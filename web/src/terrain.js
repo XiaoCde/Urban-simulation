@@ -25,10 +25,10 @@ export const LC = {
 const LC_COLOR = {
   0: [0.16, 0.24, 0.24],  // 水体：暗浑绿（水面由 water.js 覆盖，这里只是河床）
   1: [0.52, 0.50, 0.47],  // 建筑：中性灰（会被 L3 的楼盖住，只露出缝隙）
-  2: [0.42, 0.43, 0.44],  // 硬化：冷灰沥青 / 混凝土
-  3: [0.33, 0.42, 0.21],  // 草地：草甸绿，偏黄
-  4: [0.19, 0.28, 0.14],  // 林地：更深的树荫绿
-  5: [0.45, 0.38, 0.27],  // 裸土：棕黄壤质
+  2: [0.29, 0.30, 0.315], // 硬化：冷灰沥青 / 混凝土（原来 0.40 上屏偏米白，像沙地）
+  3: [0.21, 0.34, 0.11],  // 草地：草甸绿（原来 0.33/0.42/0.21 渲染出来发米黄，见 §12）
+  4: [0.12, 0.23, 0.09],  // 林地：更深的树荫绿
+  5: [0.44, 0.37, 0.25],  // 裸土：棕黄壤质
 };
 
 // 湿土过渡带：靠近水边把下垫面往「湿泥」拉，形成 1~3 m 可辨但无直线边界的过渡
@@ -199,16 +199,65 @@ export function buildTerrainMesh(T, opt = {}) {
     }
     // 颗粒噪声：同一种地类不能是一整片纯色（一眼看出是贴片）
     const n = hash2(i) * 0.055 - 0.0275;
+    // 低频斑块：6 m 一格的噪声太细，远看仍是一片平色。再叠一层 48 m 见方的
+    // 大斑块，草地才会读成「有深浅的草甸」而不是「一块绿布」。
+    const rr0 = (i / cols) | 0, cc0 = i % cols;
+    const blk = hash2(((rr0 >> 3) * 4099 + (cc0 >> 3)) >>> 0);
+    const patch = cls === LC.GRASS ? (blk * 0.20 - 0.10)
+      : cls === LC.FOREST ? (blk * 0.14 - 0.07)
+        : cls === LC.PAVED ? (blk * 0.06 - 0.03)
+          : cls === LC.BARE ? (blk * 0.12 - 0.06) : 0;
     const k = i * 3;
-    col[k] = Math.max(0, rgb[0] + n);
-    col[k + 1] = Math.max(0, rgb[1] + n);
-    col[k + 2] = Math.max(0, rgb[2] + n);
+    col[k] = Math.max(0, rgb[0] + n + patch);
+    col[k + 1] = Math.max(0, rgb[1] + n + patch * 1.15);
+    col[k + 2] = Math.max(0, rgb[2] + n + patch * 0.7);
 
     // 硬度：硬化地面与建筑 = 1（铺装贴图），草地 = 0，林地 0.15，裸土 0.45
     hard[i] = cls === LC.PAVED || cls === LC.BUILDING ? 1.0
       : cls === LC.WATER ? 1.0
         : cls === LC.BARE ? 0.45
           : cls === LC.FOREST ? 0.15 : 0.0;
+  }
+
+  // 2.5) 空地绿化：DCGIS 的 impervious 把大量空地块（球场、停车场、河岸空地）
+  //      都标成「硬化」，上屏就是一整片米白水泥地 —— 用户说的「大量空白地」。
+  //      这里只在「48 m 方块内既没有楼、也没有水」的硬化格上撒草坪；有楼/临水的
+  //      街区一律不动。**只改渲染顶点色，不改 landcover.u8 原始数据** ——
+  //      淹没计算读的仍是分类结果。
+  {
+    const BS = 14;                                  // 14 格 × 6 m = 84 m（块更大，草坪才连成片）
+    const bc = Math.ceil(cols / BS), brr = Math.ceil(rows / BS);
+    const bBld = new Float32Array(bc * brr), bWat = new Float32Array(bc * brr);
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const b = ((r / BS) | 0) * bc + ((c / BS) | 0);
+        const cls = landcover[r * cols + c];
+        if (cls === LC.BUILDING) bBld[b] += 1;
+        else if (cls === LC.WATER) bWat[b] += 1;
+      }
+    }
+    const per = BS * BS;
+    let nLawn = 0;
+    for (let i = 0; i < vCount; i++) {
+      if (landcover[i] !== LC.PAVED) continue;
+      const r = (i / cols) | 0, c = i % cols;
+      const b = ((r / BS) | 0) * bc + ((c / BS) | 0);
+      if (bBld[b] > 0.02 * per || bWat[b] > 0.10 * per) continue;  // 有楼/临水 → 留硬地
+      if (hash2((b * 7919 + 13) >>> 0) > 0.87) continue;           // 13% 留作铺装/球场
+      const t2 = hash2((b * 104729 + 7) >>> 0);
+      // 草坪 / 林荫两种绿，按块哈希分开，避免整片一个色
+      const g = t2 < 0.32 ? [0.13, 0.235, 0.085] : [0.205, 0.335, 0.105];
+      const k3 = i * 3;
+      const nA = hash2(i) * 0.05 - 0.025;
+      const nB = hash2(i + 1) * 0.05 - 0.025;
+      const nC = hash2(i + 2) * 0.03 - 0.015;
+      col[k3] = Math.max(0, g[0] + nA);
+      col[k3 + 1] = Math.max(0, g[1] + nB);
+      col[k3 + 2] = Math.max(0, g[2] + nC);
+      hard[i] = 0.0;                                 // 贴图也跟着换成草地
+      nLawn++;
+    }
+    console.log(`[terrain] 空地绿化 ${nLawn} 格 ≈ ${(nLawn * s * s / 10000).toFixed(1)} 万 m²`);
   }
 
   // 3) 法线：中心差分，从高度场直接算（不依赖三角索引）

@@ -233,14 +233,14 @@ export function buildWaterMesh(W, T) {
   group.name = 'L1_water';
 
   const mat = new THREE.MeshStandardMaterial({
-    color: 0x2f5563,
+    color: 0x3a7c9e,
     normalMap: waterNrm,
     normalScale: new THREE.Vector2(0.42, 0.42),
-    roughness: 0.14,
-    metalness: 0.28,
+    roughness: 0.055,
+    metalness: 0.16,
     transparent: true,
-    opacity: 0.94,
-    envMapIntensity: 1.35,
+    opacity: 0.965,
+    envMapIntensity: 1.65,
     side: THREE.DoubleSide,
   });
 

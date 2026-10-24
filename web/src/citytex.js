@@ -296,11 +296,24 @@ export function wallMaterial(T, key, opt = {}) {
  * 不需要管裁切位置。
  */
 export function roofMaterial(T, key, opt = {}) {
+  // 【调色】AI 屋面贴图本身很暗（实测平均亮度：碎石 0.275 / 石板 0.265 /
+  // 陶瓦 0.402）。但俯视城市时**屋顶占了画面的大半**，乘上暗贴图整座城
+  // 就读成一团炭黑 —— 这是「画面丑」最大的单一来源。
+  // 这里不做压暗，而是把三类屋面各自提到目标亮度（乘色分量可以 > 1，
+  // three 的 Color 允许），并把陶瓦往灰褐收敛，去掉乡村感。
+  const ROOF_GAIN = {
+    roof_gravel: [1.95, 1.95, 1.88],
+    roof_slate: [1.90, 1.96, 2.02],
+    roof_tile: [1.46, 1.40, 1.34],
+  };
+  const gain = ROOF_GAIN[key] || [1, 1, 1];
   const A = ROOF && ROOF[key];
   const L = A || T[key];
   if (!L) throw new Error('缺贴图 ' + key);
   const mat = new THREE.MeshStandardMaterial({
     map: L.tex,
+    // 乘色只影响贴图亮度/色相，几何自带的顶点色仍然生效
+    color: new THREE.Color(gain[0], gain[1], gain[2]),
     vertexColors: true,
     roughness: opt.roughness ?? 0.93,
     metalness: opt.metalness ?? 0.0,
@@ -477,10 +490,28 @@ export function terrainMaterial(T, opt = {}) {
         vec3 gTex = texture2D( uGrass, vWPos.xz / uTileG ).rgb;
         vec3 pTex = texture2D( uPave,  vWPos.xz / uTileP ).rgb;
         vec3 dtl = mix( gTex, pTex, clamp( vHard, 0.0, 1.0 ) );
+        // 【硬化面偏暖】pave 贴图本身是暖米黄的石板/砾石，乘以暖阳光后整条
+        // 街读成「黄土」。硬化面往冷灰压一档，草地面保持原样（vHard→0 时无影响）。
+        dtl = mix( dtl * vec3( 0.74, 0.79, 0.90 ), dtl, 1.0 - clamp( vHard, 0.0, 1.0 ) * 0.88 );
         float lum = dot( dtl, vec3( 0.299, 0.587, 0.114 ) );
         // 只补细节对比度，不整体提亮：地形顶点色本身已经带了 landcover 的明度，
         // 再乘 1.25 会把铺装刷成一片白（第一版就是这样）。
         diffuseColor.rgb *= ( 0.72 + 0.46 * lum );
+
+        // —— 饱和度/对比度调色（2026-10-24 美化）
+        // 第一版草地上屏是「米黄沙地」：ACES + 三重光 + 贴图平均亮度偏高，
+        // 绿色被压成灰绿。这里按亮度做一次轻度饱和外扩 + 保留细节的 S 曲线，
+        // 草地回到绿、铺装保持中性灰，不用改曝光去牺牲建筑层次。
+        float l = dot( diffuseColor.rgb, vec3( 0.299, 0.587, 0.114 ) );
+        // 硬化面（vHard→1）是暖调混凝土贴图 × 暖阳光，上屏会整体泛米黄；
+        // 这里对硬面降饱和 + 往冷灰拉，和草地的提饱和分开做。
+        float sat = mix( 1.42, 0.62, clamp( vHard, 0.0, 1.0 ) );
+        diffuseColor.rgb = mix( vec3( l ), diffuseColor.rgb, sat );
+        diffuseColor.rgb = mix( diffuseColor.rgb,
+          diffuseColor.rgb * vec3( 0.80, 0.86, 0.96 ), clamp( vHard, 0.0, 1.0 ) * 0.75 );
+        diffuseColor.rgb = clamp( diffuseColor.rgb, 0.0, 1.0 );
+        // 微对比：中灰附近提一点，暗部压一点，读起来不那么「灰蒙蒙」
+        diffuseColor.rgb = mix( diffuseColor.rgb, diffuseColor.rgb * diffuseColor.rgb * 1.55, 0.18 );
       `);
   };
   mat.customProgramCacheKey = () => 'terrainTex';

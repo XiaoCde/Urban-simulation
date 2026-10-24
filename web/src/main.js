@@ -35,7 +35,7 @@ import { setRoadCut } from './roadmesh.js';
 import { buildBridgeStyles } from './bridges.js';
 import { buildPlazas } from './plazas.js';
 import { buildCapitol } from './landmarks.js';
-import { loadTrees, buildTreeField } from './trees.js';
+import { loadTrees, buildTreeField, buildShrubField } from './trees.js';
 import {
   loadWater, buildWaterMesh, excavateTerrain, setWaterDesignLevel, paintShoreWet,
 } from './water.js';
@@ -59,12 +59,16 @@ renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 // 电影感：ACES 色调映射 + 轻微曝光
 renderer.toneMapping = THREE.ACESFilmicToneMapping;
-renderer.toneMappingExposure = 1.12;
+renderer.toneMappingExposure = 1.18;
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 app.appendChild(renderer.domElement);
 
 // ---------------------------------------------------------------- 场景 & 雾
 const scene = new THREE.Scene();
+// 【空中透视】没有雾时，3 km 外的街区仍然「黑得发青」，城市边缘是硬切；
+// 加一层淡蓝雾后远景自然退灰，天际线才有大气深度（用户说「丑」的一大来源）。
+// 近端 3.2 km 以外才开始起雾，避免近景发灰、贴图糊掉。
+scene.fog = new THREE.Fog(0xd3e2f0, 3200, 16000);
 // 天空：一个巨大的球内壁，用着色器做真实的天光渐变（不是纯色背景）
 scene.add(buildSky());
 
@@ -200,7 +204,14 @@ async function buildCity() {
         // 0xe6e4da → 0.32%；0xffffff → 0.15%。取 0xe8e6dc，暗线降到 0.3% 量级。
         // 只提亮 path 不够（walk 也一起画，两层的边界都在草坪上留描边），
         // 所以 mats.path 由 walk_ways 与 path_ways 共用，一改两层都变。
-        path: roadMaterial(TEX, 'pave', { color: 0xe8e6dc, roughness: 0.95 }),
+        path: (() => {
+          // 【色偏校正】pave.jpg 实测平均 RGB = (144,136,115)，本身是暖米黄；
+          // 乘上暖阳光后整片人行道/广场读成「黄土」，这是街景最大的败笔。
+          // 用线性空间的乘色把它拉回中性冷灰混凝土（分量 >1 合法）。
+          const m = roadMaterial(TEX, 'pave', { color: 0xffffff, roughness: 0.95 });
+          m.color.setRGB(1.12, 1.25, 1.58);
+          return m;
+        })(),
         markw: marks.markw,
         marky: marks.marky,
         pier: pierMat,
@@ -330,6 +341,15 @@ async function buildCity() {
     window.__trees = field;
   } catch (e) {
     console.error('[trees] 加载失败：', e && (e.stack || e.message || e));
+  }
+
+  // L4-b：草坪灌木（程序化簇状撒点，只长在草地/林地）。
+  // 「空地绿化」把大块空地养成了草坪，但 6 m 栅格的绿仍是一张平贴图；
+  // 撒一层低矮灌木/小树丛，远处才有「城市里的绿地」的体积感。
+  try {
+    world.add(buildShrubField(TERRAIN, { count: 11000, seed: 20261024 }));
+  } catch (e) {
+    console.error('[trees] 草坪灌木失败：', e && (e.stack || e.message || e));
   }
 
   // L6：行人（用户 m10520「我们先把人加进去」）。
@@ -520,11 +540,11 @@ function followShadow(focus) {
 }
 
 // 天光（半球光）：上蓝下绿，模拟草地反光
-const hemi = new THREE.HemisphereLight(0xbcd0e6, 0x6a7358, 0.62);
+const hemi = new THREE.HemisphereLight(0xc6d8ea, 0x7c7a62, 0.86);
 scene.add(hemi);
 
 // 补充一盏很弱的反向补光，避免暗面死黑
-const fill = new THREE.DirectionalLight(0xdfe9f7, 0.38);
+const fill = new THREE.DirectionalLight(0xdfe9f7, 0.46);
 fill.position.set(CITY_CX + 700, 500, CITY_CZ - 700);
 scene.add(fill);
 
@@ -835,9 +855,9 @@ function buildSky(radius = 18000) {
     side: THREE.BackSide,
     depthWrite: false,
     uniforms: {
-      uTop: { value: new THREE.Color(0x2f6fb5) },
-      uMid: { value: new THREE.Color(0x9cc3e8) },
-      uBot: { value: new THREE.Color(0xdfe8ee) },
+      uTop: { value: new THREE.Color(0x3d84cc) },
+      uMid: { value: new THREE.Color(0xa9cdec) },
+      uBot: { value: new THREE.Color(0xe8eef2) },
       // 太阳方向与 DirectionalLight 一致（城市尺度的那一盏）
       uSunDir: { value: new THREE.Vector3(-620, 900, 520).normalize() },
       uSunColor: { value: new THREE.Color(0xfff4e2) },
@@ -852,6 +872,25 @@ function buildSky(radius = 18000) {
     fragmentShader: /* glsl */`
       varying vec3 vDir;
       uniform vec3 uTop, uMid, uBot, uSunColor, uSunDir;
+
+      // 廉价值噪声 + 三倍频 FBM —— 云层只要「有形状」就够了，不需要真 VT 噪声。
+      float h21( vec2 p ) {
+        p = fract( p * vec2( 233.34, 851.73 ) );
+        p += dot( p, p + 23.45 );
+        return fract( p.x * p.y );
+      }
+      float vnoise( vec2 p ) {
+        vec2 i = floor( p ), f = fract( p );
+        f = f * f * ( 3.0 - 2.0 * f );
+        return mix( mix( h21( i ), h21( i + vec2( 1, 0 ) ), f.x ),
+                    mix( h21( i + vec2( 0, 1 ) ), h21( i + vec2( 1, 1 ) ), f.x ), f.y );
+      }
+      float fbm( vec2 p ) {
+        float s = 0.0, a = 0.5;
+        for ( int k = 0; k < 4; k++ ) { s += a * vnoise( p ); p *= 2.03; a *= 0.5; }
+        return s;
+      }
+
       void main() {
         float h = clamp(vDir.y * 0.5 + 0.5, 0.0, 1.0);
         // 三段渐变：地平线偏白，仰角 30° 附近过渡到中蓝，天顶深蓝
@@ -861,12 +900,26 @@ function buildSky(radius = 18000) {
         } else {
           col = mix(uMid, uTop, smoothstep(0.52, 0.95, h));
         }
+        // —— 云层：把方向投到一个无限远的平面上，仰角越低越密
+        vec3 d = normalize(vDir);
+        float up = max(d.y, 0.045);
+        vec2 pp = d.xz / up * 1.15;            // 投影平面坐标
+        float c1 = fbm( pp * 1.35 + vec2( 12.0, 4.0 ) );
+        float c2 = fbm( pp * 3.30 + vec2( 2.0, 9.0 ) );
+        float cloud = smoothstep( 0.50, 0.86, c1 * 0.72 + c2 * 0.38 );
+        // 地平线附近压低（避免云在墙根处拉成条），天顶也淡化
+        cloud *= smoothstep( 0.02, 0.18, d.y ) * ( 1.0 - 0.45 * smoothstep( 0.55, 0.95, d.y ) );
+        // 云的明暗：受光面偏暖白，背光面偏蓝灰
+        float lit = smoothstep( 0.35, 0.9, c2 );
+        vec3 cloudCol = mix( vec3( 0.62, 0.66, 0.72 ), vec3( 1.02, 0.99, 0.94 ), lit );
+        col = mix( col, cloudCol, cloud * 0.85 );
+
         // 太阳周围的辉光（Mie 散射的粗略近似）
         float sd = max(dot(normalize(vDir), normalize(uSunDir)), 0.0);
         col += uSunColor * pow(sd, 24.0) * 0.42;
         col += uSunColor * pow(sd, 4.0) * 0.06;
         // 地平线以下压暗（避免穿帮）
-        col = mix(col * 0.55, col, smoothstep(-0.08, 0.02, vDir.y));
+        col = mix(col * 0.74, col, smoothstep(-0.04, 0.10, vDir.y));
         gl_FragColor = vec4(col, 1.0);
       }
     `,

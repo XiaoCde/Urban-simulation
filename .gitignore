@@ -31,3 +31,7 @@ web/assets/**/*.glb
 web/assets/**/*.jpg
 web/assets/**/*.png
 data/derived/*.tif
+# 临时调试/截图产物（不入库）
+_pv*.png
+_pick*.mjs
+web/_*.mjs

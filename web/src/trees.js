@@ -99,7 +99,7 @@ export function buildTreeField(TR, opt = {}) {
   coneGeo.translate(0, 0.5, 0);
 
   const trunkMat = new THREE.MeshStandardMaterial({
-    color: 0x4a4038, roughness: 0.95, metalness: 0.0, flatShading: true,
+    color: 0x6f6355, roughness: 0.95, metalness: 0.0, flatShading: true,
   });
   // 【不能开 vertexColors】树冠几何没有 color 属性，three 会把缺失的 color
   // attribute 当成 (0,0,0)，整片林子渲染成纯黑。逐棵颜色走 instanceColor，
@@ -234,6 +234,85 @@ function mergeTwo(a, b) {
   return g;
 }
 
+/**
+ * 草地灌木/小树丛：给「空地绿化」出来的草坪撒一层低矮植被。
+ *
+ * 【为什么需要】草坪如果只有一张绿色贴图，俯瞰仍是「一块绿布」；真实公园
+ * 在 1 m 分辨率下也有成组的灌木、小树、树篱。这里用簇状撒点（每簇 3~8 株，
+ * 簇心随机，簇内抖动），数量按面积控制，全部塞进 1 个 InstancedMesh。
+ *
+ * @param {object} T   loadTerrain() 返回（用 classify 判地类）
+ * @param {object} opt {count, box, seed, onlyLawn}
+ */
+export function buildShrubField(T, opt = {}) {
+  const count = opt.count ?? 9000;
+  const box = opt.box || { x0: -1277, z0: -4189, x1: 4701, z1: 931 };  // 场景 z = -planY，北为负
+  const seed = opt.seed ?? 20261024;
+  const rnd = mulberry32(seed);
+
+  const geo = new THREE.IcosahedronGeometry(1, 0);
+  geo.scale(1, 0.72, 1);
+  const mat = new THREE.MeshStandardMaterial({
+    color: 0xffffff, roughness: 0.95, metalness: 0.0, flatShading: true,
+  });
+  const mesh = new THREE.InstancedMesh(geo, mat, count);
+  mesh.name = 'lawn_shrubs';
+  mesh.castShadow = false;         // 灌木不投影，省 3.5 万次阴影绘制
+  mesh.receiveShadow = true;
+
+  const m4 = new THREE.Matrix4();
+  const q = new THREE.Quaternion();
+  const pos = new THREE.Vector3();
+  const scl = new THREE.Vector3();
+  const col = new THREE.Color();
+
+  let n = 0, tries = 0;
+  const MAXT = count * 40;
+  while (n < count && tries < MAXT) {
+    tries++;
+    // 簇心
+    const cx = box.x0 + rnd() * (box.x1 - box.x0);
+    const cz = box.z0 + rnd() * (box.z1 - box.z0);
+    const lc = T.classify(cx, cz);
+    // 只长在草地/林地边上；建筑、水面、裸土都不要
+    if (lc !== 3 && lc !== 4) continue;
+    const per = 3 + ((rnd() * 6) | 0);
+    for (let k = 0; k < per && n < count; k++) {
+      const x = cx + (rnd() - 0.5) * 22;
+      const z = cz + (rnd() - 0.5) * 22;
+      if (T.classify(x, z) !== 3 && T.classify(x, z) !== 4) continue;
+      const y = T.sampleHeight(x, z);
+      const r = 0.65 + rnd() * 1.15;
+      pos.set(x, y + r * 0.55, z);
+      q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), rnd() * 6.283);
+      scl.set(r, r * (0.8 + rnd() * 0.5), r);
+      m4.compose(pos, q, scl);
+      mesh.setMatrixAt(n, m4);
+      const t = rnd();
+      col.setRGB(0.14 + 0.10 * t, 0.27 + 0.16 * t, 0.09 + 0.07 * t);
+      mesh.setColorAt(n, col);
+      n++;
+    }
+  }
+  mesh.count = n;
+  mesh.instanceMatrix.needsUpdate = true;
+  if (mesh.instanceColor) mesh.instanceColor.needsUpdate = true;
+  const g = new THREE.Group();
+  g.name = 'L4_vegetation_lawn';
+  g.add(mesh);
+  console.log(`[trees] 草坪灌木 ${n} 株（簇状撒点，seed=${seed}）`);
+  return g;
+}
+
+/** 确定性 PRNG（撒点用，保证每次刷新同一套灌木）。 */
+function mulberry32(a) {
+  return function () {
+    a |= 0; a = (a + 0x6D2B79F5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
 /** 稳定 0..1 哈希。 */
 function hash01(i) {
   let x = (i * 2654435761) >>> 0;
