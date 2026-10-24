@@ -1,0 +1,50 @@
+{
+  "schema": "城市仿真基座 / 材质库 v1",
+  "purpose": "给华盛顿城市基座(out\\dc_real3.blend, 22009 栋建筑 + 24835 条道路)贴现成的纹理贴图。不用大模型渲染，直接用 CC0 材质包。",
+  "source": "ambientCG",
+  "source_url": "https://ambientcg.com",
+  "api": "https://ambientcg.com/api/v2/full_json?type=Material&q={q}&limit=6&include=downloadData&sort=Popular",
+  "download_url": "https://ambientcg.com/get?file={id}_1K-JPG.zip",
+  "license": "CC0 1.0 Universal（公有领域）—— 可商用、可修改、可再分发，无需署名",
+  "root": "D:\\citysim\\textures",
+  "render_engine": "BLENDER_EEVEE",
+  "projection": "BOX（三平面投影投影，不做 UV 展开）",
+  "tile_m_note": "tile_m = 一张 1K 贴图在世界坐标里覆盖多少米。必须打开贴图数清里面画了几个东西再反推，不能拍脑袋。",
+  "lib": {
+    "wall_brick":    {"assets": ["Bricks051", "Bricks097", "Bricks005", "Bricks042"], "tile_m": 3.0,  "label": "红砖外墙", "note": "Bricks051 一张 1K 图里 14 行砖，一行约 0.22 m -> 一张约 3.0 m"},
+    "wall_paint":    {"assets": ["PaintedPlaster017", "Plaster001", "Plaster007"],     "tile_m": 3.0,  "label": "白漆/灰泥外墙", "note": "DC 连排屋刷白漆的那一类"},
+    "wall_stone":    {"assets": ["Granite002A", "Granite001A", "Concrete034"],         "tile_m": 3.5,  "label": "石灰岩/花岗岩外墙", "note": "联邦建筑主体"},
+    "wall_concrete": {"assets": ["Concrete046", "Concrete012"],                        "tile_m": 3.5,  "label": "混凝土外墙", "note": "战后办公楼"},
+    "wall_glass":    {"assets": ["Facade001", "Facade005"],                            "tile_m": 30.0, "label": "玻璃幕墙", "note": "整面反光玻璃"},
+    "wall_windowed": {"assets": ["Facade003", "Facade017", "Facade002", "Facade012", "Facade013", "Facade018A"], "tile_m": 30.0, "label": "带窗格幕墙", "note": "Facade003 一张 1K 图里 10x11 个窗格，按真实窗距 3.0 m 反推 -> 一张约 30 m。第一版按 4 m 铺，等于每 0.4 m 一个窗，整面墙糊成噪点"},
+    "roof_slate":    {"assets": ["RoofingTiles001"],                                   "tile_m": 2.5,  "label": "石板瓦屋顶", "note": "连排屋坡屋顶"},
+    "roof_tile":     {"assets": ["RoofingTiles012A", "RoofingTiles013A", "RoofingTiles011A"], "tile_m": 2.5, "label": "陶瓦/水泥瓦屋顶", "note": ""},
+    "roof_metal":    {"assets": ["CorrugatedSteel009", "CorrugatedSteel005"],          "tile_m": 1.6,  "label": "金属瓦楞屋面", "note": ""},
+    "roof_gravel":   {"assets": ["Gravel043", "Ground108"],                            "tile_m": 4.0,  "label": "碎石卷材平屋顶", "note": "DC 平屋顶的实情"},
+    "asphalt":       {"assets": ["Asphalt033", "Road012A"],                            "tile_m": 6.0,  "label": "沥青路面", "note": "绑定 blosm 的 roads_* 材质"},
+    "pavement":      {"assets": ["Concrete047A"],                                      "tile_m": 3.0,  "label": "人行道/铺装", "note": "绑定 blosm 的 areas_* 材质"},
+    "grass":         {"assets": ["Grass005", "Grass001"],                              "tile_m": 6.0,  "label": "草地", "note": "直出太艳，LOOK 里压了饱和度和亮度"},
+    "dirt":          {"assets": ["Ground037"],                                         "tile_m": 8.0,  "label": "裸土", "note": ""},
+    "wood":          {"assets": ["WoodSiding013"],                                     "tile_m": 2.0,  "label": "木挂板", "note": ""},
+    "trim":          {"assets": ["Granite002A", "Plaster001"],                         "tile_m": 1.5,  "label": "线脚/石作（檐口、台阶、女儿墙）", "note": "DC 连排屋的檐口与门廊台阶是石/漆的浅色构件。第一版错在把它们跟砖墙用了同一材质，结果屋顶边缘围了一圈砖纹、台阶也读不出来"},
+    "winpanel":      {"assets": ["Facade003"],                                         "tile_m": 12.0, "label": "窗洞面板（凸窗正面）", "note": "Facade003 一张 1K 里 10x11 个窗格，按 12 m 铺 -> 每窗约 1.2 m、一层一窗，贴到 1.7 m 宽的凸窗正面就是“一竖排真窗户”。原来用 Facade009 按 2 m 铺：平均色 (30,35,32) 近黑 + 10 个窗格挤在 2 m 里 -> 糊成一块黑斑（实测渲染图确认）"}
+  },
+  "look": {
+    "grass": {"saturation": 0.42, "value": 0.55},
+    "dirt":  {"saturation": 0.75, "value": 0.85}
+  },
+  "unused": {
+    "Facade007": "太暗，且与 Facade001/005 重复",
+    "Facade009": "平均 RGB (30,35,32)，近黑；铺整面墙是一团黑洞，弃用为外墙 —— 但已改用作 winpanel（凸窗正面的窗玻璃）",
+    "Facade010": "太暗",
+    "Facade016": "太暗"
+  },
+  "wall_by_height": {
+    "lt_16m":    "wall_brick 70% / wall_paint 28% / wall_windowed 2%",
+    "16m_35m":   "wall_windowed 42% / wall_stone 24% / wall_paint 16% / wall_brick 12% / wall_concrete 6%",
+    "gte_35m":   "wall_windowed 58% / wall_glass 24% / wall_concrete 18%",
+    "roof_lt_16m":  "roof_slate 62% / roof_tile 38%",
+    "roof_16m_35m": "roof_gravel 72% / roof_metal 28%",
+    "roof_gte_35m": "roof_gravel 100%"
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "schema": "城市仿真基座 / 材质库 v1",
+  "root": "D:\\citysim\\textures",
+  "measured": {
+    "Bricks051": {
+      "rgb": [
+        168,
+        112,
+        93
+      ],
+      "hex": "#a8705d",
+      "file": "D:\\citysim\\textures\\Bricks051\\Bricks051_1K-JPG_Color.jpg",
+      "kb": 1321,
+      "tone": "暖红/砖红"
+    },
+    "Bricks097": {
+      "rgb": [
+        133,
+        106,
+        84
+      ],
+      "hex": "#856a54",
+      "file": "D:\\citysim\\textures\\Bricks097\\Bricks097_1K-JPG_Color.jpg",
+      "kb": 812,
+      "tone": "暖红/砖红"
+    },
+    "Bricks005": {
+      "rgb": [
+        145,
+        117,
+        99
+      ],
+      "hex": "#917563",
+      "file": "D:\\citysim\\textures\\Bricks005\\Bricks005_1K-JPG_Color.jpg",
+      "kb": 1272,
+      "tone": "暖红/砖红"
+    },
+    "Bricks042": {
+      "rgb": [
+        103,
+        82,
+        75
+      ],
+      "hex": "#67524b",
+      "file": "D:\\citysim\\textures\\Bricks042\\Bricks042_1K-JPG_Color.jpg",
+      "kb": 1164,
+      "tone": "土黄/棕"
+    },
+    "PaintedPlaster017": {
+      "rgb": [
+        190,
+        191,
+        187
+      ],
+      "hex": "#bebfbb",
+      "file": "D:\\citysim\\textures\\PaintedPlaster017\\PaintedPlaster017_1K-JPG_Color.jpg",
+      "kb": 369,
+      "tone": "白/浅灰"
+    },
+    "Plaster001": {
+      "rgb": [
+        215,
+        211,
+        208
+      ],
+      "hex": "#d7d3d0",
+      "file": "D:\\citysim\\textures\\Plaster001\\Plaster001_1K-JPG_Color.jpg",
+      "kb": 809,
+      "tone": "白/浅灰"
+    },
+    "Plaster007": {
+      "rgb": [
+        191,
+        190,
+        182
+      ],
+      "hex": "#bfbeb6",
+      "file": "D:\\citysim\\textures\\Plaster007\\Plaster007_1K-JPG_Color.jpg",
+      "kb": 1137,
+      "tone": "白/浅灰"
+    },
+    "Granite002A": {
+      "rgb": [
+        181,
+        177,
+        173
+      ],
+      "hex": "#b5b1ad",
+      "file": "D:\\citysim\\textures\\Granite002A\\Granite002A_1K-JPG_Color.jpg",
+      "kb": 1426,
+      "tone": "中性灰"
+    },
+    "Granite001A": {
+      "rgb": [
+        169,
+        150,
+        133
+      ],
+      "hex": "#a99685",
+      "file": "D:\\citysim\\textures\\Granite001A\\Granite001A_1K-JPG_Color.jpg",
+      "kb": 1975,
+      "tone": "土黄/棕"
+    },
+    "Concrete034": {
+      "rgb": [
+        184,
+        184,
+        184
+      ],
+      "hex": "#b8b8b8",
+      "file": "D:\\citysim\\textures\\Concrete034\\Concrete034_1K-JPG_Color.jpg",
+      "kb": 263,
+      "tone": "白/浅灰"
+    },
+    "Concrete046": {
+      "rgb": [
+        205,
+        206,
+        185
+      ],
+      "hex": "#cdceb9",
+      "file": "D:\\citysim\\textures\\Concrete046\\Concrete046_1K-JPG_Color.jpg",
+      "kb": 1066,
+      "tone": "白/浅灰"
+    },
+    "Concrete012": {
+      "rgb": [
+        136,
+        128,
+        112
+      ],
+      "hex": "#888070",
+      "file": "D:\\citysim\\textures\\Concrete012\\Concrete012_1K-JPG_Color.jpg",
+      "kb": 1252,
+      "tone": "土黄/棕"
+    },
+    "Facade001": {
+      "rgb": [
+        70,
+        77,
+        83
+      ],
+      "hex": "#464d53",
+      "file": "D:\\citysim\\textures\\Facade001\\Facade001_1K-JPG_Color.jpg",
+      "kb": 499,
+      "tone": "中性灰"
+    },
+    "Facade005": {
+      "rgb": [
+        70,
+        82,
+        83
+      ],
+      "hex": "#465253",
+      "file": "D:\\citysim\\textures\\Facade005\\Facade005_1K-JPG_Color.jpg",
+      "kb": 718,
+      "tone": "中性灰"
+    },
+    "Facade003": {
+      "rgb": [
+        128,
+        122,
+        109
+      ],
+      "hex": "#807a6d",
+      "file": "D:\\citysim\\textures\\Facade003\\Facade003_1K-JPG_Color.jpg",
+      "kb": 591,
+      "tone": "中性灰"
+    },
+    "Facade017": {
+      "rgb": [
+        95,
+        90,
+        84
+      ],
+      "hex": "#5f5a54",
+      "file": "D:\\citysim\\textures\\Facade017\\Facade017_1K-JPG_Color.jpg",
+      "kb": 956,
+      "tone": "中性灰"
+    },
+    "Facade002": {
+      "rgb": [
+        88,
+        90,
+        91
+      ],
+      "hex": "#585a5b",
+      "file": "D:\\citysim\\textures\\Facade002\\Facade002_1K-JPG_Color.jpg",
+      "kb": 529,
+      "tone": "中性灰"
+    },
+    "Facade012": {
+      "rgb": [
+        95,
+        84,
+        78
+      ],
+      "hex": "#5f544e",
+      "file": "D:\\citysim\\textures\\Facade012\\Facade012_1K-JPG_Color.jpg",
+      "kb": 1462,
+      "tone": "中性灰"
+    },
+    "Facade013": {
+      "rgb": [
+        110,
+        97,
+        87
+      ],
+      "hex": "#6e6157",
+      "file": "D:\\citysim\\textures\\Facade013\\Facade013_1K-JPG_Color.jpg",
+      "kb": 1682,
+      "tone": "中性灰"
+    },
+    "Facade018A": {
+      "rgb": [
+        110,
+        104,
+        103
+      ],
+      "hex": "#6e6867",
+      "file": "D:\\citysim\\textures\\Facade018A\\Facade018A_1K-JPG_Color.jpg",
+      "kb": 1010,
+      "tone": "中性灰"
+    },
+    "RoofingTiles001": {
+      "rgb": [
+        70,
+        72,
+        68
+      ],
+      "hex": "#464844",
+      "file": "D:\\citysim\\textures\\RoofingTiles001\\RoofingTiles001_1K-JPG_Color.jpg",
+      "kb": 974,
+      "tone": "中性灰"
+    },
+    "RoofingTiles012A": {
+      "rgb": [
+        166,
+        96,
+        70
+      ],
+      "hex": "#a66046",
+      "file": "D:\\citysim\\textures\\RoofingTiles012A\\RoofingTiles012A_1K-JPG_Color.jpg",
+      "kb": 497,
+      "tone": "暖红/砖红"
+    },
+    "RoofingTiles013A": {
+      "rgb": [
+        49,
+        48,
+        53
+      ],
+      "hex": "#313035",
+      "file": "D:\\citysim\\textures\\RoofingTiles013A\\RoofingTiles013A_1K-JPG_Color.jpg",
+      "kb": 393,
+      "tone": "中性灰"
+    },
+    "RoofingTiles011A": {
+      "rgb": [
+        125,
+        74,
+        48
+      ],
+      "hex": "#7d4a30",
+      "file": "D:\\citysim\\textures\\RoofingTiles011A\\RoofingTiles011A_1K-JPG_Color.jpg",
+      "kb": 551,
+      "tone": "暖红/砖红"
+    },
+    "CorrugatedSteel009": {
+      "rgb": [
+        130,
+        129,
+        129
+      ],
+      "hex": "#828181",
+      "file": "D:\\citysim\\textures\\CorrugatedSteel009\\CorrugatedSteel009_1K-JPG_Color.jpg",
+      "kb": 499,
+      "tone": "中性灰"
+    },
+    "CorrugatedSteel005": {
+      "rgb": [
+        153,
+        155,
+        158
+      ],
+      "hex": "#999b9e",
+      "file": "D:\\citysim\\textures\\CorrugatedSteel005\\CorrugatedSteel005_1K-JPG_Color.jpg",
+      "kb": 1015,
+      "tone": "中性灰"
+    },
+    "Gravel043": {
+      "rgb": [
+        107,
+        108,
+        104
+      ],
+      "hex": "#6b6c68",
+      "file": "D:\\citysim\\textures\\Gravel043\\Gravel043_1K-JPG_Color.jpg",
+      "kb": 1628,
+      "tone": "中性灰"
+    },
+    "Ground108": {
+      "rgb": [
+        120,
+        107,
+        84
+      ],
+      "hex": "#786b54",
+      "file": "D:\\citysim\\textures\\Ground108\\Ground108_1K-JPG_Color.jpg",
+      "kb": 1598,
+      "tone": "土黄/棕"
+    },
+    "Asphalt033": {
+      "rgb": [
+        86,
+        82,
+        72
+      ],
+      "hex": "#565248",
+      "file": "D:\\citysim\\textures\\Asphalt033\\Asphalt033_1K-JPG_Color.jpg",
+      "kb": 1200,
+      "tone": "中性灰"
+    },
+    "Road012A": {
+      "rgb": [
+        65,
+        65,
+        62
+      ],
+      "hex": "#41413e",
+      "file": "D:\\citysim\\textures\\Road012A\\Road012A_1K-JPG_Color.jpg",
+      "kb": 897,
+      "tone": "中性灰"
+    },
+    "Concrete047A": {
+      "rgb": [
+        145,
+        135,
+        115
+      ],
+      "hex": "#918773",
+      "file": "D:\\citysim\\textures\\Concrete047A\\Concrete047A_1K-JPG_Color.jpg",
+      "kb": 1558,
+      "tone": "土黄/棕"
+    },
+    "Grass005": {
+      "rgb": [
+        101,
+        132,
+        44
+      ],
+      "hex": "#65842c",
+      "file": "D:\\citysim\\textures\\Grass005\\Grass005_1K-JPG_Color.jpg",
+      "kb": 1831,
+      "tone": "土黄/棕"
+    },
+    "Grass001": {
+      "rgb": [
+        68,
+        92,
+        40
+      ],
+      "hex": "#445c28",
+      "file": "D:\\citysim\\textures\\Grass001\\Grass001_1K-JPG_Color.jpg",
+      "kb": 1722,
+      "tone": "土黄/棕"
+    },
+    "Ground037": {
+      "rgb": [
+        152,
+        147,
+        88
+      ],
+      "hex": "#989358",
+      "file": "D:\\citysim\\textures\\Ground037\\Ground037_1K-JPG_Color.jpg",
+      "kb": 2136,
+      "tone": "土黄/棕"
+    },
+    "WoodSiding013": {
+      "rgb": [
+        102,
+        88,
+        69
+      ],
+      "hex": "#665845",
+      "file": "D:\\citysim\\textures\\WoodSiding013\\WoodSiding013_1K-JPG_Color.jpg",
+      "kb": 1050,
+      "tone": "土黄/棕"
+    }
+  },
+  "missing": []
+}

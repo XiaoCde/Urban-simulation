@@ -1,0 +1,91 @@
+{
+ "note": "AI 生成的建筑立面与屋面材质（dashscope qwen-image-3.0）。每张先用亮度 std 剖面定位窗列/窗行，再裁到整数开间 × 整数层，边缘 6% 交叉淡化，因此可按 tile_u_m × tile_v_m 无缝平铺，接缝落在两窗之间的空墙上。",
+ "generator": "dashscope / qwen-image-3.0 via dsh image-gen",
+ "prompt_intent": "flat orthographic elevation, zero perspective convergence, even overcast light, no cast shadows, seamless horizontal repeat",
+ "layers": {
+  "brick": {
+   "file": "brick.jpg",
+   "kind": "facade",
+   "tile_u_m": 3.0,
+   "tile_v_m": 6.6,
+   "bays": 1,
+   "floors": 2,
+   "bay_period_px": 0.0,
+   "floor_period_px": 0.0,
+   "src": "image-f54e995a.png"
+  },
+  "brick2": {
+   "file": "brick2.jpg",
+   "kind": "facade",
+   "tile_u_m": 3.0,
+   "tile_v_m": 3.3,
+   "bays": 1,
+   "floors": 1,
+   "bay_period_px": 0.0,
+   "floor_period_px": 0.0,
+   "src": "image-52b363b9.png"
+  },
+  "paint": {
+   "file": "paint.jpg",
+   "kind": "facade",
+   "tile_u_m": 3.0,
+   "tile_v_m": 6.4,
+   "bays": 1,
+   "floors": 2,
+   "bay_period_px": 0.0,
+   "floor_period_px": 0.0,
+   "src": "image-0645b9fa.png"
+  },
+  "stone": {
+   "file": "stone.jpg",
+   "kind": "facade",
+   "tile_u_m": 7.2,
+   "tile_v_m": 8.4,
+   "bays": 2,
+   "floors": 2,
+   "bay_period_px": 0.0,
+   "floor_period_px": 0.0,
+   "src": "image-abac0492.png"
+  },
+  "glass": {
+   "file": "glass.jpg",
+   "kind": "facade",
+   "tile_u_m": 6.0,
+   "tile_v_m": 8.0,
+   "bays": 4,
+   "floors": 4,
+   "bay_period_px": 69.2,
+   "floor_period_px": 50.8,
+   "src": "image-ae1c9362.png"
+  },
+  "conc": {
+   "file": "conc.jpg",
+   "kind": "facade",
+   "tile_u_m": 12.0,
+   "tile_v_m": 4.2,
+   "bays": 1,
+   "floors": 1,
+   "bay_period_px": 0.0,
+   "floor_period_px": 0.0,
+   "src": "image-0df6bb8c.png"
+  },
+  "roof_gravel": {
+   "file": "roof_gravel.jpg",
+   "kind": "material",
+   "tile_m": 4.0,
+   "src": "image-b270066d.png"
+  },
+  "roof_slate": {
+   "file": "roof_slate.jpg",
+   "kind": "material",
+   "tile_m": 2.5,
+   "src": "image-a5a1e4b3.png"
+  },
+  "roof_tile": {
+   "file": "roof_tile.jpg",
+   "kind": "material",
+   "tile_m": 2.5,
+   "src": "image-2554837b.png"
+  }
+ }
+}

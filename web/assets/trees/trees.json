@@ -1,0 +1,19 @@
+{
+ "count": 35296,
+ "stride_floats": 5,
+ "layout": [
+  "x",
+  "z",
+  "top_y",
+  "crown_m",
+  "base_y"
+ ],
+ "source": "DCGIS Urban Tree Canopy 2023 (Urban_Tree_Canopy/MapServer/44)",
+ "note": "实测树高 HEIGHT_FT / 冠幅 CROWN_WIDTH_FT，落地高程由 terrain_dtm 采样",
+ "bbox": [
+  -1276.9248046875,
+  -4188.58447265625,
+  4700.95654296875,
+  930.2213134765625
+ ]
+}

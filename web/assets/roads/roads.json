@@ -1,0 +1,30 @@
+{
+ "count": {
+  "road": {
+   "verts": 227974,
+   "tris": 215704
+  },
+  "path": {
+   "verts": 352912,
+   "tris": 330300
+  },
+  "walk": {
+   "verts": 455948,
+   "tris": 431408
+  },
+  "marky": {
+   "verts": 283340,
+   "tris": 269968
+  },
+  "markw": {
+   "verts": 283340,
+   "tris": 269968
+  }
+ },
+ "tile_m": {
+  "road": 2.6,
+  "path": 1.7,
+  "walk": 1.7
+ },
+ "walk_w_m": 1.8
+}

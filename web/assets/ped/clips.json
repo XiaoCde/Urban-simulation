@@ -1,0 +1,38 @@
+{
+ "male": {
+  "clips": [
+   "back",
+   "crouch",
+   "idle",
+   "idle2",
+   "look",
+   "run",
+   "run_stop",
+   "side_l",
+   "side_r",
+   "start",
+   "stop",
+   "turn180",
+   "walk"
+  ],
+  "bytes": 4699784
+ },
+ "female": {
+  "clips": [
+   "back",
+   "crouch",
+   "idle",
+   "idle2",
+   "look",
+   "run",
+   "run_stop",
+   "side_l",
+   "side_r",
+   "start",
+   "stop",
+   "turn180",
+   "walk"
+  ],
+  "bytes": 4116508
+ }
+}

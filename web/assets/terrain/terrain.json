@@ -1,0 +1,53 @@
+{
+  "grid": {
+    "x0": -1277.0,
+    "y0": -931.0,
+    "x1": 4701.0,
+    "y1": 4189.0,
+    "width_m": 5978.0,
+    "height_m": 5120.0,
+    "step_m": 6.0,
+    "cols": 996,
+    "rows": 853,
+    "layout": "row-major, row 0 = north edge, col 0 = west edge"
+  },
+  "height": {
+    "file": "height.i16",
+    "dtype": "int16",
+    "endian": "little",
+    "unit": "cm",
+    "z_min": -6.963418483734131,
+    "z_max": 89.09098815917969,
+    "quant_error_max_m": 0.0050048828125
+  },
+  "landcover": {
+    "file": "landcover.u8",
+    "dtype": "uint8",
+    "classes": {
+      "0": "water",
+      "1": "building",
+      "2": "paved",
+      "3": "grass",
+      "4": "forest",
+      "5": "bare"
+    }
+  },
+  "wet": {
+    "file": "wet.u8",
+    "dtype": "uint8",
+    "meaning": "0 at water edge, 255 at >= 30 m"
+  },
+  "parent_grid": {
+    "x0": -1277.0,
+    "y1": 4189.0,
+    "step_m": 1.0,
+    "cols": 5978,
+    "rows": 5120
+  },
+  "source": [
+    "data/derived/terrain_dtm.tif",
+    "data/derived/landcover.tif"
+  ],
+  "vertical_datum": "NAVD88",
+  "projection": "local TM (see data/derived/terrain_dtm.tif tags)"
+}

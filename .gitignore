@@ -1,0 +1,33 @@
+.dsh/
+*.log
+.idea/
+.vscode/
+__pycache__/
+
+# ---- 大二进制 / 测量数据 / 生成物：留在磁盘，不进版本库（2026-10-24）----
+# 依赖与缓存
+web/node_modules/
+web/_debug/
+models/
+
+# 生成物（可由 tools/ 下的脚本重建）
+out/
+data/derived/*.tif
+
+# 原始测量数据（体积大，按脚本重新抓取）
+data/osm/
+data/dem/
+data/characters/
+data/dcgis/
+data/ai_tex/
+
+# ---- 二进制资产：只上传「必要部分」（2026-10-24 用户要求）----
+# 几何/贴图全部可由 tools/ 重新导出，仓库里只留 manifest 与代码
+web/assets/**/*.mesh
+web/assets/**/*.idx
+web/assets/**/*.i16
+web/assets/**/*.u8
+web/assets/**/*.glb
+web/assets/**/*.jpg
+web/assets/**/*.png
+data/derived/*.tif

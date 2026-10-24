@@ -1,0 +1,107 @@
+{
+ "size": 512,
+ "layers": [
+  {
+   "key": "brick_a",
+   "pack": "Bricks051",
+   "tile_m": 3.0,
+   "url": "assets/tex/brick_a.jpg"
+  },
+  {
+   "key": "brick_b",
+   "pack": "Bricks097",
+   "tile_m": 3.0,
+   "url": "assets/tex/brick_b.jpg"
+  },
+  {
+   "key": "paint_a",
+   "pack": "PaintedPlaster017",
+   "tile_m": 3.0,
+   "url": "assets/tex/paint_a.jpg"
+  },
+  {
+   "key": "stone_a",
+   "pack": "Granite002A",
+   "tile_m": 3.5,
+   "url": "assets/tex/stone_a.jpg"
+  },
+  {
+   "key": "conc_a",
+   "pack": "Concrete046",
+   "tile_m": 3.5,
+   "url": "assets/tex/conc_a.jpg"
+  },
+  {
+   "key": "facade_a",
+   "pack": "Facade003",
+   "tile_m": 30.0,
+   "url": "assets/tex/facade_a.jpg"
+  },
+  {
+   "key": "facade_b",
+   "pack": "Facade017",
+   "tile_m": 30.0,
+   "url": "assets/tex/facade_b.jpg"
+  },
+  {
+   "key": "facade_c",
+   "pack": "Facade002",
+   "tile_m": 30.0,
+   "url": "assets/tex/facade_c.jpg"
+  },
+  {
+   "key": "facade_d",
+   "pack": "Facade012",
+   "tile_m": 30.0,
+   "url": "assets/tex/facade_d.jpg"
+  },
+  {
+   "key": "glass_a",
+   "pack": "Facade001",
+   "tile_m": 30.0,
+   "url": "assets/tex/glass_a.jpg"
+  },
+  {
+   "key": "glass_b",
+   "pack": "Facade005",
+   "tile_m": 30.0,
+   "url": "assets/tex/glass_b.jpg"
+  },
+  {
+   "key": "roof_slate",
+   "pack": "RoofingTiles001",
+   "tile_m": 2.5,
+   "url": "assets/tex/roof_slate.jpg"
+  },
+  {
+   "key": "roof_tile",
+   "pack": "RoofingTiles012A",
+   "tile_m": 2.5,
+   "url": "assets/tex/roof_tile.jpg"
+  },
+  {
+   "key": "roof_gravel",
+   "pack": "Gravel043",
+   "tile_m": 4.0,
+   "url": "assets/tex/roof_gravel.jpg"
+  },
+  {
+   "key": "asphalt",
+   "pack": "Asphalt033",
+   "tile_m": 6.0,
+   "url": "assets/tex/asphalt.jpg"
+  },
+  {
+   "key": "pave",
+   "pack": "Concrete047A",
+   "tile_m": 3.0,
+   "url": "assets/tex/pave.jpg"
+  },
+  {
+   "key": "grass",
+   "pack": "Grass005",
+   "tile_m": 6.0,
+   "url": "assets/tex/grass.jpg"
+  }
+ ]
+}

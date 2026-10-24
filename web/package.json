@@ -1,0 +1,17 @@
+{
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "puppeteer-core": "^23.11.1",
+    "three": "^0.169.0"
+  },
+  "type": "module",
+  "name": "whitehouse-threejs",
+  "version": "0.1.0",
+  "scripts": {
+    "start": "node serve.js 8123"
+  }
+}
