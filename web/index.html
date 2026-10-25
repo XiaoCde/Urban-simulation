@@ -33,6 +33,21 @@
   }
   #views button:hover { background: rgba(40,58,80,.9); border-color: rgba(150,190,235,.6); color: #fff; }
   #views button.on { background: rgba(56,110,168,.92); border-color: #7fb4e8; color: #fff; }
+  /* 积涝叠层面板（flood.js）：平时隐藏，按 F 才出来 */
+  #flood { position: fixed; right: 18px; bottom: 96px; z-index: 20; display: none;
+           width: 232px; padding: 10px 12px 11px; border-radius: 10px;
+           background: rgba(8,16,26,.82); border: 1px solid rgba(120,170,225,.35);
+           color: #d7e6f7; font: 12px/1.6 "Segoe UI", "Microsoft YaHei", sans-serif;
+           backdrop-filter: blur(6px); }
+  #flood .row { display: flex; align-items: center; gap: 8px; }
+  #flood b { font-size: 13px; letter-spacing: .06em; color: #bfe0ff; }
+  #flTime { margin-left: auto; font-variant-numeric: tabular-nums; color: #8fb6dc; }
+  #flRange { width: 100%; margin: 8px 0 6px; accent-color: #4b96e0; }
+  #flood button { padding: 3px 10px; border-radius: 6px; cursor: pointer;
+                  background: rgba(28,46,68,.95); color: #cfe2f5;
+                  border: 1px solid rgba(120,170,225,.4); }
+  #flood button:hover { background: rgba(40,70,105,.95); color: #fff; }
+  #flood .hint { margin-left: auto; color: #6f8aa6; }
   #views .t { color: #6b7f96; font-size: 11px; letter-spacing: .1em; margin-bottom: 1px; }
   #loading {
     position: fixed; inset: 0; z-index: 20;
@@ -57,7 +72,7 @@
 <div id="hud">
   <b>华盛顿 · Washington, D.C.</b><br />
   <span class="k">地形 USGS 3DEP 1 m · 下垫面 DCGIS 2025</span><br />
-  <span class="k">拖拽旋转 · 滚轮缩放 · 右键平移 · 数字键 1–8 切机位</span><br />
+  <span class="k">拖拽旋转 · 滚轮缩放 · 右键平移 · 数字键 1–0 切机位 · F 键积涝</span><br />
   <span class="n" id="stat"></span>
 </div>
 <div id="views">
@@ -72,6 +87,16 @@
   <button data-v="tidal">8 潮汐湖</button>
   <button data-v="crowd">9 行人近景</button>
   <button data-v="crowdTop">0 行人俯视</button>
+</div>
+<!-- 积涝叠层：按 F 打开。时间轴从降雨到退水，水位会自己退下去。 -->
+<div id="flood">
+  <div class="row"><b>积涝</b><span id="flTime">t=0 min</span></div>
+  <input id="flRange" type="range" min="0" max="0" value="0" step="1">
+  <div class="row">
+    <button id="flPlay">播放</button>
+    <button id="flClose">关闭</button>
+    <span class="hint">F 开关</span>
+  </div>
 </div>
 <div id="loading">正在程序化生成…</div>
 <script type="module" src="/src/main.js"></script>

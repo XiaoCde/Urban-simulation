@@ -27,6 +27,8 @@ web/assets/**/*.mesh
 web/assets/**/*.idx
 web/assets/**/*.i16
 web/assets/**/*.u8
+# 积水叠层（21 帧 u8 + 清单，17.8 MB；tools/flood/export_web.py 一条命令重建）
+web/assets/flood/
 web/assets/**/*.glb
 web/assets/**/*.jpg
 web/assets/**/*.png

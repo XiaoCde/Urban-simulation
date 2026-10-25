@@ -274,7 +274,7 @@ def route_accum(load: np.ndarray, recv: np.ndarray, drain_cap: np.ndarray,
 
 
 def level_basins(z: np.ndarray, vol: np.ndarray, pit_mask: np.ndarray,
-                 min_area: int = 3) -> np.ndarray:
+                 min_area: int = 3, cell_area: float = 1.0) -> np.ndarray:
     """
     按「洼地」摊平水面 —— 这一步才是"哪片低洼、多深"的关键。
 
@@ -308,8 +308,19 @@ def level_basins(z: np.ndarray, vol: np.ndarray, pit_mask: np.ndarray,
         if b <= a:
             continue
         zs = zv[a:b]
-        V = float(sumv[bi])
-        lo, hi = float(zs.min()), float(zs.min()) + 10.0
+        # 【坑·单位】vol 是 m³，下面 (水位-地面).sum() 是「米·格数」，两边差一个
+        # 格面积。不除面积，解出来的水位会高出十几倍（L2 里一度最大水深 13 m，
+        # 而且体积凭空多出来）。
+        V = float(sumv[bi]) / max(1e-9, cell_area)
+        # 【坑】上界写死 zs.min()+10 会让深坑（桥下、废矿坑、崖下）被截断在
+        # 10 m：解不出水位，多出来的水量凭空消失（L2 里 retained 一度比总产流
+        # 还大）。上界要按体积指数外扩。
+        lo = float(zs.min())
+        hi = lo + 1.0
+        for _ in range(24):
+            if float(np.maximum(0.0, hi - zs).sum()) >= V:
+                break
+            hi = lo + (hi - lo) * 2.0
         for _ in range(48):                     # 二分反解水位
             mid = 0.5 * (lo + hi)
             if float(np.maximum(0.0, mid - zs).sum()) * 1.0 > V:
@@ -377,6 +388,116 @@ def spread_ponding(z: np.ndarray, vol: np.ndarray, steps: int = 80, river_mask=N
     return depth
 
 
+# 管网排水能力按下垫面给（mm/h）：
+# 【坑】不能所有格子都给 30 —— 草地/林地下渗为主，管网覆盖的是硬化面；给草
+# 地也 30 会让郊区的水一路消失，退水曲线变成直线掉到 0。
+DRAIN_CLASS_MM_H = np.array([0.0, 30.0, 30.0, 5.0, 2.0, 3.0])
+
+
+def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area, vol_hour,
+            grid,
+            args, outdir):
+    """
+    L2 时间版：把 L1 的「稳态一次搬完」改成按 dt 步进。
+
+    每一步：上一刻水位体积 + 本步产流 → 扣管网 → 洼地容量内蓄住、满了溢流 →
+    按洼地反解水面。雨停之后 depot 里的水每步继续按管网能力外排，于是自然
+    出现「退水」曲线；出口格（河道/边界）进来的水直接出域。
+
+    返回 summary dict，并落盘 frames/*.u8（给 web 用的降采样深度场）。
+    """
+    h, w = z.shape
+    dt = float(args.dt)
+    n_rain = max(1, int(round(args.dur_h * 3600.0 / dt)))
+    tail = max(0, int(round(args.tail_h * 3600.0 / dt)))
+    frame_every = max(1, int(round(300.0 / dt)))
+
+    # 每个格子每步的管网排水体积（m³）
+    # mm/h -> 每步每格的排水体积（m3）：别忘了 /3600，否则 5 分钟一步会被当成
+    # 300 小时，排水能力放大 3600 倍，全城秒干（踩过）。
+    drain_step = ((DRAIN_CLASS_MM_H[lc_flow] / 1000.0) * (dt / 3600.0)) * cell_area
+
+    depth = np.zeros((h, w), dtype='float64')
+    ponded = np.zeros((h, w), dtype='float64')     # 已蓄住的体积（m³/格）
+    tau = float(getattr(args, 'tau_h', 3.0)) * 3600.0
+    decay = float(np.exp(-dt / tau))
+    frames = []
+    curve = []
+    total = {'rain': 0.0, 'drained': 0.0, 'discharged': 0.0, 'receded': 0.0}
+    os.makedirs(os.path.join(outdir, 'frames'), exist_ok=True)
+
+    def snap(t_s, tag):
+        """深度场降到 6 m（web 用），u8 量化：1/255 = 2 cm，上限 5 m。"""
+        d = depth
+        f = max(1, int(round(6.0 / args.res)))
+        hh, ww = (h // f) * f, (w // f) * f
+        if hh and ww:
+            d = d[:hh, :ww].reshape(hh // f, f, ww // f, f).mean(axis=(1, 3))
+        q = np.clip(d / 5.0, 0.0, 1.0) * 255.0
+        name = 'f%03d.u8' % len(frames)
+        step_out = float(args.res * f)
+        q.astype('uint8').tofile(os.path.join(outdir, 'frames', name))
+        frames.append({'file': name, 't_min': round(t_s / 60.0, 1),
+                       'cols': int(d.shape[1]), 'rows': int(d.shape[0]), 'step_m': step_out,
+                       'max_depth_m': round(float(depth.max()), 3),
+                       'wet_ha': round(float((depth > 0.15).sum()) * cell_area / 1e4, 2),
+                       'tag': tag})
+
+    t = 0.0
+    for k in range(n_rain + tail):
+        # 【坑】不能每步把"已蓄住的水"重新当产流灌回去再扣一遍管网：那样 30 mm/h
+        # 的排水能力会被乘上步数（36 步 × 5 min = 3 h），50 mm 的雨两小时就排干，
+        # 满城一滴不剩（第一版 L2 就是这样：retained 0）。正确拆法：
+        #   新雨 → 过管网（超能力部分才进洼地）
+        #   已蓄住的水 → 只按指数退水（雨水口过载/下渗），不再当新雨扣
+        if k < n_rain:
+            rain_vol = vol_hour.copy() * (dt / 3600.0)
+            total['rain'] += float(rain_vol.sum())
+        else:
+            rain_vol = None
+            if ponded.sum() * cell_area <= 1.0:
+                break
+
+        storage_left = np.maximum(0.0, storage - ponded)
+        if rain_vol is not None:
+            # 【坑·排水口径】route_accum 的 cap 是「水经过这一格就扣一次」，水沿着
+            # 流向走 k 格就扣 k 次，12 步 × 每格 2.5 mm 跑下来 50 mm 的雨全被排干
+            # （第一版：retained 0）。物理上雨水口只收**本格产流**，转输中的水不再
+            # 二次扣减。所以先在本格扣，再把净产流送进拓扑搬运（cap 置 0）。
+            net = np.maximum(0.0, rain_vol - drain_step)
+            total['drained'] += float((rain_vol - net).sum())
+            kept, held, drained2, discharged, leftover = route_accum(
+                net, recv, np.zeros_like(drain_step), outlet, storage_left)
+            total['drained'] += drained2
+            total['discharged'] += discharged
+            ponded = ponded + held
+        before = float(ponded.sum())
+        ponded = ponded * decay
+        total['receded'] += before - float(ponded.sum())
+        depth = level_basins(z, ponded, pit_mask, cell_area=cell_area)
+
+        if k % frame_every == 0 or (k == n_rain - 1) or                 (k >= n_rain and (k - n_rain) % frame_every == 0):
+            snap(t, 'rain' if k < n_rain else 'recede')
+        curve.append({'t_min': round(t / 60.0, 1),
+                      'max_depth_m': round(float(depth.max()), 3),
+                      'wet_ha': round(float((depth > 0.15).sum()) * cell_area / 1e4, 2),
+                      'retained_m3': round(float(depth.sum()) * cell_area)})
+        t += dt
+        if k % max(1, int(3600.0 / dt)) == 0 and k:
+            log('      t=%4.0f min  最大 %.2f m  积水 %.1f ha' %
+                (t / 60.0, depth.max(), (depth > 0.15).sum() * cell_area / 1e4))
+
+    snap(t, 'end')
+    meta = {'cols': frames[0]['cols'], 'rows': frames[0]['rows'],
+            'step_m': frames[0]['step_m'], 'scale_m': 5.0, 'dt_s': dt,
+            'x0': float(grid['x0']), 'y1': float(grid['y1']),
+            'rain_min': round(args.dur_h * 60.0, 1), 'frames': frames}
+    with open(os.path.join(outdir, 'frames', 'manifest.json'), 'w', encoding='utf-8') as f:
+        json.dump(meta, f, ensure_ascii=False, indent=1)
+    return {'depth_final': depth, 'frames': frames, 'curve': curve, 'total': total,
+            'meta': meta}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="简化排水模型 L1（产流×D8汇流×雨水口×下渗）")
     ap.add_argument("--res", type=int, default=2, help="计算分辨率（米），1/2/4")
@@ -390,6 +511,10 @@ def main() -> int:
     ap.add_argument("--drain-mm-h", type=float, default=DRAIN_CAP_MM_H,
                     help="管网设计排水强度 mm/h（默认 30，≈2 年一遇）")
     ap.add_argument("--out", default=OUT)
+    ap.add_argument("--l2", action="store_true", help="时间版：出 出水→积涝→退水 序列")
+    ap.add_argument("--dt", type=float, default=60.0, help="L2 时间步长（秒）")
+    ap.add_argument("--tail-h", type=float, default=2.0, help="L2 雨停后继续算多久（小时）")
+    ap.add_argument("--tau-h", type=float, default=3.0, help="L2 退水时间常数（小时，指数）")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -444,6 +569,59 @@ def main() -> int:
     drain_cap = np.where(DRAINS[lc_flow],
                          (args.drain_mm_h / 1000.0) * args.dur_h * cell_area, 0.0)
     outlet = (lc == 0) | edge_mask
+
+    if args.l2:
+        log("[4/6] L2 时间步：出水 → 积涝 → 退水")
+        vol_hour = (runoff_mm / 1000.0) * cell_area          # 每格每小时的产流体积
+        pit_mask = storage > 0
+        r = l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
+                    vol_hour, grid, args, args.out)
+        depth = r['depth_final']
+        wet = depth > 0.02
+        log("[6/6] 落盘 L2 序列 …")
+        summary = {
+            'mode': 'L2',
+            'grid': f'{w}×{h} @ {res} m',
+            'dt_s': args.dt, 'rain_mm': P_mm,
+            'runoff_m3': round(total_runoff),
+            'inlet_drained_m3': round(r['total']['drained']),
+            'discharged_m3': round(r['total']['discharged']),
+            'retained_m3': round(float(depth.sum()) * cell_area),
+            'max_depth_m': round(float(depth.max()), 3),
+            'cells_gt_15cm': int(wet.sum()),
+            'area_gt_15cm_m2': int(wet.sum()) * res * res,
+            'frames': len(r['frames']),
+            'curve': r['curve'][::max(1, len(r['curve']) // 40)],
+            'runtime_s': round(time.time() - t0, 1),
+        }
+        # 【坑】L2 分支一度只写 summary_l2.json，不写 params.json —— web 导出、
+    # 事后复盘都拿不到网格原点和降雨设定。现在两个分支都落 params.json。
+    meta = {
+        'grid': {'x0': float(grid['x0']), 'y1': float(grid['y1']), 'step_m': float(res),
+                 'cols': int(w), 'rows': int(h), 'layout': grid['layout']},
+        'vertical_datum': 'NAVD88',
+        'model': 'L2 时间步：产流 × D8 汇流 × 洼地蓄水 × 随步排水 + 退水',
+        'rain': {'p_mm_h': float(args.p_mm_h), 'duration_h': float(args.dur_h),
+                 'total_mm': float(P_mm)},
+        'river_level_m': None, 'river_level_mode': args.river_level,
+        'dt_s': float(args.dt), 'tail_h': float(args.tail_h),
+        'params': {'C_runoff': {str(k): float(v) for k, v in C.items()},
+                   'f_infil_mm_h': {str(k): (None if v == float('inf') else float(v))
+                                    for k, v in F.items()},
+                   'drainage': {'cap_mm_h': float(DRAIN_CAP_MM_H),
+                                'note': '管网设计排水强度，超过部分才积水'}},
+        'budget_m3': {'runoff': float(summary['runoff_m3']),
+                      'inlet_drained': float(summary['inlet_drained_m3']),
+                      'discharged': float(summary['discharged_m3']),
+                      'retained': float(summary['retained_m3'])},
+    }
+    with open(os.path.join(args.out, 'params.json'), 'w', encoding='utf-8') as f:
+        json.dump(meta, f, ensure_ascii=False, indent=1)
+    with open(os.path.join(args.out, 'summary_l2.json'), 'w', encoding='utf-8') as f:
+            json.dump(summary, f, ensure_ascii=False, indent=1)
+        log('完成：' + json.dumps({k: v for k, v in summary.items() if k != 'curve'},
+                                  ensure_ascii=False))
+        return 0
     vol_p, held, drained, discharged, leftover = route_accum(
         vol, recv, drain_cap, outlet, storage)
     log(f"      管网排掉 {drained:,.0f} m³；出域 {discharged:,.0f} m³；"

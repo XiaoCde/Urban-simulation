@@ -10,6 +10,10 @@
  */
 
 import * as THREE from 'three';
+import { createFloodLayer } from './flood.js';
+
+/** 积涝叠层（可选，数据缺失时保持 null） */
+let FLOOD = null;
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 import {
@@ -350,6 +354,28 @@ async function buildCity() {
     world.add(buildShrubField(TERRAIN, { count: 11000, seed: 20261024 }));
   } catch (e) {
     console.error('[trees] 草坪灌木失败：', e && (e.stack || e.message || e));
+  }
+
+  // L7：积涝叠层（tools/flood/simple_drainage.py 的 L2 帧序列）。
+  // 按 F 开/关；面板上能暂停、拖时间轴 —— 降雨段上涨，退水段回落。
+  // 数据在 assets/flood/，没有就安静关掉，不影响场景。
+  try {
+    FLOOD = createFloodLayer(TERRAIN, { base: '/assets/flood/' });
+    world.add(FLOOD.group);
+    FLOOD.bindHud();
+    FLOOD.startClock();
+    FLOOD.load().then(() => {
+      window.__flood = FLOOD;
+      console.log('[flood] 帧 ' + FLOOD.frames + ' 张就绪，按 F 打开');
+      // ?flood=1 直接打开并停在第一帧（截图/验收用）
+      if (/[?&]flood=1/.test(location.search)) { FLOOD.setVisible(true); FLOOD.showFrame(0); }
+    }).catch((err) => console.warn('[flood] 未启用：' + (err && err.message)));
+    addEventListener('keydown', (e) => {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      if (e.key === 'f' || e.key === 'F') FLOOD.toggle();
+    });
+  } catch (e) {
+    console.warn('[flood] 初始化失败：', e && (e.message || e));
   }
 
   // L6：行人（用户 m10520「我们先把人加进去」）。

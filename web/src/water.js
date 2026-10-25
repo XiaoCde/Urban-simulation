@@ -227,10 +227,69 @@ function surfaceY(body, x, z, T, lvl) {
   return lvl;
 }
 
+// 【河面藏在地形底下 —— 真水线遮罩】
+// water.json 的 outline 是「外扩到岸坡下面」的水面轮廓，不一定等于真出水范围：
+//   · bed.i16 没覆盖的地方（波托马克 224 ha 里 24%、Anacostia 一部分）：地形没被
+//     挖低，水面就埋进地面里——从上往下看不见，从下往上看（DoubleSide）却看得见
+//     一整条河挂在头顶。
+//   · bed 有值但比水面还高的地方（岸坡 ramp、Rock Creek 谷壁）：excavateTerrain
+//     只用 bed 往下挖、不往上填，地形保持原高，水面同样被埋。
+// 所以这里按「挖完以后地面到底比水位低不低」逐像素判一次，把水面裁到真出水格子上。
+// 1 m 的 DTM 与 6 m 的 bed 一起用，判据和渲染出来的地形完全一致。
+function buildWaterMask(W, T) {
+  const { cols, rows, x0, y1, step } = W;
+  const mask = new Uint8Array(cols * rows);
+  if (!T) { mask.fill(255); return mask; }
+  const north = y1;                       // planY：北边 y1，往南减
+  for (const b of W.bodies) {
+    const ring = b.outline || [];
+    if (ring.length < 3) continue;
+    const lvl = b.normal_water_level_m;
+    const follow = b.surface_mode === 'follow_terrain';
+    let ymin = 1e9, ymax = -1e9;
+    for (const p of ring) { if (p[1] < ymin) ymin = p[1]; if (p[1] > ymax) ymax = p[1]; }
+    const r0 = Math.max(0, Math.floor((north - ymax) / step) - 1);
+    const r1 = Math.min(rows - 1, Math.ceil((north - ymin) / step) + 1);
+    for (let r = r0; r <= r1; r++) {
+      const planY = north - (r + 0.5) * step;
+      // 扫描线求与多边形的交点，成对填格（比逐像素射线快两个数量级）
+      const xs = [];
+      for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {
+        const yi = ring[i][1], yj = ring[j][1];
+        if ((yi > planY) === (yj > planY)) continue;
+        xs.push(ring[i][0] + (planY - yi) / (yj - yi) * (ring[j][0] - ring[i][0]));
+      }
+      if (xs.length < 2) continue;
+      xs.sort((a, b2) => a - b2);
+      for (let k = 0; k + 1 < xs.length; k += 2) {
+        const c0 = Math.max(0, Math.ceil((xs[k] - x0) / step - 0.5));
+        const c1 = Math.min(cols - 1, Math.floor((xs[k + 1] - x0) / step - 0.5));
+        for (let c = c0; c <= c1; c++) {
+          const x = x0 + (c + 0.5) * step;
+          const z = -(north - (r + 0.5) * step);
+          const bz = W.sampleBed(x, z);
+          if (bz === null) continue;                    // 源数据里这里就不是水
+          const g = T.sampleHeight(x, z);
+          const h = Math.min(g, bz || g);               // excavateTerrain：只挖不填
+          if (follow || h < lvl - 0.02) mask[r * cols + c] = 255;
+        }
+      }
+    }
+  }
+  return mask;
+}
+
 export function buildWaterMesh(W, T) {
   if (!waterNrm) waterNrm = textureWaterNormal(256);
   const group = new THREE.Group();
   group.name = 'L1_water';
+
+  const maskData = buildWaterMask(W, T);
+  const maskTex = new THREE.DataTexture(maskData, W.cols, W.rows, THREE.RedFormat);
+  maskTex.minFilter = THREE.NearestFilter;
+  maskTex.magFilter = THREE.NearestFilter;
+  maskTex.needsUpdate = true;
+  W.maskTex = maskTex;
 
   const mat = new THREE.MeshStandardMaterial({
     color: 0x3a7c9e,
@@ -243,6 +302,27 @@ export function buildWaterMesh(W, T) {
     envMapIntensity: 1.65,
     side: THREE.DoubleSide,
   });
+
+  // 河面遮罩：见 loadWater 里的注释。UV 与 sampleBed 完全同一套换算。
+  mat.onBeforeCompile = (sh) => {
+    sh.uniforms.uBedMask = { value: W.maskTex };
+    sh.uniforms.uMaskO = { value: new THREE.Vector2(W.x0, W.y1) };
+    sh.uniforms.uMaskN = { value: new THREE.Vector2(W.cols, W.rows) };
+    sh.uniforms.uMaskStep = { value: W.step };
+    sh.vertexShader = sh.vertexShader
+      .replace('#include <common>',
+               '#include <common>\nvarying vec2 vMaskUV;\nuniform vec2 uMaskO;\nuniform vec2 uMaskN;\nuniform float uMaskStep;')
+      .replace('#include <begin_vertex>', `#include <begin_vertex>
+        vec4 mwp = modelMatrix * vec4(transformed, 1.0);
+        vMaskUV = vec2((mwp.x - uMaskO.x) / uMaskStep / uMaskN.x,
+                       (uMaskO.y + mwp.z) / uMaskStep / uMaskN.y);`);
+    sh.fragmentShader = sh.fragmentShader
+      .replace('#include <common>',
+               '#include <common>\nuniform sampler2D uBedMask;\nvarying vec2 vMaskUV;')
+      .replace('#include <clipping_planes_fragment>', `#include <clipping_planes_fragment>
+        if (vMaskUV.x < 0.0 || vMaskUV.x > 1.0 || vMaskUV.y < 0.0 || vMaskUV.y > 1.0) discard;
+        if (texture2D(uBedMask, vMaskUV).r < 0.5) discard;`);
+  };
 
   // 岸线湿滩带：内圈贴水面、外圈贴地面，颜色由水色过渡到湿泥，alpha 归零，
   // 这样没有一条可见的硬边。宽度逐点 1.5~2.5 m 抖动（任务书要 1~3 m 且无直线感）。
