@@ -94,6 +94,12 @@ export function buildTreeField(TR, opt = {}) {
   const capGeo = new THREE.IcosahedronGeometry(1, 0);
   capGeo.scale(0.42, 0.36, 0.42);
   capGeo.translate(0, 0.52, 0);
+  // 【第三瓣】只堆两层球时，树冠从侧面看是个「糖葫芦」，2 m 视高下很明显。
+  // 加一个偏心的侧瓣（仍是最低面数二十面体，多 20 面），轮廓才不规则、
+  // 像一丛叶子而不是几何体；3.4 万棵合计只多 68 万面。
+  const lobeGeo = new THREE.IcosahedronGeometry(1, 0);
+  lobeGeo.scale(0.46, 0.40, 0.46);
+  lobeGeo.translate(0.30, 0.16, -0.12);
 
   const coneGeo = new THREE.ConeGeometry(1, 1, 6, 1);
   coneGeo.translate(0, 0.5, 0);
@@ -147,7 +153,7 @@ export function buildTreeField(TR, opt = {}) {
 
   // ---- 阔叶树冠：一层 InstancedMesh，每棵两球（主体 + 顶帽），用同一几何
   //      合并成一个双球几何，省一个 mesh。
-  const crownAll = mergeTwo(crownGeo, capGeo);
+  const crownAll = mergeTwo(mergeTwo(crownGeo, capGeo), lobeGeo);
   const bl = new THREE.InstancedMesh(crownAll, leafMat, Math.max(1, broad.length));
   bl.name = 'trees_crown_broad';
   bl.castShadow = true;
@@ -158,7 +164,12 @@ export function buildTreeField(TR, opt = {}) {
     const seed = hash01(i);
     const r = crown * 0.5;                        // 冠幅的一半 = 半径
     pos.set(x, y + h * 0.62, z);
-    q.setFromAxisAngle(new THREE.Vector3(0, 1, 0), seed * 6.283);
+    // 【姿态随机】只绕 Y 轴转会看出「同一棵树复制了 3.4 万次」：加一点
+    // 水平轴倾角（±9°），冠幅重心就不齐，密林才有层次。
+    const tiltAxis = new THREE.Vector3(Math.cos(seed * 6.283), 0, Math.sin(seed * 6.283));
+    q.setFromAxisAngle(tiltAxis, (seed - 0.5) * 0.31);
+    const spin = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0, 1, 0), seed * 6.283);
+    q.multiply(spin);
     scl.set(r, r * (0.86 + 0.34 * seed), r);
     m4.compose(pos, q, scl);
     bl.setMatrixAt(k, m4);
