@@ -29,13 +29,15 @@ const FRAG = /* glsl */ `
   varying vec3 vWorld;
 
   void main() {
+    // 【可见性】阈值放到 1 cm：6 m 格子里只要有一处薄水膜就该露出来，
+    // 否则整层积水在城市尺度上几乎看不见（用户反馈"拖进度条几乎没变化"）。
     float d = texture2D(uDepth, vUv).r * uScale;      // 米
-    if (d < 0.02) discard;
+    if (d < 0.01) discard;
 
-    // 边缘要软：0.02~0.18 m 之间淡入，否则 6 m 栅格会显出方块边
-    float a = smoothstep(0.02, 0.18, d);
-    // 浅水几乎透明（只看得出「地上有层水」），深水才压得住地面
-    a *= mix(0.42, 0.88, smoothstep(0.05, 0.75, d)) * uAlpha;
+    // 边缘要软：1 cm~12 cm 之间淡入，否则 6 m 栅格会显出方块边
+    float a = smoothstep(0.01, 0.12, d);
+    // 浅水半透明：只盖住地面颜色；中深水把地面压住
+    a *= mix(0.55, 0.95, smoothstep(0.03, 0.45, d)) * uAlpha;
 
     vec3 shallow = vec3(0.60, 0.74, 0.78);            // 薄水膜：偏天光的灰青
     vec3 deep    = vec3(0.05, 0.15, 0.30);            // 齐膝深：靛

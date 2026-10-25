@@ -286,23 +286,26 @@ export function buildWaterMesh(W, T) {
 
   const maskData = buildWaterMask(W, T);
   const maskTex = new THREE.DataTexture(maskData, W.cols, W.rows, THREE.RedFormat);
-  maskTex.minFilter = THREE.NearestFilter;
-  maskTex.magFilter = THREE.NearestFilter;
+  // 线性过滤 + 着色器里按掩膜值淡出，把 6 m 栅格的硬水线软掉（Nearest 就是阶梯）
+  maskTex.minFilter = THREE.LinearFilter;
+  maskTex.magFilter = THREE.LinearFilter;
   maskTex.needsUpdate = true;
   W.maskTex = maskTex;
 
   const mat = new THREE.MeshStandardMaterial({
-    color: 0x3a7c9e,
+    color: 0x2e6d8c,
     normalMap: waterNrm,
-    normalScale: new THREE.Vector2(0.42, 0.42),
-    // 0.055 太亮：太阳正对时河面炸出一团死白（07 号截图），提到 0.13 收住
-    roughness: 0.13,
-    metalness: 0.10,
+    normalScale: new THREE.Vector2(1.05, 1.05),
+    // 0.055 太亮：太阳正对时河面炸出一团死白（07 号截图），0.12~0.13 收住
+    roughness: 0.26,
+    metalness: 0.08,
     transparent: true,
-    opacity: 0.965,
-    envMapIntensity: 1.65,
+    opacity: 0.95,
+    envMapIntensity: 0.72,
     side: THREE.DoubleSide,
   });
+  // 水面在动：法线贴图缓慢漂移，静止的河面一眼假
+  const uTime = { value: 0 };
 
   // 河面遮罩：见 loadWater 里的注释。UV 与 sampleBed 完全同一套换算。
   mat.onBeforeCompile = (sh) => {
@@ -310,19 +313,42 @@ export function buildWaterMesh(W, T) {
     sh.uniforms.uMaskO = { value: new THREE.Vector2(W.x0, W.y1) };
     sh.uniforms.uMaskN = { value: new THREE.Vector2(W.cols, W.rows) };
     sh.uniforms.uMaskStep = { value: W.step };
+    sh.uniforms.uTime = uTime;
     sh.vertexShader = sh.vertexShader
       .replace('#include <common>',
-               '#include <common>\nvarying vec2 vMaskUV;\nuniform vec2 uMaskO;\nuniform vec2 uMaskN;\nuniform float uMaskStep;')
+        '#include <common>\nattribute float aDepth;\nvarying float vDepth;\nuniform float uTime;\nvarying vec2 vMaskUV;\nuniform vec2 uMaskO;\nuniform vec2 uMaskN;\nuniform float uMaskStep;')
       .replace('#include <begin_vertex>', `#include <begin_vertex>
+        vDepth = aDepth;
         vec4 mwp = modelMatrix * vec4(transformed, 1.0);
         vMaskUV = vec2((mwp.x - uMaskO.x) / uMaskStep / uMaskN.x,
-                       (uMaskO.y + mwp.z) / uMaskStep / uMaskN.y);`);
+                       (uMaskO.y + mwp.z) / uMaskStep / uMaskN.y);`)
+      .replace('#include <uv_vertex>',
+        '#include <uv_vertex>\nvNormalMapUv += uTime * vec2(0.0027, 0.0013);');
     sh.fragmentShader = sh.fragmentShader
       .replace('#include <common>',
-               '#include <common>\nuniform sampler2D uBedMask;\nvarying vec2 vMaskUV;')
+        '#include <common>\nuniform sampler2D uBedMask;\nvarying vec2 vMaskUV;\nvarying float vDepth;')
       .replace('#include <clipping_planes_fragment>', `#include <clipping_planes_fragment>
         if (vMaskUV.x < 0.0 || vMaskUV.x > 1.0 || vMaskUV.y < 0.0 || vMaskUV.y > 1.0) discard;
-        if (texture2D(uBedMask, vMaskUV).r < 0.5) discard;`);
+        float msk = texture2D(uBedMask, vMaskUV).r;
+        if (msk < 0.18) discard;`)
+      // 颜色按水深分层：浅滩青绿、河心深靛。单色的水会被看成一条塑料带。
+      .replace('#include <color_fragment>', `#include <color_fragment>
+        float dep = clamp(vDepth / 3.2, 0.0, 1.0);
+        vec3 shallow = vec3(0.30, 0.47, 0.40);
+        vec3 midC = vec3(0.10, 0.25, 0.35);
+        vec3 deepC = vec3(0.035, 0.10, 0.20);
+        vec3 wc = mix(shallow, midC, smoothstep(0.0, 0.5, dep));
+        wc = mix(wc, deepC, smoothstep(0.5, 1.0, dep));
+        diffuseColor.rgb = wc;
+        // 岸线 6 m 软过渡：掩膜边缘半透明，避免一刀切的台阶水线
+        diffuseColor.a *= smoothstep(0.18, 0.72, msk);`)
+      // 掠射角补一层天光反射：从高处/低空看过去整片河面泛银蓝，这是"像水"的关键
+      .replace('#include <lights_fragment_end>', `#include <lights_fragment_end>
+        {
+          vec3 vv = normalize(vViewPosition);
+          float fres = pow(1.0 - clamp(dot(vv, normal), 0.0, 1.0), 3.0);
+          reflectedLight.directSpecular += vec3(0.30, 0.44, 0.64) * fres * 0.30;
+        }`);
   };
 
   // 岸线湿滩带：内圈贴水面、外圈贴地面，颜色由水色过渡到湿泥，alpha 归零，
@@ -357,6 +383,14 @@ export function buildWaterMesh(W, T) {
     p.needsUpdate = true;
     geo.computeVertexNormals();
     geo.computeBoundingSphere();
+
+    // 每顶点水深（水面 − 河床），着色器据此分浅滩/河心
+    const dep = new Float32Array(p.count);
+    for (let i = 0; i < p.count; i++) {
+      const bz = W.sampleBed ? W.sampleBed(p.getX(i), p.getZ(i)) : null;
+      dep[i] = bz === null ? 0.35 : Math.max(0.05, p.getY(i) - bz);
+    }
+    geo.setAttribute('aDepth', new THREE.BufferAttribute(dep, 1));
 
     const m = new THREE.Mesh(geo, mat);
     m.name = 'water_' + b.id;
@@ -476,6 +510,8 @@ export function buildWaterMesh(W, T) {
     group.add(fm);
     wetPx += n;
   }
+
+  group.userData.update = (t) => { uTime.value = t; };
 
   console.log(`[water] ${W.bodies.length} 水体, ${Math.round(tris)} 三角, ` +
               `湿滩带 ${wetPx} 点, 水面高程 ${W.levels.MSL_m ?? 0.046} m (NOAA MSL)`);

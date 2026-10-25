@@ -506,8 +506,12 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area, vol_hour,
         """深度场降到 6 m（web 用），u8 量化：1/255 = 2 cm，上限 5 m。"""
         f = max(1, int(round(6.0 / args.res)))
         hh, ww = (h // f) * f, (w // f) * f
-        d = depth[:hh, :ww].reshape(hh // f, f, ww // f, f).mean(axis=(1, 3))
-        q = np.clip(d / 5.0, 0.0, 1.0) * 255.0
+        # 【坑·可见性】原来用 mean 降采样：6×6 个 1 m 格里只有一角积 10 cm 水，
+        # 平均下来 1.4 cm，再被 web 的 2 cm 阈值丢掉 —— 页面上几乎看不出涨退水。
+        # 改成 max（取块内最深值），薄水膜也能显示；量化上限也从 5 m 收到 2 m，
+        # 8 bit 的精度从 2 cm 提到 0.8 cm。
+        d = depth[:hh, :ww].reshape(hh // f, f, ww // f, f).max(axis=(1, 3))
+        q = np.clip(d / 2.0, 0.0, 1.0) * 255.0
         name = "f%03d.u8" % len(frames)
         q.astype("uint8").tofile(os.path.join(outdir, "frames", name))
         frames.append({"file": name, "t_min": round(t_s / 60.0, 1),
@@ -577,7 +581,7 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area, vol_hour,
 
     snap(t, "end")
     meta = {"cols": frames[0]["cols"], "rows": frames[0]["rows"],
-            "step_m": frames[0]["step_m"], "scale_m": 5.0, "dt_s": dt,
+            "step_m": frames[0]["step_m"], "scale_m": 2.0, "dt_s": dt,
             "x0": float(grid["x0"]), "y1": float(grid["y1"]),
             "rain_min": round(args.dur_h * 60.0, 1), "frames": frames}
     with open(os.path.join(outdir, "frames", "manifest.json"), "w",
@@ -665,7 +669,13 @@ def main() -> int:
 
     if args.l2:
         log("[4/6] L2 时间步：出水 → 积涝 → 退水")
-        vol_hour = (runoff_mm / 1000.0) * cell_area          # 每格每小时的产流体积
+        # 【坑·历时】这里原来直接用整场产流 runoff_mm（里面已经乘过 dur_h），
+        # 再按 dt/3600 逐步灌 —— 1 h 的雨恰好对，2 h 的雨水量就成了 2 倍
+        # （total['rain'] = 2 × runoff，水体凭空多出一倍）。改成真正的「每小时产流率」：
+        # 每格每小时 = max(0, 小时雨强 − 小时下渗) × C。
+        vol_hour = ((np.maximum(0.0, args.p_mm_h - F_INFIL[lc_flow])
+                     * C_RUNOFF[lc_flow]) / 1000.0) * cell_area
+        vol_hour = np.where(lc_flow == 0, 0.0, vol_hour)
         pit_mask = storage > 0
         r = l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                     vol_hour, grid, args, args.out)

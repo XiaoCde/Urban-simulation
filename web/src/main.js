@@ -609,6 +609,10 @@ function animate() {
 
   if (WH_GROUND.fountain) updateFountain(WH_GROUND.fountain, dt);
 
+  // 水面法线缓慢漂移（氛围；静止的河面看着像塑料）
+  const wg = window.__waterGroup;
+  if (wg && wg.userData.update) wg.userData.update(elapsed);
+
   // L6 行人：状态机 + 动画（必须在相机更新之后，距离裁剪才准）
   if (PED) PED.update(dt, camera);
 
