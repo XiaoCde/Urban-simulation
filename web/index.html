@@ -43,6 +43,13 @@
   #flood b { font-size: 13px; letter-spacing: .06em; color: #bfe0ff; }
   #flTime { margin-left: auto; font-variant-numeric: tabular-nums; color: #8fb6dc; }
   #flRange { width: 100%; margin: 8px 0 6px; accent-color: #4b96e0; }
+  /* 图例：0 → 2 m 的深度渐变，和 flood.js 着色器同一套颜色 */
+  #flood .legend { display: flex; align-items: center; gap: 6px; margin-top: 4px;
+                   font-size: 10px; color: #7f9cba; }
+  #flood .legend i { flex: 1; height: 6px; border-radius: 3px;
+                     background: linear-gradient(90deg, rgba(153,189,199,.92) 0%,
+                                 rgba(95,150,190,.95) 40%, rgba(38,86,140,.96) 70%,
+                                 rgba(13,38,77,.97) 100%); }
   #flood button { padding: 3px 10px; border-radius: 6px; cursor: pointer;
                   background: rgba(28,46,68,.95); color: #cfe2f5;
                   border: 1px solid rgba(120,170,225,.4); }
@@ -92,6 +99,7 @@
 <div id="flood">
   <div class="row"><b>积涝</b><span id="flTime">t=0 min</span></div>
   <input id="flRange" type="range" min="0" max="0" value="0" step="1">
+  <div class="legend"><span>浅</span><i></i><span>深 2 m+</span></div>
   <div class="row">
     <button id="flPlay">播放</button>
     <button id="flClose">关闭</button>

@@ -295,8 +295,9 @@ export function buildWaterMesh(W, T) {
     color: 0x3a7c9e,
     normalMap: waterNrm,
     normalScale: new THREE.Vector2(0.42, 0.42),
-    roughness: 0.055,
-    metalness: 0.16,
+    // 0.055 太亮：太阳正对时河面炸出一团死白（07 号截图），提到 0.13 收住
+    roughness: 0.13,
+    metalness: 0.10,
     transparent: true,
     opacity: 0.965,
     envMapIntensity: 1.65,
