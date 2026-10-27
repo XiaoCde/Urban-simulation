@@ -22,6 +22,16 @@
   python tools/flood/simple_drainage.py --res 4 --p-mm-h 80      # 粗格粗算
   python tools/flood/simple_drainage.py --river-level design     # 用 1% 年遇水位（顶托）
 
+  # 时间版（L2）+ 长历时雨型
+  python tools/flood/simple_drainage.py --res 1 --l2 --p-mm-h 26 --dur-h 24 \\
+      --dt 900 --tail-h 18 --hyetograph pulse --frame-min 45 --out data/flood/sc_24h
+  python tools/flood/simple_drainage.py --res 1 --l2 --p-mm-h 18 --dur-h 72 \\
+      --dt 1800 --tail-h 24 --hyetograph pulse --frame-min 90 --out data/flood/sc_72h
+
+【雨型】--hyetograph 给的是时间形状（uniform/peak/pulse/front），
+以平均雨强 --p-mm-h 归一化；峰值段能到平均值的 3~4 倍，才会打穿 30 mm/h 的管网。
+长历时（24 h / 72 h）必须用非 uniform，否则均匀小雨根本打不穿管网、算出来没水。
+
 【已知边界】L1 是稳态水量平衡，不做时间演进、不做管网、不做潮位过程；
 算不出"某个雨水口倒灌"，也给不出退水曲线（那是 L2）。
 """
@@ -394,7 +404,7 @@ def spread_ponding(z: np.ndarray, vol: np.ndarray, steps: int = 80, river_mask=N
 DRAIN_CLASS_MM_H = np.array([0.0, 30.0, 30.0, 5.0, 2.0, 3.0])
 
 
-def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area, vol_hour,
+def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             grid, args, outdir):
     """
     L2 时间版：把 L1 的「稳态一次搬完」改成按 dt 步进。
@@ -418,16 +428,67 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area, vol_hour,
     dt = float(args.dt)
     n_rain = max(1, int(round(args.dur_h * 3600.0 / dt)))
     tail = max(0, int(round(args.tail_h * 3600.0 / dt)))
-    frame_every = max(1, int(round(300.0 / dt)))
+    # 落帧间隔：默认 5 min；长历时时按总时长自动放大，保证帧数不失控。
+    # 【注意】frame_every 的单位是「步」，不是秒 —— 长历时如果还用 300 s 一步的
+    # 步长去算，24 h 会出 288 帧，web 上 240 MB，加载器会卡死。
+    #
+    # 【坑，别只留自动那一条】改成「按总帧数反算」之后，`--l2` 的默认参数
+    # （dt=60 / dur 1 h / tail 2 h → 180 步）算出 frame_every=1，181 帧 ≈154 MB。
+    # 老代码是 `round(300/dt)=5` → 36 帧 ≈31 MB。所以这里**同时**保留 300 s 的
+    # 间隔下限：两边取大，短工况回到老行为，长工况靠自动放大压住帧数。
+    if getattr(args, "frame_min", 0) and args.frame_min > 0:
+        frame_every = max(1, int(round(args.frame_min * 60.0 / dt)))
+    else:
+        n_total = n_rain + tail
+        by_budget = int(round(n_total / max(1, int(args.max_frames))))
+        by_5min = int(round(300.0 / dt))
+        frame_every = max(1, by_budget, by_5min)
 
     # 每个格子每步的管网排水体积（m3）：别忘了 /3600，否则 5 分钟一步会被当成
     # 300 小时，排水能力放大 3600 倍，全城秒干（踩过）。
     drain_step = ((DRAIN_CLASS_MM_H[lc_flow] / 1000.0) * (dt / 3600.0)) * cell_area
 
+    # ---- 雨型（时间形状函数）----
+    # 【为什么必须归一化到 1】`--p-mm-h` 是**整场平均雨强**，shape 只是一个
+    # 无量纲的时间轮廓。若不归一化，峰值型雨型的**总量**会变成平均雨强的
+    # 若干倍，闭合差那本账就对不上了。
+    rain_shape = None
+    kind = str(getattr(args, "hyetograph", "uniform") or "uniform")
+    if kind != "uniform" and n_rain > 1:
+        u = np.arange(n_rain, dtype="float64") / (n_rain - 1)   # 0..1
+        if kind == "peak":
+            # 单峰：长时间小雨 → 一段强降雨 → 缓退
+            s = np.interp(u, [0.0, 0.55, 0.67, 1.0], [0.08, 2.6, 2.6, 0.06])
+        elif kind == "pulse":
+            # 双脉冲：真实长历时「下下停停」，两段对流单体各 ~2 h
+            s = np.interp(u, [0.0, 0.10, 0.22, 0.34, 0.46, 0.55, 0.62, 0.78, 1.0],
+                          [0.06, 0.50, 2.80, 0.12, 0.08, 2.20, 3.80, 0.10, 0.03])
+        elif kind == "front":
+            # 冷锋：先小后大，结尾陡收（最容易致灾的一类）
+            s = np.interp(u, [0.0, 0.30, 0.62, 0.85, 1.0], [0.05, 0.25, 1.20, 3.60, 0.90])
+        else:
+            s = np.ones(n_rain, dtype="float64")
+        # 归一化：∫shape = n_rain，保证整场雨量 = p_mm_h × dur_h
+        m = float(s.mean())
+        rain_shape = s / (m if m > 1e-9 else 1.0)
+
     zf = z.ravel().astype("float64")
     recv_f = recv.ravel().astype("int64")
     st_f = storage.ravel().astype("float64")
-    vol_f = vol_hour.ravel().astype("float64")
+    # 【坑·下渗必须逐时刻扣】原来传进来的是 `vol_hour = max(0, p − F)·C·A`，
+    # 即「按平均雨强扣完下渗再乘时间形状」—— 等于假设下渗也随时程缩放。
+    # 后果一：p=18 mm/h 的 72 h 工况，林地 F_INFIL=20 > 18，林地那一类的
+    #         vol_hour 恒为 0，整场不产一滴水（而 pulse 峰值 3.58×18≈64 mm/h
+    #         早就把 20 mm/h 的下渗打穿了）。
+    # 后果二：雨强越大，下渗被高估得越多（按峰值雨强去扣，等于假设地表
+    #         能一直以最大速率吸水），硬化面的产流被系统性低估。
+    # 正确口径：**逐格、逐时刻**算有效雨强 `max(0, 本步雨强 − F)`，
+    # 下渗是场地属性（mm/h），不能跟着雨型缩放。
+    # 所以这里只预存两个**与时间无关**的因子，真正的乘法在循环里做：
+    #   runoff_gain = C / 1000 · A   （把 mm/h 换成 m³/h）
+    #   infil_mm_h  = F[类别]        （mm/h）
+    runoff_gain = (C_RUNOFF[lc_flow] / 1000.0 * cell_area).ravel()        # (m³/h) 每 mm/h
+    infil_mm_h = F_INFIL[lc_flow].astype("float64").ravel()              # mm/h 每格
     drain_f = drain_step.ravel().astype("float64")
 
     # ---- 开场一次性：给每格算「水流终点」 ----
@@ -528,7 +589,18 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area, vol_hour,
         #   新雨 → 先扣管网（超能力部分才进洼地）
         #   已蓄住的水 → 只按指数退水（雨水口过载/下渗），不再当新雨扣
         if k < n_rain:
-            rain_vol = vol_f * (dt / 3600.0)
+            # 【雨型】长历时均匀雨强算不出内涝：25 mm/h 的雨连 30 mm/h 的管网都
+            # 打不穿，24 h 下来最大水深只有 0.15 m。真实长历时暴雨是「峰值型」：
+            # 前几天小雨润湿，中间几小时 50~70 mm/h 把雨水口打爆，后面再慢慢退。
+            # 所以这里乘一个时间形状函数 shape(k)：
+            #   uniform  全程 1.0（等于老的均匀雨强）
+            #   peak     前 55% 线性升到峰值，峰值维持 12%，后 33% 线性回落
+            #   pulse    前 45% 只有 0.25，中间 20% 冲到峰值，后 35% 落回 0.25
+            shape = rain_shape[k] if rain_shape is not None else 1.0
+            # 逐格逐时刻：有效雨强 = max(0, 本步雨强 − 下渗率)，再乘 C·A
+            p_now = args.p_mm_h * shape
+            eff_mm_h = np.maximum(0.0, p_now - infil_mm_h)
+            rain_vol = eff_mm_h * runoff_gain * (dt / 3600.0)
             total["rain"] += float(rain_vol.sum())
             net = np.maximum(0.0, rain_vol - drain_f)
             total["drained"] += float((rain_vol - net).sum())
@@ -608,6 +680,22 @@ def main() -> int:
     ap.add_argument("--dt", type=float, default=60.0, help="L2 时间步长（秒）")
     ap.add_argument("--tail-h", type=float, default=2.0, help="L2 雨停后继续算多久（小时）")
     ap.add_argument("--tau-h", type=float, default=3.0, help="L2 退水时间常数（小时，指数）")
+    # 【为什么要有 --frame-min】帧间隔原来写死 300 s。几小时的工况没问题，
+    # 但 24 h / 72 h 这种长历时会出 300~900 帧 × 0.85 MB = 几百 MB，
+    # 既跑不完也传不动。改成按「总时长自动定间隔」，帧数落在 60~120 之间。
+    ap.add_argument("--frame-min", type=float, default=0.0,
+                    help="L2 落帧间隔（分钟）。0 = 自动（让总帧数约 90）")
+    ap.add_argument("--max-frames", type=int, default=140, help="自动间隔时的帧数上限")
+    # 【雨型】长历时只拉时长、雨强不变，模型算不出内涝（25 mm/h 打不穿 30 mm/h
+    # 的管网）。真实长历时是峰值型的，所以给一个时间形状：
+    #   uniform 均匀（默认，等于老行为）
+    #   peak    单峰：缓升 → 峰 → 缓退
+    #   pulse   双脉冲：下下停停（最像真实长历时）
+    #   front   冷锋：先小后大，结尾陡收
+    # 形状函数以「平均雨强 = --p-mm-h」归一化，整场总量仍 = p_mm_h × dur_h。
+    ap.add_argument("--hyetograph", default="uniform",
+                    choices=["uniform", "peak", "pulse", "front"],
+                    help="降雨时间形状（default uniform）")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -671,22 +759,32 @@ def main() -> int:
         log("[4/6] L2 时间步：出水 → 积涝 → 退水")
         # 【坑·历时】这里原来直接用整场产流 runoff_mm（里面已经乘过 dur_h），
         # 再按 dt/3600 逐步灌 —— 1 h 的雨恰好对，2 h 的雨水量就成了 2 倍
-        # （total['rain'] = 2 × runoff，水体凭空多出一倍）。改成真正的「每小时产流率」：
-        # 每格每小时 = max(0, 小时雨强 − 小时下渗) × C。
-        vol_hour = ((np.maximum(0.0, args.p_mm_h - F_INFIL[lc_flow])
-                     * C_RUNOFF[lc_flow]) / 1000.0) * cell_area
-        vol_hour = np.where(lc_flow == 0, 0.0, vol_hour)
+        # （total['rain'] = 2 × runoff，水体凭空多出一倍）。
+        # 现在产流率在 l2_loop 里逐格逐时刻算（见那里的「下渗必须逐时刻扣」），
+        # 这里只把「静态地形量」传进去。
         pit_mask = storage > 0
         r = l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
-                    vol_hour, grid, args, args.out)
+                    grid, args, args.out)
         depth = r['depth_final']
-        wet = depth > 0.02
+        # 【必须用实测产流，不能用上面那个 P_mm 口径】上面 `total_runoff` 是按
+        # 「平均雨强 − 下渗」算的整场产流；峰值型雨型下 L2 逐时刻积出的水量
+        # 与之不等（下渗是常率，小雨段被扣光、峰值段打穿，净效果是产流偏多）。
+        # 记账口径只有一套：`runoff_m3` ≡ 逐时刻积分量，闭合差才对得上。
+        rain_total = float(r['total']['rain'])
         log("[6/6] 落盘 L2 序列 …")
+        # 【坑·口径】`depth` 是**退水末尾**的那一帧，不是峰值。原来把它的
+        # max 和 >2 cm 格数直接写成 `max_depth_m` / `cells_gt_15cm`，于是
+        # 24 h 工况明明淹了 95 ha、峰值 8.6 m，报表里却是 0.54 m / 1961 格，
+        # 看的人会以为「长历时雨反而没积水」。峰值得从 curve 里取。
+        _peak = max(r['curve'], key=lambda q: q['wet_ha']) if r['curve'] else {}
+        curve_ha = [q['wet_ha'] for q in r['curve']] or [0]
+        curve_dmax = [q['max_depth_m'] for q in r['curve']] or [0]
         summary = {
             'mode': 'L2',
             'grid': f'{w}×{h} @ {res} m',
             'dt_s': args.dt, 'rain_mm': P_mm,
-            'runoff_m3': round(total_runoff),
+            'hyetograph': str(getattr(args, 'hyetograph', 'uniform')),
+            'runoff_m3': round(rain_total),
             'inlet_drained_m3': round(r['total']['drained']),
             'discharged_m3': round(r['total']['discharged']),
             'retained_m3': round(float(depth.sum()) * cell_area),
@@ -694,9 +792,14 @@ def main() -> int:
             'budget_closed': round(r['total']['drained'] + r['total']['discharged']
                                    + r['total']['receded']
                                    + float(depth.sum()) * cell_area, 1),
-            'max_depth_m': round(float(depth.max()), 3),
-            'cells_gt_15cm': int(wet.sum()),
-            'area_gt_15cm_m2': int(wet.sum()) * res * res,
+            # 峰值（全序列最大）：这两个才是给人看的「这场雨淹多大」
+            'peak_wet_ha': round(max(curve_ha), 2),
+            'peak_wet_m2': round(max(curve_ha) * 1e4),
+            'peak_t_min': _peak.get('t_min'),
+            'peak_max_depth_m': round(max(curve_dmax), 3),
+            # 末态（退水末尾）：水面基本落回坑里，只说明「退干净了没有」
+            'final_max_depth_m': round(float(depth.max()), 3),
+            'final_wet_cells': int((depth > 0.15).sum()),
             'frames': len(r['frames']),
             'curve': r['curve'][::max(1, len(r['curve']) // 40)],
             'runtime_s': round(time.time() - t0, 1),
@@ -717,8 +820,10 @@ def main() -> int:
                        'f_infil_mm_h': {str(k): (None if v == float('inf') else float(v))
                                         for k, v in enumerate(F_INFIL)},
                        'drainage': {'cap_mm_h': float(args.drain_mm_h),
-                                    'note': '管网设计排水强度，超过部分才积水'}},
-            'budget_m3': {'runoff': float(total_runoff),
+                                    'note': '管网设计排水强度，超过部分才积水'},
+                       'hyetograph': str(getattr(args, 'hyetograph', 'uniform'))},
+            # 记账口径以 L2 逐时刻积分量为准（见上面 rain_total 的注释）
+            'budget_m3': {'runoff': float(rain_total),
                           'inlet_drained': float(r['total']['drained']),
                           'discharged': float(r['total']['discharged']),
                           'retained': float(depth.sum()) * cell_area},

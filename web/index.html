@@ -55,6 +55,12 @@
                   border: 1px solid rgba(120,170,225,.4); }
   #flood button:hover { background: rgba(40,70,105,.95); color: #fff; }
   #flood .hint { margin-left: auto; color: #6f8aa6; }
+  #flood .lbl { color: #8fb6dc; }
+  #flood select { flex: 1; padding: 2px 4px; border-radius: 6px; cursor: pointer;
+                  background: rgba(28,46,68,.95); color: #cfe2f5;
+                  border: 1px solid rgba(120,170,225,.4);
+                  font: inherit; }
+  #flood select:hover { background: rgba(40,70,105,.95); color: #fff; }
   #views .t { color: #6b7f96; font-size: 11px; letter-spacing: .1em; margin-bottom: 1px; }
   #loading {
     position: fixed; inset: 0; z-index: 20;
@@ -98,6 +104,16 @@
 <!-- 积涝叠层：按 F 打开。时间轴从降雨到退水，水位会自己退下去。 -->
 <div id="flood">
   <div class="row"><b>积涝</b><span id="flTime">t=0 min</span></div>
+  <div class="row" style="margin-top:6px">
+    <span class="lbl">暴雨时长</span>
+    <select id="flCase">
+      <option value="">2 h 短历时（默认）</option>
+      <option value="sc_6h">6 h · 40 mm/h</option>
+      <option value="sc_12h">12 h · 32 mm/h</option>
+      <option value="sc_24h">24 h · 26 mm/h</option>
+      <option value="sc_72h">72 h · 18 mm/h</option>
+    </select>
+  </div>
   <input id="flRange" type="range" min="0" max="0" value="0" step="1">
   <div class="legend"><span>浅</span><i></i><span>深 2 m+</span></div>
   <div class="row">

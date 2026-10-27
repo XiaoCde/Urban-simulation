@@ -869,6 +869,75 @@ function roofRise(X, Z, n) {
   return Math.min(4.5, Math.max(1.1, 0.42 * minSide * 0.5));
 }
 
+/**
+ * 屋面形态（与 buildBuildingMesh 里第 639 行那段判据**必须保持一致**）。
+ * 抽出来是为了让「行人站房顶」和「画出来的屋顶」用同一套规则。
+ */
+function roofKindOf(bd, X, Z, topY, baseY) {
+  const n = bd.vc;
+  let kind = 'flat';
+  if (n === 4) {
+    const e0 = edgeLen(X, Z, 0), e1 = edgeLen(X, Z, 1);
+    if (e0 >= 2.5 && e1 >= 2.5) {
+      const idNum = Number(bd.id.slice(-6)) || 7;
+      kind = roofKind(bd.function || 'yes', topY - baseY, Math.min(e0, e1), hash2(idNum + 3313));
+    }
+  }
+  const lm = LANDMARK[bd.id];
+  if (lm) kind = lm.kind;
+  return kind;
+}
+
+/**
+ * 屋顶**可站立**高度（米，NAVD88）—— 不是檐口高度。
+ *
+ * 【为什么需要这个函数】`buildings.mesh` 的 `top_y` 是**檐口**高程，而
+ * `buildBuildingMesh` 会在这之上再长出屋面：双坡/四坡的屋脊比檐口高
+ * `min(4.5, max(1.1, 0.21·La, 0.42·Lb·0.5))`，折坡高 `min(2.2, 0.22H)`。
+ * 直接拿 top_y 当站立高度，人会被整个埋进屋面实体里（实测 15,119 个屋顶
+ * 候选里约 72% 是坡屋顶/折坡/攒尖，全都会隐形）。这里返回人**脚底**该放的 y。
+ */
+export function roofSurfaceY(bd, verts) {
+  const n = bd.vc, v0 = bd.v0;
+  if (!(n >= 3)) return null;
+  const X = new Array(n), Z = new Array(n);
+  let topY = -Infinity, baseY = Infinity;
+  for (let k = 0; k < n; k++) {
+    const si = (v0 + k) * 4;
+    X[k] = verts[si];
+    Z[k] = verts[si + 1];          // 导出时已经是 three 的 z
+    if (verts[si + 2] > topY) topY = verts[si + 2];
+    if (verts[si + 3] < baseY) baseY = verts[si + 3];
+  }
+  if (!Number.isFinite(topY) || !Number.isFinite(baseY)) return null;
+  const H = topY - baseY;
+  const kind = roofKindOf(bd, X, Z, topY, baseY);
+  switch (kind) {
+    case 'gable':
+    case 'hip':
+    case 'pyramid': {
+      // 屋脊在轮廓中心上方（坡屋顶的人站屋脊上），与 gableHip 的 rise 同式
+      const e0 = edgeLen(X, Z, 0), e1 = edgeLen(X, Z, 1);
+      const La = Math.max(e0, e1), Lb = Math.min(e0, e1);
+      return topY + Math.min(4.5, Math.max(1.1, 0.21 * La, 0.42 * Lb * 0.5));
+    }
+    case 'mansard':
+      // 折坡：陡坡带顶端 `yTop` 上有平面盖，人站盖子上
+      return topY + Math.min(2.2, 0.22 * H);
+    case 'dome':
+    case 'spire':
+      // 穹顶/尖塔：先有一圈女儿墙 + 屋面盖板，穹顶坐在盖板之上 → 站盖板
+      return topY + (H >= 8 ? 0.52 : 0.36) + 0.03;
+    case 'pyramidion':
+      // 方尖碑压顶：锥面从 topY 起，能站的是锥底那一圈平台
+      return topY + 0.02;
+    default: {
+      // 平顶：平台面在 topY+0.03，女儿墙挡在脚踝以上（人不该站墙顶上）
+      return topY + 0.03;
+    }
+  }
+}
+
 function edgeLen(X, Z, k) {
   const n = X.length;
   const k1 = (k + 1) % n;

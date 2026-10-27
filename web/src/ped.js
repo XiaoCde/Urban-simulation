@@ -29,6 +29,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
+import { roofSurfaceY } from './terrain.js';
 
 // ---------------------------------------------------------------- 常量
 const TARGET_H_MALE = 1.82;     // 男性身高（米）
@@ -41,6 +42,20 @@ const MIXER_LOD_DIST = 70;
 const CELL_PED = 4.0;           // 人-人分离的空间哈希格
 const LOOK_AHEAD = 2.6;         // 静态障碍探测距离（米，"差几米就掉头"）
 const PED_AVOID = 3.2;          // 前方多远算被人挡
+
+// ---------------------------------------------------------------- 积水避险（2026-10-26）
+// 用户要求：「让人对积水有反应，可以自主前往高处未有积水的地方，比如高地、高楼
+//          （不用真的进去，站在房顶就表示进入高楼）」。
+// 做法：人脚下的水深 ≥ FLEE_DEPTH 就切换成『逃难』——离开步行网直走最近的避难所；
+//      避难所只有两类，房顶（站到上表面）和地势高点（walknet 上高程靠前的点）。
+//      走到就转入『躲着』并停住，水退了再回步行网继续走。
+const FLEE_DEPTH = 0.12;        // 米。12 cm 齐踝，普通人不会继续走
+const FLEE_SPEED = 3.3;         // 逃难速度（米/秒，接近快跑）
+const FLEE_TURN_IN = 0.55;      // 每帧朝目标转多少（0..1，越大越急）
+const REFUGE_MAX = 620;         // 最近避难所超过这个距离就不找了（不现实）
+const REFUGE_TRIES = 6;         // 直线被楼挡住时最多再换几个候选
+const SHELTER_CALM = 8.0;       // 水退干净这么久之后才敢回街上（秒）
+const HIGH_Q = 0.80;            // 「高地」定义：walknet 高程前 20% 的点
 
 // ---------------------------------------------------------------- 确定性随机
 function mulberry32(a) {
@@ -228,28 +243,48 @@ export function nextState(st, obs) {
  * 把 21,943 栋楼的真实轮廓做成 24 m 空间哈希，用于「这个点能不能站」。
  * 用 buildings.json 的 v0/vc + buildings.mesh 顶点（stride 4: x, z, top, base），
  * 不用 bbox 近似 —— 细长的楼用正方形近似会把半条街堵死。
+ *
+ * 顺带产出「屋顶避难所」清单（2026-10-26 加的积水避险）：
+ * 只收 height_m >= 6 且面积 >= 80 m² 的楼，因为用户要的是「站房顶表示进了高楼」，
+ * 低矮的棚子站上去也不像躲水。
  */
 function buildBlocker(B) {
   const CELL = 24;
   const grid = new Map();
   const kk = (cx, cz) => cx * 73856093 ^ cz * 19349663;
-  const polys = [];   // {pts:[[x,z]...], x0,x1,z0,z1}
+  const polys = [];   // {pts:[[x,z]...], x0,x1,z0,z1,top}
+  const roofs = [];   // {x,z,top,area}  —— 屋顶避难所
   const V = B.verts, meta = B.meta;
 
   for (const b of B.buildings) {
     if (!(b.height_m > 2.0)) continue;      // 台阶/平台不算障碍
     const v0 = b.v0, vc = b.vc || 4;
     const pts = [];
+    let topY = -Infinity;
     for (let i = 0; i < vc; i++) {
       const o = (v0 + i) * 4;
       pts.push([V[o], V[o + 1]]);           // x, z 已经是 three 坐标
+      if (V[o + 2] > topY) topY = V[o + 2];
     }
     let x0 = Infinity, x1 = -Infinity, z0 = Infinity, z1 = -Infinity;
     for (const [x, z] of pts) {
       if (x < x0) x0 = x; if (x > x1) x1 = x;
       if (z < z0) z0 = z; if (z > z1) z1 = z;
     }
-    polys.push({ pts, x0, x1, z0, z1 });
+    polys.push({ pts, x0, x1, z0, z1, top: topY });
+    if (b.height_m >= 6 && (b.area_m2 || 0) >= 80 && Number.isFinite(topY)) {
+      const cx = (x0 + x1) * 0.5, cz = (z0 + z1) * 0.5;
+      // 屋顶中心必须落在轮廓里（凹形楼用 bbox 中心可能掉到街上）
+      //
+      // 【踩过的坑】这里第一版直接把 `topY`（檐口高程）当站立高度，
+      // 结果 15,119 个屋顶候选里约 72% 是坡屋顶/折坡/攒尖 —— 人站到檐口
+      // 高度上，整个人被长出来的屋面实体埋掉，肉眼一只都看不见。
+      // 统一交给 terrain.js 的 roofSurfaceY 算「人脚底该放在哪个 y」。
+      if (inPoly(pts, cx, cz)) {
+        const sy = roofSurfaceY(b, V);
+        roofs.push({ x: cx, z: cz, top: Number.isFinite(sy) ? sy : topY, area: b.area_m2 || 0 });
+      }
+    }
     const pi = polys.length - 1;
     for (let cx = Math.floor(x0 / CELL); cx <= Math.floor(x1 / CELL); cx++) {
       for (let cz = Math.floor(z0 / CELL); cz <= Math.floor(z1 / CELL); cz++) {
@@ -303,6 +338,7 @@ function buildBlocker(B) {
       return false;
     },
     count: polys.length,
+    roofs,
   };
 }
 
@@ -346,6 +382,157 @@ export function buildPedestrians(assets, opt = {}) {
     if (!bad) usable.push(ci);
   }
   if (!usable.length) throw new Error('没有可走的步行链（walknet 数据异常）');
+
+  // ---------------------------------------------------------------- 避难所索引
+  // 【积水避险】2026-10-26 按用户要求新增：
+  //   「让人对积水有反应，可以自主前往高处未有积水的地方，比如高地、高楼
+  //    （不用真的进去，站在房顶就表示进入高楼）」。
+  // 两类避难所：
+  //   ① 屋顶（kind=1）：height>=6 m、面积>=80 m² 的楼，站位取轮廓中心、高度取顶面。
+  //      人到楼下墙边就算「进去了」，直接站上屋顶（不做楼梯/电梯）。
+  //   ② 高地（kind=0）：把可行走网按 24 m 采样，取高程前 20%（HIGH_Q）的点。
+  //      这样「高地」是真实抬高的街区（国会山、山丘公园），不是凭空造的点。
+  const refuges = [];
+  for (const r of (blocker.roofs || [])) refuges.push({ x: r.x, z: r.z, y: r.top, kind: 1 });
+  {
+    const _sp = new THREE.Vector3();
+    const samples = [];
+    for (const ci of usable) {
+      const c = G.chains[ci];
+      const n = Math.max(1, Math.floor(c.len / 24));
+      for (let i = 0; i <= n; i++) {
+        pointAt(c, Math.min(c.len, i * 24), _sp);
+        samples.push([_sp.x, _sp.z, groundAt(_sp.x, _sp.z)]);
+      }
+    }
+    samples.sort((a, b) => b[2] - a[2]);
+    const take = Math.min(9000, Math.floor(samples.length * (1 - HIGH_Q)));
+    for (let i = 0; i < take; i++) {
+      const [sx, sz, sy] = samples[i];
+      refuges.push({ x: sx, z: sz, y: sy, kind: 0 });
+    }
+  }
+
+  // 避难所空间索引：150 m 一格，查询时一圈圈外扩。
+  const RC = 150;
+  const rGrid = new Map();
+  const rk = (cx, cz) => cx * 73856093 ^ cz * 19349663;
+  for (let i = 0; i < refuges.length; i++) {
+    const R = refuges[i];
+    const k = rk(Math.floor(R.x / RC), Math.floor(R.z / RC));
+    let a = rGrid.get(k); if (!a) rGrid.set(k, (a = []));
+    a.push(i);
+  }
+
+  /** 直线可达性：起点到终点每 4 m 抽一检。末段允许穿墙（那是「进楼」）。 */
+  function lineClear(x0, z0, x1, z1, allowWallTail) {
+    const dx = x1 - x0, dz = z1 - z0;
+    const L = Math.hypot(dx, dz);
+    if (L < 1e-3) return true;
+    const n = Math.max(1, Math.ceil(L / 4));
+    for (let i = 1; i <= n; i++) {
+      const t = i / n;
+      const px = x0 + dx * t, pz = z0 + dz * t;
+      if (!inBounds(px, pz)) return false;
+      if (L * (1 - t) < allowWallTail) continue;   // 最后 allowWallTail 米不判墙
+      if (blocker.blocked(px, pz, 0.25)) return false;
+    }
+    return true;
+  }
+
+  /** 找离 (x,z) 最近且直线可达的避难所；avoid 用来排除刚失败的那个。 */
+  function findRefuge(x, z, avoid) {
+    const cand = [];
+    const c0x = Math.floor(x / RC), c0z = Math.floor(z / RC);
+    const maxRing = Math.ceil(REFUGE_MAX / RC) + 1;
+    for (let ring = 0; ring <= maxRing; ring++) {
+      // 已经攒够 24 个候选就不用再外扩（近的优先，够挑了）
+      if (cand.length >= 24) break;
+      for (let i = -ring; i <= ring; i++) {
+        for (let j = -ring; j <= ring; j++) {
+          if (ring > 0 && Math.abs(i) !== ring && Math.abs(j) !== ring) continue;
+          const a = rGrid.get(rk(c0x + i, c0z + j));
+          if (!a) continue;
+          for (const ri of a) {
+            const R = refuges[ri];
+            if (avoid && R === avoid) continue;
+            const d = Math.hypot(R.x - x, R.z - z);
+            if (d > REFUGE_MAX) continue;
+            cand.push([d, R]);
+          }
+        }
+      }
+    }
+    if (!cand.length) return null;
+    cand.sort((a, b) => a[0] - b[0]);
+    const tries = Math.min(REFUGE_TRIES, cand.length);
+    for (let i = 0; i < tries; i++) {
+      const [d, R] = cand[i];
+      if (lineClear(x, z, R.x, R.z, R.kind === 1 ? 9 : 0)) return R;
+      void d;
+    }
+    // 全都不可达：退一步，要最近的屋顶（哪怕穿墙，至少有个去处）
+    for (let i = 0; i < cand.length; i++) if (cand[i][1].kind === 1) return cand[i][1];
+    return null;
+  }
+
+  // 链索引：水退后把人接回步行网用（60 m 一格）。每条链的**每个顶点**都登记，
+  // 否则 200 m 的长街只在格子里留一个中点，回网时会跳到隔壁街。
+  const CC = 60;
+  const cGrid = new Map();
+  const ck = (cx, cz) => cx * 73856093 ^ cz * 19349663;
+  for (const ci of usable) {
+    const c = G.chains[ci];
+    const seen = new Set();
+    for (const p of c.pts) {
+      const cx = Math.floor(p.x / CC), cz = Math.floor(p.z / CC);
+      const k = ck(cx, cz);
+      if (seen.has(k)) continue;
+      seen.add(k);
+      let a = cGrid.get(k); if (!a) cGrid.set(k, (a = []));
+      a.push(ci);
+    }
+  }
+  /**
+   * 找最近的步行链，并给出该链上离 (x,z) 最近的弧长 —— 水退后把人原地接回网。
+   *
+   * 【为什么带 dInfo】审查发现的死循环：`updateFlee` 判定「水退了」用的是
+   * **避难所位置**的水深，但 `rejoinNet` 只按几何找最近链。如果最近的那条链
+   * 还泡在 12 cm 深的水里，人一落地下一帧就又开始逃 —— 于是「跑 2.4 m →
+   * 爬 1.2 s → 等 8 s → 回网 → 再逃」无限循环，远处看起来是人原地抽搐。
+   * 所以这里按「干」优先挑落点，一个干的都没有就返回 null，让调用方继续躲。
+   */
+  function nearestChain(x, z, dInfo) {
+    let wetBest = null, wetBestD = Infinity;
+    for (let ring = 0; ring <= 4; ring++) {
+      let best = -1, bestS = 0, bestD = Infinity;
+      const c0x = Math.floor(x / CC), c0z = Math.floor(z / CC);
+      for (let i = -ring; i <= ring; i++) {
+        for (let j = -ring; j <= ring; j++) {
+          if (ring > 0 && Math.abs(i) !== ring && Math.abs(j) !== ring) continue;
+          const a = cGrid.get(ck(c0x + i, c0z + j));
+          if (!a) continue;
+          for (const ci of a) {
+            const c = G.chains[ci];
+            for (let k = 0; k < c.pts.length; k++) {
+              const p = c.pts[k];
+              const d = (p.x - x) * (p.x - x) + (p.z - z) * (p.z - z);
+              if (d >= bestD) continue;
+              if (dInfo) {
+                dInfo(p.x, p.z, _ds);
+                if (_ds.wet) { if (d < wetBestD) { wetBestD = d; wetBest = { ci, s: c.cum[k] }; } continue; }
+              }
+              bestD = d; best = ci; bestS = c.cum[k];
+            }
+          }
+        }
+      }
+      if (best >= 0) return { ci: best, s: bestS };
+    }
+    // 四条链以内一个干点都没有 → 不勉强，返回 null（人继续待在避难所）
+    void wetBest;
+    return null;
+  }
 
   // 按「链长 × 区域密度」加权抽样。
   // 只按长度加权时，600 人摊在 1772 km 步行网上 = 每 3 km 才一个人，任何一条
@@ -486,6 +673,8 @@ export function buildPedestrians(assets, opt = {}) {
       visible: true,
       dist: 1e9,
       yaw: 0,
+      // 积水避险（2026-10-26）：mode = 'net' 正常走网 / 'flee' 正在跑 / 'shelter' 已到
+      mode: 'net', refuge: null, calmT: 0, climb: 1, baseY: 0, fromX: 0, fromZ: 0,
     });
   }
 
@@ -527,10 +716,122 @@ export function buildPedestrians(assets, opt = {}) {
   // ---------------------------------------------------------------- 每帧
   const camPos = new THREE.Vector3();
   let frame = 0;
+  const _ds = { d: 0, wet: false };   // 水深采样回填
 
-  function update(dt, camera) {
+  /** 开始逃难：找最近可直达的避难所。返回是否找到。 */
+  function startFlee(p) {
+    const R = findRefuge(p.obj.position.x, p.obj.position.z, null);
+    if (!R) return false;
+    p.mode = 'flee';
+    p.refuge = R;
+    p.state = 'flee';
+    p.stateT = 0;
+    p.calmT = 0;
+    play(p, 'run', 0.16);
+    return true;
+  }
+
+  /**
+   * 水退了：接回最近的步行链，继续正常行走。
+   * @param dInfo 可选，水深采样器。传了就会避开还泡在水里的链（见 nearestChain）。
+   * @returns 是否真的接回了网（false = 附近没有干的地方，继续躲）
+   */
+  function rejoinNet(p, dInfo) {
+    const hit = nearestChain(p.obj.position.x, p.obj.position.z, dInfo || null);
+    if (!hit) return false;
+    p.mode = 'net';
+    p.refuge = null;
+    p.ci = hit.ci;
+    p.s = Math.min(Math.max(hit.s, 0.4), Math.max(0.4, G.chains[hit.ci].len - 0.4));
+    p.dir = rnd() < 0.5 ? 1 : -1;
+    p.state = 'walk';
+    p.stateT = 0;
+    p.lat = 0; p.latTarget = 0;
+    play(p, 'walk', 0.25);
+    return true;
+  }
+
+  /** 阴影距离裁剪 + 动画降频（逃难和正常行走共用） */
+  function placeShadow(p, dt) {
+    const shadowOn = p.dist < SHADOW_DIST;
+    if (p.shadowOn !== shadowOn) {
+      p.shadowOn = shadowOn;
+      p.obj.traverse((o) => { if (o.isMesh || o.isSkinnedMesh) o.castShadow = shadowOn; });
+    }
+    const far = p.dist > MIXER_LOD_DIST;
+    if (!far || (frame + p.i) % 3 === 0) p.mixer.update(dt * (far ? 3 : 1));
+  }
+
+  /** 逃难/躲避：离开步行网，直走最近避难所；到了就站定，水退干净再回街上。 */
+  function updateFlee(p, dt, dInfo) {
+    const R = p.refuge;
+    if (!R) { p.mode = 'net'; return; }
+
+    const px = p.obj.position.x, pz = p.obj.position.z;
+    const dx = R.x - px, dz = R.z - pz;
+    const dist = Math.hypot(dx, dz);
+
+    // ---- 已经站定了：等水退
+    if (p.mode === 'shelter') {
+      p.stateT += dt;
+      if (p.climb < 1) {
+        // 从楼下"上到屋顶"：1.2 秒内抬到位，不做楼梯（用户明说不用真进去）
+        p.climb = Math.min(1, p.climb + dt / 1.2);
+      }
+      // 水平：从进楼点平滑挪到屋顶中心；竖直：从地面抬到顶面
+      const k = p.climb;
+      const x = p.fromX + (R.x - p.fromX) * k;
+      const z = p.fromZ + (R.z - p.fromZ) * k;
+      const base = R.kind === 1 ? (p.baseY + (R.y - p.baseY) * k) : R.y;
+      p.obj.position.set(x, base + p.footFix, z);
+      // 水退判定：以避难所位置的地面水深为准，干满 SHELTER_CALM 秒才敢出来
+      let dry = true;
+      if (dInfo) { dInfo(R.x, R.z, _ds); dry = !_ds.wet; }
+      p.calmT = dry ? p.calmT + dt : 0;
+      // 【别在这里只判 dry 不回网】rejoinNet 会自己再查一次落点水深，
+      // 落点还湿就返回 false —— 那就把 calmT 归零，下一轮重新等。
+      if (p.climb >= 1 && p.calmT >= SHELTER_CALM) {
+        if (!rejoinNet(p, dInfo)) p.calmT = 0;
+      }
+      placeShadow(p, dt);
+      return;
+    }
+
+    // ---- 还在跑
+    const arrive = R.kind === 1 ? 4.5 : 2.4;
+    if (dist <= arrive) {
+      p.mode = 'shelter';
+      p.state = 'shelter';
+      p.stateT = 0;
+      p.calmT = 0;
+      p.climb = R.kind === 1 ? 0 : 1;
+      p.baseY = groundAt(px, pz);
+      p.fromX = px; p.fromZ = pz;
+      play(p, 'idle', 0.22);
+      placeShadow(p, dt);
+      return;
+    }
+
+    // 朝避难所直走（忽略路网与楼，最后一小段是"进楼"）
+    const ux = dx / (dist || 1), uz = dz / (dist || 1);
+    const yawWanted = Math.atan2(ux, uz);
+    let dYaw = yawWanted - p.yaw;
+    while (dYaw > Math.PI) dYaw -= Math.PI * 2;
+    while (dYaw < -Math.PI) dYaw += Math.PI * 2;
+    p.yaw += dYaw * Math.min(1, dt * (1 / Math.max(0.05, 1 - FLEE_TURN_IN)));
+
+    const step = Math.min(dist, FLEE_SPEED * dt);
+    const nx2 = px + ux * step, nz2 = pz + uz * step;
+    const gy = groundAt(nx2, nz2);
+    p.obj.position.set(nx2, gy + p.footFix, nz2);
+    p.obj.rotation.y = p.yaw;
+    placeShadow(p, dt);
+  }
+
+  function update(dt, camera, flood) {
     frame++;
     camPos.copy(camera.position);
+    const dInfo = (flood && flood.depthInfo) ? flood.depthInfo : null;
 
     // 人-人分离：4 m 空间哈希，O(n)
     const buckets = new Map();
@@ -551,6 +852,29 @@ export function buildPedestrians(assets, opt = {}) {
       p.dist = p.obj.position.distanceTo(camPos);
       const vis = p.dist < VIS_DIST;
       if (vis !== p.visible) { p.visible = vis; p.obj.visible = vis; }
+
+      // ---- 积水避险：先看脚下有没有水
+      // 【必须在距离裁剪之前】城市总览机位下 3000 人全在 VIS_DIST 之外，
+      // 放在裁剪之后人就永远不动 —— 实测 5 秒后 flee 人数一直是 0。
+      // 水深采样是 O(1) 查表，跑动也是一次向量运算，全量算不心疼。
+      // 只有真的开了积涝叠层（flood 传进来且可见）才响应，否则人照常走路。
+      if (dInfo) {
+        dInfo(p.obj.position.x, p.obj.position.z, _ds);
+        if (p.mode === 'net') {
+          if (_ds.wet) {
+            // 找不到避难所时不要每帧都去搜（findRefuge 要扫空间索引）
+            p.tryT = (p.tryT || 0) - dt;
+            if (p.tryT <= 0) { p.tryT = 1.5; startFlee(p); }
+          }
+        } else {
+          updateFlee(p, dt, dInfo);
+          continue;
+        }
+      } else if (p.mode !== 'net') {
+        // 叠层被关掉了：原地放回步行网，不要把人留在半空
+        rejoinNet(p);
+      }
+
       if (!vis) continue;
 
       const c = G.chains[p.ci];
@@ -693,6 +1017,16 @@ export function buildPedestrians(assets, opt = {}) {
 
   return {
     group, peds, update, setVisible, setCount, graph: G,
+    /** 积水避险的实时状态（验收/截图时用：console 里看有多少人在跑、多少人躲着）。 */
+    fleeStats() {
+      let net = 0, flee = 0, shelter = 0, roof = 0;
+      for (const p of peds) {
+        if (p.mode === 'flee') flee++;
+        else if (p.mode === 'shelter') { shelter++; if (p.refuge && p.refuge.kind === 1) roof++; }
+        else net++;
+      }
+      return { net, flee, shelter, roof, refuges: refuges.length };
+    },
     stats: {
       usable: usable.length, total: G.chains.length, dropped, count: peds.length,
       hot: hotPools.map((h) => h.pool.length),

@@ -613,8 +613,9 @@ function animate() {
   const wg = window.__waterGroup;
   if (wg && wg.userData.update) wg.userData.update(elapsed);
 
-  // L6 行人：状态机 + 动画（必须在相机更新之后，距离裁剪才准）
-  if (PED) PED.update(dt, camera);
+  // L6 行人：状态机 + 动画（必须在相机更新之后，距离裁剪才准）。
+  // 积涝叠层打开时把 FLOOD 传进去 —— 人脚下 12 cm 水深就转「逃难」，跑向最近的高地/高楼。
+  if (PED) PED.update(dt, camera, (FLOOD && FLOOD.group.visible) ? FLOOD : null);
 
   // 云影缓慢移动
   if (cloudShadow.material.map) {
