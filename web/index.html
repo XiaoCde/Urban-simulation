@@ -115,7 +115,14 @@
     </select>
   </div>
   <input id="flRange" type="range" min="0" max="0" value="0" step="1">
-  <div class="legend"><span>浅</span><i></i><span>深 2 m+</span></div>
+  <div class="legend"><span>浅</span><i></i><span id="flDeep">深 4 m+</span></div>
+  <!-- 被困统计：可涉水区域被洪水切成孤岛、又走不回主城干地的人 = 彻底出不去（见 src/trapped.js） -->
+  <div class="row" id="flTrapRow" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.14);padding-top:6px">
+    <span class="lbl" title="站在孤岛上、岛上没有任何高地的人：洪水不走就出不去">困死</span>
+    <b id="flTrapped" style="color:#ff8b7a">0</b>
+    <span class="hint" id="flTrapSub">/ 3000 人</span>
+  </div>
+  <div class="row"><span class="hint" id="flTrapNote">可涉水 30 cm；走不回主城就算被困</span></div>
   <div class="row">
     <button id="flPlay">播放</button>
     <button id="flClose">关闭</button>

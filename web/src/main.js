@@ -636,6 +636,36 @@ function animate() {
     const info = renderer.info.render;
     statEl.textContent =
       `三角形 ${info.triangles.toLocaleString()} · 绘制 ${info.calls} 次 · ${fps.toFixed(0)} fps`;
+    updateTrapHud();
+  }
+}
+
+// 被困人数：0.5 s 刷一次就够（连通域只在换帧时重算，人走得慢，数字不会跳）
+let trapHudEls = null;
+function updateTrapHud() {
+  if (!PED || !FLOOD || !FLOOD.group.visible) return;
+  if (!trapHudEls) {
+    const root = document.getElementById('flood');
+    if (!root) return;
+    trapHudEls = {
+      n: root.querySelector('#flTrapped'),
+      sub: root.querySelector('#flTrapSub'),
+      note: root.querySelector('#flTrapNote'),
+    };
+  }
+  const s = PED.fleeStats();
+  if (trapHudEls.n) {
+    // 红/黄/绿分档：超过 10% 就是「成片困死」，直接标红
+    const pct = s.total ? s.trapped / s.total : 0;
+    trapHudEls.n.textContent = String(s.trapped);
+    trapHudEls.n.style.color = pct > 0.10 ? '#ff5a48' : (s.trapped > 0 ? '#ff8b7a' : '#8ee6a0');
+  }
+  if (trapHudEls.sub) trapHudEls.sub.textContent = `/ ${s.total} 人 · 孤岛 ${s.stranded || 0}`;
+  if (trapHudEls.note) {
+    // 说明这一串数字是怎么算出来的：可涉水 30 cm，判定标准是「能不能走回主城」
+    trapHudEls.note.textContent = s.comps
+      ? `可涉水 ${(s.wadeMax * 100) | 0} cm · 干地被切成 ${s.comps} 块，主城占 ${Math.round((s.mainlandPct || 0) * 100)}%`
+      : '可涉水 30 cm；走不回主城就算被困';
   }
 }
 

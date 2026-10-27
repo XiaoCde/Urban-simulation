@@ -404,6 +404,121 @@ def spread_ponding(z: np.ndarray, vol: np.ndarray, steps: int = 80, river_mask=N
 DRAIN_CLASS_MM_H = np.array([0.0, 30.0, 30.0, 5.0, 2.0, 3.0])
 
 
+def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00),
+                 road_step_m=6.0):
+    """
+    P0 口径：把「一个 wet_ha」拆成能对外说话的三本账。
+
+    【为什么必须拆】原来只报「>15 cm 的面积 / 全域 30.6 km²」。两个毛病：
+      1) 15 cm 是硬门槛，1 cm 口径的湿区面积是它的 2.8 倍，只报 15 cm 会
+         把「路面积水」整个说没了；
+      2) 分母用了含河道的全域，而波托马克河/潮汐湖/Anacostia 本身常年是水面，
+         永远淹不着，混在分母里把比例压低。
+    所以这里统一改成：**分母只算陆域**（landcover != 0），面积分四档报，
+    另外给「淹没建筑数」和「受淹道路长度」—— 这两个才是非专业读者能懂的指标。
+    """
+    h, w = depth.shape
+    x0, y1 = float(grid["x0"]), float(grid["y1"])
+    land = lc != 0
+    area_land_km2 = float(land.sum()) * cell_area / 1e6
+    d_land = np.where(land, depth, 0.0)
+
+    tiers = {}
+    for m in tier_m:
+        cells = int((d_land > m).sum())
+        tiers[f"gt{int(round(m * 100))}cm"] = {
+            "km2": round(cells * cell_area / 1e6, 4),
+            "pct_land": round(100.0 * cells * cell_area / 1e6 / max(1e-9, area_land_km2), 2),
+        }
+
+    # ---- 淹没建筑：按轮廓 bbox 取峰值水深的最大值 ----
+    bld = {"total": 0, "touched_m5cm": 0, "gt30cm": 0, "gt100cm": 0,
+           "list": []}
+    fp = os.path.join(DERIVED, "buildings_footprints.json")
+    if os.path.exists(fp):
+        bj = json.load(open(fp, encoding="utf-8"))
+        for b in bj.get("features", []):
+            rings = b.get("rings") or []
+            if not rings or len(rings[0]) < 3:
+                continue
+            # 【坑】buildings_footprints.json 里混着三类不是「楼」的东西，
+            # 直接统计会把报表搞得很荒谬（实测 `id="ground"` 那张 30.6 km² 的
+            # 大面、以及 27 万 m² 的校园/停车场面都排进了 top 榜）：
+            #   1) `building` 标签为空的（1,477 个，多是 landuse 面、水面、操场）
+            #   2) 面积 > 6 万 m² 的（7 个，整体校园/园区，不是单栋楼）
+            #   3) 面积 < 15 m² 的（棚子/门房，对内涝汇报没意义）
+            # 所以只认「有 building 标签 且 15 ≤ 面积 ≤ 60000」的。
+            tag = (b.get("building") or "").strip()
+            barea = float(b.get("footprint_area_m2") or 0)
+            if not tag or barea < 15.0 or barea > 60000.0:
+                continue
+            bld["total"] += 1
+            pts = rings[0]
+            c0 = int((min(p[0] for p in pts) - x0) / res)
+            c1 = int((max(p[0] for p in pts) - x0) / res) + 1
+            r0 = int((y1 - max(p[1] for p in pts)) / res)
+            r1 = int((y1 - min(p[1] for p in pts)) / res) + 1
+            c0, c1 = max(0, c0), min(w, c1)
+            r0, r1 = max(0, r0), min(h, r1)
+            if c1 <= c0 or r1 <= r0:
+                continue
+            d = float(d_land[r0:r1, c0:c1].max())
+            if d > 0.05:
+                bld["touched_m5cm"] += 1
+                if d > 0.30:
+                    bld["gt30cm"] += 1
+                if d > 1.00:
+                    bld["gt100cm"] += 1
+                if d > 0.30:
+                    bld["list"].append({
+                        "id": b.get("id"), "name": b.get("name") or "",
+                        "building": b.get("building") or "",
+                        "area_m2": round(float(b.get("footprint_area_m2") or 0)),
+                        "max_depth_m": round(d, 3)})
+        bld["list"].sort(key=lambda q: -q["max_depth_m"])
+        bld["list"] = bld["list"][:200]
+
+    # ---- 受淹道路：沿街道折线按 road_step_m 采样，累加「水深 >15 cm」的长度 ----
+    road = {"road_km_total": 0.0, "road_km_flooded": 0.0, "road_km_gt30cm": 0.0}
+    sp = os.path.join(ROOT, "data", "streets", "dc_streets.json")
+    if os.path.exists(sp):
+        sj = json.load(open(sp, encoding="utf-8"))
+        tot = fl = fl30 = 0.0
+        for wy in sj.get("ways", []):
+            pts = wy.get("pts") or []
+            if len(pts) < 2:
+                continue
+            for i in range(len(pts) - 1):
+                ax, ay = float(pts[i][0]), float(pts[i][1])
+                bx, by = float(pts[i + 1][0]), float(pts[i + 1][1])
+                seg = ((bx - ax) ** 2 + (by - ay) ** 2) ** 0.5
+                if seg < 1e-6:
+                    continue
+                nsub = max(1, int(round(seg / road_step_m)))
+                ds = seg / nsub
+                tot += seg
+                for j in range(nsub):
+                    u = (j + 0.5) / nsub
+                    x = ax + (bx - ax) * u
+                    y = ay + (by - ay) * u
+                    c = int((x - x0) / res)
+                    r = int((y1 - y) / res)
+                    if c < 0 or c >= w or r < 0 or r >= h:
+                        continue
+                    dv = float(depth[r, c])
+                    if dv > 0.15:
+                        fl += ds
+                        if dv > 0.30:
+                            fl30 += ds
+        road["road_km_total"] = round(tot / 1000.0, 2)
+        road["road_km_flooded"] = round(fl / 1000.0, 2)
+        road["road_km_gt30cm"] = round(fl30 / 1000.0, 2)
+        road["pct_flooded"] = round(100.0 * fl / max(1e-9, tot), 2)
+
+    return {"area_land_km2": round(area_land_km2, 3), "tiers": tiers,
+            "buildings": bld, "roads": road}
+
+
 def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             grid, args, outdir):
     """
@@ -491,6 +606,33 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
     infil_mm_h = F_INFIL[lc_flow].astype("float64").ravel()              # mm/h 每格
     drain_f = drain_step.ravel().astype("float64")
 
+    # ---- P1：管网调蓄（漏水桶）----
+    # 【为什么要这一层】原来 `net = max(0, rain_vol - drain_f)` 把 30 mm/h 当成
+    # 永不失效的能力：雨下 2 h 就排 2 h、下 72 h 就排 72 h，账面永远排得掉，
+    # 于是「特大暴雨」在报表里只剩 5% 地面湿。真实情况是雨水口 20~40 min 满管，
+    # 之后排水量掉到接近 0，水才开始在地面涨起来 —— 这才是内涝的形成机制。
+    #
+    # 建模方式：把管网看成一个有限容量的桶。桶里能存
+    #   drain_fail_after_mm ×（接了雨水口的硬化面积）
+    # 立方米的水；桶越满，进水能力越低（线性）；
+    # 桶满了只剩 `drain_residual` 倍设计能力（漏损/泵站）；雨停后按
+    # `drain_recover_h` 指数放空，于是下一场雨又能排。
+    drain_area = float((DRAINS[lc_flow] & (lc_flow > 0)).sum()) * cell_area
+    if args.drain_fail_after_mm and args.drain_fail_after_mm > 0:
+        bucket_cap = args.drain_fail_after_mm / 1000.0 * drain_area
+    else:
+        bucket_cap = 0.0                       # 0 = 退回老口径（永不失效）
+    residual = float(np.clip(getattr(args, "drain_residual", 0.05), 0.0, 1.0))
+    tau_rec = max(1.0, float(getattr(args, "drain_recover_h", 6.0)) * 3600.0)
+    rec_decay = float(np.exp(-dt / tau_rec))
+    saturated_at_min = None
+    peak_used_frac = 0.0                      # 管网预算最高占用率（0~1）
+    drains_f = DRAINS[lc_flow].ravel()        # 哪些格接了雨水口（布尔）
+    budget_used = 0.0                         # 管网已占用的调蓄预算（m³）
+    if bucket_cap > 0:
+        log(f"      管网调蓄容量 {bucket_cap:,.0f} m³"
+            f"（{args.drain_fail_after_mm:.0f} mm × {drain_area / 1e6:.3f} km² 硬化面）")
+
     # ---- 开场一次性：给每格算「水流终点」 ----
     # 洼地格是自己的终点（自环），其他格沿 D8 走；指针倍增 32 轮（2^32 > 格数）
     # 就把整条链压成一步，等价于原来跑 2000 层的 Kahn 推进。
@@ -539,6 +681,18 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
     frames = []
     curve = []
     total = {"rain": 0.0, "drained": 0.0, "discharged": 0.0, "receded": 0.0}
+    # ---- P0：分级口径 ----
+    # 【为什么只报 15 cm 会把话说小】数据里 1 cm 以上就是 3.59 km²（11.7%），
+    # 15 cm 只剩 1.29 km²（4.2%）—— 四倍差距全靠这一个阈值。真实内涝通报
+    # 也是分级的（"路面积水 / 车辆泡水 / 房屋进水"对应 15/30/100 cm 量级），
+    # 所以这里把四档全算出来，报表给的是"分布"而不是"一个数"。
+    TIER_M = (0.01, 0.15, 0.30, 1.00)
+    peak_depth = None            # 峰值帧的深度场（float32，供建筑/道路统计）
+    peak_wet = -1.0
+    # 【为什么用 lc_flow 而不是 lc】`lc_flow` 只把建筑格改判成硬化类，水体仍是 0，
+    # 所以 `lc_flow != 0` 与 `lc != 0` 是同一个陆域掩膜；l2_loop 里只拿得到前者。
+    land_cells = int((lc_flow != 0).sum())
+    area_land_km2 = land_cells * cell_area / 1e6
     os.makedirs(os.path.join(outdir, "frames"), exist_ok=True)
     depth = np.zeros((h, w), dtype="float64")
     tau = float(getattr(args, "tau_h", 3.0)) * 3600.0
@@ -564,22 +718,29 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
         return np.where(vol_b > 1e-6, 0.5 * (lo + hi), minz_b)
 
     def snap(t_s, tag):
-        """深度场降到 6 m（web 用），u8 量化：1/255 = 2 cm，上限 5 m。"""
+        """深度场降到 6 m（web 用），u8 量化：上限 --depth-scale-m（默认 4 m）。"""
         f = max(1, int(round(6.0 / args.res)))
         hh, ww = (h // f) * f, (w // f) * f
         # 【坑·可见性】原来用 mean 降采样：6×6 个 1 m 格里只有一角积 10 cm 水，
         # 平均下来 1.4 cm，再被 web 的 2 cm 阈值丢掉 —— 页面上几乎看不出涨退水。
-        # 改成 max（取块内最深值），薄水膜也能显示；量化上限也从 5 m 收到 2 m，
-        # 8 bit 的精度从 2 cm 提到 0.8 cm。
+        # 改成 max（取块内最深值），薄水膜也能显示。
+        # 【坑·量程】量化上限原来是 2 m，而峰值最大水深有 9 m —— 6 m 深的水
+        # 在页面上被画成 2 m，观感被系统性压扁。现在由 --depth-scale-m 控制，
+        # 默认 4 m（1/255 = 1.6 cm 精度），manifest 里带 scale 让前端自己换算。
+        dmax = float(getattr(args, "depth_scale_m", 4.0))
         d = depth[:hh, :ww].reshape(hh // f, f, ww // f, f).max(axis=(1, 3))
-        q = np.clip(d / 2.0, 0.0, 1.0) * 255.0
+        q = np.clip(d / dmax, 0.0, 1.0) * 255.0
         name = "f%03d.u8" % len(frames)
         q.astype("uint8").tofile(os.path.join(outdir, "frames", name))
+        tiers = {f"gt{int(m * 100)}cm_ha": round(float((depth > m).sum())
+                                                   * cell_area / 1e4, 2)
+                 for m in TIER_M}
         frames.append({"file": name, "t_min": round(t_s / 60.0, 1),
                        "cols": int(d.shape[1]), "rows": int(d.shape[0]),
                        "step_m": float(args.res * f),
                        "max_depth_m": round(float(depth.max()), 3),
                        "wet_ha": round(float((depth > 0.15).sum()) * cell_area / 1e4, 2),
+                       **tiers,
                        "tag": tag})
 
     t = 0.0
@@ -602,8 +763,39 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             eff_mm_h = np.maximum(0.0, p_now - infil_mm_h)
             rain_vol = eff_mm_h * runoff_gain * (dt / 3600.0)
             total["rain"] += float(rain_vol.sum())
-            net = np.maximum(0.0, rain_vol - drain_f)
-            total["drained"] += float((rain_vol - net).sum())
+            # ---- P1：管网会满 ----
+            # 用「累计可接水量预算」表示管网调蓄：预算用完前按设计能力 30 mm/h
+            # 接水，用完（满管）只剩 drain_residual 倍；预算按 drain_recover_h
+            # 指数恢复（泵站抽排/隧道放空），所以下一场雨又能排。
+            # 这比「桶里的水位」简单得多，也不会出现桶溢出要往回灌的数值麻烦。
+            if bucket_cap > 0:
+                used_frac = min(1.0, budget_used / bucket_cap)
+                cap_now = drain_f * (residual + (1.0 - residual) * (1.0 - used_frac))
+                take = np.minimum(rain_vol, cap_now)
+                take = np.where(drains_f, take, 0.0)
+                # 还没满管时不允许一次把预算吃穿（否则等于没有上限）
+                room = max(0.0, bucket_cap - budget_used)
+                tsum = float(take.sum())
+                if tsum > room and tsum > 1e-9:
+                    take *= room / tsum
+                    tsum = room
+                budget_used += tsum
+                # 【坑】不能用「>= bucket_cap」当满管判据：cap_now 随 used_frac 线性
+                # 衰减，越接近满管进水越少，是渐近逼近，永远到不了 100%（实测 null）。
+                # 取 0.85 作判据的物理含义：此时进水能力只剩
+                #   residual + (1-residual)*(1-0.85) = 0.05 + 0.95*0.15 = 19%
+                # 也就是说管网已经「基本堵死」，再往下 85%→100% 对地面积水的影响
+                # 不到 1%，报 0.85 这个时刻既不骗人也不误导。峰值占用率另记一项。
+                used_frac2 = budget_used / bucket_cap
+                if used_frac2 > peak_used_frac:
+                    peak_used_frac = used_frac2
+                if saturated_at_min is None and used_frac2 >= 0.85:
+                    saturated_at_min = round(t / 60.0, 1)
+                net = rain_vol - take
+                total["drained"] += tsum
+            else:
+                net = np.maximum(0.0, rain_vol - drain_f)
+                total["drained"] += float((rain_vol - net).sum())
             inflow = np.bincount(term[to_basin], weights=net[to_basin],
                                  minlength=nlab + 1)
             total["discharged"] += float(net[~to_basin].sum())
@@ -611,6 +803,18 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             if w_b.sum() * cell_area <= 1.0:
                 break
             inflow = None
+
+        # 管网放空（雨停后 / 每步都放一点），预算随之恢复
+        # 【坑】原来这里无条件放空，结果降雨期间预算一边进一边出，永远达不到满管
+        # （实测 `saturated_at_min` 一直是 null，预算只用到 40%）。物理上也说不通：
+        # 暴雨正猛的时候泵站在满负荷抽，但来水远大于抽排，管网水位只会涨。
+        # 所以只在「雨已停」或「本步雨强低于设计能力」（小雨，管网吃得下）时才恢复。
+        _light = (k >= n_rain) or (args.p_mm_h * (rain_shape[k] if rain_shape is not None else 1.0)
+                                   <= args.drain_mm_h)
+        if bucket_cap > 0 and budget_used > 0 and _light:
+            budget_used *= rec_decay
+            if budget_used < 1e-6:
+                budget_used = 0.0
 
         before = float(w_b.sum())
         w_b *= decay
@@ -642,9 +846,19 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
         if k % frame_every == 0 or (k == n_rain - 1) or \
                 (k >= n_rain and (k - n_rain) % frame_every == 0):
             snap(t, "rain" if k < n_rain else "recede")
+        # 峰值帧留存：建筑/道路的「淹没深度」要按峰值算，不能用末帧
+        # 【坑】这里必须存**整张 depth**（h*w），不能存 `cur` —— `cur` 只是洼地格
+        # 的一维数组（约 31 万），后面 reshape(h,w) 会炸。
+        _wet_now = float((cur > 0.01).sum()) * cell_area / 1e4
+        if _wet_now > peak_wet:
+            peak_wet = _wet_now
+            peak_depth = depth.astype("float32")
         curve.append({"t_min": round(t / 60.0, 1),
                       "max_depth_m": round(float(cur.max()), 3),
                       "wet_ha": round(float((cur > 0.15).sum()) * cell_area / 1e4, 2),
+                      **{f"gt{int(m * 100)}cm_ha":
+                         round(float((cur > m).sum()) * cell_area / 1e4, 2)
+                         for m in TIER_M},
                       "retained_m3": round(rec_basin)})
         t += dt
         if k % max(1, int(3600.0 / dt)) == 0 and k:
@@ -653,14 +867,21 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
 
     snap(t, "end")
     meta = {"cols": frames[0]["cols"], "rows": frames[0]["rows"],
-            "step_m": frames[0]["step_m"], "scale_m": 2.0, "dt_s": dt,
+            "step_m": frames[0]["step_m"],
+            "scale_m": float(getattr(args, "depth_scale_m", 4.0)), "dt_s": dt,
             "x0": float(grid["x0"]), "y1": float(grid["y1"]),
             "rain_min": round(args.dur_h * 60.0, 1), "frames": frames}
     with open(os.path.join(outdir, "frames", "manifest.json"), "w",
               encoding="utf-8") as f:
         json.dump(meta, f, ensure_ascii=False, indent=1)
     return {"depth_final": depth, "frames": frames, "curve": curve,
-            "total": total, "meta": meta}
+            "total": total, "meta": meta,
+            # P0：峰值帧与统计所需的辅助量
+            "peak_depth": peak_depth, "peak_wet_ha": peak_wet,
+            "area_land_km2": area_land_km2,
+            "bucket_cap": bucket_cap, "saturated_at_min": saturated_at_min,
+            "peak_used_frac": round(peak_used_frac, 4),
+            "budget_used": budget_used}
 
 
 def main() -> int:
@@ -696,6 +917,30 @@ def main() -> int:
     ap.add_argument("--hyetograph", default="uniform",
                     choices=["uniform", "peak", "pulse", "front"],
                     help="降雨时间形状（default uniform）")
+    # ---- P1：管网会满，满了就排不动 ----
+    # 老口径把 30 mm/h 当成「恒定、永不失效」的排水能力，于是 220 mm 的雨
+    # 也能一小时一小时往外搬，账面永远排得掉。真实内涝里雨水口 20~40 min
+    # 就满管，之后排水量≈0，水才开始在地面涨。
+    #
+    # 这里用一个「漏水桶」表示管网调蓄：管子里能存的水量 = 
+    # `drain_fail_after_mm` ×（接雨水口的硬化面积）。存满之后排水能力只剩
+    # `drain_residual` 倍；雨停后再按 `drain_recover_h` 指数放下。
+    #
+    # 【默认 25 mm 怎么来的】DC Water 的合流制 + 深层隧道调蓄总量是十万立方米
+    # 量级（Anacostia River Tunnel 一项 ≈ 113,000 m³），摊到本模型 11.9 km²
+    # 硬化面上 ≈ 9.5 mm；再算上干管自身存水与泵站调蓄，25 mm 是同量级的保守值。
+    # 设 0 则退回老口径（恒定 30 mm/h），用来复现 2026-10-26 之前的历史结果。
+    ap.add_argument("--drain-fail-after-mm", type=float, default=25.0,
+                    help="管网调蓄容量（mm，按接雨水口的硬化面积折算）；0=永不失效（老口径）")
+    ap.add_argument("--drain-residual", type=float, default=0.05,
+                    help="管网满管后残余排水能力（相对设计能力的倍数）")
+    ap.add_argument("--drain-recover-h", type=float, default=6.0,
+                    help="管网排空时间常数（小时，指数）")
+    # ---- P0：分级口径 ----
+    ap.add_argument("--depth-scale-m", type=float, default=4.0,
+                    help="web 帧的深度量化上限（米）。原来 2.0 会把 9 m 深的水画成 2 m")
+    ap.add_argument("--depth-stats", action="store_true",
+                    help="统计淹没建筑（按轮廓采样峰值水深）与道路长度（按街道折线采样）")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -779,6 +1024,15 @@ def main() -> int:
         _peak = max(r['curve'], key=lambda q: q['wet_ha']) if r['curve'] else {}
         curve_ha = [q['wet_ha'] for q in r['curve']] or [0]
         curve_dmax = [q['max_depth_m'] for q in r['curve']] or [0]
+        # ---- P0：峰值分级口径 + 淹没建筑 + 受淹道路 ----
+        # 【必须用峰值帧】末帧（退水末尾）的水只剩坑底的几厘米，拿它统计
+        # 建筑/道路会得出「淹了 441 栋」这种数字，而峰值帧是 3,942 栋。
+        land_cells = int((lc != 0).sum())
+        area_land_km2 = land_cells * cell_area / 1e6
+        pk = r.get('peak_depth')
+        pk2d = pk.reshape(h, w) if pk is not None else depth
+        imp = flood_impact(pk2d, grid, res, cell_area, lc)
+        peak_tiers = {k: v for k, v in _peak.items() if k.startswith('gt')}
         summary = {
             'mode': 'L2',
             'grid': f'{w}×{h} @ {res} m',
@@ -800,6 +1054,24 @@ def main() -> int:
             # 末态（退水末尾）：水面基本落回坑里，只说明「退干净了没有」
             'final_max_depth_m': round(float(depth.max()), 3),
             'final_wet_cells': int((depth > 0.15).sum()),
+            # ---- P0 分级口径（全部是**峰值帧**，不是末帧）----
+            'area_land_km2': imp['area_land_km2'],
+            'peak_area_by_depth': imp['tiers'],
+            'peak_area_by_depth_ha': peak_tiers,
+            'buildings_total': imp['buildings']['total'],
+            'buildings_touched': imp['buildings']['touched_m5cm'],
+            'buildings_gt30cm': imp['buildings']['gt30cm'],
+            'buildings_gt100cm': imp['buildings']['gt100cm'],
+            'buildings_flooded_top': imp['buildings']['list'][:60],
+            'roads_km_total': imp['roads']['road_km_total'],
+            'roads_km_flooded': imp['roads']['road_km_flooded'],
+            'roads_km_gt30cm': imp['roads']['road_km_gt30cm'],
+            'roads_pct_flooded': imp['roads'].get('pct_flooded'),
+            # ---- P1 管网失效记账 ----
+            'drain_bucket_cap_m3': round(float(r.get('bucket_cap') or 0)),
+            'drain_saturated_at_min': r.get('saturated_at_min'),
+            'drain_peak_used_frac': r.get('peak_used_frac'),
+            'drain_budget_used_m3': round(float(r.get('budget_used') or 0)),
             'frames': len(r['frames']),
             'curve': r['curve'][::max(1, len(r['curve']) // 40)],
             'runtime_s': round(time.time() - t0, 1),
@@ -820,7 +1092,11 @@ def main() -> int:
                        'f_infil_mm_h': {str(k): (None if v == float('inf') else float(v))
                                         for k, v in enumerate(F_INFIL)},
                        'drainage': {'cap_mm_h': float(args.drain_mm_h),
-                                    'note': '管网设计排水强度，超过部分才积水'},
+                                    'note': '管网设计排水强度，超过部分才积水',
+                                    'fail_after_mm': float(args.drain_fail_after_mm),
+                                    'residual': float(args.drain_residual),
+                                    'recover_h': float(args.drain_recover_h),
+                                    'bucket_cap_m3': round(float(r.get('bucket_cap') or 0))},
                        'hyetograph': str(getattr(args, 'hyetograph', 'uniform'))},
             # 记账口径以 L2 逐时刻积分量为准（见上面 rain_total 的注释）
             'budget_m3': {'runoff': float(rain_total),

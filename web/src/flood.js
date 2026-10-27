@@ -157,7 +157,7 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     const c = Math.floor((x - x0) / step);
     const r = Math.floor((z - z0) / step);
     if (c < 0 || c >= cols || r < 0 || r >= rows) return 0;
-    return tex.image.data[r * cols + c] / 255 * (scale || 5);
+    return tex.image.data[r * cols + c] / 255 * (scale || 2);
   }
   function depthInfo(x, z, out) {
     out = out || _samp;
@@ -183,7 +183,7 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
 
   // ---------------------------------------------------------------- HUD
   const hud = {
-    root: null, range: null, label: null, play: null, sel: null,
+    root: null, range: null, label: null, play: null, sel: null, deep: null,
   };
   function updateHud() {
     if (!hud.root || !man) return;
@@ -196,6 +196,9 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     // 【坑】下拉框必须跟着 curDir 走：setCase 是程序调用时不会触发 change 事件，
     // 不在这里回写就会出现「已经切到 72 h、框里还显示 2 h」。
     if (hud.sel && hud.sel.value !== curDir) hud.sel.value = curDir;
+    // 图例的量程必须跟 manifest.scale 一致：老数据 scale=2，现在 4 m，
+    // 写死「2 m+」会让人以为超过 2 m 就不再变深。
+    if (hud.deep) hud.deep.textContent = `深 ${(man.scale || 2).toFixed(0)} m+`;
   }
 
   function bindHud() {
@@ -205,6 +208,7 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     hud.label = hud.root.querySelector('#flTime');
     hud.play = hud.root.querySelector('#flPlay');
     hud.sel = hud.root.querySelector('#flCase');
+    hud.deep = hud.root.querySelector('#flDeep');
     hud.range.addEventListener('input', () => { playing = false; showFrame(Number(hud.range.value)); });
     hud.play.addEventListener('click', () => togglePlay());
     hud.root.querySelector('#flClose').addEventListener('click', () => setVisible(false));
@@ -272,5 +276,15 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     get index() { return idx; },
     get caseName() { return curDir; },
     get manifest() { return man; },
+    /** 当前帧标识（工况名 + 帧号）。行人侧用它判断「该不该重算连通域」。 */
+    get frameKey() { return curDir + '|' + idx; },
+    /** 当前帧的原始 u8 深度栅格（给行人做连接域/被困判定，不要拿去改）。 */
+    get depthGrid() {
+      if (!man || !tex || !tex.image || !tex.image.data) return null;
+      return {
+        data: tex.image.data, cols: man.cols, rows: man.rows,
+        step: man.step_m, x0: man.x0, z0: man.z0, scale: man.scale,
+      };
+    },
   };
 }

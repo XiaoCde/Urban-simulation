@@ -30,6 +30,7 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
 import { roofSurfaceY } from './terrain.js';
+import { createTrappedIndex } from './trapped.js';
 
 // ---------------------------------------------------------------- 常量
 const TARGET_H_MALE = 1.82;     // 男性身高（米）
@@ -675,6 +676,7 @@ export function buildPedestrians(assets, opt = {}) {
       yaw: 0,
       // 积水避险（2026-10-26）：mode = 'net' 正常走网 / 'flee' 正在跑 / 'shelter' 已到
       mode: 'net', refuge: null, calmT: 0, climb: 1, baseY: 0, fromX: 0, fromZ: 0,
+      trapped: 0,
     });
   }
 
@@ -717,6 +719,13 @@ export function buildPedestrians(assets, opt = {}) {
   const camPos = new THREE.Vector3();
   let frame = 0;
   const _ds = { d: 0, wet: false };   // 水深采样回填
+  // 【被困统计】2026-10-26 按用户要求新增「有多少人被彻底困住无法逃生」。
+  // 每换一帧积涝数据重算一次可涉水连通域（6 m 栅格，85 万格，约 20~30 ms），
+  // 人只查自己落在哪一块：是不是主城（最大干地连通域）、那块有没有避难所。
+  const trappedIdx = createTrappedIndex(refuges);
+  let trapStats = { trapped: 0, stranded: 0, drowning: 0, reachable: 0,
+                    comps: 0, islets: 0, passCells: 0, mainlandPct: 0 };
+  let trapDirty = true;
 
   /** 开始逃难：找最近可直达的避难所。返回是否找到。 */
   function startFlee(p) {
@@ -833,6 +842,25 @@ export function buildPedestrians(assets, opt = {}) {
     camPos.copy(camera.position);
     const dInfo = (flood && flood.depthInfo) ? flood.depthInfo : null;
 
+    // ---- 被困判定用的连通域：换帧才重算
+    // 【为什么绑帧不绑时间】连通域只跟水深场有关，同一帧里人怎么移动都不改变
+    // 「哪块地是岛、岛上有不有避难所」。按帧缓存，播放时每换一帧算一次
+    // （约 20~30 ms），拖时间轴、暂停都不浪费。
+    let tst = null;
+    if (flood && flood.depthGrid) {
+      const g = flood.depthGrid;
+      const key = flood.frameKey || '';
+      const base = trappedIdx.update(g, key);
+      // 复制一份再归零计数：update() 返回的是模块内部复用的对象，
+      // 直接改它会把「连通域层面」的统计（comps/islets/passCells）一起写坏
+      trapStats = {
+        trapped: 0, stranded: 0, drowning: 0, reachable: 0,
+        comps: base.comps, islets: base.islets,
+        passCells: base.passCells, mainlandPct: base.mainlandPct,
+      };
+      tst = trapStats;
+    }
+
     // 人-人分离：4 m 空间哈希，O(n)
     const buckets = new Map();
     const bk = (cx, cz) => cx * 73856093 ^ cz * 19349663;
@@ -852,6 +880,18 @@ export function buildPedestrians(assets, opt = {}) {
       p.dist = p.obj.position.distanceTo(camPos);
       const vis = p.dist < VIS_DIST;
       if (vis !== p.visible) { p.visible = vis; p.obj.visible = vis; }
+
+      // ---- 被困判定：必须在**所有** continue 之前（全城 3000 人全要统计，
+      // 不能只算看得见的；避险状态的人也要算 —— 他们最可能是被困的那批）
+      // p.trapped: 0=在主城干地上能走掉 1=孤岛但有避难所（活着但出不去）
+      //            2=孤岛且无避难所（彻底被困） 3=已泡在深水里
+      p.trapped = tst ? trappedIdx.query(p.obj.position.x, p.obj.position.z) : 0;
+      if (tst) {
+        if (p.trapped === 0) trapStats.reachable++;
+        else if (p.trapped === 1) trapStats.stranded++;
+        else if (p.trapped === 2) trapStats.trapped++;
+        else if (p.trapped === 3) { trapStats.drowning++; trapStats.trapped++; }
+      }
 
       // ---- 积水避险：先看脚下有没有水
       // 【必须在距离裁剪之前】城市总览机位下 3000 人全在 VIS_DIST 之外，
@@ -1019,13 +1059,30 @@ export function buildPedestrians(assets, opt = {}) {
     group, peds, update, setVisible, setCount, graph: G,
     /** 积水避险的实时状态（验收/截图时用：console 里看有多少人在跑、多少人躲着）。 */
     fleeStats() {
-      let net = 0, flee = 0, shelter = 0, roof = 0;
+      let net = 0, flee = 0, shelter = 0, roof = 0, escaped = 0;
       for (const p of peds) {
         if (p.mode === 'flee') flee++;
         else if (p.mode === 'shelter') { shelter++; if (p.refuge && p.refuge.kind === 1) roof++; }
         else net++;
+        if (p.mode === 'shelter') escaped++;
       }
-      return { net, flee, shelter, roof, refuges: refuges.length };
+      return {
+        net, flee, shelter, roof, refuges: refuges.length,
+        // 【彻底被困】站在孤岛上、岛上没有任何高地的那些人 —— 洪水不走，他们就
+        // 一天也出不去，救援也进不来。这是用户 m03597 要的那个数。
+        trapped: trapStats.trapped,
+        // 孤岛但岛上有高地/屋顶：暂时活得下来，等水退才能出来
+        stranded: trapStats.stranded,
+        // 已经泡在 >30 cm 深水里、12 m 内连干格都没有的那一批（含在 trapped 里）
+        drowning: trapStats.drowning,
+        // 还在主城干地上、能自由走掉的人
+        reachable: trapStats.reachable,
+        total: peds.length,
+        // 连通域层面：全城被洪水切成多少块可涉水区、其中多大的块还是连着的
+        comps: trapStats.comps, islets: trapStats.islets,
+        mainlandPct: trapStats.mainlandPct,
+        wadeMax: 0.30,
+      };
     },
     stats: {
       usable: usable.length, total: G.chains.length, dropped, count: peds.length,
