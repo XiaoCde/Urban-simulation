@@ -34,12 +34,15 @@ const FRAG = /* glsl */ `
     float d = texture2D(uDepth, vUv).r * uScale;      // 米
     if (d < 0.01) discard;
 
-    // 边缘要软：1 cm~12 cm 之间淡入，否则 6 m 栅格会显出方块边
-    float a = smoothstep(0.01, 0.12, d);
-    // 浅水半透明：只盖住地面颜色；中深水把地面压住
-    a *= mix(0.55, 0.95, smoothstep(0.03, 0.45, d)) * uAlpha;
+    // 【可见性第二轮】上一版 alpha 用 smoothstep(0.01, 0.12)：1 cm 的薄水膜
+    // alpha≈0，等于把「满街薄水」整层都藏了。实测峰值时 >1 cm 的湿区有 800 ha、
+    // 而 >15 cm 只有 444 ha —— 藏掉的正好是最该看见的那一半。
+    // 现在只留 0.4~1.5 cm 的极窄淡入（挡住 6 m 栅格的方块边），1 cm 起就给
+    // 接近一半的不透明度，浅水就是看得见的灰蓝水膜。
+    float a = smoothstep(0.004, 0.015, d);
+    a *= mix(0.50, 0.92, smoothstep(0.02, 0.50, d)) * uAlpha;
 
-    vec3 shallow = vec3(0.60, 0.74, 0.78);            // 薄水膜：偏天光的灰青
+    vec3 shallow = vec3(0.46, 0.66, 0.76);            // 薄水膜：偏蓝的灰青
     vec3 deep    = vec3(0.05, 0.15, 0.30);            // 齐膝深：靛
     vec3 col = mix(shallow, deep, clamp((d - 0.05) / 1.05, 0.0, 1.0));
 
