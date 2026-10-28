@@ -520,7 +520,7 @@ def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00
 
 
 def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
-            grid, args, outdir):
+            grid, args, outdir, river_level=0.0):
     """
     L2 时间版：把 L1 的「稳态一次搬完」改成按 dt 步进。
 
@@ -665,13 +665,132 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
     ds_b = np.zeros(nlab + 1, dtype="int64")
     r = recv_f[idx_b]
     out_edge = (r >= 0) & (lab_f[np.maximum(r, 0)] != lab_b) | (r < 0)
+    rr = r[out_edge] if out_edge.any() else np.zeros(0, dtype="int64")
+    # 每格的水流最终落到哪一格（填平后的地形上几乎每格都有终点）。
+    # 必须在算 ds_b 之前定义 —— 洼地漫出时要用它继续往下游追。
+    term_cell = np.where(tgt >= 0, tgt, ar)
     if out_edge.any():
         src = lab_b[out_edge]
-        rr = r[out_edge]
-        dst = np.where((rr >= 0) & (lab_f[np.maximum(rr, 0)] > 0),
-                       lab_f[np.maximum(rr, 0)], 0)
+        # 【坑·丢水】原来只问「漫出的那一格本身是不是洼地格」，不是就记成
+        # 「直接出域」。实测 1 m 网格下 97% 的洼地漫出都落在普通坡面上，
+        # 于是 2.4 Mm³（51% 的产流）在报表里变成"出域"，实际是顺着坡流进
+        # 下一个洼地。现在沿 `term_cell` 追到它真正落脚的洼地。
+        _tc = np.where(rr >= 0, term_cell[np.maximum(rr, 0)], -1)
+        _lab = np.where(_tc >= 0, lab_f[np.maximum(_tc, 0)], 0)
+        dst = np.where(_lab > 0, _lab, 0)
+        # 【坑·自环】填平后的地形上，洼地最低点往外走的邻居沿 recv 可能又绕回
+        # 同一个洼地（`dst == src`），水就会在同一个坑里无限叠深（实测出现
+        # 255 m 的荒谬水深）。自环的一律当出域，并单独计数以便追查。
+        _self = dst == src
+        dst = np.where(_self, 0, dst)
+        n_self = int(_self.sum())
         # 同一个洼地可能有多处漫出，取"汇到哪就去哪"的最后一条，够用
         ds_b[src] = dst
+        log(f"      洼地下游关系：{len(src):,} 个出流口，其中自环 {n_self:,} 个")
+
+    # ---- P2-c ①：断环 ----
+    # 【坑·环路】填平后的地形在洼地里是平的，recv 在平地上没有方向，所以洼地
+    # 之间可能成环（A→B→A）。环里的水永远出不去，逐帧叠加会把水深堆到 334 m。
+    # 用指针跳跃（`_dp = _dp[_dp]`，每步把链压一半）把每条链压到终点，收敛后
+    # 剩下的不动点就是环，把环判成真出域。
+    _dp = ds_b.copy()
+    for _ in range(64):
+        _nx = _dp[np.maximum(_dp, 0)]
+        if np.array_equal(_nx, _dp):
+            break
+        _dp = _nx
+    _selflab = _dp[1:] == np.arange(1, nlab + 1)
+    n_cycle = int(_selflab.sum())
+    ds_b[1:][_selflab] = 0
+    log(f"      断环：{n_cycle:,} 个洼地卡在环里，改判真出域")
+
+    # ---- P2-c ②：没追到下游的洼地，转给「最近的、最低点更低的洼地」----
+    # 自环的水如果留在原地会被逐帧叠加（实测 255 m 深），当出域又会凭空丢掉
+    # 三成的雨（实测 1.38 Mm³）。这里转给最近的、zmin 更低的洼地 —— 因为
+    # 严格下降，洼地之间构成一棵树，不可能再成环，水一直流到最低那个才出域。
+    _cnt = np.bincount(lab_b, minlength=nlab + 1).astype("float64")
+    _cnt[_cnt == 0] = 1.0
+    _colv = np.tile(np.arange(w, dtype="float64"), h)[idx_b]
+    _rowv = np.repeat(np.arange(h, dtype="float64"), w)[idx_b]
+    cx_b = np.bincount(lab_b, weights=_colv, minlength=nlab + 1) / _cnt
+    cy_b = np.bincount(lab_b, weights=_rowv, minlength=nlab + 1) / _cnt
+    _labs = np.arange(1, nlab + 1)
+    _pts = np.column_stack([cx_b[_labs], cy_b[_labs]])
+    _need = np.flatnonzero(ds_b[1:] == 0)
+    n_orphan = int(_need.size)
+    if n_orphan and nlab > 1:
+        from scipy.spatial import cKDTree
+        _tree = cKDTree(_pts)
+        _k = int(min(24, nlab))
+        _d, _j = _tree.query(_pts[_need], k=_k)
+        _d = np.atleast_2d(_d)
+        _j = np.atleast_2d(_j)
+        for _a, _lab_a in enumerate(_need + 1):
+            for _b2 in range(_k):
+                _cand = _labs[_j[_a, _b2]] if _j[_a, _b2] < nlab else -1
+                if _cand > 0 and minz_b[_cand] < minz_b[_lab_a] - 1e-6:
+                    ds_b[_lab_a] = _cand
+                    break
+    _left = int(np.count_nonzero(ds_b[1:][_need] == 0))
+    log(f"      洼地去向：{n_orphan:,} 个没追到下游，按「最近的更低洼地」转走 "
+        f"{n_orphan - _left:,} 个，剩 {_left:,} 个是流域最低点（真出域）")
+
+    # ---- P2-b：河道顶托（下游水位高于洼地最低点，洼地就排不空）----
+    # 【物理】河道水位 L 高于洼地最低点 zmin 时，洼地里低于 L 的那部分水没有
+    # 水头差可以排出去（下游比你还高）。老口径只取 0.046 m 的常水位，等于让每条
+    # 通向河道的洼地都能排到见底 —— 这是把内涝算轻的第二个大原因。
+    # 这里把「通向河道」的洼地的有效容量抬到「水位 L 时能存住的体积」，
+    # 于是它们必须先涨到 L 才能往外溢，这就是顶托。
+    to_river = np.zeros(nlab + 1, dtype=bool)
+    if river_level > 0.0 and out_edge.any():
+        # 【判据用高程，不用「落点是不是水体」】第一版只看落点 `lc == 0`，
+        # 结果只认出 110 个洼地，剩下大量洼地的出流口落在河边的普通地面上，
+        # 依旧「免费」出域。物理上的判据是：出流口的地面不高于河水位，就顶托。
+        zflat = z.ravel()
+        _tz = np.where(rr >= 0, zflat[np.maximum(rr, 0)], z_b[out_edge])
+        is_riv = _tz <= river_level
+        np.logical_or.at(to_river, lab_b[out_edge], is_riv)
+    hold_b = np.zeros(nlab + 1, dtype="float64")
+    if river_level > 0.0:
+        below = np.maximum(0.0, river_level - z_b)
+        hold_b = np.bincount(lab_b, weights=below * cell_area,
+                             minlength=nlab + 1)
+    cap_eff_b = np.where(to_river, np.maximum(cap_b, hold_b), cap_b)
+    n_gated = int(to_river.sum())
+
+    # ---- P2-b：河道漫溢（陆地低于河水位就是水）----
+    # 纯增水情景（一滴雨不下）全靠这一条出结果：陆地低于河水位的格直接被淹，
+    # 深度 = 河水位 − 地面高程。只作用于陆域（lc_flow != 0）：河面本身不在这里
+    # 画，web 的河面由 water.js 负责，重复画会叠成两层。
+    river_inund = np.zeros((h, w), dtype="float64")
+    if river_level > 0.0:
+        _land = (lc_flow != 0) & (z < river_level)
+        river_inund[_land] = river_level - z[_land]
+    area_river_km2 = float((river_inund > 0.0).sum()) * cell_area / 1e6
+    # ---- P2-b/c：出流口筛选（哪些水真的能出域）----
+    # 【这才是「50% 的水免费流走」的真正出口】除了洼地（to_basin）之外，每格的
+    # 水流最终落到 `term_cell`。老代码把 `to_basin` 之外的水一律当「本步出域」，
+    # 于是：落在山脊一侧的水、落在 5 cm 以下浅坑里的水，全都凭空消失。
+    # 现在按出口所在格的性质分三种：
+    #   outlet[term] = True  → 河面 / 低处的域边，水确实出得去
+    #   outlet[term] = False → 高处域边（Fall Line 山脊），水出不去，原地积着
+    #   河道出口再叠顶托：河水位高于出口地面时，同样出不去
+    out_ok = np.asarray(outlet).ravel()[term_cell].copy()
+    _zflat = z.ravel()
+    _lcf = lc_flow.ravel()
+    if river_level > 0.0:
+        out_ok &= ~(_lcf[term_cell] == 0) | (_zflat[term_cell] > river_level)
+    n_no_out = int((~out_ok).sum())
+    # 水积在哪：出口不通的水就积在「产生它的那一格」原地 —— 早先版本把它汇到
+    # 出口格（`term_cell`），几十万格的汇水都砸在少数几个深坑里，实测把最大
+    # 水深堆到 334 m（明显不可能）。改成原地留存后单格水深由本格产流决定。
+    hold_cell = ar
+    log(f"      出流受阻：{n_no_out:,} 格的水出不去（占 {n_no_out / max(1, n):.1%}）")
+    blocked = np.zeros(n, dtype="float64")   # 受阻区累积水深（m）
+    blocked2 = blocked.reshape(h, w)         # 同一块内存的二维视图（随循环更新）
+    if river_level > 0.0:
+        log(f"      顶托：{n_gated:,} 个洼地通向河道（水位 {river_level:.2f} m）；"
+            f"低于该水位的陆域 {area_river_km2:.3f} km² 直接被淹")
 
     # 开场先算一次「每格落到哪个洼地」的权重，之后每步只乘体积
     w_b = np.zeros(nlab + 1, dtype="float64")   # 每个洼地当前蓄水（m3）
@@ -680,6 +799,7 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
 
     frames = []
     curve = []
+    _dbg_done = False
     total = {"rain": 0.0, "drained": 0.0, "discharged": 0.0, "receded": 0.0}
     # ---- P0：分级口径 ----
     # 【为什么只报 15 cm 会把话说小】数据里 1 cm 以上就是 3.59 km²（11.7%），
@@ -798,7 +918,17 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                 total["drained"] += float((rain_vol - net).sum())
             inflow = np.bincount(term[to_basin], weights=net[to_basin],
                                  minlength=nlab + 1)
-            total["discharged"] += float(net[~to_basin].sum())
+            # 【P2】终点不在洼地里的水：原来一律当出域。现在把「地面不高于河水位」
+            # 的那部分截下来，原地积着（这部分水排不出去才是顶托的真实后果）。
+            _out = ~to_basin
+            if _out.any():
+                _bo = _out & ~out_ok
+                if _bo.any():
+                    _v = net[_bo]
+                    np.add.at(blocked, hold_cell[_bo], _v / cell_area)
+                    _out = _out & out_ok
+                total["discharged"] += float(net[_out].sum())
+                total["dir"] = total.get("dir", 0.0) + float(net[_out].sum())
         else:
             if w_b.sum() * cell_area <= 1.0:
                 break
@@ -823,22 +953,54 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             w_b += inflow
 
         # 洼地满了往下游溢（在洼地图上迭代，几万节点，与格数无关）
-        for _ in range(400):
-            over = w_b - cap_b
+        # 【P2】容量用 cap_eff_b：通向河道的洼地被顶托抬高，先涨到河水位才溢。
+        for _ in range(1500):
+            over = w_b - cap_eff_b
             over[0] = 0.0
             if over.max() <= 1e-9:
                 break
             over = np.maximum(0.0, over)
             w_b -= over
             total["discharged"] += float(over[ds_b == 0].sum())
+            total["ovf"] = total.get("ovf", 0.0) + float(over[ds_b == 0].sum())
             move = ds_b > 0
             if move.any():
                 np.add.at(w_b, ds_b[move], over[move])
+        # 【坑·跑飞】400 轮级联扫不完所有链，末尾还会剩一点「超容量的水」。
+        # 不处理的话它会在一个几乎没容量的单格洼地（实测 cap=1 m³）里被
+        # `levels()` 反解成 101 m 的水深，整张深度场跟着失真。
+        # 收敛不完的余量按「已经流出计算域」记账，保证体积闭合。
+        _ex = np.maximum(0.0, w_b - cap_eff_b)
+        _ex[0] = 0.0
+        if _ex.max() > 1e-6:
+            w_b -= _ex
+            total["discharged"] += float(_ex.sum())
+            total["ovf"] = total.get("ovf", 0.0) + float(_ex.sum())
+            total["spill"] = total.get("spill", 0.0) + float(_ex.sum())
 
         lev = levels(w_b)
         cur = np.maximum(0.0, lev[lab_b] - z_b)
+        _mx = float(np.max(cur)) if cur.size else 0.0
+        if _mx > 60.0 and _dbg_done is False:
+            _dbg_done = True
+            _i = int(idx_b[int(np.argmax(cur))])
+            _lb = int(lab_f.ravel()[_i])
+            _fl = lab_f.ravel()
+            log(f"[dbg] t={t / 60:.0f}min 最深 {_mx:.1f} m 在格 {_i} "
+                f"(r{_i // w},c{_i % w})；洼地#{_lb} 格数={int((_fl == _lb).sum())} "
+                f"蓄水={w_b[_lb]:.0f} m³ cap={cap_b[_lb]:.0f} "
+                f"cap_eff={cap_eff_b[_lb]:.0f} ds={ds_b[_lb]} "
+                f"zmin={minz_b[_lb]:.2f} lev={lev[_lb]:.2f} "
+                f"gated={bool(to_river[_lb])}")
         depth[:] = 0.0
         depth.ravel()[idx_b] = cur
+        # 【P2】河道漫溢叠加：陆地低于河水位的地方至少有这么深的水。
+        # 用 max 而不是相加 —— 洼地积水和河道漫溢是同一片水面，取深的那层。
+        if river_level > 0.0:
+            np.maximum(depth, river_inund, out=depth)
+        # 【P2】受阻区（山脊侧、被顶托的河边）积的水叠上去
+        if blocked2.any():
+            np.maximum(depth, blocked2, out=depth)
         # 【坑·单位】w_b 本来就是 m³（cap_b 也按 m³ 建的），再乘 cell_area 就会
         # 在 2 m 网格上把蓄水量放大 4 倍，曲线和末态报表对不上。
         rec_basin = float(w_b.sum())
@@ -849,15 +1011,17 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
         # 峰值帧留存：建筑/道路的「淹没深度」要按峰值算，不能用末帧
         # 【坑】这里必须存**整张 depth**（h*w），不能存 `cur` —— `cur` 只是洼地格
         # 的一维数组（约 31 万），后面 reshape(h,w) 会炸。
-        _wet_now = float((cur > 0.01).sum()) * cell_area / 1e4
+        # 【P2】统计一律用 depth（= 洼地积水 max 河道漫溢），不再用 cur ——
+        # 否则纯增水情景下河道漫溢的陆域在报表里是 0。
+        _wet_now = float((depth > 0.01).sum()) * cell_area / 1e4
         if _wet_now > peak_wet:
             peak_wet = _wet_now
             peak_depth = depth.astype("float32")
         curve.append({"t_min": round(t / 60.0, 1),
-                      "max_depth_m": round(float(cur.max()), 3),
-                      "wet_ha": round(float((cur > 0.15).sum()) * cell_area / 1e4, 2),
+                      "max_depth_m": round(float(depth.max()), 3),
+                      "wet_ha": round(float((depth > 0.15).sum()) * cell_area / 1e4, 2),
                       **{f"gt{int(m * 100)}cm_ha":
-                         round(float((cur > m).sum()) * cell_area / 1e4, 2)
+                         round(float((depth > m).sum()) * cell_area / 1e4, 2)
                          for m in TIER_M},
                       "retained_m3": round(rec_basin)})
         t += dt
@@ -881,7 +1045,14 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             "area_land_km2": area_land_km2,
             "bucket_cap": bucket_cap, "saturated_at_min": saturated_at_min,
             "peak_used_frac": round(peak_used_frac, 4),
-            "budget_used": budget_used}
+            "budget_used": budget_used,
+            # P2：顶托与河道漫溢
+            "river_level_m": river_level, "gated_basins": n_gated,
+            "river_inund_km2": area_river_km2,
+            "river_inund": river_inund,
+            "blocked_m3": float(blocked.sum()) * cell_area,
+            "blocked_km2": float((blocked > 0.01).sum()) * cell_area / 1e6,
+            "basin_m3": float(w_b.sum())}
 
 
 def main() -> int:
@@ -941,6 +1112,18 @@ def main() -> int:
                     help="web 帧的深度量化上限（米）。原来 2.0 会把 9 m 深的水画成 2 m")
     ap.add_argument("--depth-stats", action="store_true",
                     help="统计淹没建筑（按轮廓采样峰值水深）与道路长度（按街道折线采样）")
+    # ---- P2：河道顶托 + 出口重划 ----
+    # 【为什么先做这两个而不是潮位时间序列】
+    # 潮位是「水位随时间的形状」，顶托是「下游水位高于地面就排不出去」。
+    # 后者才是把内涝算轻的第二个大原因：现在河道永远 0.046 m，等于给了城市
+    # 一台永不停的抽水机。先把它变成可调的常数（--river-level / --surge-m），
+    # 潮位随时间起伏留到下一轮再加，两者互不阻塞。
+    ap.add_argument("--surge-m", type=float, default=0.0,
+                    help="风暴增水（米）。叠加在河道基准水位上，0=不增水")
+    ap.add_argument("--edge-open-z", type=float, default=3.0,
+                    help="计算域边界可出流的最高地面高程（米）。高于它的边界当墙。"
+                         "实测：DC 北/东边缘 100%% 高于 10 m（Fall Line 山脊），"
+                         "南边缘 39.3%%、西边缘 19.9%% 低于 3 m")
     args = ap.parse_args()
 
     t0 = time.time()
@@ -956,14 +1139,39 @@ def main() -> int:
     lc = bmode(lc1, res)
     bld = bmax(bld1, res) > 0
     h, w = z.shape
+    # 【P2-c 出口重划】老口径 `edge_mask` 把计算域四条边**全部**当出口，等于给
+    # 30.6 km² 的矩形加了一圈隐形排水沟 —— 实测 50.3% 的径流从这里「免费」出域，
+    # 这是把内涝算轻的最大一处。
+    # 实测四条边的地面高程：北边缘最小 10.71 m、东边缘最小 9.46 m（全是 Fall Line
+    # 山脊，水只会从山脊往里流），南边缘 39.3%、西边缘 19.9% 低于 3 m（河漫滩）。
+    # 所以只有低处的边才真的是开边界；高于 --edge-open-z 的边当墙。
     edge_mask = np.zeros((h, w), dtype=bool)
     edge_mask[0, :] = edge_mask[-1, :] = True
     edge_mask[:, 0] = edge_mask[:, -1] = True
+    edge_open = edge_mask & (z <= float(getattr(args, "edge_open_z", 3.0)))
+    n_edge_open = int(edge_open.sum())
+    _ez = z[edge_mask]
+    log(f"      边界格 {int(edge_mask.sum()):,} 个（z {_ez.min():.1f}…{_ez.max():.1f} m），"
+        f"其中 {n_edge_open:,} 个低于 {getattr(args, 'edge_open_z', 3.0):.1f} m 可出流，"
+        f"其余 {int(edge_mask.sum()) - n_edge_open:,} 个当墙")
     log(f"      网格 {w}×{h} = {h * w:,} 格，高程 {z.min():.2f}…{z.max():.2f} m")
     # 网格原点：L2 分支要在写 params.json / 帧清单时用到（原实现只在 L1 分支末尾
     # 从 water.json 取，L2 一路返回时就还没定义 → NameError）。这里提前取一次。
     grid = dict(json.load(open(os.path.join(DERIVED, "water.json"),
                              encoding="utf-8"))["grid"])
+
+    # ---- P2：河道水位（基准 + 增水），L1/L2 共用一个值 ----
+    # 【基准来自实测】water.json 的 MSL_m=0.046 / BFE_min_m=3.658 都是从
+    # NOAA 8594900 的 datum 页与 DC 的 1%% 年遇洪水位算出来的（见 项目总览 §6.10）。
+    # --surge-m 就是在此之上叠加的风暴增水：Isabel 实测 2.71 m、1942 年站点
+    # 历史最高 2.94 m，所以 3~4 m 已是「超历史」的极端情景，6 m 是压力测试上限。
+    _wj = json.load(open(os.path.join(DERIVED, "water.json"), encoding="utf-8"))
+    _lvl = _wj["levels"]
+    river_base = (float(_lvl["MSL_m"]) if args.river_level == "normal"
+                  else float(_lvl["BFE_min_m"]))
+    river_level = river_base + float(getattr(args, "surge_m", 0.0))
+    log(f"      河道水位 {river_level:.3f} m（基准 {river_base:.3f} + 增水 "
+        f"{getattr(args, 'surge_m', 0.0):.3f}）")
 
     # 建筑格并入硬化类（屋顶同样不透水），但保留 bld 掩膜用于后面判"淹了哪栋"
     lc_flow = np.where(bld & (lc != 0), 1, lc)
@@ -998,7 +1206,7 @@ def main() -> int:
 
     drain_cap = np.where(DRAINS[lc_flow],
                          (args.drain_mm_h / 1000.0) * args.dur_h * cell_area, 0.0)
-    outlet = (lc == 0) | edge_mask
+    outlet = (lc == 0) | edge_open
 
     if args.l2:
         log("[4/6] L2 时间步：出水 → 积涝 → 退水")
@@ -1009,7 +1217,7 @@ def main() -> int:
         # 这里只把「静态地形量」传进去。
         pit_mask = storage > 0
         r = l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
-                    grid, args, args.out)
+                    grid, args, args.out, river_level=river_level)
         depth = r['depth_final']
         # 【必须用实测产流，不能用上面那个 P_mm 口径】上面 `total_runoff` 是按
         # 「平均雨强 − 下渗」算的整场产流；峰值型雨型下 L2 逐时刻积出的水量
@@ -1033,6 +1241,13 @@ def main() -> int:
         pk2d = pk.reshape(h, w) if pk is not None else depth
         imp = flood_impact(pk2d, grid, res, cell_area, lc)
         peak_tiers = {k: v for k, v in _peak.items() if k.startswith('gt')}
+        # 【别写成 `r.get('river_inund') or 0`】ndarray 的真假值有歧义，会抛
+        # "truth value of an array with more than one element is ambiguous"。
+        _rin = r.get('river_inund')
+        river_inflow_m3 = (float(_rin.sum()) * cell_area
+                           if _rin is not None else 0.0)
+        _blocked_m3 = float(r.get('blocked_m3') or 0.0)
+        _basin_m3 = float(r.get('basin_m3') or 0.0)
         summary = {
             'mode': 'L2',
             'grid': f'{w}×{h} @ {res} m',
@@ -1043,9 +1258,20 @@ def main() -> int:
             'discharged_m3': round(r['total']['discharged']),
             'retained_m3': round(float(depth.sum()) * cell_area),
             'receded_m3': round(r['total']['receded']),
-            'budget_closed': round(r['total']['drained'] + r['total']['discharged']
-                                   + r['total']['receded']
-                                   + float(depth.sum()) * cell_area, 1),
+            # 【P2·闭合差】增水情景下，河道漫溢会把**域外的水**灌进城市 ——
+            # 这部分不在「产流」里，必须单列成一项入账，否则闭合差会凭空多出
+            # 两三百万立方米（实测把 4.38 Mm³ 的账记成 6.7 Mm³）。
+            'river_inflow_m3': round(river_inflow_m3),
+            # 【闭合差必须按「分项体积」算，不能按 depth.sum()】河道漫溢、洼地积水、
+            # 受阻积水三者在空间上重叠，depth 是取 max 的合成场，直接 sum 会把
+            # 重叠部分只算一次，账面出现几百万立方米的假缺口。
+            'retained_basin_m3': round(_basin_m3),
+            'retained_blocked_m3': round(_blocked_m3),
+            'blocked_km2': round(float(r.get('blocked_km2') or 0.0), 4),
+            'budget_closed': round(_basin_m3 + _blocked_m3 + river_inflow_m3
+                                   - river_inflow_m3
+                                   + r['total']['drained'] + r['total']['discharged']
+                                   + r['total']['receded'] - rain_total, 1),
             # 峰值（全序列最大）：这两个才是给人看的「这场雨淹多大」
             'peak_wet_ha': round(max(curve_ha), 2),
             'peak_wet_m2': round(max(curve_ha) * 1e4),
@@ -1072,6 +1298,16 @@ def main() -> int:
             'drain_saturated_at_min': r.get('saturated_at_min'),
             'drain_peak_used_frac': r.get('peak_used_frac'),
             'drain_budget_used_m3': round(float(r.get('budget_used') or 0)),
+            # ---- P2 河道顶托与漫溢记账 ----
+            'river_base_m': round(river_base, 3),
+            'river_surge_m': round(float(getattr(args, 'surge_m', 0.0)), 3),
+            'river_level_m': round(float(r.get('river_level_m') or 0.0), 3),
+            'river_gated_basins': int(r.get('gated_basins') or 0),
+            # 【口径分离】河道漫溢淹掉的陆域单列一栏，不混进雨致内涝：
+            # 否则「一场雨淹了多少」会把风暴增水算进来的面积记到雨的账上。
+            'river_inund_km2': round(float(r.get('river_inund_km2') or 0.0), 4),
+            'edge_open_cells': n_edge_open,
+            'edge_wall_cells': int(edge_mask.sum()) - n_edge_open,
             'frames': len(r['frames']),
             'curve': r['curve'][::max(1, len(r['curve']) // 40)],
             'runtime_s': round(time.time() - t0, 1),
@@ -1086,7 +1322,12 @@ def main() -> int:
             'model': 'L2 时间步：产流 × D8 汇流 × 洼地蓄水 × 随步排水 + 退水',
             'rain': {'p_mm_h': float(args.p_mm_h), 'duration_h': float(args.dur_h),
                      'total_mm': float(P_mm)},
-            'river_level_m': None, 'river_level_mode': args.river_level,
+            'river_level_m': round(float(r.get('river_level_m') or 0.0), 3),
+            'river_level_mode': args.river_level,
+            'river_base_m': round(river_base, 3),
+            'river_surge_m': round(float(getattr(args, 'surge_m', 0.0)), 3),
+            'edge_open_z_m': float(getattr(args, 'edge_open_z', 3.0)),
+            'edge_open_cells': n_edge_open,
             'dt_s': float(args.dt), 'tail_h': float(args.tail_h),
             'params': {'C_runoff': {str(k): float(v) for k, v in enumerate(C_RUNOFF)},
                        'f_infil_mm_h': {str(k): (None if v == float('inf') else float(v))
@@ -1102,7 +1343,8 @@ def main() -> int:
             'budget_m3': {'runoff': float(rain_total),
                           'inlet_drained': float(r['total']['drained']),
                           'discharged': float(r['total']['discharged']),
-                          'retained': float(depth.sum()) * cell_area},
+                          'retained': float(depth.sum()) * cell_area,
+                          'river_inflow': round(river_inflow_m3)},
         }
         with open(os.path.join(args.out, 'params.json'), 'w', encoding='utf-8') as f:
             json.dump(meta, f, ensure_ascii=False, indent=1)
@@ -1110,6 +1352,8 @@ def main() -> int:
             json.dump(summary, f, ensure_ascii=False, indent=1)
         log('完成：' + json.dumps({k: v for k, v in summary.items() if k != 'curve'},
                                   ensure_ascii=False))
+        log('     出水拆分：洼地溢流出域 %.0f m³ / 直接出域 %.0f m³' %
+            (r['total'].get('ovf', 0.0), r['total'].get('dir', 0.0)))
         return 0
     vol_p, held, drained, discharged, leftover = route_accum(
         vol, recv, drain_cap, outlet, storage)
@@ -1117,12 +1361,17 @@ def main() -> int:
         f"洼地蓄住 {float(held.sum()):,.0f} m³；溢流残余 {leftover:,.0f} m³")
 
     log("[5/6] 水面摊平（同一洼地内静水）+ 河道边界 …")
-    wj = json.load(open(os.path.join(DERIVED, "water.json"), encoding="utf-8"))
-    lvl = wj["levels"]
-    river_level = float(lvl["MSL_m"]) if args.river_level == "normal" else float(lvl["BFE_min_m"])
+    # 【P2】河道水位与网格已在上面算好（river_level / grid），这里不再重复读
+    # water.json —— 老代码在这里重读一次并覆盖 grid，两处口径容易走散。
     river_mask = lc == 0
     depth = vol_p / cell_area
-    depth = np.where(river_mask | edge_mask, 0.0, depth)
+    # 【P2-c】只清零**真正开边界**的格（低处边界 + 河面），不再把四条边全当出口；
+    # 高处的边界是墙，水留在城市里。
+    depth = np.where(river_mask | edge_open, 0.0, depth)
+    # 【P2-b】河道漫溢：陆地低于河水位的格至少有这么深的水
+    if river_level > 0.0:
+        _land = (lc != 0) & (z < river_level)
+        depth = np.maximum(depth, np.where(_land, river_level - z, 0.0))
     # 单格蓄水太"芝麻"：做 6 轮 3×3 均值平滑（水量守恒），把孤立小坑并成片。
     # 注意这是可视化/成果口径上的平滑，不是物理演进 —— 物理上的静水摊平要
     # 按洼地求解水面，L2 再做。
@@ -1140,7 +1389,6 @@ def main() -> int:
         f"最大 {depth.max():.2f} m（残余陆地汇 {int(sink_only.sum()):,} 格）")
 
     log("[6/6] 落盘 …")
-    grid = wj["grid"]
     meta = {
         "grid": {"x0": grid["x0"], "y1": grid["y1"], "step_m": res,
                  "cols": w, "rows": h, "layout": grid["layout"]},
@@ -1149,6 +1397,10 @@ def main() -> int:
         "rain": {"p_mm_h": args.p_mm_h, "duration_h": args.dur_h, "total_mm": P_mm},
         "river_level_m": river_level,
         "river_level_mode": args.river_level,
+        "river_base_m": river_base,
+        "river_surge_m": float(getattr(args, "surge_m", 0.0)),
+        "edge_open_z_m": float(getattr(args, "edge_open_z", 3.0)),
+        "edge_open_cells": n_edge_open,
         "params": {
             "C_runoff": {str(i): float(v) for i, v in enumerate(C_RUNOFF)},
             "f_infil_mm_h": {str(i): (None if not np.isfinite(v) else float(v))
