@@ -1088,8 +1088,27 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                     _node_in = None
                 if _node_in is None:
                     _node_in = np.zeros(street.n)
-                _sres = street.step(dt, _node_in, river_level=river_level,
-                                    relax=int(getattr(args, "street_relax", 4)))
+                # 【街道层子步】dt=300 s 对街道太粗：流速 1~2 m/s，一拍就能把
+                # 整个路网走到平衡，边沟水深恒为 Manning 输水深度，既堆不出
+                # 水带也看不出「水在流动」。所以街道层允许拆成 n 个子步，
+                # 每个子步只跑 64k 个节点的数组，成本很低（实测 1 m 全城 ×10
+                # 子步约 +1 分钟），但能把「积水在路上推进」这个过程显出来。
+                _nsub = max(1, int(getattr(args, "street_substep", 1)))
+                _dts = dt / float(_nsub)
+                _sti = _node_in / float(_nsub)
+                _sres = None
+                # 【坑·子步要累加】每个子步都会漫出/入河，只留最后一次的账会
+                # 直接丢掉前面几次的水（实测 sub=10 时闭合差 −3.08 Mm³）。
+                _spill_acc = np.zeros(street.n)
+                _riv_acc = 0.0
+                for _k in range(_nsub):
+                    _sres = street.step(_dts, _sti, river_level=river_level,
+                                        relax=int(getattr(args, "street_relax", 4)))
+                    _spill_acc += _sres["spill_node"]
+                    _riv_acc += float(_sres["to_river"])
+                _sres = dict(_sres)
+                _sres["spill_node"] = _spill_acc
+                _sres["to_river"] = _riv_acc
                 # 【街道管网的收支台账】in = 进管网 / to_river = 进河 /
                 # spill = 漫回路缘石 / V 是管网里剩下的。三者必须自洽，
                 # 不自洽就是管网内部丢了水（实测少了 3 万多 m³，靠这几项定位）。
@@ -1458,6 +1477,8 @@ def main() -> int:
                     help="街道糙率 Manning n（沥青路面 0.013~0.016）")
     ap.add_argument("--street-relax", type=int, default=4,
                     help="每步管网输水迭代次数（水一步能往下游走几跳）")
+    ap.add_argument("--street-substep", type=int, default=1,
+                    help="街道层每个时间步拆成几个子步（1=不拆；10~30 能看出水在路上推进）")
     ap.add_argument("--street-collect-m", type=float, default=60.0,
                     help="街区汇水半径（m）：这个距离内的地面产流直接进边沟。0=只收街面")
     ap.add_argument("--dbg-budget", type=int, default=0,
