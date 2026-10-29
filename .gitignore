@@ -37,6 +37,13 @@ data/derived/*.tif
 _pv*.png
 _pick*.mjs
 web/_*.mjs
+# 粘贴进来的截图缓存（生图会话崩掉时留下的 u_*.img/jpg，页面零引用；2026-10-28 清掉 15 个）
+web/u_*.img
+web/u_*.jpg
+data/dem/_*.json
 
 # 排水模型产物（栅格/图，本机生成，不入库）
 data/flood/
+# 街道管网/街道掩膜缓存（本机 1.7 s 可重建，不入库）
+data/derived/street_mask_*.npz
+data/derived/street_net_*.npz

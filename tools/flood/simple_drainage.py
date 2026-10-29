@@ -614,7 +614,7 @@ def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00
 
 
 def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
-            grid, args, outdir, river_level=0.0, river_area_m2=0.0):
+            grid, args, outdir, river_level=0.0, river_area_m2=0.0, street=None):
     """
     L2 时间版：把 L1 的「稳态一次搬完」改成按 dt 步进。
 
@@ -911,6 +911,7 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
     frames = []
     curve = []
     _dbg_done = False
+    _dbg_prev = 0.0
     total = {"rain": 0.0, "drained": 0.0, "discharged": 0.0, "receded": 0.0,
              # P2.5：真实退水的四项分账
              "infil": 0.0, "seep_pond": 0.0, "evap": 0.0,
@@ -1054,8 +1055,94 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             else:
                 net = np.maximum(0.0, rain_vol - drain_f)
                 total["drained"] += float((rain_vol - net).sum())
+            # ---- P4：落在街道上的水改进一维管网 ----
+            # 【为什么从这里分流】这一步之前 `net` 是「本步落在每一格上、还没进
+            # 洼地的水量」。街道格的水如果照旧进洼地，就又被切回碎片了。所以先
+            # 把街道格的量取出来灌进管网（其余格照旧），管网算完再把漫出路缘石
+            # 的那部分放回对应格的洼地。
+            _street_spill = None
+            _dbg_inj = 0.0
+            _dbg_ret = 0.0
+            if street is not None:
+                # 【只把「本来就会进洼地」的街道格分流给管网】`net` 里有一部分格
+                # 的终点不在洼地里（`~to_basin`），它们走后面的出域/受阻分支。
+                # 早先把所有街道格都抽走，回灌时只按 `to_basin` 送回去，落在这
+                # 一部分格上的漫出量就凭空消失了 —— 实测闭合差 −36,183 m³。
+                _sc = ((street.cell_node.ravel() >= 0)
+                       | (street.cell_conn.ravel() >= 0)) & to_basin
+                if _sc.any():
+                    _sv = net[_sc]
+                    _tot_s = float(_sv.sum())
+                    if _tot_s > 0:
+                        net[_sc] = 0.0
+                        _cn = street.cell_node.ravel().copy()
+                        # 汇水格归到它最近的那个节点（街面格自己已经是最邻近的）
+                        _cc = street.cell_conn.ravel()
+                        _use = _cn < 0
+                        _cn[_use] = _cc[_use]
+                        _node_in = np.bincount(_cn[_sc],
+                                               weights=_sv, minlength=street.n)
+                    else:
+                        _node_in = None
+                else:
+                    _node_in = None
+                if _node_in is None:
+                    _node_in = np.zeros(street.n)
+                _sres = street.step(dt, _node_in, river_level=river_level,
+                                    relax=int(getattr(args, "street_relax", 4)))
+                # 【街道管网的收支台账】in = 进管网 / to_river = 进河 /
+                # spill = 漫回路缘石 / V 是管网里剩下的。三者必须自洽，
+                # 不自洽就是管网内部丢了水（实测少了 3 万多 m³，靠这几项定位）。
+                total["street_in"] = total.get("street_in", 0.0) + float(_node_in.sum())
+                total["street_spill"] = (total.get("street_spill", 0.0)
+                                         + float(_sres["spill_node"].sum()))
+                total["to_river"] = total.get("to_river", 0.0) + _sres["to_river"]
+                total["street_river"] = (total.get("street_river", 0.0)
+                                         + _sres["to_river"])
+                _sp = _sres["spill_node"]
+                if _sp.any():
+                    # 【别把整节点的漫出全砸在一格上】一个节点挂着几十个街道格，
+                    # 原来用 node_cell（节点自己的那一格）当泄放点，几十个格的水
+                    # 全落进一格 → 街口凭空出现深坑。现在按节点集水面积分摊到
+                    # 它管的每一格上。
+                    _fn = street.cell_node.ravel()
+                    _m = _fn >= 0
+                    _cv = np.zeros(h * w)
+                    if _m.any():
+                        _ai = np.maximum(street.node_area[_fn[_m]], 1.0)
+                        _cv[_m] = _sp[_fn[_m]] * cell_area / _ai
+                    # 【坑·漏账】有些节点一个街道格也没分到（边缘、水面上的
+                    # 路灯/桥节点），它们照样会被上游灌水、也会漫出路缘石。
+                    # 以前这些节点的漫出量没有格子可放，就凭空蒸发了 ——
+                    # 实测正是闭合差 −36,183 m³ 的全部来源（约占街道进水量 3.3%）。
+                    # 现在退回「节点自己所在的那一格」，一滴不漏。
+                    _orph = np.nonzero((street.node_area <= 0.0) & (_sp > 0.0))[0]
+                    if _orph.size:
+                        np.add.at(_cv, street.node_cell[_orph], _sp[_orph])
+                    _street_spill = _cv
+                    if bool(getattr(args, "dbg_budget", 0)):
+                        _dbg_inj = float(_node_in.sum())
+                        _dbg_ret = float(_cv.sum()) - float(_sp.sum())
             inflow = np.bincount(term[to_basin], weights=net[to_basin],
                                  minlength=nlab + 1)
+            # P4：街道管网漫到路缘石外的水，回到它所在的那一格的洼地
+            if _street_spill is not None:
+                inflow = inflow + np.bincount(
+                    term[to_basin], weights=_street_spill[to_basin],
+                    minlength=nlab + 1)
+                # 【回灌也要按同一口径兜住】漫出落在 `~to_basin` 格上的部分，
+                # 主流程会「能出流就出域、否则原地积着」，这里照抄，不然又漏账。
+                _bad = ~to_basin
+                if _bad.any():
+                    _bv = _street_spill[_bad]
+                    if _bv.any():
+                        _ok = out_ok[_bad]
+                        if _ok.any():
+                            total["discharged"] += float(_bv[_ok].sum())
+                            total["dir"] = total.get("dir", 0.0) + float(_bv[_ok].sum())
+                        if (~_ok).any():
+                            np.add.at(blocked, hold_cell[_bad][~_ok],
+                                      _bv[~_ok] / cell_area)
             # 【P2】终点不在洼地里的水：原来一律当出域。现在把「地面不高于河水位」
             # 的那部分截下来，原地积着（这部分水排不出去才是顶托的真实后果）。
             _out = ~to_basin
@@ -1119,17 +1206,24 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                     _f = min(1.0, _cap_m3s * dt / _tot)
                     _loss_in = _pond_mm * _share * _f
             # 扣除：按洼地汇总成体积，且不能把洼地抽成负的
-            _lb = np.bincount(lab_b, weights=(_loss_inf + _loss_et + _loss_in)
-                              / 1000.0 * cell_area, minlength=nlab + 1)
-            _lb = np.minimum(_lb, np.maximum(0.0, w_b))
+            _lb_raw = np.bincount(lab_b, weights=(_loss_inf + _loss_et + _loss_in)
+                                  / 1000.0 * cell_area, minlength=nlab + 1)
+            _lb = np.minimum(_lb_raw, np.maximum(0.0, w_b))
             w_b -= _lb
+            # 【坑】账面必须按「真正扣掉的那份」记。原来直接记 `_loss_*` 全额，
+            # 一旦某个洼地剩的水不够扣（`_lb` 被钳到 w_b），账面就多记了并没
+            # 真扣掉的水 —— 实测闭合差凭空少 3 万多 m³（−36,183）。这里用
+            # 逐洼地比例把三项按同一系数缩回去，账面才和物理一致。
+            _kb = np.where(_lb_raw > 1e-12, _lb / np.maximum(_lb_raw, 1e-12), 0.0)
+            _kb_c = _kb[lab_b]
             total["seep_pond"] += float(np.bincount(
-                lab_b, weights=_loss_inf / 1000.0 * cell_area,
+                lab_b, weights=_loss_inf * _kb_c / 1000.0 * cell_area,
                 minlength=nlab + 1).sum())
             total["evap"] += float(np.bincount(
-                lab_b, weights=_loss_et / 1000.0 * cell_area,
+                lab_b, weights=_loss_et * _kb_c / 1000.0 * cell_area,
                 minlength=nlab + 1).sum())
-            _in_v = float(np.bincount(lab_b, weights=_loss_in / 1000.0 * cell_area,
+            _in_v = float(np.bincount(lab_b,
+                                      weights=_loss_in * _kb_c / 1000.0 * cell_area,
                                       minlength=nlab + 1).sum())
             total["inlet_pond"] += _in_v
         if tau > 0:
@@ -1205,9 +1299,35 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
         # 【P2】受阻区（山脊侧、被顶托的河边）积的水叠上去
         if blocked2.any():
             np.maximum(depth, blocked2, out=depth)
+        # 【P4】街道管网里走的水也画出来：沿街的连续水带主要来自这一层，
+        # 没有它页面上还是只有一个个水洼。取 max 而不是相加 —— 街道格上可能
+        # 同时有管网水和地面水，那是同一片水面。
+        if street is not None:
+            _sd = street.depth_grid()
+            if _sd.any():
+                np.maximum(depth, _sd, out=depth)
         # 【坑·单位】w_b 本来就是 m³（cap_b 也按 m³ 建的），再乘 cell_area 就会
         # 在 2 m 网格上把蓄水量放大 4 倍，曲线和末态报表对不上。
         rec_basin = float(w_b.sum())
+        # 【调试·闭合差逐拍卖点】加了街道管网分流以后账面少了几万 m³，
+        # 用它定位是哪一拍开始丢的：每拍算一次「已记账 − 已产流」，跳变超过 50 m³
+        # 就打印。平时不开（`--dbg-budget 0`），只在查漏账时用。
+        if bool(getattr(args, "dbg_budget", 0)):
+            _acc = (rec_basin + float(blocked.sum()) * cell_area
+                    + (float(street.vol.sum()) if street is not None else 0.0)
+                    + total["drained"] + total["discharged"] + total["receded"]
+                    + total.get("to_river", 0.0) + total.get("seep_pond", 0.0)
+                    + total.get("evap", 0.0) + total.get("inlet_pond", 0.0))
+            _gap_k = _acc - total["rain"]
+            if abs(_gap_k - _dbg_prev) > 50.0:
+                log(f"[dbg] t={t / 60:6.0f} min  账面差 {_gap_k:12.1f} m³"
+                    f"（本拍跳变 {_gap_k - _dbg_prev:+.1f}）")
+                if _dbg_inj or _dbg_ret:
+                    log(f"[dbg]   街道进 {_dbg_inj:9.1f} / 回灌与应回灌之差 {_dbg_ret:+.1f}"
+                        f"；管网存 {float(street.vol.sum()) if street is not None else 0.0:9.1f}"
+                        f"；洼地存 {rec_basin:9.1f}；受阻 {float(blocked.sum()) * cell_area:9.1f}"
+                        f"；出域 {total['discharged']:9.1f}；入河 {total.get('to_river', 0.0):9.1f}")
+            _dbg_prev = _gap_k
 
         if k % frame_every == 0 or (k == n_rain - 1) or \
                 (k >= n_rain and (k - n_rain) % frame_every == 0):
@@ -1257,6 +1377,11 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             "blocked_m3": float(blocked.sum()) * cell_area,
             "blocked_km2": float((blocked > 0.01).sum()) * cell_area / 1e6,
             "basin_m3": float(w_b.sum()),
+            # P4：一维街道管网里存着的水（单独入账，否则闭合差会缺这一项）
+            "street_m3": float(street.vol.sum()) if street is not None else 0.0,
+            "street_in_m3": float(total.get("street_in", 0.0)),
+            "street_spill_m3": float(total.get("street_spill", 0.0)),
+            "street_river_m3": float(total.get("street_river", 0.0)),
             # P2.5：排进河里的水量，以及按实测潮汐水面换算出来的水位抬升
             "to_river_m3": float(total.get("to_river", 0.0)),
             "river_area_m2": float(river_area_m2),
@@ -1318,6 +1443,25 @@ def main() -> int:
                     help="小于该填深的坑不计蓄水（默认 0.05 = 老口径；实测调大反而更碎，别调）")
     ap.add_argument("--legacy-infil", action="store_true",
                     help="退回老口径下渗（常数速率、无土壤蓄水上限），用于复现旧结果")
+    # ---- P4：一维街道管网（dual drainage）----
+    # 【为什么换结构而不是继续调参】P3 试过楼当墙、街道下压、微坑阈值三个旋钮，
+    # 全部无效。根因是内核：fill-and-spill 把城市切成互不相通的洼地，每块各自
+    # 蓄满才往下传 —— 参数怎么调都是碎。真实城区的雨水一落地就被路缘石和路面
+    # 纵坡组织进街道，沿街连续流走。所以 P4 在二维外面再加一层一维街道管网：
+    # 落在街道格上的水进管网（Manning 输水），超过路缘石高度就漫回地面，
+    # 流到河边直接入河。这就是国际上城市内涝模型的「双排水」标准做法。
+    ap.add_argument("--street", type=int, default=1,
+                    help="1=开启一维街道管网（默认）；0=退回纯二维洼地（P2.5 口径）")
+    ap.add_argument("--street-curb-m", type=float, default=0.15,
+                    help="路缘石高度（m），街道水超过它就漫回地面")
+    ap.add_argument("--street-n", type=float, default=0.016,
+                    help="街道糙率 Manning n（沥青路面 0.013~0.016）")
+    ap.add_argument("--street-relax", type=int, default=4,
+                    help="每步管网输水迭代次数（水一步能往下游走几跳）")
+    ap.add_argument("--street-collect-m", type=float, default=30.0,
+                    help="街区汇水半径（m）：这个距离内的地面产流直接进边沟。0=只收街面")
+    ap.add_argument("--dbg-budget", type=int, default=0,
+                    help="调试：1 = 逐拍打印地表水量平衡的账面差（查漏账用）")
     # 【为什么要有 --frame-min】帧间隔原来写死 300 s。几小时的工况没问题，
     # 但 24 h / 72 h 这种长历时会出 300~900 帧 × 0.85 MB = 几百 MB，
     # 既跑不完也传不动。改成按「总时长自动定间隔」，帧数落在 60~120 之间。
@@ -1434,6 +1578,26 @@ def main() -> int:
     # 建筑格并入硬化类（屋顶同样不透水），但保留 bld 掩膜用于后面判"淹了哪栋"
     lc_flow = np.where(bld & (lc != 0), 1, lc)
 
+    # ---- P4：一维街道管网 ----
+    _street = None
+    if int(getattr(args, "street", 1)) > 0:
+        t_sn = time.time()
+        _st_mask = build_street_raster(grid, res, h, w)
+        if int(_st_mask.sum()) > 0:
+            from street_net import StreetNet
+            _street = StreetNet(grid, res, h, w, z, street_mask=_st_mask,
+                                manning=float(getattr(args, "street_n", 0.016)),
+                                collect_m=float(getattr(args, "street_collect_m", 30.0)),
+                                conn_ok=(lc != 0),
+                                cache=os.path.join(DERIVED, f"street_net_{res:d}_v2.npz"))
+            _street.curb_m = float(getattr(args, "street_curb_m", 0.15))
+            log(f"      街道管网：{_street.n:,} 个节点，"
+                f"{getattr(_street, 'n_edges_raw', 0):,} 条街段，"
+                f"{int((_street.cell_node >= 0).sum()):,} 格挂到管网上"
+                f"（路缘石 {_street.curb_m:.2f} m，n={_street.manning:.3f}），"
+                f"本地死水节点 {int((_street.node_dn < 0).sum()):,} 个，"
+                f"耗时 {time.time() - t_sn:.1f}s")
+
     log("[2/6] 产流 …")
     P_mm = args.p_mm_h * args.dur_h
     # 【P2.5】总量估算也要跟着新下渗口径走：下渗不但受速率限制，还受土壤可吸
@@ -1500,7 +1664,8 @@ def main() -> int:
         pit_mask = storage > 0
         r = l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                     grid, args, args.out,
-                    river_level=river_level, river_area_m2=_river_area_m2)
+                    river_level=river_level, river_area_m2=_river_area_m2,
+                    street=_street)
         depth = r['depth_final']
         # 【必须用实测产流，不能用上面那个 P_mm 口径】上面 `total_runoff` 是按
         # 「平均雨强 − 下渗」算的整场产流；峰值型雨型下 L2 逐时刻积出的水量
@@ -1564,6 +1729,7 @@ def main() -> int:
             'retained_blocked_m3': round(_blocked_m3),
             'blocked_km2': round(float(r.get('blocked_km2') or 0.0), 4),
             'budget_closed': round(_basin_m3 + _blocked_m3
+                                   + float(r.get('street_m3') or 0.0)
                                    + r['total']['drained'] + r['total']['discharged']
                                    + r['total']['receded']
                                    + r['total'].get('to_river', 0.0)
@@ -1575,6 +1741,12 @@ def main() -> int:
             # `infil_m3` 是下渗量：它在产流之前就被扣掉了，**不进地表水量平衡**
             # （所以不参与上面的闭合差），单列出来是为了知道「这场雨渗进土里多少」。
             'infil_m3': round(r['total'].get('infil', 0.0)),
+            # 【P4 街道管网台账】进管网 = 进河 + 漫回路缘石 + 管网里剩的，
+            # 三项对不上就是管网内部漏水（曾经少 3.2 万 m³，就是靠这三项定位）。
+            'street_in_m3': round(float(r.get('street_in_m3') or 0.0)),
+            'street_spill_m3': round(float(r.get('street_spill_m3') or 0.0)),
+            'street_river_m3': round(float(r.get('street_river_m3') or 0.0)),
+            'street_held_m3': round(float(r.get('street_m3') or 0.0)),
             'seep_pond_m3': round(r['total'].get('seep_pond', 0.0)),
             'evap_m3': round(r['total'].get('evap', 0.0)),
             'inlet_pond_m3': round(r['total'].get('inlet_pond', 0.0)),
