@@ -1314,7 +1314,7 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
         # 就打印。平时不开（`--dbg-budget 0`），只在查漏账时用。
         if bool(getattr(args, "dbg_budget", 0)):
             _acc = (rec_basin + float(blocked.sum()) * cell_area
-                    + (float(street.vol.sum()) if street is not None else 0.0)
+                    + (float(street.vol.sum() + street.sheet.sum()) if street is not None else 0.0)
                     + total["drained"] + total["discharged"] + total["receded"]
                     + total.get("to_river", 0.0) + total.get("seep_pond", 0.0)
                     + total.get("evap", 0.0) + total.get("inlet_pond", 0.0))
@@ -1324,7 +1324,7 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                     f"（本拍跳变 {_gap_k - _dbg_prev:+.1f}）")
                 if _dbg_inj or _dbg_ret:
                     log(f"[dbg]   街道进 {_dbg_inj:9.1f} / 回灌与应回灌之差 {_dbg_ret:+.1f}"
-                        f"；管网存 {float(street.vol.sum()) if street is not None else 0.0:9.1f}"
+                        f"；管网存 {float(street.vol.sum() + street.sheet.sum()) if street is not None else 0.0:9.1f}"
                         f"；洼地存 {rec_basin:9.1f}；受阻 {float(blocked.sum()) * cell_area:9.1f}"
                         f"；出域 {total['discharged']:9.1f}；入河 {total.get('to_river', 0.0):9.1f}")
             _dbg_prev = _gap_k
@@ -1378,7 +1378,7 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             "blocked_km2": float((blocked > 0.01).sum()) * cell_area / 1e6,
             "basin_m3": float(w_b.sum()),
             # P4：一维街道管网里存着的水（单独入账，否则闭合差会缺这一项）
-            "street_m3": float(street.vol.sum()) if street is not None else 0.0,
+            "street_m3": float(street.vol.sum() + street.sheet.sum()) if street is not None else 0.0,
             "street_in_m3": float(total.get("street_in", 0.0)),
             "street_spill_m3": float(total.get("street_spill", 0.0)),
             "street_river_m3": float(total.get("street_river", 0.0)),
@@ -1458,7 +1458,7 @@ def main() -> int:
                     help="街道糙率 Manning n（沥青路面 0.013~0.016）")
     ap.add_argument("--street-relax", type=int, default=4,
                     help="每步管网输水迭代次数（水一步能往下游走几跳）")
-    ap.add_argument("--street-collect-m", type=float, default=30.0,
+    ap.add_argument("--street-collect-m", type=float, default=60.0,
                     help="街区汇水半径（m）：这个距离内的地面产流直接进边沟。0=只收街面")
     ap.add_argument("--dbg-budget", type=int, default=0,
                     help="调试：1 = 逐拍打印地表水量平衡的账面差（查漏账用）")
@@ -1587,9 +1587,9 @@ def main() -> int:
             from street_net import StreetNet
             _street = StreetNet(grid, res, h, w, z, street_mask=_st_mask,
                                 manning=float(getattr(args, "street_n", 0.016)),
-                                collect_m=float(getattr(args, "street_collect_m", 30.0)),
+                                collect_m=float(getattr(args, "street_collect_m", 60.0)),
                                 conn_ok=(lc != 0),
-                                cache=os.path.join(DERIVED, f"street_net_{res:d}_v2.npz"))
+                                cache=os.path.join(DERIVED, f"street_net_{res:d}_v3.npz"))
             _street.curb_m = float(getattr(args, "street_curb_m", 0.15))
             log(f"      街道管网：{_street.n:,} 个节点，"
                 f"{getattr(_street, 'n_edges_raw', 0):,} 条街段，"

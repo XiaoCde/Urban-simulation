@@ -11,7 +11,8 @@ P3 试过「楼当墙」「街道下压」「微坑阈值」三个旋钮，全�
 所以 P4 换的是结构，不是参数：在二维洼地之外再加一维街道管网。
   · 落在街道格上的水，不再进洼地，而是进街道管网（1D）；
   · 街道按 Manning 公式沿真实路网向下游输水（坡度取自 DEM，宽度取真实路宽）；
-  · 街道水深超过路缘石高度（默认 0.15 m）就漫出到两侧地面，回到二维模型；
+  · 街道水深超过路缘石高度（默认 0.15 m）后，多余的水留在**路面上**继续沿街
+    往下游淌（漫流 sheet flow），只有流到街道死端才漫回二维地面；
   · 街道流到河边的节点直接排进河道，不再一路往下传算作「出域」。
 
 这是国际上城市内涝模型的标准做法（「双排水 dual drainage」：1D 管网/街道 +
@@ -210,6 +211,7 @@ class StreetNet:
         nc = rr * self.w + cc
         self.node_cell[self.node_cell < 0] = nc[self.node_cell < 0]
         self.vol = np.zeros(n, dtype="float64")
+        self.sheet = np.zeros(n, dtype="float64")
 
         # ---- 汇水格（cell_conn）：街区里的水怎么进管网 ----
         # 【为什么需要它】街道格本身只占 10.85 km²，只把「落在街面上的雨」收进
@@ -262,6 +264,7 @@ class StreetNet:
                                                            dtype="int32")).reshape(
             self.h, self.w)
         self.vol = np.zeros(self.n, dtype="float64")
+        self.sheet = np.zeros(self.n, dtype="float64")
 
     # ------------------------------------------------------------------ 步进
     def step(self, dt, inject, river_level=-99.0, river_nodes=None, relax=4,
@@ -310,22 +313,64 @@ class StreetNet:
             V -= mv
             np.add.at(V, dn[has], mv[has])
 
-        # 超过路缘石的水漫回地面
+        # 超过路缘石的水：老做法是立刻漫回地面（沿街格分摊），实测 93% 的水
+        # 一进节点就原地倒回，街上永远只有一层薄水膜、连不成片。真实情况是
+        # 路缘石挡不住的时候，水在**路面上**继续往下游淌（漫流 sheet flow），
+        # 只有流到街道的死端（本地洼地/不能走）才真的漫到地面。
+        # 所以这里拆成两本账：
+        #   G —— 边沟里的水（不超过路缘石）。区域 W*L，按 Manning 输送，坡度陡。
+        #   Sh —— 路面上漫流的水。区域取"路面 + 两侧人行道"，坡降用街道纵坡。
+        # 两者都沿同一张路网往下游走；到死端才记 spill_node 还给二维模型。
         area = np.maximum(W * L, 1.0)
         d = V / area
         over = np.maximum(0.0, d - self.curb_m) * area
         if over.max() > 1e-9:
             V -= over
+            self.sheet += over
+
+        # 漫流层：路面宽 + 两侧路缘石外 1.5 m（水真的会在人行道上淌）
+        Sh = self.sheet
+        Ws = W + 3.0
+        area_s = np.maximum(Ws * L, 1.0)
+        for _ in range(max(1, int(relax))):
+            ds = Sh / area_s
+            cap_s = (1.0 / self.manning) * Ws * np.power(np.maximum(ds, 0.0), 5.0 / 3.0) \
+                * np.sqrt(S)
+            qs = np.minimum(Sh / max(dt, 1e-9), cap_s)
+            qs[~has] = 0.0
+            ms = qs * dt
+            ms = np.minimum(ms, Sh)
+            if ms.max() <= 1e-12:
+                break
+            Sh -= ms
+            np.add.at(Sh, dn[has], ms[has])
+
+        # 死端（本地洼地）：漫流到这里走不动了，才漫到地面
+        sink = ~has
+        spill_node = np.where(sink, np.maximum(Sh, 0.0), 0.0)
+        Sh = np.where(sink, 0.0, Sh)
+        # 极端情况（坡度极缓、一步灌爆）：超过 1.5 m 的部分也还给地面，
+        # 否则会在一条街上堆出几米深的水柱
+        deep = np.maximum(0.0, Sh / area_s - 1.5) * area_s
+        if deep.max() > 1e-12:
+            Sh -= deep
+            spill_node = spill_node + deep
+        self.sheet = Sh
+
         self.vol = V
-        return {"to_river": to_river, "retained": float(V.sum()),
-                "spill_node": over, "depth_node": d}
+        return {"to_river": to_river, "retained": float(V.sum() + Sh.sum()),
+                "spill_node": spill_node, "depth_node": d + Sh / area_s}
 
     def depth_grid(self):
-        """街道水深铺到栅格（只有街道格有值），供画面上叠加。"""
+        """街道水深铺到栅格（只有街道格有值），供画面上叠加。
+
+        取「边沟水 + 路面漫流」的合成深度 —— 铺到街面上就是一条连续的水带。
+        """
         g = np.zeros(self.h * self.w, dtype="float32")
         flat = self.cell_node.ravel()
         m = flat >= 0
         area = np.maximum(self.node_w * self.node_len, 1.0)
-        d = (self.vol / area).astype("float32")
+        area_s = np.maximum((self.node_w + 3.0) * self.node_len, 1.0)
+        d = (self.vol / area + self.sheet / area_s).astype("float32")
         g[m] = d[flat[m]]
         return g.reshape(self.h, self.w)
