@@ -52,6 +52,7 @@ const PED_AVOID = 3.2;          // 前方多远算被人挡
 //      走到就转入『躲着』并停住，水退了再回步行网继续走。
 const FLEE_DEPTH = 0.12;        // 米。12 cm 齐踝，普通人不会继续走
 const FLEE_SPEED = 3.3;         // 逃难速度（米/秒，接近快跑）
+const RAIN_SPEED = 1.7;         // 避雨速度（米/秒，快步走；下雨不是着火，没人狂奔）
 const FLEE_TURN_IN = 0.55;      // 每帧朝目标转多少（0..1，越大越急）
 const REFUGE_MAX = 620;         // 最近避难所超过这个距离就不找了（不现实）
 const REFUGE_TRIES = 6;         // 直线被楼挡住时最多再换几个候选
@@ -441,9 +442,18 @@ export function buildPedestrians(assets, opt = {}) {
     return true;
   }
 
-  /** 找离 (x,z) 最近且直线可达的避难所；avoid 用来排除刚失败的那个。 */
-  function findRefuge(x, z, avoid) {
+  /**
+   * 找离 (x,z) 最近且直线可达的避难所；avoid 用来排除刚失败的那个。
+   *
+   * 【needHigh】避雨用：必须真的比脚下高。下雨时人不会往低处跑，
+   * 而「最近避难所」可能只是一个比脚面高 20 cm 的路缘 —— 那不是避雨。
+   * 先只挑「至少高 1.0 m」的候选；一个都没有时退回不限制（否则会有人原地不动）。
+   */
+  function findRefuge(x, z, avoid, needHigh = false) {
+    const y0 = needHigh ? groundAt(x, z) : 0;
     const cand = [];
+    const hi = [];
+    const push = (d, R) => { if (!avoid || R !== avoid) cand.push([d, R]); };
     const c0x = Math.floor(x / RC), c0z = Math.floor(z / RC);
     const maxRing = Math.ceil(REFUGE_MAX / RC) + 1;
     for (let ring = 0; ring <= maxRing; ring++) {
@@ -459,21 +469,24 @@ export function buildPedestrians(assets, opt = {}) {
             if (avoid && R === avoid) continue;
             const d = Math.hypot(R.x - x, R.z - z);
             if (d > REFUGE_MAX) continue;
-            cand.push([d, R]);
+            push(d, R);
+            if (needHigh && R.y >= y0 + 1.0) hi.push([d, R]);
           }
         }
       }
     }
     if (!cand.length) return null;
-    cand.sort((a, b) => a[0] - b[0]);
-    const tries = Math.min(REFUGE_TRIES, cand.length);
+    // 避雨：优先只在高处挑；高处一个候选都没有（比如人已经在山上）才放开
+    const pool = (needHigh && hi.length) ? hi : cand;
+    pool.sort((a, b) => a[0] - b[0]);
+    const tries = Math.min(REFUGE_TRIES, pool.length);
     for (let i = 0; i < tries; i++) {
-      const [d, R] = cand[i];
+      const [d, R] = pool[i];
       if (lineClear(x, z, R.x, R.z, R.kind === 1 ? 9 : 0)) return R;
       void d;
     }
     // 全都不可达：退一步，要最近的屋顶（哪怕穿墙，至少有个去处）
-    for (let i = 0; i < cand.length; i++) if (cand[i][1].kind === 1) return cand[i][1];
+    for (let i = 0; i < pool.length; i++) if (pool[i][1].kind === 1) return pool[i][1];
     return null;
   }
 
@@ -676,6 +689,8 @@ export function buildPedestrians(assets, opt = {}) {
       yaw: 0,
       // 积水避险（2026-10-26）：mode = 'net' 正常走网 / 'flee' 正在跑 / 'shelter' 已到
       mode: 'net', refuge: null, calmT: 0, climb: 1, baseY: 0, fromX: 0, fromZ: 0,
+      why: 'flood',      // 这次躲起来的原因：'flood' 踩水 / 'rain' 避雨
+      lazy: rnd() < 0.45 ? 1 : 0,   // 1 = 下雨也不挪窝（撑伞/躲屋檐），模拟「不是所有人都会跑」
       trapped: 0,
     });
   }
@@ -726,17 +741,26 @@ export function buildPedestrians(assets, opt = {}) {
   let trapStats = { trapped: 0, stranded: 0, drowning: 0, reachable: 0,
                     comps: 0, islets: 0, passCells: 0, mainlandPct: 0 };
   let trapDirty = true;
+  // 累计口径（见 update 里的说明）
+  let trapPeak = 0, strandPeak = 0, trapPersonMin = 0, trapFirstMin = -1;
+  let lastSimMin = -1;
+  let lastRaining = false;
 
-  /** 开始逃难：找最近可直达的避难所。返回是否找到。 */
-  function startFlee(p) {
-    const R = findRefuge(p.obj.position.x, p.obj.position.z, null);
+  /**
+   * 开始逃难：找最近可直达的避难所。返回是否找到。
+   * @param why 'flood' 踩到水才跑 / 'rain' 一开下雨就去找高处避雨（用户 2026-10-29 要求）
+   */
+  function startFlee(p, why = 'flood') {
+    const R = findRefuge(p.obj.position.x, p.obj.position.z, null, why === 'rain');
     if (!R) return false;
     p.mode = 'flee';
     p.refuge = R;
+    p.why = why;
     p.state = 'flee';
     p.stateT = 0;
     p.calmT = 0;
-    play(p, 'run', 0.16);
+    // 避雨是走/小跑，不是逃命狂奔 —— 动画用 run 但速度降一档（见 FLEE_SPEED 用法）
+    play(p, why === 'rain' ? 'walk' : 'run', 0.16);
     return true;
   }
 
@@ -772,7 +796,7 @@ export function buildPedestrians(assets, opt = {}) {
   }
 
   /** 逃难/躲避：离开步行网，直走最近避难所；到了就站定，水退干净再回街上。 */
-  function updateFlee(p, dt, dInfo) {
+  function updateFlee(p, dt, dInfo, raining = false) {
     const R = p.refuge;
     if (!R) { p.mode = 'net'; return; }
 
@@ -796,6 +820,8 @@ export function buildPedestrians(assets, opt = {}) {
       // 水退判定：以避难所位置的地面水深为准，干满 SHELTER_CALM 秒才敢出来
       let dry = true;
       if (dInfo) { dInfo(R.x, R.z, _ds); dry = !_ds.wet; }
+      // 【避雨的人】雨没停就不走。否则 2 m 高的小土包上一块没水，人会立刻回街上淋雨。
+      if (p.why === 'rain' && raining) dry = false;
       p.calmT = dry ? p.calmT + dt : 0;
       // 【别在这里只判 dry 不回网】rejoinNet 会自己再查一次落点水深，
       // 落点还湿就返回 false —— 那就把 calmT 归零，下一轮重新等。
@@ -829,7 +855,7 @@ export function buildPedestrians(assets, opt = {}) {
     while (dYaw < -Math.PI) dYaw += Math.PI * 2;
     p.yaw += dYaw * Math.min(1, dt * (1 / Math.max(0.05, 1 - FLEE_TURN_IN)));
 
-    const step = Math.min(dist, FLEE_SPEED * dt);
+    const step = Math.min(dist, (p.why === 'rain' ? RAIN_SPEED : FLEE_SPEED) * dt);
     const nx2 = px + ux * step, nz2 = pz + uz * step;
     const gy = groundAt(nx2, nz2);
     p.obj.position.set(nx2, gy + p.footFix, nz2);
@@ -841,6 +867,10 @@ export function buildPedestrians(assets, opt = {}) {
     frame++;
     camPos.copy(camera.position);
     const dInfo = (flood && flood.depthInfo) ? flood.depthInfo : null;
+    // 正在下雨？避雨触发条件（用户 2026-10-29：不该等人脚泡水才动）
+    const raining = !!(flood && flood.raining);
+    lastRaining = raining;
+    const simMin = (flood && typeof flood.tMin === 'number') ? flood.tMin : null;
 
     // ---- 被困判定用的连通域：换帧才重算
     // 【为什么绑帧不绑时间】连通域只跟水深场有关，同一帧里人怎么移动都不改变
@@ -893,7 +923,7 @@ export function buildPedestrians(assets, opt = {}) {
         else if (p.trapped === 3) { trapStats.drowning++; trapStats.trapped++; }
       }
 
-      // ---- 积水避险：先看脚下有没有水
+      // ---- 积水避险：先看脚下有没有水；没水但正在下雨也得先找高处
       // 【必须在距离裁剪之前】城市总览机位下 3000 人全在 VIS_DIST 之外，
       // 放在裁剪之后人就永远不动 —— 实测 5 秒后 flee 人数一直是 0。
       // 水深采样是 O(1) 查表，跑动也是一次向量运算，全量算不心疼。
@@ -901,13 +931,17 @@ export function buildPedestrians(assets, opt = {}) {
       if (dInfo) {
         dInfo(p.obj.position.x, p.obj.position.z, _ds);
         if (p.mode === 'net') {
-          if (_ds.wet) {
-            // 找不到避难所时不要每帧都去搜（findRefuge 要扫空间索引）
-            p.tryT = (p.tryT || 0) - dt;
-            if (p.tryT <= 0) { p.tryT = 1.5; startFlee(p); }
+          p.tryT = (p.tryT || 0) - dt;
+          if (p.tryT <= 0) {
+            // ① 踩到水（≥12 cm）→ 逃难
+            // ② 只是在下雨 → 找高处避雨（用户 2026-10-29：一开下雨人就该动）
+            //    留一半的人不动，模拟「有人嫌麻烦 / 有地方躲」——全员同时上山不真实
+            if (_ds.wet) { p.tryT = 1.5; startFlee(p, 'flood'); }
+            else if (raining && p.lazy !== 1) { p.tryT = 2.5; startFlee(p, 'rain'); }
+            else p.tryT = 2.5;
           }
         } else {
-          updateFlee(p, dt, dInfo);
+          updateFlee(p, dt, dInfo, raining);
           continue;
         }
       } else if (p.mode !== 'net') {
@@ -1042,6 +1076,21 @@ export function buildPedestrians(assets, opt = {}) {
       const far = p.dist > MIXER_LOD_DIST;
       if (!far || (frame + p.i) % 3 === 0) p.mixer.update(dt * (far ? 3 : 1));
     }
+
+    // ---- 累计口径（用户 2026-10-29：「每次的困死数都一样吗？应该是随机的」）
+    // 【必须放在循环之后】trapStats 在循环前被归零，循环里逐人累加；
+    // 放在循环前就只能读到 0（第一版就这么错，peak 永远 0）。
+    // 三个量：峰值、人·分钟（∫N dt）、第一次被困的时刻。
+    if (tst) {
+      if (tst.trapped > trapPeak) trapPeak = tst.trapped;
+      if (tst.stranded > strandPeak) strandPeak = tst.stranded;
+      if (simMin !== null) {
+        if (tst.trapped > 0 && trapFirstMin < 0) trapFirstMin = simMin;
+        const dtm = lastSimMin >= 0 ? simMin - lastSimMin : 0;
+        if (dtm > 0) trapPersonMin += tst.trapped * dtm;
+        lastSimMin = simMin;
+      }
+    }
   }
 
   // ---------------------------------------------------------------- 开关
@@ -1055,19 +1104,43 @@ export function buildPedestrians(assets, opt = {}) {
     return n;
   }
 
+  /**
+   * 拖动进度条时把人「快进」到那一帧该有的样子。
+   *
+   * 【为什么需要】用户 2026-10-29 的质疑：拖滑块水变了、人没变，那「困死数」就是
+   * 「这批人 + 那一帧的水」错位配对。这里在时间轴跳变超过 20 分钟时补跑：
+   * 用不超过 40 步的粗步长把整段补完（步长可以几十秒 ⇒ 人一步就走到避难所），
+   * 只用于跳帧这一下；正常播放仍走 update() 的真实 dt。
+   * @returns 补跑了几步
+   */
+  function catchUp(sec, camera, flood) {
+    if (!(sec > 0)) return 0;
+    const n = Math.min(40, Math.max(1, Math.ceil(sec / 20)));
+    const dt = sec / n;
+    for (let i = 0; i < n; i++) update(dt, camera, flood);
+    return n;
+  }
+
   return {
-    group, peds, update, setVisible, setCount, graph: G,
+    group, peds, update, catchUp, setVisible, setCount, graph: G,
     /** 积水避险的实时状态（验收/截图时用：console 里看有多少人在跑、多少人躲着）。 */
     fleeStats() {
       let net = 0, flee = 0, shelter = 0, roof = 0, escaped = 0;
+      let rainShelter = 0, floodShelter = 0;
       for (const p of peds) {
         if (p.mode === 'flee') flee++;
-        else if (p.mode === 'shelter') { shelter++; if (p.refuge && p.refuge.kind === 1) roof++; }
+        else if (p.mode === 'shelter') {
+          shelter++;
+          if (p.refuge && p.refuge.kind === 1) roof++;
+          if (p.why === 'rain') rainShelter++; else floodShelter++;
+        }
         else net++;
         if (p.mode === 'shelter') escaped++;
       }
       return {
         net, flee, shelter, roof, refuges: refuges.length,
+        // 避雨 / 避水 分别有多少人躲在避难所（用户 2026-10-29 要求「下雨就动」）
+        rainShelter, floodShelter, raining: lastRaining,
         // 【彻底被困】站在孤岛上、岛上没有任何高地的那些人 —— 洪水不走，他们就
         // 一天也出不去，救援也进不来。这是用户 m03597 要的那个数。
         trapped: trapStats.trapped,
@@ -1081,6 +1154,11 @@ export function buildPedestrians(assets, opt = {}) {
         // 连通域层面：全城被洪水切成多少块可涉水区、其中多大的块还是连着的
         comps: trapStats.comps, islets: trapStats.islets,
         mainlandPct: trapStats.mainlandPct,
+        // 累计口径：整场最惨的时候有多少人被困、被困了多久
+        trappedPeak: trapPeak,
+        strandedPeak: strandPeak,
+        trappedPersonMin: Math.round(trapPersonMin),
+        firstTrapMin: trapFirstMin,
         wadeMax: 0.30,
       };
     },

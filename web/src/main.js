@@ -392,7 +392,21 @@ async function buildCity() {
     } catch (e) {
       console.warn('[ped] surf.i16 载入失败，人可能陷进铺装 0.46 m：', e.message);
     }
-    PED = buildPedestrians(pa, { T: TERRAIN, B, count: 3000, seed: 20261024, detail, SURF: PSURF });
+    // 【随机种子】用户 2026-10-29：「这些人难道不是随机出现在各个地方的吗？」
+// 原来是写死的 20261024 —— 每次刷新都是同一批人站同一处，看着像「模拟好的」。
+// 现在：默认每次加载换一个种子（真的是随机的一批人）；想看可复现的结果就加
+// ?seed=123 固定下来。种子会打进 console，方便复现 / 截图归档。
+const SEED = (() => {
+  const m = /[?&]seed=(\d+)/.exec(location.search);
+  if (m) return Number(m[1]) >>> 0;
+  return ((Date.now() ^ (Math.random() * 0x7fffffff)) >>> 0);
+})();
+const PED_N = (() => {
+  const m = /[?&]ped=(\d+)/.exec(location.search);
+  return m ? Math.max(50, Math.min(6000, Number(m[1]))) : 3000;
+})();
+    PED = buildPedestrians(pa, { T: TERRAIN, B, count: PED_N, seed: SEED, detail, SURF: PSURF });
+    console.log(`[ped] 随机种子 ${SEED}（复现：?seed=${SEED}）· ${PED_N} 人`);
     world.add(PED.group);
     window.__ped = PED;
     window.__pedSurf = PSURF;
@@ -617,6 +631,18 @@ function animate() {
   // 积涝叠层打开时把 FLOOD 传进去 —— 人脚下 12 cm 水深就转「逃难」，跑向最近的高地/高楼。
   if (PED) PED.update(dt, camera, (FLOOD && FLOOD.group.visible) ? FLOOD : null);
 
+  // 【时间轴对齐】一次跳超过 20 分钟（拖滑块/跳帧）就把人快进到那一帧该有的样子，
+  // 否则屏幕上看到的是「这批人 + 那一帧的水」错位配对。正常播放不补跑 ——
+  // 播放是 5 分钟仿真 / 0.2 秒真实，1500 倍，人只能按真实时间走。
+  if (PED && FLOOD && FLOOD.group.visible) {
+    const tm = FLOOD.tMin;
+    if (lastFloodMin >= 0) {
+      const jump = tm - lastFloodMin;
+      if (Math.abs(jump) > 20) PED.catchUp(Math.abs(jump) * 60, camera, FLOOD);
+    }
+    lastFloodMin = tm;
+  }
+
   // 云影缓慢移动
   if (cloudShadow.material.map) {
     cloudShadow.material.map.offset.x += dt * 0.0042;
@@ -642,6 +668,7 @@ function animate() {
 
 // 被困人数：0.5 s 刷一次就够（连通域只在换帧时重算，人走得慢，数字不会跳）
 let trapHudEls = null;
+let lastFloodMin = -1;   // 上一次看到的积涝仿真时刻（分钟），用来判断是「播放」还是「拖滑块」
 function updateTrapHud() {
   if (!PED || !FLOOD || !FLOOD.group.visible) return;
   if (!trapHudEls) {
@@ -660,11 +687,18 @@ function updateTrapHud() {
     trapHudEls.n.textContent = String(s.trapped);
     trapHudEls.n.style.color = pct > 0.10 ? '#ff5a48' : (s.trapped > 0 ? '#ff8b7a' : '#8ee6a0');
   }
-  if (trapHudEls.sub) trapHudEls.sub.textContent = `/ ${s.total} 人 · 孤岛 ${s.stranded || 0}`;
+  if (trapHudEls.sub) {
+    const peak = s.trappedPeak > s.trapped ? ` · 峰值 ${s.trappedPeak}` : '';
+    trapHudEls.sub.textContent = `/ ${s.total} 人 · 孤岛 ${s.stranded || 0}${peak}`;
+  }
   if (trapHudEls.note) {
     // 说明这一串数字是怎么算出来的：可涉水 30 cm，判定标准是「能不能走回主城」
+    // 累计口径：多少人被困了多久（人·分钟），第一次被困发生在第几分钟
+    const pm = s.trappedPersonMin ? ` · 累计 ${s.trappedPersonMin} 人·分` : '';
+    const first = s.firstTrapMin >= 0 ? ` · 首次 ${s.firstTrapMin | 0} min` : '';
+    const rain = s.raining ? ` · 雨中避雨 ${s.rainShelter || 0} 人` : '';
     trapHudEls.note.textContent = s.comps
-      ? `可涉水 ${(s.wadeMax * 100) | 0} cm · 干地被切成 ${s.comps} 块，主城占 ${Math.round((s.mainlandPct || 0) * 100)}%`
+      ? `可涉水 ${(s.wadeMax * 100) | 0} cm · 干地 ${s.comps} 块，主城占 ${Math.round((s.mainlandPct || 0) * 100)}%${pm}${first}${rain}`
       : '可涉水 30 cm；走不回主城就算被困';
   }
 }

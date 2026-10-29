@@ -281,6 +281,12 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     get manifest() { return man; },
     /** 当前帧标识（工况名 + 帧号）。行人侧用它判断「该不该重算连通域」。 */
     get frameKey() { return curDir + '|' + idx; },
+    /** 当前帧的仿真时刻（分钟）—— 行人侧用它判断「下没下雨」「要不要快进对齐」。 */
+    get tMin() { return man ? (man.frames[idx] ? man.frames[idx].t_min : 0) : 0; },
+    /** 降雨持续到第几分钟（manifest.rain_min，缺省按 120）。 */
+    get rainMin() { return man ? (man.rain_min ?? 120) : 0; },
+    /** 此刻还在下雨吗（t ≤ rain_min）。 */
+    get raining() { return !!man && this.tMin <= this.rainMin + 1e-6; },
     /** 当前帧的原始 u8 深度栅格（给行人做连接域/被困判定，不要拿去改）。 */
     get depthGrid() {
       if (!man || !tex || !tex.image || !tex.image.data) return null;
