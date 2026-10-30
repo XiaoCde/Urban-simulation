@@ -130,6 +130,14 @@
     <span class="hint" id="flTrapSub">/ 3000 人</span>
   </div>
   <div class="row"><span class="hint" id="flTrapNote">可涉水 30 cm；走不回主城就算被困</span></div>
+  <!-- 逃生余量：不是「此刻通不通」，而是「现在再走还来不来得及」。
+       margin = 最晚出发时刻(LDT) - 当前时刻，见 src/ldt.js + tools/ped/export_ldt.py -->
+  <div class="row" id="flLdtRow" style="margin-top:6px;border-top:1px solid rgba(255,255,255,.14);padding-top:6px;display:none">
+    <span class="lbl" title="按真实步行速度算：从这一格出发、最晚什么时候走还能走到不会淹的高处；到此刻已经晚了的就算跑不掉">跑不掉</span>
+    <b id="flLdtDoom" style="color:#ff8b7a">0</b>
+    <span class="hint" id="flLdtSub">人</span>
+  </div>
+  <div class="row" id="flLdtNoteRow" style="display:none"><span class="hint" id="flLdtNote">查表：最晚出发时刻 − 当前时刻</span></div>
   <div class="row">
     <button id="flPlay">播放</button>
     <button id="flClose">关闭</button>

@@ -361,6 +361,9 @@ export function buildPedestrians(assets, opt = {}) {
   // 站立高度 = max(地形, 铺装顶面)。没有 SURF 时退回地形（会有 0.46 m 下沉）。
   const groundAt = G.groundAt;
   const blocker = buildBlocker(B);
+  // 【LDT 图层】有就把「最晚出发时刻」也接进来（见 web/src/ldt.js）。
+  // 没有就退化成老口径（只统计静止快照的被困人数），不影响场景。
+  let LDT = opt.ldt || null;   // `let`：main.js 切工况时可以整体换表（见 setLdt）
 
   const isWater = (x, z) => !!(T && T.classify && T.classify(x, z) === 0);
   const W = { x0: -1277, x1: 4701, z0: -4189, z1: 931 };
@@ -369,7 +372,7 @@ export function buildPedestrians(assets, opt = {}) {
   // 可走段：整条链每隔一段抽检，任何一处被建筑/水/界外占住就整条丢掉。
   // （步行图是按路网算的，理论上都在人行道上；这一步是防数据脏。）
   const usable = [];
-  let dropped = { short: 0, blocked: 0, water: 0 };
+  let dropped = { short: 0, blocked: 0, water: 0, ldt: 0 };
   for (let ci = 0; ci < G.chains.length; ci++) {
     const c = G.chains[ci];
     if (c.len < 8) { dropped.short++; continue; }
@@ -380,6 +383,8 @@ export function buildPedestrians(assets, opt = {}) {
       if (!inBounds(p.x, p.z)) { bad = true; dropped.blocked++; break; }
       if (isWater(p.x, p.z)) { bad = true; dropped.water++; break; }
       if (blocker.blocked(p.x, p.z, 0.2)) { bad = true; dropped.blocked++; break; }
+      // LDT 标了「开局就泡在深水里」的格：人不能站那儿（4 m 增水一来就是一米多深）
+      if (LDT && LDT.spawnOk && !LDT.spawnOk(p.x, p.z)) { bad = true; dropped.ldt++; break; }
     }
     if (!bad) usable.push(ci);
   }
@@ -585,55 +590,14 @@ export function buildPedestrians(assets, opt = {}) {
     return usable[lo];
   };
 
-  // 【热点配额】只做全局加权，人会均摊到 1772 km 人行道网上——默认机位
-  // （4 km 高空俯瞰 / 街景平视）一个人都碰不到，用户看到的就是空城。
-  // 这里给每个默认机位圈一个半径，先保证圈内至少这么多个行人，
-  // 剩下的再按全局权重撒。坐标是 three（z = -planY）。
-  const HOT = [
-    // [x, z, radius_m, quota]  —— 只留一个集中区（用户：「保留一个地方集中分布」）
-    // 与 main.js 的初始机位对齐：白宫 + 拉斐特广场（视角正对的那一片）。
-    [1144, -815, 230, 420],
-  ];
-  // 集中区之外的人数：其余全部按链长均匀撒在全城步行网上。
-  const CLUSTER_SHARE = 0.14;   // 集中区占 14%
-  const nCluster = Math.round(count * CLUSTER_SHARE);
-  // 每条热点预先挑出半径内的可用链
-  const hotPools = HOT.map(([hx, hz, hr]) => {
-    const pool = [];
-    let w = 0;
-    const cum = [];
-    for (let i = 0; i < usable.length; i++) {
-      const dx = midX[i] - hx, dz = midZ[i] - hz;
-      if (dx * dx + dz * dz > hr * hr) continue;
-      const L = G.chains[usable[i]].len;
-      w += L; pool.push(i); cum.push(w);
-    }
-    return { pool, cum, w };
-  });
-  const pickHot = (h) => {
-    const { pool, cum, w } = hotPools[h];
-    const r = rnd() * w;
-    let lo = 0, hi = cum.length - 1;
-    while (lo < hi) { const m = (lo + hi) >> 1; if (cum[m] < r) lo = m + 1; else hi = m; }
-    return usable[pool[lo]];
-  };
-
-  // 先铺集中区，其余走全局均匀（按链长）。
-  const plan = [];
-  for (let h = 0; h < hotPools.length; h++) {
-    if (!hotPools[h].pool.length) continue;
-    const quota = h === 0 ? nCluster : HOT[h][3];
-    const want = Math.min(quota, count - plan.length);
-    for (let i = 0; i < want; i++) plan.push(pickHot(h));
-  }
-  while (plan.length < count) plan.push(pickGlobal());
-  // 打散顺序，避免同一热点的链连续出生（否则初始画面像排队）
-  for (let i = plan.length - 1; i > 0; i--) {
-    const j = (rnd() * (i + 1)) | 0;
-    const t = plan[i]; plan[i] = plan[j]; plan[j] = t;
-  }
-  let planCursor = 0;
-  const pickChain = () => (planCursor < plan.length ? plan[planCursor++] : pickGlobal());
+  // 【分布策略（用户 2026-10-29 定案）】
+  // 「先让除去需要观察行人状态的格子，每个人都出现在随机的位置上」
+  //   → 取消原来的热点集中区（白宫/拉斐特广场占 14% 的那 420 人配额），
+  //     全部人员按人行道长度加权均匀随机撒在全城步行网上。
+  //   长度加权 = 沿人行道**面积均匀**：某条街上人多，是因为那条路长，
+  //   不是被指定的「热点」。用 ?seed=N 可以完全复现同一批站位。
+  //   （`midX/midZ` 仍照旧算出来——以后想再开区域权重时直接用。）
+  const pickChain = pickGlobal;
 
   const group = new THREE.Group();
   group.name = 'L6_agents';
@@ -642,11 +606,23 @@ export function buildPedestrians(assets, opt = {}) {
   const _v = new THREE.Vector3();
   const _v2 = new THREE.Vector3();
   const _tmp = new THREE.Vector3();
+  const _sp0 = new THREE.Vector3();
 
   for (let i = 0; i < count; i++) {
     const tpl = useTpl[Math.min(useTpl.length - 1, rnd() < 0.52 ? 0 : 1)];
-    const ci = pickChain();
-    const c = G.chains[ci];
+    let ci = pickChain();
+    let c = G.chains[ci];
+    let s0 = rnd() * c.len;
+    // 【出生点不能在深水里】链级抽检只看了 3~9 个采样点，一条长链可能中间
+    // 穿过 4 m 增水淹掉的那片（实测 185/3000 人一开始就站在水里）。
+    // 这里对「这个人实际站的那一点」再查一次 LDT，撞到就重抽，最多 24 次。
+    if (LDT && LDT.spawnOk) {
+      for (let k = 0; k < 24; k++) {
+        pointAt(c, s0, _sp0);
+        if (LDT.spawnOk(_sp0.x, _sp0.z)) break;
+        ci = pickChain(); c = G.chains[ci]; s0 = rnd() * c.len;
+      }
+    }
 
     const obj = skeletonClone(tpl.scene);
     obj.scale.setScalar(tpl.userData.scale);
@@ -672,7 +648,7 @@ export function buildPedestrians(assets, opt = {}) {
     peds.push({
       i, obj, mixer, acts, tpl,
       ci, dir: rnd() < 0.5 ? 1 : -1,
-      s: rnd() * c.len,
+      s: s0,
       speed: (jogger ? SPEED_RUN : SPEED_WALK) * (0.86 + rnd() * 0.28),
       state: rnd() < 0.22 ? 'idle' : 'walk',
       stateT: 0,
@@ -745,6 +721,17 @@ export function buildPedestrians(assets, opt = {}) {
   let trapPeak = 0, strandPeak = 0, trapPersonMin = 0, trapFirstMin = -1;
   let lastSimMin = -1;
   let lastRaining = false;
+  // 【LDT 逃生余量】2026-10-29：人不是站着不动的，所以除了「此刻通不通」，
+  // 还要回答「还来不来得及」。margin = LDT - t，见 web/src/ldt.js。
+  let ldtDoomed = 0;          // 当前时刻已经来不及走掉的人
+  let ldtOn = false;          // 这一帧有没有 LDT 表可用（simMin 也可能为 null）
+  let ldtTight = 0;           // 富余 < 10 min，很紧
+  let ldtCovered = 0;         // 有 LDT 数据的人（站不到步行网上的不算）
+  let ldtMedian = null;       // 余量中位数（分钟）
+  let ldtMin = 0;             // 全场最紧的那一个
+  let ldtDoomPeak = 0;        // 最惨时刻有多少人已来不及
+  let ldtFirstDoomMin = -1;   // 第一次出现「已经来不及」的情景时刻
+  const ldtBuf = new Float64Array(peds.length);   // 复用，不每帧分配
 
   /**
    * 开始逃难：找最近可直达的避难所。返回是否找到。
@@ -903,6 +890,11 @@ export function buildPedestrians(assets, opt = {}) {
       arr.push(p);
     }
 
+    // LDT 余量按帧聚合：所有人共用同一个 nowMin，所以可以先攒再算
+    let ln = 0;
+    ldtOn = !!(LDT && simMin !== null);
+    ldtDoomed = 0; ldtTight = 0; ldtCovered = 0; ldtMedian = null; ldtMin = 0;
+
     for (const p of peds) {
       p.stateT += dt;
 
@@ -921,6 +913,18 @@ export function buildPedestrians(assets, opt = {}) {
         else if (p.trapped === 1) trapStats.stranded++;
         else if (p.trapped === 2) trapStats.trapped++;
         else if (p.trapped === 3) { trapStats.drowning++; trapStats.trapped++; }
+      }
+
+      // ---- LDT 逃生余量：和被困统计同一处（必须在所有 continue 之前，
+      // 否则被距离裁剪掉的人不算，城市总览机位下 3000 人全在裁剪范围外）。
+      // 一次查表 = O(1)：margin = 这一格的最晚出发时刻 - 当前情景时刻。
+      if (ldtOn) {
+        const m = LDT.marginAt(p.obj.position.x, p.obj.position.z, simMin);
+        if (m !== null) {
+          ldtBuf[ln++] = m;
+          if (m <= 0) ldtDoomed++;
+          else if (m <= 10) ldtTight++;
+        }
       }
 
       // ---- 积水避险：先看脚下有没有水；没水但正在下雨也得先找高处
@@ -1091,10 +1095,24 @@ export function buildPedestrians(assets, opt = {}) {
         lastSimMin = simMin;
       }
     }
+
+    // ---- LDT 聚合（循环之后，同上：必须在逐人累加完之后）
+    if (ldtOn && ln > 0) {
+      ldtCovered = ln;
+      if (ln > ldtBuf.length) ln = ldtBuf.length;
+      const sub = ldtBuf.subarray(0, ln);
+      sub.sort();                                  // Float64Array.sort 是数值排序
+      ldtMedian = sub[ln >> 1];
+      ldtMin = sub[0];
+      if (ldtDoomed > ldtDoomPeak) ldtDoomPeak = ldtDoomed;
+      if (ldtDoomed > 0 && ldtFirstDoomMin < 0) ldtFirstDoomMin = simMin;
+    }
   }
 
   // ---------------------------------------------------------------- 开关
   function setVisible(on) { group.visible = !!on; }
+  /** 换 LDT 表（切工况时用）。传 null = 关掉逃生余量统计。 */
+  function setLdt(l) { LDT = l || null; }
   function setCount(n) {
     n = Math.max(0, Math.min(peds.length, n | 0));
     for (let i = 0; i < peds.length; i++) {
@@ -1122,7 +1140,7 @@ export function buildPedestrians(assets, opt = {}) {
   }
 
   return {
-    group, peds, update, catchUp, setVisible, setCount, graph: G,
+    group, peds, update, catchUp, setVisible, setCount, setLdt, graph: G,
     /** 积水避险的实时状态（验收/截图时用：console 里看有多少人在跑、多少人躲着）。 */
     fleeStats() {
       let net = 0, flee = 0, shelter = 0, roof = 0, escaped = 0;
@@ -1160,13 +1178,23 @@ export function buildPedestrians(assets, opt = {}) {
         trappedPersonMin: Math.round(trapPersonMin),
         firstTrapMin: trapFirstMin,
         wadeMax: 0.30,
+        // 【LDT 逃生余量】margin = 最晚出发时刻 - 当前时刻（分钟）。
+        // 这几个数回答的是「人一直在动」下的问题：还剩多少时间跑得掉。
+        ldtOn,
+        ldtCovered,
+        ldtDoomed,            // 此刻已来不及走掉的人
+        ldtTight,             // 富余 0~10 min，很紧
+        ldtMedian,            // 余量中位数（分钟；大数表示整场都不会淹）
+        ldtMin,               // 全场最紧的那个人还剩多少
+        ldtDoomPeak,          // 最惨时刻已来不及的人数
+        ldtFirstDoomMin,      // 第一次出现「来不及」的情景时刻
       };
     },
     stats: {
       usable: usable.length, total: G.chains.length, dropped, count: peds.length,
-      hot: hotPools.map((h) => h.pool.length),
-      quota: HOT.map((h) => h[3]),
-      planned: plan.length,
+      // 站位策略：长度加权均匀随机（no hot spots）。改回热点配额会在这里反映。
+      placement: 'uniform',
+      planned: count,
     },
   };
 }

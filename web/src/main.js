@@ -44,6 +44,7 @@ import {
   loadWater, buildWaterMesh, excavateTerrain, setWaterDesignLevel, paintShoreWet,
 } from './water.js';
 import { loadPedAssets, buildPedestrians, nextState, loadPedSurface } from './ped.js';
+import { loadLdt } from './ldt.js';
 
 // 白宫在建筑基底里的 id（data/derived/buildings_footprints.json）。
 // 它由 whitehouse.js 的高模重建替代，所以要从建筑体块里剔掉，避免两个盒子打架。
@@ -359,12 +360,14 @@ async function buildCity() {
   // L7：积涝叠层（tools/flood/simple_drainage.py 的 L2 帧序列）。
   // 按 F 开/关；面板上能暂停、拖时间轴 —— 降雨段上涨，退水段回落。
   // 数据在 assets/flood/，没有就安静关掉，不影响场景。
+  let floodReady = null;       // 积涝清单的加载 Promise（行人要等它才知道当前工况名）
   try {
     FLOOD = createFloodLayer(TERRAIN, { base: '/assets/flood/' });
     world.add(FLOOD.group);
     FLOOD.bindHud();
     FLOOD.startClock();
-    FLOOD.load().then(() => {
+    floodReady = FLOOD.load();
+    floodReady.then(() => {
       window.__flood = FLOOD;
       console.log('[flood] 帧 ' + FLOOD.frames + ' 张就绪，按 F 打开');
       // ?flood=1 直接打开并停在第一帧（截图/验收用）
@@ -405,14 +408,40 @@ const PED_N = (() => {
   const m = /[?&]ped=(\d+)/.exec(location.search);
   return m ? Math.max(50, Math.min(6000, Number(m[1]))) : 3000;
 })();
-    PED = buildPedestrians(pa, { T: TERRAIN, B, count: PED_N, seed: SEED, detail, SURF: PSURF });
+    // 【LDT 逃生余量表】2026-10-29 用户要求：人是一直在走的，所以除了
+    // 「此刻通不通」还要有「还来不来得及」。表按工况存一份（tools/ped/export_ldt.py 生成），
+    // 缺了不影响场景，只是 HUD 少一行。
+    let LDT = null;
+    try {
+      if (floodReady) { try { await floodReady; } catch (e) { /* 没积水数据也不影响行人 */ } }
+      const src = (FLOOD && FLOOD.manifest && FLOOD.manifest.source) || '';
+      const cn = src ? src.split('/').filter(Boolean).pop() : (FLOOD && FLOOD.caseName) || '';
+      if (cn) {
+        LDT = await loadLdt(cn);
+        window.__ldt = LDT;
+        const s = LDT.summary();
+        console.log(`[ldt] ${cn} 逃生余量表就绪：${s.nodes} 节点 / 会被淹 ${s.floodedNodes}`
+          + ` / 开局已淹 ${s.wetAtT0} / 来得及 ${s.reachable} / 来不及 ${s.unreachable}`
+          + ` / 中位富余 ${s.medianLdt} min`);
+      } else {
+        console.log('[ldt] 当前工况没有名字，跳过逃生余量表');
+      }
+    } catch (e) {
+      console.warn('[ldt] 这个工况没有逃生余量表（' + (e && e.message) + '），HUD 只显示被困人数');
+    }
+    PED = buildPedestrians(pa, { T: TERRAIN, B, count: PED_N, seed: SEED, detail, SURF: PSURF, ldt: LDT });
     console.log(`[ped] 随机种子 ${SEED}（复现：?seed=${SEED}）· ${PED_N} 人`);
     world.add(PED.group);
     window.__ped = PED;
     window.__pedSurf = PSURF;
     console.log(`[ped] ${PED.stats.count} 人 / 可走链 ${PED.stats.usable} 条`
       + `（共 ${PED.stats.total}，短链 ${PED.stats.dropped.short}`
-      + ` / 压建筑 ${PED.stats.dropped.blocked} / 压水 ${PED.stats.dropped.water}）`);
+      + ` / 压建筑 ${PED.stats.dropped.blocked} / 压水 ${PED.stats.dropped.water}`
+      + ` / 开局已淹 ${PED.stats.dropped.ldt || 0}）`);
+
+    // 切工况时的表同步由 syncLdtCase() 轮询完成（见 updateTrapHud），
+    // 不在 #flCase 的 change 上抢跑：那一刻 flood 的新 manifest 还没拿到。
+    ldtCaseName = LDT ? LDT.caseName : null;
   } catch (e) {
     console.error('[ped] 行人加载失败：', e && (e.stack || e.message || e));
   }
@@ -669,7 +698,40 @@ function animate() {
 // 被困人数：0.5 s 刷一次就够（连通域只在换帧时重算，人走得慢，数字不会跳）
 let trapHudEls = null;
 let lastFloodMin = -1;   // 上一次看到的积涝仿真时刻（分钟），用来判断是「播放」还是「拖滑块」
+// 当前已经装配进 PED 的 LDT 表对应哪个工况（'' = 还没有）
+let ldtCaseName = null;
+let ldtLoading = false;
+
+/**
+ * 让 LDT 表跟着积涝工况走。
+ * 【为什么用轮询而不是监听 #flCase 的 change】flood.js 的 load() 一进函数就先把
+ * curDir 改掉，fetch 完才更新 manifest.source；在 change 里读 source 会读到**上一个**
+ * 工况（实测就是这样：切到 p25_s4 却把 l2_1m_heavy 的表又装了一遍）。
+ * 这里改成每 0.5 s 比对一次「manifest 里现在真正的 source」，变了才换表。
+ */
+function syncLdtCase() {
+  if (ldtLoading || !PED || !PED.setLdt || !FLOOD) return;
+  const cn = ((FLOOD.manifest && FLOOD.manifest.source) || '').split('/').filter(Boolean).pop();
+  if (!cn || cn === ldtCaseName) return;
+  ldtLoading = true;
+  loadLdt(cn)
+    .then((l) => {
+      PED.setLdt(l);
+      window.__ldt = l;
+      ldtCaseName = cn;
+      console.log(`[ldt] 换表 → ${cn}（${l.summary().reachable} 个节点来得及）`);
+    })
+    .catch((e) => {
+      PED.setLdt(null);
+      window.__ldt = null;
+      ldtCaseName = cn;
+      console.warn('[ldt] 这个工况没有逃生余量表：' + (e && e.message));
+    })
+    .finally(() => { ldtLoading = false; });
+}
+
 function updateTrapHud() {
+  syncLdtCase();
   if (!PED || !FLOOD || !FLOOD.group.visible) return;
   if (!trapHudEls) {
     const root = document.getElementById('flood');
@@ -678,6 +740,11 @@ function updateTrapHud() {
       n: root.querySelector('#flTrapped'),
       sub: root.querySelector('#flTrapSub'),
       note: root.querySelector('#flTrapNote'),
+      ldtRow: root.querySelector('#flLdtRow'),
+      ldtNoteRow: root.querySelector('#flLdtNoteRow'),
+      ldtDoom: root.querySelector('#flLdtDoom'),
+      ldtSub: root.querySelector('#flLdtSub'),
+      ldtNote: root.querySelector('#flLdtNote'),
     };
   }
   const s = PED.fleeStats();
@@ -700,6 +767,36 @@ function updateTrapHud() {
     trapHudEls.note.textContent = s.comps
       ? `可涉水 ${(s.wadeMax * 100) | 0} cm · 干地 ${s.comps} 块，主城占 ${Math.round((s.mainlandPct || 0) * 100)}%${pm}${first}${rain}`
       : '可涉水 30 cm；走不回主城就算被困';
+  }
+
+  // ---- 逃生余量（LDT）：这一行回答「此刻再走还来不来得及」
+  if (trapHudEls.ldtRow) {
+    const on = !!s.ldtOn && s.ldtCovered > 0;
+    trapHudEls.ldtRow.style.display = on ? '' : 'none';
+    if (trapHudEls.ldtNoteRow) trapHudEls.ldtNoteRow.style.display = on ? '' : 'none';
+    if (on) {
+      const doom = s.ldtDoomed || 0;
+      const pct = s.ldtCovered ? doom / s.ldtCovered : 0;
+      if (trapHudEls.ldtDoom) {
+        trapHudEls.ldtDoom.textContent = String(doom);
+        trapHudEls.ldtDoom.style.color = pct > 0.10 ? '#ff5a48' : (doom > 0 ? '#ff8b7a' : '#8ee6a0');
+      }
+      if (trapHudEls.ldtSub) {
+        const peak = s.ldtDoomPeak > doom ? ` · 峰值 ${s.ldtDoomPeak}` : '';
+        trapHudEls.ldtSub.textContent = `/ ${s.ldtCovered} 人 · 余量<10min ${s.ldtTight || 0}${peak}`;
+      }
+      if (trapHudEls.ldtNote) {
+        const med = s.ldtMedian === null || s.ldtMedian === undefined
+          ? '—'
+          : (s.ldtMedian > 1e5 ? '不会淹' : `${Math.round(s.ldtMedian)} min`);
+        const min = s.ldtMin === null || s.ldtMin === undefined
+          ? '—'
+          : (s.ldtMin <= -1e5 ? '已在水里' : (s.ldtMin > 1e5 ? '不会淹' : `${Math.round(s.ldtMin)} min`));
+        const first = s.ldtFirstDoomMin >= 0 ? ` · 首次来不及 ${s.ldtFirstDoomMin | 0} min` : '';
+        trapHudEls.ldtNote.textContent =
+          `最晚出发时刻 − 当前时刻 · 富余中位 ${med} · 最紧 ${min}${first}`;
+      }
+    }
   }
 }
 
