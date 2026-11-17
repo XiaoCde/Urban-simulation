@@ -240,16 +240,18 @@ export const ARR_HAZARD_CLASSES = Object.freeze({
   source: {
     title: 'Flood Hazard', authors: 'Smith, G. P., Davey, E. K. & Cox, R. J.',
     publisher: 'WRL Technical Report 2014/07, UNSW', year: 2014,
-    table: 'H1–H6 分级表（ARR 2019 Book 6 采用）',
+    table: 'Table 5-1 描述（p.38）与 Table 5-2 分类限值（p.39）',
     url: 'http://www.arr-software.org/pdfs/ARR_Project10_Stage2_Vehicle_Stability_Final.pdf',
+    local: 'from muse/第十一轮自行检索/Smith_Davey_Cox_2014_WRL_TR2014-07_FloodHazard.pdf',
+    checked: '2026-11-17 已核原件：59 页，Table 5-1/5-2 在 p.38–39；六档 D·V 界值 0.3/0.6/0.6/1.0/4.0/>4.0、静水深 0.3/0.5/1.2/2.0/4.0、流速 2.0/2.0/2.0/2.0/4.0 与代码逐格一致',
   },
   classes: [
     { id: 'H1', dvMax: 0.3, depthMaxM: 0.3, velocityMaxMs: 2.0, label: 'Generally safe for vehicles, people and buildings' },
     { id: 'H2', dvMax: 0.6, depthMaxM: 0.5, velocityMaxMs: 2.0, label: 'Unsafe for small vehicles' },
     { id: 'H3', dvMax: 0.6, depthMaxM: 1.2, velocityMaxMs: 2.0, label: 'Unsafe for vehicles, children and the elderly' },
     { id: 'H4', dvMax: 1.0, depthMaxM: 2.0, velocityMaxMs: 2.0, label: 'Unsafe for vehicles and people' },
-    { id: 'H5', dvMax: 4.0, depthMaxM: 4.0, velocityMaxMs: 4.0, label: 'All buildings subject to structural damage' },
-    { id: 'H6', dvMax: Infinity, depthMaxM: null, velocityMaxMs: null, label: 'All building types vulnerable to failure' },
+    { id: 'H5', dvMax: 4.0, depthMaxM: 4.0, velocityMaxMs: 4.0, label: 'Unsafe for vehicles and people. All buildings vulnerable to structural damage; some less robust buildings subject to failure' },
+    { id: 'H6', dvMax: Infinity, depthMaxM: null, velocityMaxMs: null, label: 'Unsafe for vehicles and people. All building types considered vulnerable to failure' },
   ],
   criterion: 'D·V ≤ 0.4 儿童低危险；0.8 受训成人可作业；>1.2 所有人极端危险',
 });
