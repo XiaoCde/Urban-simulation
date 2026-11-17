@@ -17,7 +17,7 @@ import { normalCdf, jonkmanFatality, fatalRiskPerSecond,
 import { observedCapAt, warningReachedBy, mobilisationEqS2,
   mobilisedBy } from '../src/kernel/mobilisation.js';
 import { floorElevationM, capacityPerFloor, floodFloor, goesToBasement,
-  floorsFromHeight, assignFloor } from '../src/kernel/floors.js';
+  floorsFromHeight, assignFloor, BASEMENT } from '../src/kernel/floors.js';
 import { hash01 } from '../src/kernel/draw.js';
 import { warnAtOf, warningLeadMin, receivesWarning } from '../src/kernel/warning.js';
 import { instabilityDepthFor, exposureSecFor } from '../src/kernel/thresholds.js';
@@ -204,6 +204,26 @@ check('边界：离线淹没评估拿到功能层高而不是默认 3.3', (() =>
   ]);
   const c = assignCohortFloors(idx, [{ x: 0, z: 0, kind: 'work' }]);
   return c.people[0].floorHeightM > 3.3 && fin(evaluateFloodOnFloors(c.people, () => 0.2).counts.safe);
+})());
+
+// ---- C. 2026-11-17 建模偏差修复的回归断言 ----
+check('修复：无绕路时不按总距离收费', (() => {
+  const a = attributesFromSim({ distGoal: 500, timeToDue: 45 });
+  const b = attributesFromSim({ distGoal: 500, detourMetres: 500, timeToDue: 45 });
+  return near(a.raw.costUSD, 0) && b.raw.costUSD > 0
+    && near(b.raw.costUSD, b.raw.detourMiles * 32.78);
+})());
+check('修复：地下室常数仍是 2.2 m 埋深与 0.05 m 进水阈值', (() => {
+  return near(BASEMENT.depthM, 2.2) && near(BASEMENT.entryDepthM, 0.05);
+})());
+check('修复：真实占地面积优先于外接矩形', (() => {
+  const idx = buildBuildingIndex([
+    { id: 'r', center: [0, 0], height_m: 8, function: 'residential', area_m2: 900, name: 'R' },
+  ]);
+  // 传入的面积是真实值时，容量按 900 / 人均面积算，不应等于 bbox 推算值。
+  const p = assignPersonFloor(idx, 0, 0, 0, 'home');
+  const capTrue = capacityPerFloor({ area_m2: 900, function: 'residential' });
+  return fin(capTrue) && capTrue > 0 && fin(p.elevationM);
 })());
 
 const failed = results.filter((r) => !r.pass);

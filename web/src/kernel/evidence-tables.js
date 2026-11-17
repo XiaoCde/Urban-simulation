@@ -61,6 +61,8 @@ export const BOHANNON_GAIT = Object.freeze({
     table: 'Table 2（年龄 × 性别舒适步速均值）',
     sample: '41 篇研究、23,111 名受试者；每格 n 83–8,591',
     url: 'https://www.academia.edu/22434329/Normal_walking_speed_a_descriptive_meta_analysis',
+    local: 'from muse/文献二/Normal_walking_speed_a_descriptive_meta.pdf',
+    checked: '2026-11-17 已核原件：9 页，Table 2 在 p.3；分层均值 94.3 cm/s（80–99 岁女性）至 143.4 cm/s（40–49 岁男性），与 cells 表一致',
   },
   /** 年龄段下界 → { male, female }，cm/s。 */
   cells: [
@@ -79,6 +81,8 @@ export const WEIDMANN = Object.freeze({
   source: {
     title: 'Transporttechnik der Fussgänger', authors: 'Weidmann, U.',
     publisher: 'IVT Schriftenreihe Nr. 90, ETH Zürich', year: 1993,
+    local: 'from muse/文献二/sr90_2auflage.pdf',
+    checked: '2026-11-17 已核原件：德文第 2 版 115 页，ETH Library 存档；1.34 m/s 见 p.44–54，与 freeSpeedMs 一致',
   },
   freeSpeedMs: 1.34, gammaPerM2: 1.913, jamDensityPerM2: 5.4,
   maxSpecificFlow: 1.22, note: '原文未发表自由速度的标准差，不要自己编一个',

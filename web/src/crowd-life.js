@@ -350,8 +350,14 @@ export function createCrowdLife({
         // best.h 是 building.json 的 height_m；层高与容量口径见 kernel/floors.js。
         // 【第六轮】层数改由 assignFloor 按**住宅层高 2.7 m**（Choi 2002）派生，
         // 同时把层高本身传下去——淹到第几层要按这栋楼真实的层高算。
+        // 【修 2026-11-17】优先用真实占地面积；没有时才退回外接矩形，
+        // 并在注释里保留「回退会高估容量」的标记，不能当实测报。
+        const areaFallback = (best.maxx - best.minx) * (best.maxz - best.minz);
+        const areaTrue = Number(best.area_m2);
+        const areaUsed = Number.isFinite(areaTrue) && areaTrue > 0 ? areaTrue : areaFallback;
         const fa = assignFloor({ height_m: best.h, function: 'residential',
-          area_m2: (best.maxx - best.minx) * (best.maxz - best.minz) }, n);
+          area_m2: areaUsed }, n);
+        p.homeAreaSource = Number.isFinite(areaTrue) && areaTrue > 0 ? 'real' : 'bbox';
         p.homeFloors = fa.totalFloors;
         p.homeFloorHeightM = fa.floorHeightM;
         p.homeFloor = fa.floor;

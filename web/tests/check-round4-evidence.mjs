@@ -54,9 +54,17 @@ ok('500 m 换算成 0.3107 英里', near(attr.raw.miles, 500 / 1609.344),
   attr.raw.miles.toFixed(4));
 ok('100 秒换算成 1.667 分钟', near(attr.raw.waitTimeMin, 100 / 60),
   attr.raw.waitTimeMin.toFixed(3));
+// 【2026-11-17 更正】绕路成本按正文「每多走一英里补偿 32.78 美元」，
+// 分母必须是绕路距离，不能拿「到目标的总距离」顶替。旧断言按错误口径写的。
+const attrDetour = attributesFromSim({
+  distGoal: 500, detourMetres: 500, timeToDue: 45, shelteredSec: 100,
+});
 ok('绕路美元用正文实测 32.78 美元/英里',
-  near(attr.raw.costUSD, attr.raw.miles * BOROWSKI_DESIGN.walkingCompensationUSDPerMile),
-  attr.raw.costUSD.toFixed(2) + ' USD');
+  near(attrDetour.raw.costUSD,
+    attrDetour.raw.detourMiles * BOROWSKI_DESIGN.walkingCompensationUSDPerMile),
+  attrDetour.raw.costUSD.toFixed(2) + ' USD');
+ok('没有绕路时不收绕路费（不再拿总距离顶替）',
+  near(attr.raw.costUSD, 0), attr.raw.costUSD.toFixed(2) + ' USD');
 ok('四个属性都按实测设计范围归一化到 0–1',
   ['cost', 'travelTime', 'waitTime', 'walkDistance'].every(
     (k) => attr[k] >= 0 && attr[k] <= 1));

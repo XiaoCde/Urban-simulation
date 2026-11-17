@@ -1,0 +1,109 @@
+【存档快照说明 / 来源】
+本文件是 HUD 官方新闻稿 HUD No. 22-192 的正文全文逐字转录。
+- 官方存档页（原始 URL）：https://archives.hud.gov/news/2022/pr22-192.cfm
+- 发布机构：U.S. Department of Housing and Urban Development（美国住房与城市发展部，HUD）Office of Public Affairs
+- 文号：HUD No. 22-192
+- 发布日期：For Release Thursday September 29, 2022（2022-09-29）
+- 标题：HUD and Census Bureau Release New American Housing Survey / 2021 Survey Provides Insights on Housing From the Height of the Pandemic
+- 转录方式：本地 curl 经代理无法直连 archives.hud.gov（CONNECT 502），改用 WebFetch 读取官方存档页并取得全文后逐字落盘；不是摘要、不是二手转引。
+- 关键数据句（第 5 段）："owners have many more square feet per person, 800 square feet compared to 500 for renters."
+  即：业主人均约 800 平方英尺 ≈ 74.3 m²；租客人均 500 平方英尺 ≈ 46.5 m²。租客 500 ft²/人正是项目所用的 46.5 m²/人 出处（500 × 0.092903 = 46.45 m²）。
+- 转录/登记日期：2026-11-17
+- 字节校验见 来源.md。
+
+==================== 以下为新闻稿正文全文 ====================
+
+HUD No. 22-192
+HUD Public Affairs (202) 708-0685
+For Release Thursday September 29, 2022
+
+HUD and Census Bureau Release New American Housing Survey
+
+2021 Survey Provides Insights on Housing From the Height of the Pandemic
+
+WASHINGTON - In general, 2020 and 2021 were good for homeowners but presented challenges for many renters. That's according to the new 2021 American Housing Survey released today by the U.S. Department of Housing and Urban Development (HUD) and the U.S. Census Bureau.
+
+Every two years, HUD and the Census Bureau produce the American Housing Survey (AHS), the most comprehensive analysis of the nation's housing inventory. The AHS covers a variety of important housing topics, including the composition and quality of the nation's housing stock; rents, mortgages and other housing costs; and neighborhood conditions. The AHS is used by the public, policymakers and professionals in many fields for research, planning, and decision making, as well as to understand the current state of our nation's housing markets and how they have changed over time. Today's release includes a Table Creator, which can be used to create custom tables by geographic area, demographics, income, and other characteristics (www.census.gov/programs-surveys/ahs/data/interactive/ahstablecreator.html) and the Public Use File, which contains household-level survey responses (www.census.gov/programs-surveys/ahs/data/2021/ahs-2021-public-use-file--puf-.html). These data are available in the Table Creator and Public Use File for the nation and for 25 large metropolitan areas, including the 15 largest metropolitan areas. The Table Creator also includes estimates for nine states.
+
+The American Housing Survey (AHS) is the largest regular national housing sample survey in the U.S. and tracks housing units over time. This can provide us insights on how homes age and how the occupants of homes change. The 2021 American Housing Survey results released today provide new insights on how our relationship with our homes changed during the COVID-19 pandemic and associated lockdowns of 2020 and 2021 when compared to the data from before the pandemic.
+
+Since the 2019 AHS survey was conducted, homeowners saw sharp increases in home values and were able to borrow at low interest rates. Renters, in contrast, experienced significant cost increases, such that the median renter now pays nearly the same as the median owner in total housing costs; however, owners have many more square feet per person, 800 square feet compared to 500 for renters. Homeowners were also able to move to a better home on average when they moved, while renters were just as likely to move to a better home as a worse home. Lower income households that moved had lower rates of moving to higher quality neighborhoods and housing units.*
+
+Other highlights include:
+
+Self-reported homeowner home values increased dramatically between 2019 and 2021; homeowners increased their mortgage debt modestly; and there was a sharp increase in refinancing. Homeowner reported median home values increased 30 percent at the national level in the two-year period, from $230,000 in 2019 to $300,000 in 2021. Among households with at least one mortgage or loan, the national median total amount owed increased 11 percent from $134,695 in 2019 to $150,000 in 2021. There was an increase in households that had a refinanced primary mortgage of 51 percent (from 12,574,008 refinances in 2019 to 18,991,554 refinances in 2021). The median owners interest rate on their loan declined from 4% in 2019 to 3.5% in 2021.
+
+Median housing costs for renters rose more than owners; the median renter now pays nearly the same as the median owner for total housing costs. Between 2019 and 2021, national median monthly total housing costs increased from $1,137 to $1,200 for owners, 5.5 percent over two years, and from $1,071 to $1,184 for renters (excludes renters with no cash rent), 10.6 percent over two years.
+
+Inability to pay rent payments similar in 2021 to pre-pandemic; mortgage payment was better. The data show that in 2021 relative to 2017, renter inability to pay their rent was similar in the two years, about 7 percent, likely due to the CARES Act and other interventions, including federal unemployment insurance benefits and foreclosure and eviction moratoriums. In 2021, roughly 800,000 renters reported being threatened with an eviction. Of those, about 21 percent received a court ordered eviction notice. In 2021, the percentage of owners who missed or made late payments on their mortgage was less in 2021 than in 2017 (2.5 percent in 2021 compared to 4 percent in 2017).
+
+Home renovations modestly increased during the pandemic. There was a modest increase in homeowners making home improvements between 2019 and 2021 (59 percent) relative to 2017 to 2019 (56 percent); 13.5 million homeowners made energy efficient improvements between 2019 and 2021, also an increase relative to the 12 million homeowners who made energy efficiency improvements between 2017 and 2019.
+
+The internet continues to increase as the primary way people are finding rental units. Between 2019 and 2021, 21 million households moved into rental units and 14 million households moved into owned units. The internet was more widely used to find a unit to rent (43%) in 2021 than in 2019 (37%). Many renters (45%) only searched in a single neighborhood.
+
+Among households that moved, most did not move to a better neighborhood; quality of homes was better for owners that moved but mixed for renters. Just 40% of recent mover households reported moving to a better neighborhood than their previous neighborhood. The majority of owners who moved reported moving to a better home (62%), but only half of renters improved their housing quality (46%). Lower income households that moved had lower rates of moving to higher quality neighborhoods and housing units.
+
+Among all households in 2021, relatively few reported crime as a problem in their neighborhoods; but only a minority of households report having good public transit access. About 17% of households believe that their neighborhood has petty crime and about 6% believe that their neighborhood has a lot of serious crime. Around 42% of households believe that their neighborhood has good bus, subway, or commuter bus service.
+
+Pet ownership rose modestly from 2017 to 2021; having a cell phone in the home is nearly universal. Approximately 63.8 million households in the U.S. owned at least one pet in 2021, a 7 percent increase from 2017. Pet ownership among homeowner is about 20% higher than among renters. Nearly all homes - 93 percent - have one or more household member with a cell phone in 2021, up from 91 percent in 2019.
+
+A large majority of homes in Wildland-Urban Interface (WUI) zones are not well distanced from wildland vegetation; a majority depend on text messaging for wildfire emergencies. The last decade has seen an increase in large wildfires that have led to the destruction of many housing units. The 2021 data show that approximately 37 million homes are in Wildland-Urban Interface (WUI) zones. Of these, approximately 77% were in or near wildland vegetation, and 55% reported that they had vegetation less than 5 feet away from their home. Over 52% of households in WUI zones reported that they would expect to be alerted first through their cell phone (emergency alert, text, or call) during a wildfire emergency.
+
+Key Metropolitan Area Statistics
+
+Similar statistics are available for the following 25 metropolitan areas and 9 states:
+
+15 Largest Metropolitan Areas
+
+- New York-Newark-Jersey City, NY-NJ-PA
+- Los Angeles-Long Beach-Anaheim, CA
+- Chicago-Naperville-Elgin, IL-IN-WI
+- Dallas-Fort Worth-Arlington, TX
+- Houston-The Woodlands-Sugar Land, TX
+- Washington-Arlington-Alexandria, DC-VA-MD-WV
+- Philadelphia-Camden-Wilmington, PA-NJ-DE-MD
+- Miami-Fort Lauderdale-West Palm Beach, FL
+- Atlanta-Sandy Springs-Roswell, GA
+- Boston-Cambridge-Newton, MA-NH
+- San Francisco-Oakland-Hayward, CA
+- Phoenix-Mesa-Scottsdale, AZ
+- Riverside-San Bernardino-Ontario, CA
+- Detroit-Warren-Dearborn, MI
+- Seattle-Tacoma-Bellevue, WA
+
+10 Additional Large Metropolitan Areas
+
+- Baltimore-Columbia-Towson, MD
+- Birmingham-Hoover, AL
+- Las Vegas-Henderson-Paradise, NV
+- Minneapolis-St. Paul-Bloomington, MN-WI
+- Oklahoma City, OK
+- Richmond, VA
+- Rochester, NY
+- San Antonio-New Braunfels, TX
+- San Jose-Sunnyvale-Santa Clara, CA
+- Tampa-St. Petersburg-Clearwater, FL
+
+9 States
+
+- California
+- Florida
+- Illinois
+- Maryland
+- Massachusetts
+- New York
+- Pennsylvania
+- Texas
+- Virginia
+
+*All differences in this release are statistically significant at the 90% confidence level.
+
+Census Disclosure Review Board (DRB) approval number: CBDRB-FY22-359.
+
+HUD's mission is to create strong, sustainable, inclusive communities and quality affordable homes for all. More information about HUD and its programs is available at www.hud.gov and https://espanol.hud.gov.
+
+You can also connect with HUD on social media and follow Secretary Fudge on Twitter and Facebook or sign up for news alerts on HUD's Email List.
+
+HUD COVID-19 Resources and Fact Sheets
+
+==================== 正文全文结束 ====================

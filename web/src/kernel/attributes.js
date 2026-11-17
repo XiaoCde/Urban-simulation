@@ -44,7 +44,10 @@ export function attributesFromSim(s = {}) {
   const miles = metresToGoal / METRES_PER_MILE;
   const detourMiles = Math.max(0, Number(q.detourMetres) || 0) / METRES_PER_MILE;
   // 绕路的货币成本：正文印刷「每多走一英里需补偿 32.78 美元」。
-  const costUSD = (detourMiles || miles) * D.walkingCompensationUSDPerMile;
+  // 【修 2026-11-17】原来写 (detourMiles || miles)，没有绕路时按到目标的总距离
+  // 收费，与「多走一英里」的口径不符，会凭空抬高疏散成本、压低撤离概率。
+  // 显式传入 0 或没传 detourMetres 都是「没有绕路」，成本应为 0。
+  const costUSD = detourMiles * D.walkingCompensationUSDPerMile;
   // timeToDue 在 perceive() 里是「分钟」；shelteredSec 是「仿真秒」，换分钟。
   const travelTimeMin = Math.max(0, Number(q.timeToDue) || 0);
   const waitTimeMin = Math.max(0, Number(q.shelteredSec) || 0) / 60;

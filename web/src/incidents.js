@@ -17,7 +17,7 @@
 import { RISK, CAR } from './motion-units.js';
 import { MEASURED, SELF_SET, instabilityDepthFor, exposureSecFor } from './kernel/thresholds.js';
 // 【2026-11-16 阶段3】楼层淹没判据：室内人按所在楼层是否被淹决定安危。
-import { floodFloor, floorElevationM, submergenceThresholdM, limitedMobilityByAge }
+import { floodFloor, floorElevationM, submergenceThresholdM, limitedMobilityByAge, BASEMENT }
   from './kernel/floors.js';
 // 【2026-11-16 第六轮】室内顶层被淹的致死概率改用 Jonkman 实测函数
 // （博士论文 §7.4 Eq.7-6 / 7-7），不再用自设耐受时长。见 kernel/fatality.js。
@@ -292,11 +292,22 @@ export function createIncidents(o = {}) {
       r.everWentBasement = true;
       push(i, 'basement', '下到地下室抢救财物 / 查看水泵', { ...ctx, band });
     }
-    if ((indoor && !r.inBasement) || sheltered || depth < RISK.WADING) {
-      if (indoor && Number.isFinite(ctx.totalFloors) && ctx.totalFloors > 0 && depth > 0.05) {
+    // 【修 2026-11-17】檐下只挡雨，不挡积水的重量与浮力。
+    // 原实现把 sheltered 和 indoor 一并放行到「受保护」分支直接 return，
+    // 于是站在檐下、脚边 2 m 深水的人被当成完全不暴露——这是错的。
+    // 现在：室内仍按楼层判定；檐下只有在水深低于成人失稳下界（ARR 1.2 m）
+    // 且没到深水阈值时才算受保护；超过就落到下面的涉水暴露段。
+    // 1.2 m 是「危险分级」不是死亡阈值，用在这里是保守地取消保护，不是判死。
+    const shelterProtects = sheltered && depth < Math.min(instabilityDepth, RISK.DEEP);
+    if ((indoor && !r.inBasement) || shelterProtects || depth < RISK.WADING) {
+      // 【修 2026-11-17】totalFloors 从 JSON 传来可能是字符串（"3"），
+      // Number.isFinite("3") 为 false，会导致整段楼层淹没判定被静默跳过。
+      // 这里显式转成数字再判，行数与类型都固定。
+      const tf = Number(ctx.totalFloors);
+      if (indoor && Number.isFinite(tf) && tf > 0 && depth > 0.05) {
         if (!(r.effFloor > 0)) r.effFloor = Math.max(1, Math.floor(Number(ctx.floor) || 1));
         const fr = floodFloor({ waterDepthM: depth, currentFloor: r.effFloor,
-          totalFloors: ctx.totalFloors, floorHeightM: ctx.floorHeightM });
+          totalFloors: tf, floorHeightM: ctx.floorHeightM });
         if (fr.status === 'moveUp' && fr.targetFloor > r.effFloor) {
           r.effFloor = fr.targetFloor;      // 往更高的干层转移
           if (minute() - (r.floorMoveT || -1e9) > 30) {
@@ -371,8 +382,21 @@ export function createIncidents(o = {}) {
     }
 
     // ---- 涉水暴露（只有不在任何遮蔽下的人走到这里）----
-    // 室内/檐下的人在上一段已经 return 了；这里踏的是室外地面水深。
-    const dExp = depth;
+    // 室内的人在上一段已经 return；这里踏的是室外地面水深。
+    // 【修 2026-11-17】地下室是例外：地下室地板在室外地坪以下 2.2 m，
+    // 水从窗井／门洞／下水灌进去后，室内水深 ≈ 室外水深 + 2.2 m（扣排水能力）。
+    // 原实现把地下室人当成站在室外地面，只用室外深度，系统性低估危险：
+    // 室外 0.8 m 时地下室已约 3.0 m，远超成人失稳的 1.2 m。
+    // 只在室外水深已过进水阈值（0.05 m）时才加埋深；室外没水时不凭空制造水深。
+    // 依据：kernel/floors.js 的 BASEMENT.depthM（目前自己定的埋深），
+    // 连通器原理是物理常识；日本国土交通省地下空间指南 G-11～G-14 的行动限界 30 cm
+    // 说明地下室进水极浅即不可通行。埋深本身仍属「目前自己定的」，见待补清单。
+    const basementFlooded = r.inBasement && depth >= BASEMENT.entryDepthM;
+    const dExp = basementFlooded
+      ? depth + BASEMENT.depthM
+      : depth;
+    // 风险等级的可见水深用当地实际值，事件文字才能说清是地下室内部积水。
+    r.localExposureDepth = dExp;
     if (!r.everWaded) r.everWaded = true;
     r.wadeSec += h;
     if (r.status === 'safe' || r.status === 'evacuated') {
@@ -403,9 +427,11 @@ export function createIncidents(o = {}) {
     }
 
     // ---- 涉水滑倒受伤：深水 + 走太快 + 年龄脆弱，一次行程只判一次 ----
-    if (!r.slipRolled && depth > 0.45 && speed > 2.1) {
+    // 【修 2026-11-17】用当地实际水深 dExp，不再用室外 depth：
+    // 地下室人的当地水深是室外深度 + 埋深，按室外值会漏掉滑倒判定。
+    if (!r.slipRolled && dExp > 0.45 && effSpeed > 2.1) {
       r.slipRolled = true;
-      const p = V.slip * clamp((depth - 0.45) * 2.2, 0.25, 1);
+      const p = V.slip * clamp((dExp - 0.45) * 2.2, 0.25, 1);
       const roll = ((i * 2654435761) % 1000) / 1000;
       if (roll < p) {
         // 状态可能随后变成「已避险」，但「今天受过伤」这件事不能被抹掉。

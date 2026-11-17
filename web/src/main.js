@@ -402,7 +402,10 @@ async function buildCity() {
             if (x < minx) minx = x; if (x > maxx) maxx = x;
             if (z < minz) minz = z; if (z > maxz) maxz = z;
           }
-          const r = { id: bd.id, minx, maxx, minz, maxz, h: bd.height_m, alive: true };
+          const r = { id: bd.id, minx, maxx, minz, maxz, h: bd.height_m,
+            // 【修 2026-11-17】把真实占地面积传下去。此前楼层容量用外接矩形
+            // (maxx-minx)×(maxz-minz)，L 形／细长楼会高估每层能站多少人。
+            area_m2: bd.area_m2, alive: true };
           rects.push(r);
           for (let gx = Math.floor(minx / CELL); gx <= Math.floor(maxx / CELL); gx++) {
             for (let gz = Math.floor(minz / CELL); gz <= Math.floor(maxz / CELL); gz++) {

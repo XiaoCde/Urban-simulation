@@ -145,15 +145,17 @@ export const HAZARD_THRESHOLDS = {
       url: 'http://www.arr-software.org/pdfs/ARR_Project10_Stage1_report_Final.pdf',
     },
     'D·V 单位 m²/s。第四轮 QB1 更正：成人 1.2 m 是 H3 分级限值静水深、儿童 0.5 m 是 H2 限值，不是实验测得的个体失稳深度；这是「危险／失稳分级」，不是死亡判定；失稳到伤亡的定量函数四轮检索均没有公开依据。'
-      + '【2026-11-17 复核】adultLow=0.6／trainedLimit=0.8／childLow=0.4 三个 D·V 界值在本地没有原件（Cox 2010 与 Smith 2014 两份报告都不在 from muse/），按前轮转述沿用；其中 0.6 一般对应 H1「成人低危险」上界，0.8 对应「受训成人可作业」，来源文件待补，见《待补依据清单》',
+      + '【2026-11-17 已核原件】ARR Project 10 Stage 1 Report P10/S1/006（2010）全文已到本地，p.8–9、p.25–29 逐条核对：成人低危险 D·V<0.6、受训成人 D·V<0.8、成人多数失稳 D·V>1.2；儿童（H.M 25–50）低危险 D·V<0.4、最大水深 0.5 m；成人最大水深 1.2 m。六个值与代码一致，不再标「转述」。原文另按身高×体重积 H.M 分档（成人>50、儿童25–50、幼儿<25），项目只有年龄没有体型，13 岁分界仍是自设，见《待补依据清单》',
   ),
   hazardRating: measured(
     { moderate: 0.75, significant: 1.25, extreme: 2.0, formula: 'HR = d * (v + 0.5) + DF' },
     {
-      report: 'DEFRA / Environment Agency (2006), Flood Risks to People Phase 2, FD2321/TR2',
+      report: '公式 HR = d × (v + 0.5) + DF 与碎屑因子见 DEFRA / Environment Agency (2006), Flood Risks to People Phase 2, FD2321/TR1, p.10 §3.5 与 Table 3.1；本代码采用的「danger for all = 2.0」是 FD2320/TR2 Table 13.1 的规划口径（Environment Agency 2008 澄清说明 p.3–4 明言由 2.5 预防性下调）',
       url: 'https://assets.publishing.service.gov.uk/media/602bbc3de90e07055f646148/Flood_risks_to_people_-_Phase_2_Guidance_Document_Technical_report.pdf',
     },
-    '第四轮 QB2 更正：0.75／1.25／2.0 属规划口径 FD2320；FD2321 Table 3.2 的 danger for all 界值是 2.5，两套别混用。原式的 n 即 0.5，碎屑因子 DF 见 FD2321/TR1 Table 3.1 城市列',
+    '第四轮 QB2 更正：0.75／1.25／2.0 属规划口径 FD2320；FD2321 Table 3.2 的 danger for all 界值是 2.5，两套别混用。原式的 n 即 0.5，碎屑因子 DF 见 FD2321/TR1 Table 3.1 城市列。'
+      + '【2026-11-17 已核原件】FD2321/TR1 方法报告、TR2 指南、项目记录与 2008 年环境署澄清说明均到本地：TR1 第 3.2 节印的 d×(v+1.5)+DF 是 Phase 1 旧式，第 3.3 节评审后改为现行的 d×(v+0.5)+DF，澄清说明 p.2 明确「最终修订版见 TR1 §3.5」；DF 城市列 0／1／1 与 Table 3.1 逐格一致。代码公式不需要改，仅此处纠正出处归属（旧注释误记为 TR2）。'
+      + '【重要限制】澄清说明 p.1 自承该法「主要由理论假设和少量基础实验室实验推导」，碎屑与人的行为仍是假设，需更多实测；ARR Project 10 Stage 1 p.22 进一步指出该分级缺水深上限、深水低流速可能漏判，儿童在低危险区多半站不稳。因此这套 HR 是工程判据，不是实测剂量–反应函数，不能拿来当死亡判定',
   ),
   vehicleInstability: measured(
     { yarisPushM: 0.15, yarisFloatM: 0.60, patrolInstabilityM: 0.45, patrolFloatM: 0.95 },
@@ -161,7 +163,8 @@ export const HAZARD_THRESHOLDS = {
       report: 'Smith, Modra, Tucker, Cox & Felder (2017), Vehicle Stability Testing for Flood Flows, WRL Technical Report 2017/07, UNSW',
       doi: '10.26190/unsworks/27416',
     },
-    '全尺寸拖曳水池实验。NOAA「Turn Around Don’t Drown」的 15／30／46–61 cm 是公众宣传口径，不是实测报告',
+    '全尺寸拖曳水池实验。NOAA「Turn Around Don’t Drown」的 15／30／46–61 cm 是公众宣传口径，不是实测报告。'
+      + '【2026-11-17 已核原件】WRL TR 2017/07 全文到本地：p.53 小型乘用车触底 0.15 m、p.49 Nissan Patrol 侧向推力骤降 0.45 m、p.49 后轮离地零侧向力 0.95 m、p.25–26 图 5-5 Yaris 后轮离地 0.6 m。四个值与代码一致。报告同时说明测试车不是各级别最小最脆弱者、实验室条件需谨慎外推，不能当普适阈值',
   ),
   pedestrianYieldRate: measured(
     { rangeLow: 0.07, rangeHigh: 0.75, mean: 0.34, walkSpeed: 1.1, slowWalkSpeed: 0.9 },
@@ -169,7 +172,9 @@ export const HAZARD_THRESHOLDS = {
       report: 'Fitzpatrick et al. (2006), Improving Pedestrian Safety at Unsignalized Crossings, NCHRP Report 562 / TCRP Report 112, Transportation Research Board',
       url: 'https://nacto.org/wp-content/uploads/2010/08/NCHRP-562-Improving-Pedestrian-Safety-at-Unsignalized-Crossings.pdf',
     },
-    '分母是过街事件数，不是每人每天过街机会数；不能直接搬成代码里的概率',
+    '分母是过街事件数，不是每人每天过街机会数；不能直接搬成代码里的概率。'
+      + '【2026-11-17 已核原件】NCHRP 562 / TCRP 112 全文到本地：p.9、p.56–57、p.65–71 的 3.5 ft/s（1.1 m/s，一般人群）与 3.0 ft/s（0.9 m/s，年长或行动不便者）与代码一致。'
+      + '但 0.34 这个数原文并未印出：报告 p.36–43 按 9 类过街设施、60 个研究站点给出 motorist compliance 的范围与均值，0.34 是这些跨站点数值的汇总量，不是单站实测。rangeLow=0.07 与 rangeHigh=0.75 同理，来源性质是「跨站点汇总」，不能标成「实测值」；代码数值暂不改，口径在文档里写明',
   ),
 };
 

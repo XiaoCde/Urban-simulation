@@ -52,7 +52,12 @@ export const FLOOR_HEIGHT_BY_FUNCTION = Object.freeze({
 
 /** 统一层高，保留给旧接口与对照；实际按功能取值。 */
 export const FLOOR_HEIGHT_M = 3.3;
-/** PNNL-26949 Table 2.4 的 floor-to-floor 均值（2012 CBECS，4,548 栋），仅作对照。 */
+/**
+ * PNNL-26949 p.20 给出的层高均值 3.95 m（2012 CBECS，4,548 栋），仅作对照，不进运行时分档。
+ * 【2026-11-17 更正性质】这不是实测层高：PNNL 报告 p.17 明写 CBECS 既没有 floor-to-floor
+ * height 也没有 building height，3.95 m 是用 floor-to-ceiling height 加 presumed 假设估算出来的。
+ * 本常量标「模型跑出来的数（不是实测）」，不能与 Choi 2002 的实测分功能层高混为一谈。
+ */
 export const FLOOR_HEIGHT_PNNL_26949_M = 3.95;
 
 /**
