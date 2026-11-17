@@ -1,0 +1,2324 @@
+
+
+===== [page 1] =====
+Protection or Peril of Following the Crowd in a
+Pandemic-Concurrent Flood Evacuation
+Elisa Borowski1 and Amanda Stathopoulos, Ph.D.2
+Abstract: The decisions of whether and how to evacuate during a climate disaster are influenced by a wide range of factors, including
+emergency messaging, social influences, and sociodemographics. Further complexity is introduced when multiple hazards occur simulta-
+neously, such as a flood evacuation taking place amid a viral pandemic that requires physical distancing. Such multihazard events can
+necessitate a nuanced navigation of competing decision-making strategies wherein a desire to follow peers is weighed against contagion
+risks. To better understand these trade-offs, we distributed an online survey during a COVID-19 pandemic surge in July 2020 to 600 indi-
+viduals in three midwestern and three southern states in the United States with high risk of flooding. In this paper, we estimate a random
+parameter discrete choice model in both preference space and willingness-to-pay space. The results of our model show that the directionality
+and magnitude of the influence of peers’ choices of whether and how to evacuate vary widely across respondents. Overall, the decision of
+whether to evacuate is positively impacted by peer behavior, while the decision of how to evacuate (i.e., ride-type selection) is negatively
+impacted by peer influence. Furthermore, an increase in flood threat level lessens the magnitude of peer impacts. In terms of the COVID-19
+pandemic impacts, respondents who perceive it to be a major health risk are more reluctant to evacuate, but this effect is mitigated
+by increased flood threat level. These findings have important implications for the design of tailored emergency messaging strategies
+and the role of shared rides in multihazard evacuations. Specifically, emphasizing or deemphasizing the severity of each threat in a
+multihazard scenario may assist in: (1) encouraging a reprioritization of competing risk perceptions; and (2) magnifying or neutralizing
+the impacts of social influence, thereby (3) nudging evacuation decision-making toward a desired outcome. DOI: 10.1061/(ASCE)
+NH.1527-6996.0000577. © 2022 American Society of Civil Engineers.
+Introduction
+The novel coronavirus (COVID-19) pandemic has overlapped with
+numerous climate disasters in the United States, including floods,
+earthquakes, tornadoes, wildfires, and hurricanes (Smith 2021). Of
+all natural disasters worldwide, floods are the most common and
+destructive (Kellens et al. 2013; Oshiro et al. 2022), presenting
+evacuation-related challenges of road closures and impacts to criti-
+cal infrastructure (Lim et al. 2013). Prior research has shown that
+evacuation decision-making is primarily influenced by access to
+resources, risk perception, and social influence (Dash and Gladwin
+2007; Huang et al. 2012; Riad et al. 1999; Sadri et al. 2017b, 2021).
+However, this existing body of research has largely focused on
+single-hazard events, while a research gap persists pertaining to the
+study of evacuation decision-making in the context of multihazard
+disasters. In addition to the many major flooding events that have
+occurred during the pandemic, including in Germany and China
+(Simonovic et al. 2021), this study is motivated by a flood evacu-
+ation of over 11,000 individuals from parts of Midland, Michigan,
+and surrounding areas caused by the failure of two dams: the
+Edenville and downstream Sanford. This event occurred on May
+19–20, 2020 while the state was under a pandemic stay-at-home
+mandate.
+At the time of data collection, the total number of COVID-19
+cases in the six states examined in this study ranged from 40,000
+to 160,000, and the corresponding total number of deaths ranged
+from 800 to 7,500, as shown in Table 1. Challenges with large-
+scale evacuations during the pandemic include risk of contact,
+exposure, transmission, and cross-community spread of the virus
+due to difficulties maintaining recommended physical distancing
+while evacuating (Dargin et al. 2021). Epidemiological models
+have predicted hurricane evacuations during the pandemic to
+increase the number of COVID-19 cases, although this effect
+could be minimized through guidance of evacuees away from high
+risk and crowded areas (Pei et al. 2020). This research is timely as
+pandemic-concurrent evacuation strategies have stressed the impor-
+tance of facilitating resource sharing among neighbors and reduc-
+ing staying behaviors associated with viral exposure concerns
+(Wong et al. 2021).
+In essence, dual climate and health hazards present contradic-
+tory strategies: sheltering-in-place to isolate oneself against viral
+exposure versus gathering with the masses on roads and in shelters
+to evade localized threats to life and property. Crowds are undesir-
+able in both natural hazard emergencies and contagious health
+emergencies, and yet, social connectivity bolsters resilience to
+these same emergencies by providing access to material and imma-
+terial resources. Therefore, it is difficult to predict what effect peer
+behavior will have on the decisions of whether and how to evacuate
+during a multihazard disaster.
+The goal of this research is to better understand flood evacu-
+ation decision-making amid the viral COVID-19 pandemic to gain
+insights into the role of shared rides in multihazard evacuations.
+1Dept. of Civil and Environmental Engineering, Northwestern Univ.,
+Technological Institute, 2145 Sheridan Rd., Evanston, IL 60208. ORCID:
+https://orcid.org/0000-0001-8365-7849.
+Email:
+elisaborowski2022@
+u.northwestern.edu
+2Professor, Dept. of Civil and Environmental Engineering, Northwes-
+tern Univ., Technological Institute, 2145 Sheridan Rd., Evanston, IL 60208
+(corresponding author). ORCID: https://orcid.org/0000-0001-6307-4953.
+Email: a-stathopoulos@northwestern.edu
+Note. This manuscript was submitted on November 13, 2021; ap-
+proved on May 19, 2022; published online on December 1, 2022. Dis-
+cussion period open until May 1, 2023; separate discussions must be
+submitted for individual papers. This paper is part of the Natural Ha-
+zards Review, © ASCE, ISSN 1527-6988.
+© ASCE
+04022045-1
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 2] =====
+Specifically, this study examines the following three research
+questions:
+1. What is the impact of social influence on multihazard evacu-
+ation decision-making? Using the observation of peers’ evacu-
+ation decisions as a proxy for social influence, we investigate its
+mixed impact (i.e., following versus avoiding) on evacuation
+decision-making, depending on the type of evacuation decision
+(i.e., whether or how to evacuate) within the dual emergency
+context (i.e., a pandemic-concurrent flooding event).
+2. What is the impact of flood threat level on multihazard evacu-
+ation decision-making? For example, a more severe emergency
+may lead to assigning a lower (or higher) importance to peer
+influence. Our work investigates the heterogeneity in these peer
+effects.
+3. What is the impact of pandemic risk perception on multihazard
+evacuation decision-making? Here we home in on the way de-
+cision makers navigate the competing role of flood threats and
+pandemic risks stemming from coexisting emergencies.
+To investigate these questions, we collected survey data using
+a stated choice experiment to model hypothetical responses to a
+pandemic-concurrent flood evacuation. This web-based survey
+was distributed during a pandemic surge from June 30 to July
+2, 2020, to 600 individuals in Illinois, Michigan, Wisconsin,
+Georgia, Louisiana, and Mississippi. Discrete choice models in
+willingness-to-pay space with random parameters are developed
+to control for heterogeneity in evacuation decisions.
+This paper is organized as follows. The next section presents a
+literature review, followed by an overview of the data collection and
+experimental design. Then we present the discrete choice method-
+ology and discuss the results. The final section concludes with the
+implications of the findings.
+Literature Review
+Evacuation Decision-Making: Ride Choice
+The decision of how to evacuate is typically examined through
+studies on mode and ride selection. To improve multimodal evacu-
+ation plans, this growing body of research focuses on mode choice
+in evacuations, in particular hurricane evacuations of transportation-
+disadvantaged individuals, with mode alternatives including per-
+sonal vehicles, number of vehicles, and nonhousehold modes, such
+as riding with others, bus and rail transit, special evacuation buses,
+and taxis (Bian 2017; Bian et al. 2019; Deka and Carnegie 2010;
+Sadri et al. 2014a; Wong et al. 2020b). Findings from this research
+show that the most common evacuation mode is driving private ve-
+hicles (Lindell et al. 2011; Wong et al. 2018) followed by riding
+with others (Bian et al. 2019). Evacuees using nonhousehold modes
+are most likely to evacuate by special evacuation buses (Sadri et al.
+2014a), and transportation-disadvantaged evacuees rely more on
+public transit for evacuation (Deka and Carnegie 2010). The choice
+of evacuating by nonhousehold transportation modes (e.g., riding
+with others, buses, taxis, etc.) has been shown to be related to socio-
+demographics, household characteristics, evacuation experience,
+and destination type (Sadri et al. 2014a). Additional work has ex-
+plored the joint nature of evacuation decision-making, confirming
+that mode choice is related to destination choice (Bian et al. 2019).
+Recently, research has begun to consider the role of both com-
+mercial and community ridesharing for evacuation of individuals
+who lack access to personal vehicles. Ridesharing is defined as
+“the formal or informal sharing of rides between drivers and pas-
+sengers with similar origin–destination pairings” (Shaheen and
+Cohen 2020; Shared and Digital Mobility Committee 2018). It is
+a new form of mobility that is currently of interest in alternative-
+mode evacuation planning due to its flexible, on-demand nature
+and its potential to reduce traffic, address the last-mile problem,
+and improve access to mobility resources for socially vulnerable
+populations who require transportation assistance, such as carless
+individuals. However, the use of ridesharing for emergency evacu-
+ation presents notable challenges, including driver willingness,
+safety, and liability, as well as the guarantee of equity protections
+for disadvantaged individuals as required by the Americans with
+Disabilities Act and Title VI of the Civil Rights Act (Westervelt
+et al. 2017).
+Specifically, single-hazard evacuation research has found
+evidence of driver willingness to offer shared evacuation rides with
+strangers (Li et al. 2018; Wong and Shaheen 2019), but further
+research on multihazard evacuation ride choice is warranted
+(Borowski et al. 2021). The current paper uses a discrete choice
+model to examine the decision of whether and how to evacuate
+in a multihazard scenario, while considering social and emotional
+factors, as well as communication and perceptions of relative threat
+and risk levels.
+Risk Perception: Messaging and Emotionality
+Literature reviews of disaster evacuation behavior show that risk
+perception is consistently a positive predictor of evacuation (Baker
+1991; Thompson et al. 2017). Research on emergency messaging
+suggests that decision-making is impacted through six stages
+of communication: hearing, confirming, understanding, believing,
+personalizing, and responding (e.g., Mileti and O’Brien 1992;
+Mileti and Peek 2000; Mileti and Sorensen 1990). Beyond formal
+messaging, individuals often rely on social networks to gather
+information to support decision-making (Lindell et al. 2019).
+Research on the use of on-demand ridesourcing for evacuation
+has shown that this decision is influenced by the notification
+source and the level of urgency communicated (Borowski and
+Stathopoulos 2020). The message content, style, and receiver char-
+acteristics (such as social setting, social ties, social structure,
+psychological factors, and prewarning perceptions) can all impact
+decision-making and emergency response (Mileti and Peek 2000).
+Emotional states have also been shown to have a significant ef-
+fect on decision-making (Chorus et al. 2013; Gutteling et al. 2018;
+Table 1. COVID-19 statistics for July 2020 in surveyed US states
+State
+New
+cases
+7-day
+average
+New
+deaths
+7-day
+average
+Total
+cases
+Total
+deaths
+Order began
+Order ended
+Current status
+Governor
+Georgia
+2,309
+1,900
+21
+17
+124,267
+3,071
+April 3, 2020
+April 30, 2020
+Reopening
+Republican
+Illinois
+880
+788
+24
+25
+160,898
+7,468
+March 21, 2020
+May 29, 2020
+Reopening
+Democrat
+Louisiana
+2,083
+1,099
+17
+12
+88,700
+3,509
+March 23, 2020
+May 15, 2020
+Pausing
+Democrat
+Michigan
+429
+367
+5
+12
+80,759
+6,358
+March 24, 2020
+June 1, 2020
+Pausing
+Democrat
+Mississippi
+652
+639
+9
+10
+40,829
+1,332
+April 3, 2020
+April 27, 2020
+Reopened
+Republican
+Wisconsin
+584
+522
+1
+4
+44,181
+841
+March 25, 2020
+May 13, 2020
+Reopened
+Democrat
+© ASCE
+04022045-2
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 3] =====
+Hess and Stathopoulos 2013; Lerner and Keltner 2000; Liu et al.
+2017). Experiencing heightened emotions may lead to “hot-state”
+decision-making or impulsive actions in pursuit of one’s visceral
+desires (Reid 2010). In the context of evacuations, it is likely that
+negative emotions will predominantly impact decision-making.
+The emotional content of messages can also affect decision-
+making, as observed for messages emphasizing impacts on build-
+ings and property and those emphasizing impacts on human life,
+both of which have been found to have a positive effect on evacu-
+ation intention, risk perception, and response efficacy (Morss et al.
+2018). The four primary negative emotions typically studied in
+decision-making research are fear, anger, sadness, and anxiety (Jin
+2009; Jin et al. 2016; Kim and Cameron 2011; Lerner and Keltner
+2000). It is important to note that although emotionality can impact
+decision-making, most of the research in this area has revealed that
+panicking is rarely observed during emergency events (Mileti and
+Peek 2000; Quarantelli 2001).
+The present study advances this line of research by examining
+the impact of evacuation messaging with increasing threat levels
+on the decisions of whether and how to evacuate in a multihazard
+scenario. The present study specifically explores the impacts of
+fear and anxiety on evacuation decision-making in a multihazard
+scenario.
+Social Influence and Peer Effects
+The influence of social networks on evacuation decision-making
+is an ongoing area of research. It has been shown that families,
+relatives, friends, neighbors, and coworkers impact evacuation
+decision-making (Gladwin et al. 2007). Typically, familial relation-
+ships have a stronger influence on evacuation decisions than com-
+munity relationships (Perry 1979). Several works account for the
+joint nature of evacuation decisions, such as the effect of social
+influence on evacuation decision-making within the context of
+household gatherings (Liu et al. 2014). Contagion-based network
+science analysis has been used to simulate the cascading impacts of
+family relationships (e.g., parents, siblings, relatives, etc.), as well
+as other social ties (e.g., neighbors, colleagues, friends, etc.), on
+evacuation decision-making and behavior (Hasan and Ukkusuri
+2011).
+Within the burgeoning area of research on social influence and
+evacuation decision-making, most prior studies have examined
+the effects of egocentric network characteristics on evacuation
+behavior (Ahmed et al. 2020; Gehlot et al. 2019; Sadri et al. 2015,
+2017a, b). For a comprehensive review of social influence on
+evacuation decisions, please refer to Sadri et al. (2021), which rec-
+ommends future research on new models for encouraging shared
+mobility during extreme events to address the question of under
+what conditions evacuees are willing to share a ride. The present
+study is among the first to explore this research gap by integrating
+individual risk perception and social influence, as well as the
+conditionality of sharing rides during extreme events by including
+both private and shared ride types in our evacuation choice
+experiment.
+Sociodemographics and Attitudes
+Literature reviews of disaster evacuation behavior show that the
+relationships between evacuation behavior and several sociodemo-
+graphic indicators display a mix of positive and negative effects,
+including education, income, and homeownership (Thompson
+et al. 2017). The decision of whether to evacuate is typically found
+to be positively correlated with being female, having children at
+home, and education level, while being negatively correlated with
+age, household size, and homeownership (Huang et al. 2016).
+Additional behavioral factors influencing the decision of whether
+to evacuate include income, race, employment status, and duration
+of residence, in addition to prior disaster experience, perceptions of
+risk, self-efficacy, and communication (such as official warnings,
+environmental cues from storm conditions, and social influence or
+connectivity; Collins et al. 2018; Demuth et al. 2016; Huang et al.
+2016; Lazo et al. 2015; Metaxa-Kakavouli et al. 2018; Pei et al.
+2020). Finally, the limitation or constraint of being unable to evacu-
+ate is often related to income, race, disability, and health status
+(Renne et al. 2011). It is worth noting that most of the studies
+in this space focus on single-hazard evacuation scenarios, and while
+some sociodemographics have remained unchanged during the
+pandemic, such as race and gender, others may be heavily influ-
+enced by the pandemic, like income and employment (Pei et al.
+2020).
+Pandemic Impacts on Travel Behavior
+The COVID-19 pandemic has had a distinct impact on travel
+behavior, including less time spent commuting (US Bureau of
+Labor Statistics 2021) and a decline in shared mode ridership, such
+as public transit, subways, and bike-sharing systems (Abdullah
+et al. 2020; De Vos 2020; Rahimi et al. 2021; Teixeira and Lopes
+2020). Some research has begun to examine evacuation decision-
+making regarding whether to evacuate within the pandemic context.
+Recent multihazard evacuation research has shown that the
+COVID-19 pandemic is impacting evacuation decision-making and
+reducing evacuation likelihood (Alam and Chakraborty 2021;
+Borowski et al. 2021; Collins et al. 2021). Findings suggest that
+pandemic concerns take precedence over flood concerns in a
+multihazard evacuation (Borowski et al. 2021; Botzen et al. 2021).
+Older individuals with greater vulnerability to COVID-19 are even
+more likely to stay behind during an evacuation (Botzen et al. 2021;
+Meng et al. 2020). This may be because the individuals at greatest
+risk of severe COVID-19 consequences are those 85 years of
+age and older, as well as those with underlying medical condi-
+tions, often correlated with age (Centers for Disease Control and
+Prevention 2020). Regarding evacuation ridesharing during the
+pandemic, significant determinants include traditional sociodemo-
+graphic factors, such as being Black, female, or a parent, as well as
+less traditional factors related to the sociopolitical context of the
+pandemic, including being Republican or a millennial (Borowski
+et al. 2021).
+These significant factors influencing travel behavior within the
+context of the pandemic, such as age and ridesharing attitudes, are
+expected to be relevant to the multihazard evacuation event exam-
+ined in this research.
+Data Collection: Stated Preference Survey
+A survey including a choice experiment was carefully designed
+to determine multihazard evacuation preferences with a focus on
+social influence, emotional response, and risk perception to study
+this multihazard decision-making phenomenon. Fig. 1 outlines the
+survey content and structure. Although this research study was mo-
+tivated by a real evacuation event, data was collected using a stated
+preference survey to parse out behavioral mechanisms and compare
+choice determinants that can be challenging to recall and artic-
+ulate in revealed preference surveys, as well as to expand the geo-
+graphic and sociopolitical context of our study. Despite many
+well-documented challenges (e.g., Hausman 2012; Wong et al.
+2020a), the use of stated preference data is common for evacuation
+© ASCE
+04022045-3
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 4] =====
+mode-choice research (e.g., Bian et al. 2019; Sadri et al. 2014b).
+The survey was distributed online in three midwestern states
+(Illinois, Michigan, and Wisconsin) and three southern states
+(Georgia, Louisiana, and Mississippi) from June 30 to July 2,
+2020. The selection of these six states was motivated by predictions
+of high flood risk according to authorities (National Oceanic and
+Atmospheric Administration 2020). Furthermore, each of the three
+states in each geographic region represents a different phase of pan-
+demic restriction measures in July 2020 (i.e., reopened, reopening,
+and paused), as indicated in Table 1. The web-based survey was
+designed on Qualtrics and administered to 600 respondents using
+a Prolific respondent panel. After removing poor quality responses
+that failed an attention check question or showed patterns of inatten-
+tiveness, 586 respondents remained (98%). The survey contained
+roughly 75 questions, and the average length of time taken to com-
+plete the survey was 23 minutes. While online panels have been used
+extensively to conduct research during the COVID-19 pandemic
+(e.g., Parady et al. 2020), this data collection method has its limita-
+tions, such as representativeness of the sample demographics, which
+are summarized in the final section of this paper. The final survey
+instrument included the following five sections:
+1. Emotion. In the first section, respondents were shown a descrip-
+tion of the flood evacuation in Michigan that occurred in May
+2020, including a quoted recollection of the flood evacuation
+experience of an evacuee as published in The Guardian (Holden
+2020). This prompt was used to set the context and cognitively
+situate respondents in the emergency mindset and encourage
+preference learning (c.f., Ara˜na and Le´on 2008; Carlsson et al.
+2012). Respondents were asked how likely they would be to feel
+various emotions in that evacuation situation (i.e., angry, scared,
+anxious, and sad) as measured along a five-point Likert-like
+scale, based on prior work by Borowski and Stathopoulos
+(2020). At the end of this section, respondents were asked how
+great of a threat to their personal health they believed it would be
+to evacuate during a COVID-19 outbreak (i.e., major, moderate,
+minor, or not a threat).
+2. Preevacuation questions. Respondents were asked about
+evacuation logistics, such as how many belongings (i.e., mov-
+able possessions) they would take with them when evacuating,
+their household size, and where they would likely stay during a
+flood evacuation.
+3. Egocentric network name generator. Respondents were
+asked to list up to five individuals in their life who they expect
+would provide the most support across four resource domains
+(i.e., material, instrumental, emotional, and informational)
+during a flood evacuation. This section also included questions
+about these relationships regarding distance, duration, frequency,
+and similarity in terms of gender, ethnicity, and age.
+4. Evacuation discrete choice experiment. The most relevant
+section for the current paper is the choice experiment, which
+was designed following a pilot to identify attributes and levels,
+and using best practice methods for experimental design, includ-
+ing labeled alternatives, blocking, and Bayesian prior efficient
+design (Johnson et al. 2013; Lancsar and Louviere 2008; Rose
+and Bliemer 2009).
+a. Context. Participants were presented with nine hypothetical
+evacuation choice scenarios. The setup of every scenario was
+designed to anchor participants in the evacuation context: Re-
+spondents were shown a satellite map with a five-mile radius
+that they were told they would need to evacuate within two
+hours. Then for each successive choice scenario, they were
+given a gradually changing evacuation notification indicating
+an increasing flood threat level. A color-coded warning mes-
+sage was displayed above each scenario representing three
+flood threat levels (i.e., 3 “low” in green, 3 “moderate” in
+yellow, and 3 “extreme” in red), as shown in Figs. 2(a–c).
+b. Alternatives. Each of the nine scenarios presented three
+evacuation ride alternatives and the option to not evacuate
+(i.e., staying). Fig. 3 shows an example scenario. The “opt
+out” alternative, in this case “staying,” is designed to increase
+realism and to capture a status quo effect instead of forcing an
+evacuation choice (e.g., Barton and Bergland 2010; Marsh
+et al. 2011; Meyerhoff and Liebe 2009). The three ride
+PANDEMIC-CONCURRENT FLOOD EVACUATION SURVEY
+EVACUATION CONTEXT
+SOCIAL NETWORK
+NAME GENERATOR
+SOCIAL CAPITAL
+MOBILITY BEHAVIOR
+SOCIODEMOGRAPHICS
+Angry
+Scared
+Anxious
+Sad
+Size
+Duration
+Proximity
+Frequency
+Communication Mode
+Homophily (Age, Race, Gender)
+Trust
+Helping
+Favors
+Belonging
+Contacts
+Membership
+Communication
+Participation
+Cost
+Walking Distance
+Wait Time
+Travel Time
+Crowding
+Choices
+Peers,
+CHOICE EXPERIMENT
+Accessibility
+Ride Offer
+Time Delay
+Compensation
+Policies
+Prevention/Encouragement
+Resources Offered
+Resources Accepted
+RESOURCE SHARING
+EMOTION
+EXPERIENCE
+Risk Perception 
+Possessions 
+Destination
+Supplies
+Household Size
+Residential Area
+Duration
+Housing Type
+Vehicles
+Cellphone/Internet
+Age
+Education
+Employment 
+Income
+Gender
+Race/Ethnicity
+Martial Status
+Political Afﬁliation
+Household Constraints
+Fig. 1. Flow chart of pandemic-concurrent flood evacuation survey content.
+© ASCE
+04022045-4
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 5] =====
+alternatives focus on community-based, grassroots rideshar-
+ing as opposed to commercial ride-hailing services.
+c. Attributes. The experiment includes six attributes for the
+three ride types: ride cost, walking distance to the vehicle,
+wait time prior to travel, travel time to the destination, in-
+vehicle crowding (i.e., some rides were identified as “pri-
+vate,” and others were shared with one stranger either in
+the front or back seat, wherein the distance between passen-
+gers was measured in feet), and peers’ selections. To model
+peer effects, for all four evacuation alternatives, respondents
+were told what percentage of their egocentric social network
+selected each alternative. The egocentric social network data
+was collected as described in the third item of this list. This
+method of measuring social influence is novel and inspired by
+Gaker et al. (2010).
+d. Priors. The attribute selection and presentation were quali-
+tatively evaluated and then underwent pilot testing with re-
+spondents from Prolific (n ¼ 30). Drawing on Bayesian
+priors from the pilot, an efficient Bayesian design was created
+using Ngene software (ChoiceMetrics 2012). Dominated and
+unrealistic scenarios were removed from the design before
+selecting the final set using the d-efficiency criterion.
+e. Blocking. Twenty-seven scenarios were extracted to ensure
+attribute level balance and some degree of utility balance
+among scenarios. Using blocking in the Ngene design
+ensured a balanced splitting of three sets of nine scenarios
+(ChoiceMetrics 2012). Each respondent was randomly pre-
+sented with one of the survey blocks to minimize fatigue.
+5. Sociodemographics. Respondents were asked about their per-
+sonal sociodemographics, as well as household constraints
+(such as living with one or more children under the age of 5,
+one or more adults of age 65 years or older, one or more pets,
+etc.). The survey sample sociodemographics are shown in
+Table 2.
+Methodology
+Random Parameter Model: Willingness-to-Pay Space
+In discrete choice modeling, the standard utility parameterization
+occurs in preference space (Train 2009a). In this paper, we also
+specify our model in willingness-to-pay space wherein the coeffi-
+cients directly represent the respondents’ willingness to pay (Train
+and Weeks 2005). A benefit of this approach is its added flexibility
+in estimating random parameter distributions because willingness-
+to-pay parameters can take on any distribution chosen during the
+estimation.
+(a)
+(b)
+(c)
+Fig. 2. Threat level context: (a) low; (b) moderate; and (c) extreme threat associated with evacuation scenarios.
+Fig. 3. Example of hypothetical evacuation choice scenario.
+© ASCE
+04022045-5
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 6] =====
+The utility function U for individual n choosing alternative j for
+choice task t is given by
+Unjt ¼ β 0nxnjt þ εnjt
+ð1Þ
+We can respecify this model so that the coefficient estimates
+directly represent the willingness-to-pay estimation. This provides
+an alternative to the standard practice of dividing nonprice attribute
+parameters by the price parameter to obtain the willingness-to-pay
+estimates. The advantage is that when willingness-to-pay estimates
+are directly defined for the parameter ratio, estimates are more
+tractable, plausible, and relevant for policy makers (dit Sourd
+et al. 2021; Mabit et al. 2006; Sonnier et al. 2007; Train and
+Weeks 2005). In our study, model parameters representing ride
+attributes, respondent sociodemographics, and attitudes are divided
+by the cost coefficient without creating issues in model estimation
+due to underlying scales or identification (Hensher 1994).
+More formally, Eq. (1) can be rewritten to represent respond-
+ents’ willingness to pay space following Scarpa et al. (2008) and
+Train and Weeks (2005), the only difference being that the price
+p is isolated from the nonprice evacuation ride attributes. Here
+coefficient λn is related to price and β 0 represents all other
+attributes
+Unjt ¼ −λnpnjt þ β 0nxnjt þ εnjt
+ð2Þ
+Continuing to follow Scarpa et al. (2008) and Train and Weeks
+(2005), given a scale parameter of μ where the error variance is
+expressed as μ2nðπ2=6Þ, Eq. (2) can be divided by μn
+Unjt ¼
+−λn
+μn
+
+pnjt þ
+βn
+μn
+ 0
+xnjt þ εnjt
+ð3Þ
+Rewriting ð−λn=μnÞ ¼ ϕn and ðβn=μnÞ ¼ ξn, and inserting into
+Eq. (2), we obtain
+Unjt ¼ ϕnpnjt þ ξ 0nxnjt þ εnjt
+ð4Þ
+The calculation of willingness to pay based on the preference
+space model in Eq. (4) is executed as zn ¼ ðξn=ϕnÞand thereby
+ξn ¼ znϕn. In practice, if we specified ϕ and ξ as randomly distrib-
+uted parameters that vary over decision makers following a given
+distribution, the willingness-to-pay calculation needs to contend
+with two random terms that are not always jointly identified
+(Daly et al. 2012).
+Reparameterizing Eq. (4) gives us the willingness-to-pay space
+model in Eq. (5). This model is behaviorally equivalent to the pref-
+erence space specification in Eq. (4) (Train and Sonnier 2005), but
+Table 2. Survey sample sociodemographics
+Category
+Survey
+Georgia
+Illinois
+Louisiana
+Michigan
+Mississippi
+Wisconsin
+Residence
+United States
+—
+3.2%
+4.0%
+1.4%
+3.1%
+0.9%
+1.8%
+Georgia
+23.4%
+—
+—
+—
+—
+—
+—
+Illinois
+30.5%
+—
+—
+—
+—
+—
+—
+Louisiana
+7.1%
+—
+—
+—
+—
+—
+—
+Michigan
+15.9%
+—
+—
+—
+—
+—
+—
+Mississippi
+4.1%
+—
+—
+—
+—
+—
+—
+Wisconsin
+13.4%
+—
+—
+—
+—
+—
+—
+Gender
+Male
+46.3%
+48.6%
+49.1%
+48.8%
+49.0%
+48.5%
+49.4%
+Female
+51.9%
+51.4%
+50.9%
+51.2%
+51.0%
+51.5%
+50.6%
+Other
+1.0%
+—
+—
+—
+—
+—
+—
+Age
+18–24
+30.1%
+9.9%
+9.3%
+9.4%
+9.6%
+10.2%
+9.4%
+25–34
+31.4%
+13.7%
+13.9%
+13.8%
+12.9%
+12.7%
+12.7%
+35–44
+16.2%
+13.3%
+12.9%
+12.6%
+11.6%
+12.8%
+12.1%
+45–54
+11.9%
+13.3%
+12.8%
+12.2%
+12.9%
+12.1%
+12.7%
+55–65
+6.8%
+12.2%
+13.1%
+12.9%
+14.0%
+12.8%
+14.2%
+65þ
+3.5%
+13.8%
+15.6%
+15.5%
+17.2%
+15.9%
+17.0%
+Race
+White
+65.0%
+58.2%
+71.7%
+61.8%
+78.3%
+58.1%
+85.3%
+African American
+14.5%
+31.2%
+13.8%
+32.2%
+13.6%
+37.8%
+6.3%
+Asian
+13.6%
+4.1%
+5.6%
+1.6%
+3.2%
+0.9%
+2.8%
+American Indian
+1.0%
+0.2%
+0.1%
+0.5%
+0.5%
+0.4%
+0.8%
+Two or more
+3.3%
+2.2%
+2.0%
+2.0%
+2.5%
+1.4%
+0.5%
+Other
+0.8%
+2.5%
+5.4%
+1.2%
+1.0%
+0.9%
+2.0%
+Income
+<$10k
+8.6%
+11.1%
+11.2%
+11.9%
+13.0%
+12.6%
+12.2%
+$10k to $20k
+8.8%
+13.2%
+11.5%
+15.6%
+13.4%
+16.1%
+11.3%
+$20k to $30k
+10.4%
+15.6%
+13.6%
+16.1%
+14.0%
+16.6%
+13.1%
+$30k to $40k
+7.8%
+13.5%
+12.3%
+11.6%
+13.4%
+15.3%
+14.0%
+$40k to $50k
+9.4%
+10.4%
+10.2%
+10.6%
+10.1%
+12.0%
+13.0%
+$50k to $60k
+9.8%
+8.2%
+8.8%
+8.6%
+8.4%
+8.0%
+10.2%
+$60k to $80k
+12.1%
+11.1%
+12.3%
+11.1%
+11.5%
+9.5%
+12.6%
+$80k to $100k
+8.8%
+5.9%
+7.1%
+5.4%
+6.2%
+3.8%
+5.9%
+$100k to $120k
+6.4%
+3.8%
+4.6%
+3.4%
+3.7%
+2.4%
+3.1%
+$120k to $150k
+6.3%
+2.7%
+3.3%
+2.5%
+2.7%
+1.4%
+2.0%
+$150k to $200k
+2.8%
+2.1%
+2.3%
+1.5%
+1.7%
+1.0%
+1.2%
+>$200k
+4.1%
+2.4%
+2.9%
+1.6%
+1.8%
+1.3%
+1.6%
+© ASCE
+04022045-6
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 7] =====
+the distribution of ϕn affects the estimation of willingness-to-pay
+values compared to Eq. (4). In particular, if we assume normal
+distributions, we may contend with highly skewed or unidentified
+moments of willingness to pay (Daly 2012)
+Unjt ¼ ϕnpnjt þ ðznϕnÞ 0xnjt þ εnjt
+Unjt ¼ ϕn½pnjt þ z 0nxnjt þ εnjt
+ð5Þ
+Indeed, many of the standard assumptions of random parameter
+distributions can lead to unidentified moments in the preference
+space form.
+Random Parameters
+Discrete choice models often include random parameters to account
+for taste heterogeneity across respondents by allowing these param-
+eters to vary by individual, as detailed in Thiene and Scarpa (2009).
+A random parameter coefficient can be expressed as the sum of the
+population mean and the stochastic deviation representing each re-
+spondents’ tastes, experiences, and uncertainty with that parameter
+while controlling for other effects in the model (Train 2009a).
+Applying this logic to our models of evacuation decision-making,
+we include random terms for price and peer effects in our prefer-
+ence space and willingness-to-pay space estimations, because we
+expect to find wide variation in these parameters across our sample
+population. A random parameter model is estimated here rather
+than other types of models that have been used to capture hetero-
+geneity (e.g., Wong et al. 2020b) to facilitate comparison with
+many other evacuation studies that have employed this well-
+established method (e.g., Sadri et al. 2017b).
+In our preference space model, Cost is specified as a random
+parameter with a log-normal distribution, which ensures a strictly
+negative sign, in line with many prior works (e.g., Hole and Kolstad
+2012; Kjær et al. 2013; Matthews et al. 2017). After systematic
+testing, two additional random parameters are found to be signifi-
+cant for the social effect parameters: the Share of Peers Staying and
+the Share of Peers Choosing a Ride. These parameters are both
+defined as normally distributed to reflect the wide range of sensi-
+tivities associated with peer effects, spanning from avoiding to fol-
+lowing behaviors (that is, the peer effect could produce either a
+positive or negative utility). Several interactions, including between
+Peer Choice, Flood Threat, and Pandemic Risk Perception, are also
+estimated in our models.
+Model Estimations
+For our data analysis, we first estimated a preference space model
+in order to identify for evacuation decision-making the significant
+fixed and random parameters, as well as interactions. After the
+preference space model estimation was complete, we specified
+the same model in willingness-to-pay space. We used the Apollo
+package for R (Hess and Palma 2019) to estimate the model in
+both spaces, employing the Broyden–Fletcher–Goldfarb–Shannon
+(BFGS) algorithm. For the random parameter estimation simula-
+tion, 1,000 Halton draws were found to produce stable parameter
+estimates. After comprehensive comparison, we found that the
+willingness-to-pay space formulation provides better fit and more
+plausible results.
+Table 3 lists the significant variables that were included in the
+preference space and willingness-to-pay space model estimations.
+In our discussion, we will refer to the coefficients estimated in
+willingness-to-pay space, but we also include the preference space
+estimation for comparison and to highlight the improvement of fit
+obtained using willingness-to-pay estimation.
+Methodological Equity Implications
+It is worth noting that willingness-to-pay coefficients directly pro-
+vide a monetary equivalent worth for each modeled parameter. For
+the decision of how to evacuate, our study examines shared rides
+and standard ride attributes, such as cost and travel time, and as
+such, the monetary value of ride attributes could have direct in-
+terpretations in the design of emergency ride-hailing services, in-
+cluding recommended discounts, promotions, and reimbursements.
+However, when employing the use of a willingness-to-pay analysis
+to study crisis scenarios like evacuations, it is extremely important
+to emphasize the need for governmental agencies to assist, protect,
+and provide free or very low-cost public resources to evacuees. The
+usefulness of willingness-to-pay space estimations for policy guid-
+ance is in using the utility to test hypotheses in “money space”
+(Thiene and Scarpa 2009), but it is crucial to note that willingness
+to pay is not the same as ability to pay. We wish to emphasize that
+the interpretation of our willingness-to-pay space estimations are
+intended to serve as a monetary equivalent worth or perceived value
+of behavior change and are not to be used as a recommendation to
+apply pricing or guide price setting.
+Results
+The results of the random parameter logit model estimated in
+preference space and willingness-to-pay space are shown in Table 4.
+The willingness-to-pay space estimation improves the fit compared
+to the preference space estimation with an increase in final log-
+likelihood of 220 and a higher adjusted rho squared. Three random
+parameters, twelve fixed parameters, and five interactions are
+included in the final model. All are significant to a 95% level of
+confidence or better except for the parameter Pets, which is insig-
+nificant in the willingness-to-pay estimation. The following subsec-
+tions focus on the willingness-to-pay estimation results related to
+the random parameters for ride cost and social influence, as well as
+the fixed parameters for ride attributes, threat level, risk perception,
+and emotion.
+Fixed Parameters
+Ride Attributes
+The flooding experiment included five mobility service attributes,
+in addition to the peer effect and threat level attributes discussed
+above and shown in Fig. 2. The willingness to pay for each of the
+ride attributes is shown in Fig. 4. Starting with the time attributes,
+for every additional minute of Travel Time, respondents would
+need to be compensated $0.63 to accept a ride, while for every addi-
+tional minute required to Wait for the evacuation ride to arrive, re-
+spondents would need to be compensated $0.79. These findings
+suggest that the disutility of waiting time is 125% that of traveling
+time, meaning that waiting is perceived to be more costly than trav-
+eling time in an emergency. This reflects a similar asymmetry ob-
+served for nonemergency applications (Arentze and Molin 2013).
+For every additional mile required to Walk to access a ride during a
+flood evacuation, respondents need to be compensated $32.78 to
+accept that ride, suggesting that walking is perceived as onerous
+in the emergency setting. This reflects prior research findings
+that the feasibility of walking during a flood evacuation is a func-
+tion of water depth (Dias et al. 2021; Liu et al. 2009). To evacuate
+in the Backseat of a shared ride, respondents need to be compen-
+sated $36.74, while evacuating in the Front Seat of a shared ride,
+© ASCE
+04022045-7
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 8] =====
+respondents need to be compensated at the lower monetary
+equivalent $27.72.
+Risk Perception: Messaging and Emotionality
+Risk perception is one of the key elements to understanding how
+households make decisions on whether to evacuate. Earlier work
+shows that risk is not perceived in the same way for all decision
+makers and may be influenced by social dimensions and the evacu-
+ation context (Dash and Gladwin 2007). Perceived flooding risk
+has been shown to be particularly important in a flooding evacu-
+ation context (Whitehead et al. 2000). Emotion has been shown to
+influence evacuation decision-making by impacting risk perception
+and message interpretation (DeYoung et al. 2019; Slovic and Peters
+2006). While we are not specifically examining the impact of emo-
+tional states on risk perceptions in this study, our model results
+illustrate the impact of emotional states experienced by respondents
+on the willingness to pay to evacuate in a multihazard scenario.
+Out of the four hypothesized emotional responses to the flood-
+ing evacuation storyline, only two were shown to be impactful,
+namely anxiety and fear. In terms of interpretation, for each addi-
+tional level of Evacuation Anxiety likelihood (five-point scale), re-
+spondents need to be compensated $11.17 to evacuate. Instead, for
+each additional level of Evacuation Fear likelihood (five-point
+scale), respondents are willing to pay $14.74 to evacuate. The emo-
+tional states of anger and sadness were not found to be statistically
+significant in this model.
+The survey also controlled for the role of COVID-19 pandemic
+contagion concerns in the form of a scale question. Results show
+that respondents who view the pandemic as a Major Risk to their
+health (binary variable) need to be compensated $219.45 to evacu-
+ate. There was no evidence of effects below the level of major risk
+(i.e., moderate, minor, or none), suggesting that a high threshold
+exists for pandemic risks in this evacuation setting. Once reached,
+however, the impact seems to surpass emotional effects. There is an
+important interaction effect between pandemic risk and flood threat
+communication. For each additional level of Flood Threat (4-point
+scale), the pandemic concern reduces by the equivalent amount
+of $85.02.
+Sociodemographics
+Willingness to pay as it relates to stay determinants is shown in
+Fig. 5. For every pound increase in Evacuation Luggage, respond-
+ents need to be compensated $4.36 to evacuate. For every addi-
+tional ten years of Age, respondents need to be compensated
+$5.75. Respondents in households with one or more Pets need
+to be compensated $7.54. Respondents with a Disability need to
+be compensated $84.97. The magnitude of this value of willingness
+to pay is approximately 11 times greater than that for the other
+binary parameter, Pets, suggesting a greater severity of this evacu-
+ation constraint. While we cannot ascribe an attitudinal reason
+driving these behaviors, our findings may suggest key logistic chal-
+lenges present in this evacuation context. In the course of specifi-
+cation testing, other factors, including gender, age, race/ethnicity,
+Table 3. Definitions of model variables
+Model parameters
+Variable
+Definition
+Minimum
+Maximum
+Mean
+Standard
+deviation
+Random parameters
+Cost
+Count
+Monetary cost of selecting evacuation ride
+0
+40
+11.60
+15.65
+Peer fraction choosing ride
+Count
+Fraction of social network selecting a ride
+alternative (out of 5)
+0
+1
+0.27
+0.29
+Peer fraction staying
+Count
+Fraction of social network selecting the stay
+alternative (out of 5)
+0
+0.8
+0.19
+0.22
+Ride attributes
+Travel time
+Count
+Time of evacuation ride to travel from origin to
+destination
+0
+60
+25.96
+23.83
+Wait time
+Count
+Time to wait until evacuation ride arrives
+0
+60
+18.49
+22.29
+Walking distance
+Count
+Distance to walk to access evacuation ride
+0
+0.5
+0.18
+0.21
+Shared back seat
+Binary
+Indicator of riding in the backseat in a shared
+evacuation ride with a stranger
+0
+1
+0.05
+0.22
+Shared front seat
+Binary
+Indicator of riding in the front seat in a shared
+evacuation ride with a stranger
+0
+1
+0.07
+0.25
+Threat level
+Extreme evacuation threat
+Binary
+Indicator of evacuation notification stating an
+extreme flood threat to life and property
+0
+1
+0.33
+0.47
+Moderate evacuation threat
+Binary
+Indicator of evacuation notification stating a
+moderate flood threat to life and property
+0
+1
+0.33
+0.47
+Sociodemographics
+Age
+Categorical
+Decade categories of respondent’s age
+1
+6
+2.44
+1.37
+Belongings
+Count
+One-tenth of pounds of luggage brought during
+evacuation
+0
+7.5
+3.45
+1.99
+Disability
+Binary
+Indicator of respondent having a disability
+0
+1
+0.03
+0.16
+Pets
+Binary
+Indicator of respondent living in a household with
+one or more pets
+0
+1
+0.49
+0.50
+Attitudinal variables
+Evacuation anxiety
+Likert scale
+5-point level of evacuation anxiety
+1
+5
+4.53
+0.93
+Evacuation fear
+Likert scale
+5-point level of evacuation fear
+1
+5
+4.37
+1.00
+Major pandemic risk
+Binary
+Indicator of respondent viewing the pandemic as a
+major risk to their health
+0
+1
+0.39
+0.49
+© ASCE
+04022045-8
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 9] =====
+median household income, homeownership, vehicle ownership,
+residential area type, political affiliation, and pandemic phase
+(i.e., reopened, reopening, and paused) were tested but resulted
+as being insignificant in the final model.
+Random Parameters: Cost and Peer Effects
+In the process of building our model, we opted to keep the random
+coefficients that had statistically significant standard deviations.
+Table 4. Random parameter logit model results
+Model parameters
+Preference space
+Willingness-to-pay space
+Estimate
+Robust t-ratio
+p-value
+Estimate
+Robust t-ratio
+p-value
+“Evacuate” alternative specific constant
+4.22
+8.64
+0.000
+4.20
+8.61
+0.000
+“Stay” alternative specific constant
+Fixed
+—
+—
+Fixed
+—
+—
+Random parameters
+Cost (mean)
+−3.71
+−36.44
+0.000
+−3.54
+−46.50
+0.000
+Cost (standard deviation)
+1.03
+12.61
+0.000
+0.61
+8.33
+0.000
+Share of peers choosing ride (mean)
+−1.27
+−5.10
+0.000
+71.77
+6.45
+0.000
+Share of peers choosing ride (standard deviation)
+−1.91
+−12.70
+0.000
+57.29
+8.80
+0.000
+Share of peers staying (mean)
+7.76
+9.33
+0.000
+−271.13
+−8.03
+0.000
+Share of peers staying (standard deviation)
+10.87
+9.57
+0.000
+−57.81
+−2.72
+0.003
+Ride attributes
+Travel time
+−0.02
+−11.61
+0.000
+0.63
+8.31
+0.000
+Wait time
+−0.03
+−14.65
+0.000
+0.79
+12.41
+0.000
+Walking distance
+−1.08
+−7.41
+0.000
+32.78
+6.59
+0.000
+Shared ride (back seat)
+−0.80
+−10.03
+0.000
+36.74
+8.86
+0.000
+Shared ride (front seat)
+−0.84
+−10.88
+0.000
+27.72
+8.69
+0.000
+Sociodemographics
+Age
+0.21
+3.87
+0.000
+−5.75
+−2.34
+0.010
+Evacuation luggage
+0.10
+2.46
+0.007
+−4.36
+−2.62
+0.004
+Disability
+1.13
+2.55
+0.005
+−84.97
+−2.49
+0.006
+Pets
+0.43
+2.68
+0.004
+−7.54
+−1.36
+0.087
+Attitudinal variables
+Evacuation anxiety
+0.37
+2.97
+0.002
+−11.17
+−2.09
+0.018
+Evacuation fear
+−0.33
+−2.87
+0.002
+14.74
+3.37
+0.000
+Major pandemic risk perception
+3.33
+9.27
+0.000
+−219.45
+−7.08
+0.000
+Interactions
+Peers choosing ride × moderate flood threat
+0.50
+1.79
+0.037
+−43.60
+−4.09
+0.000
+Peers choosing ride × extreme flood threat
+1.11
+4.15
+0.000
+−72.81
+−6.51
+0.000
+Peers staying × moderate flood threat
+−9.27
+−7.68
+0.000
+227.24
+7.22
+0.000
+Peers staying × extreme flood threat
+−21.13
+−8.92
+0.000
+347.97
+9.07
+0.000
+Flood threat × major pandemic risk perception
+−1.48
+−10.09
+0.000
+85.02
+7.97
+0.000
+Model parameters
+Number of draws
+1,000
+—
+—
+1,000
+—
+—
+Type of draws
+Halton
+—
+—
+Halton
+—
+—
+Number of individuals
+586
+—
+—
+586
+—
+—
+Number of modeled outcomes
+5,274
+—
+—
+5,274
+—
+—
+Final log-likelihood
+−5,645.22
+—
+—
+−5,425.07
+—
+—
+Adjusted rho-square
+0.225
+—
+—
+0.255
+—
+—
+Coefficient of variation
+Cost
+−0.277
+—
+—
+−0.171
+—
+—
+Share of peers choosing ride
+1.501
+—
+—
+0.798
+—
+—
+Share of peers staying
+1.402
+—
+—
+0.213
+—
+—
+-27.72
+-36.74
+-0.63
+-0.79
+-32.78
+-50
+-40
+-30
+-20
+-10
+0
+Shared ride (front seat)
+Shared ride (backseat)
+Travel time (mins)
+Wait time (mins)
+Walking distance (miles)
+Willingness to Pay for Ride
+Ride Attributes
+Fig. 4. Willingness to pay to select an evacuation ride type.
+-85.02
+-14.74
+4.36
+5.75
+7.54
+11.17
+84.97
+219.45
+-300
+-200
+-100
+0
+100
+200
+300
+Flood threat level  Major pandemic risk
+perception
+Level of evacuation fear
+Evacuation luggage (pounds)
+Age (10 years)
+Household constraint: Pets
+Level of evacuation anxiety
+Disability
+Major pandemic risk perception
+Willingness to Pay or Accept to Stay
+"Stay" Determinants
+Fig. 5. Factors determining willlingness to pay or accept to stay.
+© ASCE
+04022045-9
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 10] =====
+It is informative to compare the distribution of the random param-
+eters in the two model structures. In the preference space estimation
+shown in Figs. 6(a–c), the cost parameter distribution is narrower
+with a coefficient of variation (COV) for Cost that is relatively
+small (0.28), while that for Share of Peers Choosing a Ride
+and Share of Peers Staying are both relatively large (1.50 and
+1.40, respectively). This suggests low variance (or general agree-
+ment across respondents) regarding the impact of Cost on selecting
+a ride and instead high variance (or general disagreement across
+respondents) regarding the impact of the share of peers on the de-
+cisions of whether and how to evacuate.
+The distributions of the random parameters in the willingness-
+to-pay space shown in Figs. 6(d–f) reveal less dispersion in each
+case (COV for Cost is 0.17, Share of Peers Choosing a Ride is 0.80,
+and Share of Peers Staying is 0.21). This suggests low variance in
+that the direct ratio estimation is better at capturing the hetero-
+geneity in preferences for these factors, while we note that there
+is higher variance for the impact of Share of Peers Choosing
+a Ride.
+In other words, in both models, respondents display the greatest
+diversity in their views of the benefits and risks associated with
+“following the crowd” in an evacuation setting.
+Context of Flooding Threat
+Willingness to pay levels out when it relates to social influence and
+flood threat as shown in Fig. 7. The strongest effects are observed
+for the Share of Peers Staying estimates. To aid interpretation, the
+results suggest that if the proportion of peers staying increases from
+0% to 100%, respondents would require $271.13 in compensation
+on average to go against their peers’ decision to stay, which resem-
+bles earlier research findings on decision inertia across consecutive
+hurricane evacuation events (Murray-Tuite et al. 2012). This find-
+ing suggests a dominant effect of peer behavior when it comes to
+staying despite a flood warning. Comparing magnitudes for share
+of peers (Train 2009b), this coefficient is 3.7 times the magnitude of
+that for Share of Peers Choosing a Ride, suggesting a greater re-
+sistance to changing behavior related to staying compared to the
+Fig. 6. Random parameter distributions for cost and social peer effects. Preference Space: Distribution of (a) Cost random parameter; (b) willingness
+to follow peers’ evacuation Ride type selection; and (c) willingness to follow peers’ decision to Stay during an evacuation across all draws.
+Willingness-to-pay space: Distribution of (d) Cost random parameter; (e) willingness to pay to follow peers’ evacuation Ride type selection;
+and (f) willingness to pay to follow peers’ decision to Stay during an evacuation across all draws.
+© ASCE
+04022045-10
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 11] =====
+ride choice effect. The emergency context matters, however. When
+the Flood Threat is upgraded to moderate, this willingness-to-pay
+amount decreases to $43.89 (i.e., $271.13–$227.24), and when
+Flood Threat is extreme, this amount switches sign, expressing
+a willingness to pay of $76.84 (i.e., $271.13–$347.97) to evacuate.
+Overall, we note that the findings from our discrete choice model
+suggest that the impacts of the Flood Threat interactions with Share
+of Peers Staying are about five times greater than those with Share
+of Peers Choosing a Ride (that is, selecting one of three available
+ride types), suggesting that the impact of flood threat communica-
+tion on the decision of whether to evacuate is greater than on the
+decision of how to evacuate.
+Looking at the evacuation ride choice, the finding can be inter-
+preted as follows: if the Share of Peers Choosing a Ride increases
+from 0% to 100%, respondents would be willing to pay an addi-
+tional $71.77 on average to go against their peers. When the
+Flood Threat is elevated to moderate, this amount decreases to
+$28.17 (i.e., $71.77–$43.60), and when Flood Threat is extreme,
+this amount instead suggests a need to be compensated $1.04
+(i.e., $71.77–$72.81) to go against their peers.
+Discussion
+Nuanced Impact of “Following the Crowd”
+Prior research on single-hazard evacuation scenarios suggests that
+social influence tends to result in a follow-the-crowd mentality
+(Sadri et al. 2021). This may be due to the sense of safety-in-
+numbers that the act of following others could provide (Lindell
+et al. 2005). However, in a multihazard scenario that involves
+both a climate and public health crisis, it is unclear whether a sim-
+ilar effect of social influence would be observed. In this type of
+multihazard event, the emergency messaging tends to be contradic-
+tory. Specifically, the advice provided for one crisis suggests stay-
+ing home (the pandemic), while the advice for the other crisis
+suggests evacuating (flooding).
+Our findings show that although the impact of social influence
+differs widely across respondents, overall, it is negative for ride
+selection and positive for the decision to stay. In other words, if
+more peers choose to stay despite official flood warnings, the
+respondent will be more likely to stay as well. Instead, if more peers
+choose a given evacuation ride type, respondents will be more
+likely to choose a different ride option. This makes sense given
+the pandemic-related advice to shelter-in-place and to follow social
+distancing protocol when leaving one’s home.
+When interacting social influence with flood threat messaging,
+an important observation can be made. When the threat com-
+munication is upgraded, evacuation scenarios with greater flood
+threat result in reduced impacts of social influence. That is, for
+the decision to stay, the original mean value of the need to be
+compensated to go against peers’ decision to stay (i.e., $271.13)
+is reduced by 84% with moderate flood risk and switches to a
+willingness to pay to evacuate in scenarios with extreme flood
+risk. This indicates that flood risk communication seems to super-
+sede the reliance on following crowd cues, at least for severe
+evacuation events.
+For ride selection, the original willingness to pay $71.77 to go
+against peers’ ride choice is reduced by 61% in scenarios with
+moderate flood threat and switches to a minimal need to be com-
+pensated to go against peers’ ride selection in scenarios with ex-
+treme flood threat. This increased desire to follow peers’ ride
+selection in evacuation scenarios with greater threat of flood risk
+may be related to perceiving the consequences of selecting an
+ineffective (e.g., overcrowded) evacuation ride type as being more
+severe.
+The magnitude of the impact of the share of peers staying is 3.8
+times greater than that of the share of peers choosing a ride,
+although the magnitude of the standard deviation for each is ap-
+proximately equivalent. This asymmetry of social influence may
+be related to the signaling effect of visible peer behavior. The
+evacuation behavior of others could provide an environmental
+cue emphasizing the urgency of the scenario. When individuals
+evacuate, this behavior is more visible than their decision to stay
+and could result in a springing into action that motivates others to
+evacuate as well.
+Dueling Risk Perceptions and Emotions
+Our findings show that different emotional reactions lead to con-
+trasting effects. For every level of increased evacuation anxiety, re-
+spondents would need to be compensated $11.17 to evacuate. By
+contrast, for every level of increased evacuation fear, respondents
+are willing to pay $14.74 to evacuate. One possible explanation for
+these divergent findings is that anxiety may lead to a “freeze”
+-347.97
+-227.24
+271.13
+72.81
+43.60
+-71.77
+-600
+-400
+-200
+0
+200
+400
+600
+Share of peers staying  Extreme ﬂood threat
+Share of peers staying  Moderate ﬂood threat
+Share of peers staying (mean)
+Share of peers choosing ride  Extreme ﬂood threat
+Share of peers choosing ride  Moderate ﬂood threat
+Share of peers choosing ride (mean)
+Willingness to Pay or Accept to Follow Peers
+Peer Inﬂuence
+Fig. 7. Willingness to pay or accept to follow peers.
+© ASCE
+04022045-11
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 12] =====
+response, while fear may lead to a “flee” response. The impact of
+fear is greater in magnitude than the impact of anxiety by 32%.
+This research also offers insight on the tension between pan-
+demic concerns that suggest avoiding exposure introduced by
+evacuating in shared vehicles and flooding destruction that impels
+respondents to leave. Respondents who view the pandemic as a
+major risk to their health require high levels of compensation to
+evacuate, but for every increase of flood threat level, that amount
+reduces notably. Given the three levels of flood threat in the experi-
+ment (i.e., low, moderate, and extreme), this reduction could be so
+great as to entirely counterbalance the effect of pandemic risk
+evaluation. In practical terms, this suggests that respondents who
+view the pandemic as a major threat could demonstrate a willing-
+ness to pay to evacuate if the flood threat was great enough.
+Practical Applications
+This paper examines the effects of factors like social influence and
+emotion on evacuation decision-making during a simultaneous vi-
+ral pandemic and flooding event. In terms of social influence, our
+results show that if more of an individual’s peers choose to stay
+behind in this evacuation context, that individual is more likely
+to stay behind, as well. However, when evacuating, if more of
+an individual’s peers choose a specific ride type, that individual
+is more likely to select a different type of evacuation ride. While
+peers’ choices have a significant effect on evacuation decision-
+making, the severity of the flooding threat is shown to mitigate
+these peer effects. In terms of emotion, this study reveals that feel-
+ings of fear are more likely to result in the decision to evacuate,
+while feelings of anxiety are more likely to result in the decision
+to stay behind. Together these findings suggest that to nudge indi-
+viduals toward the advised response regardless of peers’ behavior,
+multihazard emergency communication should: (1) clearly empha-
+size the severity of the more threatening of the multiple hazards;
+and (2) carefully take into consideration the emotional impact of
+the messaging, for example, by bringing focus to self-efficacy
+and away from numerous hypothetical outcomes.
+Summary and Conclusion
+In this paper, we use a discrete choice model to analyze the deci-
+sions of whether and how to evacuate during a flooding disaster
+occurring simultaneously with the global COVID-19 health emer-
+gency. The focus of the analysis is on social influence and how it is
+affected by emergency messaging, emotionality, and the overlap-
+ping hazard setting. This problem is challenging given that the mul-
+tihazard setting will likely necessitate a nuanced navigation of
+competing decision-making strategies wherein a desire to follow
+peers is weighed against contagion risks.
+Drawing on data from a stated choice experiment, we report the
+results of a random parameter logit model in willingness-to-pay
+space. We examine the decision of whether to evacuate or stay
+behind in response to a flooding event. The modeling approach of-
+fers flexibility in assessing both unobserved and systematic hetero-
+geneity present in evacuation responses. The critical takeaway
+from this research is that social influence during a multihazard
+evacuation event has vastly different impacts depending on the de-
+cision being made, threat levels, and taste heterogeneity. Overall,
+our findings show that social influence has a positive impact on
+whether one evacuates (i.e., stay versus go) and a negative impact
+on how one evacuates (i.e., evacuation ride-type choice). As flood
+threat increases, the magnitude of the effect of social influence
+decreases. Large taste heterogeneity across respondents regarding
+the impact of social influence is observed. Finally, some emotional
+states are found to be significantly correlated with evacuation
+decision-making, but only fear and anxiety. Specifically, evacuation
+anxiety is positively correlated with the decision to stay, while
+evacuation fear is positively correlated with the decision to
+evacuate.
+Policy Implications for Emergency Communication
+Pandemic-concurrent evacuation decision-making can be nudged
+in different directions by emphasizing different hazard components
+and their associated threat levels, which can impact the magnitude
+of the social influence effect. Peer behavior is largely outside of
+the control of emergency communication management, but some
+behaviors could be broadcasted and amplified, such as communi-
+cating the fact that others are evacuating. There is an inherent asym-
+metric signaling effect that occurs during multihazard evacuations,
+likely due to the decision to evacuate being more visible to others
+compared to the decision to stay, which suggests a potential two-
+pronged approach to communicating peer behavior via both formal
+and informal channels. Communication strategies should utilize
+risk perception, emotion, and behavioral broadcasting carefully
+to intentionally nudge evacuation decision-making toward the
+desired outcome.
+Limitations
+There are three main limitations to this work. First, some biases
+exist in the sampling frame. There is a sampling bias or demo-
+graphic imbalance in the survey sample that is skewed toward indi-
+viduals under the age of 45, those who are Asian, and those of
+higher income. This is due in part to using convenience-based sam-
+pling, which is justified for evacuation research (e.g., Wong et al.
+2020b) and COVID-19-era travel behavior studies (e.g., Parady
+et al. 2020) due to safety concerns. Second, the results were found
+using a stated preference choice experiment, which presents the
+risk of hypothetical bias occurring when respondents lack experi-
+ence with the situation they are being asked to consider. This has
+been shown to result in upward-biased, overstated, or inflated
+willingness-to-pay values, as well as large variation in responses
+(Hausman 2012; Hensher 2010; Wong et al. 2020a). Attempting
+to mitigate this bias, we employed a technique of using a quoted
+recollection to situate respondents in the emergency context. This
+piloted approach is experimental, because the best method for
+achieving this effect is currently unknown, and more research is
+needed to determine the best approach to addressing biases in
+evacuation experiments. As such, we encourage further investiga-
+tion into data collection methods, including experiential games and
+virtual reality. Finally, in this exploratory work, the emotion vari-
+ables (i.e., anxiety and fear) were each measured using a single
+survey question and modeled as continuous variables, while more
+accurately, emotion should be treated as a latent factor using multi-
+ple indicators. Future work should extend the analysis of the impact
+of emotion on multihazard evacuation decision-making by treating
+it as a latent variable.
+Data Availability Statement
+The survey data that support the findings of this study are not pub-
+licly available due to protection of human subjects. Data with ap-
+propriate protection is available on request from the corresponding
+author.
+© ASCE
+04022045-12
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 13] =====
+Acknowledgments
+This research was supported in part by funding from the National
+Defense Science and Engineering Graduate (NDSEG) fellowship
+provided to Elisa Borowski and the US National Science Founda-
+tion (NSF) Career Grant No. 1847537 and from Leslie and Mac
+McQuown via Northwestern University Center for Engineering
+Sustainability and Resilience Seed Funding to Amanda Stathopou-
+los. The survey is approved by Northwestern’s IRB with Study No.
+STU00211228. We appreciate constructive comments from re-
+viewers that helped improve this paper.
+References
+Abdullah, M., C. Dias, D. Muley, and M. Shahin. 2020. “Exploring the
+impacts of COVID-19 on travel behavior and mode preferences.”
+Transp. Res. Interdiscip. Perspect. 8 (Mar): 100255. https://doi.org/10
+.1016/j.trip.2020.100255.
+Ahmed, M. A., A. M. Sadri, and M. Hadi. 2020. “Modeling social network
+influence on hurricane evacuation decision consistency and sharing
+capacity.” Transp. Res. Interdiscip. Perspect. 7 (14): 100180. https://doi
+.org/10.1016/j.trip.2020.100180.
+Alam, M. S., and T. Chakraborty. 2021. “Understanding the nexus between
+public risk perception of COVID-19 and evacuation behavior during
+cyclone Amphan in Bangladesh.” Heliyon 7 (7): e07655. https://doi
+.org/10.1016/j.heliyon.2021.e07655.
+Ara˜na, J. E., and C. J. Le´on. 2008. “Do emotions matter? Coherent pref-
+erences under anchoring and emotional effects.” Ecol. Econ. 66 (4):
+700–711. https://doi.org/10.1016/j.ecolecon.2007.11.005.
+Arentze, T. A., and E. J. E. Molin. 2013. “Travelers’ preferences in multi-
+modal networks: Design and results of a comprehensive series of choice
+experiments.” Transp. Res. Part A Policy Pract. 58 (Sep): 15–28.
+https://doi.org/10.1016/j.tra.2013.10.005.
+Baker, E. J. 1991. “Hurricane evacuation behavior.” Int. J. Mass Emerg.
+Disasters 9 (2): 287–310.
+Barton, D. N., and O. Bergland. 2010. “Valuing irrigation water using a
+choice experiment: An ‘individual status quo’ modelling of farm spe-
+cific water scarcity.” Environ. Dev. Econ. 15 (3): 321–340. https://doi
+.org/10.1017/S1355770X10000045.
+Bian, R. 2017. “Development of a mode and destination type joint choice
+model for hurricane evacuation.” ProQuest dissertations & theses, Agri-
+cultural and Mechanical College, Louisiana State Univ.
+Bian, R., C. G. Wilmot, R. Gudishala, and E. J. Baker. 2019. “Modeling
+household-level hurricane evacuation mode and destination type joint
+choice using data from multiple post-storm behavioral surveys.”
+Transp. Res. Part C Emerging Technol. 99 (Mar): 130–143. https://doi
+.org/10.1016/j.trc.2019.01.009.
+Borowski, E., V. L. Cedillo, and A. Stathopoulos. 2021. “Dueling
+emergencies: Flood evacuation ridesharing during the COVID-19 pan-
+demic.” Transp. Res. Interdiscip. Perspect. 10 (Mar): 100352. https://
+doi.org/10.1016/j.trip.2021.100352.
+Borowski, E., and A. Stathopoulos. 2020. “On-demand ridesourcing for
+urban emergency evacuation events: An exploration of message con-
+tent, emotionality, and intersectionality.” Int. J. Disaster Risk Reduct.
+44 (2): 101406. https://doi.org/10.1016/j.ijdrr.2019.101406.
+Botzen, W. J., J. M. Mol, P. J. Robinson, J. Zhang, and J. Czajkowski. 2021.
+“Individual hurricane evacuation intentions during the COVID-19 pan-
+demic: Insights for risk communication and emergency management
+policies.” Nat. Hazard. 2021 (Jan): 1–16. https://doi.org/10.1007
+/s11069-021-05064-2.
+Carlsson, F., M. R. Mørkbak, and S. B. Olsen. 2012. “The first time is the
+hardest: A test of ordering effects in choice experiments.” J. Choice
+Modell. 5 (2): 19–37. https://doi.org/10.1016/S1755-5345(13)70051-4.
+Centers for Disease Control and Prevention. 2020. “People at increased
+risk: And other people who need to take extra precautions.” Accessed
+July 1, 2020. https://www.cdc.gov/coronavirus/2019-ncov/need-extra
+-precautions/index.html.
+ChoiceMetrics. 2012. Ngene 1.1.1 User manual & reference guide.
+Sydney, Australia: ChoiceMetrics.
+Chorus, C. G., M. J. Koetse, and A. Hoen. 2013. “Consumer preferences
+for alternative fuel vehicles: Comparing a utility maximization and a
+regret minimization model.” Energy Policy 2013 (1): 901–908.
+https://doi.org/10.1016/j.enpol.2013.06.064.
+Collins, J., R. Ersing, A. Polen, M. Saunders, and J. Senkbeil. 2018.
+“The effects of social connections on evacuation decision making
+during Hurricane Irma.” Weather Clim. Soc. 10 (12): 459–469. https://
+doi.org/10.1175/WCAS-D-17-0119.1.
+Collins, J., A. Polen, K. McSweeney, D. Col´on-Burgos, and I. Jernigan.
+2021. “Hurricane risk perceptions and evacuation decision-making in
+the age of COVID-19.” Bull. Am. Meteorol. Soc. 102 (4): 836–848.
+https://doi.org/10.1175/BAMS-D-20-0229.1.
+Daly, A., S. Hess, and K. Train. 2012. “Assuring finite moments for will-
+ingness to pay in random coefficient models.” Transportation 39 (1):
+19–31. https://doi.org/10.1007/s11116-011-9331-3.
+Dargin, J. S., Q. Li, G. Jawer, X. Xiao, and A. Mostafavi. 2021. “Com-
+pound hazards: An examination of how hurricane protective actions
+could increase transmission risk of COVID-19.” Int. J. Disaster Risk
+Reduct. 65 (Apr): 102560. https://doi.org/10.1016/j.ijdrr.2021.102560.
+Dash, N., and H. Gladwin. 2007. “Evacuation decision making and
+behavioral responses: Individual and household.” Nat. Hazard. Rev.
+8 (3): 69–77. https://doi.org/10.1061/(ASCE)1527-6988(2007)8:3(69).
+Deka, D., and J. Carnegie. 2010. “Analyzing evacuation behavior of
+transportation-disadvantaged populations in Northern New Jersey.”
+In Proc., Transportation Research Board 89th Annual Meeting Trans-
+portation Research Board. Washington, DC: Transportation Research
+Board.
+Demuth, J. L., R. E. Morss, J. K. Lazo, and C. Trumbo. 2016. “The effects
+of past hurricane experiences on evacuation intentions through risk per-
+ception and efficacy beliefs: A mediation analysis.” Weather Clim. Soc.
+8 (6): 327–344. https://doi.org/10.1175/WCAS-D-15-0074.1.
+De Vos, J. 2020. “The effect of COVID-19 and subsequent social distancing
+on travel behavior.” Transp. Res. Interdiscip. Perspect. 5 (Dec):
+100121. https://doi.org/10.1016/j.trip.2020.100121.
+DeYoung, S. E., J. N. Sutton, A. K. Farmer, D. Neal, and K. A. Nichols.
+2019. “Death was not in the agenda for the day: Emotions, behavioral
+reactions, and perceptions in response to the 2018 Hawaii wireless
+emergency alert.” Int. J. Disaster Risk Reduct. 36 (12): 101078.
+https://doi.org/10.1016/j.ijdrr.2019.101078.
+Dias, C., N. Abd Rahman, and A. Zaiter. 2021. “Evacuation under flooded
+conditions: Experimental investigation of the influence of water depth
+on walking behaviors.” Int. J. Disaster Risk Reduct. 58 (Oct): 102192.
+https://doi.org/10.1016/j.ijdrr.2021.102192.
+dit Sourd, R. C., O. Beaumais, P. A. Mahieu, P. Martínez-Camblor, and
+R. Scarpa. 2021. “A contingent valuation test for measuring the con-
+struct validity of willingness-to-pay estimates derived from choice-
+experiments.” Land Econ. 97 (3): 608–625.
+Gaker, D., Y. Zheng, and J. Walker. 2010. “Experimental economics
+in transportation: Focus on social influences and provision of infor-
+mation.” Transp. Res. Rec. 2156 (1): 47–55. https://doi.org/10.3141
+/2156-06.
+Gehlot, H., A. M. Sadri, and S. V. Ukkusuri. 2019. “Joint modeling of
+evacuation departure and travel times in hurricanes.” Transportation
+46 (6): 2419–2440. https://doi.org/10.1007/s11116-018-9958-4.
+Gladwin, H., J. K. Lazo, B. H. Morrow, W. G. Peacock, and H. E.
+Willoughby. 2007. “Social science research needs for the hurricane
+forecast and warning system.” Nat. Hazard. Rev. 8 (3): 87–95.
+https://doi.org/10.1061/(ASCE)1527-6988(2007)8:3(87).
+Gutteling, J. M., T. Terpstra, and J. H. Kerstholt. 2018. “Citizens’ adaptive
+or avoiding behavioral response to an emergency message on their mo-
+bile phone.” J. Risk Res. 21 (12): 1579–1591. https://doi.org/10.1080
+/13669877.2017.1351477.
+Hasan, S., and S. V. Ukkusuri. 2011. “A threshold model of social conta-
+gion process for evacuation decision making.” Transp. Res. Part B
+Methodol. 45 (7): 1590–1605. https://doi.org/10.1016/j.trb.2011.07
+.008.
+Hausman, J. 2012. “Contingent valuation: From dubious to hopeless.”
+J. Econ. Perspect. 26 (4): 43–56. https://doi.org/10.1257/jep.26.4.43.
+© ASCE
+04022045-13
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 14] =====
+Hensher, D. A. 1994. “Stated preference analysis of travel choices: The
+state of practice.” Transportation 21 (2): 107–133. https://doi.org/10
+.1007/BF01098788.
+Hensher, D. A. 2010. “Hypothetical bias, choice experiments and willing-
+ness to pay.” Transp. Res. Part B Methodol. 44 (6): 735–752. https://doi
+.org/10.1016/j.trb.2009.12.012.
+Hess, S., and D. Palma. 2019. “Apollo: A flexible, powerful and custom-
+isable freeware package for choice model estimation and application.”
+J. Choice Modell. 2019 (1): 32. https://doi.org/10.1016/j.jocm.2019
+.100170.
+Hess, S., and A. Stathopoulos. 2013. “A mixed random utility—Random
+regret model linking the choice of decision rule to latent character
+traits.” J. Choice Modell. 9 (13): 27–38. https://doi.org/10.1016/j
+.jocm.2013.12.005.
+Holden, E. 2020. “Michigan: Thousands evacuated after ‘catastrophic’ dam
+failures.” Accessed May 20, 2020. https://www.theguardian.com/us
+-news/2020/may/20/michigan-dams-break-thousands-evacuated-floods.
+Hole, A. R., and J. R. Kolstad. 2012. “Mixed logit estimation of willingness
+to pay distributions: A comparison of models in preference and WTP
+space using data from a health-related choice experiment.” Empirical
+Econ. 42 (2): 445–469. https://doi.org/10.1007/s00181-011-0500-1.
+Huang, S. K., M. K. Lindell, and C. S. Prater. 2016. “Who leaves and who
+stays? A review and statistical meta-analysis of hurricane evacuation
+studies.” Environ. Behav. 48 (8): 991–1029. https://doi.org/10.1177
+/0013916515578485.
+Huang, S. K., M. K. Lindell, C. S. Prater, H. C. Wu, and L. K. Siebeneck.
+2012. “Household evacuation decision making in response to Hurricane
+Ike.” Nat. Hazard. Rev. 13 (4): 283–296. https://doi.org/10.1061
+/(ASCE)NH.1527-6996.0000074.
+Jin, Y. 2009. “The effects of public’s cognitive appraisal of emotions in
+crises on crisis coping and strategy assessment.” Public Relat. Rev.
+35 (Aug): 310–313. https://doi.org/10.1016/j.pubrev.2009.02.003.
+Jin, Y., J. D. Fraustino, and B. F. Liu. 2016. “The scared, the outraged, and
+the anxious: How crisis emotions, involvement, and demographics
+predict publics’ conative coping.” Int. J. Strategies Commun. 10 (4):
+289–308. https://doi.org/10.1080/1553118X.2016.1160401.
+Johnson, F. R., E. Lancsar, D. Marshall, V. Kilambi, A. Mühlbacher,
+D. A. Regier, B. W. Bresnahan, B. Kanninen, and J. F. Bridges. 2013.
+“Constructing experimental designs for discrete-choice experiments:
+Report of the ISPOR conjoint analysis experimental design good re-
+search practices task force.” Value Health 16 (1): 3–13. https://doi
+.org/10.1016/j.jval.2012.08.2223.
+Kellens, W., T. Terpstra, and P. De Maeyer. 2013. “Perception and com-
+munication of flood risks: A systematic review of empirical research.”
+Risk Anal. Int. J. 33 (1): 24–49. https://doi.org/10.1111/j.1539-6924
+.2012.01844.x.
+Kim, H. J., and G. T. Cameron. 2011. “Emotions matter in crisis: The role
+of anger and sadness in the publics’ response to crisis news framing and
+corporate crisis response.” Commun. Res. 38 (6): 826–855. https://doi
+.org/10.1177/0093650210385813.
+Kjær, T., M. Bech, C. Kronborg, and M. R. Mørkbak. 2013. “Public pref-
+erences for establishing nephrology facilities in Greenland: Estimating
+willingness-to-pay using a discrete choice experiment.” Eur. J. Health
+Econ. 14 (5): 739–748. https://doi.org/10.1007/s10198-012-0418-3.
+Lancsar, E., and J. Louviere. 2008. “Conducting discrete choice experi-
+ments to inform healthcare decision making.” Pharmacoeconomics
+26 (8): 661–677. https://doi.org/10.2165/00019053-200826080-00004.
+Lazo, J. K., A. Bostrom, R. E. Morss, J. L. Demuth, and H. Lazrus. 2015.
+“Factors affecting hurricane evacuation intentions: Factors affecting
+hurricane evacuation intentions.” Risk Anal. 35 (12): 1837–1857.
+https://doi.org/10.1111/risa.12407.
+Lerner, J. S., and D. Keltner. 2000. “Beyond valence: Toward a model of
+emotion–specific influences on judgement and choice.” Cognit. Emot.
+14 (4): 473–493. https://doi.org/10.1080/026999300402763.
+Li, M., J. Xu, X. Liu, C. Sun, and Z. Duan. 2018. “Use of shared-mobility
+services to accomplish emergency evacuation in urban areas via reduc-
+tion in intermediate trips—Case study in Xi’an, China.” Sustainability
+10 (4862): 1–27. https://doi.org/10.3390/su10124862.
+Lim, H., M. B. Lim, and M. Piantanakulchai. 2013. “A review of recent
+studies on flood evacuation planning.” J. Eastern Asia Soc. Transp.
+Studies 10 (Jan): 147–162.
+Lindell, M. K., S. Arlikatti, and S. K. Huang. 2019. “Immediate behavioral
+response to the June 17, 2013 flash floods in Uttarakhand, North India.”
+Int. J. Disaster Risk Reduct. 34 (12): 129–146. https://doi.org/10.1016/j
+.ijdrr.2018.11.011.
+Lindell, M. K., J. E. Kang, and C. S. Prater. 2011. “The logistics of house-
+hold hurricane evacuation.” Nat. Hazard. 58 (3): 1093–1109. https://doi
+.org/10.1007/s11069-011-9715-x.
+Lindell, M. K., J. C. Lu, and C. S. Prater. 2005. “Household decision
+making and evacuation in response to Hurricane Lili.” Nat. Hazard.
+Rev. 6 (4): 171–179. https://doi.org/10.1061/(ASCE)1527-6988(2005)
+6:4(171).
+Liu, B. F., M. M. Wood, M. Egnoto, H. Bean, J. Sutton, D. S. Mileti, and S.
+Madden. 2017. “Is a picture worth a thousand words? the effects of
+maps and warning messages on how publics respond to disaster infor-
+mation.” Public Relat. Rev. 43 (12): 493–506. https://doi.org/10.1016/j
+.pubrev.2017.04.004.
+Liu, S., P. Murray-Tuite, and L. Schweitzer. 2014. “Incorporating house-
+hold gathering and mode decisions in large-scale no-notice evacuation
+modeling.” Comput.-Aided Civ. Infrastruct. Eng. 29 (2): 107–122.
+Liu, Y., N. Okada, D. Shen, and S. Li. 2009. “Agent-based flood evacuation
+simulation of life-threatening conditions using vitae system model.”
+J. Nat. Disaster Sci. 31 (2): 69–77. https://doi.org/10.2328/jnds.31.69.
+Mabit, S. L., S. Caussade, and S. Hess. 2006. “Representation of taste
+heterogeneity in willingness to pay indicators using parameterization
+in willingness to pay space.” In Proc., European Transport Conf.
+2006. London: Association for European Transport. http://abstracts
+.aetransport.org/conference/index/id/12.
+Marsh, D., L. Mkwara, and R. Scarpa. 2011. “Do respondents’ perceptions
+of the status quo matter in non-market valuation with choice experi-
+ments? An application to New Zealand freshwater streams.” Sustain-
+ability 3 (9): 1593–1615. https://doi.org/10.3390/su3091593.
+Matthews, Y., R. Scarpa, and D. Marsh. 2017. “Stability of willingness-
+to-pay for coastal management: A choice experiment across three time
+periods.” Ecol. Econ. 138 (Mar): 64–73. https://doi.org/10.1016/j
+.ecolecon.2017.03.031.
+Meng, Y., et al. 2020. “Sex-specific clinical characteristics and prognosis of
+coronavirus disease-19 infection in Wuhan, China: A retrospective
+study of 168 severe patients.” PLoS Pathog. 16 (4): e1008520.
+https://doi.org/10.1371/journal.ppat.1008520.
+Metaxa-Kakavouli, D., P. Maas, and D. P. Aldrich. 2018. “How social ties
+influence hurricane evacuation behavior.” In Proc., ACM Human-
+Computer Interact, 1–16. New York: Association for Computing
+Machinery.
+Meyerhoff, J., and U. Liebe. 2009. “Status quo effect in choice experi-
+ments: Empirical evidence on attitudes and choice task complexity.”
+Land Econ. 85 (3): 515–528.
+Mileti, D. S., and P. W. O’Brien. 1992. “Warnings during disaster: Normal-
+izing communicated risk.” Soc. Probl. 39 (1): 40–57. https://doi.org/10
+.2307/3096912.
+Mileti, D. S., and L. Peek. 2000. “The social psychology of public response
+to warnings of a nuclear power plant accident.” J. Hazard. Mater.
+75 (5): 181–194. https://doi.org/10.1016/S0304-3894(00)00179-5.
+Mileti, D. S., and J. Sorensen. 1990. Communication of emergency public
+warnings: A social science perspective and state-of-the-art assessment.
+Oak Ridge, TN: Oak Ridge National Lab.
+Morss, R. E., C. L. Cuite, J. L. Demuth, W. K. Hallman, and R. L. Shwom.
+2018. “Is storm surge scary? The influence of hazard, impact, and fear-
+based messages and individual differences on responses to hurricane
+risks in the USA.” Int. J. Disaster Risk Reduct. 30 (Jan): 44–58.
+https://doi.org/10.1016/j.ijdrr.2018.01.023.
+Murray-Tuite, P., W. Yin, S. V. Ukkusuri, and H. Gladwin. 2012. “Changes
+in evacuation decisions between Hurricanes Ivan and Katrina.” Transp.
+Res. Rec. 2312 (1): 98–107. https://doi.org/10.3141/2312-10.
+National Oceanic and Atmospheric Administration. 2020. “U.S. Spring
+Outlook forecasts another year of widespread river flooding.” Accessed
+June 26, 2020. https://www.noaa.gov/media-release/us-spring-outlook
+-forecasts-another-year-of-widespread-river-flooding.
+© ASCE
+04022045-14
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.
+
+
+===== [page 15] =====
+Oshiro, K., Y. Tanioka, J. Schweizer, K. Zafren, H. Brugger, and P. Paal.
+2022. “Prevention of hypothermia in the aftermath of natural disasters
+in areas at risk of avalanches, earthquakes, tsunamis and floods.” Int. J.
+Environ. Res. Public Health 19 (3): 1098. https://doi.org/10.3390
+/ijerph19031098.
+Parady, G., A. Taniguchi, and K. Takami. 2020. “Travel behavior changes
+during the COVID-19 pandemic in Japan: Analyzing the effects of risk
+perception and social influence on going-out self-restriction.” Trans-
+port. Res. Interdiscip. Perspect. 7 (12): 100181. https://doi.org/10
+.1016/j.trip.2020.100181.
+Pei, S., K. A. Dahl, T. K. Yamana, R. Licker, and J. Shaman. 2020. “Com-
+pound risks of hurricane evacuation amid the COVID-19 pandemic in
+the United States.” GeoHealth 4 (12): e2020GH000319.
+Perry, R. W. 1979. “Evacuation decision-making in natural disasters.” Mass
+Emerg. 4 (Apr): 25–38.
+Quarantelli, E. L. 2001. “Sociology of panic.” Univ. Delaware Disaster
+Res. Center 28 (3): 1–12.
+Rahimi, E., R. Shabanpour, A. Shamshiripour, and A. K. Mohammadian.
+2021. “Perceived risk of using shared mobility services during the
+COVID-19
+pandemic.”
+Transp.
+Res.
+Part
+F
+Psychol.
+Behav.
+81: 271–281. https://doi.org/10.1016/j.trf.2021.06.012.
+Reid, A. 2010. “Hot-state decision making: Understanding consumer
+emotion
+and
+rationality.”
+Accessed
+May
+1,
+2020.
+http://www
+.sentientdecisionscience.com/hot-state-decision-making-understanding
+-consumer-emotion-and-rationality/.
+Renne, J. L., T. W. Sanchez, and T. Litman. 2011. “Carless and special
+needs evacuation planning: A literature review.” J. Plann. Lit. 26 (4):
+420–431. https://doi.org/10.1177/0885412211412315.
+Riad, J. K., F. H. Norris, and R. B. Ruback. 1999. “Predicting evacuation in
+two major disasters: Risk perception, social influence, and access to
+resources 1.” J. Appl. Soc. Psychol. 29 (5): 918–934. https://doi.org/10
+.1111/j.1559-1816.1999.tb00132.x.
+Rose, J. M., and M. C. Bliemer. 2009. “Constructing efficient stated choice
+experimental designs.” Transp. Rev. 29 (5): 587–617. https://doi.org/10
+.1080/01441640902827623.
+Sadri, A. M., S. V. Ukkusuri, and M. A. Ahmed. 2021. “Review of social
+influence in crisis communications and evacuation decision-making.”
+Transp. Res. Interdiscip. Perspect. 9 (Dec): 100325. https://doi.org/10
+.1016/j.trip.2021.100325.
+Sadri, A. M., S. V. Ukkusuri, and H. Gladwin. 2015. “Social network in-
+fluence on evacuation behavior: The case of hurricane sandy.” In Proc.,
+14th Int. Conf. on Travel Behaviour Research. Leeds, UK: Univ. of
+Leeds.
+Sadri, A. M., S. V. Ukkusuri, and H. Gladwin. 2017a. “Modeling joint
+evacuation decisions in social networks: The case of Hurricane Sandy.”
+J. Choice Modell. 25 (Feb): 50–60. https://doi.org/10.1016/j.jocm.2017
+.02.002.
+Sadri, A. M., S. V. Ukkusuri, and H. Gladwin. 2017b. “The role of social
+networks and information sources on hurricane evacuation decision
+making.” Nat. Hazard. Rev. 18 (3): 04017005. https://doi.org/10
+.1061/(ASCE)NH.1527-6996.0000244.
+Sadri, A. M., S. V. Ukkusuri, P. Murray-Tuite, and H. Gladwin. 2014a.
+“Analysis of hurricane evacuee mode choice behavior.” Transp. Res.
+Part C Emerging Technol. 48 (Aug): 37–46. https://doi.org/10.1016/j
+.trc.2014.08.008.
+Sadri, A. M., S. V. Ukkusuri, P. Murray-Tuite, and H. Gladwin. 2014b.
+“How to evacuate: Model for understanding the routing strategies dur-
+ing hurricane evacuation.” J. Transp. Eng. 140 (1): 61–69. https://doi
+.org/10.1061/(ASCE)TE.1943-5436.0000613.
+Scarpa, R., M. Thiene, and K. Train. 2008. “Utility in willingness to pay
+space: A tool to address confounding random scale effects in destination
+choice to the Alps.” Am. J. Agric. Econ. 90 (4): 994–1010. https://doi
+.org/10.1111/j.1467-8276.2008.01155.x.
+Shaheen, S., and A. Cohen. 2020. “Mobility on demand in the United
+States.” In Analytics for the sharing economy: Mathematics engineering
+and business perspectives, 225–227. Berkeley, CA: UC Berkeley.
+https://doi.org/10.1007/978-3-030-35032-1_14.
+Shared and Digital Mobility Committee. 2018. “Taxonomy and defini-
+tions for terms related to shared mobility and enabling technologies.”
+In Shared and digital mobility committee. Warrendale, PA: SAE
+International.
+Simonovic, S. P., Z. W. Kundzewicz, and N. Wright. 2021. “Floods and
+the COVID-19 pandemic—A new double hazard problem.” Wiley
+Interdiscip. Rev.: Water 8 (2): e1509. https://doi.org/10.1002/wat2
+.1509.
+Slovic, P., and E. Peters. 2006. “Risk perception and affect.” Curr. Direct.
+Psychol. Sci. 15 (6): 322–325. https://doi.org/10.1111/j.1467-8721
+.2006.00461.x.
+Smith, A. B. 2021. “2020 U.S. billion-dollar weather and climate disasters in
+historical context.” Accessed January 8, 2021. https://www.climate.gov
+/news-features/blogs/beyond-data/2020-us-billion-dollar-weather-and
+-climate-disasters-historical.
+Sonnier, G., A. Ainslie, and T. Otter. 2007. “Heterogeneity distributions of
+willingness-to-pay in choice models.” Quant. Marketing Econ. 5 (3):
+313–331. https://doi.org/10.1007/s11129-007-9024-6.
+Teixeira, J. F., and M. Lopes. 2020. “The link between bike sharing
+and subway use during the COVID-19 pandemic: The case-study of
+New York’s Citi Bike.” Transp. Res. Interdiscip. Perspect. 6 (12):
+100166. https://doi.org/10.1016/j.trip.2020.100166.
+Thiene, M., and R. Scarpa. 2009. “Deriving and testing efficient estimates
+of WTP distributions in destination choice models.” Environ. Resour.
+Econ. 44 (3): 379–395. https://doi.org/10.1007/s10640-009-9291-7.
+Thompson, R. R., D. R. Garfin, and R. C. Silver. 2017. “Evacuation from
+natural disasters: A systematic review of the literature.” Risk Anal.
+37 (4): 812–839. https://doi.org/10.1111/risa.12654.
+Train, K., and G. Sonnier. 2005. “Mixed logit with bounded distributions of
+correlated partworths.” In Applications of simulation methods in envi-
+ronmental and resource economics, 117–134. Berlin: Springer.
+Train, K., and M. Weeks. 2005. “Discrete choice models in preference
+space and willingness-to-pay space.” In Applications of simulation
+methods in environmental and resource economics, 1–16. Berlin:
+Springer.
+Train, K. E. 2009a. Discrete choice methods with simulation. 2nd ed.
+New York: Cambridge University Press.
+Train, K. E. 2009b. “Logit.” In Discrete choice methods with simulation.
+Cambridge, UK: Cambridge University Press.
+US Bureau of Labor Statistics. 2021. “American time use survey summary.”
+Accessed November 1, 2021. https://www.bls.gov/news.release/atus
+.nr0.htm.
+Westervelt, M., J. Schank, and E. Huang. 2017. “Partnerships with
+technology-enabled mobility companies: Lessons learned.” Transp.
+Res. Rec. 2649 (1): 106–112. https://doi.org/10.3141/2649-12.
+Whitehead, J. C., B. Edwards, M. Van Willigen, J. R. Maiolo, K. Wilson,
+and K. T. Smith. 2000. “Heading for higher ground: Factors affecting
+real and hypothetical hurricane evacuation behavior.” Global Environ.
+Change Part B: Environ. Hazards 2 (4): 133–142. https://doi.org/10
+.1016/S1464-2867(01)00013-4.
+Wong, S., J. Broader, A. Cohen, and S. Shaheen. 2021. “Double the trou-
+ble: A playbook for COVID-19 and evacuations.” Accessed March 1,
+2021. https://escholarship.org/uc/item/3dm9q8db.
+Wong, S., and S. Shaheen. 2019. Current state of the sharing economy
+and evacuations: Lessons from California. Berkeley, CA: Univ. of
+California Institute of Transportation Studies. https://doi.org/10.7922
+/G2WW7FVK.
+Wong, S., S. Shaheen, and J. Walker. 2018. Understanding evacuee
+behavior: A case study of hurricane Irma. Berkeley, CA: Univ. of
+California Institute of Transportation Studies.
+Wong, S. D., C. G. Chorus, S. A. Shaheen, and J. L. Walker. 2020a. “A
+revealed preference methodology to evaluate regret minimization with
+challenging choice sets: A wildfire evacuation case study.” Travel Be-
+hav. Soc. 20 (Apr): 331–347. https://doi.org/10.1016/j.tbs.2020.04.003.
+Wong, S. D., A. J. Pel, S. A. Shaheen, and C. G. Chorus. 2020b. “Fleeing
+from Hurricane Irma: Empirical analysis of evacuation behavior using
+discrete choice theory.” Transp. Res. Part D Transp. Environ. 79 (Dec):
+102227. https://doi.org/10.1016/j.trd.2020.102227.
+© ASCE
+04022045-15
+Nat. Hazards Rev.
+Nat. Hazards Rev., 2023, 24(1): 04022045 
+Downloaded from ascelibrary.org by CASA Institution Identity on 03/14/23. Copyright ASCE. For personal use only; all rights reserved.

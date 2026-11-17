@@ -1,0 +1,1125 @@
+Reconstructing flood-induced human mobility using LLM agent 
+with disaster context adaptation
+Zijing Zhang a, Fengjue Huang a, Junqing Tang a,b,*, Pengjun Zhao a,b,c
+a School of Urban Planning and Design, Peking University Shenzhen Graduate School, Shenzhen, China
+b Key Laboratory of Earth Surface System and Human-Earth Relations of the Ministry of Natural Resources of China, Shenzhen Graduate School, 
+Peking University, Shenzhen, China
+c School of Urban and Environmental Sciences, Peking University, Beijing, China
+ARTICLE INFO
+Keywords:
+Human mobility
+Urban floods
+LLM agents
+Trajectory modeling
+Agent-based modeling
+ABSTRACT
+Understanding human mobility during extreme flood events is critical for emergency evacuation 
+and resilient transport planning, yet flood-induced behavioral heterogeneity remains difficult to 
+characterize. Progress has been constrained by data scarcity and the inherent complexity of 
+emergency decision-making, which often induces abnormal travel behaviors and anomalous 
+mobility fluxes. We propose the Disaster-aware Trajectory Generator (DTG), integrating Large 
+Language Model (LLM) agents into an agent-based framework to generate individual-level 
+mobility trajectories under evolving urban flood conditions. Validated against 1.32 billion 
+mobility records from the 2021 “7.20” Zhengzhou flood in China, DTG outperforms all traditional 
+and LLM-enabled baselines, achieving a flood-induced inflow-shift prediction accuracy of 0.713 
+with outflow and OD distribution JSD of 0.069 and 0.047 during the disaster period. By 
+combining accessibility-constrained disaster context reasoning with the representation of het-
+erogeneous socio-demographic responses, DTG reveals critical infrastructure vulnerabilities and 
+abnormal behavioral patterns, offering actionable insights for flood-resilient transport planning.
+1. Introduction
+Climate change has intensified the frequency and severity of extreme urban flooding events worldwide, posing unprecedented 
+threats to the safety, livelihoods, and socioeconomic functioning of urban communities (Tang et al., 2023). During such events, routine 
+mobility patterns are profoundly disrupted: residents abandon planned activities, seek emergency shelters, avoid inundated roads, and 
+make rapid, context-dependent travel decisions under severe uncertainty (Deng et al., 2021; Guadagno, 2016). Even seemingly minor 
+hazard incidents can trigger city-wide flow reorganization (Li et al., 2024), and the spatial configuration of disaster impacts funda-
+mentally alters how transportation networks recover and how populations redistribute (Shen et al., 2024; Helderop and Grubesic, 
+2019). Understanding the mechanisms through which flood-induced mobility shifts unfold, and how these shifts interact with the 
+physical vulnerability of transportation infrastructure at both aggregate and individual levels, is therefore critical to effective emer-
+gency evacuation planning, resilient transportation management, and equitable allocation of relief resources (Bagloee et al., 2019; 
+Kumar et al., 2024).
+* Corresponding author at: Building C, Peking University Shenzhen Graduate School, No. 2199 Lishui Road, Nanshan District, Shenzhen, 
+Guangdong Province, China.
+E-mail address: junqingtang@pku.edu.cn (J. Tang). 
+Contents lists available at ScienceDirect
+Transportation Research Part D
+journal homepage: www.elsevier.com/locate/trd
+https://doi.org/10.1016/j.trd.2026.105685
+Received 2 May 2026; Received in revised form 24 August 2026; Accepted 8 October 2026  
+Transportation Research Part D 162 (2027) 105685 
+Available online 14 October 2026 
+1361-9209/© 2026 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies. 
+Bottom-up reconstruction of individual-level travel behavior represents a promising approach for understanding the heterogeneous 
+mobility responses that emerge under disaster conditions, as it allows direct examination of how personal risk perceptions, hazard 
+exposures, and infrastructure constraints jointly drive divergent decisions (Golshani et al., 2019; Yabe et al., 2019; da Mata Martins 
+et al., 2019). Unlike normal human movements, flood-induced travel exhibits stronger spatial heterogeneity, temporal non- 
+stationarity, and pronounced individual variability driven by evolving hazard conditions and constrained infrastructure accessi-
+bility (Han et al., 2019; Golshani et al., 2019), with evacuation decisions further shaped by disaster severity, warning lead time, and 
+socioeconomic factors (Golshani et al., 2019; Yabe et al., 2019). At the network level, connectivity links break down, aggregation 
+hotspots shift, and new infrastructure stress hotspots emerge in historically low-risk areas, patterns often driven by mobility structures 
+rather than geographic proximity to the hazard (Li et al., 2024; Song et al., 2014, 2016; Tang et al., 2023). Capturing these coupled 
+processes demands bottom-up modeling approaches that can jointly represent individual behavioral reasoning and those dynamically 
+evolving spatiotemporal constraints, thereby enabling researchers to probe the micro-level mechanisms underlying macroscopic flow 
+disruptions.
+While empirical studies using mobile phone data (Fu et al., 2021; Xing et al., 2021; Lu et al., 2012), GPS traces (Yabe et al., 2017; 
+Raei et al., 2026), and social media records have advanced post-disaster mobility analysis, such retrospective approaches are inher-
+ently constrained by data availability: obtaining high-resolution trajectory data during sudden-onset urban floods remains extremely 
+difficult given infrastructure disruption and privacy regulations (Luca et al., 2020). This data scarcity limits our capacity to anticipate 
+population movement under disaster conditions, motivating the development of modeling-based alternatives.
+Modeling-based approaches offer a potential means of overcoming this constraint, and have been employed in resilience assess-
+ment and disaster planning (Li et al., 2024; Fang et al., 2022; da Mata Martins et al., 2019). However, existing modeling methods 
+exhibit fundamental limitations in representing the micro-level behavioral heterogeneity that characterizes disaster mobility. Rule- 
+driven approaches, including Markov-based models (Lv et al., 2016), gravity models (Gonzalez et al., 2008), and conventional 
+agent-based models (Chen et al., 2023; Frias-Martinez et al., 2011), demonstrate generalizability in data-scarce settings but often 
+depend on rigid, expert-crafted rules. Under extreme flood events, where individuals deviate substantially from routine behavior, such 
+assumptions break down, and therefore, cannot capture the nuanced decision-making observed during emergencies (Golshani et al., 
+2019). Data-driven approaches based on GANs (Cao et al., 2025; Jiang et al., 2023) and VAEs (Chen et al., 2021) can reproduce 
+complex spatiotemporal patterns from normal conditions, yet they depend heavily on extensive training data and face inherent 
+challenges in out-of-distribution generalization (precisely the regime that disaster events impose). Moreover, both classes of methods 
+often treat mobility as a statistical phenomenon and offer relatively limited insights into the behavioral reasoning that drives evac-
+uation decisions, route choices, and destination shifts under extreme flooding conditions.
+Recent advances in LLM-based generative agents have shown promise in modeling semantically coherent daily mobility trajectories 
+through contextual understanding and role-playing capabilities (Liang et al., 2024; Park et al., 2023). This capacity to generate 
+intention-consistent, interpretable travel behavior at the individual level offers a new avenue for probing the micro-level heterogeneity 
+of disaster mobility. However, current LLM agents, while capable of generating contextually plausible text, are not inherently equipped 
+to perform accessibility-grounded reasoning under dynamically evolving flood hazards, for instance, evaluating travel feasibility given 
+time-varying flood impacts, and therefore cannot reliably represent how individuals adapt travel decisions to shifting risk and survival 
+needs (Song et al., 2014; Shao et al., 2024; Wang et al., 2024). This deficiency constrains the insights that can be drawn regarding 
+population redistribution, emerging resource pressure, and the coupling between human dynamics and the built environment during 
+urban floods.
+To address these gaps, this study introduces an integrated methodological approach, namely Disaster-aware Trajectory Generator 
+(DTG), a modeling framework that employs LLM agents endowed with disaster-specific contextual knowledge to reason about indi-
+vidual travel decisions under dynamically evolving hazard conditions, without requiring large-scale historical trajectory corpora 
+specific to the target flood event, thereby enabling prospective simulation in data-sparse urban contexts. Grounded in the Theory of 
+Planned Behavior (Ajzen, 1991), DTG comprises three core modules (incl., Daily Routing Generation, Geo-Alignment, and Disaster 
+Context-aware Reasoning) that decouple travel motivation from spatial constraints. More importantly, the Disaster Context-aware 
+Reasoning module integrates dynamically evolving hazard inputs to constrain the agent decision space, ensuring that generated 
+mobility patterns align with both practical constraints and individual risk perceptions. Evaluated against 1.32 billion mobility records 
+from the 2021 Zhengzhou “7.20” flood in China, DTG demonstrates consistent performance improvements over a range of conven-
+tional rule-driven and recent LLM-based approaches.
+Overall, this study contributes to the investigation of disaster-resilient transportation by advancing a behaviorally grounded, 
+accessibility constrained approach that explicitly links micro-level individual decisions to macro-level transportation system perfor-
+mance under extreme flood scenarios. The main contributions of this study are as follows: 
+• We develop a data-efficient LLM-agent modeling framework that generates behaviorally realistic mobility trajectories under 
+extreme urban flood scenarios, reducing dependency on event-specific historical data and thus enabling prospective analysis of 
+disaster-induced mobility dynamics for cities where such data are limited.
+• We embed the Theory of Planned Behavior into LLM reasoning and couple it with heterogeneous persona profiles, yielding 
+intention-consistent, geographically plausible trajectories that capture the adaptive and demographically varied travel decisions 
+observed in real floods. Ablation confirms that this theory-grounded reasoning, rather than statistical pattern replication, drives the 
+model’s high disaster-adaptation accuracy.
+• Through the mobility-driven emergency resource load (ERL) index, we demonstrate that post-disaster infrastructure stress is 
+shaped more by evacuation flow convergence than by static population density. DTG thus functions as a scenario-testing tool that 
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+2 
+translates micro-behavioral adaptations into network-level vulnerability signals, offering actionable guidance for shelter siting and 
+retrofitting prioritization.
+2. Related work
+2.1. Human mobility in disasters
+During extreme disaster events, residents’ travel behaviors often deviate dramatically from their normal patterns (Deng et al., 
+2021; Guadagno, 2016; Lu et al., 2017). Understanding these behaviors is fundamental for effective emergency traffic management 
+(Bagloee et al., 2019; Huang et al., 2018). Previous research has leveraged diverse data sources to capture mobility dynamics during 
+disasters. Among them, mobile phone signaling data has been widely used due to its extensive coverage, allowing researchers to 
+uncover large-scale population movement and evacuation trends in the aftermath of disasters (Fu et al., 2021; Xing et al., 2021). For 
+instance, Lu et al. (2012) analyzed mobile location data following the 2010 Haiti earthquake and found that, despite the severity of the 
+disaster, population movement patterns remained largely predictable. This insight helped inform targeted delivery of aid. Similarly, 
+GPS traces and social media check-in data have provided researchers with higher spatiotemporal resolution for investigating indi-
+vidual evacuation choices and post-disaster recovery behaviors (Song et al., 2016; Yabe et al., 2017). Yabe et al. (2019) compared 
+evacuation behaviors across multiple earthquake events, highlighting how disaster severity and early warning lead time significantly 
+impact both the initiation time and spatial choices of evacuations. Machine learning methods have also been applied to disaster 
+mobility modeling: for example, Long Short-Term Memory (LSTM) networks trained on historical evacuation data can forecast traffic 
+demand and congestion patterns (Roy et al., 2021). However, such models remain heavily dependent on copious event-specific 
+training data, and their predictive performance degrades markedly when confronted with the out-of-distribution conditions that 
+characterize sudden-onset urban floods.
+However, a common assumption across these studies is the availability of high-quality, event-specific human mobility or individual 
+trajectory data. In reality, especially during sudden-onset events, obtaining such large-scale, high-resolution mobility data is extremely 
+difficult or even impossible (Luca et al., 2020). This data availability bottleneck greatly limits the applicability of existing analysis 
+methods, highlighting the urgent need to develop more effective low-data-dependency mobility modeling methods for better 
+modeling.
+2.2. Human mobility modeling
+Human mobility modeling aims to generate large-scale, statistically realistic modeled movement data to support a wide range of 
+applications, such as urban planning, disaster response, public health, and transportation studies (Feng et al., 2020; Song et al., 2016; 
+U˘gurel et al., 2024). Existing approaches can be broadly categorized as rule-driven and data-driven methods.
+Rule-driven approaches generate trajectories based on prior theoretical frameworks or statistical rules. Classic examples include 
+Markov models (Lv et al., 2016) based on transition probability matrices and methods leveraging macro-level patterns, such as dis-
+tance distributions following power laws (Gonzalez et al., 2008). This category also encompasses traditional Four-Step Models and 
+simplified agent-based models (ABMs) (Chen et al., 2023; Frias-Martinez et al., 2011), both of which demonstrate strong generaliz-
+ability in data-scarce environments. However, their fundamental limitation lies in rigid, pre-specified behavioral assumptions. Rule- 
+driven methods often struggle to capture the nuanced travel decision processes at the microscopic level, such as spatiotemporal activity 
+constraints, trip chaining behaviors, and the heterogeneous preferences influenced by socioeconomic attributes. As a result, while 
+these models may reproduce reasonable aggregate flows, they often lack behavioral realism and semantic interpretability at the in-
+dividual level. More importantly, under disaster conditions, infrastructure networks that underpin these behavioral assumptions, such 
+as road capacities, travel times, destination accessibility, are themselves dynamically altered by flooding, rendering rule sets calibrated 
+under normal conditions even more inapplicable.
+Data-driven approaches, particularly those utilizing deep learning, have achieved remarkable success in recent years. Deep 
+generative models based on Generative Adversarial Networks (GANs) (Cao et al., 2025; Fang et al., 2022; Jiang et al., 2023) or 
+Variational Autoencoders (VAEs) (Chen et al., 2021; Lee et al., 2022) are capable of learning complex spatiotemporal patterns from 
+large collections of real trajectories, thus producing highly realistic synthetic trajectories. While these models excel at replicating 
+intricate mobility behaviors under normal conditions, they exhibit a strong dependence on the availability of extensive training data 
+and face inherent challenges in out-of-distribution generalization. Disaster events fundamentally disrupt travel behaviors (Han et al., 
+2019), rendering patterns learned from normal conditions invalid (Li et al., 2024a; Song et al., 2015; You et al., 2022) and limiting the 
+effectiveness of data-driven models.
+In summary, neither rule-driven nor data-driven approaches adequately capture the adaptive, accessibility constrained individual 
+mobility behaviors that characterize disaster scenarios, motivating the need for a more integrated modeling approach.
+2.3. LLM-based agents for social modeling
+In recent years, large language models (LLMs) have demonstrated transformative potential across various domains owing to their 
+strong capabilities in contextual learning (Brown et al., 2020) and zero-shot reasoning. Studies have shown that once LLMs reach a 
+critical parameter scale, emergent complex reasoning abilities arise, enabling them to perform credible role-playing tasks (Shanahan 
+et al., 2023). With the integration of modules such as memory, planning, and tool use, LLMs have been developed into generative 
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+3 
+agents, capable of modeling human interactions within complex social environments and showcasing significant promise in modeling 
+human decision-making (Lai et al., 2025; Movahedi and Choi, 2024; Park et al., 2023).
+The application of LLM-based agents in urban science and transportation is still nascent, with early studies exploring their use in 
+modeling daily activities and travel behaviors (Shao et al., 2024; Wang et al., 2024; Wang et al., 2023). To enable trajectory generation 
+with LLMs, current research follows two primary strategies. One integrates LLM-generated travel intentions with classic trip models, 
+such as coupling intention outputs with gravity models for destination choice prediction (Shao et al., 2024). The other uses a small set 
+of real user trajectory histories as prompts, guiding the LLM to synthesize new trajectories consistent with individual preferences 
+(Wang et al., 2024; Wang et al., 2023).
+These studies show that LLMs can feasibly generate semantically coherent daily mobility trajectories. However, they struggle in 
+disaster scenarios for two interconnected reasons. First, methods that rely on historical user trajectories fail because emergency be-
+haviors deviate sharply from daily routines. Second, approaches that integrate classic models such as gravity models implicitly assume 
+stable accessibility patterns, which break down when roads are inundated and facilities become inaccessible. More fundamentally, 
+existing LLM-based trajectory generation lacks mechanisms to ground decisions in physical constraints, such as flood hazard hotspots, 
+road closures, and network connectivity failures, leading to outputs that may be semantically plausible but physically infeasible.
+Consequently, a key challenge lies in developing an integrated LLM agent modeling framework that, under the constraint of limited 
+historical trajectory data, can generate emergency mobility trajectories that are both behaviorally realistic and physically feasible. 
+Meeting this challenge requires embedding dynamic disaster context into the agent’s reasoning process while restricting its decision 
+space to the physical disaster impacts. Solving this would not only advance mobility modeling per se, but also furnish a new analytical 
+capability for flood-resilient transport planning, that is, the ability to prospectively identify hidden network vulnerabilities and stress- 
+test mitigation strategies before a flood strikes.
+3. Methodology
+3.1. List of parameters
+χ: Daily trajectory of a user, represented as a sequence of stays at Points of Interest (POIs).
+P: Profile of a user, including attributes such as occupation, age, interests, and family status.
+κ: Geographical factors influencing mobility, such as weather conditions, holidays, and disaster events.
+L: Set of Points of Interest (POIs) in the city, each with attributes like type, name, coordinates, and description.
+I cand: Set of candidate travel intentions generated by the LLM agent for a user.
+C coarse: Coarse candidate set of POIs selected based on semantic relevance to travel intentions.
+C final: Final set of POI candidates after spatial reranking.
+si t: Comprehensive environmental state received by LLM agent i at time step t, including current location, historical trajectory, and 
+disaster context.
+Fig. 1. Framework of the Disaster-aware Trajectory Generator (DTG) with LLM Agents.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+4 
+θ: Parameters of the LLM agent, encoding knowledge for decision-making.
+M i: Memory module storing historical POIs visited by agent i, used for maintaining trajectory consistency.
+cdis t : Disaster-related context at time t, including disaster type, affected areas, and emergency advisories, etc.
+T: Sampling temperature for LLM agent inference, controlling the randomness of generated trajectories.
+3.2. Overall approach
+The DTG framework comprises three tightly coupled modules that jointly operationalize the interaction between flood hazard 
+dynamics and travel behavior (Fig. 1): (i) Daily Routing Generation translates traveler attributes and hazard awareness into activity- 
+travel intentions via theory-grounded behavioral reasoning; (ii) Geo-Alignment maps these intentions onto reachable destinations; and 
+(iii) Disaster Context-aware Reasoning continuously updates trip-chain decisions based on the agent’s current state and dynamic 
+disaster context. Together, these modules form a closed hazard–behavior feedback loop, capturing how cascading flood impacts 
+reshape individual mobility from intention formation through destination selection to en-route adaptation.
+3.3. Daily routing generation
+As the entry point of the hazard–behavior loop, this module converts traveler attributes and infrastructure failure states into 
+activity-travel intentions. The LLM agent role-plays as an urban resident whose travel motivations are shaped by flood-induced 
+physical constraints, including road-network disruption, facility closures, and degraded service capacity. We employ a Chain-of- 
+Thought (CoT) reasoning process (Wei et al., 2022) grounded in the Theory of Planned Behavior, combined with heterogeneous 
+user profiles, to generate diverse yet psychologically plausible travel intentions that reflect the altered decision-making landscape of 
+disaster scenarios.
+3.3.1. TPB-guided individual decision-making
+The generation of realistic and psychologically plausible travel intentions forms the cornerstone of our daily routing process. To 
+achieve this, we base our approach on the Theory of Planned Behavior (TPB) (Ajzen, 1991), a well-established model in social psy-
+chology for predicting human behavior. TPB posits that behavioral intention (BI) is the most immediate precursor to actual behavior, 
+and it’s shaped by three core factors: attitude (A), subjective norm (SN), and perceived behavioral control (PBC). Each factor con-
+tributes to the overall intention with varying weights (w1,w2,w3), as expressed by the equation: 
+BI = w1 ⋅ A + w2 ⋅ SN + w3 ⋅ PBC (1) 
+In DTG, this formulation organizes the three TPB perspectives used in the agent’s CoT reasoning. Here, A represents an individual’s 
+favorable or unfavorable evaluation of performing a specific behavior, SN reflects the perceived social pressure to engage or not engage 
+in the behavior, and PBC signifies the perceived ease or difficulty of performing the behavior.
+We operationalize TPB by designing a structured set of travel belief criteria, which are tailored to each user’s profile to model and 
+generate realistic, personalized, and psychologically plausible mobility intentions, especially under disaster scenarios. This integration 
+of TPB’s core components with the character’s profile is crucial for guiding the LLM agent’s decision-making patterns for both routine 
+and disaster-responsive travel. This process forms a key part of our systematic CoT prompting strategy, enabling the LLM to derive 
+intentions in a structured, theory-driven manner. In this CoT procedure, TPB guides the LLM to consider benefits, preferences, risks, 
+and costs as attitude; perceived family, community, and official expectations as subjective norm; and time, distance, transport, flood, 
+and facility constraints as perceived behavioral control when generating and ranking intentions.
+Specifically, we guide the LLM agent through a multi-step reasoning process to model an individual’s internal deliberations:
+First, the LLM agent generates candidate travel intentions hop by hop as an ordered daily intention list, denoted by Li=[qi,1,qi,2,…, 
+qi,Ji], where qi,j=(ti,j,posi,j,ei,j) records the travel time, destination POI category, and travel purpose at hop j. At each hop, it forms a 
+candidate set Ti,j from the detailed user profile (e.g., occupation, age, interests, and family status), the current environmental context 
+(e.g., date, weather, and holiday status), the preceding intention state, and the city POI taxonomy. This step allows the LLM to consider 
+plausible travel purposes while constraining posi,j to available destination categories. Under disaster conditions, the prompt addi-
+tionally provides time-varying information about nearby rainfall and flooding, affected areas, roads and facilities, activated shelters, 
+and official advisories. In addition, it provides several intention examples, such as seeking shelter, checking on family, and acquiring 
+emergency supplies, as few-shot demonstrations of how a routine plan may change. Following the TPB-guided reasoning described 
+below, the selected intention is returned as JSON, parsed into qi,j, and used to update the agent state for the next hop.
+Once I cand is established, the LLM agent evaluates each candidate intention within this set in the same CoT reasoning process, 
+considering the three TPB dimensions. For each intention Ii∈ I cand: 
+1 Attitude Assessment: The LLM agent internally determines its stance toward each candidate intention based on the user profile and 
+situational context, generating a preference ranking
+2 Subjective norm Interpretation: The agent infers prevailing social expectations for each intention, considering societal conventions, 
+peer or community practices, and relevant environmental conditions. In disaster contexts, prompts provide situational feedback 
+such as the extent of local disruption, shaping the agent’s normative assessment
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+5 
+3 Perceived behavioral control Evaluation: The agent evaluates the feasibility and perceived risks of pursuing each intention in light 
+of environmental constraints and its own capabilities. In evolving disaster scenarios, real-time updates continuously adjust these 
+judgments
+This theoretically grounded CoT process enables each agent to perform realistic decision-making. The resulting travel intentions 
+are diverse, context-aware, and psychologically credible, even under complex disaster conditions.
+3.3.2. User profile generator
+Population heterogeneity is a key driver of diverse travel behavior under both normal and disrupted conditions. Simply raising the 
+decoding temperature T increases lexical variety but fails to diversify the underlying activity-travel patterns; excessively high T even 
+degrades output quality. We therefore introduce explicit persona conditioning.
+While adjusting the temperature parameter is a common method for increasing diversity in the large model outputs, our analysis 
+reveals its limitations for trajectory modeling. The probability of generating a sequence y given an input prompt x is typically defined 
+as: 
+pθ(y|x)=
+∏m
+j=1
+pθ
+(
+yj
+⃒⃒⃒x, y<j ) (2) 
+Here, y<j represents the already generated sequence. The temperature parameter T plays a crucial role in shaping the probability 
+distribution for the next token yj: 
+p
+(
+yj
+⃒⃒⃒x, y<j ) = exp
+(
+zj
+T
+)
+∑K
+k=1exp
+(
+zk
+T
+) (3) 
+where zj is the logit of the j-th token, and K is the size of the vocabulary. Our experiments show that while a higher T increases the 
+surface diversity of the generated text, it fails to increase the diversity of underlying travel patterns or behavioral logic. Instead, 
+excessively high temperatures often degrade the output quality, causing format deviations or producing unrealistic responses. 
+Therefore, relying solely on temperature adjustment proves insufficient for generating high-quality, genuinely diverse, and psycho-
+logically plausible travel behaviors.
+To enhance the diversity and authenticity of generated trajectories, especially in complex urban and disaster scenarios, we move 
+beyond simple temperature adjustments and introduce manually configured urban resident profiles, such as students, IT engineers, and 
+retirees. These profiles are combined with Persona Hub, an open collection of one billion diverse personas automatically curated from 
+public web data (Ge et al., 2024). Persona Hub provides diverse profile attributes, including occupations, skills, interests, life expe-
+riences, and social perspectives, which enrich the conditions used to characterize synthetic residents. We retain profile fields such as 
+occupation, age, interests, and household status, while WorldPop independently supplies the initial residential spatial distribution. The 
+resulting profile-conditioned trajectory-generation process is formalized as: 
+pθ(y|p, o)=
+∏m
+j=1
+pθ
+(
+yj
+⃒⃒⃒p, o, y<j ) (4) 
+where y is the generated trajectory sequence, p is the user role (persona) variable, and o represents other contextual information. By 
+explicitly introducing these variable user profiles into the prefix of the autoregressive token generation process, the model is compelled 
+to think and act from distinct perspectives. This allows it to effectively produce a wide array of travel types and intentions that align 
+with different user identities. This approach directly supports the “user profile” component of our TPB-guided Individual Decision- 
+Making (Section 3.3.1), serving as the foundational context for the LLM to derive attitudes, subjective norms, and perceived behav-
+ioral control. By modeling the travel behaviors of different types of users in this structured way, we significantly enhance both the 
+diversity and the authenticity of the generated trajectories, making our modeling runs more representative of real-world crowd 
+dynamics.
+3.4. Geo-alignment
+With travel intentions established, this module maps them to feasible destinations in the city. LLMs lack inherent geographic 
+knowledge, and the candidate space is vast (e.g., over 870,000 POIs in Zhengzhou). To address this, we use a two-stage retrieval 
+strategy that combines semantic relevance and spatial constraints to efficiently map abstract intentions to actionable destinations.
+3.4.1. Vectorization and contrastive learning
+The first step of Geo-Alignment is to transform intentions and POI information into a common, dense vector space for similarity 
+comparisons. We collect comprehensive POI data for the target city, including type, name, coordinates, and a descriptive summary. 
+Each POI is then structured into a textual description: POIk=[name; category; address; description].
+We utilize a robust pre-trained text embedding encoder, denoted as Embd( ⋅ ), to convert each textual travel intention (ηi j) and each 
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+6 
+POI description (POIk) into their respective high-dimensional embedding vectors: 
+eintent = Embd
+(
+ηi j
+)
+(5) 
+epoik = Embd(POIk) (6) 
+To ensure these embeddings effectively capture the semantic correspondence between intentions and actual POIs, we fine-tune the 
+Embd( ⋅ ) encoder using a small batch of paired travel intention and corresponding actual visited POI datasets. This fine-tuning em-
+ploys contrastive learning, which pulls the embedding vectors of positive samples (i.e., a given intention and its actually visited POI) 
+closer together in the vector space, while simultaneously pushing away the vectors of negative samples (other, irrelevant POIs). The 
+loss function for this contrastive learning objective is defined as: 
+L contrastive =  log exp
+ 
+cos
+ 
+eintent, epoi+
+)
+/τ
+)
+∑K
+k=1exp
+ 
+cos
+ 
+eintent, epoik
+)
+/τ
+) (7) 
+Here, τ is a temperature parameter that controls the sharpness of the distribution, and poi+ represents the positive sample (the ground- 
+truth POI associated with eintent). This training process ensures that our embedding space is optimized for semantic relevance between 
+a user’s stated intention and real-world locations.
+3.4.2. Coarse ranking: Semantic relevance filtering
+Following the vectorization, our external POI tool firstly performs a coarse ranking to filter the massive POI repository based purely 
+on semantic relevance. For each user’s travel intention ηi j, we compute the cosine similarity between its embedding vector eintent and 
+the embedding vector of every POI epoik in the entire city’s database: 
+cos
+ 
+eintent, epoik
+)
+= eintent ⋅ epoik
+‖eintent‖ ⋅ ‖epoik‖ (8) 
+This cosine similarity quantifies the semantic alignment between the intention and the POI. We then select the top-K POIs with the 
+highest semantic relevance scores to form the initial coarse candidate set, C coarse: 
+C coarse = TopK
+({
+cos
+ 
+eintent, epoik
+)}Npoi
+k=1
+)
+(9) 
+Here, K denotes the number of candidates retained after the first filtering stage. This step prunes semantically irrelevant destinations, 
+reducing the search space for the spatially aware fine-ranking stage.
+3.4.3. Fine ranking: Integrating spatial constraints
+Travel-distance distributions follow a well-documented power law (Gonzalez et al., 2008), reflecting travelers’ preference for 
+shorter trips under normal conditions, a tendency that is amplified when flood inundation severs road-network links. We therefore 
+introduce a composite score that balances semantic relevance with spatial proximity, effectively operationalizing the physical con-
+straints imposed by infrastructure failure on destination accessibility.
+Assuming the modeled resident agent Pi is currently at starting point li j, we define a composite score for each POI in the coarse 
+candidate set C coarse. This score balances both semantic relevance and spatial proximity: 
+score
+(
+Pi, li j, ηi j, POIk
+)
+= β ⋅
+⃒⃒cos   eintent, epoik )⃒⃒+(1   β) ⋅ 1 d ( li j, POIk ) (10) 
+Here, d
+(
+li j, POIk
+)
+denotes the Euclidean distance between the agent’s current location li j and the candidate destination POIk. Euclidean 
+distance is employed here as a computationally efficient spatial proximity proxy that captures the well-documented distance-decay 
+effect in human mobility (Gonzalez et al., 2008; Brockmann et al., 2006); actual route-level feasibility under flood-induced road 
+closures is enforced by the hard feasibility filter in the Disaster Context-aware Reasoning module. Euclidean distance thus functions as 
+a stable spatial plausibility filter, identifying nearby destinations, while route-level accessibility decisions are delegated downstream. 
+The parameter β ∈[0, 1] is a crucial weighting factor that controls the relative importance of semantic (cosine similarity) and spatial 
+(inverse distance) factors. A higher β prioritizes semantic match, while a lower β gives more weight to proximity. We rigorously tune β 
+to achieve optimal performance that balances user intent with realistic travel behavior.
+Finally, we rank the POIs within the coarse candidate set C coarse in descending order based on this composite score. We then select 
+the top-p POIs with the highest scores to form the final candidate set C final: 
+C final = Topp
+({
+score
+(
+Pi, li j, ηi j, POIk
+)
+|POIk ∈ C coarse
+})
+(11) 
+This C final set represents the most semantically relevant and spatially plausible POI options for the given travel intention. This refined 
+set will be used in the subsequent stages, enabling the LLM agent to determine the specific POI to be visited through further reasoning 
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+7 
+based on context, user profile, historical records, and disaster-specific considerations. Such a two-stage POI retrieval mechanism 
+effectively bridges the gap from abstract intention to concrete physical location, even in vast and complex urban environments, 
+thereby enhancing the agent’s capability to model realistic mobility patterns.
+3.5. Disaster context-aware reasoning
+The preceding stages have established plausible travel intentions and POI candidates, and the focus now shifts to determining the 
+next destination, considering disaster-induced travel heterogeneity and accessibility constraints. Accessibility constraints here refer to 
+subjective travel disruptions caused by objective factors like flooding, which reduce the willingness to visit certain destinations or 
+interrupt travel plans. In dynamic disaster scenarios, where inundation zones expand and road closures propagate, individuals must 
+adjust their decisions in real time. This section introduces the POI Reasoning module, which refines decision-making by incorporating 
+contextual cues, user profiles, historical behavior, and disaster-specific factors. The Memory module further ensures trajectory con-
+sistency, enabling adaptive adjustments as environmental conditions evolve.
+3.5.1. Disaster-conditioned POI determination
+The Geo-Alignment module (Section 3.4) provides a refined set of semantically relevant and spatially plausible candidate POIs, 
+C final, for each travel intention ηi j. However, selecting the definitive next POI from this set still requires nuanced contextual under-
+standing. The LLM Agent, equipped with its persona configuration (pi), integrates various factors to reason out the most contextually 
+appropriate and commutable POI from C final.
+Specifically, at each decision-making time step t, the LLM Agent receives a comprehensive environmental state si t. This state 
+contains the disaster-related context, which will be discussed in the next section. Utilizing its deep understanding of human behavior, 
+as implicitly encoded in its parameters θ, the LLM Agent generates a probability distribution over all possible next target POIs within 
+C final, conditioned on its current state and persona: 
+πθ
+ 
+ai t|si t, pi) = LLM   ai t|si t, pi; θ ) (12) 
+Here, ai t ∈ C final represents a possible POI to be selected at this round. The POI with the highest calculated probability is then 
+deterministically chosen as the travel destination for this round: 
+ai* t = arg max ai t∈C final πθ   ai t|si t, pi) (13) 
+This probabilistic selection, driven by the LLM’s sophisticated reasoning, ensures that the chosen POI is not merely relevant, but also 
+optimally aligns with the agent’s complex decision-making logic.
+3.5.2. Disaster context-aware adaptation
+Urban floods are inherently evolving processes: inundation zones expand as rainfall persists, road closures propagate through the 
+network as water levels rise, and emergency information is continuously updated by authorities. To faithfully reproduce this evolving 
+hazard landscape, the Disaster Context-aware Adaptation module constructs and dynamically refreshes a disaster context variable cdis t 
+that is injected into the LLM’s context at each decision hop.
+Context variable composition. cdis t is a structured representation comprising: (i) disaster type and meteorological conditions (e.g., 
+pluvial flood with associated hourly rainfall intensity and cumulative precipitation); (ii) spatially affected area, derived by overlaying 
+the time-stamped flood-inundation extent with the city-wide POI and road-network layers to identify areas affected by waterlogging 
+and facilities where access may be significantly impeded at time t; (iii) shelter status, including the set of currently activated emergency 
+shelters and their locations; and (iv) official advisories, such as evacuation orders or travel warnings issued for specific districts.
+Context construction and update. cdis t is not a static snapshot; it is re-constructed at the granularity of each travel hop. Each hop in 
+the generated itinerary carries a timestamp; at that moment the module performs a spatiotemporal query: given the agent’s current 
+location li t and its pending travel intention ηi j, the flood-inundation map at time t is intersected with the candidate POI set C final to 
+assess which destinations fall within or near waterlogged zones, and therefore may be difficult or risky to reach. Because the flood 
+extent is time-indexed, agents at different locations and different time steps receive contextually distinct hazard information, directly 
+operationalizing the evolving disaster assumption emphasized throughout this work and reproducing the spatially and temporally 
+heterogeneous progression of real flood impacts. A disaster-context adapter implements this query by matching the agent’s current 
+time and coordinates to rainfall, waterlogging, affected-road, affected-facility, shelter, and advisory layers, then converting the 
+matched conditions into a local natural-language context. Nearby waterlogging points are represented by their direction and distance 
+from the agent, depth or risk level, and validity time.
+Integration into decision-making. The disaster context cdis t is fed into the LLM alongside the environmental state si t and persona pi 
+(see Equation (14). Through in-context learning, the LLM interprets the multifaceted and evolving impact of the disaster on individual 
+travel decisions. Because cdis t is refreshed at every hop, the same agent may make fundamentally different choices at successive steps as 
+hazard conditions shift. For instance, an agent previously heading to a shopping mall might, upon receiving updated flood warnings in 
+cdis t , instead seek the nearest designated shelter. If the inundation zone subsequently expands to affect that shelter’s surrounding area, 
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+8 
+the agent may further re-route to an alternative safe location in the next hop. This progressive, hop-by-hop adaptation mirrors the 
+sequential decision-making observed in real disaster situations, where individuals continuously reassess their plans as new information 
+becomes available. The multi-turn interactive reasoning mechanism thereby captures not only individual behavioral adaptation but 
+also the cascading effects of spatiotemporal hazard propagation on collective mobility patterns. Candidate POIs are additionally 
+described by their affected status, accessibility, and their relative relationship to nearby waterlogging points, affected roads, and 
+shelters. 
+πθ
+ 
+ai t|si t, pi, cdis t ) = LLM   ai t|si t, pi, cdis t ; θ ) (14) 
+3.5.3. Memory management for trajectory consistency
+To significantly enhance the consistency and rationality of the synthesized trajectories, we designed a dedicated memory module 
+M i for each individual agent Pi. This module serves as the agent’s long-term memory component, storing the sequence of POIs his-
+torically visited by that agent. The memory module is dynamically incorporated into the environmental state si t during the LLM’s 
+reasoning process. This integration supports travel intentions with strong historical dependencies, such as returning to the company from 
+a caf´e or going back home after work, providing crucial context for realistic sequential behavior.
+The memory module is updated iteratively after each POI selection: 
+M i t+1 = M i t∪{ai* t } (15) 
+This simple yet effective update rule ensures that the agent’s past movements continuously inform its future decisions, leading to 
+coherent and logically flowing trajectories that mirror real-world human mobility patterns.
+3.6. LLM tuning
+To operationalize the hazard–behavior loop at scale, we distill the reasoning capability of a large teacher model (LLMT, e.g., GPT- 
+5.1) into a smaller student model (LLMS, 7B-scale) via data distillation. Two capabilities are distilled: (i) persona-based intention 
+generation under disaster-affected travel conditions, and (ii) POI reasoning that maps intentions to destinations given accessibility 
+constraints.
+3.6.1. Data synthesis process
+The data synthesis process is meticulously designed to produce the high-quality training data required for distillation. 
+1 Teacher model Generation: The teacher model LLMT first generates raw travel intention data, precisely guided by a carefully crafted 
+prompt template and inputs from the role profile generator G. The stronger closed-source teacher model follows the TPB-guided 
+long-CoT procedure described in Section 3.3.1. After reasoning at each hop, it returns the selected intention as JSON; a parser 
+converts each answer into a tuple, and the tuples form the ordered daily list Li=[(ti,1,posi,1,ei,1),…,(ti,Ji,posi,Ji,ei,Ji)] used to distil 
+the 7B student model. The teacher model's superior contextual understanding and reasoning capability supports the generation of 
+rich, plausible, and diverse daily intention lists across personas and contexts
+Each travel intention is represented as a tuple (ti, posi, ei), denoting the travel time, the destination POI category, and the travel 
+purpose, respectively. The synthesized raw dataset can be formulated as: 
+D raw ={(ti, posi, ei)|(ti, posi, ei)= LLMT WT(X, G)} M i=1 (16) 
+At each hop, the prompt contains the role profile, current time and location, prior trajectory/memory, relevant environmental context, 
+and the city POI taxonomy, which constrains and maps pos_i,j. Under flooding, it additionally contains time-varying disaster, shelter, 
+and advisory information. It also provides several intention examples as few-shot demonstrations of how a routine plan may be 
+adjusted in response to safety, family responsibility, or basic needs. A representative destination-selection prompt is provided in 
+Appendix A. Here, WT denotes the parameters of the teacher model and M is the total number of generated samples. 
+2 Data parsing and quality Control: The generated raw travel intentions are then subjected to rigorous parsing and quality control to 
+ensure each tuple is well-formed and consists of clearly identifiable components: A valid travel time ti, a coherent destination POI 
+category posi, and a specific travel purpose ei. This filtering step is critical for preserving the consistency and usefulness of the 
+distilled data. Quality control retains teacher-model JSON answers that can be reliably parsed into complete daily tuple lists, 
+filtering rule-detectable structural and category-mapping failures so that the 7B student learns high-quality simulated demonstra-
+tions. The object of these checks is the complete daily tuple list Li and every element in it, rather than a subjective semantic 
+judgement of an individual free-text purpose
+(i) List and structure parsing: retain only parseable daily tuple lists in which every element contains the three fields (time, category, 
+purpose).
+(ii) Time validation: verify that every ti,j conforms to the predefined time format and falls within the daily simulation window.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+9 
+(iii) POI-category mapping: map every posi,j to the city POI taxonomy and retain only lists in which every destination category 
+maps to a valid POI category.
+(iv) Filtering: remove outputs that fail the list-structure, time, or category-mapping checks.
+The resulting high   quality dataset is expressed as: 
+D high ={(ti, posi, ei)∈ D raw| QC(ti, posi, ei)= True }N i=1 (17) 
+where N is the number of high-quality samples after filtering, and QC( ⋅ ) denotes the quality control function.
+3.6.2. Supervised Fine-Tuning (SFT)
+The curated high-quality dataset D high serves as the labeled training set for the student model LLMS. We adopt Supervised Fine- 
+Tuning (SFT) to transfer both the knowledge and behavioral generation capability from the large teacher model LLMT to the 
+smaller and more efficient LLMS. The central idea of SFT is to optimize the parameters WS of the student model so that its generated 
+outputs align closely with the expert-level targets distilled from LLMT, thereby enabling LLMS to emulate the teacher’s high-quality 
+reasoning and content generation.
+Formally, we seek the optimal parameters W* S by minimizing the loss over D high: 
+W* S = argmin WS L   D high; WS ) (18) 
+where L denotes the selected training loss function. For the sequence generation task considered here, we adopt the token-level cross- 
+entropy loss, defined as: 
+L CE = 
+∑N
+i=1
+∑M
+j=1
+yijlogpWS
+(
+yij
+⃒⃒⃒xi ) (19) 
+In this formulation, N is the number of labeled samples in D high, M is the token length of each output sequence, yij is the j-th token of 
+the i-th ground-truth sequence, xi represents the corresponding model input (including both the prompt and any previously generated 
+tokens), and pWS
+(
+yij
+⃒⃒⃒xi ) denotes the probability assigned by LLMS under parameters WS to generating token yij given xi. By minimizing 
+L CE, the student model learns to generate travel intentions that mirror the semantic richness, contextual appropriateness, and stylistic 
+fidelity of outputs from LLMT, while operating at a substantially lower computational cost.
+4. Data and materials
+4.1. Study area and disaster event
+In this study, we select the Zhengzhou “7.20” extreme pluvial flooding event as a representative case of catastrophic urban flooding 
+in China (Tang et al., 2023; Wang et al., 2022). Zhengzhou, the capital of Henan Province, is a core city in the Central Plains urban 
+agglomeration. It covers an area of 7,567 km2 and, as of year-end 2022, had a resident population of 12.8 million, making it one of 
+China’s megacities.
+Between 17 and 23 July 2021, Henan Province experienced torrential rainfall, culminating in an unprecedented urban flood in 
+Zhengzhou on 20 July. The disaster affected 14.88 million people, led to 398 fatalities or missing persons, and inflicted direct economic 
+losses of 120.06 billion Yuan. Zhengzhou accounted for 380 (95.5 %) of total fatalities and 40.9 % of provincial economic losses (Li 
+Fig. 2. Spatial distribution of disaster-affected sites and emergency shelters in Zhengzhou during the 720 extreme rainfall event.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+10 
+et al., 2023; Normile, 2021). The flood severely disrupted the urban transportation system: extensive road inundation rendered major 
+arterials and secondary roads impassable, the metro system was forced into a city-wide shutdown after floodwaters breached tunnel 
+sections, and bus services were largely suspended, effectively paralyzing multimodal urban mobility for several days.
+4.2. Data collection
+We collected sociodemographic and built-environment data (Fig. 2): (i) population distribution from WorldPop (~1 km grid) 
+(WorldPop, 2023); (ii) 870,000 POIs with categories, names, and coordinates; (iii) emergency shelter locations and capacities; and (iv) 
+flood-affected area delineation for the “7.20” event.
+For evaluation, we obtained mobile phone signaling data covering all of Zhengzhou from July 13–23, 2021 (~1.32 billion records), 
+spanning the pre-disaster phase (July 13–19) and the disaster phase (July 20–23). The data were segmented into hourly intervals and 
+processed into origin–destination (OD) matrices. All individual records were anonymized and spatially aggregated to grid cells of 1 km 
+resolution before analysis, in compliance with local data protection regulations.
+WorldPop is used solely as a publicly available static 1-km population prior for initializing the spatial distribution of synthetic 
+residents. It does not provide dynamic mobility observations. Mobile-phone signaling data are not used for agent initialization or 
+decision generation; after simulation, they serve as the aggregate benchmark for dynamic mobility validation. Evaluation aligns both 
+sources to 1-km cells and compares normalized flow distributions and relative pre-/during-disaster changes rather than absolute user 
+totals.
+4.3. Baselines and metrics
+Baselines. We compare against rule-driven and LLM-driven agent-based approaches that require minimal real trajectory data. 
+Rule-driven baselines include Random Walk (Rhee et al., 2011), Gravity Model (Truscott and Ferguson, 2012), and Markov Model 
+(Qiao et al., 2018). LLM-driven baselines include LLM-Mob (Wang et al., 2023), which models spatiotemporal dependencies, and CoPB 
+(Shao et al., 2024), which combines chain-of-thought reasoning with geographic information.
+Baselines operate within their native information interfaces. Rule-driven baselines use the structured inputs represented by their 
+predefined transition, distance-decay, or historical-pattern mechanisms; they cannot directly take POI semantics and unstructured 
+disaster text information as input. LLM-driven baselines are provided with POI information, disaster context, shelter information, and 
+flood-affected areas through the input formats supported by their original frameworks. Because their prompting, architecture, and 
+decision pipelines differ, these shared inputs are not processed through an identical end-to-end interface. All methods are evaluated in 
+the same Zhengzhou study area, time period, initial spatial distribution, POI database, trajectory scale, 1-km evaluation grid, and 
+metric system.
+Metrics. We evaluate from both statistical and semantic perspectives. Statistical metrics: JSD-inflow/outflow (grid-level flow 
+divergence), JSD-OD (OD distance distribution divergence), and flow Correlation (Corr.). Semantic: an LLM-as-Judge framework 
+assigns a plausibility score to each trajectory (Li et al., 2024b). Disaster-adaptation metric (diff-ACC): a noise-filtered classification 
+accuracy measuring agreement between modeled and observed inflow-change patterns (increase vs. decrease) across grid cells during 
+the disaster-phase transition. This metric directly captures whether the model reproduces the directional flow reorganization induced 
+by the flood, beyond pure distributional similarity.
+Alongside aggregate flow metrics, the LLM-as-Judge score provides a supplementary assessment of the semantic and logical 
+coherence of generated daily trajectories, including purpose–POI consistency, activity ordering, and consistency with hazard 
+constraints.
+4.4. Experimental setup
+We fine-tuned the Qwen2.5-7B-Instruct model using 5,000 filtered, high-quality demonstrations distilled from GPT-5.1. Training 
+was conducted using the llama-factory framework on 8 H20 GPUs (each with 96 GB memory) for 3 epochs at a learning rate of 1 ×
+10  5, with a 4,096 token context window. In the Geo-Alignment phase, BGE-Large served as the embedding backbone, configured 
+with Topk= 200 and Topp = 30. LLM-agent inference employed a sampling temperature of 0.3, accelerated via vLLM. For evaluation, 
+Table 1 
+Comparison of different models in two periods: Before vs. During.
+Model JSD(inflow) JSD(outflow) JSD(OD) Corr. Semantic
+Before During Before During Before During Before During Before During
+RandomWalk 0.0868 0.0945 0.0991 0.0784 0.0464 0.0801 0.7012 0.6805 0.4313 0.5288
+GravityModel 0.1021 0.1193 0.1076 0.1061 0.0551 0.0900 0.7145 0.6035 0.4643 0.4005
+MarkovModel 0.0840 0.1044 0.0855 0.0978 0.0452 0.0702 0.6902 0.6871 0.5008 0.4565
+LLM Mob 0.1174 0.0944 0.0954 0.0863 0.0651 0.0677 0.7153 0.7202 0.6330 0.6465
+CoPB (LLM) 0.0762 0.1185 0.0785 0.1053 0.0326 0.0938 0.8203 0.7951 0.7455 0.7021
+DTG (Ours) 0.0603 0.0707 0.0528 0.0690 0.0263 0.0476 0.882 0.8667 0.7633 0.7318
+*Note: The best performance for each metric is highlighted in bold.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+11 
+10,000 trajectories were modeled for each scenario.
+5. Results
+5.1. Overall performance
+DTG demonstrates strong performance across both pre-disaster and during-disaster aggregate indicators, outperforming all 
+baseline models in reproducing population flow distributions and disaster-induced behavioral transitions (Table 1). Our model notably 
+excels in capturing the differential changes in population movement patterns during disasters and the transition from pre-disaster to 
+disaster periods. This superiority is evident in DTG’s higher predictive accuracy for both evacuation and aggregation behaviors. 
+Quantitatively, DTG exhibited the lowest JSD (inflow) and JSD (outflow) values for both pre-disaster (0.0603 and 0.0528, respec-
+tively) and during-disaster (0.0707 and 0.0690) periods, indicating that our modeled mobility patterns most closely align with the 
+statistical properties of macro-level population distributions. The model also achieved the highest diff-ACC of 0.7134 for capturing 
+differential changes, significantly outperforming the baselines (Table 2), which will be discussed in detail in Section 5.2.
+5.2. Disaster-adaptive flow modeling analysis
+To evaluate the model’s disaster adaptation capability, this section systematically examines how well the DTG framework captures 
+and reproduces such abnormal mobility dynamics across three dimensions: behavioral patterns, spatial redistribution, and human/ 
+resource interaction. In Section 5.2.1, we compare different approaches for modeling two distinct patterns of inflow increase and 
+inflow decrease during disasters to assess their performance in capturing these contrasting mobility behaviors. In Section 5.2.2, we 
+aggregate modeled trajectories into mobility heatmaps to characterize the spatial redistribution of populations and assess the model’s 
+consistency with real-world observations. In Section 5.2.3, we extend the analysis to human-resource interactions by constructing an 
+Emergency Resource Load (ERL) index, which measures the dynamic balance between population inflows and shelter capacities. 
+Through these analyses, we demonstrate that DTG effectively captures fine-grained behavioral adaptations, reproduces realistic spatial 
+dynamics, and reflects the emergent human-environment resilience mechanisms observed in real disasters.
+5.2.1. Two mobility patterns during flooding
+Under extreme flooding, urban mobility reorganizes into a heterogeneous dual-state pattern: inflows decline in severely impacted 
+and high-risk zones where normal activities are suspended, while inflows surge in safer locations and designated shelters receiving 
+evacuees (Tang et al., 2023). Capturing this dual-state pattern is essential for realistic disaster-phase modeling and evacuation 
+planning.
+Fig. 3 shows the change in average daily inflow per 1 km grid cell between pre-disaster and disaster phases. DTG accurately re-
+produces pronounced inflow reductions in the disaster-affected urban core (blue) and inflow increases in peripheral safe zones and 
+shelters (red). Baselines fail in characteristic ways: RandomWalk produces spatially meaningless noise; GravityModel and LLM-Mob 
+miss the nuanced spatial variation; MarkovFlow partially captures decrease zones but misidentifies increase zones. DTG’s advan-
+tage stems from each agent’s ability to interpret environmental semantics (e.g., road flooded) and integrate them with persona-specific 
+behavioral attributes (e.g., shelter-seeking) within a bottom-up reasoning process, allowing macro-scale avoidance and attraction 
+patterns to emerge organically from individual decisions.
+5.2.2. Spatial flow hotspots analysis
+Accurate prediction of crowd aggregation hotspots is critical for emergency management, particularly in data-scarce regions where 
+statistical extrapolation is unreliable. High-fidelity models are therefore essential for proactive planning and resource allocation. Our 
+DTG model, with its bottom-up, scenario-aware agent-based decision-making mechanism, effectively models the spontaneous for-
+mation of crowd hotspots under external shocks, offering a viable solution to this challenge.
+Fig. 4 presents a population mobility density heatmap of Zhengzhou generated by the model during a disaster scenario. The 
+modeling results exhibit strong agreement with real-world data in terms of overall spatial distribution and successfully capture the 
+emergence of primary aggregation centers in the urban core and secondary hotspots in surrounding areas. This finding demonstrates 
+the model’s effectiveness and reliability in reproducing crowd aggregation patterns during disasters.
+Table 2 
+Comparison of different models: difference between disaster period and pre-disaster 
+period.
+Category Method diff-ACC
+Rule-based RandomWalk 0.4943
+GravityModel 0.4391
+MarkovModel 0.5013
+LLM Mob 0.6013
+LLM-based CoPB 0.5356
+​ DTG (Ours) 0.7134
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+12 
+5.2.3. Emergency resource load index
+In addition to modeling disaster-time mobility behaviors and spatial aggregation patterns, our model also demonstrates substantial 
+potential in capturing the coupling between human dynamics and resource systems under disaster conditions. It not only reproduces 
+behavioral and spatial variations, but also perceives and interprets the geographical context and the spatial distribution of emergency 
+resources with high fidelity. Building on this capability, we further investigate how modeled outputs can be exploited to evaluate the 
+load pressure on urban emergency resources, thereby delivering more granular and actionable decision support for disaster-time 
+resource allocation. To this end, we develop and compute the Emergency Resource Load (ERL) index, which quantitatively charac-
+terizes the imbalance between the influx of affected populations and the service capacity of local emergency shelters.
+First, we applied a Kernel Density Estimation (KDE) approach to independently estimate the Population Inflow Density (PID) and the 
+Shelter Service Density (SD) as follows: 
+Fig. 3. Comparative visualization of aggregated changes in average daily inflow per 1 km grid cell between pre-disaster and disaster phases, based 
+on modeled trajectories from different models and corresponding observed data.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+13 
+PID(x, y)=
+∑N
+i=1
+wi ⋅ Kh(‖pi  (x, y)‖) (20) 
+SD(x, y)=
+∑M
+j=1
+cj ⋅ Kh
+ 
+‖sj  (x, y)‖
+)
+(21) 
+where pi denotes the coordinates of the i-th incoming individual, wi is the associated weight (typically set to 1), sj represents the 
+location of the j-th shelter, cj is its capacity, and Kh is the kernel function.
+The raw emergency resource load was then computed as: 
+ERLraw(x, y)= PID(x, y) SD(x, y)+ ∊ (22) 
+To improve visual interpretability and mitigate the influence of extreme values, we applied min–max normalization to ERLraw as 
+follows: 
+ERLnorm(x, y)= ERLraw(x, y)  ERLmin
+ERLmax  ERLmin
+(23) 
+The modeled and observed ERL maps achieve a spatial Pearson correlation of 0.9397, confirming that DTG reproduces the spatial 
+Fig. 4. The comparison between the density heatmap of crowd movements in Zhengzhou modeled by our method and the ground truth on the day 
+of the July 20th disaster.
+Fig. 5. Comparative spatial distribution of Emergency Resource Load (ERL) during disasters, derived from empirical observations (left) and our 
+DTG model outputs (right), illustrating associated resource pressure.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+14 
+structure of emergency resource pressure with high fidelity. The visualization heatmap of ERL is shown in Fig. 5.
+From a resilience planning perspective, the ERL analysis reveals two actionable insights. First, areas with high ERL but low baseline 
+population density, such as the eastern peri-urban zone, represent hidden vulnerabilities that would be overlooked by static risk as-
+sessments. Second, the mismatch between shelter capacity and mobility inflow suggests that shelter placement should consider not 
+only residential density but also predicted evacuation flow patterns. These findings illustrate how DTG’s behavior-grounded modeling 
+runs can inform infrastructure renewal and resource pre-positioning strategies, which further confirms its critical value in optimizing 
+emergency planning and resource allocation.
+5.3. Statistical analysis of disaster-induced mobility dynamics
+Fig. 6 quantifies how the 7.20 flood reshaped urban travel across three dimensions: (a) Lorenz curves of inflow distribution, (b) 
+Top-K% hotspot concentration, and (c) trip-distance composition, for both observations and DTG model outputs.
+Inflow remains highly spatially concentrated across periods. The top 10 % of destination zones absorb ~ 58 % of pre-disaster inflow 
+and ~ 55 % during the flood, a modest decline reflecting partial displacement of conventional hotspots by shelters, community centers, 
+and accessible local venues. DTG’s modeled Lorenz curves align closely with observed data, confirming that population-scale 
+inequality patterns emerge from aggregated individual reasoning without being explicitly optimized. This emergent alignment is a 
+key advantage of behavior-grounded modeling.
+Short-distance trips (<5 km) dominate across all conditions (~60 % pre-disaster), consistent with the spatial anchoring of daily 
+activities. During the flood, this share rises to ~ 64 %, as medium-distance trips (5–20 km) contract from ~ 38 % to ~ 35 % and long- 
+distance trips decline substantially, reflecting rational risk-aversion as floodwaters rendered arterials and distant zones inaccessible. 
+DTG reproduces this directional contraction as an emergent property of agent-level disaster context reasoning, without explicit 
+training on distributional targets.
+5.4. Semantic analysis
+A core strength of our model lies in its ability to capture and leverage the semantic characteristics of the built environment, thereby 
+generating intention-consistent, semantically rich, and highly interpretable modeled mobility trajectories. To demonstrate that the 
+semantic coherence observed in individual cases reflects systematic model behavior, we evaluate semantic plausibility at scale. Across 
+1,000 randomly sampled disaster-phase trajectories, DTG achieves a mean semantic plausibility score of 0.7318 (on a 0–1 scale). The 
+two representative case studies presented below, one under normal and one under disaster scenarios, are selected to illustrate its 
+distinctive capabilities in producing both behaviorally plausible modelings and decision-makings.
+Under the normal scenario, we compared a single-day mobility trajectory generated by the DTG model with that of a baseline model 
+for the same individual (Fig. 7). The DTG-generated trajectory for a working professional clearly follows a coherent “commu-
+te–work–life” activity chain (corresponding to the right subplot in Fig. 7): 
+1 08:00 — Depart from home and go to the office to start the workday;
+2 12:00 — Leave the office for a nearby restaurant for lunch;
+3 13:00 — Return to the office to continue working;
+4 17:30 — After work, go to the gym for exercise;
+5 19:00 — Visit a supermarket for daily shopping;
+Fig. 6. Statistical characterization of pre- and during-disaster mobility dynamics. (a) Lorenz curves of destination inflow distribution; (b) Top-K% 
+inflow concentration across destination zones; (c) proportion of trips by distance segment (short: <5 km, medium: 5–20 km, long: >20 km). Solid 
+lines denote real observations; dashed lines denote DTG model outputs. Blue tones represent the pre-disaster period; red/orange tones the during- 
+disaster period. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+15 
+6 19:30 — Return home to wrap up the day and prepare for the next.
+Every point of interest (POI) in this sequence serves a clear, role-consistent travel intention, collectively forming a semantically 
+coherent and temporally reasonable urban daily routine. This coherence indicates that the model captures the actual needs of modeled 
+agents for urban facilities, thereby enhancing behavioral plausibility. By contrast, the baseline approach may generate statistically 
+valid sequences with respect to travel distances or transition probabilities, but the resulting POI chains often lack internal logic, making 
+it difficult to infer credible travel intentions.
+The advantage of the DTG model becomes particularly evident in disaster scenarios, where travel decisions are highly dynamic and 
+spatio-temporally heterogeneous. Traditional models may fall short in capturing such multi-factor, context-dependent decision- 
+making required during a crisis. In contrast, our approach models an agent’s internal reasoning process, providing stronger inter-
+pretability and adaptability. In one illustrative case, an agent originally planned to “go home after work”. However, upon receiving 
+environmental feedback that the destination which located 18.3 km away had been affected by flooding, and that persistent heavy 
+rainfall made long-distance commuting risky, the agent adapted its plan.
+In response to the situational disruption, the agent abandoned its original plan and generated a new temporary intention: to seek 
+nearby hotel accommodation. The reasoning process was explicitly expressed in the agent’s output: Given the ongoing heavy rain and 
+flooding at my destination, traveling there would be highly inconvenient. I need to find a hotel nearby to rest.
+This case shows that the DTG model is capable not only of generating plausible trajectories under normal conditions but also of 
+dynamically adjusting decisions in line with human-like reasoning when faced with evolving environmental constraints. By modeling 
+the underlying motives of travel behavior, DTG transcends the traditional paradigm of “pattern reproduction”, providing a deeper and 
+more explanatory tool for understanding and predicting mobility under complex scenarios.
+Fig. 7. Case study: Visualization comparing an individual trajectory generated by the baseline method and our method. The numbers indicate the 
+visiting sequence of POIs, and the color of each numbered box represents the semantic type of the POI.
+Fig. 8. Behavioral shifts in DTG-generated trajectories from pre-disaster to during-disaster conditions. Panel C summarizes descriptive textual cues.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+16 
+5.5. Pre-/during-disaster behavioral adaptation
+To examine how simulated mobility adapts across disaster phases, we analyze fixed samples of 10,000 DTG-generated daily tra-
+jectories in each of the pre-disaster and during-disaster periods. The comparison links changes in activity chains and destination 
+composition with the spatial redistribution and context cues underlying these adjustments.
+Flooding reorganizes activity space rather than producing a spatially uniform reduction in travel. The pre-/during-disaster com-
+parison shows a reduced share of inflow in the top 10 % destination zones (approximately 58 % to 55 %) and an increase in short trips 
+below 5 km (approximately 60 % to 64 %), while medium- and long-distance trips decline. These patterns indicate that hazard and 
+accessibility constraints shrink feasible activity spaces and replace some cross-area trips with nearby accessible facilities.
+Based on fixed samples of 10,000 agents in each period, Fig. 8 summarizes the same adjustment at the trajectory level. Mean hops 
+per daily trajectory decline from 9.90 to 5.56. Shelter visits increase from 1.23 % to 11.26 %, while retail, recreation, and accom-
+modation shares decline. Shelter is an operational category that includes dual-use urban facilities; it may therefore overlap with a 
+facility's ordinary POI category.
+Generated rationales provide descriptive supporting evidence: during disaster, heavy-rain, shelter, safety, and flooding cues appear 
+in 49.8 %, 29.2 %, 13.4 %, and 11.4 % of rationales, respectively, whereas the nearest-location cue decreases from 29.5 % to 20.7 %. 
+These cue frequencies indicate that safety and accessibility become more prominent constraints than proximity alone.
+5.6. Ablation study
+To assess the effectiveness of key components in the DTG model and examine the influence of hyperparameters, we conducted a 
+series of ablation experiments. Our analysis focused on three core modules: (1) the User Profile Generator, which enhances the di-
+versity of modeled populations; (2) POI Spatial Reranking, which enforces geographical plausibility of generated trajectories; and (3) 
+the Disaster Context-aware Module, the central mechanism enabling adaptive behavior under disaster scenarios. Additionally, we 
+investigated the effect of the decoding temperature hyperparameter.
+The following model variants are evaluated on the during-disaster dataset, and the results are reported in Table 3. 
+• DTG (Full Model): The complete framework with all components, serving as the performance baseline.
+• without Profile: Removes the diversified user profile generator; all agents share a uniform, standardized resident profile.
+• without Rerank: In the intent-to-POI mapping stage, uses only semantic similarity for coarse ranking, omitting spatial distance for 
+reranking.
+• without Disaster: Operates in disaster scenarios without any interactions between flood-affected built environment and behavioral 
+responses, that is, we eliminate all dynamic context-aware information and considerations regarding coupled relationship for all 
+agents.
+• High Temp (T = 1.0): Full model with increased decoding randomness, leading to more diverse and creative token generation.
+• Low Temp (T = 0.0): Full model with greedy decoding, removing stochasticity and thus producing more deterministic and less 
+varied tokens.
+The experimental results demonstrate that all of these components make positive contributions to the overall performance of the 
+model.
+(1) Removing the Disaster Context-aware Module (w/o Disaster) caused a substantial drop in diff-ACC (from 0.713 to 0.496) and 
+consistent degradation across distributional metrics. Without dynamic perception and reasoning over disaster-related conditions, the 
+model fails to reproduce adaptive behaviors, confirming the critical role of this module in understanding flood-induced mobility and 
+disaster-affected built environment in travel decision-making. The residual diff-ACC of 0.496 likely reflects macro-level spatial 
+structure inherited from the Geo-Alignment module and baseline persona patterns, which lack any dynamic hazard adaptation.
+(2) Eliminating spatial reranking (without Rerank) led to substantial increases in JSD metrics, indicating that semantic matching 
+alone is insufficient; without geographic distance constraints, agents tend to select semantically relevant yet geographically 
+implausible POIs, which degrades the statistical realism of the generated trajectories.
+(3) Removing the User Profile Generator (without Profile) also degraded performance, confirming that modeling heterogeneous 
+population characteristics better captures the complexity of mobility patterns.
+(4) Our model maintained stable performance across different decoding temperatures. High (T = 1.0) and low (T = 0.0) 
+Table 3 
+Ablation results on the During-disaster scenario. Lower JSD and higher diff-ACC/Semantic/Corr. scores indicate better performance.
+Method JSD(inflow) JSD(outflow) JSD(OD) diff-ACC Semantic Corr.
+DTG (Full) 0.0707 0.0690 0.0476 0.713 0.732 0.867
+w/o Profile 0.0952 0.0915 0.0681 0.606 0.690 0.815
+w/o Rerank 0.1283 0.1351 0.1104 0.580 0.625 0.752
+w/o Disaster 0.1510 0.1804 0.1455 0.496 0.481 0.589
+High Temp (T = 1.0) 0.0711 0.0698 0.0479 0.638 0.725 0.861
+Low Temp (T = 0.0) 0.0705 0.0690 0.0477 0.640 0.729 0.864
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+17 
+temperatures yield negligible performance differences, showing that DTG’s effectiveness primarily stems from scenario-grounded 
+reasoning rather than stochasticity, demonstrating the stability of the proposed framework.
+In addition to the component ablations and decoding-temperature analysis, Table 4 reports Geo-Alignment sensitivity. The balance 
+coefficient β controls the relative role of semantic similarity and inverse distance; K is the number of POIs retained by coarse semantic 
+retrieval; and P is the final number of spatially reranked candidates. When β approaches 0 or 1, either spatial proximity or semantic 
+relevance is over-emphasized, increasing JSD and reducing Semantic; β = 0.50 provides the best balance. Increasing K from 100 to 200 
+improves inflow, outflow, and OD consistency, while the additional gain at K = 300 is limited. In contrast, P has little effect on JSD but 
+affects semantic quality: a small final candidate set restricts semantically relevant options, Semantic saturates around P = 30, and 
+further expansion can introduce irrelevant POIs and computational cost. We therefore use β = 0.50, K = 200, and P = 30.
+Beyond the hyperparameter sensitivity analysis for Geo-Alignment, we further examined the influence of memory representation in 
+the Disaster Context-aware Reasoning stage. To assess whether the compact POI-sequence representation sacrifices behavioral 
+coherence, we conducted a memory-field ablation. As shown in Table 5, removing the POI sequence reduces Semantic from 0.732 to 
+0.518, whereas adding purpose, dwell-time, or visit-frequency fields changes Semantic by at most 0.006 relative to M0; the complete 
+memory increases prompt tokens by 26.9 %. This supports the use of compact POI-sequence memory for the present city-scale, one-day 
+objective; the additional fields can be incorporated when richer episodic continuity is required.
+6. Discussion
+DTG takes a fundamentally different approach to modeling disaster-induced human mobility: rather than fitting statistical patterns 
+to historical data, it constructs a bottom-up agent-based model grounded in deliberate human decision-making. Each resident is 
+represented as an LLM agent equipped with a persona-conditioned profile, episodic memory, and real-time disaster awareness, whose 
+decisions about where to go, when to move, and for what purpose collectively produce emergent population-level mobility patterns. 
+This design makes DTG a transparent, hypothesis-generating framework that does not require disaster-specific historical trajectory 
+data and shows promising transferability to unseen scenarios, as the LLM’s reasoning operates on generic environmental descriptions 
+rather than event-specific training samples.
+The TPB-grounded reasoning module enables agents to generate shelter-seeking, family-reunification, and emergency-supply in-
+tentions that are absent under normal conditions. Ablation confirms that removing the disaster context module causes the largest 
+performance drop, affirming that adaptive behavioral reasoning, rather than statistical regularity, drives realistic disaster mobility 
+modeling. This reinforces the value of theory-grounded behavioral modeling over rule-based heuristics (Golshani et al., 2019), and 
+suggests that evacuation design should explicitly account for behavioral heterogeneity across population segments.
+Complementing these behavioral findings, the ERL analysis reveals that disaster-time resource pressure is mobility-driven rather 
+than density-driven: high-load zones emerge where shelter coverage is sparse but inflows converge, independent of pre-disaster 
+population density (Li et al., 2024). This carries direct infrastructure implications, as evacuation corridor planning and shelter 
+siting should draw on dynamic flow predictions rather than static density maps (Shen et al., 2024).
+At the agent level, hop-by-hop disaster context injection enables agents to adaptively reroute as hazard conditions evolve. 
+Aggregated across the population, this micro-level adaptivity reproduces the macro-level contraction and reorganization of mobility 
+networks observed empirically. Unlike deep learning approaches (Cao et al., 2025; Jiang et al., 2023), which function as opaque 
+pattern replicators, this mechanism offers semantic interpretability, providing a transparent, auditable basis for evidence-based 
+transportation resilience planning.
+The same design also mitigates behavioral homogenization, a key failure mode in LLM-based multi-agent modeling, by coupling 
+diverse persona profiles with geospatial constraints. Its architecture, which decouples the LLM from city-specific POI databases, 
+demonstrates strong potential for cross-city and cross-hazard scalability.
+Beyond modeling fidelity, DTG provides actionable decision support for transportation resilience planning. The model enables 
+resilience gap quantification: contrasting pre-disaster and disaster-phase mobility under different inundation scenarios reveals how 
+network accessibility degrades as hazard intensity increases. ERL outputs further serve as infrastructure prioritization signals, directing 
+Table 4 
+Geo-Alignment parameter sensitivity analysis. Lower JSD and higher Semantic indicate better performance.
+Parameter Value JSD (Inflow) JSD (Outflow) JSD (OD) Semantic
+Balance coefficient β 0.00 0.0779 0.0788 0.0534 0.397
+0.25 0.0715 0.0708 0.0497 0.707
+0.50 0.0707 0.0690 0.0476 0.732
+0.75 0.0736 0.0714 0.0496 0.719
+1.00 0.0846 0.0801 0.0602 0.730
+Coarse retrieval K 100 0.0749 0.0731 0.0494 0.710
+200 0.0707 0.0690 0.0476 0.732
+300 0.0712 0.0696 0.0477 0.734
+Final candidates P 1 0.0714 0.0697 0.0480 0.595
+10 0.0709 0.0693 0.0477 0.681
+30 0.0707 0.0690 0.0476 0.732
+50 0.0708 0.0692 0.0477 0.734
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+18 
+targeted retrofit investments toward corridors and catchments where demand exceeds shelter capacity. Because agent trajectories are 
+generated under explicit road-network disruption states, DTG also functions as a scenario testing platform for evaluating the accessibility 
+impact of proposed interventions before any event occurs, supporting a shift from reactive post-event assessment toward proactive 
+resilience planning.
+Beyond TPB, disaster-behavior research offers complementary perspectives. Protection Motivation Theory (PMT) explains pro-
+tective motivation through threat and coping appraisal (Rogers, 1975, 1983); the Protective Action Decision Model (PADM) describes 
+how environmental cues, official warnings, and social information shape protective-action decisions, particularly warning response, 
+evacuation, and sheltering (Lindell and Perry, 2012); the Health Belief Model (HBM) represents perceived susceptibility, severity, 
+benefits, barriers, cues to action, and self-efficacy (Rosenstock, 1974); and Prospect Theory explains risk-sensitive choice through 
+reference dependence, loss aversion, and probability weighting (Kahneman and Tversky, 1979). These theories offer valuable ex-
+tensions, but PMT and PADM principally organize protective action and warning response, HBM does not organize multi-purpose 
+urban activity chains, and Prospect Theory does not itself prescribe a process from intention to destination. DTG therefore uses 
+TPB as the intention-centered framework that connects persona and time-varying context to routine and disaster-related travel pur-
+poses and subsequently to POI selection.
+The present within-day memory records the POI sequence, which is sufficient to preserve the continuity of the daily activity chain 
+in the current city-scale simulations; retaining additional temporal, purpose, dwell, or frequency fields yielded limited marginal 
+benefit for the objectives considered here. The framework can nevertheless be extended naturally because these attributes can be 
+expressed as compact natural-language descriptions and incorporated into the context at subsequent decision hops. Such an extension 
+would allow the LLM to reason over richer episodic information, for example habitual dwell duration, repeated visits, or the purpose of 
+an earlier trip, while retaining the same context-conditioned decision framework.
+Several limitations warrant acknowledgment. LLM-based agents are susceptible to hallucination, generating spatially implausible 
+outputs that require quality-control filtering, and output quality remains sensitive to prompt design. Large teacher models depend on 
+cloud APIs, raising concerns about latency and data privacy in emergency contexts; the distilled 7B student model partially addresses 
+this. Furthermore, the synthetic training data distilled from the teacher model may inherit subtle sociodemographic biases present in 
+the LLM’s pre-training corpus, potentially affecting the representativeness of certain persona groups. Although Persona Hub broadens 
+the diversity of agent conditions, it is not designed as a local census frame; explicit demographic calibration to the target city remains a 
+potential direction for future work. The use of Euclidean distance as a spatial proximity proxy, while computationally efficient, may 
+underestimate travel impedance in urban contexts with highly irregular street networks. Future iterations could incorporate network- 
+distance-based formulations. Finally, the empirical validation of our framework faces constraints in both scope and resolution. On the 
+one hand, validation is currently restricted to a single flood event; therefore, generalization to other hazard types and urban contexts 
+requires broader testing. On the other hand, strictly privacy-protected reference data cannot support point-by-point validation against 
+real individual trajectories. Consequently, individual-level outputs are currently evaluated for semantic and logical coherence only.
+7. Conclusion
+In this study, we introduce the Disaster-aware Trajectory Generator (DTG), a modeling framework designed to simulate urban 
+mobility under extreme flood scenarios by extending behaviorally-grounded agent reasoning from routine activity patterns into 
+disaster-disrupted conditions. Departing from the conventional reliance on historical trajectory corpora, DTG employs Large Language 
+Model (LLM) agents to emulate heterogeneous resident behaviors and generate intention-consistent movements. To bridge abstract 
+agent intentions with the city’s physical reality, we implement a geospatial anchoring mechanism that integrates semantic relevance 
+with spatial distance, yielding geographically viable next-POI decisions.
+Validated against 1.32 billion mobility records from the Zhengzhou “7.20” flood, DTG surpasses both rule-based and state-of-the- 
+art LLM baselines. Macroscopically, DTG achieves superior distributional alignment and higher correlation, more accurately capturing 
+the differential shifts in crowd movement during catastrophic events. At the granular level, it generates semantically coherent activity 
+chains that remain strictly aligned with individual agent roles and intentions.
+Beyond merely replicating flows, DTG enhances emergency planning by uncovering dynamic emergency resource loads (ERL). Our 
+analysis reveals that high-stress zones can materialize in historically low-risk areas driven by transient population inflows, highlighting 
+the critical necessity of context-aware behavioral modeling for adaptive relief and evacuation strategies.
+While DTG demonstrates robust fidelity in simulating urban flooding scenarios, we acknowledge specific computational trade-offs. 
+The current implementation excludes direct agent-to-agent interactions due to processing constraints. Future research should prior-
+itize scalable methods to model collective dynamics and extend the framework to a broader spectrum of hazard types and urban 
+transportation contexts.
+Table 5 
+Memory-field ablation for daily trajectory continuity. Semantic is the LLM-as-Judge score, and Token increase (%) is measured relative to the POI- 
+sequence-only memory (M0).
+Memory setting No memory POI sequence only (M0) + purpose + dwell time + visit frequency All fields
+Semantic 0.518 0.732 0.730 0.738 0.734 0.735
+Token increase (%)   7.3 0.0 17.8 5.3 6.2 26.9
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+19 
+CRediT authorship contribution statement
+Zijing Zhang: Software, Methodology, Formal analysis. Fengjue Huang: Writing – review & editing, Validation, Conceptuali-
+zation. Junqing Tang: Resources, Project administration, Funding acquisition. Pengjun Zhao: Resources, Project administration, 
+Funding acquisition.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgements
+The study was supported by (1) the National Natural Science Foundation of China (42376213); (2) Shenzhen Science and Tech-
+nology Program (JCYJ20240813181002004); (3) Henan Provincial Science and Technology R&D Program Joint Fund 
+(245200810027); (4) Guangdong Pearl River Talent Program (2023QN10G243).
+Appendix A. Prompt template for travel decisions
+This appendix provides the representative prompt used when DTG selects an actual destination at each daily-routing decision hop. 
+After TPB-guided reasoning generates the current travel intention and Geo-Alignment retrieves and spatially reranks POI candidates, 
+the prompt combines the agent profile, current state, within-day trajectory history, localized disaster context, and candidate POIs to 
+support destination selection. The disaster-context adapter refreshes the relevant local information at every hop; under routine con-
+ditions, the same template is used with the corresponding non-disaster environment. Variables in double braces are populated from the 
+agent state and current local context.
+[User Profile] Please act as {{persona}}, a city resident deciding the next travel action. Keep actions consistent with the role's 
+occupation, age, interests, household situation, routine, and risk preference; adapt the routine when safety, accessibility, or basic needs 
+change.
+[Current State and Environment] Your current date, weekday, weather, time, location, and routine setting are {{current_-
+state_and_environment}}. Your current travel intention is {{current_intention}}. First assess whether it remains reasonable and 
+feasible.
+[Trajectory History] Today’s previous visits and activities are {{trajectory_history}}. Use this history to preserve continuity of the 
+within-day activity chain.
+[Disaster Context] The adapter has transformed the local rainfall, waterlogging, affected roads/facilities, shelters, and official 
+advice into {{disaster_context}}. Consider the accessibility of each candidate POI.
+[Available POIs] The following are semantically retrieved and spatially reranked candidate POIs: {{retrieved_poi_candidates}}. 
+Select one actual POI that fits the persona and current intention while considering distance, flood impact, safety, accessibility, and 
+facility availability.
+[Few-shot Demonstrations] {{few_shot_demonstrations}}. Shelter seeking, checking on family, and obtaining supplies are il-
+lustrations only, not required actions or a closed purpose set.
+[TPB Guidance] {{tpb_guidance}}. Internally evaluate attitude (benefits, preference fit, risk, and travel/detour cost), subjective 
+norm (family responsibility, community expectations, and official advice), and perceived behavioral control (safety, accessibility, and 
+feasibility under time, distance, transport, flood, and facility conditions). Then choose the most appropriate action.
+[Output Format] Output JSON only: {‘time’: ‘HH:MM’, ‘poi_selection’: {‘poi_name’: ‘selected candidate POI’, ‘poi_category’: ‘POI 
+category’}, ‘purpose’: ‘travel purpose’, ‘reason’: ‘brief persona-, context-, and accessibility-based rationale’}.
+Data availability
+Data will be made available on request.
+References
+Ajzen, I., 1991. The theory of planned behavior. Organ. Behav. Hum. Decis. Process. 50 (2), 179–211. https://doi.org/10.1016/0749-5978(91)90020-T.
+Bagloee, S.A., Johansson, K.H., Asadi, M., 2019. A hybrid machine-learning and optimization method for contraflow design in post-disaster cases and traffic 
+management scenarios. Expert Syst. Appl. 124, 67–81.
+Brockmann, D., Hufnagel, L., Geisel, T., 2006. The scaling laws of human travel. Nature 439 (7075), 462–465. https://doi.org/10.1038/nature04292.
+Brown, T., Mann, B., Ryder, N., Subbiah, M., Kaplan, J.D., Dhariwal, P., Neelakantan, A., Shyam, P., Sastry, G., Askell, A., et al., 2020. Language models are few-shot 
+learners. Adv. Neural Inf. Proces. Syst. 33, 1877–1901.
+Cao, Z., Liu, K., Jin, X., Ning, L., Yin, L., Lu, F., 2025. STAGE: a spatiotemporal-knowledge enhanced multi-task generative adversarial network (GAN) for trajectory 
+generation. Int. J. Geogr. Inf. Sci. 39 (5), 1100–1127.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+20 
+Chen, K., Jiang, X., Li, Y., Zhou, R., 2023. A stochastic agent-based model to evaluate COVID-19 transmission influenced by human mobility. Nonlinear Dyn. 111, 
+12639–12655.
+Chen, X., Xu, J., Zhou, R., Chen, W., Fang, J., Liu, C., 2021. Trajvae: a variational autoencoder model for trajectory generation. Neurocomputing 428, 332–339.
+da Mata Martins, M.C., Rodrigues da Silva, A.N., Pinto, N., 2019. An indicator-based methodology for assessing resilience in urban mobility. Transp. Res. Part D: 
+Transp. Environ. 77, 352–363.
+Deng, H., Aldrich, D.P., Danziger, M.M., Gao, J., Phillips, N.E., Cornelius, S.P., Wang, Q.R., 2021. High-resolution human mobility data reveal race and wealth 
+disparities in disaster evacuation patterns. Human. Social Sci. Commun. 8 (1), 1–8.
+Fang, C., Chu, Y., Fu, H., Fang, Y., 2022a. On the resilience assessment of complementary transportation networks under natural hazards. Transport and Environment, 
+Transportation Research Part D. 
+Fang, F., Zhang, P., Zhou, B., Qian, K., Gan, Y., 2022b. Atten-gan: pedestrian trajectory prediction with gan based on attention mechanism. Cogn. Comput. 14 (6), 
+2296–2305.
+Feng, J., Yang, Z., Xu, F., Yu, H., Wang, M., Li, Y., 2020. Learning to simulate human mobility. In: In Proceedings of the 26th ACM SIGKDD International Conference 
+on Knowledge Discovery & Data Mining, pp. 3426–3433.
+Frias-Martinez, E., Williamson, G., & Frias-Martinez, V. (2011). An agent-based model of epidemic spread using human mobility and social network information. In 
+2011 IEEE Third International Conference on Privacy, Security, Risk and Trust and 2011 IEEE Third International Conference on Social Computing (pp. 57-64). 
+IEEE. https://doi.org/10.1109/PASSAT/SocialCom.2011.142.
+Fu, X., Yu, G., Liu, Z., 2021. Spatial–temporal convolutional model for urban crowd density prediction based on mobile-phone signaling data. IEEE Trans. Intell. 
+Transp. Syst. 23 (9), 14661–14673.
+Ge, T., Chan, X., Wang, X., Yu, D., Mi, H., Yu, D. (2024). Scaling synthetic data creation with 1,000,000,000 personas. arXiv preprint arXiv:2406.20094. https://doi. 
+org/10.48550/arXiv.2406.20094.
+Golshani, N., Shabanpour, R., Mohammadian, A., Auld, J., Ley, H., 2019. Evacuation decision behavior for no-notice emergency events. Transp. Res. Part D: Transp. 
+Environ. 77, 364–377.
+Gonzalez, M.C., Hidalgo, C.A., Barabasi, A.-L., 2008. Understanding individual human mobility patterns. Nature 453 (7196), 779–782.
+Guadagno, L., 2016. Human mobility in the sendai framework for disaster risk reduction. Int. J. Disaster Risk Sci. 7 (1), 30–40.
+Han, S.Y., Tsou, M.-H., Knaap, E., Rey, S., Cao, G., 2019. How do cities flow in an emergency? Tracing human mobility patterns during a natural disaster with big data 
+and geospatial data science. Urban Sci. 3 (2), 51.
+Helderop, E., Grubesic, T.H., 2019. Streets, storm surge, and the frailty of urban transport systems: a grid-based approach for identifying informal street network 
+connections to facilitate mobility. Transp. Res. Part D: Transp. Environ. 77, 337–351.
+Huang, Z., Wang, P., Zhang, F., Gao, J., Schich, M., 2018. A mobility network approach to identify and anticipate large crowd gatherings. Transp. Res. B Methodol. 
+114, 147–170.
+Jiang, W., Zhao, W. X., Wang, J., Jiang, J. (2023). Continuous trajectory generation based on two-stage GAN. In Proceedings of the AAAI conference on artificial 
+intelligence (Vol. 37, pp. 4374–4382).
+Kahneman, D., Tversky, A., 1979. Prospect theory: an analysis of decision under risk. Econometrica 47 (2), 263–291. https://doi.org/10.2307/1914185.
+Kumar, A., Batra, N., Mudgal, A., Yadav, A.L., 2024. Navigating urban mobility: a review of AI-driven traffic flow management in smart cities. In 2024 11th 
+International Conference on Reliability, Infocom Technologies and Optimization (trends and Future Directions) (ICRITO). IEEE.
+Lai, S., Xu, Z., Zhang, W., Liu, H., Xiong, H. (2025). Llmlight: Large language models as traffic signal control agents. In Proceedings of the 31st ACM SIGKDD conference 
+on knowledge discovery and data mining v. 1 (pp. 2335–2346).
+Lee, M., Sohn, S.S., Moon, S., Yoon, S., Kapadia, M., Pavlovic, V., 2022. Muse-vae: multi-scale vae for environment-aware long term trajectory prediction. In: In 
+Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pp. 2221–2230.
+Li, Y., Ye, S., Wu, Q., Wu, Y., Qian, S., 2023. Analysis and countermeasures of the “7.20” flood in Zhengzhou. J. Asian Arch. Build. Eng. 22 (6), 3782–3798. https:// 
+doi.org/10.1080/13467581.2023.2208195.
+Li, H., Dong, Q., Chen, J., Su, H., Zhou, Y., Ai, Q., Ye, Z., Liu, Y. (2024b). Llms-as-judges: A comprehensive survey on llm-based evaluation methods. arXiv Preprint 
+arXiv:2412.05579.
+Li, H., Zhuo, Y., Wang, C., Wang, H., & Chen, X. (2024a). Poster abstract: Generative modeling of post-disaster POI visits recovery. In 2024 23rd ACM/IEEE 
+International Conference on Information Processing in Sensor Networks (IPSN) (pp. 299-300). IEEE. https://doi.org/10.1109/IPSN61024.2024.00050.
+Li, Z., Yan, W., Wang, L., 2024c. Measuring mobility resilience with network-based simulations of flow dynamics under extreme events. Transp. Res. Part D: Transp. 
+Environ. 135, 104362.
+Liang, Y., Liu, Y., Wang, X., Zhao, Z., 2024. Exploring large language models for human mobility prediction under public events. Comput. Environ. Urban Syst. 112, 
+102153.
+Lindell, M.K., Perry, R.W., 2012. The protective action decision model: theoretical modifications and additional evidence. Risk Anal. 32 (4), 616–632. https://doi.org/ 
+10.1111/j.1539-6924.2011.01647.x.
+Lu, Q.-C., Zhang, J., Rahman, A.S., 2017. The interrelationship between travel behavior and life choices in adapting to flood disasters. Nat. Hazards 85 (2), 
+1005–1022.
+Lu, X., Bengtsson, L., Holme, P., 2012. Predictability of population displacement after the 2010 haiti earthquake. Proc. Natl. Acad. Sci. 109 (29), 11576–11581.
+Luca, M., Barlacchi, G., Lepri, B., Pappalardo, L. (2020). Deep learning for human mobility: a survey on data and models. arXiv preprint arXiv:2012.02825.
+Lv, Q., Qiao, Y., Ansari, N., Liu, J., Yang, J., 2016. Big data driven hidden Markov model based individual mobility prediction at points of interest. IEEE Trans. Veh. 
+Technol. 66 (6), 5204–5216. https://doi.org/10.1109/TVT.2016.2611654.
+Movahedi, M., Choi, J., 2024. The crossroads of llm and traffic control: a study on large language models in adaptive traffic signal control. IEEE Trans. Intell. Transp. 
+Syst.
+Normile, D. (2021). Zhengzhou subway flooding a warning for other major cities. Science.
+Park, J.S., O’Brien, J., Cai, C.J., Morris, M.R., Liang, P., Bernstein, M.S., 2023. Generative agents: Interactive simulacra of human behavior. In: In Proceedings of the 
+36th Annual Acm Symposium on User Interface Software and Technology, pp. 1–22.
+Qiao, Y., Si, Z., Zhang, Y., Abdesslem, F.B., Zhang, X., Yang, J., 2018. A hybrid markov-based model for human mobility prediction. Neurocomputing 278, 99–109.
+Raei, B., Sen, A., Kinateder, M., B´enichou, N., Wang, X., 2026. Optimizing evacuation routes for human mobility during wildfires: a case study of the 2023 McDougall 
+Creek Wildfire. Transp. Res. Part D: Transp. Environ. 153, 105216.
+Rhee, I., Shin, M., Hong, S., Lee, K., Kim, S.J., Chong, S., 2011. On the levy-walk nature of human mobility. IEEE/ACM Trans. Networking 19 (3), 630–643.
+Rogers, R.W., 1975. A protection motivation theory of fear appeals and attitude change. J. Psychol. 91 (1), 93–114. https://doi.org/10.1080/ 
+00223980.1975.9915803.
+Rogers, R.W., 1983. Cognitive and physiological processes in fear appeals and attitude change: a revised theory of protection motivation. In: Cacioppo, J.T., Petty, R.E. 
+(Eds.), Social Psychophysiology: A Sourcebook. Guilford Press, pp. 153–176.
+Rosenstock, I.M., 1974. Historical origins of the health belief model. Health Educ. Monogr. 2 (4), 328–335. https://doi.org/10.1177/109019817400200403.
+Roy, K.C., Hasan, S., Culotta, A., Eluru, N., 2021. Predicting traffic demand during hurricane evacuation using real-time data from transportation systems and social 
+media. Transp. Res. Part C Emerging Technol. 131, 103339. https://doi.org/10.1016/j.trc.2021.103339.
+Shanahan, M., McDonell, K., Reynolds, L., 2023. Role play with large language models. Nature 623 (7987), 493–498.
+Shao, C., Xu, F., Fan, B., Ding, J., Yuan, Y., Wang, M., Li, Y. (2024). Chain-of-planned-behaviour workflow elicits few-shot mobility generation in llms. arXiv Preprint 
+arXiv:2402.09836.
+Shen, Z., Ji, C., Lu, S., 2024. Transportation network resilience response to the spatial feature of hazards. Transp. Res. Part D: Transp. Environ. 128, 104121.
+Song, X., Zhang, Q., Sekimoto, Y., Shibasaki, R., 2014. Prediction of human emergency behavior and their mobility following large-scale disaster. In: In Proceedings of 
+the 20th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, pp. 5–14.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+21 
+Song, X., Zhang, Q., Sekimoto, Y., Shibasaki, R., Yuan, N. J., Xie, X. (2015). A simulator of human emergency mobility following disasters: Knowledge transfer from 
+big disaster data. In Proceedings of the AAAI conference on artificial intelligence (Vol. 29).
+Song, X., Zhang, Q., Sekimoto, Y., Shibasaki, R., Yuan, N.J., Xie, X., 2016. Prediction and simulation of human mobility following natural disasters. ACM Trans. Intelli. 
+Syst. Technol. (TIST) 8 (2), 1–23.
+Tang, J., Zhao, P., Gong, Z., Zhao, H., Huang, F., Li, J., Chen, Z., Yu, L., Chen, J., 2023. Resilience patterns of human mobility in response to extreme urban floods. 
+Natl. Sci. Rev. 10 (8), nwad097.
+Truscott, J., Ferguson, N. M. (2012). Evaluating the adequacy of gravity models as a description of human mobility for epidemic modelling.
+U˘gurel, E., Huang, S., Chen, C., 2024. Learning to generate synthetic human mobility data: a physics-regularized Gaussian process approach based on multiple kernel 
+learning. Transp. Res. B Methodol. 189, 103064.
+Wang, H., Hu, Y., Guo, Y., Wu, Z., Yan, D., 2022. Urban flood forecasting based on the coupling of numerical weather model and stormwater model: a case study of 
+zhengzhou city. J. Hydrol.: Reg. Stud. 39, 100985.
+Wang, X., Fang, M., Zeng, Z., Cheng, T. (2023). Where would i go next? Large language models as human mobility predictors. arXiv Preprint arXiv:2308.15197.
+Wang, J., Jiang, R., Yang, C., Wu, Z., Shibasaki, R., Koshizuka, N., Xiao, C., et al., 2024. Large language models as urban residents: an llm agent framework for 
+personal mobility generation. Adv. Neural Inf. Proces. Syst. 37, 124547–124574.
+Wei, J., Wang, X., Schuurmans, D., Bosma, M., Ichter, B., Xia, F., Chi, E., Le, Q.V., Zhou, D., 2022. Chain-of-thought prompting elicits reasoning in large language 
+models. Adv. Neural Inf. Proces. Syst. 35, 24824–24837.
+WorldPop. (2023). WorldPop - school of geography and environmental science, university of southampton. Retrieved from https://www.worldpop.org/.
+Xing, Z., Zhang, X., Zan, X., Xiao, C., Li, B., Han, K., Liu, Z., Liu, J., 2021. Crowdsourced social media and mobile phone signaling data for disaster impact assessment: 
+a case study of the 8.8 jiuzhaigou earthquake. Int. J. Disaster Risk Reduction 58, 102200.
+Yabe, T., Sekimoto, Y., Tsubouchi, K., Ikemoto, S., 2019. Cross-comparative analysis of evacuation behavior after earthquakes using mobile phone data. PLoS One 14 
+(2), e0211375.
+Yabe, T., Tsubouchi, K., Sekimoto, Y., 2017. CityFlowFragility: measuring the fragility of people flow in cities to disasters using GPS data collected from smartphones. 
+Proc. ACM Interactive Mobile Wearable Ubiquitous Technol. 1 (3), 1–17. https://doi.org/10.1145/3130982.
+You, J., Muhammad, A.S., He, X., Xie, T., Wang, Z., Fan, X., Yu, Z., Chen, L., Wang, C., 2022. PANDA: predicting road risks after natural disasters leveraging 
+heterogeneous urban data. CCF Trans. Pervasive Comput. Int. 4 (4), 393–407.
+Z. Zhang et al.                                                                                                                                                                                                          Transportation Research Part D 162 (2027) 105685 
+22 

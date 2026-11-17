@@ -1,0 +1,3075 @@
+
+
+===== [page 1] =====
+ 
+ 
+Page 1 of 75
+Understanding the Decision Making of 
+Evacuees from Hurricane Irma 
+ 
+Survey Flow 
+
+
+===== [page 2] =====
+ 
+ 
+Page 2 of 75
+Standard: Welcome! (1 Question) 
+Standard: Consent (1 Question) 
+Block: Mobile Phone Usage (5 Questions) 
+Standard: Evacuation Information (6 Questions) 
+Branch: New Branch 
+If 
+If Did you receive the following orders? Check all that apply. Mandatory 
+Evacuation Order - Yes Is Selected 
+Block: Mandatory Evacuation (4 Questions) 
+Branch: New Branch 
+If 
+If Did you receive the following orders? Check all that apply. 
+Voluntary/Recommended Evacuation Order - Yes Is Selected 
+Standard: Voluntary/Recommended Evacuation (4 Questions) 
+Branch: New Branch 
+If 
+If Did you receive the following orders? Check all that apply. Shelter-in-Place 
+Order - Yes Is Selected 
+Standard: Shelter-in-Place (4 Questions) 
+Standard: Decided to Not Evacuate (2 Questions) 
+Branch: New Branch 
+If 
+If Did you and your household evacuate your residence due to Hurricane Irma? 
+Yes Is Selected 
+Standard: Evacuation Behavior (33 Questions) 
+Branch: New Branch 
+If 
+If Did you and your household evacuate your residence due to Hurricane Irma? 
+No Is Selected 
+Block: Decided to Not Evacuate (2 Questions) 
+Standard: Prior to Evacuation Beliefs (4 Questions) 
+Standard: Sharing Economy Platforms (15 Questions) 
+Standard: Government Actions (3 Questions) 
+Standard: Demographic Questions (30 Questions) 
+Block: Willingness Questions (26 Questions) 
+Standard: Focus Group Confirmation (4 Questions) 
+Standard: Drawing Eligibility (4 Questions) 
+
+
+===== [page 3] =====
+ 
+ 
+Page 3 of 75
+Page Break 
+ 
+ 
+ 
+
+
+===== [page 4] =====
+ 
+ 
+Page 4 of 75
+ 
+Start of Block: Welcome! 
+ 
+Q1 Welcome!     Understanding the Decision Making of Evacuees     Thank you for your 
+interest in this research. Your response is highly valuable in helping us understand how people 
+make decisions in stressful situations. This survey will take approximately 20 minutes.  
+You will also have an opportunity to participate in future focus groups. They will occur within 6 
+months of this survey and will include an incentive. You can indicate your interest in these focus 
+groups at the end of the survey.     The next section will consist of a consent form. From the 
+consent form, you do not have to answer all question, you may skip any questions you do not 
+wish to answer, and you may terminate your participation at any time without a penalty.      Not 
+only do we hope to gain valuable information about your decision-making process, we hope that 
+you will also gain insights into how you and your household make decisions. Thank you! 
+ 
+End of Block: Welcome! 
+ 
+Start of Block: Consent 
+ 
+Q2 Study Information Sheet and Consent Form      University of California, 
+Berkeley     Understanding the Decision Making of Evacuees     Doctoral student Stephen 
+Wong (with Professor Susan Shaheen and Professor Joan Walker), from the Department of 
+Civil and Environmental Engineering at the University of California, Berkeley (UC Berkeley), is 
+conducting a research project.  You are invited to participate in this study because of your 
+experience in the recent evacuation process for the recent disaster. The researchers will be 
+obtaining your consent for this project.     Why is this study being done?  Disasters have a 
+major impact on the built environment and many situations require the movement of people 
+away from harm to reduce risk and ensure human safety.  This evacuation of people is an 
+integral part of emergency management plans.  Despite advances in transportation 
+management strategies, evacuations continue to cause congested conditions on transportation 
+networks.  At the same time, vulnerable populations frequently lack adequate resources for 
+evacuation and sheltering, and a large proportion of the population do not comply with 
+evacuation orders.  As part of this study, we are analyzing how individuals make decisions after 
+receiving a mandatory or recommended evacuation order.      What will happen if I take part 
+in this research study?  We will ask you survey questions related to your experience with 
+evacuating or not evacuating your residence during the last disaster.  These questions will 
+include demographic information about you and your household, the address of your household, 
+the choices you made during the event, and your opinions on the use of sharing economy 
+platforms (i.e., technology platforms that allow the sharing of goods such as transportation and 
+housing). If the survey includes questions you do not wish to or cannot answer, you may either 
+choose to skip those questions, or you may choose not to participate in the study. All pieces of 
+personal information and personal information of others will be kept as confidential as possible. 
+Only one member from each immediate household may take the survey. You may fill out the 
+survey at a time and place of your choosing.     How long will I be in the research study?  
+
+
+===== [page 5] =====
+ 
+ 
+Page 5 of 75
+The survey will take approximately 20 minutes.     Are there any potential benefits if I 
+participate?  Participants will not directly benefit from the research.  However, the results of the 
+research may contribute to an improved understanding of individuals’ decision making in 
+disaster situations.      Will I be compensated for my time?  A participant will be entered into a 
+drawing if the participant 1) completes the survey, and 2) provides an email address or home 
+address. These individuals will be eligible to win 1 of 5 VISA Gift Cards valued at $200 each. 
+The drawing will take place when the last survey is received. For any drawing, the odds of 
+winning depend on how many people have a ticket entered in the drawing. As we do not know 
+how many people will participate in this study-related drawing, we cannot predict what will be 
+the odds of winning a prize. Individuals who win will be sent the gift cards within two weeks of 
+the drawing through email or through their physical home address.     Are there any other 
+parts to this research?  You will have the opportunity to indicate if you are interested in being 
+a part of a focus group. Only individuals who mark their interest in a focus group AND provide 
+an email address, telephone number, or physical address will be eligible. When the surveys are 
+completed, individuals will be chosen at random to participate in a focus group. If you are 
+chosen, you will be contacted within 3 months from the end of the surveys.     Are there any 
+potential risks or discomforts that I can expect from this study?  If you experienced stress 
+or anxiety during the evacuation process, you may remember some of these feelings and you 
+may find it uncomfortable to answer certain questions.  However, the questions are phrased to 
+minimize any lasting negative effects. There is also a risk of a breach of confidentiality. This will 
+risk has been minimized by using encrypted password-protected data storage and by omitting 
+exact street addresses in any publications or reports on the research.          Will information 
+about me and my participation be kept confidential?  Your information will be kept as 
+confidential as possible.  Confidentiality will be maintained by using encrypted password-
+protected data storage on the web.  Only the primary researchers will have access to this data. 
+Participants should close the webpage after they have finished the survey in order to protect 
+their privacy. Confidentiality cannot be guaranteed since data will be transmitted online and data 
+will be stored online.     How long will data be retained?  Data will be retained for at most 
+three years after the last survey has been conducted.     What are my rights if I take part in 
+this study?  ·       You can choose whether or not you want to be in this study, and you may 
+withdraw your consent and discontinue participation at any time.  ·       Whatever decision you 
+make, there will be no penalty to you or loss of benefits to which you are otherwise entitled.  
+·       You may refuse to answer any questions that you do not want to answer and still remain in 
+the study.     Whom can I contact if I have questions about this study?  ·       The research 
+team:    If you have any questions, comments or concerns about the research, you can talk to 
+one of the researchers. Please contact:      Susan Shaheen, Professor (Faculty Sponsor)  
+sashaheen@tsrc.berkeley.edu or 510-642-9168     Joan Walker, Professor (Faculty Sponsor)  
+joanwalker@berkeley.edu or 510-642-6897     Stephen Wong, Doctoral Student  
+stephen.wong@berkeley.edu or 330-998-4533     ·       University of California, Berkeley 
+Office for Protection of Human Subjects (OPHS):  If you have any questions or concerns 
+about your rights and treatment as a research subject, you may contact the office of UC 
+Berkeley's Committee for the Protection of Human Subjects, at 510-642-7461 or 
+subjects@berkeley.edu or write to:      Office for Protection of Human Subjects 
+ 2150 Shattuck Avenue, Suite 300  
+
+
+===== [page 6] =====
+ 
+ 
+Page 6 of 75
+ University of California at Berkeley 
+ Berkeley, CA 94704-5940        PARTICIPANT CONSENT  Print a copy of this page to keep for 
+future reference. If you wish to participate in this study, please click the button below that says 
+“Accept.”    
+o Accept  (1)  
+ 
+End of Block: Consent 
+ 
+Start of Block: Mobile Phone Usage 
+ 
+Q3 Mobile Phone Usage 
+ 
+ 
+ 
+Q4 Select the option that best describes your cell phone status: 
+o Do not own a cell phone  (1)  
+o Own a typical cell phone (non-smartphone)  (2)  
+o Own a smartphone  (3)  
+ 
+ 
+ 
+Q5 Select the option that best describes your cell phone: 
+o Do not own a cell phone  (1)  
+o Only call and text capabilities  (2)  
+o Call, text, and internet access but does not have a data plan  (3)  
+o Call, text, and internet access and has a data plan  (4)  
+ 
+ 
+ 
+
+
+===== [page 7] =====
+ 
+ 
+Page 7 of 75
+Q6 Do you have access to an internet connection at your home (wifi or broadband)? 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+ 
+Q7 Do you use any in-vehicle or smartphone-based applications to navigate (Google Maps, 
+Waze, etc.)? 
+o Yes  (1)  
+o No  (2)  
+ 
+End of Block: Mobile Phone Usage 
+ 
+Start of Block: Evacuation Information 
+ 
+Q8 Information About Your Evacuation 
+ 
+ 
+ 
+Q9 All questions in this section pertain to Hurricane Irma, a disaster that you may have 
+experienced.  While remembering this information may be difficult, it is important that you 
+provide as accurate information as possible. 
+ 
+ 
+ 
+Q10 Do you live in an evacuation zone? 
+o Yes  (1)  
+o No  (2)  
+o I don't know  (3)  
+ 
+ 
+ 
+
+
+===== [page 8] =====
+ 
+ 
+Page 8 of 75
+Q11 Did any part of your county receive an evacuation order? 
+o Yes  (1)  
+o No  (2)  
+o I don't know  (3)  
+ 
+ 
+ 
+Q12 Did you and your household evacuate your residence due to Hurricane Irma? 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+ 
+Q13 Did you receive the following orders? Check all that apply. 
+ 
+Yes (1) 
+No (2) 
+Mandatory Evacuation Order 
+(1)  
+o  
+o  
+Voluntary/Recommended 
+Evacuation Order (2)  
+o  
+o  
+Shelter-in-Place Order (3)  
+o  
+o  
+No Official Order (4)  
+o  
+o  
+ 
+ 
+End of Block: Evacuation Information 
+ 
+Start of Block: Mandatory Evacuation 
+ 
+
+
+===== [page 9] =====
+ 
+ 
+Page 9 of 75
+Q14 How did you receive the mandatory evacuation order and when did you receive it? Check 
+all that apply. 
+ 
+Sun, 
+Sept. 
+3 (1) 
+Mon, 
+Sept. 
+4 (2) 
+Tues, 
+Sept. 
+5 (3) 
+Wed, 
+Sept 
+6 (4) 
+Thurs, 
+Sept. 
+7 (5) 
+Fri, 
+Sept. 
+8 (6) 
+Sat, 
+Sept. 
+9 (7) 
+Sun, 
+Sept. 
+10 
+(8) 
+Mon, 
+Sept. 
+11 
+(9) 
+Tues, 
+Sept. 
+12 
+(10) 
+Wed, 
+Sept. 
+13 
+(11) 
+Thurs, 
+Sept. 
+14 
+(12) 
+Reverse 911 
+call (1)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Text message 
+(2)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Television 
+announcement 
+(3)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Radio 
+announcement 
+(4)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Flyer (5)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Personal 
+interaction 
+with a public 
+official (6)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Social media 
+(Facebook, 
+Instagram, 
+Twitter, etc) 
+(7)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Alert from a 
+subscribed 
+service (13)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Internet 
+website (news, 
+county or state 
+emergency 
+management 
+/government 
+page) (12)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Smartphone 
+application (8)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+
+
+===== [page 10] =====
+ 
+ 
+Page 10 of 75
+Someone told 
+you (neighbor, 
+friend, 
+extended, 
+family) (9)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Billboard or 
+road message 
+board (11)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Other (10)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+ 
+ 
+ 
+ 
+Q15  
+Did you seek an additional source of information to confirm the mandatory evacuation? 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+ 
+Q16 To what extent was the mandatory evacuation order or any subsequent message about the 
+order clear? 
+o Extremely clear  (1)  
+o Somewhat clear  (2)  
+o Neither clear nor unclear  (3)  
+o Somewhat unclear  (4)  
+o Extremely unclear  (5)  
+ 
+ 
+ 
+Q17 Please comment on what was confusing about the messages. 
+________________________________________________________________ 
+
+
+===== [page 11] =====
+ 
+ 
+Page 11 of 75
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+End of Block: Mandatory Evacuation 
+ 
+Start of Block: Voluntary/Recommended Evacuation 
+ 
+
+
+===== [page 12] =====
+ 
+ 
+Page 12 of 75
+Q18 How did you receive the voluntary/recommended evacuation order and when did you 
+receive it? Check all that apply. 
+ 
+Sun, 
+Sept. 
+3 (1) 
+Mon, 
+Sept. 
+4 (2) 
+Tues, 
+Sept. 
+5 (3) 
+Wed, 
+Sept 
+6 (4) 
+Thurs, 
+Sept. 
+7 (5) 
+Fri, 
+Sept. 
+8 (6) 
+Sat, 
+Sept. 
+9 (7) 
+Sun, 
+Sept. 
+10 
+(8) 
+Mon, 
+Sept. 
+11 
+(9) 
+Tues, 
+Sept. 
+12 
+(10) 
+Wed, 
+Sept. 
+13 
+(11) 
+Thurs, 
+Sept. 
+14 
+(12) 
+Reverse 911 
+call 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(11)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Text message 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (12)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Television 
+announcement
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(13)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Radio 
+announcement
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(14)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+
+
+===== [page 13] =====
+ 
+ 
+Page 13 of 75
+Flyer  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(15)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Personal 
+interaction 
+with a public 
+official  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(16)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Social media 
+(Facebook, 
+Instagram, 
+Twitter, etc) 
+(17)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Alert from a 
+subscribed 
+service  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(18)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Internet 
+website (news, 
+county or state 
+emergency 
+management 
+/government 
+page) (19)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Smartphone 
+application 
+ 
+ 
+▢▢▢▢▢▢▢▢▢▢▢▢
+
+
+===== [page 14] =====
+ 
+ 
+Page 14 of 75
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (20)  
+Someone told 
+you (neighbor, 
+friend, 
+extended, 
+family)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(21)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Billboard or 
+road message 
+board (22)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Other (10)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+ 
+ 
+ 
+ 
+Q19  
+Did you seek an additional source of information to confirm the 
+voluntary/recommended evacuation? 
+▢ 
+Yes  (1)  
+▢ 
+No  (2)  
+ 
+ 
+ 
+
+
+===== [page 15] =====
+ 
+ 
+Page 15 of 75
+Q20 To what extent was the voluntary/recommended evacuation order or any subsequent 
+message about the order clear? 
+o Extremely clear  (1)  
+o Somewhat clear  (2)  
+o Neither clear nor unclear  (3)  
+o Somewhat unclear  (4)  
+o Extremely unclear  (5)  
+ 
+ 
+ 
+Q21 Please comment on what was confusing about the messages. 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+End of Block: Voluntary/Recommended Evacuation 
+ 
+Start of Block: Shelter-in-Place 
+ 
+
+
+===== [page 16] =====
+ 
+ 
+Page 16 of 75
+Q22 How did you receive the shelter-in-place order and when did you receive it? Check all that 
+apply. 
+ 
+Sun, 
+Sept. 
+3 (1) 
+Mon, 
+Sept. 
+4 (2) 
+Tues, 
+Sept. 
+5 (3) 
+Wed, 
+Sept 
+6 (4) 
+Thurs, 
+Sept. 
+7 (5) 
+Fri, 
+Sept. 
+8 (6) 
+Sat, 
+Sept. 
+9 (7) 
+Sun, 
+Sept. 
+10 
+(8) 
+Mon, 
+Sept. 
+11 
+(9) 
+Tues, 
+Sept. 
+12 
+(10) 
+Wed, 
+Sept. 
+13 
+(11) 
+Thurs, 
+Sept. 
+14 
+(12) 
+Reverse 911 
+call (1)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Text message 
+(2)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Television 
+announcement 
+(3)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Radio 
+announcement 
+(4)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Flyer (5)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Personal 
+interaction 
+with a public 
+official (6)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Social media 
+(Facebook, 
+Instagram, 
+Twitter, etc) 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (7)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Alert from a 
+subscribed 
+service  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+▢▢▢▢▢▢▢▢▢▢▢▢
+
+
+===== [page 17] =====
+ 
+ 
+Page 17 of 75
+ 
+ 
+ 
+(11)  
+Internet 
+website (news, 
+county or state 
+emergency 
+management 
+/government 
+page)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(12)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Smartphone 
+application 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ (13)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Someone told 
+you (neighbor, 
+friend, 
+extended, 
+family)  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(14)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Billboard or 
+road message 
+board (15)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+Other (10)  
+▢▢▢▢▢▢▢▢▢▢▢▢
+ 
+
+
+===== [page 18] =====
+ 
+ 
+Page 18 of 75
+ 
+ 
+ 
+Q23  
+Did you seek an additional source of information to confirm the shelter-in-place? 
+▢ 
+Yes  (1)  
+▢ 
+No  (2)  
+ 
+ 
+ 
+Q24 To what extent was the shelter-in-place order or any subsequent message about the order 
+clear? 
+o Extremely clear  (1)  
+o Somewhat clear  (2)  
+o Neither clear nor unclear  (3)  
+o Somewhat unclear  (4)  
+o Extremely unclear  (5)  
+ 
+ 
+ 
+Q25 Please comment on what was confusing about the messages. 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+End of Block: Shelter-in-Place 
+ 
+Start of Block: Decided to Not Evacuate 
+ 
+
+
+===== [page 19] =====
+ 
+ 
+Page 19 of 75
+Q26 Why did you decide to not evacuate? (Check all that apply) 
+▢ 
+Didn't receive any orders  (1)  
+▢ 
+Didn't want to leave  (2)  
+▢ 
+Believed the storm would not be bad  (3)  
+▢ 
+No friends or family to shelter with  (4)  
+▢ 
+Didn't want to sit in traffic  (5)  
+▢ 
+Didn’t want to go to public shelter  (6)  
+▢ 
+Didn't have the money to evacuate  (7)  
+▢ 
+No transportation to get to shelter  (8)  
+▢ 
+Was not sure where I could take my pets  (9)  
+▢ 
+Wanted to protect my property  (10)  
+▢ 
+Some requirement to go to work during storm  (11)  
+▢ 
+Tried to but ended up going back home due to traffic  (12)  
+▢ 
+Tried to but was turned away at shelter  (13)  
+▢ 
+Other (please explain all other reasons)  (14) 
+________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 20] =====
+ 
+ 
+Page 20 of 75
+Q172 What was the cost of the following components of the non-evacuation? If you did not 
+spend money on that service or item, respond with 0. 
+ 
+Click to write Scale point 1 (1) 
+Food (1)  
+ 
+Water (2)  
+ 
+Gas (3)  
+ 
+Home supplies (i.e., plywood, sandbags, 
+generators, etc...) (4)  
+ 
+Safety supplies (i.e., radio, water filters, 
+flashlight, etc...) (6)  
+ 
+Other (please specify) (5)  
+ 
+ 
+ 
+End of Block: Decided to Not Evacuate 
+ 
+Start of Block: Evacuation Behavior 
+ 
+Q27 How many trips did you take between receiving the evacuation notice and evacuating (e.g., 
+trips may include but are not limited to trips to gather supplies, pickup family members)? 
+ 
+0 
+2 
+4 
+6 
+8 
+10 12 14 16 18 20 
+ 
+
+
+===== [page 21] =====
+ 
+ 
+Page 21 of 75
+Number of Trips () 
+ 
+ 
+ 
+ 
+
+
+===== [page 22] =====
+ 
+ 
+Page 22 of 75
+Q28 As a reminder, Hurricane Irma made landfall near Cudjoe Key, Florida at 9:00 am EST on 
+September 10 and once again at San Marco Island, Florida at 3:30 pm EST on September 10. 
+ 
+ 
+Choose the date or the approximate date you evacuated.  
+o Before Sunday, Sept. 3  (1)  
+o Sunday, Sept. 3  (2)  
+o Monday, Sept. 4  (3)  
+o Tuesday, Sept. 5  (4)  
+o Wednesday, Sept. 6  (5)  
+o Thursday, Sept. 7  (6)  
+o Friday, Sept. 8  (7)  
+o Saturday, Sept. 9  (8)  
+o Sunday, Sept. 10  (9)  
+o Monday, Sept. 11  (10)  
+o Tuesday, Sept. 12  (11)  
+o Wednesday, Sept. 13  (12)  
+o Thursday, Sept. 14  (13)  
+o Friday, Sept. 15  (14)  
+o Saturday, Sept. 16  (15)  
+o Sunday, Sept. 17  (16)  
+o After Sunday, Sept. 17  (17)  
+ 
+ 
+ 
+
+
+===== [page 23] =====
+ 
+ 
+Page 23 of 75
+Q29 What time or approximate time did you evacuate? 
+o 12:00 AM  (1)  
+o 1:00 AM  (2)  
+o 2:00 AM  (3)  
+o 3:00 AM  (4)  
+o 4:00 AM  (5)  
+o 5:00 AM  (6)  
+o 6:00 AM  (7)  
+o 7:00 AM  (8)  
+o 8:00 AM  (9)  
+o 9:00 AM  (10)  
+o 10:00 AM  (11)  
+o 11:00 AM  (12)  
+o 12:00 PM  (13)  
+o 1:00 PM  (14)  
+o 2:00 PM  (15)  
+o 3:00 PM  (16)  
+o 4:00 PM  (17)  
+o 5:00 PM  (18)  
+o 6:00 PM  (19)  
+o 7:00 PM  (20)  
+o 8:00 PM  (21)  
+
+
+===== [page 24] =====
+ 
+ 
+Page 24 of 75
+o 9:00 PM  (22)  
+o 10:00 PM  (23)  
+o 11:00 PM  (24)  
+ 
+ 
+ 
+Q30 Approximately, how long did the evacuation process take, from when you left 
+your residence to reaching your final destination? 
+ 
+0 
+10 20 30 40 50 60 70 80 90 100 
+ 
+Number of Hours () 
+ 
+ 
+ 
+ 
+Q31 What state was your final destination? 
+________________________________________________________________ 
+ 
+ 
+ 
+Q32 What county was your final destination? 
+________________________________________________________________ 
+ 
+ 
+ 
+Q33 What city was your final destination? 
+________________________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 25] =====
+ 
+ 
+Page 25 of 75
+Q34  
+Choose the date or the approximate date you arrived at your destination. 
+o Before Sunday, Sept. 3  (1)  
+o Sunday, Sept. 3  (2)  
+o Monday, Sept. 4  (3)  
+o Tuesday, Sept. 5  (4)  
+o Wednesday, Sept. 6  (5)  
+o Thursday, Sept. 7  (6)  
+o Friday, Sept. 8  (7)  
+o Saturday, Sept. 9  (8)  
+o Sunday, Sept. 10  (9)  
+o Monday, Sept. 11  (10)  
+o Tuesday, Sept. 12  (11)  
+o Wednesday, Sept. 13  (12)  
+o Thursday, Sept. 14  (13)  
+o Friday, Sept. 15  (14)  
+o Saturday, Sept. 16  (15)  
+o Sunday, Sept. 17  (16)  
+o After Sunday, Sept. 17  (17)  
+ 
+ 
+ 
+
+
+===== [page 26] =====
+ 
+ 
+Page 26 of 75
+Q35 What time or approximate time did you arrive at your destination? 
+o 12:00 AM  (1)  
+o 1:00 AM  (2)  
+o 2:00 AM  (3)  
+o 3:00 AM  (4)  
+o 4:00 AM  (5)  
+o 5:00 AM  (6)  
+o 6:00 AM  (7)  
+o 7:00 AM  (8)  
+o 8:00 AM  (9)  
+o 9:00 AM  (10)  
+o 10:00 AM  (11)  
+o 11:00 AM  (12)  
+o 12:00 PM  (13)  
+o 1:00 PM  (14)  
+o 2:00 PM  (15)  
+o 3:00 PM  (16)  
+o 4:00 PM  (17)  
+o 5:00 PM  (18)  
+o 6:00 PM  (19)  
+o 7:00 PM  (20)  
+o 8:00 PM  (21)  
+
+
+===== [page 27] =====
+ 
+ 
+Page 27 of 75
+o 9:00 PM  (22)  
+o 10:00 PM  (23)  
+o 11:00 PM  (24)  
+ 
+ 
+ 
+Q36 How long did you stay at your final destination? 
+o Less than 1 day  (1)  
+o 1-2 days  (2)  
+o 3-4 days  (3)  
+o 5-6 days  (4)  
+o 7-8 days  (5)  
+o 9-10 days  (6)  
+o More than 10 days  (7)  
+ 
+ 
+ 
+Q37 What type of shelter was your final destination? 
+o A friend's residence  (1)  
+o A family member's residence  (2)  
+o A hotel or motel  (3)  
+o A public shelter  (4)  
+o Any shelter found through a peer-to-peer service (e.g., Airbnb)  (5)  
+o A portable vehicle (e.g., automobile, camper, RV)  (6)  
+o Other  (7) ________________________________________________ 
+ 
+
+
+===== [page 28] =====
+ 
+ 
+Page 28 of 75
+ 
+ 
+Q38 Why did you decide to travel a far distance out of your county to your final destination? 
+Check all that apply. 
+▢ 
+I stayed in the county  (1)  
+▢ 
+Because my location was ordered to evacuate the county  (2)  
+▢ 
+I felt my home wasn’t safe for this storm and I felt that’s how far I had to go to get 
+to safety.  (3)  
+▢ 
+That was the location of the friend/relative you wanted to stay with.  (4)  
+▢ 
+That’s how far you had to go to find available hotel/motel/public shelter or other 
+location to stay.  (5)  
+▢ 
+Other (please explain)  (6) 
+________________________________________________ 
+ 
+ 
+ 
+Q39 Did you have to shelter in more than one location throughout the evacuation process 
+before you returned home? 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+ 
+
+
+===== [page 29] =====
+ 
+ 
+Page 29 of 75
+Q40  
+Choose the date or the approximate date you returned home to your residence after the 
+evacuation. 
+o Before Sunday, Sept. 3  (1)  
+o Sunday, Sept. 3  (2)  
+o Monday, Sept. 4  (3)  
+o Tuesday, Sept. 5  (4)  
+o Wednesday, Sept. 6  (5)  
+o Thursday, Sept. 7  (6)  
+o Friday, Sept. 8  (7)  
+o Saturday, Sept. 9  (8)  
+o Sunday, Sept. 10  (9)  
+o Monday, Sept. 11  (10)  
+o Tuesday, Sept. 12  (11)  
+o Wednesday, Sept. 13  (12)  
+o Thursday, Sept. 14  (13)  
+o Friday, Sept. 15  (14)  
+o Saturday, Sept. 16  (15)  
+o Sunday, Sept. 17  (16)  
+o After Sunday, Sept. 17  (17)  
+ 
+ 
+ 
+
+
+===== [page 30] =====
+ 
+ 
+Page 30 of 75
+Q41 Why did you decide to return on that date? Check all that apply. 
+▢ 
+Received a safe-return notice from a public official or news source about 
+reentering  (1)  
+▢ 
+Was told by a secondary source that it was safe to return  (2)  
+▢ 
+Learned that power was restored  (3)  
+▢ 
+Learned that water restored  (4)  
+▢ 
+Had to return for work  (5)  
+▢ 
+Had to return for child's school  (6)  
+▢ 
+Wanted to survey damage as soon as possible  (7)  
+▢ 
+Wanted to protect property as soon as possible  (8)  
+▢ 
+Other (please explain)  (9) 
+________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 31] =====
+ 
+ 
+Page 31 of 75
+Q42 What primary mode of transportation did you use to evacuation? 
+o One personal vehicle  (1)  
+o Two personal vehicles  (2)  
+o More than two personal vehicles  (3)  
+o Carpool/vanpool with non-household people  (4)  
+o Shuttle service  (5)  
+o Ridesourcing/TNC (e.g., Uber, Lyft)  (6)  
+o Microtransit (e.g., Chariot)  (7)  
+o Carsharing (e.g., Zipcar, car2go)  (8)  
+o Rental car  (9)  
+o Rail (e.g., light/heavy, subway/metro, trolley)  (10)  
+o Bus  (11)  
+o Walk  (12)  
+o Motorcycle/scooter  (13)  
+o Bicycle  (14)  
+o Aircraft  (15)  
+o Recreational vehicle (RV)  (16)  
+o Other  (17) ________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 32] =====
+ 
+ 
+Page 32 of 75
+Q43 During your evacuation, did you travel via public roads? 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+Display This Question: 
+If During your evacuation, did you travel via public roads? = Yes 
+ 
+Q44 What overall percentage of your route did you take for the evacuation? (Must add to 100) 
+Highways : _______  (1) 
+Major local roads : _______  (2) 
+Minor local roads : _______  (3) 
+Rural roads : _______  (4) 
+Total : ________  
+ 
+ 
+Display This Question: 
+If During your evacuation, did you travel via public roads? = Yes 
+ 
+Q45 What was the largest/most major road you took to evacuate? 
+________________________________________________________________ 
+ 
+ 
+Display This Question: 
+If During your evacuation, did you travel via public roads? = Yes 
+ 
+Q46 Did you use any smartphone or GPS-based navigational tool during the evacuation (Waze, 
+Google Maps)? 
+o Yes, and I frequently followed the instructions  (1)  
+o Yes, but I rarely followed the instructions  (2)  
+o No  (3)  
+ 
+ 
+
+
+===== [page 33] =====
+ 
+ 
+Page 33 of 75
+ 
+Q47 What was the cost of the following components of the evacuation? If you did not spend 
+money on that service or item, respond with 0. 
+ 
+Money spent in $ (1) 
+Food (1)  
+ 
+Water (2)  
+ 
+Gas (3)  
+ 
+Rental vehicle (4)  
+ 
+Lodging (5)  
+ 
+Clothes (6)  
+ 
+Other (7)  
+ 
+ 
+ 
+ 
+ 
+Q48 How many work days did you miss because of the evacuation? 
+ 
+0 
+2 
+4 
+6 
+8 
+10 12 14 16 18 20 
+ 
+
+
+===== [page 34] =====
+ 
+ 
+Page 34 of 75
+Work Days Missed () 
+ 
+ 
+ 
+ 
+Q49 Did you tow a large item during the evacuation process (i.e., trailer, boat, motor home, 
+camper, or something similar)? 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+ 
+Q50 Did you use a ridesourcing/TNC or ridesharing platform at any point during your evacuation 
+or reentry to your residence?  This may include Uber, Lyft, Gett, Chariot, or Via. 
+o Yes (for both)  (1)  
+o Yes (for evacuation only)  (2)  
+o Yes (for reentry only)  (3)  
+o No  (4)  
+ 
+ 
+ 
+Q51 Did you use a carsharing platform at any point during your evacuation or reentry to your 
+residence? This may include Zipcar, car2go, Getaround, or Turo. 
+o Yes (for both)  (1)  
+o Yes (for evacuation only)  (2)  
+o Yes (for reentry only)  (3)  
+o No  (4)  
+ 
+ 
+ 
+
+
+===== [page 35] =====
+ 
+ 
+Page 35 of 75
+Q52 Did you use a shared housing platform at any point during your evacuation ? This may 
+include Airbnb, Couchsurfing, Tripping, HomeAway, VRBO, or Wimdu. 
+o Yes  (1)  
+o No  (2)  
+ 
+ 
+ 
+Q53 How many additional seats with seatbelts did you have across all vehicles combined when 
+you evacuated with your personal vehicle(s)? 
+o Did not evacuate with a personal vehicle  (1)  
+o 0  (2)  
+o 1  (3)  
+o 2  (4)  
+o 3  (5)  
+o 4  (6)  
+o 5  (7)  
+o More than 5  (8)  
+ 
+ 
+ 
+Q54 For the next several questions, imagine a possible situation in which you had known of 
+individuals in need of a ride during the evacuation. 
+ 
+ 
+ 
+
+
+===== [page 36] =====
+ 
+ 
+Page 36 of 75
+Q55 If you had known of individuals in need of a ride during the evacuation, how likely would 
+you have picked up any additional passenger(s) before you and your household evacuated? 
+o Did not evacuate with a personal vehicle  (1)  
+o Extremely likely  (2)  
+o Somewhat likely  (3)  
+o Neither likely nor unlikely  (4)  
+o Somewhat unlikely  (5)  
+o Extremely unlikely  (6)  
+ 
+ 
+ 
+Q56 If you had known of individuals in need of a ride during the evacuation, how likely would 
+you have picked up any additional passenger(s) while you and your household were evacuating 
+(in transit)? 
+o Did not evacuate with a personal vehicle  (1)  
+o Extremely likely  (2)  
+o Somewhat likely  (3)  
+o Neither likely nor unlikely  (4)  
+o Somewhat unlikely  (5)  
+o Extremely unlikely  (6)  
+ 
+ 
+ 
+Q57 How far away (in minutes) would you be willing to deviate from your route to pick up any 
+additional passenger(s)? 
+ 
+0 10 20 30 40 50 60 70 80 90 100110 120
+ 
+Minutes of Deviation () 
+ 
+ 
+
+
+===== [page 37] =====
+ 
+ 
+Page 37 of 75
+ 
+ 
+Q58 How far away (in miles) would you be willing to carry the passenger(s)? 
+ 
+0 
+20 40 60 80 100 120 140 160 180 200 
+ 
+Miles to Carry () 
+ 
+ 
+ 
+ 
+Q59 What reservations, if any, do you have about picking up any additional passenger(s)? 
+Check all that apply. 
+▢ 
+Having to deviate from evacuation route  (1)  
+▢ 
+Adding extra time to the evacuation  (2)  
+▢ 
+Not having enough fuel  (3)  
+▢ 
+Not having enough water and/or food  (4)  
+▢ 
+Uncertainty about one’s own safety or security  (5)  
+▢ 
+Having to interact with a stranger  (6)  
+▢ 
+Feeling responsible for the additional passenger(s)  (7)  
+▢ 
+Having to drive the individuals for a long period of time  (8)  
+▢ 
+Not having enough space for the additional passenger’(s) belongings  (9)  
+▢ 
+No government oversight  (10)  
+▢ 
+Other  (11) ________________________________________________ 
+▢ 
+⊗I do not have any reservations  (13)  
+ 
+End of Block: Evacuation Behavior 
+
+
+===== [page 38] =====
+ 
+ 
+Page 38 of 75
+ 
+Start of Block: Prior to Evacuation Beliefs 
+ 
+Q60 Prior to Evacuation Beliefs 
+ 
+ 
+ 
+Q61 For each of the following items, think back to before you made the decision to evacuate 
+or not.  
+ 
+ 
+ 
+
+
+===== [page 39] =====
+ 
+ 
+Page 39 of 75
+Q62 To what extent were you worried about the following items BEFORE you made an 
+evacuation decision. 
+ 
+Extremely 
+worried (1) 
+Very worried 
+(2) 
+Moderately 
+worried (3) 
+Slightly 
+worried (4) 
+Not at all 
+worried (5) 
+Severity of 
+the Hurricane 
+Irma (1)  
+o  
+o  
+o  
+o  
+o  
+Evacuating 
+(2)  
+o  
+o  
+o  
+o  
+o  
+Traffic during 
+the 
+evacuation 
+(3)  
+o  
+o  
+o  
+o  
+o  
+Finding 
+housing for 
+the 
+evacuation 
+(4)  
+o  
+o  
+o  
+o  
+o  
+Finding 
+gasoline 
+during the 
+evacuation 
+(5)  
+o  
+o  
+o  
+o  
+o  
+Finding food 
+and water 
+during the 
+evacuation 
+(6)  
+o  
+o  
+o  
+o  
+o  
+Cost of 
+transportation 
+for the 
+evacuation 
+(7)  
+o  
+o  
+o  
+o  
+o  
+Logistics of 
+planning and 
+executing the 
+transportation 
+for the 
+evacuation 
+(8)  
+o  
+o  
+o  
+o  
+o  
+Cost of 
+housing for 
+the 
+evacuation 
+o  
+o  
+o  
+o  
+o  
+
+
+===== [page 40] =====
+ 
+ 
+Page 40 of 75
+(9)  
+Logistics of 
+planning and 
+executing the 
+housing for 
+the 
+evacuation 
+(10)  
+o  
+o  
+o  
+o  
+o  
+ 
+ 
+ 
+ 
+
+
+===== [page 41] =====
+ 
+ 
+Page 41 of 75
+Q63 To what extent did you believe about the following items BEFORE you made an evacuation 
+decision. 
+ 
+Extremely 
+likely (1) 
+Somewhat 
+likely (2) 
+Neither likely 
+nor unlikely 
+(3) 
+Somewhat 
+unlikely (4) 
+Extremely 
+unlikely (5) 
+Your 
+residence 
+was at risk for 
+flooding (1)  
+o  
+o  
+o  
+o  
+o  
+Your 
+residence 
+was at risk for 
+wind (2)  
+o  
+o  
+o  
+o  
+o  
+You or a 
+member of 
+your 
+household 
+would be 
+injured or 
+killed during 
+the disaster. 
+(3)  
+o  
+o  
+o  
+o  
+o  
+Your 
+residence 
+would lose 
+any type of 
+utility from 
+possible 
+flooding and 
+wind (e.g., 
+water, 
+electricity). 
+(4)  
+o  
+o  
+o  
+o  
+o  
+Your 
+residence 
+would suffer 
+major 
+structural or 
+internal 
+damage from 
+possible 
+flooding and 
+wind. (5)  
+o  
+o  
+o  
+o  
+o  
+Your 
+personal 
+belongings in 
+o  
+o  
+o  
+o  
+o  
+
+
+===== [page 42] =====
+ 
+ 
+Page 42 of 75
+your 
+residence 
+would suffer 
+major 
+damage from 
+possible 
+flooding and 
+wind. (6)  
+Your 
+personal 
+belongings 
+would be 
+stolen. (7)  
+o  
+o  
+o  
+o  
+o  
+First 
+responders 
+would be 
+available and 
+could perform 
+rescue 
+operations. 
+(8)  
+o  
+o  
+o  
+o  
+o  
+You or a 
+member of 
+your 
+household 
+would require 
+rescuing. (9)  
+o  
+o  
+o  
+o  
+o  
+You or a 
+member of 
+your 
+household 
+would be 
+required to 
+report to work 
+during the 
+time span of 
+the 
+evacuation. 
+(10)  
+o  
+o  
+o  
+o  
+o  
+ 
+ 
+End of Block: Prior to Evacuation Beliefs 
+ 
+Start of Block: Sharing Economy Platforms 
+ 
+
+
+===== [page 43] =====
+ 
+ 
+Page 43 of 75
+Q64 Sharing Economy Platforms 
+ 
+ 
+ 
+Q65 Have you ever used a ridesourcing/TNC or ridesharing (carpooling) platform? This may 
+include Uber, Lyft, Gett, Chariot, or Via. 
+o Never  (1)  
+o Rarely  (2)  
+o Sometimes (several times a month)  (3)  
+o Often (about once a week)  (4)  
+o Regularly (several times a week or more)  (5)  
+o I don't know what this  (6)  
+ 
+ 
+ 
+Q66 Why have you used a ridesourcing/TNC or ridesharing (carpooling) platform or why have 
+you not? 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 44] =====
+ 
+ 
+Page 44 of 75
+Q67 Have you ever used a carsharing platform? This may include Zipcar, car2go, Getaround, or 
+Turo. 
+o Never  (1)  
+o Rarely  (2)  
+o Sometimes (several times a month)  (3)  
+o Often (about once a week)  (4)  
+o Regularly (several times a week or more)  (5)  
+o I don't know what this is  (6)  
+ 
+ 
+ 
+Q68 Why have you used a carsharing platform or why have you not? 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 45] =====
+ 
+ 
+Page 45 of 75
+Q69 Have you ever used a shared housing platform? This may include Airbnb, Couchsurfing, 
+Tripping, HomeAway, VRBO, or Wimdu. 
+o Never  (1)  
+o Rarely  (2)  
+o Sometimes (several times a month)  (3)  
+o Often (about once a week)  (4)  
+o Regularly (several times a week or more)  (5)  
+o I don't know what this is  (6)  
+ 
+ 
+ 
+Q70 Why have you used a shared housing platform or why have you not? 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+ 
+ 
+Q71 Prior to your decision to evacuate or not, did you have knowledge that some Airbnb rental 
+units are available for free to evacuees? 
+o Yes  (1)  
+o No  (2)  
+o I've never heard of Airbnb  (3)  
+ 
+ 
+ 
+
+
+===== [page 46] =====
+ 
+ 
+Page 46 of 75
+Q72 If you had knowledge that some Airbnb rental units were available for free to evacuees, 
+would you have considered the shelter as a viable destination for an evacuation? 
+o Extremely likely  (1)  
+o Somewhat likely  (2)  
+o Neither likely nor unlikely  (3)  
+o Somewhat unlikely  (4)  
+o Extremely unlikely  (5)  
+ 
+ 
+ 
+Q73 Consider a situation where you were not given any official orders to evacuate or stay and 
+you decided to stay at your residence. 
+ 
+ 
+ 
+Q74 How many spare beds do you have at your residence (including air mattresses)? 
+o 0  (1)  
+o 1  (2)  
+o 2  (3)  
+o 3  (4)  
+o 4  (5)  
+o 5  (6)  
+o More than 5  (7)  
+ 
+ 
+ 
+
+
+===== [page 47] =====
+ 
+ 
+Page 47 of 75
+Q75 To what extent would you be willing to rent part of your residence out to an evacuee? 
+o Extremely likely  (1)  
+o Somewhat likely  (2)  
+o Neither likely nor unlikely  (3)  
+o Somewhat unlikely  (4)  
+o Extremely unlikely  (5)  
+ 
+ 
+ 
+Q76 How much would you charge per night to rent part of your residence out to an evacuee? 
+o $0  (1)  
+o $1-$40  (2)  
+o $41-$80  (3)  
+o $81-$120  (4)  
+o $121-$160  (5)  
+o $161-$200  (6)  
+o More than $200  (7)  
+ 
+ 
+ 
+
+
+===== [page 48] =====
+ 
+ 
+Page 48 of 75
+Q77 To what extent would you be willing to rent part of your residence out to an evacuee for 
+free? 
+o Extremely likely  (1)  
+o Somewhat likely  (2)  
+o Neither likely nor unlikely  (3)  
+o Somewhat unlikely  (4)  
+o Extremely unlikely  (5)  
+ 
+ 
+ 
+Q78 What reservations do you have about housing other evacuees? Check all that apply. 
+▢ 
+Not having enough water and/or food  (1)  
+▢ 
+Uncertainty about one’s own safety or security  (2)  
+▢ 
+Having to interact with a stranger  (3)  
+▢ 
+Feeling responsible for the additional house guest(s)  (4)  
+▢ 
+Having to drive the individuals around  (5)  
+▢ 
+Disruption of everyday tasks  (6)  
+▢ 
+General dislike of hosting  (7)  
+▢ 
+Not having enough space for the additional guest(s)’ belongings  (8)  
+▢ 
+No government oversight  (9)  
+▢ 
+Other  (10) ________________________________________________ 
+▢ 
+⊗I do not have reservations  (11)  
+ 
+
+
+===== [page 49] =====
+ 
+ 
+Page 49 of 75
+End of Block: Sharing Economy Platforms 
+ 
+Start of Block: Government Actions 
+ 
+Q79 Governmental Response 
+ 
+ 
+ 
+Q80 What is your opinion of the government's ability of the following items in the evacuation 
+process? 
+ 
+Extremely 
+effective (1) 
+Very 
+effective (2) 
+Moderately 
+effective (3) 
+Slightly 
+effective (4) 
+Not effective 
+at all (5) 
+Communication 
+(1)  
+o  
+o  
+o  
+o  
+o  
+Management of 
+roadways (2)  
+o  
+o  
+o  
+o  
+o  
+Management of 
+transportation 
+of individuals 
+without cars (3)  
+o  
+o  
+o  
+o  
+o  
+Management of 
+shelters (4)  
+o  
+o  
+o  
+o  
+o  
+Overall 
+response (5)  
+o  
+o  
+o  
+o  
+o  
+ 
+ 
+ 
+ 
+Q81 Tell us more about your story: do you have any additional comments about the evacuation 
+process? 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+________________________________________________________________ 
+ 
+End of Block: Government Actions 
+
+
+===== [page 50] =====
+ 
+ 
+Page 50 of 75
+ 
+Start of Block: Demographic Questions 
+ 
+Q82 Demographic Questions 
+ 
+ 
+ 
+Q83 What is your age? 
+o Under 18  (1)  
+o 18 - 24  (2)  
+o 25 - 34  (3)  
+o 35 - 44  (4)  
+o 45 - 54  (5)  
+o 55 - 64  (6)  
+o 65 - 74  (7)  
+o 75 - 84  (8)  
+o 85 or older  (9)  
+o Prefer not to answer  (10)  
+ 
+ 
+ 
+Q84 What gender do you identify with? 
+o Male  (1)  
+o Female  (2)  
+o Other  (3) ________________________________________________ 
+o Prefer not to answer  (4)  
+ 
+ 
+
+
+===== [page 51] =====
+ 
+ 
+Page 51 of 75
+ 
+Q85 What race do you identify with? Check all that apply. 
+▢ 
+American Indian or Alaska Native  (1)  
+▢ 
+Asian  (2)  
+▢ 
+Black or African American  (3)  
+▢ 
+Native Hawaiian or Pacific Islander  (4)  
+▢ 
+White  (5)  
+▢ 
+Other  (6) ________________________________________________ 
+▢ 
+⊗Prefer not to answer  (7)  
+ 
+ 
+ 
+Q86 What ethnicity do you identify with? 
+o Hispanic or Latino or Spanish Origin  (1)  
+o Not Hispanic or Latino or Spanish Origin  (2)  
+o Prefer not to answer  (3)  
+ 
+ 
+ 
+
+
+===== [page 52] =====
+ 
+ 
+Page 52 of 75
+Q87 What is the highest level of education you have completed? 
+o Less than high school  (1)  
+o High school graduate  (2)  
+o Some college  (3)  
+o 2 year degree  (4)  
+o 4 year degree  (5)  
+o Professional degree  (6)  
+o Doctorate  (7)  
+o Prefer not to answer  (8)  
+ 
+ 
+ 
+Q88 What is your current employment status? 
+o Employed full time  (1)  
+o Employed part time  (2)  
+o Unemployed looking for work  (3)  
+o Unemployed not looking for work  (4)  
+o Retired  (5)  
+o Student  (6)  
+o Disabled  (7)  
+o Prefer not to answer  (8)  
+ 
+ 
+ 
+
+
+===== [page 53] =====
+ 
+ 
+Page 53 of 75
+Q89 Answer the following statements based on household  (including yourself). 
+ 
+ 
+Number of individuals in your household (5)  
+▼ 0 (1) ... Prefer not to answer (12) 
+Number of individuals who are either 
+employed full time or employed part time (1)  
+▼ 0 (1) ... Prefer not to answer (12) 
+Number of children under the age of 18 who 
+are present the majority of the time (2)  
+▼ 0 (1) ... Prefer not to answer (12) 
+Number of adults over the age of 65 who are 
+present the majority of the time (3)  
+▼ 0 (1) ... Prefer not to answer (12) 
+Number of individuals with disabilities who are 
+present the majority of the time (4)  
+▼ 0 (1) ... Prefer not to answer (12) 
+ 
+ 
+ 
+ 
+Q90 Which pets do you own and how many of each do you own? 
+ 
+ 
+Dog (1)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Cat (2)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Bird (3)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Fish (4)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Reptile (5)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Amphibian (6)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Hamster/Guinea Pig/Gerbil (7)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Rabbit (8)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Horse (9)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Farm animals (10)  
+▼ 0 (1) ... Prefer not to answer (7) 
+Other (11)  
+▼ 0 (1) ... Prefer not to answer (7) 
+ 
+ 
+ 
+ 
+
+
+===== [page 54] =====
+ 
+ 
+Page 54 of 75
+Q91 How many automobiles (car, SUV, pickup, or van) does your household currently have? 
+o 0  (1)  
+o 1  (2)  
+o 2  (3)  
+o 3  (4)  
+o 4  (5)  
+o 5  (6)  
+o More than 5  (7)  
+o Prefer not to answer  (8)  
+ 
+ 
+ 
+Q92 How many motorized bikes (motocycle, scooter) does your household currently have? 
+o 0  (1)  
+o 1  (2)  
+o 2  (3)  
+o 3  (4)  
+o 4  (5)  
+o 5  (6)  
+o More than 5  (7)  
+o Prefer not to answer  (8)  
+ 
+ 
+ 
+
+
+===== [page 55] =====
+ 
+ 
+Page 55 of 75
+Q93  
+How many items that require towing does your household have (i.e., trailer, boat, motor home, 
+camper, or something similar)? 
+o 0  (1)  
+o 1  (2)  
+o 2  (3)  
+o 3  (4)  
+o 4  (5)  
+o 5  (6)  
+o More than 4  (7)  
+o Prefer not to answer  (8)  
+ 
+ 
+ 
+
+
+===== [page 56] =====
+ 
+ 
+Page 56 of 75
+Q94 What is your primary type of transportation used for work/school travel? 
+o Drive alone using a car, SUV, pickup, or van  (1)  
+o Carpool/vanpool  (2)  
+o Shuttle service  (3)  
+o Ridesourcing/TNC (e.g., Uber, Lyft)  (4)  
+o Microtransit (e.g., Chariot, Via)  (5)  
+o Carsharing (e.g., Zipcar, car2go)  (6)  
+o Rail (e.g., light/heavy, subway/metro, trolley)  (7)  
+o Bus  (8)  
+o Walk  (9)  
+o Motorcycle/scooter  (10)  
+o Bicycle  (11)  
+o Other  (12) ________________________________________________ 
+o Prefer not to answer  (13)  
+ 
+ 
+ 
+
+
+===== [page 57] =====
+ 
+ 
+Page 57 of 75
+Q95 What was your total household income in 2016? 
+o Less than $10,000  (1)  
+o $10,000 - $19,999  (2)  
+o $20,000 - $29,999  (3)  
+o $30,000 - $39,999  (4)  
+o $40,000 - $49,999  (5)  
+o $50,000 - $59,999  (6)  
+o $60,000 - $69,999  (7)  
+o $70,000 - $79,999  (8)  
+o $80,000 - $89,999  (9)  
+o $90,000 - $99,999  (10)  
+o $100,000 - $149,999  (11)  
+o $150,000 - $199,999  (12)  
+o More than $200,000  (13)  
+o Prefer not to answer  (14)  
+ 
+ 
+ 
+Q96 In which state do you live currently? 
+________________________________________________________________ 
+ 
+ 
+ 
+Q97 In which county do you live currently? (i.e., Miami-Dade, Collier, etc.) 
+________________________________________________________________ 
+ 
+ 
+
+
+===== [page 58] =====
+ 
+ 
+Page 58 of 75
+ 
+Q98 In which city do you live currently? 
+________________________________________________________________ 
+ 
+ 
+ 
+Q99 Did you live in a different location immediately before Hurricane Irma than you do 
+currently? If so, please specify the city, county, state you lived in immediately before 
+Hurricane Irma. 
+o Yes (please specify city, county, and state)  (1) 
+________________________________________________ 
+o No  (2)  
+ 
+ 
+ 
+Q100 The following questions are in reference to your residence immediately before 
+Hurricane Irma. This may be the same or different as your current residence. For example, you 
+may currently live in temporary housing, a shelter, or a different location because you moved. 
+We want to know the characteristics of your house before the storm. 
+ 
+ 
+ 
+
+
+===== [page 59] =====
+ 
+ 
+Page 59 of 75
+Q101 How long did you live in your residence immediately before Hurricane Irma? 
+o Less than 6 months  (1)  
+o 6 to 11 months  (2)  
+o 1 to 2 years  (3)  
+o 3 to 4 years  (4)  
+o 5 to 6 years  (5)  
+o 7 to 8 years  (6)  
+o 9 to 10 years  (7)  
+o More than 10 years  (8)  
+o Prefer not to answer  (9)  
+ 
+ 
+ 
+Q102 How long did you live in the county of your residence immediately before Hurricane Irma? 
+o Less than 6 months  (1)  
+o 6 to 11 months  (2)  
+o 1 to 2 years  (3)  
+o 3 to 4 years  (4)  
+o 5 to 6 years  (5)  
+o 7 to 8 years  (6)  
+o 9 to 10 years  (7)  
+o More than 10 years  (8)  
+o Prefer not to answer  (9)  
+ 
+ 
+
+
+===== [page 60] =====
+ 
+ 
+Page 60 of 75
+ 
+Q103 Approximately how many miles was your residence immediately before Hurricane Irma 
+from the closest major water source (i.e., ocean, large lake, major river)? 
+ 
+0 
+10 20 30 40 50 60 70 80 90 100 
+ 
+Miles to Closest Major Water Source () 
+ 
+ 
+ 
+ 
+Q104 What type of building was your residence immediately before Hurricane Irma? 
+o Site build (single home)  (1)  
+o Site build (apartment)  (2)  
+o Mobile/manufactured home  (3)  
+o I don't know  (4)  
+o Prefer not to answer  (5)  
+ 
+ 
+ 
+Q105 Did you own your residence (were a homeowner of your pre-Irma residence)? 
+o Yes  (1)  
+o No  (2)  
+o Prefer not to answer  (3)  
+ 
+ 
+ 
+
+
+===== [page 61] =====
+ 
+ 
+Page 61 of 75
+Q106 Did you live in a flood risk area or zone as determined by the Federal Emergency 
+Management Agency? 
+o Yes  (1)  
+o No  (2)  
+o I don't know  (3)  
+o Prefer not to answer  (4)  
+ 
+ 
+ 
+
+
+===== [page 62] =====
+ 
+ 
+Page 62 of 75
+Q107 How many times have you experienced the following disasters? 
+ 
+0 (1) 
+1 (2) 
+2 (3) 
+3 (4) 
+4 (5) 
+5 (6) 
+More 
+than 5 
+(7) 
+Prefer 
+not to 
+answer 
+(8) 
+Hurricane 
+(1)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Earthquake 
+(2)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Tornado 
+(3)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Flood (non 
+hurricane) 
+(4)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Wildfire (5)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Blizzard (6)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Tsunami 
+(7)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Landslide 
+(8)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Volcanic 
+eruption (9)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Nuclear or 
+chemical 
+accident 
+(10)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+Terrorist 
+attack (11)  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+o  
+ 
+ 
+ 
+ 
+
+
+===== [page 63] =====
+ 
+ 
+Page 63 of 75
+Q108 How many times have you evacuated from any residence prior to this disaster? 
+o 0  (1)  
+o 1  (2)  
+o 2  (3)  
+o 3  (4)  
+o 4  (5)  
+o 5  (6)  
+o More than 5  (7)  
+o Prefer not to answer  (8)  
+ 
+ 
+ 
+Q109 How likely are you to buy any type of home insurance for natural disasters (i.e., flood, 
+hurricane, or natural disaster insurance)? 
+o I already have a type of insurance for natural disasters  (1)  
+o Extremely likely  (2)  
+o Somewhat likely  (3)  
+o Neither likely nor unlikely  (4)  
+o Somewhat unlikely  (5)  
+o Extremely unlikely  (6)  
+o Prefer not to answer  (7)  
+ 
+ 
+ 
+
+
+===== [page 64] =====
+ 
+ 
+Page 64 of 75
+Q110 What is the extent of your involvement in emergency planning and evacuation decisions 
+for the household? 
+o I am the sole decision maker  (1)  
+o I am the primary decision maker with input from another household member  (2)  
+o I share equally in making decisions with another household member(s)  (3)  
+o I provide input into the decisions, but I am not the primary decision maker  (4)  
+o Another person is the sole decision maker  (5)  
+o Prefer not to answer  (6)  
+ 
+ 
+ 
+Q111 Through which source did you click on the link to this survey? 
+o Emergency management agency website  (1)  
+o Transit/transportation agency website  (2)  
+o Facebook  (3)  
+o Twitter  (4)  
+o Alert subscription service  (5)  
+o Other (please specify)  (6) ________________________________________________ 
+o Prefer not to answer  (7)  
+ 
+End of Block: Demographic Questions 
+ 
+Start of Block: Willingness Questions 
+ 
+Q172  
+Important Instructions for Willingness to Evacuate   
+  We could really use your help in this last, short section. It's a little bit different than what you 
+have done so far. It's a thought experiment that lets you make a choice about a hypothetical (or 
+possible) situation.    
+    
+
+
+===== [page 65] =====
+ 
+ 
+Page 65 of 75
+In this case, you are given the strength of the hurricane and the chance of the hurricane striking 
+your residence. This means that the eye of the hurricane is predicted to be within approximately 
+70 miles of your residence. Note that tropical force winds can be upwards of 200 miles from the 
+eye.   
+    
+Please choose the answer that best describes if you would or would not evacuate your 
+residence for this type of storm, provided this information 3 days before landfall.  
+ 
+ 
+ 
+Q173 Category 1 Hurricane, 10% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q174 Category 2 Hurricane, 10% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 66] =====
+ 
+ 
+Page 66 of 75
+Q175 Category 3 Hurricane, 10% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q176 Category 4 Hurricane, 10% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q177 Category 5 Hurricane, 10% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 67] =====
+ 
+ 
+Page 67 of 75
+Q178 Category 1 Hurricane, 30% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q179 Category 2 Hurricane, 30% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q180 Category 3 Hurricane, 30% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 68] =====
+ 
+ 
+Page 68 of 75
+Q181 Category 4 Hurricane, 30% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q182 Category 5 Hurricane, 30% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q183 Category 1 Hurricane, 50% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 69] =====
+ 
+ 
+Page 69 of 75
+Q184 Category 2 Hurricane, 50% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q185 Category 3 Hurricane, 50% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q186 Category 4 Hurricane, 50% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 70] =====
+ 
+ 
+Page 70 of 75
+Q187 Category 5 Hurricane, 50% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q188 Category 1 Hurricane, 70% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q189 Category 2 Hurricane, 70% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 71] =====
+ 
+ 
+Page 71 of 75
+Q190 Category 3 Hurricane, 70% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q191 Category 4 Hurricane, 70% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q192 Category 5 Hurricane, 70% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 72] =====
+ 
+ 
+Page 72 of 75
+Q193 Category 1 Hurricane, 90% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q194 Category 2 Hurricane, 90% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q195 Category 3 Hurricane, 90% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+
+
+===== [page 73] =====
+ 
+ 
+Page 73 of 75
+Q196 Category 4 Hurricane, 90% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+ 
+ 
+Q197 Category 5 Hurricane, 90% chance of hurricane strike 
+o Definitely yes  (1)  
+o Probably yes  (2)  
+o Might or might not  (3)  
+o Probably not  (4)  
+o Definitely not  (5)  
+ 
+End of Block: Willingness Questions 
+ 
+Start of Block: Focus Group Confirmation 
+ 
+Q112 Focus Group Interest 
+ 
+ 
+ 
+Q113 If you would like the opportunity to participate in a focus group, please check the following 
+box and provide your email address and/or phone number. 
+o Yes, I am interested in a focus group  (1)  
+o No, I am not interested in a focus group  (2)  
+ 
+ 
+
+
+===== [page 74] =====
+ 
+ 
+Page 74 of 75
+Display This Question: 
+If If you would like the opportunity to participate in a focus group, please check the following box... = 
+Yes, I am interested in a focus group 
+ 
+Q114 Email Address (for example: anderson12@gmail.com) 
+________________________________________________________________ 
+ 
+ 
+Display This Question: 
+If If you would like the opportunity to participate in a focus group, please check the following box... = 
+Yes, I am interested in a focus group 
+ 
+Q115 Phone Number (for example: xxx-xxx-xxxx) 
+________________________________________________________________ 
+ 
+End of Block: Focus Group Confirmation 
+ 
+Start of Block: Drawing Eligibility 
+ 
+Q116 Drawing Eligibility 
+ 
+ 
+ 
+Q117 As described in the consent form, only participants who include their email address or 
+home address are eligible for the drawing. One of these methods of contact is needed to 
+distribute the gift card, if you win. 
+ 
+ 
+ 
+Q118 Email Address (for example: anderson12@gmail.com) 
+________________________________________________________________ 
+ 
+ 
+ 
+
+
+===== [page 75] =====
+ 
+ 
+Page 75 of 75
+Q119 Home Address (for example: 123 Main Street,  Apt. 2, Tampa, Florida, 33601) 
+________________________________________________________________ 
+ 
+End of Block: Drawing Eligibility 
+ 
+ 

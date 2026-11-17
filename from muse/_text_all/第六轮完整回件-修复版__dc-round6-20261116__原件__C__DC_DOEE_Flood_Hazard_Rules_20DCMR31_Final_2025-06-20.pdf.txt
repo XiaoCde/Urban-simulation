@@ -1,0 +1,2439 @@
+
+
+===== [page 1] =====
+ 
+1 
+ 
+DEPARTMENT OF ENERGY AND ENVIRONMENT 
+ 
+NOTICE OF FINAL RULEMAKING 
+ 
+Flood Hazard Rules 
+ 
+The Director of the Department of Energy and Environment (DOEE), pursuant to the authority set 
+forth in the District Department of the Environment Establishment Act of 2005, effective February 
+15, 2006 (D.C. Law 16-51; D.C. Official Code § 8-151.01 et seq.); the Water Pollution Control 
+Act of 1984, effective March 16, 1985 (D.C. Law 5-188; D.C. Official Code § 8-103.01 et seq.); 
+the Soil Erosion and Sedimentation Control Act of 1977, effective September 28, 1977 (D.C. Law 
+2-23; 24 DCR 000792); the District of Columbia Applications Insurance Implementation Act, 
+effective May 26, 1976 (D.C. Law 1-64; D.C. Official Code § 6-501 et seq.); and Mayor’s Order 
+2006-61, dated June 14, 2006, hereby gives notice of his adoption of the following amendments 
+to Chapter 31 (Flood Hazard Rules) of Title 20 (Environment) of the District of Columbia 
+Municipal Regulations (DCMR).  
+ 
+This rulemaking is intended to protect the public health, safety, and welfare of District residents 
+and businesses in the event of significant flooding and reduces public and private losses due to 
+flood conditions in flood hazard areas. The rule addresses deficiencies identified by the Federal 
+Emergency Management Agency (FEMA) during a March 2016 audit of the District’s 
+implementation of the National Flood Insurance Program (NFIP). The rule facilitates the District 
+remaining eligible to participate in NFIP and to receive federal financial relief in the event of a 
+flood-related disaster. This rule also reflects revisions to the District’s building code and zoning 
+regulations and includes new provisions to adapt to changing flood hazard conditions specified in 
+Climate Ready DC (2016). The rule requires safer building practices in flood hazard areas to 
+reduce injury, loss of life, and property damage from flooding, and will also help prepare the 
+District’s residents and structures for projected higher sea levels and more frequent and intense 
+storms due to climate change. 
+ 
+A Notice of Proposed Rulemaking was published in the District of Columbia Register on July 19, 
+2024, at 71 DCR 8695. A forty-five (45) day comment period ended September 2, 2024. DOEE 
+received three (3) sets of comments which it carefully evaluated and considered; for the reasons 
+described below, DOEE did not make any changes to the proposed rules in response to the 
+comments received. DOEE summarizes the comments and its responses below.  
+ 
+ 
+Rhode Island Avenue Metro Underpass Flood Hazard Area 
+A commenter asked that DOEE provide a statutory basis for treating the Rhode Island Avenue 
+area as a Special Flood Hazard Area.  
+ 
+DOEE Response: The Flood Resilience Amendment Act of 2022, DC Law 24-151, 
+effective August 16, 2022, D. C. Official Code § 6-501(b) gives the Mayor the authority to 
+issue rules designating flood hazard areas in the District and requiring flood insurance as 
+a condition of occupancy for the life of a new or substantially improved building in a flood 
+hazard area. 
+
+
+===== [page 2] =====
+ 
+2 
+ 
+  
+The same commenter asked that DOEE clarify whether the recent construction of DC Water’s 
+Northeast Boundary Tunnel (NEBT) project has been taken into consideration when delineating 
+the Rhode Island Avenue area as a special flood hazard area.  
+ 
+DOEE Response: On August 14, 2023, approximately 2 inches of rain fell in less than an 
+hour at this location, flooding the underpass, stranding cars, and filling a pet daycare 
+business with 6 feet of water. The flood killed 10 dogs and forced the business to close 
+temporarily. At the time of the flood, DC Water’s NEBT was nearing completion, but not 
+yet in operation. The Tunnel began operating on September 15, 2023, approximately a 
+month after the flood.   
+  
+As described in the proposed rulemaking, DOEE defines the Rhode Island Avenue 
+regulated area as the land that was below the elevation (94.5 ft NAVD88) of the area that 
+was flooded on August 14, 2023, which is before the NEBT began to operate. However, 
+DOEE has determined that the regulated area described in these regulations is still 
+warranted for two reasons: 1) that elevation is a conservative estimate that was already 
+allowing more risk than other similar flood hazard areas, and 2) while the operation of the 
+NEBT may alleviate flooding in this area, it was not designed to solve flooding. 
+ 
+Elaborating on the reasons above, the standard in American floodplain management is to 
+regulate areas that are in the 100-year or 500-year floodplains. Statistically, the 100-year 
+floodplain means the area that has a 1% annual chance of being flooded in a given year and 
+the 500-year floodplain means the area that has a 0.2% annual chance of being flooded in 
+a given year. According to best estimates from the National Weather Service and from DC 
+Water, the amount of rain that fell over the Rhode Island Avenue area on August 14th, 
+2023, was 2 inches over a 45-minute period,1 which equates to somewhere between a 10- 
+and 25-year storm. Statistically, a 10-year storm has a 10% chance of occurring in a given 
+year and a 25-year storm has a 4% chance of occurring in a given year. For comparison, a 
+100-year storm with a 45 minute duration would produce between 2.3 and 3.2 inches of 
+rain.2 If DOEE were to regulate an area that had a 1% annual chance of being flooded 
+around Rhode Island Avenue, the regulated area would be larger, to account for more rain 
+(between 2.3 and 3.2 inches compared to 2 inches) and the resulting higher flood waters. 
+Prior to the operation of the NEBT, DOEE’s regulated area for Rhode Island Avenue 
+already was allowing for more risk than other FEMA defined floodplains throughout the 
+city. DOEE’s regulated area is even more conservative when considering that climate 
+change is expected to increase the intensity and frequency of severe storms in the District. 
+A 25-year storm with a 1 hour duration (a high estimate of what occurred on August 14, 
+2023) results in 2.5 inches of rain according to existing design standards, but is likely to 
+result in 2.7 inches of rain in the next 50 years according to Climate Ready DC’s 2024 
+Projections Update.  
+ 
+1 Constantino, Abigail, WTOPnews. ‘It’s a terrible thing’: 10 dogs drown after flood at DC pet day care, boarding 
+facility. 
+https://wtop.com/dc/2023/08/its-a-terrible-thing-several-pets-drown-in-flooding-at-dc-pet-day-care-
+boarding-facility/. 
+2 National Oceanic and Atmospheric Administration. NOAA Atlas 14 Point Precipitation Frequency Estimates: DC. 
+https://hdsc.nws.noaa.gov/pfds/pfds_map_cont.html?bkmrk=dc 
+
+
+===== [page 3] =====
+ 
+3 
+ 
+ 
+Further, as noted, the NEBT was not designed to solve flooding. If the NEBT was able to 
+completely drain 2 inches of rain over a 45-minute period, it would be reason to reconsider 
+the boundary, as the currently defined elevation of 94.5 feet NAVD88 would now only be 
+flooded with much heavier rains. However, DC Water’s own guidance is that the NEBT 
+“will not eliminate flooding for a larger storm, but will mitigate the impact.”3 The main 
+goal of the NEBT is to improve water quality by reducing combined sewer overflows into 
+the Anacostia River. It also has an ancillary benefit of reducing interior flooding at some 
+locations near the tunnel. At the time of the flood, DC Water estimates that the stormwater 
+system in the Rhode Island Avenue area could drain all the water from a 5-year, 24-hour 
+storm, which is approximately 4 inches of rain in a 24-hour period.4 With the NEBT now 
+operational, DC Water estimates that the stormwater system capacity in this area is now 
+capable of draining a 15-year 24-hour storm,5 which is approximately 5.5 inches of rain in 
+a 24-hour period. However, that capacity is described over a 24-hour period. The 
+stormwater system in this area cannot handle all 4 or 5.5 inches of rain within 45 minutes 
+(the duration of the August 14, 2023 storm) because the sewer inlet openings are only so 
+large. Effectively, the ability of the stormwater system and the NEBT to limit flooding 
+depends on how quickly stormwater can be drained off the street, and less about total 
+stormwater storage capacity of the NEBT.  While the NEBT may help reduce some 
+flooding in the area, if there are especially intense storms (such as those that took place on 
+June 25, 2012, June 26, 2012, August 10, 2022, and August 14, 2023), the flooded area is 
+likely to be close to the same size as it would be before the NEBT was operational, though 
+the waters will likely recede more quickly.  
+ 
+The same commenter also asked DOEE to clarify the requirements for existing buildings within 
+the Rhode Island Avenue area and whether the regulations would require modification to existing 
+structures.  
+ 
+DOEE Response: Finalization of the regulations will not render existing structures out of 
+compliance.  The regulations apply when new work is being done.  If the work proposed 
+is a substantial improvement of an existing structure (project cost is greater than fifty 
+percent of the value of the existing structure), or if the work is new construction, then the 
+project will be subject to the full requirements of the regulations. The regulations require 
+that the entire building must be 1) elevated or 2) protected by a building-wide 
+floodproofing system that can be deployed quickly.  If the proposed work is less than 
+substantial improvement (such as tenant fit outs and any repair, replacement, or new 
+installation of any mechanical, electrical, or plumbing systems such as furnace, electrical 
+outlets, or water lines) and is below the Design Flood Elevation (DFE), the Flood Hazard 
+Rules and construction code require that the utility systems and other materials be flood 
+resistant or raised above the DFE.  A completely new, building-wide floodproofing system, 
+ 
+3 DC Water. Northeast Boundary Tunnel (NEBT) Briefing for ANC 2G Meeting, February 9, 2023. 
+https://www.dcwater.com/sites/default/files/project/2017-01/documents/RST%20ANC2G%20Briefing_020923_0.pdf  
+4 National Oceanic and Atmospheric Administration. NOAA Atlas 14 Point Precipitation Frequency Estimates: DC. 
+https://hdsc.nws.noaa.gov/pfds/pfds_map_cont.html?bkmrk=dc 
+5 DC Water. DC Water Celebrates Completion of the Northeast Boundary Tunnel. https://www.dcwater.com/about-
+dc-water/media/news/dc-water-celebrates-completion-northeast-boundary-tunnel 
+
+
+===== [page 4] =====
+ 
+4 
+ 
+however, would not be required because the substantial improvement threshold was not 
+triggered.   
+ 
+Technical Approach on Freeboard 
+A commenter asked what approach DOEE took in assigning a freeboard value for Design Flood 
+Elevations (DFEs).  
+ 
+DOEE Response: DOEE uses a freeboard value above the Base Flood Elevation to add 
+additional protection that accounts for future conditions with rising sea levels and increased 
+frequency and intensity of storm events. The proposed standard is based on case studies in 
+cities such as Norfolk, Virginia; Fort Collins, Colorado; Austin, Texas; and Seattle, 
+Washington. The specific elevation levels align with the existing version of the DC 
+Building Code. A FEMA study of historic flooding in Boulder County, Colorado found 
+that adopting a 100-year flood elevation plus 2 feet of freeboard standard (like what these 
+regulations propose) could have reduced losses due to flooding in that city by 38%.6 As of 
+2015, a nationwide total of 192 local governments and 4 states had adopted the 2 feet of 
+freeboard standard.7 For critical facilities, these regulations require that buildings meet a 
+DFE of whichever is higher; the 500-year elevation plus 2 feet, or the 100-year elevation 
+plus 4 feet. DOEE’s intention was to ensure that critical facilities, which house vulnerable 
+occupants or critical functions, should be protected to a standard at least 2 feet higher than 
+the standard for non-critical facilities. 
+   
+Definition of Mixed-Use 
+A commenter stated that a developer might be able to evade constraints on residential building 
+subgrade parking by adding minor retail elements to residential structures that could then qualify 
+the building as mixed-use instead of residential.  
+ 
+DOEE Response: Minor retail elements will not be enough to classify a residential building 
+as a mixed-use building instead. While these regulations provide a generic explanation of 
+what a mixed-use building is, the District’s Construction Code defines how to classify 
+buildings, or portions thereof as mixed-use or residential. The District’s Construction Code 
+has adopted the International Building Code (2015) and the International Residential Code 
+(2015) that detail the construction and classification of those buildings and states that 
+incidental uses shall be included in the building occupancies within which they are located.   
+ 
+The Director of DOEE adopted these rules as final on June 10, 2025, and the rules shall take effect 
+on the date of publication of this notice in the District of Columbia Register. 
+ 
+ 
+ 
+ 
+6 Federal Emergency Management Agency. Reducing Losses Through Higher Regulatory Standards: 2013 Colorado 
+Floods Case Study. https://www.fema.gov/sites/default/files/documents/fema_colorado-2013-study-pamphlet.pdf 
+7 Natural Resources Defense Council and Association of State Floodplain Managers, Inc. Petition Requesting That 
+The Federal Emergency Management Agency Amend Its Regulations Implementing the National Flood Insurance 
+Program. Jan. 5th, 2021. 
+https://asfpm-library.s3-us-west-2.amazonaws.com/ASFPM_Pubs/petition_fema_rulemaking_nfip_20210105.pdf   
+ 
+
+
+===== [page 5] =====
+ 
+5 
+ 
+Chapter 31, FLOOD HAZARD RULES, of Title 20 DCMR, ENVIRONMENT, is repealed 
+and replaced to read as follows: 
+ 
+CHAPTER 31     FLOOD HAZARD RULES 
+ 
+3100  
+PURPOSE  
+ 
+3100.1 
+This chapter and the flood-resistant construction provisions of the District of 
+Columbia Construction Codes (together referred to as the Floodplain Management 
+Regulations) promote public health, safety, and general welfare, and minimize 
+public and private losses due to flood conditions in flood hazard areas. 
+ 
+3100.2 
+This chapter establishes minimum requirements that are designed to: 
+ 
+(a) 
+Mitigate the impact of flooding on properties in the District; 
+ 
+(b) 
+Prevent or regulate the construction of flood barriers that will unnaturally 
+divert floodwaters or may increase flood hazards to other lands;  
+ 
+(c) 
+Restrict or prohibit certain uses, activities, and development inside areas 
+subject to flooding;  
+ 
+(d) 
+Require uses, activities, and developments that occur in flood-prone areas 
+to be protected to prevent flood damage; and 
+ 
+(e) 
+Regulate uses, activities, and development that, acting alone or in 
+combination with other existing or future uses, activities, and development, 
+will cause unacceptable increases in flood heights, velocities, and 
+frequencies that may affect other properties. 
+ 
+3100.3 
+The degree of flood protection required by this chapter is based on scientific and 
+engineering considerations and is intended to minimize the degree and extent of 
+flood damage. The regulations and the construction codes are designed to keep 
+properties reasonably safe from flooding. Enforcement of these regulations and the 
+construction codes does not imply that land outside the flood hazard areas, or that 
+uses permitted inside the flood hazard areas, will be free from flooding or flood 
+damage. Larger floods can and will occur. Flood heights may be increased by man-
+made or natural causes. 
+ 
+3101 
+APPLICABILITY OF FLOOD HAZARD RULES 
+ 
+3101.1 
+This Chapter shall apply to all flood hazard areas within the jurisdiction of the 
+District of Columbia (the District) as designated by the District or in the Flood 
+Insurance Rate Map (FIRM) and Flood Insurance Study (FIS) for the District 
+prepared by the Federal Emergency Management Agency (FEMA). The effective 
+FIS dated September 27, 2010, and the accompanying FIRM, as modified by any 
+
+
+===== [page 6] =====
+ 
+6 
+ 
+FEMA-approved Letters of Map Change, are hereby adopted by reference and shall 
+serve as the basis for establishing one hundred (100)-year and five hundred (500)-
+year flood hazard areas. Maps and studies that establish flood hazard areas, 
+including interior flooding areas, are maintained at the Department of Energy and 
+Environment (DOEE) and are posted on DOEE’s website at http://doee.dc.gov.  
+ 
+3101.2 
+The flood hazard area is: 
+ 
+(a) 
+The land inside the one hundred (100)-year floodplain (Zones A, AE, A1-
+30, A99, AR, AO, or AH) in accordance with the FEMA Flood Insurance 
+Rate Map, effective September 27, 2010, and subsequent revisions and 
+amendments as approved by FEMA;  
+ 
+(b) 
+The land inside the five hundred (500)-year floodplain (Zone X (shaded)) 
+in accordance with the FEMA Flood Insurance Rate Map, effective 
+September 27, 2010, and subsequent revisions and amendments as 
+approved by FEMA:    
+ 
+(c) 
+The land that has been removed from the five hundred (500)-year floodplain 
+(including Zones A, AE, A1-30, A99, AR, AO, AH, or X (shaded) if done 
+through a Letter of Map Revision Based on Fill (LOMR-F), and  
+ 
+(d)  
+For the Rhode Island Avenue Metro underpass area, the land that is below 
+the NAVD88 elevation of ninety-four and one-half feet (94.5 ft.) and is 
+within a five hundred foot (500 ft.) radius of the point on Rhode Island 
+Avenue NE with these coordinates: 38° 55.2593'N 76° 59.8217'W.  
+ 
+3101.3 
+Compliance with this chapter does not relieve a person of responsibility and 
+liability for damage to any persons or property caused by flooding. 
+ 
+3101.4 
+A person who is regulated under this chapter may authorize an agent to act on their 
+behalf. However, the authorization does not change or eliminate that regulated 
+person’s duty, responsibility, or liability. 
+ 
+3101.5 
+In the event of a conflict between the requirements of this chapter and those of any 
+other rule issued by DOEE, the more stringent restriction shall govern, to the extent 
+consistent with applicable District statutes and federal law. 
+ 
+3101.6 
+In the event of a conflict between the requirements of this chapter and those of a 
+deed restriction, covenant, or easement adopted after [effective date of final rules], 
+the more stringent restriction shall govern. 
+ 
+3102 
+ADMINISTRATIVE ROLES AND RESPONSIBILITIES 
+ 
+3102.1 
+The Director of DOEE, or the Director’s designee, is designated as the Floodplain 
+Administrator. 
+
+
+===== [page 7] =====
+ 
+7 
+ 
+ 
+3102.2 
+The duties and responsibilities of the Floodplain Administrator shall include: 
+ 
+(a) 
+Coordinating the review and approval process between the Department of 
+Buildings (DOB) and DOEE to ensure that an application for a permit to 
+build or engage in activities in a flood hazard area complies with the 
+applicable requirements of the District of Columbia, and that the site is 
+reasonably safe from flooding; 
+ 
+(b)  
+Reviewing a permit application to ensure that no encroachment on a 
+watercourse, alteration of a watercourse, or improvement of any kind to a 
+watercourse, is made unless it has been demonstrated through hydrologic 
+and hydraulic analyses performed in accordance with standard engineering 
+practice that the proposed encroachment, alteration, or improvement would 
+not increase the flood-carrying capacity of the watercourse; 
+ 
+(c)  
+As necessary, interpreting flood hazard area boundaries when there appears 
+  
+to be a conflict between a mapped boundary and actual field conditions, and 
+providing available flood hazard information to the public; 
+ 
+(d)  
+Reviewing additional hydrologic, hydraulic, or other engineering data and 
+studies required to support any request for a Letter of Map Change from 
+FEMA; 
+ 
+(e) 
+Maintaining copies of the FIRM, FIS, and all revisions and amendments to 
+flood maps and studies 
+ 
+(f) 
+Ensuring that all records necessary to administer federal and District 
+programs related to flood hazards and protections are maintained and made 
+available for public inspection, including FIRMs, FISs, Letters of Map 
+Amendment, Letters of Map Revision, required certifications, and 
+documentation specified by this chapter; 
+ 
+(g) 
+Ensuring that the applicant for a permit provides public notifications related 
+to alterations of watercourses to adjacent communities and to FEMA;  
+  
+(h) 
+Maintaining records of as-built lowest floor elevations or elevation 
+certificates, floodproofing certificates, and other certifications or proof of 
+compliance as may be required by this chapter or Appendix G 12-A DCMR 
+(District of Columbia Municipal Regulations);   
+ 
+(i) 
+Making periodic recommendations to FEMA when updates to flood models 
+and maps are needed, based on best-available data and climate science;  
+ 
+
+
+===== [page 8] =====
+ 
+8 
+ 
+(j) 
+Making periodic recommendations to the Mayor when updates to flood 
+models and maps are needed based on best-available data and climate 
+science;  
+ 
+(k) 
+Providing annual progress reports to the Council of the District of 
+Columbia, and reports to the Federal Insurance Administrator as required 
+by FEMA;  
+ 
+(l) 
+Requiring that applicants, who submit hydrologic and hydraulic 
+engineering analyses to support permit or Letter of Map Revision 
+applications, submit data and information necessary to maintain the Flood 
+Insurance Rate Maps to FEMA when the analyses propose to change base 
+flood elevations, flood hazard area boundaries, or floodway designations. 
+The submissions shall be made within six (6) months of the data becoming 
+available;  
+ 
+(m) 
+Reviewing subdivision proposals and other proposed new development, 
+including manufactured home parks or subdivisions, to determine whether 
+the proposals will be reasonably safe from flooding. If a subdivision 
+proposal or other proposed new development is in a flood-prone area, any 
+proposal shall be reviewed to ensure that:  
+ 
+(1)  
+The proposals are consistent with the need to minimize flood damage 
+inside the flood-prone area;  
+ 
+(2)  
+All public utilities and facilities, such as sewer, gas, electrical, and 
+water systems are located and constructed to minimize or eliminate 
+flood damage; and  
+ 
+(3)  
+Adequate drainage is provided to reduce exposure to flood hazards; 
+and   
+ 
+(n) 
+Requiring a change to the permit for development on a development site 
+located wholly or partially inside a flood hazard area, if upon inspection, 
+DOEE determines that the permit conditions are inadequate to comply with 
+the requirements of this chapter based on a discrepancy between the permit 
+conditions and the actual site conditions. 
+ 
+3102.3 
+The duties and responsibilities of DOB include: 
+ 
+(a) 
+Issuing permits for all development on a development site located wholly 
+or partially inside a flood hazard area;  
+ 
+(b) 
+Coordinating with DOEE to ensure that all development on a development 
+site located wholly or partially inside a flood hazard area is compliant with 
+the flood resistant construction provisions of the District of Columbia 
+
+
+===== [page 9] =====
+ 
+9 
+ 
+Construction Codes, including Appendix G of the Building Code, and the 
+requirements of this chapter. Consistent with 12-A DCMR § G103.6, DOB 
+shall not issue a permit for any development on a development site located 
+wholly or partially inside a flood hazard area until DOEE has reviewed the 
+permit application for compliance with this chapter and submitted 
+recommendations;  
+ 
+(c)  
+Maintaining a complete record of all code modification requests and related 
+actions in flood hazard areas; and 
+ 
+(d) 
+Determining, in coordination with DOEE, whether proposed reconstruction, 
+rehabilitation, repair, alteration, addition, or other improvement of existing 
+buildings or structures located in flood hazard areas constitutes substantial 
+improvement or repair of substantial damage.  
+ 
+3102.4 
+The Historic Preservation Office (HPO) is responsible for reviewing any permit 
+application for repair or rehabilitation to historic structures wholly or partially 
+inside a flood hazard area to assure coordination and consistency with this chapter. 
+ 
+3103 
+RESERVED  
+ 
+3104 
+RESERVED 
+ 
+3105 
+FEES  
+ 
+3105.1 
+An applicant requesting DOEE review and approval related to development on a 
+development site located wholly or partially inside a flood hazard area shall first 
+obtain a DOB permit number and pay the fees for DOEE services as shown in 
+Tables 1 through 6. No permit shall be issued until all applicable review fees have 
+been paid.  
+ 
+3105.2  
+DOEE shall not assess an applicant the Final Plan Review Fees if the development 
+is not located inside the flood hazard area.  
+ 
+3105.3 
+Fees payable under this section shall be paid at the DOB Permit Center, or online 
+through DOEE’s submittal database, and shall be in addition to any permit fees 
+charged by DOB. If a person chooses to pay a fee in this chapter through an online 
+payment platform, DOEE shall increase the fee by two and thirty-six hundredths 
+percent (2.36%). 
+ 
+3105.4 
+DOEE shall annually adjust the fees in the following Tables within this section for 
+inflation using the Urban Consumer Price Index published by the United States 
+Bureau of Labor Statistics. To perform this adjustment, DOEE shall increase each 
+fee by the percentage, if any, by which the Consumer Price Index for June of the 
+calendar year exceeds the Consumer Price Index for June of the previous year. Each 
+inflation adjustment shall be posted to DOEE’s website.  
+
+
+===== [page 10] =====
+ 
+10 
+ 
+ 
+3105.5  
+The initial plan review fee includes an initial review and review of three 
+resubmissions. An applicant shall pay a resubmission fee for each subsequent 
+resubmission, and the resubmission fee shall be paid prior to permit issuance. 
+ 
+Table 1. DOEE Review Fees for One to Two (1–2) Unit Dwellings or Accessory Structures 
+in Flood Hazard Areas 
+Permit Type 
+Trade / Postcard 
+Permit or Interior 
+Work (Not SI) 
+Substantial 
+Improvement (SI) 
+New Construction 
+or Addition with 
+Footprint Change 
+Initial plan review fee 
+due upon submittal to 
+permitting database 
+$0 
+$0 
+$600.00 
+Final plan review fee 
+due before issuance of 
+approval 
+$0 
+$0 
+$200.00 
+ 
+ 
+ 
+Table 2. DOEE Review Fees for Residential-Only Apartment Building with Five (5) or 
+Fewer Units in Flood Hazard Areas 
+Permit Type 
+Interior Work  
+(Not SI) 
+Substantial 
+Improvement 
+New Construction 
+or Addition with 
+Footprint Change 
+Initial plan review fee 
+due upon submittal to 
+permitting database 
+$0 
+$0 
+$1,200.00 
+Final plan review fee 
+due before issuance of 
+approval 
+$0 
+$0 
+$600.00 
+ 
+Table 3. DOEE Review Fees for Minor Development (Nonresidential Structures or Mixed-
+Use Buildings with Three (3) or Fewer Floors and/or Five (5) or Fewer Residential Units) 
+in Flood Hazard Areas 
+Permit Type 
+Interior Work  
+(Not SI) 
+Substantial 
+Improvement 
+New Construction 
+or Addition with 
+Footprint Change 
+Initial plan review fee 
+due upon submittal to 
+permitting database 
+$200 
+$3,000.00 
+$3,000.00 
+Final plan review fee 
+due before issuance of 
+approval 
+$0 
+$1,500.00 
+$1,500.00 
+ 
+
+
+===== [page 11] =====
+ 
+11 
+ 
+Table 4. DOEE Review Fees for Major Development (Four (4) or More Floors and/or 
+Six (6) or More Residential Units) in Flood Hazard Areas 
+Permit Type 
+Interior Work  
+(Not SI) 
+Substantial 
+Improvement 
+New Construction 
+or Addition with 
+Footprint Change 
+Initial plan review fee 
+due upon submittal to 
+permitting database 
+$500 
+$6,000.00 
+$6,000.00 
+Final plan review fee 
+due before issuance of 
+approval 
+$0 
+$4,000.00 
+$4,000.00 
+ 
+ 
+Table 5. DOEE Review Fees for Nonstructural Land-Disturbing Activity in Flood 
+Hazard Areas 
+Permit Type 
+Infrastructure 
+Projects 
+ 
+Nonstructural 
+Landscaping or Site 
+Improvements 
+ 
+Negligible Impact 
+Projects 
+ 
+Initial plan review 
+fee due upon 
+submittal to 
+permitting database 
+$5,000.00 
+$3,000.00 
+$200.00 
+Final plan review 
+fee due before 
+issuance of 
+approval 
+$2,000.00 
+$1,600.00 
+N/A 
+ 
+Table 6. Additional DOEE Fees for Flood Hazard Areas 
+Additional Fees (any 
+development) 
+due upon submission or 
+when determined a 
+requirement 
+1-2 Unit Dwellings 
+/Accessory 
+Structures 
+Other Building 
+Work (as shown 
+in Tables 2-4) 
+Nonstructural 
+Land-
+Disturbing 
+Activity 
+Predevelopment Meeting 
+(per hour after five (5) free 
+hours) 
+$100 
+$100 
+$100 
+Resubmission Fee 
+(Beginning on Fourth 
+Resubmission) 
+25% of initial plan 
+review fee 
+25% of initial plan 
+review fee 
+25% of initial 
+plan review fee 
+Determination of Flood 
+Hazard Zone and Elevation 
+$100 
+$100 
+$100 
+Review of a Hydrologic and 
+Hydraulic (H&H) Study 
+involving culverts or in-
+channel structures  
+$3,000 + $500 per 
+crossing structure 
+more than one 
+$3,000+ $500 per 
+crossing structure 
+more than one  
+$3,000+ $500 
+per crossing 
+structure more 
+than one 
+
+
+===== [page 12] =====
+ 
+12 
+ 
+Review of all other H&H 
+studies  
+$100 
+$800 
+$800 
+Processing/Review of a 
+CLOMR or LOMR (each 
+submission) 
+$0 
+$800 
+$800 
+Review of a Proposed Code 
+Modification or Variance 
+$100 
+$800 
+$800 
+ 
+3106  
+PERMIT APPLICATION PROCEDURES AND REQUIREMENTS 
+ 
+3106.1 
+In any flood hazard area, a permit issued by DOB shall be required for all new 
+construction, substantial improvement, or development. A permit for any 
+development on a development site located wholly or partially inside a flood hazard 
+area will not be issued by DOB unless DOEE has determined that the proposed 
+work conforms to the Floodplain Management Regulations. 
+  
+3106.2 
+Permit applicants shall provide the information required by the Floodplain 
+Management Regulations in sufficient detail and clarity to determine whether the 
+following conditions are met: 
+ 
+(a)  
+The proposal is designed and constructed with methods, practices and 
+materials that minimize flood damage and that are in accordance with the 
+Floodplain Management Regulations and the American Society of Civil 
+Engineers Standard 24-14 (ASCE 24), Flood Resistant Design and 
+Construction; 
+ 
+(b)  
+All utilities and facilities, such as sewer, gas, electrical, and water systems, 
+are located and constructed to minimize or eliminate flood damage;  
+ 
+(c)  
+The proposed development provides adequate drainage to reduce exposure 
+to flood hazards;  
+ 
+(d)  
+Any wet-floodproofed enclosure at a new construction or substantial 
+improvement of residential or non-residential structures is: 
+ 
+(1) 
+Used only for parking of vehicles, building access, or storage; 
+ 
+(2) 
+Designed to automatically equalize hydrostatic flood forces on 
+exterior walls by allowing for the entry and exit of floodwaters and 
+is either: 
+ 
+(A) 
+Certified by a District registered professional engineer or 
+architect; or  
+ 
+(B) 
+Meets the construction requirements listed in ASCE 24 
+related to flood resistance; and 
+
+
+===== [page 13] =====
+ 
+13 
+ 
+ 
+(3) 
+Above grade on at least one side.  
+ 
+3106.3 
+The applicant shall provide any information or documentation requested by DOEE 
+for DOEE to determine whether the proposed development is a substantial 
+improvement. Required documentation includes estimates of the improvement or 
+repair costs pursuant to the methodology set forth in the Substantial 
+Improvement/Substantial Damage Desk Reference (FEMA P-758, May 2010). 
+ 
+3106.4 
+The applicant shall provide the following additional information, as applicable: 
+ 
+(a)  
+Zone A. If the specific regulatory flood elevation for a flood hazard area 
+has not been provided in the FIS and FIRM for a development site located 
+in Zone A, then the applicant shall provide the following for DOEE’s review 
+and approval: 
+ 
+(1)  
+Available reports or studies from federal or District agencies or 
+other sources related to flood elevation; or 
+ 
+(2)  
+A new hydrologic and hydraulic (H&H) analysis. 
+ 
+(b)  
+Subdivisions. An applicant for a subdivision (including a new 
+manufactured home park or subdivision, or expansion to an existing 
+manufactured home park or subdivision) of more than five (5) acres in area 
+or with more than fifty (50) lots shall show the flood hazard area boundaries 
+and regulatory flood elevations on the plat submitted in the application. 
+ 
+(c)  
+Conditional Letter of Map Revision (CLOMR). If the project requires a 
+CLOMR, the applicant shall provide DOEE the following documentation 
+prepared by a registered professional engineer for submission to FEMA: 
+ 
+(1) 
+Completed 
+FEMA 
+CLOMR 
+forms 
+available 
+at 
+https://www.fema.gov/; 
+ 
+(2) 
+H&H analyses with any additional information required by FEMA;  
+ 
+(3) 
+A letter of transmittal to FEMA;  
+ 
+(4) 
+Receipt for payment of FEMA’s processing fees; 
+ 
+(5)  
+Copies of correspondence and documentation submitted to FEMA 
+in which the applicant addresses any issues and comments on the 
+CLOMR request; and 
+ 
+
+
+===== [page 14] =====
+ 
+14 
+ 
+(6)  
+If FEMA issues a CLOMR, as-built plans showing the site 
+elevations and a FEMA approved Letter of Map Revision (LOMR) 
+prior to the issuance of a Certificate of Occupancy. 
+ 
+(d)  
+Letter of Map Revision (LOMR). If the project requires a LOMR, the 
+applicant shall provide DOEE the following documentation prepared by a 
+District-registered professional engineer for submission to FEMA: 
+ 
+(1) 
+Completed 
+FEMA 
+LOMR 
+forms 
+available 
+at 
+https://www.fema.gov/; 
+ 
+(2) 
+H&H analyses with any additional information required by FEMA; 
+ 
+(3) 
+A letter of transmittal to FEMA; 
+ 
+(4) 
+Receipt of payment of FEMA’s processing fees;  
+ 
+(5)  
+Before FEMA issues a LOMR, copies of correspondence letters and 
+documentations submitted to FEMA in which the applicant 
+addresses any issues and comments on the LOMR request; and 
+ 
+(6) 
+A LOMR approved by FEMA before building permit approval, 
+except DOEE may approve site development permits without a 
+FEMA-approved LOMR if the site development permits are for 
+grading or filling of the site that is necessary to elevate it and remove 
+it from the floodplain as specified in the CLOMR. 
+ 
+(e) 
+Alteration of a watercourse. For development that will alter a watercourse, 
+the applicant shall: 
+ 
+(1) 
+Provide an H&H analysis prepared and sealed by a District-
+registered professional engineer that demonstrates the flood-
+carrying capacity of the altered portion of the watercourse will not 
+be decreased; and 
+ 
+(2) 
+Make notifications in accordance with 44 CFR § 60.3(b)(6). 
+ 
+(f)  
+No Adverse Impact. For all development (other than development related 
+to interior work that is not considered substantial improvement, floodplain 
+restoration, water body restoration, elevation of a public roadway located 
+outside of a floodway or a flood hazard area with base flood elevations 
+included in the FIS or on the FIRM but no designated floodways, or flood 
+control governmental projects), an applicant shall: 
+ 
+(1) 
+Submit volumetric calculations prepared and sealed by a District-
+registered professional engineer or surveyor demonstrating that no 
+
+
+===== [page 15] =====
+ 
+15 
+ 
+net loss of natural floodplain storage will occur, as the volume of 
+the loss of floodwater storage due to filling in the flood hazard area 
+shall be offset by providing an equal volume of flood storage by 
+excavation or other compensatory measures at or adjacent to the 
+development site outside the footprint of a proposed structure; or  
+ 
+(2) 
+Submit an H&H analysis prepared and sealed by a District-
+registered professional engineer demonstrating that the cumulative 
+effect of the proposed development, when combined with all other 
+existing and anticipated flood hazard area encroachment, will not 
+increase the base flood elevation on any property not owned by the 
+applicant.  
+ 
+(g)  
+Floodway. For development in a floodway or in riverine flood hazard areas 
+where design flood elevations (DFEs) are specified but floodways have not 
+been designated, other than development related to floodplain restoration, 
+water body restoration, or flood control governmental projects, the 
+applicant shall provide a site plan with an H&H analysis performed in 
+accordance with 44 CFR § 60.3(d)(3) and a No-Rise Certification prepared 
+and sealed by a District-registered professional engineer to demonstrate that 
+the development will not result in any increase in flood levels inside the 
+District during the occurrence of the base flood discharge. 
+ 
+ (h)  
+Floodplain Restoration, Waterbody Restoration, or Flood Control 
+Government Projects. For development related to floodplain restoration, 
+waterbody restoration, or flood control, the applicant may, with DOEE 
+approval, increase regulatory flood elevations up to one foot (1 ft.)  if the 
+increase in flood elevation is offset by stream or channel improvements 
+which have been approved by DOEE. The applicant shall first provide 
+DOEE a FEMA approved CLOMR (See also §§ 3106.4 (c) and (d)). 
+ 
+(i) 
+Covenants and Agreements. Covenants and agreements shall be recorded 
+before permit issuance, as described in § 3112.  
+ 
+(j) 
+Elevation Certificates. An applicant shall submit an elevation certificate 
+for flood elevations, building elevations, and floodway data as shown on 
+construction drawings. Additional elevation certificates are required during 
+and after construction as specified in § 3108.6. 
+ 
+(k)  
+Floodproofing Certificates. When an applicant seeks to undertake dry 
+floodproofing that is not prohibited by this chapter, the applicant shall 
+submit a floodproofing certificate of flood elevations, building elevations, 
+and floodway data as shown on construction drawings. An additional 
+floodproofing certificate is required after construction as specified in § 
+3108.7. 
+ 
+
+
+===== [page 16] =====
+ 
+16 
+ 
+(l) 
+Engineered Flood Opening Documentation. For an enclosure below the 
+DFE that complies with the Floodplain Management Regulations through 
+the use of engineered flood openings, the applicant shall provide a statement 
+by a registered design professional that the design of the openings will 
+provide for equalization of hydrostatic flood forces on exterior walls by 
+allowing for the automatic entry and exit of floodwaters. The statement shall 
+be provided to DOB and reviewed and approved by DOEE before the 
+issuance of a certificate of completion or the first certificate of occupancy. 
+ 
+(m)    Mechanical, Electrical, and Plumbing. For development that includes 
+mechanical, electrical, and plumbing that is not required to be accompanied 
+by plan designs, DOEE may request that the applicant submit supplemental 
+documentation, such as photographs or work receipts for work performed 
+by a licensed professional, or receive an inspection by DOEE, to verify 
+installation that is in accordance with § 3108.1. 
+ 
+(n) 
+Removing a Property from the Flood Hazard Area. Requests for 
+removal from the flood hazard areas described in § 3101.2 (c) and (d) shall 
+be accompanied and justified by an H&H analysis that is prepared and 
+sealed by a registered design professional and submitted to DOEE for 
+review.  
+ 
+3106.5 
+A permit for any development on a development site located wholly or partially 
+inside a flood hazard area will not be issued until the applicant has obtained all 
+legally required District and federal permits, including those required by section 
+404 of the Federal Water Pollution Control Act Amendments of 1972, 33 U.S.C. § 
+1334. 
+ 
+3107 
+DESIGN FLOOD ELEVATIONS (DFEs) 
+ 
+3107.1 
+DFEs must be identified for all development on a development site located wholly 
+or partially inside a flood hazard area. Applicants may voluntarily design their 
+project to be elevated or protected at a height above the DFEs required in this 
+section. 
+ 
+3107.2 
+If an application includes a site plan, an applicant shall provide with the site plan 
+cross sections that show the ground elevation and DFE at the site.  
+ 
+3107.3 
+Unless otherwise designated, the DFE shall be the higher of: 
+ 
+(a) 
+The base flood elevation plus a freeboard equal to two feet (2 ft.), or  
+ 
+(b)  
+The high flood elevation, in accordance with the most current FIS and FIRM 
+published by FEMA and adopted by the District.  
+
+
+===== [page 17] =====
+ 
+17 
+ 
+3107.4 
+For critical facilities permitted wholly or partially inside flood hazard areas, the 
+DFE shall be equivalent to that identified in § 3107.3 plus two feet (2 ft.).  
+3107.5 
+For any new construction or substantial improvement located on a development site 
+wholly or partially inside a tidal shoreline buffer area, the DFE shall be equivalent 
+to that identified in § 3107.3 plus three and four-tenths feet (3.4 ft.). 
+3107.6 
+If the DFE is not specified on the FIS or FIRM, the applicant shall, subject to DOEE 
+approval, either: 
+(a) 
+Determine the DFE by obtaining, reviewing, and reasonably utilizing data 
+available from a federal or state agency; or 
+ 
+(b) 
+Determine the DFE by using hydrologic and hydraulic engineering 
+techniques, and as follows:  
+ 
+(1) 
+The determination shall be performed and sealed by a District-
+registered professional engineer.  
+ 
+(2) 
+Studies, analyses, and computations shall be submitted in sufficient 
+detail to allow review and approval by DOEE.  
+ 
+(3) 
+The accuracy of data submitted for the determination shall be the 
+responsibility of the applicant. 
+ 
+3107.7 
+For the Zone X (shaded) flood hazard area mapped by Letter of Map Revision 
+(LOMR) 15-03-2388P, where no high flood elevation is specified on the FIS and 
+FIRM, the DFE shall be the elevation of the base flood elevation plus freeboard of 
+two feet (2 ft.) if no high flood elevation data is available from a federal, state, or 
+other source approved by DOEE. Requests for removal from this flood hazard area 
+based on elevation shall be accompanied and justified by an H&H analysis that is 
+prepared and sealed by a registered design professional and submitted to DOEE for 
+review.  
+ 
+3107.8 
+For the Rhode Island Avenue Metro underpass area specified in § 3101.2(d), the 
+DFE shall be the NAVD88 elevation of ninety-six and one-half feet (96.5 ft.). 
+ 
+3108 
+GENERAL TECHNICAL PROVISIONS 
+3108.1 
+Utilities and Finishes. The applicant shall apply the following minimum standards 
+to all proposed development on a development site located wholly or partially 
+inside a flood hazard area: 
+(a) 
+Installation or replacement of any electrical systems, equipment, and 
+components; heating, ventilating, air conditioning, and plumbing 
+appliances; plumbing fixtures; duct systems; and other service equipment 
+
+
+===== [page 18] =====
+ 
+18 
+ 
+shall be performed so that the systems are elevated above the DFE or 
+designed to prevent water from entering or accumulating inside the 
+components during flooding.  
+(b) 
+New and replacement sanitary sewage systems and gas and oil supply 
+systems shall be designed:  
+(1) 
+To minimize or eliminate infiltration of flood waters into the 
+systems; and  
+(2) 
+So that discharges from the systems into flood waters and onsite 
+waste disposal systems are located to avoid impairment to them or 
+contamination from them during flooding. 
+(c) 
+All new or replacement water facilities and systems shall be designed, 
+located, and constructed to minimize or eliminate flood damage and the 
+infiltration of flood waters.  
+(d) 
+Flood-resistant building materials and installation methods for flooring and 
+interior and exterior walls and wall coverings shall be used below the DFE 
+in accordance with the August 2008 version of FEMA Technical Bulletin 
+2, Flood Damage-Resistant Materials Requirements.  
+(e) 
+All electrical outlets located below the DFE shall be of the ground fault 
+circuit interrupter (GFCI) type. 
+(f) 
+All buildings, structures, storage tanks, and appliances and components 
+therein shall be firmly anchored in accordance with ASCE 24 to prevent 
+flotation, collapse, or lateral movement during a flood. 
+3108.2  
+Placement. For all development on a development site located partially inside a 
+flood hazard area, every proposed structure shall be placed or designed and 
+constructed to minimize impact upon the flow and height of flood water.  
+3108.3 
+Additions. All additions to residential and nonresidential structures located wholly 
+or partially inside flood hazard areas shall comply with the elevation and dry 
+floodproofing requirements of 12-J DCMR (“District of Columbia Existing 
+Building Code”).  
+3108.4 
+Historic Preservation. DOEE, in coordination with the Historic Preservation 
+Office (HPO), shall review any permit application for repair or rehabilitation to 
+historic structures wholly or partially inside a flood hazard area. If relief from any 
+of the Floodplain Management Regulations becomes necessary for continued 
+designation as a historic structure, the applicant shall submit either a variance 
+petition or a code modification application as described in § 3116 and § 3117, 
+respectively.  
+ 
+
+
+===== [page 19] =====
+ 
+19 
+ 
+3108.5 
+Accessory Structures. For a development site located wholly or partially inside a 
+flood hazard area: 
+ 
+(a) 
+Accessory structures that are smaller than six hundred square feet (600 sq. 
+ft.) must be elevated, dry floodproofed, or wet floodproofed to at least the 
+DFE; and 
+ 
+(b) 
+An accessory structure shall not be converted to a residential use. 
+ 
+3108.6 
+Elevation Certificates. For any elevated structure, the applicant shall submit to 
+DOEE for review and approval an elevation certificate, which shall be prepared and 
+sealed by a registered design professional using the latest FEMA Elevation 
+Certificate Form and submitted and verified by DOEE: 
+ 
+(a) 
+As part of the initial application for a building permit as described in § 
+3106.4(j); 
+ 
+(b) 
+Upon placement of the lowest floor and before further vertical construction, 
+and construction shall not continue further until this elevation certificate has 
+been reviewed and approved; and 
+ 
+(c) 
+Before the final building inspection or before the issuance of a conditional 
+certificate of occupancy for core and shell, whichever is earlier. Occupancy 
+shall not begin until this elevation certificate has been reviewed and 
+approved pursuant to the flood resistant provisions of the D.C. Building 
+Code, 12-A DCMR § 110.3.  
+ 
+3108.7 
+Dry Floodproofing. When dry floodproofing is requested for development on a 
+development site: 
+ 
+(a) 
+The applicant shall submit to DOEE for review and approval a 
+floodproofing certificate, which shall be prepared and sealed by a registered 
+design professional and submitted and verified by DOEE:  
+  
+(1) 
+As part of the initial application in support of a building permit as 
+described in § 3106.4(k); 
+ 
+(2) 
+Before the final inspection, the issuance of a certificate of 
+completion, or the issuance of the first certificate of occupancy for 
+an occupied space at grade or above, whichever is earlier; and 
+ 
+(3) 
+Using the latest FEMA Floodproofing Certificate Form. 
+ 
+(b) 
+Occupancy shall not begin until DOEE has reviewed and approved the 
+floodproofing certificate.  
+ 
+
+
+===== [page 20] =====
+ 
+20 
+ 
+(c) 
+The property owner shall be responsible for maintenance of the dry 
+floodproofing system and shall record that responsibility in a declaration of 
+covenants. The property owner must properly maintain that system as 
+demonstrated by: 
+ 
+(1)  
+Annually deploying the dry flood proofing system and documenting 
+the deployment with a timestamped photo to be kept on file for five 
+(5) years; and   
+ 
+(2)  
+Conducting any maintenance, as specified in the floodproofing 
+plans approved by DOEE, and preserving documentation of any 
+maintenance conducted on site for at least five (5) years after that 
+maintenance is conducted. 
+ 
+(d) 
+A property owner shall submit a flood emergency operations plan and 
+inspection and maintenance plan that complies with the requirements of 
+ASCE 24 along with all other required documentation in this chapter as part 
+of the initial permit application to DOEE for approval. 
+ 
+(e) 
+Dry floodproofing shall be limited to areas where the flood velocities 
+adjacent to the structure are less than or equal to five feet per second (5 
+ft./sec.) during the design flood. If the specific regulatory flood velocity for 
+a development site in a flood hazard area has not been provided in the FIS 
+and FIRM, then the applicant shall provide the following data to establish 
+those velocities for DOEE’s review and approval: 
+ 
+(1) 
+Available reports or studies from federal or District agencies or 
+other sources related to flood velocity; or 
+ 
+(2) 
+A hydrologic and hydraulic (H&H) analysis prepared and sealed by 
+a District-registered professional engineer.  
+ 
+3108.8 
+Enclosures. Any enclosure shall be designed and constructed to allow for the 
+automatic entry and exit of floodwaters for the purpose of equalizing hydrostatic 
+forces on exterior walls. Designs shall be in accordance with ASCE 24 and 
+Appendix G 12-A DCMR. Design and construction of flood openings shall meet 
+the following criteria: 
+ 
+(a) 
+There shall be at least two (2) flood openings on different sides of each 
+enclosed area; 
+(b) 
+For the substantial improvement of residential structures wholly or partially 
+mapped in flood hazard areas having space below the DFE that has only one 
+exterior wall, there shall be at least two (2) flood openings on one (1) side 
+or on different sides of each enclosed area;   
+
+
+===== [page 21] =====
+ 
+21 
+ 
+(c) 
+The total net area of all flood openings shall be at least one square inch (1 
+sq. in.) for each one square foot (1 sq. ft.) of enclosed area, or the flood 
+openings shall be engineered flood openings that are designed and certified 
+by a licensed professional engineer to automatically allow entry and exit of 
+flood waters; 
+(d) 
+The bottom of each flood opening shall be one foot (1 ft.) or less above the 
+higher of either the interior floor or grade or the exterior grade immediately 
+below the opening; 
+(e) 
+Any louvers, screens, or other covers for the flood openings shall allow the 
+automatic flow of floodwaters into and out of the enclosed area; and  
+ 
+(f) 
+Interior partitions and load-bearing walls shall have openings to allow water 
+to readily reach every enclosed area.  
+ 
+3109 
+RESIDENTIAL STRUCTURES 
+ 
+3109.1 
+Lowest Floor Height. For the new construction or substantial improvement of 
+residential structures wholly or partially inside the flood hazard areas specified in 
+§ 3101.2(a), the lowest floor (including the basement, parking garage, and any 
+ancillary residential uses) shall be at least the height of the DFE. The lowest floor 
+of any underground parking garage or ancillary residential use portion of any new 
+construction, or substantial improvement of a building located entirely outside of 
+flood hazard areas specified in § 3101.2(a), but wholly or partially inside flood 
+hazard areas specified in § 3101.2(b), (c), or (d), shall be at or above the DFE or be 
+designed and constructed to be dry floodproofed during any flood up to the height 
+of the DFE.  
+ 
+3109.2 
+Residential Enclosures. For the new construction or substantial improvement of 
+residential structures wholly or partially inside flood hazard areas, any enclosures 
+below the DFE shall only be used for parking of vehicles, building access, or 
+incidental storage. The enclosure shall be designed and constructed in accordance 
+with § 3108.8. 
+ 
+3109.3 
+Additions. For all lateral additions to an existing residential structure that constitute 
+a substantial improvement and are located wholly or partially inside the flood 
+hazard area, the lowest floor of the addition shall be at least the height of the DFE.  
+ 
+3110 
+NONRESIDENTIAL STRUCTURES 
+ 
+3110.1 
+Lowest Floor Height. For the new construction or substantial improvement of non-
+residential structures wholly or partially inside flood hazard areas, the lowest floor 
+(including the basement) either shall be at least the height of the DFE or the entire 
+structure shall be designed and constructed to be dry floodproofed during any flood 
+up to the DFE height.  
+ 
+
+
+===== [page 22] =====
+ 
+22 
+ 
+3110.2 
+Additions. For all lateral additions to an existing nonresidential structure that 
+constitute a substantial improvement and are located wholly or partially inside the 
+Flood Hazard Area, the lowest floor of the addition shall be at least the height of 
+the DFE or designed and constructed to be dry floodproofed during any flood up to 
+the height of the DFE for the additions to a non-residential structure. 
+ 
+3110.3 
+Nonresidential Enclosures. For the new construction or substantial improvement 
+of non-residential structures wholly or partially inside flood hazard areas, any 
+enclosures below the DFE shall only be used for parking of vehicles, building 
+access, or incidental storage. Enclosed areas of non-residential structures that are 
+below the lowest floor must be adequately anchored and built using flood resistant 
+building material. Any utilities or service facilities located below the DFE must be 
+designed and/or located to prevent flood damage. The enclosure shall be designed 
+and constructed in accordance with § 3108.8. 
+ 
+3110.4 
+Non-Conversion. For any new construction of, or substantial improvement to, a 
+nonresidential building located wholly or partially inside a flood hazard area, a non-
+residential space below the DFE shall not be converted to a residential use. 
+ 
+3111 
+MIXED-USE BUILDINGS 
+3111.1  
+Lowest Floor Height. The lowest floor (including basement or underground 
+parking garage) of any new construction or substantial improvement of a mixed-
+use building located on a development site wholly or partially inside a flood hazard 
+area shall either be at or above the DFE or be designed and constructed to be dry 
+floodproofed during any flood up to the DFE.  
+3111.2 
+Residential Portion. The lowest floor of the residential portion of any new 
+construction of, or substantial improvement to, a mixed-use building located on a 
+development site wholly or partially inside a flood hazard area shall be at or above 
+the DFE.  
+3111.3 
+Nonresidential Portion. The lowest floor of the nonresidential portion of any new 
+construction or substantial improvement of a mixed-use building located on a 
+development site wholly or partially inside a flood hazard area shall either be at or 
+above the design flood elevation or be designed and constructed to be dry 
+floodproofed during any flood up to the design flood elevation.  
+ 
+3111.4 
+Ancillary Residential Use Portion. The lowest floor of the ancillary residential 
+use portion of any new construction or substantial improvement of a mixed-use 
+building located on a development site wholly or partially inside a flood hazard 
+area shall be at or above the DFE, except that the lowest floor of the ancillary 
+residential use portion of any new construction or substantial improvement of a 
+mixed-use building located entirely outside of flood hazard areas specified in § 
+3101.2(a), but wholly or partially inside flood hazard areas specified in §§ 
+
+
+===== [page 23] =====
+ 
+23 
+ 
+3101.2(b), (c), or (d), shall be at or above the DFE or be designed and constructed 
+to be dry floodproofed during any flood up to the height of the DFE.  
+ 
+3111.5  
+Mixed-Use Enclosures. For the new construction or substantial improvement of 
+mixed-use structures wholly or partially inside flood hazard areas, the non-
+residential portions below the DFE must be dry floodproofed. All residential units, 
+building systems and service equipment that serve residential units and ancillary 
+areas used by residents, must be elevated above the DFE. When an enclosure is 
+created by elevating the non-residential portions at or above the DFE, the space 
+below the DFE shall only be used for parking of vehicles, building access, or 
+incidental storage. These enclosed areas shall be adequately anchored and built 
+using flood resistant building material. Any utilities or service facilities below the 
+DFE shall be designed and/or located to prevent flood damage. The enclosure shall 
+be designed and constructed in accordance with § 3108.8. 
+ 
+3111.6  
+Dry Floodproofing. Dry floodproofing of non-residential portions of mixed-use 
+buildings is allowed if all residential units, building systems, and service equipment 
+that serve residential units, and ancillary areas used by residents, are elevated above 
+the DFE. Dry floodproofed shared accesses, such as lobbies to residential and non-
+residential portions, must provide separate access to the elevated residential 
+portions of the mixed-use structures. When the separate access to the residential 
+portions of a mixed-use building is enclosed by walls and below an elevated 
+building, the walls must comply with the requirements for enclosures in § 3108.8.  
+ 
+3111.7 
+Non-Conversion. For any new construction of or substantial improvement to a 
+mixed-use building located wholly or partially inside a flood hazard area, a non-
+residential space below the DFE shall not be converted to a residential use. 
+ 
+3112 
+COVENANTS AND AGREEMENTS 
+ 
+3112.1 
+The owner of each lot and parcel on which substantial improvement or new 
+construction of a residential, mixed-use, or nonresidential structure is located 
+wholly or partially inside a flood hazard area shall record with the Office of the 
+Recorder of Deeds a non-conversion agreement not to convert areas of parking, 
+storage, or access below the DFE to a residential use.  
+ 
+3112.2 
+The owner of each lot and parcel on which substantial improvement or new 
+construction of an accessory structure is located wholly or partially inside a flood 
+hazard area shall record with the Office of the Recorder of Deeds a non-conversion 
+agreement not to convert an accessory structure to a residential use.  
+ 
+3112.3 
+The owner of each lot and parcel on which substantial improvement or new 
+construction of any structure is located wholly or partially inside a flood hazard 
+area and is designed to be dry floodproofed shall record with the Office of the 
+Recorder of Deeds a covenant to maintain the dry floodproofing system, including 
+the deployment, operation, or maintenance of the system. 
+
+
+===== [page 24] =====
+ 
+24 
+ 
+ 
+3112.4 
+Each non-conversion agreement or covenant shall: 
+ 
+(a)  
+Be in the form approved by DOEE;  
+ 
+(b)  
+Be approved for technical sufficiency by DOEE; 
+ 
+(c) 
+Be binding on each subsequent owner (run with the land); and 
+ 
+(d) 
+Provide for inspection of and access to the areas, structures, and systems 
+described in the covenant or non-conversion agreement at reasonable times 
+by DOEE or its authorized representative. 
+  
+3112.5 
+Before any DOEE-issued permit required under this chapter is issued, the property 
+owner shall file and record each required covenant or non-conversion agreement, 
+at the expense of the owner, with the Office of the Recorder of Deeds. 
+ 
+3112.6 
+The owner shall provide DOB with one copy of the covenant or non-conversion 
+agreement that is certified by the Office of the Recorder of Deeds as having been 
+recorded among the land records against the lot and parcel on which development 
+is occurring. 
+ 
+3112.7 
+For any modification or termination of the covenant or non-conversion agreement, 
+the owner shall obtain prior written approval by DOEE and record the covenant or 
+agreement accordingly. 
+ 
+3112.8 
+An agency or authority of the federal government or District Government shall not 
+be required to make or record a covenant or non-conversion agreement. If a District 
+property is leased to a private entity for more than three (3) years, the lessee and 
+District agency shall sign an agreement that documents the property’s dry 
+floodproofing system and who is responsible for its operation and maintenance, as 
+well as an agreement not to convert an accessory structure, parking area, storage 
+area, or access that is below the DFE into residential use. 
+ 
+3113 
+CRITICAL FACILITIES 
+ 
+3113.1 
+In addition to all other applicable provisions of this chapter, new construction of 
+critical facilities or substantial improvement of existing critical facilities in the 
+flood hazard areas shall comply with the additional requirements described in this 
+section.  
+3113.2  
+The applicant shall submit materials demonstrating that:  
+(a)  
+The development project has received all applicable federal and District 
+authorizations, including approvals related to stormwater management and 
+soil erosion and sediment control;  
+
+
+===== [page 25] =====
+ 
+25 
+ 
+(b)  
+There is no practical alternative for development outside the flood hazard 
+area; 
+(c)  
+In determining the proposed location, the applicant has considered the 
+likelihood of inundation by sea level rise and the increased intensity of 
+rainfall and its associated flooding over the course of the life of the critical 
+facility structure;  
+(d) 
+The development is designed to avoid or, in the alternative, minimize 
+environmental and structural damage and other flood-related impacts from 
+floods and from sea level rise; and 
+(e) 
+Specific flood mitigation measures are incorporated into the design of the 
+facility to protect the development and access to it.  
+3113.3  
+The applicant shall submit for DOEE’s review:  
+(a) 
+A comprehensive resilient systems plan that demonstrates how any 
+equipment and systems supporting critical functions of the development 
+will be protected during a flood to the height of the DFE; and 
+(b)      An evacuation plan that fully explains how any evacuation of the site before 
+or during a one hundred (100)-year or five hundred (500)-year flood would 
+proceed, by providing for:  
+ 
+(1) 
+Adequate vehicle access at all times and conditions; and 
+  
+(2) 
+Alternate escape routes.  
+ 
+3114 
+HAZARDOUS 
+AND 
+BUOYANT 
+MATERIALS 
+STORAGE 
+AND 
+EMERGENCY PLANS 
+ 
+3114.1 
+Any proposed development on a development site that is located wholly or partially 
+inside a flood hazard area and involves a facility that produces, stores, or disposes 
+of hazardous materials shall be considered a critical facility and subject to § 3113. 
+ 
+3114.2 
+Any proposed development described in § 3114.1 shall be: 
+ 
+(a) 
+Elevated or designed and constructed to remain dry and prevent pollution 
+from the facility in the event of a flood reaching the DFE for critical 
+facilities specified in § 3107.4; and 
+ 
+(b) 
+Constructed in accordance with the standards for dry floodproofing 
+contained in § 3108.7.  
+ 
+
+
+===== [page 26] =====
+ 
+26 
+ 
+3114.3 
+The owner of a property or a facility that is located wholly or partially inside a flood 
+hazard area shall store any hazardous materials so that they do not come into contact 
+with floodwaters or become debris in the event of a flood reaching the DFE for 
+critical facilities specified in § 3107.4.  
+ 
+3114.4 
+The owner of a property or a facility that is located wholly or partially inside a flood 
+hazard area that stores buoyant materials, including tires, storage tanks, lumber, 
+auto body components, insulation, and prefabricated above-ground pools, shall:  
+ 
+(a) 
+Not store the materials in a flood hazard area for more than sixty (60) days; 
+and 
+ 
+(b) 
+Anchor or enclose the materials to resist flotation. 
+ 
+3115  
+TIDAL SHORELINE BUFFER  
+ 
+3115.1 
+The provisions of this section shall apply for all development on a development site 
+located wholly or partially inside the flood hazard area known as the tidal shoreline 
+buffer. 
+ 
+3115.2 
+A non-residential space below the tidal shoreline flood elevation shall not be 
+converted to a residential use. 
+ 
+3115.3 
+An applicant for new construction or substantial improvement of structures wholly 
+or partially inside the tidal shoreline buffer shall submit for DOEE’s review, in 
+addition to documents required by the other applicable requirements in this chapter: 
+ 
+(a) 
+Evaluations to prove that alternative site locations are not possible; 
+ 
+(b) 
+A comprehensive resilient systems plan that includes a suitability 
+assessment of equipment and systems supporting critical functions of the 
+development and specifies flood mitigation measures that will be taken to 
+protect this equipment and systems, and ensure continuity of operations; 
+and 
+ 
+(c) 
+An evacuation plan that fully explains the way the development will be 
+evacuated before or during a one hundred (100)-year and five hundred 
+(500)-year flood by providing for: 
+ 
+(1) 
+Adequate vehicle access at all times and conditions, and 
+ 
+(2) 
+Alternate escape routes. 
+ 
+ 
+ 
+ 
+
+
+===== [page 27] =====
+ 
+27 
+ 
+3116 
+VARIANCES TO THIS CHAPTER 
+ 
+3116.1 
+An applicant for a permit in the floodplain who is subject to the requirements of 
+this chapter may petition DOEE for a variance from any of the following as applied 
+to the applicant: 
+ 
+(a) 
+Regulatory flood elevation determinations, flood hazard area boundaries, 
+floodway locations, or other FIRM-related determinations; 
+ 
+(b) 
+Decisions made by DOEE regarding land-disturbing development, 
+including but not limited to mining, dredging, filling, grading, paving, and 
+excavations; and 
+    
+(c) 
+Decisions made by DOEE regarding the information requirements set forth 
+in the permit application process pursuant to § 3106. 
+ 
+3116.2 
+DOEE may grant a variance in response to a petition pursuant to § 3116.1 if the 
+applicant shows, to the satisfaction of DOEE, that: 
+ 
+(a)  
+The unique characteristics of the size, configuration, or topography of the 
+site justify a change to the regulatory flood elevations in this chapter; 
+ 
+(b)  
+Failure to grant the variance would result in exceptional hardship by 
+rendering the lot undevelopable due to conditions such as unique physical 
+and topographical conditions of the property; 
+ 
+(c)  
+Granting a variance will not result in increased flood heights, additional 
+threats to public safety, or extraordinary public expense, or conflict with 
+other existing laws; or regulations; or  
+ 
+(d)  
+The variance is the minimum necessary to afford relief considering the flood 
+hazard. 
+ 
+3116.3 
+A variance shall not be granted for any construction, development, use, or activity 
+inside any floodway area that would cause any increase in the regulatory flood 
+elevations. 
+ 
+3116.4 
+A variance shall not be granted for an accessory structure exceeding six hundred 
+square feet (600 sq. ft.). 
+ 
+3116.5 
+When DOEE issues an order granting a variance, that order may include, and the 
+requester must abide by, any reasonable condition or safeguard DOEE deems 
+necessary to protect the public health, safety, and welfare, and to achieve the 
+objectives of this chapter and the District of Columbia Applications Insurance 
+Implementation Act (D.C. Official Code § 6-501 et seq.). 
+ 
+
+
+===== [page 28] =====
+ 
+28 
+ 
+3116.6 
+All other requests to deviate from the floodplain management regulations, 
+including those regarding buildings or other temporary or permanent structures, 
+shall be made to DOB through the code modification process in § 3117.  
+ 
+3117 
+CODE 
+MODIFICATIONS 
+TO 
+FLOOD 
+RESISTANT 
+DESIGN 
+PROVISIONS OF THE CONSTRUCTION CODES 
+ 
+3117.1 
+An applicant seeking a code modification to any provision of the Construction 
+Codes relating to any development on a development site located wholly or 
+partially inside a flood hazard area must have DOB approval. No approval will be 
+granted by DOB unless:  
+ 
+(a)  
+The code modification complies with the procedures set forth in Appendix  
+G 12-A DCMR; and  
+ 
+(b)  
+DOEE has reviewed and provided a recommendation to DOB regarding the 
+code modification request. 
+ 
+3117.2 
+Notwithstanding any provision of this section, all structures wholly or partially 
+inside flood hazard areas shall be designed and constructed to have the capability 
+of resisting the base flood and high flood. 
+ 
+3118  
+APPEALS TO DOEE 
+ 
+3118.1 
+A person adversely affected by a decision made by DOEE under this chapter may 
+appeal the action in accordance with this section. 
+ 
+3118.2 
+A person adversely affected by a DOEE action may, within fifteen (15) calendar 
+days of the action, appeal the action to the Director of DOEE or the Director’s 
+designee. In making an appeal, the person shall: 
+ 
+(a) 
+Submit the request in writing to DOEE by email to flood.risk@dc.gov, or 
+by mail that is postmarked within fifteen (15) days of the adverse action to 
+the Director or the Director’s designee; 
+ 
+(b) 
+Provide information or material that would support a change in or 
+withdrawal of DOEE’s action; and 
+ 
+(c) 
+Provide any additional information requested by DOEE. 
+ 
+3118.3 
+Appeals must be in writing and include all information and material that the 
+aggrieved person wishes to present for consideration on appeal. 
+ 
+3118.4 
+When considering an appeal, the Director or the Director’s designee may stay the 
+effect of a decision or action being appealed pending determination of the appeal. 
+Unless stayed, the original decision or action remains in effect. 
+
+
+===== [page 29] =====
+ 
+29 
+ 
+ 
+3118.5 
+Any person adversely affected or aggrieved by a decision of the Director under this 
+section may request a hearing in accordance with § 3119. 
+ 
+3119 
+APPEALS TO THE OFFICE OF ADMINISTRATIVE HEARINGS 
+ 
+3119.1 
+A person adversely affected by a decision of the Director or DOEE under § 3118 
+may appeal the decision to the Office of Administrative Hearings (OAH) within 
+fifteen (15) calendar days of DOEE’s final decision.  
+ 
+3119.2 
+Prehearing practice and the conduct of the hearing shall be in accordance with the 
+Office of Administrative Hearings Establishment Act of 2001, effective March 6, 
+2002 (D.C. Law 14-76; D.C. Official Code § 2-1831.01 et seq.), and the regulations 
+set forth at Title 1, Chapter 28, of the District of Columbia Municipal Regulations. 
+ 
+ 
+3120 
+PENALTIES 
+ 
+3120.1 
+Any person who violates this chapter and the Construction Codes (DCMR Title 12) 
+will be subject to any applicable penalties in the Construction Codes as well as any 
+applicable penalties provided in this chapter. 
+ 
+3120.2 
+Violations of the provisions of this chapter shall be subject to any applicable 
+penalties provided in the Water Pollution Control Act of 1984, effective March 16, 
+1985 (D.C. Law 5-188; D.C. Official Code § 8-103.01 et seq.), or the District of 
+Columbia Applications Insurance Implementation Act, effective May 26, 1976 
+(D.C. Law 1-64; D.C. Official Code § 6-501 et seq.), as well as any civil fines, fees, 
+and penalties established by DOEE pursuant to the Civil Infractions Act of 1985 
+(D.C. Official Code §§ 2-1801 et seq). 
+ 
+3121-3197 
+[RESERVED] 
+ 
+3198 
+TRANSITION 
+ 
+3198.1 
+An applicant that has submitted a complete application in accordance with 21 
+DCMR § 3106 and 12-A DCMR § G104 within thirty (30) days of June 20, 2025 
+may comply with the previous edition of the Flood Hazard Rules.  
+ 
+3198.2  
+Applications for which DOEE determines that an unexpired approval or final report 
+listed below conflicts with this chapter may comply with the provisions of this 
+chapter effective as of June 19, 2025, provided that the permit is obtained before 
+December 20, 2025:   
+ 
+(a) 
+Final approval by the Historic Preservation Review Board;  
+(b) 
+Final approval by the Commission on Fine Arts; 
+
+
+===== [page 30] =====
+ 
+30 
+ 
+(c) 
+Final approval by the National Capital Planning Commission;  
+(d) 
+Variance or special exception from the Board of Zoning Adjustment;  
+(e) 
+Stage 2 or Consolidated Planned Unit Development review by the District 
+Office of Planning; or    
+(f) 
+Design review by the District Office of Planning.  
+3198.3       
+If a permit under which a floodplain plan was approved by the DOEE expires or is 
+abandoned in accordance with 12-A DCMR Chapter 1, then the DOEE’s floodplain 
+approval shall be considered expired. 
+ 
+3199  
+DEFINITIONS 
+ 
+When used in this chapter, the following words and phrases shall have the meanings ascribed: 
+ 
+Accessory Structure – a structure that is:  
+ 
+(a)  
+Not used for human habitation;  
+ 
+(b)  
+Incidental to a main structure on the premises; and  
+ 
+(c)  
+Used only for the parking of vehicles or limited storage. 
+ 
+Adjacent community – any State, or political subdivision thereof, that is immediately adjacent to 
+the borders of the District of Columbia and that has authority to adopt and enforce floodplain 
+management regulations for areas inside its jurisdiction. 
+ 
+Alteration of a watercourse – a dam, impoundment, channel relocation, change in channel 
+alignment, channelization, or change in cross-sectional area of the channel or the channel capacity, 
+or any other form of modification, which may alter, impede, retard, or change the direction or 
+velocity of the riverine flow of water during conditions of the base flood. 
+ 
+Ancillary residential use portion – a portion of a building that is used by residents, but not as a 
+residential unit. Ancillary residential uses include lobbies, mailrooms, loading docks, and gyms 
+that are available only to residents, but do not include above-grade enclosed areas that are below 
+the DFE and used solely for parking of vehicles, building access, or storage.  
+ 
+American Society of Civil Engineers Standard 24-14 (ASCE 24), Flood Resistant Design and 
+Construction – a publication of the American Society of Civil Engineers (ASCE) that provides 
+minimum requirements for flood-resistant design and construction of structures located in flood 
+hazard areas. FEMA has deemed that ASCE 24 meets or exceeds the minimum National Flood 
+Insurance Program requirements for buildings and structures. ASCE 24 is a referenced standard in 
+the International and District of Columbia Construction Codes. ASCE 24-14 refers to the version 
+of ASCE 24 published in 2014 that is available on the ASCE website at: 
+https://ascelibrary.org/doi/book/10.1061/9780784413791.  
+
+
+===== [page 31] =====
+ 
+31 
+ 
+ 
+Base flood – the flood having a one percent (1%) chance of being equaled or exceeded in any 
+given year. The base flood is commonly referred to as the “one hundred (100)-year flood” or the 
+“one-percent (1%)-annual-chance flood.” 
+ 
+Base floodplain – the area that would be inundated by a flood having a one percent (1%) chance 
+of being equaled or exceeded in any given year, also known as the one hundred (100)-year 
+floodplain. 
+ 
+Base flood elevation – the one hundred (100)-year flood elevation, including wave height, relative 
+to the National Geodetic Vertical Datum (NGVD), North America Vertical Datum (NAVD), or 
+other datum specified on the Flood Insurance Rate Map (FIRM). 
+ 
+Basement - the portion of a building having its floor subgrade (below ground level) on all sides. 
+ 
+Construction – the building, rebuilding, renovation, repair, extension, expansion, alteration, or 
+relocation of a structure. 
+ 
+Critical facility – a building or structure intended to remain operational in the event of extreme 
+environmental loading from flood, wind, snow, or earthquake that contains essential equipment, 
+houses services necessary for emergency response and recovery, or would pose a substantial risk 
+to the public or significant disruption to the community at large in the event of failure, disruption 
+of function during or after flooding, or damage by flooding. Critical facilities include: 
+ 
+(a) 
+Hospitals and health care facilities having surgery or emergency treatment 
+facilities; 
+  
+(b) 
+Fire, rescue, ambulance, and police stations and emergency vehicle garages;  
+ 
+(c) 
+Designated emergency shelters;  
+ 
+(d) 
+Designated emergency preparedness, communication, and operation centers and 
+other facilities required for emergency response; 
+ 
+(e) 
+Power generating stations and other public utility facilities required in emergencies; 
+ 
+(f) 
+Critical aviation facilities such as control towers, air traffic control centers, and 
+hangars for aircraft used in emergency response; 
+ 
+(g) 
+Ancillary structures such as communication towers, electrical substations, fuel or 
+water storage tanks, or other structures necessary to allow continued functioning of 
+a critical facility during and after an emergency; 
+ 
+(h) 
+Jails, correctional facilities, and detention facilities; 
+ 
+
+
+===== [page 32] =====
+ 
+32 
+ 
+(i) 
+Care facilities where residents have limited mobility or ability, including nursing 
+homes but not including care facilities for five or fewer persons; 
+ 
+(j) 
+Shelters and short-term family housing facilities for individuals experiencing 
+homelessness; 
+ 
+(k) 
+Elementary schools and secondary schools; 
+ 
+(l) 
+Preschool and child care facilities not located in one- and two-family dwellings; 
+ 
+(m) 
+Inpatient alcohol or drug rehabilitation facilities; 
+ 
+(n) 
+Psychiatric hospitals; 
+ 
+(o) 
+Animal shelters and wildlife rehabilitation facilities; and 
+ 
+(p) 
+Facilities that produce, store, or dispose of hazardous materials. 
+ 
+Design Flood Elevation (DFE) – the one hundred (100)-year flood elevation (base flood 
+elevation) plus two feet (2 ft.), or the five hundred (500)-year flood elevation (high flood 
+elevation), whichever is higher, based on the FEMA Flood Insurance Rate Map, effective 
+September 27, 2010, and subsequent revisions and amendments as approved by FEMA, or the 
+flood protection elevation as designated herein in accordance with the Floodplain Management 
+Regulations. 
+ 
+Development – any human-made change to improved or unimproved premises, including 
+buildings or other structures, temporary structures, temporary or permanent storage of materials, 
+mining, dredging, filling, grading, paving, excavations, operations, and other land-disturbing 
+activities. 
+ 
+Development Site – a record lot located wholly or partially inside a flood hazard area on which 
+any development is proposed to occur. 
+ 
+District-registered professional engineer – an engineer who registers as a professional engineer 
+and becomes licensed to practice as an engineer in the District of Columbia. 
+ 
+District of Columbia (D.C.) Building Code – the District of Columbia Building Code 
+Supplement, 12-A DCMR, or any successor thereto. 
+ 
+District of Columbia (D.C.) Construction Codes − the District of Columbia Construction Codes 
+Supplement, 12-A DCMR, and any subsequent editions thereof, or any successor thereto. 
+ 
+DOB – the District of Columbia Department of Buildings. 
+ 
+DOEE – the Department of Energy and Environment. 
+ 
+
+
+===== [page 33] =====
+ 
+33 
+ 
+Dry floodproofing – a combination of design modifications that result in a building or structure, 
+including the attendant utility and sanitary facilities, being watertight with walls substantially 
+impermeable to the passage of water and with structural components having the capacity to resist 
+hydrostatic loads.  
+ 
+Elevation Certificate – the National Flood Insurance Program Elevation Certificate (FEMA form 
+086-0-33), any successor to FEMA form 086-0-33, or other DOEE-approved form used to certify 
+that new buildings and substantial improvements in flood hazard areas are properly elevated in 
+accordance with the Floodplain Management Regulations.  
+ 
+Enclosure – an area below the lowest floor of an elevated building that is enclosed on all sides by 
+walls.  
+ 
+Encroachment – the placement of fill, excavation, buildings, permanent structures, or other 
+development into a flood hazard area that may impede or alter the flow capacity of riverine flood 
+hazard areas. 
+ 
+Existing manufactured home park or subdivision – a manufactured home park or subdivision 
+for which the construction of facilities for servicing the lots on which the manufactured homes are 
+to be affixed (including, at a minimum, the installation of utilities, the construction of streets, and 
+either final site grading or the pouring of concrete pads) is finished before the effective date of the 
+Floodplain Management Regulations adopted by the District of Columbia. 
+ 
+Expansion to an existing manufactured home park or subdivision – the preparation of 
+additional sites by the construction of facilities for servicing the lots on which the manufactured 
+homes are to be affixed (including the installation of utilities, the construction of streets, and either 
+final site grading or the pouring of concrete pads). 
+ 
+FEMA – the Federal Emergency Management Agency. 
+ 
+Flood or flooding – a general and temporary condition of partial or complete inundation of 
+normally dry land from: 
+ 
+(a) 
+The overflow of inland or tidal waters; or 
+ 
+(b) 
+The unusual and rapid accumulation or runoff of surface waters from any source. 
+ 
+Flood hazard area – the land inside the five hundred (500)-year (Zone X(shaded)) or one hundred 
+(100)-year (Zones A, AE, A1-30, A99, AR, AO, or AH) floodplain in accordance with the FEMA 
+Flood Insurance Rate Map, effective September 27, 2010, and subsequent revisions and 
+amendments as approved by FEMA, or other area designated herein as a flood hazard area in 
+accordance with the Floodplain Management Regulations.  
+ 
+Flood Insurance Rate Map (FIRM) – an official map of a community on which FEMA has 
+delineated both the flood hazard areas and other risk premium zones applicable to the community. 
+ 
+
+
+===== [page 34] =====
+ 
+34 
+ 
+Flood Insurance Study (FIS) – the official report provided by FEMA containing the Flood 
+Insurance Rate Map (FIRM), the Flood Boundary and Floodway Map (FBFM), the water surface 
+elevation of the base flood, and supporting technical data.  
+ 
+Floodplain – a relatively flat or low land area that is subject to partial or complete inundation from 
+an adjoining or nearby stream, river, or watercourse; or any area subject to the usual and rapid 
+accumulation of surface waters from any source. 
+ 
+Floodplain Management Regulations – The flood-resistant construction provisions of the D.C. 
+Construction Codes, in combination with this chapter.  
+ 
+Floodproofing – any combination of structural and nonstructural additions, changes, or 
+adjustments to structures that reduce or eliminate flood damage to real estate or improved real 
+property, water and sanitary facilities, structures, and their contents. 
+ 
+Floodproofing Certificate – the National Flood Insurance Program Floodproofing Certificate for 
+Non-Residential Structures (FEMA form 086-0-34), any successor to FEMA form 086-0-34, or 
+other DOEE approved form used to certify a floodproofing design for buildings that are permitted 
+by these regulations to use dry floodproofing as an alternative to elevating to or above the DFE.  
+ 
+Floodway – the channel of a river, creek, or other watercourse and the adjacent land areas that 
+must be reserved in order to discharge the base flood without cumulatively increasing the water 
+surface elevation more than a designated height. 
+ 
+Freeboard – a factor of safety usually expressed in feet above a flood level for purposes of 
+floodplain management intended to compensate for the many unknown factors that could 
+contribute to flood heights greater than the height calculated for a selected size flood and floodway 
+conditions, such as wave action, bridge openings, and the hydrological effect of urbanization of 
+the watershed. 
+ 
+Hazardous Materials – The following materials:  
+ 
+(a) 
+Acetone; 
+ 
+(b) 
+Ammonia; 
+ 
+(c) 
+Benzene; 
+(d) 
+Calcium carbide; 
+(e) 
+Carbon disulfide; 
+(f) 
+Celluloid; 
+(g) 
+Chlorine; 
+
+
+===== [page 35] =====
+ 
+35 
+ 
+(h) 
+Hydrochloric acid; 
+(i) 
+Hydrocyanic acid; 
+(j) 
+Magnesium; 
+(k) 
+Nitric acid and oxides of nitrogen; 
+(l) 
+Petroleum products (gasoline, fuel oil, etc.); 
+(m) 
+Phosphorus; 
+(n) 
+Potassium; 
+(o) 
+Sodium; 
+(p) 
+Sulfur and sulfur products; 
+(q) 
+Pesticides (including insecticides, fungicides, and rodenticides); and 
+(r) 
+Radioactive substances. 
+ 
+High flood – the flood having a two-tenths percent (0.2%) chance of being equaled or exceeded 
+in any given year, also known as the five-hundred (500)-year flood. 
+ 
+High flood elevation – the five hundred (500)-year flood water surface elevation, including wave 
+height, relative to the National Geodetic Vertical Datum (NGVD), North America Vertical Datum 
+(NAVD), or other datum specified on the Flood Insurance Rate Map (FIRM). 
+ 
+Historic structure – any structure that is: 
+ 
+(a) 
+Individually listed in the National Register of Historic Places (a listing maintained 
+by the U.S. Department of Interior) or preliminarily determined by the Secretary of 
+the Interior as meeting the requirements for individual listing on the National 
+Register; 
+ 
+(b) 
+Certified or preliminarily determined by the Secretary of the Interior as contributing 
+to the historical significance of a registered historic district or a district 
+preliminarily determined by the Secretary to qualify as a registered historic district; 
+ 
+(c) 
+Individually listed on a state inventory of historic places in states with historic 
+preservation programs that have been approved by the Secretary of the Interior; or 
+ 
+(d) 
+Individually listed on a local inventory of historic places in communities with 
+historic preservation programs that have been certified either: 
+
+
+===== [page 36] =====
+ 
+36 
+ 
+ 
+(1) 
+By an approved state program as determined by the Secretary of the Interior; 
+or 
+ 
+(2) 
+Directly by the Secretary of the Interior in states without approved 
+programs. 
+ 
+Hydrologic and Hydraulic (H&H) Analysis – an analysis that quantifies the volumetric flow of 
+water. Hydraulic analyses determine the depth of flow, flow velocity, and forces from flowing 
+water. 
+ 
+Interior Flooding – Floods, also known as flash floods, urban floods, stormwater floods, and 
+cloudburst floods, that are caused by heavy rainfall that cannot be absorbed by the ground and then 
+overwhelm the drainage system. Interior flooding can occur when river elevations are normal 
+because interior floods are attributed to topography, development, localized weather, and the 
+capacity of stormwater systems. Generally, areas of interior flood risk are not mapped on FEMA’s 
+flood insurance rate maps.  
+ 
+Land-disturbing activity – Movement of earth, land, or sediment that disturbs the land surface 
+and the related use of pervious land to support that movement. Land-disturbing activity includes 
+stripping, grading, grubbing, trenching, excavating, transporting, and filling of land, as well as the 
+use of pervious adjacent land for movement and storage of construction vehicles and materials. 
+Land-disturbing activity does not include repaving or remilling that does not expose the underlying 
+soil. 
+ 
+Letter of Map Change – an official determination issued by FEMA that amends or revises an 
+effective Flood Insurance Rate Map or Flood Insurance Study. Letters of Map Change include: 
+ 
+(a) 
+Letter of Map Amendment (LOMA) – An amendment based on technical data 
+showing that a property was incorrectly included in a designated special flood 
+hazard area. A LOMA amends the current effective Flood Insurance Rate Map and 
+establishes that a specific property, portion of a property, or structure is not located 
+in a special flood hazard area. 
+ 
+(b) 
+Letter of Map Revision (LOMR)– A revision based on technical data that may show 
+changes to flood zones, flood elevations, special flood hazard area boundaries and 
+floodway delineations, and other planimetric features.  
+ 
+(c) 
+Letter of Map Revision Based on Fill (LOMR-F) – A determination that a structure 
+or parcel of land has been elevated by fill above the base flood elevation and is, 
+therefore, no longer located inside the special flood hazard area. In order to qualify 
+for this determination, the fill must have been permitted and placed in accordance 
+with the community’s floodplain management regulations. 
+ 
+(d) 
+Conditional Letter of Map Revision (CLOMR) – A formal review and comment as 
+to whether a proposed flood protection project or other project complies with the 
+
+
+===== [page 37] =====
+ 
+37 
+ 
+minimum NFIP requirements for the projects with respect to delineation of special 
+flood hazard areas. A CLOMR does not revise the effective Flood Insurance Rate 
+Map or Flood Insurance Study; upon submission and approval of certified as-built 
+documentation, a Letter of Map Revision may be issued by FEMA to revise the 
+effective FIRM. 
+ 
+Lowest floor – the floor of the lowest enclosed area, including basement. The term excludes the 
+floor of any unfinished or flood-resistant enclosure usable solely for vehicle parking, building 
+access or limited storage provided that the enclosure is not built so as to render the structure in 
+violation of Section 1612 of the D.C. Building Code and Appendix G 12-A DCMR. 
+ 
+Manufactured home – a structure that is transportable in one or more sections, built on a 
+permanent chassis, designed for use with or without a permanent foundation when attached to the 
+required utilities, and constructed to the Federal Manufactured Home Construction and Safety 
+Standards and rules and regulations promulgated by the U.S. Department of Housing and Urban 
+Development in 24 CFR Part 3280. The term also includes mobile homes, park trailers, travel 
+trailers and similar transportable structures that are placed on a site for one hundred eighty (180) 
+consecutive days or longer. 
+ 
+Mixed-use building – any building or structure that has non-residential and residential portions.  
+ 
+National Flood Insurance Program (NFIP) – a Federal program administered by FEMA 
+enabling property owners in participating communities to purchase insurance protection against 
+losses from flooding. Participation in the NFIP is based on an agreement between local 
+communities and FEMA under which FEMA agrees to make flood insurance available in the 
+community as a financial protection against flood losses if the community will adopt and enforce 
+a floodplain management ordinance to reduce future flood risks from new construction and 
+development in flood hazard areas. 
+ 
+NAVD88 – the North American Vertical Datum of 1988 (NAVD88), which is the current vertical 
+control datum for the District of Columbia. It defines a specific zero (0) elevation point from which 
+vertical elevation is measured. 
+ 
+New construction – site preparation for, and construction of, entirely new structures and structures 
+that maintain only the existing foundation, the exterior walls, or both. New construction means, 
+for the purposes of determining insurance rates, structures for which the “start of construction” 
+started on or after the effective date of an initial FIRM or after December 31, 1974, whichever is 
+later, and includes any subsequent improvements to the structures. For floodplain management 
+purposes, new construction means structures for which the start of construction started on or after 
+the effective date of a floodplain management regulation adopted by the District and includes any 
+subsequent improvements to the structures. 
+ 
+New manufactured home park or subdivision – a manufactured home park or subdivision for 
+which the construction of facilities for servicing the lots on which the manufactured homes are to 
+be affixed (including at a minimum, the installation of utilities, the construction of streets, and 
+
+
+===== [page 38] =====
+ 
+38 
+ 
+either final site grading or the pouring of concrete pads) is finished on or after the effective date of 
+these regulations. 
+ 
+No-Rise Certification – a document that the applicant provides to demonstrate that their project 
+does not cause any increase to the base flood elevation. 
+ 
+Non-residential – any building or structure or portion thereof that is not classified residential.  
+ 
+Non-residential portion of a mixed-use building – a portion of the mixed-use building that is 
+available for use by the general public or is publicly accessible. 
+ 
+Recreational vehicle – a vehicle that is built on a single chassis, four hundred square feet (400 sq. 
+ft.) (thirty-seven and sixteen hundredths square meters (37.16 m2)) or less when measured at the 
+largest horizontal projection, designed to be self-propelled or permanently towable by a light-duty 
+truck, and designed primarily not for use as a permanent dwelling but as temporary living quarters 
+for recreational, camping, travel, or seasonal use. A recreational vehicle is ready for highway use 
+if it is on its wheels or jacking system, is attached to the site only by quick disconnect-type utilities 
+and security devices and has no permanently attached additions. 
+ 
+Registered Design Professional – an individual who is registered or licensed to practice 
+engineering, architecture, or land surveying, as defined by the statutory requirements of the 
+professional registration laws of District of Columbia. 
+ 
+Residential – refers to:  
+ 
+(a) 
+Building and structures and portions thereof in which people live or that are used 
+for sleeping purposes on a transient or non-transient basis;  
+ 
+(b) 
+Structures including one (1)- and two (2)-family dwellings, townhouses, 
+condominiums, multifamily dwellings, apartments, congregate residences, 
+boarding houses, lodging houses, rooming houses, hotels, motels, apartment 
+buildings, convents, monasteries, dormitories, fraternity houses, sorority houses, 
+vacation time-share properties; and 
+ 
+(c) 
+Institutional facilities in which people are cared for or live on a twenty-four hour 
+(24 hr.) basis in a supervised environment including board and care facilities, 
+assisted living facilities, halfway houses, group homes, congregate care facilities, 
+social rehabilitation facilities, alcohol and drug centers, convalescent facilities, 
+hospitals, nursing homes, mental hospitals, detoxification facilities, prisons, jails, 
+reformatories, detention centers, correctional centers, and prerelease centers. 
+ 
+Residential portion of a mixed-use building – residential or dwelling unit where people live or 
+that are used for sleeping purposes. Ancillary residential uses such as lobbies, mailrooms, loading 
+docks, and gyms that are available only to residents inside the residential portion of a mixed-use 
+building. 
+ 
+
+
+===== [page 39] =====
+ 
+39 
+ 
+Resilient systems plan – a suitability assessment of equipment and systems that support critical 
+functions of the facility and that specifies flood mitigation measures that will be taken to protect 
+the systems.  
+ 
+Resubmission – after the initial submission of a permit application by an applicant to DOEE, each 
+time the applicant makes changes to, or provides new information for their application (including 
+at the request of DOEE), is considered a resubmission.  
+ 
+Special flood hazard area – the land area subject to flood hazards and shown on a Flood Insurance 
+Rate Map or other flood hazard map as Zone A, AE, A1-30, A99, AR, AO, AH, V, VO, VE, or 
+V1-30. 
+ 
+Start of construction – the date of permit issuance for new construction and substantial 
+improvements to existing structures, provided the actual start of construction, repair, 
+reconstruction, rehabilitation, addition, placement, or other improvement is within one hundred 
+eighty (180) days after the date of issuance. The actual start of construction means the first 
+placement of permanent construction of a building (including a manufactured home) on a site, 
+such as the pouring of a slab or footings, installation of pilings, or construction of columns. 
+Permanent construction does not include land preparation (such as clearing, excavation, grading 
+or filling), the installation of streets or walkways, excavation for a basement, footings, piers or 
+foundations, the erection of temporary forms or the installation of accessory buildings such as 
+garages or sheds not occupied as dwelling units or not part of the main building. For a substantial 
+improvement, the actual start of construction means the first alteration of any wall, ceiling, floor, 
+or other structural part of a building, whether or not that alteration affects the external dimensions 
+of the building. 
+ 
+Structure – for floodplain management purposes, a walled and roofed building, including a gas 
+or liquid storage tank, that is principally above ground, as well as a manufactured home or 
+recreational vehicle that is on-site for more than one hundred eighty (180) days.  
+ 
+Subdivision – the division or assembly of land into one or more lots of record that are platted and 
+recorded on the records of the Surveyor in accordance with the Subdivision Regulations of the 
+District of Columbia, 10B DCMR §§ 2700 et seq. 
+ 
+Substantial damage – damage of any origin sustained by a structure for which the cost of restoring 
+the structure to the condition before the damage occurred would equal or exceed 50 percent (50%) 
+of the tax assessed value of the structure before the damage occurred. 
+ 
+Substantial improvement – any combination of repairs, reconstruction, rehabilitation, additions, 
+modifications, or improvements of a building or structure made during the five (5)-year period 
+immediately preceding a permit application, the aggregate cost of which, together with the cost of 
+the work proposed by the latest permit application, equals or exceeds fifty percent (50%) of the 
+tax assessed value of the structure before the start of construction. If the structure has sustained 
+substantial damage, any repairs are considered substantial improvement regardless of the actual 
+repair work performed. The term does not include: 
+ 
+
+
+===== [page 40] =====
+ 
+40 
+ 
+(a) 
+Any project for improvement of a building required to correct existing health, 
+sanitary, or safety code violations identified by the building official and that are the 
+minimum necessary to assure safe living conditions, or   
+ 
+(b) 
+Any repair, reconstruction, rehabilitation, alteration, addition or other improvement 
+of a detached one (1)- and two (2)-family dwelling or townhouse not more than 
+three stories above grade plane in height with a separate means of egress located 
+wholly outside of flood hazard areas described in § 3101.2 (a), the cost of which is 
+less than two hundred thousand dollars ($200,000). The Floodplain Administrator 
+may adjust this value annually using updated assessment data from the Office of 
+Tax and Revenue for the value of improvements at residential properties in Zone X 
+(shaded).  
+ 
+Tidal shoreline buffer – land projected to be inundated by water by year 2080 due to changes in 
+sea level as determined by best available science. The flood hazard area is the land inside the Tidal 
+Shoreline Buffer layer depicted in the DOEE Flood Risk Portal (http://dcfloodrisk.org/), along 
+with any subsequent revisions and amendments.  
+ 
+Watercourse – A river, creek, stream, channel, or other topographic feature in, on, through, or 
+over which water flows at least periodically. 
+ 
+Wet floodproofing – floodproofing method that relies on the use of flood-damage-resistant 
+materials and construction techniques to minimize flood damages to areas below the DFE of a 
+structure intentionally allowed to flood. 

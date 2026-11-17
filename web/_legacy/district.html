@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>同一个雨夜 · 七个人的撤离</title>
+<link rel="icon" href="data:," />
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #0d1319;
+    --panel: rgba(17, 26, 34, 0.86);
+    --line: rgba(148, 180, 200, 0.16);
+    --line-strong: rgba(148, 180, 200, 0.34);
+    --text: #e9f1f5;
+    --muted: #8fa3b1;
+    --dim: #63737f;
+    --accent: #6fc3dd;
+    --ok: #74c69d;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+  body {
+    font: 13px/1.5 "Segoe UI", "Microsoft YaHei", -apple-system, sans-serif;
+    color: var(--text);
+    -webkit-font-smoothing: antialiased;
+  }
+  #app { position: fixed; inset: 0; }
+  canvas { display: block; width: 100%; height: 100%; }
+  button { font: inherit; cursor: pointer; color: var(--text); background: transparent; border: 0; }
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(16px) saturate(120%);
+  }
+
+  #roster {
+    position: fixed; left: 16px; top: 16px; z-index: 12;
+    width: 286px; max-height: calc(100vh - 132px);
+    display: flex; flex-direction: column; overflow: hidden;
+  }
+  #roster .head { padding: 15px 16px 11px; border-bottom: 1px solid var(--line); }
+  #roster .kicker { font-size: 9.5px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+  #roster h1 { font-size: 18px; font-weight: 650; letter-spacing: .01em; margin: 5px 0 4px; }
+  #roster .lead { font-size: 11px; color: var(--muted); line-height: 1.55; }
+  #cards { padding: 8px; overflow-y: auto; }
+  #cards::-webkit-scrollbar { width: 6px; }
+  #cards::-webkit-scrollbar-thumb { background: rgba(148,180,200,.2); border-radius: 3px; }
+
+  .card {
+    display: grid; grid-template-columns: 30px 1fr 8px; gap: 9px; align-items: center;
+    width: 100%; text-align: left; padding: 9px 10px; margin: 3px 0;
+    border-radius: 10px; border: 1px solid transparent; background: transparent;
+    transition: background .14s, border-color .14s;
+  }
+  .card:hover { background: rgba(255,255,255,.045); }
+  .card.on { background: rgba(111,195,221,.13); border-color: rgba(111,195,221,.45); }
+  .avatar {
+    width: 30px; height: 30px; border-radius: 50%;
+    display: grid; place-items: center;
+    font-size: 12px; font-weight: 700; color: #0d1319;
+    background: var(--c, #6fc3dd);
+  }
+  .card .n { font-size: 12.5px; font-weight: 600; display: flex; align-items: baseline; gap: 5px; }
+  .card .n em { font-style: normal; font-size: 10px; color: var(--dim); font-weight: 400; }
+  .card .s { font-size: 11px; color: var(--muted); margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .card.done .s { color: var(--ok); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--c, #6fc3dd); opacity: .85; justify-self: center; }
+  .card.done .dot { background: var(--ok); }
+
+  #views { position: fixed; right: 16px; top: 16px; z-index: 12; display: flex; gap: 6px; }
+  #views .grp { display: flex; gap: 2px; padding: 3px; border-radius: 11px; }
+  #views button, #views a {
+    padding: 6px 11px; border-radius: 8px; font-size: 12px; color: var(--muted);
+    text-decoration: none; white-space: nowrap;
+  }
+  #views button:hover { color: var(--text); background: rgba(255,255,255,.05); }
+  #views button.on { color: #0d1319; background: var(--accent); font-weight: 600; }
+
+  #detail {
+    position: fixed; right: 16px; top: 68px; z-index: 11;
+    width: 306px; max-height: calc(100vh - 200px); overflow-y: auto;
+    padding: 16px;
+  }
+  #detail::-webkit-scrollbar { width: 6px; }
+  #detail::-webkit-scrollbar-thumb { background: rgba(148,180,200,.2); border-radius: 3px; }
+  #dHead { display: flex; gap: 10px; align-items: center; }
+  #dAvatar { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #0d1319; background: var(--accent); }
+  #dName { font-size: 15px; font-weight: 650; }
+  #dSub { font-size: 10.5px; color: var(--muted); margin-top: 1px; }
+  #dStateWrap { margin: 13px 0 4px; }
+  #dStateLabel { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); }
+  #dState { font-size: 15px; font-weight: 600; color: var(--accent); margin-top: 2px; }
+  #dReason {
+    margin-top: 9px; padding: 9px 11px; border-radius: 9px;
+    background: rgba(255,255,255,.04); border-left: 2px solid rgba(111,195,221,.5);
+    font-size: 11.5px; color: #cfdde5; line-height: 1.6;
+  }
+  .meta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; }
+  .meta div { background: rgba(255,255,255,.035); border-radius: 8px; padding: 7px 9px; }
+  .meta span { display: block; font-size: 9.5px; color: var(--dim); letter-spacing: .06em; }
+  .meta b { font-size: 12px; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .sec { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--line); }
+  .sec h4 { font-size: 9.5px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); margin-bottom: 8px; }
+  .feed { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .feed li { display: grid; grid-template-columns: 42px 1fr; gap: 8px; font-size: 11.5px; color: #c4d3dc; }
+  .feed time { font-variant-numeric: tabular-nums; color: var(--accent); font-size: 10.5px; padding-top: 1px; }
+
+  .bubble {
+    position: fixed; z-index: 14; display: none; transform: translate(-50%, -100%);
+    padding: 5px 10px; border-radius: 9px; font-size: 11px; white-space: nowrap;
+    pointer-events: none; background: rgba(13, 22, 30, .9);
+    border: 1px solid var(--b, #6fc3dd); color: #f0fbff;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .45);
+  }
+  .bubble b { color: var(--b, #6fc3dd); font-weight: 600; margin-right: 5px; }
+  .bubble:after {
+    content: ""; position: absolute; left: 50%; bottom: -5px; width: 8px; height: 8px;
+    background: rgba(13, 22, 30, .9); border-right: 1px solid var(--b, #6fc3dd); border-bottom: 1px solid var(--b, #6fc3dd);
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  #timeline {
+    position: fixed; z-index: 12; left: 50%; bottom: 16px; transform: translateX(-50%);
+    width: min(920px, calc(100vw - 32px)); padding: 11px 14px 9px;
+  }
+  #timeline .row { display: flex; align-items: center; gap: 10px; }
+  #timeLabel { font-size: 17px; font-weight: 650; font-variant-numeric: tabular-nums; letter-spacing: .02em; color: #dff0f7; min-width: 84px; text-align: right; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 7px 13px; border-radius: 9px; font-size: 12px;
+    background: rgba(255,255,255,.06); border: 1px solid var(--line);
+  }
+  .btn:hover { background: rgba(255,255,255,.12); border-color: var(--line-strong); }
+  .btn.primary { background: var(--accent); color: #0d1319; font-weight: 650; border-color: transparent; }
+  .btn.primary:hover { background: #8ad4e8; }
+  .speeds { display: flex; gap: 2px; padding: 3px; border-radius: 9px; background: rgba(255,255,255,.05); }
+  .speeds button { padding: 4px 9px; border-radius: 7px; font-size: 11px; color: var(--muted); }
+  .speeds button.on { background: rgba(111,195,221,.9); color: #0d1319; font-weight: 650; }
+  #scrub { position: relative; margin: 10px 0 6px; }
+  #timeRange { width: 100%; accent-color: var(--accent); height: 4px; }
+  #ticks { position: absolute; left: 0; right: 0; top: 12px; height: 6px; pointer-events: none; }
+  #ticks i { position: absolute; width: 3px; height: 3px; border-radius: 50%; opacity: .85; }
+  #timeline .foot { display: flex; justify-content: space-between; font-size: 10px; color: var(--dim); }
+  #stat { color: var(--muted); }
+
+  #loading {
+    position: fixed; inset: 0; z-index: 40; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 14px; background: radial-gradient(circle at 50% 42%, #16222c 0%, #0b1116 70%);
+    color: #b5c7d3; text-align: center; padding: 24px; transition: opacity .5s;
+  }
+  #loading.done { opacity: 0; pointer-events: none; }
+  #loading .ring { width: 34px; height: 34px; border-radius: 50%; border: 2px solid rgba(111,195,221,.2); border-top-color: var(--accent); animation: spin 1s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #loading small { color: #6f899a; letter-spacing: .02em; max-width: 520px; line-height: 1.7; }
+
+  @media (max-width: 900px) {
+    #roster { width: 210px; }
+    #roster .lead { display: none; }
+    #detail { display: none; }
+    #views { flex-direction: column; align-items: flex-end; }
+  }
+</style>
+<script type="importmap">
+{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}
+</script>
+</head>
+<body>
+<div id="app"></div>
+
+<section id="roster" class="panel">
+  <div class="head">
+    <div class="kicker">Multi-agent flood simulation</div>
+    <h1>同一个雨夜</h1>
+    <div class="lead">同一场暴雨、同一个时钟。七个人因为身份、信息和职责不同，做出完全不同的选择。</div>
+  </div>
+  <div id="cards"></div>
+</section>
+
+<nav id="views">
+  <div class="grp panel">
+    <button data-view="follow" class="on">跟随</button>
+    <button data-view="overview">区域</button>
+    <button data-view="free">自由</button>
+  </div>
+  <div class="grp panel">
+    <a href="/office.html">单人版</a>
+    <a href="/">全城</a>
+  </div>
+</nav>
+
+<aside id="detail" class="panel">
+  <div id="dHead">
+    <div id="dAvatar">马</div>
+    <div>
+      <div id="dName">—</div>
+      <div id="dSub">—</div>
+    </div>
+  </div>
+  <div id="dStateWrap">
+    <div id="dStateLabel">当前状态</div>
+    <div id="dState">—</div>
+  </div>
+  <div id="dReason">—</div>
+  <div class="meta">
+    <div><span>位置</span><b id="dWhere">—</b></div>
+    <div><span>脚下积水</span><b id="dDepth">—</b></div>
+    <div><span>速度</span><b id="dSpeed">—</b></div>
+    <div><span>时间</span><b id="dTime">—</b></div>
+  </div>
+  <div class="sec">
+    <h4>他/她收到了什么</h4>
+    <ul class="feed" id="dInfo"></ul>
+  </div>
+  <div class="sec">
+    <h4>关键事件</h4>
+    <ul class="feed" id="dEvents"></ul>
+  </div>
+</aside>
+
+<section id="timeline" class="panel">
+  <div class="row">
+    <button id="playBtn" class="btn primary">暂停</button>
+    <button id="resetBtn" class="btn">重播</button>
+    <div class="speeds" id="speeds">
+      <button data-speed="1">1×</button>
+      <button data-speed="4" class="on">4×</button>
+      <button data-speed="12">12×</button>
+    </div>
+    <span style="flex:1"></span>
+    <span id="timeLabel">17:52:00</span>
+  </div>
+  <div id="scrub">
+    <input id="timeRange" type="range" min="52" max="96" step="0.1" value="52" />
+    <div id="ticks"></div>
+  </div>
+  <div class="foot"><span>17:52 七条故事线同时开始</span><span id="stat">统一时钟 · 0.25 秒子步</span><span>18:36 场景边界</span></div>
+</section>
+
+<div id="loading">
+  <div class="ring"></div>
+  <div>正在搭建街区、楼内空间与七条故事线…</div>
+  <small>FAA 办公楼 · 565 Penn 公寓 · Pavilion 咖啡馆 · 社区医疗中心 · 特许学校 · 10th St 工地</small>
+</div>
+<script type="module" src="./src/district-main.js"></script>
+</body>
+</html>

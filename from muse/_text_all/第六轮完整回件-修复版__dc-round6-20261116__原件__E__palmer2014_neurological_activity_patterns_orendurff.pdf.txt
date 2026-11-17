@@ -1,0 +1,779 @@
+
+
+===== [page 1] =====
+NEW ZEALAND JOURNAL OF PHYSIOTHERAPY | 09 
+RESEARCH REPORT
+Activity patterns in people with neurological conditions
+Katie Palmer BHSc Physio 
+Physiotherapist, Cabrini Health
+Jamie Thomas BA, LLB, BHSc Physio 
+Physiotherapist, Auckland District Health Board 
+Suzie Mudge Dip Phys, MHSc, PhD 
+Person Centred Research Centre, AUT University
+ABSTRACT
+Walking is often impaired following a neurological insult; however, little is known how daily activity patterns are affected. The 
+aims of this pilot study were to describe activity patterns of individuals with neurological conditions and examine the relationship 
+between activity patterns and clinical walking tests. Twenty-two participants with neurological conditions were recruited and fitted 
+with a StepWatch to record all steps taken over seven days. Daily activity patterns were compared to a sample of healthy adults and 
+the relationship between clinical walking tests and activity patterns was evaluated. The activity patterns of adults with neurological 
+conditions were similar to healthy adults with a high frequency of low numbers of steps in a row, interspersed with short rest 
+periods. However, a greater proportion of activity bouts involved short duration activity (<30seconds) in people with neurological 
+conditions (71% of all bouts) when compared to healthy individuals (60% of all bouts). Adults with neurological conditions had 
+significantly different daily activity patterns (average steps, p<0.001; average minutes of activity, p<0.001; total number of activity 
+bouts, p<0.001; variability of activity, p<0.001) to healthy adults and older adults with functional limitations.  Because walking bouts 
+are shorter and more frequent, it could be inferred adults with neurological conditions do not cover as much distance as healthy 
+adults. The only significant correlation between clinical walking tests and activity patterns was between the Rivermead Mobility 
+Index and average daily steps (r=.45; p<0.01).  The findings from this study may assist in the development of more specific walking 
+rehabilitation, including retraining acceleration and deceleration together with the ability to cover distances required for functional 
+community ambulation. 
+Palmer K, Thomas J, Mudge S (2014) Activity patterns in people with neurological conditions New Zealand Journal of 
+Physiotherapy 42(1): 9-15.
+INTRODUCTION
+Walking is an important aspect of independent functioning 
+needed for many activities of daily living and community 
+participation. It is therefore important that walking can be 
+quantified to determine an individual’s functional walking ability. 
+This is generally achieved by using objective (e.g. six minute 
+walk test and self selected gait speed tests) and self-reported  
+(e.g. ABILOCO and Rivermead Mobility Index) tests in a clinical 
+setting.
+Recently, accelerometry, such as the StepWatch Activity 
+Monitor™ (StepWatch) (Orthocare Innovations, Prosthetics 
+Research Study, Seattle, WA, USA), has been used to quantify 
+aspects of walking ability over extended periods of time in 
+real world environments. The StepWatch is a valid and reliable 
+tool (de Bruin et al 2008) which records information about 
+the quantity and rate of stepping, together with more specific 
+aspects of walking activity over a period of time, including total 
+steps, steps in a row, walking bout durations and rest period 
+durations (Coleman et al 1999, Storti et al 2008). 
+The StepWatch is worn on one leg and has an inbuilt custom 
+sensor to detect acceleration, position and timing to determine 
+one step. The sensitivity of the StepWatch means it can be used 
+to assess slow or altered gait patterns in populations known to 
+have impaired walking abilities (Busse et al 2009, Mudge and 
+Stott 2009). 
+Although activity monitors are typically used to provide 
+information about total steps and cadence, they can provide 
+more information about overall activity patterns.  However, to 
+date, only two studies have used the StepWatch to quantify and 
+describe specific aspects of walking and activity patterns in this 
+way (Cavanaugh et al 2007, Orendurff et al 2008).  
+Orendurff et al (2008) investigated the length of walking bouts 
+in time, number of sequential steps and rest periods of ten 
+healthy, sedentary employed adults (aged 36.6 SD 14.8 years) 
+in an urban environment during normal daily living. The study 
+found that 60% of all walking bouts lasted for 30 seconds or 
+less and walking bouts of two minutes or more occurred only 
+one percent of the time. Forty percent of all walking bouts 
+entailed fewer than 12 sequential steps and 75% of all walking 
+bouts had fewer than 40 sequential steps. Rest periods were 
+typically very short; 50% were 20 seconds or less (Orendurff et 
+al 2008). In summary, the study found that healthy individuals 
+take part most frequently in walking bouts comprised  a low 
+number of steps, in short duration, interspersed with short rest 
+periods.
+Cavanaugh et al (2007) collected StepWatch data over six 
+days in thirty healthy younger adults (aged 36.6 SD 2.6 years), 
+twenty-eight healthy retired older adults (aged 83.7 SD 2.3 
+years) and twelve older adults (aged 79.3 SD 4.5 years) with 
+functional limitations. All participants lived in the community. 
+Average daily values for number of steps, number of minutes 
+
+
+===== [page 2] =====
+10 | NEW ZEALAND JOURNAL OF PHYSIOTHERAPY 
+spent active, number of activity bouts, variability of minute to 
+minute activity and randomness of minute-to-minute activity 
+fluctuations were calculated. Healthy older adults had a lower 
+number of activity bouts than younger adults. Older adults with 
+functional limitations had lower numbers of steps, number of 
+active minutes, number of activity bouts and variability when 
+compared to healthy younger adults. This study revealed that 
+activity bouts, activity duration, step count and variability 
+decrease with age and functional limitation (Cavanaugh et al 
+2007).  
+Although activity patterns have been explored in healthy 
+individuals and older adults with functional limitations, activity 
+patterns of individuals with neurological conditions have not 
+been described. It is known that individuals with neurological 
+conditions often experience reduced or impaired walking ability 
+(Pearson et al 2004), however, little is known about whether this 
+change alters daily activity patterns in those with a neurological 
+condition. It is also not clear how these activity patterns relate, 
+if at all, to clinical outcome measures. Significant relationships 
+between the two may provide clinicians with further insight into 
+an individual’s mobility outside a clinical environment.  
+The aim of this study was to describe the daily activity patterns 
+of individuals with neurological conditions, in particular, walking 
+bout duration, sequential step count and rest period duration. 
+A further aim of the study was to examine the association 
+between activity patterns and clinical walking tests and also to 
+compare the activity patterns of individuals with neurological 
+conditions to those of healthy adults from previously reported 
+studies (Cavanaugh et al 2007, Orendurff et al 2008).
+METHODS
+The study was approved by the Institutional Ethics Committee 
+(EA1_0408) and informed consent was given by each 
+participant.  Participants were recruited through community 
+support organisations and private rehabilitation clinics for 
+convenience. The inclusion criteria were a diagnosis of a 
+neurological condition for more than six months, the ability to 
+walk independently with or without the use of a walking aid 
+and aged over 18 years. Participants were excluded if they had 
+Parkinson’s disease or other conditions resulting in inconsistent 
+step length from step to step, which could lead to an inability 
+to calibrate the StepWatch. People with other health conditions 
+known to alter or limit normal activity patterns were also 
+excluded (e.g. cardiorespiratory disease).  
+Participants took part in a one hour session at a university 
+to administer the following tests: The Rivermead Mobility 
+Index (RMI) (Collen and Wade 1991), Activity-specific Balance 
+Confidence Scale (ABC) (Powell and Myers 1995), ABILOCO 
+(Caty et al 2008), the six minute walk test (Flansbjer et al 2005), 
+self-selected and fast gait speed tests (Bohannon 1992). A 
+StepWatch was calibrated and attached to each participant’s 
+less affected ankle and tested at fast, self-selected and slow gait 
+speeds to check calibration and recalibrate if needed until 100% 
+accurate at these speeds. The StepWatch was set to record 
+all steps taken by the less affected leg in ten-second intervals, 
+24 hours a day, for seven consecutive days. An explanation 
+regarding care of the StepWatch was provided, together 
+with instructions on how the monitor was to be worn. On 
+completion of the seven days, if any data from the StepWatch 
+were missing, the StepWatch was re-calibrated and worn by 
+the participant for additional days to complete seven days of 
+monitoring.    
+The StepWatches were collected from participants at the end 
+of the monitoring period and the data downloaded to the 
+StepWatch software. Daily average walking bout duration, 
+sequential step count, rest period duration, minutes of activity, 
+number of activity bouts, variability of activity and total step 
+count were calculated for each participant.  
+A walking bout was defined as a period of time in which 
+sequential steps occurred in subsequent ten-second intervals, 
+consistent with Cavanaugh et al (2007). A walking bout ended 
+when no steps were recorded in the subsequent ten-second 
+interval. A rest period was defined as a period of time in which 
+no steps occurred in the prior or subsequent ten-second interval. 
+An error was considered when only one step (a singleton) was 
+recorded in a ten-second interval, when no prior or subsequent 
+steps appeared in an adjoining ten-second interval.  Therefore, 
+all singletons were removed and two foot-offs of the same 
+foot (4 SD 1 steps) was the lowest step count included in the 
+calculations. Variability of activity was defined as the dispersion 
+or spread of activity and was calculated based on minutes of 
+activity and divided by the coefficient of variation (CV = 100 x 
+standard deviation/mean) (Cavanaugh et al 2007).
+The data calculated were then compared with that of previously 
+reported healthy adults (Orendurff et al 2008). Permission was 
+granted and raw data obtained for the comparison of younger 
+adults, older adults and older adults with functional limitations 
+(Cavannagh et al 2007). The calculated data were also 
+compared with the clinical walking tests. 
+Statistical Analysis
+The Kolmogorov–Smirnov test was used to test variables for 
+normality. The level of association between the variables was 
+investigated using the Spearman rank correlation coefficient 
+for variables without a normal distribution, and the Pearson 
+correlation coefficient for variables following a linear 
+distribution, with significance accepted at the 0.05 level. The 
+correlation coefficients were interpreted as 0.90, very high; 
+0.70 to 0.89, high; 0.50 to 0.69, moderate; 0.30 to 0.49, low; 
+and less than 0.29 as little, if any correlation (McDowell 2006). 
+Calculations were performed using SPSS, Version 17.0. Kruskal 
+Wallis one-way analysis was used to test for similar medians 
+among differing samples in data not normally distributed and 
+one way ANOVA for normally distributed data. 
+RESULTS
+Twenty-two adults with a neurological condition were 
+recruited. The data from one participant was excluded as it 
+was incomplete, leaving data from 21 participants for analysis.  
+Individual participant information is shown in Table 1. The 
+results of the clinical walking tests and self report questionnaires 
+were not normally distributed and are reported in Table 2.
+Daily activity 
+The comparison of data obtained from adults with neurological 
+conditions from this study and Cavanaugh et al’s (2007) data 
+of younger adults, older adults and older adults with functional 
+limitations is shown in Table 3. The differences in the means 
+showed significant differences in the daily activity patterns 
+
+
+===== [page 3] =====
+NEW ZEALAND JOURNAL OF PHYSIOTHERAPY | 11 
+between the groups. Individuals with neurological conditions 
+had a significantly different average number of daily activity 
+bouts (p < 0.001), minutes of activity (p < 0.001) and variability 
+of activity (p < 0.001) than the healthy younger and older adult, 
+and older adult with functional limitations samples. However, 
+adults with neurological conditions had similar average daily 
+step counts to healthy adults and older adults, but showed 
+a significant difference from older adults with functional 
+limitations (p < 0.001).
+Walking and rest bout durations
+The average values of steps in a row, frequency of walking 
+bouts, walking bout durations and rest bout durations of adults 
+with neurological conditions were calculated. The data were 
+then compared with Orendurff et al’s (2008) data from healthy 
+individuals.	
+	
+Steps in a Row: Adults with neurological conditions participated 
+in short duration walking bouts with a high occurrence (17.3%) 
+of low numbers of steps in a row (4 SD 1) (Figure 1). Twelve (SD 
+1) or fewer steps per bout accounted for 44% of all walking 
+bouts, and 40 (SD 1) steps or fewer accounted for 75% of all 
+walking bouts. Healthy individuals show a similar pattern of 
+sequential steps. The lowest step count of 4 (SD 1) steps was 
+also the most frequent, totalling 17% of all walking bouts. 
+Forty percent of all walking bouts were 12 (SD 1) steps or fewer. 
+Similarly, 75% of all walking bouts had step counts of 40 (SD 1) 
+steps or fewer.
+Table 1: Individual Participant Information
+Age
+Sex
+Ethnicity
+Neurological  Condition
+Mobility Aid
+Height 
+(cm)
+48
+F
+European NZ
+Myotonic Dystrophy
+Nil
+173
+43
+F
+European/ British
+Cerebral Palsy
+Nil
+166
+44
+F
+Chinese
+Spinal Cerebellar Ataxia
+Nil
+148
+48
+F
+European NZ
+SCI (T5)
+SPS, Frame, W/Chair
+163
+61
+M
+European NZ
+MS
+SPS, Frame, W/Chair
+175
+36
+M
+European NZ
+GBS
+Nil
+178
+60
+F
+European NZ
+MS
+Frame in community
+160
+48
+M
+European NZ
+Stroke
+Nil
+174
+43
+M
+Maori Chinese
+Stroke
+Nil
+171
+61
+M
+European NZ
+Stroke
+Nil
+167
+57
+F
+European NZ
+Stroke
+SPS
+163
+21
+M
+European NZ
+SCI (C2)
+Nil
+174
+43
+F
+European NZ
+MS
+Nil
+165
+40
+M
+European NZ
+MS
+Nil
+181
+77
+M
+European NZ
+Stroke
+Nil
+177
+25
+F
+European NZ
+SCI (C6/7)
+SPS
+176
+71
+M
+European NZ
+Stroke
+Nil
+177
+81
+F
+European NZ
+Stroke
+Nil
+163
+53
+F
+Chinese/Hong Kong
+Stroke
+Quad Stick
+153
+62
+F
+Maori 
+Stroke
+SPS indoor, w/frame outdoor
+166
+19
+M
+NZ European/Australian 
+Aboriginal
+Cerebral Palsy
+SPS, Frame, W/chair
+19
+20
+M
+European NZ
+Cerebral Palsy
+Frame, W/chair
+19
+Key: F = female, M = male, NZ = New Zealand, SCI = spinal cord injury, MS = multiple sclerosis, GBS = Guillain Barrè Syndrome, w/chair = wheelchair, w/frame 
+= walking frame, SPS = single point walking sticks
+Table 2: Results of initial clinical walking tests and self-
+report questionnaires
+Clinical Test
+Median
+Range
+Rivermead Mobility Index
+13.2
+9-15
+ABILOCO (raw score)
+11.5
+5-13
+Activities-Specific Balance 
+Confidence Scale
+72.1%
+16.0-98.8%
+6 Minute Walk Test
+309m
+80-545m
+Self-selected Gait Speed
+1.0m/s
+0.2-1.4m/s
+Self-selected Step Length
+0.48m
+0.15-0.67m
+Fast Gait Speed
+1.3m/s
+0.3-2.0m/s
+Fast Gait Step Length
+0.59m
+0.17-1.1m
+Abbreviations: m = metres, m/s = metres per second.
+
+
+===== [page 4] =====
+12 | NEW ZEALAND JOURNAL OF PHYSIOTHERAPY 
+Walking Bout Duration: Figure 2 shows that individuals with 
+neurological conditions have a high frequency (41%) of short 
+duration bouts (10 seconds). Healthy individuals, similarly 
+engage most frequently in short duration bouts (10 seconds and 
+20 seconds, occurring 20% and 26% respectively). 
+Rest Bout Durations: Individuals with neurological conditions 
+most commonly took rest periods of short duration (10 – 20 
+seconds) throughout the day, encompassing 52% of all rest 
+bouts daily (Figure 3). Rest bouts up to 3 minutes in length 
+total, 88% of all rest bouts, similar to the patterns of rest taken 
+by healthy individuals. Rest durations of 10 or 20 seconds 
+accounted for 50% of all rest bouts. As the rest duration 
+increases, the frequency of rests decreases in both groups. 
+Relationship between the daily walking activity of 
+individuals with neurological conditions and clinical walking 
+tests
+In general, the clinical walking tests (self-selected and fast gait 
+speed tests and 6MWT) and the self-report questionnaires 
+(RMI, ABILOCO and ABC) showed little to low correlation with 
+walking activity in individuals with neurological conditions (Table 
+4). The only significant, but low correlation was between the 
+total number of steps per day and the RMI (r=.45; p<0.01). 
+DISCUSSION
+Our findings show that while individuals with neurological 
+conditions and healthy adults have a similar number of total 
+Figure 1: Frequency of sequential step counts in 
+individuals with neurological conditions  
+Table 3: Comparison of activity patterns between differing populations
+Variables of Activity 
+Patterns
+Adults with 
+Neurological Conditions
+Healthy 
+Younger 
+Adultsa
+Healthy Older 
+Adults a
+Older Adults with Functional 
+Limitations a
+Total Steps
+9,997*
+11,075
+9,982
+7,682
+Total Minutes of Activity
+   197**	
+   
+    400
+  336
+  298
+Total Number of Activity Bouts
+   227**
+      77 
+    68
+    63
+Variability of Activity (%)
+    38**
+   100
+    93
+    85
+a Data reproduced with permission from Cavanaugh et al 2007.
+* Significant difference between adults with neurological conditions and older adults with functional limitations (p<0.001)
+** Significant difference between adults with neurological conditions, and healthy older and younger adults and older adults with functional limitations 
+(p<0.001)
+Figure 2: Frequency of walking bout durations in 
+individuals with neurological conditions
+Figure 3: Daily frequency of rest bout durations for 
+individuals with neurological conditions
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+===== [page 5] =====
+NEW ZEALAND JOURNAL OF PHYSIOTHERAPY | 13 
+steps; the number of steps in a row and the length of rest 
+periods taken over the course of a day differ. Individuals with 
+neurological conditions take more short duration walking 
+bouts per day. These activity bouts are shorter and occur more 
+frequently than those of healthy adults. 
+Possible reasons for shorter walking bouts within the 
+neurological sample include poor levels of fitness and/
+or inefficient and disrupted gait patterns. It is well known 
+that people with neurological impairments have reduced 
+cardiorespiratory fitness, which is likely to limit walking 
+endurance (Kelly et al 2003). Increased energy expenditure 
+caused by gait disturbances associated with neurological 
+conditions, together with decreased walking endurance may 
+contribute to shorter activity bouts (Macko et al 1997). 
+Individuals with neurological conditions generally have a shorter 
+step length (Brandstater et al 1985, Reid et al 2011). The mean 
+step length of participants in this study was 0.48 metres at 
+self-selected speed, which is almost half that previously reported 
+for healthy adults (Bilney et al 2003). An increased number 
+of activity bouts may be one way in which individuals with 
+neurological conditions compensate for covering a reduced 
+distance during activity bouts. So shorter bout duration and 
+decreased step length together may be associated with the 
+higher number of daily activity bouts taken by adults with 
+neurological conditions. 
+Achieving functional distances is important for successful 
+integration within the community (Lord et al 2004). Research 
+suggests that 300 metres was the minimum distance required 
+for safe community ambulation (Lerner-Frankiel et al 1986), 
+however, there is some question whether this distance is 
+underestimated (Andrews et al 2010). Even with the increase in 
+the number of daily activity bouts described in this study group, 
+the time spent active is still almost half that of healthy adults. 
+This suggests adults with neurological conditions may not be 
+achieving functional distances and may not be able to access 
+important community locations. 
+The variability of activity patterns of individuals with neurological 
+conditions is much lower than that reported for healthy 
+adults (Cavanaugh et al 2007, Orendurff et al 2008). Low 
+variability of activity suggests that individuals with neurological 
+conditions participate predominantly in orderly and repetitive 
+activities. Other studies have shown that individuals with 
+neurological conditions often function closer to their maximal 
+functional capacity than healthy adults (Dean et al 2001). It 
+also suggests a reduced ability to adapt to unexpected changes 
+in the environment, which would again impact on functional 
+independent living (Cavanaugh et al 2007). Given this, adults 
+with neurological conditions may use a less flexible and more 
+ordered daily structure as a strategy to ensure completion of 
+activities. 
+Gait speed and endurance have previously been shown to 
+correlate with total steps per day (Busse et al 2006, Mudge and 
+Stott 2009), however, we found little to no correlation between 
+the clinical gait tests and total steps or other measures of activity 
+patterns. Although our participants walked at a similar speed to 
+participants in previous studies (Busse et al 2006, Mudge and 
+Stott 2009), they took a relatively high number of steps per day, 
+in the magnitude of what would be expected from healthy older 
+adults (Cavanaugh et al 2007).  This may account for the low 
+correlation. 
+Clinical Implications
+The results of this study may assist practitioners to target very 
+specific aspects of walking retraining. For example, daily activity 
+patterns in individuals with neurological conditions were made 
+up of a large number of short bouts of activity, similar to 
+healthy adults. This shows that initiation and termination of gait 
+are undertaken multiple times each day together with speed 
+modulation, which requires acceleration and deceleration with 
+each bout. This suggests that, as well as training walking speed 
+in one direction, changing speed and direction may also need 
+to be assessed and trained in order to prepare individuals with 
+neurological conditions for community walking. 
+Based on the activity patterns described in this study, early 
+rehabilitation may need to include the retraining of initiation, 
+acceleration, deceleration and termination of gait. Retraining 
+should also occur in multiple bouts of short duration, which are 
+interspersed with short periods of rest to replicate the described 
+patterns of activity. This initial training would be seen as a 
+preparation for longer bouts or endurance training as is needed 
+for achieving the distances required in the community.
+Later gait rehabilitation can be targeted more specifically by 
+increasing the length of walking bout duration, improving 
+step length, and establishing longer distances walked in order 
+to achieve the patterns and distances undertaken by healthy 
+older and younger adults. This would assist individuals with 
+neurological conditions to achieve functional community 
+distances, and therefore independence within the community 
+setting. 
+Limitations
+The heterogeneity of neurological conditions and small sample 
+size may have limited the appearance of relationships and 
+patterns within the data. In saying this, the information from 
+Table 4: Association between activity patterns and clinical walking tests for people with neurological conditions 
+(Spearman correlation r-values)
+ 
+6MWT
+SSGS
+FGS
+RMI
+ABILOCO
+    ABCS
+Total Steps
+.178
+.159
+.093
+.449*
+  .208
+    .428
+Total Minutes 
+.022
+.087
+-.023
+.212
+  .109
+    .227
+Variability 
+.229
+.344
+.329
+.155
+  .226
+    .174
+# of Bouts
+-.045
+.073
+-.055
+.121
+  .172
+     .11
+*Significant 0.05 level (2-tailed).  
+Total Minutes = total minutes of activity, Variability = variability of activity, # of Bouts = total number of activity bouts.
+Abbreviations: SSGS, Self-selected gait speed; FGS, fast gait speed.
+
+
+===== [page 6] =====
+14 | NEW ZEALAND JOURNAL OF PHYSIOTHERAPY 
+this pilot study could be used for further studies looking at 
+more homogeneous populations or larger sample groups. This 
+study also cannot be generalised to people with inconsistent 
+step length from step to step due to the inclusion criteria, which 
+limits the findings of the study.
+Other factors may have influenced walking activity during 
+the collection of data. Health concerns and unfavourable 
+environmental conditions may have limited the amount 
+of activity undertaken. On the other hand, factors such as 
+individual behaviour and wanting to achieve “good results” may 
+have caused increased walking activity. However, apart from 
+individual behaviour, these factors represent normal features of 
+daily activity and, as such, may not be considered a limitation. 
+Recollection of data was not performed on the particular days 
+of the week that were missed during the initial seven days. This 
+may have had an impact on individual results, as certain days 
+may have been significant for individual routines. 
+Further research should focus on whether rehabilitation changes 
+activity patterns over the course of the rehabilitation period. If 
+not, investigations into whether activity patterns or aspects of 
+activity patterns are amenable to change may be required. For 
+example, changes may be dependent on a number of factors 
+such as disease progression, the severity of the neurological 
+condition, the use of assistive devices and behavioural 
+influences. 
+CONCLUSION
+The StepWatch was used to describe the activity patterns of 
+individuals with neurological conditions demonstrating that 
+participants were active for shorter durations, with fewer 
+steps in a row, which was interspersed with short periods of 
+rest compared to healthy adults. Participants also covered 
+less distance than previously reported by healthy adults. This 
+information may assist in the development of more specific 
+walking rehabilitation. Training should include retraining 
+acceleration and deceleration, and focusing on increasing the 
+duration of walking in single bouts, together with the ability to 
+cover distances required for functional community ambulation.
+KEY POINTS
+•	 Adults with neurological conditions walk in bouts with low 
+step counts interspersed with short, frequent rest periods, 
+similar to healthy adults.
+•	 Adults with neurological conditions take a higher number of 
+short duration bouts than healthy individuals do. 
+•	 While adults with neurological conditions had a similar 
+number of total steps per day to previously reported data 
+from healthy adults, overall variability and activity levels were 
+less. 
+•	 Rehabilitation may initially need to include a focus on 
+more specific aspects of walking, such as acceleration and 
+deceleration and short bursts of activity, as well as achieving 
+functional walking distances. 
+ACKNOWLEDGEMENTS
+AUT University for funding the study through the Health and 
+Rehabilitation Research Institute and the Faculty of Health and 
+Environmental Sciences. 
+We would like to thank and acknowledge Jim Cavanaugh, 
+University of New England for the use of raw data in this 
+project.
+ADDRESS FOR CORRESPONDENCE
+Katie Palmer, 5/278 Barkly St, Elwood 3184, Victoria, Australia. 
+Phone: +61450195659. Email: kt.palmer@hotmail.com 	
+SOURCE OF Funding
+This project was funded by a summer studentships through 
+the Health and Rehabilitation Research Institute and Faculty of 
+Health and Environmental Sciences at AUT University.
+Suzie Mudge is the recipient of a post doctoral research 
+fellowship funded by the Waitemata District Health Board.
+REFERENCES
+Andrews AW, Chinworth SA, Bourassa M, Garvin M, Benton D, Tanner S 
+(2010) Update on distance and velocity requirements for community 
+ambulation. Journal of Geriatric Physical Therapy 33: 128-134.
+Bilney B, Morris M, Webster K (2003) Concurrent related validity of the 
+GAITRite walkway system for quantification of the spatial and temporal 
+parameters of gait. Gait and Posture 17: 68-74.
+Bohannon RW (1992) Walking after stroke: Comfortable versus maximum 
+safe speed. International Journal of Rehabilitation Research 15: 246-248.
+Brandstater M, deBruin H, Gowland C, Clark B (1985) Hemiplegic 
+gait: analysis of temporal variables. Archives of Physical Medicine & 
+Rehabilitation 64: 583-587.
+Busse ME, van Deursen RW, Wiles CM (2009) Real-life step and activity 
+measurement: reliability and validity. Journal of Medical Engineering and 
+Technology 33: 33-41.
+Busse ME, Wiles CM, van Deursen RW (2006) Community walking activity 
+in neurological disorders with leg weakness. Journal of Neurology, 
+Neurosurgery & Psychiatry 77: 359-362.
+Caty GD, Arnould C, Stoquart GG, Thonnard JL, Lejeune TM (2008) 
+ABILOCO: a Rasch-built 13-item questionnaire to assess locomotion ability 
+in stroke patients. Archives of Physical Medicine & Rehabilitation 89: 284-
+290.
+Cavanaugh JT, Coleman KL, Gaines JM, Laing L, Morey MC (2007) Using 
+step activity monitoring to characterize ambulatory activity in community-
+dwelling older adults. Journal of the American Geriatrics Society 55: 
+120-124.
+Coleman KL, Smith DG, Boone DA, Joseph AW, del Aguila MA (1999) Step 
+activity monitor: long-term, continuous recording of ambulatory function. 
+Journal of Rehabilitation Research & Development 36: 8-18.
+Collen FM, Wade DT (1991) Residual mobility problems after stroke. 
+International Disability Studies 13: 12-15.
+de Bruin ED, Hartmann A, Uebelhart D, Murer K, Zijlstra W (2008) Wearable 
+systems for monitoring mobility-related activities in older people: a 
+systematic review. Clinical Rehabilitation 22: 878-895.
+Dean CM, Richards CL, Malouin F (2001) Walking speed over 10 metres 
+overestimates locomotor capacity after stroke. Clinical Rehabilitation 15: 
+415-421.
+Flansbjer U, Holmback AM, Downham D, Patten C, Lexell J (2005) Reliability 
+of gait performance tests in men and women with hemiparesis after 
+stroke. Journal of Rehabilitation Medicine 37: 75-82.
+Kelly JO, Kilbreath SL, Davis GM, Zeman B, Raymond J (2003) 
+Cardiorespiratory fitness and walking ability in subacute stroke patients. 
+Archives of Physical Medicine and Rehabilitation 84: 1780-1785.
+Lerner-Frankiel MB, Vargas S, Brown M, Krusell L, Schoneberger W (1986) 
+Functional community ambulation: what are your criteria? Clinical 
+Management in Physical Therapy 6: 12-15.
+Lord SE, McPherson K, McNaughton HK, Rochester L, Weatherall M (2004) 
+Community ambulation after stroke: how important and obtainable is it 
+and what measures appear predictive? Archives of Physical Medicine and 
+Rehabilitation 85: 234-239.
+
+
+===== [page 7] =====
+NEW ZEALAND JOURNAL OF PHYSIOTHERAPY | 15 
+Macko R, DeSouza C, Tretter L, Silver K, Smith G, Anderson P, Tomoyasu N, 
+Gorman P, Dengel D (1997) Treadmill aerobic exercise training reduces the 
+energy expenditure and cardiovascular demands of hemiparetic gait in 
+chronic stroke patients. Stroke 28: 326-330.
+McDowell I (2006) Measuring Health: A Guide to Rating Scales and 
+Questionnaires (Third edn). New York: Oxford University Press.
+Michael KM, Allen JK, Macko RF (2005) Reduced ambulatory activity after 
+stroke: the role of balance, gait, and cardiovascular fitness. Archives of 
+Physical Medicine & Rehabilitation 86: 1552-1556.
+Michael KM, Allen JK, Macko RF (2006) Fatigue after stroke: relationship 
+to mobility, fitness, ambulatory activity, social support, and falls efficacy. 
+Rehabilitation Nursing 31: 210-217.
+Mudge S, Stott NS (2009) Timed walking tests correlate with daily step 
+activity in individuals with stroke. Archives of Physical Medicine & 
+Rehabilitation 90: 296-301.
+Orendurff MS, Schoen JA, Bernatz GC, Segal AD, Klute GK (2008) How 
+humans walk: bout duration, steps per bout, and rest duration. Journal of 
+Rehabilitation Research & Development 45: 1077-1089.
+Pearson OR, Busse ME, van Deursen RW, Wiles CM (2004) Quantification of 
+walking mobility in neurological disorders. Quarterly Journal of Medicine 
+97: 463-475.
+Powell LE, Myers AM (1995) The Activities-specific Balance Confidence 
+(ABC) Scale. The Journals of Gerontology Series A: Biological Sciences and 
+Medical Sciences 50A: M28-34.
+Reid S, Held JM, Lawrence S (2011) Reliability and validity of the Shaw 
+gait assessment tool for temporospatial gait assessment in people with 
+hemiparesis. Archives of Physical Medicine & Rehabilitation 92: 1060-
+1065.
+Storti KL, Pettee KK, Brach JS, Talkowski JB, Richardson CR, Kriska AM (2008) 
+Gait speed and step-count monitor accuracy in community-dwelling older 
+adults. Medicine & Science in Sports & Exercise 40: 59-64.
+ 

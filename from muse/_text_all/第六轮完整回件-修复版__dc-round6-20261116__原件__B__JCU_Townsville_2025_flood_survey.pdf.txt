@@ -1,0 +1,3854 @@
+
+
+===== [page 1] =====
+ 
+ 
+ 
+ 
+Post Disaster Survey of 
+Residents in North Queensland 
+Following Monsoonal Floods in 
+January and February 2025 
+ 
+ 
+ 
+ 
+The Social Impacts and Preparedness Experiences of 
+Households Which Experienced the Monsoonal Floods in 
+Townsville and surrounding locations in 2025 
+ 
+ 
+ 
+ 
+Yetta Gurtner and David King 
+Centre for Disaster Studies 
+James Cook University 
+ 
+ 
+ 
+
+
+===== [page 2] =====
+Executive Summary 
+ 
+• 
+Event Overview: The 2025 Queensland heavy rainfall and floods were caused by tropical lows 
+and Cyclone Alfred, resulting in widespread devastation, including infrastructure damage, 
+power outages, damage to residences and properties and evacuations. 
+• 
+Rainfall and Impact: BoM and TCC report 2,420 mms of rain for Townsville during the wet 
+season between November 2024 and April 2025. Ingham had similar high rainfall but much 
+more severe river flooding. 
+• 
+The Ross River Dam reached 164% capacity, necessitating water releases which caused 
+downstream flooding.  
+• 
+Economic and Human Costs: The floods caused over $1.2 billion AUD in damage, two fatalities 
+from flooding, and 31 deaths from a melioidosis outbreak.  
+• 
+Survey Purpose: The Centre for Disaster Studies conducted an online survey to assess the 
+social impacts, preparedness, and flood and evacuation experiences of affected households.  
+• 
+Respondent Demographics: The survey recruited 233 participants, skewed toward older, highly 
+educated, and predominantly female respondents. Their comments suggest that they were 
+reporting on behalf of their households. 
+• 
+Preparedness Levels: 70% of respondents felt adequately prepared, with 71% having disaster 
+kits and 72% holding insurance, though 29% lacked kits and 23% were uninsured. 
+• 
+Primary Information Sources: Facebook was the most accessed source (25%), followed by 
+government websites (18%) and local disaster dashboards (17%). 
+• 
+Trust in Official Sources: The Bureau of Meteorology and local government dashboards were 
+rated highly for accuracy, usefulness, and trustworthiness.  
+• 
+Misinformation Concerns: Social media, particularly Facebook, was both a valuable resource 
+and a source of misinformation, including exaggerated forecasts and outdated flood photos.  
+• 
+Evacuation Experiences: 86% of respondents did not evacuate. Most of those who did 
+evacuate their homes stayed with friends or family.  Pet-friendly evacuation centres were 
+identified as a critical need.  
+• 
+Communication Shortcomings: Issues included unclear evacuation instructions, a perception 
+of outdated flood zone maps, and inconsistent messaging from authorities and institutions.  
+• 
+Respondents’ recommendations for Improvement: Suggestions included clearer evacuation 
+routes, timely updates, centralized information sources, and better coordination among 
+agencies.  
+• 
+Flood Zone Confusion: Respondents highlighted confusion over pink and black flood zones, 
+calling for improved mapping and clearer instructions.  
+• 
+Post-Event Support: Respondents emphasized the need for better cleanup assistance, mental 
+health resources, and education for new residents on disaster preparedness.  
+• 
+Key Takeaway: The survey underscores the importance of accurate information, effective 
+communication, and coordinated efforts to build resilience and improve disaster management 
+in North Queensland.  
+ 
+ 
+ 
+
+
+===== [page 3] =====
+Contents 
+ 
+Executive Summary 
+The Monsoonal Weather Event and Meteorological Conditions 
+Research Method of Online Household Surveys 
+Results 
+Disaster Preparation 
+Sources and Ratings of Information and Communication 
+Shortcomings and Areas for Improvement 
+Evacuation 
+Demographic Characteristics of Respondents 
+Summary 
+References 
+Appendix 
+ 
+Tables  
+Table 1. Disaster Preparation 
+Table 2. Suburb of Residence of Households impacted by the Flood 
+Table 3. Primary Source of Information 
+Table 4. Reason for Accessing Information 
+Table 5. Official Sources used to Access Information 
+Table 6. Ratings of Official Sources 
+Table 7. Access to Bureau of Meteorology Information Sources 
+Table 8. Ratings of Bureau of Meteorology Information Sources 
+Table 9. Access to News Media Outlets 
+Table 10. Ratings of News Media Sources of Information 
+Table 11. Access to Community Based Sources of Information 
+Table 12. Ratings of Community Based Sources of Information 
+Table 13. Access to Non-government Organisation Sources of Information 
+Table 14. Ratings of Non-government Organisation Information 
+Table 15. Compilation of Open Ended Responses to the Most Useful Sources of Information 
+Table 16. Inaccurate, Conflicting or Misleading Information 
+Table 17. Word Counts on Aspects of Information, Warnings or Evacuations that Could be Improved 
+Table 18. Overall Level of Trust in Information 
+Table 19. Evacuation Plan 
+Table 20. Location in Flood Zone 
+Table 21. Evacuation Advice 
+Table 22. Evacuation Action by Households 
+Table 23. Open Ended Responses to evacuation Action 
+Table 24. Destination of Evacuees 
+Table 25. Gender of Respondents 
+Table 26. Age Group of Respondents and 2021 Census Comparison 
+Table 27. Educational Attainment of Respondents 
+ 
+Figures 
+Figure 1. Primary source of information  
+Figure 2. Reason to access information 
+Figure 3. Access to Official Sources 
+Figure 4. Access to News Media Outlets 
+Figure 5. Access to Community Groups or Sources 
+Figure 6. Word Cloud of Most Useful Groups and Sources of Information 
+
+
+===== [page 4] =====
+Figure 7. Word Cloud of Inaccurate, Conflicting or Misleading Information 
+Figure 8. Word Cloud of Comments on Aspects of Information, Warnings or Evacuations that Could be 
+Improved 
+Figure 9. Advice to Evacuate 
+Figure 10. Response to Evacuation advice 
+Figure 11. Word Cloud of What Influenced Household Decision to Evacuate or Stay in Place 
+Figure 12. Destination of Evacuees 
+Figure 13. Age group 
+Figure 14. Educational Attainment 
+ 
+Appendix Tables 
+Table A1. Open ended Responses to question do you feel that you/your household was adequately 
+prepared for a disaster before the flood event happened? 
+Table A2. Open-Ended responses to Other choice in question what was your primary source of 
+information regarding the flood event (you may select more than one option) 
+Table A3. Open-Ended responses to Other choice in question please indicate the main reason you 
+accessed information regarding the flood event (you may select more than one option) 
+Table A4. Open Ended Responses to the Most Useful Sources of Information 
+Table A5. Open ended responses and details of Inaccurate, Conflicting or Misleading Information 
+Table A6. Open ended Comments on Aspects of Information, Warnings or Evacuations that Could be 
+Improved 
+Table A7. Open ended Responses to What Influenced Household Decision to Evacuate or Stay in Place 
+Survey Instrument 
+ 
+ 
+ 
+
+
+===== [page 5] =====
+The Monsoonal Weather Event and Meteorological Conditions 
+ 
+The 2025 Queensland floods were a series of severe weather events that impacted northeast 
+Queensland from late January to April 2025, causing widespread flooding and devastation.  The 
+disasters resulted in two fatalities from flooding, 31 deaths from a melioidosis outbreak primarily in 
+Cairns and Townsville, and extensive evacuations in coastal regions.  By mid-April, the flooding was 
+estimated to have cost the Queensland economy over $1.2 billion AUD.  
+ 
+Meteorology 
+The floods were caused by two tropical lows and a third system in the Coral Sea, producing rainfall 
+totals comparable to cyclonic conditions.  Rainfall reached up to 300 mm in 24 hours in some areas, 
+with isolated totals exceeding 600 mm.  By 2nd February, some regions had recorded over 1,000 mm 
+of precipitation.  Major flood warnings were issued for several rivers, and high tides of up to 4 meters 
+were forecast.  
+ 
+A second burst of heavy rainfall and flooding was brought to North Queensland later in February 
+through the emergence of Tropical Cyclone Alfred. It formed north-east of Cooktown on 21 February, 
+tracked eastward then turned southward and continued to strengthen to a peak intensity of category 
+4 on 27 February, before weakening to category 1 and crossing south-east Queensland on 8th March. 
+Alfred brought damaging wind gusts, heavy rainfall with subsequent flooding and severe coastal 
+erosion of beaches in south-east Queensland and northeastern New South Wales. During its initial 
+development off North Queensland the cyclone generated further heavy falls of rain and riverine 
+flooding. 
+ 
+Impacts 
+Flooding severely affected the Hinchinbrook Shire, Townsville, and surrounding areas.  Townsville 
+Airport closed briefly due to severe weather.  The Ross River Dam reached 164% capacity.  The Bruce 
+Highway was cut where the Ollera Creek Bridge collapsed, disrupting supplies and access.  Cardwell 
+and Ingham experienced extensive flooding, power outages, and road closures. Ingham saw the 
+Herbert River rise to historic levels, and two fatalities occurred in the area. Palm Island suffered a 
+complete power outage due to a landslide.  
+ 
+On 19th March, North Queensland experienced additional flooding, with Toolakea for example 
+recording 293 mm of rain.  Overall, more than 8,000 homes lost power, and transport disruptions led 
+to goods shortages, including produce in Cairns, Innisfail, and Ingham.  
+Evacuation orders were issued for low-lying areas, including six suburbs in Townsville, although many 
+residents chose to stay in their homes.  The State Emergency Service conducted multiple rescues, 
+including rooftop evacuations in Cardwell.  Disaster declarations were made for Townsville, 
+Hinchinbrook, and Innisfail.  Ergon Energy shut down power in flood-prone areas, and the Insurance 
+Council of Australia declared the floods a "significant event."  
+ 
+The Australian Government activated hardship assistance, offering emergency payments and grants 
+for affected households.   
+ 
+ 
+ 
+
+
+===== [page 6] =====
+Research Method of Online Household Surveys  
+ 
+Centre for Disaster Studies survey instruments have been employed extensively in communities 
+throughout Queensland and elsewhere in Australia, for almost 30 years. Each survey is modified 
+slightly in relation to the place, time, event and specific issues that had already been identified by 
+media and response organisations, but the primary instrument is quite standardised.  
+ 
+A qualitative questionnaire approach was used:  
+ 
+a) 
+Semi-structured online survey with householders, individuals and residents in affected 
+communities. These usually take 15 to 30 minutes. Most questions are factual, very short answer, avoid 
+accounts of stressful situations, or require a selection from suggested responses. The only personal 
+questions are factual and straightforward based on census characteristics;  
+b) 
+Observations of locations by researchers. Disaster impacts for specific places are collected 
+from emergency management and local government organisations to provide context to the residents’ 
+responses. This is on-going during the time of the surveys.  
+ 
+Apart from using the results of surveys to analyse community experience of warnings, preparation and 
+awareness, the researchers of the CDS have also contributed to methodological analysis of post 
+disaster studies – for example:   
+ 
+Cottrell, A. and King, D. 2010. Social assessment as a complementary tool to hazard risk assessment 
+and disaster planning. The Australasian Journal of Disaster and Trauma Studies.   
+ 
+Gurtner, Y., Cottrell, A. and King, D. 2008 PRE and RAPID. Community Hazard Recovery Needs and 
+Capacity Assessment. Unpublished Report. Department of Communities & James Cook University 
+Research Project.  
+ 
+Following JCU Human Ethics approval (H9365) the electronic survey was distributed predominantly via 
+local community based social media groups on Facebook.  Consistent with previous CDS research, the 
+questions covered the following themes:  
+ 
+• 
+Household Preparedness (kits, plans, insurance)  
+• 
+Event impacts and evacuations  
+• 
+Sources of event information, and perceived credibility (and misinformation)  
+• 
+Basic demographic data   
+ 
+Initially, a brief introduction, overview, and link to the survey were sent to relevant online group 
+administrator/s requesting permission to post and distribute. The approved social media post 
+encouraged community members and respondents to share the link to anyone that may have been 
+impacted by either event.  Established contacts from the local council community disaster recovery 
+committees were additionally approached via email to promote the survey throughout their networks.  
+Paper-based versions of the survey were available on request.  As the intent was to accurately capture 
+and document lived experiences of events, the surveys were closed in late March 2025. The survey 
+instrument and explanation are reproduced in the appendix.  
+ 
+This document is presented as a basic research report detailing basic raw data. Further analysis of 
+findings and comparisons with previous surveys and events will be submitted to scholarly journals.  
+ 
+ 
+ 
+
+
+===== [page 7] =====
+Results 
+ 
+The online survey was delivered through Survey Monkey which produced results of responses in an 
+excel database. Each question has been downloaded as a simple table showing the numbers of each 
+response. These have also been displayed as percentages of the number of responses to each question. 
+For clarity each percentage has been rounded to the nearest whole number, (or percents of less than 
+1 shown as a decimal). Consequently, the totals in each percentage column may add to 99 to 101, but 
+equalled 100 before rounding. An initial 233 people started the survey and responded to most of the 
+questions, including the 13 who answered that they were not impacted by floods (and were advised 
+not to continue with the survey), but they may have ticked no in the sense of direct damage. All of the 
+population in North Queensland was affected in some way by the remorseless rain. Responses to most 
+of the questions were made by the majority of the people who started the survey.  
+ 
+Tables have been constructed directly from the excel spreadsheet of raw survey data, while bar graphs 
+have been copied and pasted from the survey monkey analysis. The bar graphs from survey monkey 
+calculate responses as a percentage of the number of respondents. The tables calculate percentages 
+of all responses. In many questions people were invited to select more than one response. 
+Consequently the totals vary quite significantly from one table to another, but one is able to consider 
+from the graphs the proportion of people who selected each choice, while the tables focus on the 
+proportion of each platform or response that was selected. Word Clouds were constructed from a free 
+internet word cloud generator Word It Out at https://worditout.com/word-cloud/create This enabled 
+greater flexibility and word numbers in comparison to the word cloud figures in survey monkey. 
+ 
+A summary of survey questions is included in the appendix. The question, as worded in the survey, is 
+included in the column heading of each table. Open ended responses to some of the questions are 
+listed as written by respondents in the appendix. Responses in the appendix are exactly as they were 
+written in the survey. Some analysis of key words and concepts has been summarised from open ended 
+responses, and Word Clouds are used to illustrate key words. Tables and graphs are grouped into 
+clusters of response sections. These are Disaster Preparation, Residential Location of Respondents, 
+Sources and ratings of Information and Communication, Shortcomings and Areas for Improvement, 
+Evacuation, and Demographic Characteristics of Respondents. 
+ 
+Disaster Preparation 
+ 
+The high proportion of people who felt prepared for these floods is synonymous with households who 
+had a disaster kit. Nineteen people responded other to the question about being adequately prepared 
+for disaster. Their detailed responses in appendix table A1 provide insights into their thoughts, but do 
+not suggest a common theme other than some ambivalence. The flood events were quite remorseless 
+and drawn out – an extended very heavy wet season, rather than the immediacy of events like 
+cyclones. As the majority of respondents to this survey were women, Cottrell and Anderson-Berry’s 
+research on Women and the Wet Season in Northern Australia (2002) is an illustration of wet season 
+preparation as a household strategy carried out by women annually across the north of Australia. The 
+level of preparation and disaster kit reported here fits into the strategies identified by Cottrell and 
+Anderson-Berry.  
+ 
+ 
+ 
+
+
+===== [page 8] =====
+Table 1. Disaster Preparation 
+Do you feel that you/your household was adequately prepared for a 
+disaster before the flood event happened? 
+Number 
+Percent 
+Yes 
+162 
+70 
+No 
+52 
+22 
+Other  
+19 
+8 
+Total 
+233 
+100 
+See appendix table A1 for open ended responses to this question 
+ 
+ 
+Did you/your household have a disaster kit prepared before the 
+event (minimum 3 days food, water and supplies)? 
+ 
+ 
+No 
+67 
+29 
+Yes 
+166 
+71 
+Total 
+233 
+100 
+Did you/your household have household and/or contents insurance 
+before the event? 
+ 
+ 
+Yes 
+168 
+72 
+No 
+53 
+23 
+Other  
+11 
+5 
+Total 
+232 
+100 
+ 
+It is positive that 72% of households are covered by insurance, but the 23% who are not, are a cause 
+for concern. The demographic characteristics of the respondents are skewed towards older and highly 
+educated residents, among whom it may be reasonable to expect higher levels of insurance cover than 
+among the bulk of the population. Insurance aids recovery, with a lack of insurance increasing the 
+vulnerability, and reducing the resilience, of a significant proportion of households. This issue extends 
+to a lack of disaster kit and a perception of unreadiness for this series of flood events. Table 1 thus 
+indicates a lack of resilience among many of the people who responded to this survey. 
+ 
+Residential Location of Respondents 
+ 
+Table 2 lists all residential locations of people who responded to the survey. Comparison between 
+experiences in the 2019 monsoonal floods (Gurtner and King 2025) and the 2025 wet season floods is 
+examined in the scholarly literature (in preparation) and therefore details of comparison or contrast 
+are avoided in this basic research report. However, table 2 in both reports provides a strong contrast 
+between the two flood events. The 2019 monsoonal flood was especially concentrated in low lying 
+suburbs adjacent to and downstream of the Ross River. Primary flooding of these suburbs was a 
+consequence of necessary release of water from the Ross dam, which spilled out onto the flood plain 
+downstream. While water was released from the dam during 2025, consequent flooding downstream 
+was not an issue as it had been in 2019.  
+ 
+The question on location of the respondent at the time of impact asked people to record - in what 
+town, suburb and postcode do you live? Most people did as instructed, and listed all three locations, 
+but many recorded only the postcode, and a few simply indicated the city (distant locations such as 
+Adelaide involved people who were in North Queensland at the time of the floods). Table 2 lists the 
+suburb as the primary location of respondents, or the postcode where that was the only location 
+stated. 
+ 
+ 
+
+
+===== [page 9] =====
+Table 2. Place of Residence of Households impacted by the Floods 
+Location 
+Number 
+Location 
+Number 
+4807 
+3 
+Hyde Park 
+2 
+4810 
+4 
+Idalia 
+5 
+4811 
+2 
+Ingham 
+12 
+4812 
+7 
+Jerona 
+1 
+4814 
+4 
+Kelso 
+8 
+4816 
+1 
+Kirwan 
+8 
+4817 
+4 
+Kuranda 
+1 
+4818 
+2 
+Lucinda 
+1 
+4820 
+4 
+Macknade 
+1 
+4850 
+1 
+Magnetic Island 
+1 
+4859 
+1 
+Majors Creek 
+2 
+Adelaide 
+1 
+Mount Louisa 
+8 
+Aitkenvale  
+5 
+Mount Low 
+2 
+Alice River 
+2 
+Mount Surround 
+1 
+Alligator Creek 
+5 
+Mundingburra 
+4 
+Annandale 
+5 
+Mutarnee 
+1 
+Ayr 
+1 
+Nelly Bay 
+2 
+Beach Holm 
+1 
+North Ward 
+3 
+Belgian Gardens 
+3 
+Oak Valley 
+2 
+Black River 
+1 
+Oonoonba 
+4 
+Bluewater Creek/Park 
+7 
+Pallarenda 
+2 
+Bohle Plains 
+2 
+Palm Cove 
+1 
+Braemeadows 
+1 
+Palm Island 
+1 
+Burdell 
+7 
+Pimlico 
+2 
+Bushland Beach  
+5 
+Railway Estate 
+2 
+Charters Towers 
+2 
+Rasmussen 
+3 
+Condon 
+1 
+Rosslea 
+4 
+Cosgrove 
+2 
+Shaw 
+2 
+Cranbrook 
+5 
+South Townsville 
+4 
+Deeragun 
+4 
+Taylors Beach 
+2 
+Douglas 
+4 
+Toonpan 
+1 
+Forrest Beach 
+2 
+Townsville 
+2 
+Garbutt 
+2 
+Townsville City 
+2 
+Gulliver 
+4 
+Vincent 
+2 
+Heatley 
+5 
+West End 
+2 
+Hermit Park  
+10 
+Woodstock 
+1 
+Home Hill 
+2 
+Wulguru 
+4 
+Horseshoe Bay 
+2 
+Yabulu 
+1 
+Total 
+231 (1 missing and 1 inaccurately listed) 
+ 
+The initial question in the survey asked people if they had been impacted – Question 1 were you or 
+your household impacted in any way by the major flood event in North Queensland during late 
+January/February 2025? As we left the survey open until the end of March, responses encompassed 
+the later heavy rainfall events as well. The wording of the question - impacted in any way – was 
+intended to capture experiences of flood, rain damage, mould, loss of power, loss or restricted access, 
+shortage of goods, and a range of restrictions on activities and livelihoods. The suburbs or postcodes 
+identified by respondents and listed in table 2 show no dominant concentration of places of impact in 
+contrast to the 2019 flood. There is some concentration of responses from Ingham and its surrounding 
+
+
+===== [page 10] =====
+suburbs and communities in Hinchinbrook Shire, where the floods were most severe, but loss of power 
+and a later period of impact reduced the potential to recruit more respondents from Ingham.  
+ 
+Sources and Ratings of Information and Communication 
+ 
+As with other online surveys administered during the last decade the major focus of the survey was 
+on sources of information and modes of communication, as these contribute towards individual and 
+household education and awareness of disaster risk reduction. Education and awareness drive 
+preparedness and build resilience to hazards and disaster. 
+ 
+Table 3. Primary Source of Information 
+What was your primary source of information regarding the 
+flood event (you may select more than one option) 
+Number 
+Percent of all 
+responses 
+Facebook 
+176 
+25 
+Government web site (this includes Bureau of Meteorology) 
+122 
+18 
+Local Government Disaster Management Dashboard 
+117 
+17 
+Weather based app (smart device) 
+70 
+10 
+Radio 
+58 
+8 
+Friends/family 
+43 
+6 
+Television 
+36 
+5 
+Media website 
+34 
+5 
+Community website 
+18 
+3 
+Other social media platform (eg Flikr, YouTube, blogs) 
+6 
+1 
+Other internet source 
+5 
+1 
+Print media (newspaper) 
+4 
+1 
+Instagram 
+3 
+0.4 
+Telephone support service/hotline 
+2 
+0.3 
+X (formerly Twitter) 
+1 
+0.1 
+Total 
+695 
+100 
+ 
+Table 3, which is supplemented by figure 1, indicates the primary sources of information for 
+preparedness, and response actions. Respondents were invited to select more than one option. Not 
+all of the initial 233 people who started the survey, responded to most of the subsequent questions. 
+The number of respondents was generally around 208 or 209. The bar graphs (derived from Survey 
+Monkey analysis) indicate percentages of respondents who selected each choice in the questionnaire 
+while the tables indicate each response as a percentage of the overall number of items selected, where 
+people could choose more than one item. 
+ 
+Three platforms are dominant: Facebook, a Government web site (this includes Bureau of 
+Meteorology) and Townsville City Council Local Government Disaster Management Dashboard. As 
+people were especially recruited through facebook groups, it is inevitable that this platform should be 
+selected by almost three quarters of respondents. The next group of information sources comprised a 
+weather based app, Radio, Friends and family, Television, and media app, forming 34% of all sources 
+accessed, compared to 60% for Facebook, Dashboard and Bom site. As these sources dominate we can 
+infer that when people commented on shortcomings, failures and improvements that may be made 
+for future events (open ended questions towards the end of the survey) their responses were primarily 
+influenced by these information platforms. 
+ 
+ 
+
+
+===== [page 11] =====
+ 
+Figure 1. Primary source of information Figure 2. Reason to access information 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+Figure 2 and table 4 indicate the reasons people gave for accessing information about the floods. The 
+same group of respondents answered this question as in table 3, but selected a far greater number of 
+reasons, with most people choosing 6 or 7 options. Given that about 208 people responded the vast 
+majority of them were concerned with the top 7 reasons: monitoring of the event and local impacts, 
+warning information, river/waterway levels updates, personal preparedness, flood/inundation 
+mapping, dam updates and event tracking/updates. 
+ 
+Table 4. Reason for Accessing Information 
+Please indicate the main reason you accessed 
+information regarding the flood event (you may 
+select more than one option) 
+Number 
+Percent of 
+responses 
+Monitoring of the event/local impacts 
+188 
+13 
+Warning information 
+152 
+11 
+River/waterway levels updates 
+141 
+10 
+Personal preparedness 
+137 
+10 
+Flood/inundation mapping 
+136 
+10 
+Dam updates 
+119 
+8 
+Event tracking/updates 
+115 
+8 
+Information on impacts 
+81 
+6 
+Evacuation information 
+75 
+5 
+Information on emergency response 
+73 
+5 
+Information on relief efforts 
+49 
+3 
+Information on recovery efforts 
+45 
+3 
+Financial assistance 
+36 
+3 
+Information about pets/evacuation 
+33 
+2 
+Sandbags and supplies 
+32 
+2 
+Volunteering/donations 
+18 
+1 
+Total 
+1430 
+100 
+ 
+
+
+===== [page 12] =====
+ 
+Table 5. Official Sources used to Access Information 
+Please indicate any official source/group you accessed 
+to prepare or obtain information regarding the flood 
+event (you may select more than one option) 
+Number 
+Percent 
+of 
+responses 
+Bureau of Meteorology 
+173 
+23 
+Local Council Disaster Management Dashboard 
+147 
+20 
+Local Council Based Disaster Information Group 
+89 
+12 
+Ergon Energy 
+78 
+10 
+Department of Transport and Main Roads 
+74 
+10 
+Queensland Police Service 
+40 
+5 
+Flood Event Livestream/Videos 
+31 
+4 
+Local Politician 
+29 
+4 
+State Emergency Services (SES) 
+28 
+4 
+Queensland Health 
+23 
+3 
+Other 
+22 
+3 
+RACQ 
+9 
+1 
+Queensland Fire Department 
+8 
+1 
+Total 
+751 
+100 
+ 
+Table 5 and figure 3 focus on official sources of information and are an extension of the primary source 
+of information, outlined above. The Bureau of Meteorology and Townsville City Council disaster 
+management dashboard along with its related Council disaster information group comprise over half 
+of access to official sources.  
+ 
+Figure 3. Access to Official Sources 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+Bureau of Meteorology and the Townsville City Council sources of information dominate the responses 
+in table 6 where people were asked to rate official sources generically. Table 5 indicates that the 
+
+
+===== [page 13] =====
+208/209 respondents clearly accessed a number of official sources – average of 3.6 per respondent. 
+The ratings of the official sources are therefore most likely to be concerned primarily with the 
+dominant sources of information – BoM and Council. 
+ 
+Table 6. Ratings of Official Sources 
+How would you 
+rate the 
+information 
+provided by these 
+official sources? 
+Accurate 
+% 
+Up-to-
+date 
+% 
+Useful 
+% 
+Trustworthy 
+% 
+Completely 
+25 
+12 
+26 
+12 
+39 
+19 
+37 
+18 
+Very 
+89 
+43 
+63 
+30 
+94 
+45 
+90 
+43 
+Moderately 
+60 
+29 
+78 
+37 
+42 
+20 
+40 
+19 
+Somewhat 
+28 
+13 
+29 
+14 
+25 
+12 
+27 
+13 
+Not at all 
+5 
+2 
+13 
+6 
+8 
+4 
+12 
+6 
+N/A 
+1 
+0.5 
+0 
+0 
+0 
+0 
+2 
+1 
+Total 
+208 
+100 
+209 
+100 
+208 
+100 
+208 
+100 
+ 
+Four categories of ratings were presented to respondents. Although there is some relationship and 
+overlap between them - for example accurate can be assumed to influence the idea of usefulness – 
+each category is otherwise mutually exclusive as far as the ratings are concerned. The ratings of official 
+sources within each of the four categories, are on a 5 point scale from completely through very, 
+moderately and somewhat to not at all. A small number of respondents chose not applicable or gave 
+no response, while still answering some of the questions. At this stage of the survey 89% of the initial 
+233 respondents answered most questions. It is assumed that the other 11% lost interest in the survey, 
+or did not feel that a specific question was relevant to their experience. The first question in the survey 
+asked people ‘Were you or your household impacted in any way by the major flood event in North 
+Queensland during late January/February 2025’: 220 people indicated yes and were asked to complete 
+the survey; only 13 people responded no and were instructed not to continue with the survey although 
+some may have chosen to continue, presumably because their response implied some kind of impact. 
+ 
+Table 7. Access to Bureau of Meteorology Information Sources 
+Please indicate if you accessed weather based 
+information generated by the Bureau of Meteorology 
+regarding this event 
+Number 
+Percent 
+Bureau of Meteorology website 
+170 
+34 
+Bureau of Meteorology facebook page 
+65 
+13 
+Bureau of Meteorology severe weather warnings 
+120 
+24 
+Bureau of Meteorology rainfall tracking maps 
+100 
+20 
+Bureau of Meterology live streams/videos 
+28 
+6 
+None 
+15 
+3 
+Total 
+498 
+100 
+ 
+Table 7 and the following ratings question focus closer on the Bureau of Meteorology information 
+sources. The Bureau of Meteorology was a significant partner with the Centre for Disaster Studies in 
+sponsoring post disaster surveys from the mid 1990s onwards. The Bureau was interested in feedback 
+concerning its hazard messaging, and frequently responded to that feedback in its development of 
+information platforms and language. It is also significant that the Bureau of Meteorology has always 
+been a major source of information to households, and remains a primary source. However, when 
+citing the BoM as a source of hazard information there are a number of products or webpages that 
+people use. The main ones are identified in table 7, and are then generically rated in table 8. 
+
+
+===== [page 14] =====
+ 
+Table 8. Ratings of Bureau of Meteorology Information Sources 
+Please rate the 
+information generated 
+by the Bureau of 
+Meteorology  
+Accurate 
+% 
+Up-to-
+date 
+% 
+Useful 
+% 
+Trustworthy 
+% 
+Completely  
+29 
+14 
+33 
+16 
+38 
+18 
+41 
+20 
+Very  
+87 
+42 
+80 
+38 
+93 
+45 
+92 
+44 
+Moderately  
+52 
+25 
+54 
+26 
+42 
+20 
+38 
+18 
+Somewhat  
+29 
+14 
+28 
+13 
+23 
+11 
+23 
+11 
+Not at all  
+9 
+4 
+11 
+5 
+9 
+4 
+10 
+5 
+N/A  
+3 
+1 
+3 
+1 
+3 
+1 
+4 
+2 
+Total 
+209 
+100 
+209 
+100 
+208 
+ 
+208 
+ 
+ 
+Table 6 in rating all official sources and table 8 rating just the BoM are inevitably similar, given the 
+significant overlap of the BoM sources of information. The responses are similar in each table. Each of 
+the 4 categories indicate similar ratings where completely and very (accurate, up to date, useful and 
+trustworthy) are half to two thirds of all responses. Only up to date falls slightly lower, but still 42 to 
+54% in each table. The difference in selection of completely or very – accurate etc – may often 
+represent a personality difference on the part of respondents, rather than a qualitative evaluation. 
+Some people never tick the outer, more extreme, option. Thus it makes more sense to group the two 
+positive responses, and the negatives of somewhat or not at all – accurate etc. The negatives are 
+insignificant, but around 17 to 26% of respondents rated these sources of information as moderately 
+– accurate etc. This ambivalent, or less impressed rating, suggests that improvements may need to be 
+considered. 
+ 
+Table 8a. Ratings of information from other weather focused source/groups 
+Please rate the 
+information from other 
+weather focused 
+source/groups you may 
+have accessed 
+Accurate 
+% 
+Up-to-
+date 
+% 
+Useful 
+% 
+Trustworthy 
+% 
+Completely  
+17 
+8 
+39 
+19 
+35 
+17 
+34 
+16 
+Very  
+87 
+42 
+91 
+44 
+92 
+44 
+66 
+32 
+Moderately  
+60 
+29 
+36 
+17 
+37 
+17 
+59 
+28 
+Somewhat  
+14 
+7 
+13 
+6 
+14 
+7 
+19 
+9 
+Not at all  
+3 
+1 
+2 
+1 
+2 
+1 
+3 
+1 
+N/A  
+27 
+13 
+28 
+13 
+28 
+13 
+28 
+13 
+Total 
+208 
+100 
+209 
+100 
+208 
+100 
+209 
+100 
+Note: the other weather focused sources were not required to be listed, so this rating is more a subset 
+of the BoM ratings. 
+ 
+Table 9 and figure 4 illustrate access to all news media outlets. The popularity of ABC may in part reflect 
+the older demographic of most of the respondents. People could select more than one option, as in 
+previous questions about official sources and all sources. The number of selections, 368, is significantly 
+less than access to official sources of information. Ratings, shown in table 10, are also lower, with 
+around a third rating selected as completely and very.  The lowest ratings are higher, as are moderate 
+ratings. People were less impressed with media information than official sources. 
+ 
+ 
+
+
+===== [page 15] =====
+ 
+Table 9. Access to News Media Outlets 
+Please indicate any news media outlet source/group you 
+accessed to prepare or obtain information regarding the 
+flood event (you may select more than one option) 
+Number 
+% of 
+Responses 
+ABC News 
+75 
+20 
+None 
+63 
+17 
+7 News 
+56 
+15 
+ABC radio 
+41 
+11 
+Local commercial radio station 
+37 
+10 
+WIN News 
+35 
+10 
+Online news based services (eg. news.com) 
+28 
+8 
+Other print based news network (eg. Local newspaper, The 
+Australian, Guardian, Reuters etc) 
+18 
+5 
+SBS News 
+11 
+3 
+Other commercial news network 
+4 
+1 
+Total Responses 
+368 
+100 
+ 
+Figure 4. Access to News Media Outlets 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+Table 10. Ratings of News Media Sources of Information 
+Please rate the information 
+from the news media outlet 
+source/groups  
+Accurate 
+% 
+Up-to-
+date 
+% 
+Useful 
+% 
+Trustworthy 
+% 
+Completely  
+12 
+6 
+12 
+6 
+12 
+6 
+17 
+8 
+Very  
+63 
+30 
+54 
+26 
+62 
+30 
+59 
+28 
+Moderately  
+53 
+25 
+50 
+24 
+43 
+21 
+44 
+21 
+Somewhat  
+20 
+10 
+30 
+14 
+23 
+11 
+22 
+11 
+Not at all  
+9 
+4 
+10 
+5 
+18 
+9 
+14 
+7 
+N/A  
+52 
+25 
+52 
+25 
+51 
+24 
+53 
+25 
+Total  
+209 
+100 
+208 
+100 
+209 
+100 
+209 
+100 
+
+
+===== [page 16] =====
+ 
+Community based sources of information have potential to inform local situations and to give 
+reassurance or community support. Facebook, local question and answer group and family and friends 
+comprise 64% of responses, but are not necessarily mutually exclusive. The flood event group is an 
+interesting emergent community entity (identified also in the 2019 flood), but we did not gather any 
+more detailed information on the organisation and access to this group. 
+ 
+Table 11. Access to Community Based Sources of Information 
+Please indicate any community based forum 
+source/group you accessed to prepare or 
+obtain information regarding the flood event 
+(you may select more than one option) 
+Number 
+Percent 
+Disaster Response on Facebook 
+94 
+24 
+Local question and answer group 
+80 
+ 
+Friend/family 
+71 
+ 
+Community support group 
+46 
+ 
+None 
+46 
+ 
+Flood event group 
+38 
+ 
+Local animal or pet focused group 
+7 
+ 
+Local church or religious group 
+3 
+ 
+Total 
+385 
+ 
+ 
+Figure 5. Access to Community Groups or Sources 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+Table 12. Ratings of Community Based Sources of Information 
+Please rate the 
+information from 
+community based 
+forum sources/groups 
+Accurate 
+% 
+Up-to-
+date 
+% 
+Useful 
+% 
+Trustworthy 
+% 
+Completely 
+21 
+10 
+32 
+15 
+27 
+13 
+20 
+10 
+Very 
+57 
+27 
+71 
+34 
+63 
+30 
+49 
+24 
+Moderately 
+52 
+25 
+36 
+17 
+42 
+20 
+50 
+24 
+Somewhat 
+26 
+12 
+18 
+9 
+23 
+11 
+31 
+15 
+Not at all 
+4 
+2 
+4 
+2 
+6 
+3 
+9 
+4 
+N/A 
+49 
+23 
+48 
+23 
+48 
+23 
+49 
+24 
+Total 
+209 
+100 
+209 
+100 
+208 
+100 
+208 
+100 
+
+
+===== [page 17] =====
+The ratings on community based sources of information are less positive than official sources. Up to 
+date was rated completely and very by around half of responses but accurate, trustworthy and useful 
+were rated completely and very by 40% or less of responses. While not at all is insignificant, moderately 
+and somewhat – accurate etc. – are as significant as the most positive ratings. It is likely that people 
+used these sources of information as a supplement to more official sources. 
+ 
+Table 13. Access to Non-government Organisation Sources of Information 
+Responses to question 17 - Please indicate any non-government organisations or agency 
+source/groups you accessed to prepare or obtain information regarding the flood event – returned a 
+dominant response of none, 79%. This is reflected in the low number of people who provided ratings 
+of NGO information in table 14. Categories are consequently truncated. 
+ 
+Table 14. Ratings of Non-government Organisation Information 
+Please rate the 
+information from non-
+government 
+organisations or agency 
+sources/groups 
+Accurate 
+% 
+Up-to-
+date 
+% 
+Useful 
+% 
+Trustworthy 
+% 
+Completely/Very 
+23 
+11 
+26 
+12 
+24 
+11 
+25 
+12 
+Moderately/ Somewhat 
+17 
+8 
+13 
+6 
+15 
+7 
+16 
+8 
+Not at all 
+3 
+1 
+4 
+2 
+5 
+2 
+2 
+1 
+N/A 
+166 
+79 
+166 
+79 
+165 
+79 
+166 
+79 
+Total 
+209 
+ 
+209 
+ 
+209 
+ 
+209 
+ 
+ 
+Figure 6. Word Cloud of Most Useful Groups and Sources of Information 
+Q22: Which group/source did you find most useful/valuable? 
+ 
+ 
+Figure 6 and table 15 illustrate the open ended responses to the question ‘Which group/source did 
+you find most useful/valuable?’ The responses varied extensively in length, detail and grammar etc. 
+including capitalisation or lower case etc. Some of these tabulate and appear in word clouds as 
+separate entities. Responses such as the disaster management dashboard listed as separate words. 
+
+
+===== [page 18] =====
+The open ended responses were extensively edited to reduce case, title, spelling and spacing 
+variations, including the compression of multi word entities into a single word chain. The numbers of 
+citations of groups and sources are listed in table 15. 
+ 
+Table 15. Compilation of Open Ended Responses to the Most Useful Sources of Information 
+See appendix table A4 for full list and details of responses. 
+Which group/source did you find most useful/valuable? 
+Number of times cited 
+Facebook 
+76 
+Local – in context of community, facebook, management etc. 
+40 
+Wally’s Weather etc. 
+34 
+Bureau of Meteorology (BOM) 
+32 
+Townsville Disaster Dashboard etc. 
+13 
+Everything Townsville 
+12 
+Weather IQ 
+11 
+Family & friends 
+6 
+Higgins storm chasing 
+5 
+Townsville Disaster Management 
+5 
+ABC 
+4 
+Everything Ingham 
+3 
+Total Most common sources (includes some overlap) 
+241 
+Total Number of Items named 
+272 
+ 
+There were also a number of descriptive words such as ‘local’, and generalised nouns like ‘all, aware 
+and answers’, which cropped up in various contexts but were important pointers to peoples’ needs. 
+Otherwise, Word Clouds often ignore common words like ‘to’ or ‘is’ etc. The intention in both the word 
+cloud and the table, was to isolate the most commonly occurring key words that related to sources of 
+information. Once words, phrases and titles had been standardised between responses, the 
+generation of the word cloud selected from over 100 most commonly occurring words. Facebook 
+stands out because many respondents were recruited through facebook groups, but local as a 
+descriptive term, Wally’s Weather and BoM are also commonly repeated sources. 
+ 
+Table 15 takes 12 of the most commonly occurring sources of information. Many responses were long 
+and detailed and referred to multiple combinations of sources without actually answering the question 
+as to which was the most useful. The sources that are cited in these response are included in the Word 
+Cloud but as some indicated multiple sources of information without saying what was the most useful, 
+these are not listed in table 15 in the single row entities. The 12 most cited sources (or qualifiers such 
+as local) comprise 87% of the total number of useful items that were named. 
+ 
+ 
+
+
+===== [page 19] =====
+Shortcomings and Areas for Improvement 
+ 
+As described above for figure 6 and table 15 which compiled open ended responses, the same method 
+was used to sort and summarise inaccurate, misleading or conflicting information, and the subsequent 
+word cloud figure 7 illustrating comments on aspects of information, warnings or evacuations that 
+could be improved. As many as 62% of the respondents felt that information was in various ways 
+inaccurate, conflicting or misleading. 
+ 
+Table 16. Inaccurate, Conflicting or Misleading Information 
+Did you come across any 
+inaccurate, conflicting or 
+misleading information regarding 
+the flood event? 
+Number 
+Percent 
+Yes 
+129 
+62 
+No 
+80 
+38 
+Total 
+209 
+100 
+Table A5 in the appendix lists full details of open ended responses.  
+ 
+Figure 7. Word Cloud of Inaccurate, Conflicting or Misleading Information 
+ 
+ 
+The word cloud highlights exaggeration, scare mongering, confused, false and misleading information 
+as well as quite a few references to moronic behaviour and communication. Facebook was also 
+attacked for communicating inaccurate, conflicting or misleading information, as well as its previous 
+identification as a useful source of information. Facebook does both – it is good and bad.  There are a 
+number of terms and words that relate to water, flooding, channels, and opening being in reference 
+to flood gates, as well as evacuation centres. Following from this question and responses, survey 
+respondents were asked to comment on aspects of information, warnings or evacuations that could 
+be improved.  
+ 
+The misleading aspects were concentrated into a broad range of dominant issues, with ideas for 
+improvement equally varied and specific. These responses are summarised in figure 8 and table 17.  
+ 
+ 
+
+
+===== [page 20] =====
+Figure 8. Word Cloud of Comments on Aspects of Information, Warnings or Evacuations that Could 
+be Improved 
+ 
+ 
+Table 17. Word Counts of Comments on Aspects of Information, Warnings or Evacuations that Could 
+be Improved 
+Count of Specific terms in open ended responses 
+Number of times cited in 
+responses 
+Warnings & Emergency (often cited as more or earlier) 
+55 
+People and residents (mostly actions & needs) 
+50 
+Flood (referring to maps or levels or flooding experience) 
+49 
+More (evacuation centres, information, timeliness etc.) 
+44 
+Zone (flood zones) 
+35 
+Evacuation or evacuate 
+34 
+Council (mostly Townsville – also Hinchinbrook) 
+28 
+Disaster and Risk (groups, dashboard, management etc) 
+28 
+Information 
+26 
+Pink (flood zone) 
+24 
+Black (flood zone) 
+21 
+Maps  
+17 
+Better (information, management, maps etc) 
+17 
+Better (communication, information & maps) 
+17 
+Updates 
+13 
+Areas (locations and zones) 
+11 
+Communication (better or lack) 
+11 
+Local (information, community etc) 
+11 
+Prepare/d 
+11 
+Messages 
+10 
+Pets 
+9 
+Roads (closures and flooding) 
+9 
+Community 
+9 
+House/s 
+9 
+Text (mobile texts) 
+8 
+Schools (closure & notification) 
+5 
+ 
+
+
+===== [page 21] =====
+Respondents’ ideas on areas that could be improved are a particularly important contribution to 
+understanding the 2025 floods and extreme rainfall events. A summary of ideas for improvements to 
+warnings, information, and evacuations based on the open ended responses to aspects of information, 
+warnings or evacuations that people believe could be improved, is listed below. This is a summary of 
+what people wrote on the questionnaire form. It summarises the range of their ideas and observations. 
+This summary is not necessarily a recommendation of the authors of this report, although there are 
+many sound ideas and lessons that could be incorporated into future emergency management 
+planning. Primarily this is a summary of what was written by the majority of the respondents to this 
+survey. 
+• 
+Clearer Evacuation Instructions: Provide specific guidance on when to evacuate, including 
+flood levels or water reaching certain landmarks (e.g., driveway).  
+• 
+Evacuation Route Clarity: provide defined evacuation routes and update them as conditions 
+change. 
+• 
+Improved Flood Zone Maps: ensure maps (e.g., pink and black zones) are high-resolution, easy 
+to read, and accessible, with clear explanations of the zones' risks.  
+• 
+Pet-Friendly Evacuation Centres: open evacuation centres that accommodate pets earlier to 
+reduce stress for pet owners.  
+• 
+Timely and Accurate updates: increase the frequency and accuracy of updates on road 
+closures, flood levels, and evacuation centre capacity.  
+• 
+Centralised Information Source: establish a single, reliable government source for accurate and 
+timely disaster information to avoid conflicting advice.  
+• 
+Better Coordination Among Authorities: improve communication between council, police, 
+SES, and other agencies to ensure consistent messaging.  
+• 
+Better Use of Communication Channels: utilise TV, radio, SMS, and social media effectively, 
+ensuring updates are consistent across all platforms.  
+• 
+Targeted Warnings: tailor warnings to specific regions and age groups, avoiding overly broad 
+or alarmist messages.  
+• 
+Pre-Event Preparation: provide sandbags and other supplies well before the event starts, 
+especially for vulnerable groups like the elderly.  
+• 
+Education for New Residents: create a disaster preparedness kit or guide for newcomers, 
+summarising key actions and contact numbers.  
+• 
+Live Updates on Conditions: offer live streams or real-time updates on river conditions, major 
+bridges, and affected streets.  
+• 
+Improved Messaging for Pink Zones: include clear instructions for pink zones alongside black 
+zone warnings to reduce confusion.  
+• 
+Mental Health Support: communicate feasible mental health strategies.  
+• 
+Post-Event Support in recovery: offer better post-event cleanup assistance, such as hard 
+rubbish and green waste collection.  
+ 
+Note on Open Ended Statements 
+Full unedited open responses to each of the sections on useful sources, of information, inaccurate and 
+misleading information and areas for improvement are contained in the appendix as Table A4 Open 
+Ended Responses to the Most Useful Sources of Information, Table A5 Open ended responses of details 
+of Inaccurate, Conflicting or Misleading Information, and Table A6 Open ended Comments on Aspects 
+of Information, Warnings or Evacuations that Could be Improved. Open ended statements in 
+confidential surveys are a direct statement of the experiences, observations (and sometimes 
+prejudices and gripes) of members of the public. There are criticisms in many of these written 
+statements, but no slander, defamation, misogyny, racism or personal attack was identified in these 
+comments. It is not possible to identify an individual from any of these statements, thereby 
+maintaining confidentiality. Typing errors etc have not been corrected in these appendices, unless a 
+
+
+===== [page 22] =====
+typing or spelling error made interpretation impossible. There are some factual errors and 
+misunderstanding in some statements, but it is possible that an error of knowledge or understanding 
+highlights a communication shortcoming (for example the belief that there is no evacuation centre on 
+Magnetic Island). Importantly it is our belief that people made these statements out of a desire that 
+their voices should be heard. We therefore present the responses and comments verbatim as an 
+insight into the thoughts and experiences of this set of respondents to a public survey. 
+ 
+Table 18. Overall Level of Trust in Information 
+Please indicate your overall level of trust in the 
+information provided regarding the flood event 
+Number of 
+responses 
+Percent 
+Completely trustworthy 
+17 
+8 
+A great deal 
+97 
+46 
+Moderately 
+73 
+35 
+Not much at all 
+15 
+7 
+Not at all 
+7 
+3 
+Total 
+209 
+100 
+ 
+Table 18 summarises the overall level of trust that people had in the information that was provided. 
+Given the unpredictable nature and severity of this wet season and its floods information providers 
+were challenged to keep up with the changing, unfolding situation. However, the question did not 
+address accuracy or timeliness of information, but asked people to reflect on their level of trust in the 
+information. The uncertainty of the event is inevitably reflected in the low proportion finding 
+information completely trustworthy. Overall the level of trust is positive, with the summary of the open 
+ended responses providing sensible improvements that may improve trust in the future. 
+ 
+ 
+ 
+
+
+===== [page 23] =====
+Evacuation 
+ 
+Evacuation from flood waters was not such a major issue in Townsville as had been the case in the 
+2019 monsoonal floods. In Ingham and Hinchinbrook Shire flood waters from nearby rivers, especially 
+the Herbert, were much more severe, with 2 people losing their lives in floodwaters. As stated in the 
+introduction, over the 2 months of very heavy rain events from January to March, evacuation orders 
+were issued for low-lying areas, including six suburbs in Townsville, although many residents chose to 
+stay in their homes.  The State Emergency Service conducted multiple rescues, including rooftop 
+evacuations in Cardwell. Ingham and communities in Hinchinbrook Shire experienced evacuations of 
+a few hundred people at different times in the flood crisis, but it seems that most people stayed within 
+the region and the majority remained in their homes, especially as significant numbers of houses are 
+high set, and surrounding flooded rivers cut off the town and shire. However, most responses to the 
+survey are from Townsville residents, so their experiences dominate the following summary tables. 
+ 
+Table 19. Evacuation Plan 
+Did you/your household have a disaster evacuation 
+plan before the event? 
+Number 
+Percent 
+No 
+138 
+59 
+Yes 
+95 
+41 
+Total 
+233 
+100 
+ 
+Table 19 records responses to questions asked early in the questionnaire concerning disaster 
+preparation, which are reported in table 1. Most people did not have an evacuation plan, but as table 
+20 indicates, most, 62% were not in a flood inundation zone. Although only 12% were unsure if they 
+were in a flood zone, it is still worrying, as respondents to this survey were generally older and better 
+educated than the majority of the population. It may be surmised that the situation of flood zone 
+uncertainty across the city may be much higher than indicated here. 
+ 
+Table 20. Location in Flood Zone 
+Is your home located in a previously identified 
+flood inundation zone? 
+Number of 
+Responses 
+Percent 
+No 
+127 
+62 
+Yes 
+52 
+25 
+Unsure  
+25 
+12 
+Total 
+204 
+100 
+ 
+Figure 9 indicates that over three quarters of respondents did not receive advice to evacuate, most 
+probably because they were not, as shown in table 20 resident in a flood zone. Table 21 records the 
+range of advice information, where people selected more than one option in a minority of cases.  
+ 
+Table 21. Evacuation Advice 
+Did you receive advice to evacuate your 
+home/location (you may select more than one 
+option)? 
+Number 
+Percent 
+No 
+158 
+63 
+Door knock by emergency services/military 
+16 
+6 
+Text message 
+33 
+13 
+General warning via media 
+29 
+12 
+Advised by friends/family 
+6 
+2 
+Self evacuated before any notifications 
+8 
+3 
+Total 
+250 
+100 
+
+
+===== [page 24] =====
+Figure 10 and table 22 show that 86% of respondents did not evacuate. The range of other advice and 
+responses mostly concern those households that did evacuate. Numbers are very small. The other 
+response in table 22 is detailed fully in written comments, copied into table 23. 
+ 
+Figure 9. Advice to Evacuate 
+ 
+ 
+Figure 10. Response to Evacuation advice 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+Table 22. Evacuation Action by Households 
+Did you evacuate your home/location? 
+Number of 
+Responses 
+Percent 
+Did not evacuate 
+175 
+86 
+Self evacuated after door knock/warning 
+6 
+3 
+Self evacuated early 
+9 
+4 
+Self evacuated after text 
+2 
+1 
+Self evacuated after general warning 
+3 
+1 
+Assisted evacuation (friends/family) 
+1 
+0.5 
+Emergency evacuation 
+1 
+0.5 
+Assisted evacuation (emergency services/support) 
+0 
+0 
+Other (specified in table below) 
+7 
+3 
+Total 
+203 
+100 
+ 
+Table 23. Open Ended Responses to evacuation Action 
+Did you evacuate your home/location? Other Response. 
+Evacuated but were not given a warning or notification to evacuate. Only received a warning labelled 
+'too late to evacuate' after we had chosen to leave. 
+No, warning came too late to do anything 
+Self evacuated 
+We weren’t asked to evacuate  
+We helped people evacuate their home after inundation. There were no warnings for them  
+The text came through once it was too late to evacuate, the roads were already flooded and access 
+anywhere cut off. The sea attended in boats to rescue those who were in imminent danger but if 
+those warnings were received earlier they may not have had to put their lives at risk 
+Was already away from home when flooding started. 
+ 
+ 
+ 
+ 
+
+
+===== [page 25] =====
+Figure 11. Word Cloud of What Influenced Household Decision to Evacuate or Stay in Place 
+ 
+See full list of open ended responses in the Appendix Table A7. 
+ 
+The word cloud in figure 11 includes words relating to experiences that influenced the majority of 
+respondents in  staying home and not evacuating as well as the small numbers of people who did 
+evacuate. Dominant words like flood, flooding, water and house refer to both a threat or a lack of a 
+threat. There are many terms that suggest past experiences and knowledge, some that identify 
+evacuation issues including pets, and there is some identification of family and friends.  
+ 
+Table 24. Destination of Evacuees 
+If you/your household evacuated - where did 
+you go? 
+Number of 
+Responses 
+Percent of 
+respondents 
+Did not evacuate 
+169 
+83 
+Friends/family 
+25 
+12 
+Other 
+5 
+2 
+Evacuation centre 
+3 
+1 
+Accommodation service provider 
+0 
+0 
+Evacuated out of town 
+2 
+1 
+Total 
+204 
+100 
+ 
+Table 24 and figure 12 record the destinations of evacuees. Only 1 person (household?) who responded 
+to this survey went to a council evacuation centre. The largest number, just 25 or 12%, went to family 
+and friends - 71% of all those who evacuated. We cannot extrapolate these responses to the whole 
+population because this very small sample is not representative.  However, it is possble that many 
+more people evacuated temporarily as the flood waters threatened. 
+ 
+ 
+ 
+
+
+===== [page 26] =====
+Figure 12. Destination of Evacuees 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+ 
+ 
+
+
+===== [page 27] =====
+Demographic Characteristics of Respondents 
+ 
+The final questions in the survey asked for basic demographic characteristics. These are recorded in 
+tables 25 to 27 and supplemented in figures 13 and 14. The characteristics of the respondents are 
+skewed towards female, older ages, and tertiary qualified. Figures from the 2021 census are placed 
+alongside the survey categories for comparison. We use these responses as indicators from the 
+population. The results of the survey cannot be extrapolated to be representative of the whole 
+Townsville region population, which is gender balanced, younger and much less qualified than this 
+survey sample. However, it is possible to suggest that preparation and experiences amongst the mass 
+of the city population may have been worse, or more vulnerable than this experienced, well educated 
+survey sample. 
+ 
+Table 25. Gender of Respondents 
+Are you male or female? 
+Gender 
+Percent 
+Female 
+174 
+85 
+Male 
+27 
+13 
+Other 
+3 
+1 
+Total 
+204 
+100 
+ 
+Table 26. Age Group of Respondents and 2021 Census Comparison 
+What is your age? 
+Number in 
+Age Group 
+Percent 
+2021 Census 
+TCC LGA 
+18-20 
+1 
+0.5 
+4.3 
+21-29 (ABS Census 20-29) 
+16 
+8 
+15.4 
+30-39 
+43 
+21 
+13.8 
+40-49  
+55 
+27 
+12.6 
+50-59  
+50 
+25 
+12.4 
+60 or older 
+37 
+18 
+19.9 
+Prefer not to say 
+2 
+1 
+ 
+Total 
+204 
+100 
+ 
+Note: TCC LGA – Townsville City Council Local Government Area 
+ 
+Table 27. Educational Attainment of Respondents 
+What is the highest level of education you have 
+completed? 
+Number 
+Percent 
+2021 Census 
+TCC LGA 
+Primary/elementary school/not attend school 
+0 
+0 
+6.6 <year 9 
+High school (up to grade 10) 
+14 
+7 
+12.8 
+Graduated high school (year 12 or equivalent) 
+20 
+10 
+16.8 
+Vocational certificate or diploma 
+43 
+21 
+29.2 
+Undergraduate/ Bachelors Degree 
+61 
+30 
+18.1 
+Post Graduate Qualification 
+59 
+29 
+Prefer not to say 
+7 
+3 
+ 
+Total 
+204 
+100 
+ 
+ 
+ 
+ 
+ 
+
+
+===== [page 28] =====
+Figure 13. Age group 
+ 
+ 
+ 
+Figure 14. Educational Attainment 
+ 
+ 
+Note: Percentages are calculated as a percent of all respondents. 
+ 
+ 
+ 
+ 
+
+
+===== [page 29] =====
+Summary 
+ 
+The 2025 Queensland floods were a devastating weather event that severely impacted North 
+Queensland, particularly Townsville and surrounding areas The Ross River Dam reached 164% capacity, 
+necessitating water releases. Evacuation orders were issued for low-lying areas, but many residents 
+chose to stay in their homes.   
+ 
+The Centre for Disaster Studies survey, distributed via social media and local networks, focused on 
+disaster preparation, sources of information, evacuation experiences, and demographic 
+characteristics. The survey revealed that 70% of respondents felt adequately prepared, with 71% 
+having disaster kits and 72% holding insurance. However, 29% lacked disaster kits, and 23% were 
+uninsured, highlighting vulnerabilities among certain groups.  The extended nature of the flood event, 
+spanning three months, challenged disaster preparedness strategies.  
+ 
+Facebook emerged as the primary source of information during the floods, , followed by government 
+websites and local disaster dashboards.  Respondents accessed information for event monitoring, 
+preparedness, and updates on river levels, road and service closures, dam conditions, and evacuation 
+advice.  Official sources like the Bureau of Meteorology (BoM) and local government dashboards were 
+rated highly for accuracy, usefulness, and trustworthiness.  However, community-based sources and 
+news media received mixed ratings, with concerns about misinformation and conflicting advice.  
+Respondents noted that Facebook was both a valuable resource and a source of inaccurate or 
+exaggerated information.  The Bureau of Meteorology remained a trusted source, with respondents 
+accessing its website, rainfall tracking maps, and severe weather warnings. 
+ 
+The survey identified several shortcomings in communication and areas for improvement.  
+Respondents highlighted issues such as unclear evacuation instructions, outdated flood zone maps, 
+and inconsistent messaging from authorities.  Suggestions for improvement included clearer 
+evacuation routes, pet-friendly evacuation centres, timely updates, centralized information sources, 
+and better coordination among agencies. Respondents also emphasized the need for targeted 
+warnings, pre-event preparation, and education for new residents.  Specific recommendations 
+included live updates on river conditions, improved flood zone maps, and better use of communication 
+channels like TV, radio, and SMS. Many respondents called for clearer instructions regarding flood 
+zones, particularly the pink and black zones, which caused some people confusion during the event.  
+ 
+Evacuation experiences varied, but the vast majority of respondents did not evacuate, in most cases 
+because it was unnecessary.  Most evacuees stayed with friends or family. Decisions to evacuate or 
+stay were influenced by factors such as flood zone location, past experiences, and the presence of pets.  
+Many respondents felt safe in their homes due to elevated locations or prior knowledge of flood risks.  
+However, some noted that evacuation warnings were issued too late, leaving them unable to act.  Pet-
+friendly evacuation centres were identified as a critical need, as many residents chose to stay home to 
+avoid leaving their animals behind.  
+ 
+The survey also explored the trustworthiness of information sources.  While official sources were 
+generally trusted, respondents expressed concerns about conflicting advice from different agencies.  
+Social media platforms, particularly Facebook, were criticized for spreading misinformation, including 
+exaggerated weather forecasts and outdated flood photos.  Respondents called for a centralized 
+government source of accurate and timely information to reduce confusion and improve trust.  
+ 
+Demographic data showed that the survey sample was skewed toward older, highly educated 
+residents, with 85% female respondents. This demographic may have contributed to higher levels of 
+preparedness and insurance coverage compared to the general population.  The survey results cannot 
+
+
+===== [page 30] =====
+be generalized to the entire population but provide insights into the experiences of a specific group.  
+The findings and opinions from this survey should be considered as indicators of concerns, experiences 
+and insights. The majority of respondents were from Townsville, with smaller numbers from Ingham 
+and other affected areas.  
+ 
+Overall, the survey highlighted the importance of accurate and timely information, effective 
+communication, and community preparedness in managing disaster events.  Recommendations from 
+the respondents to this survey identify future planning to improve flood zone mapping, enhance 
+communication channels, and address the needs of vulnerable groups.  Respondents also called for 
+better post-event support, such as cleanup assistance and mental health resources.  The findings 
+underscore the need for coordinated efforts to build resilience and reduce the impacts of disasters in 
+North Queensland.  By addressing the shortcomings identified in the survey, authorities can improve 
+disaster management and better support affected communities in future events.  
+ 
+The results of this online survey summarise the thoughts and opinions of people who were interested 
+to express and share their experiences during the heavy rainfall and flooding of the 2025 wet season. 
+They were invited to make suggestions and recommendations, which are recorded here in detail. They 
+do not represent any official group or organization. These are the voices and experiences of members 
+of the Townsville region community.  
+ 
+ 
+ 
+
+
+===== [page 31] =====
+References 
+ 
+Cottrell, A. and Anderson-Berry, L. 2002. Women and the Wet Season in Northern Australia. EMA 
+project 13 2002. Emergency Management Australia, Canberra. https://www.jcu.edu.au/centre-for-
+disaster-studies/publications/reports  
+ 
+Cottrell, A. and King, D. 2010. Social assessment as a complementary tool to hazard risk assessment 
+and disaster planning. The Australasian Journal of Disaster and Trauma Studies.   
+ 
+Gurtner, Y., Cottrell, A. and King, D. 2008 PRE and RAPID. Community Hazard Recovery Needs and 
+Capacity Assessment. Unpublished Report. Department of Communities & James Cook University 
+Research Project. 
+ 
+Gurtner, Y. and King, D. 2025. Post Disaster Survey of Residents in Townsville Following Monsoonal 
+Floods in January and February 2019: The Social Impacts and Preparedness Experiences of Households 
+Which Experienced the Monsoonal Floods in Townsville in 2019. Centre for Disaster Studies, James 
+Cook University https://www.jcu.edu.au/centre-for-disaster-studies/publications/reports  
+ 
+ 
+ 
+ 
+ 
+
+
+===== [page 32] =====
+Appendix 
+ 
+Appendix Tables 
+Table A1. Open ended Responses to question do you feel that you/your household was adequately 
+prepared for a disaster before the flood event happened? 
+Table A2. Open-Ended responses to Other choice in question what was your primary source of 
+information regarding the flood event (you may select more than one option) 
+Table A3. Open-Ended responses to Other choice in question please indicate the main reason you 
+accessed information regarding the flood event (you may select more than one option) 
+Table A4. Open Ended Responses to the Most Useful Sources of Information 
+Table A5. Open ended responses and details of Inaccurate, Conflicting or Misleading Information 
+Table A6. Open ended Comments on Aspects of Information, Warnings or Evacuations that Could be 
+Improved 
+Table A7. Open ended Responses to What Influenced Household Decision to Evacuate or Stay in Place 
+Survey Instrument 
+ 
+Table A1. Open ended Responses to question do you feel that you/your household was adequately 
+prepared for a disaster before the flood event happened? 
+Yes and no - failure of some critical infrastructure caused problems. 
+House floated away :( 
+Sort of,  raised furniture packed important things 
+Somewhat. Wasn't prepared for water seeping through the wall from the outside 
+prepared for a flood event yes, for an earthquake/asteriod no 
+Mostly yes... although this disaster had a curveball 
+We was in hospital with our daughter  
+Without correct river measurements, how can one be prepared? 
+Welfare checks should have been done on the elderly and people with dementia still in their 
+homes 
+It was prepared as best as possible, but did not have a generator, and live alone. 
+Family yes, house not (rental) 
+Yes and no. We were about to move house when the rain hit. We were moving to Bluewater 
+temporarily to stay with family and their house nearly flooded and infrastructure was damaged.  
+Yes-ish; I don't want to completely say yes here because governments will be all "oh see they're 
+fine" and all levels of decision making need to do better here.  
+I was proposed in all aspects other than non perishable food as I had "just not yet got around to 
+organising the food" aspect 
+Real estate and landlord have not done any physical external work such as roof gutter cleaning, or 
+trees near powerlines etc 
+Kind of. We were watching the weather, so I went and did a big shop & got fuel Thursday night 
+before it hit. 
+Yes but I don’t believe we were informed in time of this event. Being south of Townsville we were 
+told we not be impacted 
+We thought we were  
+Yes and no. Yes because we usually live in a flood free zone, not could've had more supplies etc 
+ 
+Table A2. Open-Ended responses to Other choice in question what was your primary source of 
+information regarding the flood event (you may select more than one option) 
+JCU Safe app 
+Email & text messages 
+Official BOM briefing, LDMG 
+
+
+===== [page 33] =====
+No power and so we had no news source.  
+Wallys Weather 
+I received many letters by pigeon informing me of the events 
+No power, no mobile service, no TV, Radio as we don't get radio here, no communication with the 
+outside world 
+Work 
+Tsv Council Dam Level 
+to be clear - reliable channels on Facebook - not el bodgitus Joe Bloggs opinions 
+I ran the disaster hub at Forrest beach - communications issues were rife here  
+Community radio 103.9 FM Triple T 
+when electricity and internet were available which was a non event during the disaster. 
+Weather IQ 
+Community Facebook page (I.e Community website?) 
+I walked to Ross Dam to read dam levels on sign as councils website did not load dam levels when 
+needed the most 
+Wally's Weather on FB (local Townsville), seems to have the most relevant and correct weather. 
+Townsville Disaster Information Facebook page 
+My hobby is weather tracking, I can understand the variables with different models 
+Disaster management text messages & police door knocks  
+QLD traffic app 
+My work gave me more information then anything else (qld gov) 
+Local community 
+Facebook - Townsville Disaster Page 
+One text message  
+Work 
+ 
+Table A3. Open-Ended responses to Other choice in question please indicate the main reason you 
+accessed information regarding the flood event (you may select more than one option) 
+Ability to get to work 
+Dam updates and my property seems to be in the 'Black zone' of the EAP. My property backs on to 
+Ross River 
+Ergon switched off and de-energised all homes in my area, so we had no power and couldn't charge 
+anything.  
+fear of not knowing what is happening as we had no communication 
+Information on human impact/loss of life/injury 
+Local road conditions and river heights 
+Needed to know if I could cross the creeks to get to work 
+Real Time water levels ( Creekside B'water were flooded X3 2019) 
+Road closures 
+Road status as we were away from home at the time and are still currently stuck. 
+To keep track of my business (Rabbit breeding and distributing to wild) 
+To share to others that may have been impacted  
+To stay safe and listen for updates 
+Updates to changes impacting supply of goods 
+ 
+Table A4. Open Ended Responses to the Most Useful Sources of Information 
+A local Facebook group for Fairfield Waters, Idalia, Oonoonba and Railway Estate  
+A local neighborhood watch group, most remained i their houses during the event 
+ABC local radio - because it's local, on the ground, and thorough coverage. 
+Acta Diurna, a little bit behind (2000 years) but very useful 
+
+
+===== [page 34] =====
+All together gave a pretty good picture 
+Beuro of metierlogy  Wally's weather  Higgins storm chasing  Friend- Diana - lives on site in railway 
+retake 
+Bluewater news 
+BOM 
+Bom  
+BOM  Higgins Weather 
+BOM  Weather is their job. Trustworthy. The media often dramatises the situation.  
+Bom and disaster management  
+bom and ergon.   They provided real time updates, clear and constant communication and empathy  
+Bom as it’s very acute and also 7 news as they were up to date on everything  
+Bom for radar tracking of rain events. Also found Windy app extremely useful she looking at the 
+forward weather situation.  
+BOM for rain mapping  Tmr for road closures 
+Bom not trying to sensationalise the weather event 
+bOM Triple t because I visited and listened  at crucial times  
+BOM, as it helped us understand when rain was likely to worsen/ improve.  
+BOM, due to its credibility, and friends, due to their first-hand knowledge. 
+Bom, Townsville Disaster Management Page (trustworthy but slower), “Everything Townsville” 
+Facebook group (less trustworthy but faster information in real time what was happening) 
+BOM, visualisation of data 
+BOM, WeatherIQ, Disaster response 
+BOM, while we had comms.  
+Bom. I like their Radar maps 
+Burdell and Townsville community Facebook pages. Real time info (pics, updates etc) from people 
+in the area 
+Bureau of meteorology as their data was quite good most of the time 
+Bureau of meterlogy 
+Certain individuals that kept reporting flood levels accurately and often 
+Charters towers groups were very up to date and included pictures of the bridge and let people 
+know when it was flooded and when it was accessible.Also letting people know when the shops 
+have been restocked,plus giving people a much needed laugh here and there..my kids and myself 
+have only lived in Charters towers 3 and a half years and this is a first for us,so it's a reassuring feeling 
+when the community openly say,, we've been through worse.... 
+Community Facebook groups per suburbs, because they provide updates with pictures of the 
+current situation in certain places 
+Disaster dashboard  
+Disaster dashboard and Some of the BOM rain radar loops. Also the council’s flood maps and the 
+predicted flooding map in their latest report. 
+Disaster dashboard. Because it was a single spot that updated me on everything in real time in one 
+place.  
+Disaster Management  
+Disaster management and bom.  Helped us to understand what to prepare for 
+Disaster Management and local Facebook pages as they were up to date and sharing current info. 
+Disaster management fb page  
+Disaster response 
+Disaster response Facebook group as it provided weather and emergency information  
+Emergency services ; Local disaster group; ABC TV radio friends and neighbours 
+Emergency Services tend to be accurate and to the point. Government & Local council and disaster 
+pages waffle and say a lot, yet nothing, and pretty much go into damage control assuring people 
+
+
+===== [page 35] =====
+that it's not their fault yet you only had to watch the earth to know we had a big weather event 
+coming AND you could literally re-run the "Townsville 100 Years Ago" headlines today as in 1925 
+roads and supply chains were cut off and bridges washed out, down to the date, just showcasing 
+that nobody has truly done enough to weather proof the North. Yeah it's part of life up here but 
+why do the people who have the influence insist on making it SO MUCH harder?  
+Everything Ingham Facebook page was the most valuable and useful sourc2e as it had live updates 
+of specific areas and houses, people were able to offer and ask for what they needed, and they 
+community seemed to be the only people actually helping throughout this process. 
+Everything Ingham page....   That's where everyone was - whinging and whining mostly...  but lots 
+of information as well.  
+Everything Ingham, Travel, tourism & flood chatterbox-hinchinbrook & ingham 
+Everything Ingham. Good information at the source. 
+Everything Townsville 
+Everything Townsville  
+Everything Townsville - yes there are pisstakers which are pretty obvious, but it's crowdsourced 
+aggregated information so often very useful 
+Everything Townsville (two of what I believe are three on FB). Because it was reports from people 
+on the ground with photos of what they were seeings where they were.  
+Everything Townsville allowed people to post what was happening in their areas; & 
+allowed/encouraged responses to be made. Offers of assistance were plentiful. 
+Everything Townsville Facebook group had more information faster than the news etc but it's a satire 
+group with almost no moderation so there was a lot of misinformation.  
+Everything Townsville Facebook page. Kept me apprised of all street flooding so I could organise to 
+keep my children safe at home during the event.  
+Everything Townsville on Facebook because people were constantly posting and I could see what 
+was happening in various suburbs. 
+Everything Townsville on Facebook. It included links to trustworthy sites but also on ground 
+experiences and videos/photos from community members. This provided some info that wasn't 
+available through official channels.  
+everything townsville uncensored 
+Facebook 
+Facebook  
+Facebook   Real time comments  
+Facebook - all sources were posting on FB (BOM, TLDMG, TMR, Wally's Weatehr etc) It was easier 
+to see all the relevant information on one platform rahter than multiple websites 
+Facebook - Bluewater Community News page. 
+Facebook & Community pages.  Always up to date and accurate included pics when appropriate  
+Facebook as localised and up to date, provided information on all aspects  
+Facebook based weather pages local to north Queensland    
+Facebook because it was constantly being update in real time by so many different people. And BoM 
+because their rainfall accuracy 
+Facebook community  
+Facebook community group 
+Facebook community groups allowed people to share photos and videos of flooded areas in real 
+time  
+Facebook Communty Groups and Chats  
+Facebook Disaster Response Group. It was updated as soon as it happened. On Friday 31st January 
+there was a post warning of rising water levels & to get your children from school. I took that as an 
+emergency.  
+Facebook group 
+
+
+===== [page 36] =====
+Facebook group for FNQ weather predictions run by some old guy who lives in Mt Garnet. He knew 
+his shit.   Townsville disaster management group dashboard was very helpful.  
+Facebook groups   Bom   
+Facebook groups. You have to filter through alot of rubbish but it's social media, it's by the minute, 
+people on the ground posting what's actually happening.  
+Facebook local community groups 
+Facebook Townsville q amd a 
+Family  
+Fb Wally’s weather 
+FNQ flood and disaster watch group on Facebook  
+FNQ Flood watch 
+Forrest Beach Disaster Hub  
+Friend who is a disaster manager in another part of Qld 
+Friends in the area. We all live in different areas so knew if people where evacuating etc 
+Government & BOM 
+Government groups: trustworthy  
+Greenvale roadhouse, they are upstream from me and posted info of rain and videos of creek 
+flooding etc also a lady posted all road closures on there Leanne Dryer and updated all the time 
+had no communication with the outside world 
+Higgins Storm Chasing. Accurate, timely, understandable.  
+Higgins, NQ weather 
+Higgins, weather IQ, etc 
+I compared information from wearher groups on facebook 
+I don’t know  
+I found the Facebook groups (Townsville Storms, Weather IQ and Wally's Weather) very helpful and 
+informative in addition to the BOM.  They would often explain not just what was happening, but 
+why, with diagrams included, so that we could understand what was happening and what to expect 
+next.  This helped to inform my decisions about when to leave work, collect my children from school, 
+and although we had a 'cyclone kit', we needed some additional food items to get us through.  
+Luckily we didn't lose power where we were, but we were stuck for a few days due to trees being 
+down and also being encouraged by the BOM and disaster management group not to leave home 
+unless necessary. 
+I found the qps the most valuable because they would do live streams straight from Brisbane  
+Idalia Oonoonba Facebook group, was very up to date, made it obvious the flooding wasn't as bad 
+as predicted 
+Independent weather forecasters.    But mostly myself, I educate myself on how it all works. I knew 
+this was coming ages ago. I told my daughters kindy to prepare and they did. Before any media 
+outlet mentioned it.  
+IQ weather and wallys weather on FB - updates were frequent and in easily understood language.  
+Lightning and ACCU apps 
+Local community Facebook group was useful for real time road conditions and flood levels. There 
+really was no other source of information for the majors creek area so we were completely unaware 
+that we would be impacted, nor the volume of water and wind to expect. Only one weather person, 
+Wally weather, commented on the wind and lucky we listened to him and removed our shade sails 
+otherwise the damage would have been catastrophic with 100kph winds in our region in excess of 
+12 hours. 
+Local community fb pages, weather iq 
+Local community group which also had a live chat.   My neighbour also was keeping me updated 
+when I evacuated & she stayed  
+
+
+===== [page 37] =====
+Local community groups + Townsville wide community group. Local was good for road 
+closure/localised flooding information so we could ascertain the safety of leaving our home to assist 
+friends. Townsville wide was valuable to find real time updates of sandbag and evacuate locations 
+as well as community members offering help  
+Local community groups on Facebook as they were detailed and had photos and most up to date 
+and accurate  
+Local community hall group    They were living it. And trying to support others in the area with little 
+to no support  
+Local disaster management dashboard  
+local disaster management group, TSV council disaster dashboard 
+Local Disaster Management. Road closures were more accurate than RACQ 
+Local Facebook group for suburbs 
+Local facebook groups  
+Local FB group 
+Local FB weather experts  Wally's Weather etc.   
+Local Flood watch Facebook Group 
+Local government disaster dashboard 
+local government, Wallys Weather face book 
+Local knowledge for our area  
+Local pages  
+Local radio 
+Local radio. They are given up to date information by the applicable organisations.  
+Local SES  
+Local social media weather pages were more up to date, took their information from a variety of 
+sources and did not have another agenda.  
+Local suburb and town Facebook pages  
+Local weather groups 
+Locals reading river levels persobally 
+Mainly used a combination of Weather IQ, Wally’s Weather, BOM information, TSV Disaster 
+Dashboard.   
+Multiple "TOWNSVILLE" themed social media pages, and Weather IQ,  
+My family who has been through floods 
+My local community page on Facebook. Because it was my neighbourhood and very accurate  
+My local suburb page as it was very useful to know where the water level is and if the entrance of 
+the estate is still open (gets flooded) 
+N/a 
+NA 
+Nil 
+None because I didn’t access any group 
+None really. 
+North Queensland Weather Watch - Jim Gray is the most reliable source of weather information, he 
+is factual, does not instill panic and reminds everyone to be fully prepared for an impending event. 
+Not one source, a variety of sources were needed to get up to date accurate information regarding 
+the events.  
+Official government channels, because they were up to date and accurate 
+Official sources during prep and for advice about what to expect/how to keep safe    Community 
+facebook groups for constant up to date information about what was happening during the event / 
+what streets and rivers etc elsewhere in the city looked like at the time 
+Only government agencies  
+
+
+===== [page 38] =====
+Our local Facebook group has been invaluable providing information on creek heights and road 
+access 
+Private weather groups - accurate, easy to understand, up to date information  
+QFD & QPS - both trusted professional sites.  Also make sure to check Qld Health but not so much a 
+focus during. 
+Qld dept of housing sent info prior to the event which was extremely useful. Wallys weather on 
+Facebook was great. Townsville Q&A, Everything Townsville useful. Townsville council dashboard 
+was great 
+Qld gov housing for letting me stay at oaks palmer metropole hotel 
+Radio  
+Radio .. Triple M. Live updates with correct information  
+Radio as they were the most up to date  
+River Heights data, traffic cameras and BOM radar. Community Facebook pages because updates 
+were more frequent, more specific information, usually provided more reasoning/context than 
+official info and in some cases photos were useful. Ergon updates included a lot of context. 
+ses 
+TCC Disaster dashboard , gave honest answers as available  
+The Government websites.  
+The local Everything Townsville group, people shared their own images/information as well as 
+sharing updates (including screenshots) from other sources. It was especially useful when the official 
+websites were overloaded and unable to be accessed.  
+The locals who live in and around the area, the ones who were able to communicate to others when 
+telecommunications were available, the local council were good when updated, when we had 
+internet/wifi/network or service available via charging mobile phones at houses with a generator, 
+but just not often enough. ABC radio also very good, (if lucky enough to own a battery operated 
+radio and to get signal to hear it!)  
+The only one I ticked, because it was the only one I used. 
+The Townsville Disaster Management Group - 100% reliable, practical, useful. However they stick to 
+core business - so it's necessary to seek extra related info from other groups. 
+Tim's severe weather Australia Facebook page. He's obviously spent a lot of time research in 
+understanding how weather works and can explain what to expect properly. Very good information, 
+in advance of the event. 
+Townsville city Council disaster management information but I wish the press conferences had been 
+advertised more in terms of the time they were set. 
+Townsville Disaster  
+Townsville Disaster Dashboard 
+Townsville Disaster Information - answered questions. Link to others following to exchange 
+information.  The Ross River Dam water height level must be available on the TCCouncil page as this 
+information allows us to know how much water is being released and is more relevant to those living 
+near a the river than the capacity of dam. 
+Townsville disaster information and the dashboard. Local information on the ground. Dashboard 
+updates to seldem 
+Townsville Disaster Information Facebook group - was only sharing from trusted government sites 
+Townsville Disaster Information facebook page 
+Townsville Disaster Information Facebook page. It contained all the relevant information for me 
+Townsville disaster management Facebook page,  and townsville storms Facebook page 
+Townsville Disaster Management group.   Up to date, measured information. (That is, not too much, 
+not small stuff, was accurate and timely.) 
+Townsville disaster page   Factual, clear directives on what to do, helpful 
+Townsville district disaster Facebook page.   My police Townsville facebook page 
+
+
+===== [page 39] =====
+Townsville local disaster management group and BOM 
+Townsville questions and answers on Facebook. Locals that had experience with other events went 
+out of their way to help people with questions. Or if anyone asked for help others quickly 
+volunteered to assist. It also became a platform for people to share if they had spare rooms for 
+others that had been told to evacuate.  
+Townsville Storms on FB 
+TRAVEL, TOURISM & Flood CHATTER BOX - Hinchinbrook & Ingham (2018-present) - lots of local 
+posts 
+Wally weather, Townsville storm chasers  
+Wally’s Weather  Weather IQ    (Facebook pages dedicated to located NQ weather). Frequent and 
+measured weather updates using a lot of different models without the dramatisation. Also locals 
+and they and their followers provided videos and photos of the events as they were occurring.  
+Wally’s Weather FB. Up to Date and no scaremongering  
+Wally’s Weather on Facebook  
+Wally’s weather was excellent as always.  
+Wallys weather 
+Wally's Weather 
+Wallys weather  
+Wally's Weather  
+Wallys Weather  asking my friends who live in different suburbs 
+Wallys Weather - highly accurate and up to date. Townsville Disaster Dashboard, MyPolice 
+Townsville- accurate info on the event 
+Wally's Weather - up-to-date information but very little hype 
+Wally's Weather and our local community facebook page for very local info 
+Wally's weather and Townsville Storms had up to date and easy to understand information.  
+Wallys weather emails and Facebook. Most accurate and up to date 
+Wally's Weather Facebook page is excellent 
+Wallys weather he has been the most accurate for over 10 yrs 
+Wallys Weather on facebook 
+Wally's weather on Facebook  
+Wallys weather on Facebook, he posted continuously throughout the event, and the information 
+was easy to understand, and to the point. Very trustworthy!!  
+Wallys weather on Facebook.  And ABC news.  Does not come with all the media hype and carry on. 
+Wally's Weather on FB (local Townsville) accurate, up-to-date, useful and trustworthy. 
+Wally's Weather. His analysis is always in-depth and considered 
+Wallys weathwr 
+We couldn't access anything 
+Weather IQ Facebook page, BOM Facebook page, and Everything Townsville Facebook page 
+Weather IQ subscription updates and BoM  radar 
+Weather IQ they were easily the most knowledgeable meteorological source of information pre 
+during and towards the end of the event. These people need to be funded properly as they were far 
+more accurate than the bom 
+Weather IQ. Extensive model guidance and meteorology explained thoroughly, with real time access 
+to info 
+which group doing what 
+Woodstock Giru Community FB page. Photos were posted of creek crossing throughout the day. Can 
+gauge if you’re able to get home or need to stay in town, rather than drive 45 mins or more only to 
+turn around and drive back with water levels rising behind you and poor mobile service. Flood 
+cameras at every creek crossing along Woodstock Giru Road would be of huge benefit. People will 
+always try to cross flooded roads to get to work. When you are self employed you need to work and 
+
+
+===== [page 40] =====
+when you have animals you cant leave more than 24 hrs you will make every effort to get home and 
+not be flooded out of your property.  
+Work chats and sports group chatta 
+ 
+Table A5. Open ended responses and details of Inaccurate, Conflicting or Misleading Information 
+A lot of people confused about Dan opening process, misleading information about road access. 
+There are a lot of people who post without full knowledge which is why it is so important that 
+TLDMG gets its act together and has better communication to the community.  
+A lot of the weather groups were exaggerating what we were expecting immediately for clicks. Other 
+community members were spreading false information  
+A whole load of jokes/bullshit and scaremongering on Facebook (floating crocodiles etc), Official 
+news stories occasionally getting confused/ not distinguishing between Townsville and Ingham - 
+needed a mix of both community and official to get a good sense of what was going on. 
+All sources differed. 
+As I already said, no advance warning from official channels. I picked my daughter up from school a 
+good 3 hours before any warnings on Friday. 
+As mentioned before, local councillors!!  
+As the event was ending, there was another burst of rain which reflooded the streets. There was 
+minimal information from official sources on street flooding. I made a decision to keep my children 
+home based on limited information from facebook 
+Being told to stay in place by Council, but also that I should attend work.  
+Black and pink zones, dam levels, flood risk --- this information that came from council often lacked 
+accuracy and the council itself seemed to lack the confidence in its own information. Embarrassing.  
+Bom 
+Bom  
+Bom automatic gauge at inkerman bridge 
+BOM is useless 
+BOM Rain radar wasn’t correct at times. TV reports were saying the wrong thing. Confusion over 
+what zones were to evacuate when only part of a suburb needed to. 
+BOM was almost a metre off an accurate river level reafing 
+BOM was behind with all other weather sites and local information  
+Bom was often lagging Wally’s weather site 
+Comments on Facebook telling people the river heights were going back down when they weren’t. 
+Fake photos of crocodiles in streets.  
+Conflicting information about our local community centre and it being available for revovery 
+conflicting information between the disaster response management and QPS and Army (knocking 
+at doors) 
+Confusion about if buses were running, if Supermarkets were trading, if fuel gets contaminated by 
+water if the station is flood affected. Misinformation about when to go to hospital or why to call SES 
+and about two million different ways to avoid mould damage.  
+Council showing outdated storm warnings off Twitter, refusing to accept that bom had cancelled 
+them. They were even timestamped before the cancellations! 
+Definitely 
+Different weather Facebook pages reported different severaity of the upcoming storms 
+Differing weather pages on social media  
+Disaster dashboard updates could have been more frequent  
+Every time a government official feigned shock and assurances that they'd do better. This is a legacy 
+of ineffective management and projects over decades.  
+Everything Townsville Uncensored 
+Facebook community pages 
+
+
+===== [page 41] =====
+Facebook is a cesspool of misinformation  
+Facebook obviously had large volumes of inaccurate or out of date data. 
+Facebook pages with scare mongers claiming to be weather forecasters. 
+Facebook people giving out wrong information. Especially when roads are closed they will say go 
+the long way in land but it’s flooded too. 
+FB comments, council disaster group in FB 
+FB groups "experts" often had conflicting or over dramatised information 
+Flood information from previous flooding was posted.  Very misleading.  Had to look very closely 
+From Townsville Disaster Management Facebook group posts 
+Higgins weather group, sensationalism at its finest  
+Interstate and international news sites tend to over dramatise the event. 
+It's good to take the event seriously but some people create more anxiety in social media with bad 
+forecasts 
+Lots of comments on how the dam was managed better, when the difference was primarily the rain 
+event not when the flood gates were opened. Information on conditions, evacuations etc was 
+generally very accurate. 
+Lots of misinformation on social media 
+Lots of people passing on second or third hand information  
+Lots of photos from 2019 floods  
+Lots of scaremongering and carastrophising early on. With no real evidence for it.  
+Lots of the "weather" groups (eg Wally's Weather, Weather IQ, Townsville Storms) were spruiking 
+worst case scenario and scare-mongering the community. 
+Lots of weather pages showing lots of different information made it difficult especially at the start 
+until we found the most accurate one by far some local road information was conflicting at times on 
+various social groups. We found Townsville council was useless at the start of the disaster especially 
+on day one/two  but improved quickly as the disaster went on. It was disappointing that they were 
+so reactive at the start.  
+Many people were scared mongering, or just catastrophising it  
+Many unknown or not local weather Facebook groups posting and commenting were getting in the 
+way of genuine disaster posts on Facebook. 
+Mayor said we’d run out of water but I’ve had my bath, shower, sprinklers and taps on for atleast 3 
+days straight and there’s still water  
+Media outlets were quick to add fear.  
+Moronic FB posts-but my BS radar is finely tuned- lots of candidates for the Darwin awards 
+Most of the weather info was conflicting,  
+Most offical data was not current or specific enough. Some people post photos and don’t specify 
+date and time photo taken.  
+Mostly it was just people thinking that they knew what they were talking about, but didn't.  Some 
+people who were saying it was a government conspiracy to keep us all inside, etc.  I did worry though 
+that some people weren't taking the event seriously and that could lead to them endangering 
+themselves and others. 
+N  Commercial news reports .... inflationary and sensationalism.  I saw video of what "looked like 
+flooding" but was actual at the end of my street near a standard flood way where water was 
+supposed to be.  The channel 7 news reporters was then saying that cyclones were forming of the 
+cost which was a blatant lie. 
+National news seemed to inaccurately portray the severity of the floods for Townsville, and 
+understate the severity for Ingham  
+Not from official sites.  
+Not sure of flood height no information in regards to evacuation  
+
+
+===== [page 42] =====
+On a local Facebook site (called Everything Townsville). People were posting random, inaccurate and 
+fear mongering posts.   
+On facebook 
+On Facebook,  it can sometimes show information posted a few days ago that if you are not careful 
+you may think it's recent.   
+On local fb community groups. 
+One of the local commercial news stations reported the crocodile AI images as real.  
+Only talk around the town, no one really knew what was happening with the dam opening 
+Only when sources couldn't keep up with the changing events. 
+Orders to evacuate the 'Black zone' listing just 6 suburbs (excluding Kelso) ambiguous as the map in 
+the Emergency Action Plan for Ross Dam seems to indicate my property, which backs onto Ross River 
+in Kelso is in the black zone and may be inundated by up to 25-26m of water.  Neither the local 
+council member or the MP for Thuringowa have answered my queries regarding this. Unfortunately 
+the maps in the EAP are of a scale that they cannot ne zoomed into to give certainty.  I do not believe 
+modelling for Kelso that has green zone butting up against black zone. 
+People making all kinds of jokes about things that weren’t true 
+People relaying outdated information 
+People scaremongering but they were usually called out by others pretty quickly. 
+People spreading misinformation on crocodile sightings, this should be finable as then true crocodile 
+sightings are not treated seriously or are ignored. 
+Plenty as happens everyday on social media, people need to understand the climate they live in and 
+be better prepared themselves 
+Plenty of people with strong opinions about whether to stay/leave, council competence, dam 
+management, etc etc etc on social media, but you have to just know which sources you're looking 
+at for what purpose and think critically about what you're seeing as per usual 
+Queensland Police Service added confusion when reporting evacuations from the black zone but 
+not the pink. QPS used a pink map icon to demonstrate the black zone area which caused the 
+confusion  
+Random people were saying that the Ollera creek bridge was open to everyone, when it wasnt 
+Reposting of official pages after things had changed. Facebook also randomly feeds out of date 
+information. Time stamping needs to be better. 
+river and dam levels likelihood of local flooding 
+Road access 
+road closures  So for goodness sake, why can north Qld councils & TMR not get with the program & 
+just instal live view cameras at every iffy crossing! It's not hard! That would also get rid of a lot of 
+the eejit repetition clogging up otherwise useful facebook groups. 
+Road closures, areas in black zone not really impacted.  
+Road closures, flooded roadways, dam levels 
+Roads being open/closed. Opened briefly, then shut quickly as water/rivers/high tides rose. 
+Limitations on rationing at fuel drops varied, and insufficient fuel drops and sandbags available. Also, 
+only TWO drums of fuel dropped to our area and 2nd drum contained rust in the fuel that people 
+were using for their generators.      
+rumours 
+Sensationalist news reporting   Genreric and non specific information in several disaster 
+management group live feeds  
+So called weather forecasters and some information in community groups. Also information 
+available on the council website page was misleading and causing issues. Council need to focus on 
+ensuring information is clear and not able to be misconstrued by morons within the community  
+some confusion on how the dam gates were operated in comparison with 2019 floods. 
+
+
+===== [page 43] =====
+Some images with AI generated crocodiles in flood waters. Some photos circulating were real, while 
+others were fake, and many people didn't know which ones to believe. 
+Some of the updates shown on facebook were several hours old 
+Some out of date info and some people purposely trying to mislead others 
+Some people posting photos from previous flood events to Facebook trying to pass them off as 
+current 
+Some unclear information perhaps, but not misleading 
+Some weather pages predicted the worst and often presumably for maximum engagement. The 
+language used created panic amongst the community  
+State news repeat same pictures on television  
+Struck to known gov sites  MET disaster response 
+The flood map showing black and pink zones needs to be redone with colours that more accurately 
+show the exact streets. Transparent colours that allow the viewer to see the streets would be better. 
+People on the cusps were confused as to which zone in which they were situated. This map should 
+have been readily available before the event was taking place. 
+The flood zone areas only focussed on inundation from the river and waterways and not the whole 
+community.  
+The following were misleading: direct emergency text messages which were extremely misleading, 
+Local Council Disaster Management Group flood mapping and evacuation direction was misleading, 
+Council information regarding spillway opening was opaque and misleading, BOM forecasting was 
+horribly inaccurate. 
+The height of the rivers, which roads were closed, flash flooding areas,  
+The information was dynamic and changing rapidly. Often the offical information was out dated 
+before it was available.   Conflicting information lead to confusion.  
+The local council.  
+The pink and black flood maps were very confusing. I clearly live in the pink zone bait was door 
+knocked by police and army to evacuate. Social media and the TSV Bulletin were, at one point, 
+advising that pink areas had to evacuate 
+The warning zone map. I was in the Pink section of map but police evacuated my area along with 
+the black zone. This map should have been updated as the event went along. It was very confusing 
+being told to leave thinking I was safe. Lucia my unit was not flooded  
+There was confusion about pink and black zones which led to anxiety among many and cost me a 
+days work (can’t get a day back) 
+There was not really any warnings that flooding was expected to occur, which meant that people 
+had not made plans to safely collect children from school etc, and also made it difficult for 
+workplaces to make decisions whether to shut or continue to trade 
+There were some reports of heavy rain which didn't eventuate  
+There were streets in the Pink Zone that were actually in the Black Zone, as referenced by people 
+living in those streets who were door-knocked by the QPS and told to evacuate 
+Told to evacuate by Police and we were not in the black zone 
+Too numerous to list.  Distressing 
+Usually conflicting between what journalists are peddling & what people in the community are 
+experiencing.  Can't think of specific details. 
+Various “weather” groups on FB 
+Various weather predictors and Facebook users 
+Very little but some duff information on Townsville questions and answers. But not a trusted source 
+anyway 
+We were aware that people were obtaining fuel from vendors but were unaware of timing and limits 
+Weather rainfalls, road closures, river levels 
+Well, not that I am aware of... 
+
+
+===== [page 44] =====
+When I was using Facebook simply to communicate with friends - nothing to do with the 
+flooding/rain event - random reels/TikTok videos would appear with a wide range of information 
+about NQ flood event.  Much of this random information wasn't up to date, described locations not 
+relevant to our event or in other ways did not contribute to the accuracy of information available 
+for people. 
+Yes, people panicking and saying very inaccurate stuff. 
+ 
+Table A6. Comments on Aspects of Information, Warnings or Evacuations that Could be Improved 
+1. Bluewater Community Centre to be confirmed as an evacuation centre. The centre to be 
+established with essential support equipment and supplies at least 1 month prior to the high risk 
+weather season.  2. Local Disaster Management or SES be tasked to establish contact with farmers 
+within their area to confirm the safety of residents. Eg Bluewater SES to establish contact with me. 
+I could have drowned and nobody would have known.   3. Townsville City Council CEO to be the face 
+of TCC disaster management and not councillors or politicians. The CEO needs to also explain their 
+decisions related to the allocation and funding of TCC resources during the warning phase.  4. Pre-
+event warning was too generalised and down played as a rain depression, contributing to an under-
+evaluation of the threat to community due to flooding.  5. There was no effective messaging for 
+mental health welfare before, during or after. Promoting of internet sites, phone numbers and hubs 
+is not effective for people who are too stressed or unable to reach out for help. Recommend radio 
+be used to convey mental health strategies, eg breathing exercises. Also recommend 
+communication about the impact of low barometric pressure on the human body, eg 
+severe/debilitating aches in joints.  6. Where was JCU’s specialist knowledge during this event? How 
+was it used? Where could I access it?  
+A lot for conflicting information and no one source was accurate  
+Advised to evacuate yet given nowhere to go. Roads were closed and our local community didn’t 
+open as they have always done previously 
+All of it.   
+As a household we evaluated on each situation as it came to hand and prepared accordingly and 
+also preparing my elderly mother as well, gave us a enough time to prepare when we were informed. 
+as above, there was not sufficient warning for people to make decisions on how to act.  
+As listed prior 
+As mentioned earlier when evacuation centers are announced, there needs to be at least two at the 
+same time. One that accepts pets. You’d alleviate so much stress if that happened  
+as previously mentioned, we were unaware of the black/ pink zones.  a defined evacuation route as 
+our initial evacuation route was flooded and we had to drive around to find a safe route  
+Be more specific in the streets on the map. 
+Better clarity on when people should leave based on river levels. Pink zone was broad and may areas 
+in pink zone had no impact in 2019, it would be good to know if this was an overly conservative 
+approach or if modelling showed a real likelihood of inundation 
+Better communication about the likely severity of the event for those regions outside of Townsville 
+and coastal. All media reports referred to north of Townsville to ingham including coastal areas and 
+there were no warnings issued for south west Townsville. The text about evacuation was received 
+once the roads were already flooded and cut off and there was a slow response to close schools. 
+We collected our children, and neighbours children from school early and thank god we did (make 
+the decision based on the rainfall in our area) because we weren’t aware that so much had fallen in 
+Giru we were caught in excessive flooding on the Woodstock Giru road and were almost stuck, with 
+a car full of children, between Giru and majors creek due to those road conditions. 
+Better communication all round! The WARDENS the Police, there was a severe lack of 
+communication between authorities, another person was going around handing out printed sheets 
+of what supplies one could order and PAY for and the local Council would organize to get to you, 
+somehow?? Medical supplies, for those that can afford to, more warning for the elderly in particular 
+
+
+===== [page 45] =====
+to STOCK up where possible as when roads are cut no supplies are coming in and then resources 
+like the Helicopters are needed to bring in additional supplies. Everything needs better 
+communication between residents, and those in  authority! The WARDENS LIST needs to be 
+UPDATED! There are some who suffer from various medical conditions that effect their ability to 
+function in a safely. WARDENS need to undergo regular safety training in all aspects, CPR, First Aid, 
+they need to have regular Medicals themselves, and where Food Drops are concerned NEED to learn 
+Food Safety and Handling skills. Cold sandwiches were placed on table tops at local shed in Park, 
+(should be left in containers to keep COLD longer) and a RESPONSIBLE person handing out the food 
+items, same with HOT Foods, one or two people to advise choices available and stand there 
+watching the process carefully, making sure multiple hands aren't lifing lids etc. ADVISE ALL where 
+possible to bring a shopping bag or small box to carry items where necessary. The majority of the 
+Volunteers did a wonderful job going around to individuals to hand out meals and other supplies at 
+various times, many were unable to travel to get to the Park area. In the beginning the amount of 
+food delivered was insufficient for the numbers living here. Also, it has to be said, ONE particular 
+car of persons, handed out HOT food to certain 'workers' after BYPASSING everyone else in the main 
+street, before elderly and other families in need in this street. They were seen stopping at the 
+opposite end of the street where people came from everywhere to hopefully get what was left. 
+EVERYONE is entitled to a hot meal, yes, some had severe inundation, whilst others did not, but that 
+shoild NOT be a reason to bypass the elderly and the familes who should have been served FIRST! 
+There were those who did NOT have a generator or refrigeration of any kind, so I believe, there 
+should be a priority LIST made up BEFORE any natural disaster. Name, Address, Contact Number, 
+Medical Conditions, (just a Yes/No), live alone, children/babies, have a generator, have gas cooking 
+facilities. Serve the elderly first, then families with children and babies, then the rest. Especially 
+those with NO Generator or cold keeping facilities and NO Gas cooking facilities! The local hardware 
+stores should have had both single and some double GAS burners advertised for sale PRIOR to the 
+disaster along with sufficient gas canisters. The few that were available sold out long before the 
+event. Not good enough! Items flown in were, 1L bottles of water, miniature tins of baked beans, 
+two fruits, up n go milks, individual toothpaste and toiletry bags. Would have also liked to see some 
+a combination of small fresh orange juices or even 'poppers', more fresh fruit, allowing one or two 
+pieces per family member, some mini salad bowls with dressing separate, fresh cheese/cracker 
+combo's, (one per person), RID mosquito creams, (which is suitable for babies and children), fresh 
+bread, (rationed out with everything else), miniature butters/vegemite/jams/peanut butter and 
+packs of the travel or individual tissues. If things are rationed out there will be enough for everyone. 
+Organize trustworthy Volunteers BEFORE a crisis hits!      
+Better information for those at work, prioritise public safety over work  
+Better security for empty houses. More places people can evacuate to with their pets. People who 
+are worried about these things are unwilling to evacuate  
+Bit of confusion among friends about distinction between pink and black zones, they were in Idalia 
+and incorrectly believed that they had to evacuate (because they received a text message and ABC 
+news said “Idalia” and didn’t specify pink zones didn’t have to (they were pink) so they came to us 
+for 3 nights. We also got a text message “prepare to leave” from TDMG which panicked everyone 
+and was very confusing  
+BOM 
+BOM - not up to date  
+Bom flood warning page needs to be updated  more frequently.  TSV disaster group SMS 
+communication needs to be improved 
+BOM radar to be fixed  
+BOM should be ashamed of themselves.once they realised river level reading were very inaccurate, 
+they just glossed over their updates, guessing as such. 
+Bridge openings and closing and water crisis in Charters Towers  
+Can't please everyone  
+
+
+===== [page 46] =====
+Clear instructions on when to evacuate and which areas are most at risk. E.g. when flood levels 
+reach x metres or when waters reach your driveway, etc. 
+Co.ercial news outlets should be financially penalised for making baseless and sensationalist 
+'reports'.     The govt agencies, whilst sometimes a little slow were excellent and accurate.    The two 
+previous weather groups on Facebook were also EXCELLENT and FAST. 
+communication between council, QPS and Army.   Information from door knocking police and army 
+was outdated, very forceful.  
+consistency 
+Could be more timely 
+Council made sand available for sand bags but had not made the bag supply itself readily available 
+until the event started. People were unsure where to get sand bags, having to make a trip to 
+Bunnings to get them and then a second trip to the sand stockpiles.     Post-event clean up could be 
+better supported by council. e.g. Hard rubbish collection, green waste collection.  
+Council media briefings were poor. Information needs to be clear, succinct and directed to those 
+who need it most first. Waffling on for ages helps noone. 
+differentiation between areas that are prone to flooding from storm surge and area that flood due 
+to rain or river inundation.   
+Disaster response information could be released quicker and with more detail. As of now there is a 
+temporary bridge over Ollera creek but no word at all as to if or when it might be open to the public, 
+and the official road closure updates are not keeping up with the state of the roads around Charters 
+Towers. Those of us stuck away from home are still left with no idea of how or when we will get 
+home after a whole week.  A phone number to call for information could be useful  
+Earlier notice, not reactive warnings. 
+Evacuate sooner  One evacuation centre open for over 1000 people  Ridiculous  Townsville city 
+council wee disorganised and woeful 
+Explaining the black and pink areas 
+Fix plantation Creek. Stuck for 4 days, even though had a 4wd that would have cleared it, over 
+protection from police. People sleeping in their cars in home hill - no support financially or otherwise 
+for these people 
+Flood maps were very vague based on how much water may be expected in varying locations (only 
+black zone and pink zone) 
+For people who always follow the weather - we had plenty of time to plan. At least 2 weeks we knew 
+big rain was coming. City people live under a rock when it comes to the weather.  
+Friends in the safer part of Hermit Park were unnecessarily alarmed by statements that "the suburb" 
+needed to evacuate when only half of it was in the black zone. 
+Generally informed. Authorities do their best to keep up with latest info to pass on. 
+Government sources stay on official channels, no FB…  Council info needs to be consistent and up 
+to date on all channels  
+Hard to find fault.     I think it would be good though to have information for people that are new to 
+Townsville and have not experienced a disaster before. Even if it’s just a two page PDF that 
+summarises key actions, what to do when you have to evacuate, when to know how to evacuate, 
+what to pack, contact support numbers, what to do if your house has sewerage leaks or when to 
+contact Ergon.    The information is all there but it lives in multiple different places.  
+Have text overview of key updates from Facebook livestreams of local disaster management groups 
+Having appropriately stationed emergency service in all locations - we had 1 ambulance offer, a 
+couple of fire brigade reserve members and no one else on the ground for 5 days  
+Hinchinbrook shire council and their communication  
+Honestly nothing - the community was furious at TCC for not enough warning in 2019 and were 
+furious in 2025 because they were asked to leave when they thought they didn’t need to. Can’t win 
+sometimes - I think the warnings and information from Gov sources was accurate and useful.  
+I am happy with the current information provisions 
+
+
+===== [page 47] =====
+I believe it was well managed and executed for those involved 
+I feel the longer period of rain and potential for flash flooding that is ongoing has not been well 
+enough advised. 
+I think maybe a kit provided when people move here explaining what happens in monsoon season 
+and not to panic.  
+I think we should  
+I vomited from smell disinfectant  it was so strong  
+I was largely non informed on evacs as I did not have to   
+I wish that there sandbags (prefilled) to grab, especially for the elderly and people who have mobility 
+issues  
+If the Disaster Facebook page could announce times of their updates each day so we knew when to 
+check and when the next directives would be given   -MP knocked on the door after the flood to 
+check we were okay which was very kind  -Townsville Council handled this very well   
+Individuals taking responsibility for themselves, understanding they live in NQ, we have 
+unpredictable weather and they should always be prepared. If anything spend more time on a 
+project that supports this/ provide packs or information to newcomers on how to prepare.  Enough 
+warning was given advice went out early for Townsville if people chose to ignore that, that is their 
+responsibility. 
+Info was targeted & accurate. Press conference was fronted by the experts not filtered through the 
+elected reps. Dam Ops bloke was brilliant- he should have been wheeled out 24-36 hours earlier.  
+Information i did get hold of was very vague but also catastrophising.. or on the other spectrum, 
+complex language and difficult to understand 
+Information was readily available & I felt was very accurate & helpful  
+It is difficult to find an evacuation shelter that will allow pets, and even then, we don't own the 
+travel crate that the shelter requires 
+It might be that I couldn't find it, but a live stream of the river conditions at the major arterial bridges 
+(e.g. Bowen Rd) would be great 
+It was good enough for the time being  
+It was unclear that a pet friendly evacuation centre would open. It was unclear if evacuated houses 
+would be safe from burglary. It was unclear when it was safe to return. Also, council provided sand 
+and said BYO bags. I don't have a vehicle and not the first idea where or how to get bags, so I didn't.  
+It was well handled 
+It's not specifically the evacuation but that school wasn't cancelled in the first day the rain started. 
+All the parents had to get their kids when it was already flooded.  
+Just sometimes more context as to why guidance has been given/what they're expecting, for 
+example sometimes roads are closed but suitable for 4WD access. Sometimes information covers 
+too broad an area 
+Live updates or forecasts on the conditions of particular streets/water levels would be useful.  
+Local disaster information from Townsville city council was not updated frequently enough. It should 
+have been better 
+Local road closures need to be better managed and shared to stop damage from people being looks-
+loos 
+Make it accurate and timely. 
+Maybe 1/2 hour notification of roads closing.  Notification of loss of power so people can prepare. 
+Not just switch it off. 
+Maybe more up to date information on how full evacuation centres were. 
+Media needs to understand the fear they can quickly induce     The townsville disaster dashboard 
+needs to be easier to read and updated frequently  
+Mobile services made to be able to survive longer than few hours without power 
+More accessible flood mapping. More detailed information from council sent to residents.  
+
+
+===== [page 48] =====
+More clarity for people in the pink zone about what actions to take 
+More evacuation center with animals 
+More frequent updates from TLDMG - concise, plain language, informative. 
+More information for the evacuated on the status of their area during evacuation would have helped 
+be less concerned and worried and would have prevented me from driving by the house multiple 
+times a day to check if under water or not.  Every 2nd house hold has animals setting up an 
+evacuation center where animals can be brought too in the event of emergency and or more centres 
+that take people and their pets. I would never leave my dog at home then I’d rather stay with the 
+animal or drive around in the car with my animal 
+More involvement from TCC their input was non existent 
+more pet acceptance - prior warning of needing crate 
+More timely and accurate flooded roads 
+More updates from mayor who had all specialists with her  
+More visibility of the mayor. 
+More warnings to target different age groups. The biggest issue is the drain maintenance. A lot of 
+places wouldn’t have flooded if the council maintained creeks and drain properly. I do however think 
+this was way better managed than the 2019 floods. It was very evident that disaster management 
+has improved.  
+Mostly worked well! Although more notice of the seriousness would have been useful for people to 
+go to supermarket get sandbags sorted etc not in a panic at the end - I had definitely heard lots of 
+rain was coming early in the week, but no one really seemed too concerned or trying to get fully 
+prepared until the very last day 
+Much earlier warnings 
+N/a 
+Need to be able to accommodate pets in evacuation centres. 
+no adequate for us 
+No one expected the power to go out.  Totally unprepared for that aspect.  We were not informed 
+it would. Let alone that it would be of for over a week... 
+None 
+None I think everyone did their best. Newspapers over dramatic and useless information fake news.  
+Not opening a pet centre until the 11th hour is ridiculous. Of course people aren't leaving their pets.  
+Not sure. There is plenty 
+Nothing  
+Nothing applicable 
+Notifications to businesses/schools to close to allow employees to get home safely and to collect 
+children safely from schools. 
+People don't trust the news and many people are afraid of police abusing their powers, then 
+potential looters, pets that stress etc  
+People seemed to be confused about if they could take pets to shelters or not. Some people didn't 
+seem to understand that shelters should only be used as a last resort.  
+Pink and black weren’t explained.   Stand up levels weren’t explained.   No subtitles on the council 
+livestreams.   Relied too heavily on social media and oldies were alienated.   More evac centres 
+needed with pets.   Zones need improvement - areas of Maggie and Bluewater weren’t black zones 
+but were arguably more affected.  
+Prepare part, thisbshould have been planned event since we are living in the tropics. Why don't we 
+have similar solutions like countries over seas where they have built dam like structures under cities 
+to control flooding and severe weather  
+Provide more council coloured maps of predicted flood levels. Better rain radar and forecast 
+technology. More warnings about flash flooding. Have sandbags available before the event, not just 
+during.  
+
+
+===== [page 49] =====
+Provide people with links or access to more detailed information on a range of topics (dam, flood 
+zones and how they’re determined etc etc).   It was very very difficult to check where your house 
+was located in the black or pink zone based on the links. I had to search multiple times on council’s 
+website to find a map. Much too hard  
+Put notifications up on TV screens 
+QPS very good and vigilant patrolling the area. 
+Regularly scheduled press conferences from the LDCC could be better  
+Reports of the Burdekin disaster pages where vague difficult to interpret and not refreshed to reflect 
+quickly changing conditions  
+Roads were cut by Saturday lunch time tge evacuation centre opened 3am Sunday morning.. people 
+couldn’t get there tge roads were already flooded  
+See 27 - the wind warnings were abysmally inadequate.  Here in Pallarenda, we all woke up at 3am 
+one morning (the first Sunday, I think?) because the wind was cyclonic - proper howling. Things blew 
+away and blew over.  The whole of northern Queensland deserately needs an adequate amount of 
+amenometers so the CTS can accurately map winds, so far more nuanced wind warnings can be 
+issued for different areas, as is done now for flood warnings. It is no longer 'the whole of Townsville 
+will flood', it is 'these specific areas are most at risk'.   It is very below par that this is not already 
+done re wind warnings. Help people understand the specific wind risks re their area and their 
+personal situation - eg house siting, materials, design & maintenance.  
+SES could’ve been more prepared for this community and helpful instead of telling people if you can 
+come and fill your own sand bags as were swamped there were elderly people and people who 
+didn’t have the right vehicle to put the amount of sand bags required  
+SES should have stayed as a support service of QFES to ensure a more coordinated service.  It was 
+way too obvious they were competing for attention & just looked childish.  It's insane that they 
+thought it was responsible to promote a different phone number to the community instead of 
+leaving it as the trusted 000.  Don't confuse people.  In case of emergency call 000.  Don't add 
+numbers & expect people to know when it's appropriate to call each number.  Stop being so 
+irresponsible.  Work within your ability, volunteers should not be responsible for someone's life.  
+Leave them to tarp roofs & do field searches etc.   
+Severe weather texts went out but 5 in a row with incorrect link and we werent asked to evacuate - 
+flooding wasn’t going to happen in my area 
+Specific Flooding streets. Basic services and water restrictions  
+Suspected outcome and clearer detailed information be provided by authorities at the onset, not 
+3/4 of the way through the event. 
+TCC needs to check the accuracy of the Pink & Black Zones on the distributed maps & update if 
+necessary. During the Event, warnings (including Road closures) could be a little more frequent ... 
+oh, and please filter out the "Not available" data on the Disaster Dashboard Road Closures. 
+Text message - my husband got loads and I got none.  Better communication and trustworthy 
+communication from council.   More possibilities to help get sandbags etc (like if your estate road is 
+flooded and you have a small car you might not be able to go).   
+Text message evacuation warning was extremely alarmist and misleading. This will create a "boy 
+who cried wolf" scenario in residents. The black zone / pink zone was poorly communicated and 
+poorly explained. It just created confusion. The complete absence of the temporary acting mayor 
+Greaney in creating a consistent leadership presence was appalling and should be a sackable matter.  
+The black zone pink zone thing was so badly done. Map on the dashboard had solid fills which 
+covered the road layer. Useless. No link from there to a useable map. No explanation of the criteria 
+to designate zones. Not trustworthy and very poor effort. Didnt reflect on ground risk or reality. Boo  
+The evacuation messages were not clear as to whether the black zone referred to the area on the 
+maps or the all of the suburbs mentioned. 
+The flood zone map should have been regularly updated if they were upgrading suburbs from pink 
+zone to black  
+
+
+===== [page 50] =====
+The local disaster board crashed several times, and we couldn’t access it.  
+The map that was circulated by the Council on social media outlining the black and pink zones was 
+of low resolution, and it was difficult to read street names. I found a full page pdf version on council's 
+disaster dashboard website which was much clearer. This could have been linked to.  
+The maps with zones on them were hard to zoom in on. Eg if trying to see which streets and houses 
+were in and out. Resolution was too low!! People couldn’t tell from low res images on social media. 
+(Imagine if you could see it on the Applemaps or GoogleMaps app on your phone — how helpful 
+and easily accessible would that be!) 
+The mere fact that people have no access to any visual media (Tv) in Townsville and are forced to 
+get 99% of their information from Facebook is horrendous.  If you have no power, no internet, etc 
+you are basically dead in the water.  Having to depend on commercial radio stations is 50 to 60 years 
+behind the times. 
+The news is repetitive and not useful. I don't know how to improve it.. but I personally would benefit 
+from more accurate and up to date road closure notifications and Oak Valley being included where 
+suitable. 
+The phone messaging to landlines was inflammatory and lacked accurate information. It was more 
+like scare mongering 
+The pink and black maps were a little hard to read.  When Bluewater was told to evacute, it was too 
+late. The flooding had happened in some areas. 
+the pink and black zones created confusion  
+The public doesn’t understand the government different levels of response. There is no need to tell 
+the public you are in “stand up” mode as we have no idea what that even means.       Putting sand 
+up at the dam and then telling people not to go to the dam.       It’s all fine and well the council 
+telling residents to remove their own greenwaste, but council can’t then expect the community to 
+help move green waste generated by councils trees falling. Letting people know ahead of time what 
+assistance council intends to provide also helps, don’t change it half way through a disaster.   
+Government needs to understand that whilst some areas were more impacted, all residents are 
+impacted and it costs every resident money they don’t have to clean up and stay healthy. It’s $180 
+that goes a long way in such circumstances, to purchase cleaning materials and food.  
+The text messages were great, it promoted us to research 
+The timing and accuracy of warnings could be improved. The pink zones could be re-assessed, Hyde 
+park  it is higher than Hermit Park, was not mentioned in suburbs needing to evacuate but managed 
+to get into the pink. I didn’t flood in 1969, 2019, 2025 or many other years and I am unhappy  
+The Townsville City Council needs to educate its disaster coordinators better. Also media train them. 
+QPS need to be more careful when door knocking as saying the wrong thing to concerned residents 
+only creates more chaos.  
+There is an issue with the wind warnings. Not accurate wind measurements from Townsville Airport 
+(very close to Pallarenda) and therefore no warning given.  
+There is no evacuation center at all on Magnetic island. That definitely need to change 
+There needs to be a central government source of accurate and timely information. At times the 
+police/council/sES advice was conflicting.  The fact that community storm chasers provide more 
+support and information to the local community then BOM do is ridiculous.  
+There was ZERO information about the risk in the pink zone! Thank Dog my friend's partner is ex-
+Disaster Management Group. He gave me accurate info when it was not available on the Facevook 
+page or from the ABC radio. He explauned I would get AT LEAST 48 hours to leave if my place was at 
+risk. He explained it would have to rain for about 6 more days at the same rate for my place to be at 
+risk. NO official sources explained this, whicg made me panic unnecessarily for days. Why could 
+nobody just say: pink zone, no threat for the next 48 hours, then U would not have been panicking. 
+There wasn't enough warning in the lead up. Sure, we knew it was raining because we could look 
+out the window, but there was no actual warnings in advance that it was going to get bad. Not like 
+how we have warnings in advance before a cyclone hits.  
+
+
+===== [page 51] =====
+This event appeared to be better managed than in 2019 due to flood mitigation ,dam control and 
+disaster management preparedness with better local and state government involvement 
+This event was very well managed  
+Townsville City Councils EAP for the Ross Dam needs better maps and TCC should educate people 
+generally and specifically about which areas are in the 'Black zone'. Language should be consistent 
+as orders to evacuate the black zone then naming just 6 suburbs is misleading if more Ares are in 
+the black zone than thec6 suburbs named. The EAP needs to be refined with field work 'ground 
+truthing' and surveys of properties like mine. My property was hit by a wall of water in 2019 yet 
+Townsville City Council have not inspected it or provided any assistance to repair my backyard after 
+the 2019 flooding event. This is a missed opportunity to refine data on how high the River will reach 
+close to Ross Dam. 
+Try to stay more current 
+Up to date info on road closures/inundation.  
+Warnings should be sent out to all residents phones  
+We are not in the grants list. Please help us get grants to put storm water plumbing in & block fences 
+to keep water out !!  
+When finishing up the event, can official sources maintain a small presence on webpages to monitor 
+the chances of resurgence. Otherwise I would also recommend more sandbagging sites,as well as 
+access to an automated sandbagger to improve efficiency. Additionally can news sources stop 
+referring to these events as once a century. I've lived here 20 years, and been flooded every few 
+years to varying degrees.  
+When instructions for the black zone were given out, people were confused about what that meant 
+for the pink zone. In future both zones should be given instructions. Don't just ignore one of them. 
+At least say "but pink can stay put" or something 
+You used to get news flashes on tv for cyclones etc. this doesn’t happen now 
+ 
+ 
+Table A7. Open ended Responses to What Influenced Household Decision to Evacuate or Stay in 
+Place 
+Not in the zone 
+A working farm, I stayed to oversee the safety of livestock. This was essential for their welfare and 
+to maintain their security during small windows when repair of boundary fences was required. Also, 
+after the first flush of rain on the Paluma range, I was flooded in on Friday 31 January. Townsville 
+City Council’s failure to address material blockages in the dry arm of Upper Sleeper Log Creek 
+resulted in the flooding of my main access road to Bluewater Park.  
+As we are in the pink zone we were unsure how much worse it would get and we have pets. We 
+wanted to get out early before roads became flooded. We went to my parents at Bushland Beach. 
+There is a lot of anxiety when the first shelters that open say ‘pets are not accepted’ two places 
+should be opened at the same time and one should accept pets. This is reiterated on all social media 
+pages and something that needs to be addressed. People won’t leave their pets and they shouldn’t 
+be forced to.  
+Based on river levels. Evacuated animals based on BOMriver level readings and then realised they 
+were almost 1 metre higher than actual river level. Massive f%$up on behalf of BOM.  
+Based on the lack of water in the street, monitored our storm water inlets - which were not backed 
+up- unlike 2019 plus the drain. I could access dam levels matched that info to tides (neap) thankfully.  
+Because our property is on a hill and if we get flood water through our house, the whole of Ingham 
+will be completely under water 
+Because we are safe where we are 
+Before purchasing my house I researched flood levels.  Confident neither I nor my home were in 
+danger of flooding. 
+
+
+===== [page 52] =====
+Bohle River level had not reached the same height as the 2019 flood. We were safe then so knew 
+we would flood when the river was at a lower level.  
+Bushland beach was safe, received text message for blue water  
+Concerns from my friends & family about me staying in my home alone.   My house did not flood in 
+the 2019 floods so I thought I’d be safe but still choose to leave. 
+Confident we'd be fine 
+Defence had said to prepare for the worst  Media had said to prepare for roof level flooding  Our 
+house was not impacted in the 2019 floods yet we were told it was going to be worse  We followed 
+the mandatory directives because we didn’t want to be left behind and then overload the 
+SES/defence if anything were to happen when we had options to do something about it  
+Did not evacuate as the water levels were not rising on the streets and house premises. 
+Did not flood in 2019, felt safe to stay. 
+Did not need to evacuate  
+Didn’t flood in 2019 
+Didn’t need to  
+Didn’t want to be have a emergency arise requiring assistance in black zone  
+Do not live in a flood zone 
+Elevated site. Felt safe 
+Evacuated as an immuno-suppressed foster child lives in the home and needs access to clean water, 
+electricity and to be kept away from flood water. Evacuated as we did not want to get stuck in the 
+house for an extended period of time. 
+Evacuated because our house flooded in 2019 - we were worried and didn’t want to risk evacuation 
+at night time or if road conditions worsened to get to safety/comfort. Mostly due to having a child 
+and a dog we wanted to be safe than sorry. The unknown / unpredictability  
+Experience of 2019 flood and flood inundation maps 
+experience with 2019 floods. 
+Fear of looters 
+Felt prepared and rather stay with animals 
+Felt safe 
+Felt safe to stay,  
+Felt safe… we were not advised to evacuate  
+Felt we were safe, understand enough of our local area. 
+Firstly, having nowhere to go. There is no suitable enclosure in the near vicinity. There is nowhere 
+for people to go with Pets in near vicinity. I'm not leaving without my Pets. There needs to be a 
+LARGE enclosed facility with both GAS and electrical cooking facilities, and a LARGE generator 
+available, where people can go cook a meal for their families and/or cook meals for the community. 
+A facility that has multiple showers/toilets for men and women, NOT the awful unisex type facilities. 
+There also needs to be a large facility/weatherproof area with fenced in yarded areas for Animals, 
+one for Cats and a separate area for dogs.  
+Flood level in the gully and sitting in a house where everything has been packed upwards and no 
+real pleasant place to spend time 
+Flood map - we were not in the black or pink zone but if that would have changed I would have 
+flood map zones, prior experience of flood free, comparing the rainfall totals for this amount several 
+times a day compared to previous flood events 
+flooded in 2019 
+had pets so we stayed 
+Have only ever had localised flooding below a half meter. Live in a high set house. Well prepared 
+and have pets. Shelters are hell quite frankly. 
+Having been through multiple weather events at this address I was confident that I wouldn't flood 
+here.  
+
+
+===== [page 53] =====
+Heeding advice  
+Home is safe 
+House is on flood free land 
+House is on high ground and we stayed home to monitor the yard and sheds that are sometimes 
+impacted by flooding  
+House located on hill. Many animals 
+I could walk to the dam to see the dam level was lower than the 2019 flood event 
+I had evacuated my son to his father's home or if the pink zone just got peace of mind and although 
+I was fairly sure my home would be fine I didn't want to risk being cut off from my son. 
+I had no need to evacuate 
+I had water to ceiling in 2019 I didn't want to go mundingburra  police evacuatedme 
+I have 95 years history of the house in floods, I was never at any risk. I had water, food and gas. 
+I have exotic pets and medical conditions and evacuation would have caused excess stress on them 
+and myself so I chose to avoid it unless I was door knocked, which I wasn't.  
+I live in Wulguru which is close to Mt Stuart. We are a bit higher in this suburb compared to most 
+other suburbs of Townsville.  
+I stayed as it was only heavy rains and eventually it went down by a few hours  
+I stayed in place a) to protect property from looting and crime b) I am a long term Townsville resident 
+with significant understanding of dam and weir levels, tide heights and their impact on water 
+outflow, ground level height and previous flood water heights.  
+I think I got texts because I lived in Rosslea with the same mobile phone number in 2019. 
+I was in the pink zone not the black zone, but the black was the other side of my street. I asked my 
+neighbours if we flooded in 2019 and they said no so I stayed. Also I live in a highset house so I knew 
+I would be safe.  
+I was in the pink zone, and after a few days of listening to the over-the-top warnings it became clear 
+my house was not at risk, given most of the black zone houses didn't flood. 
+I was in the pink zone, and watched dam levels/local flooding. We didn’t even get water in my street 
+until 6/2 
+I was out of Townsville. My husband evaluated friend's house due to his 2019 experience. We back 
+home earlier due to our dog had anxiety at the friends' place. We couldn't leave our dog behind and 
+evaluated evacuation centre. I've hear many if my friends are the same boat. If we have somewhere 
+to evaluate with animal, it would be great. 
+I was safe and fully prepared  
+I was watching the level of the creek slowly rising, though it was still far away from the property. 
+I’m on higher ground and was prepared 
+If my house floods, most of Townsville will be underwater!  The MAJOR fail is the total absence of 
+adequate wind warnings.  Where I am, the wind on the first Saturday afternoon blew my bbq of the 
+low table it was sitting on - and would have blown it further away but the hose had it anchored to a 
+heavy gas bottle. The best part of 3 days of winds that had a far greater impact than the non-cyclone 
+- Kirrily.  
+Im on castle hill in an elevated location.  
+It is high on a hill and was absolutely safe in the 2019 floods. 
+It was clear we were not in danger. 
+It was too late to leave when the text to evacuate (if unsafe) was received 
+Level of preparation I knew I was okay to stay. Also to avoid theft of my property  
+Local flooding receded as rain eased, had supplies for family and pets 
+Local knowledge and official advice. 
+Local suburb, was free from any flooding.  
+Located on outer edge of pink zone - no flooding in immediate surrounding areas. 
+Location  
+
+
+===== [page 54] =====
+Monitoring reports, bulletins. Knowing my flood zone. Having all I needed at home.  
+Mt house block is a little refuge island in the middle of a flood zone ..... I did not get water in during 
+either 1998 flood or 2019 flood. 
+My ability to get to my workplace. I am in healthcare (pharmacy) and need to be able to assist the 
+community in a disaster. If I stayed home and the bohle river floods and the suburb gets isolated I 
+can’t get to work and that runs the risk of people not being able to access their medications 
+My dog and inability to get off island as no ferries were running for days 
+My home has never been close to flooding  
+My home was not subject of flooding,  just the bridge crossing bohle river  
+My home whilst easily cut off, is high rise and in a high area, not in either evacuation zone. Being a 
+local, I am confident in my ability to ascertain the likelihood of being flooded in.  
+My house backs on to bluewater creek. The Creek level page on BOM 
+My partner lives in Rosslea, which was an evacuation zone 
+N/a 
+Na 
+Never flooded and I’m in a first floor unit.  
+No chance of flooding at my residence  
+No flood risk 
+No flooding at our home 
+No flooding at our home in previous similar weather events such as 2019 monsoon  
+No flooding in Charters Towers  
+no flooding in my area 
+No funding to put fuel in and no where to go 
+No government advice to evacuate, not in a flood zone, no flooding occurred, did feel safe 
+No imminent danger  
+No instruction to leave 
+no need to evacuate 
+No need to evacuate so stayed in place 
+No need to evacuate. 
+No need to evacuate.  
+No need to not in a flood zone 
+No need was on high grounds  
+No previous history, no official recommendation to do so, no obvious issue, had all reqd items. 
+No prior warning, no one door knocked and by the time the disaster council group warned us, we 
+were surrounded by water 
+no risk of flooding 
+No text received to evacuate as there was no need  
+No water coming in house 
+No where to evacuate to. The water from our creek should not be able to get higher than  the mound 
+the house is built on 
+None flood area 
+Not apart of the pink or black zones being monitored and previously weathered 2019 flood even 
+with minimal impact  
+Not at risk where I was living. 
+Not impacted in 2019, was in pink zone and not asked to leave 
+not in a black zone, plus data from the BOM, adn ergon didn't turn our power off. Plus we were 
+there for 2019  
+Not in a flood area. Ours was trees down due to high wind and water 
+Not in a flood prone area. 
+Not in a flood zone 
+
+
+===== [page 55] =====
+Not in a flood zone - house and land does not flood. We were also fully prepared to stay in place 
+once the creek spilled over the local causeway and cut us off. 
+Not in a flood zone, bought enough supplies at the beginning of the event.  
+Not in a flood zone, inability to properly relocate pets safely, evacuation centres unfit for people 
+with a disability to spend extended periods.  
+Not in a known flood black or pink zone here 
+Not in an evacuation zone. We had other people evacuate to us.  
+Not in black zone  
+Not in flood zone 
+Not in flood zone  
+Not in flood zone and this house was safe in 2019. 
+Not in the evacuation area and in a high-rise complex. 
+Not necessary 
+Not required 
+On resonably high ground 
+Our are is not know to flood. Floodways go under, but properties do not. 
+Our home is higher than most of Townsville, our greatest danger is being cut off by local flooding. 
+We have pets, and  most evacuation shelters refuse to accept them. Although we were not 100% 
+prepared, we have a generator and food/water for several days, and gas to cook with.  
+Our house did not flood 
+Pink zone and in a high set property 
+Police 
+Police advise which was incorrect, so at the time I  not aware it wasn't nessersary  
+Police told me to leave and I was quite distraught as I didn't know where to go 
+Positioned on a hill, very low likelihood of flooding   
+Previous events, wife and child both unwell, better to leave early, also we had friends in safe zone, 
+so somewhere to go made it easy 
+Previous experience in 2019 floods - water level in the drainage gully remained lower than in 2019 
+Previous experience of nil flooding in events like 2019 and Yasi 2011 
+Previous flood event experience taught me to watch the water levels gauging when to leave  
+Previous flood mapping and updates via facebook 
+Previous flood mapping stated roads out would flood. Later confirmed decision after black zone ran 
+behind house. 
+Previous floods in 2019 
+Previous lack of inundation and preparedness 
+Ran out of toilet to paper to buy, so I went to neighbouring towns to buy there 
+Research and preparation.  
+Residents of Townsville for over 50years, previous experiences in cyclones and floods from past 
+events  
+Returned home from out west and had. O time to get back oit 
+Risk of being cut off with no power for days, and not wanting to be a drain on emergency services if 
+we did get cut off. 
+River level  
+River levels aren’t as high as 2019 
+Road cut by rainwater before the flood no way to go anywhere 
+road floods before any decision could be made 
+Roads out of location get flooded with heavy rains.  
+Roads shut, no way home. 
+Stay in place- too many pets and children and inaccuracy around needing to evacuate or not  
+Stayed In 2019 so stayed this time  
+
+
+===== [page 56] =====
+The creek level, water coming over the deck & through the shed 
+The people we offered evacuation to were elderly and in chest deep water in their house. They 
+weren’t going to go initially until a neighbour encouraged them. We had no powers to force them 
+to evacuate  
+The risk of conditions worsening and preventing me from getting out before roads were closed and 
+I was trapped, and the risk of having to leave my cats behind if I couldn't evacuate on my own 
+There was no flood waters affecting my property. My house is elevated slightly and the flood water 
+would have to rise very significantly (climb uphill) to flood our property. 
+there was no threat of flooding 
+There was not enough warning to organise yourself 
+Unpredictable weather event and water release from the dam 
+Was just outside the pink zone, looked reasonably safe council flood maps, walks around our street 
++ photos of flooding in the wider local area on facebook, felt safe to stay put and had sufficient 
+supplies 
+Was not in a flood zone. 
+Wasn't a need  
+Water levels remained below the height of our property by about 30 cm 
+Water was leaking in from the external wall into the inside and i wanted to keep an eye on it. If I did 
+loss power I would have evacuated to family  
+We are 50km from the Townsville CBD but still in the LGA and tend to get flooded in. Roads close 
+and properties flood but houses tend to stay out of flood waters. We choose to stock up and stay 
+here once a possible weather event is advised  
+We are high above sea level and not in the path of the dam. 
+We are in a green zone here in West End next to Castle Hill. It would take a lot more water for us to 
+go under.  
+we are in a highset house with the main area staying dry in 2019 floods. We now have a generator 
+and felt better prepared to stay - we also have 3 pets 
+We are JUST outside the pink zone. If pink evacuated, we were preparing.  
+We are located outside of the Evac Zones. Having lived in Townsville since 1997, I know which areas 
+flood, how quickly, the extent to which they flood, and how quickly MOST areas will recede. As a 
+Disability Support Worker, I was able to take my client food shopping the day before the flooding 
+started, and we stayed in contact throughout the event. 
+We are not in low-lying area and our properly drains well  
+We are not situated in a flood zone, we live in a high set house, our driveway and house ground 
+level is naturally higher than the street level. 
+We believed we would be ok due to previous flood levels, and then didn't have a crate large enough 
+for my dog. I also have autism and being in an emergency evacuation center would have been 
+incredibly distressing for me due to sensory/physical issues.  
+We did not have a problem with floodwater during the 2019 event, so felt confident that we would 
+be safe to remain. 
+We didn't get a door knock to go 
+We didn't need to  
+We don't normally flood in our actual house, however our yard has become a raging river 
+We got flooded last time 2019 but not this year a little bit of water under house and house is up 
+high.  
+We have quite a few animals & my adult son has autism & an intellectual impairment which makes 
+it difficult to make him understand the dangers behind the flooding 
+We kept an eye on the creek across the road, it lowered quickly with any reprieve in the rain. The 
+damage to our home was from the heavy rain.  
+We know our place won’t flood / we are up a slight hill, but we did take other evacuees  
+
+
+===== [page 57] =====
+We live in a safe zone based on the mapping 
+We live on a hillside so inundation was not a risk 
+We only received a prepare to leave message. We felt safe. If it had been a direct order to evacuate 
+or we felt unsafe we would have left.  
+We only suffered flash flooding 
+We were close to the Ross river but at a safe elevation  
+We were in a  watch and act zone 
+We were not at risk of flooding  
+We were outside the pink zone by several blocks, our street did not get inundated in 2019, we had 
+generators ready and supplies to shelter in place.  
+We were prepared 
+We were safe inside the house 
+We weren't in a pink zone and monitored the water around our property, which did not reach 
+concerning levels.  
+We wouldn't flood, we could just become isolated. We also have many pets.  
+We’re not advised to evacuate. Also that question is irrelevant tge military does not evacuate 
+anymore when it’s deemed climate change apparently.  
+We’re not in a flood zone. Home became inundated due to water run off issue. Knew we could reside 
+safely upstairs.  
+While roads in & out of our area were affected at times, our house was quite safe. Although if there 
+was another meter or so in it, this would likely have been a different story. 
+ 
+ 
+ 
+
+
+===== [page 58] =====
+SURVEY INSTRUMENT5 
+ 
+1. Were you or your household impacted in any way by the major flood event in North 
+Queensland during late January/February 2025? 
+Yes - please proceed to complete the following survey 
+No - please do not complete this survey - thank you for your time 
+ 
+2. In what town, suburb and postcode do you live? 
+ 
+3. Do you feel that you/your household was adequately prepared for a disaster before the 
+flood event happened? 
+Yes 
+ 
+No 
+ 
+Other (please specify) 
+ 
+4. Did you/your household have a disaster kit prepared before the event (minimum 3 days food, 
+water and supplies)? 
+Yes 
+ 
+No 
+ 
+Other (please specify) 
+ 
+5. Did you/your household have a disaster evacuation plan before the event? 
+Yes 
+ 
+No 
+ 
+6. Did you/your household have household and/or contents insurance before the event? 
+Yes 
+ 
+No 
+ 
+Other (please specify) 
+FLOOD INFORMATION 
+ 
+7. What was your primary source of information regarding the flood event (you may 
+select more than one option)? 
+Television 
+Print media (newspaper) 
+Facebook 
+X (formerly) Twitter 
+Instagram 
+Other social media platform (eg Flikr, YouTube, blogs) 
+Media website Government web site (this 
+includes Bureau of Meteorology) 
+Local Government Disaster Management Dashboard 
+Community website 
+Other internet source Weather based app (smart device) 
+Radio 
+Friends/family Telephone support service/hotline 
+Other (please specify) 
+ 
+8. Please indicate the main reason you accessed information regarding the flood event. (you may 
+select more than one option) 
+Monitoring of the event/local impacts Personal preparedness Sandbags and supplies 
+Warning information 
+Flood/inundation mapping 
+Evacuation information 
+Information about pets/evacuation 
+Dam updates 
+River/waterway levels updates 
+Event tracking/updates  
+Information on impacts  
+Information on emergency response 
+Information on relief efforts 
+Information on recovery efforts  
+Financial assistance 
+Volunteering/donations 
+Other (please specify) 
+ 
+9/10. Please indicate any official source/group you accessed to prepare or obtain information 
+regarding the flood event (you may select more than one option). 
+Queensland Fire Department 
+Bureau of Meteorology  
+Queensland Health 
+State Emergency Services (SES)  
+Local Council Based Disaster Information Group 
+Local Council Disaster Management Dashboard  
+Flood Event Livestream/Videos 
+Queensland Police Service 
+Local Politician  
+Ergon Energy 
+Department of Transport and Main Roads 
+RACQ  
+Other (please specify) 
+ 
+11. How would you rate the information provided by these official sources?  
+Completely  
+Very  
+Moderately  
+Somewhat  
+Not at all  
+N/A 
+
+
+===== [page 59] =====
+Accurate 
+Up-to-date 
+Useful 
+Trustworthy 
+If you wish, you can provide comments here: 
+ 
+12. Please indicate if you accessed weather based information generated by the Bureau 
+of Meteorology regarding this event 
+Bureau of Meteorology website 
+Bureau of Meteorology facebook page 
+Bureau of Meteorology severe weather warnings 
+Bureau of Meteorology rainfall tracking maps 
+Bureau of Meteorology live streams/videos 
+None  
+ 
+13. Please rate the information generated by the Bureau of Meteorology 
+Completely  
+Very  
+Moderately  
+Somewhat  
+Not at all  
+N/A 
+Accurate 
+Up-to-date 
+Useful 
+Trustworthy 
+If you wish, you can provide comments here: 
+ 
+14. Please rate the information from other weather focused source/groups you may have accessed. 
+Completely  
+Very  
+Moderately  
+Somewhat  
+Not at all  
+N/A 
+Accurate 
+Up-to-date 
+Useful 
+Trustworthy 
+If you wish, you can provide comments here: 
+ 
+15. Please indicate any news media outlet source/group you accessed to prepare or 
+obtain information regarding the flood event (you may select more than one option) 
+ABC News 
+SBS News 
+7 News  
+WIN News 
+Other commercial news network 
+Other print based news network (eg. Local newspaper, The Australian, Guardian, Reuters etc) 
+Online news based services (eg. news.com) 
+ABC radio 
+Local commercial radio station 
+None 
+Other 
+ 
+16. Please rate the information from the news media outlet source/groups 
+Completely  
+Very  
+Moderately  
+Somewhat  
+Not at all  
+N/A 
+Accurate 
+Up-to-date 
+Useful 
+Trustworthy 
+If you wish, you can provide comments here: 
+ 
+17. Please indicate any non-government organisations or agency source/groups you accessed to 
+prepare or obtain information regarding the flood event (you may select more than one option). 
+Australian Red Cross 
+RSPCA  
+The Salvation Army 
+Volunteering Queensland 
+GIVIT 
+Lifeline  
+None  Other (please specify) 
+ 
+
+
+===== [page 60] =====
+18. Please rate the information from non-government organisations or agency sources/groups. 
+Completely  
+Very  
+Moderately  
+Somewhat  
+Not at all  
+N/A 
+Accurate 
+Up-to-date 
+Useful 
+Trustworthy 
+If you wish, you can provide comments here: 
+ 
+19. Please indicate any community based forum source/group you accessed to prepare or obtain 
+information regarding the flood event (you may select more than one option). 
+Disaster Response on Facebook  
+Local questions and answer group 
+Local animal or pet focused group 
+Local church or religious group 
+Community support group 
+ 
+Flood event group 
+Friend/family  None 
+ 
+20. Please rate the information from community based forum sources/groups. 
+Completely  
+Very  
+Moderately  
+Somewhat  
+Not at all  
+N/A 
+Accurate 
+Up-to-date 
+Useful 
+Trustworthy 
+If you wish, you can provide comments here: 
+ 
+21. Which group/source did you find most useful/valuable? why? Please give details. 
+ 
+22. Did you come across any inaccurate, conflicting or misleading information regarding the flood 
+event? 
+Yes 
+ 
+No 
+ 
+If you wish, you can provide comments here: 
+ 
+23. Please indicate your overall level of trust in the information provided regarding the flood event. 
+Completely trustworthy  
+A great deal 
+Moderately 
+Not much at all  
+Not at all 
+If you wish, you can provide comments here: 
+WARNINGS AND EVACUTION 
+ 
+24. Is your home located in a previously identified flood inundation zone? 
+Yes 
+ 
+No 
+ 
+Unsure (please specify) 
+ 
+25. Did you receive advice to evacuate your home/location (you may select more than one option)? 
+No 
+Door knock by emergency services/military 
+Text message 
+General warning via media 
+Advised by friends/family 
+Self evacuated before any notifications  
+ 
+ 
+26. Did you evacuate your home/location? 
+Did not evacuate 
+Self evacuated early 
+Self evacuated after general warning 
+Self evacuated after text 
+Self evacuated after door knock/warning 
+Assisted evacuation (friends/family) 
+Assisted evacuation (emergency services/support) 
+Emergency evacuation  
+Other (please specify) 
+ 
+27. What influenced your decision to evacuate or stay in place? 
+ 
+28. If you/your household evacuated - where did you go? 
+Did not evacuate 
+Friends/family  
+Accommodation service provider 
+Evacuation centre 
+Evacuated out of town  
+Other (please specify) 
+
+
+===== [page 61] =====
+29. Please comment on any aspect of information, warnings or evacuations for this event that you 
+believe could be improved? 
+DEMOGRAPHIC DETAILS 
+ 
+30. Are you male or female? 
+Male 
+ 
+Female  
+Other (please specify) 
+ 
+31. What is your age? 
+18-20  
+21-29  
+30-39  
+40-49  
+50-59  
+60 or older 
+Prefer not to say 
+ 
+32. What is the highest level of education you have completed? 
+Primary/elementary school/not attend school 
+High school (up to grade 10) 
+Graduated high school (year 12 or equivalent) 
+Vocational certificate or diploma 
+Undergraduate/ Bachelors Degree 
+Post Graduate Qualification 
+Prefer not to say 
+ 
+This is the end of the survey. 
+ 

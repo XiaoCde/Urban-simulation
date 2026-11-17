@@ -1109,7 +1109,7 @@ function domeGeometry(idx, put, cx, topY, cz, R) {
  * 地标：这些楼在 DC 天际线里一眼可辨，用固定形态而不是随机。
  * 穹顶半径 = k × 轮廓短边（US Capitol 实测短边约 107 m → 直径 27 m 左右）。
  */
-const LANDMARK = {
+export const LANDMARK = {
   '66418809': { kind: 'dome', k: 0.135, wall: 'marble' },   // United States Capitol
   '398769543': { kind: 'dome', k: 0.30, wall: 'marble' },   // Lincoln Memorial
   '1029374': { kind: 'dome', k: 0.26, wall: 'marble' },     // Library of Congress (Jefferson)

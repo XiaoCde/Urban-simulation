@@ -1,0 +1,28 @@
+{
+  "source_model": "data/characters/Ch33_nonPBR.fbx",
+  "source_note": "用户提供；原始许可待补记",
+  "height_m": 1.82,
+  "clips": [
+    "back",
+    "crawl",
+    "crouch",
+    "door",
+    "idle",
+    "idle2",
+    "look",
+    "run",
+    "run_stop",
+    "side_l",
+    "side_r",
+    "sit",
+    "stairs_down",
+    "stairs_up",
+    "start",
+    "stop",
+    "turn180",
+    "walk"
+  ],
+  "bytes": 4590192,
+  "root_motion_curves_flattened": 54,
+  "textures_resized": 295
+}

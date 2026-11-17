@@ -47,3 +47,4 @@ data/flood/
 # 街道管网/街道掩膜缓存（本机 1.7 s 可重建，不入库）
 data/derived/street_mask_*.npz
 data/derived/street_net_*.npz
+项目备份_整理前_20261117/

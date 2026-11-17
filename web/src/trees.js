@@ -54,10 +54,15 @@ export function buildTreeField(TR, opt = {}) {
   const box = opt.only || null;
   const T = opt.T || null;              // loadTerrain() 的返回，用来剔除长在楼里/水里的树
   const skipNear = opt.skipNear || null; // {x,z,r}：白宫园林自己那批树的地界，避免重影
+  // 【avoid(x,z) → true 就不种】路面走廊测试。DCGIS 的树点只经过「楼里/水里」
+  // 两道剔除，**没有判在不在路上**；而地现在铺的是 roadnet 的瓦片棋盘路，
+  // 和 OSM 街心线相位不同，于是 34002 棵里实测 1493 棵的树干直接扎在车行道
+  // 和斑马线上（用户 2026-11-06「灌木球长在路中间」）。这里补上第三道。
+  const avoid = opt.avoid || null;
 
   // 先挑出要画的（核心区可以只画一部分）
   const idx = [];
-  let dropBld = 0, dropWater = 0, dropNear = 0;
+  let dropBld = 0, dropWater = 0, dropNear = 0, dropRoad = 0;
   for (let i = 0; i < count; i++) {
     const x = data[i * STRIDE], z = data[i * STRIDE + 1];
     if (box && (x < box.x0 || x > box.x1 || z < box.z0 || z > box.z1)) continue;
@@ -73,6 +78,7 @@ export function buildTreeField(TR, opt = {}) {
       const dx = x - skipNear.x, dz = z - skipNear.z;
       if (dx * dx + dz * dz < skipNear.r * skipNear.r) { dropNear++; continue; }
     }
+    if (avoid && avoid(x, z)) { dropRoad++; continue; }
     idx.push(i);
     if (opt.max && idx.length >= opt.max) break;
   }
@@ -213,7 +219,7 @@ export function buildTreeField(TR, opt = {}) {
   }
 
   console.log(`[trees] ${n} 棵：阔叶 ${broad.length} / 针叶 ${conif.length}`
-    + `（剔除 楼内 ${dropBld} / 水中 ${dropWater} / 白宫园林 ${dropNear}）`);
+    + `（剔除 楼内 ${dropBld} / 水中 ${dropWater} / 白宫园林 ${dropNear} / 路面上 ${dropRoad}）`);
   return g;
 }
 
@@ -260,6 +266,9 @@ export function buildShrubField(T, opt = {}) {
   const box = opt.box || { x0: -1277, z0: -4189, x1: 4701, z1: 931 };  // 场景 z = -planY，北为负
   const seed = opt.seed ?? 20261024;
   const rnd = mulberry32(seed);
+  // 同上：灌木是「簇状撒点」，簇心与每株都要过一遍路面走廊测试，
+  // 否则走路中间会看到一坨绿色球压在斑马线上。
+  const avoid = opt.avoid || null;
 
   const geo = new THREE.IcosahedronGeometry(1, 0);
   geo.scale(1, 0.72, 1);
@@ -287,11 +296,13 @@ export function buildShrubField(T, opt = {}) {
     const lc = T.classify(cx, cz);
     // 只长在草地/林地边上；建筑、水面、裸土都不要
     if (lc !== 3 && lc !== 4) continue;
+    if (avoid && avoid(cx, cz)) continue;
     const per = 3 + ((rnd() * 6) | 0);
     for (let k = 0; k < per && n < count; k++) {
       const x = cx + (rnd() - 0.5) * 22;
       const z = cz + (rnd() - 0.5) * 22;
       if (T.classify(x, z) !== 3 && T.classify(x, z) !== 4) continue;
+      if (avoid && avoid(x, z)) continue;
       const y = T.sampleHeight(x, z);
       const r = 0.65 + rnd() * 1.15;
       pos.set(x, y + r * 0.55, z);

@@ -15,6 +15,7 @@ const W = Number(process.argv[4] || 1600);
 const H = Number(process.argv[5] || 900);
 const VIEW = process.argv[6] || 'city';
 const WAIT = Number(process.argv[7] || 2);
+const CASE = process.argv[8] || '';   // 工况子目录名，如 sw2d_isabel
 
 const browser = await puppeteer.launch({
   executablePath: CHROME, headless: 'new',
@@ -45,6 +46,7 @@ await page.evaluate((v) => {
     t.update();
   } else if (window.__setView) window.__setView(v);
 }, VIEW);
+if (CASE) await page.evaluate((c) => window.__flood.setCase(c), CASE);
 await page.evaluate(() => { window.__flood.setVisible(true); });
 await page.evaluate((i) => window.__flood.showFrame(i), FRAME);
 await new Promise((r) => setTimeout(r, WAIT * 1000));
@@ -52,9 +54,10 @@ const info = await page.evaluate(() => ({
   frames: window.__flood.frames, idx: window.__flood.index,
   stat: document.getElementById('stat')?.textContent || '',
   label: document.getElementById('flTime')?.textContent || '',
+  caseName: window.__flood.caseName,
 }));
 await page.screenshot({ path: out, type: 'png' });
-console.log(`[fshot] ${out} ${W}x${H} frame=${info.idx}/${info.frames} ${info.label}`);
+console.log(`[fshot] ${out} ${W}x${H} case=${info.caseName || '(root)'} frame=${info.idx}/${info.frames} ${info.label}`);
 console.log(`[fshot] HUD: ${info.stat}`);
 for (const l of logs.slice(0, 25)) console.log('  ' + l);
 await browser.close();

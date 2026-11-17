@@ -4,6 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>华盛顿 · 程序化 three.js 重建</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231b2736'/%3E%3Cpath d='M16 5C12 12 9 16 9 20a7 7 0 0 0 14 0c0-4-3-8-7-15z' fill='%235aa9ee'/%3E%3C/svg%3E" />
 <style>
   :root { color-scheme: dark; }
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -34,6 +35,134 @@
   #views button:hover { background: rgba(40,58,80,.9); border-color: rgba(150,190,235,.6); color: #fff; }
   #views button.on { background: rgba(56,110,168,.92); border-color: #7fb4e8; color: #fff; }
   /* 积涝叠层面板（flood.js）：平时隐藏，按 F 才出来 */
+  /* 决策流：A 档只放 20~30 人，重点不是「多少人」而是「谁在想什么」 */
+  #decide {
+    display: none;               /* 2026-11-07：决策流并入人物列表，面板不再堆叠 */
+    position: fixed; left: 18px; bottom: 16px; z-index: 20; width: 320px;
+    max-height: 40vh; overflow: auto; padding: 10px 12px 10px;
+    border-radius: 10px; background: rgba(8,16,26,.84);
+    border: 1px solid rgba(120,170,225,.35); color: #d7e6f7;
+    font: 12px/1.55 "Segoe UI", "Microsoft YaHei", sans-serif;
+    backdrop-filter: blur(6px);
+  }
+  #decide .hd { display: flex; align-items: baseline; justify-content: space-between;
+                margin-bottom: 6px; }
+  #decide .hd b { font-size: 13px; letter-spacing: .06em; color: #bfe0ff; }
+  #decide .hd span { font-size: 11px; color: #7fa3c4; }
+  #decide .d { padding: 5px 0; border-top: 1px solid rgba(255,255,255,.08); }
+  #decide #dcList .d { cursor: pointer; border-radius: 5px; padding-left: 4px; padding-right: 4px;
+                       transition: background .12s; }
+  #decide #dcList .d:hover { background: rgba(120,170,225,.14); }
+  #decide .d:first-of-type { border-top: 0; }
+  #decide .who { display: inline-block; font-size: 10px; padding: 1px 5px; border-radius: 4px;
+                 margin-right: 5px; background: rgba(120,170,225,.22); color: #cfe6ff; }
+  #decide .who.flee { background: rgba(220,90,70,.28); color: #ffc9bd; }
+  #decide .who.wade { background: rgba(220,180,70,.26); color: #ffe6b0; }
+  #decide .who.shelter { background: rgba(90,150,220,.26); color: #c6ddff; }
+  #decide .txt { color: #dfe9f4; }
+  #decide .at { color: #6f8ba6; font-size: 11px; }
+  #decide .empty { color: #7d93a8; }
+  #decide .ttl { font-size: 13px; color: #fff; margin-bottom: 2px; }
+  #decide .kv { color: #a8c2d8; font-size: 11px; margin-top: 2px; }
+  #decide .kv b { color: #e8f2ff; }
+  #decide { cursor: default; }
+  /* 马克实时位置：不点也能看到他此刻在哪、在做什么、为什么 */
+  /* 全天故事面板已移除：实时决策模型不再展示预写剧本 */
+  #markHud {
+    position: fixed; right: 18px; top: 16px; z-index: 50; width: 268px;
+    max-height: calc(100vh - 28px); overflow: auto;
+    padding: 10px 12px 11px; border-radius: 10px;
+    background: rgba(8,16,26,.86); border: 1px solid rgba(120,170,225,.42);
+    color: #d7e6f7; font: 12px/1.55 "Segoe UI", "Microsoft YaHei", sans-serif;
+    backdrop-filter: blur(6px);
+  }
+  #markHud .hd { display: flex; align-items: baseline; justify-content: space-between; }
+  #markHud .hd b { font-size: 13px; letter-spacing: .04em; color: #bfe0ff; }
+  #markHud .hd span { font-size: 12px; color: #8fd0ff; font-variant-numeric: tabular-nums; }
+  #markHud .st { margin-top: 5px; font-size: 14px; color: #fff; }
+  #markHud .kv { color: #a8c2d8; font-size: 11px; margin-top: 2px; }
+  #markHud .why { color: #7d93a8; font-size: 11px; margin-top: 4px; }
+  #markHud .incttl {
+    margin-top: 9px; padding-top: 7px; font-size: 11px; color: #8fd0ff;
+    border-top: 1px solid rgba(120,170,225,.28);
+  }
+  #markHud .inc { margin-top: 4px; font-size: 11px; line-height: 1.65; color: #b9cfe2; }
+  #markHud .inc b { color: #ffd88a; font-weight: 600; font-variant-numeric: tabular-nums; }
+  #markHud .ctl { display: flex; align-items: center; gap: 5px; margin-top: 9px; }
+  #markHud button {
+    background: rgba(120,170,225,.18); color: #cfe6ff; border: 1px solid rgba(120,170,225,.34);
+    border-radius: 5px; font-size: 10px; padding: 3px 6px; cursor: pointer;
+  }
+  #markHud button:hover { background: rgba(120,170,225,.34); }
+  #markHud select {
+    background: rgba(8,16,26,.9); color: #cfe6ff; border: 1px solid rgba(120,170,225,.34);
+    border-radius: 5px; font-size: 10px; padding: 3px 4px; max-width: 100%;
+  }
+  #markHud input[type=range] { flex: 1; min-width: 0; accent-color: #6fb2f0; }
+  #markHud .others { margin-top: 6px; padding-top: 4px;
+                     border-top: 1px solid rgba(255,255,255,.10);
+                     max-height: 190px; overflow-y: auto; }
+  #markHud .others::-webkit-scrollbar { width: 4px; }
+  #markHud .others::-webkit-scrollbar-thumb { background: rgba(120,170,225,.35); border-radius: 2px; }
+  #markHud .others .t { color: #7fa3c4; font-size: 9.5px; letter-spacing: .05em; margin-bottom: 1px; }
+  /* 【24h 日程】状态文案比原来的危机短句长得多，必须固定两列 + 省略号，
+     否则长文本撑开网格，6 行会叠成一团糊字。 */
+  #markHud .row { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 0 5px;
+                  align-items: baseline; padding: 1px 3px; border-radius: 4px;
+                  cursor: pointer; font-size: 10px; line-height: 1.25; min-width: 0; }
+  #markHud .row:hover { background: rgba(120,170,225,.16); }
+  #markHud .row b { color: #cfe6ff; font-weight: 500; min-width: 0;
+                    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #markHud .row span { color: #dfe9f4; text-align: right; min-width: 0; font-size: 9.5px;
+                       overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #markHud .row i { color: #6f8ba6; font-style: normal; font-size: 9.5px; }
+  /* 心理状态：紧张度条 + 情绪标签；颜色随紧张度由蓝转橙转红 */
+  #markHud .row .mood { grid-column: 1 / 3; display: flex; align-items: center; gap: 5px;
+                        font-size: 9.5px; color: #9fb6cc; }
+  #markHud .row .mood em { font-style: normal; color: #ffd9a0; min-width: 34px; }
+  #markHud .row .mood .bar { flex: 1; height: 3px; border-radius: 2px;
+                             background: rgba(255,255,255,.10); overflow: hidden; }
+  #markHud .row .mood .bar u { display: block; height: 100%; text-decoration: none; }
+  #markHud .row .mood .act { color: #8fd0ff; font-size: 9px; }
+  #markHud .row .why { display: none; }
+  #markHud .row .tags { grid-column: 1 / 3; display: flex; flex-wrap: wrap; gap: 2px; margin-top: 1px; }
+  /* 生理状态徽标：伞 / 车 / 饿 / 困 */
+  #markHud .row .tags u, #markHud .row .tags .um, #markHud .row .tags .car,
+  #markHud .row .tags .hun, #markHud .row .tags .trap {
+    display: inline-block; text-decoration: none; font-style: normal;
+    font-size: 9px; line-height: 1.1; padding: 0 3px; margin-right: 3px;
+    border-radius: 3px; vertical-align: 1px;
+  }
+  #markHud .row .tags .um { background: rgba(110,170,235,.30); color: #d5ecff; }
+  #markHud .row .tags .um.off { background: rgba(255,255,255,.10); color: #8e9dab; }
+  #markHud .row .tags .car { background: rgba(120,220,170,.26); color: #d3ffe9; }
+  #markHud .row .tags .hun { background: rgba(255,190,90,.26); color: #ffe3bb; }
+  #markHud .row .tags .trap { background: rgba(255,105,90,.30); color: #ffd9d4; }
+  #castDetail .phys { color: #a8c6e0; margin-top: 2px; }
+  #markHud .row.sel { background: rgba(120,170,225,.22); }
+  /* 统一人物列表：马克 + 6 个具名角色一人一行，点一行切换「跟随 / 自由」 */
+  #markHud .prow { display: flex; align-items: center; gap: 6px; padding: 3px 4px;
+                   border-radius: 5px; cursor: pointer; font-size: 11px; line-height: 1.35; }
+  #markHud .prow:hover { background: rgba(120,170,225,.16); }
+  #markHud .prow.sel { background: rgba(120,170,225,.28); }
+  #markHud .prow .nm { flex: 0 0 66px; color: #cfe6ff; overflow: hidden;
+                       text-overflow: ellipsis; white-space: nowrap; }
+  #markHud .prow .st { flex: 1; min-width: 0; color: #dfe9f4; font-size: 10px;
+                       overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  #markHud .prow .go { flex: 0 0 38px; text-align: center; font-size: 9.5px; color: #8fd0ff;
+                       border: 1px solid rgba(120,170,225,.40); border-radius: 4px; padding: 0 2px; }
+  #markHud .prow.sel .go { color: #ffe0b0; border-color: rgba(255,200,140,.55); }
+  #markHud .kv, #markHud .why { display: none; }
+  /* 点一行后展开的「这个人在想什么」 */
+  #castDetail { margin-top: 6px; padding: 6px 7px; border-radius: 6px;
+                background: rgba(4,12,22,.62); border: 1px solid rgba(120,170,225,.22);
+                font-size: 10px; line-height: 1.45; color: #c8dcf0;
+                max-height: 168px; overflow: auto; }
+  #castDetail .h { color: #bfe0ff; font-size: 11px; margin-bottom: 3px; }
+  #castDetail .trait { color: #8fb6dc; }
+  #castDetail .d { margin-top: 3px; padding-top: 3px; border-top: 1px solid rgba(255,255,255,.07); }
+  #castDetail .d b { color: #ffd9a0; font-weight: 500; }
+  #castDetail .d i { color: #6f8ba6; font-style: normal; }
   #flood { position: fixed; right: 18px; bottom: 96px; z-index: 20; display: none;
            width: 232px; padding: 10px 12px 11px; border-radius: 10px;
            background: rgba(8,16,26,.82); border: 1px solid rgba(120,170,225,.35);
@@ -62,6 +191,50 @@
                   font: inherit; }
   #flood select:hover { background: rgba(40,70,105,.95); color: #fff; }
   #views .t { color: #6b7f96; font-size: 11px; letter-spacing: .1em; margin-bottom: 1px; }
+  /* ===== 统一控制栏目：左雨强 / 中 24h 时间轴 / 右增水，一个平台全部可调 ===== */
+  #control {
+    position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%);
+    z-index: 40; width: min(1120px, calc(100vw - 36px));
+    display: grid; grid-template-columns: 178px 1fr 178px; gap: 14px;
+    padding: 10px 14px 9px; border-radius: 12px;
+    background: rgba(8,16,26,.88); border: 1px solid rgba(120,170,225,.42);
+    color: #d7e6f7; font: 12px/1.45 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    box-shadow: 0 8px 30px rgba(0,0,0,.42); backdrop-filter: blur(8px);
+  }
+  #control .grp { min-width: 0; }
+  #control .t { color: #8fb0cf; font-size: 10.5px; letter-spacing: .04em; margin-bottom: 5px; }
+  #control .t b { color: #ffd9a0; font-size: 13px; }
+  #control .tiers { display: flex; flex-wrap: wrap; gap: 4px; }
+  #control .tiers button {
+    flex: 1 1 auto; min-width: 34px; padding: 4px 2px; border-radius: 5px;
+    border: 1px solid rgba(120,170,225,.28); background: rgba(30,52,76,.6);
+    color: #bcd4ec; font-size: 11px; cursor: pointer;
+  }
+  #control .tiers button:hover { background: rgba(70,110,160,.65); }
+  #control .tiers button.on {
+    background: #3f86cf; border-color: #7ab6f0; color: #fff; font-weight: 600;
+  }
+  #control .clock .top { display: flex; align-items: baseline; gap: 9px; margin-bottom: 2px; }
+  #control .clock .top b { font-size: 17px; letter-spacing: .04em; color: #eaf4ff; }
+  #control .clock .top span { font-size: 10.5px; color: #8fb0cf; }
+  #ctlTime { width: 100%; margin: 2px 0 0; accent-color: #4b96e0; }
+  #control .ticks { display: flex; justify-content: space-between;
+                    font-size: 9px; color: #6f8ba6; margin-top: -2px; }
+  #control .ticks .rainmark { color: #e2a45c; }
+  #control .clock .row2 { display: flex; align-items: center; gap: 6px; margin-top: 4px; }
+  #control button.sm {
+    padding: 3px 9px; border-radius: 5px; cursor: pointer; font-size: 10.5px;
+    border: 1px solid rgba(120,170,225,.32); background: rgba(30,52,76,.7); color: #cfe1f5;
+  }
+  #control button.sm:hover { background: rgba(70,110,160,.75); }
+  #ctlCase { font-size: 10px; color: #7d93a8; margin-left: auto; }
+  #ctlCurve { width: 100%; height: 26px; display: block; margin-top: 2px; }
+  #control .hint { color: #6f8ba6; font-size: 9.5px; }
+  /* 老面板让位：决策流上移，左下信息挪到左上，旧积涝面板退役（DOM 保留兼容） */
+  #decide { bottom: 168px; }
+  #hud { top: 16px; left: 18px; bottom: auto; }
+  #flood { display: none !important; }
+
   #loading {
     position: fixed; inset: 0; z-index: 20;
     display: flex; align-items: center; justify-content: center;
@@ -88,6 +261,29 @@
   <span class="k">拖拽旋转 · 滚轮缩放 · 右键平移 · 数字键 1–0 切机位 · F 键积涝</span><br />
   <span class="n" id="stat"></span>
 </div>
+<div id="decide">
+  <div class="hd"><b>此刻的判断</b><span id="dcCount">—</span></div>
+  <div class="at" style="margin:-4px 0 4px;font-size:11px;color:#7d93a8">点任意一条，镜头就过去看他在做什么</div>
+  <div id="dcList"><div class="empty">还没有人做出判断…</div></div>
+</div>
+<div id="markHud">
+  <div class="hd"><b>马克 · 唯一演示人</b><span id="mkClock">00:00:00</span></div>
+  <div class="st" id="mkState">正在载入…</div>
+  <div class="kv" id="mkWhere">—</div>
+  <div class="why" id="mkWhy">底部时间轴可查看任意时刻</div>
+  <div class="ctl">
+    <button id="mkFollow">跟拍</button><button id="mkCity">全城</button>
+  </div>
+  <div class="others" id="mkOthers"></div>
+  <div class="incttl">全城实时统计 · 决策 / 驾驶 / 事故</div>
+  <div class="inc" id="incHud">正在采集…</div>
+  <div class="incttl">事故个案 · 逐帧回放</div>
+  <div class="ctl"><select id="casePick" style="flex:1;min-width:0"></select></div>
+  <div class="inc" id="caseInfo">连续运行后，这里会列出出过事的人</div>
+  <div class="ctl"><input id="caseFrame" type="range" min="0" max="0" value="0" step="1" style="flex:1;min-width:0"><button id="caseGo">定位</button></div>
+  <div class="inc" id="caseFrameInfo">—</div>
+  <div id="castDetail" style="display:none"></div>
+</div>
 <div id="views">
   <div class="t">机位</div>
   <button data-v="city">1 城市总览</button>
@@ -101,24 +297,59 @@
   <button data-v="crowd">9 行人近景</button>
   <button data-v="crowdTop">0 行人俯视</button>
 </div>
-<!-- 积涝叠层：按 F 打开。时间轴从降雨到退水，水位会自己退下去。 -->
-<div id="flood">
+  <!-- ===== 统一控制栏目 =====
+       左边调雨强档位（mm/h）、右边调河道增水（直接加水多少米）、
+       中间一根 0:00→24:00 时间轴。三个控件都作用在同一套统一内核预计算
+       的 24h 帧序列上，切档即时换帧；拖时间轴水、人、车一起重放。
+       下方曲线是这一档的「城区积水面积 24h 涨退全过程」。 -->
+  <div id="control">
+    <div class="grp rain">
+      <div class="t">降雨强度 <b id="ctlRainVal">40</b> mm/h</div>
+      <div class="tiers" id="ctlRain"></div>
+      <div class="hint" style="margin-top:5px">24 小时平均雨强<br>全天雨型 · 峰值 2.9×</div>
+    </div>
+    <div class="grp clock">
+      <div class="top"><b id="ctlClock">17:00</b><span id="ctlPhase">降雨前</span>
+        <span id="ctlTrap" style="margin-left:auto"></span></div>
+      <input id="ctlTime" type="range" min="0" max="1440" step="1" value="1020">
+      <div class="ticks">
+        <span>00:00</span><span>06:00</span><span>12:00</span>
+        <span class="rainmark">18:00 雨强峰值</span><span>24:00</span>
+      </div>
+      <svg id="ctlCurve" viewBox="0 0 600 26" preserveAspectRatio="none"></svg>
+      <div class="row2">
+        <button class="sm" id="ctlPlay">暂停</button>
+        <button class="sm" id="ctlSpeed">×6</button>
+        <button class="sm" id="ctlWater">水面 开</button>
+        <span id="ctlCase">统一内核 · 24h</span>
+      </div>
+      <!-- 双向耦合回写读数：多少人正在涉水、有多少格被扰动、最大退水延滞 -->
+      <div class="hint" id="ctlFB" style="margin-top:3px">人流扰动 · 等待数据</div>
+    </div>
+    <div class="grp surge">
+      <div class="t">河道增水 <b id="ctlSurgeVal">2</b> m</div>
+      <div class="tiers" id="ctlSurge"></div>
+      <div class="hint" style="margin-top:5px">直接加水多少米<br>雨停后按 3h 回落</div>
+    </div>
+  </div>
+
+  <!-- 积涝叠层：按 F 打开。时间轴从降雨到退水，水位会自己退下去。 -->
+  <div id="flood">
   <div class="row"><b>积涝</b><span id="flTime">t=0 min</span></div>
   <div class="row" style="margin-top:6px">
     <span class="lbl">暴雨时长</span>
+    <!-- 只留 4 档，按「雨 → 雨更久 → 加河道 → 加街道管网」一级一级往上升。
+         「四种方式退水」= 下渗进土 / 蒸发进空气 / 雨水口泵走 / 流进河，
+         这是模型里水从地面消失的四条路（代码里叫四本账，页面上一律说人话）。
+         下面两档只差一个街道管网：尾巴都是 4 h、土壤回补都是 24 h，参数已对齐。
+         其余工况（sc_6h / sc_12h / sc_72h / p2_s4 / p2_pure）数据和
+         assets/flood/<dir>/ 都还在磁盘上，要恢复只需把对应 <option> 加回来。 -->
     <select id="flCase">
-      <option value="">2 h 短历时（默认）</option>
-      <option value="sc_6h">6 h · 40 mm/h</option>
-      <option value="sc_12h">12 h · 32 mm/h</option>
-      <option value="sc_24h">24 h · 26 mm/h</option>
-      <option value="sc_72h">72 h · 18 mm/h</option>
-      <!-- P2 增水情景：河道水位被风暴增水抬高，出口顶托，水排不出去 -->
-      <option value="p2_s4">重雨 2h + 增水 4 m</option>
-      <option value="p2_pure">纯增水 4 m（无雨）</option>
-      <!-- P2.5：真实下渗/蒸散/管网输送/入河，退水是按土质算的 -->
-      <option value="p25_s4">重雨 2h + 增水 4 m（真实退水）</option>
-      <!-- P4：再加一层一维街道管网（双排水），水沿街走 -->
-      <option value="p4_st">重雨 2h + 增水 4 m（街道管网）</option>
+      <option value="">2 h 短历时（默认，旧算法）</option>
+      <option value="sc_24h">24 h 长历时 · 26 mm/h（旧算法）</option>
+      <option value="p25_s4">重雨 2h + 增水 4 m · 四种方式退水</option>
+      <option value="p4_st">重雨 2h + 增水 4 m · 四种方式退水 + 街道管网</option>
+      <option value="sw2d_isabel">重雨 2h · Isabel 实测潮位 · 二维浅水（新内核）</option>
     </select>
   </div>
   <input id="flRange" type="range" min="0" max="0" value="0" step="1">

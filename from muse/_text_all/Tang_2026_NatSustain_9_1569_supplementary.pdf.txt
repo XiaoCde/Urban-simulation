@@ -1,0 +1,1981 @@
+
+
+===== [page 1] =====
+nature sustainability
+https://doi.org/10.1038/s41893-026-01886-9
+Article
+Human mobility dynamics for cost-effective 
+flood emergency resource allocation
+In the format provided by the 
+authors and unedited
+Supplementary information
+
+
+===== [page 2] =====
+1 
+ 
+Supplementary information 
+ 
+ 
+ 
+Table of Contents 
+ 
+Supplementary Figures 1-11 
+2-12 
+Supplementary Tables 1-9 
+13-21 
+Supplementary Algorithms 1-9 
+22-29 
+Supplementary Methods 1-3 
+30-32 
+Supplementary References 
+33 
+ 
+
+
+===== [page 3] =====
+2 
+ 
+Supplementary Figures 
+ 
+Supplementary Fig. 1 | On-site signage for emergency shelters under the “Dual-use public 
+service facilities” policy. The photographs were taken by the authors.
+
+
+===== [page 4] =====
+3 
+ 
+Supplementary Fig. 2 | The geographical distribution of the 21 large cities. These 21 cities are 
+geographically dispersed across China, covering a wide range of climatic zones and urban 
+environments. They are distributed from the northeast to the southwest, concentrating in the 
+eastern and southeastern coastal regions, reflecting areas with a high population density and 
+significant economic activities. The map is based on administrative boundaries reproduced from 
+MAP WORLD (https://www.tianditu.gov.cn/).
+
+
+===== [page 5] =====
+4 
+ 
+ 
+Supplementary Fig. 3 | Additional tests on the model performance regarding temporal scale: 
+Critical turning points in actual and modeled inflow curves during the disasters. Critical 
+turning points (i.e., elbow points) are detected using the Kneedle algorithm1 and compared based 
+on their normalized positions within the actual (hours) and modeled (generations) sequences. The 
+similarity score quantifies the alignment of temporal transition patterns in the actual and modeled 
+inflow sequences, which is computed as 𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆𝑆 𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠= 1 −|
+ℎ𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒
+𝐻𝐻𝑑𝑑𝑑𝑑𝑑𝑑−
+𝑔𝑔𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒
+𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠|, where ℎ𝑒𝑒𝑒𝑒𝑒𝑒𝑜𝑜𝑤𝑤 
+is the elbow time identified from the actual hourly inflow sequence; 𝐻𝐻𝑑𝑑𝑑𝑑𝑑𝑑 is the total number of 
+hours during the disaster; 𝑔𝑔𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒𝑒 is the elbow generation identified from the modeled inflow 
+sequence; 𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 refers to the stable simulation generation. The resulting similarity scores are 
+0.906 for Zhengzhou case and 0.760 for Shenzhen case, indicating that our model captures the 
+temporal transition pattern reasonably well during the event.
+
+
+===== [page 6] =====
+5 
+ 
+ 
+Supplementary Fig. 4 | The sensitivity test results at 2 km and 3 km spatial resolutions. a, 
+The spatial comparison between the model predictions and the ground-truth benchmarks. The data 
+was normalized to highlight the model’s consistency in capturing mobility patterns. b, The 
+improvements in prediction performance with growing generations at the 2 km grid scale. In the 
+simulations for both Zhengzhou and Shenzhen, the model’s accuracy exhibited variability and 
+growth over the initial 50 generations, eventually stabilized at a higher and consistent level. c, The 
+correlation between modeled and actual inflow volumes. At the 2 km resolution, the scatter points 
+show a wider spread around the diagonal line, indicating a slight reduction in model fit. The 
+residual analyses at 2 km resolution for Zhengzhou (d) and Shenzhen (e) show approximately 
+symmetric distributions centered around zero, as illustrated by the histograms and kernel density 
+estimation (KDE) curves. The Q–Q plots further indicate that Shenzhen’s residuals closely follow 
+a normal distribution (𝑅𝑅2 = 0.93), while Zhengzhou exhibits more substantial deviation (𝑅𝑅2 = 
+0.60). At the 3 km grid scale, the predictive capability demonstrates a similar trend, with an initial 
+increase followed by stabilization over the generation process (g). However, larger deviations are 
+observed compared to the other two resolutions (f), and the ability to capture the granularity of 
+hotspot details declines (h). As expected, a coarser grid scale (2 km or 3 km spatial resolution) 
+slightly reduces the model’s performance with respect to inflow volume and spatial distribution 
+(recall Fig. 2b,c) but the accuracy is still acceptable as the residuals at 3 km resolution for 
+Zhengzhou (i) and Shenzhen (j) remain centered and symmetric. Error bars indicate 95% CIs in 
+d,e,i,j. The confidence envelopes were generated using 1,000 Monte Carlo simulations. These 
+results indicate a relatively robust performance of the proposed ABM against the well-known 
+Modifiable Areal Unit Problem (MAUP) sensitivity tests. The maps in a,f are based on 
+administrative boundaries reproduced from MAP WORLD (https://www.tianditu.gov.cn/).
+
+
+===== [page 7] =====
+6 
+ 
+Supplementary Fig. 5 | Modeled inflows under 100-year flooding events for China’s 21 large 
+cities. Lighter areas indicate higher inflow volumes, while darker areas show regions with less 
+inflow. In most of the cities, the areas with the highest inflow are concentrated in the central urban 
+regions. This pattern reveals a core-periphery structure, where the inflow is significantly larger in 
+the densely populated or developed city centers and gradually decreases towards the peripheral 
+areas. The sample sizes for each city are the same as that in Fig. 3.
+
+
+===== [page 8] =====
+7 
+ 
+Supplementary Fig. 6 | Maps of the demand-supply matching relationship for all 21 cities. 
+This analysis considers two scenarios. Scenario 1 (S1) examines the proportion of deficit and 
+surplus areas relative to the total area of each city, offering a city-wide perspective on the overall 
+demand-supply relationship. In contrast, Scenario 2 (S2) restricts the analysis to settlement areas, 
+capturing the proportion of each mismatch label within inhabited zones and thereby providing a 
+more localized, population-relevant view. The sample sizes for each city are the same as that in 
+Fig. 3.
+
+
+===== [page 9] =====
+8 
+ 
+ 
+Supplementary Fig. 7 | Proportions of resource matching status by settlement types. Bar 
+charts depict the proportions of different matching status (categorized as deficit, match, and surplus) 
+across 21 China’s cities, classified by settlement type. Settlement data is sourced from the GHS-
+SMOD dataset and reclassified into two categories: settlement and non-settlement areas. In 
+settlement areas, Chongqing, Changsha, Harbin, Dalian and Jinan exhibit the highest resource 
+matching proportions, all exceeding 80% (with 88.98%, 87.17%, 86.58%, 82.62% and 82.28%, 
+respectively), while Dongguan (32.67%) and Shenzhen (39.32%) show the lowest matching levels. 
+Over 35% of the mismatched grids are found in Dongguan, Shenzhen, Foshan, Shanghai, 
+Guangzhou and Zhengzhou in settlement-focused statistics. For non-settlements, the proportions 
+of deficit and surplus areas across all cities remains below 12%. The sample sizes for each city are 
+the same as that in Fig. 3.
+
+
+===== [page 10] =====
+9 
+ 
+Supplementary Fig. 8 | Spatial patterns of demand‒supply mismatches of emergency 
+resource by clustering type and significance levels. The spatial patterns are categorized into four 
+morphological types (i.e., Centralized, Satellite, Belted, and Clustered) based on clustering 
+morphology derived from morphological indicators and spatial statistics. Local spatial 
+autocorrelation analyses2, 3 are conducted using a 999-permutation test. Each map shows 
+statistically significant clustering patterns at various levels (𝑝𝑝-value < 0.10, 𝑝𝑝-value < 0.05, and 𝑝𝑝-
+value < 0.01), with blue color representing deficit areas and red color representing surplus areas. 
+Numerical values below each city map indicate the proportion of deficit (blue) and surplus (red) 
+grids at the highest confidence level (𝑝𝑝-value < 0.01), highlighting the most pronounced spatial 
+concentrations of mismatches. A summary of clustering results is provided in Supplementary 
+Table 4. The sample sizes for each city are the same as that in Fig. 3.
+
+
+===== [page 11] =====
+10 
+ 
+Supplementary Fig. 9 | The spatial distribution of demand‒supply mismatches of emergency 
+resource in Shanghai. 
+
+
+===== [page 12] =====
+11 
+ 
+Supplementary Fig. 10 | Four-quadrant analysis of the proportion vs. global spatial 
+autocorrelation for deficit and surplus areas for all 21 cities. Here, the global spatial 
+autocorrelation (i.e., BB join count) is normalized by dividing by 8 (Queen contiguity). The global 
+spatial autocorrelation2, 3 and proportion are divided into “high” and “low” categories using 0.5 as 
+the threshold for both axes. For deficit areas, most cities fall into the “high-high” category, with 
+both high spatial autocorrelation and high proportion (a). For surplus areas, most cities are in the 
+“low-low” category, indicating both low proportion and low spatial autocorrelation (b).
+
+
+===== [page 13] =====
+12 
+ 
+ 
+Supplementary Fig. 11 | Comparison of current population and projected population under 
+SSP5-8.5 scenario for all 21 cities. The bar chart illustrates city-level population values, with 
+light-green color representing the current population and darker-green color indicating projections 
+under the SSP5-8.5 scenario. The projected population under the SSP5-8.5 is lower than the current 
+population for the majority of cities, with the notable exceptions of Zhengzhou, Shenzhen, and 
+Kunming.
+
+
+===== [page 14] =====
+13 
+ 
+Supplementary Tables 
+ 
+Supplementary Table 1 | Comparison of the 2021 Zhengzhou extreme flood and the 2018 
+Shenzhen Typhoon Mangkhut-induced flood 
+ 
+Zhengzhou 
+Shenzhen 
+Alternative name 
+Zhengzhou “7·20” flood 
+Shenzhen “9·16” flood 
+Location 
+Zhengzhou city, Henan province 
+Shenzhen city, Guangdong province 
+Event period 
+July 17-23, 2021 
+September 15-17, 2018 
+Event type 
+Extreme 
+rainfall-induced 
+urban 
+flooding 
+Typhoon-induced 
+heavy 
+rainfall 
+leading to urban flooding 
+Event intensity 
+Hourly rainfall: 201.9 mm (4-5 PM, 
+July 20); daily rainfall: 624.1 mm 
+(July 20); 3-day cumulative: 617.1 
+mm (July 17-20) 
+Maximum wind: 52.7 m/s (380-year 
+return period); storm surge: 2.47 m 
+(historical record); average rainfall: 
+187.2 mm (city-wide) 
+Casualties 
+380 deaths/missing 
+0 deaths/missing 
+Affected population 
+14.786 million (Henan total) 
+Nearly 3 million (5 provinces) 
+Economic loss 
+40.9 billion CNY 
+13.68 billion CNY (5 provinces) 
+Infrastructure damage 
+Subway flooding; tunnel inundation; 
+dam failure 
+Power outages; coastal facilities 
+inundation; transportation disruption 
+Early warning 
+Red warning 
+(The highest in China’s national early 
+warning system) 
+Red warning 
+(The highest in China’s national early 
+warning system) 
+Emergency response 
+Level I emergency response (July 20, 
+16:30) 
+(The highest in China’s national 
+emergency response system) 
+Level 
+I 
+emergency 
+response 
+(September 15, 20:00) 
+(The highest in China’s national 
+emergency response system) 
+Note: Data sources include government investigation reports and China Meteorological 
+Administration reports. Unless otherwise specified, all data refer specifically to Zhengzhou city and 
+Shenzhen city. 
+ 
+ 
+
+
+===== [page 15] =====
+14 
+ 
+Supplementary Table 2 | Full procedure of model calibration and validation 
+Step 
+Description 
+Phase 1: Average actual inflow mobility computation (ground truth) 
+Step 1 
+Retrieve the hourly inflows 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑖𝑖,ℎ for each 1 km grid from mobile-phone signaling data 
+during the disaster period, aggregated by destination grid (i.e., counting all trips whose 
+destinations fall within that grid during each hour). 
+Step 2 
+Identify grids whose inflow values remain zero at all time steps during the disaster period. 
+The binary zero-inflow mask is recorded as 𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑖𝑖
+𝑜𝑜𝑜𝑜𝑜𝑜. 
+Step 3 
+Apply a Gaussian filter to 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑖𝑖,ℎ to preserve road-network continuity, producing 
+intermediate filtered actual inflows 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,ℎ. 
+Step 4 
+Overwrite 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,ℎ with zero for all grids flagged by 𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑖𝑖
+𝑜𝑜𝑜𝑜𝑜𝑜 to reflect road-network 
+constraints, obtaining filtered actual inflow mobility 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,ℎ. 
+Step 5 
+Average 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,ℎ across all hours 𝐻𝐻, yielding average actual inflow mobility 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 as 
+ground truth. 
+Phase 2: Average modeled inflow mobility computation 
+Step 6 
+For each generation 𝑔𝑔, record the inflow 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑖𝑖,𝑔𝑔 of grid 𝑖𝑖. 
+Step 7 
+Find grids whose inflow is zero for all generations. Store the binary mask as 𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑖𝑖
+𝑠𝑠𝑠𝑠𝑠𝑠. 
+Step 8 
+Apply a Gaussian filter to 𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑅𝑖𝑖,𝑔𝑔 for grids note marked as zeros to reflect road-network 
+constraints, producing intermediate filtered modeled mobility 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔. 
+Step 9 
+Overwrite 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔 with zero for grids marked by 𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑍𝑖𝑖
+𝑠𝑠𝑠𝑠𝑠𝑠, obtaining the filtered 
+modeled inflow mobility 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔. 
+Step 10 
+Average 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔 across generations from 0 to the stable simulation generation 𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠, 
+obtaining average modeled inflow mobility 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖. 
+Phase 3: Evaluation metrics computation 
+Step 11 
+For both the 2021 Zhengzhou “7·20” flood event (calibration case) and the 2018 Shenzhen 
+event (validation case), derive the average actual inflow mobility 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 and average 
+modeled inflow mobility 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 for each 1 km grid as described in Step 1 to Step 10, 
+obtaining paired fields (𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖, 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖) for each city. 
+Step 12 
+Normalize 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 and 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 separately for the calibration and validation cases. 
+Step 13 
+Compare normalized 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 and 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 using evaluation metrics from trend and quantity 
+dimensions (see Methods). 
+ 
+ 
+
+
+===== [page 16] =====
+15 
+ 
+Supplementary Table 3 | Performance metrics for ABM at spatial resolutions of 1 km, 2 km 
+and 3 km 
+Metrics 
+Zhengzhou 
+Shenzhen 
+1 km 
+2 km 
+3 km 
+1 km 
+2 km 
+3 km 
+Trend 
+Accuracy 
+0.80 
+0.92 
+0.95 
+0.86 
+0.94 
+0.88 
+Precision 
+0.98 
+0.98 
+0.98 
+0.94 
+0.96 
+0.88 
+Recall 
+0.81 
+0.94 
+0.97 
+0.90 
+0.98 
+1.00 
+F1 score 
+0.89 
+0.96 
+0.98 
+0.92 
+0.97 
+0.94 
+Quantity 
+MAE 
+0.04 
+0.05 
+0.06 
+0.09 
+0.12 
+0.12 
+RMSE 
+0.09 
+0.10 
+0.11 
+0.14 
+0.18 
+0.18 
+Pearson corr. 
+0.70** 
+0.76** 
+0.64** 
+0.73** 
+0.64** 
+0.63** 
+Spearman corr. 
+0.69** 
+0.67** 
+0.56** 
+0.82** 
+0.79** 
+0.78** 
+TOST 𝑝𝑝-value (∆=0.1) 
+0.00 
+0.00 
+0.00 
+0.00 
+0.00 
+0.00 
+Note: ** 𝑝𝑝-value < 0.01; ∆ means the equivalence margin for TOST (Two One-Sided T-test). 
+
+
+===== [page 17] =====
+16 
+ 
+Supplementary Table 4 | Proportions of mismatch areas with clustering patterns at different 
+significance levels 
+City 
+Morphology 
+Mismatch type 
+Deficit 
+Surplus 
+𝒑𝒑-value 
+(0.01) 
+𝒑𝒑-value 
+(0.05) 
+𝒑𝒑-value 
+(0.1) 
+𝒑𝒑-value 
+(0.01) 
+𝒑𝒑-value 
+(0.05) 
+𝒑𝒑-value 
+(0.1) 
+Beijing 
+Centralized 
+9.67% 
+0.54% 
+0.05% 
+0.32% 
+0.00% 
+0.26% 
+Chengdu 
+Centralized 
+9.73% 
+0.65% 
+0.17% 
+0.63% 
+0.43% 
+0.00% 
+Chongqing 
+Clustered 
+1.97% 
+0.03% 
+0.00% 
+0.05% 
+0.01% 
+0.00% 
+Dalian 
+Clustered 
+2.64% 
+0.25% 
+0.00% 
+0.47% 
+0.01% 
+0.07% 
+Dongguan 
+Centralized 
+5.47% 
+7.85% 
+10.65% 
+0.93% 
+1.29% 
+0.06% 
+Shanghai 
+Centralized 
+16.28% 
+4.03% 
+0.39% 
+4.64% 
+0.92% 
+0.03% 
+Qingdao 
+Clustered 
+9.24% 
+0.79% 
+0.09% 
+0.30% 
+0.02% 
+0.17% 
+Hangzhou 
+Satellite 
+6.11% 
+0.44% 
+0.07% 
+0.32% 
+0.08% 
+0.03% 
+Harbin 
+Clustered 
+1.38% 
+0.00% 
+0.00% 
+0.05% 
+0.00% 
+0.00% 
+Zhengzhou 
+Clustered 
+6.93% 
+1.36% 
+1.00% 
+1.21% 
+1.16% 
+1.60% 
+Shenzhen 
+Satellite 
+4.21% 
+4.32% 
+6.30% 
+1.68% 
+1.13% 
+2.53% 
+Xi’an 
+Satellite 
+5.32% 
+0.46% 
+0.33% 
+0.88% 
+0.15% 
+0.00% 
+Changsha 
+Satellite 
+4.65% 
+0.02% 
+0.03% 
+0.01% 
+0.01% 
+0.00% 
+Wuhan 
+Centralized 
+13.84% 
+1.27% 
+0.04% 
+0.08% 
+0.02% 
+0.00% 
+Foshan 
+Satellite 
+14.27% 
+4.51% 
+0.46% 
+1.42% 
+0.36% 
+1.01% 
+Jinan 
+Clustered 
+6.63% 
+1.01% 
+0.01% 
+0.30% 
+0.00% 
+0.39% 
+Shenyang 
+Belted 
+5.26% 
+0.09% 
+0.09% 
+0.33% 
+0.01% 
+0.15% 
+Guangzhou 
+Belted 
+9.42% 
+2.52% 
+1.21% 
+0.41% 
+0.23% 
+1.01% 
+Tianjin 
+Belted 
+10.15% 
+1.98% 
+1.07% 
+1.62% 
+0.65% 
+0.01% 
+Kunming 
+Clustered 
+2.94% 
+0.07% 
+0.00% 
+0.00% 
+0.00% 
+0.00% 
+Nanjing 
+Belted 
+6.00% 
+0.99% 
+0.02% 
+0.88% 
+0.52% 
+0.00% 
+ 
+
+
+===== [page 18] =====
+17 
+ 
+Supplementary Table 5 | Projected changes in population, potentially flooded area, 
+mismatch area, and dynamically affected population by 2050 under SSP5-8.5 scenario 
+against the current state. 
+City 
+Population 
+(million, %) 
+Potentially flooded area 
+(×103 km2, ×103%) 
+Mismatch area (×103 
+km2, %) 
+Affected population 
+(million, %) 
+Beijing 
+-7.54, -25.19 
++8.35, +0.34 
+-2.00, -62.25 
+-2.59, -82.60 
+Chengdu 
+-2.04, -8.59 
++9.32, +1.01 
+-0.78, -25.56 
+-0.62, -53.38 
+Chongqing 
+-30.51, -51.78 
++4.05, +404.90 
++0.46, +17.60 
++0.63, +114.82 
+Dalian 
+-0.76, -9.54 
++5.80, +24.16 
++0.16, +15.09 
+-0.03, -11.59 
+Dongguan 
+-4.69, -28.22 
++2.27, +0.58 
+-0.48, -25.09 
+-0.15, -32.94 
+Shanghai 
+-12.33, -32.98 
++6.65, +0.20 
+-2.56, -66.06 
+-1.67, -80.33 
+Qingdao 
+-0.87, -6.73 
++11.01, +0.50 
+-1.07, -52.78 
+-0.02, -4.82 
+Hangzhou 
+-8.25, -41.18 
++3.97, +0.47 
+-0.07, -3.79 
+-0.01, -1.80 
+Harbin 
+-8.26, -42.48 
++28.73, +1.92 
+-0.73, -50.45 
+-0.27, -53.28 
+Zhengzhou 
++3.02, +22.22 
++5.88, +0.44 
+-0.61, -20.70 
+-0.06, -13.42 
+Shenzhen 
++4.09, +23.08 
++1.63, +8.59 
++0.38, +30.00 
++0.09, +11.90 
+Xi’an 
+-1.63, -9.95 
++4.72, +0.89 
+-0.27, -20.26 
+-0.10, -20.98 
+Changsha 
+-0.98, -7.75 
++4.57, +8.61 
+-0.09, -10.85 
+-0.09, -14.35 
+Wuhan 
+-1.69, -9.19 
++8.57, +0.62 
+-1.10, -52.18 
++0.03, +3.86 
+Foshan 
+-11.05, -47.75 
++3.65, +1.21 
+-0.79, -43.69 
+-0.01, -1.73 
+Jinan 
+-8.26, -41.43 
++7.59, +0.34 
+-0.29, -18.32 
+-0.07, -14.45 
+Shenyang 
+-2.92, -22.31 
++14.89, +0.44 
+-0.78, -54.69 
++0.19, +24.52 
+Guangzhou 
+-17.63, -40.41 
++4.68, +4.68 
+-0.41, -19.02 
+-0.11, -13.30 
+Tianjin 
+-4.33, -19.15 
++9.62, +0.13 
+-2.03, -55.32 
+-0.72, -68.33 
+Kunming 
++4.65, +46.67 
++1.41, +5.04 
++0.88, +93.09 
++0.64, +116.87 
+Nanjing 
+-2.47, -17.15 
++8.98, +20.87 
+-0.36, -33.09 
+-0.08, -21.86 
+
+
+===== [page 19] =====
+18 
+ 
+Supplementary Table 6 | Estimated costs, benefits, net benefits, benefit-to-cost ratios and per 
+capita cost under the 30% retrofitting strategy for all 21 cities 
+City 
+Cost (million 
+US$) 
+Benefit 
+(billion US$) 
+Net benefit 
+(million US$) 
+Benefit-cost 
+ratio 
+Per capita 
+cost (US$) 
+Beijing 
+77.34 
+3.05 
+2,970.04 
+39.40 
+3.53 
+Chengdu 
+27.80 
+1.01 
+979.95 
+36.26 
+1.33 
+Chongqing 
+16.39 
+0.49 
+473.66 
+29.90 
+0.51 
+Dalian 
+6.07 
+0.20 
+191.71 
+32.56 
+0.82 
+Dongguan 
+12.56 
+0.41 
+397.29 
+32.63 
+1.20 
+Shanghai 
+50.70 
+1.94 
+1,891.77 
+38.31 
+2.04 
+Qingdao 
+13.00 
+0.40 
+382.16 
+30.39 
+1.29 
+Hangzhou 
+14.38 
+0.47 
+453.35 
+32.53 
+1.20 
+Harbin 
+13.30 
+0.46 
+445.40 
+34.48 
+1.33 
+Zhengzhou 
+9.78 
+0.28 
+270.76 
+28.70 
+0.78 
+Shenzhen 
+13.21 
+0.49 
+471.96 
+36.73 
+0.75 
+Xi’an 
+12.13 
+0.44 
+424.03 
+35.95 
+0.94 
+Changsha 
+15.66 
+0.60 
+582.35 
+38.18 
+1.56 
+Wuhan 
+22.72 
+0.81 
+782.92 
+35.46 
+1.84 
+Foshan 
+11.80 
+0.37 
+360.85 
+31.58 
+1.24 
+Jinan 
+12.97 
+0.42 
+409.21 
+32.55 
+1.41 
+Shenyang 
+19.84 
+0.75 
+728.70 
+37.73 
+2.19 
+Guangzhou 
+18.49 
+0.67 
+652.13 
+36.26 
+0.99 
+Tianjin 
+26.10 
+0.84 
+817.16 
+32.31 
+1.88 
+Kunming 
+14.93 
+0.57 
+553.40 
+38.06 
+1.77 
+Nanjing 
+6.41 
+0.21 
+200.87 
+32.35 
+0.69 
+Mean 
+19.79 
+0.71 
+687.60 
+34.40 
+1.39 
+Total 
+415.60 
+14.86 
+14.44×103 
+/ 
+/ 
+
+
+===== [page 20] =====
+19 
+ 
+Supplementary Table 7 | Detailed cost and benefit breakdown under the 30% retrofitting 
+strategy for all 21 cities 
+City 
+Cost 
+Benefit 
+ 
+CON 
+(million 
+US$) 
+AOM 
+(million 
+US$) 
+PI (US$) 
+DME (×103 
+US$) 
+MA 
+(billion 
+US$) 
+CE 
+(×103 
+US$) 
+DEL (billion 
+US$) 
+Beijing 
+30.55 
+46.79 
+2,127.77 
+344.42 
+1.63 
+5.40 
+1.42 
+Chengdu 
+10.98 
+16.82 
+764.67 
+113.90 
+0.54 
+1.23 
+0.47 
+Chongqing 
+6.47 
+9.92 
+450.88 
+55.39 
+0.26 
+3.46 
+0.23 
+Dalian 
+2.40 
+3.68 
+167.12 
+22.35 
+0.11 
+0.23 
+0.09 
+Dongguan 
+4.96 
+7.60 
+345.56 
+46.32 
+0.22 
+0.45 
+0.19 
+Shanghai 
+20.03 
+30.67 
+1,394.87 
+219.54 
+1.04 
+3.13 
+0.90 
+Qingdao 
+5.14 
+7.87 
+357.75 
+44.66 
+0.21 
+0.82 
+0.18 
+Hangzhou 
+5.68 
+8.70 
+395.61 
+52.86 
+0.25 
+1.06 
+0.22 
+Harbin 
+5.26 
+8.05 
+366.02 
+51.84 
+0.25 
+1.52 
+0.21 
+Zhengzhou 
+3.86 
+5.91 
+268.96 
+31.71 
+0.15 
+0.27 
+0.13 
+Shenzhen 
+5.22 
+7.99 
+363.41 
+54.83 
+0.26 
+0.48 
+0.23 
+Xi’an 
+4.79 
+7.34 
+333.81 
+49.30 
+0.23 
+0.61 
+0.20 
+Changsha 
+6.19 
+9.47 
+430.86 
+67.59 
+0.32 
+0.75 
+0.28 
+Wuhan 
+8.97 
+13.74 
+624.97 
+91.05 
+0.43 
+2.15 
+0.37 
+Foshan 
+4.66 
+7.14 
+324.67 
+42.12 
+0.20 
+0.72 
+0.17 
+Jinan 
+5.12 
+7.85 
+356.88 
+47.72 
+0.23 
+0.52 
+0.20 
+Shenyang 
+7.84 
+12.00 
+545.76 
+84.60 
+0.40 
+0.90 
+0.35 
+Guangzhou 
+7.30 
+11.19 
+508.77 
+75.79 
+0.36 
+0.75 
+0.31 
+Tianjin 
+10.31 
+15.79 
+718.11 
+95.31 
+0.45 
+1.26 
+0.39 
+Kunming 
+5.90 
+9.03 
+410.84 
+64.23 
+0.30 
+2.00 
+0.26 
+Nanjing 
+2.53 
+3.88 
+176.26 
+23.43 
+0.11 
+0.27 
+0.10 
+Mean 
+7.82 
+11.97 
+544.45 
+79.95 
+0.38 
+1.33 
+0.33 
+Total 
+164.16 
+251.43 
+11,433.55 
+1,678.96 
+7.95 
+28.00 
+6.90 
+*CON: construction cost; AOM: annual operation and maintenance cost; PI: property insurance cost; DME: 
+saved disaster mitigation expenditure; MA: saved medical aid expenditure; CE: reduced carbon emissions; 
+DEL: saved direct economic loss
+
+
+===== [page 21] =====
+20 
+ 
+Supplementary Table 8 | Surface runoff coefficients for various land cover types 
+Type 
+Subtype 
+Surface runoff coefficient 
+Average of surface 
+runoff coefficient 
+Cropland 
+Tree cover cropland 
+9.57 
+25.465 
+Shrub cover cropland 
+7.9 
+Irrigated cropland 
+34.7 
+Rainfed cropland 
+49.69 
+Forest 
+Evergreen broadleaved forest 
+2.67 
+4.898 
+Evergreen needle-leaved forest 
+3.02 
+Mixed leaf forest (broadleaved 
+and needle-leaved) 
+2.29 
+Deciduous broadleaved forest 
+1.33 
+Deciduous needle-leaved forest 0.88 
+Sparse herbaceous 
+19.2 
+Shrubland 
+Evergreen shrubland 
+4.26 
+7.950 
+Deciduous shrubland 
+4.17 
+Needle-leaved shrubland 
+4.17 
+Sparse shrubland 
+19.2 
+Grassland 
+Meadow 
+8.2 
+10.155 
+Grassland 
+4.78 
+Brushwood 
+9.37 
+Sparse herbaceous 
+18.27 
+Wetland 
+Wetland 
+0 
+0 
+Impervious 
+surfaces 
+Impervious surfaces 
+100 
+100 
+Bare areas 
+Bare areas 
+100 
+100 
+
+
+===== [page 22] =====
+21 
+ 
+Supplementary Table 9 | Ratios of agents with different IGPs (i.e., local to nonlocal residents) 
+serving as input parameters in the proposed ABM 
+City 
+Ratio 
+City 
+Ratio 
+City 
+Ratio 
+Beijing 
+5:6 
+Hangzhou 
+7:5 
+Foshan 
+3:2 
+Chengdu 
+5:2 
+Harbin 
+4:1 
+Jinan 
+3:1 
+Chongqing 
+9:5 
+Zhengzhou 
+5:1 
+Shenyang 
+9:4 
+Dalian 
+9:4 
+Shenzhen 
+3:2 
+Guangzhou 
+3:2 
+Dongguan 
+3:2 
+Xi’an 
+3:1 
+Tianjin 
+9:5 
+Shanghai 
+3:4 
+Changsha 
+4:1 
+Kunming 
+7:2 
+Qingdao 
+3:1 
+Wuhan 
+5:2 
+Nanjing 
+5:2 
+ 
+ 
+
+
+===== [page 23] =====
+Supplementary Algorithms
+Supplementary Algorithm 1 Person(x, y, id, rIGP, env) class
+Input: x, y, id, rIGP (radius of IGP), env (environment)
+Output: An agent object p
+1:
+Function init (x, y, id, rIGP, env)
+2:
+Initialize x, y, id, rIGP, env
+3:
+M ←0 % mode for normal search
+4:
+Initialize wrep, wattr, wherd % weights of three fundamental forces
+5:
+End function
+6:
+Function FindHazardInIGP(env)
+7:
+see Algorithm 2
+8:
+End function
+9:
+Function FindUninhabitedInIGP(env)
+10:
+see Algorithm 3
+11:
+End function
+12:
+Function FindAttrMaxInIGP(env)
+13:
+see Algorithm 4
+14:
+End function
+15:
+Function CalRepAttrV ector(Gshazard, Gsuninhabited)
+16:
+see Algorithm 5
+17:
+End function
+18:
+Function CalRepAttrHerd(env)
+19:
+see Algorithm 7
+20:
+End function
+21:
+Function MovableDirection(env)
+22:
+see Algorithm 8
+23:
+End function
+24:
+Function Move(env)
+25:
+see Algorithm 9
+26:
+End function
+22
+
+
+===== [page 24] =====
+Supplementary Algorithm 2 FindHazardInIGP(env) procedure
+Input: env
+Output: Gshazard
+1:
+For i from -rIGP to rIGP Do
+2:
+For j from -rIGP to rIGP Do
+3:
+If Gself.x+i,self.y+j is within the env boundaries Then
+4:
+If the Gself.x+i,self.y+j is affected by hazards in the env Then
+5:
+Append the position of Gself.x+i,self.y+j to Gshazards
+6:
+End if
+7:
+End if
+8:
+End for
+9:
+End for
+Supplementary Algorithm 3 FindUninhabitedInIGP(env) procedure
+Input: env
+Output: Gsuninhabited
+1:
+For i from -rIGP to rIGP Do
+2:
+For j from -rIGP to rIGP Do
+3:
+If Gx+i,y+j is within the env boundaries Then
+4:
+If the Gx+i,y+j has no inhabitants in the env Then
+5:
+Append Gx+i,y+j to Gsuninhabited
+6:
+End if
+7:
+End if
+8:
+End for
+9:
+End for
+23
+
+
+===== [page 25] =====
+Supplementary Algorithm 4 FindAttrMaxInIGP(env) procedure
+Input: env
+Output: Gattr
+1: If self.M = 1 Then
+2:
+rIGP ←1 % reduced proximity
+3: End if
+4: k ←0 % Counter for the search within the IGP
+5: dk−1 ←MAXIMUM
+6: Scoreattr
+k−1 ←−1
+7: For i in range of rIGP Do
+8:
+For j in range of rIGP Do
+9:
+If Gx+i,y+j is within the env boundaries Then
+10:
+If Gx+i,y+j is in self.memoryattr Then
+11:
+Continue
+12:
+End if
+13:
+If Scoreattr
+k
+= Scoreattr
+k−1 Then
+14:
+dk ←sqrt(i2 + j2)
+15:
+If dk < dk−1 Then
+16:
+Gattr ←Gx+i,y+j
+17:
+Else if dk = dk−1 Then
+18:
+Gattr ←Gx+i,y+j with a certain probability
+19:
+End if
+20:
+Else if Scoreattr
+k
+> Scoreattr
+k−1 Then
+21:
+Gattr ←Gx+i,y+j, dk−1 ←dk, and Scoreattr
+k−1 ←Scoreattr
+k
+22:
+End if
+23:
+End if
+24:
+k ←k + 1
+25:
+End for
+26: End for
+24
+
+
+===== [page 26] =====
+Supplementary Algorithm 5 CalRepAttrV ector(Gshazard, Gsuninhabited) procedure
+Input: Gshazard, Gsuninhabited
+Output: dirs2f, probs2f,⃗vrep,attr
+1:⃗
+vrep,attr ←⃗0, dirs2f ←∅, probs2f ←∅
+2:
+If self.Gattr exists Then
+3:⃗
+vattr ←[self.Gattr.x −self.x, self.Gattr.y −self.y]
+4:
+If⃗vattr =⃗0 Then
+5:
+Continue
+6:
+End if
+7:⃗
+vrep,attr ←⃗vattr/|⃗vattr| ∗self.wattr
+8:
+End if
+9:
+If Gshazards is not empty Then
+10:⃗
+vtotal
+hazard ←⃗0
+11:
+For Ghazard in Gshazard Do
+12:⃗
+vhazard ←[Ghazard.x −self.x, Ghazard.y −self.y]
+13:
+If⃗vhazard =⃗0 Then
+14:
+Continue
+15:
+End if
+16:
+dhazard ←|⃗vhazard| % distance decay
+17:⃗
+vtotal
+hazard ←⃗vtotal
+hazard +⃗vhazard/|⃗vhazard|/dhazard
+18:
+End for
+19:⃗
+vrep,attr ←(−1) ∗⃗vtotal
+hazard ∗self.wrep
+20:
+End if
+21:
+If Gsuninhabited is not empty Then
+22:⃗
+vtotal
+uninhabited ←⃗0
+23:
+For Guninhabited in Gsuninhabited Do
+24:⃗
+vuninhabited ←[Guninhabited.x −self.x, Guninhabited.y −self.y]
+25:
+If⃗vuninhabited =⃗0 Then
+26:
+Continue
+27:
+End if
+28:
+duninhabited ←|⃗vuninhabited| % distance decay
+29:⃗
+vtotal
+uninhabited ←⃗vtotal
+uninhabited +⃗vuninhabited/|⃗vuninhabited|/duninhabited
+30:
+End for
+31:⃗
+vrep,attr ←(−1) ∗⃗vtotal
+uninhabited ∗self.wrep
+32:
+End if
+33:
+dirs2f, probs2f ←vectorDirection(⃗vrep,attr) % see Algorithm 6
+25
+
+
+===== [page 27] =====
+Supplementary Algorithm 6 V ectorDirection(⃗vi) procedure
+Input:⃗vi
+Output: dirs, probs
+1:⃗
+v0 ←[1, 0]
+2:
+cos⃗vi,⃗v0 ←⃗vi ·⃗v0/(|⃗vi| ∗|⃗v0|)
+3:
+If⃗vi[0] ≥0 And⃗vi[1] ≤0 Then
+4:
+If cos⃗vi,⃗v0 = 1 Then
+5:
+Add 5 to dirs, 1 to probs
+6:
+Else if cos⃗vi,⃗v0 = 0 Then
+7:
+Add 1 to dirs, 1 to probs
+8:
+Else if cos⃗vi,⃗v0 = cos(π/4) Then
+9:
+Add 2 to dirs, 1 to probs
+10:
+Else if cos⃗vi,⃗v0 > cos(π/4) Then
+11:
+p2 ←arccos(cos⃗vi,⃗v0)/(π/4) , p5 ←(π/4 −arccos(cos⃗vi,⃗v0))/(π/4)
+12:
+Add 2 and 5 to dirs, p2 and p5 to probs
+13:
+Else if cos⃗vi,⃗v0 < cos(π/4) Then
+14:
+p1 ←(arccos(cos⃗vi,⃗v0) −π/4)/(π/4) , p2 ←(π/2 −arccos(cos⃗vi,⃗v0))/(π/4)
+15:
+Add 1 and 2 to dirs, p1 and p2 to probs
+16:
+End if
+17:
+Else if⃗vi[0] > 0 And⃗vi[1] > 0 Then
+18:
+If cos⃗vi,⃗v0 = cos(π/4) Then
+19:
+Add 8 to dirs, 1 to probs
+20:
+Else if cos⃗vi,⃗v0 > cos(π/4) Then
+21:
+p5 ←(π/4 −arccos(cos⃗vi,⃗v0))/(π/4) , p8 ←arccos(cos⃗vi,⃗v0)/(π/4)
+22:
+Add 5 and 8 to dirs, p5 and p8 to probs
+23:
+Else if cos⃗vi,⃗v0 < cos(π/4) Then
+24:
+p7 ←(arccos(cos⃗vi,⃗v0) −π/4)/(π/4) , p8 ←(π/2 −arccos(cos⃗vi,⃗v0))/(π/4)
+25:
+Add 7 and 8 to dirs, p7 and p8 to probs
+26:
+End if
+27:
+Else if⃗vi[0] < 0 And⃗vi[1] < 0 Then
+28:
+If cos⃗vi,⃗v0 = −cos(π/4) Then
+29:
+Add 0 to dirs, 1 to probs
+30:
+Else if cos⃗vi,⃗v0 > −cos(π/4) Then
+31:
+p0 ←(arccos(cos⃗vi,⃗v0) −π/2)/(π/4) , p1 ←(3π/4 −arccos(cos⃗vi,⃗v0))/(π/4)
+32:
+Add 0 and 1 to dirs, p0 and p1 to probs
+33:
+Else if cos⃗vi,⃗v0 < −cos(π/4) Then
+34:
+p0 ←(π −arccos(cos⃗vi,⃗v0))/(π/4) , p3 ←(arccos(cos⃗vi,⃗v0) −3π/4)/(π/4)
+35:
+Add 0 and 3 to dirs, p0 and p3 to probs
+36:
+End if
+37:
+Else if⃗vi[0] ≤0 And⃗vi[1] ≥0 Then
+38:
+If cos⃗vi,⃗v0 = 0 Then
+39:
+Add 7 to dirs, 1 to probs
+40:
+Else if cos⃗vi,⃗v0 = −1 Then
+41:
+Add 3 to dirs, 1 to probs
+42:
+Else if cos⃗vi,⃗v0 = −cos(π/4) Then
+43:
+Add 6 to dirs, 1 to probs
+44:
+Else if cos⃗vi,⃗v0 > −cos(π/4) Then
+45:
+p6 ←(arccos(cos⃗vi,⃗v0) −π/2)/(π/4) , p7 ←(3π/4 −arccos(cos⃗vi,⃗v0))/(π/4)
+46:
+Add 6 and 7 to dirs, p6 and p7 to probs
+47:
+Else if cos⃗vi,⃗v0 < −cos(π/4) Then
+48:
+p3 ←(arccos(cos⃗vi,⃗v0) −3π/4)/(π/4) , p6 ←(π −arccos(cos⃗vi,⃗v0))/(π/4)
+49:
+Add 3 and 6 to dirs, p3 and p6 to probs
+50:
+End if
+51:
+End if
+26
+
+
+===== [page 28] =====
+Supplementary Algorithm 7 CalRepAttrHerd(⃗vmove
+rep,attr) procedure
+Input:⃗vmove
+rep,attr
+Output: dirs3f , probs3f
+1:
+If⃗vmove
+rep,attr̸ =⃗0 Then
+2:
+self.⃗vrep,attr,herd ←self.⃗vrep,attr,herd +⃗vmove
+rep,attr/|⃗vmove
+rep,attr| ∗self.wherd
+3:
+End if
+4:
+dirs3f, probs3f ←V ectorDirection(⃗vrep,attr,herd) % see Algorithm 6
+Supplementary Algorithm 8 MovableDirection(env) procedure
+Input: env
+Output: mdirs
+1:
+k ←0, dir ←0, mdirs ←∅
+2:
+For i from −self.steplen to self.steplen Do
+3:
+For i from −self.steplen to self.steplen Do
+4:
+If i̸ = j̸ = 0 And Gself.x+i,self.y+j in the env boundaries Then
+5:
+Add k to mdirs
+6:
+End if
+7:
+k ←k + 1
+8:
+End for
+9:
+End for
+27
+
+
+===== [page 29] =====
+Supplementary Algorithm 9 Move(env, gen) procedure
+Input: env
+Output: Statemax
+1:
+Statemax ←False
+2:
+If self.wander = True Or self.finish = True Then
+3:
+Statemax ←True , self.jump ←False
+4:
+Exit
+5:
+End if
+6:
+If self.revisit > Trev Then
+7:
+self.wander ←True , self.jump ←False
+8:
+Exit
+9:
+End if
+10:
+mdirs ←moveableDirection(env)
+11:
+If self.jump = True Then
+12:
+self.mode ←1
+13:
+Add Gself.x,self.y to self.memory
+14:
+End if
+15:
+self.Gattr ←self.FindAttrMaxInIGP(env)
+16:
+If self.Gattr is not None Then
+17:
+self.Gspre ←Gself.x,self.y , self.x ←self.Gattr.x , self.y ←self.Gattr.y
+18:
+self.jump ←False, Statemax ←True
+19:
+Exit
+20:
+End if
+21:
+dirs3f , probs3f ←self.CalRepAttrHerd(env.¯vmove
+attr,rep) , dirs ←empty, probs ←empty
+22:
+If dirs3f is not empty Then
+23:
+For element in dirs3f Do
+24:
+If element not in mdirs Then
+25:
+Find the index i of the element in dirs3f
+26:
+Remove element from dirs3f
+27:
+Remove probs3f[i] from probs3f
+28:
+End if
+29:
+End for
+30:
+Undirected ←True
+31:
+If dirs3f is not empty Then
+32:
+If self.jump = False Then
+33:
+For k in dirs3f Do
+34:
+i ←self.x + self.dirDics[k][0] , j ←self.y + self.dirDics[k][1]
+35:
+If Gi,j is in Gspre Then
+36:
+Find the index i of the element in dirs3f
+37:
+Remove element i from dirs3f
+38:
+Remove probs3f[i] from probs3f
+39:
+End if
+40:
+End for
+41:
+If dirs3f is not empty Then
+42:
+ind ←roulette(probs3f) , moveDir ←dirs3f[ind]
+28
+
+
+===== [page 30] =====
+Supplementary Algorithm 9 (continued) Move(env, gen) procedure
+43:
+self.x ←self.x + self.dirDics[moveDir][0] , self.y ←self.y + self.dirDics[moveDir][1]
+44:
+If self.jump = True Then
+45:
+self.Gattr ←Gx,y
+46:
+End if
+47:
+Else
+48:
+Undirected ←True
+49:
+End if
+50:
+Else
+51:
+Undirected ←True
+52:
+End if
+53:
+Else
+54:
+Undirected ←True
+56:
+End if
+57:
+If Undirected = True
+58:
+If mdirs is not empty Then
+59:
+If self.jump = False Then
+60:
+For k in mdirs Do
+61:
+i ←self.x + self.dirDics[k][0] , j ←self.y + self.dirDics[k][1]
+62:
+If Gi,j is in Gspre Then
+63:
+Remove element i from mdirs
+64:
+End if
+65:
+End for
+66:
+End if
+67:
+If mdirs is not empty Then
+68:
+Randomly select one element moveDir from mdirs
+69:
+Add Gself.x,self.y to self.Gspre
+70:
+self.x ←self.x + self.dirDics[moveDir][0] , self.y ←self.y + self.dirDics[moveDir][1]
+71:
+If self.jump = True Then
+72:
+self.Gattr ←Gself.x,self.y
+73:
+End if
+74:
+Else
+75:
+self.Gattr ←Gself.x,self.y
+76:
+End if
+77:
+Else
+78:
+self.Gattr ←Gself.x,self.y
+79:
+End if
+80:
+End if
+81:
+If self.Gattr is empty:
+82:
+self.Gattr ←self.FindAttrMaxInIGP(env)
+83:
+Else if self.Gattr is not within the env boundaries Then
+84:
+self.Gattr ←self.FindAttrMaxInIGP(env)
+85:
+End if
+86:
+If self.Gattr is not empty And self.Gattr = Gself.x,self.yThen
+87:
+Statemax ←True
+88:
+End if
+89:
+self.jump ←False
+29
+
+
+===== [page 31] =====
+30 
+ 
+Supplementary Methods 
+ 
+ 
+Supplementary Method 1 | Model description and configuration 
+ 
+The proposed ABM focuses on the large city-scale human mobility. We study the inflow rather 
+than overlapping static population distribution4 so that the model provides a better understanding 
+of whether the carrying capacity of a given area can accommodate an influx during flooding 
+emergencies. We report the pseudocode of this original model in Supplementary Algorithms 1-9. 
+For all individual agents in our experiments, the guiding principle is that action decisions are not 
+made in isolation but are shaped by dynamic interplays between risk perceptions, feelings of safety, 
+and the observed actions of others5 (included as a proxy for social connections with others and 
+subjective norms and attitudes toward collective behavior6). Evacuees’ understanding of the 
+environment often translates into a subjective evaluation, which forms the basis of their cognition 
+and influences how they assess potential threats or safe areas7. We tune our ABM with the 
+following agentic settings: 
+ 
+Each grid is initialized with a predefined population count estimated by 2020-constrained 
+WorldPop data (including uninhabited grid identification, the initial number of agents assigned to 
+each grid, and grid capacity; see Data availability). At each time step, each agent has the option to 
+move in any direction within the Moore neighborhood but is limited to a movement of only one 
+grid length per step (averaged moving range of a 5-min travel)8. The capacity 𝐶𝐶𝑖𝑖 of grid 𝑖𝑖 is 
+determined by the maximum population of the administrative area where it is located. Based on 
+the calibration results, a Gaussian filter with σ  =  1 is adopted for inflow mobility. 
+ 
+The ratio R between the agents with different IGPs for each city is obtained from the China 
+Statistical Yearbook 2023 (Supplementary Table 9). Since the yearbook provides statistics only at 
+the provincial level, we approximate 𝑅𝑅 for each city using province-level data. To take model 
+sensitivity into consideration, we assume that different subgroups of populations, such as local and 
+nonlocal residents, have different situational awareness to acquire information due to various 
+levels of familiarity with the environment, social ties, access to local media, cultural and linguistic 
+understanding, and past experiences (we set different 3×3 and 5×5 grid IGPs for agents; recall Fig. 
+1a). 
+ 
+All modeling and simulations were conducted on two AMD EPYC 7T83 64-core processors and 
+a GNU/Linux Ubuntu 18.04.6 LTS operation system implemented in Python using PyCharm 
+2020.2.3. The system is equipped with 512 GB DDR4 RAM and 16 TB SSD, providing sufficient 
+memory and storage to manage the ABM’s dynamic datasets. Note that 1 agent represents 100 
+people in the downscaling settings to reduce the computational burden. 
+
+
+===== [page 32] =====
+31 
+ 
+Supplementary Method 2 | Estimation of inflow mobility in the ABM 
+ 
+The disaster periods are categorized into pre-, during-, and post-stages. For the Zhengzhou case, 
+the during-disaster period is July 20–22, 2021, while for the Shenzhen case, it is September 16, 
+2018. The ground truth for inflow mobility is calculated by averaging the inflow obtained from 
+mobile phone signaling data (hourly aggregated Origin-Destination trips for each day at 1 km 
+spatial resolution collected from the service provider, see Data availability) during the disaster 
+period (Equation (1)). We consider the period from the 0th generation to the generation of 
+convergence as representing the complete population movement process during the disaster. The 
+modeled inflow mobility is then calculated by taking the average of the inflow with Gaussian filter 
+over this entire simulation process (Equation (2)), reflecting the overall movement dynamics of 
+the population affected by the flooding event. More details for inflow mobility computation are 
+presented in Supplementary Table 2. 
+ 
+𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖=
+∑
+𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,ℎ
+𝐻𝐻𝑑𝑑𝑑𝑑𝑑𝑑
+ℎ=0
+𝐻𝐻𝑑𝑑𝑑𝑑𝑑𝑑
+                                                          (1) 
+ 
+where 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 refers to the average actual inflow mobility of grid 𝑖𝑖, 𝐹𝐹𝐹𝐹𝐼𝐼𝑀𝑀𝑖𝑖,ℎ denotes the volume 
+of filtered actual inflow mobility into grid 𝑖𝑖 at a specific hour ℎ; 𝐻𝐻𝑑𝑑𝑑𝑑𝑑𝑑 is the total number of hours 
+during the disaster; ∑
+𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,ℎ
+𝐻𝐻𝑑𝑑𝑑𝑑𝑑𝑑
+ℎ=0
+ represents the total volume of inflow to grid 𝑖𝑖 over the disaster 
+hours. 
+ 
+𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖=
+∑
+𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔
+𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠
+𝑔𝑔=0
+𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠
+                                                     (2) 
+ 
+where 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖 is the average modeled inflow mobility for a given grid 𝑖𝑖; 𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔 represents the 
+filtered modeled inflow mobility at grid 𝑖𝑖 at generation 𝑔𝑔; 𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠 is the total number of 
+generations from the 0th generation to the simulation generation when the stable pattern emerges; 
+and ∑
+𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝐹𝑖𝑖,𝑔𝑔
+𝐺𝐺𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠𝑠
+𝑔𝑔=0
+ sums the inflows over all generations. 
+
+
+===== [page 33] =====
+32 
+ 
+Supplementary Method 3 | Evaluation metrics for model performance 
+ 
+We evaluate the performance of proposed ABM along two dimensions: trend and quantity. Each 
+dimension consists of a set of multiple metrics. The trend metrics assess whether the model 
+correctly reproduces the comparative relationships of spatial pattern of inflows across all grids, 
+whereas the quantity metrics evaluate the numerical accuracy between the actual and modeled 
+inflow volumes. 
+ 
+We first construct binary indicators for each 1 km grid based on average actual and modeled inflow 
+mobility: 
+ 
+𝐵𝐵𝑖𝑖= 𝕀𝕀(𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖> 0), 𝐵𝐵𝚤𝚤෡= 𝕀𝕀(𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖> 0)                              (3) 
+  
+Using {𝐵𝐵𝑖𝑖} as ground truth and {𝐵𝐵𝚤𝚤෡} as model predictions of grid 𝑖𝑖, we obtain the confusion matrix 
+summarizing true positives, true negatives, false positives, and false negatives. A set of trend 
+metrics is then defined as: 
+ 
+𝒯𝒯= ൛𝑔𝑔𝑗𝑗൫{𝐵𝐵𝑖𝑖}, ൛𝐵𝐵𝚤𝚤෡ൟ൯ห𝑗𝑗= 1, … , 𝐽𝐽}                                  (4) 
+ 
+where 𝑔𝑔𝑗𝑗(·) denotes the j-th classification metric derived from the confusion matrix, and 𝐽𝐽 is the 
+total number of trend metrics. In this study, 𝐽𝐽= 4 corresponding to accuracy, precision, recall, and 
+F1 score. 
+ 
+Secondly, we compare the magnitudes of average actual and modeled inflow mobility across grids. 
+Let 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖
+𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 and 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖
+𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛 denote the normalized actual and modeled inflow for grid 𝑖𝑖. A set 
+of quantity metrics is then defined as: 
+ 
+𝒬𝒬= {𝑓𝑓𝑘𝑘(𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖
+𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛, 𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝐴𝑖𝑖
+𝑛𝑛𝑛𝑛𝑛𝑛𝑛𝑛)|𝑘𝑘= 1,2, … , 𝐾𝐾}                       (5) 
+ 
+where 𝑓𝑓𝑘𝑘(·) represents commonly used indicators of numerical performance. 𝐾𝐾 is the total number 
+of quantity metrics. In this study, 𝐾𝐾= 5 corresponds to mean absolute error (MAE), root mean 
+square error (RMSE), Pearson correlation, Spearman correlation, and TOST p-values for statistical 
+equivalence testing. 
+ 
+For model calibration and validation, we use the Zhengzhou case for calibration and the Shenzhen 
+case for validation, and compare the model results against the ground truth. All results have an 
+hourly temporal resolution within 1 km spatial resolution. We then evaluate the model validation 
+using the two above metrics to depict its overall performance (Full procedure of model calibration 
+and validation can be found in Supplementary Table 2). 
+ 
+
+
+===== [page 34] =====
+33 
+ 
+Supplementary References 
+ 
+1. 
+Satopaa V., Albrecht J., Irwin D., Raghavan B. Finding a “Kneedle” in a Haystack: 
+Detecting Knee Points in System Behavior. 2011 31st International Conference on 
+Distributed Computing Systems Workshops, 166–171 (2011). 
+2. 
+Anselin L., Li X. Operational local join count statistics for cluster detection. Journal of 
+Geographical Systems 21, 189–210 (2019). 
+3. 
+Cliff A. D., Ord J. K. Spatial processes: models & applications. Pion London (1981). 
+4. 
+Rajput A. A., Liu C., Liu Z., Mostafavi A. Human-centric characterization of life activity 
+flood exposure shifts focus from places to people. Nature Cities 1, 264–274 (2024). 
+5. 
+Slovic P. Perception of Risk. Science 236, 280–285 (1987). 
+6. 
+Ajzen I. The theory of planned behavior. Organizational Behavior and Human Decision 
+Processes 50, 179–211 (1991). 
+7. 
+Cai J., Hu S., Que T., Li H., Xing H., Li H. Influences of social environment and 
+psychological cognition on individuals’ behavioral intentions to reduce disaster risk in 
+geological hazard-prone areas: An application of social cognitive theory. International 
+Journal of Disaster Risk Reduction 86, 103546 (2023). 
+8. 
+Beijing Transport Institute. Beijing transport development annual report (2024). 
+https://www.bjtrc.org.cn/List/index/cid/7.html. 
+ 

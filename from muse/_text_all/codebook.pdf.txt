@@ -1,0 +1,11310 @@
+
+
+===== [page 1] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+CDIVMSAR
+C
+2
+11=New England MSA/CMSA of 1 million+ with heavy rail
+161
+2,066,163
+12=New England MSA/CMSA of 1 million+ w/o heavy rail
+51
+703,523
+13=New England MSA of less than 1 million
+208
+3,135,078
+14=New England Not in an MSA
+19
+221,998
+21=Mid-Atlantic MSA/CMSA of 1 million+ with heavy rail
+468
+8,330,759
+22=Mid-Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+136
+2,261,377
+23=Mid-Atlantic MSA of less than 1 million
+302
+5,374,347
+24=Mid-Atlantic Not in an MSA
+18
+372,342
+31=East North Central MSA/CMSA of 1 million+ with heavy rail
+266
+4,095,724
+32=East North Central MSA/CMSA of 1 million+ w/o heavy rail
+374
+5,208,903
+33=East North Central MSA of less than 1 million
+562
+8,364,935
+34=East North Central Not in an MSA
+91
+1,360,875
+42=West North Central MSA/CMSA of 1 million+ w/o heavy rail
+211
+3,631,402
+43=West North Central MSA of less than 1 million
+275
+4,141,517
+44=West North Central Not in an MSA
+82
+887,706
+51=South Atlantic MSA/CMSA of 1 million+ with heavy rail
+453
+7,412,223
+52=South Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+383
+6,222,721
+53=South Atlantic MSA of less than 1 million
+681
+11,014,145
+54=South Atlantic Not in an MSA
+65
+1,183,864
+62=East South Central MSA/CMSA of 1 million+ w/o heavy rail
+147
+2,408,598
+63=East South Central MSA of less than 1 million
+262
+4,504,203
+64=East South Central Not in an MSA
+39
+728,984
+72=West South Central MSA/CMSA of 1 million+ w/o heavy 
+508
+8,652,288
+73=West South Central MSA of less than 1 million
+321
+5,622,516
+74=West South Central Not in an MSA
+56
+1,024,153
+82=Mountain MSA/CMSA of 1 million+ w/o heavy rail
+290
+4,790,052
+83=Mountain MSA of less than 1 million
+301
+4,427,898
+84=Mountain Not in an MSA
+29
+472,886
+91=Pacific MSA/CMSA of 1 million+ with heavy rail
+400
+7,415,805
+92=Pacific MSA/CMSA of 1 million+ w/o heavy rail
+398
+6,126,638
+93=Pacific MSA of less than 1 million
+320
+5,141,778
+94=Pacific Not in an MSA
+16
+239,306
+CENSUS_D
+C
+2
+01=New England
+439
+6,126,763
+02=Middle Atlantic
+924
+16,338,825
+03=East North Central
+1,293
+19,030,437
+04=West North Central
+568
+8,660,626
+Grouping of household by 
+combination of Census 
+division, MSA status, and 
+presence of rail
+Census division classification 
+for home address
+1
+
+
+===== [page 2] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+05=South Atlantic
+1,582
+25,832,953
+06=East South Central
+448
+7,641,785
+07=West South Central
+885
+15,298,957
+08=Mountain
+620
+9,690,835
+09=Pacific
+1,134
+18,923,527
+CENSUS_R
+C
+2
+01=Northeast
+1,363
+22,465,587
+02=Midwest
+1,861
+27,691,062
+03=South
+2,915
+48,773,695
+04=West
+1,754
+28,614,362
+CNTTDHH
+Count of household trips on 
+travel day
+N
+8
+Responses=0-45
+7,893
+127,544,707
+DRVRCNT
+N
+8
+0
+302
+7,099,918
+1
+2,724
+43,858,281
+2
+4,059
+60,010,921
+3
+592
+12,191,086
+4
+180
+3,632,459
+5
+29
+584,967
+6
+5
+140,242
+7
+2
+26,833
+FLAG100
+C
+2
+01=All eligible household members completed
+7,784
+125,486,652
+02=75% to 99% of eligible household members completed
+109
+2,058,055
+HBHTNRNT
+C
+2
+01=0-4%
+476
+6,408,770
+05=5-14%
+2,009
+29,679,267
+20=15-24%
+1,603
+24,903,349
+30=25-34%
+1,160
+18,679,644
+40=35-44%
+839
+14,932,268
+50=45-54%
+638
+10,787,821
+60=55-64%
+482
+8,919,370
+70=65-74%
+339
+6,201,539
+80=75-84%
+232
+4,466,246
+90=85-94%
+101
+2,216,207
+95=95-100%
+14
+350,225
+HBHUR
+C
+2
+01=Rural
+1,553
+24,116,022
+02=Small Town
+1,748
+26,778,757
+03=Second City
+1,514
+25,469,405
+04=Suburban
+1,866
+29,898,290
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+household's home location
+Census region classification 
+for home address
+Number of drivers in the 
+household
+All HH members completed 
+survey?
+Urban / Rural indicator - 
+Block group
+2
+
+
+===== [page 3] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+05=Urban
+1,212
+21,282,233
+HBPPOPDN
+C
+2
+-9=Not ascertained
+38
+722,450
+01=0-99
+919
+13,977,712
+02=100-499
+1,092
+17,011,099
+03=500-999
+588
+9,248,977
+04=1,000-1,999
+990
+15,597,275
+05=2,000-3,999
+1,612
+25,841,633
+06=4,000-9,999
+1,849
+30,519,566
+07=10,000-24,999
+526
+9,233,205
+08=25,000-999,999
+279
+5,392,789
+HBRESDN
+C
+2
+-9=Not ascertained
+62
+833,184
+01=0-99
+1,522
+23,623,257
+02=100-499
+1,384
+21,297,154
+03=500-999
+911
+14,311,807
+04=1,000-1,999
+1,645
+27,430,867
+05=2,000-3,999
+1,452
+23,993,133
+06=4,000-9,999
+559
+9,478,816
+07=10,000-24,999
+212
+3,630,050
+08=25,000-999,999
+146
+2,946,439
+HHFAMINC
+C
+2
+-7=I prefer not to answer
+93
+1,600,743
+-8=I don't know
+3
+41,549
+01=Less than $10,000
+300
+7,385,631
+02=$10,000 to $14,999
+242
+5,158,271
+03=$15,000 to $24,999
+467
+8,616,667
+04=$25,000 to $34,999
+552
+9,884,380
+05=$35,000 to $49,999
+824
+13,569,738
+06=$50,000 to $74,999
+1,392
+21,252,307
+07=$75,000 to $99,999
+1,120
+16,651,925
+08=$100,000 to $124,999
+890
+12,256,706
+09=$125,000 to $149,999
+611
+8,490,208
+10=$150,000 to $199,999
+593
+9,895,360
+11=$200,000 or more
+806
+12,741,223
+HHFAMINC_IMP
+C
+2
+01=Less than $10,000
+301
+7,412,233
+02=$10,000 to $14,999
+245
+5,190,388
+03=$15,000 to $24,999
+470
+8,689,825
+04=$25,000 to $34,999
+560
+9,988,975
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the household's 
+home location
+Category of housing units per 
+square mile in the census 
+block group of the 
+household's home location
+Household income
+Household income (imputed)
+3
+
+
+===== [page 4] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+05=$35,000 to $49,999
+831
+13,739,586
+06=$50,000 to $74,999
+1,415
+21,714,430
+07=$75,000 to $99,999
+1,132
+16,823,251
+08=$100,000 to $124,999
+909
+12,591,086
+09=$125,000 to $149,999
+617
+8,553,171
+10=$150,000 to $199,999
+599
+10,026,162
+11=$200,000 or more
+814
+12,815,601
+HHRELATD
+C
+2
+01=At least two persons in hh are related
+5,485
+88,955,338
+02=No related persons in hh
+2,408
+38,589,369
+HHSIZE
+N
+8
+1
+2,271
+36,408,705
+2
+3,339
+44,750,886
+3
+967
+19,001,129
+4
+786
+15,515,882
+5
+343
+7,521,882
+6
+123
+2,635,515
+7
+37
+1,058,082
+8
+19
+506,173
+9
+6
+113,514
+10
+2
+32,938
+HHVEHCNT
+N
+8
+0
+476
+10,712,489
+1
+2,623
+42,271,037
+2
+3,199
+48,347,257
+3
+1,043
+16,859,280
+4
+360
+6,251,994
+5
+122
+1,810,760
+6
+44
+781,712
+7
+13
+230,253
+8
+7
+101,909
+9
+1
+12,447
+11
+3
+130,732
+14
+1
+9,226
+17
+1
+25,610
+HH_HISP
+C
+2
+01=Hispanic or Latino
+604
+16,553,656
+02=Not Hispanic or Latino
+7,289
+110,991,051
+HH_RACE
+C
+2
+01=White
+6,664
+96,010,623
+02=Black or African American
+579
+15,096,503
+Flag indicating at least 2 
+persons in HH are related
+Total number of people in 
+household
+Total number of vehicles in 
+household
+Hispanic status of household 
+respondent
+Race of household 
+respondent
+4
+
+
+===== [page 5] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+03=Asian
+388
+8,704,890
+04=American Indian/Alaska Native
+39
+1,194,452
+05=Native Hawaiian/Pacific Islander
+19
+397,448
+06=Multiple races selected
+29
+819,754
+97=Other race
+175
+5,321,035
+HOMEOWN
+C
+2
+01=Owned by hh member with mortgage or loan
+3,670
+57,012,796
+02=Owned by hh member free and clear (no mortgage)
+2,166
+29,733,272
+03=Rented by hh member
+1,941
+38,426,213
+04=Occupied without payment
+116
+2,372,427
+HOMETYPE
+C
+2
+01=One-family detached
+5,430
+83,144,699
+02=One-family attached (townhome, condo)
+748
+11,870,409
+03=Building with 2 or more apartments
+1,437
+27,055,566
+04=Mobile home
+263
+5,181,585
+05=Boat, RV, van, etc.
+15
+292,448
+HOUSEID
+Unique Identifier- Household
+C
+10
+Responses=9000013002-9000218040
+7,893
+127,544,707
+HTEEMPDN
+C
+2
+-9=Not ascertained
+56
+840,868
+01=0-49
+1,118
+17,378,747
+02=50-99
+434
+7,248,794
+03=100-249
+696
+10,438,503
+04=250-499
+740
+11,759,799
+05=500-999
+903
+14,101,014
+06=1,000-1,999
+1,585
+25,964,370
+07=2,000-3,999
+1,451
+23,711,442
+08=4,000-999,999
+910
+16,101,170
+HTHTNRNT
+C
+2
+01=0-4%
+230
+3,454,979
+05=5-14%
+1,783
+25,737,487
+20=15-24%
+1,848
+29,040,766
+30=25-34%
+1,325
+21,340,144
+40=35-44%
+995
+15,829,573
+50=45-54%
+717
+13,721,921
+60=55-64%
+458
+8,339,114
+70=65-74%
+294
+5,248,868
+80=75-84%
+183
+3,470,122
+90=85-94%
+55
+1,253,937
+95=95-100%
+5
+107,797
+HTPPOPDN
+C
+2
+-9=Not ascertained
+33
+493,896
+Type of home
+Whether home owned or 
+rented
+Category of workers per 
+square mile in the census 
+tract of the household's home 
+location
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the 
+household's home location
+Category of population 
+5
+
+
+===== [page 6] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=0-99
+1,045
+16,493,193
+02=100-499
+1,157
+18,250,663
+03=500-999
+638
+10,059,087
+04=1,000-1,999
+1,048
+16,147,232
+05=2,000-3,999
+1,628
+26,326,517
+06=4,000-9,999
+1,672
+27,942,564
+07=10,000-24,999
+425
+7,139,351
+08=25,000-999,999
+247
+4,692,204
+HTRESDN
+C
+2
+-9=Not ascertained
+61
+963,571
+01=0-99
+1,640
+25,721,429
+02=100-499
+1,524
+23,900,699
+03=500-999
+959
+14,444,990
+04=1,000-1,999
+1,667
+27,614,139
+05=2,000-3,999
+1,276
+21,629,306
+06=4,000-9,999
+455
+7,582,440
+07=10,000-24,999
+197
+3,374,845
+08=25,000-999,999
+114
+2,313,288
+LIF_CYC
+C
+2
+01=one adult, no children
+1,281
+21,718,945
+02=2+ adults, no children
+1,497
+23,083,323
+03=one adult, youngest child 0-5
+63
+1,628,015
+04=2+ adults, youngest child 0-5
+645
+13,532,120
+05=one adult, youngest child 6-15
+184
+3,532,237
+06=2+ adults, youngest child 6-15
+772
+15,211,748
+07=one adult, youngest child 16-21
+90
+1,564,284
+08=2+ adults, youngest child 16-21
+256
+5,115,491
+09=one adult, retired, no children
+990
+14,689,760
+10=2+ adults, retired, no children
+2,115
+27,468,785
+MSACAT
+C
+2
+01=MSA of 1 million or more, with rail
+1,748
+29,320,674
+02=MSA of 1 million or more, without rail
+2,498
+40,005,502
+03=MSA less than 1 million
+3,232
+51,726,418
+04=Not in MSA
+415
+6,492,114
+MSASIZE
+C
+2
+01=In an MSA of Less than 250,000
+1,458
+23,004,676
+02=In an MSA of 250,000 - 499,999
+751
+11,829,216
+03=In an MSA of 500,000 - 999,999
+1,023
+16,892,525
+04=In an MSA or CMSA of 1,000,000 - 2,999,999
+1,805
+28,603,472
+05=In an MSA or CMSA of 3 million or more
+2,441
+40,722,704
+density (persons per square 
+mile) in the census tract of 
+the household's home 
+location
+Category of housing units per 
+square mile in the census 
+tract of the household's home 
+location
+Life Cycle classification for 
+the household
+MSA category for the HH 
+home address
+Population size category of 
+the MSA from the five-year 
+ACS API
+6
+
+
+===== [page 7] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+06=Not in MSA or CMSA
+415
+6,492,114
+NUMADLT
+N
+8
+1
+2,535
+41,752,814
+2
+4,427
+66,233,077
+3
+670
+13,922,133
+4
+208
+4,402,441
+5
+38
+840,127
+6
+9
+271,959
+7
+5
+114,532
+8
+1
+7,624
+PPT517
+N
+8
+0
+6,397
+97,033,313
+1
+730
+14,565,767
+2
+528
+10,824,231
+3
+169
+3,580,625
+4
+52
+1,227,132
+5
+14
+239,010
+6
+3
+74,629
+RAIL
+C
+2
+01=Yes
+1,808
+30,282,605
+02=No
+6,085
+97,262,102
+RESP_CNT
+N
+8
+1
+2,298
+36,897,744
+2
+3,589
+49,533,888
+3
+1,019
+20,412,806
+4
+631
+12,916,475
+5
+251
+5,251,666
+6
+65
+1,426,220
+7
+29
+874,666
+8
+8
+190,317
+9
+2
+18,283
+10
+1
+22,642
+STRATUMID
+Household Stratum ID
+C
+4
+Responses=1021-1040
+7,893
+127,544,707
+TDAYDATE
+C
+6
+202201
+216
+4,020,209
+202202
+807
+9,784,210
+202203
+706
+10,832,627
+202204
+694
+10,483,155
+202205
+560
+10,832,500
+202206
+358
+10,483,155
+202207
+468
+10,832,500
+Date of travel day (YYYYMM)
+Count of adult household 
+members at least 18 years 
+old
+Count of household members 
+5-17 years old
+MSA heavy rail status for 
+household
+Count of responding persons 
+in household
+7
+
+
+===== [page 8] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+202208
+474
+10,832,500
+202209
+441
+10,483,155
+202210
+621
+10,832,500
+202211
+1,203
+10,482,777
+202212
+973
+10,832,627
+202301
+372
+6,812,796
+TRAVDAY
+C
+2
+01=Sunday
+1,388
+18,220,672
+02=Monday
+1,428
+18,220,672
+03=Tuesday
+1,133
+18,220,672
+04=Wednesday
+1,006
+18,220,672
+05=Thursday
+1,034
+18,220,672
+06=Friday
+1,061
+18,220,672
+07=Saturday
+843
+18,220,672
+URBAN
+C
+2
+01=In an urban area
+5,632
+91,931,510
+02=In an Urban cluster
+674
+10,987,800
+03=In an area surrounded by urban areas
+1
+14,433
+04=Not in urban area
+1,586
+24,610,964
+URBANSIZE
+C
+2
+01=50,000-199,999
+768
+12,505,317
+02=200,000-499,999
+879
+13,977,640
+03=500,000-999,999
+760
+12,182,845
+04=1,000,000 or more with heavy rail
+1,491
+25,434,046
+05=1,000,000 or more without heavy rail
+1,734
+27,831,661
+06=Not in urbanized area
+2,261
+35,613,197
+URBRUR
+C
+2
+01=Urban
+6,306
+102,919,310
+02=Rural
+1,587
+24,625,397
+URBRUR_2010
+C
+2
+01=Urban
+6,298
+103,092,709
+02=Rural
+1,595
+24,451,998
+WRKCOUNT
+N
+8
+0
+2,758
+43,369,247
+1
+2,790
+45,309,376
+2
+2,026
+32,224,593
+3
+266
+5,430,725
+4
+42
+955,351
+5
+8
+202,620
+6
+3
+52,795
+WTHHFIN
+7-day natl household weight
+N
+8
+Responses=100.84634725-81832.021407
+7,893
+127,544,707
+WTHHFIN2D
+2-day natl household weight
+N
+8
+Responses=0-264588.14373
+7,893
+127,544,707
+Travel day - day of week
+Household urban area 
+classification, based on 2020 
+TIGER/Line Shapefile
+Urban area size where home 
+address is located
+Household in urban/rural 
+area
+Household in urban/rural 
+area based on 2010 Census
+Count of workers in 
+household
+8
+
+
+===== [page 9] =====
+2022 NextGen NHTS Household File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+WTHHFIN5D
+5-day natl household weight
+N
+8
+Responses=0-112970.16439
+7,893
+127,544,707
+YOUNGCHILD
+N
+8
+0
+7,271
+114,340,084
+1
+445
+9,496,670
+2
+154
+3,284,251
+3
+20
+350,815
+4
+3
+72,888
+Count of household members 
+under 5 years old
+9
+
+
+===== [page 10] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+BIKESHARE22
+N
+8
+-1=Appropriate skip
+16,910
+303,853,065
+Responses=0-30
+87
+1,707,860
+BIKETRANSIT
+N
+8
+-1=Appropriate skip
+15,438
+278,562,891
+Responses=0-30
+1,559
+26,998,034
+CDIVMSAR
+C
+2
+11=New England MSA/CMSA of 1 million+ with heavy rail
+335
+4,810,762
+12=New England MSA/CMSA of 1 million+ w/o heavy rail
+109
+2,118,086
+13=New England MSA of less than 1 million
+432
+6,539,311
+14=New England Not in an MSA
+41
+404,307
+21=Mid-Atlantic MSA/CMSA of 1 million+ with heavy rail
+993
+20,543,696
+22=Mid-Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+266
+4,509,275
+23=Mid-Atlantic MSA of less than 1 million
+651
+12,738,014
+24=Mid-Atlantic Not in an MSA
+45
+831,917
+31=East North Central MSA/CMSA of 1 million+ with heavy rail
+555
+8,887,015
+32=East North Central MSA/CMSA of 1 million+ w/o heavy rail
+778
+11,221,596
+33=East North Central MSA of less than 1 million
+1,197
+19,752,882
+34=East North Central Not in an MSA
+216
+3,589,271
+42=West North Central MSA/CMSA of 1 million+ w/o heavy rail
+478
+8,475,007
+43=West North Central MSA of less than 1 million
+610
+9,515,772
+44=West North Central Not in an MSA
+183
+1,840,125
+51=South Atlantic MSA/CMSA of 1 million+ with heavy rail
+980
+19,129,787
+52=South Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+822
+13,854,562
+53=South Atlantic MSA of less than 1 million
+1,471
+25,791,453
+54=South Atlantic Not in an MSA
+135
+2,703,056
+62=East South Central MSA/CMSA of 1 million+ w/o heavy rail
+307
+5,682,664
+63=East South Central MSA of less than 1 million
+584
+10,787,207
+64=East South Central Not in an MSA
+89
+1,405,444
+72=West South Central MSA/CMSA of 1 million+ w/o heavy 
+1,143
+21,999,891
+73=West South Central MSA of less than 1 million
+674
+13,286,951
+74=West South Central Not in an MSA
+117
+2,419,376
+82=Mountain MSA/CMSA of 1 million+ w/o heavy rail
+629
+11,565,777
+83=Mountain MSA of less than 1 million
+674
+10,935,846
+84=Mountain Not in an MSA
+65
+904,343
+91=Pacific MSA/CMSA of 1 million+ with heavy rail
+845
+19,511,818
+92=Pacific MSA/CMSA of 1 million+ w/o heavy rail
+816
+14,739,673
+93=Pacific MSA of less than 1 million
+726
+14,589,398
+94=Pacific Not in an MSA
+31
+476,645
+CENSUS_D
+C
+2
+01=New England
+917
+13,872,466
+02=Middle Atlantic
+1,955
+38,622,901
+03=East North Central
+2,746
+43,450,764
+04=West North Central
+1,271
+19,830,904
+Days in last 30 days bike 
+share used
+Days in last 30 days cycling 
+used
+Grouping of household by 
+combination of Census 
+division, MSA status, and 
+presence of rail
+Census division classification 
+for home address
+10
+
+
+===== [page 11] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+05=South Atlantic
+3,408
+61,478,858
+06=East South Central
+980
+17,875,314
+07=West South Central
+1,934
+37,706,218
+08=Mountain
+1,368
+23,405,967
+09=Pacific
+2,418
+49,317,533
+CENSUS_R
+C
+2
+01=Northeast
+2,872
+52,495,367
+02=Midwest
+4,017
+63,281,668
+03=South
+6,322
+117,060,390
+04=West
+3,786
+72,723,500
+CNTTDTR
+Count of person trips on 
+travel day
+N
+8
+Responses=0-36
+16,997
+305,560,925
+CONDNIGH
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+355
+5,037,392
+02=Not Selected
+1,276
+19,466,629
+CONDNONE
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+250
+3,712,886
+02=Not Selected
+1,381
+20,791,135
+CONDPUB
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+76
+1,235,016
+02=Not Selected
+1,555
+23,269,004
+CONDRF
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+68
+1,259,740
+02=Not Selected
+1,563
+23,244,280
+CONDRIDE
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+440
+6,767,587
+02=Not Selected
+1,191
+17,736,434
+CONDRIVE
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+312
+4,448,709
+02=Not Selected
+1,319
+20,055,312
+CONDSHARE
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+79
+1,313,475
+02=Not Selected
+1,552
+23,190,546
+CONDSPEC
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+Travel not affected by 
+condition or disability
+Used bus or subway less 
+frequently due to condition or 
+disability
+Prefer not to answer if travel 
+is affected by condition or 
+disability
+Asked others for rides due to 
+condition or disability
+Given up driving due to 
+condition or disability
+Used rideshare due to 
+condition or disability
+Census region classification 
+for home address
+Limited driving to daytime 
+due to condition or disability
+Used special transportation 
+11
+
+
+===== [page 12] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+-9=Not ascertained
+6
+122,263
+01=Selected
+87
+1,490,533
+02=Not Selected
+1,544
+23,013,487
+CONDTRAV
+C
+2
+-1=Valid skip
+15,360
+280,934,642
+-9=Not ascertained
+6
+122,263
+01=Selected
+992
+13,923,468
+02=Not Selected
+639
+10,580,553
+COV1_OHD
+C
+2
+-8=Don't Know
+574
+12,945,765
+-9=Not ascertained
+66
+1,346,762
+01=Do more often than before
+5,633
+94,606,752
+02=Do the same as before
+7,122
+121,794,668
+03=Do less often than before
+480
+10,399,423
+04=Not Applicable
+3,122
+64,467,555
+COV1_PT
+C
+2
+-8=Don't Know
+561
+12,930,285
+-9=Not ascertained
+51
+1,313,208
+01=Do more often than before
+377
+6,866,886
+02=Do the same as before
+4,626
+77,606,734
+03=Do less often than before
+3,189
+51,841,644
+04=Not Applicable
+8,193
+155,002,168
+COV1_SCH
+C
+2
+-1=Valid skip
+13,670
+235,542,267
+-8=Don't Know
+120
+2,660,046
+-9=Not ascertained
+8
+160,501
+01=Do more often than before
+296
+6,566,671
+02=Do the same as before
+2,093
+44,009,706
+03=Do less often than before
+469
+9,266,855
+04=Not Applicable
+341
+7,354,879
+COV1_WK
+C
+2
+-1=Valid skip
+9,214
+147,551,415
+-8=Don't Know
+123
+3,426,088
+-9=Not ascertained
+4
+70,821
+01=Do more often than before
+511
+11,731,476
+02=Do the same as before
+4,317
+91,034,405
+03=Do less often than before
+2,433
+43,562,413
+04=Not Applicable
+395
+8,184,307
+COV2_OHD
+C
+2
+-1=Valid skip
+10,884
+200,554,751
+-8=Don't Know
+1,133
+21,837,233
+-9=Not ascertained
+8
+94,521
+01=Temporary
+767
+14,363,172
+02=Permanent
+4,205
+68,711,247
+COV2_PT
+C
+2
+-1=Valid skip
+13,431
+246,852,396
+-8=Don't Know
+1,035
+17,839,645
+Home delivery changes 
+temporary or permanent
+Public transit use changes 
+temporary or permanent
+services due to condition or 
+disability
+Reduced travel due to 
+condition or disability
+COVID impact on online 
+purchases for home delivery
+COVID impact on use of 
+public transit
+COVID impact on travel to a 
+physical school/class location
+COVID impact on travel to a 
+physical work location
+12
+
+
+===== [page 13] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+-9=Not ascertained
+6
+191,103
+01=Temporary
+1,318
+21,050,529
+02=Permanent
+1,207
+19,627,252
+COV2_SCH
+C
+2
+-1=Valid skip
+16,232
+289,727,398
+-8=Don't Know
+135
+2,219,919
+01=Temporary
+290
+6,106,807
+02=Permanent
+340
+7,506,802
+COV2_WK
+C
+2
+-1=Valid skip
+14,053
+250,267,035
+-8=Don't Know
+550
+11,691,143
+-9=Not ascertained
+1
+139,546
+01=Temporary
+672
+12,993,627
+02=Permanent
+1,721
+30,469,573
+DELIVER
+N
+8
+-1=Appropriate skip
+2,193
+46,150,763
+Responses=0-99
+14,804
+259,410,162
+DELIV_FOOD
+N
+8
+-9=Not ascertained
+4,476
+71,867,767
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-59
+6,528
+113,388,873
+DELIV_GOOD
+N
+8
+-9=Not ascertained
+243
+4,344,279
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-99
+10,761
+180,912,361
+DELIV_GROC
+N
+8
+-9=Not ascertained
+5,193
+86,598,939
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-30
+5,811
+98,657,701
+DELIV_PERS
+N
+8
+-9=Not ascertained
+5,257
+88,468,562
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-60
+5,747
+96,788,078
+DRIVER
+C
+2
+-1=Valid skip
+1,964
+41,806,101
+01=Yes
+13,434
+231,803,889
+02=No
+1,599
+31,950,935
+DRIVINGOCCUPATION
+C
+2
+-1=Valid skip
+9,409
+152,347,586
+-9=Not ascertained
+7
+114,582
+01=Yes
+1,502
+32,399,039
+02=No
+6,079
+120,699,718
+DRIVINGVEHICLE
+C
+2
+-1=Valid skip
+15,495
+273,161,886
+01=Yes, use a household vehicle
+846
+18,146,289
+02=No, use non-household vehicle
+481
+10,430,248
+03=Use both household and non-household vehicle
+175
+3,822,501
+DRVRCNT
+N
+8
+0
+432
+9,995,516
+1
+3,611
+61,185,614
+2
+9,789
+158,842,174
+School travel changes 
+temporary or permanent
+Work travel changes 
+temporary or permanent
+Number of online purchase 
+deliveries in past 30 days
+Number of times food 
+delivered in past 30 days
+Number of drivers in the 
+household
+Number of times goods 
+delivered in past 30 days
+Number of times groceries 
+delivered in past 30 days
+Number of times services 
+delivered in the past 30 days
+Driver status, derived
+Drive for work
+Vehicle driven for work
+13
+
+
+===== [page 14] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+3
+2,152
+50,323,039
+4
+809
+20,359,988
+5
+157
+3,835,125
+6
+31
+892,290
+7
+16
+127,179
+EDUC
+C
+2
+-1=Valid skip
+1,765
+38,037,040
+01=Less than high school
+544
+14,041,499
+02=Some high school, no diploma/GED
+932
+25,528,118
+03=High school graduate, have diploma/GED
+2,401
+71,126,449
+04=Some college, no degree/ some trade school
+2,603
+44,747,688
+05=Associates degree (2-year)/ trade school certificate
+1,704
+28,670,188
+06=Bachelor's degree
+4,021
+46,133,785
+07=Master's degree
+2,180
+26,430,208
+08=Professional/Doctorate degree
+847
+10,845,950
+EMPLOYMENT2
+N
+8
+-1=Appropriate skip
+9,214
+147,551,415
+Responses=0-99
+7,783
+158,009,510
+EMPPASS
+C
+2
+-1=Valid skip
+16,824
+302,831,555
+01=Yes
+68
+954,314
+02=No
+105
+1,775,055
+ESCOOTERUSED
+N
+8
+-1=Appropriate skip
+16,756
+300,607,941
+Responses=0-30
+241
+4,952,984
+FRSTHM
+C
+2
+01=Yes
+15,956
+286,324,953
+02=No
+1,041
+19,235,972
+GCDWORK
+N
+8
+-9=Not ascertained
+2,028
+37,747,280
+-1=Appropriate skip
+9,214
+147,551,415
+Responses=0-2543.9541665
+5,755
+120,262,230
+HBHTNRNT
+C
+2
+01=0-4%
+1,151
+17,186,136
+05=5-14%
+4,596
+73,181,734
+20=15-24%
+3,572
+59,667,010
+30=25-34%
+2,480
+44,631,728
+40=35-44%
+1,799
+37,345,899
+50=45-54%
+1,250
+25,087,099
+60=55-64%
+927
+22,377,768
+70=65-74%
+611
+13,304,191
+80=75-84%
+411
+8,264,929
+90=85-94%
+177
+4,047,676
+95=95-100%
+23
+466,755
+HBHUR
+C
+2
+01=Rural
+3,484
+56,827,875
+02=Small Town
+3,926
+66,575,651
+03=Second City
+3,205
+61,190,375
+Highest level of education
+Hours worked for pay each 
+week
+Employer pays for discounted 
+transit pass
+Days in last 30 days e-
+scooter used
+Started travel day at home
+Great circle distance (miles) 
+between home and work
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+household's home location
+Urban / Rural indicator - 
+Block group
+14
+
+
+===== [page 15] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+04=Suburban
+4,025
+71,801,912
+05=Urban
+2,357
+49,165,112
+HBPPOPDN
+C
+2
+-9=Not ascertained
+93
+1,869,465
+01=0-99
+1,998
+31,310,617
+02=100-499
+2,443
+41,185,505
+03=500-999
+1,323
+23,941,536
+04=1,000-1,999
+2,194
+37,570,101
+05=2,000-3,999
+3,472
+61,508,050
+06=4,000-9,999
+3,956
+74,208,907
+07=10,000-24,999
+1,043
+23,423,947
+08=25,000-999,999
+475
+10,542,797
+HBRESDN
+C
+2
+-9=Not ascertained
+142
+2,110,150
+01=0-99
+3,359
+53,480,521
+02=100-499
+3,167
+54,120,411
+03=500-999
+2,002
+35,193,088
+04=1,000-1,999
+3,611
+68,085,667
+05=2,000-3,999
+3,042
+57,798,219
+06=4,000-9,999
+1,076
+22,782,814
+07=10,000-24,999
+361
+6,680,486
+08=25,000-999,999
+237
+5,309,568
+HHFAMINC
+C
+2
+-7=I prefer not to answer
+205
+3,321,286
+-8=I don't know
+5
+108,411
+01=Less than $10,000
+547
+12,777,003
+02=$10,000 to $14,999
+405
+7,652,726
+03=$15,000 to $24,999
+811
+16,967,878
+04=$25,000 to $34,999
+1,064
+21,208,087
+05=$35,000 to $49,999
+1,583
+27,892,189
+06=$50,000 to $74,999
+2,824
+48,440,547
+07=$75,000 to $99,999
+2,436
+41,285,423
+08=$100,000 to $124,999
+2,056
+32,133,172
+09=$125,000 to $149,999
+1,503
+24,875,938
+10=$150,000 to $199,999
+1,507
+32,009,298
+11=$200,000 or more
+2,051
+36,888,967
+HHFAMINC_IMP
+C
+2
+01=Less than $10,000
+549
+12,824,414
+02=$10,000 to $14,999
+409
+7,694,097
+03=$15,000 to $24,999
+817
+17,071,869
+04=$25,000 to $34,999
+1,081
+21,388,207
+05=$35,000 to $49,999
+1,598
+28,219,078
+06=$50,000 to $74,999
+2,867
+49,404,937
+07=$75,000 to $99,999
+2,464
+41,688,877
+Household income (imputed)
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the household's 
+home location
+Category of housing units per 
+square mile in the census 
+block group of the 
+household's home location
+Household income
+15
+
+
+===== [page 16] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+08=$100,000 to $124,999
+2,099
+32,832,804
+09=$125,000 to $149,999
+1,516
+24,980,200
+10=$150,000 to $199,999
+1,525
+32,336,209
+11=$200,000 or more
+2,072
+37,120,232
+HHSIZE
+N
+8
+1
+2,271
+36,098,091
+2
+6,657
+87,921,569
+3
+2,719
+57,418,392
+4
+2,781
+60,418,305
+5
+1,517
+38,752,988
+6
+636
+13,676,387
+7
+222
+6,053,194
+8
+131
+4,170,204
+9
+44
+864,570
+10
+19
+187,225
+HHVEHCNT
+N
+8
+0
+743
+16,634,884
+1
+4,092
+70,456,909
+2
+7,583
+127,012,311
+3
+2,885
+55,305,071
+4
+1,093
+24,703,796
+5
+391
+7,054,317
+6
+139
+2,835,860
+7
+37
+832,013
+8
+21
+317,997
+9
+2
+17,697
+11
+7
+343,101
+14
+3
+26,989
+17
+1
+19,982
+HH_HISP
+C
+2
+01=Hispanic or Latino
+1,525
+52,613,378
+02=Not Hispanic or Latino
+15,472
+252,947,547
+HH_RACE
+C
+2
+01=White
+14,261
+221,708,653
+02=Black or African American
+1,201
+36,899,219
+03=Asian
+899
+20,917,285
+04=American Indian/Alaska Native
+100
+3,278,147
+05=Native Hawaiian/Pacific Islander
+56
+1,340,654
+06=Multiple races selected
+57
+7,845,160
+97=Other race
+423
+13,571,806
+HOMEOWN
+C
+2
+01=Owned by hh member with mortgage or loan
+8,873
+157,818,131
+02=Owned by hh member free and clear (no mortgage)
+4,227
+59,854,221
+03=Rented by hh member
+3,666
+83,204,678
+04=Occupied without payment
+231
+4,683,895
+Total number of people in 
+household
+Total number of vehicles in 
+household
+Hispanic status of household 
+respondent
+Race of household 
+respondent
+Whether home owned or 
+rented
+16
+
+
+===== [page 17] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+HOUSEID
+Unique Identifier- Household
+C
+10
+Responses=9000013002-9000218040
+16,997
+305,560,925
+HTEEMPDN
+C
+2
+-9=Not ascertained
+124
+1,758,465
+01=0-49
+2,430
+40,800,144
+02=50-99
+997
+16,936,695
+03=100-249
+1,554
+24,587,235
+04=250-499
+1,663
+29,757,844
+05=500-999
+1,983
+33,471,165
+06=1,000-1,999
+3,406
+63,171,901
+07=2,000-3,999
+3,101
+59,613,706
+08=4,000-999,999
+1,739
+35,463,770
+HTHTNRNT
+C
+2
+01=0-4%
+588
+10,318,759
+05=5-14%
+4,099
+63,886,711
+20=15-24%
+4,149
+70,630,396
+30=25-34%
+2,858
+50,624,637
+40=35-44%
+2,030
+37,973,767
+50=45-54%
+1,446
+31,253,896
+60=55-64%
+882
+19,919,945
+70=65-74%
+520
+11,566,734
+80=75-84%
+316
+6,607,986
+90=85-94%
+99
+2,520,827
+95=95-100%
+10
+257,267
+HTPPOPDN
+C
+2
+-9=Not ascertained
+63
+1,046,654
+01=0-99
+2,282
+37,939,835
+02=100-499
+2,623
+43,030,198
+03=500-999
+1,439
+25,260,026
+04=1,000-1,999
+2,289
+39,062,193
+05=2,000-3,999
+3,511
+62,831,147
+06=4,000-9,999
+3,540
+69,505,656
+07=10,000-24,999
+828
+17,316,528
+08=25,000-999,999
+422
+9,568,688
+HTRESDN
+C
+2
+-9=Not ascertained
+129
+3,034,683
+01=0-99
+3,639
+59,544,561
+02=100-499
+3,447
+60,169,789
+03=500-999
+2,136
+34,551,671
+04=1,000-1,999
+3,600
+66,477,024
+05=2,000-3,999
+2,674
+54,338,713
+06=4,000-9,999
+855
+16,631,326
+07=10,000-24,999
+330
+6,238,772
+08=25,000-999,999
+187
+4,574,386
+LAST30_BIKE
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+Category of workers per 
+square mile in the census 
+tract of the household's home 
+location
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the 
+household's home location
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+the household's home 
+location
+Category of housing units per 
+square mile in the census 
+tract of the household's home 
+location
+Used bicycle in last 30 days
+17
+
+
+===== [page 18] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+-8=Don't Know
+55
+1,190,965
+01=Yes
+1,559
+26,998,034
+02=No
+13,190
+231,221,164
+LAST30_BKSHR
+C
+2
+-1=Valid skip
+15,438
+278,562,891
+-8=Don't Know
+6
+108,473
+-9=Not ascertained
+1
+6,766
+01=Yes
+87
+1,707,860
+02=No
+1,465
+25,174,934
+LAST30_ESCT
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-8=Don't Know
+56
+1,242,860
+01=Yes
+241
+4,952,984
+02=No
+14,507
+253,214,318
+LAST30_MTRC
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-8=Don't Know
+47
+1,112,457
+01=Yes
+374
+6,824,048
+02=No
+14,383
+251,473,657
+LAST30_PT
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-8=Don't Know
+59
+1,340,245
+01=Yes
+1,610
+32,020,627
+02=No
+13,135
+226,049,290
+LAST30_RDSHR
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-8=Don't Know
+74
+1,538,790
+01=Yes
+2,294
+44,483,733
+02=No
+12,436
+213,387,640
+LAST30_TAXI
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-8=Don't Know
+67
+1,219,787
+01=Yes
+544
+10,883,481
+02=No
+14,193
+247,306,895
+LAST30_WALK
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-8=Don't Know
+72
+1,394,707
+01=Yes
+6,473
+110,279,370
+02=No
+8,259
+147,736,085
+LIF_CYC
+C
+2
+01=one adult, no children
+1,281
+23,077,501
+02=2+ adults, no children
+3,258
+54,787,803
+03=one adult, youngest child 0-5
+137
+4,250,317
+04=2+ adults, youngest child 0-5
+2,010
+47,014,063
+05=one adult, youngest child 6-15
+502
+10,271,698
+06=2+ adults, youngest child 6-15
+3,167
+70,473,399
+07=one adult, youngest child 16-21
+199
+3,722,612
+08=2+ adults, youngest child 16-21
+906
+21,701,999
+Used e-scooters in last 30 
+days
+Used motorcycle in last 30 
+days
+Used public transit in last 30 
+days
+Used rideshare in last 30 
+days
+Used taxi service in last 30 
+days
+Walked from place to place in 
+last 30 days
+Used bike share in last 30 
+days
+Life Cycle classification for 
+the household
+18
+
+
+===== [page 19] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+09=one adult, retired, no children
+990
+13,020,590
+10=2+ adults, retired, no children
+4,547
+57,240,942
+MCTRANSIT
+N
+8
+-1=Appropriate skip
+16,623
+298,736,877
+Responses=0-30
+374
+6,824,048
+MEDCOND
+C
+2
+-7=I prefer not to answer
+679
+12,168,424
+-8=Don't know
+101
+2,643,258
+-9=Not ascertained
+33
+565,448
+01=Yes
+1,206
+18,647,931
+02=No
+14,978
+271,535,864
+MEDCOND6
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+40
+865,166
+-8=Don't know
+15
+445,088
+-9=Not ascertained
+5
+76,312
+01=6 months or less
+80
+1,295,363
+02=More than 6 months
+895
+12,670,707
+03=Entire life
+171
+3,295,294
+MSACAT
+C
+2
+01=MSA of 1 million or more, with rail
+3,708
+72,883,077
+02=MSA of 1 million or more, without rail
+5,348
+94,166,530
+03=MSA less than 1 million
+7,019
+123,936,833
+04=Not in MSA
+922
+14,574,484
+MSASIZE
+C
+2
+01=In an MSA of Less than 250,000
+3,154
+53,109,001
+02=In an MSA of 250,000 - 499,999
+1,647
+29,786,993
+03=In an MSA of 500,000 - 999,999
+2,218
+41,040,839
+04=In an MSA or CMSA of 1,000,000 - 2,999,999
+3,864
+68,477,467
+05=In an MSA or CMSA of 3 million or more
+5,192
+98,572,141
+06=Not in MSA or CMSA
+922
+14,574,484
+NUMADLT
+N
+8
+1
+2,918
+50,335,502
+2
+10,526
+171,330,354
+3
+2,358
+53,315,088
+4
+895
+22,562,579
+5
+196
+5,186,376
+6
+56
+2,160,737
+7
+40
+622,999
+8
+8
+47,288
+OUTOFTWN
+C
+2
+01=Yes
+75
+1,515,001
+02=No
+16,922
+304,045,924
+PARK
+C
+2
+-1=Valid skip
+9,599
+155,422,007
+01=Yes
+186
+4,098,815
+02=No
+7,212
+146,040,103
+PARKHOME
+C
+2
+-1=Valid skip
+16,811
+301,462,110
+Count of adult household 
+members at least 18 years 
+old
+Away from home entire travel 
+day
+Paid for parking at any time 
+during travel day
+Pay for home parking
+Days in last 30 days 
+motorcycle used
+Condition or disability that 
+makes travel difficult
+Length of time respondent 
+has had condition
+MSA category for the HH 
+home address
+Population size category of 
+the MSA from the five-year 
+ACS API
+19
+
+
+===== [page 20] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=Yes
+14
+367,227
+02=No
+172
+3,731,588
+PARKHOMEAMT
+C
+4
+-1=Valid skip
+16,983
+305,193,698
+0001=Paid to park at home
+12
+290,412
+9998=Paid but I don't remember the cost
+2
+76,815
+PARKHOMEAMT_PAMOUNT
+N
+8
+-1=Appropriate skip
+16,985
+305,270,513
+Responses=6.55-200
+12
+290,412
+PARKHOMEAMT_PAYTYPE
+C
+2
+-1=Valid skip
+16,985
+305,270,513
+01=One Time
+4
+152,836
+03=Per Month
+8
+137,576
+PAYPROF
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+01=Yes
+7,559
+152,753,322
+02=No
+7,245
+106,656,841
+PERSONID
+C
+2
+01
+7,852
+137,629,125
+02
+5,554
+87,542,460
+03
+1,986
+44,286,568
+04
+1,041
+22,966,179
+05
+384
+9,199,927
+06
+120
+2,498,081
+07
+44
+1,141,113
+08
+12
+259,118
+09
+3
+26,480
+10
+1
+11,874
+PRMACT
+C
+2
+-1=Valid skip
+9,752
+198,904,084
+01=Temporarily absent from a job or business
+224
+5,256,189
+02=Looking for work/unemployed
+499
+8,718,083
+03=A homemaker
+807
+12,174,137
+04=Going to school
+532
+10,863,661
+05=Retired
+4,051
+49,050,556
+97=Something else
+1,132
+20,594,215
+PROXY
+C
+2
+01=Self
+11,568
+203,513,392
+02=Someone else
+5,429
+102,047,533
+PTUSED
+N
+8
+-1=Appropriate skip
+15,387
+273,540,298
+Responses=0-30
+1,610
+32,020,627
+QACSLAN1
+C
+2
+-9=Not ascertained
+26
+354,664
+01=Yes
+2,247
+53,814,968
+02=No
+14,724
+251,391,293
+QACSLAN3
+C
+2
+-1=Valid skip
+14,724
+251,391,293
+-9=Not ascertained
+27
+414,743
+01=Very well
+1,700
+38,808,877
+Whether respondent pays to 
+park at home
+Cost of parking at home
+Language other than English 
+spoken at home
+How well this person speaks 
+English
+Duration of payment
+Worked for pay last week
+Person ID within household
+Primary activity for those who 
+did not work for pay last week
+Survey completed by self or 
+someone else
+Days in last 30 days public 
+transit used
+20
+
+
+===== [page 21] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Well
+369
+9,227,434
+03=Not well
+146
+4,692,769
+04=Not at all
+31
+1,025,810
+RAIL
+C
+2
+01=Yes
+3,845
+75,551,008
+02=No
+13,152
+230,009,917
+RET_AMZ
+N
+8
+-9=Not ascertained
+2,946
+50,615,868
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-31
+8,058
+134,640,772
+RET_HOME
+N
+8
+-9=Not ascertained
+3,177
+53,341,225
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-60
+7,827
+131,915,415
+RET_PUF
+N
+8
+-9=Not ascertained
+2,332
+39,488,913
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-47
+8,672
+145,767,727
+RET_STORE
+N
+8
+-9=Not ascertained
+3,179
+52,561,680
+-1=Appropriate skip
+5,993
+120,304,285
+Responses=0-17
+7,825
+132,694,960
+RIDESHARE22
+N
+8
+-1=Appropriate skip
+14,703
+261,077,192
+Responses=0-30
+2,294
+44,483,733
+R_AGE
+Respondent age
+N
+8
+Responses=5-92
+16,997
+305,560,925
+R_HISP
+C
+2
+01=Hispanic
+1,722
+56,715,891
+02=Not Hispanic
+15,275
+248,845,034
+R_RACE
+C
+2
+-9=Not ascertained
+2
+23,871
+01=White
+14,053
+218,057,854
+02=Black or African American
+1,282
+37,907,512
+03=Asian
+935
+17,369,165
+04=American Indian/Alaska Native
+124
+3,564,969
+05=Native Hawaiian/Pacific Islander
+67
+1,382,011
+06=Multiple races selected
+70
+12,995,066
+97=Other race
+464
+14,260,476
+R_RACE_IMP
+C
+2
+01=White
+14,055
+218,081,725
+02=Black or African American
+1,282
+37,907,512
+03=Asian
+935
+17,369,165
+04=American Indian/Alaska Native
+124
+3,564,969
+05=Native Hawaiian/Pacific Islander
+67
+1,382,011
+06=Multiple races selected
+70
+12,995,066
+97=Other race
+464
+14,260,476
+R_RELAT
+C
+2
+-9=Not ascertained
+9
+168,983
+01=Spouse/Partner
+4,547
+68,828,752
+02=Child
+3,284
+69,790,558
+MSA heavy rail status for 
+household
+Number of times returned 
+online purchase at Amazon 
+dropoff center
+Number of times returned 
+online purchase by home 
+pickup
+Number of times returned 
+online purchase to post 
+office/UPS/Fed Ex/ similar
+Number of times returned 
+online purchase by direct to 
+store
+Days in last 30 days 
+rideshare used
+Person 5 or older - Hispanic 
+or Latino
+Respondent race
+Respondent race (imputed)
+Respondent relationship to 
+primary respondent
+21
+
+
+===== [page 22] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+03=Parent
+355
+8,380,901
+04=Brother/Sister
+207
+5,136,443
+05=Other relative
+418
+9,855,000
+06=Not related
+325
+5,771,162
+07=Self
+7,852
+137,629,125
+R_SEX
+C
+2
+-7=Refuse
+228
+4,179,855
+-8=Don't know
+8
+232,338
+-9=Not ascertained
+1
+12,070
+01=Male
+8,154
+148,289,962
+02=Female
+8,606
+152,846,699
+R_SEX_IMP
+C
+2
+01=Male
+8,250
+150,091,842
+02=Female
+8,747
+155,469,083
+SAMEPLC
+C
+2
+-1=Valid skip
+10,592
+226,115,055
+-7=I prefer not to answer
+990
+13,481,580
+-8=Don't know
+1,057
+14,923,177
+-9=Not ascertained
+477
+5,844,281
+01=Personally sick or quarantining
+343
+4,267,169
+02=Vacation or personal day
+273
+3,676,590
+03=Caretaking
+93
+1,219,129
+04=Disabled or home-bound
+144
+1,759,712
+05=Worked at home (for pay)
+427
+4,955,731
+06=Not scheduled to work
+130
+1,826,897
+07=Household chores/projects
+263
+3,334,931
+08=Bad weather
+347
+3,276,670
+09=Out of country
+4
+19,406
+10=No transportation available
+92
+1,138,889
+12=School holiday/teacher workday
+58
+591,442
+14=Hospitalized or otherwise confined
+22
+285,112
+15=School from home
+111
+1,009,636
+16=Reluctant to travel
+83
+903,632
+97=Something else, please specify
+1,491
+16,931,886
+SBHTNRNT
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+5
+70,144
+01=0-4%
+116
+2,705,386
+05=5-14%
+490
+9,139,662
+20=15-24%
+457
+9,274,750
+30=25-34%
+326
+7,878,079
+40=35-44%
+226
+5,600,534
+50=45-54%
+160
+3,811,757
+60=55-64%
+124
+2,471,636
+Respondent sex
+Respondent sex (imputed)
+Reason for not taking trips on 
+travel day
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+school's location
+22
+
+
+===== [page 23] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+70=65-74%
+94
+2,401,680
+80=75-84%
+77
+2,117,576
+90=85-94%
+50
+1,029,839
+95=95-100%
+11
+305,607
+SBHUR
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+5
+70,144
+01=Rural
+330
+5,884,756
+02=Small Town
+471
+10,171,269
+03=Second City
+462
+10,010,058
+04=Suburban
+587
+13,244,471
+05=Urban
+281
+7,425,951
+SBPPOPDN
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+16
+339,569
+01=0-99
+161
+2,839,010
+02=100-499
+300
+6,085,568
+03=500-999
+189
+3,682,867
+04=1,000-1,999
+308
+7,261,848
+05=2,000-3,999
+551
+11,761,779
+06=4,000-9,999
+450
+10,632,086
+07=10,000-24,999
+120
+3,009,403
+08=25,000-999,999
+41
+1,194,521
+SBRESDN
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+19
+291,152
+01=0-99
+370
+7,446,507
+02=100-499
+482
+9,750,159
+03=500-999
+345
+6,872,796
+04=1,000-1,999
+528
+11,471,396
+05=2,000-3,999
+271
+7,247,119
+06=4,000-9,999
+79
+2,532,270
+07=10,000-24,999
+22
+416,280
+08=25,000-999,999
+20
+778,972
+SCHOOL1
+C
+2
+-9=Not ascertained
+27
+429,104
+01=Yes
+3,327
+70,018,658
+02=No
+13,643
+235,113,162
+SCHOOL1C
+C
+2
+-1=Valid skip
+16,094
+288,254,914
+-9=Not ascertained
+1
+8,823
+01=In- person
+458
+9,317,474
+02=Online
+382
+6,857,125
+03=Other (specify)
+62
+1,122,588
+SCHTRN1
+C
+2
+-1=Valid skip
+14,246
+245,289,742
+Urban / Rural indicator - 
+School Block group
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the school's location
+Category of housing units per 
+square mile in the census 
+block group of the school's 
+location
+Enrolled in school or 
+academic program
+Type of non K-12 school 
+enrolled in
+Usual transport to school
+23
+
+
+===== [page 24] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=Car
+857
+21,104,247
+02=Van
+137
+2,489,404
+03=SUV/Crossover
+481
+8,846,291
+04=Pickup truck
+98
+1,573,620
+07=Motorcycle
+1
+9,914
+08=Public or commuter bus
+62
+1,565,170
+09=School bus
+745
+16,993,219
+10=Streetcar or trolley car
+3
+43,662
+11=Subway or elevated rail
+11
+262,693
+12=Commuter rail
+6
+80,107
+15=Taxicab or limo service
+1
+14,744
+16=Other ride-sharing service
+7
+167,259
+17=Paratransit/ Dial a ride
+1
+21,711
+18=Bicycle (including bikeshare, ebike, etc.)
+49
+892,277
+19=E-scooter
+2
+13,216
+20=Walked
+254
+5,615,940
+21=Other (specify)
+36
+577,708
+SCHTYP
+C
+2
+-1=Valid skip
+14,579
+252,977,032
+-9=Not ascertained
+4
+30,913
+01=Public or private school
+2,220
+49,652,950
+02=Home schooled
+183
+2,721,858
+03=Other (specify)
+11
+178,171
+STEEMPDN
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+14
+201,608
+01=0-49
+227
+4,324,186
+02=50-99
+118
+2,742,315
+03=100-249
+192
+3,797,835
+04=250-499
+214
+3,969,420
+05=500-999
+283
+6,252,997
+06=1,000-1,999
+499
+10,610,839
+07=2,000-3,999
+392
+9,828,328
+08=4,000-999,999
+197
+5,079,123
+STHTNRNT
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+5
+70,144
+01=0-4%
+59
+1,888,467
+05=5-14%
+420
+7,418,146
+20=15-24%
+502
+10,349,923
+30=25-34%
+383
+9,646,264
+40=35-44%
+263
+5,675,951
+50=45-54%
+174
+4,118,085
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the 
+school's location
+Type of K-12 school enrolled 
+in
+Category of workers per 
+square mile in the census 
+tract of the school's location
+24
+
+
+===== [page 25] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+60=55-64%
+124
+2,860,285
+70=65-74%
+87
+1,757,923
+80=75-84%
+72
+2,101,621
+90=85-94%
+43
+778,772
+95=95-100%
+4
+141,070
+STPPOPDN
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+10
+152,711
+01=0-99
+210
+4,253,989
+02=100-499
+310
+5,882,053
+03=500-999
+179
+3,487,509
+04=1,000-1,999
+322
+7,246,524
+05=2,000-3,999
+492
+10,964,775
+06=4,000-9,999
+444
+10,731,682
+07=10,000-24,999
+119
+2,672,197
+08=25,000-999,999
+50
+1,415,211
+STRATUMID
+Household Stratum ID
+C
+4
+Responses=1021-1040
+16,997
+305,560,925
+STRESDN
+C
+2
+-1=Appropriate skip
+14,861
+258,754,275
+-9=Not ascertained
+22
+457,004
+01=0-99
+387
+7,181,068
+02=100-499
+484
+9,499,415
+03=500-999
+323
+8,337,987
+04=1,000-1,999
+510
+10,910,475
+05=2,000-3,999
+294
+7,643,667
+06=4,000-9,999
+67
+1,462,337
+07=10,000-24,999
+28
+528,146
+08=25,000-999,999
+21
+786,551
+STUDE
+C
+2
+-1=Valid skip
+13,670
+235,542,267
+-9=Not ascertained
+6
+128,755
+01=K-12th grade including GED
+2,418
+52,583,893
+02=Vocation/Technical/Trade School
+57
+1,502,207
+03=Part-time college or university
+252
+4,857,771
+04=Full-time college or university
+487
+9,007,934
+05=Other (specify)
+107
+1,938,099
+TAXISERVICE
+N
+8
+-1=Appropriate skip
+16,453
+294,677,444
+Responses=0-30
+544
+10,883,481
+TDAYDATE
+C
+6
+202201
+441
+7,909,179
+202202
+1,717
+23,440,226
+202203
+1,508
+25,951,890
+202204
+1,472
+25,114,687
+202205
+1,218
+25,951,624
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+the school's location
+Category of housing units per 
+square mile in the census 
+tract of the school's location
+School or academic program 
+description
+Days in last 30 days taxi 
+service used
+Date of travel day (YYYYMM)
+25
+
+
+===== [page 26] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+202206
+780
+25,114,668
+202207
+998
+25,951,601
+202208
+1,028
+25,951,583
+202209
+937
+25,114,655
+202210
+1,369
+25,951,555
+202211
+2,566
+25,114,378
+202212
+2,126
+25,951,892
+202301
+837
+18,042,988
+TRAVDAY
+C
+2
+01=Sunday
+3,032
+43,651,555
+02=Monday
+3,199
+43,651,502
+03=Tuesday
+2,311
+43,651,578
+04=Wednesday
+2,111
+43,651,550
+05=Thursday
+2,287
+43,651,659
+06=Friday
+2,278
+43,651,589
+07=Saturday
+1,779
+43,651,492
+TRNPASS
+C
+2
+-1=Valid skip
+15,432
+274,095,232
+01=Yes
+445
+7,592,752
+02=No
+1,120
+23,872,942
+URBAN
+C
+2
+01=In an urban area
+11,945
+220,756,776
+02=In an Urban cluster
+1,494
+26,082,432
+03=In an area surrounded by urban areas
+2
+17,645
+04=Not in urban area
+3,556
+58,704,072
+URBANSIZE
+C
+2
+01=50,000-199,999
+1,665
+29,792,063
+02=200,000-499,999
+1,854
+33,753,568
+03=500,000-999,999
+1,654
+30,533,415
+04=1,000,000 or more with heavy rail
+3,117
+62,864,818
+05=1,000,000 or more without heavy rail
+3,655
+63,812,911
+06=Not in urbanized area
+5,052
+84,804,149
+URBRUR
+C
+2
+01=Urban
+13,439
+246,839,208
+02=Rural
+3,558
+58,721,717
+USAGE1
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+-9=Not ascertained
+38
+639,344
+01=Yes, took fewer trips
+4,109
+72,595,522
+02=No, did not take fewer trips
+10,657
+186,175,296
+USAGE2_1
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=I had more home deliveries
+697
+11,594,659
+02=Not Selected
+3,396
+60,768,563
+USAGE2_10
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+Reason fewer trips - more 
+deliveries
+Reason fewer trips - COVID 
+19
+Travel day - day of week
+Discounted transit pass used 
+in past 30 days
+Household urban area 
+classification, based on 2020 
+TIGER/Line Shapefile
+Urban area size where home 
+address is located
+Household in urban/rural 
+area
+Fewer trips in past 30 days
+26
+
+
+===== [page 27] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=Concerns related to COVID 19
+1,147
+18,955,852
+02=Not Selected
+2,946
+53,407,370
+USAGE2_2
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Transportation did not feel safe
+198
+3,573,315
+02=Not Selected
+3,895
+68,789,907
+USAGE2_3
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Transportation did not feel clean or healthy
+131
+2,220,465
+02=Not Selected
+3,962
+70,142,757
+USAGE2_4
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Transportation was not reliable
+265
+5,863,774
+02=Not Selected
+3,828
+66,499,448
+USAGE2_5
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Available transportation did not go where I need to go
+230
+3,802,899
+02=Not Selected
+3,863
+68,560,323
+USAGE2_6
+C
+2
+-1=valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Unable to afford available forms of transportation
+553
+11,764,346
+02=Not Selected
+3,540
+60,598,876
+USAGE2_7
+C
+2
+-1=valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Had health problems and unable to travel
+851
+12,069,913
+02=Not Selected
+3,242
+60,293,308
+USAGE2_8
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Did not have time to travel
+706
+12,784,831
+02=Not Selected
+3,387
+59,578,391
+USAGE2_9
+C
+2
+-1=Valid skip
+12,888
+232,965,403
+-9=Not ascertained
+16
+232,301
+01=Another reason
+1,318
+23,537,071
+02=Not Selected
+2,775
+48,826,151
+USEPUBTR
+C
+2
+01=Yes
+182
+4,992,815
+02=No
+16,815
+300,568,110
+WALKTRANSIT
+N
+8
+-1=Appropriate skip
+10,523
+195,272,358
+Responses=0-30
+6,474
+110,288,567
+WBHTNRNT
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+18
+455,829
+Reason fewer trips - did not 
+feel safe
+Reason fewer trips - did not 
+feel clean/healthy
+Reason fewer trips - not 
+reliable
+Reason fewer trips - did not 
+go where needed
+Reason fewer trips - 
+unaffordable
+Reason fewer trips - health 
+problems
+Reason fewer trips - no time
+Reason fewer trips - other
+Public Transit Usage on 
+Travel Date
+Days in last 30 days walking 
+used
+Category of the percent of 
+renter-occupied housing in 
+27
+
+
+===== [page 28] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=0-4%
+229
+4,023,621
+05=5-14%
+771
+14,620,909
+20=15-24%
+916
+20,186,757
+30=25-34%
+875
+17,867,235
+40=35-44%
+682
+15,629,856
+50=45-54%
+701
+16,050,798
+60=55-64%
+542
+9,970,368
+70=65-74%
+460
+9,613,714
+80=75-84%
+385
+8,461,684
+90=85-94%
+161
+3,074,473
+95=95-100%
+33
+762,815
+WBHUR
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+18
+455,829
+01=Rural
+731
+14,385,232
+02=Small Town
+1,222
+25,260,838
+03=Second City
+1,064
+22,168,064
+04=Suburban
+1,739
+36,835,965
+05=Urban
+999
+21,612,132
+WBPPOPDN
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+90
+1,964,022
+01=0-99
+572
+10,692,133
+02=100-499
+885
+19,348,328
+03=500-999
+567
+12,571,550
+04=1,000-1,999
+949
+19,266,869
+05=2,000-3,999
+1,213
+25,275,079
+06=4,000-9,999
+962
+20,493,049
+07=10,000-24,999
+369
+6,888,894
+08=25,000-999,999
+166
+4,218,135
+WBRESDN
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+138
+2,829,680
+01=0-99
+1,019
+19,565,889
+02=100-499
+1,365
+30,577,215
+03=500-999
+794
+16,361,208
+04=1,000-1,999
+1,105
+23,034,153
+05=2,000-3,999
+730
+15,851,827
+06=4,000-9,999
+362
+6,995,815
+07=10,000-24,999
+167
+3,192,995
+08=25,000-999,999
+93
+2,309,278
+WHOPROXY
+C
+2
+-1=Valid skip
+11,568
+203,513,392
+01=Person1
+5,215
+96,668,360
+Urban / Rural indicator - 
+Workplace Block group
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the workplace's 
+location
+Category of housing units per 
+square mile in the census 
+block group of the 
+workplace's location
+Who is completing the survey
+the census block group of the 
+workplace's location
+28
+
+
+===== [page 29] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Person 2
+100
+2,138,257
+03=Person 3
+28
+749,300
+04=Person 4
+10
+298,939
+05=Person 5
+5
+115,914
+06=Person 6
+4
+111,927
+97=Someone else
+67
+1,964,837
+WKFMHM22
+C
+2
+-1=Valid skip
+9,214
+147,551,415
+01=Never
+4,366
+98,141,336
+02=One or two days a week
+1,120
+18,610,326
+03=Three or four days a week
+610
+10,484,139
+04=Five or more days a week/ Entire work week
+1,687
+30,773,710
+WORKER
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+01=Worker
+7,783
+158,009,510
+02=Not worker
+7,021
+101,400,652
+WRKCOUNT
+N
+8
+0
+4,769
+65,254,659
+1
+5,421
+96,952,160
+2
+5,509
+108,241,205
+3
+1,044
+27,188,782
+4
+188
+5,593,977
+5
+47
+1,960,414
+6
+19
+369,728
+WRKLOC
+C
+2
+-1=Valid skip
+9,214
+147,551,415
+01=Only one work location outside of home
+4,659
+98,564,167
+02=Work location regularly varies (different offices/job sites)
+1,301
+26,410,451
+03=Only work at home (telework, self-employed)
+1,489
+26,276,358
+04=Drive/travel for work (driver, sales)
+334
+6,758,535
+WRKTRANS
+C
+2
+-1=Valid skip
+10,901
+178,325,124
+01=Car
+2,972
+65,010,734
+02=Van
+204
+4,648,517
+03=SUV/Crossover
+1,585
+30,039,130
+04=Pickup truck
+758
+15,175,255
+07=Motorcycle
+12
+283,635
+08=Public or commuter bus
+97
+2,640,723
+09=School bus
+7
+125,816
+10=Streetcar or trolley car
+2
+18,983
+11=Subway or elevated rail
+88
+1,660,118
+12=Commuter rail
+49
+888,393
+13=Amtrak
+1
+33,162
+14=Airplane
+11
+216,473
+15=Taxicab or limo service
+2
+38,627
+Days per week worked from 
+home
+Employment status of 
+respondent
+Count of workers in 
+household
+Description of work location
+Usual transport to work
+29
+
+
+===== [page 30] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+16=Other ride-sharing service
+35
+675,128
+17=Paratransit/ Dial a ride
+4
+110,672
+18=Bicycle (including bikeshare, ebike, etc.)
+77
+1,292,624
+19=E-scooter
+1
+6,640
+20=Walked
+163
+3,723,305
+21=Other (specify)
+25
+590,109
+22=Ferryboat
+3
+57,754
+WTEEMPDN
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+96
+2,245,256
+01=0-49
+599
+11,458,076
+02=50-99
+299
+7,080,422
+03=100-249
+556
+12,125,489
+04=250-499
+610
+12,703,105
+05=500-999
+804
+16,644,203
+06=1,000-1,999
+1,247
+26,943,023
+07=2,000-3,999
+866
+18,080,120
+08=4,000-999,999
+696
+13,438,366
+WTHTNRNT
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+18
+455,829
+01=0-4%
+99
+1,931,564
+05=5-14%
+720
+14,118,208
+20=15-24%
+1,042
+22,117,732
+30=25-34%
+922
+19,821,403
+40=35-44%
+822
+17,292,347
+50=45-54%
+682
+14,862,637
+60=55-64%
+581
+11,677,256
+70=65-74%
+446
+10,081,484
+80=75-84%
+312
+5,575,347
+90=85-94%
+116
+2,409,433
+95=95-100%
+13
+374,822
+WTPERFIN
+7 day National person weight N
+8
+Responses=30.877179031-781699.97227
+16,997
+305,560,925
+WTPERFIN2D
+2 day National person weight N
+8
+Responses=0-473081.72428
+16,997
+305,560,925
+WTPERFIN5D
+5 day National person weight N
+8
+Responses=0-972351.28194
+16,997
+305,560,925
+WTPPOPDN
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+66
+1,634,494
+01=0-99
+597
+11,148,954
+02=100-499
+798
+17,394,023
+03=500-999
+545
+11,109,449
+04=1,000-1,999
+940
+20,237,909
+05=2,000-3,999
+1,258
+26,843,457
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+the workplace's location
+Category of workers per 
+square mile in the census 
+tract of the workplace's 
+location
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the 
+workplace's location
+30
+
+
+===== [page 31] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+06=4,000-9,999
+1,022
+21,801,487
+07=10,000-24,999
+361
+6,114,063
+08=25,000-999,999
+186
+4,434,223
+WTRESDN
+C
+2
+-1=Appropriate skip
+11,224
+184,842,866
+-9=Not ascertained
+107
+2,668,699
+01=0-99
+992
+19,830,411
+02=100-499
+1,268
+27,354,579
+03=500-999
+827
+17,409,078
+04=1,000-1,999
+1,185
+24,800,281
+05=2,000-3,999
+752
+15,851,353
+06=4,000-9,999
+377
+7,187,037
+07=10,000-24,999
+168
+2,864,818
+08=25,000-999,999
+97
+2,751,804
+W_CANE
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+80
+1,562,096
+-8=Don't know
+4
+38,676
+-9=Not ascertained
+11
+114,290
+01=Selected
+379
+5,396,130
+02=Not Selected
+732
+11,536,738
+W_CHAIR
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+80
+1,562,096
+-8=Don't know
+4
+38,676
+-9=Not ascertained
+11
+114,290
+01=Selected
+113
+1,755,731
+02=Not Selected
+998
+15,177,138
+W_NONE
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+80
+1,562,096
+-8=Don't know
+4
+38,676
+-9=Not ascertained
+11
+114,290
+01=Selected
+479
+7,733,762
+02=Not Selected
+632
+9,199,107
+W_SCCH
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+80
+1,562,096
+-8=Don't know
+4
+38,676
+-9=Not ascertained
+11
+114,290
+01=Selected
+119
+1,643,490
+02=Not Selected
+992
+15,289,378
+W_VISIMP
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+80
+1,562,096
+-8=Don't know
+4
+38,676
+Uses devices to aid the blind 
+or visually impaired
+Category of housing units per 
+square mile in the census 
+tract of the workplace's 
+location
+Uses cane or walking stick
+Uses manual scooter or 
+wheel chair
+Uses no medical device for 
+mobility
+Uses motorized scooter or 
+wheelchair
+31
+
+
+===== [page 32] =====
+2022 NextGen NHTS Person File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+-9=Not ascertained
+11
+114,290
+01=Selected
+17
+338,302
+02=Not Selected
+1,094
+16,594,567
+W_WKCR
+C
+2
+-1=Valid skip
+15,791
+286,912,994
+-7=I prefer not to answer
+80
+1,562,096
+-8=Don't know
+4
+38,676
+-9=Not ascertained
+11
+114,290
+01=Selected
+265
+3,744,650
+02=Not Selected
+846
+13,188,219
+Uses walker or crutches
+32
+
+
+===== [page 33] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+ANNMILES
+N
+8
+-9=Not ascertained
+213
+3,869,451
+Responses=0-200000
+14,471
+228,967,653
+CDIVMSAR
+C
+2
+11=New England MSA/CMSA of 1 million+ with heavy rail
+281
+3,751,502
+12=New England MSA/CMSA of 1 million+ w/o heavy rail
+93
+1,216,194
+13=New England MSA of less than 1 million
+365
+5,589,563
+14=New England Not in an MSA
+33
+374,415
+21=Mid-Atlantic MSA/CMSA of 1 million+ with heavy rail
+657
+10,841,833
+22=Mid-Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+221
+3,401,522
+23=Mid-Atlantic MSA of less than 1 million
+569
+10,168,427
+24=Mid-Atlantic Not in an MSA
+38
+811,142
+31=East North Central MSA/CMSA of 1 million+ with heavy rail
+452
+6,766,070
+32=East North Central MSA/CMSA of 1 million+ w/o heavy rail
+710
+9,537,244
+33=East North Central MSA of less than 1 million
+1,169
+17,238,486
+34=East North Central Not in an MSA
+212
+3,439,623
+42=West North Central MSA/CMSA of 1 million+ w/o heavy rail
+396
+6,657,762
+43=West North Central MSA of less than 1 million
+562
+8,428,865
+44=West North Central Not in an MSA
+206
+2,111,759
+51=South Atlantic MSA/CMSA of 1 million+ with heavy rail
+787
+12,709,142
+52=South Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+696
+11,445,058
+53=South Atlantic MSA of less than 1 million
+1,277
+20,358,236
+54=South Atlantic Not in an MSA
+114
+1,911,989
+62=East South Central MSA/CMSA of 1 million+ w/o heavy rail
+291
+4,692,251
+63=East South Central MSA of less than 1 million
+501
+8,232,246
+64=East South Central Not in an MSA
+86
+1,505,713
+72=West South Central MSA/CMSA of 1 million+ w/o heavy 
+922
+15,197,417
+73=West South Central MSA of less than 1 million
+572
+9,963,183
+74=West South Central Not in an MSA
+103
+1,752,975
+82=Mountain MSA/CMSA of 1 million+ w/o heavy rail
+501
+8,173,465
+83=Mountain MSA of less than 1 million
+631
+9,013,995
+84=Mountain Not in an MSA
+72
+1,026,429
+91=Pacific MSA/CMSA of 1 million+ with heavy rail
+729
+13,442,449
+92=Pacific MSA/CMSA of 1 million+ w/o heavy rail
+724
+11,047,294
+93=Pacific MSA of less than 1 million
+679
+11,469,243
+94=Pacific Not in an MSA
+35
+561,616
+CENSUS_D
+C
+2
+01=New England
+772
+10,931,673
+02=Middle Atlantic
+1,485
+25,222,924
+03=East North Central
+2,543
+36,981,422
+04=West North Central
+1,164
+17,198,386
+Self-reported annualized mile 
+estimate
+Grouping of household by 
+combination of Census 
+division, MSA status, and 
+presence of rail
+Census division classification 
+for home address
+33
+
+
+===== [page 34] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+05=South Atlantic
+2,874
+46,424,425
+06=East South Central
+878
+14,430,209
+07=West South Central
+1,597
+26,913,575
+08=Mountain
+1,204
+18,213,888
+09=Pacific
+2,167
+36,520,601
+CENSUS_R
+C
+2
+01=Northeast
+2,257
+36,154,598
+02=Midwest
+3,707
+54,179,809
+03=South
+5,349
+87,768,209
+04=West
+3,371
+54,734,489
+COMMERCIALFREQ
+C
+2
+-1=Appropriate skip
+13,282
+210,478,573
+-9=Not ascertained
+4
+45,805
+Responses=00-30
+1,398
+22,312,726
+DRVRCNT
+N
+8
+0
+36
+841,565
+1
+3,330
+52,367,279
+2
+8,757
+127,812,350
+3
+1,732
+35,060,378
+4
+662
+13,315,413
+5
+127
+2,504,379
+6
+27
+758,207
+7
+13
+177,535
+HBHTNRNT
+C
+2
+01=0-4%
+1,062
+14,619,022
+05=5-14%
+4,328
+64,697,070
+20=15-24%
+3,290
+51,425,964
+30=25-34%
+2,175
+34,423,069
+40=35-44%
+1,418
+24,955,699
+50=45-54%
+942
+15,668,270
+60=55-64%
+686
+12,444,680
+70=65-74%
+433
+8,202,586
+80=75-84%
+248
+4,568,905
+90=85-94%
+92
+1,640,679
+95=95-100%
+10
+191,160
+HBHUR
+C
+2
+01=Rural
+3,482
+53,193,200
+02=Small Town
+3,524
+53,832,781
+03=Second City
+2,564
+42,008,509
+04=Suburban
+3,481
+56,129,621
+05=Urban
+1,633
+27,672,993
+HBPPOPDN
+C
+2
+-9=Not ascertained
+88
+1,517,807
+01=0-99
+2,049
+29,936,928
+Number of drivers in the 
+household
+Category of population 
+density (persons per square 
+Census region classification 
+for home address
+Over past 30 days, how 
+many days was vehicle used 
+for business purposes?
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+household's home location
+Urban / Rural indicator - 
+Block group
+34
+
+
+===== [page 35] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=100-499
+2,351
+36,167,646
+03=500-999
+1,151
+17,871,268
+04=1,000-1,999
+1,904
+30,254,904
+05=2,000-3,999
+2,976
+47,273,135
+06=4,000-9,999
+3,222
+52,970,894
+07=10,000-24,999
+738
+13,135,718
+08=25,000-999,999
+205
+3,708,804
+HBRESDN
+C
+2
+-9=Not ascertained
+140
+1,675,274
+01=0-99
+3,357
+50,501,206
+02=100-499
+2,845
+43,922,558
+03=500-999
+1,773
+28,576,532
+04=1,000-1,999
+3,033
+49,644,699
+05=2,000-3,999
+2,475
+40,445,071
+06=4,000-9,999
+779
+13,069,017
+07=10,000-24,999
+213
+3,655,904
+08=25,000-999,999
+69
+1,346,842
+HHFAMINC
+C
+2
+-7=I prefer not to answer
+197
+3,216,972
+-8=I don't know
+10
+123,192
+01=Less than $10,000
+279
+6,126,056
+02=$10,000 to $14,999
+233
+4,062,848
+03=$15,000 to $24,999
+578
+10,845,806
+04=$25,000 to $34,999
+776
+13,998,150
+05=$35,000 to $49,999
+1,360
+22,037,547
+06=$50,000 to $74,999
+2,535
+39,558,195
+07=$75,000 to $99,999
+2,242
+34,688,480
+08=$100,000 to $124,999
+1,844
+25,135,624
+09=$125,000 to $149,999
+1,394
+20,201,699
+10=$150,000 to $199,999
+1,357
+22,976,207
+11=$200,000 or more
+1,879
+29,866,330
+HHFAMINC_IMP
+C
+2
+01=Less than $10,000
+281
+6,179,259
+02=$10,000 to $14,999
+241
+4,134,206
+03=$15,000 to $24,999
+586
+11,018,285
+04=$25,000 to $34,999
+791
+14,160,657
+05=$35,000 to $49,999
+1,375
+22,344,662
+06=$50,000 to $74,999
+2,585
+40,548,797
+07=$75,000 to $99,999
+2,269
+35,110,334
+08=$100,000 to $124,999
+1,883
+25,726,571
+09=$125,000 to $149,999
+1,406
+20,326,619
+mile) in the census block 
+group of the household's 
+home location
+Category of housing units per 
+square mile in the census 
+block group of the 
+household's home location
+Household income
+Household income (imputed)
+35
+
+
+===== [page 36] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+10=$150,000 to $199,999
+1,369
+23,252,926
+11=$200,000 or more
+1,898
+30,034,788
+HHSIZE
+N
+8
+1
+2,557
+38,877,931
+2
+6,714
+86,643,381
+3
+2,190
+42,592,121
+4
+1,870
+36,249,110
+5
+884
+18,361,684
+6
+299
+6,057,815
+7
+91
+2,306,468
+8
+45
+1,101,221
+9
+23
+472,390
+10
+11
+174,983
+HHVEHCNT
+N
+8
+1
+2,623
+42,271,037
+2
+6,398
+96,694,513
+3
+3,129
+50,577,839
+4
+1,440
+25,007,975
+5
+610
+9,053,801
+6
+264
+4,690,274
+7
+91
+1,611,771
+8
+56
+815,274
+9
+9
+112,025
+11
+33
+1,438,056
+14
+14
+129,161
+17
+17
+435,378
+HHVEHUSETIME_DEL
+C
+2
+-1=Appropriate skip
+14,485
+228,981,017
+-9=Not ascertained
+5
+63,814
+Responses=00-30
+194
+3,792,274
+HHVEHUSETIME_OTH
+C
+2
+-1=Appropriate skip
+13,572
+216,222,731
+-9=Not ascertained
+26
+410,318
+Responses=00-30
+1,086
+16,204,055
+HHVEHUSETIME_RS
+C
+2
+-1=Appropriate skip
+14,598
+230,974,585
+-9=Not ascertained
+2
+33,659
+Responses=00-30
+84
+1,828,860
+HH_HISP
+C
+2
+01=Hispanic or Latino
+1,046
+27,397,358
+02=Not Hispanic or Latino
+13,638
+205,439,746
+HH_RACE
+C
+2
+01=White
+12,789
+186,127,208
+02=Black or African American
+821
+20,006,733
+03=Asian
+621
+13,841,528
+Hispanic status of household 
+respondent
+Total number of people in 
+household
+Total number of vehicles in 
+household
+Over past 30 days, how 
+many days was vehicle used 
+for deliveries?
+Over past 30 days, how 
+many days was vehicle used 
+for other business?
+Over past 30 days, how 
+many days was vehicle used 
+for rideshare?
+Race of household 
+respondent
+36
+
+
+===== [page 37] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+04=American Indian/Alaska Native
+82
+2,630,307
+05=Native Hawaiian/Pacific Islander
+32
+633,972
+06=Multiple races selected
+49
+1,426,548
+97=Other race
+290
+8,170,808
+HOMEOWN
+C
+2
+01=Owned by hh member with mortgage or loan
+7,790
+122,998,361
+02=Owned by hh member free and clear (no mortgage)
+4,310
+59,533,459
+03=Rented by hh member
+2,396
+46,729,388
+04=Occupied without payment
+188
+3,575,895
+HOUSEID
+Unique Identifier- Household
+C
+10
+Responses=9000013002-9000218040
+14,684
+232,837,104
+HTEEMPDN
+C
+2
+-9=Not ascertained
+131
+1,735,300
+01=0-49
+2,446
+37,368,352
+02=50-99
+914
+15,221,168
+03=100-249
+1,434
+21,080,089
+04=250-499
+1,502
+23,852,835
+05=500-999
+1,737
+26,802,609
+06=1,000-1,999
+2,903
+47,340,015
+07=2,000-3,999
+2,489
+39,721,428
+08=4,000-999,999
+1,128
+19,715,308
+HTHTNRNT
+C
+2
+01=0-4%
+517
+7,989,635
+05=5-14%
+3,860
+56,513,116
+20=15-24%
+3,867
+60,106,092
+30=25-34%
+2,455
+39,572,637
+40=35-44%
+1,652
+25,518,517
+50=45-54%
+1,116
+21,287,942
+60=55-64%
+624
+11,116,269
+70=65-74%
+366
+6,856,265
+80=75-84%
+176
+2,889,854
+90=85-94%
+46
+912,851
+95=95-100%
+5
+73,925
+HTPPOPDN
+C
+2
+-9=Not ascertained
+79
+1,143,765
+01=0-99
+2,324
+35,809,432
+02=100-499
+2,429
+37,631,572
+03=500-999
+1,275
+20,473,322
+04=1,000-1,999
+2,011
+30,537,157
+05=2,000-3,999
+2,983
+47,645,941
+06=4,000-9,999
+2,820
+46,551,601
+07=10,000-24,999
+587
+9,859,482
+08=25,000-999,999
+176
+3,184,833
+Whether home owned or 
+rented
+Category of workers per 
+square mile in the census 
+tract of the household's home 
+location
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the 
+household's home location
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+the household's home 
+location
+37
+
+
+===== [page 38] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+HTRESDN
+C
+2
+-9=Not ascertained
+125
+1,811,705
+01=0-99
+3,592
+55,366,018
+02=100-499
+3,109
+48,785,316
+03=500-999
+1,861
+27,435,367
+04=1,000-1,999
+3,037
+49,583,167
+05=2,000-3,999
+2,100
+35,391,696
+06=4,000-9,999
+629
+10,565,134
+07=10,000-24,999
+182
+2,948,033
+08=25,000-999,999
+49
+950,667
+HYBRID
+C
+2
+01=Yes
+743
+11,113,234
+02=No
+13,941
+221,723,870
+LIF_CYC
+C
+2
+01=one adult, no children
+1,414
+22,816,887
+02=2+ adults, no children
+3,176
+47,773,738
+03=one adult, youngest child 0-5
+59
+1,460,595
+04=2+ adults, youngest child 0-5
+1,331
+27,660,806
+05=one adult, youngest child 6-15
+243
+4,288,412
+06=2+ adults, youngest child 6-15
+1,881
+36,496,636
+07=one adult, youngest child 16-21
+167
+2,535,234
+08=2+ adults, youngest child 16-21
+744
+14,747,384
+09=one adult, retired, no children
+1,143
+16,061,043
+10=2+ adults, retired, no children
+4,526
+58,996,370
+MAKE
+C
+2
+00=Suppressed for confidential reason
+457
+6,892,024
+02=Jeep
+554
+8,749,966
+06=Chrysler
+219
+3,828,359
+07=Dodge
+582
+10,105,329
+12=Ford
+1,921
+30,596,220
+13=Lincoln
+99
+1,463,659
+18=Buick / Opel
+239
+3,803,581
+19=Cadillac
+116
+2,093,638
+20=Chevrolet
+1,571
+26,484,861
+22=Pontiac
+82
+1,035,905
+23=GMC
+447
+6,895,420
+29=Other Domestic Manufacturers (e.g., Tesla)
+93
+1,463,501
+30=Volkswagen
+315
+4,551,687
+32=Audi
+142
+1,969,262
+34=BMW
+290
+4,426,608
+35=Nissan/Datsun
+702
+11,826,290
+37=Honda
+1,507
+23,657,766
+Category of housing units per 
+square mile in the census 
+tract of the household's home 
+location
+Hybrid vehicle
+Life Cycle classification for 
+the household
+Vehicle make ID
+38
+
+
+===== [page 39] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+41=Mazda
+292
+4,260,113
+42=Mercedes-Benz
+228
+3,481,748
+48=Subaru
+601
+7,926,250
+49=Toyota
+1,974
+31,400,238
+51=Volvo
+116
+1,613,468
+52=Mitsubishi
+72
+1,407,117
+54=Acura
+166
+2,672,255
+55=Hyundai
+516
+8,212,309
+58=Infiniti
+71
+1,239,866
+59=Lexus
+291
+3,908,455
+63=KIA
+376
+6,345,528
+72=Harley-Davidson
+145
+2,309,700
+98=Other Make
+500
+8,215,984
+MSACAT
+C
+2
+01=MSA of 1 million or more, with rail
+2,906
+47,510,996
+02=MSA of 1 million or more, without rail
+4,554
+71,368,205
+03=MSA less than 1 million
+6,325
+100,462,243
+04=Not in MSA
+899
+13,495,660
+MSASIZE
+C
+2
+01=In an MSA of Less than 250,000
+2,927
+45,386,078
+02=In an MSA of 250,000 - 499,999
+1,458
+23,340,893
+03=In an MSA of 500,000 - 999,999
+1,940
+31,735,272
+04=In an MSA or CMSA of 1,000,000 - 2,999,999
+3,321
+51,143,517
+05=In an MSA or CMSA of 3 million or more
+4,139
+67,735,684
+06=Not in MSA or CMSA
+899
+13,495,660
+NUMADLT
+N
+8
+1
+2,878
+44,613,160
+2
+9,171
+134,465,160
+3
+1,781
+35,843,440
+4
+652
+13,408,063
+5
+143
+2,954,438
+6
+33
+977,914
+7
+25
+567,304
+8
+1
+7,624
+RAIL
+C
+2
+01=Yes
+3,019
+49,374,340
+02=No
+11,665
+183,462,764
+STRATUMID
+Household Stratum ID
+C
+4
+Responses=1021-1040
+14,684
+232,837,104
+TDAYDATE
+C
+6
+202201
+401
+7,281,639
+202202
+1,517
+18,084,519
+202203
+1,316
+19,429,396
+202204
+1,295
+19,086,307
+Count of adult household 
+members at least 18 years 
+old
+MSA category for the HH 
+home address
+Population size category of 
+the MSA from the five-year 
+ACS API
+MSA heavy rail status for 
+household
+Date of travel day (YYYYMM)
+39
+
+
+===== [page 40] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+202205
+1,059
+19,468,319
+202206
+656
+18,317,956
+202207
+895
+20,252,950
+202208
+882
+19,084,590
+202209
+866
+20,533,751
+202210
+1,129
+19,706,811
+202211
+2,160
+18,399,470
+202212
+1,788
+19,706,152
+202301
+720
+13,485,243
+TRAVDAY
+C
+2
+01=Sunday
+2,589
+33,695,777
+02=Monday
+2,698
+33,786,998
+03=Tuesday
+2,084
+32,773,405
+04=Wednesday
+1,819
+31,960,139
+05=Thursday
+1,943
+32,931,656
+06=Friday
+1,977
+33,552,309
+07=Saturday
+1,574
+34,136,819
+URBAN
+C
+2
+01=In an urban area
+9,815
+157,842,355
+02=In an Urban cluster
+1,269
+20,303,419
+03=In an area surrounded by urban areas
+2
+28,866
+04=Not in urban area
+3,598
+54,662,464
+URBANSIZE
+C
+2
+01=50,000-199,999
+1,420
+23,652,022
+02=200,000-499,999
+1,595
+25,437,943
+03=500,000-999,999
+1,387
+21,479,562
+04=1,000,000 or more with heavy rail
+2,361
+39,417,642
+05=1,000,000 or more without heavy rail
+3,052
+47,855,186
+06=Not in urbanized area
+4,869
+74,994,749
+URBRUR
+C
+2
+01=Urban
+11,084
+178,145,774
+02=Rural
+3,600
+54,691,330
+VEHAGE
+Age of vehicle, based on 
+model year
+N
+8
+Responses=1-40
+14,684
+232,837,104
+VEHCASEID
+Unique vehicle identifier
+C
+12
+Responses=900001300201-900021804001
+14,684
+232,837,104
+VEHCOMMERCIAL
+C
+2
+-9=Not ascertained
+39
+543,706
+01=Yes
+1,402
+22,358,531
+02=No
+13,243
+209,934,868
+VEHCOM_DEL
+C
+2
+-1=Valid skip
+13,282
+210,478,573
+-9=Not ascertained
+209
+3,299,794
+01=Yes
+199
+3,856,088
+02=No
+994
+15,202,650
+Travel day - day of week
+Household urban area 
+classification, based on 2020 
+TIGER/Line Shapefile
+Urban area size where home 
+address is located
+Household in urban/rural 
+area
+Vehicle used for business 
+purposes
+Vehicle used for delivery 
+service
+40
+
+
+===== [page 41] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+VEHCOM_OTH
+C
+2
+-1=Valid skip
+13,282
+210,478,573
+-9=Not ascertained
+105
+2,114,047
+01=Yes
+1,112
+16,614,373
+02=No
+185
+3,630,111
+VEHCOM_RS
+C
+2
+-1=Valid skip
+13,282
+210,478,573
+-9=Not ascertained
+205
+3,249,664
+01=Yes
+86
+1,862,519
+02=No
+1,111
+17,246,348
+VEHFUEL
+C
+2
+-9=Not ascertained
+32
+475,793
+01=Gas
+13,485
+214,859,181
+02=Diesel
+384
+5,494,116
+03=Biodiesel
+6
+165,405
+04=Plug-in hybrid
+80
+1,147,568
+05=Electric only
+186
+2,898,975
+06=Hybrid, gas/electric, non plug-in
+477
+7,066,691
+97=Uses other fuel
+34
+729,375
+VEHID
+C
+2
+01
+7,417
+116,832,218
+02
+4,794
+74,561,181
+03
+1,595
+26,213,924
+04
+552
+9,354,644
+05
+192
+3,102,651
+06
+70
+1,291,890
+07
+26
+510,178
+08
+13
+279,925
+09
+6
+178,016
+10
+5
+165,569
+11
+5
+165,569
+12
+2
+34,836
+13
+2
+34,836
+14
+2
+34,836
+15
+1
+25,610
+16
+1
+25,610
+17
+1
+25,610
+VEHOWNED
+C
+2
+-9=Not ascertained
+99
+1,600,835
+01=Yes
+12,914
+202,776,921
+02=No
+1,671
+28,459,348
+VEHOWNMO
+C
+2
+-1=Appropriate skip
+12,914
+202,776,921
+-9=Not ascertained
+103
+1,672,427
+Vehicle ID within household
+Vehicle used for other 
+business purposes
+Vehicle used for rideshare
+Type of fuel vehicle runs on
+Vehicle owned for 1  year or 
+more
+Vehicles owned less than 1 
+year - months owned
+41
+
+
+===== [page 42] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01
+256
+4,484,834
+02
+165
+2,832,760
+03
+151
+2,649,543
+04
+138
+2,479,451
+05
+119
+1,856,331
+06
+203
+3,233,022
+07
+120
+2,192,050
+08
+129
+1,964,571
+09
+114
+1,981,902
+10
+127
+2,329,086
+11
+145
+2,384,207
+VEHTYPE
+C
+2
+01=Automobile/Car/Stationwagon
+6,382
+103,846,565
+02=Van (Minivan/Cargo/Passenger)
+671
+11,048,501
+03=SUV (Santa Fe, Tahoe, Jeep, etc.)
+4,562
+70,228,543
+04=Pickup Truck
+2,393
+37,378,137
+05=Other Truck
+81
+1,457,732
+06=Recreational vehicle (RV)/Motorhome
+112
+1,364,200
+07=MotorcycleMoped
+430
+6,720,038
+97=Something else
+53
+793,389
+VEHYEAR
+Vehicle year
+N
+8
+Responses=1982-2023
+14,684
+232,837,104
+WHOMAIN
+C
+2
+-9=Not ascertained
+210
+3,232,100
+01=Person1
+8,346
+128,959,701
+02=Person 2
+4,764
+74,244,974
+03=Person 3
+686
+14,217,209
+04=Person 4
+183
+3,828,437
+05=Person 5
+34
+713,499
+06=Person 6
+6
+153,082
+07=Person 7
+3
+75,647
+08=Person 8
+1
+10,295
+96=No one
+253
+3,890,555
+97=Someone else
+198
+3,511,605
+WRKCOUNT
+N
+8
+0
+4,325
+63,409,427
+1
+4,737
+75,853,806
+2
+4,568
+71,737,319
+3
+837
+16,873,753
+4
+164
+3,747,409
+5
+39
+969,289
+6
+14
+246,102
+Vehicle type
+Main driver of vehicle
+Count of workers in 
+household
+42
+
+
+===== [page 43] =====
+2022 NextGen NHTS Vehicle File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+WTHHFIN
+7-day natl household weight
+N
+8
+Responses=100.84634725-81832.021407
+14,684
+232,837,104
+WTHHFIN2D
+2-day natl household weight
+N
+8
+Responses=0-264588.14373
+14,684
+232,837,104
+WTHHFIN5D
+5-day natl household weight
+N
+8
+Responses=0-112970.16439
+14,684
+232,837,104
+43
+
+
+===== [page 44] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+CDIVMSAR
+C
+2
+11=New England MSA/CMSA of 1 million+ with heavy rail
+643
+3,946,149,018
+12=New England MSA/CMSA of 1 million+ w/o heavy rail
+201
+1,599,163,490
+13=New England MSA of less than 1 million
+866
+5,879,280,099
+14=New England Not in an MSA
+67
+324,364,703
+21=Mid-Atlantic MSA/CMSA of 1 million+ with heavy rail
+1,767
+15,775,411,553
+22=Mid-Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+516
+4,025,390,230
+23=Mid-Atlantic MSA of less than 1 million
+1,175
+11,985,354,635
+24=Mid-Atlantic Not in an MSA
+63
+540,974,000
+31=East North Central MSA/CMSA of 1 million+ with heavy rail
+1,051
+7,920,048,142
+32=East North Central MSA/CMSA of 1 million+ w/o heavy rail
+1,406
+9,046,540,957
+33=East North Central MSA of less than 1 million
+2,094
+16,617,152,500
+34=East North Central Not in an MSA
+359
+3,038,668,083
+42=West North Central MSA/CMSA of 1 million+ w/o heavy rail
+914
+7,476,947,736
+43=West North Central MSA of less than 1 million
+1,177
+8,731,240,817
+44=West North Central Not in an MSA
+286
+1,404,712,604
+51=South Atlantic MSA/CMSA of 1 million+ with heavy rail
+1,709
+14,706,554,626
+52=South Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+1,541
+10,281,253,629
+53=South Atlantic MSA of less than 1 million
+2,796
+22,151,550,825
+54=South Atlantic Not in an MSA
+238
+2,483,403,244
+62=East South Central MSA/CMSA of 1 million+ w/o heavy rail
+550
+4,483,376,190
+63=East South Central MSA of less than 1 million
+966
+8,226,607,245
+64=East South Central Not in an MSA
+120
+767,632,811
+72=West South Central MSA/CMSA of 1 million+ w/o heavy 
+2,115
+17,089,549,961
+73=West South Central MSA of less than 1 million
+1,218
+11,262,842,722
+74=West South Central Not in an MSA
+156
+1,308,228,971
+82=Mountain MSA/CMSA of 1 million+ w/o heavy rail
+1,232
+9,541,800,957
+83=Mountain MSA of less than 1 million
+1,286
+9,459,130,737
+84=Mountain Not in an MSA
+103
+687,359,096
+91=Pacific MSA/CMSA of 1 million+ with heavy rail
+1,559
+17,072,472,196
+92=Pacific MSA/CMSA of 1 million+ w/o heavy rail
+1,519
+13,192,838,299
+93=Pacific MSA of less than 1 million
+1,318
+12,305,049,000
+94=Pacific Not in an MSA
+63
+423,487,431
+CENSUS_D
+C
+2
+01=New England
+1,777
+11,748,957,310
+02=Middle Atlantic
+3,521
+32,327,130,418
+03=East North Central
+4,910
+36,622,409,682
+04=West North Central
+2,377
+17,612,901,158
+05=South Atlantic
+6,284
+49,622,762,324
+06=East South Central
+1,636
+13,477,616,246
+Grouping of household by 
+combination of Census 
+division, MSA status, and 
+presence of rail
+Census division classification 
+for home address
+44
+
+
+===== [page 45] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+07=West South Central
+3,489
+29,660,621,654
+08=Mountain
+2,621
+19,688,290,790
+09=Pacific
+4,459
+42,993,846,926
+CENSUS_R
+C
+2
+01=Northeast
+5,298
+44,076,087,728
+02=Midwest
+7,287
+54,235,310,840
+03=South
+11,409
+92,761,000,224
+04=West
+7,080
+62,682,137,715
+DBHTNRNT
+C
+2
+-9=Not ascertained
+26
+181,756,712
+01=0-4%
+1,639
+11,657,900,840
+05=5-14%
+6,586
+48,190,868,585
+20=15-24%
+5,703
+43,544,272,631
+30=25-34%
+4,653
+38,092,480,793
+40=35-44%
+3,701
+33,894,608,540
+50=45-54%
+3,036
+27,014,701,084
+60=55-64%
+2,313
+20,416,410,197
+70=65-74%
+1,763
+15,711,432,256
+80=75-84%
+1,122
+10,277,600,550
+90=85-94%
+489
+4,373,044,172
+95=95-100%
+43
+399,460,147
+DBHUR
+C
+2
+-9=Not ascertained
+26
+181,756,712
+01=Rural
+4,558
+36,660,284,224
+02=Small Town
+7,087
+54,675,858,809
+03=Second City
+6,169
+51,238,136,469
+04=Suburban
+8,775
+70,442,919,146
+05=Urban
+4,459
+40,555,581,146
+DBPPOPDN
+C
+2
+-9=Not ascertained
+224
+1,875,784,176
+01=0-99
+2,816
+22,422,293,838
+02=100-499
+4,239
+33,431,817,702
+03=500-999
+2,540
+20,330,282,100
+04=1,000-1,999
+5,017
+39,174,809,249
+05=2,000-3,999
+7,102
+55,897,170,912
+06=4,000-9,999
+6,673
+56,584,614,332
+07=10,000-24,999
+1,705
+16,878,427,353
+08=25,000-999,999
+758
+7,159,336,844
+DBRESDN
+C
+2
+-9=Not ascertained
+353
+2,641,684,288
+01=0-99
+5,014
+39,475,603,960
+02=100-499
+6,211
+49,398,910,131
+03=500-999
+4,422
+35,193,276,535
+Census region classification 
+for home address
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+trip destination's location
+Urban / Rural indicator - Trip 
+Destination Block group
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the trip destination's 
+location
+Category of housing units per 
+square mile in the census 
+block group of the trip 
+destination's location
+45
+
+
+===== [page 46] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+04=1,000-1,999
+7,061
+57,577,350,659
+05=2,000-3,999
+5,118
+43,588,579,009
+06=4,000-9,999
+1,867
+16,626,711,842
+07=10,000-24,999
+648
+5,603,330,787
+08=25,000-999,999
+380
+3,649,089,295
+DRIVER
+C
+2
+-1=Valid skip
+3,021
+30,400,557,766
+01=Yes
+26,489
+206,173,910,719
+02=No
+1,564
+17,180,068,022
+DRVRCNT
+N
+8
+0
+399
+4,925,737,213
+1
+6,564
+49,674,927,582
+2
+18,809
+137,925,500,052
+3
+3,728
+41,399,743,784
+4
+1,331
+16,370,869,743
+5
+213
+3,070,916,340
+6
+27
+357,147,902
+7
+3
+29,693,891
+DRVR_FLG
+C
+2
+-1=Valid skip
+3,665
+33,100,554,130
+01=Driver on trip
+20,490
+160,953,195,395
+02=Not driver on trip
+6,919
+59,700,786,981
+DTEEMPDN
+C
+2
+-9=Not ascertained
+255
+1,854,198,419
+01=0-49
+3,348
+27,737,007,030
+02=50-99
+1,634
+13,595,206,402
+03=100-249
+2,771
+21,076,265,719
+04=250-499
+3,202
+24,610,297,433
+05=500-999
+4,115
+32,464,745,829
+06=1,000-1,999
+6,914
+56,148,743,503
+07=2,000-3,999
+5,704
+48,785,828,056
+08=4,000-999,999
+3,131
+27,482,244,116
+DTHTNRNT
+C
+2
+-9=Not ascertained
+26
+181,756,712
+01=0-4%
+796
+5,450,951,052
+05=5-14%
+5,797
+43,449,717,094
+20=15-24%
+6,634
+50,629,539,788
+30=25-34%
+5,389
+45,464,200,440
+40=35-44%
+4,407
+36,747,808,379
+50=45-54%
+3,337
+29,521,678,392
+60=55-64%
+2,214
+20,078,003,300
+70=65-74%
+1,349
+12,157,923,445
+80=75-84%
+783
+6,596,797,522
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the trip 
+destination's location
+Driver status, derived
+Number of drivers in the 
+household
+Flag for driver on trip
+Category of workers per 
+square mile in the census 
+tract of the trip destination's 
+location
+46
+
+
+===== [page 47] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+90=85-94%
+317
+3,262,563,145
+95=95-100%
+25
+213,597,237
+DTPPOPDN
+C
+2
+-9=Not ascertained
+167
+1,245,883,948
+01=0-99
+3,111
+24,775,483,155
+02=100-499
+4,285
+33,353,956,046
+03=500-999
+2,807
+21,810,725,410
+04=1,000-1,999
+4,864
+39,290,229,073
+05=2,000-3,999
+7,176
+57,516,442,125
+06=4,000-9,999
+6,448
+55,466,503,765
+07=10,000-24,999
+1,449
+13,094,064,971
+08=25,000-999,999
+767
+7,201,248,014
+DTRESDN
+C
+2
+-9=Not ascertained
+298
+2,494,679,457
+01=0-99
+5,266
+42,244,064,464
+02=100-499
+6,412
+49,789,910,451
+03=500-999
+4,442
+35,909,802,456
+04=1,000-1,999
+7,268
+59,521,312,670
+05=2,000-3,999
+4,762
+41,695,232,416
+06=4,000-9,999
+1,664
+13,765,872,116
+07=10,000-24,999
+591
+4,650,275,193
+08=25,000-999,999
+371
+3,683,387,285
+DWELTIME
+N
+8
+-9=Not ascertained
+10,615
+90,260,978,054
+Responses=0-1050
+20,459
+163,493,558,453
+EDUC
+C
+2
+-1=Valid skip
+2,726
+27,502,388,259
+01=Less than high school
+609
+8,078,195,355
+02=Some high school, no diploma/GED
+1,262
+17,939,946,605
+03=High school graduate, have diploma/GED
+3,138
+51,363,614,130
+04=Some college, no degree/ some trade school
+4,589
+39,727,045,028
+05=Associates degree (2-year)/ trade school certificate
+3,116
+25,755,723,667
+06=Bachelor's degree
+8,589
+45,115,741,335
+07=Master's degree
+5,103
+27,599,420,117
+08=Professional/Doctorate degree
+1,942
+10,672,462,010
+ENDTIME
+C
+4
+-9=Not ascertained
+21
+201,438,643
+Responses=0000-2359
+31,053
+253,553,097,864
+FRSTHM
+C
+2
+01=Yes
+29,566
+241,179,279,256
+02=No
+1,508
+12,575,257,250
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+the trip destination's location
+Category of housing units per 
+square mile in the census 
+tract of the trip destination's 
+location
+Time at Destination (minutes)
+Highest level of education
+24 hour local end time of trip
+Started travel day at home
+47
+
+
+===== [page 48] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+GASPRICE
+Weekly regional gasoline 
+price, in cents, during the 
+week of the household's 
+travel day
+C
+8
+Responses=272.7-597.9
+31,074
+253,754,536,507
+HHACCCNT
+Number of household 
+members on trip
+C
+2
+Responses=01-08
+31,074
+253,754,536,507
+HHFAMINC
+C
+2
+-7=I prefer not to answer
+331
+2,165,193,527
+-8=I don't know
+10
+87,401,220
+01=Less than $10,000
+481
+6,056,279,359
+02=$10,000 to $14,999
+459
+5,130,178,399
+03=$15,000 to $24,999
+1,049
+12,966,998,552
+04=$25,000 to $34,999
+1,613
+15,947,881,484
+05=$35,000 to $49,999
+2,604
+21,897,547,493
+06=$50,000 to $74,999
+4,766
+36,428,852,094
+07=$75,000 to $99,999
+5,063
+40,452,354,606
+08=$100,000 to $124,999
+4,149
+27,478,236,092
+09=$125,000 to $149,999
+3,050
+22,894,984,492
+10=$150,000 to $199,999
+3,172
+28,404,473,719
+11=$200,000 or more
+4,327
+33,844,155,469
+HHFAMINC_IMP
+C
+2
+01=Less than $10,000
+483
+6,077,461,875
+02=$10,000 to $14,999
+472
+5,184,498,164
+03=$15,000 to $24,999
+1,051
+12,975,897,411
+04=$25,000 to $34,999
+1,648
+16,077,164,277
+05=$35,000 to $49,999
+2,621
+22,119,555,963
+06=$50,000 to $74,999
+4,836
+36,973,591,135
+07=$75,000 to $99,999
+5,107
+40,792,619,665
+08=$100,000 to $124,999
+4,229
+27,911,424,538
+09=$125,000 to $149,999
+3,065
+22,956,501,309
+10=$150,000 to $199,999
+3,202
+28,661,207,343
+11=$200,000 or more
+4,360
+34,024,614,829
+HHMEMDRV
+C
+2
+-1=Valid skip
+3,665
+33,100,554,130
+-9=Not ascertained
+53
+733,763,022
+01=Household member drove
+26,475
+211,796,579,717
+02=Non-household member drove
+881
+8,123,639,638
+HHSIZE
+N
+8
+1
+4,419
+30,126,167,853
+2
+12,483
+74,202,887,057
+3
+4,887
+47,645,903,037
+4
+5,027
+50,921,335,670
+Household income
+Household income (imputed)
+Household member drove on 
+trip
+Total number of people in 
+household
+48
+
+
+===== [page 49] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+5
+2,883
+32,660,828,734
+6
+846
+9,599,698,351
+7
+266
+4,578,609,581
+8
+188
+3,515,926,595
+9
+72
+468,056,061
+10
+3
+35,123,568
+HHVEHCNT
+N
+8
+0
+853
+9,458,166,174
+1
+7,116
+56,047,670,847
+2
+14,558
+108,888,097,111
+3
+5,498
+48,673,385,263
+4
+2,084
+21,663,642,100
+5
+691
+6,138,217,774
+6
+182
+1,729,789,560
+7
+46
+554,886,479
+8
+35
+283,681,804
+9
+3
+12,535,268
+11
+8
+304,464,127
+HH_HISP
+C
+2
+01=Hispanic or Latino
+2,358
+42,702,418,504
+02=Not Hispanic or Latino
+28,716
+211,052,118,003
+HH_RACE
+C
+2
+01=White
+27,204
+192,105,547,584
+02=Black or African American
+1,628
+26,750,893,692
+03=Asian
+1,394
+15,338,544,319
+04=American Indian/Alaska Native
+149
+2,843,066,608
+05=Native Hawaiian/Pacific Islander
+108
+1,069,328,370
+06=Multiple races selected
+109
+6,646,419,280
+97=Other race
+482
+9,000,736,654
+HOMEOWN
+C
+2
+01=Owned by hh member with mortgage or loan
+17,211
+135,849,290,590
+02=Owned by hh member free and clear (no mortgage)
+7,650
+49,719,191,516
+03=Rented by hh member
+5,938
+64,704,930,661
+04=Occupied without payment
+275
+3,481,123,739
+HOUSEID
+Unique Identifier- Household
+C
+10
+Responses=9000013002-9000218040
+31,074
+253,754,536,507
+LIF_CYC
+C
+2
+01=one adult, no children
+2,575
+20,650,979,369
+02=2+ adults, no children
+6,199
+47,727,421,826
+03=one adult, youngest child 0-5
+223
+3,368,351,638
+04=2+ adults, youngest child 0-5
+3,539
+38,549,123,265
+05=one adult, youngest child 6-15
+837
+7,630,099,405
+06=2+ adults, youngest child 6-15
+6,106
+62,211,350,832
+07=one adult, youngest child 16-21
+336
+2,933,052,716
+Hispanic status of household 
+respondent
+Total number of vehicles in 
+household
+Race of household 
+respondent
+Whether home owned or 
+rented
+Life Cycle classification for 
+the household
+49
+
+
+===== [page 50] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+08=2+ adults, youngest child 16-21
+1,546
+16,887,792,464
+09=one adult, retired, no children
+1,844
+9,475,188,484
+10=2+ adults, retired, no children
+7,869
+44,321,176,507
+LOOP_TRIP
+C
+2
+01=Loop trip
+351
+3,489,569,578
+02=Not a loop trip
+30,723
+250,264,966,929
+MSACAT
+C
+2
+01=MSA of 1 million or more, with rail
+6,729
+59,420,635,535
+02=MSA of 1 million or more, without rail
+9,994
+76,736,861,448
+03=MSA less than 1 million
+12,896
+106,618,208,581
+04=Not in MSA
+1,455
+10,978,830,943
+MSASIZE
+C
+2
+01=In an MSA of Less than 250,000
+5,529
+43,452,662,455
+02=In an MSA of 250,000 - 499,999
+3,078
+26,499,091,138
+03=In an MSA of 500,000 - 999,999
+4,289
+36,666,454,988
+04=In an MSA or CMSA of 1,000,000 - 2,999,999
+7,177
+56,765,389,101
+05=In an MSA or CMSA of 3 million or more
+9,546
+79,392,107,881
+06=Not in MSA or CMSA
+1,455
+10,978,830,943
+NONHHCNT
+Number of non-household 
+members on trip
+N
+8
+Responses=0-98
+31,074
+253,754,536,507
+NUMADLT
+N
+8
+1
+5,534
+40,972,914,770
+2
+20,223
+149,314,606,537
+3
+3,722
+41,733,230,426
+4
+1,272
+16,339,716,167
+5
+228
+3,614,112,603
+6
+81
+1,680,866,002
+7
+6
+64,817,459
+8
+8
+34,272,543
+NUMONTRP
+Number of people on trip
+N
+8
+Responses=1-99
+31,074
+253,754,536,507
+OBHTNRNT
+C
+2
+-9=Not ascertained
+17
+146,626,131
+01=0-4%
+1,633
+11,745,000,985
+05=5-14%
+6,627
+48,571,908,618
+20=15-24%
+5,687
+43,554,900,812
+30=25-34%
+4,664
+38,234,319,250
+40=35-44%
+3,701
+33,701,063,774
+50=45-54%
+3,027
+26,958,358,689
+60=55-64%
+2,307
+20,324,513,317
+70=65-74%
+1,765
+15,539,617,770
+80=75-84%
+1,121
+10,256,718,661
+90=85-94%
+481
+4,325,304,229
+95=95-100%
+44
+396,204,270
+Trip origin and destination at 
+Identical location
+MSA category for the HH 
+home address
+Population size category of 
+the MSA from the five-year 
+ACS API
+Count of adult household 
+members at least 18 years 
+old
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+trip origin's location
+50
+
+
+===== [page 51] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+OBHUR
+C
+2
+-9=Not ascertained
+17
+146,626,131
+01=Rural
+4,571
+36,838,503,536
+02=Small Town
+7,092
+54,761,237,382
+03=Second City
+6,175
+51,091,135,089
+04=Suburban
+8,774
+70,497,187,299
+05=Urban
+4,445
+40,419,847,070
+OBPPOPDN
+C
+2
+-9=Not ascertained
+208
+1,796,170,338
+01=0-99
+2,849
+22,683,285,333
+02=100-499
+4,234
+33,368,039,106
+03=500-999
+2,551
+20,639,932,268
+04=1,000-1,999
+5,011
+39,103,186,883
+05=2,000-3,999
+7,081
+55,886,821,836
+06=4,000-9,999
+6,702
+56,273,394,497
+07=10,000-24,999
+1,682
+16,841,511,533
+08=25,000-999,999
+756
+7,162,194,712
+OBRESDN
+C
+2
+-9=Not ascertained
+338
+2,605,548,376
+01=0-99
+5,050
+39,782,302,869
+02=100-499
+6,204
+49,326,200,729
+03=500-999
+4,404
+35,052,612,906
+04=1,000-1,999
+7,045
+57,633,891,524
+05=2,000-3,999
+5,156
+43,525,496,773
+06=4,000-9,999
+1,860
+16,643,149,194
+07=10,000-24,999
+627
+5,431,601,355
+08=25,000-999,999
+390
+3,753,732,781
+ONTD_P1
+C
+2
+01=Selected
+23,503
+182,903,969,142
+02=Not Selected
+7,571
+70,850,567,365
+ONTD_P10
+C
+2
+-1=Valid skip
+31,071
+253,719,412,939
+02=Not Selected
+3
+35,123,568
+ONTD_P2
+C
+2
+-1=Valid skip
+4,419
+30,126,167,853
+01=Selected
+13,798
+106,253,640,055
+02=Not Selected
+12,857
+117,374,728,599
+ONTD_P3
+C
+2
+-1=Valid skip
+16,902
+104,329,054,910
+01=Selected
+5,685
+59,027,358,374
+02=Not Selected
+8,487
+90,398,123,222
+ONTD_P4
+C
+2
+-1=Valid skip
+21,789
+151,974,957,947
+01=Selected
+3,817
+38,811,605,841
+02=Not Selected
+5,468
+62,967,972,719
+ONTD_P5
+C
+2
+-1=Valid skip
+26,816
+202,896,293,618
+Person 1  was on trip
+Urban / Rural indicator - Trip 
+Origin Block group
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the trip origin's 
+location
+Category of housing units per 
+square mile in the census 
+block group of the trip origin's 
+location
+Person 10 was on trip
+Person 2 was on trip
+Person 3 was on trip
+Person 4 was on trip
+Person 5 was on trip
+51
+
+
+===== [page 52] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=Selected
+1,719
+18,642,303,177
+02=Not Selected
+2,539
+32,215,939,712
+ONTD_P6
+C
+2
+-1=Valid skip
+29,699
+235,557,122,351
+01=Selected
+413
+4,507,249,643
+02=Not Selected
+962
+13,690,164,512
+ONTD_P7
+C
+2
+-1=Valid skip
+30,545
+245,156,820,702
+01=Selected
+172
+2,451,959,146
+02=Not Selected
+357
+6,145,756,658
+ONTD_P8
+C
+2
+-1=Valid skip
+30,811
+249,735,430,283
+01=Selected
+69
+856,712,725
+02=Not Selected
+194
+3,162,393,498
+ONTD_P9
+C
+2
+-1=Valid skip
+30,999
+253,251,356,878
+01=Selected
+18
+176,596,910
+02=Not Selected
+57
+326,582,719
+OTEEMPDN
+C
+2
+-9=Not ascertained
+249
+1,839,155,718
+01=0-49
+3,384
+27,983,374,505
+02=50-99
+1,639
+13,614,404,399
+03=100-249
+2,760
+21,115,466,450
+04=250-499
+3,198
+24,631,140,941
+05=500-999
+4,115
+32,740,315,346
+06=1,000-1,999
+6,909
+55,862,629,115
+07=2,000-3,999
+5,700
+48,816,016,931
+08=4,000-999,999
+3,120
+27,152,033,100
+OTHTNRNT
+C
+2
+-9=Not ascertained
+17
+146,626,131
+01=0-4%
+810
+5,767,579,313
+05=5-14%
+5,786
+43,080,931,052
+20=15-24%
+6,667
+51,100,188,145
+30=25-34%
+5,386
+45,611,073,532
+40=35-44%
+4,416
+36,693,867,529
+50=45-54%
+3,315
+29,172,708,153
+60=55-64%
+2,200
+20,134,536,522
+70=65-74%
+1,365
+12,264,905,474
+80=75-84%
+775
+6,364,744,578
+90=85-94%
+311
+3,201,836,231
+95=95-100%
+26
+215,539,846
+OTPPOPDN
+C
+2
+-9=Not ascertained
+162
+1,227,419,128
+01=0-99
+3,144
+25,214,573,426
+02=100-499
+4,269
+33,205,839,854
+Person 6 was on trip
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+Person 7 was on trip
+Person 8 was on trip
+Person 9 was on trip
+Category of workers per 
+square mile in the census 
+tract of the trip origin's 
+location
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the trip 
+origin's location
+52
+
+
+===== [page 53] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+03=500-999
+2,809
+21,806,652,114
+04=1,000-1,999
+4,860
+39,356,957,702
+05=2,000-3,999
+7,166
+57,222,798,524
+06=4,000-9,999
+6,461
+55,463,197,417
+07=10,000-24,999
+1,443
+13,113,244,092
+08=25,000-999,999
+760
+7,143,854,249
+OTRESDN
+C
+2
+-9=Not ascertained
+296
+2,651,852,626
+01=0-99
+5,312
+42,746,904,033
+02=100-499
+6,381
+49,736,228,466
+03=500-999
+4,440
+35,711,477,532
+04=1,000-1,999
+7,264
+59,344,856,568
+05=2,000-3,999
+4,758
+41,319,439,727
+06=4,000-9,999
+1,663
+13,949,569,578
+07=10,000-24,999
+581
+4,502,676,373
+08=25,000-999,999
+379
+3,791,531,605
+PARK
+C
+2
+-1=Valid skip
+8,696
+77,800,043,353
+01=Yes
+595
+4,796,343,177
+02=No
+21,783
+171,158,149,976
+PARK2
+C
+4
+-1=Valid skip
+30,653
+249,553,605,788
+0001=Paid to park
+162
+1,676,350,410
+9996=N/A Paid for by employer
+3
+13,137,364
+9997=N/A Paid for by school
+1
+10,622,927
+9998=Paid but I don't remember the cost
+20
+217,195,269
+9999=I did not pay for parking at this location
+235
+2,283,624,749
+PARK2_PAMOUNT
+N
+8
+-1=Appropriate skip
+30,912
+252,078,186,097
+Responses=0.25-900
+162
+1,676,350,410
+PARK2_PAYTYPE
+C
+2
+-1=Valid skip
+30,912
+252,078,186,097
+01=One Time
+132
+1,506,375,800
+02=Per Week
+2
+9,935,312
+03=Per Month
+17
+87,053,909
+05=Per Semester
+1
+3,358,417
+06=Per Year
+10
+69,626,971
+PERSONID
+C
+2
+01
+17,713
+134,799,626,902
+02
+8,599
+64,256,731,821
+03
+2,643
+29,837,437,259
+04
+1,436
+15,970,447,860
+05
+512
+6,544,966,935
+06
+108
+1,376,358,952
+the trip origin's location
+Category of housing units per 
+square mile in the census 
+tract of the trip origin's 
+location
+Paid for parking at any time 
+during travel day
+Paid for parking on this trip
+Amount paid for parking
+Periodicity of parking 
+payment
+Person ID within household
+53
+
+
+===== [page 54] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+07
+49
+788,263,632
+08
+12
+172,642,223
+09
+2
+8,060,923
+PRMACT
+C
+2
+-1=Valid skip
+20,107
+181,148,141,541
+01=Temporarily absent from a job or business
+304
+3,202,238,446
+02=Looking for work/unemployed
+582
+5,279,746,218
+03=A homemaker
+1,347
+9,749,392,574
+04=Going to school
+726
+7,762,711,144
+05=Retired
+6,725
+34,103,719,213
+97=Something else
+1,283
+12,508,587,370
+PROXY
+C
+2
+01=Self
+22,740
+180,097,726,639
+02=Someone else
+8,334
+73,656,809,868
+PSGR_FLG
+C
+2
+-1=Valid skip
+3,665
+33,100,554,130
+01=Passenger on trip
+6,919
+59,700,786,981
+02=Not passenger on trip
+20,490
+160,953,195,395
+PUBTRANS
+C
+2
+01=Used public transit
+341
+3,700,714,487
+02=Did not use public transit
+30,733
+250,053,822,019
+RAIL
+C
+2
+01=Yes
+6,969
+61,527,179,473
+02=No
+24,105
+192,227,357,034
+R_AGE
+Respondent age
+N
+8
+Responses=5-92
+31,074
+253,754,536,507
+R_HISP
+C
+2
+01=Hispanic
+2,608
+44,809,480,106
+02=Not Hispanic
+28,466
+208,945,056,401
+R_RACE
+C
+2
+01=White
+26,992
+190,285,096,109
+02=Black or African American
+1,713
+27,423,812,171
+03=Asian
+1,428
+12,759,865,186
+04=American Indian/Alaska Native
+178
+3,041,273,110
+05=Native Hawaiian/Pacific Islander
+109
+913,402,073
+06=Multiple races selected
+116
+10,079,737,043
+97=Other race
+538
+9,251,350,815
+R_SEX
+C
+2
+-7=Refuse
+256
+2,593,232,606
+-8=Don't know
+10
+89,814,498
+01=Male
+15,289
+123,771,340,879
+02=Female
+15,519
+127,300,148,525
+R_SEX_IMP
+C
+2
+01=Male
+15,415
+124,901,841,440
+02=Female
+15,659
+128,852,695,067
+SEQ_TRIPID
+C
+2
+01
+10,592
+90,067,395,070
+02
+9,951
+83,842,069,350
+03
+4,470
+34,652,715,507
+Person 5 or older - Hispanic 
+or Latino
+Primary activity for those who 
+did not work for pay last week
+Survey completed by self or 
+someone else
+Flag for passenger on trip
+Used public transit on trip
+MSA heavy rail status for 
+household
+Respondent race
+Respondent sex
+Respondent sex (imputed)
+Renumbered sequential tripid
+54
+
+
+===== [page 55] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+04
+2,896
+21,725,959,669
+05
+1,372
+10,145,889,212
+06
+810
+5,879,737,431
+07
+434
+3,141,565,766
+08
+244
+1,840,716,920
+09
+124
+978,210,561
+10
+69
+571,884,784
+11
+41
+359,844,373
+12
+21
+242,306,488
+13
+11
+71,227,087
+14
+7
+55,458,042
+15
+4
+24,070,491
+16
+2
+8,698,078
+17
+2
+8,653,005
+18
+2
+8,653,005
+19
+2
+8,653,005
+20
+2
+8,698,078
+21
+2
+8,677,080
+22
+2
+8,677,080
+23
+1
+6,769,745
+24
+1
+6,769,745
+25
+1
+6,769,745
+26
+1
+6,769,745
+27
+1
+6,769,745
+28
+1
+6,769,745
+29
+1
+6,769,745
+30
+1
+6,769,745
+31
+1
+6,769,745
+32
+1
+6,769,745
+33
+1
+6,769,745
+34
+1
+6,769,745
+35
+1
+6,769,745
+36
+1
+6,769,745
+STRATUMID
+Household Stratum ID
+C
+4
+Responses=1021-1040
+31,074
+253,754,536,507
+STRTTIME
+C
+4
+-9=Not ascertained
+21
+201,438,643
+Responses=0000-2359
+31,053
+253,553,097,864
+TDAYDATE
+C
+6
+202201
+673
+5,583,521,122
+202202
+2,861
+20,629,675,132
+24 hour local start time of trip
+Date of travel day (YYYYMM)
+55
+
+
+===== [page 56] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+202203
+2,725
+21,335,422,008
+202204
+2,742
+20,153,574,266
+202205
+2,415
+22,279,879,624
+202206
+1,398
+21,880,415,246
+202207
+1,736
+21,350,564,697
+202208
+1,902
+20,959,540,639
+202209
+1,813
+21,396,803,845
+202210
+2,586
+21,197,449,207
+202211
+4,859
+20,841,298,368
+202212
+3,904
+21,173,560,483
+202301
+1,460
+14,972,831,868
+TDCASEID
+Unique identifier for every trip C
+14
+Responses=90000130020101-90002180400103
+31,074
+253,754,536,507
+TDWKND
+C
+2
+01=Weekend
+8,630
+75,849,398,109
+02=Weekday
+22,444
+177,905,138,398
+TRAVDAY
+C
+2
+01=Sunday
+4,395
+29,544,138,653
+02=Monday
+5,978
+36,562,693,515
+03=Tuesday
+4,389
+36,467,149,595
+04=Wednesday
+4,101
+37,113,105,777
+05=Thursday
+4,250
+37,870,606,280
+06=Friday
+4,505
+36,297,037,899
+07=Saturday
+3,456
+39,899,804,788
+TRIPID
+C
+2
+01
+10,583
+89,971,302,821
+02
+9,943
+83,773,039,616
+03
+4,474
+34,688,025,294
+04
+2,899
+21,809,231,329
+05
+1,375
+10,156,888,816
+06
+812
+5,888,677,291
+07
+436
+3,152,083,108
+08
+246
+1,851,819,539
+09
+124
+978,152,059
+10
+70
+577,257,131
+11
+41
+359,511,640
+12
+21
+242,306,488
+13
+11
+71,227,087
+14
+7
+55,458,042
+15
+4
+24,070,491
+16
+2
+8,698,078
+17
+2
+8,653,005
+Weekend trip
+Travel day - day of week
+Trip ID for each trip a person 
+took
+56
+
+
+===== [page 57] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+18
+2
+8,653,005
+19
+2
+8,653,005
+20
+2
+8,698,078
+21
+2
+8,677,080
+22
+2
+8,677,080
+23
+1
+6,769,745
+24
+1
+6,769,745
+25
+1
+6,769,745
+26
+1
+6,769,745
+27
+1
+6,769,745
+28
+1
+6,769,745
+29
+1
+6,769,745
+30
+1
+6,769,745
+31
+1
+6,769,745
+32
+1
+6,769,745
+33
+1
+6,769,745
+34
+1
+6,769,745
+35
+1
+6,769,745
+36
+1
+6,769,745
+TRIPMODE
+C
+2
+01=Privately Owned Vehicle-Driver
+20,490
+160,953,195,395
+02=Privately Owned Vehicle-Passenger
+6,919
+59,700,786,981
+03=Public Transit
+341
+3,700,714,487
+04=School Bus
+650
+7,295,049,228
+05=Walk
+2,103
+17,390,867,219
+06=Bike
+298
+2,393,493,731
+07=Other
+273
+2,320,429,465
+TRIPPURP
+C
+2
+-9=Not ascertained
+24
+268,756,916
+01=Home-based work (HBW)
+4,871
+45,331,996,163
+02=Home-based shopping (HBSHP)
+6,884
+52,848,752,760
+03=Home-based social/recreational (HBSOC)
+4,546
+34,005,287,433
+04=Home-based other (HBO)
+7,714
+64,898,571,539
+05=Not a home-based trip (NHB)
+7,035
+56,401,171,696
+TRPHHVEH
+C
+2
+-1=Valid skip
+1,168
+12,382,636,260
+01=Yes, used a household vehicle
+26,294
+210,462,841,181
+02=No, did not use a household vehicle
+3,612
+30,909,059,066
+TRPMILES
+N
+8
+-9=Not ascertained
+14
+137,560,622
+Responses=0-4859.4769818
+31,060
+253,616,975,885
+TRPTRANS
+C
+2
+01=Car
+11,777
+101,726,646,688
+Household vehicle used for 
+trip
+General mode of 
+transportation of trip
+General purpose of trip
+Calculated Trip distance 
+converted into miles
+Trip mode, derived
+57
+
+
+===== [page 58] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Van
+1,881
+16,034,016,170
+03=SUV/Crossover
+10,384
+76,732,037,644
+04=Pickup truck
+3,302
+25,499,402,941
+06=Recreational Vehicle
+10
+195,796,445
+07=Motorcycle
+55
+466,082,488
+08=Public or commuter bus
+190
+2,362,638,066
+09=School bus
+650
+7,295,049,228
+10=Street car or trolley car
+9
+94,455,175
+11=Subway or elevated rail
+109
+996,954,772
+12=Commuter rail
+33
+246,666,474
+13=Amtrak
+4
+19,749,243
+14=Airplane
+71
+451,462,314
+15=Taxicab or limo service
+9
+128,845,072
+16=Other ride-sharing service
+109
+1,029,359,424
+17=Paratransit/ Dial a ride
+9
+90,326,110
+18=Bicycle (including bikeshare, ebike, etc.)
+298
+2,393,493,731
+19=E-scooter
+6
+80,094,188
+20=Walked
+2,103
+17,390,867,219
+21=Other (specify)
+65
+520,593,115
+TRVLCMIN
+N
+8
+-9=Not ascertained
+21
+201,438,643
+Responses=0-1425
+31,053
+253,553,097,864
+URBAN
+C
+2
+01=In an urban area
+22,522
+183,822,388,091
+02=In an Urban cluster
+2,680
+22,025,513,604
+03=In an area surrounded by urban areas
+2
+8,479,552
+04=Not in urban area
+5,870
+47,898,155,260
+URBANSIZE
+C
+2
+01=50,000-199,999
+3,118
+24,965,505,326
+02=200,000-499,999
+3,630
+30,487,288,039
+03=500,000-999,999
+3,110
+26,264,793,993
+04=1,000,000 or more with heavy rail
+5,772
+50,878,144,755
+05=1,000,000 or more without heavy rail
+6,892
+51,226,655,978
+06=Not in urbanized area
+8,552
+69,932,148,416
+URBRUR
+C
+2
+01=Urban
+25,202
+205,847,901,695
+02=Rural
+5,872
+47,906,634,812
+VEHCASEID
+C
+12
+-1=Appropriate skip
+4,767
+43,243,446,749
+Responses=900001300201-900021804001
+26,307
+210,511,089,758
+VEHID
+C
+2
+-1=valid skip
+4,767
+43,243,446,749
+01
+16,888
+133,338,932,470
+02
+7,467
+56,702,933,855
+Trip Duration in Minutes
+Household urban area 
+classification, based on 2020 
+TIGER/Line Shapefile
+Urban area size where home 
+address is located
+Household in urban/rural 
+area
+Unique vehicle identifier
+Vehicle ID of vehicle used 
+from household roster
+58
+
+
+===== [page 59] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+03
+1,520
+15,548,817,346
+04
+333
+3,957,610,549
+05
+80
+688,543,033
+06
+15
+191,072,628
+07
+4
+83,179,877
+VEHTYPE
+C
+2
+-1=Valid skip
+4,780
+43,291,695,326
+01=Automobile/Car/Stationwagon
+11,080
+95,058,221,903
+02=Van (Minivan/Cargo/Passenger)
+1,796
+15,077,650,925
+03=SUV (Santa Fe, Tahoe, Jeep, etc.)
+10,210
+75,576,635,333
+04=Pickup Truck
+3,086
+23,400,957,466
+05=Other Truck
+60
+706,133,601
+06=Recreational vehicle (RV)/Motorhome
+8
+178,931,577
+07=MotorcycleMoped
+54
+464,310,376
+VMT_MILE
+N
+8
+-9=Not ascertained
+3
+21,266,693
+-1=Appropriate skip
+10,584
+92,801,341,112
+Responses=0-1123.5711622
+20,487
+160,931,928,702
+WALK
+C
+2
+-1=Valid skip
+3,132
+29,240,703,482
+-9=Not ascertained
+4,837
+41,809,982,736
+01=0 minutes/ parked in the same building
+13,657
+109,069,171,808
+02=1 to less than 5 minutes
+7,651
+58,175,024,023
+03=5 to less than 10 minutes
+423
+3,467,416,060
+04=10 to less than 15 minutes
+141
+1,169,096,131
+05=15 to less than 20 minutes
+62
+460,222,552
+06=20 minutes or more
+159
+1,002,666,808
+07=N/A - someone else took vehicle
+21
+286,013,740
+08=N/A - Didn't park
+991
+9,074,239,168
+WHODROVE
+C
+2
+-1=Valid skip
+3,665
+33,100,554,130
+-9=Not ascertained
+300
+3,185,588,805
+01=Person 1
+17,915
+138,356,000,692
+02=Person 2
+7,368
+57,189,296,795
+03=Person 3
+816
+11,406,763,525
+04=Person 4
+214
+3,215,310,395
+05=Person 5
+33
+625,011,555
+07=Person 7
+2
+64,427,943
+97=Non household member drove
+761
+6,611,582,667
+WHODROVE_IMP
+C
+2
+-1=Valid skip
+3,665
+33,100,554,130
+-9=Not ascertained
+53
+733,763,022
+01=Person 1
+17,970
+138,766,260,696
+Person who drove on trip
+Vehicle type
+Calculated Trip distance 
+(miles) for Driver Trips
+Minutes walked from parking 
+to destination
+Imputed person who drove 
+on trip
+59
+
+
+===== [page 60] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Person 2
+7,427
+57,657,058,033
+03=Person 3
+827
+11,463,613,440
+04=Person 4
+214
+3,215,310,395
+05=Person 5
+35
+629,909,209
+07=Person 7
+2
+64,427,943
+97=Non household member drove
+881
+8,123,639,638
+WHYFROM
+C
+2
+-9=Not ascertained
+47
+567,490,157
+01=Regular activities at home
+12,176
+101,237,426,718
+02=Work from home (paid)
+315
+2,821,167,515
+03=Work at a non-home location
+2,736
+24,975,521,170
+04=Work activity to drop-off/pickup someone/something
+255
+2,207,478,623
+05=Other work-related activities
+353
+3,333,458,097
+06=Attend school as a student
+981
+10,071,903,950
+07=Attend childcare or adult care
+72
+724,838,829
+08=Volunteer activities (not paid)
+164
+1,770,502,646
+09=Change type of transportation
+190
+1,864,478,176
+10=Drop off/pick up someone (personal)
+1,581
+12,950,427,549
+11=Health care visit
+676
+4,780,540,834
+12=Buy meals
+2,311
+18,982,781,906
+13=Shop/buy/pick-up or return goods
+3,796
+28,192,291,465
+14=Other family/personal errands
+1,212
+8,950,653,413
+15=Recreational activities
+875
+7,317,414,346
+16=Exercise
+1,051
+7,282,898,917
+17=Visit friends or relatives
+1,196
+8,270,576,178
+18=Rest or relaxation/vacation
+286
+2,088,008,256
+19=Religious or other community activities
+768
+5,087,878,290
+97=Something else (specify)
+33
+276,799,473
+WHYTO
+C
+2
+01=Regular activities at home
+11,445
+93,356,345,132
+02=Work from home (paid)
+446
+3,308,815,116
+03=Work at a non-home location
+2,843
+26,056,013,806
+04=Work activity to drop-off/pickup someone/something
+270
+2,405,190,624
+05=Other work-related activities
+359
+3,419,850,113
+06=Attend school as a student
+1,005
+10,509,480,217
+07=Attend childcare or adult care
+76
+775,503,546
+08=Volunteer activities (not paid)
+176
+1,920,847,803
+09=Change type of transportation
+177
+1,752,207,606
+10=Drop off/pick up someone (personal)
+1,708
+14,412,459,986
+11=Health care visit
+684
+4,782,348,703
+Reason for previous trip
+Reason for travel to 
+destination
+60
+
+
+===== [page 61] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+12=Buy meals
+2,356
+19,699,831,316
+13=Shop/buy/pick-up or return goods
+3,872
+28,806,675,130
+14=Other family/personal errands
+1,285
+9,819,477,889
+15=Recreational activities
+879
+7,525,592,699
+16=Exercise
+1,291
+9,638,227,334
+17=Visit friends or relatives
+1,159
+8,001,850,661
+18=Rest or relaxation/vacation
+220
+2,043,473,661
+19=Religious or other community activities
+780
+5,107,061,042
+97=Something else (specify)
+43
+413,284,123
+WHYTRP1S
+C
+2
+01=Home
+11,891
+96,665,160,248
+10=Work
+3,472
+31,881,054,543
+20=School/Daycare/Religious
+1,861
+16,392,044,805
+30=Medical/Dental services
+684
+4,782,348,703
+40=Shopping/Errands
+5,157
+38,626,153,019
+50=Social/Recreational
+3,549
+27,209,144,355
+70=Transport someone
+1,708
+14,412,459,986
+80=Meals
+2,356
+19,699,831,316
+97=Something else
+396
+4,086,339,532
+WHYTRP90
+C
+2
+01=To/From Work
+5,113
+46,636,524,264
+02=Work-Related Business
+946
+8,970,712,754
+03=Shopping
+5,767
+43,006,971,351
+04=Other Family/Personal Business
+4,659
+38,215,057,869
+05=School/Church
+3,318
+28,706,844,780
+06=Medical/Dental
+1,151
+8,161,604,141
+08=Visit Friends/Relatives
+1,949
+13,432,106,425
+10=Other Social/Recreational
+7,633
+61,586,666,693
+11=Other
+515
+4,739,314,989
+99=Refused / Don't Know
+23
+298,733,241
+WORKER
+C
+2
+-1=Valid skip
+3,366
+33,601,639,380
+01=Worker
+17,045
+150,748,740,608
+02=Not worker
+10,663
+69,404,156,519
+WRKCOUNT
+N
+8
+0
+7,158
+42,217,453,320
+1
+10,189
+82,816,969,293
+2
+11,361
+97,471,397,184
+3
+1,970
+24,814,257,275
+4
+316
+4,852,529,433
+5
+54
+1,392,867,552
+6
+26
+189,062,450
+Count of workers in 
+household
+Trip purpose summary
+Travel day trip purpose 
+consistent with 1990 NPTS 
+design
+Employment status of 
+respondent
+61
+
+
+===== [page 62] =====
+2022 NextGen NHTS Trip File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+WTTRDFIN
+7 day National trip weight
+N
+8
+Responses=33695.133464-322721155.65
+31,074
+253,754,536,507
+WTTRDFIN2D
+2 day National trip weight
+N
+8
+Responses=0-53643493.647
+31,074
+253,754,536,507
+WTTRDFIN5D
+5 day National trip weight
+N
+8
+Responses=0-285950601.31
+31,074
+253,754,536,507
+62
+
+
+===== [page 63] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+AIRSIZE
+C
+2
+-1=Valid Skip
+16,458
+295,698,434
+-9=Not Ascertained
+181
+3,846,416
+01=Nonhub
+14
+254,222
+02=Small
+32
+508,749
+03=Medium
+65
+872,311
+04=Large
+247
+4,380,793
+BEGTRIP
+C
+6
+-1=Appropriate skip
+3,065
+64,648,974
+-9=Not ascertained
+6,941
+122,550,488
+Responses=202112-202301
+6,991
+118,361,463
+CDIVMSAR
+C
+2
+11=New England MSA/CMSA of 1 million+ with heavy rail
+335
+4,810,762
+12=New England MSA/CMSA of 1 million+ w/o heavy rail
+109
+2,118,086
+13=New England MSA of less than 1 million
+432
+6,539,311
+14=New England Not in an MSA
+41
+404,307
+21=Mid-Atlantic MSA/CMSA of 1 million+ with heavy rail
+993
+20,543,696
+22=Mid-Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+266
+4,509,275
+23=Mid-Atlantic MSA of less than 1 million
+651
+12,738,014
+24=Mid-Atlantic Not in an MSA
+45
+831,917
+31=East North Central MSA/CMSA of 1 million+ with heavy rail
+555
+8,887,015
+32=East North Central MSA/CMSA of 1 million+ w/o heavy rail
+778
+11,221,596
+33=East North Central MSA of less than 1 million
+1,197
+19,752,882
+34=East North Central Not in an MSA
+216
+3,589,271
+42=West North Central MSA/CMSA of 1 million+ w/o heavy rail
+478
+8,475,007
+43=West North Central MSA of less than 1 million
+610
+9,515,772
+44=West North Central Not in an MSA
+183
+1,840,125
+51=South Atlantic MSA/CMSA of 1 million+ with heavy rail
+980
+19,129,787
+52=South Atlantic MSA/CMSA of 1 million+ w/o heavy rail
+822
+13,854,562
+53=South Atlantic MSA of less than 1 million
+1,471
+25,791,453
+54=South Atlantic Not in an MSA
+135
+2,703,056
+62=East South Central MSA/CMSA of 1 million+ w/o heavy rail
+307
+5,682,664
+63=East South Central MSA of less than 1 million
+584
+10,787,207
+64=East South Central Not in an MSA
+89
+1,405,444
+72=West South Central MSA/CMSA of 1 million+ w/o heavy 
+1,143
+21,999,891
+73=West South Central MSA of less than 1 million
+674
+13,286,951
+74=West South Central Not in an MSA
+117
+2,419,376
+82=Mountain MSA/CMSA of 1 million+ w/o heavy rail
+629
+11,565,777
+83=Mountain MSA of less than 1 million
+674
+10,935,846
+Domestic airport hub size 
+based on FY23 NPIAS hub 
+type status (international trips 
+only)
+Beginning date of trip 
+(YYYYMM)
+Grouping of household by 
+combination of Census 
+division, MSA status, and 
+presence of rail
+63
+
+
+===== [page 64] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+84=Mountain Not in an MSA
+65
+904,343
+91=Pacific MSA/CMSA of 1 million+ with heavy rail
+845
+19,511,818
+92=Pacific MSA/CMSA of 1 million+ w/o heavy rail
+816
+14,739,673
+93=Pacific MSA of less than 1 million
+726
+14,589,398
+94=Pacific Not in an MSA
+31
+476,645
+CENSUS_D
+C
+2
+01=New England
+917
+13,872,466
+02=Middle Atlantic
+1,955
+38,622,901
+03=East North Central
+2,746
+43,450,764
+04=West North Central
+1,271
+19,830,904
+05=South Atlantic
+3,408
+61,478,858
+06=East South Central
+980
+17,875,314
+07=West South Central
+1,934
+37,706,218
+08=Mountain
+1,368
+23,405,967
+09=Pacific
+2,418
+49,317,533
+CENSUS_R
+C
+2
+01=Northeast
+2,872
+52,495,367
+02=Midwest
+4,017
+63,281,668
+03=South
+6,322
+117,060,390
+04=West
+3,786
+72,723,500
+DRIVER
+C
+2
+-1=Valid skip
+1,964
+41,806,101
+01=Yes
+13,434
+231,803,889
+02=No
+1,599
+31,950,935
+DRVRCNT
+N
+8
+0
+432
+9,995,516
+1
+3,611
+61,185,614
+2
+9,789
+158,842,174
+3
+2,152
+50,323,039
+4
+809
+20,359,988
+5
+157
+3,835,125
+6
+31
+892,290
+7
+16
+127,179
+EDUC
+C
+2
+-1=Valid skip
+1,765
+38,037,040
+01=Less than high school
+544
+14,041,499
+02=Some high school, no diploma/GED
+932
+25,528,118
+03=High school graduate, have diploma/GED
+2,401
+71,126,449
+04=Some college, no degree/ some trade school
+2,603
+44,747,688
+05=Associates degree (2-year)/ trade school certificate
+1,704
+28,670,188
+06=Bachelor's degree
+4,021
+46,133,785
+Census division classification 
+for home address
+Census region classification 
+for home address
+Driver status, derived
+Number of drivers in the 
+household
+Highest level of education
+64
+
+
+===== [page 65] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+07=Master's degree
+2,180
+26,430,208
+08=Professional/Doctorate degree
+847
+10,845,950
+ENDTRIP
+C
+6
+-1=Appropriate skip
+3,065
+64,648,974
+-9=Not ascertained
+6,938
+121,826,946
+Responses=202112-202301
+6,994
+119,085,005
+EXITCDIV
+C
+2
+-1=Valid Skip
+16,458
+295,698,434
+-9=Not Ascertained
+42
+870,493
+01=New England
+26
+233,889
+02=Middle Atlantic
+89
+1,752,653
+03=East North Central
+57
+854,278
+04=West North Central
+28
+462,738
+05=South Atlantic
+98
+2,359,379
+06=East South Central
+11
+107,364
+07=West South Central
+49
+721,548
+08=Mountain
+38
+624,824
+09=Pacific
+101
+1,875,324
+FARCDIV
+C
+2
+-1=Valid Skip
+3,604
+74,511,465
+-9=Not Ascertained
+383
+7,753,244
+01=New England
+696
+10,095,839
+02=Middle Atlantic
+1,312
+23,239,429
+03=East North Central
+1,768
+28,281,286
+04=West North Central
+996
+14,936,914
+05=South Atlantic
+3,001
+51,435,334
+06=East South Central
+794
+13,906,985
+07=West South Central
+1,253
+22,451,188
+08=Mountain
+1,284
+21,442,570
+09=Pacific
+1,906
+37,506,671
+FARCREG
+C
+2
+-1=Valid Skip
+3,604
+74,511,465
+-9=Not Ascertained
+383
+7,753,244
+01=Northeast
+2,008
+33,335,268
+02=Midwest
+2,764
+43,218,200
+03=South
+5,048
+87,793,507
+04=West
+3,190
+58,949,240
+FARREAS
+C
+2
+-1=Valid skip
+3,065
+64,648,974
+-9=Not ascertained
+265
+4,697,610
+01=Business trip
+955
+18,419,810
+Farthest domestic destination 
+Census region FIPS code 
+(domestic trips only)
+Ending date of trip 
+(YYYYMM)
+Census division at which 
+respondent exited the US
+Farthest domestic destination 
+Census division code 
+(domestic trips only)
+Main reason for most recent 
+long distance trip
+65
+
+
+===== [page 66] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Personal vacation
+4,789
+86,655,753
+03=Visit family or friends
+5,308
+89,861,438
+04=Other, specify
+2,615
+41,277,340
+GCDTOT
+N
+8
+-9=Not ascertained
+372
+7,246,194
+-1=Appropriate skip
+3,604
+74,511,465
+Responses=0.0000224433-5005.858425
+13,021
+223,803,266
+GCD_FLAG
+C
+2
+-1=Valid Skip
+3,604
+74,511,465
+-9=Not Ascertained
+372
+7,246,194
+01=GCD 50 miles or more
+10,508
+177,118,172
+02=GCD less than 50 miles
+2,513
+46,685,094
+HBHTNRNT
+C
+2
+01=0-4%
+1,151
+17,186,136
+05=5-14%
+4,596
+73,181,734
+20=15-24%
+3,572
+59,667,010
+30=25-34%
+2,480
+44,631,728
+40=35-44%
+1,799
+37,345,899
+50=45-54%
+1,250
+25,087,099
+60=55-64%
+927
+22,377,768
+70=65-74%
+611
+13,304,191
+80=75-84%
+411
+8,264,929
+90=85-94%
+177
+4,047,676
+95=95-100%
+23
+466,755
+HBHUR
+C
+2
+01=Rural
+3,484
+56,827,875
+02=Small Town
+3,926
+66,575,651
+03=Second City
+3,205
+61,190,375
+04=Suburban
+4,025
+71,801,912
+05=Urban
+2,357
+49,165,112
+HBPPOPDN
+C
+2
+-9=Not ascertained
+93
+1,869,465
+01=0-99
+1,998
+31,310,617
+02=100-499
+2,443
+41,185,505
+03=500-999
+1,323
+23,941,536
+04=1,000-1,999
+2,194
+37,570,101
+05=2,000-3,999
+3,472
+61,508,050
+06=4,000-9,999
+3,956
+74,208,907
+07=10,000-24,999
+1,043
+23,423,947
+08=25,000-999,999
+475
+10,542,797
+HBRESDN
+C
+2
+-9=Not ascertained
+142
+2,110,150
+Great circle distance from 
+home to farthest domestic 
+dest (domestic trips only)
+Flag for long distance trips of 
+50 miles or more
+Category of the percent of 
+renter-occupied housing in 
+the census block group of the 
+household's home location
+Urban / Rural indicator - 
+Block group
+Category of population 
+density (persons per square 
+mile) in the census block 
+group of the household's 
+home location
+Category of housing units per 
+66
+
+
+===== [page 67] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+01=0-99
+3,359
+53,480,521
+02=100-499
+3,167
+54,120,411
+03=500-999
+2,002
+35,193,088
+04=1,000-1,999
+3,611
+68,085,667
+05=2,000-3,999
+3,042
+57,798,219
+06=4,000-9,999
+1,076
+22,782,814
+07=10,000-24,999
+361
+6,680,486
+08=25,000-999,999
+237
+5,309,568
+HHFAMINC
+C
+2
+-7=I prefer not to answer
+205
+3,321,286
+-8=I don't know
+5
+108,411
+01=Less than $10,000
+547
+12,777,003
+02=$10,000 to $14,999
+405
+7,652,726
+03=$15,000 to $24,999
+811
+16,967,878
+04=$25,000 to $34,999
+1,064
+21,208,087
+05=$35,000 to $49,999
+1,583
+27,892,189
+06=$50,000 to $74,999
+2,824
+48,440,547
+07=$75,000 to $99,999
+2,436
+41,285,423
+08=$100,000 to $124,999
+2,056
+32,133,172
+09=$125,000 to $149,999
+1,503
+24,875,938
+10=$150,000 to $199,999
+1,507
+32,009,298
+11=$200,000 or more
+2,051
+36,888,967
+HHFAMINC_IMP
+C
+2
+01=Less than $10,000
+549
+12,824,414
+02=$10,000 to $14,999
+409
+7,694,097
+03=$15,000 to $24,999
+817
+17,071,869
+04=$25,000 to $34,999
+1,081
+21,388,207
+05=$35,000 to $49,999
+1,598
+28,219,078
+06=$50,000 to $74,999
+2,867
+49,404,937
+07=$75,000 to $99,999
+2,464
+41,688,877
+08=$100,000 to $124,999
+2,099
+32,832,804
+09=$125,000 to $149,999
+1,516
+24,980,200
+10=$150,000 to $199,999
+1,525
+32,336,209
+11=$200,000 or more
+2,072
+37,120,232
+HHSIZE
+N
+8
+1
+2,271
+36,098,091
+2
+6,657
+87,921,569
+3
+2,719
+57,418,392
+4
+2,781
+60,418,305
+square mile in the census 
+block group of the 
+household's home location
+Household income
+Household income (imputed)
+Total number of people in 
+household
+67
+
+
+===== [page 68] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+5
+1,517
+38,752,988
+6
+636
+13,676,387
+7
+222
+6,053,194
+8
+131
+4,170,204
+9
+44
+864,570
+10
+19
+187,225
+HHVEHCNT
+N
+8
+0
+743
+16,634,884
+1
+4,092
+70,456,909
+2
+7,583
+127,012,311
+3
+2,885
+55,305,071
+4
+1,093
+24,703,796
+5
+391
+7,054,317
+6
+139
+2,835,860
+7
+37
+832,013
+8
+21
+317,997
+9
+2
+17,697
+11
+7
+343,101
+14
+3
+26,989
+17
+1
+19,982
+HH_HISP
+C
+2
+01=Hispanic or Latino
+1,525
+52,613,378
+02=Not Hispanic or Latino
+15,472
+252,947,547
+HH_RACE
+C
+2
+01=White
+14,261
+221,708,653
+02=Black or African American
+1,201
+36,899,219
+03=Asian
+899
+20,917,285
+04=American Indian/Alaska Native
+100
+3,278,147
+05=Native Hawaiian/Pacific Islander
+56
+1,340,654
+06=Multiple races selected
+57
+7,845,160
+97=Other race
+423
+13,571,806
+HOMEOWN
+C
+2
+01=Owned by hh member with mortgage or loan
+8,873
+157,818,131
+02=Owned by hh member free and clear (no mortgage)
+4,227
+59,854,221
+03=Rented by hh member
+3,666
+83,204,678
+04=Occupied without payment
+231
+4,683,895
+HOUSEID
+Unique Identifier- Household
+C
+10
+Responses=9000013002-9000218040
+16,997
+305,560,925
+HTEEMPDN
+C
+2
+-9=Not ascertained
+124
+1,758,465
+01=0-49
+2,430
+40,800,144
+02=50-99
+997
+16,936,695
+Hispanic status of household 
+respondent
+Total number of vehicles in 
+household
+Race of household 
+respondent
+Whether home owned or 
+rented
+Category of workers per 
+square mile in the census 
+tract of the household's home 
+68
+
+
+===== [page 69] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+03=100-249
+1,554
+24,587,235
+04=250-499
+1,663
+29,757,844
+05=500-999
+1,983
+33,471,165
+06=1,000-1,999
+3,406
+63,171,901
+07=2,000-3,999
+3,101
+59,613,706
+08=4,000-999,999
+1,739
+35,463,770
+HTHTNRNT
+C
+2
+01=0-4%
+588
+10,318,759
+05=5-14%
+4,099
+63,886,711
+20=15-24%
+4,149
+70,630,396
+30=25-34%
+2,858
+50,624,637
+40=35-44%
+2,030
+37,973,767
+50=45-54%
+1,446
+31,253,896
+60=55-64%
+882
+19,919,945
+70=65-74%
+520
+11,566,734
+80=75-84%
+316
+6,607,986
+90=85-94%
+99
+2,520,827
+95=95-100%
+10
+257,267
+HTPPOPDN
+C
+2
+-9=Not ascertained
+63
+1,046,654
+01=0-99
+2,282
+37,939,835
+02=100-499
+2,623
+43,030,198
+03=500-999
+1,439
+25,260,026
+04=1,000-1,999
+2,289
+39,062,193
+05=2,000-3,999
+3,511
+62,831,147
+06=4,000-9,999
+3,540
+69,505,656
+07=10,000-24,999
+828
+17,316,528
+08=25,000-999,999
+422
+9,568,688
+HTRESDN
+C
+2
+-9=Not ascertained
+129
+3,034,683
+01=0-99
+3,639
+59,544,561
+02=100-499
+3,447
+60,169,789
+03=500-999
+2,136
+34,551,671
+04=1,000-1,999
+3,600
+66,477,024
+05=2,000-3,999
+2,674
+54,338,713
+06=4,000-9,999
+855
+16,631,326
+07=10,000-24,999
+330
+6,238,772
+08=25,000-999,999
+187
+4,574,386
+INT_FLAG
+C
+2
+-1=valid skip
+3,065
+64,648,974
+Category of the percent of 
+renter-occupied housing in 
+the census tract of the 
+household's home location
+Category of population 
+density (persons per square 
+mile) in the census tract of 
+the household's home 
+location
+Category of housing units per 
+square mile in the census 
+tract of the household's home 
+location
+location
+Farthest destination on the 
+69
+
+
+===== [page 70] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+-9=not ascertained
+255
+4,461,283
+01=Inside the US
+13,138
+226,588,177
+02=Outside the US
+539
+9,862,491
+LDT_FLAG
+C
+2
+-9=Not Ascertained
+199
+3,563,433
+01=Long distance info derived from travel day
+370
+7,230,403
+02=Long distance info asked of respondents
+13,363
+230,118,114
+03=More than 5 years since last long distance trip
+1,745
+37,056,990
+04=Never taken a trip longer than 50 miles
+1,320
+27,591,984
+LD_AMT
+Number of times used 
+AMTRAK in past year
+N
+8
+Responses=0-35
+16,997
+305,560,925
+LD_ICB
+Number of times used Inter-
+City bus in past year
+N
+8
+Responses=0-100
+16,997
+305,560,925
+LD_NUMONTRP
+N
+8
+-9=Not ascertained
+239
+4,226,310
+-1=Appropriate skip
+3,065
+64,648,974
+Responses=1-99
+13,693
+236,685,641
+LIF_CYC
+C
+2
+01=one adult, no children
+1,281
+23,077,501
+02=2+ adults, no children
+3,258
+54,787,803
+03=one adult, youngest child 0-5
+137
+4,250,317
+04=2+ adults, youngest child 0-5
+2,010
+47,014,063
+05=one adult, youngest child 6-15
+502
+10,271,698
+06=2+ adults, youngest child 6-15
+3,167
+70,473,399
+07=one adult, youngest child 16-21
+199
+3,722,612
+08=2+ adults, youngest child 16-21
+906
+21,701,999
+09=one adult, retired, no children
+990
+13,020,590
+10=2+ adults, retired, no children
+4,547
+57,240,942
+LONGDIST
+Number of long distance trips 
+in past 30 days
+N
+8
+Responses=0-207
+16,997
+305,560,925
+MAINMODE
+C
+2
+-1=Valid skip
+3,065
+64,648,974
+-9=Not ascertained
+259
+4,447,264
+01=Car
+5,995
+108,871,742
+02=Van
+849
+14,292,127
+03=SUV/Crossover
+3,363
+55,392,672
+04=Pickup truck
+1,316
+21,438,850
+06=Recreational Vehicle
+72
+999,231
+07=Motorcycle
+26
+403,906
+08=Public or commuter bus
+38
+1,354,133
+trip was in the US or outside 
+US
+Source of long distance data
+Number of people with 
+respondent on long distance 
+trip
+Life Cycle classification for 
+the household
+Mode of travel for last long 
+distance trip
+70
+
+
+===== [page 71] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+09=School bus
+28
+353,516
+11=Subway or elevated rail
+12
+153,824
+12=Commuter rail
+44
+693,405
+13=Amtrak
+56
+627,606
+14=Airplane
+1,713
+28,577,181
+15=Taxicab or limo service
+5
+55,242
+16=Other ride-sharing service
+20
+535,931
+17=Paratransit/ Dial a ride
+4
+54,918
+18=Bicycle (including bikeshare, ebike, etc.)
+3
+48,717
+20=Walked
+10
+326,219
+21=Other (specify)
+51
+1,008,525
+22=Ferryboat
+5
+52,428
+23=Charter/tour buses
+30
+554,613
+24=Inter-city bus service
+33
+669,901
+MRT_DATE
+C
+6
+-1=Appropriate skip
+3,065
+64,648,974
+-9=Not ascertained
+6,816
+119,894,907
+Responses=202112-202301
+7,116
+121,017,044
+MSACAT
+C
+2
+01=MSA of 1 million or more, with rail
+3,708
+72,883,077
+02=MSA of 1 million or more, without rail
+5,348
+94,166,530
+03=MSA less than 1 million
+7,019
+123,936,833
+04=Not in MSA
+922
+14,574,484
+MSASIZE
+C
+2
+01=In an MSA of Less than 250,000
+3,154
+53,109,001
+02=In an MSA of 250,000 - 499,999
+1,647
+29,786,993
+03=In an MSA of 500,000 - 999,999
+2,218
+41,040,839
+04=In an MSA or CMSA of 1,000,000 - 2,999,999
+3,864
+68,477,467
+05=In an MSA or CMSA of 3 million or more
+5,192
+98,572,141
+06=Not in MSA or CMSA
+922
+14,574,484
+NTSAWAY
+N
+8
+-9=Not ascertained
+7,063
+124,482,527
+-1=Appropriate skip
+3,065
+64,648,974
+0
+3,223
+56,313,279
+1
+841
+14,045,042
+2
+872
+14,630,789
+3
+567
+9,230,264
+4
+365
+6,007,284
+5
+199
+2,759,241
+6
+135
+2,138,505
+Date of most recent long 
+distance trip (YYYYMM)
+MSA category for the HH 
+home address
+Population size category of 
+the MSA from the five-year 
+ACS API
+Nights away on long distance 
+trip
+71
+
+
+===== [page 72] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+7
+197
+3,371,241
+8
+103
+1,262,475
+9
+82
+1,733,363
+10
+61
+911,511
+11
+40
+738,338
+12
+25
+354,735
+13
+14
+171,245
+14
+23
+641,201
+15
+16
+220,865
+16
+12
+64,569
+17
+7
+62,608
+18
+5
+70,166
+19
+5
+88,506
+20
+6
+134,876
+21
+12
+442,541
+22
+8
+372,305
+23
+5
+26,982
+24
+7
+168,431
+25
+1
+21,048
+26
+7
+75,382
+27
+6
+69,953
+28
+8
+72,474
+29
+8
+109,171
+30
+5
+101,249
+31
+4
+19,785
+NUMADLT
+N
+8
+1
+2,918
+50,335,502
+2
+10,526
+171,330,354
+3
+2,358
+53,315,088
+4
+895
+22,562,579
+5
+196
+5,186,376
+6
+56
+2,160,737
+7
+40
+622,999
+8
+8
+47,288
+ONTP_P1
+C
+2
+-1=Valid skip
+3,065
+64,648,974
+-9=Not ascertained
+735
+14,498,250
+01=On trip
+11,779
+200,222,219
+Count of adult household 
+members at least 18 years 
+old
+Person 1 on long distance 
+trip
+72
+
+
+===== [page 73] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Not on trip
+1,418
+26,191,482
+ONTP_P10
+C
+2
+-1=Valid skip
+3,620
+75,254,533
+-9=Not ascertained
+13,369
+230,243,197
+02=Not on trip
+8
+63,194
+ONTP_P2
+C
+2
+-1=Valid skip
+3,210
+67,312,383
+-9=Not ascertained
+2,709
+46,737,522
+01=On trip
+9,111
+151,657,032
+02=Not on trip
+1,967
+39,853,987
+ONTP_P3
+C
+2
+-1=Valid skip
+3,418
+69,996,393
+-9=Not ascertained
+7,761
+109,700,238
+01=On trip
+3,967
+84,538,977
+02=Not on trip
+1,851
+41,325,317
+ONTP_P4
+C
+2
+-1=Valid skip
+3,507
+72,002,571
+-9=Not ascertained
+9,626
+147,249,177
+01=On trip
+2,776
+60,932,690
+02=Not on trip
+1,088
+25,376,487
+ONTP_P5
+C
+2
+-1=Valid skip
+3,573
+73,712,412
+-9=Not ascertained
+11,685
+189,997,308
+01=On trip
+1,265
+28,837,366
+02=Not on trip
+474
+13,013,839
+ONTP_P6
+C
+2
+-1=Valid skip
+3,610
+74,941,587
+-9=Not ascertained
+12,723
+214,632,101
+01=On trip
+422
+9,316,862
+02=Not on trip
+242
+6,670,375
+ONTP_P7
+C
+2
+-1=Valid skip
+3,618
+75,192,257
+-9=Not ascertained
+13,137
+222,843,916
+01=On trip
+127
+3,950,347
+02=Not on trip
+115
+3,574,405
+ONTP_P8
+C
+2
+-1=Valid skip
+3,620
+75,254,533
+-9=Not ascertained
+13,261
+226,682,182
+01=On trip
+69
+1,672,481
+02=Not on trip
+47
+1,951,729
+ONTP_P9
+C
+2
+-1=Valid skip
+3,620
+75,254,533
+-9=Not ascertained
+13,332
+229,435,516
+01=On trip
+22
+413,062
+02=Not on trip
+23
+457,813
+Person 7 on long distance 
+trip
+Person 10 on long distance 
+trip
+Person 2 on long distance 
+trip
+Person 3 on long distance 
+trip
+Person 4 on long distance 
+trip
+Person 5 on long distance 
+trip
+Person 6 on long distance 
+trip
+Person 8 on long distance 
+trip
+Person 9 on long distance 
+trip
+73
+
+
+===== [page 74] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+PERSONID
+C
+2
+01
+7,852
+137,629,125
+02
+5,554
+87,542,460
+03
+1,986
+44,286,568
+04
+1,041
+22,966,179
+05
+384
+9,199,927
+06
+120
+2,498,081
+07
+44
+1,141,113
+08
+12
+259,118
+09
+3
+26,480
+10
+1
+11,874
+PROXY
+C
+2
+01=Self
+11,568
+203,513,392
+02=Someone else
+5,429
+102,047,533
+RAIL
+C
+2
+01=Yes
+3,845
+75,551,008
+02=No
+13,152
+230,009,917
+R_AGE
+Respondent age
+N
+8
+Responses=5-92
+16,997
+305,560,925
+R_HISP
+C
+2
+01=Hispanic
+1,722
+56,715,891
+02=Not Hispanic
+15,275
+248,845,034
+R_RACE
+C
+2
+-9=Not ascertained
+2
+23,871
+01=White
+14,053
+218,057,854
+02=Black or African American
+1,282
+37,907,512
+03=Asian
+935
+17,369,165
+04=American Indian/Alaska Native
+124
+3,564,969
+05=Native Hawaiian/Pacific Islander
+67
+1,382,011
+06=Multiple races selected
+70
+12,995,066
+97=Other race
+464
+14,260,476
+R_SEX
+C
+2
+-7=Refuse
+228
+4,179,855
+-8=Don't know
+8
+232,338
+-9=Not ascertained
+1
+12,070
+01=Male
+8,154
+148,289,962
+02=Female
+8,606
+152,846,699
+R_SEX_IMP
+C
+2
+01=Male
+8,250
+150,091,842
+02=Female
+8,747
+155,469,083
+STRATUMID
+Household Stratum ID
+C
+4
+Responses=1021-1040
+16,997
+305,560,925
+TDAYDATE
+C
+6
+202201
+441
+7,909,179
+202202
+1,717
+23,440,226
+202203
+1,508
+25,951,890
+Person ID within household
+Survey completed by self or 
+someone else
+MSA heavy rail status for 
+household
+Person 5 or older - Hispanic 
+or Latino
+Respondent race
+Respondent sex
+Respondent sex (imputed)
+Date of travel day (YYYYMM)
+74
+
+
+===== [page 75] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+202204
+1,472
+25,114,687
+202205
+1,218
+25,951,624
+202206
+780
+25,114,668
+202207
+998
+25,951,601
+202208
+1,028
+25,951,583
+202209
+937
+25,114,655
+202210
+1,369
+25,951,555
+202211
+2,566
+25,114,378
+202212
+2,126
+25,951,892
+202301
+837
+18,042,988
+TRAVDAY
+C
+2
+01=Sunday
+3,032
+43,651,555
+02=Monday
+3,199
+43,651,502
+03=Tuesday
+2,311
+43,651,578
+04=Wednesday
+2,111
+43,651,550
+05=Thursday
+2,287
+43,651,659
+06=Friday
+2,278
+43,651,589
+07=Saturday
+1,779
+43,651,492
+URBAN
+C
+2
+01=In an urban area
+11,945
+220,756,776
+02=In an Urban cluster
+1,494
+26,082,432
+03=In an area surrounded by urban areas
+2
+17,645
+04=Not in urban area
+3,556
+58,704,072
+URBANSIZE
+C
+2
+01=50,000-199,999
+1,665
+29,792,063
+02=200,000-499,999
+1,854
+33,753,568
+03=500,000-999,999
+1,654
+30,533,415
+04=1,000,000 or more with heavy rail
+3,117
+62,864,818
+05=1,000,000 or more without heavy rail
+3,655
+63,812,911
+06=Not in urbanized area
+5,052
+84,804,149
+URBRUR
+C
+2
+01=Urban
+13,439
+246,839,208
+02=Rural
+3,558
+58,721,717
+WEEKEND
+C
+2
+-1=Valid Skip
+3,065
+64,648,974
+-9=Not Ascertained
+7,063
+124,482,527
+01=Short weekend (2 or 3 days and includes a FRI and/or 
+1,184
+19,398,139
+02=Long weekend (4 to 6 days and includes a FRI and/or 
+899
+13,861,583
+03=Not weekend trip (all other trips)
+4,786
+83,169,702
+WORKER
+C
+2
+-1=Valid skip
+2,193
+46,150,763
+01=Worker
+7,783
+158,009,510
+Household urban area 
+classification, based on 2020 
+TIGER/Line Shapefile
+Travel day - day of week
+Urban area size where home 
+address is located
+Household in urban/rural 
+area
+Trip includes weekend
+Employment status of 
+respondent
+75
+
+
+===== [page 76] =====
+2022 NextGen NHTS Long Distance File - Public Use Codebook
+Version 2.1 (April 2025)
+Name
+Label
+Type
+Length
+Code / Range
+Frequency
+Weighted
+02=Not worker
+7,021
+101,400,652
+WRKCOUNT
+N
+8
+0
+4,769
+65,254,659
+1
+5,421
+96,952,160
+2
+5,509
+108,241,205
+3
+1,044
+27,188,782
+4
+188
+5,593,977
+5
+47
+1,960,414
+6
+19
+369,728
+WTPERFIN
+7 day National person weight N
+8
+Responses=30.877179031-781699.97227
+16,997
+305,560,925
+WTPERFIN2D
+2 day National person weight N
+8
+Responses=0-473081.72428
+16,997
+305,560,925
+WTPERFIN5D
+5 day National person weight N
+8
+Responses=0-972351.28194
+16,997
+305,560,925
+Count of workers in 
+household
+76

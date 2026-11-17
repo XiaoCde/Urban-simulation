@@ -1,0 +1,1651 @@
+
+
+===== [page 1] =====
+ 
+1
+ 
+ 
+ 
+ 
+Studying the Vehicle Headway Issue and Its Impact  
+on the Slow-Down Effect 
+ 
+ 
+Jyh-Hone Wang, Ph.D. 
+Miao Song 
+University of Rhode Island 
+ 
+June 2009 
+ 
+URITC PROJECT NO. 0001852 
+ 
+ 
+ 
+ 
+PREPARED FOR 
+ 
+UNIVERSITY OF RHODE ISLAND 
+TRANSPORTATION CENTER 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DISCLAIMER 
+This report, prepared in cooperation with the University of Rhode Island Transportation Center, does 
+not constitute a standard, specification, or regulation.  The contents of this report reflect the views of 
+the author(s) who is (are) responsible for the facts and the accuracy of the data presented herein.  This 
+document is disseminated under the sponsorship of the Department of Transportation, University 
+Transportation Centers Program, in the interest of information exchange.  The U.S. Government 
+assumes no liability for the contents or use thereof. 
+ 
+ 
+ 
+ 
+
+
+===== [page 2] =====
+ 
+2
+1. Report No 
+2. Government Accession No. 
+3. Recipient's Catalog No. 
+URITC FY 06 
+N/A 
+N/A
+4. Title and Subtitle 
+Studying the Vehicle Headway Issue and Its Impact 
+On the Slow-Down Effect 
+5. Report Date 
+      June 2009 
+6. Performing Organization Code 
+    N/A 
+7. Authors(s) 
+ 
+Jyh-Hone Wang, Ph.D., Miao Song 
+8. Performing Organization  Report No. 
+N/A 
+9. Performing Organization Name and Address 
+ 
+University of Rhode Island, Dept. of Industrial and 
+Systems Engineering, Kingston, RI 02881 
+ 
+10. Work Unit No. (TRAIS) 
+N/A 
+11. Contract or Grant No. 
+ 
+13. Type of Report and Period Covered 
+ Final Report, Jun. 2008 – Dec. 2008 
+ 
+12. Sponsoring Agency Name and Address 
+ 
+University of Rhode Island Transportation Center 
+Carlotti Administration Building, 75 Lower College 
+Road 
+Kingston, RI 02881 
+14. Sponsoring Agency Code 
+ A study conducted in 
+ cooperation with RIDOT and FHWA 
+15. Supplementary Notes 
+  
+ N/A 
+16. Abstract 
+ 
+Tailgating is a dangerous driving behavior and is a major cause of rear-ended crashes. Finding 
+effective means to help drivers maintain proper vehicle headways and to warn and discourage 
+tailgating behavior is thus of utmost importance to traffic management authorities. This project 
+presented a human-factors study, consisting of a vehicle headway analysis and a questionnaire 
+survey, which was aimed to identify the causes of tailgating and to find effective means for 
+tailgating treatments. In the vehicle headway analysis, vehicle headways on specific segments of 
+major highways in Rhode Island were examined. With tailgating phenomenon confirmed from the 
+analysis, the study next searched means to mitigate tailgating behavior. A questionnaire survey was 
+conducted to find the leading causes of tailgating. Drivers’ preferences on several tailgating 
+treatments were surveyed. The results of the survey indicated that the majority considered 
+“tailgating” a serious offense. Most of them, however, did not know what the proper vehicle 
+headway was when driving on highways. Among the few different tailgating treatments, most 
+preferred the one where equal-distanced horizontal bars were used as reference markings. They 
+also indicated that properly designed dynamic message signs and fixed signs using both graphics 
+and words could help them better understand the proposed tailgating treatment systems. 
+ 
+17. Key Words 
+ 
+Human factors, Tailgating, Vehicle 
+headway analysis, Questionnaire survey
+18. Distribution Statement 
+No restrictions. This document is available to the  
+Public through the URI Transportation Center, Carlotti 
+Administration Building, 75 Lower College Rd., Kingston, RI 
+02881 
+ 
+19. Security Classif. (of this report) 
+ Unclassified 
+20. Security Classif. (of this page) 
+   Unclassified 
+21. No. of Pages 
+22. Price 
+         53 
+N/A 
+Form DOT F 1700.7 (8-72) Reproduction of completed page authorized (art. 5/94)
+ 
+
+
+===== [page 3] =====
+ 
+3
+TABLE OF CONTENTS 
+Page 
+LIST OF TABLES ......................................................................................................... 5 
+LIST OF FIGURES ....................................................................................................... 6 
+1. 
+INTRODUCTION ................................................................................................. 8 
+2. 
+RESEARCH OBJECTIVE AND GOAL ............................................................. 10 
+3. 
+LITERATURE REVIEW .................................................................................... 12 
+3.1 
+Accident risk caused by vehicle headway issue .......................................... 12 
+3.2 
+Drivers’ reaction time .................................................................................. 13 
+3.3 
+Factors effect vehicle headway .................................................................... 14 
+3.4 
+Feasibility of using vehicle headway treatment ........................................... 14 
+3.5 
+Use of graphics on traffic signs ................................................................... 17 
+4. 
+METHODOLOGY .............................................................................................. 18 
+4.1 
+Vehicle headway analysis ............................................................................ 18 
+4.1.1 
+Video collection ................................................................................... 19 
+4.1.2 
+Vehicle headway analysis .................................................................... 19 
+4.2 
+Questionnaire survey ................................................................................... 21 
+4.2.1 
+Design of the questionnaire survey ...................................................... 21 
+4.2.2 
+Authorization for the electronic survey................................................ 34 
+4.2.3 
+Recruitment of subjects ........................................................................ 35 
+4.2.4 
+Incentives for participation in the study .............................................. 36 
+4.2.5 
+Completion and administration of the survey ...................................... 37 
+
+
+===== [page 4] =====
+ 
+4
+5. 
+RESULTS AND DISCUSSION .......................................................................... 41 
+5.1 
+Vehicle headway analysis ............................................................................ 41 
+5.2 
+Questionnaire survey ................................................................................... 44 
+6. 
+CONCLUSION AND FUTURE WORK ............................................................ 49 
+LIST OF REFERENCES ............................................................................................. 53 
+ 
+
+
+===== [page 5] =====
+ 
+5
+LIST OF TABLES 
+Table 4.1 Participants’ demographic statistics ............................................................. 37 
+Table 5.1 Summary of vehicle headway analysis ........................................................ 42 
+Table 5.2 Vehicle headway analysis with lane break-downs ...................................... 44 
+ 
+
+
+===== [page 6] =====
+ 
+6
+LIST OF FIGURES 
+Figure 3.1 Tailgating Treatment in Pennsylvania with painted dots and fixed signs .. 16 
+Figure 4.1  Data collection in vehicle headway analysis ............................................. 19 
+Figure 4.2 Reference markings and advisory message signs used in the survey ......... 23 
+Figure 4.3 Major causes of crashes .............................................................................. 24 
+Figure 4.4 Reasons of following other cars ................................................................. 24 
+Figure 4.5 Frequency of following other cars .............................................................. 25 
+Figure 4.6 Reasons of not following other cars ........................................................... 25 
+Figure 4.7 Definition of tailgating ............................................................................... 26 
+Figure 4.8 Major causes of tailgating .......................................................................... 26 
+Figure 4.9 Driver’s reactions when being tailgated ..................................................... 27 
+Figure 4.10 Drivers’ acknowledge of proper vehicle headway ................................... 28 
+Figure 4.11 Importance of keeping safe vehicle headway ........................................... 28 
+Figure 4.12 Frequency of keeping safe vehicle headway ............................................ 29 
+Figure 4.13 Drivers’ behavior in maintaining following distance ............................... 29 
+Figure 4.14 Vehicle headway (in second) maintained while driving on highway ....... 30 
+Figure 4.15 Vehicle headway (in car length) maintained while driving on highway .. 30 
+Figure 4.16 The preferred way to measure vehicle headway ...................................... 31 
+Figure 4.17 Vehicle headway treatment design ........................................................... 32 
+Figure 4.18 Reference markings for vehicle headway treatment ................................ 32 
+Figure 4.19 Fixed signs for vehicle headway treatment .............................................. 33 
+Figure 4.20 Fixed signs for vehicle headway treatment .............................................. 33 
+
+
+===== [page 7] =====
+ 
+7
+Figure 4.21 Traffic signs for vehicle headway treatment ............................................ 34 
+Figure 4.22 Tailgating Public Survey poster ............................................................... 36 
+Figure 4.23 Introductory slide...................................................................................... 38 
+Figure 4.24 Introductory slide with consent form ....................................................... 39 
+Figure 4.25 Demographic information form ................................................................ 40 
+Figure 4.26 Subjects’ answers stored as text files ....................................................... 40 
+Figure 5.1 Vehicle headway analysis Excel worksheet ............................................... 41 
+Figure 5.2 Day of week comparison: I95 rush hours (left) & non-rush hours (right) . 44 
+Figure 5.3  Pareto chart of major causes of crashes ..................................................... 45 
+Figure 5.4 Causes of tailgating .................................................................................... 46 
+Figure 5.5 Drvier’s reactions when being tailgated ..................................................... 47 
+Figure 5.6 Vehicle headways maintained by drivers when driving at 60 mph ............ 48 
+Figure 5.7 Drivers’ preference on reference markings ................................................ 49 
+ 
+
+
+===== [page 8] =====
+ 
+8
+1. INTRODUCTION 
+This project conducted a human-factors study on the causes of tailgating and 
+possible means for tailgating treatments. It was aimed to facilitate a more efficient and 
+safer driving on highway by reducing accidents caused by tailgating.  
+The National Highway Traffic Safety Administration (NHTSA) defines 
+“Aggressive driving” as “an individual committing a combination of moving traffic 
+offenses so as to endanger other persons or property.” More specifically, speeding, 
+tailgating, weaving in and out of traffic, running red lights, using emergency break-
+down lane for travel, or any combination of these activities are generally considered 
+aggressive driving.  
+In Rhode Island, “Aggressive Driving” is defined as operating a motor vehicle in 
+violation of any speed law and a violation of two or more of traffic law provisions. 
+While many driving patterns are considered aggressive, tailgating is one of the most 
+dangerous driving behaviors and is a major cause of rear-end crashes. The National 
+Highway Traffic Safety Administration (NHTSA) research has reported that about 32 
+percent of the annual fatalities in motor vehicle crashes were speed-related and at 
+least one of the drivers involved in the crash exceeded the posted speed limit or was 
+driving too fast for the prevailing conditions.  
+In Rhode Island, speeding accounts for 52 percent of all statewide fatalities, 20 
+percent higher than the national average, and causes more than 40 fatalities per year 
+since 2002. Out of an annual average of 6.3 million automobile accidents in the US in 
+the past few years, rear-end collisions ranked as the highest, with about 2.5 million 
+
+
+===== [page 9] =====
+ 
+9
+cases per year. The two main causes of rear-end crashes are driver-inattention and 
+tailgating while the latter is the major contributing cause with a deadly consequence. 
+Finding effective means to help drivers maintain proper vehicle headways and to 
+warn and discourage tailgating behavior is thus of utmost importance to traffic 
+management authorities. As the most dangerous one of all the aggressive driving 
+patterns, “Tailgating” is defined as following too closely—interval between vehicles. 
+Therefore, maintaining safe following distances is the most effective way to avoid 
+tailgating. 
+Vehicle headway, or the headway between vehicles, is defined as the time 
+between two vehicles passing the same point. Many studies have demonstrated that 
+following distances depend on a wide range of factors such as driver behavior, traffic 
+condition, road condition, roadway design, state law and regulation, and personality 
+[1, 2, 3, 4, 5]. Tailgating treatments such as advisory signs and road markings have 
+been tested in some studies. These treatments have provided drivers with information 
+regarding following distance and showed good results. To mitigate rear-end collisions 
+caused by tailgating, Lertworawanich [6] conducted a study to estimate safe car-
+following distance for a speed range from 80 km/h to 120 km/h, and developed the 
+“dot” tailgating treatment marking to implement the findings. Rama & Kulmala [7] 
+conducted a field study in Finland investigating the effects of variable message signs 
+(VMS) on driver’s car-following behavior. Results showed that those warning signs 
+reduced the mean speed and increased following distance.  Pennsylvania DOT has 
+successfully conducted a tailgating treatment program that was honored with a 2001 
+
+
+===== [page 10] =====
+ 
+10
+National Highway Safety Award [8]. Tailgating has dropped a significant 60% on a 
+portion of US route 11 after equipping with reflective dots on the roadway and 
+pavement markings and signs that help motorists gauge their following distances. 
+Minnesota DOT and Public Safety piloted a similar project in 2006 by employing 
+similar engineering elements from the Pennsylvania program: elliptical pavement dots, 
+informational signs, and a strong public information campaign [9]. On a section of 
+State Highway 55, the average gap increased from 2.36 to 2.62 seconds, or 22.9 feet. 
+To gain insights on tailgating issue, explore effective means to warn and 
+discourage such behavior and identify the causes of tailgating, a multi-stage study was 
+conducted for this purpose. It started with an extensive literature review to identify 
+leading causes to tailgating and existing practices in tailgating treatments. A vehicle 
+headway analysis was then conducted to evaluate tailgating behaviors on Rhode 
+Island highways. A survey was employed to identify the causes of tailgating and to 
+assess drivers’ understanding of tailgating and their preferences regarding several 
+proposed tailgating treatments. It intends to find an effective tailgating treatment for 
+the state of Rhode Island. 
+ 
+2. RESEARCH OBJECTIVE AND GOAL 
+The proposed study will examine the vehicle headway issue and its impact on the 
+slow-down effect that is often observed on vehicles approaching in-service dynamic 
+message signs. The purpose of this research is to help achieve the mission stated in 
+
+
+===== [page 11] =====
+ 
+11
+the Rhode Island Strategic Highway Safety Plan to reduce fatalities and serious 
+injuries caused by aggressive driving. The proposed research is consistent with the 
+URITC Theme “Connectivity through Sustainable Transportation Systems.” It is 
+aimed to facilitate more efficient and safer driving on highway by reducing accidents 
+caused by aggressive driving, namely, tailgating. It will identify the major causes of 
+tailgating and assess various features that might impact the effectiveness of using 
+tailgating treatment systems such as roadside reference marks, pavement markings, 
+fixed signs, and variable/dynamic message signs. Four areas of interest were defined 
+in order to create a comprehensive and methodical approach: 
+ 
+1. Identify the characteristics of existing vehicle headway management and 
+tailgating treatment systems and evaluate their capabilities and limitations through 
+an extensive review of literature and existing studies. 
+ 
+2. Assess vehicle headway behaviors on Rhode Island highways through analysis of 
+highway surveillance videos in the term of vehicle headway. 
+ 
+3. Find out leading causes of tailgating through questionnaire survey and propose 
+feasible vehicle headway management and tailgating treatment systems for Rhode 
+Island. Compare both existing and proposed systems with respect using roadside 
+reference marks, pavement markings, fixed signs, and variable/dynamic message 
+signs. 
+
+
+===== [page 12] =====
+ 
+12
+ 
+4. Analyze the survey results and recommend one or more effective vehicle headway 
+management and tailgating treatment system for Rhode Island highways to help 
+reduce injuries and fatalities caused by rear-end crashes. 
+ 
+3. LITERATURE REVIEW 
+An extensive literature search was conducted on available transportation 
+publications, manuals, articles, and past studies regarding vehicle headway issue and 
+tailgating treatment systems. It encompassed documents both in the United States and 
+international, and is presented in the following sections. Topics covered include 
+accident risk caused by vehicle headway issue, driver’s reaction time, factors effect 
+vehicle headway, feasibility of using treatments to warn and discourage tailgating and 
+any “best practices” adopted by state DOTs or traffic management agencies in treating 
+the vehicle headway and tailgating problem, and the use of graphics on traffic signs. 
+ 
+3.1 
+Accident risk caused by vehicle headway issue 
+In Rhode Island, “Aggressive Driving” is defined as operating a motor vehicle in 
+violation of any speed law and a violation of two or more of traffic law provisions 
+[10]. The National Highway Traffic Safety Administration (NHTSA) research has 
+reported that about 32 percent of the annual fatalities in motor vehicle crashes were 
+speed-related and there were 12,000 persons killed in these crashes every year [11]. In 
+
+
+===== [page 13] =====
+ 
+13
+Rhode Island, speeding accounts for 52 percent of all statewide speed-related fatal 
+crashes, that is 20 percent higher than the national average, and causes more than 40 
+fatalities per year since 2002. Out of an annual average of 6.3 million automobile 
+accidents in the US in the past few years, rear-end collisions ranked as the highest, 
+with about 2.5 million cases per year. The two main causes of rear-end crashes are 
+driver-inattention and tailgating while the latter is the major contributing cause with a 
+deadly consequence.  
+ 
+The term “headway” usually is defined as the time between the front bumper of 
+one vehicle and the front bumper of the next [12], while in this study, vehicle 
+headway that of the most interest is the time interval between the back bumper of one 
+vehicle and the front bumper of the next, more precisely, called gap.  
+ 
+3.2 
+Drivers’ reaction time 
+ 
+Simple reaction times are often less than 1 second, but decision reaction times 
+often takes much longer [13, 14]. Driver’s perception time varies from 0.5 second for 
+simple situations to 4 seconds for complex situations and the perception-reaction time 
+in braking is about 2.5 seconds [15]. According to this, quantified safe following 
+distances have been written into rules of the road. It varies from states to states, but 
+mostly in the forms of “2-second rule” or “3-second rule” that drivers should keep at 
+least 2/3 seconds vehicle headway from the vehicle ahead driving in the same 
+direction. 
+ 
+
+
+===== [page 14] =====
+ 
+14
+3.3 
+Factors effect vehicle headway 
+ 
+Many studies have demonstrated that following distances depend on a wide range 
+of factors such as driver behavior, traffic condition, road condition, roadway design, 
+state law and regulation, and personality [1, 2, 3, 4, 5]. And a lot of car following 
+models were developed to describe the interaction between adjacent vehicles in the 
+same lane, and even the whole traffic dynamics. However, few of them provided 
+information about major factors effected following distance and could lead to 
+tailgating. 
+ 
+3.4 
+Feasibility of using vehicle headway treatment 
+Tailgating treatments such as advisory signs and road markings have been tested 
+in some studies. These treatments have provided drivers with information regarding 
+following distance and showed good results. To mitigate rear-end collisions caused by 
+tailgating, Lertworawanich [6]conducted a study to estimate safe car-following 
+distance for a speed range from 80 km/h to 120 km/h, and developed the “dot” 
+tailgating treatment marking to implement the findings. 
+Rama & Kulmala [7] conducted a field study in Finland investigating the effects 
+of 2 variable message signs (VMS) on driver’s car-following behavior. The signs 
+warned of slippery road conditions and to keep a minimum following distance. The 
+study was performed as a before-and-after experiment at 3 test sites with an after 
+period covering 2 winter seasons. Results showed that the slippery road conditions 
+sign reduced the mean speed on slippery roads by 1-2 km/hour in addition to the 
+
+
+===== [page 15] =====
+ 
+15
+decrease caused by the adverse road conditions. The minimum following distance 
+sign reduced the proportion of cars with following distances less than 1.5 seconds, in 
+addition to a speed reduction of 1 km/hour.   
+Several tailgating treatment programs were conducted by the state DOTs. The 
+most successful one is the PENNDOT’s Tailgating Treatment Program (Safety 
+Improvements) which then honored with a 2001 National Highway Safety Award. On 
+a portion of US route 11 that previously experienced high rates of tailgating, 
+aggressive driving and tailgating has dropped a significant 60% after equipping with 
+reflective dots on the roadway and pavement markings and signs that help motorists 
+gauge their distance behind moving vehicles [8]. The average daily traffic of the 
+targeted area of route 11 is around 13,600. Before implementation there were 135 
+crashes a year costing approximately $1.9 million. Afterwards, yearly crashes 
+decreased to 60 at a reduced cost of $1.3 million. The cost of implementation in the 
+first year is estimated at just over $11,000, including enforcement. After eight to nine 
+months, statistics indicated that crash reductions remained fairly constant, pointing to 
+the success of the program. Figure 3.1 Tailgating Treatment in Pennsylvania with 
+painted dots and fixed signsdisplays the tailgating treatment system in PENNDOT 
+program. 
+ 
+Given the successes, relatively low implementation cost and the measurable 
+benefits of PENNDOT program, Minnesota DOT and Public Safety piloted a similar 
+project in 2006. The project was viewed as a tool to educate motorists on how to 
+identify and maintain a minimum safe following distance, and ultimately reduce rear 
+end crashes. Minnesota used similar engineering elements from the Pennsylvania 
+
+
+===== [page 16] =====
+ 
+16
+program: elliptical pavement dots, informational signs, and a strong public 
+information campaign. A section of State Highway 55 in Wright County was used to 
+paint 94 elliptical dots, spaced 225 feet apart, along a two-mile segment of the rural, 
+single-lane, 55 mile-per-hour roadway. Vehicle headway data collected prior to and 
+after installation of the pavement marking dots and signs showed that at the mid-point 
+of the marking location, the average gap increased from 2.36 to 2.62 seconds, or 22.9 
+feet [9].  
+ 
+ 
+Figure 3.1 Tailgating Treatment in Pennsylvania with painted dots and fixed signs 
+Source: http://www.roadwaysafety.org/RSF%20Reporter/1st_Qtr_03/penndot.htm 
+ 
+These existing tailgating treatment systems using a combination of roadside 
+reference marks, information signs and pavement markings are highly effective in 
+maintaining safe following distances and reducing fatalities and serious injuries 
+caused by tailgating. However, it is still feasible to seek further improvements on 
+current systems. Michael, Leeming, & Dwyer [16] implemented a method to collect 
+
+
+===== [page 17] =====
+ 
+17
+tailgating data in an urban setting and gained some insights into the effectiveness of 2 
+hand-held roadside signs admonishing drivers not to tailgate by producing reliable 
+data on over 25,000 drivers. They found that one of these signs (with a reference to 
+crashes) had a significantly positive impact on drivers' tailgating behavior comparing 
+to another one, which expanded the average drivers following headway from 2.11 
+seconds when the sign was absent, to 2.29 seconds when the sign was present. 
+ 
+3.5 
+Use of graphics on traffic signs 
+The use of graphical images to help understanding of roadway signs is a common 
+practice and has been shown in several studies to provide numerous advantages over 
+text only messages alone. Graphic aided messages are more easily and quickly 
+identified compared to messages containing only text, and graphics can be recognized 
+from a further distance. The use of graphics or symbols on DMS signs has been 
+employed in many European countries such as Germany and Spain but has not yet 
+gained widespread popularity in the United States.  
+In comparison with text-only messages, graphic-aided messages can be identified 
+easier, faster, and from a farther distance. They are seen better under adverse viewing 
+conditions, and understood better by people who cannot understand the language in 
+the text. Furthermore, graphics are more effective at conveying information to 
+motorists who cannot understand the language in text messages [17]. Another study 
+investigating performance on tasks with written or verbal instructions found that 
+graphics alone led to quicker reaction times but accuracy was increased with the 
+
+
+===== [page 18] =====
+ 
+18
+addition of words [ 18 ]. Several studies have found that graphically presented 
+information produced faster responses than words [19,20]. 
+ 
+4. METHODOLOGY 
+In order to examine the tailgating behavior on Rhode Island highways, identify the 
+causes of tailgating, and to assess driving subjects’ preferences to different tailgating 
+treatment systems, two approaches were employed in this human-factors study 
+consisting of a vehicle headway analysis and a computer based questionnaire survey. 
+The vehicle headway analysis collected highway surveillance videos and assessed the 
+tailgating behavior. The questionnaire survey studied driving subjects of both genders 
+within three distinct age groups (18-40, 41-60, 61+) and collected their opinions and 
+preferences toward cause of tailgating and tailgating treatment designs.  
+ 
+4.1 
+Vehicle headway analysis 
+To examine the tailgating behavior on Rhode Island highways, highway traffic 
+surveillance videos were analyzed. For this study, Rhode Island Department of 
+Transportation provided two-week’s of traffic surveillance videos that captured all-
+lane traffic on three specific segments of major highways in December 2008. They 
+were I-95 at Detroit Ave, I-195 at Rte. 114, and I-295 North at Exit 6. 
+ 
+
+
+===== [page 19] =====
+ 
+19
+4.1.1 Video collection 
+Video clips collected on each day during both rush hour and non-rush hour were 
+analyzed. Rush hour videos were recorded between 7:30am and 8:00am on weekdays 
+(from Monday to Friday) while non-rush hour videos were between 10:00am and 
+10:30am. From each of the 30-minute video clips, five one-minute sections were 
+randomly selected for analysis.  
+ 
+4.1.2 Vehicle headway analysis 
+By randomly setting up a reference line, based on the time stamp embedded in the 
+video, time for the front bumper of each vehicle reached that reference line was 
+recorded (see Figure 4.1  Data collection in vehicle headway analysis). By 
+calculating the time intervals between two vehicles next to each other in the same lane, 
+vehicle headways measured in time were recorded for all vehicles appeared in videos.  
+ 
+Figure 4.1  Data collection in vehicle headway analysis 
+Reference line 
+
+
+===== [page 20] =====
+ 
+20
+ 
+According to the quantified safe following distances that have been written into 
+rules of the road, vehicles examined in the video were classified as 3-second tailgaters, 
+2-second tailgaters, as well as 1-second tailgaters and non-tailgaters. For example, if a 
+vehicle’s headway was in between 2 and 3 seconds, it was marked as a 3-second 
+tailgater; if a vehicle’s headway was in between 1 and 2 seconds, it was marked as a 
+2-second tailgater; so it was 1-second tailgater; non-tailgaters were defined as those 
+driving with a vehicle headway more than 3 seconds. The percentages of them in total 
+vehicles counted were calculated for comparison. 
+The total number of 1-second tailgater, 2-second tailgater, and 3-second tailgater 
+was the number of vehicles who broke 3-second rule. Both 1-second tailgater and 2-
+second tailgater broke 2-second rule. 
+To find out if time of the day was a significant factor in effecting vehicle 
+headway issue, more specifically, amount of vehicles who broke 3-second and 2-
+second rule, a hypotheses test using paired t-test was employed for all three highway 
+segments between rush hour and non-rush hour: 
+H
+0: μ
+d = 0 
+H
+1: μ
+d > 0 
+Since all the three highway segments have 4 lanes, to fully assess tailgating issue 
+in Rhode Island, the data collected from the video was broke down by lanes and 
+conducted comparisons among them. 
+ 
+
+
+===== [page 21] =====
+ 
+21
+4.2 
+Questionnaire survey 
+To help identify the causes of tailgating, a computer based questionnaire 
+survey was designed and deployed. It was also designed to gain insights about drivers’ 
+understanding, interpretation and preference of various design features of tailgating 
+treatment that could help mitigate tailgating behavior.  
+ 
+4.2.1 Design of the questionnaire survey 
+It was a computer based electronic survey containing 19 single/multiple choice 
+questions. These 19 questions could be divided into 3 groups: causes of tailgating, to 
+find out drivers’ perceptions of tailgating and its causes and effects; vehicle headway, 
+to identify drivers’ behaviors when following other vehicles or being followed; 
+tailgating treatments, to assess drivers’ preferences regarding different proposed 
+treatment systems. A tailgating treatment system includes: reference marking 
+(pavement marking, roadside marking), and advisory message signs (dynamic 
+message signs, variable message signs, or fixed road signs).  
+Prior to developing the computer based questionnaire survey, research was 
+required to establish various criteria to investigate through the help of the computer 
+based survey. This research required the review of past literature detailing vehicle 
+headway issue and the use of different types of tailgating treatment systems. In order 
+to develop the survey, suggestions were also taken from other sources, including 
+officials from the Rhode Island Department of Transportation (RIDOT) and 
+University of Rhode Island Transportation Center (URITC). Some reference markings 
+
+
+===== [page 22] =====
+ 
+and a
+were 
+used 
+mess
+signs
+ 
+advisory me
+adopted fro
+in several E
+age signs u
+ used in the 
+essage signs 
+om existing t
+European co
+used in the 
+questionnair
+ 
+of propose
+tailgating tre
+ountries. Fig
+surveyshow
+re survey. 
+ 
+ 
+d tailgating 
+eatments in 
+gure 4.2 Ref
+ws reference
+    
+    
+ 
+ 
+ 
+treatment s
+the US as w
+ference mar
+e markings a
+ 
+systems in th
+well as those
+rkings and 
+and advisory
+22
+he survey 
+e currently 
+advisory 
+y message 
+ 
+ 
+ 
+ 
+
+
+===== [page 23] =====
+ 
+23
+Figure 4.2 Reference markings and advisory message signs used in the survey 
+ 
+The questionnaire survey was designed using Microsoft PowerPoint® and Visual 
+Basic macros to record the subject’s answers to each set of questions. Each question 
+in the survey required subjects to choose single or multiple answers. 
+The computer based electronic survey contained a total of 32 slides with 19 questions 
+designed to collect drivers’ opinions on questions of 3 categories. Causes of tailgating; 
+vehicle headway, to identify drivers’ behaviors when following other vehicles or 
+being followed; tailgating treatments, to assess drivers’ preferences regarding 
+different proposed treatment systems.  
+ 
+a. Causes of tailgating: 
+6 questions were presented including major causes of crashes, reasons of 
+following other cars, frequency of following other cars, reasons of not following other 
+cars, definition of tailgating, and major causes of tailgating.  
+The purpose is to find out driver’ perceptions of tailgating and its causes and 
+effects 
+ 
+
+
+===== [page 24] =====
+ 
+24
+ 
+Figure 4.3 Major causes of crashes 
+ 
+ 
+Figure 4.4 Reasons of following other cars 
+ 
+
+
+===== [page 25] =====
+ 
+25
+ 
+Figure 4.5 Frequency of following other cars 
+ 
+ 
+Figure 4.6 Reasons of not following other cars 
+ 
+
+
+===== [page 26] =====
+ 
+26
+ 
+Figure 4.7 Definition of tailgating 
+ 
+ 
+Figure 4.8 Major causes of tailgating 
+Hypermiling: the act of driving using techniques that maximize fuel economy. People 
+sometimes draft behind trucks to reduce their wind resistance, increasing the 
+possibility of a rear-end collision. 
+
+
+===== [page 27] =====
+ 
+27
+b. Vehicle headway: 
+8 questions were presented to identify drivers’ behaviors when following other 
+vehicles or being followed. Subjects were first asked their reactions when being 
+tailgated, acknowledgement of proper vehicle headway, and importance of keeping 
+safe vehicle headway. Then, to get qualitative opinions about tailgating behavior, they 
+were asked about frequency of keeping safe vehicle headway, and drivers’ behavior in 
+maintaining following distance. The quantitative opinions were obtained by asking 
+them vehicle headway maintained while driving on highway measured in both second 
+and car length, and the preferred way to measure vehicle headway.  
+Depending on which way most of driver subjects preferred, the answers to the 
+associated “how many vehicle headway maintained” question could be used to assess 
+their tailgating behavior. 
+ 
+Figure 4.9 Driver’s reactions when being tailgated 
+
+
+===== [page 28] =====
+ 
+28
+ 
+Figure 4.10 Drivers’ acknowledge of proper vehicle headway 
+ 
+ 
+Figure 4.11 Importance of keeping safe vehicle headway 
+ 
+
+
+===== [page 29] =====
+ 
+29
+ 
+Figure 4.12 Frequency of keeping safe vehicle headway 
+ 
+ 
+Figure 4.13 Drivers’ behavior in maintaining following distance 
+ 
+
+
+===== [page 30] =====
+ 
+30
+ 
+Figure 4.14 Vehicle headway (in second) maintained while driving on highway 
+ 
+ 
+Figure 4.15 Vehicle headway (in car length) maintained while driving on highway 
+ 
+
+
+===== [page 31] =====
+ 
+31
+ 
+Figure 4.16 The preferred way to measure vehicle headway 
+ 
+c. Tailgating treatments: 
+5 questions were presented to assess drivers’ preferences regarding different 
+proposed treatment systems.  
+Depending on which kind of reference markings each subject chose for Question 
+16, Question 17-19 were displayed for him/her with that reference marking on.  
+ 
+
+
+===== [page 32] =====
+ 
+32
+ 
+Figure 4.17 Vehicle headway treatment design 
+ 
+ 
+Figure 4.18 Reference markings for vehicle headway treatment 
+ 
+
+
+===== [page 33] =====
+ 
+33
+ 
+Figure 4.19 Fixed signs for vehicle headway treatment 
+ 
+ 
+Figure 4.20 Fixed signs for vehicle headway treatment 
+ 
+
+
+===== [page 34] =====
+ 
+34
+ 
+Figure 4.21 Traffic signs for vehicle headway treatment 
+ 
+4.2.2 Authorization for the electronic survey 
+Due to the necessity of the use of human subjects participating in the study, 
+permission for the completion of the research was required from the Institutional 
+Review Board (IRB) at the University of Rhode Island. The IRB must be contacted in 
+any study involving human factors, in order to ensure that human subjects will not be 
+harmed in any way during the course of the research. As conditions of approval of the 
+study, the IRB required that consent forms be read and filled out by all participants in 
+the study acknowledging that they had been informed as to the purpose and potential 
+benefits of the research, possible risks or any discomforts they might experience, and 
+all contact information of individuals they could direct questions to, along with a 
+
+
+===== [page 35] =====
+ 
+35
+statement informing them of their ability to stop and quit the survey at any time, if 
+they wished to do so. 
+In this survey, the consent form was in electronic form on the second slide of the 
+survey, subjects would start doing the survey by pressing the “Start” button if they 
+agreed to take the survey.  
+ 
+4.2.3 Recruitment of subjects 
+Due to the large number of subjects needed to take part in the research, various 
+methods were used to recruit a wide variety of drivers to take the survey. All drivers 
+were eligible to participate as long as they held a valid U.S. driver’s license, but they 
+did not need to drive on a regular basis in order to take the survey. To recruit younger 
+driving subjects, members of the research team attended several on campus events at 
+URI attended by university students and staff. A good amount of subjects were 
+obtained using this method. 
+To recruit older drivers, other methods were employed. An event was held at the 
+Warwick Mall to draw subjects to participate in the study. Flyers and posters (see 
+Figure 4.22 Tailgating Public Survey poster) were displayed at the mall to inform 
+shoppers of the research and invite them to participate. Although some elder drivers 
+participated in the research during the mall event, the majority of elder drivers had to 
+be recruited using other methods. Researchers also visited Kathleen M. Mallon 
+Outreach Center of University of Rhode Island on a daily basis for a week to recruit 
+their volunteers all of whom were older drivers. 
+
+
+===== [page 36] =====
+ 
+36
+The recruiting process was well controlled to make sure the participants’ demographic 
+statistics as close to Rhode Island demographic statistics as possible. 
+ 
+Figure 4.22 Tailgating Public Survey poster 
+ 
+4.2.4 Incentives for participation in the study 
+To provide an incentive for subjects to participate in the research, a variety of 
+small gifts were handed out to subjects after their completion of the survey. These 
+items included calculators, back packs, and pens. Some of the items were stitched 
+with the URI Transportation Center logo. The cost of the items varied from $2 to $5 
+each. 
+ 
+
+
+===== [page 37] =====
+ 
+37
+4.2.5 Completion and administration of the survey 
+To gather responses from various driver subjects, the survey was given to and 
+completed by volunteer subjects who possessed valid drivers’ licenses. The survey 
+was conducted at several different locations throughout the state including the 
+University of Rhode Island, the Warwick Mall as well as various locations in the town 
+of South Kingstown, close by the URI campus. The variety of locations was selected 
+to ensure that a broad sample of the driving population was obtained (see Table 4.1 
+Participants’ demographic statistics). After arrival, subjects were greeted by a 
+member of the research team and given information about the survey and the study. 
+They were asked if they had any questions regarding the study, and invited to take 
+part in the research if they so chose. All subjects read and completed an electronic 
+consent form approved by the IRB (Institutional Review Board) to acknowledge that 
+they sufficiently understood the research and agreed to participate in the study. 
+Table 4.1 Participants’ demographic statistics 
+Age groups 
+Gender 
+Male 
+Female 
+  18-40 yrs. old 
+50 subjects 
+41 subjects 
+41-60 yrs. old 
+31 subjects 
+41 subjects 
+ 61+ yrs. old 
+22 subjects 
+25 subjects 
+Total 
+103 subjects 
+107 subjects 
+ 
+Subjects began the PowerPoint survey via a laptop computer. Two introductory 
+slides (including the consent form) were shown prior to answering the questions (see 
+Figure 4.23 Introductory slideFigure 4.24 Introductory slide with consent form). 
+
+
+===== [page 38] =====
+ 
+38
+The slides informed the subject of the goal of the research study and reminded them 
+again of the contacts and the numbers where researchers could be reached in case of 
+any questions the subject had related to the research or any concerns they wished to 
+formally express. After viewing the introductory slides, the subject began the survey 
+by clicking on the “Start” button. After selecting a choice, the subject advanced to the 
+next slide by clicking the “Next Question” button appearing at the bottom of each 
+slide. Subjects were not timed while they completed the survey so they could take as 
+much time as they needed to answer a question. Researchers oversaw the completion 
+of the survey and answered any questions the subject had as they arose. 
+ 
+ 
+Figure 4.23 Introductory slide 
+ 
+ 
+
+
+===== [page 39] =====
+ 
+39
+After all the survey questions had been answered, the subject completed a 
+demographic information form to record their age and gender information. By 
+clicking on the “Submit” button at the bottom of the slide, the information would be 
+recorded and the subject was allowed to exit the survey (see Figure 4.25 
+Demographic information form). The subject’s answers and demographic 
+information were automatically stored as text files (see Figure 4.26 Subjects’ 
+answers stored as text files) and entered into an MS Excel® database to be analyzed 
+in the final phase of the project. The confidentiality of participants was ensured 
+through the use of a locked room to store all consent forms and the computer which 
+contained individual subject information. 
+ 
+ 
+Figure 4.24 Introductory slide with consent form 
+ 
+
+
+===== [page 40] =====
+ 
+40
+ 
+Figure 4.25 Demographic information form 
+ 
+ 
+Figure 4.26 Subjects’ answers stored as text files 
+
+
+===== [page 41] =====
+ 
+41
+5. RESULTS AND DISCUSSION 
+5.1 
+Vehicle headway analysis 
+The time for each vehicle sampled was recorded in Excel. Vehicle headways were 
+calculated and analyzed. An Excel worksheet is shown in Figure 5.1 Vehicle 
+headway analysis Excel worksheet. 
+ 
+ 
+Figure 5.1 Vehicle headway analysis Excel worksheet 
+ 
+The results regarding vehicle headway analysis are shown in Table 5.1 Summary 
+of vehicle headway analysis. As noted from the table, there were around 70%-80% 
+vehicles with less than 3 seconds of headways, about 60% vehicles with less than 2 
+seconds of headways, and around 30% to 40% vehicles with less than 1 second of 
+headways during rush hours. The only exception was I-195 during rush hours which 
+
+
+===== [page 42] =====
+ 
+42
+had lower percentages (about 60%, 40%, and 20%, respectively) because of lower 
+vehicle volume in videos.  
+During non-rush hours, there were still about half of the vehicles were with less 
+than 3 seconds of headways, about 30% to 40% vehicles were with less than 2 
+seconds of headways, and around 20% vehicles maintaining less than 1 second of 
+headways.  
+Comparing to rush hours’ results through paired t-tests (with significance = 0.05), 
+significant reductions in both percentages of vehicles who broke 2-second and 3-
+second rules were observed at all three locations during non-rush hours since all p-
+values were less than significance value.  
+Table 5.1 Summary of vehicle headway analysis 
+ 
+ 
+Highway sections 
+I-95 @ Detroit Ave
+I-195 @ Rte. 114
+I-295 N @ Ex. 6
+Time of Day 
+Rush hour    Non-rush hour 
+Rush hour    Non-rush hour
+Rush hour    Non-rush hour
+Day of Week 
+Monday 
+1s tailgater 
+44.97%        25.00% 
+16.67%        16.18% 
+26.32%        21.62% 
+2s tailgater 
+17.99%        18.94% 
+26.92%        16.17% 
+36.84%        10.81% 
+3s tailgater 
+13.76%        16.67% 
+17.95%        18.63% 
+  7.89%          9.91% 
+Tuesday 
+1s tailgater 
+38.85%        23.61% 
+19.13%        14.74% 
+22.17%        19.41% 
+2s tailgater 
+20.69%        18.01% 
+20.26%        16.72% 
+36.42%        14.54% 
+3s tailgater 
+20.95%        16.42% 
+18.20%        14.83% 
+10.80%          7.44% 
+Wednesday 
+1s tailgater 
+33.51%        21.01%
+18.49%        13.23%
+24.03%        17.92%
+2s tailgater 
+22.71%        19.57% 
+23.43%        15.68% 
+33.45%        17.40% 
+3s tailgater 
+15.13%        21.01% 
+20.46%        19.42% 
+  8.37%        10.26% 
+Thursday 
+1s tailgater 
+36.95%        25.33% 
+19.35%        15.27% 
+24.71%        18.03% 
+2s tailgater 
+22.19%        18.38% 
+27.46%        18.37% 
+35.42%        12.70% 
+3s tailgater 
+16.09%        22.12% 
+17.25%        15.61% 
+  8.32%        11.78% 
+Friday 
+1s tailgater 
+32.35%        24.81% 
+18.76%        16.86% 
+21.63%        19.72% 
+2s tailgater 
+25.89%        21.81% 
+20.76%        14.18% 
+34.68%        11.79% 
+3s tailgater 
+21.17%        17.29% 
+20.22%        20.01% 
+10.92%        10.11% 
+ 
+Percentage of vehicles who broke 2-second rule 
+Day of 
+Week 
+Monday 
+62.96%         43.94% 
+43.59%        32.35% 
+63.16%        32.43% 
+Tuesday 
+59.54%         41.62% 
+39.39%        31.46% 
+58.59%        33.95% 
+Wednesday 
+56.22%         40.58% 
+41.92%        28.91% 
+57.48%        35.32% 
+Thursday 
+59.14%         43.71% 
+46.81%        33.64% 
+60.13%        30.73% 
+Friday 
+58.24%         46.62% 
+39.52%        31.04% 
+56.31%        31.51% 
+ 
+Percentage of vehicles who broke 3-second rule 
+Day of 
+Week 
+Monday 
+76.72%         60.61% 
+61.54%        50.98% 
+71.05%        43.24% 
+Tuesday 
+80.49%         58.04% 
+57.59%        46.29% 
+69.39%        41.39% 
+Wednesday 
+71.35%         61.59% 
+62.38%        48.33% 
+65.85%        45.58% 
+Thursday 
+75.23%         65.83% 
+64.06%        49.25% 
+68.36%        42.51% 
+Friday 
+79.41%         63.91% 
+59.74%        51.05% 
+67.23%        41.62% 
+
+
+===== [page 43] =====
+ 
+43
+ 
+P value of  
+Paired t test 
+2s rule 
+0.000 
+0.000 
+0.000 
+3s rule 
+0.002 
+0.000 
+0.000 
+ 
+ 
+The percentages of three types of tailgaters were fairly consistent regardless of the 
+day of week during both rush hours and non-rush hours (see Figure 5.2 Day of week 
+comparison: I95 1-second tailgater (top), 2-second tailgater (middle), and 3-
+second tailgater (bottom)). 
+ 
+0.00%
+5.00%
+10.00%
+15.00%
+20.00%
+25.00%
+30.00%
+35.00%
+40.00%
+45.00%
+50.00%
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Percentage
+1‐second tailgater
+Rush hours
+Non‐rush hours
+ 
+0.00%
+5.00%
+10.00%
+15.00%
+20.00%
+25.00%
+30.00%
+35.00%
+40.00%
+45.00%
+50.00%
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Percentage
+2‐second tailgater
+Rush hours
+Non‐rush hours
+ 
+0.00%
+5.00%
+10.00%
+15.00%
+20.00%
+25.00%
+30.00%
+35.00%
+40.00%
+45.00%
+50.00%
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Percentage
+3‐second tailgater
+Rush hours
+Non‐rush hours
+ 
+
+
+===== [page 44] =====
+ 
+44
+Figure 5.2 Day of week comparison: I95 1-second tailgater (top), 2-second tailgater 
+(middle), and 3-second tailgater (bottom) 
+ 
+To further assess tailgating issue, the results above were broke down into lanes. 
+Table 5.2 Vehicle headway analysis with lane break-downsshows the results with 
+lane break-down. It shows that tailgating issue (especially the percentage of 1-second 
+tailgater) was worse on the leftmost lane. This might because tailgating was a speed 
+related issue and the leftmost lane usually had the highest speed. 
+ 
+Table 5.2 Vehicle headway analysis with lane break-downs 
+ 
+ 
+Lanes (from left) 
+1st lane 
+2nd lane 
+3rd lane 
+4th lane 
+Time of Day 
+Rush hour     Non-RH 
+Rush hour     Non-RH 
+Rush hour     Non-RH 
+Rush hour     Non-RH 
+Highway sections 
+I-95 @ 
+Detroit 
+Ave 
+1-sec 
+36.11%  24.68% 
+47.10%  15.60% 
+29.92%  21.43% 
+33.05%  20.95% 
+2-sec 
+22.22%  16.88% 
+18.06%  28.44% 
+24.41%  21.23% 
+24.58%  23.81% 
+3-sec 
+14.59%  18.18% 
+17.42%  20.18% 
+18.11%  23.43% 
+16.10%  12.38% 
+I-195 @ 
+Rte. 114 
+1-sec 
+23.53%  19.64% 
+11.54%  19.67% 
+20.69%  13.98% 
+18.26%  16.31% 
+2-sec 
+12.76%    7.15% 
+23.08%  13.12% 
+37.93%  21.50% 
+23.35%  25.93% 
+3-sec 
+12.53%  12.50% 
+23.07%  19.77% 
+20.69%  21.51% 
+16.43%  12.19% 
+I-295 N 
+@ Ex. 6 
+1-sec 
+34.21%  19.23% 
+23.08%  11.76% 
+15.42%  10.24% 
+17.67%  26.43% 
+2-sec 
+33.22%  26.92% 
+30.77%  23.53% 
+13.15%    5.68% 
+16.46%  12.11% 
+3-sec 
+19.31%  24.56% 
+15.38%  11.77% 
+  6.14%    6.45% 
+20.43%    7.20% 
+ 
+These results provided strong evidence that tailgating existed on major highways 
+in Rhode Island despite the time of day effect. This posed serious transportation safety 
+concerns on highway driving, therefore, to conduct a vehicle headway project and to 
+recommend feasible vehicle headway treatments was important to Rhode Island. 
+ 
+5.2 
+Questionnaire survey 
+All the subjects’ responses were recorded in text files (see Figure 4.26 Subjects’ 
+answers stored as text files) and then put in Excel worksheets for analysis. 
+
+
+===== [page 45] =====
+ 
+45
+To help identify major causes of crashes, the participated driver subjects were 
+asked to select the top three (see Figure 4.3 Major causes of crashes). According to 
+the weighted scores (a cause got 3 points for being ranked the first once, 2 points for 
+second, etc.), the top three leading causes of crashes are: distraction, speeding, and 
+tailgating (see Figure 5.3  Pareto chart of major causes of crashes). Distraction and 
+speeding received much more scores than any other causes. Road rage and DUI also 
+received scores close to that of tailgating. 
+ 
+0
+50
+100
+150
+200
+250
+300
+Weighted score
+ 
+Figure 5.3  Pareto chart of major causes of crashes 
+ 
+147 out of 210 subjects said that they did not intentionally follow other cars. Only 
+29 subjects said it was easier to maintain speed and 31 subjects did so to avoid 
+speeding tickets.  
+142 out of 210 subjects said that they did not follow other cars closely. Other 
+subjects said it happened sometimes. 
+
+
+===== [page 46] =====
+ 
+46
+104 out of 210 subjects said that it’s safer not following other cars closely, 44 
+thought following closely was against the law. 36 subjects’ reason of not following 
+closely was obstruction in view, and the rest 26 subjects’ reason was others were 
+driving slowly. 
+When they were asked about the definition best described tailgating, 160 subjects 
+chose “following too close to the vehicle ahead”, and only 24 chose “insufficient 
+following distance”. This indicated that most drivers had only a qualitative idea of 
+what tailgating means instead of a quantitative one. 
+“Heavy traffic”, “slow car ahead of my vehicle”, and “in a hurry” were the top 3 
+choices selected by subjects when asked to choose all applicable causes of tailgating 
+(see Figure 5.4 Causes of tailgating). 
+ 
+Figure 5.4 Causes of tailgating 
+ 
+When they were asked about their reactions when being tailgated, the answers to 
+this multiple choices question (see Figure 5.5 Drvier’s reactions when being 
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+200
+Frequency
+
+
+===== [page 47] =====
+ 
+47
+tailgated) showed that most of subjects were affected by tailgaters, because only 74 
+subjects’ answers included “Ignore the tailgater”. Most of them reacted passively that 
+161 subjects chose “change lanes to let the tailgater pass”. 
+ 
+ 
+Figure 5.5 Drvier’s reactions when being tailgated 
+ 
+In the next few questions, 162 out of 210 subjects indicated that they knew what 
+the proper vehicle headway was, 155 out of 210 subjects said keeping a safe vehicle 
+headway was very important, and 190 out of 210 stated that they kept a safe vehicle 
+headway at least most of the time. Those answers gave a positive impression that 
+tailgating was not serious issue in Rhode Island.  
+However, the answers to the next question indicated that the majority of drivers 
+who took the survey did not know what the proper vehicle headway was, and drove 
+with a dangerous vehicle headway. When driving at 60 mph, a 2-second vehicle 
+headway produces a following distance of 11 car lengths (assuming with a car length 
+0
+20
+40
+60
+80
+100
+120
+140
+160
+180
+Change 
+lanes to 
+let the 
+tailgater 
+pass
+Slow 
+down to 
+force the 
+tailgater 
+to get 
+away
+Speed up
+Make a 
+gesture
+Ignore the 
+tailgater
+Tap the 
+brake
+Call the 
+police
+Frequency
+
+
+===== [page 48] =====
+ 
+48
+of 15 feet). When question came to “how much distance do you maintain when 
+driving 60 mph on highways”, 95% of subjects said they maintained a vehicle 
+headway less than 11 car lengths, and almost half of total answers were less than 4 car 
+lengths (see Figure 5.6 Vehicle headways maintained by drivers when driving at 
+60 mph).  
+Although 158 out of 210 subjects said they maintained a vehicle headway equal 
+or large than 3 seconds, subjects’ opinion on vehicle headway measured in car lengths 
+could be considered more accurate since 165 out of 210 subjects also said they 
+preferred car lengths to measure vehicle headway.  
+ 
+This finding in computer based questionnaire survey, in some way, agreed 
+with the tailgating issue identified in vehicle headway analysis. 
+ 
+0
+10
+20
+30
+40
+50
+60
+Frequency
+ 
+Figure 5.6 Vehicle headways maintained by drivers when driving at 60 mph 
+ 
+
+
+===== [page 49] =====
+ 
+49
+134 out of 210 subjects preferred a combination in vehicle headway treatment 
+with both advisory message signs and reference markings. 
+When various treatment designs were presented, equal-distanced horizontal bars 
+were preferred over other cases (see Figure 5.7 Drivers’ preference on reference 
+markings). Graphic-aided dynamic message signs and fixed road signs were both 
+preferred over text-only ones by the majority (88.6% and 80% respectively). The 
+survey also indicated that 53.8% of the subjects preferred overhead dynamic message 
+signs over fixed road signs (27.6%) and roadside variable message signs (18.6%). 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+Dots
+Arrows
+NeonPanels
+Bars
+Frequency
+ 
+Figure 5.7 Drivers’ preference on reference markings 
+ 
+ 
+ 
+ 
+ 
+ 
+6. CONCLUSION AND FUTURE WORK 
+ 
+
+
+===== [page 50] =====
+ 
+50
+A vehicle headway analysis and a computer based questionnaire survey were 
+employed to examine the tailgating behavior on Rhode Island highways and to find 
+possible means for tailgating treatments.  
+In the vehicle headway analysis, vehicle headways on specific segments of major 
+highways in Rhode Island were examined through traffic surveillance video provided 
+by the Rhode Island Department of Transportation. Tailgating behaviors on major 
+Rhode Island highways, during rush hour and non-rush hour between Monday and 
+Friday, were compared.  
+Although, comparing to rush hours’ results, significant reductions in all tailgater 
+percentages were observed at all three locations during non-rush hours, there were 
+still about half of the vehicles were with less than 3 seconds of headways, about 30% 
+to 40% vehicles were with less than 2 seconds of headways, and around 20% vehicles 
+maintaining less than 1 second of headways. Moreover, these percentages were 
+consistent regardless day of week for during both rush hours and non-rush hours. 
+Tailgater percentages with lane break-downs showed that vehicle headway issue 
+(especially the percentage of 1-second tailgater) was worse on the leftmost lane. 
+The vehicle headway analysis confirmed the presence of vehicle headway issue on 
+major highways in Rhode Island despite time of day and posed serious transportation 
+safety concerns on highway driving. Therefore, it is important for Rhode Island to 
+conduct a vehicle headway study and to find a suitable vehicle headway treatment. 
+A questionnaire survey was designed to identify the causes of tailgating and to 
+gain insights about drivers’ preferences of various design features of tailgating 
+
+
+===== [page 51] =====
+ 
+51
+treatment. A total of 210 driver subjects participated in the survey and provide valid 
+responses.  
+The findings of the survey indicated that the majority considered “tailgating” a 
+serious offense as it was ranked top three major causes of crashes. Most of them, 
+however, only had a qualitative idea of what tailgating means instead of a quantitative 
+one, i.e., did not understand what the proper vehicle headway was when driving on 
+highways and maintained dangerous vehicle headways while driving. This finding, in 
+some way, agreed with the tailgating issue identified in vehicle headway analysis. 
+Among a few tailgating treatments, subjects preferred the one with equal-
+distanced horizontal bars painted on highway pavement as reference markings and 
+graphic-aided dynamic message signs as advisory message signs. This would be the 
+tailgating treatment system recommended to Rhode Island at current stage. 
+As discussed above, the vehicle headway analysis and the computer based 
+questionnaire survey exhibited somewhat similar findings and agreed on serious 
+tailgating issue on Rhode Island highways. The survey also indicated that drivers 
+preferred tailgating treatment system with equal-distanced horizontal bars painted on 
+highway pavement as reference markings and graphic-aided dynamic message signs 
+as advisory message signs which could be implemented on Rhode Island highways. 
+Future works regarding this study might include further vehicle headway analysis. 
+Although vehicle headway analysis in this study confirmed the existence of the 
+tailgating phenomenon, sampling two-week’s of traffic surveillance videos in 
+December only could not be considered convincing. More traffic videos recorded 
+
+
+===== [page 52] =====
+ 
+52
+from longer period are needed to reach a conclusive statement of tailgating issue in 
+Rhode Island. Instead of showing static vehicle headway treatment designs to driver 
+subjects, more accurate results could come from drivers’ responses to dynamic 
+scenarios with built-in treatments. Therefore, future works also include validating 
+some of the survey results by conducting driving simulation experiments with driving 
+simulator. Furthermore, recommended vehicle headway treatment systems validated 
+by driving simulation need to be assessed via field test before implemented on Rhode 
+Island highways. 
+
+
+===== [page 53] =====
+ 
+53
+LIST OF REFERENCES 
+                                                 
+1   Aycin, M.F., and Benekohal, R.F., 1998, Linear Acceleration Car-following Model 
+Development and Validation, Transportation Research Record, no.1644, pp 10-19. 
+ 
+2  Brackstone, M., and McDonald, M., 1999, Car Following: A Historical Review, 
+Transportation Research Part F: Traffic Psychology and Behaviour, vol. 1, Issue 2, 
+pp 181-196. 
+ 
+3  Hogema, J.H., 1999, Modeling Motorway Driving Behavior, Transportation 
+Research Record, no.1689, pp 25-32. 
+ 
+4  Brackstone, M., 2003, Driver psychological types and car following: Is there a 
+correlation? Results of a pilot study, Proceedings of the Second International 
+Driving Symposium on Human Factors in Driver Assessment, Training and Vehicle 
+Design, pp. 245-250. 
+ 
+5  Rajalin, .S, Hassel, S.O., Summala, H., 1997, Close-following drivers on two-lane 
+highways, Accident Analysis and Prevention 29: 723-729. 
+ 
+6 Lertworawanich, P., 2006, Safe-Following Distances Based on the Car-Following 
+Model, PIARC International seminar on Intelligent Transport System (ITS) in 
+Road Network Operations, August 2006, Kuala Lumpur, Malaysia. 
+ 
+7  Rama, P., and Kulmala, R., 2000, Effects of Variable Message Signs for Slippery 
+Road Conditions on Driving Speed and Headways, Transportation Research Part 
+F: Traffic Psychology and Behaviour, vol. 3, Issue 2, pp 85-94. 
+ 
+8  Roadway Safety Foundation, 2001, Saving Lives: RSF Recognizes Nine 
+Outstanding Highway Safety Projects, Road Safety Reporter, December Issue. 
+ 
+9  Minnesota Department of Public Safety, 2006, Minnesota Tailgating Pilot Project, 
+Report and Summary, http://www.dot.state.mn.us/trafficeng/tailgating/index.html. 
+ 
+10 Teigen, A. (2007) Aggressive Driving, NCSL Transportation Review. 
+ 
+11 NHTSA (2005) Analysis of Speeding-Related Fatal Motor Vehicle Traffic 
+Crashes. U.S. Department of Transportation, National Highway Traffic Safety 
+Administration; DOT HS 809 839. 
+ 
+12 Hutchinson, T.P., 2008, Tailgating, Safety Research Report # CASR046, Centre for 
+Automotive Safety Research, University of Adelaide. 
+
+
+===== [page 54] =====
+ 
+54
+                                                                                                                                            
+ 
+13 Green, M., 2000, How long does it take to stop? Methodological analysis of driver 
+perception-brake times, Transportation Human Factors 2: 195-216. Commentary 
+and Response, pp. 217-228. 
+ 
+14 Summala, H., 2000, Brake reaction times and driver behavior analysis, 
+Transportation Human Factors 2: 218-226. 
+ 
+15  AASHO, 1973, A Policy on Design of Urban Highways and Arterial Streets, 
+Washington, DC, American Association of State Highway Officials. 
+ 
+16 Michael, P.G., Leeming, F.C., Dwyer, W.O. (2000) Headway on Urban Streets: 
+Observational Data and an Intervention to Decrease Tailgating, Transportation 
+Research Part F: Traffic Psychology and Behaviour, vol. 3, Issue 2, pp 55-64. 
+ 
+17. Dewar R., Kline D., Scheiber F., and Swanson A. (1997) Symbol Signing Design 
+for 
+Older 
+Drivers, 
+Report 
+No. 
+FHWA-RD-94-069, 
+Federal 
+Highway 
+Administration, McLean, VA. 
+ 
+18. Stern K.R. (1984) An Evaluation of Written, Graphics, and Voice Messages in 
+Proceduralized Instruction, Proceedings of the Human Factors Society 28th 
+Annual Meeting, Santa Monica, CA, 314-318. 
+ 
+19. Staplin L., Lococo K., and Sim J. (1990) Traffic Control Design Elements for 
+Accommodating Drivers with Diminished Capacity, Volume II. Report No. 
+FHWA-RD-90-055, Federal Highway Administration, Washington, DC. 
+ 
+20. Hanowski R.J. and Kantowitz B.H. (1997) Driver Memory Retention of In-
+Vehicle Information System Messages, Transportation Research Record 1573, 
+Transportation Research Board, National Research Board, Washington, D.C., 
+National Academy Press, 8-18. 
+ 

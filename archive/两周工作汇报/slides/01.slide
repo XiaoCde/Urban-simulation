@@ -1,0 +1,73 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#FFFFFF', padding: 60, fontFamily: 'Microsoft YaHei' }}>
+  <Box style={{ width: '100%', height: 600, flexDirection: 'column' }}>
+    <Box style={{ height: 22, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+      <Text style={{ fontSize: 14, color: '#7C7C7C' }}>01 / 系统结构</Text>
+      <Text style={{ fontSize: 14, color: '#7C7C7C' }}>城市内涝 24 小时连续仿真</Text>
+    </Box>
+    <Box style={{ height: 12 }} />
+    <Text style={{ height: 44, fontSize: 34, fontWeight: 'bold', color: '#111111', lineHeight: 1.2 }}>3000 人各自判断，不是预录动画</Text>
+    <Box style={{ height: 14 }} />
+    <Box style={{ height: 1, width: '100%', background: '#DEDEDE' }} />
+    <Box style={{ height: 18 }} />
+    <Text style={{ height: 62, fontSize: 20, color: '#292929', lineHeight: 1.5 }}>城市 5978 × 5120 m、21491 栋建筑。每个人按身份、位置、水情和当天经历，每 0.5–1 仿真秒判断一次「现在该干什么」，结果直接变成真实位移、开车或避险；判断理由和伤亡数字都由状态算出来，不是预写文案。</Text>
+    <Box style={{ height: 18 }} />
+    <Table
+      style={{ width: '100%', height: 300 }}
+      defaultTextStyle={{ fontSize: 16, textAlign: 'left', color: '#111111' }}
+      defaultCellStyle={{
+        border: {
+          left: { width: 1, color: '#DEDEDE' }, right: { width: 1, color: '#DEDEDE' },
+          top: { width: 1, color: '#DEDEDE' }, bottom: { width: 1, color: '#DEDEDE' },
+        },
+      }}
+      cells={[
+        [
+          { text: '层', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#111111' } } },
+          { text: '做什么', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#111111' } } },
+          { text: '什么时候算', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#111111' } } },
+          { text: '输出', textStyle: { bold: true, color: '#FFFFFF' }, cellStyle: { background: { color: '#111111' } } },
+        ],
+        ['L1 慢层日程', '9 个目标节点，带时间窗和真实门牌', '一天几次', '目标状态、门牌坐标'],
+        [
+          { text: 'L2 群体内核', cellStyle: { background: { color: '#F0F0F0' } } },
+          { text: '职业 / 年龄 / 圈层 / 灾害履历决定判断参数', cellStyle: { background: { color: '#F0F0F0' } } },
+          { text: '建人时一次', cellStyle: { background: { color: '#F0F0F0' } } },
+          { text: '涉水线、耐心、噪声', cellStyle: { background: { color: '#F0F0F0' } } },
+        ],
+        ['L3 出行方式', '按距离、门口水深、雨强、有无车选步行或自驾', '目标激活时', '出行方式、车辆'],
+        [
+          { text: 'L4 快判断', cellStyle: { background: { color: '#F0F0F0' } } },
+          { text: '感知水情、阻挡、迟到、身体与今日经历，softmax 采样', cellStyle: { background: { color: '#F0F0F0' } } },
+          { text: '0.5–1 仿真秒', cellStyle: { background: { color: '#F0F0F0' } } },
+          { text: '7 个动作之一', cellStyle: { background: { color: '#F0F0F0' } } },
+        ],
+        ['L5 执行层', '动作落到真实路网 A* 折线、步速、朝向或方向盘', '每个子步', '真实位移、动画'],
+      ]}
+    />
+    <Box style={{ height: 14 }} />
+    <Box style={{ height: 1, width: '100%', background: '#DEDEDE' }} />
+    <Box style={{ height: 12 }} />
+    <Box style={{ height: 64, flexDirection: 'row', justifyContent: 'space-between' }}>
+      <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#111111', lineHeight: 1.2 }}>3000 人</Text>
+        <Text style={{ fontSize: 14, color: '#7C7C7C' }}>全城同时连续决策</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#111111', lineHeight: 1.2 }}>24 小时</Text>
+        <Text style={{ fontSize: 14, color: '#7C7C7C' }}>0 → 1440 分钟不 seek</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#E63946', lineHeight: 1.2 }}>1531 万次</Text>
+        <Text style={{ fontSize: 14, color: '#7C7C7C' }}>快层判断</Text>
+      </Box>
+      <Box style={{ flexDirection: 'column' }}>
+        <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#E63946', lineHeight: 1.2 }}>0</Text>
+        <Text style={{ fontSize: 14, color: '#7C7C7C' }}>脚本错误 / 无依据改道 / 超速</Text>
+      </Box>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', left: 60, top: 670, width: 1160, height: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
+    <Text style={{ fontSize: 14, color: '#7C7C7C' }}>2026-11-13 · 数据来自连续推帧实测</Text>
+    <Text style={{ fontSize: 14, color: '#7C7C7C' }}>1 / 5</Text>
+  </Box>
+</Slide>

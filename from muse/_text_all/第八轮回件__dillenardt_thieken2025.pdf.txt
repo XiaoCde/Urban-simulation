@@ -1,0 +1,3233 @@
+
+
+===== [page 1] =====
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+© Author(s) 2025. This work is distributed under
+the Creative Commons Attribution 4.0 License.
+Individual ﬂood risk adaptation in Germany: exploring the
+role of different types of ﬂooding
+Lisa Dillenardt and Annegret H. Thieken
+Institute of Environmental Science and Geography, University of Potsdam,
+Karl-Liebknecht-Straße 24–25, 14476 Potsdam, Germany
+Correspondence: Lisa Dillenardt (lisa.dillenardt@senmvku.berlin.de)
+Received: 18 January 2024 – Discussion started: 25 January 2024
+Revised: 6 March 2025 – Accepted: 12 March 2025 – Published: 10 September 2025
+Abstract. The inﬂuence of different ﬂood types, i.e., ﬂuvial,
+ﬂash, and urban pluvial ﬂoods, on whether and how ﬂood-
+affected people prepare for ﬂooding is unclear but might be
+relevant for effective risk communication. Survey data from
+more than 3000 households affected by different types of
+ﬂooding in Germany have been investigated and revealed
+the inﬂuence of ﬂood type on adaptive behavior. Descrip-
+tive statistics, Kruskal–Wallis tests, and single-factor anal-
+ysis of variance (ANOVA) have been used to identify differ-
+ences and similarities between respondents. Linear regres-
+sions have been used to identify factors that inﬂuence house-
+holds’ adaptive behavior in the context of ﬂuvial, pluvial, and
+ﬂash ﬂooding.
+Most respondents were motivated to protect themselves,
+but there were ﬂood-type-speciﬁc differences in the factors
+inﬂuencing an adaptive response. Those affected by ﬂuvial
+events had most often implemented measures before the last
+ﬂooding and had experienced ﬂooding before but frequently
+showed signs of maladaptive thinking. Those affected by
+ﬂash ﬂooding showed less conﬁdence in the effectiveness of
+measures but were less likely to rate their costs as too high
+and were most likely to implement measures after the event.
+Regardless of the type of ﬂooding, the perception of the ef-
+fectiveness of adaptive measures and a positive perception of
+personal responsibility were found to be crucial for motivat-
+ing those affected to protect themselves. These two key ele-
+ments can be strengthened by offering ﬁnancial support for
+adaptive measures. Communication on a municipality level
+enhances residents’ sense of personal responsibility. Hence,
+communication and management strategies need to involve
+municipalities and should be tailored to the locally relevant
+ﬂood type.
+1
+Introduction
+Floods were Europe’s most damaging climate-related ex-
+tremes between 1980 and 2022 (EEA, 2024). The European
+Floods Directive (2007/60/EC) was launched in 2007 in re-
+sponse to several damaging ﬂood events in the European
+Union (EU) around the year 2000 to improve ﬂood risk man-
+agement and reduce ﬂood impacts (EC, 2007). The direc-
+tive introduced a structured and integrated ﬂood risk man-
+agement plan for all EU member states from 2010 onwards,
+mainly addressing coastal and ﬂuvial ﬂoods. In particular,
+ﬂoods that occur due to an overloaded sewage system can
+be disregarded by member states when adhering to the plan.
+Germany used this option when adapting the Federal Water
+Act (Wasserhaushaltsgesetz – WHG) in 2009 to the require-
+ments of the Floods Directive (WHG, 2009). Section 72 of
+the Federal Water Act deﬁnes ﬂooding as “the temporary in-
+undation of land not normally covered by water, particularly
+by surface waters or seawater entering coastal areas. This
+does not include ﬂooding from sewage systems”. However,
+in recent years, many German cities have experienced urban
+pluvial ﬂooding, e.g., the city of Münster in 2014 (Spekkers
+et al., 2017) and Potsdam and Berlin in both 2017 and 2019
+(Caldas-Alvarez et al., 2022; Dillenardt et al., 2022). More-
+over, fast-onset ﬂash ﬂoods in the middle hills in May/June
+2016 (Laudan et al., 2017; Piper et al., 2016) and July 2021
+(Kreienkamp et al., 2021) had huge impacts, i.e., 11 fatali-
+ties and EUR 2.6 billion in damage in 2016 and 189 fatalities
+and EUR 33 billion in damage in 2021 (Thieken et al., 2023).
+Such impacts from these ﬂood types were unprecedented in
+the recent past and again called into question current ﬂood
+risk management approaches.
+Published by Copernicus Publications on behalf of the European Geosciences Union.
+
+
+===== [page 2] =====
+3258
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+Figure 1. Deﬁnitions of the ﬂood types used in this paper based on Adams et al. (2020), Bruijn et al. (2009), Hunt (2005), Knocke and
+Kolivras (2007), and Sweeney (1992).
+Integrated ﬂood risk management is built on various risk-
+reducing measures involving all possible stakeholders, in-
+cluding the general public. Residents in ﬂood-prone areas
+have been obliged to contribute to ﬂood risk reduction since
+2005, as stated in the WHG. Households can implement
+property-level ﬂood risk adaptation measures (PLFRAMs)
+(Attems et al., 2020). These measures cover a broad spec-
+trum of effectiveness and implementation costs and thus
+range from creating emergency plans or sealing foundations
+to implementing stationary barriers or relocation to a less at-
+risk area. PLFRAMs can reduce damage caused by ﬂoods
+in situ in a cost-effective manner (DEFRA, 2008; Hudson
+et al., 2014; Kreibich et al., 2011; Lamond et al., 2018;
+Poussin et al., 2015). Using the events of 2013 and 2016
+as examples, however, Thieken et al. (2022) illustrated that
+people have to cope with very different ﬂood pathways in
+terms of hydraulic characteristics. In addition, different cop-
+ing and adaptive behaviors have been observed (Thieken et
+al., 2022). Still, explanations and conclusions for risk com-
+munication are vague. There has not yet been a study focus-
+ing on adaptive behavior and its drivers in the context of dif-
+ferent types of ﬂooding to identify and analyze factors inﬂu-
+encing the motivation to adapt. Given the devastating event
+of July 2021, there is an urgent need to understand peoples’
+behavior better in different (inland) ﬂood settings. To tackle
+this issue, the adaptive behavior of households in the context
+of three types of ﬂooding has been investigated: ﬂuvial, ﬂash,
+and urban pluvial ﬂoods (see Fig. 1). It should be noted that
+the distinction between ﬂood types is not always clearly de-
+ﬁned, and there may be overlaps (Hunt, 2005; Kaiser, 2021;
+Thieken et al., 2022).
+All three types of ﬂooding are inland ﬂoods (see Fig. 1).
+Inland ﬂoods are usually caused by heavy-precipitation or
+melting events or the sudden release of water due to, e.g.,
+dike or dam breaches (Bruijn et al., 2009; Hunt, 2005). Over-
+ﬂowing river courses cause ﬂuvial ﬂoods. This can be distin-
+guished from pluvial events, which are more directly driven
+by surface runoff and can, therefore, theoretically occur any-
+where (Bruijn et al., 2009). Pluvial ﬂoods are triggered by
+heavy-rainfall events or cloudbursts, which are usually lim-
+ited in time and space and difﬁcult to predict (DWD, 2016). If
+pluvial events occur in urban areas with low topography, they
+are intensiﬁed by a high proportion of sealed surfaces and are
+accompanied by an overload of the sewer and/or drainage
+system. This study refers to this type of event as urban plu-
+vial ﬂooding. If pluvial events occur in hilly or mountainous
+terrain, i.e., in steep topography, ﬂash ﬂoods with high ﬂow
+velocities may occur (Arrow et al., 1995; Bruijn et al., 2009).
+They develop in relatively small catchment areas – usually
+less than 6 h after a rain event (Arrow et al., 1995; Knocke
+and Kolivras, 2007).
+The theoretical frameworks provided by the protection
+motivation theory (PMT) and the protection action decision
+model (PADM) are used to investigate households’ adaptive
+behavior in a structured way. These models identify threat,
+coping, and responsibility appraisals as drivers of adaptive
+behavior (Lindell and Perry, 2012; Rogers, 1975, 1983). Var-
+ious studies have demonstrated the inﬂuence of these as-
+pects on the adaptive behavior of households in the context
+of ﬂooding (Bubeck et al., 2013; Bubeck et al., 2018; Dil-
+lenardt et al., 2022; Grothmann and Reusswig, 2006). The
+PMT and PADM assume that an individual must ﬁrst recog-
+nize a threat by assessing its severity (perceived severity) and
+probability of occurrence (perceived probability). In addition
+to the threat, the individual will assess the options for cop-
+ing by estimating the costs and effort required to implement
+suitable measures (perceived response costs), their effective-
+ness in terms of risk reduction (perceived response efﬁcacy),
+and their ability to implement these measures (perceived self-
+efﬁcacy). The PADM adds to the basic construct of the PMT
+in that individuals assess the extent to which they (perceived
+self-responsibility) or public institutions (perceived govern-
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 3] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3259
+ment responsibility) are responsible for the implementation
+of measures and widens the understanding of framing/con-
+textual factors (Lindell and Perry, 2012).
+It is assumed that if the appraisals of threat, coping, and
+responsibility are sufﬁciently high, a motivation to protect
+oneself (protection motivation) is encouraged, ideally lead-
+ing to a protective response within the scope of the person’s
+possibilities. Grothmann and Reusswig (2006) also assume
+that an assessment of threat that is too low or too high and
+an assessment of coping strategies that is too low promote
+maladaptive thinking or emotional coping mechanisms such
+as fatalism, denial, procrastination, or wishful thinking, each
+of which is said to have a negative effect on the motivation to
+protect oneself. Using a hybrid PMT–PADM framework, Dil-
+lenardt et al. (2022) found that in the context of urban pluvial
+ﬂooding, in addition to negative coping mechanisms, nega-
+tive responsibility appraisal promotes maladaptive thinking.
+Another aspect of adaptive behavior is trust in public institu-
+tions. Terpstra (2011) found that although trust in public in-
+stitutions is important for (potentially) affected people to be-
+lieve the complex hazard assessments of scientists and other
+stakeholders, trust in public ﬂood protection can also reduce
+their protection motivation. Currently, this aspect is not well
+accounted for in the theoretical frameworks. Next to threat
+and coping appraisals, local ﬂood risk management and pre-
+viously experienced ﬂooding also affect adaptive behavior
+(Kreibich et al., 2005; Poussin et al., 2014; Thieken et al.,
+2006; Wind et al., 1999).
+Examining the interactions described above between the
+individual ﬂood types and the factors inﬂuencing adaptive
+behavior leads to a better understanding of ﬂood manage-
+ment strategies. It opens up the possibility of tailoring risk
+communication to the prevailing ﬂood situation in potentially
+affected areas. While past research has analyzed factors that
+inﬂuence adaptive behavior solely in the context of one spe-
+ciﬁc type of ﬂooding (Bubeck et al., 2020; Dillenardt et al.,
+2022; Grothmann and Reusswig, 2006), there is a lack of
+research about how those inﬂuencing factors differ among
+ﬂood types. In order to close this research gap, this study
+analyses survey data from over 3000 households affected by
+ﬂuvial, ﬂash, or urban pluvial ﬂooding in Germany and asks
+the following question: how does the type of ﬂooding inﬂu-
+ence adaptive behavior? To answer this question, three fur-
+ther research questions are explored:
+1. What adaptive responses were reported by individuals
+impacted by the three types of ﬂooding?
+2. What factors inﬂuenced adaptive behavior in those af-
+fected by the three ﬂood types?
+3. What characteristics of these three groups of respon-
+dents explain the differences reported?
+2
+Data and methods
+This study is based on survey data collected via four different
+survey designs (see Fig. 2) between 2014 and 2022 during
+six surveys among ﬂood-affected households in Germany;
+see Table 1. While S-1, S-2, S-3, and S-4 were created by
+random sampling in affected areas (based on lists of ﬂooded
+roads; see Thieken et al., 2017) and considered only land-
+lines, S-6 was created in Rhineland-Palatinate with the help
+of the Ahrweiler district, where every third household who
+had applied for immediate disaster aid was invited to partic-
+ipate. In North Rhine-Westphalia (as well as in S-5), people
+from the affected areas were invited for a computer-assisted
+web interview (CAWI) via advertisements on Meta (Face-
+book and Instagram) and other media. Advertising via Meta
+to recruit survey participants is a method that has been used
+in health-related research in the last few decades (Gilligan et
+al., 2014; Kapp et al., 2013; Shaver et al., 2019) and has also
+been used by Thieken et al. (2023). A total of 3670 house-
+holds were questioned about the impacts of recently experi-
+enced ﬂood events and adaptive behavior based on the PMT
+and PADM. Data were collected by paper/pencil, computer-
+assisted web interviews (CAWIs), and/or computer-assisted
+telephone interviews (CATIs; see Fig. 2 and Table 1).
+Data on what PLFRAMs were implemented before and af-
+ter the damaging ﬂood event were collected. However, the
+questions on PLFRAMs were not fully consistent across all
+surveys due to necessary adaptations to different survey and
+event contexts. In order to evaluate the implementation of
+PLFRAMs, all measures were assigned to six main groups
+based on their principal mode of functioning (Fig. 3), as de-
+scribed in current literature (DEFRA, 2008; Hudson et al.,
+2014; Kreibich et al., 2011; Lamond et al., 2018; Poussin
+et al., 2015). Table A1 (see Appendix) documents the PL-
+FRAM queries in each survey and their assignment to these
+six groups. This paper does not assess the number of PL-
+FRAMs implemented but only whether at least one PL-
+FRAM from a respective group was implemented before or
+after the ﬂood. It should be noted that this study and the avail-
+able data cannot clarify if households adapted appropriately
+to their local ﬂood situation. This is because the speciﬁc PL-
+FRAM or combinations of PLFRAMs appropriate to an in-
+dividual’s ﬂood risk depend on many personal and local fac-
+tors for which no data were collected. On-site visits would
+be needed for such an evaluation.
+For the analysis in this study, the respondents of the re-
+spective surveys were assigned to the urban pluvial ﬂooding,
+ﬂash ﬂooding, and ﬂuvial ﬂooding ﬂood types according to
+the deﬁnitions in Fig. 1 and based on pathways reported in
+the survey and further event contexts. Urban pluvial ﬂooding
+was assigned to respondents affected by pluvial ﬂooding in
+urban areas with no steep topography and possibly accom-
+panied by overloaded sewer systems due to temporally and
+spatially limited heavy-rainfall events. This applies to those
+affected in the city of Münster and the smaller neighboring
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 4] =====
+3260
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+Figure 2. Simpliﬁed illustration of survey designs A–D used to contact ﬂood-affected households in Germany.
+Table 1. Information on the surveys and demographic information among surveyed households. CAWIs: computer-assisted web interviews,
+CATIs: computer-aided telephone interviews.
+No.
+Place of ﬂood
+Flood type
+Responses
+Flood event
+Survey period
+Methods
+Survey design
+Publications
+and survey
+based on Fig. 2
+S-1
+More than 160
+municipalities
+Fluvial ﬂood
+1258
+June 2013
+18 February–
+24 March 2014
+CATI
+A
+Thieken et al.
+(2022)
+across nine
+federal states
+Levee breach
+394
+A
+S-2
+Münster, Greven
+Urban pluvial
+ﬂood
+510
+July 2014
+20 October–
+26 November
+2015
+CATI
+A
+Spekkers et al.
+(2017)
+S-3
+A total of 67
+municipalities in
+Urban pluvial
+ﬂood
+448
+May–June
+2016
+28 March–
+28 April 2017
+CATI
+A
+Laudan et al.
+(2020)
+south and west
+Germany
+Flash ﬂood
+153
+A
+Thieken et al.
+(2022)
+S-4
+Potsdam,
+Remscheid,
+Leegebruch
+Urban pluvial
+ﬂood
+183
+2017, 2018,
+2019
+9 July–
+9 September
+2019
+Paper/
+pencil,
+CATI
+B
+Dillenardt et
+al. (2022)
+S-5
+Berlin
+Urban pluvial
+ﬂood
+115
+2017, 2018,
+2019
+27 March–
+31 May 2020
+CAWI
+C
+Berghäuser et
+al. (2021)
+Dillenardt et
+al. (2022)
+S-6
+North Rhine-
+Westphalia and
+Rhineland-
+Palatinate
+Flash ﬂood
+609
+July 2021
+18 November–
+31 December
+2022
+CAWI
+D
+No publication
+yet
+town of Greven (Spekkers et al., 2017), as well as those af-
+fected in Berlin, Potsdam, and Leegebruch (Dillenardt et al.,
+2022) and 448 surveyed households from S-3 (Thieken et al.,
+2022). The 53 households affected in the city of Remscheid
+are not included in the study, as Remscheid’s steep topogra-
+phy differs too much from that of the other locations. The
+respondents to S-1 were assigned to the ﬂuvial ﬂood type,
+as ﬂooding originated from the Rhine, Weser, Danube, and
+Elbe rivers (Thieken et al., 2022). During the ﬂooding in
+June 2013, dike breaches occurred in the federal states of
+Bavaria and Saxony-Anhalt (Thieken et al., 2022). Respon-
+dents who experienced a dike breach were excluded from the
+analysis of this paper. Following the classiﬁcation of Thieken
+et al. (2022), those from S-3 who were affected by ﬂash
+ﬂoods were separated and assigned to the ﬂash ﬂooding ﬂood
+type, while the remaining cases were considered urban plu-
+vial ﬂooding. All respondents from S-6 were also assigned to
+the ﬂash ﬂood type, as this was the primary ﬂood type during
+the ﬂood of July 2021.
+The demographics of the surveyed households are summa-
+rized in Table 2. The reported building losses were adjusted
+for inﬂation to 2022 levels based on the construction price
+index (DeStatis, 2023a). Losses to household contents were
+adjusted to 2022 levels based on the consumer price index
+(DeStatis, 2023b). Regardless of the ﬂood type, more women
+(57 %) than men (43 %) participated in the surveys. The me-
+dian age of the respondents was 59, which is approx. 8 years
+higher than the mean age of those over 18 years old in the
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 5] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3261
+Figure 3. The six main groups to which the surveyed adaptation measures were assigned.
+Table 2. Information on the demographic characteristics of surveyed households, with gender classiﬁed as follows: individuals who identify
+as female (f), individuals who identify as male (m), and individuals who identify as neither female nor male – categorized as “diverse” (d).
+Flood type
+Gender
+Median
+Home ownership
+Median
+Household
+Previously
+m/f/d
+age
+[%]
+monthly net
+size
+experienced
+[%]
+[years]
+income [EUR]
+[mean]
+ﬂoods [%]
+Total
+43/57/0.1
+59
+79.8
+2500
+2.6
+–
+Fluvial (N = 1258)
+41/59/–
+62
+79.7
+1750
+2.4
+62
+Urban pluvial (N = 1203)
+43/56/0.3
+60
+81.5
+2500
+2.5
+35
+Flash (N = 762)
+44/56/0.1
+55
+76.9
+3100
+3.2
+21
+German population (DeStatis, 2014). Mainly homeowners
+or apartment owners participated in the surveys (82 %). On
+average, 2.6 people lived in the households surveyed. More
+than half of those affected by ﬂuvial ﬂooding reported previ-
+ous ﬂood experience (62 %) since similar regions had already
+been affected in August 2002. In contrast, fewer respondents
+affected by urban pluvial ﬂooding (35 %) or ﬂash ﬂooding
+(21 %) reported such experiences.
+The data were analyzed using the statistical software pack-
+age IBM SPSS 27. The abbreviation stands for “Statisti-
+cal Package for the Social Sciences”. To identify signiﬁ-
+cant differences between the three ﬂood types, the Kruskal–
+Wallis test was performed. A Kruskal–Wallis test was ﬁrst
+performed for each PMT factor for all three ﬂood types. If
+the Kruskal–Wallis test showed no signiﬁcant difference be-
+tween the ﬂood types, this is indicated in Table 4. If the
+Kruskal–Wallis test showed signiﬁcant differences, single-
+factor analysis of variance (ANOVA) was performed to better
+understand the identiﬁed differences by comparing the ﬂood
+types in pairs.
+Linear regressions were carried out with IBM SPSS 27
+to examine in the ﬁrst step which PMT/PADM factors, i.e.,
+threat, coping and responsibility appraisals, inﬂuenced the
+protection motivation of the respondents. The dependent
+variable for the regressions presented in Table 6 was protec-
+tion motivation, derived from the “I will do everything pos-
+sible to protect myself from ﬂooding” item and the “I would
+recommend that others take private precautions” item (see
+Table A1 in the Appendix). These two items were combined
+so that the highest value was always taken for the combined
+variable. This combined variable enables us to capture pro-
+tection motivation regardless of whether it relates to the re-
+spondent, as in the ﬁrst item, or to others, as in the second
+item. In a second step, the PMT/PADM factors that signif-
+icantly inﬂuenced protection motivation were examined to
+determine the framing factors that inﬂuenced them.
+3
+Results
+3.1
+Comparing the perceived severity of the
+investigated ﬂood types
+In order to characterize the different processes and impacts
+of the three ﬂood types investigated, key variables are com-
+pared in Table 3. Additional data on the perceived ﬂow ve-
+locity can be found in Table A1. Altogether, the data reveal
+that ﬂash ﬂoods were particularly severe since those affected
+reported the most intense ﬂow velocity, the highest losses to
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 6] =====
+3262
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+their buildings and building contents, and the highest water
+depth in their homes, and they were most likely to experi-
+ence ﬂoodwater contaminated with fuel oil. About half of
+those affected had to be evacuated in both ﬂuvial and ﬂash
+ﬂood events. Flood duration was particularly high in ﬂuvial
+ﬂoods. Inundation indoors, duration, and contamination with
+fuel oil were the lowest for those affected by urban pluvial
+ﬂooding. The same holds for ﬁnancial losses.
+3.2
+Comparison of the measures taken by those
+affected before and after a perceived ﬂood
+Figure 4 shows the share of surveyed households that im-
+plemented at least one PLFRAM from a given category (see
+Fig. 3 and A) of PLFRAMs before (Fig. 4, left) and/or after
+a ﬂood (see Fig. 4, middle). The before-and-after results are
+summed up in Fig. 4 (right graph).
+Households affected by ﬂuvial ﬂooding in 2013 had im-
+plemented PLFRAMs most frequently before the event and
+very few measures after the event, while those affected by
+ﬂash ﬂoods (in 2016 and 2021) had rarely implemented PL-
+FRAMs before the event but frequently after the event. Those
+affected by ﬂuvial or ﬂash ﬂoods had taken out insurance be-
+fore the last ﬂood event in roughly equal numbers and more
+often than those affected by urban pluvial ﬂooding. After
+the event, those affected by ﬂash ﬂooding were particularly
+likely to take out insurance, making them the most likely
+group for this kind of PLFRAM. After the event, roughly
+the same number of households affected by urban pluvial
+ﬂooding and ﬂash ﬂoods had implemented measures in the
+categories “resistance” and “drawback”. However, those af-
+fected by ﬂash ﬂoods implemented measures in the category
+“securing” more frequently after they had been ﬂooded.
+Considering together the PLFRAMs implemented before
+and after the event, a pattern can be seen across the ﬂood
+types. Preparedness measures were implemented quite fre-
+quently. Evasion measures were predominantly implemented
+before the most recent ﬂood event. Drawback measures were
+implemented before and after with somewhat equal fre-
+quency by 60 % of respondents. In addition to the above-
+mentioned similarities, it is striking that those affected by
+ﬂuvial ﬂooding less frequently implemented resistance mea-
+sures.
+3.3
+Comparing potential drivers of adaptive behavior
+Table 4 compares the ﬂood types in terms of respondents’
+attitudes towards adaptation to ﬂood risk on the theoret-
+ical basis of the PMT and PADM, using Kruskal–Wallis
+tests and, if Kruskal–Wallis tests indicate differences, single-
+factor ANOVA. Table 5 shows the median and mean values
+of each item analyzed. More detailed information on the an-
+swers to the items can be found in Table A2 (see Appendix).
+The percentages show the proportion of respondents who se-
+lected either 1 and 2 or 5 and 6 on a scale from 1 to 6 and are
+derived from the data presented in Table A2.
+With regard to threat appraisal, respondents rate the
+severity of a future ﬂood as high (median values of 5 for ﬂu-
+vial, 4 for pluvial, and 5 for ﬂash ﬂoods on a scale from 1 –
+not bad to 6 – very bad) but often do not believe that such a
+future event will affect them (median values of 5 for ﬂuvial, 3
+for pluvial, and 4 for ﬂash ﬂoods on a scale from 1 – unlikely
+to 6 – likely). The group reporting high perceived severity
+is comparable in size to and, in some cases, larger than the
+group affected by ﬂuvial or ﬂash ﬂooding when compared to
+those affected by urban pluvial ﬂoods. As for the rating of
+the probability of a future event, Table 5 shows a gradient
+from those affected by urban pluvial ﬂooding, who rate the
+probability of a future event the lowest (median: 3), followed
+by those affected by ﬂash ﬂooding (median: 4) and those af-
+fected by ﬂuvial ﬂooding, who rate the probability of being
+affected again the highest (median: 5).
+Coping appraisal is investigated by looking at perceived
+self-efﬁcacy, perceived response efﬁcacy, and the perceived
+response cost. Self-efﬁcacy is rather high for around 60 %
+of respondents and comparable across all samples and ﬂood
+types, indicating that self-efﬁcacy is person-related rather
+than event- or ﬂood-type-related. Most of those affected by
+urban pluvial and ﬂuvial ﬂooding tend to have a high and
+comparable response efﬁcacy (median: 5), while this pro-
+portion is lower for those affected by ﬂash ﬂoods (median:
+4). About 60 % of those affected by urban pluvial ﬂoods
+and 56 % of those affected by ﬂash ﬂoods perceive the re-
+sponse costs as (too) high and are comparable in this respect.
+This proportion is higher for those affected by ﬂuvial ﬂoods
+(69 %).
+Self-responsibility is perceived as high by all respondents.
+However, the level of self-responsibility is higher among
+those affected by ﬂuvial ﬂooding (median: 6) than among
+those affected by urban pluvial or ﬂash ﬂooding (median: 5).
+At the same time, those affected by ﬂuvial, urban pluvial,
+or ﬂash ﬂoods believe that public institutions have a respon-
+sibility to implement ﬂood protection measures (median: 4).
+However, only ﬂash and pluvial ﬂooding are comparable here
+(see Table 4), and the mean values in Table 5 reveal that those
+affected by ﬂuvial ﬂooding stand out in seeing public insti-
+tutions as slightly more responsible. However, most of those
+affected by ﬂooding (median: 1–2) have little conﬁdence in
+public ﬂood protection measures. Moreover, most people af-
+fected by ﬂooding lack conﬁdence in state ﬁnancial aid (me-
+dian: 2–3).
+In general, most respondents believe that there is enough
+information available about ﬂooding and ﬂood adaptation
+(median: 3). However, fewer respondents affected by urban
+pluvial (median: 3) and ﬂash ﬂooding (median: 2) believe
+that there is enough local information available from the mu-
+nicipalities. Those affected by ﬂuvial ﬂoods stand out here,
+as they tend to feel better informed by their municipalities
+(median: 4).
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 7] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3263
+Table 3. Factors used to approximate the severity of the different types of ﬂooding. The reported losses to the building were adjusted for
+inﬂation to 2022 levels based on the construction price index (DeStatis, 2023a). The losses to household contents were adjusted to 2022
+levels based on the consumer price index (DeStatis, 2023b).
+Total
+Pluvial
+Fluvial
+Flash
+Total number of cases
+3449 (100 %)
+1203 (37 %)
+1258 (39 %)
+762 (24 %)
+Inundation depth indoors [cm] – median
+60
+20
+90
+100
+Flood duration [h] – median
+60
+12
+120
+24
+Flow velocity as assessed on a scale from 1 (steadily ﬂowing)
+–
+3
+2
+5
+to 6 (turbulent ﬂow) – median
+Evacuation [%]
+43
+6
+54
+54
+Oil contamination [%]
+16
+2
+12
+34
+Losses to building contents [EUR] – median
+3517
+1749
+3517
+30 000
+Losses to building structure [EUR] – median
+14 627
+4343
+11 251
+144 780
+Figure 4. Proportion of respondents per ﬂood type who implemented at least one measure from a PLFRAM group before and/or after a ﬂood.
+Regardless of the type of ﬂooding, over 70 % of respon-
+dents have a rather high motivation to protect themselves
+and/or would recommend others to do the same. A gradi-
+ent can be seen in the motivation to protect oneself (ﬂuvial –
+median: 5.5, pluvial – median: 4.9, and ﬂash – median: 4.3;
+see Table 5). The proportion of respondents showing signs
+of fatalism is higher among those affected by ﬂuvial and ur-
+ban pluvial ﬂooding (median: 4) than among those affected
+by ﬂash ﬂooding (median: 3). The proportion of respondents
+showing signs of denial is high among those affected by ﬂu-
+vial ﬂooding (median: 6) and less high among those affected
+by urban pluvial and ﬂash ﬂooding (median: 4–3). Hence,
+the group affected by ﬂuvial ﬂooding demonstrates that high
+protection motivation and emotional coping are not mutually
+exclusive.
+3.4
+Results of regression analyses
+The PMT/PADM aspects analyzed in this study and how
+they affect protection motivation were tested in regressions
+1–3 (see Table 6). After identifying the PMT/PADM aspects
+that showed signiﬁcant inﬂuences in the respective ﬂood type
+contexts, framing factors inﬂuencing them were investigated
+(see Table 7). This table shows the dependent variables of
+all linear regressions in the second row (“dependent vari-
+ables”). “Perceived ﬂood inundation/velocity” corresponds
+to item no. 4 in Table 1, namely “An average person could
+have stood with no difﬁculty”. The ﬂood types were consid-
+ered in all linear regressions presented here, meaning that
+the datasets presented in Table 2 were used. Each column
+in Tables 6 and 7 represents a linear regression. All PMT/-
+PADM aspects examined show signiﬁcant inﬂuences for at
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 8] =====
+3264
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+Table 4. Results of Kruskal–Wallis and ANOVA post hoc testsa: signiﬁcance values are adjusted by Bonferroni correction for multiple tests.
+The number of cases used for this analysis is indicated by “count”; more details on the items can be found in Table A1.
+Item
+H test
+ANOVA (pairwise)
+Fluvial versus
+pluvial
+Fluvial versus
+ﬂash
+Flash versus
+pluvial
+Perceived
+probability
+Count: 2856
+Test statistics: 279.741∗∗∗
+STS: 16.363
+Ad. sig.a: 0.000
+STS: 11.204
+Ad. sig.a: 0.000
+STS: −3.621
+Ad. sig.a: 0.001
+Perceived severity
+Count: 2641
+Test statistics: 248.531∗∗∗
+STS: −13.400
+Ad. sig.a: 0.000
+STS: −0.589
+Ad. sig.a: 1.000
+STS: 12.801
+Ad. sig.a: 0.000
+Perceived
+self-efﬁcacy
+Count: 2634
+Test statistics: 1.686
+Retain null hypothesis
+Response efﬁcacy
+Count: 2829
+Test statistics: 66.584∗∗∗
+STS: 0.460
+Ad. sig.a: 1.000
+STS: −6.878
+Ad. sig.a: 0.000
+STS: −7.610
+Ad. sig.a: 0.000
+Response costs
+Count: 2620
+Test statistics: 41.416∗∗∗
+STS: −5.916
+Ad. sig.a: 0.000
+STS: −5.128
+Ad. sig.a: 0.000
+STS: 0.129
+Ad. sig.a: 1.000
+Responsibility of
+government
+Count: 2782
+Test statistics: 15.058∗∗∗
+STS: −3.820
+Ad. sig.a: 0.000
+STS: −2.464
+Ad. sig.a: 0.041
+STS: 0.957
+Ad. sig.a: 1.000
+Responsibility of
+self
+Count: 2804
+Test statistics: 235.118∗∗∗
+STS: −10.447
+Ad. sig.a: 0.000
+STS: −14.891
+Ad. sig.a: 0.000
+STS: −5.917
+Ad. sig.a: 0.000
+Trust – public
+ﬂood protection
+Count: 2804
+Test statistics: 256.027∗∗∗
+STS: 10.780
+Ad. sig.a: 0.000
+STS: > −5.088
+Ad. sig.a: 0.000
+STS: −15.203
+Ad. sig.a: 0.000
+Trust – ﬁnancial
+aid
+Count: 2008
+Test statistics: 47.959∗∗∗
+STS: 0.432
+Ad. sig.a: 1.000
+STS: −5.643
+Ad. sig.a: 0.000
+STS: −6.460
+Ad. sig.a: 0.000
+Financial support
+Count: 2008
+Test statistics: 47.959∗∗∗
+STS: 0.432
+Ad. sig.a: 1.000
+STS: −5.643
+Ad. sig.a: 0.000
+STS: −6.460
+Ad. sig.a: 0.000
+Protection
+motivation – self
+Count: 2779
+Test statistics: 319.338∗∗∗
+STS: −10.931
+Ad. sig.a: 0.000
+STS: −17.674
+Ad. sig.a: 0.000
+STS: −8.623
+Ad. sig.a: 0.000
+Protection
+motivation –
+others
+Count: 2796
+Test statistics: 66.818∗∗∗
+STS: −7.888
+Ad. sig.a: 0.000
+STS: −5.246
+Ad. sig.a: 0.000
+STS: 1.768
+Ad. sig.a: 0.231
+Emotional
+coping – fatalism
+Count: 2862
+Test statistics: 102.101∗∗∗
+STS: −8.171
+Ad. sig.a: 0.000
+STS: −9.187
+Ad. sig.a: 0.000
+STS: −2.086
+Ad. sig.a: 0.111
+Emotional
+coping – denial
+Count: 2863
+Test statistics: 378.274∗∗∗
+STS: −15.409
+Ad. sig.a: 0.000
+STS: −17.880
+Ad. sig.a: 0.000
+STS: −4.565
+Ad. sig.a: 0.000
+Information –
+general
+Count: 2524
+Test statistics: 4.637∗
+Retain null hypothesis
+Information –
+municipalities
+Count: 2636
+Test statistics: 225.746∗∗∗
+STS: −11.489
+Ad. sig.a: 0.000
+STS: −14.061
+Ad. sig.a: 0.000
+STS: −4.011
+Ad. sig.a: 0.000
+∗p < 0.1, ∗∗p < 0.05, ∗∗∗p < 0.01. STS – standardized test statistic.
+least one type of ﬂooding, which indicates the suitability of
+the PMT/PADM-based hybrid framework for starting a dis-
+cussion on the factors inﬂuencing protection motivation in
+the context of ﬂooding. Only signiﬁcant correlations are dis-
+cussed hereafter. Correlation coefﬁcients are shown in paren-
+theses.
+The inﬂuence of threat appraisal on protection motiva-
+tion is examined through the perception of the ﬂood inun-
+dation/velocity of the last ﬂooding and the perceived prob-
+ability of future ﬂooding. Protection motivation is nega-
+tively linked to perceived ﬂood inundation/velocity for those
+affected by ﬂuvial ﬂooding (−0.131) and ﬂash ﬂooding
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 9] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3265
+Table 5. Items asked in the surveys with the scales used and the answers per ﬂood type (median and mean).
+No.
+Topic
+Item asked in survey
+Scale
+Fluvial
+Pluvial
+Flash
+Data presented as median
+(above) and mean (below)
+1
+Perceived
+probability
+“How likely do you think it is that your
+apartment or house will be hit by ﬂooding
+again?”
+1 – Very unlikely
+6 – Very likely
+5
+4.6
+3
+3.4
+4
+3.6
+2
+Perceived
+severity –
+coding reversed
+“How bad do you expect the consequences of a
+future event will be?”∗
+1 – Not bad
+6 – Very bad
+5
+4.5
+4
+3.8
+5
+4.5
+3
+Response
+efﬁcacy –
+coding reversed
+“Adaptive measures can signiﬁcantly reduce
+ﬂood damage.”
+1 – I do not agree
+6 – I fully agree
+5
+4.4
+5
+4.5
+4
+3.9
+4
+Response cost
+“Adaptive measures are far too expensive.”
+1 – I fully agree
+6 – I do not agree
+3
+2.9
+3
+3.4
+3
+3.3
+5
+Self-efﬁcacy
+“Personally, I do not feel able to implement any
+of the measures mentioned above.”
+1 – I fully agree
+6 – I do not agree
+5
+4.3
+5
+4.3
+5
+4.4
+6
+Responsibility
+public –
+coding reversed
+“Flood prevention is the responsibility of public
+institutions and not of private individuals.”
+1 – I do not agree
+6 – I fully agree
+4
+4.0
+4
+3.8
+4
+3.9
+7
+Responsibility
+self –
+coding reversed
+“Every individual has a responsibility to reduce
+ﬂood damage as much as possible.”
+1 – I do not agree
+6 – I fully agree
+6
+5.3
+5
+4.7
+5
+4.2
+8
+Fatalism –
+coding reversed
+“There is generally nothing that can be done
+about ﬂooding and ﬂood damage.”
+1 – I do not agree
+6 – I fully agree
+4
+4.1
+4
+3.5
+3
+3.3
+9
+Denial –
+coding reversed
+“I don’t even want to think about future ﬂood
+damage!”
+1 – I do not agree
+6 – I fully agree
+6
+5.2
+5
+4.2
+4
+3.8
+10
+Trust –
+coding reversed
+“The ﬂood protection in our region is so good, I
+don’t need to take private adaptation measures.”
+1 – I do not agree
+6 – I fully agree
+1
+2.0
+2
+2.7
+1
+1.6
+11
+Public support –
+coding reversed
+“There are enough tax concessions and subsidy
+programs for ﬁnancing adaptive measures.”
+1 – I do not agree
+6 – I fully agree
+2
+2.7
+3
+2.8
+2
+2.2
+12
+Information
+available
+“There is far too little information and advice
+on private ﬂood prevention.”
+1 – I fully agree
+6 – I do not agree
+3
+3.4
+3
+3.3
+3
+3.2
+13
+Local
+information –
+coding reversed
+“Our municipality provides very good
+information about ﬂood risks and possible
+precautionary measures.”
+1 – I do not agree
+6 – I fully agree
+4
+3.8
+3
+2.9
+2
+2.5
+14
+Protection
+motivation (self)
+“Personally, I will do everything I can to protect
+the house I live in from ﬂooding.”
+1 – I do not agree
+6 – I fully agree
+6
+5.4
+5
+4.9
+5
+4.3
+15
+Protection
+motivation
+(others) – coding
+reversed
+“I would recommend that others implement
+adaptive measures.”
+1 – I do not agree
+6 – I fully agree
+6
+5.2
+5
+4.8
+6
+4.8
+∗As S-1 was designed as a panel survey and this item was not asked in the ﬁrst wave of the survey, the results for this item are based on the results of the second wave of the
+panel survey, in which n = 710 households from the ﬁrst wave took part.
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 10] =====
+3266
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+Table 6. Results of regression analysis. The dependent variable for all four regressions is the protection motivation of households. Standard
+errors are in parentheses.
+Regression 0
+Regression 1
+Regression 2
+Regression 3
+general
+ﬂuvial
+pluvial
+ﬂash
+(n = 3449)
+(n = 1258)
+(n = 1203)
+(n = 762)
+Dependent variable: protection motivation coding reversed
+Constant
+1.653∗∗∗
+(0.282)
+2.625∗∗∗
+(0.456)
+1.100∗∗
+(0.379)
+0.744
+(0.048)
+Financial loss
+−3.094 × 10−7∗
+(0.000)
+−1.153 × 10−6
+(0.000)
+3.386 × 10−6∗∗
+(0.000)
+−6.727 × 10−8
+(0.000)
+Perceived ﬂood inundation/velocity
+−0.144∗∗∗
+(0.044)
+−0.131∗
+(0.073)
+0.068
+(0.123)
+−0.128∗
+(0.076)
+Perceived probability of future
+ﬂoods
+0.019
+(0.026)
+−0.052
+(0.042)
+0.096∗
+(0.051)
+−0.009
+(0.048)
+Perceived response efﬁcacy –
+coding reversed
+0.252∗∗∗
+(0.026)
+0.240∗∗∗
+(0.038)
+0.255∗∗∗
+(0.047)
+0.228∗∗∗
+(0.051)
+Perceived response cost
+0.064∗∗
+(0.025)
+0.066∗
+(0.039)
+0.097∗∗
+(0.048)
+0.064
+(0.047)
+Perceived self-efﬁcacy
+0.089∗∗∗
+(0.026)
+0.083∗∗
+(0.037)
+0.013
+(0.048)
+0.196∗∗∗
+(0.052)
+Perceived government
+responsibility –
+coding reversed
+0.041
+(0.027)
+−0.026
+(0.0.039)
+0.109∗∗
+(0.053)
+0.128∗∗
+(0.051)
+Perceived self-responsibility –
+coding reversed
+0.273∗∗∗
+(0.030)
+0.246∗∗∗
+(0.054)
+0.238∗∗∗
+(0.058)
+0.269∗∗∗
+(0.048)
+R2
+0.243
+0.177
+0.234
+0.262
+Signiﬁcance is indicated as follows: ∗p < 0.1, ∗∗p < 0.05, ∗∗∗p < 0.01.
+(−0.128). Hence, the last event’s perceived severity may
+inhibit protection motivation. However, only for those af-
+fected by urban pluvial ﬂooding are ﬁnancial losses posi-
+tively linked to protection motivation (3.386 × 10−6). This
+link appears minimal because this item is not on a scale from
+1 to 6. Instead, this item captures the overall loss in euros.
+Therefore, the ﬁnancial loss experienced seems to trigger
+protection motivation only if high losses have been experi-
+enced. The link between the perceived probability of a fu-
+ture event and protection motivation in the context of pluvial
+ﬂooding is positive but minimal (0.096).
+The inﬂuence of coping appraisal on protection motiva-
+tion is analyzed through perceived response efﬁcacy, per-
+ceived self-efﬁcacy, and perceived response cost. Perceived
+response efﬁcacy is highly signiﬁcant across all types of
+ﬂooding (see Table 6) and thus inﬂuences the protection mo-
+tivation regardless of ﬂood type. Perceived self-efﬁcacy pos-
+itively inﬂuences the protection motivation of those affected
+by ﬂuvial (0.083) or ﬂash (0.196) ﬂooding, which is in line
+with PMT. Response costs are positively linked to protection
+motivation in ﬂuvial ﬂooding (0.066) and in the context of
+pluvial ﬂooding (0.097); however, those linkages are mini-
+mal.
+The inﬂuence of responsibility appraisal on protection mo-
+tivation is analyzed through perceived self-responsibility and
+perceived government responsibility. A positive linkage be-
+tween perceived self-responsibility and protection motiva-
+tion is found across all types of ﬂooding (see Table 6). Thus,
+the assessment of self-responsibility inﬂuences the protec-
+tion motivation, regardless of the type of ﬂooding. Protec-
+tion motivation is positively linked to government responsi-
+bility for those affected by pluvial (0.109) and ﬂash (0.128)
+ﬂooding. In conjunction with the positive inﬂuence of a sense
+of personal responsibility, communicating responsibilities in
+general may positively affect the motivation to adapt.
+The PMT factors identiﬁed as signiﬁcant in Table 6 were
+then analyzed to determine the extent to which they were in-
+ﬂuenced by framing factors. However, the framing factors
+analyzed can only be a starting point for investigating the
+inﬂuences of framing factors and are limited to those in-
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 11] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3267
+Table 7. Results of regression analysis for those affected by ﬂuvial ﬂooding. Dependent variables (ﬁrst line) are those in Table 6 (ﬂuvial, column 3) that are signiﬁcant; standard errors
+are in parentheses.
+Threat
+appraisal
+Coping appraisal
+Responsibility appraisal
+Dependent variables
+Perceived
+Perceived
+Perceived
+Perceived self-efﬁcacy
+Perceived
+Perceived government
+probability
+response efﬁcacy
+response cost
+(reverse scale)
+self-responsibility
+responsibility
+Dataset (compare Table 2)
+Pluvial
+Fluvial
+Pluvial
+Flash
+Fluvial
+Pluvial
+Fluvial
+Flash
+Fluvial
+Pluvial
+Flash
+Pluvial
+Flash
+Independent variables
+Constant
+4.104∗∗∗
+(0.400)
+0.968∗
+(0.553)
+3.628∗∗∗
+(0.418)
+3.077∗∗∗
+(0.500)
+1.515∗∗
+(0.533)
+1.395∗∗∗
+(0.451)
+4.963∗∗∗
+(0.554)
+3.636∗∗∗
+(0.531)
+2.456∗∗∗
+(0.379)
+3.942∗∗∗
+(0.412)
+2.251∗∗∗
+(0.495)
+4.743∗∗∗
+(0.414)
+5.316∗∗
+(0.381)
+Dummy_S-2
+Excluded
+–
+Excluded
+–
+–
+Excluded
+–
+–
+–
+Excluded
+–
+Excluded
+–
+Dummy_S-3
+0.101
+(0.144)
+–
+−0.316∗
+(0.161)
+Excluded
+–
+−0.020
+(0.155)
+–
+Excluded
+–
+−0.163
+(0.143)
+Excluded
+−0.016
+(0.153)
+0.550∗∗
+(0.177)
+Dummy_S-4
+−2.092∗∗∗
+(−0.032)
+–
+0.460
+(0.468)
+–
+–
+−0.393
+(0.017)
+–
+–
+–
+−0.206
+(0.412)
+–
+−0.612
+(0.428)
+–
+Dummy_S-5
+−1.563∗∗∗
+(0.276)
+–
+0.418
+(0.279)
+–
+–
+0.209
+(0.276)
+–
+–
+–
+−0.242
+(0.271)
+–
+−0.586∗∗
+(0.290)
+–
+Dummy_S-6
+–
+–
+–
+0.288
+(0.222)
+–
+–
+–
+0.720∗∗
+(0.229)
+–
+–
+0.070
+(0.209)
+–
+Excluded
+Age
+−0.003
+(0.004)
+0.006
+(0.006)
+0.001
+(0.004)
+−0.002
+(0.005)
+−0.003
+(0.005)
+0.004
+(0.004)
+−0.030∗∗∗
+(0.006)
+−0.019∗∗
+(0.074)
+−0.001
+(0.004)
+0.001
+(0.004)
+−0.009∗
+(0.005)
+−0.001
+(0.004)
+−0.001
+(0.005)
+Trust in public
+ﬂood protection
+coding reversed
+0.008
+(0.038)
+0.024
+(0.058)
+0.040
+(0.043)
+−0.013
+(0.075)
+0.088
+(0.056)
+−0.137∗∗
+(0.047)
+0.099∗
+(0.058)
+−0.058
+(0.074)
+−0.102∗∗
+(0.040
+−0.100∗∗∗
+(0.036)
+0.022
+(0.073)
+0.037
+(0.040)
+0.082
+(0.060)
+Availability of
+ﬁnancial aid
+coding reversed
+−0.042
+(0.041)
+0.173∗∗∗
+(0.050)
+0.066
+(0.046)
+0.104∗
+(0.059)
+0.069
+(0.048)
+0.042
+(0.047)
+0.034
+(0.050)
+−0.057
+(0.057)
+−0.001
+(0.034)
+0.116∗∗
+(0.041)
+0.126∗∗
+(0.056)
+−0.008
+(0.045)
+−0.106∗
+(0.056)
+Availability of
+general information
+−0.014
+(0.039)
+0.023
+(0.044)
+−0.025
+(0.044)
+0.116∗∗
+(0.047)
+0.222∗∗∗
+(0.043)
+0.380∗∗∗
+(0.041)
+0.135∗∗
+(0.044)
+0.249∗∗∗
+(0.044)
+−0.009
+(0.030)
+−0.010
+(0.037)
+0.089∗
+(0.049)
+−0.203∗∗∗
+(0.040)
+−0.273∗∗
+(0.051)
+Availability of
+local information
+coding reversed
+−0.075∗
+(0.039)
+0.043
+(0.045)
+0.049
+(0.047)
+0.065
+(0.053)
+0.024
+(0.043)
+0.007
+(0.042)
+−0.063
+(0.045)
+−0.052
+(0.052)
+0.092∗∗
+(0.031)
+0.088∗∗
+(0.036)
+0.076
+(0.055)
+−0.020
+(0.042)
+−0.044
+(0.051)
+Ownership
+−0.062
+(0.092)
+0.000
+(0.099)
+0.179∗
+(0.094)
+−0.005
+(0.088)
+−0.036
+(0.095)
+0.234∗∗
+(0.098)
+0.075
+(0.098)
+0.295∗∗
+(0.093)
+−0.152∗∗
+(0.067)
+0.167∗
+(0.090)
+0.236∗∗
+(0.092)
+−0.018
+(0.042)
+−0.175∗
+(0.098)
+Flood experience
+0.254∗∗∗
+(0.065)
+0.045
+(0.055)
+−0.019
+(0.073)
+0.153∗
+(0.086)
+0.000
+(0.054)
+0.061
+(0.070)
+0.061
+(0.056)
+0.133
+(0.088)
+−0.028
+(0.038)
+0.050
+(0.066)
+0.100
+(0.006)
+0.010
+(0.067)
+−0.006
+(0.087)
+R2
+0.098
+0.039
+0.033
+0.044
+0.074
+0.167
+0.095
+0.129
+0.044
+0.057
+0.068
+0.068
+0.127
+Signiﬁcance is indicated as follows: ∗p < 0.1, ∗∗p < 0.05, ∗∗∗p < 0.01.
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 12] =====
+3268
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+cluded in the surveys. In order to see the extent to which
+event-speciﬁc and, thus, survey-speciﬁc factors could inﬂu-
+ence the PMT factors, dummy variables have been used in
+these analyses. A dummy variable for each survey from Ta-
+ble 2 was created and implemented in the linear regressions
+of the urban pluvial and ﬂash ﬂooding types. As the data on
+ﬂuvial ﬂooding originate from one survey, no dummy vari-
+ables were created for this type of ﬂooding. Only signiﬁcant
+results are presented below. All results can be found in Ta-
+ble 7. The ﬁnancial loss incurred and the ﬂood inundation/ve-
+locity were not investigated. R2 is generally lower than in the
+regression analyses of the PMT factors. This indicates that
+the independent variables do not yet include all framing fac-
+tors that would reveal inﬂuences in these contexts. Neverthe-
+less, the incomplete list of framing factors is used to identify
+meaningful relationships between PMT/PADM aspects and
+framing factors.
+The event-speciﬁc dummy variables improve the R2 of
+the regression models and capture inﬂuences that distinguish
+those affected by a particular event from others affected by
+the same type of ﬂood. These event-speciﬁc effects can be
+time-, survey-, or location-speciﬁc, although it is impossible
+to break this down precisely based on our data. The perceived
+probability of a future event is lower among those who expe-
+rienced urban pluvial ﬂooding events in Berlin, Potsdam, and
+Leegebruch. The response efﬁcacy was lower among those
+affected by urban pluvial ﬂooding in 2016. The residents of
+Berlin stand out for perceiving government responsibility as
+lower.
+Regarding ﬂash ﬂooding, those affected by the event in
+2021 stand out with a high perceived self-efﬁcacy, while
+those affected in 2016 perceived government responsibility
+as high. However, it must be mentioned at this point that
+what causes these differences on the basis of our data can-
+not be separated. Therefore, it remains open to interpretation
+and discussion as to whether these are local aspects or as-
+pects speciﬁc to the survey. Further research is needed in this
+respect.
+Increasing age is negatively linked to respondents’ self-
+efﬁcacy in the context of ﬂuvial (−0.030) and ﬂash (−0.019)
+ﬂooding. Older people, therefore, tend to feel unable to im-
+plement PLFRAMs. Increasing age is negatively linked to
+perceived self-responsibility in the context of ﬂash ﬂooding
+(−0.009), which indicates that self-responsibility assessment
+decreases with increasing age. Conﬁdence in public ﬂood de-
+fenses is negatively related to the perceived response costs
+for pluvial ﬂooding (−0.137), which indicates that people
+with a high level of conﬁdence in public ﬂood defenses tend
+to rate the costs of PLFRAMs as (too) high. When respon-
+dents have high trust in public ﬂood defenses, they show a
+higher perceived self-efﬁcacy in the context of ﬂuvial ﬂoods
+(0.099) but a lower perceived self-responsibility in the con-
+text of ﬂuvial (−0.102) and pluvial (−0.100) ﬂoods. The
+overall picture suggests that trust in public ﬂood protection
+can be a rather hindering factor in promoting adaptive be-
+havior.
+A positive perception of the availability of ﬁnancial sup-
+port increases perceived response efﬁcacy in the context of
+ﬂuvial (0.173) and ﬂash (0.104) ﬂooding. In addition, there
+is a positive link between the perception of ﬁnancial aid and
+perceived self-responsibility in the context of pluvial (0.166)
+and ﬂash (0.126) ﬂooding. Both perceived response efﬁcacy
+and perceived self-responsibility were identiﬁed as the clear-
+est triggers of protection motivation in the analysis (see Ta-
+ble 6). Since the perceived availability of ﬁnancial aid en-
+hances them, communicating ﬁnancial aid may be crucial
+to support the implementation of PLFRAMs. Furthermore,
+the perceived availability of ﬁnancial aid is negatively linked
+to the perceived government responsibility in the context of
+ﬂash ﬂooding.
+Availability of general information has been shown to pos-
+itively inﬂuence perceived response efﬁcacy in the context
+of ﬂash ﬂoods (0.116), perceived response costs in the con-
+text of ﬂuvial (0.222) and pluvial (0.380) ﬂoods, and self-
+efﬁcacy in the context of ﬂuvial ﬂoods (0.135) and ﬂash
+ﬂoods (0.249). The availability of general information has
+been shown to negatively inﬂuence self-responsibility for
+ﬂash ﬂoods (−0.089) and government responsibility for plu-
+vial ﬂoods (−0.203) and ﬂash ﬂoods (−0.273). The overall
+picture thus shows that a positively perceived availability of
+general information can promote adaptive behavior, in which
+those affected see the government as less responsible and, at
+the same time, assess the costs and feasibility of measures
+more positively. While the availability of general informa-
+tion impacts the perception of the government’s responsibil-
+ity, it is information from the municipalities that might pro-
+mote the perception of personal responsibility among the re-
+spondents, at least in the context of ﬂuvial (0.092) and urban
+pluvial (0.088) ﬂooding. However, in the context of pluvial
+ﬂooding, the availability of local information links negatively
+with perceived probability of a future event (−0.075), which
+might suggest that it is challenging to communicate occur-
+rence probabilities, as suggested in the literature (Grounds et
+al., 2018).
+There is a positive connection between ownership and
+perceived response efﬁcacy (0.179) and perceived response
+cost (0.234) in the context of pluvial ﬂooding. In the con-
+text of ﬂash ﬂooding, ownership links positively with per-
+ceived self-efﬁcacy (0.295) and negatively with perceived
+government responsibility (−0.175). Ownership further links
+positively with perceived self-responsibility in the context
+of pluvial (0.167) and ﬂash (0.236) ﬂooding but negatively
+in the context of ﬂuvial ﬂooding (−0.152). Hence, home-
+owners affected by ﬂash ﬂooding tend to see themselves,
+rather than the government, as responsible. Previously ex-
+perienced ﬂoods positively affect the perceived probability
+of a future event occurring in the context of pluvial ﬂooding
+(0.254). Flood experience positively affects the perception of
+response efﬁcacy in the context of ﬂash ﬂooding (0.153).
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 13] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3269
+4
+Discussion
+4.1
+Adaptive responses to the different ﬂood types
+At 95.6 %, most respondents (98.6 % of those affected by ﬂu-
+vial, 97.5 % of those affected by ﬂash, and 91.5 % of those
+affected by urban pluvial ﬂooding) had implemented at least
+one PLFRAM before or after the damaging event regardless
+of ﬂood type. This reﬂects the generally progressed adap-
+tation of those affected by ﬂooding and the boost in adap-
+tation after damaging events. Respondents were particularly
+likely to adapt their behavior by, e.g., seeking information,
+attending seminars and neighborhood assistance meetings,
+creating emergency plans, or implementing other preparatory
+measures (e.g., procuring pumps). This is consistent with the
+ﬁndings of Grothmann and Reusswig (2006), who found that
+searching for ﬂood-related information is the most frequently
+performed adaptation. These positive attitudes towards pre-
+paredness measures do not directly reduce future damage but
+demonstrate the need for information after a ﬂood.
+Evasion measures were very rarely implemented after an
+event (see Fig. 4). Since measures in this group are difﬁcult
+to implement retroactively, such as making driveways drop
+towards the road, and also require great effort, such as mov-
+ing to a less ﬂood-prone area, it is likely that these measures
+undergo individual cost–beneﬁt assessments. They are much
+easier to be implemented when planning or constructing a
+home and should thus be communicated to people involved
+in construction projects. In contrast, the possibility of tak-
+ing out insurance could be communicated before and after
+events. Communication on this topic is likely to have an im-
+pact. In Germany, mandatory ﬂood insurance has been dis-
+cussed since the devastating ﬂoods of 2002 (Thieken et al.,
+2006). Market penetration has increased from 19 % in 2002
+to 49 % in 2021 (GDV, 2022) and to 52 % in 2022 (GDV,
+2023).
+Furthermore, our data show that the uptake of insurance
+policies covering ﬂood losses before the last event was
+around 40 % among all households surveyed. Insurance was
+purchased after ﬂooding, especially by those who were af-
+fected by ﬂash ﬂooding. This makes sense since the amount
+of ﬂood losses by ﬂash ﬂoods is very high (see Table 3), and
+people with insurance can generally rely on loss compensa-
+tion based on the insurance contract.
+4.2
+Appraisal of threat, coping, and responsibility in
+the context of different ﬂood types
+The appraisal of threat is assumed to be a crucial driver in
+the PMT and PADM. It is formed by the perceived severity
+and perceived probability (of a future event) and is expected
+to inﬂuence protection motivation positively if the perceived
+threat is not too high (Grothmann and Reusswig, 2006; Lin-
+dell and Perry, 2012; Prentice-Dunn and Rogers, 1986). Flu-
+vial ﬂoods were perceived as more devastating than urban
+pluvial ﬂoods but less devastating than ﬂash ﬂoods. Hence,
+our analyses illustrate that the respondents perceived the
+ﬂood types examined very differently. These perceptions are
+conﬁrmed by research on events not analyzed in this study.
+Poussin et al. (2014) found for ﬂooding in France that ﬂu-
+vial ﬂoods caused less damage and fewer fatalities than ﬂash
+ﬂoods, and Spekkers et al. (2017) observed rather minor wa-
+ter depth during an urban pluvial ﬂood in Amsterdam and did
+not report any fatalities. In contrast to ﬂash ﬂooding, urban
+pluvial events were perceived as the least severe in our data.
+Those affected by ﬂuvial ﬂoods report a higher perceived
+severity and a higher probability of future ﬂooding, which
+might also be due to repeatedly experienced ﬂooding of this
+type. Since this group had also implemented the most PL-
+FRAMs before the event, our data do not allow us to ob-
+serve the negative feedback loop between the implementa-
+tion of PLFRAMs and the appraisal of the threat that was
+described by Bubeck et al. (2012) and conﬁrmed by Poussin
+et al. (2014) for the context of ﬂuvial events. Our data sug-
+gest that the implementation of PLFRAMs in the past did not
+lower the respondents’ assessment of the threat or that the
+assessment of the threat, which may have decreased after the
+implementation of PLFRAMs, increased again after experi-
+encing another ﬂood. However, in this context, the fact that
+those who were affected by ﬂuvial ﬂooding retroﬁtted fewer
+PLFRAMs after the last ﬂood event may indicate that if those
+affected by ﬂoods implement PLFRAMs and then experience
+ﬂooding and losses again, their higher risk assessment may
+lead not to the implementation of more PLFRAMs but rather
+to higher maladaptive thinking, as maladaptive thinking was
+particularly pronounced in those affected by ﬂuvial ﬂooding.
+The regression analysis of PMT/PADM aspects (see Ta-
+ble 6) reveals no signiﬁcant link between the perceived prob-
+ability of a future event and protection motivation for ﬂuvial
+and ﬂash ﬂooding, which aligns with ﬁndings in Australia
+(Bird et al., 2013). For all respondents, the mean of the per-
+ception of a ﬂood’s severity is higher than its perceived prob-
+ability, indicating that many of those affected are aware that
+ﬂooding can cause high levels of losses but that they might
+not be affected by it (again), which is in line with ﬁndings
+of Netzel et al. (2021) in the context of urban pluvial ﬂood-
+ing. Communicating the probability of future events occur-
+ring in a particular locality may, therefore, be a way to en-
+hance one’s local risk awareness. Return periods may not
+be the most suitable tool here (Grounds et al., 2018) since
+they suggest long time periods between ﬂood events if not
+well explained. Perceived inundation/velocity showed an ef-
+fect that decreased the motivation to protect oneself in the
+context of ﬂuvial and ﬂash ﬂoods, which were perceived as
+more severe. In the context of urban pluvial ﬂooding, ﬁnan-
+cial losses trigger protection motivation if those losses are
+high. Future information campaigns for urban pluvial ﬂood-
+ing could, therefore, communicate high losses, if those are to
+be expected in a speciﬁc area.
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 14] =====
+3270
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+In addition to assessing the threat, it is the assessment of
+coping options that shapes adaptive behavior and is perhaps
+even the stronger driving force here (Poussin et al., 2014).
+Therefore, it is a positive aspect that most respondents, after
+an event, tend to believe that PLFRAMs reduce ﬂood damage
+and that they can implement these measures. They thus gen-
+erally tend to perceive both a high sense of self-efﬁcacy and a
+high perceived response efﬁcacy. Perceived response efﬁcacy
+has been found to positively inﬂuence protection motivation
+regardless of ﬂood type. The fact that those affected by ﬂash
+ﬂooding have a lower perceived response efﬁcacy but less
+often perceive the costs of measures as too high may sug-
+gest that this group of respondents experienced particularly
+severe ﬂooding, undermining the effectiveness of many PL-
+FRAMs and putting their costs into perspective. Therefore,
+cost–beneﬁt analyses of PLFRAMs could be carried out on a
+ﬂood-type-speciﬁc basis and communicated to those poten-
+tially affected. For urban pluvial ﬂood events in particular, it
+should be investigated which PLFRAM can reduce the ex-
+pected damage cost-effectively since ﬂoods of this type are
+characterized as less severe (see Table 3). Those affected per-
+ceive response costs to be rather high (see Table 5). Often,
+only small changes to a building, e.g., the implementation
+of ground sills, might help prevent water from entering the
+building.
+Responsibility appraisal is expected to positively inﬂu-
+ence protection motivation. This study divides responsibil-
+ity appraisal into one’s own perceived responsibility and the
+perception of the government’s responsibility. The regres-
+sion analyses revealed that self-responsibility positively af-
+fects protection motivation, regardless of the type of ﬂood-
+ing, and that perceived government responsibility in the con-
+text of pluvial and ﬂash ﬂooding has a positive inﬂuence on
+protection motivation. Among those affected by ﬂoods, the
+sense of responsibility is generally high (see Table 5). Stud-
+ies have shown that homeowners feel a greater sense of re-
+sponsibility (Dillenardt et al., 2022; Grothmann and Reuss-
+wig, 2006). As over 80 % of respondents were homeowners
+(see Table 2), this might explain the high sense of respon-
+sibility observed. At the same time, respondents also place
+responsibility on public authorities. Thus, these two percep-
+tions are not mutually exclusive. This is in the spirit of in-
+tegrated ﬂood risk management. However, over 70 % of all
+respondents have little or rather little conﬁdence that the pub-
+lic sector will fulﬁll the responsibilities they ascribe to it (see
+topic no. 11 in Table 5). This suggests that clear communi-
+cation and conﬁdence-building actions among all stakehold-
+ers involved in integrated ﬂood risk management should be
+strengthened.
+4.3
+Framing factors: a chance to enhance adaptive
+behavior?
+Framing factors offer the opportunity to discuss the inﬂu-
+ences of, e.g., respondents’ age, the availability of general
+or local information, the perceived availability of ﬁnancial
+aid, and ﬂood experience on adaptive behavior (i.e., the im-
+plementation of PLFRAMs). The inﬂuence of framing fac-
+tors is either indirect via the inﬂuence on threat, coping, or
+responsibility appraisals or direct if the framing factor pre-
+vents the implementation of measures despite a high moti-
+vation of those affected, thus acting as a barrier. This study
+focuses on the indirect effects of the framing factors men-
+tioned. The importance of framing factors for developing
+protective behavior has already been addressed by Prentice-
+Dunn and Rogers (1986) in protection motivation theory, in
+which the inﬂuence of “source information” on threat and
+coping appraisal is mentioned. Lindell and Perry (2012) ex-
+tend this understanding by stating that those factors form a
+framework; i.e., they are both at the beginning of the devel-
+opment of a protective response (indirect inﬂuence), mean-
+ing they can directly hinder or promote the implementation
+of protection motivation in a protective response. Although
+the naming of this group of factors differs, other studies dis-
+cuss framing factors. Fuchs et al. (2017) describe “situational
+factors”, which include “being informed”, for example, and
+assign them to a superclass of “social capital”, which is as-
+sumed to have a positive inﬂuence on the implementation of
+measures.
+The regression analysis of the framing factors shows low
+R2 values. This is a known problem in psychological re-
+search. People are very different, but they do not participate
+in interviews that last longer than 30 min, making it impossi-
+ble to include all personal and contextual factors (Grothmann
+and Reusswig, 2006). However, conclusions from the results
+should be drawn with caution. Our analyses show that home
+ownership indirectly promotes the motivation to protect one-
+self by strengthening coping and responsibility appraisals,
+which is in line with Grothmann and Reusswig (2006), who
+showed that ownership as a framing factor can positively in-
+ﬂuence the implementation of measures. In the context of ﬂu-
+vial and ﬂash ﬂooding, the age of affected respondents was
+linked negatively to their self-efﬁcacy. Hence, older people,
+if they have experienced rather severe ﬂooding, are less likely
+to see themselves in a position to implement PLFRAMs.
+However, Houston et al. (2021) found that households with
+older adults show less long-term ﬂood impacts and suggested
+that this is caused by their social capital (e.g., social networks
+and knowledge). Information campaigns should build on this
+and pay particular attention to older people in ﬂooded ar-
+eas by enhancing or, if possible, proﬁting from their social
+capital and, at the same time, identifying who could help
+them during the implementation process of PLFRAMs and
+recommending that they not select measures that require ac-
+tion during an event, such as mobile devices that need to
+be installed. Both perceived response efﬁcacy and perceived
+self-responsibility were identiﬁed as the clearest triggers of
+protection motivation in the regression analysis presented in
+Table 6. Since the perceived availability of ﬁnancial aid en-
+hances them, communicating ﬁnancial aid may be crucial to
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 15] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3271
+support the implementation of adaptive measures. This argu-
+ment is strengthened by the ﬁndings of Houston et al. (2021),
+who show the sensitivity of individuals’ vulnerability and re-
+silience to ﬁnancial resources.
+Our data suggest that those with little ﬂood experience,
+i.e., those affected by urban pluvial or ﬂash ﬂoods, were par-
+ticularly likely to take action after the last ﬂood. In contrast,
+those with more ﬂood experience, i.e., those affected by ﬂu-
+vial ﬂoods, were particularly likely to have taken action be-
+fore the last ﬂood and were less likely to take further PL-
+FRAMs. In this context, however, it should be considered
+that ﬂood experience is characterized not only by the pure ex-
+perience of the ﬂood but also by the experience of the recon-
+struction process and possibly subsequent adapted integrated
+ﬂood risk management, as was the case, for example, after
+the 2002 and 2013 ﬂoods in Saxony (Müller, 2013). Such
+management, which includes the creation of ﬂood hazard
+maps and information campaigns aimed at the population,
+may beneﬁt peoples’ perceptions of the threat, coping op-
+tions, and responsibilities. Past research has shown a positive
+effect of (targeted) information campaigns on ﬂood adapta-
+tion (Erdlenbruch and Bonté, 2018). While this relationship
+cannot be examined based on the data, the data do reveal that
+those who have been affected by ﬂuvial ﬂoods – who, accord-
+ing to our data, are also those who have the most ﬂood ex-
+perience – have a higher risk perception, a higher perceived
+response efﬁcacy, a higher sense of personal responsibility,
+and a higher motivation to protect themselves. They also feel
+better informed by their communities (see Table 5) and are
+more likely to have had implemented PLFRAMs before the
+last ﬂood event (see Fig. 4). Future research should focus on
+these relationships in order to better understand the extent
+to which integrated ﬂood risk management of ﬂuvial ﬂoods
+has had a positive impact on the adaptive behaviors of house-
+holds. In the context of different types of ﬂooding, it should
+then be considered whether similar management approaches
+should be adapted and applied to other types of ﬂooding.
+4.4
+Protection motivation and emotional coping: an
+interaction still not sufﬁciently understood
+Overall, the protection motivation of all respondents is posi-
+tive or rather positive, and those affected by ﬂuvial ﬂooding
+in particular have a high motivation to protect themselves
+from future events. At the same time, most interviewees
+agree with statements indicating they will face future events
+with denial and fatalism. Denial and fatalism are markers
+of a non-protective response, as deﬁned by Grothmann and
+Reusswig (2006), and are also referred to as emotional cop-
+ing or maladaptive thinking in other studies. Grothmann and
+Reusswig (2006) conclude from their own and other studies
+that a non-protective response has a negative/hindering effect
+on protection motivation.
+For respondents who were affected by ﬂuvial ﬂooding,
+our results show that high ratings for denial and fatalism
+and a high protection motivation are not mutually exclu-
+sive but can instead coexist, which might be caused by re-
+peated ﬂooding and decreasing resilience, as indicated by
+other studies (Houston et al., 2021; Köhler et al., 2023).
+This may indicate that protective motivation is promoted re-
+gardless of maladaptive thinking if the assessments of threat,
+coping, and (personal) responsibility are high. However, it
+has been found that those affected by ﬂuvial ﬂooding imple-
+mented fewer measures after the event than the other respon-
+dents. This might suggest that a protective response results
+from the interaction between maladaptive thinking and pro-
+tection motivation. Our data show that, at least in the con-
+text of ﬂuvial ﬂooding, the high sense of self-responsibility
+is not enough to stop those affected from developing a non-
+protective response. However, self-responsibility was found
+to hinder maladaptive thinking in the context of urban pluvial
+ﬂooding (Dillenardt et al., 2022). Hence, interconnections
+among the factors of PMT and PADM are not yet fully un-
+derstood, particularly in the context of different ﬂood types,
+and the exact role of maladaptive thinking cannot be con-
+clusively clariﬁed. Further research is needed on this topic.
+For instance, future research could use qualitative interviews
+to identify or conﬁrm items to capture maladaptive thinking
+within future survey campaigns.
+4.5
+Limitations
+In this study, people affected by different types of ﬂooding
+have been compared. Therefore, several surveys have been
+conducted. Between 2013 and today, our survey methodol-
+ogy has evolved from computer-aided telephone interviews
+(CATIs) to computer-assisted web interviews (CAWIs); see
+Fig. 2. The reason for this is that the use of mobile phones
+has increased rapidly in the last decade, and it can no longer
+be assumed that a balanced sample can be reached via land-
+line. As a result, the ﬂuvial group is homogeneous in terms of
+methodology (CATI), while the urban pluvial and ﬂash ﬂood-
+ing groups are mixed in terms of sampling methods used.
+One limitation in this context is that it is almost impossible
+to derive response rates for a CAWI advertised via social me-
+dia, as it is impossible to conclusively determine how many
+people were reached through the original advertisement or
+through sharing of the survey link by those initially reached
+by the advertisement. In addition, a study conducted in Aus-
+tralia by Gilligan et al. (2014) indicates that participants re-
+cruited through Facebook may be more socially engaged, be
+better educated, and have higher earnings than the general
+population. In our study, however, the CAWIs within a ﬂood
+type group were not advertised exclusively via social media
+but also via direct mail. It can be assumed that the mixed use
+of methods minimizes those effects.
+In addition to these limitations, which can be attributed to
+the combination of sampling methods, it is possible that our
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 16] =====
+3272
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+surveys were unable to reach those affected who had moved
+to a new place of residence after experiencing ﬂooding. This
+is supported by the fact that around 1/5 of the letters sent
+out by the municipality as part of the survey conducted in
+the wake of the 2021 ﬂood have been undeliverable. This
+group could, therefore, be underrepresented in sample D (see
+Fig. 2). However, the applied combination of sampling meth-
+ods will likely reduce that effect within the overall group af-
+fected by ﬂash ﬂooding. Shaver et al. (2019) point out that
+Facebook uses a non-random targeting algorithm.
+Furthermore, our survey exclusively targeted affected
+households. Our sampling based on advertisements via Meta
+is, therefore, non-random, and our results only reﬂect the per-
+ceptions of those affected and not those of unaffected house-
+holds. In addition, our surveys were conducted exclusively
+in Germany. The transfer to other regions must, therefore, be
+scrutinized in advance. For example, it can be assumed that
+the sense of responsibility of those affected by ﬂoods differs
+between countries (Andrasko, 2021).
+Regarding implementing PLFRAMs, this study and the
+available data cannot clarify the extent to which households
+adapted appropriately before or after the ﬂood. This is be-
+cause which PLFRAMs or combinations of PLFRAMs are
+appropriate to the individual ﬂood risk depends on many in-
+dividual and local factors for which no data were collected.
+Furthermore, it is not possible to conclusively clarify how
+much ﬁnancial resources, time, and/or construction effort
+was required by those affected to implement PLFRAMs. This
+is because the classes used differentiate between PLFRAMs
+in terms of their mode of action and not in terms of imple-
+mentation costs or effort.
+5
+Conclusion
+This paper examined and compared the adaptive behavior of
+households that experienced urban pluvial ﬂooding between
+2014 and 2019, ﬂash ﬂooding in 2016 or 2021, and ﬂuvial
+ﬂooding in 2013 in Germany. The ﬁndings are based on sev-
+eral post-event surveys that were analyzed descriptively via
+Kruskal–Wallis tests, single-factor ANOVA, and linear re-
+gressions. The theoretical frameworks of PMT and PADM
+are used to structure our analyses and discuss our results in
+a way that allows us to draw practical conclusions for future
+risk communication strategies.
+The communication of the threat should include the prob-
+ability of future events, particularly those at risk of urban
+pluvial ﬂooding, and communicate high ﬂow velocities and
+water inundations if those are expected. The local context
+must be established so that those affected can become aware
+of their individual risk. Our results suggest that information
+campaigns should focus on informing affected individuals
+about PLFRAMs and responsibilities. Flood-type-speciﬁc
+recommendations and cost–beneﬁt analyses should be car-
+ried out. The results of such analyses should be communi-
+cated to speciﬁc target groups so that the measures can be
+adapted to the expected severity and hydraulic forces. Care
+should be taken to ensure that the communicated PLFRAMs
+can be implemented by the target group, e.g., evasion mea-
+sures by those involved in house construction. It may be ad-
+visable to incorporate the implementation of PLFRAMs into
+the planning and permitting process. As respondents show
+very little trust in the public sector’s ability to deal with
+ﬂoods, especially after events that are perceived as very se-
+vere, communication strategies should include conﬁdence-
+building strategies and communicate responsibilities. Those
+affected are open to information campaigns, particularly af-
+ter a ﬂood event, but these campaigns should be ﬂood-type-
+speciﬁc.
+Our results suggest that investigating framing factors en-
+hances the discussion about households’ adaptive behavior.
+In this context, whether and how the perceived availability
+of information and ﬁnancial aid, ﬂood experience, and home
+ownership promote aspects of PMT and PADM have been
+discussed. It has been found that the perceived availability of
+ﬁnancial aid and information positively impacts coping ap-
+praisal and that community-led information campaigns are
+more likely to increase peoples’ sense of personal responsi-
+bility. However, the interaction of these factors and the effect
+of maladaptive thinking within the development of adaptive
+behavior are not yet sufﬁciently understood, neither in our
+study nor in the wider literature. Further research is needed,
+as a better understanding can strengthen future risk commu-
+nication strategies.
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 17] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3273
+Appendix A
+Table A1. Summary of the measures, their deﬁnitions, and the survey items assigned to them, based on and updated from Dillenardt et
+al. (2024). For more information about the surveys, see Table 1.
+Description
+Item in survey(s)
+Survey(s) in which the
+item was asked
+Evasion
+Measures that remove the entire building
+Moving to a less threatened area
+S-3, S-1, S-6
+out of the risk zone
+Upstands (e.g., steps)
+S-4, S-5, S-2, S-6
+Dispensing with a cellar
+S-2, S-3, S-1, S-6
+Driveways dropping towards the street
+S-4, S-5
+Resistance
+Measures that do not allow the water to
+Ground sills
+S-4, S-5
+enter the building when it reaches the
+Barrier systems or safety gates
+S-4, S-5
+building
+Backﬂow ﬂap
+S-4, S-5, S-2, S-3, S-1, S-6
+Waterproof or pressure-resistant windows and/or
+doors
+S-4, S-5
+Window ﬂaps or stationary or mobile water stops
+S-4, S-5, S-2, S-3, S-1, S-6
+Waterprooﬁng of the foundation
+S-4, S-5
+Improvement of the ﬂood safety of the building,
+e.g., improved structural stability
+S-2, S-3
+Drawback
+Measures that reduce loss caused by water
+penetration. Measures that reduce loss due
+I improve the ﬂood safety of my building; i.e., I
+improve the stability of the building
+S-1, S-6
+to the protection of pollutants are excluded,
+Low-value use of the ﬂoors at risk of ﬂooding
+S-4, S-5, S-2, S-3, S-1, S-6
+as these are listed in a separate category
+Low-value use of the ﬂoors at risk of ﬂooding
+S-4, S-5, S-2, S-3, S-1, S-6
+called “securing”
+Buying pumps
+S-4, S-5, S-2, S-3, S-1, S-6
+Securing
+Measures that reduce loss from ﬂoodwater
+intrusion by protecting hazardous materials
+Heating-oil protection or relocation of the heating
+system and/or electrical utilities to higher ﬂoors
+S-4, S-5
+and pollutants
+Relocation of the heating system and/or the
+electrical utilities to higher ﬂoors
+S-3, S-2, S-1, S-6
+Not storing varnish, paint, or gasoline cans in the
+basement
+S-2, S-3, S-1, S-6
+Changing the heating system or providing the oil
+tank with ﬂood protection
+S-2, S-3, S-1, S-6
+Risk
+transfer
+Measures that do not directly prevent loss
+from ﬂooding but transfer the cost of the
+loss to someone else
+Insurance against ﬂood loss
+S-4, S-5, S-2, S-3, S-1, S-6
+Behavior
+Measures that cannot be implemented
+Preparations for the eventuality of a hazard
+S-4, S-5, S-2, S-3, S-1, S-6
+precaution
+because they are changes in behaviors or
+the acquisition of new behaviors. Here we
+Search for information on how affected
+individuals can protect themselves
+S-2, S-3, S-1, S-6
+also include information seeking, as this
+Participation in seminars
+S-2, S-3, S-6
+can be considered a protective behavior
+Participation in neighborhood networks
+S-2, S-3, S-1, S-6
+(Maidl and Buchecker, 2015)
+Informing oneself about one’s risk
+S-1, S-6
+Acquisition of an emergency generator or a
+power generator
+S-2, S-3, S-1, S-6
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 18] =====
+3274
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+Table A2. Items asked in the surveys, their respective scale, and the respondents’ answers in percent.
+No.
+Topic
+Item asked in survey
+Flood type
+Scale
+1
+2
+3
+4
+5
+6
+Values represent the proportion
+of respondents [%] who rated
+the respective item with the
+respective number.
+1
+Flow velocity
+What best describes the water velocity?
+Fluvial
+1 – Steady ﬂow
+46
+11
+14
+11
+7
+10
+2
+Pluvial
+6 – Turbulent ﬂow
+30
+14
+17
+13
+10
+15
+3
+Flash
+6
+8
+12
+20
+21
+32
+4
+Flow velocity
+and inundation
+An average man . ..
+Fluvial
+1: . . . could have stood
+with no difﬁculty
+59
+20
+18
+3
+–
+–
+5
+Pluvial
+2: . . . could have stood
+only with difﬁculty
+75
+14
+11
+0
+–
+–
+6
+Flash
+3: . . . would have been
+swept away
+4: water too deep to stand
+22
+22
+36
+20
+–
+–
+7
+Perceived
+How likely do you think it is that your
+Fluvial
+1 – Very unlikely
+5
+8
+16
+11
+17
+44
+8
+probability
+apartment or house will be hit by
+Pluvial
+6 – Very likely
+13
+16
+27
+17
+14
+13
+9
+ﬂooding again?
+Flash
+6
+14
+25
+24
+14
+18
+10
+Perceived
+How bad do you expect the
+Fluvial
+1 – Very bad
+38
+20
+21
+8
+7
+7
+11
+severity
+consequences of a future event to be?
+Pluvial
+6 – Not bad at all
+14
+17
+31
+17
+11
+9
+12
+Flash
+34
+22
+20
+14
+7
+3
+13
+Response
+Adaptive measures can signiﬁcantly
+Fluvial
+1 – I fully agree
+40
+16
+19
+6
+6
+13
+14
+efﬁcacy
+reduce ﬂood damage.
+Pluvial
+6 – I do not agree at all
+37
+20
+21
+7
+5
+10
+15
+Flash
+24
+16
+18
+17
+14
+10
+16
+Response cost
+Adaptive measures are far too
+Fluvial
+1 – I fully agree
+26
+20
+24
+10
+7
+12
+17
+expensive.
+Pluvial
+6 – I do not agree at all
+16
+18
+27
+12
+11
+17
+18
+Flash
+21
+14
+22
+16
+12
+16
+19
+Self-efﬁcacy
+Personally, I do not feel able to
+Fluvial
+1 – I fully agree
+11
+8
+16
+8
+15
+42
+20
+implement any of the measures
+Pluvial
+6 – I do not agree at all
+9
+9
+19
+9
+14
+40
+21
+mentioned above.
+Flash
+8
+10
+12
+15
+13
+42
+22
+Responsibility
+Flood prevention is the responsibility
+Fluvial
+1 – I fully agree
+23
+15
+34
+8
+7
+13
+23
+public
+of public institutions and not of private
+Pluvial
+6 – I do not agree at all
+17
+17
+31
+12
+10
+12
+24
+individuals.
+Flash
+21
+16
+25
+18
+8
+12
+25
+Responsibility
+Every individual has a responsibility to
+Fluvial
+1 – I fully agree
+61
+21
+12
+2
+2
+3
+26
+self
+reduce ﬂood damage as much as
+Pluvial
+6 – I do not agree at all
+39
+25
+20
+6
+5
+5
+27
+possible.
+Flash
+29
+22
+19
+14
+8
+9
+28
+Fatalism
+There is generally nothing that can be
+Fluvial
+1 – I fully agree
+31
+13
+23
+9
+10
+14
+29
+done about ﬂooding and ﬂood damage.
+Pluvial
+6 – I do not agree at all
+17
+15
+22
+12
+14
+20
+30
+Flash
+15
+13
+15
+20
+17
+20
+40
+Denial
+I don’t even want to think about future
+Fluvial
+1 – I fully agree
+72
+8
+9
+3
+2
+6
+41
+ﬂood damage!
+Pluvial
+6 – I do not agree at all
+36
+14
+19
+8
+8
+14
+42
+Flash
+25
+18
+17
+13
+10
+17
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 19] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3275
+Table A2. Continued.
+No.
+Topic
+Item asked in survey
+Flood type
+Scale
+1
+2
+3
+4
+5
+6
+Values represent the proportion
+of respondents [%] who rated
+the respective item with the
+respective number.
+43
+Trust
+The ﬂood protection in our region is so
+Fluvial
+1 – I fully agree
+3
+4
+9
+9
+20
+55
+44
+good that I don’t need to take private
+Pluvial
+6 – I do not agree at all
+9
+9
+16
+12
+18
+36
+45
+protection measures.
+Flash
+2
+2
+5
+7
+17
+68
+46
+There are enough tax concessions and
+Fluvial
+1 – I fully agree
+8
+8
+19
+12
+19
+35
+47
+subsidy programs for ﬁnancing
+Pluvial
+6 – I do not agree at all
+5
+9
+20
+17
+19
+30
+48
+adaptive measures.
+Flash
+5
+4
+7
+14
+26
+43
+49
+Information
+There is far too little information and
+Fluvial
+1 – I fully agree
+21
+14
+21
+10
+13
+21
+50
+available
+advice on private ﬂood prevention.
+Pluvial
+6 – I do not agree at all
+17
+20
+24
+11
+11
+18
+51
+Flash
+21
+16
+21
+17
+12
+13
+52
+Our municipality provides very good
+Fluvial
+1 – I fully agree
+26
+19
+19
+9
+10
+18
+53
+information about ﬂood risks and
+Pluvial
+6 – I do not agree at all
+9
+12
+17
+13
+17
+32
+54
+possible precautionary measures.
+Flash
+8
+6
+12
+14
+21
+39
+55
+Protection
+Personally, I will do everything I can to
+Fluvial
+1 – I fully agree
+76
+11
+5
+2
+1
+5
+56
+motivation
+protect the house I live in from
+Pluvial
+6 – I do not agree at all
+48
+24
+15
+6
+3
+5
+57
+ﬂooding.
+Flash
+31
+19
+21
+16
+7
+6
+Code availability. The analyses were performed using a commer-
+cial software (IBM-SPSS) and, thus, the code is not publicly avail-
+able.
+Data availability. Some of the data sets (S1, S2) are available in
+HOWAS21 (https://howas21.gfz.de/, GFZ, 2025); others (S3, S6)
+will be included soon. However, not all variables used in this paper
+can be found in HOWAS21. The whole data set can be provided by
+the authors upon reasonable request.
+Author contributions. LD carried out the conceptualization, cu-
+rated and analyzed the data, and prepared the paper. AHT con-
+tributed to the writing through review and editing and providing
+resources and supervision.
+Competing interests. The contact author has declared that neither
+of the authors has any competing interests.
+Disclaimer. Publisher’s note: Copernicus Publications remains
+neutral with regard to jurisdictional claims made in the text, pub-
+lished maps, institutional afﬁliations, or any other geographical rep-
+resentation in this paper. While Copernicus Publications makes ev-
+ery effort to include appropriate place names, the ﬁnal responsibility
+lies with the authors.
+Special issue statement. This article is part of the special issue
+“Strengthening climate-resilient development through adaptation,
+disaster risk reduction, and reconstruction after extreme events”. It
+is not associated with a conference.
+Financial support. This research has been supported by the Bun-
+desministerium für Bildung und Forschung (grant no. 01LR2102I).
+Review statement. This paper was edited by Marvin Ravan and re-
+viewed by two anonymous referees.
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 20] =====
+3276
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+References
+Adams, R., Binder, W., Breit, W., Disse, M., Fröhlich, K.-D., Jüp-
+ner, R., Kathmann, M., Kron, W., Lesny, K., Müller, U., Patt,
+H., Piroth, K., Pohl, R., and Weiß, G.: Hochwasser-Handbuch,
+3, Springer Vieweg, 729 pp., https://doi.org/10.1007/978-3-658-
+26743-8, 2020.
+Andrasko, I.: Why People (Do Not) Adopt the Private Precau-
+tionary and Mitigation Measures: A Review of the Issue from
+the Perspective of Recent Flood Risk Research, Water, 13, 140,
+https://doi.org/10.3390/w13020140, 2021.
+Arrow, K., Solow, R., Portney, P. R., Leamer, E. E., Radner, R., and
+Schuman, H.: Report of the NOAA panel on contingent valua-
+tion, United States, National Oceanic and Atmospheric Admin-
+istration, 1995.
+Attems, M.-S., Thaler, T., Genovese, E., and Fuchs, S.: Im-
+plementation of property-level ﬂood risk adaptation (PLFRA)
+measures: Choices and decisions, WIREs Water, 7, e1404,
+https://doi.org/10.1002/wat2.1404, 2020.
+Berghäuser, L., Schoppa, L., Ulrich, J., Dillenardt, L., Jurado, O. E.,
+Passow, C., Samprogna Mohor, G., Seleem, O., Petrow, T., and
+Thieken, A. H.: Starkregen in Berlin, Universitätsverlag Pots-
+dam, https://doi.org/10.25932/PUBLISHUP-50056, 2021.
+Bird, D., King, D., Haynes, K., Box, P., Okada, T., and
+Nairn, K.: Impact of the 2010–11 ﬂoods and the factors
+that
+inhibit
+and
+enable
+household
+adaptation
+strategies,
+NCCARF
+Publication
+07/13,
+ISBN
+978-1-921609-77-0,
+https://nccarf.edu.au/wp-content/uploads/2019/03/Bird_2013_
+Floods_household_adaptation_strategies.pdf
+(last
+access:
+22 August 2025), 2013
+Bruijn, K. D., Klijn, F., Ölfert, A., Penning-Rowsell, E., Simm, J.,
+and Wallis, M.: Flood risk assessment and ﬂood risk manage-
+ment, FloodSite Report T29-09-01, FLOODsite, ISBN 978 90
+814067 1 0, 2009.
+Bubeck, P., Botzen, W. J. W., and Aerts, J. C. J. H.: A
+review of risk perceptions and other factors that inﬂu-
+ence ﬂood mitigation behavior, Risk Anal., 32, 1481–1495,
+https://doi.org/10.1111/j.1539-6924.2011.01783.x, 2012.
+Bubeck, P., Botzen, W. J. W., Kreibich, H., and Aerts, J. C. J. H.:
+Detailed insights into the inﬂuence of ﬂood-coping appraisals on
+mitigation behaviour, Global Environ. Chang., 23, 1327–1338,
+https://doi.org/10.1016/j.gloenvcha.2013.05.009, 2013.
+Bubeck, P., Wouter Botzen, W. J., Laudan, J., Aerts, J. C.
+J. H., and Thieken, A. H.: Insights into Flood-Coping Ap-
+praisals of Protection Motivation Theory: Empirical Evi-
+dence from Germany and France, Risk Anal., 38, 1239–1257,
+https://doi.org/10.1111/risa.12938, 2018.
+Bubeck, P., Berghäuser, L., Hudson, P., and Thieken, A. H.: Us-
+ing Panel Data to Understand the Dynamics of Human Be-
+havior in Response to Flooding, Risk Anal., 40, 2340–2359,
+https://doi.org/10.1111/risa.13548, 2020.
+Caldas-Alvarez, A., Augenstein, M., Ayzel, G., Barfus, K., Cherian,
+R., Dillenardt, L., Fauer, F., Feldmann, H., Heistermann, M.,
+Karwat, A., Kaspar, F., Kreibich, H., Lucio-Eceiza, E. E., Mered-
+ith, E. P., Mohr, S., Niermann, D., Pfahl, S., Ruff, F., Rust, H.
+W., Schoppa, L., Schwitalla, T., Steidl, S., Thieken, A. H., Trad-
+owsky, J. S., Wulfmeyer, V., and Quaas, J.: Meteorological, im-
+pact and climate perspectives of the 29 June 2017 heavy pre-
+cipitation event in the Berlin metropolitan area, Nat. Hazards
+Earth Syst. Sci., 22, 3701–3724, https://doi.org/10.5194/nhess-
+22-3701-2022, 2022.
+DEFRA: Developing the evidence base for ﬂood resistance and re-
+silience: Summary Report, Environment Agency and DEFRA,
+London, UK, 2008.
+DeStatis: Ergebnisse des Zensus am 9. Mai 2011, Statistische Ämter
+des Bundes und der Länder, 2014.
+DeStatis: Bau- und Immobilienpreise – Tabellen, DeStatis, 2023a.
+DeStatis: Verbraucherpreisindex für Deutschland – Lange Reihen
+ab 1948 – Dezember 2022, DeStatis, 2023b.
+Dillenardt, L., Hudson, P., and Thieken, A. H.: Urban pluvial
+ﬂood adaptation: Results of a household survey across four
+German municipalities, J. Flood Risk Manag., 15, e12748,
+https://doi.org/10.1111/jfr3.12748, 2022.
+Dillenardt, L., Bubeck, P., Hudson, P., Wutzler, B., and Thieken,
+A. H.: Property-level adaptation to pluvial ﬂooding: An anal-
+ysis of individual behaviour and risk communication material,
+Mitig. Adapt. Strat. Gl., 29, 53, https://doi.org/10.1007/s11027-
+024-10148-y, 2024.
+DWD: Die Entwicklung von Starkniederschlägen in Deutschland –
+Plädoyer für eine differenzierte Betrachtung, DWD, 7 pp., 2016.
+EC (European Commission): Directive 2007/60/EC of the Euro-
+pean Parliament and of the Council of 23 October 2007 on the
+assessment and management of ﬂood risks, Ofﬁcial Journal of
+the European Union, L 288/27, https://eur-lex.europa.eu/eli/dir/
+2007/60/oj/eng (last access: 8 September 2025), 2007.
+EEA:
+Economic
+losses
+from
+weather-
+and
+climate-
+related
+extremes
+in
+Europe,
+European
+Environment
+Agency,
+https://www.eea.europa.eu/en/analysis/indicators/
+economic-losses-from-climate-related (last access: 22 August
+2025), 2024.
+Erdlenbruch, K. and Bonté, B.: Simulating the dynamics of individ-
+ual adaptation to ﬂoods, Environ. Sci. Policy, 84, 134–148, 2018.
+Fuchs, S., Karagiorgos, K., Kitikidou, K., Maris, F., Paparrizos, S.,
+and Thaler, T.: Flood risk perception and adaptation capacity: a
+contribution to the socio-hydrology debate, Hydrol. Earth Syst.
+Sci., 21, 3183–3198, https://doi.org/10.5194/hess-21-3183-2017,
+2017.
+GDV: Naturgefahrenreport 2022 – Die Schaden-Chronik der
+deutschen Versicherer, Gesamtverband der Deutschen Ver-
+sicherungswirtschaft e.V., 2022.
+GDV: Naturgefahrenreport 2023 – Die Schaden-Chronik der
+deutschen Versicherer, Gesamtverband deutscher Versicherer
+e.V., 2023.
+GFZ:
+Hochwasserschadensdatenbank
+HOWAS21,
+Helmholtz-
+Zentrum Potsdam – Deutsches GeoForschungsZentrum GFZ,
+https://howas21.gfz.de/, 9 September 2025.
+Gilligan, C., Kypri, K., and Bourke, J.: Social Networking Ver-
+sus Facebook Advertising to Recruit Survey Respondents:
+A Quasi-Experimental Study, JMIR Res. Protoc., 3, e48,
+https://doi.org/10.2196/resprot.3317, 2014.
+Grothmann, T. and Reusswig, F.: People at Risk of Flooding: Why
+Some Residents Take Precautionary Action While Others Do
+Not, Nat. Hazards, 38, 101–120, https://doi.org/10.1007/s11069-
+005-8604-6, 2006.
+Grounds, M., Leclerc, J., and Joslyn, S.: Expressing Flood Likeli-
+hood: Return Period versus Probability, Weather Clim. Soc., 10,
+5–17, 2018.
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025
+
+
+===== [page 21] =====
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+3277
+Houston, D., Werritty, A., Ball, T., and Black, A.: Environmen-
+tal vulnerability and resilience: Social differentiation in short-
+and long-term ﬂood impacts, T. I. Brit. Geog. 46, 102–119,
+https://doi.org/10.1111/tran.12408, 2021.
+Hudson, P., Botzen, W. J. W., Kreibich, H., Bubeck, P., and
+Aerts, J. C. J. H.: Evaluating the effectiveness of ﬂood dam-
+age mitigation measures by the application of propensity
+score matching, Nat. Hazards Earth Syst. Sci., 14, 1731–1747,
+https://doi.org/10.5194/nhess-14-1731-2014, 2014.
+Hunt, J.: Inland and coastal ﬂooding: developments in predic-
+tion and prevention, Phil. Trans. R. Soc. A, 363, 1475–1491,
+https://doi.org/10.1098/rsta.2005.1580, 2005.
+Kaiser, M. H. E.: Data-driven modeling of areas prone to heavy rain-
+induced ﬂoods, PhD thesis, TU München, https://mediatum.ub.
+tum.de/doc/1600892/1600892.pdf (last access: 14 August 2025),
+2021.
+Kapp, J. M., Peters, C., and Oliver, D. P.: Research Recruitment
+Using Facebook Advertising: Big Potential, Big Challenges, J.
+Cancer Educ., 28, 134–137, https://doi.org/10.1007/s13187-012-
+0443-z, 2013.
+Knocke, E. T. and Kolivras, K. N.: Flash Flood Aware-
+ness
+in
+Southwest
+Virginia,
+Risk
+Anal.,
+27,
+155–169,
+https://doi.org/10.1111/j.1539-6924.2006.00866.x, 2007.
+Köhler, L., Masson, T., Köhler, S., and Kuhlicke, C.: Better pre-
+pared but less resilient: the paradoxical impact of frequent ﬂood
+experience on adaptive behavior and resilience, Nat. Hazards
+Earth Syst. Sci., 23, 2787–2806, https://doi.org/10.5194/nhess-
+23-2787-2023, 2023.
+Kreibich, H., Thieken, A. H., Petrow, Th., Müller, M., and Merz,
+B.: Flood loss reduction of private households due to building
+precautionary measures – lessons learned from the Elbe ﬂood
+in August 2002, Nat. Hazards Earth Syst. Sci., 5, 117–126,
+https://doi.org/10.5194/nhess-5-117-2005, 2005.
+Kreibich, H., Christenberger, S., and Schwarze, R.: Economic mo-
+tivation of households to undertake private precautionary mea-
+sures against ﬂoods, Nat. Hazards Earth Syst. Sci., 11, 309–321,
+https://doi.org/10.5194/nhess-11-309-2011, 2011.
+Kreienkamp, F., Philip, S. Y., Tradowsky, J. S., Kew, S. F., Lorenz,
+P., Arrighi, J., Belleﬂamme, A., Bettmann, T., Caluwaerts, S.,
+Chan, S. C., Ciavarella, A., Cruz, L. D., Vries, H. D., Demuth, N.,
+Ferrone, A., Fischer, E. M., Fowler, H. J., Goergen, K., Heinrich,
+D., Henrichs, Y., Lenderink, G., Kaspar, F., Nilson, E., Otto, F.
+E. L., Ragone, F., Seneviratne, S. I., Singh, R. K., Skålevåg, A.,
+Termonia, P., Thalheimer, L., Aalst, M. V., Bergh, J. V. D., Vyver,
+H. V. D., Vannitsem, S., Oldenborgh, G. T. J. V., Schaeybroeck,
+B. V., Vautard, R., Vonk, D., and Wanders, N.: Rapid attribution
+of heavy rainfall events leading to the severe ﬂooding in Western
+Europe during July 2021, World Weather Attribution, http://hdl.
+handle.net/2128/30381 (last access: 8 September 2025), 2021.
+Lamond, J., Rose, C., Bhattacharya-Mis, N., and Joseph, R.: Ev-
+idence review for property ﬂood resilience phase 2 report,
+Flood Re and UWE Bristol, https://uwe-repository.worktribe.
+com/output/874824 (last access: 22 August 2025), 2018.
+Laudan, J., Rözer, V., Sieg, T., Vogel, K., and Thieken, A. H.: Dam-
+age assessment in Braunsbach 2016: data collection and analy-
+sis for an improved understanding of damaging processes dur-
+ing ﬂash ﬂoods, Nat. Hazards Earth Syst. Sci., 17, 2163–2179,
+https://doi.org/10.5194/nhess-17-2163-2017, 2017.
+Laudan, J., Zöller, G., and Thieken, A. H.: Flash ﬂoods versus river
+ﬂoods – a comparison of psychological impacts and implications
+for precautionary behaviour, Nat. Hazards Earth Syst. Sci., 20,
+999–1023, https://doi.org/10.5194/nhess-20-999-2020, 2020.
+Lindell, M. K. and Perry, R. W.: The Protective Action De-
+cision Model: Theoretical Modiﬁcations and Additional Evi-
+dence, Risk Anal., 32, 616–632, https://doi.org/10.1111/j.1539-
+6924.2011.01647.x, 2012.
+Maidl, E. and Buchecker, M.: Raising risk preparedness by ﬂood
+risk communication, Nat. Hazards Earth Syst. Sci., 15, 1577–
+1595, https://doi.org/10.5194/nhess-15-1577-2015, 2015.
+Müller, U.: 10 Jahre Hochwasserrisikomanagement in Sachsen.
+Dresdner Wasserbauliche Mitteilungen 48, Technische Uni-
+versität Dresden, Institut für Wasserbau und technische Hy-
+dromechanik, https://hdl.handle.net/20.500.11970/103482 (last
+access: 22 August 2025), 2013.
+Netzel,
+L.
+M.,
+Heldt,
+S.,
+Engler,
+S.,
+and
+Denecke,
+M.:
+The importance of public risk perception for the effec-
+tive management of pluvial ﬂoods in urban areas: A case
+study from Germany, J. Flood Risk Manag., 14, e12688,
+https://doi.org/10.1111/jfr3.12688, 2021.
+Piper, D., Kunz, M., Ehmele, F., Mohr, S., Mühr, B., Kron, A., and
+Daniell, J.: Exceptional sequence of severe thunderstorms and
+related ﬂash ﬂoods in May and June 2016 in Germany – Part 1:
+Meteorological background, Nat. Hazards Earth Syst. Sci., 16,
+2835–2850, https://doi.org/10.5194/nhess-16-2835-2016, 2016.
+Poussin,
+J.
+K.,
+Botzen,
+W.
+J.
+W.,
+and
+Aerts,
+J.
+C.
+J.
+H.: Factors of Inﬂuence on ﬂood damage mitigation be-
+havior
+by
+households,
+Environ.
+Sci.
+Policy,
+40,
+69–77,
+https://doi.org/10.1016/j.envsci.2014.01.013, 2014.
+Poussin, J. K., Botzen, W. J. W., and Aerts, J. C. J. H.: Effective-
+ness of ﬂood damage mitigation measures: Empirical evidence
+from French ﬂood disasters, Global Environ. Chang., 31, 74–84,
+https://doi.org/10.1016/j.gloenvcha.2014.12.007, 2015.
+Prentice-Dunn,
+S.
+and
+ROGERS,
+R.
+W.:
+Protection
+Mo-
+tivation
+Theory
+and
+preventive
+health:
+Beyond
+the
+Health
+Belief
+Model,
+Health
+Educ.
+Res.,
+1,
+153–161,
+https://doi.org/10.1093/her/1.3.153, 1986.
+Rogers,
+R.
+W.:
+A
+Protection
+Motivation
+Theory
+of
+Fear
+Appeals
+and
+Attitude
+Change,
+J.
+Psychol.,
+91,
+93–114,
+https://doi.org/10.1080/00223980.1975.9915803, 1975.
+Rogers, R. W.: Cognitive and Physiological Processes in Fear Ap-
+peals and Attitude Change: A Revised Theory of Protection Mo-
+tivation, in: Social Psychophysiology: A Sourcebook, edited by:
+Cacioppo, J. T. and Petty, R. E., Guilford Press, New York, 153–
+176, 1983.
+Shaver, L. G., Khawer, A., Yi, Y., Aubrey-Bassler, K., Etchegary,
+H., Roebothan, B., Asghari, S., and Wang, P. P.: Using Facebook
+Advertising to Recruit Representative Samples: Feasibility As-
+sessment of a Cross-Sectional Survey, J. Med. Internet Res., 21,
+e14021, https://doi.org/10.2196/14021, 2019.
+Spekkers, M., Rözer, V., Thieken, A., ten Veldhuis, M.-C., and
+Kreibich, H.: A comparative survey of the impacts of ex-
+treme rainfall in two international case studies, Nat. Hazards
+Earth Syst. Sci., 17, 1337–1355, https://doi.org/10.5194/nhess-
+17-1337-2017, 2017.
+Sweeney, T. L.: Modernized Areal Flash Flood Guidance, NOAA
+Technical Memorandum NWS HYDRO 44, Ofﬁce of Hydology
+Silver Spring, Mf, 1992.
+https://doi.org/10.5194/nhess-25-3257-2025
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+
+
+===== [page 22] =====
+3278
+L. Dillenardt and A. H. Thieken: Individual ﬂood risk adaptation in Germany
+Terpstra, T.: Emotions, trust, and perceived risk: affective and cog-
+nitive routes to ﬂood preparedness behaviour, Risk Anal., 31,
+1658–1675, https://doi.org/10.1111/j.1539-6924.2011.01616.x,
+2011.
+Thieken, A. H., Petrow, T., Kreibich, H., and Merz, B.: Insurability
+and Mitigation of Flood Losses in Private Households in Ger-
+many, Risk Anal., 26, 383–395, 2006.
+Thieken, A. H., Kreibich, H., Müller, M., and Lamond, J. E.:
+Data collection for a better understanding of what causes ﬂood
+damage–experiences with telephone surveys, in: Flood damage
+survey and assessment: new insights from research and practice,
+edited by: Molinari, D., Menoni, S., and Ballio, F., Wiley, 95–
+106, ISBN 978-1-119-21792-3, 2017.
+Thieken, A. H., Samprogna Mohor, G., Kreibich, H., and Müller,
+M.: Compound inland ﬂood events: different pathways, differ-
+ent impacts and different coping options, Nat. Hazards Earth
+Syst. Sci., 22, 165–185, https://doi.org/10.5194/nhess-22-165-
+2022, 2022.
+Thieken, A. H., Bubeck, P., Heidenreich, A., von Keyserlingk, J.,
+Dillenardt, L., and Otto, A.: Performance of the ﬂood warn-
+ing system in Germany in July 2021 – insights from af-
+fected residents, Nat. Hazards Earth Syst. Sci., 23, 973–990,
+https://doi.org/10.5194/nhess-23-973-2023, 2023.
+WHG: Wasserhaushaltsgesetz vom 31. Juli 2009, BGBl. I S. 2585,
+2009.
+Wind, H. G., Nierop, T. M., Blois, C. J. D., and Kok,
+J. L. D.: Analysis of ﬂood damages from the 1993 and
+1995 Meuse ﬂoods, Water Resour. Res., 35, 3459–3465,
+https://doi.org/10.1029/1999WR900192, 1999.
+Nat. Hazards Earth Syst. Sci., 25, 3257–3278, 2025
+https://doi.org/10.5194/nhess-25-3257-2025

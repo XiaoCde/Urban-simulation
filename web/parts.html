@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>MegaKit 构件图鉴</title>
+<style>
+  html, body { margin: 0; height: 100%; overflow: hidden; background: #e9e7e2;
+               font: 13px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif; color: #222; }
+  #hud { position: fixed; left: 14px; top: 12px; z-index: 5; background: rgba(255,255,255,.9);
+         border-radius: 8px; padding: 10px 14px; box-shadow: 0 2px 10px rgba(0,0,0,.12); }
+  #hud b { font-size: 14px; }
+  #hud div { color: #666; margin-top: 2px; }
+  #msg { position: fixed; left: 50%; top: 50%; transform: translate(-50%,-50%); z-index: 9;
+         background: rgba(0,0,0,.72); color: #fff; padding: 10px 18px; border-radius: 8px; }
+</style>
+</head>
+<body>
+<div id="hud">
+  <b>MegaKit 构件图鉴</b>
+  <div id="cnt">加载中…</div>
+  <div>拖拽旋转 · 滚轮缩放 · 标签 = 文件名</div>
+</div>
+<div id="msg">正在加载构件…</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "/node_modules/three/build/three.module.js",
+    "three/addons/": "/node_modules/three/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0xe9e7e2);
+scene.fog = new THREE.Fog(0xe9e7e2, 120, 260);
+
+// 光：半球光给底噪，平行光给方向，否则平屋顶和墙分不清
+scene.add(new THREE.HemisphereLight(0xffffff, 0x8d8578, 2.4));
+const sun = new THREE.DirectionalLight(0xfff4e2, 2.2);
+sun.position.set(40, 60, 30);
+scene.add(sun);
+const fill = new THREE.DirectionalLight(0xd8e6ff, 0.8);
+fill.position.set(-50, 30, -40);
+scene.add(fill);
+
+const camera = new THREE.PerspectiveCamera(38, innerWidth / innerHeight, 0.5, 600);
+camera.position.set(0, 46, 62);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(0, 2, 0);
+controls.enableDamping = true;
+controls.maxPolarAngle = Math.PI * 0.495;
+
+// 地面
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(400, 400),
+  new THREE.MeshStandardMaterial({ color: 0xd7d3cb, roughness: 1 })
+);
+ground.rotation.x = -Math.PI / 2;
+ground.position.y = -0.02;
+scene.add(ground);
+
+/** 用一个 canvas 画名字，做成贴片，摆在构件脚下。 */
+function label(text) {
+  const pad = 8, fs = 30;
+  const c = document.createElement('canvas');
+  const ctx = c.getContext('2d');
+  ctx.font = `${fs}px "Segoe UI", sans-serif`;
+  const w = Math.ceil(ctx.measureText(text).width) + pad * 2;
+  c.width = w; c.height = fs + pad * 2;
+  const g = c.getContext('2d');
+  g.fillStyle = 'rgba(255,255,255,0.92)';
+  g.fillRect(0, 0, c.width, c.height);
+  g.fillStyle = '#1d1d1d';
+  g.font = `${fs}px "Segoe UI", sans-serif`;
+  g.textBaseline = 'middle';
+  g.fillText(text, pad, c.height / 2);
+
+  const tex = new THREE.CanvasTexture(c);
+  tex.colorSpace = THREE.SRGBColorSpace;
+  tex.anisotropy = 4;
+  const h = 1.05;                       // 世界高度 1.05 m
+  const mesh = new THREE.Mesh(
+    new THREE.PlaneGeometry(h * c.width / c.height, h),
+    new THREE.MeshBasicMaterial({ map: tex, transparent: true, depthWrite: false })
+  );
+  return mesh;
+}
+
+const loader = new GLTFLoader();
+const names = await (await fetch('/assets/megakit/parts.json')).json();
+
+// 8 列网格，间距按构件最大尺寸给足（屋顶块 4 m 宽，留 6 m 才不挨着）
+const COLS = 8, GAP = 7.2;
+const rows = Math.ceil(names.length / COLS);
+const originX = -(COLS - 1) * GAP * 0.5;
+const originZ = -(rows - 1) * GAP * 0.5;
+
+let done = 0;
+for (let i = 0; i < names.length; i++) {
+  const name = names[i];
+  const cx = originX + (i % COLS) * GAP;
+  const cz = originZ + Math.floor(i / COLS) * GAP;
+  try {
+    const g = await loader.loadAsync('/assets/megakit/' + name + '.gltf');
+    g.scene.updateMatrixWorld(true);
+    const holder = new THREE.Group();
+    holder.add(g.scene);
+
+    // 统一缩放到最长边 ≈ 3.4 m，并把底面落到 y=0：构件尺寸从 0.7 m 到 4 m 不等，
+    // 不归一化的话小的看不见、大的挤成一团。
+    const box = new THREE.Box3().setFromObject(g.scene);
+    const size = box.getSize(new THREE.Vector3());
+    const longest = Math.max(size.x, size.y, size.z) || 1;
+    const k = Math.min(3.4 / longest, 2.2);
+    holder.scale.setScalar(k);
+    holder.position.set(cx, -box.min.y * k, cz);
+    scene.add(holder);
+
+    const lab = label(name);
+    lab.position.set(cx, 0.55, cz + 1.9);
+    lab.rotation.x = -Math.PI / 2;
+    scene.add(lab);
+
+    done++;
+  } catch (e) {
+    console.warn('[gallery] 失败', name, e && e.message);
+  }
+  document.getElementById('cnt').textContent = `${done} / ${names.length} 个构件`;
+}
+
+document.getElementById('msg').remove();
+document.getElementById('cnt').textContent = `${done} 个构件 · ${COLS} 列 × ${rows} 行`;
+window.__ready = true;
+window.__count = done;
+
+function tick() {
+  requestAnimationFrame(tick);
+  controls.update();
+  renderer.render(scene, camera);
+}
+tick();
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+</script>
+</body>
+</html>

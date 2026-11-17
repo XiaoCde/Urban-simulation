@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>MegaKit 拼装 · 样板验证</title>
+<style>
+  :root { color-scheme: dark; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 100%; height: 100%; overflow: hidden; background: #10141a; }
+  canvas { display: block; }
+  #hud {
+    position: fixed; left: 18px; top: 16px; z-index: 10;
+    font: 13px/1.7 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    color: #cfd6e0; text-shadow: 0 1px 4px rgba(0,0,0,.9);
+    pointer-events: none; user-select: none;
+  }
+  #hud b { color: #fff; font-weight: 600; }
+  #hud .k { color: #8da3bb; }
+  #hud .n { color: #ffd479; font-variant-numeric: tabular-nums; }
+  #tip {
+    position: fixed; left: 18px; bottom: 14px; z-index: 10;
+    font: 12px/1.6 -apple-system, "Segoe UI", "Microsoft YaHei", sans-serif;
+    color: #7f94ab; pointer-events: none;
+  }
+</style>
+<script type="importmap">
+{
+  "imports": {
+    "three": "/node_modules/three/build/three.module.js",
+    "three/addons/": "/node_modules/three/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="hud">加载中…</div>
+<div id="tip">拖拽旋转 · 滚轮缩放 · 这四栋楼全部由 10 种构件拼出，没有一个是整楼模型</div>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { loadMegakit, collectBuilding, buildInstancedMeshes, estimateCost } from './src/megakit.js';
+
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+renderer.setSize(innerWidth, innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x8fa6bd);
+scene.fog = new THREE.Fog(0x8fa6bd, 220, 620);
+
+const camera = new THREE.PerspectiveCamera(45, innerWidth / innerHeight, 0.1, 2000);
+camera.position.set(62, 46, 74);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.target.set(26, 9, 22);
+controls.enableDamping = true;
+controls.maxPolarAngle = Math.PI * 0.495;
+controls.update();
+
+// 光：一盏低角度主光 + 环境光，模拟上午
+const sun = new THREE.DirectionalLight(0xfff0d8, 2.6);
+sun.position.set(-70, 95, 55);
+sun.castShadow = true;
+sun.shadow.mapSize.set(2048, 2048);
+const sc = sun.shadow.camera;
+sc.left = -90; sc.right = 90; sc.top = 90; sc.bottom = -90; sc.far = 320;
+scene.add(sun);
+scene.add(new THREE.HemisphereLight(0xbcd4ea, 0x6b6357, 1.15));
+
+// 地面
+const ground = new THREE.Mesh(
+  new THREE.PlaneGeometry(400, 400),
+  new THREE.MeshStandardMaterial({ color: 0x9c9a92, roughness: 0.96 }),
+);
+ground.rotation.x = -Math.PI / 2;
+ground.receiveShadow = true;
+scene.add(ground);
+
+const grid = new THREE.GridHelper(400, 100, 0x6d7683, 0x6d7683);
+grid.material.opacity = 0.18;
+grid.material.transparent = true;
+grid.position.y = 0.02;
+scene.add(grid);
+
+// ---- 四栋样板楼：不同 footprint、不同高度、含一个 L 形 ----
+const CASES = [
+  { name: 'A 20×15 / 5层', poly: rect(0, 0, 20, 15), h: 15 },
+  { name: 'B 30×20 / 8层', poly: rect(34, 0, 30, 20), h: 24 },
+  { name: 'C 12×12 / 3层', poly: rect(0, 32, 12, 12), h: 9 },
+  {
+    name: 'D L形 / 6层', h: 18,
+    poly: [[34, 34], [58, 34], [58, 44], [46, 44], [46, 54], [34, 54]],
+  },
+];
+
+function rect(x, z, w, d) {
+  return [[x, z], [x + w, z], [x + w, z + d], [x, z + d]];
+}
+
+const hud = document.getElementById('hud');
+
+(async () => {
+  const t0 = performance.now();
+  const mk = await loadMegakit();
+  const tLoad = performance.now() - t0;
+
+  const sink = new Map();
+  let placed = 0, est = 0;
+  for (const c of CASES) {
+    placed += collectBuilding(mk, c.poly, c.h, 0, sink, { seed: placed * 13 });
+    est += estimateCost(c.poly, c.h);
+  }
+  const grp = buildInstancedMeshes(sink);
+  scene.add(grp);
+
+  // 三角面统计
+  let tris = 0;
+  for (const im of grp.children) {
+    const g = im.geometry;
+    tris += ((g.index ? g.index.count : g.attributes.position.count) / 3) * im.count;
+  }
+
+  hud.innerHTML =
+    `<b>MegaKit 拼装 · 样板</b><br>` +
+    `<span class="k">构件种类</span> <span class="n">10</span> · ` +
+    `<span class="k">加载</span> <span class="n">${tLoad.toFixed(0)} ms</span><br>` +
+    `<span class="k">4 栋楼共</span> <span class="n">${placed}</span> 个实例<br>` +
+    `<span class="k">InstancedMesh</span> <span class="n">${grp.children.length}</span> 个（= draw call）<br>` +
+    `<span class="k">三角面</span> <span class="n">${(tris / 1e3).toFixed(1)}k</span>`;
+
+  console.info(`[sample] placed=${placed} est=${est} draw=${grp.children.length} tris=${tris}`);
+  window.__ready = true;
+  window.__stats = { placed, draw: grp.children.length, tris, tLoad, est };
+})();
+
+addEventListener('resize', () => {
+  camera.aspect = innerWidth / innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(innerWidth, innerHeight);
+});
+
+renderer.setAnimationLoop(() => {
+  controls.update();
+  renderer.render(scene, camera);
+});
+</script>
+</body>
+</html>

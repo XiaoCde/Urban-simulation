@@ -15,6 +15,7 @@
  */
 
 import * as THREE from 'three';
+import { WINDOW_NIGHT, WINDOW_RATIO, WINDOW_COLOR } from './light-grid.js';
 
 const TEX_BASE = 'assets/tex/';
 
@@ -109,6 +110,11 @@ const BOX_FRAG = `
   uniform float uLift;
   uniform vec3 uTint;
   uniform float uPlain;
+  // —— 夜间窗光（light-grid.js 统一时刻表）：逐开间随机点亮，屋顶不亮
+  uniform float uWNight;
+  uniform float uWRatio;
+  uniform vec3 uWColor;
+  float vWin = 0.0;
   vec2 boxUv( vec3 p, vec3 n, vec2 t, vec3 bd ) {
     vec3 a = abs( n );
     vec2 uv;
@@ -136,6 +142,10 @@ function patchBoxProjection(mat, tu, tv, tag = '', lift = 1.0, tint = null, plai
     shader.uniforms.uLift = { value: lift };
     shader.uniforms.uTint = { value: tint ? new THREE.Vector3(...tint) : new THREE.Vector3(1, 1, 1) };
     shader.uniforms.uPlain = { value: plain };
+    // 共享对象引用：灯网每帧改 .value，所有立面材质同时换亮度 / 亮窗率
+    shader.uniforms.uWNight = WINDOW_NIGHT;
+    shader.uniforms.uWRatio = WINDOW_RATIO;
+    shader.uniforms.uWColor = { value: WINDOW_COLOR };
     mat.userData.uTileRef = shader.uniforms.uTile;
     mat.userData.uLiftRef = shader.uniforms.uLift;
 
@@ -147,6 +157,10 @@ function patchBoxProjection(mat, tu, tv, tag = '', lift = 1.0, tint = null, plai
 
     shader.fragmentShader = shader.fragmentShader
       .replace('#include <common>', `#include <common>\n${BOX_FRAG}`)
+      .replace('#include <emissivemap_fragment>', `
+        #include <emissivemap_fragment>
+        totalEmissiveRadiance += vWin * uWColor;
+      `)
       .replace('#include <map_fragment>', `
         #ifdef USE_MAP
           vec3 bN = normalize( cross( dFdx( vWPos ), dFdy( vWPos ) ) );
@@ -168,6 +182,16 @@ function patchBoxProjection(mat, tu, tv, tag = '', lift = 1.0, tint = null, plai
           // 与地形（顶点色已含亮度）并列时建筑会像黑盒子。这里做一次
           // 与参考照片一致的提亮，让砖石在晴天下读成中灰棕而不是深黑。
           diffuseColor.rgb *= min( alb * uLift * uTint, vec3( 1.0 ) );
+
+          // —— 夜间窗光：buv 以「一开间 × 一层」为单位，fract 就是窗格内坐标。
+          // 逐格 hash 决定这户亮不亮，逐栋相位 vBld.x 打散，避免全城同亮同灭。
+          vec2 wCell = floor( buv );
+          vec2 wUv = fract( buv );
+          float wRect = step( 0.24, wUv.x ) * step( wUv.x, 0.76 )
+                      * step( 0.18, wUv.y ) * step( wUv.y, 0.76 );
+          float wRnd = fract( sin( dot( wCell + vec2( vBld.x * 53.0, vBld.y * 0.07 ),
+                                       vec2( 12.9898, 78.233 ) ) ) * 43758.5453 );
+          vWin = wRect * step( 1.0 - uWRatio, wRnd ) * ( 1.0 - isRoofFace ) * uWNight;
         #endif
       `);
   };

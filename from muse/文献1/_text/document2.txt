@@ -1,0 +1,1354 @@
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 1
+TYPE Original Research
+PUBLISHED 19 July 2022
+DOI 10.3389/fpsyg.2022.913790
+OPEN ACCESS
+EDITED BY
+Andrea Bosco,
+University of Bari Aldo Moro, Italy
+REVIEWED BY
+Luigi Tinella,
+University of Bari Aldo Moro, Italy
+Pierluigi Cordellieri,
+Sapienza University of Rome, Italy
+*CORRESPONDENCE
+Amy D. Lykins
+alykins@une.edu.au
+SPECIALTY SECTION
+This article was submitted to
+Personality and Social Psychology,
+a section of the journal
+Frontiers in Psychology
+RECEIVED 06 April 2022
+ACCEPTED 28 June 2022
+PUBLISHED 19 July 2022
+CITATION
+Benjamin S, Parsons M, Apthorp D
+and Lykins AD (2022) Why take
+the risk? Exploring the psychosocial
+determinants of ﬂoodwater driving.
+Front. Psychol. 13:913790.
+doi: 10.3389/fpsyg.2022.913790
+COPYRIGHT
+© 2022 Benjamin, Parsons, Apthorp
+and Lykins. This is an open-access
+article distributed under the terms of
+the Creative Commons Attribution
+License (CC BY). The use, distribution
+or reproduction in other forums is
+permitted, provided the original
+author(s) and the copyright owner(s)
+are credited and that the original
+publication in this journal is cited, in
+accordance with accepted academic
+practice. No use, distribution or
+reproduction is permitted which does
+not comply with these terms.
+Why take the risk? Exploring the
+psychosocial determinants of
+ﬂoodwater driving
+Shauntelle Benjamin
+ 1,2, Melissa Parsons
+ 2,3,
+Deborah Apthorp
+ 1,4 and Amy D. Lykins
+ 1*
+1School of Psychology, University of New England, Armidale, NSW, Australia, 2Bushﬁre and Natural
+Hazards Cooperative Research Centre, Melbourne, VIC, Australia, 3School of Humanities, Arts,
+and Social Sciences, University of New England, Armidale, NSW, Australia, 4School of Computing,
+The Australian National University, Canberra, ACT, Australia
+As anthropogenic climate change progresses, there is an increasing need
+for individuals to make appropriate decisions regarding their approach to
+extreme weather events. Natural hazards are involuntary risk environments
+(e.g., ﬂooded roads); interaction with them cannot be avoided (i.e., a
+decision must be made about how to engage). While the psychological
+and sociocultural predictors of engagement with voluntary risks (i.e., risk
+situations that are sought out) are well-documented, less is known about
+the factors that predict engagement with involuntary risk environments. This
+exploratory study assessed whether mental health (depression, anxiety, and
+stress symptoms), personality traits, and cultural worldviews combine to
+predict engagement with involuntary risk, using the situation of ﬂoodwater
+driving. An Australian sample (N = 235) was assessed via questionnaire and
+scenario measures. Results were analyzed in a binomial logistic regression
+assessing which individual factors predicted decision-making in a proxy
+ﬂoodwater driving scenario. Agreeableness and gender were individually
+signiﬁcant predictors of ﬂoodwater driving intention, and four factors (named
+“affect,” “progressiveness,” “insightfulness,” and “purposefulness”) were derived
+from an exploratory factor analysis using the variables of interest, though
+only two (“progressiveness” and “insightfulness”) predicted ﬂoodwater driving
+intention in an exploratory binomial logistic regression. The ﬁndings highlight
+the need for further research into the differences between voluntary and
+involuntary risk. The implication of cultural worldviews and personality traits
+in interaction with mental health indicators on risk situations is discussed.
+KEYWORDS
+personality traits, cultural worldviews, ﬂoodwater driving, risk-taking behavior, mood
+states
+Introduction
+The overwhelming majority of climate scientists agree that anthropogenic climate
+change is occurring (Doran and Zimmerman, 2009; Rosenberg et al., 2010; Powell,
+2016), with remaining debates focused only on timing and degree: in other words, how
+fast humans will experience the consequences of rising world temperatures, and just
+Frontiers in Psychology 01 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 2
+Benjamin et al. 10.3389/fpsyg.2022.913790
+how severe these will be. While there are a variety of predicted
+environmental eﬀects of climate change (see IPCC, 2014 for
+review), the increased severity (and possibly frequency) of acute
+natural hazard events such as ﬂoods, wildﬁres, hurricanes,
+and other such extreme weather events represent a particular
+outcome of interest to health professionals, due to their
+likely impact on human health and wellbeing. These global
+changes, occurring in concert with a growing world population,
+suggest that even greater numbers of people are likely to face
+increasingly severe environmental threats going into the future.
+Consequently, understanding how individuals respond to
+environmental threats is crucial to mitigate future risk to human
+wellbeing associated with exposure to extreme weather events.
+The effects of natural hazard exposure
+The varied and sometimes long-term mental health eﬀects
+of natural hazard exposure have been well documented. Though
+people generally are resilient, and many do not develop
+mental illness following exposure to a traumatic event (Norris
+et al., 2009; Pietrzak et al., 2012), those that do can suﬀer
+signiﬁcant impacts on their overall wellbeing and functioning.
+Reviews of the post-disaster mental health literature (see Norris
+et al., 2002; Goldmann and Galea, 2014) indicate that post-
+traumatic stress disorder is experienced by 30–40% of direct
+disaster victims, and major depressive disorder might have the
+highest post-disaster prevalence of all psychological disorders
+examined. There are some indications that disorders such as
+generalized anxiety disorder, panic disorder, and phobias might
+also increase in prevalence following disaster exposure, and
+many victims report non-speciﬁc psychological sequelae such
+as sleep disruption, feelings of grief and anxiety, and physical
+symptoms such as headaches, fatigue, abdominal pain, and
+shortness of breath (Goldmann and Galea, 2014). Norris et al.
+(2009) reported that following exposure to disaster, only 11%
+of the samples they reviewed experienced minimal or transient
+impairment, 51% evidenced moderate impairment, and 21 and
+18%, respectively, showed severe or very severe impairment
+pointing to the development of one or more diagnosable
+psychological disorders. Typically, most persons experienced
+a peak of symptom presentation within the ﬁrst year post-
+exposure that then improved over time. However, a signiﬁcant
+minority of victims had symptoms that persisted for months
+or years, pointing to the ongoing nature of the psychological
+impact disaster exposure can precipitate.
+A great deal is known about the psychological eﬀects of
+natural hazard exposure, and the likely consequences for a
+substantial minority of those directly exposed to these events
+is predictable. However, in line with general clinical opinion
+as well as those of national psychological associations and
+research institutions (e.g., National Institute of Mental Health,
+World Health Organization, Australian Psychological Society),
+preventing mental illness is far preferable to working to manage
+and relieve it once it has developed. Recent reports from
+Australia indicate that mental health problems cost the economy
+over $220 billion annually (Australian Government Productivity
+Commission, 2020), an estimate that still does not account for
+the emotional and social costs associated with mental illness.
+Thus, for many important reasons, the ideal situation is to
+prevent the development of mental illness. It is clear that not
+all exposure to natural hazards is avoidable, but there is a
+diversity of behavioral responses when faced with a natural
+hazard, ranging from avoiding threats when risk is known to
+be high (e.g., evacuating during a bushﬁre or hurricane, not
+driving through ﬂooded roads) to electing to engage with the
+hazard (e.g., staying to ﬁght bushﬁres, sheltering in place during
+a hurricane, driving through a ﬂooded road). Irrespective of
+other environmental factors, it is possible, and perhaps even
+likely, that core intrapersonal features and/or mental health
+states inﬂuence responses to engage with or avoid natural
+hazards. Further exploration of the interactions between social
+and psychological inﬂuencers and their eﬀect on risk-taking
+behavior is urgently needed if we are to prepare for the
+increasing severity and frequency of natural hazard events.
+Individual factors associated with
+risk-taking
+With respect to who engages in risky behavior when faced
+with an environmental threat, there is a large body of research
+identifying the demographic characteristics and environmental
+factors that are associated with risky decision-making. Taking
+ﬂoodwater driving as an example, men (Haynes et al., 2016),
+those who are driving a 4-wheel-drive automobile (Gissing
+et al., 2015), and persons who are following the instructions
+of others (Hamilton et al., 2020) are most likely to attempt
+to drive through ﬂooded roadways. Previous experience with
+having driven through ﬂoodwaters is also associated with
+doing so again (Taylor and Haynes, 2019; Ahmed et al.,
+2020). Despite targeted government advertising highlighting the
+dangers associated with ﬂoodwater driving, fatalities have been
+increasing in Australia (Gissing et al., 2015), with more than half
+of unintentional ﬂood-related drowning deaths resulting from
+ﬂoodwater driving (Pearson and Hamilton, 2014; Australian
+Water Safety Council, 2016).
+Risk-taking and personality traits in driving situations have
+been queried in other areas, such as speeding and drink
+driving (e.g., Tinella et al., 2021), however, there may be
+implicit diﬀerences between those who engage in risky behavior
+unprompted by external factors and those presented with
+inherently risky situations and choose to then engage in risk-
+taking behavior. While personality traits have been noted as a
+distal inﬂuencer on proximal driving factors such as driving
+skills, the relationship between personality traits and driving
+Frontiers in Psychology 02 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 3
+Benjamin et al. 10.3389/fpsyg.2022.913790
+behavior is complex, given the variations in context and number
+of variables that inﬂuence behavior in this setting (Tinella
+et al., 2021). Tinella et al. (2021) queried whether demographic
+information was a distraction from underlying personality traits,
+however, found that information such as age, gender and
+experience or education are critical inﬂuencers impacting driver
+behavior in areas such as awareness, visual acuity, and reaction
+speed. Demographically, the people who engage in these
+behaviors are generally consistent with the ﬁndings described
+above. Moreover, in situations such as speeding and traﬃc
+violations, increased experience has been found to be consistent
+with increased violations, potentially due to a sense that they
+understand the road and its hazards better than less experienced
+drivers (Trapsilawati et al., 2021). Trapsilawati et al. (2021)
+also found that perception or awareness of what consequences
+the individual could face inﬂuence driver behavior. Married
+drivers with children and older drivers reported increased
+awareness of legal road requirements, while single and younger
+drivers were less responsive to these mechanisms, suggesting
+that risk awareness and aversion may be related to awareness
+of potential material loss. As demographics such as age and
+gender are intrinsically linked to sociocultural structures and
+expectations (Figner and Weber, 2011), risk-taking behavior
+is necessarily going to be inﬂuenced by a combination of
+biological, psychological and sociocultural inﬂuencers.
+Despite the information known about who is most likely
+to engage in risky behavior when faced with an environmental
+threat such as a ﬂooded road, and under what social and
+environmental circumstances, we know signiﬁcantly less about
+why and how these decisions are made. Are there intrapersonal
+characteristics that place a person at greater risk of engaging
+with an environmental threat? If such characteristics can be
+found, this information could be used to identify individuals
+with a higher propensity for engaging with these risky
+situations. Interventions may then be developed to mitigate
+individuals’ innate proclivities for environmental risk-taking,
+thus preventing the potential development of subsequent mental
+health diﬃculties due to direct natural hazard exposure.
+Given the lack of literature about the intrapersonal
+characteristics that inﬂuence engagement with an
+environmental threat, we turned to the literature on intrinsic
+psychological drivers (both clinically-relevant and socially-
+based) of risk-taking behavior in general. The clinically-relevant
+literature points to two major areas of interest: the eﬀects of
+mental states such as anxiety and depression on decision-
+making, and the eﬀects of personality factors (particularly
+in their extreme forms, potentially indicating personality
+pathology) on risk engagement.
+Mood states and risk-taking
+Research ﬁndings about the relationship between negative
+mood and/or aﬀect and risk-taking are somewhat mixed.
+Generally, negative mood or aﬀect, and depression speciﬁcally,
+show a positive correlation with risk-taking, such that when
+negative mood is higher, the propensity for engaging in risky
+behavior is also higher. However, this pattern sometimes varies
+depending on how the person has come to experience his or
+her negative mood (i.e., pre-existing depression vs. sad mood
+induction) and what type of risk has been assessed. Samples
+of persons self-reporting or actually diagnosed with clinical
+depression have shown higher propensities for sexual (Alvy
+et al., 2011; Wilson et al., 2014; Millar et al., 2017), ﬁnancial
+(Blaszczynski and McConaghy, 1989; Bayer et al., 2019), and
+general (Desrichard and Denarie, 2005) risk-taking. However,
+Cobb-Clarke et al. (2019) found a higher propensity for health
+but not general risk-taking in their depressed participants when
+assessed against their non-depressed participants. Interestingly,
+mood induction studies have largely found the opposite pattern,
+with greater negative mood increasing risk aversion (Yuen
+and Lee, 2003; Chou et al., 2007), though Mittal and Ross
+(1998) found that participants who experienced a negative mood
+induction showed higher levels of risk-taking than those in
+the positive mood induction condition. Herman et al. (2018)
+found that negative emotions were associated with increased
+impulsivity, while positive aﬀect was related to increased risk-
+taking. The authors in this case noted that negative aﬀect,
+and therefore impulsivity can, but may not necessarily, lead to
+increased risk-taking. Overall, these results suggest that while
+persons experiencing a temporary negative mood may become
+more risk averse, those experiencing a persistently negative
+mood are likely at higher risk of engaging in risky behaviors,
+potentially due to reduced impulse control or as a coping
+mechanism used in eﬀort to relieve the negative mood state.
+In contrast, the results of studies investigating how anxiety
+and stress inﬂuence risk-taking have mostly shown the opposite
+pattern. Maner et al. (2007) reported that participants with
+higher dispositional anxiety showed greater risk avoidance
+than non-anxious participants, as did Giorgetta et al. (2012)
+for participants with generalized anxiety or panic disorder.
+Giongetta et al. interpreted their results as indicative of a
+hypersensitivity to potential threats and pessimism associated
+with future events resulting in lower risk-taking engagement.
+However, Renier et al. (2016) reported that adolescents with
+higher social anxiety were more susceptible to risk-taking
+than those with lower social anxiety, suggesting that anxiety
+involving interpersonal interactions may place some people
+(at least, adolescents) at greater risk of engaging in risky
+behavior. Lastly, von Helversen and Rieskamp (2019) showed
+no main eﬀect of experiencing a stress induction on ﬁnancial
+risk-taking; however, participants who reported higher negative
+aﬀect prior to the stress induction did show an increase in risky
+decision-making that did not occur in the non-stress-induction
+condition, indicating important interactions between negative
+mood and stress and consequent behavioral outcomes.
+Frontiers in Psychology 03 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 4
+Benjamin et al. 10.3389/fpsyg.2022.913790
+Personality and risk-taking
+In an eﬀort to understand whether more enduring
+intrapersonal characteristics might put an individual at higher
+risk for engaging in risk-taking behavior, many researchers have
+turned to examining the relationships between personality traits
+and risk-taking. Though there have been a number of models of
+personality structure over the past decades, the model with the
+greatest amount of empirical support is the Five Factor Model,
+or the “Big Five” (McCrae and John, 1992). This model proposes
+that a person’s overall “personality” is constructed by the
+degree to which they experience the core features of openness
+to experience, conscientiousness, extraversion, agreeableness,
+and neuroticism (i.e., emotional instability; Costa et al., 2019).
+Test-retest intervals of 6–15 years have shown little change
+in the endorsement of the Big Five personality traits over
+time (Terracciano et al., 2006), providing support for their
+enduring nature. Furthermore, Big Five personality traits have
+been found to predict a wide range of positive and negative
+outcomes across the lifespan, and more recently have begun
+to be linked to diagnosable personality disorders (DSM-5;
+American Psychiatric Association, 2013).
+Though the reported prevalence of personality disorders
+in Australia is relatively low at 6.5% (Jackson and Burgess,
+2000) with a skew toward men that likely reﬂects the direct
+prevalence rate (in which individuals have been provided with
+a diagnosis), it is believed that the provisional prevalence rate
+(the rate at which a diagnosis might be provisionally provided)
+is likely to be higher. Furthermore, it is likely that even higher
+percentages of the overall population experience subclinical
+levels of one or more of the symptoms of a personality
+disorder—levels not reaching diagnostic thresholds but still
+impacting overall wellbeing and functioning. Research on
+maladaptive levels of the Big Five personality traits have shown
+extreme conscientiousness and its relationship to compulsivity
+to be associated with obsessive-compulsive personality disorder
+(Carvalho et al., 2019a), high levels of openness related to
+magical thinking have been associated with aspects of psychosis
+(Widiger and Crego, 2019), extreme levels of agreeableness
+associated with subservience as seen in dependent personality
+disorder (Carvalho et al., 2019b), a lack of neuroticism relating
+to fearlessness (Friedman, 2019), and high levels of extraversion
+resulting in dominance (Watson et al., 2019) associated with
+aspects of narcissistic personality disorder.
+Through the construct of personality traits, it is possible to
+see how enduring maladaptive cognition and aﬀect can result
+in risky decision-making. In a brief review of the literature on
+the Big Five personality traits and risk-taking using diﬀerent
+measures, assessing diﬀerent age groups, and investigating
+a variety of diﬀerent types of risky behaviors, some clear
+patterns emerge. One of the most consistent ﬁndings is the
+relationship between higher extraversion and greater propensity
+for risk-taking, which has been found from early (McGhee
+et al., 2012) to middle (Gullone and Moore, 2000) adolescence
+through to adulthood (Nicholson et al., 2005; Tok, 2011;
+Thompson and Prendergast, 2015; Czerwonka, 2019) across a
+range of diﬀerent potentially risky situations. Higher openness
+to experience (Nicholson et al., 2005; Tok, 2011; McGhee et al.,
+2012) and lower conscientiousness (Gullone and Moore, 2000;
+Tok, 2011; McGhee et al., 2012; Thompson and Prendergast,
+2015; Czerwonka, 2019) have also been associated with higher
+propensities for risk-taking.
+The ﬁndings for agreeableness and neuroticism are mixed,
+and these traits do not regularly account for a signiﬁcant amount
+of variance in risk-taking propensity. Risk-taking adolescents
+scored higher on agreeableness (Gullone and Moore, 2000),
+possibly suggesting a greater susceptibility to risk-tasking
+associated with peer pressure, but no other studies reviewed
+indicated that agreeableness signiﬁcantly contributed to risk-
+taking in either direction. Lower neuroticism was associated
+with greater risk-taking in sports (Tok, 2011) and across a
+number of diﬀerent domains (e.g., recreation, health, career,
+ﬁnance, safety) in the Nicholson et al. (2005) study; however,
+higher neuroticism was associated with greater impulse buying
+(Thompson and Prendergast, 2015) and more risk-taking in
+parkour enthusiasts (Merritt and Tharp, 2013) in other studies.
+Overall, research investigating the contribution of Big Five
+personality factors to risk-taking suggest that these traits
+together account for a large percentage of variance present in
+risk-taking behavior, reinforcing their relevance in examining
+various types of risk-taking behavior.
+Cultural worldviews and risk-taking
+Less clinically relevant but still pertinent to risk-taking
+behavior is the relationship between sociocultural worldviews
+and the perception of risk. The cultural theory of risk (Wildavsky
+and Dake, 1990) proposes a 2 × 2 matrix of culturally-
+based risk analysis that both reﬂects and reinforces one’s
+own preferences for social organization and culturally-derived
+ways of life. According to Douglas and Wildvasky (1982), the
+“grid” axis reﬂects preferences for social stratiﬁcation and roles
+of authority; as such, high grid scores reﬂect beliefs in the
+immutability of status (i.e., hierarchism), whereas low grid
+scores reﬂect beliefs that no individual should be excluded from
+social roles based on their demographic characteristics (i.e.,
+egalitarianism). The “group” axis reﬂects a person’s preferences
+for individualism vs. communitarianism; persons higher on
+the group axis prefer systems that foster self-reliance and
+competition (i.e., individualism), whereas persons lower on the
+group axis prefer social structures that foster strong social bonds
+and cooperation (i.e., communitarianism).
+An oft-mentioned example of the diﬀerences across the axes
+is the focus on environmental risk perception (Kahan, 2012).
+With respect to environmental threat, people high on the group
+axis (i.e., high on individualism) could be expected to dismiss
+environmental concerns due to the threat it introduces to their
+way of life, while those low on group characteristics would
+Frontiers in Psychology 04 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 5
+Benjamin et al. 10.3389/fpsyg.2022.913790
+likely be disdainful of the individualistic behaviors involved
+in dismissing environmental concern, viewing the focus on
+industry as selﬁsh or uncompromising. Comparatively, those
+high on hierarchical endorsement (i.e., high grid characteristics)
+can be predicted to dismiss environmental concerns due to the
+implicit judgment of authority that occurs in such discussions,
+while those low on grid characteristics (i.e., high egalitarianism)
+are more likely to question the judgment of those across rank
+lines, because such markers are deemed to be unjust.
+Voluntary vs involuntary risk situations
+The preceding information brieﬂy reviews what is known
+about psychological and sociocultural factors associated with
+risk-taking in general. However, there may be reason to examine
+whether the same cognitive or behavioral patterns occur when
+engaged by an involuntary risk situation that confronts an
+individual (e.g., ﬂooded roads) compared to when a risk
+situation is voluntary, or approached (e.g., abseiling). The
+majority of the cognitive and behavioral studies reviewed have
+examined mental states and personality factors that predict
+engagement of risky behaviors in voluntary situations that a
+person seeks out, such as sexual behavior, alcohol and drug use,
+gambling, extreme sports, and speeding while driving, and thus
+may serve as a proxy assessment of propensities for sensation
+seeking (Skeel et al., 2007). In the case of environmentally
+threatening situations, however, most persons who experience
+natural hazards are involuntarily confronted with them without
+their consent (Rehm et al., 2014). As such, we suggest that
+there are two dimensions to the voluntariness of a situation
+when engaging in risk-taking behavior. The ﬁrst is whether the
+individual can decide whether to be exposed to the risk situation
+or environment. This refers to the seeking out of risk situations
+(e.g., drug seeking behavior), but also applies to situations that
+could be avoided if the individual leaves the environment (e.g.,
+stockbroking). The second is the decision of how to engage with
+that risk. In our conceptualization, the bulk of research assesses
+how individuals behave in response to this decision. In the case
+of natural hazards, there is no ability to control whether there
+will be exposure to the risk situation. The only decision available
+to individuals is how to engage. In this way, predictors of
+risky environmental decision-making may be qualitatively and
+quantitatively diﬀerent from what we know about risk-taking
+in general. Given natural hazards are involuntarily experienced
+and not sought out, there may not be a typical proﬁle of a person
+who is faced with them. So, what does the average person do
+when faced with an environmentally-threatening situation, and
+what clinically-relevant and sociocultural characteristics drive
+these decisions?
+The current study
+In the current study, we aimed to address this gap in the
+literature by investigating the relative contribution of clinically
+relevant psychological and sociocultural characteristics to
+risk-taking behavior in a proxy situation of involuntary
+environmental threat, using ﬂoodwater driving as a test case.
+Due to the relative lack of information on psychological
+predictors of risky decision-making in natural hazard events, or
+the potential interactions amongst personality traits, ﬂoodwater
+driving and mental health indicators, for this exploratory study
+we relied on the results of studies that examined individual
+drivers of risk-taking in general to develop hypotheses. We
+focused on indicators of mental health and mental states
+(e.g., depression, anxiety, and stress symptoms) and personality
+factors associated with the Big Five (e.g., neuroticism,
+extraversion, openness to new experiences, agreeableness,
+and conscientiousness). We also assessed the contribution
+of sociocultural worldviews (e.g., hierarchism, egalitarianism,
+individualism, communitarianism) to this decision-making
+process, as these variables have been shown to be associated with
+environmental risk perceptions (Xue et al., 2014).
+To assess risk-taking behavior in a physically safe situation,
+we developed a proxy ﬂoodwater driving setting administered
+using a Situational Judgement Test (Ng and Rayner, 2010).
+Participants were presented with a situation in which they have
+approached a ﬂooded roadway in their own cars and were asked
+what they would do in this situation: drive through or ﬁnd a
+diﬀerent route.
+Based on the extant psychological risk-taking literature,
+and the literature about ﬂoodwater driving, we hypothesized
+that participants who are more likely to drive through ﬂooded
+roadways than to turn around would evidence:
+1. Higher levels of depressive symptoms;
+2. Lower levels of anxiety and stress;
+3. Lower conscientiousness;
+4. Higher extraversion;
+5. Higher openness;
+6. Higher levels of group cultural worldview;
+7. Lower levels of grid cultural worldview;
+8. Identify as male;
+9. Be younger rather than older adults.
+Method
+Participants
+Overall, 337 adults residing in Australia engaged with the
+online survey in October 2018. Data were removed for persons
+who did not complete all aspects of the survey, for those who
+completed the survey in less than half the median completion
+time, for those whose qualitative responses indicated that they
+had not completed the study in earnest, and for those who
+reported having had no ﬁrst-hand driving experience. The
+ﬁnal sample comprised 235 adults (Mage = 47.46, SD = 18.05,
+range = 18–82), of whom 60% (n = 141) identiﬁed as male and
+40% (n = 94) identiﬁed as female. Regarding education, 60%
+Frontiers in Psychology 05 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 6
+Benjamin et al. 10.3389/fpsyg.2022.913790
+of participants reported their highest educational attainment
+as a trade certiﬁcate or higher. The Australian Bureau of
+Statistics reports that the median age for capital cities is
+36 years, which is younger than the median for the rest of
+Australia (41.2; Australian Bureau of Statistics, 2020a,b). Both
+are younger than the reported median age of our sample
+(49 years of age). Our sample reported lower weekly income
+on average (approximately AUD$1,153) than the national mean
+(AUD$2,242) for 2017. Seventy per cent of the sample reported
+more than 10 years of driving experience, and consistent
+with previous research, 48.1% reported having driven through
+ﬂoodwater in the past.
+Qualtrics (Provo, Utah) was hired to recruit participants for
+this study. They were responsible for all aspects of advertising
+and recruitment to the study via their online survey panels.
+Participants received minor incentives for their participation,
+as determined and managed by Qualtrics. This study received
+approval from the University of New England’s Human
+Research Ethics Committee prior to participant recruitment.
+Measures
+International personality item pool
+The International Personality Item Pool (IPIP; Maples
+et al., 2014) is a public domain collection of items that can
+be used to assess personality traits. Participants were given
+a series of statements and asked to respond to them by
+describing themselves as they generally are, with response
+options ranging from 1 = “very inaccurate” to 5 = “very
+accurate,” with higher scores on the subscales indicating higher
+levels of that particular trait. For the present study, the Maples
+et al. (2014) 120-item measure was used to assess personality
+traits and symptomology consistent with the NEO Five-Factor
+Personality Inventory (Costa and McCrae, 1992). This 120-
+item measure has shown good convergent validity with the
+NEO-PI-R across each trait, with correlations ranging from
+0.88 to 0.91 (Maples et al., 2014). In the present sample,
+assessments of internal consistency resulted in Cronbach’s
+alphas of 0.68 for Conscientiousness (questionable), 0.74 for
+Openness (acceptable), 0.79 for Neuroticism (acceptable), 0.80
+for Agreeableness (good), and 0.88 for Extraversion (good).
+Depression, anxiety, and stress scale
+The Depression, Anxiety and Stress Scale (DASS-21;
+Lovibond and Lovibond, 1995) was administered to assess
+general mental health and wellbeing over the preceding week.
+Participants were asked to respond to 21 items such as, “I found
+it hard to wind down,” with response options ranging from
+0 = “never” to 3 = “almost always.” Scale scores ranged from 0
+to 21, with higher scores on the DASS-21 subscales indicating
+higher levels of depression, anxiety, and stress symptoms.
+The DASS-21 has been shown to have strong convergent and
+discriminant validity, as well as good internal consistency, with
+Cronbach’s alphas of 0.88 (depression), 0.82 (anxiety), and 0.90
+(stress; Henry and Crawford, 2005). Cronbach’s alphas for the
+current sample were 0.95 for depression (excellent), 0.89 for
+anxiety (good), and 0.92 for stress (excellent).
+Cultural cognition worldview scale
+The short version of the Cultural Cognition Worldview
+Scale (CCWS; Kahan et al., 2011) was used to assess participants’
+endorsements of cultural worldviews across two orthogonal
+axes of grid and group (Kahan et al., 2007). Participants were
+asked to respond to 12 items such as, “The government should
+stop telling people how to live their lives,” with response
+options ranging from 1 = “strongly disagree” to 7 = “strongly
+agree.” Higher scores on these two axes indicate greater
+endorsements of hierarchy or individualism, and thus lower
+endorsements of egalitarianism and communitarianism. The
+CCWS was designed and validated in the United States and
+has shown good internal consistency in American samples, with
+Cronbach’s alphas of 0.81 and 0.87 (Kahan et al., 2011). However,
+the internal consistency of these scales was questionable to
+acceptable in the current Australian sample, with Cronbach’s
+alphas of 0.61 and 0.76.
+Situational judgement test
+The participant’s proclivity to enter a ﬂooded road while
+driving was assessed without endangering them using a
+Situational Judgement Test (SJT; Ng and Rayner, 2010).
+Participants were provided with a vignette to assess their
+behavioral responses to a ﬂooded road while driving a car. The
+scenario read:
+It has been raining heavily and there has been a rise in the
+water level of the local river. You are driving during the daytime.
+You come to a point where the road is ﬂooded. You can see the
+water is ﬂowing downstream across the road, but there is no
+indication of whether it will continue to rise, fall, or stay the same.
+You note that there is a white ﬂood marker pole sticking out of the
+water at the side of the crossing. It shows a water depth of 20 cm.
+The SJT was designed to provide a baseline scenario for what
+a person would do when presented with a ﬂooded road under
+ideal circumstances. In this scenario, visibility was good, no one
+was in the car putting pressure on the participant to cross, and
+no information was provided indicating that the participant had
+an urgent reason to cross the road (e.g., to pick up a child)—all
+variables that have been shown to increase ﬂoodwater driving
+propensities in previous research (Wright et al., 2015). The
+depth of 20 cm was selected because at this depth, water will
+reach the underside of most cars, causing a potential ﬂoating
+hazard (Pearson and Hamilton, 2014). Previous research also
+has indicated that 20 cm is conceptualized as a low but still
+potentially risky scenario (Hamilton et al., 2016). After reading
+the scenario, participants were provided with four response
+options and asked to rank them in the order in which they would
+Frontiers in Psychology 06 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 7
+Benjamin et al. 10.3389/fpsyg.2022.913790
+undertake each action. The response options were: “Continue in
+the direction I was going,” “Stop and assess the situation,” “Find
+another route,” and “Something else.”
+Procedure
+Participants clicked on a link to the online survey through
+Qualtrics, where they were provided with information about
+the study. After providing consent, participants ﬁrst answered
+the demographics questions. They were then presented with
+measures in the following order: (1) CCWS; (2) the DASS-
+21; (3) the IPIP; and (4) the Situational Judgement Test.
+Participants were then thanked for their time and their
+responses were recorded.
+Statistical analyses
+This study utilized a correlational design to examine the
+individual psychological predictors impacting risk-taking
+behavior in an environmentally risky situation. To test our
+hypotheses, all data were analyzed using Jamovi computer
+software (The jamovi Project, 2022), except for factor scores,
+which were calculated using R (R Core Team, 2014) and the
+psych package (Revelle, 2021). To assess the determinants
+of ﬂoodwater driving in the Situational Judgement Test,
+we used binomial logistic regression to predict participant
+behaviors around ﬂoodwater driving using psychological and
+sociocultural factors. Though we had a priori hypotheses about
+which factors we expected to inﬂuence decision-making, we
+included all 10 variables of interest (i.e., depression, anxiety,
+stress, hierarchical-egalitarianism/grid scale, individualism-
+communitarianism/group scale, neuroticism, extraversion,
+openness, agreeableness, and conscientiousness) as well as
+two of the demographic variables (i.e., age and sex) that have
+been shown to be related to risk-taking in previous research.
+Additionally, we used exploratory factor analysis to discover
+whether latent constructs might underpin the decision-making
+process. We chose this method because the factors inﬂuencing
+engagement with involuntary risk may diﬀer from those
+reported in the literature about voluntary risk, and so an
+exploratory approach was deemed appropriate. Finally, we ran
+an exploratory binomial logistic regression to assess which
+factors (among those derived from the factor analysis) could
+predict reported ﬂoodwater driving intentions.
+Participant response decision options formed four
+categories reﬂective of the participant’s decision-making
+process: (1) drive straight through, (2) assess, then drive
+through, (3) assess, then take a diﬀerent route, and (4) take a
+diﬀerent route immediately, with a ﬁfth option, “something
+else” to allow participants to qualify responses. These categories
+reﬂected the point at which the participant stopped engaging
+with the ﬂooded road because they had either driven through
+it or turned around, irrespective of whether that happened as
+their ﬁrst decision or second. To analyze the data, we collapsed
+the responses into a binary: individuals who drove through
+(drive straight through, or assess then drive straight through)
+and individuals who did not (take a diﬀerent route immediately,
+or assess then take a diﬀerent route).
+Results
+Most participants (66.8%) reported the intention to stop
+and assess the situation prior to deciding; however, 21% of
+those who made the decision to assess then also reported the
+intention to drive through ﬂoodwater regardless. Correlations
+among the variables are reported in Table 1, and results of
+the logistic regression are reported in Table 2. While we asked
+participants to indicate their driving experience (in years), we
+found that this was highly correlated with age (r(233) = 0.84,
+p < 0.001). As such, we deemed that controlling for age was
+suﬃcient while avoiding multicollinearity as a result of including
+this demographic alongside.
+Binomial logistic regression
+Following assessment of the Akaike Information Criterion
+(AIC = 290) and analysis of McFadden’s, Cox and Snell and
+Nagelkerke goodness of ﬁt tests (reported in Table 1), we
+conducted a binomial logistic regression on the 12 variables.
+As noted in Table 2, the only statistically signiﬁcant predictors
+of intending to take a diﬀerent route were agreeableness
+(b = 0.04, Waldχ2 (1) = 6.66 p = 0.010) and gender (b =
+0.91, Waldχ2 (1) = 6.36,p = 0.012). At higher levels of
+agreeableness, participants were more likely to report the
+intention to take a diﬀerent route. Females were more likely to
+report taking a diﬀerent route than males.
+Additional analyses
+Factor analysis
+Given the high correlations between many of the variables,
+and the fact that, individually, most of our variables of interest
+were not directly associated with our behavior measure, we
+conducted an exploratory factor analysis to assess: (1) whether
+there were underlying, unidentiﬁed variables that clustered
+together amongst the 12 variables of interest, and (2) whether
+these factors (should they exist) better predicted the results
+of the SJT responses than the variables did individually. The
+exploratory factory analysis was conducted using principal axis
+factoring and orthogonal rotation (varimax) to assess whether
+underlying constructs existed among these 12 variables.
+Frontiers in Psychology 07 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 8
+Benjamin et al. 10.3389/fpsyg.2022.913790
+TABLE 1 Correlation matrix of the variables of interest.
+1 2 3 4 5 6 7 8 9 10 11
+1. Age –
+2. Gender −0.33*** –
+3. Group - CWV 0.04 −0.14* –
+4. Grid - CWV 0.17* −0.30*** 0.40*** –
+5. Neuroticism - IPIP −0.41*** 0.30*** −0.20** −0.20** –
+6. Extraversion - IPIP −0.07 −0.02 −0.11 −0.04 −0.29*** −−
+7. Openness - IPIP −0.22*** 0.20** −0.24*** −0.42*** 0.12 0.27*** –
+8. Agreeableness - IPIP 0.24*** 0.14* −0.14* −0.43*** −0.16* 0.11 0.28*** –
+9. Conscientiousness - IPIP 0.29*** 0.01 0.07 −0.01 −0.51*** 0.35*** 0.04 0.44*** –
+10. Depression - DASS −0.27*** 0.09 0.01 −0.06 0.68* −0.31*** 0.03 −0.15* −0.33*** –
+11. Anxiety - DASS −0.32*** 0.07 0.03 0.00 0.61 −0.14* −0.03 −0.25*** −0.36*** 0.79*** –
+12. Stress - DASS −0.36*** 0.15* −0.03 −0.07 0.68 −0.12 0.11 −0.17*** −0.29*** 0.84*** 0.83***
+*p < 0.05, **p < 0.01, ***p < 0.001.
+Sampling adequacy was “middling” (KMO = 0.75) as
+described using the standard set by Kaiser and Rice (1974).
+Initial eigenvalues and the scree plot both indicated that
+a 4-factor solution was appropriate (see Table 3). The
+ﬁrst factor, which we named “aﬀect,” explained 25.10%
+of variance within the factor and was comprised of the
+measure items of state depression, anxiety, stress and
+neuroticism. The second factor, named “progressiveness,”
+explained 14.24% of factor variance and was comprised
+of positively loaded neuroticism, gender, openness (to
+experience), and agreeableness, while age, group and grid
+cultural worldviews loaded negatively. As high scores on the
+cultural worldview scales indicate increasingly hierarchical
+and individualized cultural worldviews, a negative loading
+is indicative of the opposite constructs (egalitarianism
+and communitarianism, respectively), while age indicates
+younger individuals. The third factor, which we named
+“insightfulness,” comprised negatively loaded neuroticism
+and positively loaded agreeableness, conscientiousness, and
+age, explaining 10.90% of variance. The fourth factor, named
+“purposefulness” (after Witt, 2002) comprised positively
+loaded conscientiousness and extraversion, explaining
+8.10% of variance.
+Binomial regression of factor scores
+A binomial logistic regression using the factor
+scores derived from the original dependent variables
+reveals that only two of the factors, “progressiveness”
+(b = 0.33, Waldχ2 (2) = 13.4 p = 0.046) and “insightfulness”
+(b = 0.49, Waldχ2 (2) = 13.4 p = 0.005) signiﬁcantly predicted
+reported decision-making. Further, these latent variables more
+accurately predicted the intention to take a diﬀerent route
+(86.6%), rather than predicting the intention to drive through
+ﬂoodwater (19.3%). Results of this binomial regression are
+reported in Table 4.
+Discussion
+In this study, we aimed to establish whether state
+mental health and aﬀect, trait personality, and sociocultural
+characteristics predicted behavioral decision-making in an
+involuntary risk-taking situation. Trait agreeableness and
+gender identiﬁcation were the only signiﬁcant individual
+predictors of decision-making in the original regression analysis.
+Though we only found support for one of our original
+hypotheses, results of a binomial regression analysis using the
+factors revealed in an exploratory factor analysis indicated that
+the intention to avoid ﬂoodwater driving is likely to be impacted
+TABLE 2 Binomial logistic regression assessing which variables
+predict ﬂoodwater driving.
+95% Conﬁdence interval
+Predictor b SE Lower Odds ratio Upper
+Intercept 3.61 2.77 0.16 36.80 8411.14
+Age 0.01 0.01 0.99 1.01 1.03
+Depression –0.04 0.05 0.86 0.96 1.06
+Anxiety 0.10 0.06 0.98 1.11 1.25
+Stress 0.02 0.07 0.90 1.02 1.16
+Neuroticism – IPIP –0.03 0.02 0.95 0.98 1.01
+Extraversion – IPIP –0.01 0.01 0.96 0.99 1.01
+Openness – IPIP –0.03 0.02 0.94 0.97 1.00
+Agreeableness – IPIP 0.04* 0.02 1.01 1.04 1.08
+Conscientiousness – IPIP –0.01 0.02 0.96 0.99 1.02
+Female – Male 0.91* 0.37 1.21 2.47 5.07
+Group – CWV –0.05 0.04 0.89 0.95 1.03
+Grid – CWV –0.04 0.03 0.91 0.96 1.01
+Estimates represent the log odds of “Diﬀerent route” vs. “Drove through.” R2 = 0.11
+(McFadden), 0.13 (Cox-Snell), 0.18 (Nagelkerke). Model χ2(12) = 31.8, p = 0.0001.
+*p < 0.05.
+Frontiers in Psychology 08 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 9
+Benjamin et al. 10.3389/fpsyg.2022.913790
+TABLE 3 Factor analysis showing latent constructs between variables of interest.
+Factor
+“Aﬀect” “Progressiveness” “Insightfulness” “Purposefulness” Communalities
+DASS – stress 0.93 0.10
+DASS – depression 0.90 0.14
+DASS – anxiety 0.86 0.22
+IPIP – neuroticism 0.64 0.36 0.25
+CWV – grid –0.77 0.38
+IPIP – openness 0.55 0.63
+CWV – group –0.45 –0.35 0.80
+Sex 0.42 0.80
+IPIP – agreeableness 0.42 0.73 0.28
+IPIP – conscientiousness 0.58 0.36 0.47
+Age –0.32 0.46 0.58
+IPIP – extraversion 0.78 0.35
+“Principal axis factoring” extraction method was used in combination with a “varimax” rotation.
+by two constructs that we have named “progressiveness” and
+“insightfulness.”
+Outcome of hypotheses
+Of the psychosocial variables we used to predict risk-taking
+behavior (i.e., mental health indicators, cultural worldview
+and personality traits), only gender and trait agreeableness
+were signiﬁcant individual predictors of decision-making.
+While our ﬁndings regarding gender and risk-taking were
+consistent with existing literature (Kahan et al., 2007; Hamilton
+et al., 2020), the fact that our other hypotheses were not
+conﬁrmed is surprising, as negative aﬀect has been shown to
+increase or decrease risk-taking proclivities in several studies
+(Malouﬀ et al., 2005; Wise et al., 2015), and extraversion has
+been largely implicated as a predictor of other risk-taking
+activities (e.g., Breivik et al., 2019; Zhang et al., 2020).
+TABLE 4 Logistic regression to assess the predictive ability of
+identiﬁed factors.
+95% Conﬁdence interval
+Predictor b SE Lower Odds ratio Upper
+Intercept 0.57** 0.14 0.29 1.77 0.86
+Factor 2 – “Progressiveness” 0.33* 0.16 0.005 1.39 0.65
+Factor 3 – “Insightfulness” 0.50** 0.17 0.15 1.65 0.82
+Factor 1 – “Aﬀect” 3.40e-4 0.15 –0.29 1.00 0.29
+Factor – 4 “Purposefulness” –0.21 0.18 –0.56 0.81 0.13
+Estimates represent the log odds of “Diﬀerent route” vs. “Drove through”. R2 = 0.05
+(McFadden), 0.06 (Cox-Snell), 0.08 (Nagelkerke). Model χ2(2) = 13.4, p = 0.001.
+*p < 0.05, **p = 0.005, *p < 0.001.
+Additionally, in applying the cultural theory of risk to risk-
+perception associated with oil and gas development, McEvoy
+et al. (2017) found that individuals who aligned more with
+an increased individualistic worldview (high group cultural
+worldview) were more likely to express low risk perception
+when faced with an objectively risky situation. Given these
+diﬀerences are so well documented, our initial ﬁndings were
+somewhat unexpected.
+Exploratory factor analysis
+Due to the lack of individual predictors, we ran an
+exploratory factor analysis and a further binomial logistic
+regression using the factor scores to assess whether groupings of
+variables better predicted risk-taking behavior than those
+variables on their own. We reduced our twelve initial
+predictors down to four latent variables, which we named
+“progressiveness” (more female, with positively loaded
+neuroticism, openness to experience, and agreeableness;
+negatively loaded age, group and grid cultural worldviews),
+“insightfulness” (negatively loaded neuroticism and positively
+loaded agreeableness, conscientiousness, and age), “aﬀect”
+(state depression, anxiety, stress and neuroticism), and
+“purposefulness” (positively loaded conscientiousness
+and extraversion).
+Of the four latent variables, two of them (“progressiveness”
+and “insightfulness”) signiﬁcantly predicted an aversion
+to ﬂoodwater driving behavior in our sample. The latent
+variable of aﬀect, combining neuroticism with mental health
+indicators, was to be expected, as neuroticism is largely
+conceptualized as a trait describing (the lack of) emotional
+stability (Widiger and Oltmanns, 2017). However, both
+positive and negative valences of neuroticism were predictive
+Frontiers in Psychology 09 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 10
+Benjamin et al. 10.3389/fpsyg.2022.913790
+of risk-aversion within the constructs of “progressiveness”
+and “insightfulness.” As neuroticism is largely perceived
+to be a negative trait with broadly poor health outcomes
+(Widiger and Oltmanns, 2017), the possibility that the
+interaction of increased neuroticism with other traits
+such as openness to experience and agreeableness may
+provide protection against more extreme trait expression is
+notable.
+Though we did not hypothesize an impact of agreeableness
+on ﬂoodwater driving, it should not be surprising that those
+individuals who indicated they would not drive through
+ﬂoodwater are also those more likely to report increased
+openness to experience and low hierarchism. Hierarchism is
+deﬁned within this context as deference to authority (Kahan
+et al., 2011), however, increased hierarchism does not identify
+in which authority the individual places their trust. Those
+exhibiting increased openness to experience, and increased
+agreeableness, therefore may, in their rejection of authority,
+be seen to be more likely to consider their own ability to
+navigate the risk situation before choosing how to engage
+with it. This possibility is interesting given the fact that
+increased agreeableness has been associated with selﬂessness,
+subservience, and suggestibility (Widiger et al., 2012).
+The inﬂuence of voluntariness
+The inﬂuence of agreeableness in voluntary risk situations
+may lend further credence to a potential diﬀerence between
+voluntary (approached) and involuntary (unavoidable) risk
+situations. Increased agreeableness conceptually aligns within
+both the “progressive” and “insightful” factors, both of
+which we found to be signiﬁcantly predictive of ﬂoodwater
+driving aversion in our sample. As agreeableness can be
+conceptually viewed as collaborative, considerate, sociable,
+and altruistic (Graziano and Eisenberg, 1997), involuntary
+situations may lead such individuals to consider the macro
+eﬀect of their risk-taking behavior rather than their own
+motivations. When compared to the sociability of extraversion,
+it is possible that the two traits work in opposition across
+involuntary and voluntary risk-taking, such that increased
+agreeableness fulﬁlls a similar psychosocial function in
+involuntary situations that extraversion fulﬁlls in voluntary
+situations. Speciﬁcally, it is possible that increased extraversion
+and low agreeableness (two “leader traits”; Aichholzer and
+Willmann, 2020) which are recognized as socially desirable in
+voluntary situations, become ineﬀective in involuntary risk
+situations, thus leaving those with increased agreeableness,
+conscientiousness, and openness to experience to ﬁnd safer
+solutions to navigate undesirable environments. As such, both
+sets of traits would be required in a functioning community
+to navigate both emergency risk situations and risks that may
+provide community enhancement.
+Implications and limitations
+Environmental threat is currently mitigated through several
+diﬀerent means, including education programs (McNeill et al.,
+2016), legal regulations such as ﬁnes for passing barriers or
+engaging in risky behavior (Ahmed et al., 2018), and early
+warning systems and signage (Franklin et al., 2014). There is a
+limited understanding of the behavioral determinants around
+environmental risk-taking behavior, and as noted above, given
+reports that ﬂoodwater driving is increasing (Taylor et al., 2019),
+one positive ﬁnding is that most (66.8%) individuals stopped
+to assess the situation prior to making a decision, although
+21% of those who stopped to assess the situation then made
+the decision to continue through despite this initial hesitation.
+As behavioral change is a complex endeavor, the present study
+provides some insight into crucial traits and experiences that
+may be inﬂuencing poor decision-making when faced with an
+environmental risk situation.
+With respect to potential limitations of the current study,
+we note that the internal consistency for the CCWS was
+“questionable” in our sample, consistent with the study of
+Phillips et al., 2018 (unpublished) that reported a Cronbach’s
+alpha of 0.22 for the short form version of this measure (Johnson
+and Swedlow, 2020). The question of individual vs. country
+level diﬀerences has been raised, with van der Linden (2015)
+suggesting that using a measure designed to detect cultural
+leanings may be better suited to broader scale demographic
+purposes than to observe its eﬀect on individuals. It is also
+possible that the issue lies with the Likert scale used to engage
+participants: having a middle-of-the-range response option
+(which was not included in the original measure) allowed for less
+commitment to either end of each axis. The eﬀect of hierarchical
+cultural worldviews may, in certain cultures, be of crucial
+importance, as the partisan political treatment of environmental
+threat may be a cause of certain risk-taking behaviors (Kahan
+et al., 2011), particularly as those with increased hierarchical
+worldviews would be more likely to defer to, or expect to be
+deferred to as, an authority in an involuntary risk situation.
+A further limitation of the study are the ﬁt indices of
+the binomial regression models. While we found signiﬁcance
+with the variables and factors distilled from our measures, low
+ﬁt indices indicate the model is not as robust as we would
+have hoped. Given the exploratory nature of the study and
+the breadth of variables assessed, further research may ﬁnd
+that there is a better battery or collection of items that may
+more accurately represent the factors involved. Due to funding
+limitations and concerns around response fatigue/participant
+non-completion, we were unable to include measures of
+global cognitive function such as Raven’s Progressive Matrices,
+which may have allowed us to assess and control for the
+eﬀect of cognitive function on risk-taking behavior (Raven,
+2000; Porter et al., 2004). Decision-making behavior is limited
+by and inﬂuenced by time available, in combination with
+Frontiers in Psychology 10 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 11
+Benjamin et al. 10.3389/fpsyg.2022.913790
+cognitive load capacity; however, this was beyond the scope
+of our current study. Future research would do well to
+include such assessments (Kahneman, 2003). Locus of control
+(i.e., the amount of control an individual perceives he or
+she has over his/her life; Galvin et al., 2018) may be a
+suitable target for future study, given its potential relevance
+in risky decision-making in relation to the involuntary risk
+of natural hazards. As discussed earlier, the majority of
+research into risk-taking is focused toward understanding
+risk-taking through the lens of voluntary or proxy-voluntary
+risks. Burmudez (1999) reported that personality traits can
+be clustered onto factors, with agreeableness and neuroticism
+loading onto an “emotional character” construct that includes
+anxiety, depression and impatience (with an external locus
+of control), and conscientiousness, extraversion and openness
+loading on an energetic-motivational factor that includes the
+constructs of competitiveness, optimism, self-eﬃcacy, and an
+internal locus of control. While optimism and self-eﬃcacy
+may be powerfully beneﬁcial in voluntary risk situations, an
+excess of self-eﬃcacy and optimism may be contributing to
+undesirable outcomes in involuntary risk-taking situations.
+This is not to say that the opposite is better – heightened
+emotional coping mechanisms may result in risk-taking to
+avoid dealing with the emotions engendered by the situation.
+Establishing the extent to which locus of control impacts
+other mental health and demographic factors would be
+beneﬁcial.
+Males have been reported to be largely more risk-prone
+than females (Harris and Jenkins, 2006), so the consistency
+in this ﬁnding is not particularly surprising. As discussed,
+increased stress is associated with greater risk taking (Lazarus,
+2000). Previous ﬂoodwater driving research has investigated
+the frequency with which males would engage in this risk-
+taking behavior. However, our study has placed focus on
+stress and (lack of) openness as potential reasons why this
+may occur in involuntary situations. We have also queried
+the preferences of the general public with regard to such
+behavior rather than eliciting responses from those with
+experience of having done so before. With some of the
+psychological determinants of this risk situation identiﬁed,
+future research would beneﬁt from ascertaining whether
+there are more psychological diﬀerences between voluntary
+and involuntary risk, and if there are, how they could
+be addressed to reduce the number of individuals making
+dangerous decisions. We found little support for our hypotheses
+regarding the eﬀects of individual personality traits on risk-
+taking – a somewhat surprising result given the amount of
+literature that indicates that these relationships should have
+been apparent in our results (e.g., Soane and Chmiel, 2005;
+Bowen et al., 2020). However, when trait eﬀects were combined
+with cultural worldview, age and gender, predictive ability
+achieved signiﬁcance, suggesting that risk-aversion is inﬂuenced
+by how “progressive” or “insightful” the individual’s nature.
+Taken together, these ﬁndings point to the need for hazard-
+reduction messaging that targets individuals on diﬀering levels
+to account for psychosocial diﬀerences that may impact message
+acceptance.
+Data availability statement
+The raw data supporting the conclusions of this article will
+be made available by the authors, without undue reservation.
+Ethics statement
+The studies involving human participants were reviewed
+and approved by University of New England Human Research
+Ethics Committee. The participants provided their written
+informed consent to participate in this study.
+Author contributions
+SB, MP, and AL contributed to conception and design of
+the study and wrote sections of the manuscript. SB and AL
+organized and cleaned the data. SB and DA performed the
+statistical analyses. SB wrote the ﬁrst draft of the manuscript.
+All authors contributed to the manuscript revision, read, and
+approved the submitted version.
+Funding
+The Bushﬁre and Natural Hazards Cooperative Research
+Centre provided scholarship funding for this research.
+Conﬂict of interest
+The authors declare that the research was conducted in the
+absence of any commercial or ﬁnancial relationships that could
+be construed as a potential conﬂict of interest.
+Publisher’s note
+All claims expressed in this article are solely those of the
+authors and do not necessarily represent those of their aﬃliated
+organizations, or those of the publisher, the editors and the
+reviewers. Any product that may be evaluated in this article, or
+claim that may be made by its manufacturer, is not guaranteed
+or endorsed by the publisher.
+Frontiers in Psychology 11 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 12
+Benjamin et al. 10.3389/fpsyg.2022.913790
+References
+Ahmed, M. A., Haynes, K., and Taylor, M. (2018). Driving into ﬂoodwater: a
+systematic review of risks, behaviour and mitigation. Int. J. Disaster Risk Reduct.
+31, 953–963. doi: 10.1016/j.ijdrr.2018.07.007
+Ahmed, M. A., Haynes, K., and Taylor, M. (2020). Vehicle-related ﬂood fatalities
+in Australia, 2001–2017. J. Flood Risk Manag. 13:e12616. doi: 10.1111/jfr3.12616
+Aichholzer, J., and Willmann, J. (2020). Desired personality traits in politicians:
+similar to me but more of a leader. J. Res. Personal. 88:103990.
+Alvy, L. M., McKirnan, D. J., Mansergh, G., Koblin, B., Colfax, G. N., Flores,
+S. A., et al. (2011). Depression is associated with sexual risk among men who have
+sex with men, but is mediated by cognitive escape and self-eﬃcacy. AIDS Behav.
+15, 1171–1179. doi: 10.1007/s10461-010-9678-z
+American Psychiatric Association (2013). Diagnostic and Statistical Manual of
+Mental Disorders, 5th Edn. Washington, D. C: American Psychiatric Association.
+Australian Bureau of Statistics (2020a). Household Income and Wealth,
+Australia. Canberra, VIC: Australian Bureau of Statistics.
+Australian Bureau of Statistics (2020b). Twenty years of Population Change.
+Canberra, ACT: Australian Bureau of Statistics.
+Australian Government Productivity Commission (2020). Mental Health
+Inquiry Report, No. 95. Melbourne, VIC: Productivity Commission.
+Australian Water Safety Council (2016). Australian Water Safety Strategy
+Consultation Draft 2016-20. Sydney, NSW: Australian Water Safety Council.
+Bayer, Y. M., Shtudiner, Z., Sohorukov, O., and Grisaru, N. (2019). Time and
+risk preferences, and consumption decisions of patients with clinical depression.
+J. Behav. Exp. Econ. 78, 138–145.
+Blaszczynski, A., and McConaghy, N. (1989). Anxiety and/or depression in the
+pathogenesis of addictive gambling. Int. J. Addict. 24, 337–350.
+Bowen, L., Budden, S. L., and Smith, A. P. (2020). Factors underpinning unsafe
+driving: a systematic literature review of car drivers. Trans. Res. Part F: Traﬃc
+Psychol. Behav. 72, 184–210.
+Breivik, G., Sand, T. S., and Sookermany, A. M. (2019). Risk-taking and
+Sensation Seeking in Military Contexts: A Literature Review. Thousand Oaks, CA:
+Sage.
+Burmudez, J. (1999). Personality and health-protective behaviour. Eur. J.
+Personal. 13, 83–103.
+Carvalho, L. D., Costa, A. R. L., Otoni, F., and Junqueira, P. (2019a). Obsessive–
+compulsive personality disorder screening cut-oﬀ for the conscientiousness
+dimension of the dimensional clinical personality inventory 2. Eur. J. Psychiatry
+33, 112–119. doi: 10.1016/j.ejpsy.2019.05.002
+Carvalho, L. D., Pianowski, G., and Goncalves, A. P. (2019b). Dimensional
+clinical personality inventory-2: investigating key factors on the assessment of
+dependent personality disorder. Psychol. Health Med. 24, 732–738. doi: 10.1080/
+13548506.2018.1554254
+Chou, K.-L., Lee, T. M. C., and Ho, A. H. Y. (2007). Does mood state change risk
+taking tendency in older adults? Psychol. Aging 22, 310–318.
+Cobb-Clarke, D. A., Dahmann, S. C., and Kettlewell, N. (2019). Depression, Risk
+Preferences and Risk-Taking Behavior. Bonn: IZA. IZA Discussion Papers, No.
+12285.
+Costa, P. T. Jr., McCrae, R. R., and Löckenhoﬀ, C. E. (2019). Personality across
+the life span. Annu. Rev. Psychol. 70, 423–448. doi: 10.1146/annurev-psych
+Costa, P. T., and McCrae, R. R. (1992). The ﬁve-factor model of personality
+and its relevance to personality disorders. J. Personal. Disord. 6, 343–359. doi:
+10.1521/pedi.1992.6.4.343
+Czerwonka, M. (2019). Cultural, cognitive and personality traits in risk-taking
+behaviour: evidence from Poland and the United States of America. Econ.
+Research-Ekonomska Istrazivanja 32, 894–908.
+Desrichard, O., and Denarie, V. (2005). Sensation seeking and negative
+aﬀectivity as predictors of risky behaviors: a distinction between occasional versus
+frequent risk-taking. Addict. Behav. 30, 1449–1453. doi: 10.1016/j.addbeh.2005.01.
+011
+Doran, P. T., and Zimmerman, M. K. (2009). Examining the scientiﬁc
+consensus on climate change. Eos Trans. Am. Geophys. Union 90:22. doi: 10.1029/
+2009eo030002
+Douglas, M., and Wildvasky, A. (1982). Risk and Culture. Berkley, C. A:
+University of California Press.
+Figner, B., and Weber, E. U. (2011). Who takes risks when and why? Curr. Direct.
+Psychol. Sci. 20, 211–216. doi: 10.1177/0963721411415790
+Franklin, R. C., King, J. C., Aitken, P. J., and Leggat, P. A. (2014). “Washed
+away”—assessing community perceptions of ﬂooding and prevention strategies:
+a North Queensland example. Nat. Hazards 73, 1977–1998. doi: 10.1007/s11069-
+014-1180-x
+Friedman, H. S. (2019). Neuroticism and health as individuals age. Personal
+Disord. 10, 25–32. doi: 10.1037/per0000274
+Galvin, B. M., Randel, A. E., Collins, B. J., and Johnson, R. E. (2018). Changing
+the focus of locus (of control): a targeted review of the locus of control literature
+and agenda for future research. J. Organ. Behav. 39, 820–833. doi: 10.1002/job.
+2275
+Giorgetta, C., Grecucci, A., Zuanon, S., Perini, L., Balestrieri, M., Bonini, N.,
+et al. (2012). Reduced risk-taking behavior as a trait feature of anxiety. Emotion
+12, 1373–1383.
+Gissing, A., Haynes, K., Coates, L., and Keys, C. (2015). Motorist behaviour
+during the 2015 Shoalhaven ﬂoods. Australian J. Emergency Manag. 31, 25–30.
+Goldmann, E., and Galea, S. (2014). Mental health consequences of disasters.
+Annu. Rev. Public Health 35, 169–183.
+Graziano, W. G., and Eisenberg, N. (1997). “Agreeableness: a dimension of
+personality,” in Handbook of Personality Psychology, eds R. Hogan, J. A. Johnson,
+and S. R. Briggs (Cambridge, MA: Academic Press).
+Gullone, E., and Moore, S. (2000). Adolescent risk-taking and the ﬁve-factor
+model of personality. J. Adolesc. 23, 393–407.
+Hamilton, K., Demant, D., Peden, A. E., and Hagger, M. S. (2020). A systematic
+review of human behaviour in and around ﬂoodwater. Int. J. Disaster Risk Reduct.
+47:101561. doi: 10.1016/j.ijdrr.2020.101561
+Hamilton, K., Peden, A. E., Pearson, M., and Hagger, M. S. (2016). Stop
+there’s water on the road! Identifying key beliefs guiding people’s willingness to
+drive through ﬂooded waterways. Safety Sci. 89, 308–314. doi: 10.1016/j.ssci.2016.
+07.004
+Harris, C. R., and Jenkins, M. (2006). Gender diﬀerences in risk assessment: why
+do women take fewer risks than men? Judgement Decision Making 1, 48–63.
+Haynes, K., Coates, L., de Oliveira, F.D., Gissing, A., Bird, D., van den Honert, R.,
+et al. (2016) An Analysis of Human Fatalities from Floods in Australia 1900-2015.
+Melbourne, VIC: Bushﬁre and Natural Hazards Cooperative Research Centre.
+Henry, J. D., and Crawford, J. R. (2005). The short-form version of the
+Depression Anxiety Stress Scales (DASS-21): construct validity and normative
+data in a large non-clinical sample. Br. J. Clin. Psychol. 44, 227–239. doi: 10.1348/
+014466505X29657
+Herman, A. M., Critchley, H. D., and Duka, T. (2018). Risk-taking and
+impulsivity: the role of mood states and interoception. Front. Psychol. 9:1625.
+doi: 10.3389/fpsyg.2018.01625
+IPCC (2014). “Climate change 2014: synthesis report. contribution of working
+groups I, II and III to the Fifth assessment report of the intergovernmental panel
+on climate change,” in Core writing team, eds R. K. Pachauri and L. A. Meyer
+(Geneva: IPCC).
+Jackson, H. J., and Burgess, P. M. (2000). Personality disorders in the
+community: a report from the Australian National Survey of Mental Health
+and Wellbeing. Soc. Psychiatry Psychiatric Epidemiol. 35, 531–538. doi: 10.1007/
+s001270050276
+Johnson, B. B., and Swedlow, B. (2020). Comparing cultural theory and
+cultural cognition theory survey measures to each other and as explanations
+for judged risk. J. Risk Res. 23, 1278–1300. doi: 10.1080/13669877.2019.164
+6310
+Kahan, D. M. (2012). “Cultural cognition as a conception of the cultural theory
+of risk,” in Handbook of Risk Theory, eds S. Roeser, R. Hillerbrand, P. Sandin, and
+M. Peterson (Amsterdam: Springer), doi: 10.1007/978-94-007-1435_28
+Kahan, D. M., Braman, D., Gastil, J., Slovic, P., and Mertz, C. K. (2007).
+Culture and identity-protective cognition: explaining the white-male eﬀect in risk
+perception. J. Empirical Legal Stud. 4, 465–505.
+Kahan, D. M., Jenkins-Smith, H., and Braman, D. (2011). Cultural cognition of
+scientiﬁc consensus. J. Risk Res. 14, 147–174. doi: 10.1080/13669877.2010.511246
+Kahneman, D. (2003). A perspective on judgment and choice: mapping
+bounded rationality. Am. Psychol. 58, 697–720. doi: 10.1037/0003-066X.58.9.697
+Kaiser, H. F., and Rice, J. (1974). Little Jiﬀy, Mark Iv. Educ. Psychol. Meas. 34,
+111–117.
+Lazarus, R. S. (2000). Toward better research on stress and coping. Am. J.
+Psychol. 55, 665–673. doi: 10.1037//0003-066x.55.6.665
+Lovibond, P. F., and Lovibond, S. H. (1995). The structure of negative emotional
+states: comparison of the Depression Anxiety Stress Scales (DASS) with the beck
+depression and anxiety inventories. Behav. Res. Ther. 33, 335–343. doi: 10.1016/
+0005-7967(94)00075-U
+Malouﬀ, J. M., Thorsteinsson, E. B., and Schutte, N. S. (2005). The relationship
+between the ﬁve-factor model of personality and symptoms of clinical disorders:
+a meta-analysis. J. Psychopathol. Behav. Assess. 27, 101–114. doi: 10.1007/s10862-
+005-5384-y
+Frontiers in Psychology 12 frontiersin.org
+fpsyg-13-913790 July 14, 2022 Time: 12:6 # 13
+Benjamin et al. 10.3389/fpsyg.2022.913790
+Maner, J. K., Richey, J. A., Cromer, K., Mallott, M., Lejuez, C. W., Joiner, T. E.,
+et al. (2007). Dispositional anxiety and risk-avoidant decision-making. Personal.
+Individual Diﬀer. 42, 665–675. doi: 10.1016/j.paid.2006.08.016
+Maples, J. L., Guan, L., Carter, N. T., and Miller, J. D. (2014). A test of the
+international personality item pool representation of the revised NEO personality
+inventory and development of a 120-item IPIP-based measure of the ﬁve-factor
+model. Psychol. Assess. 26, 1070–1084. doi: 10.1037/pas0000004
+McCrae, R. R., and John, O. P. (1992). An introduction to the ﬁve-factor model
+and its applications. J. Pers. 60, 175–215. doi: 10.1111/j.1467-6494.1992.tb00970.x
+McEvoy, J., Gilbertz, S., Anderson, M., Ormerod, K. J., and Bergmann, N.
+(2017). Cultural theory of risk as a heuristic for understanding perceptions of
+oil and gas development in Eastern Montana, USA. Extr. Ind. Soc. 4, 852–859.
+doi: 10.1016/j.exis.2017.10.004
+McGhee, R. L., Ehrler, D. J., Buckhalt, J. A., and Phillips, C. (2012). The relation
+between ﬁve-factor personality traits and risk-taking behavior in preadolescents.
+Psychology 8, 558–561.
+McNeill, I. M., Dunlop, P. D., Skinner, T. C., and Morrison, D. L. (2016).
+Predicting risk-mitigating behaviors from indecisiveness and trait anxiety: two
+cognitive pathways to task avoidance. J. Pers. 84, 36–45. doi: 10.1111/jopy.12135
+Merritt, C. J., and Tharp, I. J. (2013). Personality, self-eﬃcacy and risk-taking
+in parkour (free-running). Psychol. Sport Exercise 14, 608–611. doi: 10.1016/j.
+psychsport.2013.03.001
+Millar, B. M., Starks, T. J., Grov, C., and Parsons, J. T. (2017). Sexual risk-taking
+in HIV-negative gay and bisexual men increases with depression: results from a
+U.S. national study. AIDS Behav. 21, 1665–1675. doi: 10.1007/s10461-016-1507-6
+Mittal, V., and Ross, W. T. Jr. (1998). The impact of positive and negative aﬀect
+and issue framing on issue interpretation and risk taking. Organ. Behav. Hum.
+Decision Proc. 76, 298–324. doi: 10.1006/obhd.1998.2808
+Ng, R., and Rayner, S. (2010). Integrating psychometric and cultural theory
+approaches to formulate an alternative measure of risk perception. Innov. Eur. J.
+Soc. Sci. Res. 23, 85–100. doi: 10.1080/13511610.2010.512439
+Nicholson, N., Soane, E., Fenton-O’Creevy, M., and Willman, P. (2005).
+Personality and domain-speciﬁc risk taking. J. Risk Res. 2, 157–176.
+Norris, F. H., Friedman, M. J., Watson, P. J., Byrne, C. M., Diaz, E., and
+Kaniasty, K. (2002). 60,000 disaster victims speak: Part 1. an empirical review of
+the empirical literature, 1981 – 2001. Psychiatry 65, 207–239. doi: 10.1521/psyc.65.
+3.207.20173
+Norris, F. H., Tracy, M., and Galea, S. (2009). Looking for resilience:
+understanding the longitudinal trajectories of responses ot stress. Soc. Sci. Med.
+68, 190–198. doi: 10.1016/j.socscimed.2009.03.043
+Pearson, M., and Hamilton, K. (2014). Investigating driver willingness to drive
+through ﬂooded waterways. Accident Anal. Prevent. 72, 382–390. doi: 10.1016/j.
+aap.2014.07.018
+Phillips, W. J., Hine, D. W., and Marks, A. D. G. (2018). “Exploring the eﬀects
+of cultural cognition on responses to climate change messages,” in Working Paper,
+Faculty of Medicine and Health, School of Psychology, (Armidale, NSW: University
+of New England).
+Pietrzak, R. H., Southwick, S. M., Tracy, M., Galea, S., and Norris, F. H. (2012).
+Posttraumatic stress disorder, depression, and perceived needs for psychological
+care in older persons aﬀected by Hurricane Ike. J. Aﬀect. Disord. 138, 96–103.
+doi: 10.1016/j.jad.2011.12.018
+Porter, S. R., Whitcomb, M. E., and Weltzer, W. H. (2004). Multiple surveys
+of students and survey fatigue. New Direct. Institutional Res. 2004, 63–73. doi:
+10.1002/ir.101
+Powell, J. L. (2016). Climate scientists virtually unanimous: anthropogenic
+global warming is true. Bull. Sci. Technol. Soc. 35, 121–124. doi: 10.1177/
+0270467616634958
+R Core Team (2014). R: A Language and Environment for Statistical Computing.
+Vienna: R Foundation for Statistical Computing.
+Raven, J. (2000). The Raven’s progressive matrices: change and stability over
+culture and time. Cogn. Psychol. 41, 1–48. doi: 10.1006/cogp.1999.0735
+Rehm, R., Lachenmeier, D. W., and Room, R. (2014). Why does society accept
+a higher risk for alcohol than for other voluntary or involuntary risks? BMC Med.
+12:189. doi: 10.1186/s12916-014-0189-z
+Renier, R. L. E. P., Murphy, L., Lin, A., Bartolome, S. P., and Wood, S. J. (2016).
+Risk perception and risk-taking behaviour during adolescence: the inﬂuence
+of personality and gender. PLoS One 11:e0153842. doi: 10.1371/journal.pone.
+0153842
+Revelle, W. (2021). Psych: Procedures for Psychological, Psychometric, and
+Personality Research. Evanston, Ill: Northwestern University.
+Rosenberg, S., Vedlitz, A., Cowman, D., and Zahran, S. (2010). Climate change:
+a proﬁle of U.S. climate scientists’ perspectives. Climactic Change 101, 311–329.
+Skeel, R. L., Neudecker, J., Pilarski, C., and Pytlak, K. (2007). The utility of
+personality variables and behaviorally-based measures in the prediction of risk-
+taking behavior. Personal. Individual Diﬀer. 43, 203–214. doi: 10.1016/j.paid.2006.
+11.025
+Soane, E., and Chmiel, N. (2005). Are risk preferences consistent? Personal.
+Individual Diﬀer. 38, 1781–1791. doi: 10.1016/j.paid.2004.10.005
+Taylor, M., Tofa, M., Haynes, K., McLaren, J., Readman, P., Ferguson, D., et al.
+(2019). Behaviour around ﬂoodwater: challenges for ﬂoodwater safety and risk
+communication. Aust. J. Emerg. Manag. 34, 40–47.
+Taylor, M., and Haynes, K. (2019). What do we really mean by ‘ﬂoodwater’ and
+is it ever ok to enter? Aust. J. Emerg. Manage. 34, 10–11.
+Terracciano, A., Costa, P. T., and Mccrae, R. R. (2006). Personality
+plasticity after age 30. Personal. Soc. Psychol. Bull. 32, 999–1009. doi: 10.1177/
+0146167206288599
+The jamovi Project (2022). jamovi. (Version 2.3) [Computer Software]. Available
+online at: https://www.jamovi.org
+Thompson, E. R., and Prendergast, G. P. (2015). The inﬂuence of trait aﬀect and
+the ﬁve-factor personality model on impulse buying. Personal. Individual Diﬀer.
+76, 216–221.
+Tinella, L., Lopez, A., Caﬀò, A. O., Nardulli, F., Grattagliano, I., and Bosco,
+A. (2021). Cognitive eﬃciency and ﬁtness-to-drive along the lifespan: the
+mediation eﬀect of visuospatial transformations. Brain Sci. 11:1028. doi: 10.3390/
+brainsci11081028
+Tok, S. (2011). The big ﬁve personality traits and risky sport participation. Soc.
+Behav. Personal. 39, 1105–1112.
+Trapsilawati, F., Priatna, N. U., Wijayanto, T., Widyanti, A., Syaﬁtri, U. D.,
+and Chamidah, N. (2021). Examining drivers’ socio-demographic variables
+and perceptions towards sanction mechanisms on speeding behaviour on
+highways: targeting appropriate prevention. J. Navigat. 74, 726–737. doi: 10.1017/
+s0373463321000217
+van der Linden, S. (2015). The social-psychological determinants of climate
+change risk perceptions: towards a comprehensive model. J. Environ. Psychol. 41,
+112–124. doi: 10.1016/j.jenvp.2014.11.012
+von Helversen, B., and Rieskamp, J. (2019). Stress-related changes in ﬁnancial
+risk taking: considering joint eﬀects of cortisol and aﬀect. Psychophysiology
+57:e13560. doi: 10.1111/psyp.13560
+Watson, D., Stanton, K., Khoo, S., Ellickson-Larew, S., and Stasik-O’Brien, S. M.
+(2019). Extraversion and psychopathology: a multilevel hierarchical review. J. Res.
+Personal. 81, 1–10. doi: 10.1016/j.jrp.2019.04.009
+Widiger, T. A., Lynam, D. R., Miller, J. D., and Oltmanns, T. F. (2012). Measures
+to assess maladaptive variants of the ﬁve factor model. J. Pers. Assess. 94, 450–455.
+Widiger, T. A., and Crego, C. (2019). HiTOP thought disorder, DSM-5
+psychoticism, and ﬁve factor model openness. J. Res. Personal. 80, 72–77. doi:
+10.1016/j.jrp.2019.04.008
+Widiger, T. A., and Oltmanns, J. R. (2017). Neuroticism is a fundamental
+domain of personality with enormous public health implications. World Psychiatry
+16, 144–145. doi: 10.1002/wps.20411
+Wildavsky, A., and Dake, K. (1990). Theories of risk perception: who fears what
+and why? Daedalus 119, 41–60.
+Wilson, P. A., Stadler, G., Boone, M. R., and Bolger, N. (2014). Fluctuations
+in depression and well-being are associated with sexual risk episodes
+among HIV-positive men. Health Psychol. 33, 681–685. doi: 10.1037/a003
+5405
+Wise, R. J., Phung, A. L., Labuschagne, I., and Stout, J. C. (2015). Diﬀerential
+eﬀects of social stress on laboratory-based decision-making are related to
+both impulsive personality traits and gender. Cogn. Emot. 29, 1475–1485. doi:
+10.1080/02699931.2014.989815
+Witt, L. A. (2002). The interactive eﬀects of extraversion and conscientiousness
+on performance. J. Manag. 28, 835–851.
+Wright, K. C., Doody, B. J., Taylor, H. L., Becker, J. S., Gruntfest, E.,
+and Webber, D. (2015). A review of people’s behavior in and around
+ﬂoodwater. Weather Climate Soc. 7, 321–332. doi: 10.1175/wcas-d-14-000
+30.1
+Xue, W., Hine, D., Loi, N. M., Thorsteinsson, E. B., and Phillips, W. J.
+(2014). Cultural worldviews and environmental risk perceptions: a meta-analysis.
+J. Environ. Psychol. 40, 249–258.
+Yuen, K. S. L., and Lee, T. M. C. (2003). Could mood state aﬀect risk-taking
+decisions? J. Aﬀect. Disord. 75, 11–18.
+Zhang, Y., Huang, Y., Wang, Y., and Casey, T. W. (2020). Who uses a mobile
+phone while driving for food delivery? the role of personality, risk perception,
+and driving self-eﬃcacy. J. Safety Res. 73, 69–80. doi: 10.1016/j.jsr.2020.
+02.014
+Frontiers in Psychology 13 frontiersin.org

@@ -1,0 +1,819 @@
+Stop there’s water on the road! Identifying key beliefs guiding people’s
+willingness to drive through ﬂooded waterways
+Kyra Hamilton a,b,⇑, Amy E. Peden c,d, Marti Pearson a, Martin S. Hagger a,b,e
+a School of Applied Psychology, Menzies Health Institute Queensland, Grifﬁth University, Queensland, Australia
+b School of Psychology and Speech Pathology, Health Psychology and Behavioural Medicine Research Group, Faculty of Health Sciences, Curtin University, Western Australia, Australia
+c Royal Life Saving Society – Australia, Australia
+d College of Public Health, Medical and Veterinary Sciences, James Cook University, Queensland, Australia
+e Faculty of Sport and Health Sciences, University of Jyväskylä, Jyväskylä, Finland
+article info
+Article history:
+Received 2 May 2015
+Received in revised form 2 December 2015
+Accepted 2 July 2016
+Keywords:
+Floods
+Driving
+Theory of Planned Behaviour
+Beliefs
+abstract
+Floods are among the most widespread of natural disasters and exposure to ﬂoodwaters increases
+drowning risk. A leading cause of ﬂood related drowning deaths is driving through ﬂooded waterways.
+Drawing on the Theory of Planned Behaviour, a two-phased research program was conducted. Phase 1
+(N = 25; Mage = 32.38, SD = 11.46) identiﬁed common beliefs about driving through a ﬂooded waterway.
+Phase 2 (N = 174; Mage = 27.43, SD = 10.76) adopted a cross-sectional design to examine the belief predic-
+tors of drivers’ willingness to drive through a ﬂooded waterway. Given differences in consequences due
+to the depth of water, scenarios of low (road covered in 20 cm of water) and high (road covered in 60 cm
+of water) risk situations were investigated. A range of beliefs emerged as predicting drivers’ willingness
+to engage in this unsafe driving behaviour. These included attitudinal beliefs (e.g., sustain vehicle dam-
+age, become stuck/stranded), beliefs of social expectations (e.g., pressure from friends, family members,
+police), and efﬁcacy beliefs (e.g., small distance of water to drive through, presence of signage). The
+results of the current study support using a Theory of Planned Behaviour belief-based approach to the
+understanding of risky transport-related aquatic activities. The ﬁndings highlight the role that speciﬁc
+key beliefs play in guiding people’s willingness to drive through ﬂooded waterways and, in turn, provide
+possible targets for future interventions to curb this risky and potentially fatal driving behaviour.
+/C211 2016 Elsevier Ltd. All rights reserved.
+1. Introduction
+Floods, the most widespread of all natural disasters, are a
+leading cause of death related to drowning worldwide (Ashley
+and Ashley, 2008; Berz et al., 2001; World Health Organization,
+2014). Drowning risks increase with ﬂoods, particularly in low
+and middle income countries, and it is estimated that between
+1980 and 2009 there were over 500,000 deaths from ﬂoods
+worldwide (World Health Organization, 2014). Flood related
+drowning deaths are also an issue in high income countries where,
+in Australia for example, they accounted for 17% of all uninten-
+tional fatal drowning in rivers, creeks, and streams between 2002
+and 2012 (Peden and Queiroga, 2014). In Australia, rapid onset
+ﬂoods occur; however, slow onset ﬂoods in rivers are the most
+common (Australian Emergency Management Institute, 2013). A
+reported risk factor of many ﬂood related drowning fatalities is
+driving through ﬂooded waterways. Research in Australia between
+1997 and 2008 found that the use of a motor vehicle was involved
+in drowning deaths 48.5% of the time and 39.7% of this was
+attempting to cross a waterway (FitzGerald et al., 2010). A study
+of unintentional fatal drowning in Australian rivers also identiﬁed
+54% of all ﬂood related drowning deaths occurred as a result of
+motor vehicles intentionally entering ﬂood waters or vehicles
+being swept in (Peden and Queiroga, 2014). Research suggests that
+driving through ﬂoodwaters is a common type of ﬂood experience
+(Franklin et al., 2014); however, little is known about risk factors
+for motor vehicle-related drowning (Yale et al., 2003).
+Research investigating the risks of driving through ﬂooded
+waterways suggests that approximately 15 cm of water will reach
+the bottom of most passenger cars which can cause loss of control
+and stalling, and 60 cm of water will cause virtually all cars includ-
+ing four-wheel drives to ﬂoat (NOAA, 2012; Royal Life Saving
+Society – Australia, 2011). When a vehicle becomes buoyant the
+water will push it sideways, and at this point, most vehicles will
+http://dx.doi.org/10.1016/j.ssci.2016.07.004
+0925-7535//C211 2016 Elsevier Ltd. All rights reserved.
+⇑ Corresponding author at: School of Applied Psychology, Grifﬁth University, 176
+Messines Ridge Road, Mt Gravatt, Queensland, 4122, Australia.
+E-mail address: kyra.hamilton@grifﬁth.edu.au (K. Hamilton).
+Safety Science 89 (2016) 308–314
+Contents lists available at ScienceDirect
+Safety Science
+journal homepage: www.elsevier.com/locate/ssci
+
+roll over, leaving those inside with only seconds to escape. Once a
+person starts to drown, the outcome is often fatal (World Health
+Organization, 2014). Although we have some understanding about
+the consequences of driving through ﬂooded waterways due to the
+depth of water, there is a dearth of knowledge about why people
+engage in this risky behaviour.
+Research undertaken in America suggests that people who
+deliberately drive through ﬂoodwater have a lack of knowledge
+about the risks and perceive ﬂood warnings as not being indicative
+of real threat (Drobot et al., 2007, 2006). To address the issue, cam-
+paigns such as ‘‘Turn Around, Don’t Drown” (NOAA, 2004) were
+released. This campaign was developed in the United States by
+the National Oceanic and Atmospheric Association (NOAA) in the
+early 2000s in response to ﬁndings from the Centre for Disease
+Control and Prevention who found over half of all ﬂood-related
+drownings occur when a vehicle is driven into ﬂood waters, with
+the next highest percentage occurring as a result of walking in or
+near ﬂood waters (CDC, 2000). The campaign aimed to remind peo-
+ple of the preventative nature of these incidents and discourage
+people from driving past ﬂood warning barriers (NOAA, 2004).
+In Queensland, Australia policymakers employed a campaign
+with the slogan ‘‘If it’s ﬂooded, forget it” after the January 2011
+ﬂoods, which resulted in 35 people losing their lives (almost a
+quarter due to people attempting to drive through ﬂooded water-
+ways) and 78% of the state declared as a disaster zone (Queensland
+Floods Commission of Inquiry, 2012). Although these campaigns
+have been aimed at reducing the number of unintentional drown-
+ing deaths, very little research to date has evaluated the success of
+these campaigns on people’s attitudes, beliefs, and, critically,
+actual drowning rates. As many fatalities associated with driving
+through ﬂoodwaters can be avoided, further preventive action is
+vital (World Health Organization, 2014). Given motor vehicle-
+related drownings are largely preventable, decisions informing this
+risky act are likely to be psychological in nature, involving a range
+of social and motivational factors. Although mechanisms exist
+which can help to understand why individuals may decide to drive
+through a ﬂooded waterway (Pearson and Hamilton, 2014), the
+peer-reviewed literature to guide public health messages is lack-
+ing. Theory-based campaigns are more effective in promoting
+health-protective behaviour compared to atheoretical ones, and
+evaluation of advertising countermeasures is easier and more cost
+effective with theoretically devised approaches given the clearly
+measurable constructs (Stead et al., 2005). However, a major criti-
+cism of the design of many health advertising campaigns is the
+neglect of psychological theory. Given psychological factors are
+likely to be critical in individuals’ decisions to engage in risky
+transport-related aquatic activities, it is important that future
+behavioural interventions grounded in sound psychological theory
+are adopted to modify people’s risky driving behaviours around
+water.
+1.1. The theory of planned behaviour: behavioural, normative, and
+control beliefs
+In trying to understand the safety actions of drivers, the current
+study draws on a sound social psychological model of decision
+making, the Theory of Planned Behaviour (TPB; Ajzen, 1991). The
+model states intention as the most proximal predictor of
+behaviour, with intention determined by three social-cognitive
+variables: attitudes (overall positive/negative evaluations of
+performing the behaviour), subjective norms (perceived social
+pressure from important others to perform the behaviour), and
+perceived behavioural control (perceived amount of control over
+behavioural performance; also theorized to predict behaviour
+directly) predict intention, with intention and perceived beha-
+vioural control predicting behaviour (Ajzen, 1991). Meta-analytic
+studies support the use of the TPB in predicting people’s health
+and social behaviours (e.g., Armitage and Conner, 2001), including
+risky water-related behaviours (Hamilton and Schmidt, 2014).
+An important feature of the TPB is the hypothesis that the ante-
+cedents of attitudes, subjective norms, and perceived behavioural
+control are corresponding salient behavioural, normative, and con-
+trol beliefs, respectively, reﬂecting the systems of beliefs that
+underpin an individual’s intention and behaviour (Ajzen, 1991,
+2015). These beliefs can be used to develop theoretically-based
+and empirically-driven behaviour change messages that are
+relevant to the target group (Ajzen, 2015; Epton et al., 2015;
+Hardeman et al., 2002). Formative research on beliefs, therefore,
+is necessary not only for depth of understanding of the behaviour
+in a given population but to test theory and the efﬁcacy of the
+TPB mechanisms in changing behaviour, although researchers sel-
+dom conduct this necessary formative work (Ajzen, 2015; Epton
+et al., 2015). A growing number of studies have adopted the TPB
+framework to elicit beliefs for a range of health-enhancing
+behaviours (Chan et al., 2015; Cowie and Hamilton, 2014;
+Hamilton et al., 2012; Hamilton and White, 2011; Kane et al.,
+2015; Sainsbury and Mullan, 2011; Spinks and Hamilton, 2015)
+and, more relevant to the current study, risky water safety beha-
+viours including swimming between the ﬂags (Hamilton et al.,
+2015) and swimming while intoxicated (Hamilton and Schmidt,
+2013). In addition, the TPB has been successfully applied to beha-
+viour change interventions (Fife-Schaw et al., 2007; Hawkes
+et al., 2012; Kothe et al., 2012; Parker et al., 1996; Sainsbury
+et al., 2013). Given the important role beliefs play in guiding
+decision making, the current study sought to investigate the key
+beliefs underpinning people’s decisions to drive through a ﬂooded
+waterway.
+1.2. The current study
+While previous studies have identiﬁed TPB beliefs in accident
+and injury prevention, to date, no research has investigated peo-
+ple’s beliefs underpinning drowning incidents related to driving
+through ﬂooded waterways, nor done so via adopting a theoreti-
+cally rigorous approach. The aim of the current research was to
+identify the key behavioural, normative, and control beliefs that
+guide people’s willingness to drive through a ﬂooded waterway.
+In the current study, a measure of willingness (which is examined
+more frequently in the context of the prototype willingness model;
+Gibbons et al., 1998) was considered more appropriate than assess-
+ing intentions given that driving through ﬂoodwaters may involve
+less planned action (given the often spontaneous nature of the sit-
+uation) and more reactive rather than deliberate decision making
+processes. In addition, given differences in consequences due to
+depth of water are evident in the literature, scenarios of low (road
+covered in 20 cm of water) and high (road covered in 60 cm of
+water) risk situations were investigated. It was expected that
+signiﬁcant correlations between the behavioural, normative, and
+control beliefs and willingness would be observed; and that some
+of the signiﬁcant key beliefs would independently predict willing-
+ness to drive through a ﬂooded waterway.
+2. Method
+2.1. Target behaviour
+The target behaviour was, driving through a ﬂooded waterway.
+The term ‘‘ﬂooded waterway” was deﬁned based on the
+Australian Government Geoscience Australia (2014) and opera-
+tionalised as, ‘‘an overﬂowing of water onto land that is normally
+dry and is not limited to roads”. Two driving scenarios depicting
+K. Hamilton et al. / Safety Science 89 (2016) 308–314 309
+a low and high-risk situation of driving through a ﬂooded water-
+way (Perry, 2012; Queensland Government, 2012) were presented:
+‘‘You are driving in a mid-size car immediately after a thunder-
+storm. You approach a section of the road that is completely cov-
+ered in 20 cm of water” (low risk); ‘‘You are driving in a mid-size
+car immediately after a thunderstorm. You approach a section of
+the road that is completely covered in 60 cm of water” (high risk).
+The generic description of each scenario was adopted from Drobot
+et al. (2007).
+2.2. Phase 1: Pilot study
+A Pilot Study, following guidelines as outlined by Fishbein and
+Ajzen (1975) was conducted to identify the most frequently occur-
+ring salient beliefs, which served as the belief-based TPB measures
+with respect to each of the two driving scenarios in the Phase 2
+Main Study. Participants completed a paper-based survey which
+asked them to respond to the same set of open-ended questions
+for each scenario. An information sheet was provided and
+completion and submission of the survey was considered as
+informed consent. A convenience sample of 25 individuals
+(18 male, 7 female), aged between 17 and 51 years (Mage = 32.38,
+SD = 11.46) participated in the pilot study.
+To elicit salient beliefs, participants were asked to list the
+advantages and disadvantages of driving through the ﬂooded
+waterway in each scenario. As beliefs considered to be most impor-
+tant are more accessible in memory (van Harreveld et al., 2000)
+and people draw from a small number of these important beliefs
+to guide their decision making (van der Pligt and de Vries, 1998),
+the most regularly occurring responses formed the rationale of
+the measures used to analyze behavioural, normative, and control
+beliefs. Given the variety of beliefs elicited in the pilot study,
+beliefs that exceeded a 30% frequency were used as the cut off
+(Hamilton and White, 2010). The ﬁve most common disadvantages
+(e.g., sustain vehicle damage) and the three most common advan-
+tages (e.g., save time) were used to assess behavioural beliefs in the
+Main Study. Participants were then asked to list any individuals or
+groups who would approve or disapprove of them driving through
+the ﬂooded waterway in each scenario. The six most frequently
+identiﬁed individuals/groups (e.g., friends, partner) were used as
+measures of normative beliefs in the Main Study. Participants were
+requested to identify factors or circumstances that might encour-
+age or discourage them to drive through the ﬂooded waterway in
+each scenario. The ﬁve most frequently reported responses encour-
+aging (e.g., save time) and the three most frequently reported
+responses discouraging (e.g., presence of signage) them to drive
+through a ﬂooded waterway in each scenario constructed the con-
+trol belief measures in the Main Study. Refer to Table 1 for the full
+listing of beliefs elicited in the Pilot Study.
+2.3. Phase 2: Main study
+2.3.1. Participants
+One hundred and seventy-four Australian individuals ranging in
+age from 17 to 65 years (Mage = 27.43, SD = 10.76) participated in
+the study. Participant recruitment consisted of convenience
+sampling using online advertising (e.g., Facebook, emails), face-
+to-face (e.g., university campuses), and snowball methods. As an
+incentive to participate, participants were given the option to enter
+a prize draw to win one of ﬁve AUD$20 department store gift
+vouchers. Additionally, ﬁrst year undergraduate psychology
+students could receive course credit for their participation. The
+majority of participants reported coming from an English speaking
+background (n = 158, 90.8%), being in paid employment (n = 127,
+73%), and not having any children (n = 124, 71.3%). Over half of
+the participants reported being in a partnered relationship
+(n = 99, 56.9%) and holding a current unrestricted drivers license
+(n = 100, 57.5%).
+Table 1
+Means and standard deviations of individual behavioural, normative, and control beliefs, and correlations with willingness for the 20 cm scenario and 60 cm scenario.
+M (20 cm) SD (20 cm) r (20 cm) M (60 cm) SD (60 cm) r (60 cm)
+Behavioural beliefs
+Beneﬁts
+Save time 4.65 1.73 0.41*** 3.60 2.05 0.34***
+Reach my destination 5.07 1.59 0.53*** 3.37 1.78 0.54***
+Avoid injury or death 4.64 1.80 0.52*** 3.60 1.72 0.20*
+Costs
+Become stuck/stranded 3.71 1.86 /C00.68*** 5.80 1.32 /C00.57***
+Crash 3.30 1.77 /C00.57*** 4.88 1.74 /C00.40***
+Sustain vehicle damage 4.07 1.85 /C00.69*** 5.88 1.21 /C00.50***
+Be swept away 3.68 1.92 /C00.69*** 5.60 1.35 /C00.47***
+Encounter hidden hazards 4.84 1.62 /C00.51*** 5.98 1.08 /C00.57***
+Normative beliefs
+Friends 4.02 2.01 0.69*** 2.24 1.59 0.55***
+Other family members 3.35 1.89 0.72*** 1.58 0.99 0.70***
+Partner 3.34 1.99 0.65*** 1.73 1.31 0.59***
+Police 2.07 1.40 0.53*** 1.24 0.79 0.38***
+State Emergency Service (SES) 2.01 1.41 0.50*** 1.21 0.76 0.34***
+Thrill seekers 5.97 1.68 0.14 5.49 1.90 0.09
+Control beliefs
+Small distance of water to drive through 2.87 1.84 /C00.38*** 3.94 2.06 /C00.17*
+Seeing others do it 2.82 1.80 /C00.29*** 3.69 1.95 /C00.15
+Presence of signage 4.96 1.96 /C00.28*** 5.55 1.79 /C00.16*
+Laziness 3.20 1.63 /C00.12 3.66 1.88 /C00.01
+Save time 3.30 1.70 /C00.14 3.77 1.96 /C00.07
+Speed of water 5.57 1.69 /C00.16* 6.01 1.65 /C00.10
+Rising water 5.74 1.58 /C00.12 6.11 1.61 /C00.08
+Emergency situation 4.84 2.13 /C00.13 5.26 2.12 /C00.02
+* p < 0.05.
+** p < 0.01.
+*** p < 0.001.
+310 K. Hamilton et al. / Safety Science 89 (2016) 308–314
+2.3.2. Measures
+The main questionnaire assessed the standard TPB predictors
+(attitudes, subjective norm, perceived behavioural control, and
+willingness), along with the indirect TPB predictors (i.e., the
+underlying beliefs of attitude, subjective norm, and perceived
+behavioural control; namely, behavioural, normative, and control
+beliefs, respectively) which are the focus of this paper. The items
+measuring the belief-based TPB constructs were formulated to
+relate to driving through a ﬂooded waterway in the two risk
+situations. The majority of the items were positively worded, with
+some reverse-scaled items included to reduce response bias. Items
+were scored on a 7-point Likert scale. Two items assessed the
+strength of willingness to implement the target behaviours (e.g.,
+‘‘In general I would be willing to drive through the ﬂooded water-
+way in this situation”, scored strongly disagree [1] to strongly agree
+[7]). These two items were added and averaged to produce a
+composite scale with a signiﬁcant correlation for the 20 cm scenar-
+io, r(170) = 0.75, p < 0.001, and the 60 cm scenario, r(164) = 0.81,
+p < 0.001. Behavioural beliefs were assessed through eight salient
+behavioural beliefs derived from the pilot study. Participants were
+asked to state how likely the three beneﬁts (e.g., reach their desti-
+nation) and the ﬁve costs (e.g., encounter hidden hazards) would
+result if they performed the target behaviour in each scenario.
+Responses ranged from extremely unlikely [1] to extremely likely
+[7]. Normative beliefs were measured by the six predeﬁned refer-
+ents identiﬁed in the pilot study. Participants were asked to rate
+how likely the six referents (e.g., partner, other family members)
+would approve of them driving through the ﬂooded waterway in
+each scenario. Responses ranged from extremely unlikely [1] to
+extremely likely [7]. Control beliefs, were assessed by the ﬁve facil-
+itators (e.g., laziness) and three inhibitors (e.g., speed of water)
+obtained from the elicitation study. Participants rated how likely
+it was that these factors would prevent them from driving through
+a ﬂooded waterway in each scenario, scored extremely unlikely [1]
+to extremely likely [7].
+2.3.3. Design and procedure
+A cross-sectional study involving a correlational design was
+adopted to identify drivers’ beliefs underpinning their willingness
+to drive through a ﬂooded waterway. Ethical clearance was
+granted by the University Human Research Ethics Committee
+(Reference #: PSY/B5/12/HREC). Participants completed a self-
+report questionnaire either online (n = 142, 72.8%) or paper-
+based (n = 53, 27.2%), and surveys were counterbalanced to avoid
+order effects for the two scenarios. Bivariate analyses with
+Bonferroni adjustment of the study variables across the methods
+of questionnaire delivery as well as order of scenario delivery
+revealed no substantive differences. Prior to involvement, all
+participants were given an information sheet containing details
+of the study and informed consent was acknowledged through
+the completion and return of the questionnaire. Gift vouchers were
+drawn on completion of the study and all participants were given
+the option to receive a summary of the research ﬁndings if
+requested.
+3. Results
+3.1. Data analysis overview
+To ascertain the key beliefs that guide individuals’ willingness
+to drive through ﬂooded waterways, similar procedures as outlined
+by von Haeften et al. (2001) and utilised in a number of TPB belief-
+based studies (e.g., Spinks and Hamilton, 2015; Epton et al., 2015;
+Fishbein et al. 2001; French and Cooke, 2012), were employed.
+First, to identify the beliefs that are signiﬁcantly correlated with
+individuals’ willingness, the Pearson correlation matrix was
+analyzed. Second, to determine the key beliefs that make signiﬁ-
+cant, independent contributions to willingness within each
+belief-based measure signiﬁcant beliefs were entered in a multiple
+regression analysis. Signiﬁcance level was set at p < 0.05 and all
+analyses were carried out using the statistical software SPSS
+version 21.
+3.2. Key belief analysis
+As shown in Table 1, bivariate correlations revealed that for
+both scenarios, all of the behavioural beliefs and ﬁve of six
+normative beliefs to be signiﬁcantly correlated with willingness
+(r = 0.41–0.72 [20 cm scenario], r = 0.34–0.70 [60 cm scenario]).
+For the control beliefs, four out of eight for the 20 cm scenario
+(r = 0.16–0.38) and two out of eight for the 60 cm scenario
+(r = 0.16–0.17) were signiﬁcantly correlated with willingness.
+3.2.1. 20 cm scenario
+Multiple regression analysis for the 20 cm scenario revealed
+those more willing to drive through a ﬂooded waterway were more
+likely to hold a belief that driving through ﬂoodwaters would have
+the outcome of ‘reach my destination’; ‘friends’, ‘other family
+members’, and ‘police’ would approve of the behaviour; and a
+‘small distance of water to drive through’ and ‘presence of signage’
+would not prevent them from doing so. Regression analysis also
+showed those less willing to drive through a ﬂooded waterway
+were more likely to hold a belief that engaging in the behaviour
+would result in ‘sustain vehicle damage’ and ‘be swept away’. Refer
+to Table 2.
+3.2.2. 60 cm scenario
+Multiple regression analysis for the 60 cm scenario revealed
+those more willing to drive through a ﬂooded waterway were more
+likely to hold a belief that driving through ﬂoodwaters would have
+Table 2
+Summary of the multiple regression analyses identifying the key beliefs toward
+driving through ﬂooded waterways.
+b sr2 R2 df F
+20 cm scenario
+Behavioural beliefs 0.58 3, 164 75.47***
+Sustain vehicle damage /C00.37*** 0.04
+Reach my destination 0.26*** 0.05
+Be swept away /C00.26** 0.02
+Normative beliefs 0.57 3, 160 71.95***
+Friends 0.32*** 0.05
+Other family members 0.35** 0.03
+Police 0.19** 0.02
+Control beliefs 0.19 2, 166 19.64***
+Small distance of water
+to drive through
+/C00.34*** 0.11
+Presence of signage /C00.21** 0.04
+60 cm scenario
+Behavioural beliefs 0.47 3, 151 44.41***
+Encounter hidden hazards /C00.29*** 0.04
+Become stuck/stranded /C00.26** 0.04
+Reach my destination 0.27*** 0.05
+Normative beliefs 0.52 2, 157 84.48***
+Other family members 0.55*** 0.17
+Partner 0.23** 0.03
+Control beliefs 0.03 1, 162 4.54*
+Small distance of water
+to drive through
+/C00.17* 0.03
+* p < 0.05.
+** p < 0.01.
+*** p < 0.001.
+K. Hamilton et al. / Safety Science 89 (2016) 308–314 311
+the outcome of ‘reach my destination’; ‘other family members’ and
+‘partner’ would approve of the behaviour; and a ‘small distance of
+water to drive through’ would not prevent them from doing so.
+Regression analysis also showed those less willing to drive through
+a ﬂooded waterway were more likely to hold a belief that engaging
+in the behaviour would result in ‘encounter hidden hazards’ and
+‘become stuck/stranded’. Refer to Table 2.
+4. Discussion
+The aim of the current study was to determine key salient beha-
+vioural, normative, and control beliefs that guide individuals’ will-
+ingness to drive through ﬂooded waterways, and in doing so,
+address a signiﬁcant knowledge gap in the current literature on
+driving behaviours during ﬂoods. Results revealed a range of
+beliefs as making independent contributions to people’s willing-
+ness to engage in this risky driving behaviour.
+4.1. Key beliefs of people’s willingness to drive through ﬂooded
+waterways
+In examining the behavioural beliefs, when deciding to drive
+through a ﬂooded waterway people assess both the positive (reach
+their destination) and negative outcomes (sustain vehicle damage,
+be swept away, encounter hidden hazards, become stuck or
+stranded) of their potential future action. Although it should be
+noted that more behavioural costs than beneﬁts were elicited, indi-
+cating people may more readily access negative over positive out-
+comes in weighing up their willingness to engage in this risky
+driving behaviour. The fact that people believe they will reach their
+destination is salient across both the high and low risk scenarios
+suggests that this speciﬁc belief may be particularly important to
+target when developing interventions. Challenging drivers to con-
+sider whether potentially reaching their destination outweighs the
+risks concerned with driving through ﬂoodwater could be useful.
+Furthermore, and in line with other research on driving behaviour
+(Nelson et al., 2009; Zhou et al., 2009), the results of the current
+study suggest that in low-risk situations attention is focused on
+judgments of material (i.e., sustain vehicle damage) as well as per-
+sonal damage (i.e., be swept away), and if a person believes they
+will not experience these negative consequences. Whereas in the
+high-risk scenario, attention is directed more towards the self
+(i.e., encounter hidden hazards, become stuck/stranded),
+suggesting that in high-risk situations evaluations about beliefs
+concerning the individual are more salient.
+Social inﬂuence also emerged as important in determining indi-
+viduals’ willingness to drive through ﬂoodwaters. In examining the
+normative beliefs, other family members appeared to be a salient
+inﬂuence across both risk scenarios, with friend and partner inﬂu-
+ence emerging as important in a low and high risk context, respec-
+tively. These ﬁndings are in line with previous research and
+suggest it is proximal rather than distal (e.g., State Emergency Ser-
+vice) people that exert the most inﬂuence on individuals’ decisions
+to drive through ﬂooded waterways (Scott-Parker et al., 2012). In
+addition, the more people believe that the police approve of them
+driving through ﬂooded waterways, the more pressure they feel to
+enact the behaviour. It should be noted, however, that the mean
+perceived levels of approval were low. Although police may have
+some inﬂuence over willingness to drive through a low-risk
+ﬂooded waterway, the majority of the sample view police as disap-
+proving of the target behaviour, which may act as a deterrent
+(Scott-Parker et al., 2012). Similarly, in the high-risk scenario, the
+more people believe that other members of their family and their
+partner approve of them driving through the ﬂooded waterway,
+the more pressure they feel to perform the target behaviour.
+Although these signiﬁcant key beliefs correlated positively with
+willingness, the mean perceived levels of approval were again
+low for both other family members and partner. Given the limited
+understanding of the inﬂuence of others on driving decisions dur-
+ing ﬂoods, further research is needed to better understand the
+effect of normative inﬂuences on people’s decisions to drive
+through ﬂooded waterways.
+Finally, ﬁndings regarding control beliefs provide important
+information about facilitators and barriers that may help under-
+stand this risky driving behaviour. The results suggest that when
+people perceive there to be only a small distance of water to drive
+through, they believe themselves to be capable of driving through
+the ﬂooded waterway. Targeting this belief, therefore, may prove
+useful in challenging people’s perceptions of their conﬁdence in
+this context. In the 20 cm scenario, the presence of signage may
+also inﬂuence people’s willingness to drive through the ﬂooded
+waterway and, thus, increasing the salience of this belief and pro-
+viding more informed signage regarding the risks of entering the
+ﬂoodwater may be an additional strategy to consider in water
+safety campaigns to increase the effectiveness of road signage dur-
+ing ﬂoods.
+4.2. Theoretical and practical implications
+The ﬁndings of the current study have a number of theoretical
+and practical implications for the development of strategies to
+reduce the incidence of driving through ﬂooded waterways. In
+terms of theoretical importance, the current study adopted a sound
+theoretical approach to elicit key beliefs that can be used to aid the
+development of safety messages for risky driving behaviour during
+ﬂoods. Although the TPB has been employed to evaluate interven-
+tions (Hardeman et al., 2002), it has rarely been used to guide the-
+oretical interventions (Ajzen, 2015). In terms of practical
+implications and impact, the current study targeted a priority
+water-safety behaviour of national and international importance
+that can potentially save lives by combating drownings from risky
+transport-related aquatic activities, a key objective in the Aus-
+tralian Water Safety Strategy 2012–2015 (Australian Water
+Safety Council, 2012). In line with Ajzen (2002), who suggested
+that the content for TPB-based interventions is founded on under-
+lying behavioural, normative, and control beliefs, the current ﬁnd-
+ings identify a number of beliefs that can be used to reduce
+people’s willingness to drive through ﬂoodwaters. First, providing
+information about consequences of the behaviour may prove use-
+ful in changing people’s attitudes. In particular, interventions could
+aim to encourage people to contemplate whether the potential
+risks of the behaviour (e.g., becoming stuck/stranded, be swept
+away) outweigh the positive outcome of reaching their destination
+safely. Caution, however, needs to be taken when attempting to
+increase the awareness of negative behavioural consequences.
+Research on fear appeals and threatening messages in regards to
+road safety behaviour appears inconclusive and research suggests
+that positive emotional appeals may be more successful in chang-
+ing behaviour (Lewis et al., 2007). Considering risk beliefs, such as
+crashing or avoiding injury/death, did not emerge as signiﬁcant in
+either risk scenario, emphasizing the positive outcomes of not driv-
+ing through ﬂooded waterways (e.g., not being swept away) may
+be justiﬁed. Highlighting the positives of safe driving behaviour
+has produced successful results in reducing risky driving behaviour
+(Sibley and Harre, 2009).
+The ﬁndings suggest the use of strategies that provide norma-
+tive information about social pressure to engage in this driving
+behaviour may also be useful. Speciﬁcally, the current ﬁndings
+indicate the expectations of proximal rather than distal referent
+groups may have more inﬂuence over people’s willingness to drive
+through ﬂooded waterways. To reduce this behaviour, one strategy
+312 K. Hamilton et al. / Safety Science 89 (2016) 308–314
+that has been successfully used is the consideration of others’ dis-
+approval to reduce risky driving behaviour (Parker et al., 1996).
+Additionally, using positively framed messages could be effective.
+For example, conveying closer signiﬁcant others as approving of
+peoples’ decisions when they choose to take an alternate route
+(Sibley and Harre, 2009). Finally, interventions focusing on reduc-
+ing peoples’ control beliefs about driving through ﬂooded water-
+ways could be an effective strategy to curb the target behaviour;
+perhaps by providing people with information that challenges
+their beliefs in their ability to successfully undertake the beha-
+viour. For example, highlighting that, although it may be perceived
+to be safe to drive through a small distance of water, the potential
+risks involved in doing so can be great. However, as suggested pre-
+viously, careful consideration must be taken when providing peo-
+ple with risk-information as they should not elicit too much
+emotion so as to polarize peoples’ views into strong acceptance
+or rejection of the message (Tay and Watson, 2002). Alternatively,
+positively reinforcing peoples’ beliefs about their conﬁdence in this
+context may prove helpful. Strategies that increase individuals’
+control over their ability to avoid situations that involve the target
+behaviour could potentially be a valuable technique to discourage
+people from driving through ﬂooded waterways (Elliot and
+Thomson, 2010; Luszczynska et al., 2007).
+4.3. Strengths, limitations, and future directions
+The current study is important as it investigated a risky driving
+behaviour that to date has received scant attention in the empirical
+literature, and adopted a systematic, theoretical approach to iden-
+tify key beliefs that can be used to inform future campaigns about
+safe driving behaviour during ﬂoods. The current study, however,
+has limitations. The sample was predominantly Caucasian and liv-
+ing in a developed country in Queensland, Australia, thus limiting
+generalizability of the ﬁndings. Although the geographical location
+where the data was collected is prone to ﬂooding and many indi-
+viduals may therefore be exposed to ﬂooded roads, it would be
+useful for future research to continue investigations across
+different communities and differentiated demographic subgroups
+of drivers in terms of behavioural, normative, and control beliefs
+to determine if diverse or country speciﬁc views emerge.
+A further limitation was the use of self-report measures which
+may be susceptible to social desirability bias, particularly when
+investigating socially undesirable behaviours (Beck and Ajzen,
+1991), although the TPB is suggested to be a good predictor of both
+actual and self-reported behaviour (Armitage and Conner, 2001).
+Nevertheless, the use of objective behaviour measures in future
+research, such as observational cameras, may be useful to consider
+for providing a better understanding of people’s behaviour in this
+context. In addition, future research into this risky driving beha-
+viour should consider the role of past behaviour and the effect of
+previous experiences, both positive and negative, of driving
+through ﬂooded waterways on people’s decisions in this context.
+Finally, the current study employed a measure of willingness,
+which refocuses some of the responsibility for the behaviour from
+the individual to the context (Gibbons et al., 1998). As a result, this
+study may have been less affected by social desirability constraints
+that are usually present in the more ‘traditional’ measures of inten-
+tions (Gibbons et al., 1998). However, given the decision to drive
+through ﬂoodwater may be intentional, further research investi-
+gating both deliberative and more spontaneous processes to deci-
+sion making is needed.
+4.4. Conclusion
+Overall, the current study provides one of the ﬁrst examinations
+of the beliefs that underpin people’s willingness to drive through
+ﬂooded waterways. The ﬁndings of the current study highlight
+the importance of an approach that incorporates attitudinal, nor-
+mative, and control inﬂuences when designing programs to curb
+this risky driving behaviour. The results, however, should be con-
+sidered in light of the study’s limitations including the use of self
+report data and the sample being predominantly Caucasian and
+living in Queensland, Australia – an area prone to ﬂoods. Neverthe-
+less, the study provides some useful insights that future interven-
+tions could consider when developing campaigns to reduce the
+incidence of people driving through ﬂooded waterways. In partic-
+ular, incorporating attitudinal change strategies, highlighting the
+social disapproval of others for the behaviour, and challenging peo-
+ple’s beliefs about their ability for performing the behaviour as
+well as positively reinforcing self-efﬁcacy beliefs that people can
+avoid the behaviour, may be effective strategies to curb this risky
+and potentially life threatening driving behaviour. Human lives
+are lost each year as a result of driving through ﬂooded waterways;
+thus, continued efforts to better understand this behaviour are
+needed, which in turn, will ultimately help to save lives.
+References
+Ajzen, I., 1991. The theory of planned behaviour. Organ. Behav. Hum. Decis. Process.
+50, 179–211. http://dx.doi.org/10.1016/0749-5978(91)90020-T.
+Ajzen, I., 2002. Construction of a Theory of Planned Behavior Intervention Retrieved
+from <http://www-unix.oit.umass.edu/~aizen/pdf/tpb.measurement.pdf>.
+Ajzen, I., 2015. The theory of planned behaviour is alive and well, and not ready to
+retire: a commentary on Sniehotta, Presseau, and Araújo-Soares. Health
+Psychol. Rev. 9, 131–137. http://dx.doi.org/10.1080/17437199.2014.883474.
+Armitage, C.J., Conner, M., 2001. Efﬁcacy of the theory of planned behaviour: a
+meta-analytic review. Br. J. Soc. Psychol. 40, 471–499. http://dx.doi.org/
+10.1348/014466601164939.
+Ashley, S.T., Ashley, W.T., 2008. Flood fatalities in the United States. J. Appl.
+Meteorol. Climatol. 3, 805–818. http://dx.doi.org/10.1175/2007JAMC1611.1.
+Australian Emergency Management Institute, 2013. Australian Emergency
+Management Knowledge Hub Retrieved from <https://www.
+emknowledge.gov.au/category/?id=2>.
+Australian Government Geoscience Australia, 2014. Flood Terms, Geoscience
+Australia, Retrieved from <http://www.ga.gov.au>.
+Australian Water Safety Council, 2012. Australian Water Safety Strategy 2012–
+2015. Australian Water Safety Council, Australia, Sydney.
+Beck, L., Ajzen, I., 1991. Predicting dishonest actions using the theory of planned
+behavior. J. Res. Pers. 25, 285–301. http://dx.doi.org/10.1016/0092-6566(91)
+90021-H.
+Berz, G., Kron, W., Loster, T., Rauch, E., Schimetschek, J., Schmieder, A., et al., 2001.
+World map of natural hazards – a global view of the distribution and intensity
+of signiﬁcant exposures. Nat. Hazards 23, 443–465. http://dx.doi.org/10.1023/
+A:1011193724026.
+CDC, 2000. Morbidity and mortality associated with Hurricane Floyd-North
+Carolina, September-October 1999. MMWR – Morb. Mortal. Wkly. Rep. 49
+(17), 369–372.
+Chan, D.K., Hardcastle, S., Dimmock, J.A., Lentillon-Kaestner, V., Donovan, R.J.,
+Burgin, M., Hagger, M.S., 2015. Modal salient belief and social cognitive
+variables of anti-doping behaviors in sport: examining an extended model of
+the theory of planned behavior. Psychol. Sport Exerc. 16, 164–174. http://dx.doi.
+org/10.1016/j.psychsport.2014.03.002.
+Cowie, E., Hamilton, K., 2014. Key beliefs related to decisions for physical activity
+engagement among ﬁrst-in-family students transitioning to university. J.
+Commun. Health, 1–8. http://dx.doi.org/10.1007/s10900-013-9817-3.
+Drobot, S.D., Benight, C., Gruntfest, E.C., 2007. Risk factors for driving into ﬂooded
+roads. Environ. Hazards 7, 227–234. http://dx.doi.org/10.1016/j.
+envhaz.2007.07.003.
+Drobot, S.D., Gruntfest, E.C., Barnes, L., Benight, C., Schultz, D., Demuth, J., 2006.
+Driving under the inﬂuence of weather: perceptions of ﬂash ﬂoods and vehicle
+safety. In: The 2006 Annual Meeting of the Association of American
+Geographers. Chicago, IL, March 2006.
+Elliot, M.A., Thomson, J.A., 2010. The social cognitive determinants of offending
+drivers’ speeding behaviour. Accid. Anal. Prev. 42, 1595–1605. http://dx.doi.org/
+10.1016/j.aap.2010.03.018.
+Epton, T., Norman, P., Harris, P., Webb, T., Snowsill, F.A., Sheeran, P., 2015.
+Development of theory-based health messages: three-phase programme of
+formative research, Health Promot. Int. 3, 756–768.
+Fife-Schaw, C., Sheeran, P., Norman, P., 2007. Stimulating behaviour change
+interventions based on the Theory of Planned Behaviour: impacts on
+intention and action. Br. J. Soc. Psychol. 46, 43–68. http://dx.doi.org/10.1348/
+014466605X85906.
+Fishbein, M., Ajzen, I., 1975. Belief, Attitude, Intention and Behavior: An
+Introduction to Theory and Research. Addison-Wesley, Reading, MA.
+K. Hamilton et al. / Safety Science 89 (2016) 308–314 313
+Fishbein, M., Haeften, I., Appleyard, J., 2001. The role of theory in developing
+effective interventions: implications from Project SAFER. Psychol. Health Med. 6
+(2), 223–238. http://dx.doi.org/10.1080/13548500123176.
+FitzGerald, G., Du, W., Jamal, A., Clark, M., Hou, X.Y., 2010. Flood fatalities in
+contemporary Australia (1997–2008): disaster medicine. Emerg. Med. Austral.
+22 (2), 180–186. http://dx.doi.org/10.1111/j.1742-6723.2010.01284.x.
+Franklin, R.C., King, J.C., Aitken, P.J., Leggat, P.A., 2014. ‘‘Washed away” – assessing
+community perceptions of ﬂooding and prevention strategies: a North
+Queensland example. Nat. Hazards 73 (3), 1977–1998. http://dx.doi.org/
+10.1007/s11069-014-1180-x.
+French, D.P., Cooke, R., 2012. Using the Theory of Planned Behaviour to
+understand binge drinking: the importance of beliefs for developing
+interventions. Br. J. Health Psychol. 17, 1–17. http://dx.doi.org/10.1111/j.
+2044-8287.2010.02010.x.
+Gibbons, F.X., Gerrard, M., Blanton, H., Russell, D.W., 1998. Reasoned action and
+social reaction: willingness and intention as independent predictors of health
+risk. J. Pers. Soc. Psychol. 74 (5), 1164–1180.
+Hamilton, K., Schmidt, H., 2014. Drinking and swimming: investigating young
+Australian males’ intentions to engage in recreational swimming while under
+the inﬂuence of alcohol. J. Commun. Health 39, 139–147.
+Hamilton, K., Schmidt, H., 2013. Critical beliefs underlying young Australian males’
+intentions to drink and swim. SAGE Open 3, 1–7.
+Hamilton, K., White, K.M., Young, R., Hawkes, A., Starfelt, L.C., Leske, S., 2012.
+Identifying critical sun-protective beliefs among Australian adults. Health Educ.
+Res. 27, 834–843. http://dx.doi.org/10.1093/her/cys093.
+Hamilton, K., White, K.M., 2010. Identifying parents’ perceptions about physical
+activity: a qualitative exploration of salient behavioural, normative and control
+beliefs among mothers and fathers of young children. J. Health Psychol. 15,
+1157–1169. http://dx.doi.org/10.1177/1359105310364176.
+Hamilton, K., White, K.M., 2011. Identifying key belief-based targets for promoting
+regular physical activity among mothers and fathers with young children. J. Sci.
+Med. Sport 14, 135–142. http://dx.doi.org/10.1016/j.jsams.2010.07.004.
+Hamilton, K., White, K.M., Wihardjo, K., Hyde, M., 2015. Targets to promote
+swimming between the ﬂags among Australian beach goers. Health Promot. Int.
+http://dx.doi.org/10.1093/heapro/dav079, Epub ahead of print.
+Hardeman, W., Johnston, M., Johnston, D., Bonetti, D., Wareham, N., Kinmonth, A.L.,
+2002. Application of the Theory of Planned Behaviour in behaviour change
+interventions: a systematic review. Psychol. Health 17 (2), 123–158. http://dx.
+doi.org/10.1080/08870440290013644a.
+Hawkes, A., Hamilton, K., White, K.M., Young, R., 2012. A randomised controlled trial
+of a theory-based intervention to improve sun protective behaviour in
+adolescents (‘You can still be HOT in the shade’): study protocol. BMC Cancer
+12, 1. http://dx.doi.org/10.1186/1471-2407-12-1.
+Kane, J., Hyde, M., Hamilton, K., 2015. Exploring female university students’
+behavioral, normative, and control beliefs about binge eating. Int. J. Health
+Promot. Edu. 53, 118–127.
+Kothe, E., Mullan, B., Butow, P., 2012. Promoting fruit and vegetable consumption:
+testing an intervention based on the theory of planned behaviour. Appetite 58
+(3), 997–1004.
+Lewis, I.M., Watson, B., White, K.M., Tay, R., 2007. Promoting public health
+messages: should we move beyond fear-evoking appeals in road safety? Qual.
+Health Res. 17 (1), 61–74. http://dx.doi.org/10.1177/1049732306296395.
+Luszczynska, A., Tryburcy, M., Schwarzer, R., 2007. Improving fruit and vegetable
+consumption: a self-efﬁcacy intervention compared with a combined self-
+efﬁcacy and planning intervention. Health Educ. Res. 22 (5), 630–638. http://dx.
+doi.org/10.1093/her/cyl133.
+Nelson, E., Atchley, P., Little, T.D., 2009. The effects of perception of risk and
+importance of answering and initiating a cellular phone call while driving.
+Accid. Anal. Prev. 41, 438–444. http://dx.doi.org/10.1016/j.aap.2009.01.006.
+National Oceanic and Atmospheric Administration (NOAA), 2004. Turn Around
+Don’t Drown, Retrieved from <http://www.nws.noaa.gov/os/water/tadd/>.
+National Oceanic and Atmospheric Administration (NOAA), 2014. Flood Safety,
+Retrieved from <http://www.ﬂoodsafety.noaa.gov/index.shtml>.
+Parker, D., Stradling, S.G., Manstead, A.S.R., 1996. Modifying beliefs and attitudes to
+exceeding the speed limit: an intervention study based on the theory of planned
+behaviour. J. Appl. Soc. Psychol. 26 (1), 1–19. http://dx.doi.org/10.1111/j.1559-
+1816.1996.tb01835.x.
+Pearson, M., Hamilton, K., 2014. Investigating driver willingness to drive through
+ﬂooded roads. Accid. Anal. Prev. 72, 382–390.
+Peden, A., Queiroga, A.C., 2014. Drowning Deaths in Australian Rivers, Creeks and
+Streams: A 10 year Analysis. Royal Life Saving Society, Sydney, Australia,
+Retrieved from <http://www.royallifesaving.com.au/__data/assets/pdf_ﬁle/
+0007/11230/RLS_DrowningDeathsInRiversReport_LR.pdf>.
+Perry, C.A., 2012. National Oceanic and Atmospheric Administration., National
+Oceanic and Atmospheric Administration’s national weather service, Retreived
+from <http://www.ﬂoodsafety.noaa.gov/>.
+Queensland Floods Commission of Inquiry (2012). Queensland Floods Commission
+of Inquiry: Final Report. Brisbane, Australia. Retrieved from <http://www.
+ﬂoodcommission.qld.gov.au/__data/assets/pdf_ﬁle/0007/11698/QFCI-Final-
+Report-March-2012.pdf>.
+Queensland Government, 2012. Road Safety during Flooding and Fire, Retrieved
+from <http://www.qld.gov.au/transport/conditions/disastes/ﬂood/index.html>.
+Royal Life Saving Society Australia, 2011. Flooding: The Seen and Unseen Dangers of
+Flooding Retrieved from <http://www.royallifesaving.com.au/families/out-and-
+about/locations/ﬂooding>.
+Sainsbury, K., Mullan, B., 2011. Measuring beliefs about gluten free diet adherence
+in adult coeliac disease using the theory of planned behaviour. Appetite 56 (2),
+476–483. http://dx.doi.org/10.1016/j.appet.2011.01.026.
+Sainsbury, K., Mullan, B., Sharpe, L., 2013. A randomized controlled trial of an online
+intervention to improve gluten free diet adherence in celiac disease. Am. J.
+Gastroenterol. 108, 811–817.
+Scott-Parker, B., Watson, B., King, M.J., Hyde, M.K., 2012. ‘‘They’re lunatics on the
+road”: exploring the normative inﬂuences of parents, friends, and police on
+young novices’ risky driving decisions. Saf. Sci. 50, 1917–1928. http://dx.doi.
+org/10.1016/j.ssci.2012.05.014.
+Sibley, C., Harre, N., 2009. The impact of different styles of trafﬁc safety
+advertisement on young drivers’ explicit and implicit self-enhancement
+biases. Transport. Res. 12, 159–167. http://dx.doi.org/10.1016/j.trf.2008.11.001.
+Spinks, T., Hamilton, K., 2015. Investigating key beliefs guiding mothers’ dietary
+decisions for their 2–3 year old. Appetite 89, 167–174. http://dx.doi.org/
+10.1016/j.appet.2015.02.004.
+Stead, M., Tagg, S., MacKintosh, A.M., Eadie, D., 2005. Development and evaluation
+of a mass media TPB intervention to reduce speeding. Health Educ. Res. 20, 36–
+50.
+Tay, R., Watson, B., 2002. Changing drivers’ intentions and behaviours using fear-
+based driver fatigue advertisements. Health Mark. Quart. 19 (4), 55–68. http://
+dx.doi.org/10.1300/J026v19n04_05.
+van der Pligt, J., de Vries, N., 1998. Belief importance in expectancy-value models of
+attitudes. J. Appl. Soc. Psychol. 28 (15), 1339–1354. http://dx.doi.org/10.1111/
+j.1559-1816.1998.tb01680.x.
+van Harreveld, F., van der Pligt, J., de Vries, N., 2000. The structure of attitudes:
+attribute importance, accessibility, and judgement. Br. J. Soc. Psychol. 39, 363–
+380. http://dx.doi.org/10.1348/01446660016454.
+von Haeften, I., Fishbein, M., Kasprzyk, D., Montano, D., 2001. Analyzing data to
+obtain information to design targeted interventions. Psychol. Health Med. 6 (2),
+151–164. http://dx.doi.org/10.1080/13548500125076.
+World Health Organization, 2014. Global Report on Drowning: Preventing a Leading
+Killer Retrieved from <http://www.who.int/violence_injury_prevention/
+publications/drowning_global_report/Final_report_full_web.pdf>.
+Yale, J.D., Cole, T.B., Garrison, H.G., Runyan, C.W., Riad Ruback, J.K., 2003. Motor
+vehicle-related drowning deaths associated with inland ﬂooding after Hurrican
+Floyd: a ﬁeld investigation. Trafﬁc Injury Prevent. 4 (4), 279–284. http://dx.doi.
+org/10.1080/714040485.
+Zhou, R., Wu, C., Patrick Rau, P.L., Zhang, W., 2009. Young driving learners’ intention
+to use a handheld or hands-free mobile phone when driving. Transport. Res. 12,
+208–217. http://dx.doi.org/10.1016/j.trf.2008.11.003.
+314 K. Hamilton et al. / Safety Science 89 (2016) 308–314

@@ -1,0 +1,1535 @@
+
+
+===== [page 1] =====
+ORIGINAL PAPER
+Agent-based tsunami evacuation modeling of unplanned
+network disruptions for evidence-driven resource
+allocation and retroﬁtting strategies
+Alireza Mostaﬁzi1 • Haizhong Wang1 • Dan Cox1 •
+Lori A. Cramer2 • Shangjia Dong1
+Received: 1 January 2017 / Accepted: 10 May 2017 / Published online: 26 May 2017
+ Springer Science+Business Media Dordrecht 2017
+Abstract The M9 Cascadia subduction zone earthquake represents one of the most
+pressing natural hazard threats in the Paciﬁc Northwest of the USA with an astonishing
+high 7–12% chance of occurrence by 2060, mirroring the 2011 devastating earthquake and
+tsunami in Japan. Yet this region, like many other coastal communities, is underprepared,
+lacking a comprehensive understanding of unplanned network disruptions as a key com-
+ponent to disaster management planning and infrastructure resilience. The goals of this
+paper are twofold: (1) to conduct a network vulnerability assessment to systematically
+characterize the importance of each link’s contribution to the overall network resilience,
+with speciﬁc emphasis on identifying the most critical set of links and (2) to create an
+evidence-driven retroﬁtting resource allocation framework by quantifying the impacts of
+unplanned network disruptions to the critical links on network resilience and retroﬁtting
+planning. This research used the city of Seaside on the Oregon coast as a study site to
+create the agent-based tsunami evacuation modeling and simulation platform with an
+explicit focus on the transportation network. The results indicated that (1) the network
+bridges are not equally important and some of the critical links are counterintuitive and (2)
+the diverse ways of spending the limited retroﬁtting resources can generate dramatically
+different life safety outcomes. These results strongly suggest that accurate characterization
+& Haizhong Wang
+Haizhong.Wang@oregonstate.edu
+Alireza Mostaﬁzi
+mostaﬁa@oregonstate.edu
+Dan Cox
+Dan.Cox@oregonstate.edu
+Lori A. Cramer
+lcramer@oregonstate.edu
+Shangjia Dong
+dongs@oregonstate.edu
+1
+School of Civil and Construction Engineering, Oregon State University, Corvallis, OR 97331, USA
+2
+School of Public Policy, Oregon State University, Corvallis, OR 97331, USA
+123
+Nat Hazards (2017) 88:1347–1372
+DOI 10.1007/s11069-017-2927-y
+
+
+===== [page 2] =====
+and measurement of infrastructure network failures will provide evidence-driven retro-
+ﬁtting planning strategies and inform resource allocations that enhance network resilience.
+Keywords Unplanned network disruption  Agent-based tsunami evacuation
+modeling  Evidence-driven resource allocation  Retroﬁtting planning  Community
+resilience
+1 Introduction
+Natural disasters could result in unnecessary loss of life and disproportionate suffering to
+families and communities if the essential infrastructure systems are not resilient. The
+Paciﬁc Northwest region is highly prone to a M9 CSZ earthquake (Goldﬁnger et al. 2012)
+and near-ﬁeld tsunami (20–40 min of lead time) mirroring the devastating 2011 Tohoku
+event in Japan. Yet this region is grossly underprepared for the ‘‘Big One’’ (Schulz
+2015a, b), lacking the developed disaster management plans and critical infrastructure it
+needs to be resilient. Transportation networks are one of the most critical components of
+the civil infrastructure system susceptible to natural disasters (Murray-Tuite 2007). The
+performance of a transportation network is essential to emergency responses and recovery
+activities following an immediate earthquake. Depending on the magnitude and duration of
+an earthquake, the transportation network typically suffers from certain levels of mobility
+losses (e.g., bridge failures and road blockage) caused by either ground shaking, or sec-
+ondary hazards such as landslides or rockfalls triggered by the initial shake. Bridges in
+transportation networks, speciﬁcally, are ‘‘critical’’ and vital to normal and emergency
+operations. However, they are continuously deteriorating over time and are particularly
+vulnerable to seismic hazards (Chang et al. 2012). It is critical that bridges retain their
+trafﬁc-carrying capacities after a devastating earthquake so that people can efﬁciently
+evacuate to safer areas. Retroﬁtting existing bridges is a widely accepted and relatively
+economical way to enhance bridges’ performance against earthquakes and mitigate their
+functional loss (Chang et al. 2012). Nevertheless, it is neither practical nor economical to
+retroﬁt all existing bridges due to budget constraints. In addition, the amount and level of
+retroﬁtting are of great signiﬁcance. Therefore, it is vital to prioritize the bridges’ retro-
+ﬁtting with an appropriate strategy. Besides bridges, maintenance of some of the trans-
+portation links is also of signiﬁcance. The criticality of any speciﬁc link or bridge is
+reinforced by the lack of alternative links in an evacuation scenario. Since life safety is the
+most important measure to evaluate the success of a near-ﬁeld tsunami evacuation,
+exploring the effect of network disruption through evacuation mortality would provide an
+innovative and straightforward perspective to prioritize a retroﬁtting strategy in a way to
+minimize the mortality rate considering limited resources.
+1.1 Motivation and contribution
+The major contributions of this research are (1) an agent-based modeling framework to
+systematically characterize each transportation link’s contribution to the overall life safety
+and network resilience measured by their contribution to the mortality rate and (2) an
+evidence-driven retroﬁtting framework to prioritize resource allocations for maximum life
+safety beneﬁts. This research integrates the unplanned transportation network disruption
+1348
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 3] =====
+uncertainties into a multimodal agent-based evacuation model to assess the impacts of
+disruptions considering an agent’s choice of evacuation modes (i.e., driving, walking on
+foot) and their life safety from a network-wide perspective. An innovative agent-based
+modeling framework is used to identify and classify the criticality of network links, based
+on their failure impact on the mortality rate of the evacuation, and further, the framework is
+used to devise the optimal retroﬁtting plan for the critical links of the network. Research
+results will enlighten policy makers, city planners, and government ofﬁcials on how link
+disruptions (i.e., bridge failures) can affect the evacuees’ rerouting decision-making
+behavior. Ultimately, the efﬁciency of the evacuation process is analyzed in order to devise
+a logical retroﬁtting plan for critical links of the transportation network and rationally
+allocate the limited retroﬁtting resources. Using the city of Seaside as a case study, an
+optimal retroﬁtting plan is created to prioritize the limited resources to minimize the
+fatality rate.
+1.2 Paper organization
+This paper is organized as follows: Sect. 2 presents a brief literature review on planned and
+unplanned network disruptions. Section 3 details the different critical components of the
+agent-based modeling and simulation framework. A description of the case study site is
+provided in Sect. 3.1. Section 4 presents a detailed experiment design and analysis of
+results. Finally, Sect. 5 summarizes the research and discusses the major ﬁndings from this
+study.
+2 Literature review
+Most of the existing network disruption (Sullivan et al. 2009) research focuses on trafﬁc
+ﬂow pattern change (He and Liu 2012; Xie and Levinson 2011), congestion-induced
+capacity reduction (Sullivan et al. 2010), economic loss estimation (Tatano and Tsuchiya
+2008), and rerouting behavior (Qian and Zhang 2013) as a result of the planned disrup-
+tion (Konduri et al. 2013; Zhu and Levinson 2012). Less work has been done on the
+impacts of unplanned disruptions to network-wide resilience (Jenelius et al. 2010). Despite
+methodological advancements, challenges remain in measuring and quantifying the
+impacts of network disruptions from a network science perspective by characterizing each
+link’s contribution to the overall network resilience (Scott et al. 2006). The lack of a
+systematic characterization of network resilience hinders understanding how limited ret-
+roﬁtting resources should be allocated to generate maximum mobility and safety beneﬁts
+for post-disaster response and recovery. This methodological shortcoming is linked with
+the shortage of empirical data on network failure modes or partial failure/function for a
+collection of nodes or links in the network ( Fessel et al. 2014).
+2.1 Planned and unplanned network disruptions
+Network disruptions refer to a series of events that change the regular ﬂow of trafﬁc on one
+or more roadway facilities. Generally, network disruptions are classiﬁed as planned and
+unplanned events. Planned disruptions include trafﬁc congestion or road or ramp closures
+to accommodate work zones along a freeway segment or bridge section, or to accom-
+modate transit strikes, etc. (Konduri et al. 2013; Zhu and Levinson 2012). Unplanned
+Nat Hazards (2017) 88:1347–1372
+1349
+123
+
+
+===== [page 4] =====
+disruptions include natural disasters (e.g., tsunamis, earthquakes, ﬂoods, landslides, hur-
+ricanes), terrorist attacks (e.g., September 11, 2001), infrastructure failures (e.g., I-35W
+bridge collapse in 2007), severe accidents, etc. (Zhu and Levinson 2012; Jenelius et al.
+2010). Network disruptions lead to a drop in capacity on the roadway segment where the
+incident occurs and result in delays, built-up queues, and spill-backs on to surrounding
+areas in the network (Konduri et al. 2013). A partial decrease or complete loss of capacity
+on a road or bridge link can result in travel time increase and changes in travel behavior
+through congestion and queues. Empirical evidence shows that a majority of unplanned
+transport network disruptions are followed by ‘‘a time-on the order of days or weeks-of
+uncertainty, learning and adaptation for the travelers’’ (Jenelius et al. 2010). If the network
+disruption lasts for a long time, the trafﬁc eventually reaches a new equilibrium, where
+travelers collect sufﬁcient information and change their travel behaviors accordingly. In
+such cases, unplanned disruptions have similar impacts to trafﬁc as planned disruptions, as
+people are more informed and have time to change travel decisions; most common are
+changes to departure time and route choice (Jenelius et al. 2010). However, the immediacy
+of an evacuation would leave no room for adaptation. Various approaches have been
+proposed to model the network disruptions, including static analysis (Earnest 2011),
+equilibrium analysis (Miller et al. 1999), weighted network model (Earnest 2011), dis-
+ruption index (Murray-Tuite and Mahmassani 2005; Rahimian and Mcneil 2012), agent-
+based models (Earnest 2011), damage index (Rahimian and Mcneil 2012), probability
+model (Chang et al. 2012), and travel time analysis (Bocchini and Frangopol 2010).
+2.2 Measures of network disruptions
+When it comes to emergency response or disaster evacuation, a system performance metric
+is required to assess the serviceability of a road network and compare the effectiveness
+resulting from different intervention or mitigation projects. Such system metrics for road
+networks can be divided into three categories: (1) connectivity, (2) travel delay cost, and
+(3) network ﬂow capacity (Chang et al. 2012). Connectivity relies highly on the con-
+nectedness of a transportation network. However, it ignores trafﬁc systems’ capacities,
+travel time, and trip length. Travel delay cost has been widely adopted to assess the seismic
+risk of transportation systems (Kiremidjian et al. 2007). Nevertheless, it is heavily
+dependent on origin–destination (OD) demand matrices. Network ﬂow capacity metric
+falls in between: it evaluates the serviceability of transportation networks under speciﬁ-
+cally determined seismic damage and does not require detailed OD demand information or
+traveler behavior to compute the travel delay cost. It serves better to evaluate the emer-
+gency serviceability of a transportation network in terms of immediate population evac-
+uation. Berdica (2002) deﬁned the vulnerability as ‘‘a susceptibility to incidents that can
+result in considerable reductions in road network serviceability.’’ The serviceability of a
+link is deﬁned as ‘‘the possibility to use that link during a given time period.’’ However,
+previous research did not examine the availability of alternative links for a speciﬁc link in
+the transportation network. In addition, Jenelius et al. (2006) deﬁned two concepts of
+criticality and exposure for elements in the network in case of a hazard. The proposed
+concepts are purely based on the characteristics of the network and not the type and
+dynamics of the hazard. Therefore, the criticality calculated for any element might not
+properly reﬂect the importance of that element’s failure.
+Moreover, it is vital to know the details of the impacts of the system disruption, for
+example where events are most likely to happen, and where impacts would be the most
+severe (Jenelius and Mattsson 2012). The desire to better understand the impacts of
+1350
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 5] =====
+network disruptions has led to a rich body of research. This literature can be classiﬁed into
+two categories: (1) measuring the change of activity–travel behavior in response to net-
+work perturbation and user information provision and (2) tool development for simulating
+network disruptions and evaluating various policies and solutions to alleviate the impacts
+of network disruptions (Konduri et al. 2013). Zhu et al. (2010) investigated the impact of
+the collapse of the I-35W bridge over the Mississippi River on regional trafﬁc ﬂow and
+travel behavior patterns.
+Akiyama et al. (2012) proposed a probability assessment of
+bridge performance by estimating bridge failure likelihood through bridge fragility curves.
+As Murray-Tuite (2007) stated, ‘‘before planning network improvement, they should
+examine the degree to which the disruption of a link, or set of links, will inﬂuence network
+connectivity.’’ Network connectivity plays a signiﬁcant part in the performance of the
+network, especially during an evacuation. However, the connectivity of a network does not
+necessarily represent the proﬁciency of the network in an evacuation situation. A trans-
+portation network has hundreds of thousand links, and the impact of their failure to the
+evacuation varies. Identifying which link is critical to the evacuation performance is
+challenging but meaningful. Existing studies select the critical links based on a travel
+performance measurement, such as travel time, travel delay, capacity. However, during an
+evacuation, life safety is of the most concern. Therefore, in this research, the critical link is
+determined by studying the mortality rate before and after the link failure.
+3 Methodology: agent-based tsunami evacuation modeling (ABTEM)
+framework
+The agent-based modeling and simulation framework is coded in NetLogo to evaluate the
+near-ﬁeld tsunami evacuation under transportation network disruptions (Wang et al. 2016).
+NetLogo is a high-level integrated modeling platform through an agent-based program-
+ming language (Wilensky 1999). This modeling framework enables the multi-parameter
+exploration for an emergent phenomenon in a multi-agent system and visualizes the
+dynamic (time-dependent) scenarios (Railsback et al. 2006). This feature has turned
+NetLogo into an increasingly popular tool for research due to its extensive documentation,
+user-friendly interface, expandable modeling environment, the existence of good tutorials,
+and a large library of preexisting models (Wilensky 1999; Klugl and Bazzan 2012). The
+major part of complexity in evacuation modeling is largely driven by interactions between
+agents that capture the emergent behavior of the whole system (Pan et al. 2007). Along
+with these beneﬁts, the GIS compatibility in NetLogo further validates the use of this
+platform for modeling and simulating the evacuation dynamics at a community scale,
+ranging from engineering studies to sociology (Wang et al. 2016). Figure 1 shows a
+snapshot of the simulation environment coded in NetLogo. As shown in Fig. 1, blue shade
+illustrates the tsunami wave, and darker blue represents higher waves. Red dots represent
+the evacuees who were caught by the tsunami inundation, and the orange dots represent the
+evacuees who are on the way toward the shelters. Yellow circles represent the locations of
+primary evacuation shelters, and green represents the evacuees who are safely evacuated to
+one of the safe areas.
+It is noteworthy that the simulation we developed only focuses on the consequences of
+the tsunami hazard, and we do not include direct consequences of the earthquake on the
+population or the constructed environment. This is a reasonable assumption since over 90%
+of the loss of life in the 2011 Tohoku disaster was attributed to the tsunami inundation, not
+Nat Hazards (2017) 88:1347–1372
+1351
+123
+
+
+===== [page 6] =====
+the preceding earthquake. The ABTEM platform can be extended to a multi-hazard model
+in future work. For the agent behavior, it is assumed that all agents are autonomous and
+heterogeneous and that their choices are directly inﬂuenced by their surrounding envi-
+ronment and also through interactions. To simplify the problem, it is assumed that agents
+do not change their mode choice decisions throughout the evacuation, that is to say, an
+agent who starts evacuating by car will not switch to evacuation on foot, and vice versa.
+For the sake of network disruption assessment, it is assumed all agents decide to evacuate,
+although previous experiences have shown that a small portion of people chose to
+stay (Mas et al. 2011, 2012; Mas and Koshimura 2012).
+3.1 Study area and multi-hazard scenario
+This study uses the city of Seaside on the Oregon coast which is one of the most vulnerable
+communities to a combined CSZ earthquake and near-ﬁeld tsunami (Gonzalez et al. 2009;
+Wang et al. 2016; Priest et al. 2016). The city of Seaside has recently been the topic of
+several studies regarding tsunami evacuation as well as seismic resiliency and vulnera-
+bility, mainly due to its location and its topography which makes it highly prone to a CSZ
+tsunami (Wood 2007; Wood and Schmidtlein 2012, 2013; Wood et al. 2016; Priest et al.
+2016). This is due, in part, to the proximity to the CSZ, fairly ﬂat topography, and the
+location of the tsunami shelter areas at more than 1.5 Km from the shoreline. Two rivers,
+Fig. 1 The interface of the agent-based tsunami evacuation model (ABTEM) for city of Seaside, Oregon, in
+NetLogo. On the left panel, there are the adjustable variables of the simulation, including the tsunami
+severity, evacuation mode split, behavioral and physical aspects of the evacuee community that possibly
+affects the mortality rate of the evacuation scenario. The dynamics of the evacuation can be monitored
+through simulated graphics in the middle which reﬂects the movement of cars and pedestrians through the
+network, as well as the dynamics of the inundation wave. The darkness of the blue color represents the water
+level of the inundated area. Throughout the simulation, dot represents pedestrians and triangles represent
+cars. The red dots reﬂect the geographical distribution of the casualties, while the green dots show the safely
+evacuated agents into the designated shelters, shown as yellow circles. Orange dots are evacuees who are
+moving toward the safe zones. On the right panel, there are the temporal results of the simulation, including
+the number of casualties, number of safely evacuated, based on the evacuation mode
+1352
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 7] =====
+ﬂowing from south to north, divide the city into three parts. The presence of ten bridges
+in total, spanning these two rivers, makes multimodal evacuation more complex and highly
+vulnerable and makes Seaside an interesting case study for further analysis on the effects of
+a network disruption on the success rate of tsunami evacuation and mortality rates. The
+current tsunami evacuation plan for the area calls for horizontal evacuation on foot, and the
+option of vertical evacuation has only been discussed in recent years as a possible option.
+No comprehensive studies exist which explore the feasibility of vertical evacuation. In
+addition to Seaside, there are several other towns along the coast with a high risk of near-
+ﬁeld tsunamis, including Ocean Shores, WA, and Long Beach, WA (Wood and Sch-
+midtlein 2013).
+The CSZ measures 1000 Km in length and extends from the Mendocino Ridge off the
+coast of northern California to northern Vancouver Island, British Columbia (Venturato
+et al. 2007; Goldﬁnger et al. 2012). A near-ﬁeld event generated from the CSZ is expected
+to cause widespread damage to the northwest Paciﬁc coast of North America with the ﬁrst
+waves arriving in the tens of minutes (Park et al. 2012; Wood and Schmidtlein 2013;
+Wang et al. 2016). The last great CSZ event occurred more than three centuries ago on
+January 26, 1700, and was a full-length rupture (Satake et al. 2003). The event is estimated
+to have had a moment magnitude (MW) between 8.7 and 9.2, and a slip of 19 m (Satake
+et al. 2003). The average recurrence interval between full-length CSZ events is 530 years,
+and the next event is estimated to have a 7–12% probability of occurrence by
+2060 (Goldﬁnger et al. 2012).
+3.2 Model behavior overview
+Figure 2 shows an example of the model simulation starting with time t ¼ 0 repre-
+senting the end of the initial shaking due to the earthquake to the end of evacuation
+scenario. For this simulation, it is assumed that no evacuation takes place during the
+earthquake itself. Figure 2a shows the initial population, shown with brown color, which
+is distributed normally around the centroid of the beach and downtown area. The agents
+have the options to evacuate either on foot or by car. Agents change color and shape
+depending on their mode of transportation Fig. 2b, c. Blue color represents the cars, and
+orange represents the pedestrians. Figure 2b shows t ¼ 10 after the end of earthquake that
+most of the evacuees have started their evacuation. However, there are many agents who
+have delayed and they are still in the beach area. Looking at Fig. 2c, d, after approxi-
+mately 30–35 min the ﬁrst waves of tsunami reach the shore. Figure 2e shows the ﬁrst
+fatalities that occur when the inundation level exceed 0.5 m, represented as agents with
+red color. It can also be seen that the tsunami has inundated the ﬁrst part of Seaside after
+40 min, crossing the Necanicum River. Finally, the tsunami reaches the runup limit
+approximately 1 Km inland, 15 min after reaching the shoreline (Fig. 2f). At the end of
+each simulation, the mortality rate of the evacuees can be calculated and be used as a
+measurement of effectiveness.
+3.3 Monte Carlo simulation
+To capture the stochasticity of the simulations, mostly due to the distribution of evacuees
+with different decision-making parameters and walking speeds, Monte Carlo simulation
+has been implemented in NetLogo and R, bridging the gap using package ‘‘RNetLogo’’1 in
+1 https://cran.r-project.org/web/packages/RNetLogo/index.html.
+Nat Hazards (2017) 88:1347–1372
+1353
+123
+
+
+===== [page 8] =====
+R. RNetLogo is an open-source package that delivers either a headless interface or a GUI
+to use NetLogo in R. It provides the functions to run models, execute commands, and push
+or get values from NetLogo directly in R. It allows the modeler to virtually and system-
+atically control NetLogo using R code. The package has been thoroughly documented,
+providing the opportunity to run simulations, store the results, and analyze using powerful
+statistical tools in R (Thiele et al. 2012; Thiele 2014). Our studies show that the average
+mortality rate of 10 repetitions is fairly close to 100 repetitions. Figure 3 illustrates
+the variation in mortality rate and the mean mortality rate for two different cases with
+100% cars and 100% pedestrians. Results indicate that the difference in the mean mortality
+rate between 10 and 100 repetitions, for both cases, is less than 0.1%. Therefore, the
+assessments have been done using a Monte Carlo simulation mostly with 10 times repe-
+tition for computational beneﬁts in this study but the number of repetitions could be set as
+100 or 1000 in future endeavors.
+3.4 Model components
+There are essentially ﬁve building blocks of the model: population distribution, road
+network, tsunami inundation data, the locations of evacuation shelters, and casualty model,
+each of which is explained in detail below.
+Fig. 2 Snapshots of ABTEM simulation at varying time from the initial start (a) to the full inundation (e).
+a Shows the initial population distribution which is highly concentrated around the beach and downtown
+area. b Shows partial initiation of evacuation by the community due to different evacuation milling times.
+Blue color represents the vehicles, and orange color is assigned to pedestrians. After 30 min (c), ﬁrst waves
+hit the shoreline, and after 35 min (d), it starts to actually inundate the city. e, f show the movement and
+dynamics of tsunami wave and the way it inundates the city considering its topography
+1354
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 9] =====
+3.4.1 Population distribution model
+In the model, the worst-case scenario, noontime of a weekend in the summer, is consid-
+ered. Tourists and residents are distributed unevenly based on the attributes of the envi-
+ronment (i.e., tourist attractions and residential areas) to the 38 areas shown in Fig. 4a.
+Fig. 3 Mortality rate variations for 10 and 100 number of repetitions. Red line represents the median
+mortality rate, and the green diamond represents the average mortality rate. a 100% car, b 100% pedestrian
+Fig. 4 Population distribution for city of Seaside, Oregon, including residents and tourists. a shows the
+arbitrary distribution of the population which reﬂects the worst-case scenario with high level of population,
+40% in this case, along the shoreline. The population on the shoreline is normally distributed around the
+centroid of the beach, as shown in (b). Other than this, 30% of the population is distributed normally to the
+downtown area. The rest of the population is distributed uniformly to the residential area
+Nat Hazards (2017) 88:1347–1372
+1355
+123
+
+
+===== [page 10] =====
+These areas are chosen such that the change in land use and other attributes is minimal in
+each region. As shown in Fig. 4b, the population is normally distributed around the cen-
+troid of the beach and the downtown area. Therefore, the concentration of the evacuees in
+those two areas is high. Moreover, although different categories of people (i.e., residents
+and tourists) may respond differently to the same hazard, categorization of the evacuees
+based on their attributes should be considered for a realistic evacuation simulation plat-
+form. For the sake of the main objective of this study it is assumed that different categories
+react to the hazard in the same fashion. That is, the agents choose their destination, their
+route, their mode of transportation, and immediacy of evacuation regardless of their
+knowledge and familiarity with the area.
+According to US Census data, the latest population of the city of Seaside is estimated to
+be 6445 with 20% under the age of 18.2 The number of tourists in the city considering the
+amount of rentals, hotels, and inns can be up to 10,000 on any given day. However, due to
+computational challenges in NetLogo coming from agent-agent interactions, 4500 evac-
+uees have been included in the simulation runs. For the purpose of network assessment, the
+number of agents is valid, as it allows for relative comparison regarding the sensitivity of
+the mortality rate to the inﬂuential factors. We believe that the relative criticality of the
+links remains stable. It is not anticipated that increasing the number of evacuees in the
+model will signiﬁcantly alter the outcomes of critical link identiﬁcation.
+3.4.2 Road network
+The road network is imported into the model as a GIS shapeﬁle which was extracted from
+OpenStreetMap3 with markings for the area of interest. It is assumed that all the agents
+(i.e., residents and visitors) are to follow this network, including the potential crossing of
+10 two-lane bridges. For the purpose of network assessment, the possibility of network
+disruption in the form of link accessibility, limiting access to (a) neither pedestrians nor
+cars and (b) pedestrians only is considered. Conservatively, all network links are consid-
+ered as two-way one-lane streets with a speed limit of 55 km/h. This is a reasonable
+assumption based on the speed limits (maximum allowable speed) of the area and ﬁeld
+observations of the general standing of the network. Refer to Wang et al. (2016) for the
+details of the interactions of agents with the transportation network.
+3.4.3 Tsunami shelters
+Oregon Department of Geology and Mineral Industries has proposed eight evacuation
+shelters outside the inundation zone as shown in Fig. 4b with yellow color (Priest et al.
+2013). These are the primary evacuation locations in the model, which are placed outside
+the inundation zone. Although recently there have been studies regarding the impact of
+vertical evacuation shelter and how they can reduce the number of casualties (Wood et al.
+2014; Wang et al. 2016), for the sake of the main objectives of this study, the focus is on
+the primary evacuation shelters. All shelters are assumed to have the capacity to ﬁt the
+evacuees. In addition, it is assumed that all shelters are structurally sound and can with-
+stand tsunami and earthquake forces (FEMA 2008).
+2 http://www.cityofseaside.us/.
+3 http://www.openstreetmap.org.
+1356
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 11] =====
+3.4.4 Tsunami inundation
+The tsunami inundation dynamics is generated by the ComMIT/MOST model developed
+by NOAA calibrated for Cascadia subduction zone (Titov and Gonzalez 1997). Park and
+Cox (2016) had proposed a probabilistic model for tsunami inundation that incorporates
+uncertainties associated with the event. However, in this study, inundation is modeled as a
+deﬁnite extreme event with a ﬁxed 2500-year return interval. The inundation model sup-
+plies time variation of ﬂow depth and speed for the area of interest. The details of the
+inundation model can be found in (Wang et al. 2016).
+3.4.5 Casualty model
+Although calculating the rate of casualties can be highly complicated due to the variability
+of a person’s age, gender, and mental and physical state (Yeh 2010), the casualty model in
+the simulations is simpliﬁed. Many studies have looked into the hydrodynamics of the
+tsunami and its impact on the human body, considering both speed and height of the ﬂow,
+using simpliﬁed (Lind et al. 2004; Jonkman et al. 2008) as well as detailed models of the
+body (Koshimura et al. 2006; Muhari et al. 2011). However, in this paper, for computation
+simpliﬁcation purposes, only wave height was taken into consideration. It has been
+assumed that if a wave with a height of Hc or more touches an agent, it will be considered
+as a casualty. This assumption might not reﬂect an accurate mortality rate; however, for
+comparison purposes and assessment of the transportation network, this gives us a rea-
+sonable estimate of mortality rate. Besides, Hc can reﬂect the vulnerability of the evacuee
+community to the inundation force. For example, in a population with high percentages of
+elderly and children the vulnerability is high, and therefore, the Hc can be adjusted to lower
+values. The Hc for these simulations has conservatively been set to be 0.5 m. Model
+casualties beyond the initial (approximately 1 h) inundation such as hypothermia or heart
+attack are not modeled.
+3.5 Agent decisions
+Decision making in emergency situations is a highly complex process. Although Yin et al.
+(2014) had analyzed the process and its impacts on evacuation travel demand for hurricane
+evacuation scenario, the characteristics of decision making varies with hazard type. In this
+study, it has been assumed that human decisions are limited to the following criteria.
+3.5.1 Mode choices
+Each agent can make one of the following choices. Option 1 is horizontal evacuation on
+foot. Option 2 is horizontal evacuation by car. It also has to be noted that in order to
+replicate the worst-case scenario and to expose the transportation network to the highest
+level of trafﬁc demand, it has been assumed that there is only one person in each vehicle.
+The probability of choosing an option can be speciﬁed by the evacuee group proportions.
+For example, for a given simulation, the population may have 70% who choose horizontal
+evacuation on foot (Opt. 1) and 30% who choose horizontal evacuation by car (Opt. 2).
+Refer to Wang et al. (2016) for the details of decision model.
+Nat Hazards (2017) 88:1347–1372
+1357
+123
+
+
+===== [page 12] =====
+3.5.2 Milling time
+One of the most challenging aspects of modeling natural hazard evacuation, especially for
+near-ﬁeld tsunami evacuations with very low preparation time, is to model evacuation
+milling time. Understanding psychological aspects involved in the process of departure
+time decision making is complex. It has been shown that milling time has a great impact on
+both the formation and evolution of bottlenecks and trafﬁc congestion (Naser and Birst
+2010), and mortality rate of the evacuation scenario (Wang et al. 2016). To capture the
+evacuation preparation time, as suggested by Mas et al. (2011), departure times follow a
+Rayleigh distribution as presented by Wang et al. (2016).
+To abstractly consider the decision-making process, values of s and r are reasonably
+calibrated and the milling time is randomly drawn from the mentioned distribution with the
+following formula (Tweedie et al. 1986; Lindell and Prater 2007).
+PðtÞ ¼
+0
+0\t\s
+1  eðtsÞ2=ð2r2Þ
+t\s
+
+ð1Þ
+where t is the departure time in minutes after earthquake. Both s and r can be adjusted in
+the platform. s represents the minimum time that an evacuee needs to get prepared, and r
+represents the spread of the departure times. The larger the r is, the larger the tail of the
+distribution toward later departure times will be. Slight increases in s and r will lead to an
+enormous increase in mortality rates (Wang et al. 2016). For the sake of the main objective
+and having accurate analysis on the vulnerability of transportation network, and following
+the suggestion of government ofﬁcials regarding the importance of immediate evacuation,
+it is assumed s to be 1 min and r to be 0.5, meaning that 99% of agents start their
+evacuation between 1 to 2 min and 30 s. Refer to Wang et al. (2016) for more information
+regarding the milling time and its impacts on mortality rate.
+3.6 Vehicular movement
+The movement of vehicles is governed by the classic car-following model (Brackstone and
+McDonald 1999), the General Motors model (Chandler et al. 1958; Herman et al. 1959),
+with the following equation.
+atþdt
+nþ1 ¼
+al;mðvt
+nþ1Þm
+ðxt
+n  xt
+nþ1Þl
+"
+#
+ðvt
+n  vt
+nþ1Þ
+ð2Þ
+where xt
+n is the location of leading vehicle at time t, vt
+n is the speed of leading vehicle at
+time t, xt
+nþ1 is the location of following vehicle at time t, vt
+nþ1 is the speed of following
+vehicle at time t, vt
+nþ1 is the speed of following vehicle at time t, l is the distance headway
+exponent (varying from -1 to ?4), m is the speed exponent (varying from -2 to ?2), al;m
+is the sensitivity coefﬁcient, and dt is the perception-reaction time. The parameters are
+adjustable and can be calibrated using empirical data. Despite the lack of empirical data
+regarding the driving behavior in emergency situations, the following parameter sets,
+shown in Table 1, have been chosen to simulate the vehicular movement.
+The perception-reaction time is known to be lower than usual in emergency situations
+since the drivers tend to be more alert and responsive if they are aware of the approaching
+threat. Therefore, the perception-reaction time in this case, conservatively and in favor of
+evacuation by car, is assumed to be fairly close to zero. In addition, parameter a is
+1358
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 13] =====
+estimated based on the jam density, Kj, of 155 veh/km and free ﬂow speed, Vf , of 55 km/h.
+In addition, parameter a linearly correlates with the range of accelerations and decelera-
+tions calculated from the car-following model. Therefore, it has to vary in a reasonable and
+realistic manner. Simulations have shown that a of 0.14 leads to accelerations in the range
+of 1.5–3 m/s2. Decelerations, on the other hand, vary from 3 to 7.5 m/s2. Based on the
+literature, this range of accelerations and decelerations represent the empirical data fairly
+well, considering the fact that in the case of evacuations, accelerations and decelerations
+tend to be higher. Therefore, changes in a are not suggested.
+It is worth mentioning that the combination of parameters above, with the assumption of
+steady state trafﬁc ﬂow, from a macroscopic point of view, leads to well-known Green-
+shields model (Gazis et al. 1961) which represents a linear relationship between speed and
+density. Figure 5 shows the speed–density diagram generated by the evacuation simulation
+model. The reproduction of this classic speed–density relationship from the ABTEM
+simulation further veriﬁed the validity of the trafﬁc dynamics. As shown in Fig. 5, speed
+decreases when density increases. In addition, the graph is highly concentrated around
+higher densities, which shows that the network is in a congested phase.
+3.7 Pedestrian movement
+The speed of evacuation is another signiﬁcant variable governing hazards evacua-
+tion (Wood and Schmidtlein 2012). Normal walking speed is on average 1.4 m/s. For the
+simulation of near-ﬁeld tsunami evacuation, although people tend to walk faster in
+emergency situations, the mean walking speed is conservatively set to be 1.2 m/s (Kno-
+blauch et al. 1995). To capture the walking speeds of the elderly, children, and also, fast
+walkers, it is assumed that walking speeds follow a normal distribution. Conservatively,
+Table 1 Car-following model
+parameters
+Parameter
+Notation
+Value
+Distance headway exp
+l
+2
+Speed exp
+m
+0
+Perception-reaction time
+dt
+0
+Sensitivity coef
+a
+0.14
+Fig. 5 The speed–density relationship generated from the ABTEM simulation. The simulation results show
+the congested state of most of the links on the network, as the points are concentrated toward higher
+densities and lower speeds
+Nat Hazards (2017) 88:1347–1372
+1359
+123
+
+
+===== [page 14] =====
+the normal distribution’s standard deviation is set to 0.2 m/s, which covers very slow
+walking to slow running, ranging from 0.5 to 1.7 m/s (TRB 2010; Wang et al. 2016). Refer
+to Wang et al. (2016) for details of the pedestrian movement rules.
+4 Experiment design and results
+Traditionally, critical link is identiﬁed through its contribution to the network travel time.
+In an evacuation scenario, however, life safety is the ﬁrst priority. Building upon the agent-
+based tsunami evacuation platform, an innovative critical link identiﬁcation method is
+presented in this section, along with the detailed retroﬁtting scheme utilized to maximize
+the beneﬁts of life safety.
+4.1 Critical links identiﬁcation
+In this research, the criticality of a link comes from the impact of the failure of the link on
+life safety, and in particular mortality rates. It is, therefore, essential to identify all the
+critical links over the investigated transportation network. There are around 700 links
+within the transportation network of this case study, including bridges, streets, arterials,
+and highway links. The failure of all links, individually, has been assessed, and the links
+that had the greatest impact on the mortality rate of evacuation scenario in the trans-
+portation network were identiﬁed. It is assumed that all the evacuees have prior knowledge
+regarding any broken links and reroute to their destination accordingly. To capture the
+variation of different decisions as well as walking speeds, each scenario has been simulated
+multiple times; the mean mortality of each scenario has been assessed to ﬁnd critical links
+in the network. It is worth mentioning that criticality of a link is correlated with the mode
+choice split. In other words, failure of a link can highly impact the efﬁciency of evacuation
+if the evacuees are evacuating on foot, but not in the case where evacuees drive, and vice
+versa. To account for different splits of evacuation mode, critical links have been identiﬁed
+for 5 different combination of mode splits: (1) 100% pedestrians; (2) 75% pedestrians–25%
+cars; (3) 50% pedestrians–50% cars; (4) 25% pedestrians–75% cars; and (5) 100% cars.
+4.1.1 Critical link selection criteria
+Figure 6 shows the normalized increase in mortality rates of a scenario where a speciﬁc
+link is failed, over the average mortality rate of all links failures, for different evacuation
+mode splits. For example, looking at Fig. 6a, there are 10 links that their failure increases
+the mean mortality rate by at least 5%. Interestingly, there are a few links that are critical in
+cases where the majority of evacuees are pedestrians, but not in cases where the percentage
+of vehicles is high. Analogously, there are a few links that are considered as critical only
+when the percentage of cars is high. There are several links that are considered in all the
+evacuation mode splits. Figure 6f shows the average mortality rate increase for each link
+over all the 5 different evacuation mode splits. In this study, links whose failure causes an
+increase in mortality rate over 5% are considered as critical, and further assessment has
+been done on these identiﬁed links. The other links are expected to have minimal criticality
+and do not affect mortality rate dramatically upon failure as multiple alternative routes
+exist. In the next section, these critical links are mapped to the transportation network of
+1360
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 15] =====
+Seaside to ﬁnd the topographically and structurally vulnerable ones to devise a plan for
+retroﬁtting.
+4.1.2 Critical links visualization
+Figure 8 shows the visualization of the identiﬁed critical links in the transportation net-
+work of this study for different evacuation mode choice combinations. Surprisingly, not all
+bridges have large impacts on mortality rates. It can be explained by the potential avail-
+ability to alternative routes in case of failure. For high percentages of cars, as shown in
+Fig. 7a, b four main bridges and the roads leading to highly demanded shelters are marked
+as critical. This is mostly due to the fact that failure of either of these links causes a severe
+congestion to adjacent links, leading to higher travel times and thus higher fatality rates. As
+the percentage of vehicles decrease, the links which are adjacent to shelters are no longer
+marked as critical. Although with the failure of those links, the evacuees are forced to
+choose another available shelter, the concentration of pedestrians does not have an impact
+on travel times as it does on vehicles. Therefore, as shown in Fig. 7d which represents the
+critical links for the evacuation scenario with 75% pedestrians and 25% cars, the critical
+links are narrowed down to three main bridges and one arterial. The failure of this arterial
+will cause an isolation to the top left part of the transportation network. For the scenario
+where all the evacuees decide to evacuate on foot, as in Fig. 7e, the bottom left road and its
+Fig. 6 Normalized mortalities associated with each link’s failure. Y-axis shows the increase in mortality
+rate associated with failure of each link, compared to the average mortality rate for each speciﬁc evacuation
+mode split. Therefore, the peaks on this set of graphs redirect to the links whose failure poses massive
+impact on mortality rate and evacuation efﬁciency. It can be seen that the collection of critical links varies
+for different evacuation mode splits. Figure 7 visualizes the critical links for each case
+Nat Hazards (2017) 88:1347–1372
+1361
+123
+
+
+===== [page 16] =====
+adjacent bridge is added to critical links. These links become critical because their failure
+leads to a sizable increase in distance to the safe zone for the agents in the lower sections of
+the beach. Figure 7f illustrates the critical links identiﬁed based on the average mortality
+increase over all the different mode splits.
+In total, there are 13 critical links identiﬁed in the whole transportation network of
+Seaside, OR. However, not all of these links have equal impacts on mortality rate in an
+evacuation. Moreover, running retroﬁtting planning algorithm on 13 critical links is
+computationally expensive. Therefore, we have to narrow down the important links to the
+ones that are either known as being vulnerable or are expected to be inﬂuential on fatality
+rate with higher certainty. Since the four links on the far east side of the city, adjacent to
+the evacuation shelters, are located outside of the inundation zone, retroﬁtting them does
+not seem to be of high priority. In addition, retroﬁtting arterials, compared to the bridges, is
+not of great signiﬁcance since they are expected to be partially functional even facing
+extreme earthquakes. Furthermore, even though they are closed for vehicles, they probably
+can still carry pedestrians. One exception, however, is the bottom left road which is highly
+prone to a landslide after an extreme earthquake. With all this in mind, and accounting for
+Fig. 7 Color coded network, representing critical links. a–f show the variation of identiﬁed critical links
+with the evacuation mode choice split, corresponding to Fig. 6. a, b reﬂect the scenarios with high
+percentages of cars. In these cases, bottom left link that acts as an outlet for the evacuees on the south part of
+the beach proves to be inﬂuential. With the increase in percentage of pedestrians to 50 (c) and 75 (d),
+moving toward optimal mode choice split, despite emergence of a new set of links that are considered
+critical only for high percentages of pedestrians, the number of critical links collectively decreases. Moving
+on to fully on-foot evacuation (e), interestingly the number of critical links increases. (f) shows that the links
+that are collectively combining all 5 different mode split cases are considered as critical. a 0% Pedestrain–
+100% cars, b 25% pedestrain–75% cars, c 50% pedestrain–50% cars, d 75% pedestrain–25% cars, e 100%
+pedestrain–0% cars, f average
+1362
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 17] =====
+the insights of the structural engineers regarding the stability and vulnerability of the
+bridges and other links, there are ﬁve links identiﬁed for retroﬁtting purposes, shown in
+Fig. 8. Further assessment of the degree to which a link is damaged in order to propose an
+optimal retroﬁtting plan is provided.
+4.2 Retroﬁtting analysis
+In this section, we assess the damage to each of the previously determined critical links.
+Functionality states to which any transportation facility operates is categorized as follows:
+(1) able to accommodate both vehicles and pedestrians, INTACT, (2) able to accommodate
+only pedestrians, PED, and (3) not able to accommodate any kind of trafﬁc, FAILED.
+The goal is to prepare a retroﬁtting plan considering limited resources on the critical
+links to minimize mortality rates. In order to formulate the problem, a few assumptions
+have been made regarding the details of the retroﬁtting. First, if a bridge is not retroﬁtted, it
+fails as a consequence of an earthquake. Second, one level retroﬁtting costs one unit of
+resources and makes a bridge remain functional for pedestrians after an earthquake. Third,
+another level of retroﬁtting costs another RATIO number of resources and makes a bridge
+remain intact after the earthquake, meaning that it will be functional for both pedestrians
+and vehicles. Therefore, fully retroﬁtting a bridge costs RATIO þ 1 number of resources.
+Considering the states mentioned, and for different values of RATIO and splits of
+evacuation mode, retroﬁtting planning is represented in Fig. 9a, b. Besides a detailed
+retroﬁtting plan for all the cases, the objective is to ﬁnd general rules for retroﬁtting which
+can be applied to different evacuation cases with different splits and different retroﬁtting
+plans with different RATIOs. As expected, there are numerous ways to spend the few units
+of resources to retroﬁt the system. The aim is to minimize the mortality with respect to
+constraints on alternatives to spending those amounts of resources. The following section
+explains a constraint satisfaction problem that clears the limits and alternatives of spending
+a speciﬁc amount of resources.
+Fig. 8 Final critical links. This
+subset of critical links has been
+chosen based on the collective
+impact that they expose on
+mortality rate of the evacuation
+in different scenarios with
+various evacuation mode split, as
+well as structural stability and
+vulnerability. A, B, C, and D are
+bridges that do not have close
+rerouting alternative in case of
+failure. E is an outlet to one of
+the important shelters which is
+prone to landslides in case of
+earthquake
+Nat Hazards (2017) 88:1347–1372
+1363
+123
+
+
+===== [page 18] =====
+4.2.1 Constraint satisfaction formulation
+These alternatives can be formulated as a constraint satisfaction problem (CSP):
+N  1 þ M  ðRatio þ 1Þ ¼ R
+ð3Þ
+N þ M  Ncr
+ð4Þ
+N; M 2 N
+ð5Þ
+where N is the number of retroﬁtted links to be pedestrian accessible (PED), M is the
+number of retroﬁtted links to be intact (INTACT), R is the number of resources available,
+and Ncr is the number of critical links which in this case equals to 5 links. The above
+integer equation can either have no integer answers for N and M or have multiple sets of
+answers for N and M. After solving the above equation, the number of alternatives
+(Nalternatives) to spend R number of resources on M þ N bridges can be calculated as
+following:
+Nalternatives ¼
+X
+M;N
+Ncr
+M þ N
+
+
+M þ N
+M
+
+
+ð6Þ
+As shown in the ﬁgures, the blue dots represent mean mortality rates associated with the
+various resource consumption alternatives from retroﬁtting. For example, if we assume the
+RATIO ¼ 2, and we have R ¼ 6 number of resources, considering city of Seaside, with
+Ncr ¼ 5 identiﬁed critical links, the solutions to Eq. 3 would be the following: (1) N ¼ 0
+and M ¼ 2, retroﬁtting two bridges to the highest extent (INTACT); and (2) N ¼ 3 and
+M ¼ 1, retroﬁtting one of the bridges to the highest extent (INTACT) and two of the others
+to be pedestrian accessible (PED). In light of Eq. 6, the number of different alternatives for
+spending 6 units of resources with the above combination on 5 critical links can be
+calculated in the following way.
+Fig. 9 Retroﬁtting resources planning—single mode evacuation. Each blue dot corresponds to mortality
+rate associated with a speciﬁc expenditure alternative. The alternative that leads to the lowest mortality rate
+is the best option for expenditure, and it is represented by the green line. On the other hand, the red line
+represents the upper bound of spending speciﬁc amount resources. a associates with the case that all the
+evacuees evacuate by car. Therefore, retroﬁtting a link to remain pedestrian accessible has no impact on the
+mortality rate, and thus, mortality rate constantly decreases with the increase in number of resources. On the
+other hand, b reﬂects retroﬁtting scheme for fully on-foot evacuation. Analogously in this case, there is no
+beneﬁt in retroﬁtting to the state that the link stays intact after the earthquake. Thus, mortality rate drops at
+the beginning as the number of resources increases and then stays constant after the point that all the links
+are retroﬁtted to PED state. a 100% car, b 100% pedestrian
+1364
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 19] =====
+Nalternatives ¼
+5
+2
+
+
+2
+2
+
+
+þ
+5
+4
+
+
+4
+1
+
+
+¼ 10 þ 20 ¼ 30
+As Fig. 9 shows, 30 blue dots for R ¼ 6 are plotted which represent the mortality rates
+associated with 30 different alternatives of spending 6 units of resources.
+4.2.2 Retroﬁtting scheme
+Figures 9 and 10 represent the expected mortality rate associated with different alternatives
+of spending different amount of resources, respectively, for single mode and multimodal
+evacuation scenarios. As stated in the objective, for each speciﬁc amount of resources, the
+alternative that leads to the lowest mortality rate is the best option and it is represented by
+the green line in the ﬁgures. Moreover, the red line represents the upper bound of spending
+speciﬁc resources. In other words, it bounds the worst option of spending a speciﬁc amount
+of resources which results in the highest mortality rate. As before, to capture the
+stochasticity of the system, each scenario has been simulated multiple times and mean
+mortality rates were used for assessment. The slopes of green lines between resource units
+represent the value of the retroﬁtting in terms of decreasing mortality rates. In other words,
+this can be translated into a cost–beneﬁt problem in which one considers the cost of
+retroﬁtting and consuming resources against the beneﬁt of decreasing the number of
+fatalities.
+Retroﬁtting, in rare cases, can surprisingly increase the mortality rate. This phenomenon
+happens mostly due to opening a new route to cars that may result in concentrations of
+vehicles. In these cases, road closure (e.g., network disruption) will result in dissipation of
+trafﬁc that leads to lower densities and thus lower travel times. However, the availability of
+a major route for vehicles might encourage a rebound effect in which additional people
+decide to use the link, which in turn causes severe congestion and higher travel times.
+4.2.2.1 Single mode evacuation
+Figure 9a shows the retroﬁtting beneﬁts for the case that
+none of the evacuees walk and all the population drive to safe zones. In this case, we see
+that parameter RATIO has no impact on the details of retroﬁtting plans since there are no
+pedestrians using the network, and thus, retroﬁtting a bridge to stay pedestrian accessible
+Fig. 10 Retroﬁtting resources planning—multimodal evacuation. This ﬁgure shows the beneﬁts gained on
+decrease in mortality rate through retroﬁtting for different multimodal evacuation scenarios, assuming
+RATIO ¼ 1. As expected, comparing Figs. 9 to 10, it can be stated that Fig. 10 covers the spectrum in
+between 9a and 9b. For high percentages of cars (a), the mortality rate almost constantly decreases with the
+increase in retroﬁtting. As the percentages of pedestrians increase (b, c), higher marginal decrease at the
+beginning of the graph appears. a 25% Pedestrain–75% car, b 50% Pedestrain–50% car, c 75% Pedestrain–
+25% car
+Nat Hazards (2017) 88:1347–1372
+1365
+123
+
+
+===== [page 20] =====
+has no impact on the mortality rate. It can also be seen that retroﬁtting the ﬁrst bridge to
+remain INTACT has the most value and the highest decrease in the mortality rate (13%
+drop from  78% to  65%). Table 2 clariﬁes the priority of critical links to be retroﬁtted
+with the corresponding resultant mortality rate. Looking at the mortality rate column in
+Table 2, improvement in the mortality rate at each level of retroﬁtting, compared to the
+baseline, can be interpreted and mapped to the green lines in Fig. 9.
+Figure 9b shows the beneﬁt of retroﬁtting links in the case that all the evacuees
+evacuate on foot. Therefore, there would be no beneﬁt in retroﬁtting a link to remain
+INTACT since there are no cars using the network. This explains the green curve in the
+ﬁgures to decrease in the beginning and stays the same as the bridges are upgraded to
+remain INTACT. Like the other single mode evacuation case, retroﬁtting the ﬁrst bridge
+has the most value and decreases the mortality rate by 65%. Regarding the impact of
+RATIO parameter, it does not impact the general trend of the cost–beneﬁt analysis;
+however, it affects the details of the retroﬁtting priorities. Table 2 shows the priority of
+critical links to be retroﬁtted.
+From Table 2, the ﬁrst link that should be retroﬁtted, for the case with 100% cars, is
+Link E which helps to evacuate all the cars that are on the west side of the city and the
+beach area to the bottom left evacuation shelters. Retroﬁtting bridge C by itself does not
+have a signiﬁcant impact on the mortality rate for cars since it does not provide enough
+capacity for all the evacuees who are located on the beach to evacuate to the east side
+shelters. On the other hand, in the case of evacuation on foot, retroﬁtting bridge C has the
+higher impact and helps people move to safe zones quicker. The rest of the retroﬁtting
+priorities for these two cases can be interpreted by the table.
+4.2.2.2 Multimodal evacuation
+Figure 10 shows the decrease in expected mortality rate
+when the evacuation is multimodal, assuming RATIO ¼ 1. Analogously, it can be inter-
+preted as described in single mode evacuation.
+Table 3 presents the retroﬁtting plan’s details for multimodal evacuation with retro-
+ﬁtting RATIO ¼ 1. For example, if the retroﬁtting RATIO is equal to 1 and the amount of
+Table 2 Retroﬁtting plan details—single mode evacuation
+Number of
+retroﬁtted links
+Pedestrian
+(%)
+Critical link
+Mortality
+rate (%)
+A
+B
+C
+D
+E
+0 (Baseline)
+0
+FAILED
+FAILED
+FAILED
+FAILED
+FAILED
+77.61
+100
+FAILED
+FAILED
+FILED
+FAILED
+FAILED
+85.23
+1
+0
+FAILED
+FAILED
+FAILED
+FAILED
+INTACT
+64.63
+100
+FAILED
+FAILED
+PED
+FAILED
+FAILED
+21.33
+2
+0
+FAILED
+FAILED
+INTACT
+INTACT
+FAILED
+59.96
+100
+FAILED
+FAILED
+PED
+FAILED
+PED
+15.93
+3
+0
+FAILED
+FAILED
+INTACT
+INTACT
+INTACT
+52.74
+100
+FAILED
+FAILED
+PED
+PED
+PED
+14.57
+4
+0
+FAILED
+INTACT
+INTACT
+INTACT
+INTACT
+48.39
+100
+PED
+PED
+PED
+FAILED
+PED
+8.24
+5
+0
+INTACT
+INTACT
+INTACT
+INTACT
+INTACT
+41.41
+100
+PED
+PED
+PED
+PED
+PED
+7.33
+1366
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 21] =====
+available resources is 5, we can see that the optimal retroﬁtting option is the following: (1)
+25% pedestrian–75% cars: Bridges C and D should be intact (INTACT), and link E should
+be pedestrian accessible (PED); (2) 50% pedestrian–50% cars: Bridges B and D should be
+intact (INTACT), and bridge C should be pedestrian accessible (PED); and (3) 75%
+pedestrian–25% cars: Bridges A, B, and C should be pedestrian accessible (PED), and link
+E should be intact (INTACT). This is mostly because as the percentage of the pedestrians
+increases, having INTACT bridges loses its importance. Therefore, the rational decision
+would be to distribute the resources in a way to have more pedestrian accessible links and
+Table 3 Retroﬁtting plan details—multimodal evacuation—RATIO ¼ 1
+Number of
+resources
+Pedestrian
+(%)
+Critical link
+Mortality rate
+(%)
+A
+B
+C
+D
+E
+0 (Baseline)
+25
+FAILED
+FAILED
+FAILED
+FAILED
+FAILED
+76.54
+50
+FAILED
+FAILED
+FAILED
+FAILED
+FAILED
+75.12
+75
+FAILED
+FAILED
+FAILED
+FAILED
+FAILED
+73.11
+1
+25
+FAILED
+FAILED
+PED
+FAILED
+FAILED
+60.76
+50
+FAILED
+FAILED
+PED
+FAILED
+FAILED
+42.70
+75
+FAILED
+FAILED
+PED
+FAILED
+FAILED
+26.86
+2
+25
+FAILED
+FAILED
+INTACT
+FAILED
+FAILED
+54.90
+50
+FAILED
+FAILED
+INTACT
+FAILED
+FAILED
+38.46
+75
+FAILED
+FAILED
+PED
+FAILED
+PED
+20.22
+3
+25
+FAILED
+FAILED
+PED
+FAILED
+INTACT
+46.26
+50
+FAILED
+FAILED
+PED
+FAILED
+INTACT
+29.97
+75
+FAILED
+FAILED
+PED
+FAILED
+INTACT
+16.71
+4
+25
+FAILED
+FAILED
+INTACT
+INTACT
+FAILED
+42.55
+50
+FAILED
+FAILED
+INTACT
+INTACT
+FAILED
+26.37
+75
+FAILED
+PED
+PED
+FAILED
+INTACT
+15.09
+5
+25
+FAILED
+FAILED
+INTACT
+INTACT
+PED
+41.99
+50
+FAILED
+INTACT
+PED
+INTACT
+FAILED
+24.37
+75
+PED
+PED
+PED
+FAILED
+INTACT
+10.89
+6
+25
+FAILED
+FAILED
+INTACT
+INTACT
+INTACT
+36.84
+50
+PED
+INTACT
+PED
+INTACT
+FAILED
+22.00
+75
+PED
+INTACT
+PED
+INTACT
+FAILED
+8.62
+7
+25
+FAILED
+INTACT
+PED
+INTACT
+INTACT
+35.66
+50
+PED
+INTACT
+PED
+INTACT
+PED
+18.62
+75
+PED
+INTACT
+PED
+INTACT
+PED
+7.04
+8
+25
+INTACT
+INTACT
+INTACT
+INTACT
+FAILED
+28.46
+50
+INTACT
+INTACT
+INTACT
+INTACT
+FAILED
+13.00
+75
+INTACT
+INTACT
+PED
+INTACT
+PED
+6.02
+9
+25
+INTACT
+INTACT
+INTACT
+INTACT
+PED
+27.77
+50
+INTACT
+INTACT
+INTACT
+INTACT
+PED
+10.55
+75
+INTACT
+INTACT
+INTACT
+INTACT
+PED
+5.24
+10
+25
+INTACT
+INTACT
+INTACT
+INTACT
+INTACT
+24.95
+50
+INTACT
+INTACT
+INTACT
+INTACT
+INTACT
+11.12
+75
+INTACT
+INTACT
+INTACT
+INTACT
+INTACT
+6.19
+Nat Hazards (2017) 88:1347–1372
+1367
+123
+
+
+===== [page 22] =====
+bridges. From Table 3, it is obvious bridge C is the ﬁrst one that should be retroﬁtted for
+most of the cases, followed by link E, bridge B, and bridge D. Among these 5 critical links,
+bridge A is the least likely to be retroﬁtted in most of the cases. Other RATIOs will result in
+fairly the same conclusion, but slightly different link prioritizations (Mostaﬁzi 2016).
+5 Discussion of implications for community planning
+In this work, we created an agent-based modeling framework to systematically characterize
+the critical links of the transportation network as a result of an unplanned network dis-
+ruption due to a CSZ/tsunami event. Results indicate that network failure severely impacts
+the mortality rate of the scenario and the efﬁciency of the evacuation. The criticality of a
+link is measured by the contribution of a particular link’s failure to the overall mortality
+rate of the scenario. A set of critical links have been identiﬁed after a systematic char-
+acterization of each link’s contribution to the overall mortality rate for different evacuation
+mode splits between driving and walking on foot. Each link’ contribution is measured by
+the mortality rate when a speciﬁc link fails, while the rest of the links are intact in the
+scenario. The link importance deﬁned in this context is relative in nature. The relative
+importance could be governed by the joint impacts from multiple different factors/pa-
+rameters (i.e., mode split, walking or driving speeds, the existence of vertical evacuation
+structures). One link can be highly inﬂuential when one of the evacuation modes has the
+majority, but not when the other mode rules. After that, a mutual set of critical links of all
+the evacuation mode splits, informed by engineering judgment and structural criticality and
+vulnerability of the link, has been chosen for further retroﬁtting assessment.
+The modeling framework has been applied to the city of Seaside, OR, as a case study.
+The results identiﬁed four bridges and one link as being the most critical—whose failure
+increases the mortality rates by great amounts. Then, a retroﬁtting plan has been created to
+minimize the number of fatalities considering the limited amount of retroﬁtting resources.
+The analysis incorporated the different levels of retroﬁtting (i.e., pedestrian accessible and
+intact). The results of the assessment of the city of Seaside transportation network have
+shown that neither all the bridges failures impact the mortality rate, nor all the critical links
+are the bridges. This research also captures the marginal mortality rate with the change in
+number of resources available to provide a baseline to assess further cost–beneﬁt analyses.
+Furthermore, for the case of the city of Seaside, retroﬁtting schemes have shown that in
+most of the cases, bridge C should have the highest priority to be retroﬁtted, and after that,
+depending on the mode choice split, link E, bridge D, or bridge B are the next critical links,
+respectively.
+6 Conclusion and future remarks
+6.1 Summary of contributions and ﬁndings
+The overall contribution of this study is the novel agent-based tsunami evacuation mod-
+eling framework which allows accurate modeling of unplanned network disruptions on the
+critical links in a transportation network. The characterization of each link’s impor-
+tance/contribution facilitates the creation of evidence-driven retroﬁtting strategies and
+resource allocation decision making to increase the overall network resilience through
+1368
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 23] =====
+informed and targeted proactive protection to those critical links. The major ﬁndings of this
+research are:
+1.
+The agent-based modeling and simulation framework are uniquely situated to identify
+and characterize the criticality of each link through an iterative Monte Carlo approach.
+2.
+The links in a transportation network are not equally signiﬁcant in terms of each
+individual’s contribution to the overall life safety outcomes measured by mortality
+rate. There exist links whose criticality to life safety is counterintuitive.
+3.
+Diverse ways of spending the limited retroﬁtting resources can generate dramatically
+different life safety outcomes.
+4.
+Accurate characterization and modeling of the unplanned network disruptions will
+facilitate the creation of evidence-driven retroﬁtting planning strategies and inform
+resource allocations that enhance network resilience.
+These ﬁndings emphasize the importance of proactive evidence-driven retroﬁtting planning
+and informed resource allocation to enhance the network resilience especially considering
+that retroﬁtting resources are often inadequate. The agent-based tsunami evacuation
+modeling framework, as an integrated and interdisciplinary approach, is uniquely situated
+to merge transportation engineering, social science, and hazard science to address prob-
+lems in a multi-hazard context (i.e., earthquake and tsunami). The results of our models
+provide baseline data that allows for future unplanned network disruption modeling
+research, as well as useful tools for local emergency planners and managers to identify
+social and infrastructure parameters unique to their locations and enhance community
+resiliency to a CSZ earthquake and near-ﬁeld tsunami.
+6.2 Future remarks
+The presence of vertical evacuation shelters can dramatically change the criticality of a
+link. As an alternative, investing resources in building highly resistant shelter structures
+inside the inundation zone might be more economical than spending greater amounts of
+resources on retroﬁtting bridges or transportation links. Therefore, future work needs to
+incorporate the impact of having vertical evacuation shelters on vulnerability and criticality
+of the transportation network. Additionally, the creation of population distributions at
+different times of day (day of week), the number of tourists, and their combined effect on
+link criticality are beyond the scope of this study but will be assessed as a logical next step.
+In addition, social aspects of the evacuation scenario necessitate more extensive investi-
+gation. Population characteristics, coalescing behavior, car-abandoning (evacuation mode
+transfer) and communications (information provision and propagation strategies), and
+alternative daytime or nighttime contexts need to be considered in the future evacuation
+scenarios. Moreover, very likely, earthquake-induced damages could reduce the usability
+or capacity of facilities, but not necessarily to the extent to completely eliminate the use of
+a certain mode of transportation. Thus, capacity drop, as a consequence of earthquake
+damage to the transportation network, could serve as an alternative metric for network
+assessment. In addition, realistic interaction rules among agents (i.e., pedestrian and car
+interaction) to provide more accurate representation of the multimodal evacuation should
+be taken into consideration.
+Nat Hazards (2017) 88:1347–1372
+1369
+123
+
+
+===== [page 24] =====
+Acknowledgements The authors would like to acknowledge the funding support from the National Science
+Foundation through grant CMMI #1563618: ‘‘An Integrated Social Science and Agent-based Modeling
+Approach to Improve Life Safety from Near-ﬁeld Tsunami Hazards’’ and Oregon Sea Grant program
+(#NA140AR4170064) through the project ‘‘Building resilient coastal communities: A social assessment of
+mobile technology for tsunami evacuation planning.’’ Any opinions, ﬁndings, and conclusion or recom-
+mendations expressed in this research are those of the authors and do not necessarily reﬂect the view of the
+funding agencies.
+References
+Akiyama M, Frangopol DM, Arai M, Koshimura S (2012) Probabilistic assessment of structural perfor-
+mance of bridges under tsunami hazard. ASCE Struct Congr 1919–1928
+Berdica K (2002) An introduction to road vulnerability: what has been done, is done and should be done.
+Transp Polic 9(2):117–127
+Bocchini P, Frangopol DM (2010) Optimal resilience-and cost-based postdisaster intervention prioritization
+for bridges along a highway segment. J Bridg Eng 17(1):117–129
+Brackstone M, McDonald M (1999) Car-following: a historical review. Transp Res F Trafﬁc Psychol Behav
+2(4):181–196
+Chandler RE, Herman R, Montroll EW (1958) Trafﬁc dynamics: studies in car following. Op Res
+6(2):165–184
+Chang L, Peng F, Ouyang Y, Elnashai AS, Spencer BF Jr (2012) Bridge seismic retroﬁt program planning to
+maximize postearthquake transportation network capacity. J Infrastruct Syst 18(2):75–88
+Earnest DC (2011) Geographic distribution of disruptions in weighted complex networks: an agent-based
+model of the us air transportation network. Complex adaptive systems. In: AAAI fall symposium,
+pp 34–43
+FEMA (2008) Guidelines for design of structures for vertical evacuation from tsunamis, Technical report,
+APPLIED TECHNOLOGY COUNCIL, 201 Redwood Shores Pkwy, Suite 240 Redwood City. Cali-
+fornia 94065
+Fessel A, Oettmeier C, Do¨bereiner H.-G (2014) An analytical model for percolation in small link degree
+transportation networks. In: Proceedings of the 8th international conference on bioinspired information
+and communications technologies, pp 81–86
+Gazis DC, Herman R, Rothery RW (1961) Nonlinear follow-the-leader models of trafﬁc ﬂow. Op Res
+9(4):545–567
+Goldﬁnger C, Nelson CH, Morey AE, Johnson JE, Patton JR, e.a. Karabanov E (2012) Turbidite event
+history—methods and implications for holocene paleoseismicity of the cascadia subduction zone. U.S.
+Geological Survey Professional Paper 1661F, 170
+Gonzalez FI, Geist EL, Jaffe B, Kanoglu U, Mofjeld HO, Synolakis C, Titov VV, Arcas DR, Bellomo D,
+Carlton D, Horning T, Johnson J, Newman J, Parsons T, Peters R, Peterson CD, Priest G, Venturato A,
+Weber J, Wong FL, Yalciner A (2009) Probabilistic tsunami hazard assessment at seaside, oregon, for
+near- and far-ﬁeld seismic sources. J Geophys Res. doi:10.1029/2008JC005132
+He X, Liu H (2012) Modeling the day-to-day trafﬁc evolution process after an unexpected network dis-
+ruption. Transp Res B 46(1):50–71
+Herman R, Montroll EW, Potts RB, Rothery RW (1959) Trafﬁc dynamics: analysis of stability in car
+following. Op Res 7(1):86–106
+Jenelius E, Mattsson LG (2012) Road network vulnerability analysis of area-covering disruptions: a grid-
+based approach with case study. Transp Res A Polic Pract 46(5):746–760
+Jenelius E, Petersen T, Mattsson LG (2006) Importance and exposure in road network vulnerability analysis.
+Transp Res A Pol Pract 40(7):537–560
+Jenelius E, Mattsson L.-G, Levinson D (2010) The traveler costs of unplanned transport network disrup-
+tions: an activity-based modeling approach. 1–34
+Jonkman SN, Vrijling JK, Vrouwenvelder ACWM (2008) Methods for the estimation of loss of life due to
+ﬂoods: a literature review and a proposal for a new method. Nat Hazards 46:353–389
+Kiremidjian A, Moore J, Fan YY, Yazlali O, Basoz N, Williams M (2007) Seismic risk assessment of
+transportation network systems. J Earthq Eng 11(3):371–382
+Klugl F, Bazzan ALC (2012) Agent-based modeling and simulation. AI Mag 29–40
+Knoblauch R, Pietrucha M, Nitzburg M (1995) Field studies of pedestrian walking speed and start-up time.
+Transp Res Rec 1538:27–38
+1370
+Nat Hazards (2017) 88:1347–1372
+123
+
+
+===== [page 25] =====
+Konduri KC, Pendyala RM, You D, Chiu Y.-C, Hickman M, Noh H, Gardner B, Waddell P, Wang L (2013)
+A network-sensitive transport modeling framework for evaluating impacts of network disruptions on
+traveler choices under varying levels of user information provision. In: 92nd Annual meeting of the
+Transportation Research Board, Washington, DC, p 510
+Koshimura S, Katada T, Mofjeld HO, Kawata Y (2006) A method for estimating casualties due to the
+tsunami inundation ﬂow. Nat Hazards 39(2):265–274
+Lind N, Hartford D, Assaf H (2004) Hydrodynamic models of human stability in a ﬂood. JAWRA J Am
+Water Resour As 40(1):89–96. doi:10.1111/j.1752-1688.2004.tb01012.x
+Lindell MK, Prater CS (2007) Critical behavioral assumptions in evacuation time estimate analysis for
+private vehicles: examples from hurricane research and planning. J Urban Plan Devel 133(1):18–29
+Mas E, Imamura F, Koshimura S (2011) Modeling the decision of evacuation from tsunami, based on human
+risk perception. In: Annual meeting of the Tohoku Branch Technology Research conference
+Mas E, Suppasri A, Imamura F, Koshimura S (2012) Agent-based simulation of the 2011 great east Japan
+earthquake/tsunami evacuation: an integrated model of tsunami inundation and evacuation. J Nat
+Disaster Sci 34(1):41–57
+Mas Erick FI, Koshimura S (2012) An agent-based model for the tsunami simulation: case study of the 2011
+great east Japan tsunami in arahama town. Joint conference proceeding. In: 9th International confer-
+ence on urban earthquake engineering & 4th Asia conference on earthquake engineering. Tokyo
+Institute of Technology, Tokyo, Japan
+Miller HJ, Wu Y.-H, Hung M.-C (1999) Gis-based dynamic trafﬁc congestion modeling to support time-
+critical logistics. In: Proceedings of the 32nd annual Hawaii international conference on systems
+sciences. HICSS-32
+Mostaﬁzi A (2016) Agent-based tsunami evacuation model : life safety and network resilience, Master’s
+thesis, Oregon State University
+Muhari A, Imamura F, Koshimura S, Post J (2011) Examination of three practical run-up models for
+assessing tsunami impact on highly populated areas. Nat Hazards Earth Syst Sci 11(12):3107–3123
+Murray-Tuite P (2007) Perspectives for network management in response to unplanned disruptions. J Urban
+Plan Dev 133(1):9–17
+Murray-Tuite P, Mahmassani HS (2005) Identiﬁcation of vulnerable transportation infrastructure and
+household decision making under emergency evacuation conditions. No. SWUTC/05/167528-1,
+Southwest Region University Transportation Center, Center for Transportation Research, University of
+Texas at Austin
+Naser M, Birst SC (2010) Mesoscopic evacuation modeling for small- to medium-sized metropolitan areas,
+Technical report, Advanced Trafﬁc Analysis Center, Upper Great Plains Transportation Institute, North
+Dakota State University, Fargo, ND 58108
+Pan X, Han CS, Dauber K, Law KH (2007) A multi-agent based framework for the simulation of human and
+social behaviors during emergency evacuations. AI Soc 22:113–132
+Park H, Cox DT (2016) Probabilistic assessment of near-ﬁeld tsunami hazards: inundation depth, velocity,
+momentum ux, arrival time, and duration applied to seaside, oregon. Coast Eng 117:79–96
+Park S, van de Lindt JW, Gupta R, Cox D (2012) Method to determine the locations of tsunami vertical
+evacuation shelters. Nat Hazards 63(2):891–908
+Priest GR, Stimely LL, Wood NJ, Madin IP, Watzig RJ (2016) Beat-the-wave evacuation mapping for
+tsunami hazards in seaside, Oregon, USA. Nat Hazards 80(2):1031–1056
+Priest GR, Witter RC, Zhang YJ (2013) Tsunami animations, time histories, and digital point data for ﬂow
+depth, elevation, and velocity for the South Coast Project Area, Curry County, Oregon, Technical
+Report Open-File Report O-13-13, Department of Geology and Mineral Industries
+Qian ZS, Zhang HM (2013) Full closure or partial closure? Evaluation of construction plans for the i-5
+closure in downtown Sacramento. J Transp Eng 139(3):273–286
+Rahimian S, Mcneil S (2012) Post earthquake transportation network performance: transportation of injured
+to medical facilities. In: 2012 NZSEE conference, p 59
+Railsback SF, Lytinen SL, Jackson SK (2006) Agent-based simulation platforms: review and development
+recommendations. Simulation 82(9):609–623
+Satake K, Wang K, Atwater BF (2003) Fault slip and seismic moment of the 1700 Cascadia earthquake
+inferred from Japanese tsunami descriptions. J Geophys Res 108(B11):1978–2012
+Schulz K (2015a) How to stay safe when the big one comes. http://www.newyorker.com/tech/elements/how-
+to-stay-safe-when-the-big-one-comes
+Schulz K (2015b) The really big one, Annals of Seismology. http://www.newyorker.com/magazine/2015/07/
+20/the-really-big-one
+Nat Hazards (2017) 88:1347–1372
+1371
+123
+
+
+===== [page 26] =====
+Scott DM, Novak DC, Aultman-Hall L, Guo F (2006) Network robustness index: a new method for
+identifying critical links and evaluating the performance of transportation networks. J Transp Geogr
+14(3):215–227
+Sullivan JL, Aultman-Hall L, Novak DC (2009) A review of current practice in network disruption analysis
+and an assessment of the ability to account for isolating links in transportation networks. Transp Lett
+1(4):271–280
+Sullivan JL, Novak DC, Aultman-Hall L, Scott DM (2010) Identifying critical road segments and measuring
+system-wide robustness in transportation networks with isolating links: A link-based capacity-reduc-
+tion approach. Transp Res A Polic Pract 44(5):323–336
+Tatano H, Tsuchiya S (2008) A framework for economic loss estimation due to seismic transportation
+network disruption: a spatial computable general equilibrium approach. Nat Hazards 44(2):253–265
+Thiele JC (2014) R marries NetLogo: introduction to the RNetLogo package. J Stat Softw 58(2):1–41
+Thiele JC, Kurth W, Grimm V (2012) RNetLogo: an R package for running and exploring individual-based
+models implemented in NetLogo. Methods Ecol Evol 3(3):480–483
+Titov VV, Gonzalez FI (1997) Implementation and testing of the method of splitting tsunami (MOST)
+model, Technical report, US Department of Commerce, National Oceanic and Atmospheric Admin-
+istration, Environmental Research Laboratories, Paciﬁc Marine Environmental Laboratory
+TRB, Highway Capacity Manual, (2010) Transportation Research Board. National Research Council,
+Washington, D.C., p 2010
+Tweedie SW, Rowland JR, Walsh SJ, Rhoten RP (1986) A methodology for estimating emergency evac-
+uation times. Soc Sci J 23(2):189–204
+Venturato AJ, Arcas D, Kanoglu U (2007) Modeling tsunami inundation from a Cascadia subduction zone
+earthquake for long beach and ocean shores, Washington, Technical report, National Oceanic and
+Atmospheric Administration, Seattle. WA, Paciﬁc Marine Environmental Lab
+Wang H, Mostaﬁzi A, Cramer LA, Cox D, Park H (2016) An agent-based model of a multimodal near-ﬁeld
+tsunami evacuation: decision-making and life safety. Transp Res C Emerg Technol 64:86–100
+Wilensky U (1999) Netlogo. http://ccl.northwestern.edu/netlogo/. Center for connected learning and com-
+puter-based modeling, Northwestern University. Evanston, IL
+Wood N (2007) Variations in city exposure and sensitivity to tsunami hazards in Oregon., Technical report
+5283, U.S. Geological Survey Scientiﬁc Investigations Report
+Wood NJ, Schmidtlein MC (2012) Anisotropic path modeling to assess pedestrian-evacuation potential from
+Cascadia-related tsunamis in the US Paciﬁc Northwest. Nat Hazards 62(2):275–300
+Wood NJ, Schmidtlein MC (2013) Community variations in population exposure to near-ﬁeld tsunami
+hazards as a function of pedestrian travel time to safety. Nat Hazards 65(3):1603–1628
+Wood NJ, Jones J, Spielman S, Schmidtlein MC (2016) Community clusters of tsunami vulnerability in the
+us paciﬁc northwest. Proc Nat Acad Sci 112(17):5354–5359
+Wood N, Jones J, Schelling J, Schmidtlein M (2014) Tsunami vertical-evacuation planning in the US Paciﬁc
+Northwest as a geospatial, multi-criteria decision problem. Int J Disaster Risk Reduct 9:68–83
+Xie F, Levinson D (2011) Evaluating the effects of the i-35w bridge collapse on road-users in the twin cities
+metropolitan region. Transp Plan Technol 34(7):691–703
+Yeh H (2010) Gender and age factors in tsunami casualties. Nat Hazards Rev 11(1):29–34
+Yin W, Murray-Tuite P, Ukkusuri SV, Gladwin H (2014) An agent-based modeling system for travel
+demand simulation for hurricane evacuation. Transp Res C Emerg Technol 42:44–59
+Zhu S, Levinson DM (2012) Disruptions to transportation networks: a review. Network reliability in
+practice. Springer, New York
+Zhu S, Levinson D, Liu HX, Harder K (2010) The trafﬁc and behavioral effects of the i-35w Mississippi
+river bridge collapse. Transp Res A Polic Pract 44(10):771–784
+1372
+Nat Hazards (2017) 88:1347–1372
+123

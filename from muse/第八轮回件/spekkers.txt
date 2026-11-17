@@ -1,0 +1,1703 @@
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+https://doi.org/10.5194/nhess-17-1337-2017
+© Author(s) 2017. This work is distributed under
+the Creative Commons Attribution 3.0 License.
+A comparative survey of the impacts of extreme rainfall
+in two international case studies
+Matthieu Spekkers1, Viktor Rözer2, Annegret Thieken3, Marie-Claire ten Veldhuis1, and Heidi Kreibich2
+1Delft University of Technology, Department of Water Management, Stevinweg 1, 2628 CN Delft, the Netherlands
+2German Research Centre for Geosciences, Section 5.4 Hydrology, Telegrafenberg, 14473 Potsdam, Germany
+3University of Potsdam, Institute of Earth and Environmental Science, Karl-Liebknecht-Strasse 24–25,
+14476 Potsdam-Golm, Germany
+Correspondence to: Viktor Rözer (vroezer@gfz-potsdam.de)
+Received: 31 March 2017 – Discussion started: 3 April 2017
+Revised: 8 June 2017 – Accepted: 9 June 2017 – Published: 9 August 2017
+Abstract. Flooding is assessed as the most important nat-
+ural hazard in Europe, causing thousands of deaths, affect-
+ing millions of people and accounting for large economic
+losses in the past decade. Little is known about the damage
+processes associated with extreme rainfall in cities, due to
+a lack of accurate, comparable and consistent damage data.
+The objective of this study is to investigate the impacts of
+extreme rainfall on residential buildings and how affected
+households coped with these impacts in terms of precaution-
+ary and emergency actions. Analyses are based on a unique
+dataset of damage characteristics and a wide range of poten-
+tial damage explaining variables at the household level, col-
+lected through computer-aided telephone interviews (CATI)
+and an online survey. Exploratory data analyses based on a
+total of 859 completed questionnaires in the cities of Mün-
+ster (Germany) and Amsterdam (the Netherlands) revealed
+that the uptake of emergency measures is related to charac-
+teristics of the hazardous event. In case of high water levels,
+more efforts are made to reduce damage, while emergency
+response that aims to prevent damage is less likely to be ef-
+fective. The difference in magnitude of the events in Mün-
+ster and Amsterdam, in terms of rainfall intensity and wa-
+ter depth, is probably also the most important cause for the
+differences between the cities in terms of the suffered ﬁnan-
+cial losses. Factors that signiﬁcantly contributed to damage in
+at least one of the case studies are water contamination, the
+presence of a basement in the building and people’s aware-
+ness of the upcoming event. Moreover, this study conﬁrms
+conclusions by previous studies that people’s experience with
+damaging events positively correlates with precautionary be-
+haviour. For improving future damage data acquisition, we
+recommend the inclusion of cell phones in a CATI survey to
+avoid biased sampling towards certain age groups.
+1 Introduction
+More than 200 major ﬂood events occurred in Europe be-
+tween 1998 and 2009, causing 1126 deaths, displacement
+of about half a million people and around EUR 52 billion
+insured economic losses (European Environment Agency,
+2010). These lumped statistics include various types of ﬂood-
+ing, including ﬂuvial ﬂoods, ﬂash ﬂoods, and pluvial ﬂoods
+in urban areas that are triggered by extreme rain events over-
+whelming urban drainage systems. Currently, only little is
+known about the contributions of the different ﬂood types
+and characteristic damage processes.
+To better manage ﬂoods and to reduce their impacts, the
+European Union launched the Floods Directive in 2007 (Eu-
+ropean Commission, 2007). When implementing the direc-
+tive, most of the countries concentrated on ﬂuvial and coastal
+ﬂoods and neglected pluvial ﬂoods despite their damaging
+character (European Commission, 2015). However, recent
+pluvial ﬂood events in urban dwellings in Europe and else-
+where have demonstrated that the adverse consequences of
+extreme rainfall must not be neglected. This includes large
+cities such as seen in the pluvial ﬂoods in Copenhagen in July
+2011, with EUR 807 million of insured losses (Garne et al.,
+2013), or in Beijing, where a rainstorm in July 2012 caused
+an estimated total loss of over USD 1.86 billion (Wang et al.,
+Published by Copernicus Publications on behalf of the European Geosciences Union.
+1338 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+2013), but also smaller cities such as the city of Hull, which
+suffered, among other towns in the UK, from severe plu-
+vial ﬂooding after a series of extreme rainstorms in 2007
+(Coulthard and Frostick, 2010). In addition to losses caused
+directly by pluvial ﬂooding, damage can also be caused
+by rainwater directly entering the building through roofs
+(Spekkers et al., 2015).
+A prerequisite for an adequate management of the risks of
+extreme rainfall is a quantitative analysis of the hazard and its
+potential impacts. To quantify impacts, processes that govern
+damage caused by extreme rainfall have to be analysed, un-
+derstood and ﬁnally used to derive quantitative loss models.
+Accurate, comparable and consistent data on impacts of ex-
+treme rainfall and potentially inﬂuencing factors, gathered on
+the scale of ﬂood-affected properties, serve as a good basis.
+While such comprehensive data sets have been collected for
+ﬂuvial ﬂoods in recent years (e.g. Gissing and Blong, 2004;
+Thieken et al., 2005, 2016; Kreibich et al., 2007; Kienzler
+et al., 2015), data collection for extreme rainfall is rare and
+samples are much smaller (Rözer et al., 2016; Van Ootegem
+et al., 2015).
+Two approaches to collect ex-post damage data can be
+distinguished. Large data sets originate from loss adjust-
+ments by insurers or from payouts of governmental disas-
+ter funds or other risk transfer schemes. Such data sets pro-
+vide a complete picture of the losses of insured households
+and properties with regard to the total amount of losses and
+also their spatial as well as temporal distribution. However,
+these data do not contain information on damage conditions
+and the processes underlying damage estimates. Therefore,
+they are only of limited use for loss model development (e.g.
+Spekkers et al., 2014). In addition, loss data from risk transfer
+schemes, particularly from ﬂood insurance, may be biased.
+Insurance data only cover households that are insured and
+thus not necessarily the whole affected population. More-
+over, insurance contracts commonly include a deductible as
+well as an excess rate; i.e. the insured household has to cover
+small losses as well as losses which exceed the excess rate on
+their own. Thus, these costs have to be added to the payouts
+in order to receive the total loss (e.g. Thieken et al., 2006).
+In addition, access to damage data from risk transfer schemes
+and similar sources might be constrained by data privacy pro-
+tection.
+Scientiﬁc surveys can help to overcome some of the prob-
+lems associated with insurance data sets. Surveys allow the
+collection of detailed information on the property scale in-
+cluding many factors that might inﬂuence the amount and
+type of damage, such as hazard characteristics at the affected
+property, characteristics of the affected structure including
+property-level precautionary and emergency measures, and
+socio-economic variables of the affected households. How-
+ever, due to the high costs and the dependence on the will-
+ingness of affected residents to participate in the survey, only
+a sample of the affected population can be investigated and
+is hence covered by the data. Depending on the question-
+naire and survey mode, this sample can be biased through
+an overrepresentation of certain groups (selection bias) or
+a cognitive bias caused by the questionnaire (response bias).
+In contrast to data from insurances, surveys are not neces-
+sarily restricted to residents that suffered from damage. In
+fact, residents that live in the affected area but did not expe-
+rience damage may contribute information that is important
+for damage analysis and risk mitigation (Van Ootegem et al.,
+2015).
+In the past decades, several scientiﬁc surveys have been
+conducted in the aftermath of severe ﬂood events, focussing
+on private households in Germany (e.g. Kreibich et al., 2005;
+Thieken et al., 2005, 2007, 2016; Kienzler et al., 2015). Only
+a few surveys have been carried out to investigate the risks
+and damage associated with extreme rainfall. For example,
+Van Ootegem et al. (2015, 2016) conducted a mail survey in
+2013 among pluvial ﬂood victims in Flanders, the northern
+part of Belgium. People were asked to report how much dam-
+age they suffered to several parts of the building as well as
+the building contents. Explanatory variables were collected,
+such as building characteristics, behavioural indicators and
+socio-economic variables, to construct multivariate damage
+models for pluvial ﬂoods. Rözer et al. (2016) used data col-
+lected through computer-aided telephone interviews (CATI)
+to analyse three pluvial ﬂood events in Germany. Rözer et al.
+(2016) found emergency response played a bigger role in plu-
+vial ﬂood damage mitigation than in ﬂuvial ﬂoods, because
+of the relative low water depths associated with pluvial ﬂoods
+and a low risk awareness among people for this type of ﬂood-
+ing. Poussin et al. (2015) conducted a mail survey in three
+regions in France to investigate how households reacted in
+terms of mitigation measures for different types of ﬂooding,
+including pluvial ﬂooding. They found that the effectiveness
+of ﬂood mitigation measures depends on the characteristics
+of the ﬂood hazard. Morss et al. (2016) conducted interviews
+on people’s risk perception of ﬂash ﬂoods by sending a mail
+survey to 1000 randomly chosen households in Boulder, Col-
+orado, and 200 students from the University of Colorado,
+Boulder. Their study showed that respondents who had pre-
+pared themselves for ﬂash ﬂoods or who perceive a higher
+likelihood of being killed by a ﬂash ﬂood were also more
+willing to take protective actions in response to a ﬂash ﬂood
+warning.
+For this type of analysis, the risk management was found
+to be a valuable framework (Thieken et al., 2007; Kienzler
+et al., 2015; Rözer et al., 2016). This cycle generally consists
+of three phases (see Fig. 1).
+1. Response and recovery: just before, during and immedi-
+ately after a damaging event, residents take emergency
+measures to limit adverse effects of the event and start to
+clean-up and repair damage as soon as possible in order
+to regain the pre-event standard of living.
+2. Risk analysis and event assessment: in order to create
+a sound knowledge base for risk management, a phase
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1339
+Event 
+Figure 1. The risk management cycle used as a framework for the
+exploratory data analyses in this paper.
+of risk analysis and event assessment should be per-
+formed including the investigation of the adverse con-
+sequences.
+3. Disaster risk reduction: in the face of a next disaster, res-
+idents plan and implement adequate precautionary and
+preparatory measures that aim at preventing and miti-
+gating risks.
+In this paper, we analyse the impacts of extreme rainfall to
+residential buildings in the cities of Münster (Germany) and
+Amsterdam (the Netherlands) as well as precautionary be-
+haviour and emergency response by households, using the
+risk management cycle as an aid to analyse and present re-
+sults. The two cities suffered from extreme rainfall in the past
+years, most notably the severe weather event of 28 July 2014
+that caused rainfall damage in parts of northern and central
+Europe. Within the risk management cycle, we focused on
+the following research questions in particular:
+1. How did residents in Münster and Amsterdam respond
+to a hazardous rain event by undertaking emergency
+measures?
+2. What is the ﬁnancial damage to building structure and
+building content due to a hazardous rain event?
+3. How does the level of precaution and other possible ex-
+planatory variables affect the height of these losses?
+4. How prepared are residents in Münster and Amsterdam
+for extreme rainfall?
+5. Does experience with previous damaging rain events af-
+fect people’s precautionary behaviour?
+These questions were indicated as being important for ﬂood
+risk management during panel discussions with professionals
+working for the city of Amsterdam. Similar questions were
+also discussed in related studies by Kienzler et al. (2015) and
+Rözer et al. (2016).
+Scientiﬁc surveys were administered among affected
+households in Münster and Amsterdam to collect informa-
+tion on self-reported ﬁnancial losses caused by damage to
+building structure and building content as well as factors po-
+tentially inﬂuencing damage, such as hazard, building and
+socio-economic characteristics. A questionnaire was devel-
+oped for the purpose of investigating the impacts of intense
+local rainfall. It has a ﬂexible structure and is set up in open
+source software to make it easily adaptable and applicable to
+other cases.
+After brieﬂy describing the two case studies and the dam-
+age data collection campaign in the next section, we discuss
+the result of the case study comparison in Sect. 3. We then
+discuss possible methodological biases and differences be-
+tween the case studies due to hazard and regional character-
+istics (Sect. 4). Conclusions are summarized in Sect. 5.
+2 Data and methods
+2.1 Case studies
+Two case studies are central in this paper: the cities of
+Münster (Germany) and Amsterdam (the Netherlands). Both
+cities suffered rainfall damage caused by a synoptic weather
+event that occurred on 28 July 2014. The following two sec-
+tions describe the case studies in detail. Key features of the
+two case studies are summarized in Table 1.
+2.1.1 Münster
+On 28 July 2014, the city of Münster (population: 310 000,
+area: 300 km2) and the smaller town Greven (population:
+37 000, area: 140 km2) were hit by an extreme rainfall event.
+The event, which exceeded a return period of 100 years, was
+a result of an interaction between a stationary cold front
+over Münster and constantly incoming hot and humid air
+from the east (Grüning and Grimm, 2015). Between 14:00
+and 21:00 UTC, a rain intensity of 292 mm in 7 h was mea-
+sured at the weather station “Hauptkläranlage”, north of the
+city centre of Münster, operated by the State Environmental
+Agency of North Rhine-Westphalia (LANUV NRW, 2015).
+At its peak, a depth of 220 mm was accumulated in 1.75 h.
+Except for the west, the whole city of Münster and all
+of Greven were affected by pluvial ﬂooding. There was no
+ﬂooding of a river system in that region that day. More than
+7000 residential houses were damaged, and around 24 000
+households were without electricity for some hours. The rail
+and road trafﬁc was disrupted that day. The total damage to
+private households for Münster is estimated to be more than
+EUR 70 million (GDV, 2015). The most affected neighbour-
+hoods in Münster were located in the east of the city.
+Ground elevation differences in Münster are up to 30–
+60 m. The percentage of impervious surfaces in the city cen-
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1340 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+Table 1. Key features of the two case studies.
+Münster Amsterdam
+Rainfall characteristics 28 Jul 2014:
+– 292 mm in 7 ha
+– 220 mm in 1.75 ha
+28 Jul 2014:
+– 93 mm in 6.5 hb
+– 40 mm in 1 hb
+Dominant building style Single-family housesc Multifamily housesd
+Building years 1950–1990c 1880–1940d
+Sewer system 80 % separate systeme 75 % separate systemf
+Impervious surface 34 %g 61 %h
+Recent ﬂood history No ﬂoods before 28 July 2014 Minor ﬂoods
+Survey period 20 Oct 2015–26 Nov 2015 20 Jan 2016–28 Apr 2016
+Investigated damage processes – Pluvial ﬂooding – Pluvial ﬂooding
+– Water intrusion through roofs
+Survey mode – Computer-aided telephone interviews – Computer-aided telephone interviews
+– Online survey
+a LANUV NRW (2015), b KNMI (2017), c LfStat (2017a), d Kadaster (2013), e Grüning and Grimm (2015), f Waternet, personal communication (2017), g City of
+Münster (2014), h city of Amsterdam (2016).
+Figure 2. Overview map of the two case study areas. The left panel shows the cities of Münster (bottom) and Greven (top). The black
+triangle shows the location of the gauge “Hauptkläranlage” in Münster. The right panel shows the neighbourhoods Oud-West and Oud-Zuid
+in Amsterdam. Sample areas are shown in red. The black stars indicate the centres of the three cities.
+tre is around 90 % and on a city-wide level 34 %. Münster
+has a high percentage of single-family houses, built in the
+period of 1950–1990. There is an intensive residential use
+of souterrains by students. Around 80 % of the city area has
+separate sewer systems (Grüning and Grimm, 2015). The
+city of Greven directly borders to the city of Münster but is
+part of another administrative district (i.e. Steinfurt). Greven
+is a small mid-sized town, with mostly small single-family
+houses – the earliest dating back to the 19th century.
+The case study area compromises neighbourhoods in
+Münster and Greven that were most affected (Fig. 2), based
+on ﬁre brigade data on street level provided by the cities of
+Münster and Greven. All streets that had at least one, for
+Münster, or three, for Greven, ﬁre brigade records on 28 July
+2014 were selected. This case study focuses on households
+that suffered from pluvial ﬂooding, which was the scope of
+the EVUS project that funded the Münster survey. In the re-
+mainder of the paper, we refer to “Münster and Greven” as
+“Münster”.
+2.1.2 Amsterdam
+The city of Amsterdam (population: 830 000, area: 230 km2)
+was also hit by extreme rainfall on 28 July 2014. Between
+07:30 and 14:00 UTC, a total of 93 mm of rainfall was accu-
+mulated in 6.5 h, based on radar data from the Royal Nether-
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1341
+lands Meteorological Institute (KNMI, 2017). A maximum
+hourly rain intensity of 40 mm h−1 was recorded between
+09:15 and 10:15 UTC (i.e. 40 mm in 1 h is exceeded once
+every 50 years).
+Parts of the highways around Amsterdam were temporar-
+ily closed for trafﬁc due to the rainfall. Throughout the city,
+ﬂoods were reported, mostly in the centrally located neigh-
+bourhoods Oud-West and Oud-Zuid (see Fig. 2). Areas for
+the survey were based on a density analysis of ﬁre brigade
+and municipal ﬂood data of the city of Amsterdam.
+The case study area is characterized by multifamily houses
+(i.e. apartment buildings) built in the period of 1880–1940
+and mostly connected to separate sewer systems. The per-
+centage of impervious surface areas is 61 %, based on 2016
+GIS data provided by the city of Amsterdam. The area is
+known for having many semi-basements (i.e. souterrains)
+which are vulnerable to ﬂooding; an exact number on the
+percentage of houses with a basement could not be obtained
+from public data sources. The case study area is practically
+ﬂat (height differences of 2–3 m). Besides pluvial ﬂooding,
+we investigated cases of roof leakages in this case study, too.
+The survey included not only data from the 28 July 2014
+event but also other smaller rain events that occurred after
+2010. Since the extreme rainfall event on 28 July 2014 was
+most often reported by respondents (41 % of all cases), we
+refer to this event in the event description.
+2.2 Damage data collection procedure
+To identify factors that inﬂuence damage and gain insights on
+coping strategies, we conducted surveys among tenants and
+homeowners in Münster and Amsterdam whose houses were
+ﬂooded due to rainfall. In line with the work by Van Ootegem
+et al. (2015), the surveys were also applied to ﬂooded house-
+holds that did not suffer any damage. The member of the
+household with the best knowledge of the damaging event
+was asked to participate in the survey. Homeowners were
+asked to report on their damage to building content and build-
+ing structure, while tenants were only asked to report on the
+latter in case they had detailed knowledge about the struc-
+tural damage of the building. We aimed for a minimum of
+300 completed interviews per case study to avoid small sub-
+samples (e.g. groups of respondents that take a certain pre-
+cautionary measure).
+A questionnaire was developed for the collection of dam-
+age data associated with extreme rainfall events, building
+upon an existing questionnaire for ﬂuvial ﬂooding (Thieken
+et al., 2005; Kreibich et al., 2005). River or groundwater
+ﬂooding are not addressed in this questionnaire. The ques-
+tionnaire was organized in six thematic groups, containing
+82 mainly closed questions. The questionnaire acquires in-
+formation on ﬁnancial losses caused by damage to building
+structure and content, hazard and building characteristics,
+people’s precautionary behaviour and emergency response.
+A more detailed description of the questionnaire design is
+given in Appendix A.
+In Amsterdam, we conducted computer-aided telephone
+interviews and an online survey. Samples were randomly
+drawn from a database of landline and cell-phone numbers
+(2269 households) held by EDM, a customer data analytics
+company, for the selected case study area. A team of trained
+students carried out the CATI in the period of 20 January to
+28 April 2016. We conducted an online survey among 7000
+households for which we were not able to retrieve a phone
+number. Survey participants who suffered damage from mul-
+tiple rain events were asked to focus on the most recent event.
+In case participants suffered from a rain event after 2010
+other than the one on 28 July 2014, they were asked to re-
+port on this event. Therefore, the analyses in this study do
+not exclusively refer to the extreme rainfall events on 28 July
+2014, but impacts of extreme rainfall in general. For Amster-
+dam, the entire database of survey responses is available un-
+der Creative Commons Attribution-NonCommercial license
+(CC BY-NC) and can be downloaded from the DANS archive
+(Spekkers, 2016).
+In Münster, a CATI among tenants and homeowners was
+conducted by explorare, an independent market research in-
+stitute. Samples were drawn from the Deutsche Post ad-
+dress database (7445 households) for the affected streets. The
+generic questionnaire was adapted for this case study to be
+consistent with existing ﬂood damage databases. More de-
+tails on the survey modes of the Münster and Amsterdam
+case studies and the sampling procedures are given in Ap-
+pendix B.
+Some post-processing activities were performed on the
+collected data. Checks were performed to correct or remove
+implausible inputs, for example, by comparing reported wa-
+ter levels inside and outside the house and by comparing
+reported ﬂoor areas with building footprint. Responses to
+open questions (e.g. the “Other” ﬁeld of the question “How
+did water get into your house?”) were manually categorized.
+First, open answers were categorized using existing answer
+categories wherever possible. If the open answer did not ﬁt in
+any of existing categories, but was given by several respon-
+dents, a new category was added. Otherwise the answer was
+set to “Other”.
+2.3 Data analyses
+Table 2 presents an overview of the collected data used for
+analyses in this paper. Similar to the papers by Thieken et al.
+(2007), Kienzler et al. (2015) and Rözer et al. (2016), the
+risk management cycle (Fig. 1) is used as a framework for
+the data analyses and the presentation of the results. In the
+present study we did not cover the topic of recovery, because
+this would require repeated surveys over a period of time.
+Response is here deﬁned as the efforts to minimize the
+damage created by a disaster by taking emergency measures
+just before, during or immediately after the event. This topic
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1342 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+Table 2. Items of the questionnaires that were used in this paper.
+Item Measurement scale∗, unit and labels Risk management cycle
+Hazard characteristics
+Water depth in basement r: m Risk analysis
+Water depth at ground level r: m Risk analysis
+Contaminated water n: No | yes Risk analysis
+Entry point of water n: How water got into the house Risk analysis
+Building information
+Presence of a basement n: No | yes Risk analysis
+Floor area r: m2
+Building type n: Detached | semi-detached | terraced | multifamily
+Damage information
+Damage to building structure r: EUR Risk analysis
+Damage to building content r: EUR Risk analysis
+Preparedness
+Flood experience r: Number of previous ﬂood events Disaster risk reduction
+Precautionary measures n: Type of precautionary measures implemented before the event,
+implemented after the event and planned within 6 months from in-
+terview date
+Disaster risk reduction
+Aware of upcoming rain event n: No | yes Risk analysis
+Respondent was at home n: No | yes Risk analysis
+Emergency measures n: Type of emergency measures implemented Response
+Socio-economic variables
+Age of the respondent r: Number of years
+Gender n: Female | male
+Education o: Highest degree of education obtained
+Household size r: Number of persons living in the household
+Ownership structure n: Homeowner | tenant
+∗ r = ratio, o = ordinal, n = nominal.
+covers items labelled “Response” in Table 2. People’s re-
+sponses were analysed by means of a frequency analysis of
+the emergency measures people took. A few emergency mea-
+sures were only asked in one of the two case studies. In the
+present paper, we only report on emergency measures that
+were considered in both case studies.
+Risk analysis and event assessment, in this paper, relates to
+the analysis of damage characteristics and the factors inﬂu-
+encing damage. This topic covers items labelled “Risk analy-
+sis” in Table 2. We distinguished between damage to building
+structure and building content as well as the total damage.
+Building structure is here deﬁned as everything permanently
+connected to the building, such as building walls and ceil-
+ing, permanent ﬂooring and infrastructure. Building contents
+are portable goods and semi-permanent objects, such as fur-
+nishing, curtains and carpets. Total damage was calculated
+by summing building structure damage and building content
+damage for the records where both values are available, in-
+cluding reported zero values. We analysed the effect of the
+following binary variables on damage:
+– water contamination by sewage, chemicals, oil or gas;
+– presence of a basement;
+– if respondent was at home;
+– respondent’s awareness of the upcoming severe weather
+event;
+– respondent’s experience with water intrusion;
+– if respondent took at least one precautionary measure.
+We performed a median ratio test to analyse the signiﬁcance
+of these variables, i.e. by comparing the median damage in
+the subset of the data for which the binary variable is true
+with the median damage in the subset of the data for which
+the binary variable is false. For this purpose, we estimated the
+conﬁdence intervals of the difference between the medians
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1343
+Table 3. Basic statistics of the data sets. City-level census data are obtained from the databases of LfStat (2017b) and Statistics Netherlands
+(2017) for Münster and Amsterdam respectively. Characteristics of people relate to persons older than 15 years.
+Münster Amsterdam
+Telephone sample Census data Telephone sample Online sample Census data
+Survey characteristics
+Number of completed questionnaires 510 210 139
+Number of contacted households 7445 2269 7000
+Response rate (%) 6.9 9.3 2.0
+Mean interview time in minutes 29 21 21
+Demographic characteristics
+Mean age of the respondent 64 45 56 54 43
+Female / male ratio 1.3 1.1 0.8 0.8 1.0
+Percentage of people with Master’s
+degrees or higher
+37 20 50 55 38
+Mean household size 2.3 2.2 2.3 2.3 1.8
+Mean ﬂoor area (m2) 130 95 110 100 –
+Percentage of homeowners 80 42 66 63 39
+Percentage of single-family houses 33 32 19 16 –
+using a bootstrapping method with 10 000 bootstrap samples
+(e.g. Haukoos and Lewis, 2005).
+Disaster risk reduction is here deﬁned as a set of actions
+that is taken as precautionary measures in the face of a po-
+tential disaster and refers to items labelled “Disaster risk re-
+duction” in Table 2. We investigated the number and the type
+of precautionary measures respondents took as well as when
+respondents implemented these measures. A few precaution-
+ary measures were excluded from the analysis because they
+were only investigated in one of the two case studies. The
+correlation between people’s preparedness and their expe-
+rience with previous damaging rain events was determined
+by comparing the mean number of precautionary measures
+people have taken before the event in groups of respondents
+with and without previous ﬂood experience. Experience is
+here deﬁned as having at least one experience with a dam-
+aging rain event, independent of the severity and the recency
+of earlier events. A two-sided t test was performed to test
+whether means are signiﬁcantly different.
+3 Results
+3.1 Summary statistics of the data set
+A total of 859 questionnaires were completed, including
+510 for Münster and surroundings and 349 for Amster-
+dam. The Münster data set contains 447 completed ques-
+tionnaires from the city of Münster and 63 from the neigh-
+bouring town of Greven. Basic statistics are summarized in
+Table 3. The response rate was calculated according to Re-
+sponse Rate 1 (RR1) in AAPOR (2015) by dividing the num-
+ber of completed questionnaires by the number of contacted
+households. In Amsterdam, the response to the CATI survey
+(9.3 %) was higher than the online survey (2.0 %). The CATI
+survey of Münster was in between, with a response rate of
+6.9 %. In the CATI survey, multiple call attempts were made
+to obtain a completed questionnaire, whereas for the online
+survey we only sent out a survey invitation letter once. The
+interviews averaged 8 min longer in Münster than Amster-
+dam mainly because of a difference in the length of the ques-
+tionnaires.
+Response bias was checked by comparing demographic
+indicators between response sample and census averages.
+Respondents in both cities are relatively old, highly educated
+and more often homeowners, compared to city-level averages
+(Table 3). There can be several explanations for this. In the
+Münster survey, only landlines phone numbers were avail-
+able. Due to the increasing use of cell phones, elderly people
+may tend to be overrepresented in a landline-only sample,
+as argued by Kienzler et al. (2015). In the Amsterdam sur-
+vey, selected areas affected by ﬂooding were more expensive,
+and the sample is therefore not representative for the city as
+a whole.
+Unpublished research by the second author, based on data
+from a previous study (Rözer et al., 2016), shows that de-
+mographic variables, similar to those listed in Table 3, do
+not correlate with damage. The exception is the variable
+“Percentage of homeowners”, which shows a weak positive
+correlation with damage. We therefore expect that damage
+amounts reported in this study may be overestimated because
+of the response bias. More details on a possible response bias
+are given in Sect. 4.
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1344 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+Switched off gas and/or electricity*** Unplugged electronic devices or secured power sockets***
+Secured oil tank and tanks with other hazardous substances*** Secured or removed semi−permanent facilities*** Secured pets and other animals
+Pumped or mopped out the water*** Redirected the water on your property by provisional solutions Secured important documents and valuables***
+Asked for external help*** Moved furniture to higher floors or another safe place*** Prevented water intrusion by provisionally sealing openings
+0 % 20 % 40 % 60 % 0 % 20 % 40 % 60 %
+0 % 20 % 40 % 60 %
+Amsterdam
+Münster
+Amsterdam
+Münster
+Amsterdam
+Münster
+Amsterdam
+Münster
+Figure 3. Percentage of respondents undertaking emergency measures. Only emergency measures that were asked in both cities are shown.
+A signiﬁcant difference between proportions is denoted as follows: ∗= p < 0.05, ∗∗= p < 0.01, ∗∗∗= p < 0.001.
+3.2 Frequency analysis of emergency response data
+A total of 39 % of the respondents in Amsterdam and 71 %
+of the respondents in Münster have implemented at least one
+emergency measure before or during the event out of the 11
+emergency measures compared in this study. Compared to
+similar studies by Rözer et al. (2016) for pluvial ﬂoods and
+Kienzler et al. (2015) for ﬂuvial ﬂoods, the percentage for
+Münster is high and the percentage for Amsterdam is among
+the lowest. For the frequency analysis all observations in-
+cluding missing data were considered. Therefore, the results
+have to be interpreted with caution as a large number of re-
+spondents in Amsterdam did not answer this question (43–
+45 %; see also Sect. 4.1.2).
+Figure 3 shows an overview of the implemented emer-
+gency measures in the two cities. For 8 out of 11 emer-
+gency measures, the percentage of respondents who imple-
+mented emergency measures is signiﬁcantly higher in Mün-
+ster than in Amsterdam on a 0.001 signiﬁcance level. “Pump-
+ing or mopping out the water” is in both cities by far the
+most frequently implemented measure (Münster 52 %, Am-
+sterdam 23 %). The measure “Moving furniture to higher
+ﬂoors” ranks second in Münster (37 %) and third in Am-
+sterdam (12 %). These ﬁndings are in line with studies by
+Rözer et al. (2016) and Kienzler et al. (2015), where the
+two above-mentioned emergency measures are also among
+the three most frequently implemented measures. A survey
+among pluvial-ﬂood-affected households in Flanders, Bel-
+gium, revealed a similar percentage for “Moving furniture to
+higher ﬂoors” as in Amsterdam (Van Ootegem et al., 2015).
+Unlike the measures “Pumping or mopping out the water”
+and “Moving furniture to higher ﬂoors”, other measures dif-
+fer considerably in popularity between the two cities. For ex-
+ample, the measure “Provisionally sealing openings” ranked
+Table 4. Number of respondents providing loss information.
+Damage data Missing values Zero damage
+Münster (n = 510)
+– Structure damage 340 (67 %) 170 (33 %) 33 (6 %)
+– Content damage 328 (64 %) 182 (36 %) 41 (8 %)
+– Total damage 274 (54 %) 236 (46 %) 23 (5 %)
+Amsterdam (n = 349)
+– Structure damage 294 (84 %) 55 (16 %) 91 (26 %)
+– Content damage 325 (93 %) 24 (7 %) 215 (62 %)
+– Total damage 282 (81 %) 67 (19 %) 58 (17 %)
+second in Amsterdam (13 %) but was one of the least popular
+in Münster (18 %). The differences in emergency response
+can partly be explained by the differences in event magni-
+tude. Some measures are more sensible to take than others,
+depending on the ﬂood depth, as is discussed in more detail
+in Sect. 4.2.2.
+3.3 Risk analysis and event assessment
+A total of 67 % of the respondents in Münster and 84 % of
+the respondents in Amsterdam reported on structural damage
+to the building they live in, which includes reports of zero
+damage (Table 4). A total of 64 % of respondents in Münster
+and 93 % in Amsterdam could state their damage to building
+contents. In the Amsterdam sample, people reported a high
+number of zero losses for content damage (215 out of 325
+records). A similar result was found by Van Ootegem et al.
+(2015), who argue that these zero damages stem from the fact
+that “it is possible that people are able to remove the water
+immediately before or during the ﬂood or they are able to
+protect their belongings in some way (for instance by moving
+them to another place)”. The number of zero values is limited
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1345
+x~ A x~ M
+x~ Mx~ A
+x~ A x~ M
+Content
+Structure
+Total
+1 10 100 1000 10 000 1e+05 1e+06
+0.0
+0.2
+0.4
+0.6
+0.0
+0.2
+0.4
+0.6
+0.0
+0.2
+0.4
+0.6
+Damage [Euro]
+Density [−]
+City
+Münster
+Amsterdam
+Figure 4. Kernel density function of the total damage (top), the
+building structure damage (middle) and building content damage
+(bottom), for Amsterdam (blue) and Münster (green). Zero values
+are excluded in these graphs. The vertical dashed lines represent the
+median of the distribution. The difference in medians (=|xM −xA|)
+is signiﬁcant in all three plots (p < 0.001).
+in the Münster sample, since water depths in Münster were
+a few decimetres high, which suggests that people were not
+able to remove water or protect their contents effectively.
+Figure 4 shows the distribution of the total damage (top
+panel), the building structure damage (middle panel) and
+building content damage (bottom panel) of the two data sets.
+There is a large variation in the loss amounts reported by
+respondents, ranging from tens of Euros to hundreds of thou-
+sands of Euros. Based on a comparison of the medians of the
+distributions, signiﬁcantly higher amounts were observed in
+Münster than in Amsterdam; the median of the total dam-
+age is an order of magnitude larger in Münster (EUR 10 500)
+than in Amsterdam (EUR 1200).
+The damage distributions of Münster, especially for struc-
+tural building damage, are less symmetrical than those of
+Amsterdam and show higher peak densities. A possible cause
+that can explain these differences is the difference in reported
+water depths between the cities (Table 5), which is discussed
+in Sect. 4.2.3. The asymmetry in the Münster data set may in-
+dicate the presence of atypical extreme observations, as dis-
+cussed in more detail in Sect. 4.2.3.
+Figure 5 shows pathways for rainwater entering buildings
+as reported by respondents. In Münster, 83 % of the total
+damage was caused by water entering the house through toi-
+Table 5. Reported water depths and contamination. Median and
+mean are based on non-zero values of the water depth.
+Münster Amsterdam
+Water depth in basement
+Median (m) 0.35 0.05
+Mean (m) 0.49 0.16
+Water depth at ground level
+Median (m) 0.20 0.02
+Mean (m) 0.57 0.05
+Percentage of cases with contaminated water 22 16
+lets, sinks, drains, basement entrances, doors and other open-
+ings at ground level. In Amsterdam, only 39 % of the to-
+tal damage was associated with these pathways. This can be
+partly explained by differences in the sampling strategy be-
+tween Münster and Amsterdam: in Münster cases with roof
+leakages were only considered when the respective house-
+hold had suffered at the same time from pluvial ﬂoods, while
+the Amsterdam sample contains cases with roof leakage only.
+In Amsterdam 19 % of the total damage was caused by leak-
+ing roofs. The remaining difference is probably caused by
+the difference in the severity of the two events (see Ta-
+ble 1), combined with differences in building topology be-
+tween cities, but this hypothesis could not be tested based on
+the available data.
+A number of explanatory variables for damage were inves-
+tigated in this study (Fig. 6). For Münster, we found a sig-
+niﬁcant difference between respondents who reported con-
+taminated water and those who did not, in terms of median
+damage. Contaminated ﬂood water positively correlated with
+the median damage. No signiﬁcant correlation was found
+for Amsterdam because the number of respondents report-
+ing contaminated water was low (Table 5). In Amsterdam,
+the presence of a basement signiﬁcantly affected the median
+damage with a factor 2.2. Since less than 2 % of the respon-
+dents in Münster did not report a basement, more data are
+needed to be conclusive about the signiﬁcance of this vari-
+able for this city. No signiﬁcant correlations were found be-
+tween median damage and the variables “Experience with
+water intrusion” and “Took precautionary measures”. Aware-
+ness correlates positively with median damage for Münster.
+More research is needed to study the causality of these rela-
+tionships.
+3.4 Disaster risk reduction
+Signiﬁcantly more respondents took precautionary measures
+in Münster compared to Amsterdam (Fig. 7). For example,
+the measure “Installing a ﬂood water pump” is taken around
+six times more frequently in Münster than in Amsterdam.
+The exception is the measure “Adapting the building struc-
+ture”, which is taken more frequently in Amsterdam. This is
+because in Amsterdam, unlike in Münster, we also investi-
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1346 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+0 %
+25 %
+50 %
+75 %
+100 %
+Münster Amsterdam
+Contribution to total damage [%]
+Through building walls
+Through toilets, sinks and drains
+Through unsealed basement shafts or basement entrance
+Through closed doors, patio doors, french windows at ground level
+Through open doors or windows at ground level
+Through bursts in rainwater downpipes inside the house
+Through other openings at ground level like cable ducts or ventilation holes
+Through the roof
+Through windows, window interfaces or other openings not at ground level
+From under the floor
+Through backflow from another drainage system (e.g. roof gutter)
+Figure 5. The different ways water entered a house and their relative contribution to the total damage (of all data). Damage was assigned to
+the pathways as follows: if a respondent only reported one pathway, then the damage amount was completely assigned to that pathway. If
+two or more pathways were reported at the same time, then the damage amount was equally divided over these pathways.
+*
+**
+*
+Water contamination Presence of a basement Respondent was at home Aware of upcoming event Experience with water intrusion Took precautionary measures
+Münster Amsterdam Münster Amsterdam Münster Amsterdam Münster Amsterdam Münster Amsterdam Münster Amsterdam
+0.0
+0.5
+1.0
+1.5
+2.0
+Median ratio [−]
+Figure 6. The effect of water contamination, presence of a basement in the building, presence of the respondent during the event, respondent’s
+awareness of the upcoming rain event, experience with water intrusion and precaution on the total damage (N = 274, Münster; and N = 282,
+Amsterdam). Damage is expressed as the ratio between the median damage in the group of respondents where variable value is true and the
+median damage in the group of respondents where variable value is false. A median ratio above 1 means a positive correlation and below 1
+means a negative correlation. A signiﬁcant difference between medians, based on a bootstrapping method with 10 000 bootstrap samples, is
+denoted as follows: ∗= p < 0.05, ∗∗= p < 0.01, ∗∗∗= p < 0.001.
+gated roof leakages, and improvements to the roof were con-
+sidered building adaptation.
+The list of the ﬁve most popular precautionary measures
+of both case studies contains the same measures, but not
+in same order: “Requesting information about precautionary
+measures”, “Installing a ﬂood water pump”, “Avoid expen-
+sive furnishing on the ﬂoor at risk”, “Store low-value goods
+on ﬂoor at risk” and “Adapting the building structure” are
+frequently reported by respondents in the both cities. Apart
+from “Adapting the building structure”, these are measures
+that can be implemented at relatively low or medium costs
+(Rözer et al., 2016).
+Results show that respondents’ actions were mostly re-
+active: many respondents implemented precautionary mea-
+sures after the event. An exception is the measure “Installing
+a water pump”. The reactive approach is also conﬁrmed by
+Fig. 8, which shows that respondents who have experienced
+water intrusion before take 1.5 to 1.7 times more precaution-
+ary measures than respondents with no experience. This is
+in line with studies by Kreibich et al. (2005), Bubeck et al.
+(2012) and Kienzler et al. (2015).
+Figure 8 also shows that the relative increase in uptake of
+precautionary measures between groups with and without ex-
+perience with water intrusion seems to be independent from
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1347
+Adapting the building structure (e.g. sealing the basement walls) Installing mobile or built−in water barriers Installing mobile or built−in flood water pump(s)
+Install/store low−value material and goods on floors at risk Avoiding expensive, built−in interior furnishing on the floors at risk Moving heating system and/or electric fuse box to higher floors
+Requesting information about precautionary measures Attending information events about precaution Joining a local community network
+0 % 20 % 40 % 60 % 0 % 20 % 40 % 60 % 0 % 20 % 40 % 60 %
+Amsterdam
+Münster
+Amsterdam
+Münster
+Amsterdam
+Münster
+Before the event After the event Within six months from interview date
+Figure 7. Percentage of respondents undertaking precautionary measures: before the event (blue), after the event (purple) or planned to be
+implemented within 6 months from interview date (green). Only precautionary measures that were asked in both cities are shown.
+n = 390
+n = 108
+n = 55
+n = 274
+Münster*** Amsterdam*
+No Yes No Yes
+0.0
+0.1
+0.2
+0.3
+0
+1
+2
+3
+Experience with water intrusion
+Mean number of precautionary measures
+Figure 8. Mean number of precautionary measures against people’s
+experience with water intrusion. A signiﬁcant difference, based on
+two-sided t test, between means is denoted as follows: ∗= p <
+0.05, ∗∗= p < 0.01, ∗∗∗= p < 0.001.
+the number of measures implemented as well as from the
+fraction of households with experience. While the majority
+of households in the Amsterdam dataset had experience with
+water intrusion (83 %), the number of implemented measures
+was relatively low, with less than one measure on average per
+household. In Münster, only 21 % of the households stated to
+have had experience with water intrusion but implemented
+on average 2.3 measures. In Sect. 4.2.1 we discuss possible
+explanations for the difference between cities in uptake of
+precautionary measures.
+4 Discussion and recommendations
+The results shown in Sect. 3 reveal considerable differ-
+ences between the two cities in terms of emergency response
+(Fig. 3), ﬁnancial losses (Fig. 4) and people’s level of precau-
+tion (Fig. 7), with generally higher losses and uptake of mea-
+sures in Münster compared to Amsterdam. There are several
+underlying effects that may cause variations. These include
+methodological biases as well as differences in case study
+characteristics, i.e. differences in the magnitude of the events
+in terms of rainfall intensity and recorded water depth and re-
+gional effects such as differences in the socio-economics and
+building topology (Table 3). In this section, the observed dif-
+ferences are critically evaluated in terms of possible method-
+ological biases and differences between case studies to derive
+more universal coherences. Moreover, we make recommen-
+dations for future surveys on the topic of damage data collec-
+tion.
+4.1 Methodological biases
+As described in Sect. 2.2, the Münster and Amsterdam sur-
+veys are based on one generic questionnaire, which was
+adapted independently to the case studies. The main differ-
+ences between the two surveys are related to the survey de-
+livery mode and questionnaire structure.
+4.1.1 Survey delivery mode
+In Münster a single-mode CATI survey was conducted, while
+in Amsterdam a combination of a CATI and an online survey
+was used. Although there are many studies investigating sur-
+vey mode effects, i.e. the possible sources of differences in
+survey outcomes such as selection bias, the effect of a partic-
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1348 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+ular mode on the survey outcome is not yet fully understood
+(Couper, 2011).
+Demographics of respondent groups can be compared
+between the samples of different survey modes to check
+whether the choice of the survey mode has affected the rep-
+resentativeness of the sample (Link and Mokdad, 2006). For
+Amsterdam, we found only minor differences in the demo-
+graphics between CATI and the online survey, with a simi-
+lar over-representation of older and higher-educated respon-
+dents compared to census data, as shown in Table 3. We
+therefore conclude that the choice of survey mode does not
+inﬂuence population representation in the samples, i.e. Mün-
+ster CATI sample, Amsterdam CATI sample and Amsterdam
+online sample.
+The bias towards older and higher-educated respondents
+could not have been avoided by the choice of survey mode.
+This bias is particularly large for the Münster sample where
+only landline phones were contacted. Response bias in sur-
+veys that are based on landline samples only are a well-
+known challenge in modern survey research. Dillman (2011)
+argues that because of the decreasing numbers of landline
+phones and accessibility to online surveys (i.e. internet con-
+nection), it becomes increasingly difﬁcult to obtain a repre-
+sentative sample using a single-mode survey. A combination
+of a CATI with landline and cell-phone numbers and an on-
+line survey probably brought the mean age of the respondents
+in Amsterdam closer to census data. Because of the small dif-
+ferences between the telephone and online samples in Ams-
+terdam, we assume that by including cell-phone numbers in
+the sample we improved the survey coverage.
+4.1.2 Questionnaire structure
+Modiﬁcations to the questionnaire structure (i.e. wording,
+sequencing, response format) can signiﬁcantly bias survey
+outcomes (e.g. Couper, 2011; Bergman et al., 1994; Porst,
+2014). In the context of the present study, an important dif-
+ference between the surveys (i.e. Münster CATI, Amsterdam
+CATI and Amsterdam online survey) is the response format
+of questions related to precautionary and emergency mea-
+sures. These items were designed as closed questions in the
+Münster CATI and the Amsterdam online survey, i.e. each
+measure was individually presented to the respondent. In the
+Amsterdam CATI, a semi-closed format was chosen. While
+testing the Amsterdam CATI, test respondents reported to
+have had difﬁculties with focussing on closed questions that
+contain many sub-items, which was particularly the case
+with the question on precautionary measures (18 sub-items).
+We therefore decided to group similar kind of precaution-
+ary measures (in groups of around 3–4 items) and asked ﬁrst
+a closed question about whether they took measures of this
+class. Then, clarifying questions were asked to make sure
+the correct precautionary measures within the group were
+selected. In case of doubt, the interviewer explicitly went
+through all items and double-checked with the respondent.
+However, after analysing the collected data, we found that
+the closed question format in the online survey resulted in
+a signiﬁcantly higher percentage of respondents who stated
+to have implemented one or more precautionary measures
+compared to the semi-closed format in the CATI (online sur-
+vey: 34 %; CATI: 15 %; p < 0.001). The same is true for
+the average number of implemented measures (online sur-
+vey: 0.6; CATI 0.2; p < 0.001). Nevertheless, these values
+are much smaller than the values found for the Münster sur-
+vey; i.e. 64 % of the respondents implemented one or more
+precautionary measures with an average of 2.3 measures. We
+can therefore conclude that besides the evident methodologi-
+cal bias, the level of private precaution is considerably higher
+in Münster compared to Amsterdam.
+For the question items on emergency measures in Amster-
+dam, where we used a closed response format in both the
+CATI and the online survey, we did not ﬁnd a signiﬁcant
+difference between the two samples in terms of emergency
+response. However, considerably more respondents in Am-
+sterdam did not answer this question (online survey: 45 %;
+CATI: 43 %) compared to Münster (0.4 %). This was prob-
+ably caused by the fact that in Amsterdam we coded a ﬁlter
+question (i.e. “Did you or another person in your household
+take any emergency measures as an immediate reaction to the
+rain event?”) that allowed respondents to skip the question
+on emergency measures in case they did not implement any
+emergency measures or had no information about it. We pre-
+sume that people were unfamiliar with the term “emergency
+measures” (or its Dutch translation “noodmaatregelen”) and
+therefore skipped the question (“No answer”) or answered
+“No” because the emergency measure(s) they applied where
+not perceived as such. Because of the high number of miss-
+ing values, the absolute differences between the case studies
+should be interpreted with caution, but we can still compare
+the ranks of emergency measures, which will be discussed in
+the next section. Possible solutions to avoid missing values
+for this question in a future survey are given in Sect. 4.3.
+4.2 Results associated with hazard and regional
+characteristics
+Taking into account the methodological biases as discussed
+in Sect. 4.1, differences in the results between Münster and
+Amsterdam are also caused by differences in hazard and re-
+gional characteristics of the case studies. It is necessary to
+determine to what extent these hazard and regional charac-
+teristics play a role to better understand the factors that con-
+tribute to damage due to extreme rainfall.
+4.2.1 Causes of differences in precautionary behaviour
+Respondents in Münster implemented more precautionary
+measures compared to respondents in Amsterdam (Fig. 7).
+This cannot be explained by the magnitude of the studied
+event, because there was a high uptake of precautionary mea-
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1349
+sures in Münster before the event as well as after. Another
+explanation is the relation we found between the mean num-
+ber of precautionary measures and ﬂood experience (Fig. 8),
+which was also found by other researchers (Kreibich et al.,
+2005; Bubeck et al., 2012; Kienzler et al., 2015), but this
+cannot explain the absolute difference in precaution between
+the cities, because ﬂood experience results in 1.5 to 1.7 times
+more precautionary measures, while the mean number of im-
+plemented precautionary measures was about one magnitude
+higher in Münster compared to Amsterdam (see Sect. 3.4).
+The absolute difference in uptake of precautionary mea-
+sures may be caused by cultural- and/or language-speciﬁc
+differences in how respondents in Münster and Amsterdam
+perceive risk. Based on a study in Switzerland, Siegrist and
+Gutscher (2006) found German-speaking regions to have
+a signiﬁcantly lower perception of ﬂood risk compared to
+French-speaking regions. They also found that people in
+German-speaking regions underestimated their ﬂood risk,
+while people in French-speaking regions overestimated their
+ﬂood risk compared to expert judgements. However, the re-
+lationship between risk perception and precautionary be-
+haviour is subject to current research and not yet well un-
+derstood. While few studies found a signiﬁcant correlation
+between risk perception and precautionary behaviour (i.e.
+Grothmann and Reusswig, 2006), a large number of studies
+could not ﬁnd such a relationship (see Bubeck et al., 2012,
+for an overview). We recommend the inclusion of question
+items on risk perception in a future survey as it may explain
+the level of precaution and thus also indirectly damage.
+4.2.2 Causes of differences in emergency response
+The difference in emergency response between the case stud-
+ies can to some extent be explained by the magnitude of
+the event in terms of reported water depths (Table 5). If we
+compare the rankings of the emergency measures between
+the two case studies, we can conclude the following. The
+most popular emergency measures were implemented in both
+cases (i.e. “Pumping or mopping out the water” and “Moving
+furniture to higher ﬂoors”) and, thus, are implemented irre-
+spectively of the water depth. Other measures were mostly
+applied in case of large water depths (i.e. “Switching off gas
+and electricity”) or in case of small water depths (i.e. “Pro-
+visionally sealing openings”). Thus, the relative small water
+depths in Amsterdam not only reduced the overall necessity
+of taking emergency actions; they also make some measures
+more sensible to take than others. Rözer et al. (2016) found
+a similar effect: in case studies with small water depths, peo-
+ple focus more on emergency measures that have the goal to
+keep the water out (e.g. sealing openings), rather than reduc-
+ing the damage after water has already entered the building
+(e.g. securing or moving semi-permanent facilities).
+4.2.3 Causes of differences in ﬁnancial losses
+Signiﬁcantly larger damage amounts were reported in Mün-
+ster compared to Amsterdam, as shown in Fig. 4. With only
+two case studies, it is difﬁcult to quantify the factors that ex-
+plain the variability of damage between case studies. Nev-
+ertheless, possible factors can be discussed on a qualitative
+level. Following the conceptual model for building damage
+proposed by Thieken et al. (2005), we can roughly distin-
+guish between variables that relate on the impact to the struc-
+ture (i.e. hydrological load and contamination) and the resis-
+tance of the structure (i.e. permanent resistance and tempo-
+ral resistance). We expect that the Münster and Amsterdam
+cases were mostly different because of the impacts on struc-
+tures. The hydrological load in terms of water depths was
+much larger in Münster than in Amsterdam. Although there
+are differences in building types between cities (Table 3), we
+believe that differences in resistance are minor or slightly in
+favour of Münster, given the high uptake of emergency and
+precautionary measures (Figs. 3 and 7).
+In Amsterdam the damage distribution is more symmetri-
+cal on a logarithmic scale, while the damage distribution is
+negatively skewed for Münster. Generally, ﬂood damage data
+follows a lognormal distribution (Zhai et al., 2005), and as
+a consequence the density function would appear symmetri-
+cal on a logarithmic scale, but, in case of atypical extreme
+observations, standard distributions such as the lognormal
+are unable to capture the data well (Balasooriya and Low,
+2008). The asymmetry may indicate that the Münster sample
+contains some exceptional losses that are caused by different
+damage mechanisms than the bulk of the data. This could be
+a topic for further research.
+4.3 Recommendations for rainfall damage surveys
+Applying a survey in different countries or regions, as done
+in this study, is challenging. To make survey outcomes com-
+parable, and thus to avoid methodological biases, surveys
+should to a large extent share the same response format, sur-
+vey delivery mode, sampling techniques and questionnaire
+design (Bird, 2009). On the other hand, a survey should also
+be able to capture regional features, for example, in our case
+country-speciﬁc building topologies, and thus it is unavoid-
+able to introduce some differences in the set-up between sur-
+veys of different case studies.
+Some of the methodological biases we encountered in our
+survey could have been avoided, while others are more difﬁ-
+cult to address. For example, we sampled only landline phone
+numbers in the Münster CATI. Including cell phones in the
+sample can increase the representativeness of the sample as
+shown for the case of Amsterdam and other studies (e.g.
+Busse and Fuchs, 2012), but this is not possible for coun-
+tries where cell phones are not registered at an address (i.e. in
+Germany). The present study also highlighted certain issues
+with respect to the choice of response format for some of the
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1350 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+questions (e.g. items on precautionary measures). A helpful
+tool to reduce these and other methodological issues in ques-
+tionnaires is to use the template proposed by Bird (2009),
+who listed minimum requirements on methodological details
+of a questionnaire to allow comparison between case studies
+in natural hazard sciences. Another issue relates to the use of
+ﬁlter questions. A sparse use of ﬁlter questions can generate
+an unnecessarily long questionnaire that comes with fatigue
+effects and high drop out rates. However, a wrong answer to
+a ﬁlter question by mistake may lead to respondents skip-
+ping a block of questions, resulting in an increased number
+of missing observations (see Sect. 4.1.2). A possible way to
+avoid this is to make use of validation questions to cross-
+check answers to important questions.
+We recommend the use of the same IT infrastructure in all
+case studies, i.e. the same survey software and a shared data
+repository. This not only increases the comparability between
+studies, it also makes data analyses easier and less prone to
+errors. In Appendix A, the LimeSurvey-coded questionnaire
+used in Amsterdam is presented as an example of such an
+infrastructure.
+5 Conclusions
+In this paper we investigated the impacts of extreme rainfall
+to residential buildings in the cities of Münster and Ams-
+terdam as well as precautionary behaviour and emergency
+response by households. Scientiﬁc surveys were conducted
+among affected residents in Münster and Amsterdam to col-
+lect information on self-reported ﬁnancial losses, caused by
+damage to building structure and building content as well
+as factors inﬂuencing damage, such as hazard, building and
+socio-economic characteristics. The paper presents an open
+source, ﬂexible questionnaire tool that is speciﬁc to the im-
+pacts of intense local rainfall events and can easily be adapted
+to international case studies.
+A total of 510 questionnaires in Münster and 349 in
+Amsterdam were completed. Reported damage varied from
+tens of euros to hundreds of thousands of euros. The me-
+dian damage was an order of magnitude larger in Münster
+(EUR 10 500) than in Amsterdam (EUR 1200). The mean
+water depths were a lot higher in Münster (0.49–0.57 m) than
+in Amsterdam (0.05–0.16 m). From 16 to 22 % of the respon-
+dents reported water contamination by sewage, chemicals, oil
+or gas.
+Exploratory data analyses revealed that the types of im-
+plemented emergency measures are likely to be associated
+with the hazard characteristics of the event, such as the wa-
+ter level. The Münster case, with higher reported water levels
+than in Amsterdam, shows a preference for emergency mea-
+sures to reduce damage, such as unplugging electronic de-
+vices, switching off electricity and securing semi-permanent
+facilities, while in Amsterdam, with only minor water lev-
+els, people responded by undertaking emergency measures
+to prevent damage, such as provisionally sealing openings.
+The same types of emergency measures were preferred in
+both cases and are independent of the water levels: moving
+furniture to higher ﬂoors and pumping out the water.
+The difference in magnitude of the events in Münster and
+Amsterdam is probably also the most important cause for the
+differences between the cities in terms of the suffered ﬁnan-
+cial losses; in Münster signiﬁcantly higher damage amounts
+were reported compared to Amsterdam, including some ex-
+ceptionally high losses. Additionally, the low number of ob-
+servations with no damage in Münster compared to Amster-
+dam shows that in Münster people were unable to prevent
+damage, likely due to high water levels. Within the case stud-
+ies a large variation in damage was also found. Factors that
+are signiﬁcantly associated with damage are the water con-
+tamination, the presence of a basement in the building and
+people’s awareness of the upcoming weather event.
+This study conﬁrms the conclusions of other studies that
+people’s previous experience with adverse events positively
+correlates with precautionary behaviour. However, experi-
+ence cannot explain the considerably higher uptake of pre-
+cautionary measures observed in Münster compared to Am-
+sterdam. We recommend that a future survey should investi-
+gate the extent to which risk perception of extreme rainfall
+can explain people’s precautionary behaviour.
+Data availability. The databases of survey responses of the Am-
+sterdam case are available under Creative Commons Attribution-
+NonCommercial license (CC BY-NC) and can be downloaded from
+the DANS archive (Spekkers, 2016). The questionnaire used in
+Amsterdam can be downloaded from the same source. The sur-
+vey responses of the Münster case will be available through the
+HOWAS21 database (GeoForschungsZentrum , GFZ) 5 years after
+the end of the EVUS project (BMBF, 03G0846B), i.e. June 2023.
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1351
+Appendix A: Questionnaire
+A1 Questionnaire design criteria
+We set the following requirements prior to the development
+of the questionnaire:
+– The main objective of the questionnaire should be to
+characterize damage to residential buildings as a direct
+result of a rain event, i.e. pluvial ﬂooding and rainwater
+entering the house through roofs and facades.
+– The damage assessment should distinguish between the
+assessment of ﬁnancial damage to building structure
+and building content; questions related to social and
+physical vulnerability, such as human health, will not
+be part of the questionnaire as this requires a completely
+different questionnaire design.
+– The target groups of the questionnaire are private home-
+owners and tenants. Homeowners are asked to report
+their ﬁnancial damage to building structure and build-
+ing content. Tenants are asked to report on the build-
+ing content damage of their household and, in case they
+have detailed information (i.e. bills), on the damage to
+the structure of the building they live in.
+– In cases where tenants or homeowners can only report
+on one of the damage types, the other one is considered
+as missing observation. In cases where water entered the
+building, but did not cause damage to the building con-
+tent and/or building structure, the respective damage is
+considered to be zero.
+– The questionnaire considers a large set of contextual
+variables that can potentially explain damage; this list
+of variables should be based on scientiﬁc literature and
+expert judgements.
+– Deﬁnitions and variables used in the questionnaire will,
+as far as possible, be in line with deﬁnitions and vari-
+ables used in other, related questionnaires (i.e. Kreibich
+et al., 2005; Thieken et al., 2005, 2007; Van Ootegem
+et al., 2015).
+– Closed questions should be incorporated in the design
+as much as possible to reduce data post-processing ef-
+forts, to allow quantitative statistical analyses of the data
+and to allow comparison within and between data sets
+(Sarantakos, 2005).
+– The questionnaire should be applicable to computer-
+aided telephone interviewing (CATI) and online survey-
+ing; to avoid a “fatigue effect”, the questionnaire should
+not take longer than 15–20 min to ﬁnish (Rathod and
+LaBruna, 2005).
+– The questionnaire should be made generic, so it can eas-
+ily be adapted to regional speciﬁcations when applied
+internationally.
+A2 Item generation
+We have built upon a questionnaire developed by GFZ Pots-
+dam and Deutsche Rück, which was originally developed to
+assess ﬂood damage in the aftermath of the severe ﬂood event
+that hit Germany in 2002 (Kreibich et al., 2005; Thieken
+et al., 2005). This questionnaire has undergone several up-
+dates since that time. It has been mainly applied to ﬂuvial
+ﬂooding, i.e. the 2002, 2005, 2006, 2010, 2011 and 2013
+ﬂoods in Germany (see e.g. Thieken et al., 2007; Kienzler
+et al., 2015). It has also been used to investigate pluvial ﬂood
+events in Lohmar and Hersbruck in 2005 and Osnabrück in
+2010 (Rözer et al., 2016). The 2010 survey in Osnabrück was
+part of a larger survey focusing on ﬂuvial ﬂoods and only mi-
+nor changes were made to the questionnaire. The 2005 sur-
+vey in Lohmar and Hersbruck, initiated by Deutsche Rück,
+had a speciﬁc focus on pluvial ﬂoods, and some of the origi-
+nal questions were tailored to this type of event without com-
+pletely updating the questionnaire.
+The present study is a continuation of the existing line
+of research. We considerably adjusted the original question-
+naire in terms of question items and structure to account
+speciﬁcally for rainfall-related damages to residential build-
+ings. The most important changes are the following:
+– We have optimized the questionnaire from around 106
+items to 82 items to increase the chance that people will
+complete the survey. We removed questions that were
+not or less relevant for extreme rainfall in cities (e.g.
+whether people received information about river water
+levels or locations of dike bursts, which river was over-
+ﬂowing, or whether boulders were eroded or deposited
+because of high ﬂow velocities).
+– We added speciﬁc questions related to local rainfall con-
+ditions (e.g. on the causes of roof leakages, on the avail-
+able drainage facilities for rainwater and whether wind
+contributed to the occurrence of water in the house),
+based on ﬁndings from previous studies identifying
+damage explanatory factors (e.g. Spekkers et al., 2015).
+– In line with the study by Van Ootegem et al. (2015), we
+included items to specify the amount of damage in dif-
+ferent parts of the building (i.e. basement, ground ﬂoor),
+rather than asking for a total damage amount only.
+– The questionnaire was translated to English and has
+been made more generic (i.e. not speciﬁc to Germany)
+to make it applicable internationally.
+– The questionnaire was modiﬁed in such as way that
+households with no damage could also complete the
+questionnaire.
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1352 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+Table A1. Questionnaire: item groups and example question items
+Item group Number of Example question items
+questions
+Hazard
+characteristics
+12 – On which date did water get into your house?
+– How did water get into your house?
+– What was the cause of the roof leakage?
+– Which ﬂoors of your house were affected by water?
+– Could you give an estimate of the water depth in centimetres in the basement and on the ground ﬂoor?
+– How long did the water remain in your house?
+– Was the water contaminated or dirty?
+Building
+information
+17 – Which of the following building types best describes your house?
+– Do you have a garden adjacent to your house?
+– How many ﬂoors does your house have?
+– What is the main ﬂooring material being used for the following ﬂoors?
+– Is the roof ﬂat or pitched?
+Damage
+information
+14 – Did you have damage to your building structures, your building content, or both?
+– Have there been any deformations or collapses of walls or ceilings?
+– What is the total amount of building structure damage in euros?
+– Which building contents were lost or had to be replaced after the rain event?
+– Could you still live in your house?
+Preparedness 21 – Were you or someone else at home at the time of the rain event?
+– Were you aware of the rainstorm just before it occurred?
+– Which emergency measures were taken as an immediate reaction to the rain event?
+– How many times have you experienced rainwater intrusion in your life before?
+– Have you taken any actions to store rainwater in your garden or improve the inﬁltration capacity of
+your garden?
+Damage
+compensation
+8 – Have your received any form of ﬁnancial compensation from a third party?
+– What was the size of the insurance claim in euros?
+– How much compensation have you received by your insurer so far?
+Socio-
+economic
+variables
+10 – Do you or someone else in your household rent or own the house?
+– How many persons are permanently living in your household?
+– What is the net household income per year?
+– What is the highest education you have achieved?
+Total number
+of questions
+82
+The new questionnaire is organized in six thematic groups.
+Table A1 lists the groups and example questions per group.
+Closed questions were used as much as possible but where
+relevant respondents could select the answer items “Other,
+please specify” and “Do not know or prefer not to say”.
+Question groups were sequenced in such a way that there was
+a smooth transition between the topics. Moreover, the groups
+“Hazard characteristics” and “Building information” were
+put at the start of the survey as some of the items in these
+groups are conditional for items in next groups. The ques-
+tionnaire was programmed in the open source survey soft-
+ware LimeSurvey 2.05 (Schmitz, 2016). Six “urban ﬂood-
+ing” experts, inside and outside academia, reviewed a draft
+version of the questionnaire. The entire LimeSurvey ques-
+tionnaire structure ﬁle (.lls) can be downloaded from the
+DANS archive (Spekkers, 2016).
+Appendix B: Survey mode and sampling technique
+B1 Amsterdam
+In Amsterdam, we applied two survey modes:
+1. Computer-aided telephone interviewing (CATI), where
+trained interviewers contacted households by phone and
+went through the questionnaire using a computer.
+2. An online survey, where households completed a web-
+based version of the questionnaire.
+We initially considered different survey modes, but we
+favoured CATI for the following reasons: (1) it is consis-
+tent with the Münster survey where a CATI campaign was
+planned; (2) because extreme rainfall impacts is a complex
+topic, and a CATI approach allows for questions to be clari-
+ﬁed where needed; (3) by phone, people could be motivated
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1353
+to participate in the survey even if people thought their dam-
+age was not relevant for the research. However, because of
+the high costs involved in carrying out a CATI campaign (i.e.
+mainly the costs of hiring staff) and the limited number of
+phone numbers that could be obtained for the case study area,
+we eventually select for a mixed-mode survey by combing
+CATI with an online survey. The online survey does not have
+the advantage of being able to clarify questions, which may
+affect the reliability of responses.
+The organization of the telephone survey included the
+sampling of potential survey participants, the training of
+a team of interviewers, setting up a call centre and call centre
+software and writing, mail merging and sending out survey
+announcement letters.
+The sampling was done as follows. We listed the residen-
+tial addresses located in the case study using the National
+Building Register (Kadaster, 2013). We only listed addresses
+located at ground or top ﬂoor level, because these ﬂoors are
+most likely to be affected by rainfall. Floor level data are not
+readily available in the National Building Register. We there-
+fore created an algorithm based on house numbering logic to
+determine the ﬂoor per address. Per address, the phone num-
+ber of the main tenant or the homeowner was then retrieved
+through the data enrichment service of the EDM company
+(www.edm.nl). EDM was able to enrich around 30 % of the
+records with one or two phone numbers, including cell-phone
+numbers. According to EDM, this sample covers all groups
+of people in the demographic sample. Phone numbers regis-
+tered in the National Do Not Call Register for consumer re-
+search (i.e. MOA research ﬁlter, www.moaweb.nl) were not
+used in this study. The sample included 44 % landline and
+56 % cell-phone numbers.
+The interviews were carried out by a team of eight MSc
+students of the TU Delft (four males and four females), with
+most of them having a background in hydrology and hy-
+draulics. A half-day session was organized to provide the stu-
+dents with project background and instructions. A handbook
+with tips and fall-back statements (i.e. standard replies to fre-
+quently asked questions by the respondents) was provided to
+the students. The ﬁrst author was closely involved in the ﬁrst
+weeks of the data collection phase to support the interview-
+ers. A dedicated room with computers, phones and headsets
+was made available by the Product Evaluation Laboratory
+(PEL) at the TU Delft. The call centre was available from
+15:00 to 21:00 UTC on weekdays in the period of 20 January
+to 28 April 2016. We wrote a simple web interface to man-
+age phone calls and appointments using the R shiny package
+(Chang et al., 2015). Up to ﬁve calls were allowed to obtain
+a completed questionnaire.
+A letter was sent to the households to announce the sur-
+vey the weeks before they were called. A cover letter can
+increase people’s motivation to participate in a survey. In the
+letter, we introduced the TU Delft, we explained the research
+background, the scientiﬁc and social relevance, why we se-
+lected the participant and the Dutch privacy protection regu-
+lations the research was bounded to. We also indicated that
+the survey would take approximately 20 min to ﬁnish. Peo-
+ple had the opportunity to opt-out if they did not feel like
+being called. The letters were sent in six batches during the
+study period to ensure there was not too much time between
+the letter and the call attempt. More general announcements
+were done through social media and local websites. The city
+authorities of Amsterdam were informed prior to the survey.
+Households for which no phone number could be retrieved
+through the EDM data enrichment service were sent a survey
+invitation letter for the online survey by regular mail. The let-
+ter contained a URL to the survey website and a unique token
+to open the web-based questionnaire. Compared to the tele-
+phone survey, some items were removed in the online survey
+to make the survey 5 min shorter and, thus, more likely to be
+completed online. Moreover, some items had been slightly
+rephrased, in their expression only, for online readability.
+Two new variables, i.e. “building construction year” and
+“ﬂoor area”, were added to each record based on the National
+Building Register (Kadaster, 2013).
+B2 Münster
+In Münster, the survey mode was CATI. Interviews were
+administered in the period 20 October–26 November 2015
+(i.e. a total of 37 days) by explorare, an independent mar-
+ket research institute. They have over 10 years of experience
+with household surveys on the topic of ﬂood damage (e.g.
+Kreibich et al., 2005; Thieken et al., 2007, 2016). The main
+reason for a CATI approach was to have a data set that was
+consistent with existing CATI data sets.
+Samples were drawn by explorare from the Deutsche Post
+address database (6457 phone numbers in Münster and 988
+in Greven) for the entire case study area. Due to German pri-
+vacy protection regulations, this database only contains land-
+line phone numbers of households that did not opt-out of be-
+ing called for surveys.
+A raw text ﬁle with the question items and relevance equa-
+tions was provided to explorare, which then coded the ques-
+tionnaire in Voxco CATI, a commercial software for profes-
+sional call centres. Prior to the actual survey, a demo version
+of the questionnaire was made available for veriﬁcation pur-
+poses. Interviewers were professionals trained by explorare.
+Depending on the available call centre capacity, 2–10 inter-
+viewers were working at the same time. The interviewers re-
+ceived a 1 h introduction to the topic and the questionnaire by
+the second author of the present paper. There was a feedback
+round after the ﬁrst ﬁve completed surveys.
+The survey was announced via a press release, which was
+picked up by at least six local and regional newspapers as
+well as local radio stations. Additionally, the survey was an-
+nounced through the city websites. The city authorities of
+Münster and Greven were informed prior to the survey. They
+distributed the information via online and ofﬂine public no-
+tice boards.
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017
+1354 M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies
+Competing interests. The authors declare that they have no conﬂict
+of interest.
+Disclaimer. Privacy of the survey participants is guaranteed as all
+personal data were anonymized and kept conﬁdential.
+Special issue statement. This article is part of the special issue
+“Damage of natural hazards: assessment and mitigation”. It is a
+result of the EGU General Assembly 2016, Vienna, Austria, 17–
+22 April 2016.
+Acknowledgements. The data collection campaigns were supported
+by project “EVUS Real-Time Prediction of Pluvial Floods and In-
+duced Water Contamination in Urban Areas” (BMBF, 03G0846B),
+the University of Potsdam and Deutsche Rückversicherung AG
+for the Münster survey, and project “Samen met verzekeraars naar
+een regenbestendige stad” and Climate-KIC project OASIS for the
+Amsterdam survey. We would like to thank Agnes Tan (Product
+Evaluation Laboratory at TU Delft) for allowing us to use their
+call centre facilities, the students that conducted the interviews
+for the Amsterdam case, Waternet for making the ﬁre brigade and
+municipal call data for Amsterdam available, the city of Münster
+and Greven for making the ﬁre brigade data available. Johan Post,
+Wouter Botzen, Harry van Luijtelaar, Philip Bubeck, Eljakim
+Koopman and Lot Locher are acknowledged for their comments
+on a draft version of the questionnaire. We would also like to
+thank Meike Müller from Deutsche Rückversicherung AG, who
+contributed signiﬁcantly to the post-processing of the Münster
+survey data.
+Edited by: Thomas Thaler
+Reviewed by: two anonymous referees
+References
+AAPOR: American Association for Public Opinion Research
+– Standard Deﬁnitions Final Dispositions of Case Codes
+and Outcome Rates for Surveys, Tech. rep., available at:
+http://www.aapor.org/AAPOR_Main/media/publications/
+Standard-Deﬁnitions20169theditionﬁnal.pdf (last access:
+February 2017), 2015.
+Balasooriya, U. and Low, C.-K.: Modeling insurance claims with
+extreme observations: transformed kernel density and gener-
+alized lambda distribution, N. Am. Actuar. J., 12, 129–142,
+https://doi.org/10.1080/10920277.2008.10597507, 2008.
+Bergman, L. R., Kristiansson, K.-E., Olofsson, A., and Säf-
+ström, M.: Decentralised CATI versus paper and pencil inter-
+viewing: effects on the results in the Swedish Labour Force Sur-
+veys, J. Off. Stat., 10, 181–195, 1994.
+Bird, D. K.: The use of questionnaires for acquiring information
+on public perception of natural hazards and risk mitigation – a
+review of current knowledge and practice, Nat. Hazards Earth
+Syst. Sci., 9, 1307–1325, https://doi.org/10.5194/nhess-9-1307-
+2009, 2009.
+Bubeck, P., Botzen, W. J. W., Kreibich, H., and Aerts, J. C. J.
+H.: Long-term development and effectiveness of private ﬂood
+mitigation measures: an analysis for the German part of the
+river Rhine, Nat. Hazards Earth Syst. Sci., 12, 3507–3518,
+https://doi.org/10.5194/nhess-12-3507-2012, 2012.
+Busse, B. and Fuchs, M.: The components of landline telephone
+survey coverage bias. The relative importance of no-phone
+and mobile-only populations, Qual. Quant., 46, 1209–1225,
+https://doi.org/10.1007/s11135-011-9431-3, 2012.
+Chang, W., Cheng, J., Allaire, J. J., Xie, Y., and McPherson, J.:
+Shiny: web application framework for R, available at: https:
+//cran.r-project.org/package=shiny (last access: 10 June 2017),
+2015.
+City of Münster: Amt für Stadtentwicklung, Stadtplanung,
+Verkehrsplanung – Jahres-Statistik Münster 2014, avail-
+able at: http://www.bbsr.bund.de/BBSR/DE/FP/ExWoSt/
+Studien/2015/Stadtgruen/dl-steckbrief-muenster.pdf?__blob=
+publicationFile&v=2 (last access: May 2017), 2014.
+Coulthard, T. and Frostick, L.: The Hull ﬂoods of 2007:
+implications for the governance and management of ur-
+ban drainage systems, J. Flood Risk Manage., 3, 223–231,
+https://doi.org/10.1111/j.1753-318X.2010.01072.x, 2010.
+Couper, M. P.: The future of modes of data collection, Publ. Opin.
+Quart., 75, 889–908, https://doi.org/10.1093/poq/nfr046, 2011.
+Dillman, D. A.: Mail and Internet Surveys: The Tailored Design
+Method – 2007 Update with New Internet, Visual, and Mixed-
+Mode Guide, John Wiley and Sons, Hoboken, NJ, USA, 2011.
+European Commission: EU Floods Directive (2007/EC/60), avail-
+able at: http://ec.europa.eu/environment/water/ﬂood_risk/ (last
+access: 10 June 2017), 2007.
+European Commission: EU overview of methodologies used in
+preparation of Flood Hazard and Flood Risk Maps, Tech. rep.,
+Luxembourg, https://doi.org/10.2779/204606, 2015.
+European Environment Agency: Mapping the impacts of recent nat-
+ural disasters and technological accidents in Europe, Tech. Rep.
+No. 13/2010, Luxenbourg, https://doi.org/10.2800/62638, 2010.
+Garne, T. W., Ebeltoft, M., Kivisaari, E., and Moberg, S.:
+Weather related damage in the Nordic countries –
+from an insurance perspective, Tech. rep., available at:
+http://www.svenskforsakring.se/globalassets/rapporter/klimat/
+weather-related-damage-in-the-nordic-countries.pdf (last
+access: 10 June 2017), 2013.
+GDV: Naturgefahrenreport 2015, Tech. rep.,
+available at: http://www.gdv.de/wp-content/
+uploads/2015/10/Naturgefahrenreport-2015_
+Die-Unwetter-Bilanz-der-deutschen-Versicherer_GDV.pdf
+(last access: 10 June 2017), 2015.
+GeoForschungsZentrum (GFZ): HOWAS 21 –
+Hochwasserschadensdatenbank, Potsdam, Germany,
+https://doi.org/10.1594/GFZ.SDDB.HOWAS21, 2017.
+Gissing, A. and Blong, R.: Accounting for variability in com-
+mercial ﬂood damage estimation, Austr. Geogr., 35, 209–222,
+https://doi.org/10.1080/0004918042000249511, 2004.
+Grothmann, T. and Reusswig, F.: People at risk of ﬂooding: why
+some residents take precautionary action while others do not,
+Nat. Hazards, 38, 101–120, https://doi.org/10.1007/s11069-005-
+8604-6, 2006.
+Grüning, H. and Grimm, M.: Unwetter mit Rekordniederschlägen
+in Münster, Korrespondenz Wasserwirtschaft, 8, 88–93, 2015.
+Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017 www.nat-hazards-earth-syst-sci.net/17/1337/2017/
+M. Spekkers et al.: A comparative survey of the impacts of extreme rainfall in two international case studies 1355
+Haukoos, J. S. and Lewis, R. J.: Advanced statistics: bootstrapping
+conﬁdence intervals for statistics with “difﬁcult” distributions,
+Acad. Emerg. Med., 12, 360–365, 2005.
+Kadaster: Online viewer of the National Building Register held by
+Kadaster, available at: http://bagviewer.pdok.nl/ (last access: 10
+June 2017), 2013.
+Kienzler, S., Pech, I., Kreibich, H., Müller, M., and Thieken, A.
+H.: After the extreme ﬂood in 2002: changes in preparedness, re-
+sponse and recovery of ﬂood-affected residents in Germany be-
+tween 2005 and 2011, Nat. Hazards Earth Syst. Sci., 15, 505–
+526, https://doi.org/10.5194/nhess-15-505-2015, 2015.
+KNMI: Online data repository of Royal Netherlands Me-
+teorological Institute, available at: http://www.knmi.nl/
+kennis-en-datacentrum, last access: 10 June 2017.
+Kreibich, H., Thieken, A. H., Petrow, T., Müller, M., and Merz,
+B.: Flood loss reduction of private households due to building
+precautionary measures – lessons learned from the Elbe ﬂood
+in August 2002, Nat. Hazards Earth Syst. Sci., 5, 117–126,
+https://doi.org/10.5194/nhess-5-117-2005, 2005.
+Kreibich, H., Müller, M., Thieken, A. H., and Merz, B.: Flood pre-
+caution of companies and their ability to cope with the ﬂood
+in August 2002 in Saxony, Germany, Water Resour. Res., 43,
+W03408, https://doi.org/10.1029/2005WR004691, 2007.
+LANUV NRW: North Rhine-Westphalia State Ofﬁce for Envi-
+ronment and Consumer Protection – HYGON (Hydrologische
+Rohdaten Online) – Niederschlag MünsterHKA 28.07.2014,
+available at: http://luadb.lds.nrw.de/LUA/hygon/pegel.php?
+stationsname_n=MuensterHKA, last access: August 2015.
+LfStat: Bavarian State Ofﬁce for Statistics – Census database
+of the census 2011 from Federal Statistical Ofﬁces, available
+at: https://ergebnisse.zensus2011.de/?locale=en#dynTable:
+statUnit=GEBAEUDE;absRel=ANZAHL;ags=055150000000;
+agsAxis=X;yAxis=BAUJAHR_10JA,GEBAEUDEART_SYS
+(last access: May 2017), 2017a.
+LfStat: Bavarian State Ofﬁce for Statistics – Census database
+of the census 2011 from Federal Statistical Ofﬁces,
+available at: https://ergebnisse.zensus2011.de/#dynTable:
+statUnit=PERSON;absRel=PROZENT;ags=055660012012,
+055150000000;agsAxis=X;yAxis=BERUFABS_AUSF:5:6:7
+(last access: May 2017), 2017b.
+Link, M. W. and Mokdad, A.: Can web and mail survey modes
+improve participation in an RDD-based national health surveil-
+lance?, J. Off. Stat., 22, 293–312, 2006.
+Morss, R. E., Mulder, K. J., Lazo, J. K., and Demuth, J. L.:
+How do people perceive, understand, and anticipate respond-
+ing to ﬂash ﬂood risks and warnings? Results from a public
+survey in Boulder, Colorado, USA, J. Hydrol., 541, 649–664,
+https://doi.org/10.1016/j.jhydrol.2015.11.047, 2016.
+Porst, R.: Fragebogen – Ein Arbeitsbuch, Springer, Heidelberg,
+Germany, 2014.
+Poussin, J. K., Wouter Botzen, W., and Aerts, J. C.: Effective-
+ness of ﬂood damage mitigation measures: empirical evidence
+from French ﬂood disasters, Global Environ. Change, 31, 74–84,
+https://doi.org/10.1016/j.gloenvcha.2014.12.007, 2015.
+Rathod, S. and LaBruna, A.: Questionnaire length and fatigue,
+Worldwide Panel Research Conference 2005, 17–19 April 2005,
+Budapest, Hungary, 16 pp., 2005.
+Rözer, V., Müller, M., Thieken, A., Bubeck, P., Kienzler, S., and
+Pech, I.: Coping with pluvial ﬂoods by private households, Water,
+8, 304, https://doi.org/10.3390/w8070304, 2016.
+Sarantakos, S.: Social Research, 2nd Edn., Palgrave Macmillan
+Hampshire, Basingstoke, Hampshire, UK, 2005.
+Schmitz, C.: LimeSurvey: An Open Source survey tool, available
+at: http://www.limesurvey.org (last access: 10 June 2017), 2016.
+Siegrist, M. and Gutscher, H.: Flooding risks: a comparison of
+lay people’s perceptions and expert’s assessments in Switzer-
+land, Risk Anal., 26, 971–979, https://doi.org/10.1111/j.1539-
+6924.2006.00792.x, 2006.
+Spekkers, M. H.: Rainfall damage to residential buildings in Ams-
+terdam: a database of survey responses, The Hague, the Nether-
+lands, https://doi.org/10.17026/dans-x8n-vcbn, 2016.
+Spekkers, M. H., Kok, M., Clemens, F. H. L. R., and ten Veldhuis,
+J. A. E.: Decision-tree analysis of factors inﬂuencing rainfall-
+related building structure and content damage, Nat. Hazards
+Earth Syst. Sci., 14, 2531–2547, https://doi.org/10.5194/nhess-
+14-2531-2014, 2014.
+Spekkers, M. H., Clemens, F. H. L. R., and ten Veldhuis, J. A. E.:
+On the occurrence of rainstorm damage based on home insurance
+and weather data, Nat. Hazards Earth Syst. Sci., 15, 261–272,
+https://doi.org/10.5194/nhess-15-261-2015, 2015.
+Statistics Netherlands: StatLine online database, available at: http:
+//statline.cbs.nl, last access: January 2017.
+Thieken, A. H., Müller, M., Kreibich, H., and Merz, B.: Flood
+damage and inﬂuencing factors: New insights from the Au-
+gust 2002 ﬂood in Germany, Water Resour. Res., 41, 1–16,
+https://doi.org/10.1029/2005WR004177, 2005.
+Thieken, A. H., Petrow, T., Kreibich, H., and Merz, B.: Insurabil-
+ity and mitigation of ﬂood losses in private households in Ger-
+many, Risk Anal., 26, 383–395, https://doi.org/10.1111/j.1539-
+6924.2006.00741.x, 2006.
+Thieken, A. H., Kreibich, H., Müller, M., and Merz, B.: Coping with
+ﬂoods: preparedness, response and recovery of ﬂood-affected
+residents in Germany in 2002, Hydrolog. Sci. J., 52, 1016–1037,
+https://doi.org/10.1623/hysj.52.5.1016, 2007.
+Thieken, A. H., Bessel, T., Kienzler, S., Kreibich, H., Müller,
+M., Pisi, S., and Schröter, K.: The ﬂood of June 2013 in Ger-
+many: how much do we know about its impacts?, Nat. Hazards
+Earth Syst. Sci., 16, 1519–1540, https://doi.org/10.5194/nhess-
+16-1519-2016, 2016.
+Van Ootegem, L., Verhofstadt, E., Van Herck, K., and Creten, T.:
+Multivariate pluvial ﬂood damage models, Environ. Impact
+Asses., 54, 91–100, https://doi.org/10.1016/j.eiar.2015.05.005,
+2015.
+Van Ootegem, L., Herck, K. V., Creten, T., Verhofstadt, E.,
+and Foresti, L.: Exploring the potential of multivariate depth-
+damage and rainfall-damage models, J. Flood Risk Manage.,
+https://doi.org/10.1111/jfr3.12284, 2016.
+Wang, K., Wang, L., Wei, Y.-M., and Ye, M.: Beijing storm of
+July 21, 2012: observations and reﬂections, Nat. Hazards, 67,
+969–974, https://doi.org/10.1007/s11069-013-0601-6, 2013.
+Zhai, G., Fukuzono, T., and Ikeda, S.: Modeling ﬂood damage:
+case of Tokai Flood 2000, J. Am. Water Resour. As., 41, 77–92,
+https://doi.org/10.1111/j.1752-1688.2005.tb03719.x, 2005.
+www.nat-hazards-earth-syst-sci.net/17/1337/2017/ Nat. Hazards Earth Syst. Sci., 17, 1337–1355, 2017

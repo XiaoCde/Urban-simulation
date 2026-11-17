@@ -49,12 +49,14 @@ class StreetNet:
 
     def __init__(self, grid, res, h, w, z, street_mask=None,
                  snap_m=2.0, manning=0.016, half_min=2.0, cache=None,
-                 collect_m=0.0, conn_ok=None):
+                 collect_m=0.0, conn_ok=None, out_m3s=0.0):
         self.res = float(res)
         self.h, self.w = int(h), int(w)
         self.x0, self.y1 = float(grid["x0"]), float(grid["y1"])
         self.manning = float(manning)
         self.curb_m = 0.15
+        # 死端「虚拟下游」的总输送能力（m³/s）：0 = 关闭（老口径，到死端全漫回地面）
+        self.out_m3s = float(out_m3s or 0.0)
         if cache and os.path.exists(cache):
             d = np.load(cache)
             if int(d["h"]) == self.h and int(d["w"]) == self.w:
@@ -345,8 +347,23 @@ class StreetNet:
             Sh -= ms
             np.add.at(Sh, dn[has], ms[has])
 
-        # 死端（本地洼地）：漫流到这里走不动了，才漫到地面
+        # 死端（本地洼地）：漫流到这里走不动了。
+        # 【死端不是终点】真实路网是连通的：6,484 个「死端」绝大多数是路网提取/
+        # 高程造成的假断头（路画到计算域边界就断、上坡上到顶、被铁轨和铁路切断），
+        # 水到这儿不该原地倒回地面，而应该按一个等效输送能力继续往下游走。
+        # 算术补法：全城合计 out_m3s（默认 45 m³/s，和雨水口/截流管同量级，
+        # 代表「断头之后那段未知的路网/支管」），按各死端当前水量的比例分配；
+        # 排走的记 deadend_out（一路当作出域/入下游），剩下的才漫回二维地面。
         sink = ~has
+        deadend_out = 0.0
+        if self.out_m3s > 0:
+            _av = np.where(sink, np.maximum(Sh, 0.0), 0.0)
+            _tot = float(_av.sum())
+            if _tot > 1e-9:
+                _frac = min(1.0, self.out_m3s * dt / _tot)
+                _take = _av * _frac
+                Sh -= _take
+                deadend_out = float(_take.sum())
         spill_node = np.where(sink, np.maximum(Sh, 0.0), 0.0)
         Sh = np.where(sink, 0.0, Sh)
         # 极端情况（坡度极缓、一步灌爆）：超过 1.5 m 的部分也还给地面，
@@ -359,7 +376,8 @@ class StreetNet:
 
         self.vol = V
         return {"to_river": to_river, "retained": float(V.sum() + Sh.sum()),
-                "spill_node": spill_node, "depth_node": d + Sh / area_s}
+                "spill_node": spill_node, "depth_node": d + Sh / area_s,
+                "deadend_out": deadend_out}
 
     def depth_grid(self):
         """街道水深铺到栅格（只有街道格有值），供画面上叠加。

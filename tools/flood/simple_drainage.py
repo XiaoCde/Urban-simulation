@@ -1101,14 +1101,17 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                 # 直接丢掉前面几次的水（实测 sub=10 时闭合差 −3.08 Mm³）。
                 _spill_acc = np.zeros(street.n)
                 _riv_acc = 0.0
+                _out_acc = 0.0
                 for _k in range(_nsub):
                     _sres = street.step(_dts, _sti, river_level=river_level,
                                         relax=int(getattr(args, "street_relax", 4)))
                     _spill_acc += _sres["spill_node"]
                     _riv_acc += float(_sres["to_river"])
+                    _out_acc += float(_sres.get("deadend_out", 0.0))
                 _sres = dict(_sres)
                 _sres["spill_node"] = _spill_acc
                 _sres["to_river"] = _riv_acc
+                _sres["deadend_out"] = _out_acc
                 # 【街道管网的收支台账】in = 进管网 / to_river = 进河 /
                 # spill = 漫回路缘石 / V 是管网里剩下的。三者必须自洽，
                 # 不自洽就是管网内部丢了水（实测少了 3 万多 m³，靠这几项定位）。
@@ -1118,6 +1121,10 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                 total["to_river"] = total.get("to_river", 0.0) + _sres["to_river"]
                 total["street_river"] = (total.get("street_river", 0.0)
                                          + _sres["to_river"])
+                # 【死端虚拟下游】断头按 --street-out-m3s 排走的那部分，单独记账。
+                # 物理上它代表「断头之后那段没画出来的路网/支管」，一路当出域。
+                total["deadend_out"] = (total.get("deadend_out", 0.0)
+                                        + float(_sres.get("deadend_out", 0.0)))
                 _sp = _sres["spill_node"]
                 if _sp.any():
                     # 【别把整节点的漫出全砸在一格上】一个节点挂着几十个街道格，
@@ -1217,12 +1224,25 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             #    雨季可开到 700 MGD 以上（30 m³/s），另有合流制溢流口直排河道。
             #    取 45 m³/s 作「雨水口 + 截流管 + 溢流口」的合计输送能力（含溢流）。
             #    分配：每个洼地按其「有雨水口的面积比例」吞水，不按格判掩膜。
+            #
+            #    【管网是一根管子，不是两根】上面 ①（对降雨的 30 mm/h + 满管桶）
+            #    和这里 ③（对地面积水的 45 m³/s）在现实里是同一套设施：管子满了，
+            #    雨水进不去，积水也抽不动。原来 ③ 用的是恒定 45 m³/s，完全不管
+            #    桶满没满 —— 实测每个工况都把「45 m³/s × 全场时长」抽到 98.5%
+            #    （p25_1m_s4：1,595,451 / 1,620,000 m³），等于城里白养了第二套
+            #    独立排泵，排水被系统性算多。
+            #    现在让 ③ 跟着桶的占用率衰减：空桶 100%，满桶只剩 residual(5%)。
             if _cap_m3s > 0 and cur_prev.size:
                 _share = _drain_frac_b[lab_b]
                 _avail = (_pond_mm / 1000.0 * cell_area) * _share
                 _tot = float(_avail.sum())
                 if _tot > 1e-9:
-                    _f = min(1.0, _cap_m3s * dt / _tot)
+                    if bucket_cap > 0:
+                        _bfrac = min(1.0, max(0.0, budget_used) / bucket_cap)
+                        _cap_now = _cap_m3s * (residual + (1.0 - residual) * (1.0 - _bfrac))
+                    else:
+                        _cap_now = _cap_m3s          # 没有桶 = 老口径，保持恒定
+                    _f = min(1.0, _cap_now * dt / _tot)
                     _loss_in = _pond_mm * _share * _f
             # 扣除：按洼地汇总成体积，且不能把洼地抽成负的
             _lb_raw = np.bincount(lab_b, weights=(_loss_inf + _loss_et + _loss_in)
@@ -1336,7 +1356,8 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
                     + (float(street.vol.sum() + street.sheet.sum()) if street is not None else 0.0)
                     + total["drained"] + total["discharged"] + total["receded"]
                     + total.get("to_river", 0.0) + total.get("seep_pond", 0.0)
-                    + total.get("evap", 0.0) + total.get("inlet_pond", 0.0))
+                    + total.get("evap", 0.0) + total.get("inlet_pond", 0.0)
+                    + total.get("deadend_out", 0.0))
             _gap_k = _acc - total["rain"]
             if abs(_gap_k - _dbg_prev) > 50.0:
                 log(f"[dbg] t={t / 60:6.0f} min  账面差 {_gap_k:12.1f} m³"
@@ -1401,6 +1422,8 @@ def l2_loop(z, recv, storage, pit_mask, outlet, lc_flow, cell_area,
             "street_in_m3": float(total.get("street_in", 0.0)),
             "street_spill_m3": float(total.get("street_spill", 0.0)),
             "street_river_m3": float(total.get("street_river", 0.0)),
+            # 死端虚拟下游：断头按 --street-out-m3s 排走的那部分（当出域）
+            "deadend_out_m3": float(total.get("deadend_out", 0.0)),
             # P2.5：排进河里的水量，以及按实测潮汐水面换算出来的水位抬升
             "to_river_m3": float(total.get("to_river", 0.0)),
             "river_area_m2": float(river_area_m2),
@@ -1481,6 +1504,9 @@ def main() -> int:
                     help="街道层每个时间步拆成几个子步（1=不拆；10~30 能看出水在路上推进）")
     ap.add_argument("--street-collect-m", type=float, default=60.0,
                     help="街区汇水半径（m）：这个距离内的地面产流直接进边沟。0=只收街面")
+    ap.add_argument("--street-out-m3s", type=float, default=200.0,
+                    help="街道死端的「虚拟下游」总输送能力 m³/s（默认 200；"
+                         "0=关闭，退回「到死端就全漫回地面」的老口径）")
     ap.add_argument("--dbg-budget", type=int, default=0,
                     help="调试：1 = 逐拍打印地表水量平衡的账面差（查漏账用）")
     # 【为什么要有 --frame-min】帧间隔原来写死 300 s。几小时的工况没问题，
@@ -1610,6 +1636,7 @@ def main() -> int:
                                 manning=float(getattr(args, "street_n", 0.016)),
                                 collect_m=float(getattr(args, "street_collect_m", 60.0)),
                                 conn_ok=(lc != 0),
+                                out_m3s=float(getattr(args, "street_out_m3s", 45.0)),
                                 cache=os.path.join(DERIVED, f"street_net_{res:d}_v3.npz"))
             _street.curb_m = float(getattr(args, "street_curb_m", 0.15))
             log(f"      街道管网：{_street.n:,} 个节点，"
@@ -1757,6 +1784,7 @@ def main() -> int:
                                    + r['total'].get('seep_pond', 0.0)
                                    + r['total'].get('evap', 0.0)
                                    + r['total'].get('inlet_pond', 0.0)
+                                   + r['total'].get('deadend_out', 0.0)
                                    - rain_total, 1),
             # ---- P2.5 真实退水分账 ----
             # `infil_m3` 是下渗量：它在产流之前就被扣掉了，**不进地表水量平衡**
@@ -1768,6 +1796,7 @@ def main() -> int:
             'street_spill_m3': round(float(r.get('street_spill_m3') or 0.0)),
             'street_river_m3': round(float(r.get('street_river_m3') or 0.0)),
             'street_held_m3': round(float(r.get('street_m3') or 0.0)),
+            'deadend_out_m3': round(float(r.get('deadend_out_m3') or 0.0)),
             'seep_pond_m3': round(r['total'].get('seep_pond', 0.0)),
             'evap_m3': round(r['total'].get('evap', 0.0)),
             'inlet_pond_m3': round(r['total'].get('inlet_pond', 0.0)),

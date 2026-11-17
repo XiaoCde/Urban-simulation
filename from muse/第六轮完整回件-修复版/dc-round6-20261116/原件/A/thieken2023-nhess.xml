@@ -1,0 +1,2090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD Journal Publishing with OASIS Tables v3.0 20080202//EN" "journalpub-oasis3.dtd">
+<article xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:oasis="http://docs.oasis-open.org/ns/oasis-exchange/table" xml:lang="en" dtd-version="3.0" article-type="research-article"><?xmltex \makeatother\@nolinetrue\makeatletter?>
+  <front>
+    <journal-meta><journal-id journal-id-type="publisher">NHESS</journal-id><journal-title-group>
+    <journal-title>Natural Hazards and Earth System Sciences</journal-title>
+    <abbrev-journal-title abbrev-type="publisher">NHESS</abbrev-journal-title><abbrev-journal-title abbrev-type="nlm-ta">Nat. Hazards Earth Syst. Sci.</abbrev-journal-title>
+  </journal-title-group><issn pub-type="epub">1684-9981</issn><publisher>
+    <publisher-name>Copernicus Publications</publisher-name>
+    <publisher-loc>Göttingen, Germany</publisher-loc>
+  </publisher></journal-meta>
+    <article-meta>
+      <article-id pub-id-type="doi">10.5194/nhess-23-973-2023</article-id><title-group><article-title>Performance of the flood warning system in Germany in July 2021 – insights from affected residents</article-title><alt-title>Performance of the flood warning system in Germany in July 2021</alt-title>
+      </title-group><?xmltex \runningtitle{Performance of the flood warning system in Germany in July 2021}?><?xmltex \runningauthor{A. H. Thieken et al.}?>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name><surname>Thieken</surname><given-names>Annegret H.</given-names></name>
+          <email>thieken@uni-potsdam.de</email>
+        <ext-link>https://orcid.org/0000-0001-7068-2615</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name><surname>Bubeck</surname><given-names>Philip</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name><surname>Heidenreich</surname><given-names>Anna</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0002-3477-2557</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name><surname>von Keyserlingk</surname><given-names>Jennifer</given-names></name>
+          
+        </contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name><surname>Dillenardt</surname><given-names>Lisa</given-names></name>
+          
+        <ext-link>https://orcid.org/0000-0003-0972-1843</ext-link></contrib>
+        <contrib contrib-type="author" corresp="no">
+          <name><surname>Otto</surname><given-names>Antje</given-names></name>
+          
+        </contrib>
+        <aff id="aff1"><institution>Institute of Environmental Science and Geography, University of
+Potsdam, <?xmltex \hack{\break}?>Karl-Liebknecht-Strasse 24-25, 14476 Potsdam, Germany</institution>
+        </aff>
+      </contrib-group>
+      <author-notes><corresp id="corr1">Annegret H. Thieken (thieken@uni-potsdam.de)</corresp></author-notes><pub-date><day>3</day><month>March</month><year>2023</year></pub-date>
+      
+      <volume>23</volume>
+      <issue>2</issue>
+      <fpage>973</fpage><lpage>990</lpage>
+      <history>
+        <date date-type="received"><day>20</day><month>April</month><year>2022</year></date>
+           <date date-type="rev-request"><day>29</day><month>April</month><year>2022</year></date>
+           <date date-type="rev-recd"><day>22</day><month>December</month><year>2022</year></date>
+           <date date-type="accepted"><day>31</day><month>January</month><year>2023</year></date>
+      </history>
+      <permissions>
+        <copyright-statement>Copyright: © 2023 </copyright-statement>
+        <copyright-year>2023</copyright-year>
+      <license license-type="open-access"><license-p>This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit <ext-link ext-link-type="uri" xlink:href="https://creativecommons.org/licenses/by/4.0/">https://creativecommons.org/licenses/by/4.0/</ext-link></license-p></license></permissions><self-uri xlink:href="https://nhess.copernicus.org/articles/.html">This article is available from https://nhess.copernicus.org/articles/.html</self-uri><self-uri xlink:href="https://nhess.copernicus.org/articles/.pdf">The full text article is available as a PDF file from https://nhess.copernicus.org/articles/.pdf</self-uri>
+      <abstract><title>Abstract</title>
+
+      <p id="d1e126">In July 2021 intense rainfall caused devastating floods
+in western Europe and 184 fatalities in the German federal states of North
+Rhine-Westphalia (NW) and Rhineland-Palatinate (RP), calling into question their flood
+forecasting, warning and response system (FFWRS). Data from an online survey
+(<inline-formula><mml:math id="M1" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1315</mml:mn></mml:mrow></mml:math></inline-formula>) reveal that 35 % of the respondents from NW and 29 % from
+RP did not receive any warning. Of those who were warned, 85 % did not
+expect very severe flooding and 46 % reported a lack of situational
+knowledge on protective behaviour. Regression analysis reveals that this
+knowledge is influenced not only by gender and flood experience but also by the
+content and the source of the warning message. The results are complemented
+by analyses of media reports and official warnings that show shortcomings in
+providing adequate recommendations to people at risk. Still, the share of
+people who did not report any emergency response is low and comparable to
+other flood events. However, the perceived effectiveness of the protective behaviour was low and mainly compromised by high water levels and the perceived level of surprise about the flood magnitude. Good situational knowledge and a higher number of previously experienced floods were linked to performing more effective loss-reducing action. Dissemination of warnings,
+clearer communication of the expected flood magnitude and recommendations on
+adequate responses to a severe flood, particularly with regard to flash and
+pluvial floods, are seen as major entry points for improving the FFWRS in
+Germany.</p>
+  </abstract>
+    </article-meta>
+  </front>
+<body>
+      
+
+      <?xmltex \hack{\newpage}?>
+<sec id="Ch1.S1" sec-type="intro">
+  <label>1</label><title>Introduction</title>
+      <p id="d1e152">From 12 to 19 July 2021, western and central Europe witnessed widespread and
+intense rainfall caused by the low-pressure system “Bernd” that led to
+severe flooding in Belgium, Germany, Luxembourg and the Netherlands as well
+as in further European countries at lower intensities (Schneider and Gebauer,
+2021; Kron et al., 2022). In the western part of Germany, particularly in
+the federal states of North Rhine-Westphalia (NW) and Rhineland-Palatinate
+(RP), rainfall amounts totalled to more than 100 mm in 72 h over large
+parts of these two most affected states with local maxima of more than 150 mm in 24 h (Junghänel et al., 2021). This rainfall led to urban
+flooding in some bigger cities such as Cologne, Düsseldorf and Hagen as
+well as to quickly rising flash floods in small and steep catchments in the
+middle hills, particularly around the Eifel mountain range (Dietze et al.,
+2022; Kron et al., 2022).</p>
+      <p id="d1e155">In all of Germany, 189 people lost their lives, thereof 135 in RP, 49 in NW,
+2 in Bavaria, 2 in Saxony and 1 in Baden-Württemberg. Even 1 year after the flood, two people were still reported missing. Severe damage
+of around EUR 33 billion occurred in the residential, commercial and
+industrial sectors as well as in the public sector and at infrastructures
+(Koks et al., 2022; Munich Re, 2022). Governmental disaster aid of an
+unprecedented amount of EUR 30 billion has been provided to support
+reconstruction and recovery in the affected areas. After floods in August 2002, June 2013 and May–June 2016, this is the fourth flood over the past 20 years that has caused damage of more than EUR 2 billion in Germany (Kron
+et al., 2022; see Table 1 for an overview of recent flood events in
+Germany). Even worse, the death toll in July 2021 by far exceeds the number
+of fatalities caused by<?pagebreak page974?> former floods, which amounted to 21 in 2002, 14 in
+2013 and 11 in 2016. A higher death toll caused by a water-related
+hazard has only been recorded for a storm surge in February 1962 along the North
+Sea coast, with 347 fatalities in Germany, thereof 318 in the city of
+Hamburg. Consequently, failures in warning, alerting and evacuation
+processes were already being discussed shortly after the event of July 2021
+(Cornwall, 2021).</p>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T1" specific-use="star"><?xmltex \currentcnt{1}?><label>Table 1</label><caption><p id="d1e161">Overview of recent damaging flood events in Germany and number of
+survey participants per federal state (compiled from Kienzler et al., 2015;
+Rözer et al., 2016; Spekkers et al., 2017; Thieken et al., 2016, 2017,
+2022; Dillenardt et al., 2022; abbreviations of the federal states – BB:
+Brandenburg; BW: Baden-Württemberg; BY: Bavaria; NI: Lower Saxony; NW: North
+Rhine-Westphalia; RP: Rhineland-Palatinate; SN: Saxony; ST: Saxony-Anhalt;
+TH: Thuringia; see Fig. 1 for geographic locations).</p></caption><oasis:table frame="topbot"><?xmltex \begin{scaleboxenv}{0.92}[0.92]?><oasis:tgroup cols="4">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="justify" colwidth="10cm"/>
+     <oasis:colspec colnum="3" colname="col3" align="justify" colwidth="2.9cm"/>
+     <oasis:colspec colnum="4" colname="col4" align="justify" colwidth="2.5cm"/>
+     <oasis:thead>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Fluvial floods</oasis:entry>
+         <oasis:entry colname="col2">Event description</oasis:entry>
+         <oasis:entry colname="col3">Surveyed cases per <?xmltex \hack{\hfill\break}?>federal state <?xmltex \hack{\hfill\break}?>(if <inline-formula><mml:math id="M2" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mi mathvariant="italic">&gt;</mml:mi><mml:mn mathvariant="normal">24</mml:mn></mml:mrow></mml:math></inline-formula>)</oasis:entry>
+         <oasis:entry colname="col4">Field time of the <?xmltex \hack{\hfill\break}?>survey</oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">August 2002</oasis:entry>
+         <oasis:entry colname="col2">Flash floods in Bavarian and Saxon middle hills (e.g. in the Erzgebirge – the Ore Mountains in English) were caused by a so-called Vb weather system with (very) extensive rainfall on saturated soils. In Germany, a record-breaking daily rainfall amount of 312 mm in 24 h was recorded. Flooding in the middle hills was followed by a slower-onset flood along the river Elbe.</oasis:entry>
+         <oasis:entry colname="col3">BY: 447 <?xmltex \hack{\hfill\break}?>SN: 967 <?xmltex \hack{\hfill\break}?>ST: 271</oasis:entry>
+         <oasis:entry colname="col4">8 April to <?xmltex \hack{\hfill\break}?>10 June 2003</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">August 2005</oasis:entry>
+         <oasis:entry colname="col2">Flash floods at the alpine foothills were caused by a Vb weather system with extensive rainfall that coincided with high preceding soil moisture and little snow cover in the Alps.</oasis:entry>
+         <oasis:entry colname="col3">BY: 276</oasis:entry>
+         <oasis:entry colname="col4">20 November to <?xmltex \hack{\hfill\break}?>21 December 2006</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">April 2006</oasis:entry>
+         <oasis:entry colname="col2">Slowly rising river floods resulted from a high winterly snow cover that completely melted due to a rapid temperature increase and was accompanied by heavy rainfall from westerly cyclones.</oasis:entry>
+         <oasis:entry colname="col3">BY: 41 <?xmltex \hack{\hfill\break}?>NI: 28 <?xmltex \hack{\hfill\break}?>SN: 69</oasis:entry>
+         <oasis:entry colname="col4">20 November to <?xmltex \hack{\hfill\break}?>21 December 2006</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">August 2010</oasis:entry>
+         <oasis:entry colname="col2">Several flash flood waves were triggered by three consecutive fronts with heavy rainfall (due to a locked strongly meandering jet stream) and were intensified by a dam breach. Since measurements began in 1881, August 2010 was the wettest August in all of Germany.</oasis:entry>
+         <oasis:entry colname="col3">SN: 305</oasis:entry>
+         <oasis:entry colname="col4">16 February to <?xmltex \hack{\hfill\break}?>20 March 2012</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">January 2011</oasis:entry>
+         <oasis:entry colname="col2">Slowly rising river floods in several catchments resulted from a high winterly snow cover, which melted due to a rapid temperature increase with heavy rainfall followed by more intense rainfall.</oasis:entry>
+         <oasis:entry colname="col3">BW: 43 <?xmltex \hack{\hfill\break}?>BY: 75 <?xmltex \hack{\hfill\break}?>RP: 57</oasis:entry>
+         <oasis:entry colname="col4">16 February to <?xmltex \hack{\hfill\break}?>20 March 2012</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">June 2013</oasis:entry>
+         <oasis:entry colname="col2">Local flooding was caused by a thunderstorm in May 2013 in Lower Saxony (NI). Widespread river floods were caused 2 weeks later by intense rainfall on highly saturated soils across Germany. Record-breaking soil moisture was recorded in 40 % of Germany by the end of May 2013.</oasis:entry>
+         <oasis:entry colname="col3">BY: 239 <?xmltex \hack{\hfill\break}?>NI: 50 <?xmltex \hack{\hfill\break}?>SN: 523 <?xmltex \hack{\hfill\break}?>ST: 593 <?xmltex \hack{\hfill\break}?>TH: 216</oasis:entry>
+         <oasis:entry colname="col4">18 February to <?xmltex \hack{\hfill\break}?>24 March 2014 <?xmltex \hack{\hfill\break}?></oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">May–June 2016</oasis:entry>
+         <oasis:entry colname="col2">A series of (local) flash floods occurred between 26 May and 9 June 2016, when due to atmospheric blocking an extraordinarily high number of severe convective storms with low wind speeds leading to almost stationary and slow-moving cells and extreme local rainfall. The villages of Braunsbach (BW) and Simbach am Inn (BY) were particularly damaged.</oasis:entry>
+         <oasis:entry colname="col3">BW: 195 <?xmltex \hack{\hfill\break}?>BY: 191 <?xmltex \hack{\hfill\break}?>NW: 85 <?xmltex \hack{\hfill\break}?>RP: 71</oasis:entry>
+         <oasis:entry colname="col4">28 March to <?xmltex \hack{\hfill\break}?>28 April 2017</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry namest="col1" nameend="col4">Pluvial floods (urban flooding) </oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">29 June 2005</oasis:entry>
+         <oasis:entry colname="col2">Thunderstorms with heavy rainfall, storm gusts, lightning and hail developed along a boundary zone of colliding warm humid subtropical air from the southwest of Europe with cold and dry air masses from the north.</oasis:entry>
+         <oasis:entry colname="col3">Hersbruck (BY): 111 <?xmltex \hack{\hfill\break}?>Lohmar (NW): 62</oasis:entry>
+         <oasis:entry colname="col4">21 November to <?xmltex \hack{\hfill\break}?>19 December 2006</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">26 August 2010</oasis:entry>
+         <oasis:entry colname="col2">A weather system (due to a locked and strongly meandering jet stream; see above) brought 128 mm of rain (i.e. 47 % of the mean monthly precipitation of August) and overburdened drainage capacities in the city of Osnabrück (NI) leading to urban flooding.</oasis:entry>
+         <oasis:entry colname="col3">Osnabrück (NI): 91</oasis:entry>
+         <oasis:entry colname="col4">16 February to <?xmltex \hack{\hfill\break}?>20 March 2012 <?xmltex \hack{\hfill\break}?></oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">28 July 2014</oasis:entry>
+         <oasis:entry colname="col2">Extraordinary amounts of rain, i.e. 292 mm in 7 h with a peak of 220 mm in <inline-formula><mml:math id="M3" display="inline"><mml:mrow><mml:mi mathvariant="italic">&lt;</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:mrow></mml:math></inline-formula> h, were dumped on the cities of Münster and Greven (NW) due to an interaction of a stationary cold front with constantly incoming hot and humid air from the east, resulting in widespread urban flooding.</oasis:entry>
+         <oasis:entry colname="col3">Münster (NW): 510</oasis:entry>
+         <oasis:entry colname="col4">20 October to <?xmltex \hack{\hfill\break}?>26 November 2015</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">June–July 2017</oasis:entry>
+         <oasis:entry colname="col2">Local convective storms resulted in high rainfall amounts that overburdened</oasis:entry>
+         <oasis:entry colname="col3">Berlin: 28</oasis:entry>
+         <oasis:entry colname="col4">July 2019 to</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1"/>
+         <oasis:entry colname="col2">drainage systems and caused inundations of urban areas. In the village of Leege-</oasis:entry>
+         <oasis:entry colname="col3">Leegebruch (BB): 91</oasis:entry>
+         <oasis:entry colname="col4">May 2020 (see Dil-</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry rowsep="1" colname="col1"/>
+         <oasis:entry colname="col2">bruch (BB), the water stayed for weeks due to its location in a low-lying area.</oasis:entry>
+         <oasis:entry rowsep="1" colname="col3"/>
+         <oasis:entry colname="col4">lenardt et al., 2022)</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry rowsep="1" colname="col1">Summer 2018</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry rowsep="1" colname="col3">Remscheid (NW): 33</oasis:entry>
+         <oasis:entry colname="col4"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">June 2019</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3">Berlin: 64 <?xmltex \hack{\hfill\break}?>Potsdam (BB): 105</oasis:entry>
+         <oasis:entry colname="col4"/>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup><?xmltex \end{scaleboxenv}?></oasis:table></table-wrap>
+
+      <p id="d1e506">Internationally, a substantial reduction in global disaster-related
+fatalities per 100 000 people by 2030 is the first target of the Sendai
+Framework for Disaster Risk Reduction 2015–2030 (SFDRR). Since it is the
+primary goal of early warning systems to prevent fatalities during a
+disaster, the SFDRR, in its seventh target, also aims at increasing the number of countries with
+multi-hazard early warning systems (UN, 2015).
+Worldwide, the effectiveness of early warning systems to save lives was
+impressively demonstrated in the flood-prone country of Bangladesh: while a
+cyclone in 1999 claimed around 10 000 deaths, warning and evacuation reduced
+the death toll to 38 lives in 2013 (Hallegatte et al., 2020). Recent
+cyclones have confirmed the success of the warning and response system (Ferdous
+et al., 2020). For Europe, Hallegatte (2012) estimated that weather
+information and warnings have annually saved hundreds of lives and EUR 460 million to EUR 2.7 billion of losses while creating even higher
+benefits by optimized production in weather-sensitive sectors.</p>
+      <p id="d1e509">Flood warning systems are more adequately termed flood forecasting, warning
+and response systems (FFWRSs; Parker and Priest, 2012). As such, they include
+continuous monitoring and forecasting of precipitation and water levels, as well as the
+detection of potentially hazardous situations, which should be linked to
+defined thresholds and rules on when, how and whom to warn in the case of
+expected heavy precipitation or rising water levels and include (predefined)
+statements that alert and inform civil protection authorities and potentially affected
+people. For the overall success of a FFWRS, civil protection authorities and affected
+parties have to respond adequately and effectively to an unfolding flood
+situation (Parker et al., 1994; Parker and Priest, 2012), e.g. by erecting
+temporary water barriers, by evacuating people from heavily affected areas
+or by limiting access to inundated areas such as with road closures. Warning is
+successful if all components function across spatial and departmental
+borders. In this process, the creation and dissemination of warnings that
+trigger adequate and effective response is seen as a major challenge (e.g.
+Cools et al., 2016; Kuller et al., 2021), in which different content and
+formats of a warning message and different dissemination channels can be
+distinguished (Kuller et al., 2021). Furthermore, trust among partners and
+in institutions plays a crucial role (Parker and Priest, 2012; Cools et al.,
+2016; Morss et al., 2016).</p>
+      <p id="d1e512">In Germany, flood warning systems have been established since the 1880s
+(DKKV, 2015). Currently, capacities and responsibilities for forecasting,
+warning and response are divided between the federal, state and local
+levels. At the federal level, the meteorological service (Deutscher
+Wetterdienst – DWD) is in charge of weather forecasting and severe weather
+warnings, such as heavy precipitation. Flood forecasting and warning are,
+however, the task of the individual federal states and are organized
+differently as described by DKKV (2015) and Kreibich et al. (2017). After
+the severe flood of August 2002, the DWD introduced a fourth warning level
+to indicate very extreme weather events. Some federal states reorganized and
+centralized their forecasting and warning centres, e.g. Saxony,
+Lower Saxony and Thuringia (DKKV, 2015). In addition, data on flood water
+levels are displayed in a joint nationwide web portal
+(<uri>https://www.hochwasserzentralen.de/</uri>, last access: 23 February 2023). These changes led to an improved warning
+situation during the river flood of June 2013 (Thieken et al., 2016;
+Kreibich et al., 2017).</p>
+      <p id="d1e518">To warn the general public is primarily the task of the local level, e.g.
+the district administrations. Since 2017, warnings have been able to be disseminated via the
+Modular Warning System (Modulares Warnsystem – MoWaS) hosted by the Federal
+Office of Civil Protection and Disaster Assistance (Bundesamt für
+Bevölkerungsschutz – BBK) to a wide range of warning multipliers and
+dissemination channels like media operators and warning apps (e.g. NINA,
+KATWARN). Some districts and municipalities also use sirens or loudspeaker
+announcements to warn their population directly. In September 2020, the first nationwide alert
+day since the German reunification in 1990 revealed how difficult
+it is to operate warning systems successfully. The Federal Ministry of
+Interior declared the test a failure as the MoWaS messages and consequently
+also messages of warning apps were delayed due to technical reasons (BBK,
+2020; Deutscher Bundestag, 2020). Subsequently, the system was improved and
+was tested successfully in NW in March 2021 (BBK, 2021). However, user data
+and views were not analysed (BBK, 2021).</p>
+      <?pagebreak page976?><p id="d1e521">Even if alerts function technically, there are many “potential deficiencies
+at each stage of the FFWRS which transfer through their enchained processes”
+(Parker and Priest, 2012). Eventually, warnings can only avoid flood impacts
+– primarily fatalities but also financial losses – if people in
+flood-prone areas as well as the local disaster management or civil
+protection authorities receive and notice the warning in time, trust the warning,
+understand its content, and know how to respond and behave adequately
+(Penning-Rowsell and Green, 2000; Párraga Niebla, 2015; Morss et al.,
+2016). Using German survey data from 2002 to 2013, Kreibich et al. (2021)
+showed the importance of residents' situational knowledge on protective
+behaviour (“knowing what to do”) for flood damage reduction. Such
+situational knowledge is at least partly influenced by the warning message
+itself that should contain not only information on the hazard process,
+location and time but also some guidance on protective behaviour (Kuller
+et al., 2021). Therefore, an evaluation of a FFWRS should include how the
+population at risk perceived the warnings and whether they were able to
+respond adequately (Penning-Rowsell and Green, 2000). As part of a broader
+post-event investigation, this paper aims to analyse how the warning system
+in July 2021 performed – also in comparison to other flood events in
+Germany that are summarized in Table 1. The evaluation of the performance of
+the warning system is mainly based on an online survey in the affected
+regions and focusses on three research questions (RQs): (RQ1) how many people
+received a warning before they were in danger? (RQ2) How well did people
+trust and understand the warnings? (RQ3) How did people respond to the
+warnings and how did they perceive the effectiveness of their action?</p>
+      <p id="d1e524">As indicated by Thieken et al. (2022) for the river flood of June 2013 in
+comparison to the pluvial and flash floods of May–June 2016, the performance of
+Germany's FFWRS differs per flood type. For pluvial and flash floods in
+2016, there was a higher share of affected people who were not warned,
+warning times were shorter and the situational knowledge was poorly
+developed among affected residents (Thieken et al., 2022). Given the severe
+impacts in 2021, we hypothesize that the performance of Germany's FFWRS in
+July 2021 was even worse than during recent pluvial and flash floods (see
+Table 1 for brief event descriptions) with regard to the dissemination of
+the warning messages and people's situational knowledge on protective
+behaviour.</p>
+      <p id="d1e528">Since elderly people were considerably overrepresented among the
+flood fatalities of 2021 (Kron et al., 2022), we expect that the receipt of
+warnings, situational knowledge and the perceived effectiveness of
+protective behaviour are influenced by the age of respondents as well as by the
+event's magnitude. The flood magnitude of July 2021 was exceptionally high
+as estimations of precipitation indices and of return periods of the
+discharge along the river Ahr revealed (Lengfeld et al., 2022; Vorogushyn et
+al., 2022). Therefore, we further hypothesize that damage-reducing behaviour
+was not perceived as effective by the respondents.</p>
+      <p id="d1e531">Following an explorative approach, we finally discuss as a fourth research
+question (RQ4) how to further improve the FFWRS based on the outcomes of the
+analyses and the views and wishes of the population affected in July 2021.</p>
+</sec>
+<sec id="Ch1.S2">
+  <label>2</label><title>Data and methods</title>
+      <p id="d1e542">Between 25 August and 17 October 2021, an online survey on the warning
+situation in July 2021 was conducted. The online survey was advertised via
+Facebook, primarily in the two most affected federal states of North
+Rhine-Westphalia (NW) and Rhineland-Palatinate (RP), but the questionnaire
+was provided in SoSci Survey and hence was accessible from outside of Facebook.
+In addition, a press release was sent to local newspapers in the area and
+all mayors were informed by e-mail about the survey with a plea to mention
+it in local newsletters. Overall, there was a response to all advertising
+activities. In total, 1348 people completely answered the survey, thereof
+892 from NW and 423 from RP; Fig. 1 shows the districts with respondents
+from these two states. The remaining 33 cases could not be located due to
+missing geographic information or were located in other federal states and
+thus omitted from further analyses. In this paper, first analyses of the
+data set are presented.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F1" specific-use="star"><?xmltex \currentcnt{1}?><?xmltex \def\figurename{Figure}?><label>Figure 1</label><caption><p id="d1e547">Overview map of Germany (left) highlighting the districts with
+respondents of the online survey in North Rhine-Westphalia (upper right) and
+Rhineland-Palatinate (lower right).</p></caption>
+        <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f01.png"/>
+
+      </fig>
+
+      <p id="d1e556">The socio-demographic characteristics of the subsamples are summarized in
+Table 2 and are compared to the general population per federal state as of
+31 December 2020. With regard to gender, the subsample of NW is somewhat
+biased towards women (chi-square goodness-of-fit test, <inline-formula><mml:math id="M4" display="inline"><mml:mrow><mml:mi>p</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0.0003</mml:mn></mml:mrow></mml:math></inline-formula>), while
+the subsample of RP is slightly, but non-significantly, biased towards men.
+With regard to age, the age group of 41 to 60 years is overrepresented in
+both subsamples and accounts for almost half of the respondents. Adolescents
+(15 to 20 years), who were not explicitly addressed by the adverts, and very
+old people (<inline-formula><mml:math id="M5" display="inline"><mml:mrow><mml:mi mathvariant="italic">&gt;</mml:mi><mml:mn mathvariant="normal">80</mml:mn></mml:mrow></mml:math></inline-formula> years), who might not be reached by the online
+format, are clearly underrepresented in both subsamples (Table 2). However,
+both samples include respondents from all age classes and hence cover a wide
+range (NW: 15 to 88 years; RP: 20 to 83 years). Therefore, the sample is
+believed to provide answers to the research questions. However, conclusions
+with regard to gender or age have to be drawn with special care.</p>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T2" specific-use="star"><?xmltex \currentcnt{2}?><label>Table 2</label><caption><p id="d1e585">Socio-demographic characteristics of the sample in comparison with
+the general population per state as of 31 December 2020 according to
+Destatis (2021).</p></caption><oasis:table frame="topbot"><oasis:tgroup cols="7">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="right"/>
+     <oasis:colspec colnum="3" colname="col3" align="right"/>
+     <oasis:colspec colnum="4" colname="col4" align="right" colsep="1"/>
+     <oasis:colspec colnum="5" colname="col5" align="right"/>
+     <oasis:colspec colnum="6" colname="col6" align="right"/>
+     <oasis:colspec colnum="7" colname="col7" align="right"/>
+     <oasis:thead>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1"/>
+         <oasis:entry namest="col2" nameend="col4" align="center" colsep="1">North Rhine-Westphalia (NW) </oasis:entry>
+         <oasis:entry namest="col5" nameend="col7" align="center">Rhineland-Palatinate (RP) </oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row>
+         <oasis:entry colname="col1">Gender</oasis:entry>
+         <oasis:entry colname="col2">Number of</oasis:entry>
+         <oasis:entry colname="col3">%</oasis:entry>
+         <oasis:entry colname="col4">% population as of</oasis:entry>
+         <oasis:entry colname="col5">Number of</oasis:entry>
+         <oasis:entry colname="col6">%</oasis:entry>
+         <oasis:entry colname="col7">% population as of</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1"/>
+         <oasis:entry colname="col2">respondents</oasis:entry>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4">31 December 2020</oasis:entry>
+         <oasis:entry colname="col5">respondents</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7">31 December 2020</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Male</oasis:entry>
+         <oasis:entry colname="col2">354</oasis:entry>
+         <oasis:entry colname="col3">42.8 %</oasis:entry>
+         <oasis:entry colname="col4">49.1 %</oasis:entry>
+         <oasis:entry colname="col5">207</oasis:entry>
+         <oasis:entry colname="col6">52.5 %</oasis:entry>
+         <oasis:entry colname="col7">49.4 %</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Female</oasis:entry>
+         <oasis:entry colname="col2">474</oasis:entry>
+         <oasis:entry colname="col3">57.2 %</oasis:entry>
+         <oasis:entry colname="col4">50.9 %</oasis:entry>
+         <oasis:entry colname="col5">187</oasis:entry>
+         <oasis:entry colname="col6">47.5 %</oasis:entry>
+         <oasis:entry colname="col7">50.6 %</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Subtotal</oasis:entry>
+         <oasis:entry colname="col2">828</oasis:entry>
+         <oasis:entry colname="col3">100 %</oasis:entry>
+         <oasis:entry colname="col4">100 %</oasis:entry>
+         <oasis:entry colname="col5">394</oasis:entry>
+         <oasis:entry colname="col6">100 %</oasis:entry>
+         <oasis:entry colname="col7">100 %</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Diverse</oasis:entry>
+         <oasis:entry colname="col2">1</oasis:entry>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5">1</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Missing</oasis:entry>
+         <oasis:entry colname="col2">63</oasis:entry>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5">28</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Total</oasis:entry>
+         <oasis:entry colname="col2">892</oasis:entry>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5">423</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Age</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M6" display="inline"><mml:mi>n</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">%</oasis:entry>
+         <oasis:entry colname="col4">% population</oasis:entry>
+         <oasis:entry colname="col5"><inline-formula><mml:math id="M7" display="inline"><mml:mi>n</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col6">%</oasis:entry>
+         <oasis:entry colname="col7">% population</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1"/>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4">excluding children</oasis:entry>
+         <oasis:entry colname="col5"/>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7">excluding children</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">15–20 years</oasis:entry>
+         <oasis:entry colname="col2">10</oasis:entry>
+         <oasis:entry colname="col3">1.1 %</oasis:entry>
+         <oasis:entry colname="col4">6.9 %</oasis:entry>
+         <oasis:entry colname="col5">1</oasis:entry>
+         <oasis:entry colname="col6">0.3 %</oasis:entry>
+         <oasis:entry colname="col7">6.6 %</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">21–40 years</oasis:entry>
+         <oasis:entry colname="col2">298</oasis:entry>
+         <oasis:entry colname="col3">33.7 %</oasis:entry>
+         <oasis:entry colname="col4">28.8 %</oasis:entry>
+         <oasis:entry colname="col5">101</oasis:entry>
+         <oasis:entry colname="col6">24.3 %</oasis:entry>
+         <oasis:entry colname="col7">27.7 %</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">41–60 years</oasis:entry>
+         <oasis:entry colname="col2">435</oasis:entry>
+         <oasis:entry colname="col3">49.2 %</oasis:entry>
+         <oasis:entry colname="col4">33.0 %</oasis:entry>
+         <oasis:entry colname="col5">235</oasis:entry>
+         <oasis:entry colname="col6">56.6 %</oasis:entry>
+         <oasis:entry colname="col7">33.1 %</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">61–80 years</oasis:entry>
+         <oasis:entry colname="col2">136</oasis:entry>
+         <oasis:entry colname="col3">15.4 %</oasis:entry>
+         <oasis:entry colname="col4">24.1 %</oasis:entry>
+         <oasis:entry colname="col5">76</oasis:entry>
+         <oasis:entry colname="col6">18.3 %</oasis:entry>
+         <oasis:entry colname="col7">25.4 %</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1"><inline-formula><mml:math id="M8" display="inline"><mml:mrow><mml:mi mathvariant="italic">&gt;</mml:mi><mml:mn mathvariant="normal">80</mml:mn></mml:mrow></mml:math></inline-formula> years</oasis:entry>
+         <oasis:entry colname="col2">5</oasis:entry>
+         <oasis:entry colname="col3">0.6 %</oasis:entry>
+         <oasis:entry colname="col4">7.1 %</oasis:entry>
+         <oasis:entry colname="col5">2</oasis:entry>
+         <oasis:entry colname="col6">0.5 %</oasis:entry>
+         <oasis:entry colname="col7">7.2 %</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Subtotal</oasis:entry>
+         <oasis:entry colname="col2">884</oasis:entry>
+         <oasis:entry colname="col3">100 %</oasis:entry>
+         <oasis:entry colname="col4">100 %</oasis:entry>
+         <oasis:entry colname="col5">415</oasis:entry>
+         <oasis:entry colname="col6">100 %</oasis:entry>
+         <oasis:entry colname="col7">100 %</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Missing</oasis:entry>
+         <oasis:entry colname="col2">8</oasis:entry>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5">8</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Total</oasis:entry>
+         <oasis:entry colname="col2">892</oasis:entry>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5">423</oasis:entry>
+         <oasis:entry colname="col6"/>
+         <oasis:entry colname="col7"/>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup></oasis:table></table-wrap>
+
+      <p id="d1e1069">The questionnaire comprised 22 questions, of which several were taken from
+similar surveys that have been conducted after floods since 2002 (Thieken et
+al., 2017; Kreibich et al., 2017), allowing us to compare the data from 2021
+to the recent past and to explore whether warning in July 2021 was
+comparable to or worse than during other flood events. The events used for
+comparison and the available survey data are listed in Table 1.</p>
+      <p id="d1e1072">In line with the research questions (RQs), the questionnaire used in 2021
+addressed the following topics: for RQ1, warning source (dissemination
+channel), information content and point in time when the first warning was
+received; for RQ2, assessment of the credibility of the warning on a
+six-point rating scale, the anticipated magnitude of the flood and perceived knowledge on how to react adequately (situational knowledge on
+protective behaviour), as well as the perceived level of surprise by the
+magnitude of the event; and on RQ3, types of immediate response actions and a
+perception of their loss-reducing effect on a six-point rating scale, since
+shortly after the event, data on financial losses were not available. As
+potentially independent variables that might influence the performance of
+the warning process, it was asked how the water entered the building (flood
+pathway), the maximum water level at the building, and the perceived impacts of
+the event on the neighbourhood and on the respondent's own household. In addition, two
+questions on previously experienced floods were posed. Furthermore, the
+postal code, place of residence, age and gender of the respondent
+as well as the size of their household were elicited as socio-demographic
+information. With regard to RQ4, people were asked to<?pagebreak page977?> indicate on a six-point
+rating scale how much they appreciate currently discussed channels of
+warning dissemination and how important they regard different pieces of
+information contained in a warning message to be. At the very end,
+respondents could provide further information considered important as an open
+answer. The full questionnaire is provided as Supplement. As data
+post-processing, the corresponding federal state, as well as the official
+codes and names of the district and the municipality, was added to each
+case based on the reported postal code and place of residence. In addition,
+indicators on the warning source and the information content were calculated
+in accordance with Thieken et al. (2005). The warning source indicator
+captures through which channel/by whom respondents received a warning,
+ranging from “no warning” and “own search” to “official warnings” from
+authorities or local disaster management. The warning information indicator
+reflects the reported pieces of information of the warning message. It
+ranges from “no relevant information/no warning” to “information on how to
+act and protect oneself”. All variable definitions, coding and summary
+statistics are provided in the Supplement (Table S1).</p>
+      <p id="d1e1075">Results on the warning
+process were verified by local media reports that were searched for in a
+newspaper database and official warnings released by MoWaS in July 2021 as
+well as via the warning app KATWARN.</p>
+      <p id="d1e1078">To identify entry points for improvements of the FFWRS, we examined whether
+we can identify factors predicting (1) the receipt of an official warning
+issued by authorities (or not), (2) the perceived situational knowledge on
+protective behaviour and (3) the perceived effectiveness of performed
+emergency response using regression analyses.</p>
+      <p id="d1e1081">In a first logistic regression analysis, we examined factors that
+potentially relate to the receipt of an official warning (yes/no). Official
+warnings include warnings from authorities or civil protection agencies, calls to
+evacuate, and messages from weather apps as well as sirens or sound trucks. As
+potentially explanatory factors, we included socio-demographic information
+(age, gender, household size and the federal state of the respondents), the
+number of previously experienced<?pagebreak page978?> flood events (prior flood experience) and the
+perceived impact of the 2021 event on the respondent's household, as well as
+different flood pathways, as reported by the respondents.</p>
+      <p id="d1e1085">As an intuitive
+interpretation of regression coefficients is difficult for logistic
+regressions, we provide odds ratios as a measure of the effect size, which
+are easier to interpret. An odds ratio above 1 indicates that as the
+explanatory variable increases, the odds (or likelihood) of the dependent
+variable occurring also increase. Conversely, an odds ratio below 1
+indicates that as the explanatory variable increases, the likelihood of
+the dependent variable occurring decreases.</p>
+      <p id="d1e1088">A second linear regression model
+analysed factors that potentially relate to people's situational knowledge
+on protective behaviour. As explanatory factors, we entered information on
+the warning source (also referred to as “channel”, e.g. by Kuller et al.,
+2021) and the content of the warning messages, the perceived flood impact in
+the respondent's household (as a proxy for the flood magnitude), the number of
+previously experienced floods, and the perceived degree of being surprised by the
+flood magnitude, as well as age, gender and the federal state as
+socio-demographic control variables. Although the quality of the warning
+source is considered to increase with every category of the warning source
+indicator (see Table S1), the different categories are still entered as
+dummy variables in this regression model. We report a linear model in
+Sect. 3.2 because regression coefficients can be interpreted more
+intuitively and since results are largely similar in terms of significant
+predictors compared with the corresponding ordered logistic model that can
+be found in the Supplement (Table S2).</p>
+      <p id="d1e1091">A third model tested how to predict the perceived effectiveness of the
+loss-reducing action performed. The perceived damage-reducing effect was elicited by
+the following question: “In your opinion, how much could your response
+before/during the event and/or private precautionary measures reduce the
+damage?” Following that question, explanatory examples of risk-reducing
+behaviour were provided, like the use of flood-adapted material and the
+purchase of water pumps, to facilitate a consistent interpretation by the
+respondents. The question was again elicited on a six-point rating scale (1 – “not at all” to 6 – “almost completely”; see also Table S1). In addition
+to the warning source and the warning information indicators, we added the
+perceived situational knowledge on protective behaviour and examined whether
+water depth experienced at the building, previous flood experience and
+perceived surprise of the flood magnitude were related to the perceived
+effectiveness of risk-reducing behaviour. Additionally, age, gender and the
+two federal states were added as socio-economic controls. As a proxy for the
+flood magnitude, we tested the perceived impact on the respondent's household
+and the water level at the building. Since the water level explained more
+variance, that model is presented in Sect. 3.3. We again report a linear
+model in<?pagebreak page979?> the text and provide the corresponding ordered logistic regression
+in the Supplement (Table S3).</p>
+      <p id="d1e1094">In general, data from rating scales that are end-labelled are usually
+assumed to be equidistant, i.e. interval-scaled, according to Porst (2014),
+which was recently confirmed by Höhne et al. (2021) for questions on
+income (in)equalities. Therefore, the survey data were mainly treated as numeric data although in principle the equidistance of each rating
+scale needs validation.</p>
+</sec>
+<sec id="Ch1.S3">
+  <label>3</label><title>Results and discussion</title>
+<sec id="Ch1.S3.SS1">
+  <label>3.1</label><title>Receiving warnings</title>
+      <p id="d1e1112">As outlined in the introduction, a prerequisite of an effective FFWRS is
+that warnings officially issued by authorities reach the people at risk. In
+July 2021, 35 % of the surveyed residents from North Rhine-Westphalia (NW,
+<inline-formula><mml:math id="M9" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">892</mml:mn></mml:mrow></mml:math></inline-formula>) and 29 % of those from Rhineland-Palatinate (RP, <inline-formula><mml:math id="M10" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">423</mml:mn></mml:mrow></mml:math></inline-formula>)
+stated that they had not been warned. Figure 2 puts these high numbers into
+the context of former fluvial (left) and pluvial (right) floods in Germany.
+Since flood forecasting and warning is the responsibility of the federal
+states (see Introduction), data in Fig. 2 are distinguished per federal
+state and event year for fluvial floods, while for pluvial floods, for which
+severe weather warnings of the DWD are decisive, just the name of the most
+affected city and the year of the event are provided.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F2" specific-use="star"><?xmltex \currentcnt{2}?><?xmltex \def\figurename{Figure}?><label>Figure 2</label><caption><p id="d1e1141">Share of respondents who reported that they had not been warned
+before the flood danger became imminent. Data are shown per flood event
+(year), federal state and flood type; left: fluvial floods from 2002 to
+2021; right: some pluvial floods between 2005 and 2019 (abbreviations of the
+federal states – BB: Brandenburg; BW: Baden-Württemberg; BY: Bavaria; NI:
+Lower Saxony; NW: North Rhine-Westphalia; RP: Rhineland-Palatinate; SN:
+Saxony; ST: Saxony-Anhalt; TH: Thuringia; see Fig. 1 for geographic
+locations; see Table 1 for brief event descriptions).</p></caption>
+          <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f02.png"/>
+
+        </fig>
+
+      <p id="d1e1150">Since August 2002, Germany has experienced several fluvial floods,
+particularly in the southern and eastern parts of the country (see Kienzler
+et al., 2015; Thieken et al., 2022; Table 1). Figure 2 reveals that in 2002,
+2005, 2010 and 2016 the share of the affected population that received no
+warning is in general comparable to the outcomes in 2021 with only small
+differences across different federal states, except for Saxony-Anhalt in
+2002. The flood processes of these events are also comparable to the
+situation in 2021; i.e. they occurred mainly in the middle hills and partly
+showed a flash-flood-like character (Kienzler et al., 2015; Thieken et al., 2022;
+Table 1). In 2002, the flood then travelled further downstream and caused
+inundations along the river Elbe, which had the character of a (huge)
+fluvial flood particularly in Saxony-Anhalt, where the warning situation
+hence improved (Fig. 2; Kreibich et al., 2017).</p>
+      <p id="d1e1154">In contrast to the events in 2002, 2005, 2010, 2016 and 2021, the share of
+the population that was not warned in 2006, 2011 and 2013 dropped to around
+5 to 10 % in most of the affected federal states (Fig. 2), which can be
+regarded as a good performance of the FFWRS (Thieken et al., 2016). These
+latter floods can be primarily characterized as slowly rising fluvial floods
+(Kienzler et al., 2015; Thieken et al., 2016; Table 1). Figure 2 further
+reveals that during pluvial floods the warning situation is even worse: the
+share of the unwarned population amounts to more than 50 % but shows some improvements over time (see also Rözer et al., 2016).</p>
+      <p id="d1e1157">Altogether Fig. 2 suggests that the performance of the FFWRS in Germany
+greatly depends on the type of flooding and is particularly challenged by
+pluvial and flash floods. For most of the pluvial floods shown in Fig. 2 as
+well as for the rainfall and subsequent (flash) floods in May and June 2016,
+lead times of just 2 h were reported by Kind et al. (2019, p. 79)
+based on official warnings. Survey data from residents affected in 2016
+resulted in a median lead time of just 1 h (Thieken et al., 2022). In
+addition, the forecasted rainfall amounts underestimated the observed values
+by far (Kind et al., 2019, p. 79). These analyses illustrate the limits of
+rainfall forecasts for convective storms. In 2021, however, the
+flood-triggering low-pressure system had been forecasted several days in
+advance, i.e. since Sunday 11 July 2021, by the European Flood Awareness
+System (EFAS) as well as by the German weather forecasting system (DWD,
+2021). Hence, the share of residents who received no warning should have
+been considerably lower than surveyed, although Saadi et al. (2023)
+illustrate the tendency of radar-based rainfall data from July 2021 to
+underestimate rainfall amounts and hence flood peaks.</p>
+      <p id="d1e1160">Table 3 presents the results of the logistic regression explaining the
+receipt (yes or no) of an official warning as defined in Sect. 2. As
+regression coefficients are difficult to interpret in logistic regressions,
+we provide odds ratios as effect sizes (see Sect. 2 for an explanation).
+In terms of socio-demographic characteristics, we find that men report
+higher levels of being officially warned than women (increased odds ratio of
+nearly 67 %). No significant effect is shown for age, the household size
+and the federal state. Having experienced flooding prior to 2021 increases
+the odds of receiving a warning in 2021 by 23 %, while perceived strong
+impacts of the flood on the household decreases the odds by 18 %. In terms
+of flood pathways, we find that fluvial flooding (marginally significant)
+and wildly flowing surface runoff increase the receipt of a warning (odds
+ratio of 36 % and 43 %, respectively), while a dike or dam breach
+reduces the odds ratio of an official warning receipt by 36 % (marginally
+significant). Respondents who observed no flooding in their immediate
+surrounding reported significantly higher levels of being officially warned.
+While the latter finding might sound counterintuitive at first, it may be
+explained by the fact that respondents who were not flooded themselves were
+not surprised by water intrusion and thus had more time to receive an
+official warning. In addition, they might not have been affected by power
+outages or breakdowns of telecommunications, which were frequently reported
+in severely affected areas (e.g. by Koks et al., 2022). Overall, the
+explanatory power of the model is rather low with an explained variance in
+official warning receipt of 6.3 %. Maybe general habits of media usage or
+a person's social network could further improve the model's explanatory
+power. The timing of the flood event might also have an influence, since
+people are harder to reach at night.</p>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T3" specific-use="star"><?xmltex \currentcnt{3}?><label>Table 3</label><caption><p id="d1e1166">Results of a logistic regression explaining the receipt of an
+official warning (<inline-formula><mml:math id="M11" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1115</mml:mn></mml:mrow></mml:math></inline-formula>; SE: standard error; _cons: constant). All variable definitions, coding and summary
+statistics are provided in the Supplement, Table S1.</p></caption><oasis:table frame="topbot"><oasis:tgroup cols="5">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="right"/>
+     <oasis:colspec colnum="3" colname="col3" align="right"/>
+     <oasis:colspec colnum="4" colname="col4" align="right"/>
+     <oasis:colspec colnum="5" colname="col5" align="right"/>
+     <oasis:thead>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Explanatory variable</oasis:entry>
+         <oasis:entry colname="col2">Odds ratio</oasis:entry>
+         <oasis:entry colname="col3">SE</oasis:entry>
+         <oasis:entry colname="col4"><inline-formula><mml:math id="M13" display="inline"><mml:mi>p</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col5">95 % conf. interval</oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row>
+         <oasis:entry colname="col1">Age</oasis:entry>
+         <oasis:entry colname="col2">1.004</oasis:entry>
+         <oasis:entry colname="col3">0.005</oasis:entry>
+         <oasis:entry colname="col4">0.387</oasis:entry>
+         <oasis:entry colname="col5">[0.994, 1.014]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Gender</oasis:entry>
+         <oasis:entry colname="col2">1.668</oasis:entry>
+         <oasis:entry colname="col3">0.216</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[1.294, 2.151]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Federal state</oasis:entry>
+         <oasis:entry colname="col2">1.075</oasis:entry>
+         <oasis:entry colname="col3">0.077</oasis:entry>
+         <oasis:entry colname="col4">0.310</oasis:entry>
+         <oasis:entry colname="col5">[0.934, 1.238]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Perceived flood impact for household</oasis:entry>
+         <oasis:entry colname="col2">0.818</oasis:entry>
+         <oasis:entry colname="col3">0.031</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.759, 0.882]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Number of floods experienced prior to 2021</oasis:entry>
+         <oasis:entry colname="col2">1.235</oasis:entry>
+         <oasis:entry colname="col3">0.098</oasis:entry>
+         <oasis:entry colname="col4">0.008</oasis:entry>
+         <oasis:entry colname="col5">[1.056, 1.443]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Household size</oasis:entry>
+         <oasis:entry colname="col2">1.003</oasis:entry>
+         <oasis:entry colname="col3">0.052</oasis:entry>
+         <oasis:entry colname="col4">0.957</oasis:entry>
+         <oasis:entry colname="col5">[0.906, 1.111]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">No flood in immediate surrounding</oasis:entry>
+         <oasis:entry colname="col2">2.030</oasis:entry>
+         <oasis:entry colname="col3">0.643</oasis:entry>
+         <oasis:entry colname="col4">0.025</oasis:entry>
+         <oasis:entry colname="col5">[1.091, 3.776]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Overloaded sewage water system</oasis:entry>
+         <oasis:entry colname="col2">0.816</oasis:entry>
+         <oasis:entry colname="col3">0.122</oasis:entry>
+         <oasis:entry colname="col4">0.175</oasis:entry>
+         <oasis:entry colname="col5">[0.608, 1.095]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Wildly flowing surface runoff</oasis:entry>
+         <oasis:entry colname="col2">1.430</oasis:entry>
+         <oasis:entry colname="col3">0.204</oasis:entry>
+         <oasis:entry colname="col4">0.012</oasis:entry>
+         <oasis:entry colname="col5">[1.081, 1.893]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Water ingress from toilets, floor drains, etc.</oasis:entry>
+         <oasis:entry colname="col2">0.945</oasis:entry>
+         <oasis:entry colname="col3">0.168</oasis:entry>
+         <oasis:entry colname="col4">0.750</oasis:entry>
+         <oasis:entry colname="col5">[0.668, 1.338]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Overflowing waterbody (e.g. river)</oasis:entry>
+         <oasis:entry colname="col2">1.361</oasis:entry>
+         <oasis:entry colname="col3">0.239</oasis:entry>
+         <oasis:entry colname="col4">0.079</oasis:entry>
+         <oasis:entry colname="col5">[0.965, 1.919]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Dike or dam breach</oasis:entry>
+         <oasis:entry colname="col2">0.639</oasis:entry>
+         <oasis:entry colname="col3">0.155</oasis:entry>
+         <oasis:entry colname="col4">0.065</oasis:entry>
+         <oasis:entry colname="col5">[0.398, 1.027]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Groundwater ingress</oasis:entry>
+         <oasis:entry colname="col2">1.127</oasis:entry>
+         <oasis:entry colname="col3">0.168</oasis:entry>
+         <oasis:entry colname="col4">0.425</oasis:entry>
+         <oasis:entry colname="col5">[0.840, 1.510]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">_cons</oasis:entry>
+         <oasis:entry colname="col2">0.192</oasis:entry>
+         <oasis:entry colname="col3">0.151</oasis:entry>
+         <oasis:entry colname="col4">0.035</oasis:entry>
+         <oasis:entry colname="col5">[0.042, 0.893]</oasis:entry>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup></oasis:table><table-wrap-foot><p id="d1e1181">Pseudo <inline-formula><mml:math id="M12" display="inline"><mml:mrow><mml:msup><mml:mi>R</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0.063</mml:mn></mml:mrow></mml:math></inline-formula>.</p></table-wrap-foot></table-wrap>
+
+      <?pagebreak page981?><p id="d1e1498">In many places affected in July 2021, flooding occurred in the evening of 14
+July and during the night from Wednesday to Thursday (15 July).
+A total of 740 respondents (valid <?xmltex \hack{\mbox\bgroup}?>answers<?xmltex \hack{\egroup}?> from NW: <inline-formula><mml:math id="M14" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">474</mml:mn></mml:mrow></mml:math></inline-formula>; RP: <inline-formula><mml:math id="M15" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">266</mml:mn></mml:mrow></mml:math></inline-formula>) provided
+the day on which they were warned for the first time (Fig. 3). In both
+federal states, most respondents who were warned received the first
+warning on Wednesday 14 July 2021 (NW <inline-formula><mml:math id="M16" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 40 % of valid answers; RP <inline-formula><mml:math id="M17" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 61 %). The second most frequent day for receiving a warning was Monday 12
+July 2021 (NW <inline-formula><mml:math id="M18" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 23 %; RP <inline-formula><mml:math id="M19" display="inline"><mml:mo>=</mml:mo></mml:math></inline-formula> 16 %). Altogether, around 35 % of the
+warned residents from RP had received their first warning before 14 July,
+while this share amounts to 50 % in NW. By the end of 14 July 2021, the
+cumulative sums rise to 95 % in RP and 90 % in NW (Fig. 3).</p>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F3" specific-use="star"><?xmltex \currentcnt{3}?><?xmltex \def\figurename{Figure}?><label>Figure 3</label><caption><p id="d1e1561">Day on which 740 respondents from North Rhine-Westphalia (NW) and
+Rhineland-Palatinate (RP) received a first warning.</p></caption>
+          <?xmltex \igopts{width=455.244094pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f03.png"/>
+
+        </fig>
+
+      <p id="d1e1570">In fact, the heavily affected district of Euskirchen (NW) issued a first
+warning with expected rainfall amounts of 200 mm via MoWaS on 12 July 2021
+(around 17:00 local time – all times throughout the paper are given in local time), which was updated twice on 14 July 2021. Most of
+the other districts issued a first warning via MoWaS in the course of 14
+July 2021; this was accompanied by statewide warnings for NW and RP. The
+severely affected district of Ahrweiler (RP) issued a flood warning in the
+early afternoon of 14 July 2021 via the app KATWARN; at 19:35 a water
+level of more than 5 m was forecasted for the river Ahr.</p>
+      <p id="d1e1573">Due to missing independent data on the outreach of different dissemination
+channels, there is only anecdotal evidence to compare our survey data
+with. For example, in the most affected district of Ahrweiler (RP), around
+18 % of the residents had subscribed to the warning app KATWARN. In the
+survey around 20 % of respondents from this district reported warnings
+from this app. In addition, their reports on the time slot of the first
+warning match well with the officially released warning message between 14:00
+and 15:00 (data not shown). So, the answers of the respondents in Fig. 3 are
+basically consistent with the release of official warnings and underline the
+need to improve timely warning dissemination. According to a media expert
+(Westdeutscher Rundfunk (WDR) Cologne, Programmdirektion NRW, Wissen und Kultur, personal communication, 4 April 2022), considerably more people would have
+been reached if the warnings and the upcoming event had been addressed in TV and radio programmes for several days by using easily interpretable
+stories and images. The fact that warnings of slow-onset fluvial floods like
+the one in June 2013 were much more successful (as shown by Kreibich et al.,
+2017; Thieken et al., 2022; and Fig. 2) was explained by the longer
+coverage in the media starting with stories of affected places and people in
+the upstream areas. In comparison to TV and radio coverage, coverage with
+mobile phones is much higher. However, residents in Germany used to have to
+subscribe to warning apps such as KATWARN or NINA; a cell broadcast system
+was tested in December 2022 and introduced in February 2023.</p>
+</sec>
+<sec id="Ch1.S3.SS2">
+  <label>3.2</label><title>Trusting and understanding warnings</title>
+      <p id="d1e1584">An investigation of the performance of a FFWRS should involve an assessment
+of the credibility and comprehensibility of the warning message as these are
+crucial aspects for response (Morss et al., 2016; Párraga Niebla, 2015).
+In July 2021, the credibility of the warning was in general high but also
+revealed some doubts: on a six-point rating scale (1 – “the warning was
+totally incredible” to 6 – “the warning was highly credible”) 48 % of
+the 841 respondents who had been warned and answered this question chose a
+5 or 6 (NW: 47 %, RP: 51 %). Around 9 % found the warnings incredible,
+i.e. chose a 1 or 2 (NW: 8 %, RP: 11 %). This distribution is very
+different when it comes to the anticipated magnitude of the forecasted event
+– and thus the understanding people got of the upcoming event after having
+received a warning: on a six-point rating scale (1 – “it will rain, but
+there's no problem” to 6 – “torrential rain will cause widespread
+inundations, massive damage and life-threatening situations”) just around
+15 % of the 856 respondents who had been warned and answered this
+question chose a 5 or 6 (NW: 15 %, RP: 14 %) and 29 % (NW: 30 %,
+RP: 26 %) chose a 1 or 2. This underlines that the warnings failed to
+credibly communicate the magnitude of the upcoming event. This is reflected
+by the perceived level of surprise about the flood magnitude: on a six-point
+rating scale (1 – “the magnitude of the event didn't surprise me at all” to
+6 – “the magnitude of the event totally surprised me”) just around 5 % of
+the 877 respondents who had been warned and answered this question chose a
+1 or 2 (NW: 5 %, RP: 4 %), while 86 % (NW: 87 %, RP: 84 %) chose a
+5 or 6. In many parts of the affected areas, the flood of July 2021 was
+larger than any flood that had been measured in the continuous discharge
+series (e.g. Apel et al., 2022; Saadi et al., 2023). Our data underline that
+the flood magnitude was largely underestimated by the affected residents. In
+addition, some respondents complained that too many warnings about Covid-19
+were disseminated via the most popular warning app NINA, which was tiring
+and lowered their attention to warning messages. Above all, in the week
+prior to the severe flood event there were already warnings of heavy rain
+in parts of the affected region, but no serious flooding happened. False
+alarms are known to commonly lower trust in warnings.</p>
+      <p id="d1e1587">Warning can only avoid flood impacts – not only in terms of deaths but also in
+terms of financial damage – if people know how to respond and how to behave
+adequately (Kreibich et al., 2021; Kuller et al., 2021). Thus, situational knowledge about how to avoid dangerous situations or mitigate
+damage should be assessed to learn whether people achieved a deeper
+understanding of the warning and were able to translate the warning into
+action. In the survey, the perceived situational knowledge on protective
+behaviour was assessed on a six-point rating scale (1 – “Based on the warning,
+I didn't know at all how to protect myself and my household from the
+flooding” to 6 – “Based on the warning, I<?pagebreak page982?> knew very well how to protect
+myself and my household from the flooding”). Figure 4 shows the lack of this
+situational <?xmltex \hack{\mbox\bgroup}?>knowledge<?xmltex \hack{\egroup}?> as assessed by respondents who reported that they had
+been warned before the flood hazard became relevant for them and chose a 1
+or 2 on the rating scale mentioned above. Similarly to Fig. 2, the answers of
+2021 can be compared to former surveys and flood events. Again, severe and
+flash floods like those in 2002, 2010 and 2016 perform the worst and are
+comparable to the values reported for the flood of 2021.</p>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F4" specific-use="star"><?xmltex \currentcnt{4}?><?xmltex \def\figurename{Figure}?><label>Figure 4</label><caption><p id="d1e1596">Share of respondents who were warned but reported that they did not
+know (well) how to behave, i.e. how to protect themselves and their
+household against the flood. Data are shown per flood event (year), federal
+state and flood type; left: fluvial floods from 2002 to 2021; right: some
+pluvial floods between 2005 (no data) and 2019 (abbreviations of the federal
+states – BB: Brandenburg; BW: Baden-Württemberg; BY: Bavaria; NI: Lower
+Saxony; NW: North Rhine-Westphalia; RP: Rhineland-Palatinate; SN: Saxony;
+ST: Saxony-Anhalt; TH: Thuringia; see Fig. 1 for geographic locations; see
+Table 1 for brief event descriptions; note that in former surveys the scale
+was used in a reversed order; for this figure all data were aligned).</p></caption>
+          <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f04.png"/>
+
+        </fig>
+
+      <p id="d1e1606">Some answers from the slow river floods of 2006 in Lower Saxony and 2013 in
+Bavaria or Thuringia (see Fig. 4) suggest that the flood magnitude and/or
+the lack of experience might play a role, too. To identify more specific
+entry points for improvements, we hence analysed the influence of various
+factors on people's situational knowledge during a flood by means of a
+regression analysis as explained in Sect. 2. The results are displayed in
+Table 4. The corresponding ordered logistic regression model, which
+considers the ordered nature of the dependent variable, is provided in the
+Supplement (Table S2).</p>
+
+<?xmltex \floatpos{t}?><table-wrap id="Ch1.T4" specific-use="star"><?xmltex \currentcnt{4}?><label>Table 4</label><caption><p id="d1e1612">Results of the linear regression model predicting respondents'
+situational knowledge on protective behaviour (knowing what to do; <inline-formula><mml:math id="M20" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1097</mml:mn></mml:mrow></mml:math></inline-formula>). All variable definitions, coding and summary statistics are provided
+in the Supplement, Table S1.</p></caption><oasis:table frame="topbot"><oasis:tgroup cols="5">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="right"/>
+     <oasis:colspec colnum="3" colname="col3" align="right"/>
+     <oasis:colspec colnum="4" colname="col4" align="right"/>
+     <oasis:colspec colnum="5" colname="col5" align="right"/>
+     <oasis:thead>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Explanatory variable</oasis:entry>
+         <oasis:entry colname="col2">Coefficient</oasis:entry>
+         <oasis:entry colname="col3">SE</oasis:entry>
+         <oasis:entry colname="col4"><inline-formula><mml:math id="M22" display="inline"><mml:mi>p</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col5">95 % conf. interval</oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row>
+         <oasis:entry colname="col1">Age</oasis:entry>
+         <oasis:entry colname="col2">0.003</oasis:entry>
+         <oasis:entry colname="col3">0.003</oasis:entry>
+         <oasis:entry colname="col4">0.285</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M23" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.003</mml:mn></mml:mrow></mml:math></inline-formula>, 0.009]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Gender</oasis:entry>
+         <oasis:entry colname="col2">0.378</oasis:entry>
+         <oasis:entry colname="col3">0.082</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.216, 0.540]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Federal state</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">North Rhine-Westphalia</oasis:entry>
+         <oasis:entry colname="col2">0.000</oasis:entry>
+         <oasis:entry colname="col3">(base)</oasis:entry>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Rhineland-Palatinate</oasis:entry>
+         <oasis:entry colname="col2">0.336</oasis:entry>
+         <oasis:entry colname="col3">0.087</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.165, 0.507]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Warning source indicator</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Not warned</oasis:entry>
+         <oasis:entry colname="col2">0.000</oasis:entry>
+         <oasis:entry colname="col3">(base)</oasis:entry>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Own search</oasis:entry>
+         <oasis:entry colname="col2">0.113</oasis:entry>
+         <oasis:entry colname="col3">0.291</oasis:entry>
+         <oasis:entry colname="col4">0.697</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M24" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.458</mml:mn></mml:mrow></mml:math></inline-formula>, 0.684]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Friends or neighbours</oasis:entry>
+         <oasis:entry colname="col2">0.036</oasis:entry>
+         <oasis:entry colname="col3">0.155</oasis:entry>
+         <oasis:entry colname="col4">0.819</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M25" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.269</mml:mn></mml:mrow></mml:math></inline-formula>, 0.341]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">National news</oasis:entry>
+         <oasis:entry colname="col2">0.273</oasis:entry>
+         <oasis:entry colname="col3">0.217</oasis:entry>
+         <oasis:entry colname="col4">0.208</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M26" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.152</mml:mn></mml:mrow></mml:math></inline-formula>, 0.699]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Official warning</oasis:entry>
+         <oasis:entry colname="col2">0.328</oasis:entry>
+         <oasis:entry colname="col3">0.150</oasis:entry>
+         <oasis:entry colname="col4">0.029</oasis:entry>
+         <oasis:entry colname="col5">[0.034, 0.622]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Warning information indicator</oasis:entry>
+         <oasis:entry colname="col2">0.107</oasis:entry>
+         <oasis:entry colname="col3">0.049</oasis:entry>
+         <oasis:entry colname="col4">0.028</oasis:entry>
+         <oasis:entry colname="col5">[0.012, 0.202]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Number of floods experienced prior to 2021</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Never before</oasis:entry>
+         <oasis:entry colname="col2">0.000</oasis:entry>
+         <oasis:entry colname="col3">(base)</oasis:entry>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Once</oasis:entry>
+         <oasis:entry colname="col2">0.525</oasis:entry>
+         <oasis:entry colname="col3">0.125</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.279, 0.771]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Twice</oasis:entry>
+         <oasis:entry colname="col2">0.702</oasis:entry>
+         <oasis:entry colname="col3">0.195</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.320, 1.085]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Three times</oasis:entry>
+         <oasis:entry colname="col2">1.466</oasis:entry>
+         <oasis:entry colname="col3">0.324</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.830, 2.101]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Four times or more</oasis:entry>
+         <oasis:entry colname="col2">1.510</oasis:entry>
+         <oasis:entry colname="col3">0.309</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.903, 2.118]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Perceived surprise</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M27" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.491</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.045</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M28" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.580</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M29" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.402</mml:mn></mml:mrow></mml:math></inline-formula>]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Perceived flood impact for household</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M30" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.065</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.024</oasis:entry>
+         <oasis:entry colname="col4">0.006</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M31" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.112</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M32" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.019</mml:mn></mml:mrow></mml:math></inline-formula>]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">_cons</oasis:entry>
+         <oasis:entry colname="col2">4.307</oasis:entry>
+         <oasis:entry colname="col3">0.345</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[3.630, 4.984]</oasis:entry>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup></oasis:table><table-wrap-foot><p id="d1e1627"><inline-formula><mml:math id="M21" display="inline"><mml:mrow><mml:msup><mml:mi>R</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0.33</mml:mn></mml:mrow></mml:math></inline-formula>.</p></table-wrap-foot></table-wrap>
+
+      <p id="d1e2148">In terms of the warning source, results show that warnings issued by
+authorities have a significant positive influence on people's situational
+knowledge on protective behaviour, when compared with respondents that did
+not receive any warning (the base), which is in line with the literature
+review presented by Kuller et al. (2021). The other three warning source
+categories, i.e. own search, friends and neighbours, as well as nationwide
+or regional news, had no significant effect when compared to those without
+warning. A significant but rather weak positive effect is found for the
+warning information; i.e. if the warning message contains information about
+adequate behaviour, people tend to perceive themselves to be better informed and able
+to cope with the situation. A strong positive effect is observed for flood
+experience. As could be expected, people who had experienced one or more
+floods before the 2021 event report significantly higher levels of
+situational knowledge. Interestingly, this effect increases continuously
+with the reported number of previously experienced events (Table 4). In
+terms of the socio-demographic control variables, men tend to report higher
+levels of situational knowledge, while age had again no significant effect.
+We also find that respondents from RP report higher levels of situational
+knowledge than people from NW. Significant negative effects are found for the
+level of surprise and the perceived flood impact on the respondents'
+household, with surprise having the larger effect (Table 4). Apel et al. (2022) argue that forecasting the impacts, i.e. the potentially inundated
+areas, would have been helpful to communicate the extent of inundation and
+the life-threatening potential of the upcoming flood event. Overall, the
+model explains 33 % of the variance in situational knowledge.</p>
+      <p id="d1e2151">The findings were verified by a first content analysis of media reports on
+warnings before the event hit and of the official warnings that were
+disseminated via MoWaS or KATWARN. Some examples from the local press
+illustrate that even though warnings from the DWD were usually reported
+correctly, the corresponding advice on behaviour was often too
+vague and seems – in hindsight – inappropriate given the high flood
+magnitude. Moreover, only around a third of media reports that mentioned
+warnings included recommendations on behaviour. For example, on 13 July
+2021, the <?xmltex \hack{\mbox\bgroup}?><italic>Trierischer Volksfreund</italic><?xmltex \hack{\egroup}?> (region Trier, RP; Seydewitz, 2021)
+reported an extreme weather warning from DWD with up to 200 mm of rainfall that
+may also lead to rising water levels in small rivers. The associated advice
+was that people living along small rivers and streams should monitor the
+situation and potentially undertake precautionary measures. However, what
+such measures involve was not specified. Another article published on 14
+July 2021 (<italic>Ruhr Nachrichten</italic>, NW) similarly reported severe weather warnings
+for the district of Unna (NW). The corresponding advice was to keep doors and
+windows closed and to store objects in cellars on higher shelves. Finally,
+for the area of Koblenz (RP) the <italic>Rhein-Lahn-Zeitung</italic> (Lindner, 2021)
+reported on 14 July 2021 a warning of heavy rain and rising water levels
+that was associated with advice for campers to be careful alongside
+rivers. More comprehensive advice on appropriate property-level measures
+was only found in the <italic>Rhein-Zeitung</italic> (RP) of 14 July 2021 and mentioned
+backflow preventers, waterproof doors and windows, and maintenance
+works.</p>
+      <p id="d1e2168">Official warnings are usually accompanied by action recommendations.
+However, some recommendations seem not to have fit the situation that unfolded
+in July 2021. One example illustrating that the recommended protective
+actions were not adapted to the real situation is taken from the severely
+affected district of Ahrweiler (RP). Here, the app KATWARN warned against
+water levels of more than 5 m on 14 July 2021 at 19:35, which
+considerably exceeded the 100-year flood level of around 3.7 m at the
+gauge of Altenahr. However, the recommended protective actions for affected
+people were still to avoid cellars and underground car parks, not to drive
+on inundated streets, and to clear drains and wells. These actions were
+clearly insufficient, since already at 20:30 houses in the municipality of
+Altenahr were reported to be halfway under water and flowing away at 22:40 (<italic>Frankfurter Allgemeine Zeitung</italic>, 15 September 2021; Staib and Steppat,
+2021). Only at 23:09 was a state of emergency declared and people with 50 m
+of the river Ahr on both sides were requested to leave their homes and
+evacuate by themselves – a piece of advice which, at that time, was clearly too
+late and also dangerous. As one consequence, more than 330 people were
+rescued by helicopters from the roofs of their houses or from trees (Kron et
+al., 2022). In summary, the official warning messages seem to have contained all
+necessary information but were not adapted to the flood magnitude that
+occurred in July 2021.</p>
+</sec>
+<?pagebreak page984?><sec id="Ch1.S3.SS3">
+  <label>3.3</label><title>Responses and perception of loss reduction</title>
+      <p id="d1e2182">Whether a warning prevents or mitigates flood impacts ultimately depends on the
+damage-reducing actions performed. These are commonly divided into immediate
+emergency measures and (long-term) precautionary measures (e.g. Dillenardt
+et al., 2022). Since measures can be very diverse, we compared the
+percentage of people across different flood events who reported no
+(emergency) action or a continuation of their daily routines. Figure 5
+illustrates that there is only a small percentage of less than 10 % of
+flood-affected residents who did not perform any emergency action during
+slow-onset fluvial floods that occurred in 2006, 2011 and 2013 (Fig. 5).
+This share is a bit higher in areas that experienced flash floods, e.g. in
+2002, 2005 and 2010 but not in July 2021 (Fig. 5). Higher percentages of
+inaction were only reported for pluvial flooding and the event of 2016. This
+might be due to the short lead times of just 2 h (see Sect. 3.1; Kind
+et al., 2019, p. 79) and might also be a reasonable life-saving behaviour
+given the rapid rise of water levels.</p>
+
+      <?xmltex \floatpos{p}?><fig id="Ch1.F5" specific-use="star"><?xmltex \currentcnt{5}?><?xmltex \def\figurename{Figure}?><label>Figure 5</label><caption><p id="d1e2187">Share of respondents who reported no emergency action. Data are
+shown per flood event (year), federal state and flood type; left: fluvial
+floods from 2002 to 2021; right: some pluvial floods between 2005 and 2019 (abbreviations of the federal states – BB: Brandenburg; BW:
+Baden-Württemberg; BY: Bavaria; NI: Lower Saxony; NW: North
+Rhine-Westphalia; RP: Rhineland-Palatinate; SN: Saxony; ST: Saxony-Anhalt;
+TH: Thuringia; see Fig. 1 for geographic locations; see Table 1 for brief
+event descriptions; note that the question was phrased differently in
+surveys after the 2016 flood).</p></caption>
+          <?xmltex \igopts{width=497.923228pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f05.png"/>
+
+        </fig>
+
+      <p id="d1e2196">To gain insights into the perceived damage-reducing effect of risk-reducing
+behaviour, we ran a third regression model (Table 5). In line with Table 4,
+we again report a linear model for consistency and ease of interpretation
+and provide the ordered logistic model in the Supplement (Table S3). Results
+show that both the warning source and the warning information indicator did
+not relate significantly to the perceived damage reduction (Table 5). As it
+could be intuitively expected, higher situational knowledge on protective
+behaviour and floods experienced by the respondents prior to 2021 both
+relate to significantly higher levels of perceived damage reduction by the
+respondents. In contrast, respondents who experienced high water levels at
+their building and perceived the flood magnitude in 2021 as a surprise
+reported significantly lower levels of perceived damage reduction. In terms
+of the socio-economic control variables, respondents from RP reported
+significantly lower levels, which might be due to the very high flood
+magnitude. Overall, the model explains 23 % of the variance. Altogether,
+the response of people affected in July 2021 is comparable to other
+(fluvial) floods but seems to be compromised by the high flood magnitude.</p>
+
+<?xmltex \floatpos{p}?><table-wrap id="Ch1.T5" specific-use="star"><?xmltex \currentcnt{5}?><label>Table 5</label><caption><p id="d1e2203">Results of the linear regression model predicting
+respondents' perceived damage reduction due to risk-reducing
+behaviour (<inline-formula><mml:math id="M33" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">1003</mml:mn></mml:mrow></mml:math></inline-formula>). All variable definitions, coding and
+summary statistics are provided in the Supplement, Table S1.</p></caption><oasis:table frame="topbot"><oasis:tgroup cols="5">
+     <oasis:colspec colnum="1" colname="col1" align="left"/>
+     <oasis:colspec colnum="2" colname="col2" align="right"/>
+     <oasis:colspec colnum="3" colname="col3" align="right"/>
+     <oasis:colspec colnum="4" colname="col4" align="right"/>
+     <oasis:colspec colnum="5" colname="col5" align="right"/>
+     <oasis:thead>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Explanatory variable</oasis:entry>
+         <oasis:entry colname="col2">Coefficient</oasis:entry>
+         <oasis:entry colname="col3">SE</oasis:entry>
+         <oasis:entry colname="col4"><inline-formula><mml:math id="M35" display="inline"><mml:mi>p</mml:mi></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col5">95 % conf. interval</oasis:entry>
+       </oasis:row>
+     </oasis:thead>
+     <oasis:tbody>
+       <oasis:row>
+         <oasis:entry colname="col1">Perceived situational knowledge (knowing what to do)</oasis:entry>
+         <oasis:entry colname="col2">0.205</oasis:entry>
+         <oasis:entry colname="col3">0.034</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[0.139, 0.27]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Warning source indicator</oasis:entry>
+         <oasis:entry colname="col2">0.004</oasis:entry>
+         <oasis:entry colname="col3">0.04</oasis:entry>
+         <oasis:entry colname="col4">0.915</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M36" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.074</mml:mn></mml:mrow></mml:math></inline-formula>, 0.082]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Warning information indicator</oasis:entry>
+         <oasis:entry colname="col2">0.055</oasis:entry>
+         <oasis:entry colname="col3">0.051</oasis:entry>
+         <oasis:entry colname="col4">0.287</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M37" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.046</mml:mn></mml:mrow></mml:math></inline-formula>, 0.155]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Age</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M38" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.006</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.003</oasis:entry>
+         <oasis:entry colname="col4">0.061</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M39" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.013</mml:mn></mml:mrow></mml:math></inline-formula>, 0.0]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Gender</oasis:entry>
+         <oasis:entry colname="col2">0.161</oasis:entry>
+         <oasis:entry colname="col3">0.092</oasis:entry>
+         <oasis:entry colname="col4">0.079</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M40" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.019</mml:mn></mml:mrow></mml:math></inline-formula>, 0.342]</oasis:entry>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Federal state</oasis:entry>
+         <oasis:entry colname="col2"/>
+         <oasis:entry colname="col3"/>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">North Rhine-Westphalia</oasis:entry>
+         <oasis:entry colname="col2">0.000</oasis:entry>
+         <oasis:entry colname="col3">(base)</oasis:entry>
+         <oasis:entry colname="col4"/>
+         <oasis:entry colname="col5"/>
+       </oasis:row>
+       <oasis:row rowsep="1">
+         <oasis:entry colname="col1">Rhineland-Palatinate</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M41" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.279</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.099</oasis:entry>
+         <oasis:entry colname="col4">0.005</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M42" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.474</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M43" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.084</mml:mn></mml:mrow></mml:math></inline-formula>]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Number of floods experienced prior to 2021</oasis:entry>
+         <oasis:entry colname="col2">0.188</oasis:entry>
+         <oasis:entry colname="col3">0.061</oasis:entry>
+         <oasis:entry colname="col4">0.002</oasis:entry>
+         <oasis:entry colname="col5">[0.07, 0.307]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Perceived surprise</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M44" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.209</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.056</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M45" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.318</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M46" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.1</mml:mn></mml:mrow></mml:math></inline-formula>]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">Water depth</oasis:entry>
+         <oasis:entry colname="col2"><inline-formula><mml:math id="M47" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.213</mml:mn></mml:mrow></mml:math></inline-formula></oasis:entry>
+         <oasis:entry colname="col3">0.026</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[<inline-formula><mml:math id="M48" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.264</mml:mn></mml:mrow></mml:math></inline-formula>, <inline-formula><mml:math id="M49" display="inline"><mml:mrow><mml:mo>-</mml:mo><mml:mn mathvariant="normal">0.162</mml:mn></mml:mrow></mml:math></inline-formula>]</oasis:entry>
+       </oasis:row>
+       <oasis:row>
+         <oasis:entry colname="col1">_cons</oasis:entry>
+         <oasis:entry colname="col2">3.626</oasis:entry>
+         <oasis:entry colname="col3">0.434</oasis:entry>
+         <oasis:entry colname="col4">0.000</oasis:entry>
+         <oasis:entry colname="col5">[2.774, 4.478]</oasis:entry>
+       </oasis:row>
+     </oasis:tbody>
+   </oasis:tgroup></oasis:table><table-wrap-foot><p id="d1e2218"><inline-formula><mml:math id="M34" display="inline"><mml:mrow><mml:msup><mml:mi>R</mml:mi><mml:mn mathvariant="normal">2</mml:mn></mml:msup><mml:mo>=</mml:mo><mml:mn mathvariant="normal">0.23</mml:mn></mml:mrow></mml:math></inline-formula>.</p></table-wrap-foot></table-wrap>
+
+</sec>
+<sec id="Ch1.S3.SS4">
+  <label>3.4</label><title>Wishes for future warnings</title>
+      <?pagebreak page986?><p id="d1e2632">In the online survey, respondents were finally asked about their views on
+warning content and their wishes for (new) warning technologies (see
+Sect. 2). Figure 6 displays the mean assessments of the importance of
+different pieces of information by the respondents on a rating scale from 1
+(not important at all) to 6 (very important) for both federal states. The
+data reveal that almost all information is regarded as (very) important with
+slight compromises with regard to the timing and the expected amount of
+rainfall; comparisons with past events; and potential impacts of and information
+about detours, road closures or train cancellations. It should be noted that the
+timing and height of water levels are considered more important than
+information on rainfall, which contrasts the media reports that focus more
+on severe weather warnings released by DWD than on hydrological forecasts.
+Moreover, Kuller et al. (2021) found in their literature review inconsistent
+results on the effectiveness of impact-based warnings (and the provision of
+uncertainties in warnings). Besides the content shown in Fig. 6, Kuller et
+al. (2021) further recommend providing contact information. These aspects were
+mentioned by respondents of our survey in the open answers.</p>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F6" specific-use="star"><?xmltex \currentcnt{6}?><?xmltex \def\figurename{Figure}?><label>Figure 6</label><caption><p id="d1e2637">Mean rating of surveyed respondents with regard to the importance of
+different pieces of warning information or content (NW: <inline-formula><mml:math id="M50" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">837</mml:mn></mml:mrow></mml:math></inline-formula> to 882; RP:
+<inline-formula><mml:math id="M51" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">404</mml:mn></mml:mrow></mml:math></inline-formula> to 418; rating scale from 1 “This piece of information is not
+important at all” to 6 “This piece of information is very important”).</p></caption>
+          <?xmltex \igopts{width=364.195276pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f06.png"/>
+
+        </fig>
+
+      <?xmltex \floatpos{t}?><fig id="Ch1.F7"><?xmltex \currentcnt{7}?><?xmltex \def\figurename{Figure}?><label>Figure 7</label><caption><p id="d1e2672">Mean rating of surveyed respondents with regard to future warning
+channels (NW: <inline-formula><mml:math id="M52" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">837</mml:mn></mml:mrow></mml:math></inline-formula> to 882; RP: <inline-formula><mml:math id="M53" display="inline"><mml:mrow><mml:mi>n</mml:mi><mml:mo>=</mml:mo><mml:mn mathvariant="normal">404</mml:mn></mml:mrow></mml:math></inline-formula> to 418; rating scale from 1
+“This measure is not helpful at all” to 6 “This measure is very helpful”).</p></caption>
+          <?xmltex \igopts{width=241.848425pt}?><graphic xlink:href="https://nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023-f07.png"/>
+
+        </fig>
+
+      <p id="d1e2706">In the future, affected residents are in favour of a countrywide
+installation of sirens and cell broadcast accompanied by enhanced media
+coverage (Fig. 7). There are only small differences between respondents from
+the two federal states. The lower values in RP for cell broadcast might be
+due to the fact that many people experienced power outages and a breakdown
+of telecommunication in July 2021 (Koks et al., 2022).</p>
+</sec>
+</sec>
+<sec id="Ch1.S4" sec-type="conclusions">
+  <label>4</label><title>Conclusions and recommendations</title>
+      <p id="d1e2719">In Germany, the system of severe weather and flood warnings, better termed
+flood forecasting, warning and response system (FFWRS), has been improved
+over the past 20 years, particularly after the severe flood of August 2002.
+Although a good performance was achieved during fluvial floods in January
+2011 and June 2013, our analyses show that the system is particularly
+challenged by pluvial and fast-onset flash floods: around one-third of
+residents at risk of pluvial or flash floods are not reached by severe
+weather or flood warnings. This was found across various federal states in
+Germany and across several fast-onset floods including the event of July
+2021. Hence, the FFWRS in Germany with responsibilities across multiple
+governance levels from the federal to the local level reacts in general too
+slowly to these events. To accelerate the dissemination of warning messages,
+widespread dissemination on mobile phones is an option; cell broadcast has
+meanwhile been introduced in Germany and was tested in December 2022. Our
+online survey of 2021 underlines, however, that residents from the regions
+affected in July 2021 tend to be in favour of sirens, probably since they do
+not depend so much on power and telecommunication networks compared to other
+dissemination channels.</p>
+      <p id="d1e2722">The fact that the atmospheric system that triggered the floods of July 2021
+was forecasted several days in advance pinpoints further weaknesses of
+the FFWRS. Warning messages with rainfall amounts are difficult to
+interpret. For a better understanding, rainfall needs to be translated into
+water levels and inundated areas. To make use of rainfall forecasts and to
+gain time for response, flood forecast models need to be improved and flood
+warnings need to be communicated. In Germany, flood forecasting is the
+responsibility of the federal states, which have different models in place,
+while media often just refer to weather warnings issued by the DWD. Hence,
+either a nationwide flood forecasting system should be set up or more
+investments in better regional or even local flood forecasting systems have
+to be made. With regard to pluvial and flash floods, the need for
+implementing local warning systems, e.g. at small creeks, which have not
+been included in the flood forecasting system so far, has to be checked by
+local authorities.</p>
+      <p id="d1e2725">To better highlight potentially affected areas, warning messages should link
+flood forecasts to hazard maps or should directly provide estimated
+inundated areas for the forecasted event, particularly for severe events. In
+many areas affected in Germany, the flood of July 2021 was larger than any
+flood that had been captured by the continuous discharge series. The survey
+data underline that its magnitude was greatly underestimated by the affected
+residents; warning messages obviously failed to clearly communicate the
+flood magnitude and potential impacts. This aspect needs more in-depth
+investigations. For example, the reliable creation, dissemination and
+understandability of maps that show the expected inundated areas should be
+tested, including against other pieces of information that were considered more
+important by respondents of our survey, e.g. affected places, timing of the
+flood peak or information on evacuations.</p>
+      <p id="d1e2728">Our analyses show that it is important that official warnings, which usually
+include some action recommendation, reach the residents at risk, since this
+generally improves their situational knowledge on protective behaviour.
+Still, our survey data reveal that up to 50 % of the warned residents did
+not know what to do in July 2021. Again, similar percentages had been
+reported earlier for flash and pluvial floods. The results indicate that
+flood risk and crisis communication in Germany has focussed much on river,
+i.e. fluvial, flooding. Hence, efforts to communicate threats, mitigation
+options and adequate behaviour with regard to flash and pluvial floods have
+to be considerably enhanced. Examples from local newspapers and official
+warning messages underline that warning messages have to be linked more
+consistently and regularly with recommendations on adequate behaviour and
+should better account for the anticipated magnitude of the unfolding flood
+event. For extreme scenarios such as the record-breaking flood of July 2021,
+more warning levels could be an option. Since each (official) warning level
+is associated with predefined recommendations on what affected parties
+should do to protect themselves (including translations to other languages),
+more warning levels could probably lead to better communication of
+protective behaviour that is appropriate for the unfolding event. In
+general, the understandability of<?pagebreak page987?> warning messages should be better tested
+and evaluated in future.</p>
+      <p id="d1e2732">Our analyses show that previously experienced flooding facilitates all
+aspects along the warning and response chain, i.e. the receipt of a
+warning, the situational <?xmltex \hack{\mbox\bgroup}?>knowledge<?xmltex \hack{\egroup}?> on protective behaviour and the
+(perceived) effectiveness of loss-reducing responses. Therefore, risk
+communication needs to better mimic flood experience and train successful
+behaviour. Since some analyses revealed gender sensitivity, women should be
+addressed more specifically. Given the high death toll of 189 fatalities in
+Germany in July 2021, life-threatening situations and their avoidance should
+be particularly communicated, although it is still unclear how many
+fatalities can be directly attributed to shortcomings of the FFWRS in July
+2021. This should be a topic of future research to further improve the FFWRS
+and risk communication. Special attention should be given to elderly people
+due to their high percentage among the fatalities. However, in our analyses
+age was not a factor that influenced the receipt of a warning, the
+situational knowledge on protective behaviour or the (perceived)
+effectiveness of responses. Due to the online format of the survey, this
+needs, however, further investigation.</p>
+      <p id="d1e2739">The magnitude of the upcoming flood was probably underestimated by the
+responsible authorities, too. In some places, e.g. in the district of
+Ahrweiler (RP), this resulted in the fact that a state of emergency was
+declared too late and that evacuations of heavily affected settlement areas
+were initiated too late. In most German states, the declaration of a state
+of emergency is the responsibility of the district administrator, since in
+most cases the district also has to bear the incurred costs. However, there
+is no mandatory training in disaster management for district administrators,
+who are elected politicians. Whether this is a primary weakness of the
+system needs some further research and thought. However, some federal
+states, e.g. Saxony, have introduced a risk-averse decision strategy,
+meaning that there is an automatic declaration of a state of emergency if
+flood forecasts exceed the highest warning level. In other regions, local
+warning chains have been established so that a telephone chain is initiated
+from upstream<?pagebreak page988?> to downstream along a river in the case of flooding or another
+incident, e.g. pollution. The success and transferability of such
+approaches need further investigation. In general, a more continuous
+evaluation of the whole FFWRS would be an asset. Our analyses suggest that
+some shortcomings of the current FFWRS that were painfully revealed by the
+severe event in July 2021 were not unique to this event but generally
+apply to pluvial and flash floods. They could have been detected earlier by
+a better evaluation of the system after recent flood events including the
+perspective of the affected population. Altogether, future research should
+focus on how to design a FFWRS that alerts communities and residents at risk
+on time and clearly communicates flood magnitudes, threats and response
+options.</p>
+</sec>
+
+      
+      </body>
+    <back><notes notes-type="dataavailability"><title>Data availability</title>
+
+      <p id="d1e2746">The survey data are owned by the authors and can currently be provided upon
+reasonable request only.</p>
+  </notes><app-group>
+        <supplementary-material position="anchor"><p id="d1e2749">The supplement related to this article is available online at: <inline-supplementary-material xlink:href="https://doi.org/10.5194/nhess-23-973-2023-supplement" xlink:title="pdf">https://doi.org/10.5194/nhess-23-973-2023-supplement</inline-supplementary-material>.</p></supplementary-material>
+        </app-group><notes notes-type="authorcontribution"><title>Author contributions</title>
+
+      <p id="d1e2758">AH, AHT, AO and PB developed the questionnaire and conducted the survey with
+the support of LD. AHT, PB, AH and LD processed and analysed the data. JvK
+searched for and analysed media reports and official warning messages with the
+support of AO. AHT prepared the manuscript with contributions from all
+co-authors.</p>
+  </notes><notes notes-type="competinginterests"><title>Competing interests</title>
+
+      <p id="d1e2764">The contact author has declared that none of the authors has any competing interests.</p>
+  </notes><notes notes-type="disclaimer"><title>Disclaimer</title>
+
+      <p id="d1e2770">Publisher’s note: Copernicus Publications remains neutral with regard to jurisdictional claims in published maps and institutional affiliations.</p>
+  </notes><ack><title>Acknowledgements</title><p id="d1e2776">We thank all respondents for participating in the survey despite the
+flood impacts they suffered from.</p></ack><notes notes-type="financialsupport"><title>Financial support</title>
+
+      <p id="d1e2781">The presented work was initially developed within the framework of the
+research project “Urban resilience against extreme weather
+events – typologies and transfer of adaptation strategies in small
+metropolises and medium-sized cities” (ExTrass) funded by Germany's Federal
+Ministry of Education and Research (BMBF, FKZ 01LR1709A1) in collaboration
+with the Research Training Group “Natural Hazards and Risks in a Changing
+World” (NatRiskChange) funded by the Deutsche Forschungsgemeinschaft (DFG;
+GRK 2043/2). Further analyses were performed in the framework of the project
+“Governance and communication during the crisis of the flood event in July 2021”
+(HoWas2021) funded by BMBF (FKZ 13N16230).</p>
+  </notes><notes notes-type="reviewstatement"><title>Review statement</title>
+
+      <p id="d1e2787">This paper was edited by Daniela Molinari and reviewed by Martijn Kuller and one anonymous referee.</p>
+  </notes><ref-list>
+    <title>References</title>
+
+      <ref id="bib1.bib1"><label>1</label><?label 1?><mixed-citation>Apel, H., Vorogushyn, S., and Merz, B.: Brief communication: Impact forecasting could substantially improve the emergency management of deadly floods: case study July 2021 floods in Germany, Nat. Hazards Earth Syst. Sci., 22, 3005–3014, <ext-link xlink:href="https://doi.org/10.5194/nhess-22-3005-2022" ext-link-type="DOI">10.5194/nhess-22-3005-2022</ext-link>, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib2"><label>2</label><?label 1?><mixed-citation>BBK – Bundesamt für Bevölkerungsschutz und Katastrophenhilfe:
+MoWaS-Meldung konnte nur verspätet zugestellt werden,
+<uri>https://www.bbk.bund.de/SharedDocs/Kurzmeldungen/DE/2020/09/1-bundesweiter-warntag.html</uri>
+(last access: 22 December 2022), 2020 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib3"><label>3</label><?label 1?><mixed-citation>BBK – Bundesamt für Bevölkerungsschutz und Katastrophenhilfe:
+Warn-App NINA erreicht Meilenstein ohne Probleme,
+<uri>https://www.bbk.bund.de/SharedDocs/Kurzmeldungen/DE/2021/03/nina-erreicht-meilenstein.html</uri>
+(last access: 22 December 2022), 2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib4"><label>4</label><?label 1?><mixed-citation>
+Cools, J., Innocenti, D., and O'Briena, S.: Lessons from flood early warning
+systems, Environ. Sci. Policy, 58, 117–122, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib5"><label>5</label><?label 1?><mixed-citation>Cornwall, W.: Europe's deadly floods leave scientists stunned, Science,
+373, 372–373, <ext-link xlink:href="https://doi.org/10.1126/science.373.6553.372" ext-link-type="DOI">10.1126/science.373.6553.372</ext-link>, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib6"><label>6</label><?label 1?><mixed-citation>Destatis: GENESIS Datenbank 12411-0013: Bevölkerung: Bundesländer,
+Stichtag, Geschlecht, Altersjahre (31 December 1967–31 December 2020),
+<uri>https://www-genesis.destatis.de/genesis//online?operation=table&amp;code=12411-0013&amp;bypass=true&amp;levelindex=0&amp;levelid=1642928753644#abreadcrumb</uri>
+(last access: March 2022), 2021.</mixed-citation></ref>
+      <ref id="bib1.bib7"><label>7</label><?label 1?><mixed-citation>Deutscher Bundestag: Bundesweiter Warntag 2020, Antwort der Bundesregierung
+auf die Kleine Anfrage der Abgeordneten Stephan Brandtner und der Fraktion
+der AfD, Drucksache 19/23413,
+<uri>https://dserver.bundestag.de/btd/19/234/1923413.pdf</uri> (last access: 22 December
+2022), 2020 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib8"><label>8</label><?label 1?><mixed-citation>Dietze, M., Bell, R., Ozturk, U., Cook, K. L., Andermann, C., Beer, A. R., Damm, B., Lucia, A., Fauer, F. S., Nissen, K. M., Sieg, T., and Thieken, A. H.: More than heavy rain turning into fast-flowing water – a landscape perspective on the 2021 Eifel floods, Nat. Hazards Earth Syst. Sci., 22, 1845–1856, <ext-link xlink:href="https://doi.org/10.5194/nhess-22-1845-2022" ext-link-type="DOI">10.5194/nhess-22-1845-2022</ext-link>, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib9"><label>9</label><?label 1?><mixed-citation>Dillenardt, L., Hudson, P., and Thieken, A. H.: Urban pluvial flood
+adaptation: results of a household survey across four German municipalities,
+J. Flood Risk Manag., 15, e12748, <ext-link xlink:href="https://doi.org/10.1111/jfr3.12748" ext-link-type="DOI">10.1111/jfr3.12748</ext-link>,
+2022.</mixed-citation></ref>
+      <ref id="bib1.bib10"><label>10</label><?label 1?><mixed-citation>
+DKKV – Deutsches Komitee Katastrophenvorsorge: Das Hochwasser im Juni 2013:
+Bewährungsprobe für das Hochwasserrisikomanagement in Deutschland.
+DKKV-Schriftenreihe Nr. 53, Bonn, ISBN 978-3-933181-62-6, 207 pp., 2015 (in
+German).</mixed-citation></ref>
+      <?pagebreak page989?><ref id="bib1.bib11"><label>11</label><?label 1?><mixed-citation>DWD – Deutscher Wetterdienst: Bericht zum Ablauf und Umfang der
+operationellen Warn- und Beratungstätigkeit des Deutschen Wetterdienstes
+im Vorlauf und während des Unwetters 12–15 Juli 2021 in NRW und
+Rheinland-Pfalz, ausgelöst durch das Tief “Bernd”, DWD Offenbach, 10 pp., <uri>https://www.dwd.de/DE/presse/hintergrundberichte/berichts_warnchronologie.pdf.pdf?__blob=publicationFile&amp;amp;v=2</uri> (last access: 23 February 2023), 2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib12"><label>12</label><?label 1?><mixed-citation>
+Ferdous, M., Mondal, B.K., Rahman, M.A., Sarder, M.A., Erichsen, D.R., and
+Chatenier, C.: Effectiveness of Flood Early Warning System to Reduce
+Economic Loss at Four Communities, Integrated Flood Resilience Programme,
+Bangladesh Red Crescent Society, Government of the Republic of Korea, and
+International Federation of Red Cross and Red Crescent Societies, Dhaka,
+Bangladesh, ISBN 978-984-34-9168-8, 2020.</mixed-citation></ref>
+      <ref id="bib1.bib13"><label>13</label><?label 1?><mixed-citation>Hallegatte, S.: A Cost Effective Solution to Reduce Disaster Losses in
+Developing Countries: Hydro-Meteorological Services, Early Warning, and
+Evacuation, Policy Research Working Paper 6058, World Bank, Washington, DC,
+20 pp.,
+<uri>https://documents1.worldbank.org/curated/en/190261468181486694/pdf/WPS6058.pdf</uri>,
+(last access: 19 December 2022), 2012.</mixed-citation></ref>
+      <ref id="bib1.bib14"><label>14</label><?label 1?><mixed-citation>
+Hallegatte, S., Rentschler, J., and Rozenberg, J.: Adaptation Principles – A
+Guide for Designing Strategies for Climate Change Adaptation and Resilience,
+World Bank, Washington, DC, 2020.</mixed-citation></ref>
+      <ref id="bib1.bib15"><label>15</label><?label 1?><mixed-citation>Höhne, J. K., Krebs, D., and Kühnel, S.-M.: Measurement Properties of
+Completely and End Labeled Unipolar and Bipolar Scales in Likert-type
+questions on Income (In)equality, Soc. Sci. Res., 97, 102544,
+<ext-link xlink:href="https://doi.org/10.1016/j.ssresearch.2021.102544" ext-link-type="DOI">10.1016/j.ssresearch.2021.102544</ext-link>, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib16"><label>16</label><?label 1?><mixed-citation>Junghänel, T., Bissolli, P., Daßler, J., Fleckenstein, R., Imbery,
+F., Janssen, W., Kaspar, F., Lengfeld, K., Leppelt, T., Rauthe, M.,
+Rauthe-Schöch, A., Rocek, M., Walawender, E., and Weigl, E.:
+Hydro-klimatologische Einordnung der Stark- und Dauerniederschläge in
+Teilen Deutschlands im Zusammenhang mit dem Tiefdruckgebiet “Bernd” vom 12 bis 19 Juli 2021, DWD-Report, 16 pp.,
+<uri>https://www.dwd.de/DE/leistungen/besondereereignisse/niederschlag/20210721_bericht_starkniederschlaege_tief_bernd.pdf?__blob=publicationFile&amp;v=10</uri> (last access: 22 December 2022),
+2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib17"><label>17</label><?label 1?><mixed-citation>Kienzler, S., Pech, I., Kreibich, H., Müller, M., and Thieken, A. H.: After the extreme flood in 2002: changes in preparedness, response and recovery of flood-affected residents in Germany between 2005 and 2011, Nat. Hazards Earth Syst. Sci., 15, 505–526, <ext-link xlink:href="https://doi.org/10.5194/nhess-15-505-2015" ext-link-type="DOI">10.5194/nhess-15-505-2015</ext-link>, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib18"><label>18</label><?label 1?><mixed-citation>
+Kind, C., Kaiser, T., Riese, M., Bubeck, P., Müggenburg, E.,
+Schüller, L., Fleischmann, R., and Thieken, A.: Vorsorge gegen
+Starkregenereignisse und Maßnahmen zur wassersensiblen Stadtentwicklung
+– Analyse des Standes der Starkregenvorsorge in Deutschland und Ableitung
+zukünftigen Handlungsbedarfs, UBA-Text 55/2019, Umweltbundesamt (Federal Environment Agency), Dessau, ISSN 1862-4804, 2019 (in
+German).</mixed-citation></ref>
+      <ref id="bib1.bib19"><label>19</label><?label 1?><mixed-citation>Koks, E. E., van Ginkel, K. C. H., van Marle, M. J. E., and Lemnitzer, A.: Brief communication: Critical infrastructure impacts of the 2021 mid-July western European flood event, Nat. Hazards Earth Syst. Sci., 22, 3831–3838, <ext-link xlink:href="https://doi.org/10.5194/nhess-22-3831-2022" ext-link-type="DOI">10.5194/nhess-22-3831-2022</ext-link>, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib20"><label>20</label><?label 1?><mixed-citation>
+Kreibich H., Hudson P., and Merz, B.: Knowing What to Do Substantially
+Improves the Effectiveness of Flood Early Warning, B. Am. Meteorol. Soc., 102,
+E1450–E1463, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib21"><label>21</label><?label 1?><mixed-citation>Kreibich, H., Müller, M., Schröter, K., and Thieken, A. H.: New insights into flood warning reception and emergency response by affected parties, Nat. Hazards Earth Syst. Sci., 17, 2075–2092, <ext-link xlink:href="https://doi.org/10.5194/nhess-17-2075-2017" ext-link-type="DOI">10.5194/nhess-17-2075-2017</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib22"><label>22</label><?label 1?><mixed-citation>Kron, W., Bell, R., Thiebes, B., and Thieken, A. H.: The July 2021 flood
+disaster in Germany, chapter 2 in: HELP Global Report on Water and
+Disasters 2022, Secretariat of the High-level Experts and Leaders Panel on Water and Disasters (HELP), Tokyo, Japan,
+<uri>https://www.wateranddisaster.org/category/documents/</uri> (last access: 23 February 2023), 12–44, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib23"><label>23</label><?label 1?><mixed-citation>
+Kuller, M., Schoenholzer, K., and Lienert, J.: Creating effective flood
+warnings: A framework from a critical review, J. Hydrol., 602,
+126708, 2021.</mixed-citation></ref>
+      <ref id="bib1.bib24"><label>24</label><?label 1?><mixed-citation>Lengfeld, K., Voit, P., Kaspar, F., and Heistermann, M.: Brief Communication: On the extremeness of the July 2021 precipitation event in western Germany, EGUsphere [preprint], <ext-link xlink:href="https://doi.org/10.5194/egusphere-2022-979" ext-link-type="DOI">10.5194/egusphere-2022-979</ext-link>, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib25"><label>25</label><?label 1?><mixed-citation>
+Lindner, J.: Starkregen erwartet/Wetterexperte warnt vor hohen
+Niederschlagsmengen, Rhein-Lahn-Zeitung, 14 July 2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib26"><label>26</label><?label 1?><mixed-citation>
+Morss, R., Mulder, K. J., Lazo, J. K., and Demuth, J. L.: How do people
+perceive, understand, and anticipate responding to flash flood risks and
+warnings? Results from a public survey in Boulder, Colorado, USA, J.
+Hydrol., 541, 649–664, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib27"><label>27</label><?label 1?><mixed-citation>Munich Re: Hurricanes, cold waves, tornadoes: Weather disasters in USA
+dominate natural disaster losses in 2021, Munich Re,
+<uri>https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2022/natural-disaster-losses-2021.html</uri>, last access: 22 December 2022.</mixed-citation></ref>
+      <ref id="bib1.bib28"><label>28</label><?label 1?><mixed-citation>
+Parker, D. J. and Priest, S. J.: The Fallibility of Flood Warning Chains:
+Can Europe's Flood Warning be Effective?, Water Resour. Manag., 26,
+2917–2950, 2012.</mixed-citation></ref>
+      <ref id="bib1.bib29"><label>29</label><?label 1?><mixed-citation>
+Parker, D. J., Fordham, M., and Torterotot, J. P.: Real-time hazard
+management: flood forecasting, warning and response, in: Floods across
+Europe. Hazard assessment, modelling and management, edited by:
+Penning-Rowsell, E. C. and Fordham, M., Middlesex University Press, London,
+UK, 135–166, ISBN-13 978-1898253013, 1994.</mixed-citation></ref>
+      <ref id="bib1.bib30"><label>30</label><?label 1?><mixed-citation>
+Párraga Niebla, C.: 8 – Communication Technologies for Public Warning,
+Wireless Public Safety Networks, 1, 229–260, 2015.</mixed-citation></ref>
+      <ref id="bib1.bib31"><label>31</label><?label 1?><mixed-citation>
+Penning-Rowsell, E. C. and Green, C.: Insights into the appraisal of flood
+alleviation benefits: (1) Flood damage and flood loss information, J. Chart.
+Inst. Water E., 14, 347–353, 2000.</mixed-citation></ref>
+      <ref id="bib1.bib32"><label>32</label><?label 1?><mixed-citation>Porst, R.: Fragebogen – ein Arbeitsbuch, Springer VS, Wiesbaden, 4th
+edition, <ext-link xlink:href="https://doi.org/10.1007/978-3-658-02118-4" ext-link-type="DOI">10.1007/978-3-658-02118-4</ext-link>, 2014 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib33"><label>33</label><?label 1?><mixed-citation>
+Rhein-Zeitung: Starke Niederschläge lassen Wasser steigen, 14 July 2021
+(in German).</mixed-citation></ref>
+      <ref id="bib1.bib34"><label>34</label><?label 1?><mixed-citation>
+Ruhr Nachrichten: Feuerwehren sind gerüstet für den Starkregen am
+heutigen Mittwoch, 14 July 2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib35"><label>35</label><?label 1?><mixed-citation>Rözer, V., Müller, M., Bubeck, P., Kienzler, S., Thieken, A., Pech,
+I., Schröter, K., Buchholz, O., and Kreibich, H.: Coping with pluvial
+floods by private households, Water, 8, 304, <ext-link xlink:href="https://doi.org/10.3390/w8070304" ext-link-type="DOI">10.3390/w8070304</ext-link>, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib36"><label>36</label><?label 1?><mixed-citation>Saadi, M., Furusho-Percot, C., Belleflamme, A., Chen, J.-Y., Trömel, S., and Kollet, S.: How uncertain are precipitation and peak flow estimates for the July 2021 flooding event?, Nat. Hazards Earth Syst. Sci., 23, 159–177, <ext-link xlink:href="https://doi.org/10.5194/nhess-23-159-2023" ext-link-type="DOI">10.5194/nhess-23-159-2023</ext-link>, 2023.</mixed-citation></ref>
+      <ref id="bib1.bib37"><label>37</label><?label 1?><mixed-citation>Schneider, D. and Gebauer, P.: Die Flutkatastrophe im Juli 2021 in
+Mitteleuropa aus meteorologischer Sicht, Beiträge zur Berliner
+Wetterkarte, Verein BERLINER WETTERKARTE e.V. zu<?pagebreak page990?>r Förderung der
+meteorologischen Wissenschaft, Berlin, Germany, ISSN 0177-3984,
+<uri>https://berliner-wetterkarte.de/Beilagen/2021/Die_Flutkatastrophe_2021.pdf</uri> (last access: 23 February 2023), 2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib38"><label>38</label><?label 1?><mixed-citation>
+Seydewitz, R.: Meteorologe warnt Region vor Starkregen und steigenden
+Pegeln, Trierischer Volksfreund, 13 July 2021 (in German).</mixed-citation></ref>
+      <ref id="bib1.bib39"><label>39</label><?label 1?><mixed-citation>Spekkers, M., Rözer, V., Thieken, A., ten Veldhuis, M.-C., and Kreibich, H.: A comparative survey of the impacts of extreme rainfall in two international case studies, Nat. Hazards Earth Syst. Sci., 17, 1337–1355, <ext-link xlink:href="https://doi.org/10.5194/nhess-17-1337-2017" ext-link-type="DOI">10.5194/nhess-17-1337-2017</ext-link>, 2017.</mixed-citation></ref>
+      <ref id="bib1.bib40"><label>40</label><?label 1?><mixed-citation>
+Staib, J. and Steppat, T.: Flutnacht von Ahrweiler – Rekonstruktion eines
+politischen Versagens, Frankfurter Allgemeine Zeitung, 15 September 2021 (in
+German).</mixed-citation></ref>
+      <ref id="bib1.bib41"><label>41</label><?label 1?><mixed-citation>Thieken, A. H., Kienzler, S., Kreibich, H., Kuhlicke, C., Kunz, M.,
+Mühr, B., Müller, M., Otto, A., Petrow, T., Pisi, S., and
+Schröter, K.: Review of the flood risk management system in Germany
+after the major flood in 2013, Ecol. Soc., 21, 51,  <ext-link xlink:href="https://doi.org/10.5751/ES-08547-210251" ext-link-type="DOI">10.5751/ES-08547-210251</ext-link>, 2016.</mixed-citation></ref>
+      <ref id="bib1.bib42"><label>42</label><?label 1?><mixed-citation>Thieken, A., Kreibich, H., Müller, M., and Lamond, J.: Data collection
+for a better understanding of what causes flood damage – experiences with
+telephone surveys, in: Flood damage survey and assessment: new insights from
+research and practice, edited by: Molinari, D., Menoni, S., and Ballio, F.,, AGU, Wiley,
+Chapter 7, 95–106; <ext-link xlink:href="https://doi.org/10.1002/9781119217930.ch7" ext-link-type="DOI">10.1002/9781119217930.ch7</ext-link>, 2017.
+</mixed-citation></ref><?xmltex \hack{\newpage}?>
+      <ref id="bib1.bib43"><label>43</label><?label 1?><mixed-citation>Thieken, A. H., Müller, M., Kreibich, H., and Merz, B.: Flood damage and
+influencing factors: New insights from the August 2002 flood in Germany,
+Water Resour. Res., 41, W12430, <ext-link xlink:href="https://doi.org/10.1029/2005WR004177" ext-link-type="DOI">10.1029/2005WR004177</ext-link>, 2005.</mixed-citation></ref>
+      <ref id="bib1.bib44"><label>44</label><?label 1?><mixed-citation>Thieken, A. H., Samprogna Mohor, G., Kreibich, H., and Müller, M.: Compound inland flood events: different pathways, different impacts and different coping options, Nat. Hazards Earth Syst. Sci., 22, 165–185, <ext-link xlink:href="https://doi.org/10.5194/nhess-22-165-2022" ext-link-type="DOI">10.5194/nhess-22-165-2022</ext-link>, 2022.</mixed-citation></ref>
+      <ref id="bib1.bib45"><label>45</label><?label 1?><mixed-citation>UN – United Nations: Sendai Framework for Disaster Risk Reduction
+2015–2030, <uri>https://www.unisdr.org/files/43291_sendaiframeworkfordrren.pdf</uri> (last access on 14 April 2022), 2015.</mixed-citation></ref>
+      <ref id="bib1.bib46"><label>46</label><?label 1?><mixed-citation>Vorogushyn, S., Apel, H, Kemter, M., and Thieken, A. H.: Analyse der
+Hochwassergefährdung im Ahrtal unter Berücksichtigung historischer
+Hochwasser, Hydrol. Wasserbewirts., 66, 244–254, <ext-link xlink:href="https://doi.org/10.5675/HyWa_2022.5_2" ext-link-type="DOI">10.5675/HyWa_2022.5_2</ext-link>, 2022 (in German).</mixed-citation></ref>
+
+  </ref-list></back>
+    <!--<article-title-html>Performance of the flood warning system in Germany in July 2021 – insights from affected residents</article-title-html>
+<abstract-html/>
+<ref-html id="bib1.bib1"><label>1</label><mixed-citation>
+      
+Apel, H., Vorogushyn, S., and Merz, B.: Brief communication: Impact forecasting could substantially improve the emergency management of deadly floods: case study July 2021 floods in Germany, Nat. Hazards Earth Syst. Sci., 22, 3005–3014, <a href="https://doi.org/10.5194/nhess-22-3005-2022" target="_blank">https://doi.org/10.5194/nhess-22-3005-2022</a>, 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib2"><label>2</label><mixed-citation>
+      
+BBK – Bundesamt für Bevölkerungsschutz und Katastrophenhilfe:
+MoWaS-Meldung konnte nur verspätet zugestellt werden,
+<a href="https://www.bbk.bund.de/SharedDocs/Kurzmeldungen/DE/2020/09/1-bundesweiter-warntag.html" target="_blank"/>
+(last access: 22 December 2022), 2020 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib3"><label>3</label><mixed-citation>
+      
+BBK – Bundesamt für Bevölkerungsschutz und Katastrophenhilfe:
+Warn-App NINA erreicht Meilenstein ohne Probleme,
+<a href="https://www.bbk.bund.de/SharedDocs/Kurzmeldungen/DE/2021/03/nina-erreicht-meilenstein.html" target="_blank"/>
+(last access: 22 December 2022), 2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib4"><label>4</label><mixed-citation>
+      
+Cools, J., Innocenti, D., and O'Briena, S.: Lessons from flood early warning
+systems, Environ. Sci. Policy, 58, 117–122, 2016.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib5"><label>5</label><mixed-citation>
+      
+Cornwall, W.: Europe's deadly floods leave scientists stunned, Science,
+373, 372–373, <a href="https://doi.org/10.1126/science.373.6553.372" target="_blank">https://doi.org/10.1126/science.373.6553.372</a>, 2021.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib6"><label>6</label><mixed-citation>
+      
+Destatis: GENESIS Datenbank 12411-0013: Bevölkerung: Bundesländer,
+Stichtag, Geschlecht, Altersjahre (31 December 1967–31 December 2020),
+<a href="https://www-genesis.destatis.de/genesis//online?operation=table&amp;code=12411-0013&amp;bypass=true&amp;levelindex=0&amp;levelid=1642928753644#abreadcrumb" target="_blank"/>
+(last access: March 2022), 2021.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib7"><label>7</label><mixed-citation>
+      
+Deutscher Bundestag: Bundesweiter Warntag 2020, Antwort der Bundesregierung
+auf die Kleine Anfrage der Abgeordneten Stephan Brandtner und der Fraktion
+der AfD, Drucksache 19/23413,
+<a href="https://dserver.bundestag.de/btd/19/234/1923413.pdf" target="_blank"/> (last access: 22 December
+2022), 2020 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib8"><label>8</label><mixed-citation>
+      
+Dietze, M., Bell, R., Ozturk, U., Cook, K. L., Andermann, C., Beer, A. R., Damm, B., Lucia, A., Fauer, F. S., Nissen, K. M., Sieg, T., and Thieken, A. H.: More than heavy rain turning into fast-flowing water – a landscape perspective on the 2021 Eifel floods, Nat. Hazards Earth Syst. Sci., 22, 1845–1856, <a href="https://doi.org/10.5194/nhess-22-1845-2022" target="_blank">https://doi.org/10.5194/nhess-22-1845-2022</a>, 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib9"><label>9</label><mixed-citation>
+      
+Dillenardt, L., Hudson, P., and Thieken, A. H.: Urban pluvial flood
+adaptation: results of a household survey across four German municipalities,
+J. Flood Risk Manag., 15, e12748, <a href="https://doi.org/10.1111/jfr3.12748" target="_blank">https://doi.org/10.1111/jfr3.12748</a>,
+2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib10"><label>10</label><mixed-citation>
+      
+DKKV – Deutsches Komitee Katastrophenvorsorge: Das Hochwasser im Juni 2013:
+Bewährungsprobe für das Hochwasserrisikomanagement in Deutschland.
+DKKV-Schriftenreihe Nr. 53, Bonn, ISBN 978-3-933181-62-6, 207 pp., 2015 (in
+German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib11"><label>11</label><mixed-citation>
+      
+DWD – Deutscher Wetterdienst: Bericht zum Ablauf und Umfang der
+operationellen Warn- und Beratungstätigkeit des Deutschen Wetterdienstes
+im Vorlauf und während des Unwetters 12–15 Juli 2021 in NRW und
+Rheinland-Pfalz, ausgelöst durch das Tief “Bernd”, DWD Offenbach, 10 pp., <a href="https://www.dwd.de/DE/presse/hintergrundberichte/berichts_warnchronologie.pdf.pdf?__blob=publicationFile&amp;amp;v=2" target="_blank"/> (last access: 23 February 2023), 2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib12"><label>12</label><mixed-citation>
+      
+Ferdous, M., Mondal, B.K., Rahman, M.A., Sarder, M.A., Erichsen, D.R., and
+Chatenier, C.: Effectiveness of Flood Early Warning System to Reduce
+Economic Loss at Four Communities, Integrated Flood Resilience Programme,
+Bangladesh Red Crescent Society, Government of the Republic of Korea, and
+International Federation of Red Cross and Red Crescent Societies, Dhaka,
+Bangladesh, ISBN 978-984-34-9168-8, 2020.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib13"><label>13</label><mixed-citation>
+      
+Hallegatte, S.: A Cost Effective Solution to Reduce Disaster Losses in
+Developing Countries: Hydro-Meteorological Services, Early Warning, and
+Evacuation, Policy Research Working Paper 6058, World Bank, Washington, DC,
+20 pp.,
+<a href="https://documents1.worldbank.org/curated/en/190261468181486694/pdf/WPS6058.pdf" target="_blank"/>,
+(last access: 19 December 2022), 2012.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib14"><label>14</label><mixed-citation>
+      
+Hallegatte, S., Rentschler, J., and Rozenberg, J.: Adaptation Principles – A
+Guide for Designing Strategies for Climate Change Adaptation and Resilience,
+World Bank, Washington, DC, 2020.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib15"><label>15</label><mixed-citation>
+      
+Höhne, J. K., Krebs, D., and Kühnel, S.-M.: Measurement Properties of
+Completely and End Labeled Unipolar and Bipolar Scales in Likert-type
+questions on Income (In)equality, Soc. Sci. Res., 97, 102544,
+<a href="https://doi.org/10.1016/j.ssresearch.2021.102544" target="_blank">https://doi.org/10.1016/j.ssresearch.2021.102544</a>, 2021.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib16"><label>16</label><mixed-citation>
+      
+Junghänel, T., Bissolli, P., Daßler, J., Fleckenstein, R., Imbery,
+F., Janssen, W., Kaspar, F., Lengfeld, K., Leppelt, T., Rauthe, M.,
+Rauthe-Schöch, A., Rocek, M., Walawender, E., and Weigl, E.:
+Hydro-klimatologische Einordnung der Stark- und Dauerniederschläge in
+Teilen Deutschlands im Zusammenhang mit dem Tiefdruckgebiet “Bernd” vom 12 bis 19 Juli 2021, DWD-Report, 16 pp.,
+<a href="https://www.dwd.de/DE/leistungen/besondereereignisse/niederschlag/20210721_bericht_starkniederschlaege_tief_bernd.pdf?__blob=publicationFile&amp;v=10" target="_blank"/> (last access: 22 December 2022),
+2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib17"><label>17</label><mixed-citation>
+      
+Kienzler, S., Pech, I., Kreibich, H., Müller, M., and Thieken, A. H.: After the extreme flood in 2002: changes in preparedness, response and recovery of flood-affected residents in Germany between 2005 and 2011, Nat. Hazards Earth Syst. Sci., 15, 505–526, <a href="https://doi.org/10.5194/nhess-15-505-2015" target="_blank">https://doi.org/10.5194/nhess-15-505-2015</a>, 2015.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib18"><label>18</label><mixed-citation>
+      
+Kind, C., Kaiser, T., Riese, M., Bubeck, P., Müggenburg, E.,
+Schüller, L., Fleischmann, R., and Thieken, A.: Vorsorge gegen
+Starkregenereignisse und Maßnahmen zur wassersensiblen Stadtentwicklung
+– Analyse des Standes der Starkregenvorsorge in Deutschland und Ableitung
+zukünftigen Handlungsbedarfs, UBA-Text 55/2019, Umweltbundesamt (Federal Environment Agency), Dessau, ISSN 1862-4804, 2019 (in
+German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib19"><label>19</label><mixed-citation>
+      
+Koks, E. E., van Ginkel, K. C. H., van Marle, M. J. E., and Lemnitzer, A.: Brief communication: Critical infrastructure impacts of the 2021 mid-July western European flood event, Nat. Hazards Earth Syst. Sci., 22, 3831–3838, <a href="https://doi.org/10.5194/nhess-22-3831-2022" target="_blank">https://doi.org/10.5194/nhess-22-3831-2022</a>, 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib20"><label>20</label><mixed-citation>
+      
+Kreibich H., Hudson P., and Merz, B.: Knowing What to Do Substantially
+Improves the Effectiveness of Flood Early Warning, B. Am. Meteorol. Soc., 102,
+E1450–E1463, 2021.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib21"><label>21</label><mixed-citation>
+      
+Kreibich, H., Müller, M., Schröter, K., and Thieken, A. H.: New insights into flood warning reception and emergency response by affected parties, Nat. Hazards Earth Syst. Sci., 17, 2075–2092, <a href="https://doi.org/10.5194/nhess-17-2075-2017" target="_blank">https://doi.org/10.5194/nhess-17-2075-2017</a>, 2017.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib22"><label>22</label><mixed-citation>
+      
+Kron, W., Bell, R., Thiebes, B., and Thieken, A. H.: The July 2021 flood
+disaster in Germany, chapter 2 in: HELP Global Report on Water and
+Disasters 2022, Secretariat of the High-level Experts and Leaders Panel on Water and Disasters (HELP), Tokyo, Japan,
+<a href="https://www.wateranddisaster.org/category/documents/" target="_blank"/> (last access: 23 February 2023), 12–44, 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib23"><label>23</label><mixed-citation>
+      
+Kuller, M., Schoenholzer, K., and Lienert, J.: Creating effective flood
+warnings: A framework from a critical review, J. Hydrol., 602,
+126708, 2021.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib24"><label>24</label><mixed-citation>
+      
+Lengfeld, K., Voit, P., Kaspar, F., and Heistermann, M.: Brief Communication: On the extremeness of the July 2021 precipitation event in western Germany, EGUsphere [preprint], <a href="https://doi.org/10.5194/egusphere-2022-979" target="_blank">https://doi.org/10.5194/egusphere-2022-979</a>, 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib25"><label>25</label><mixed-citation>
+      
+Lindner, J.: Starkregen erwartet/Wetterexperte warnt vor hohen
+Niederschlagsmengen, Rhein-Lahn-Zeitung, 14 July 2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib26"><label>26</label><mixed-citation>
+      
+Morss, R., Mulder, K. J., Lazo, J. K., and Demuth, J. L.: How do people
+perceive, understand, and anticipate responding to flash flood risks and
+warnings? Results from a public survey in Boulder, Colorado, USA, J.
+Hydrol., 541, 649–664, 2016.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib27"><label>27</label><mixed-citation>
+      
+Munich Re: Hurricanes, cold waves, tornadoes: Weather disasters in USA
+dominate natural disaster losses in 2021, Munich Re,
+<a href="https://www.munichre.com/en/company/media-relations/media-information-and-corporate-news/media-information/2022/natural-disaster-losses-2021.html" target="_blank"/>, last access: 22 December 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib28"><label>28</label><mixed-citation>
+      
+Parker, D. J. and Priest, S. J.: The Fallibility of Flood Warning Chains:
+Can Europe's Flood Warning be Effective?, Water Resour. Manag., 26,
+2917–2950, 2012.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib29"><label>29</label><mixed-citation>
+      
+Parker, D. J., Fordham, M., and Torterotot, J. P.: Real-time hazard
+management: flood forecasting, warning and response, in: Floods across
+Europe. Hazard assessment, modelling and management, edited by:
+Penning-Rowsell, E. C. and Fordham, M., Middlesex University Press, London,
+UK, 135–166, ISBN-13 978-1898253013, 1994.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib30"><label>30</label><mixed-citation>
+      
+Párraga Niebla, C.: 8 – Communication Technologies for Public Warning,
+Wireless Public Safety Networks, 1, 229–260, 2015.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib31"><label>31</label><mixed-citation>
+      
+Penning-Rowsell, E. C. and Green, C.: Insights into the appraisal of flood
+alleviation benefits: (1) Flood damage and flood loss information, J. Chart.
+Inst. Water E., 14, 347–353, 2000.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib32"><label>32</label><mixed-citation>
+      
+Porst, R.: Fragebogen – ein Arbeitsbuch, Springer VS, Wiesbaden, 4th
+edition, <a href="https://doi.org/10.1007/978-3-658-02118-4" target="_blank">https://doi.org/10.1007/978-3-658-02118-4</a>, 2014 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib33"><label>33</label><mixed-citation>
+      
+Rhein-Zeitung: Starke Niederschläge lassen Wasser steigen, 14 July 2021
+(in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib34"><label>34</label><mixed-citation>
+      
+Ruhr Nachrichten: Feuerwehren sind gerüstet für den Starkregen am
+heutigen Mittwoch, 14 July 2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib35"><label>35</label><mixed-citation>
+      
+Rözer, V., Müller, M., Bubeck, P., Kienzler, S., Thieken, A., Pech,
+I., Schröter, K., Buchholz, O., and Kreibich, H.: Coping with pluvial
+floods by private households, Water, 8, 304, <a href="https://doi.org/10.3390/w8070304" target="_blank">https://doi.org/10.3390/w8070304</a>, 2016.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib36"><label>36</label><mixed-citation>
+      
+Saadi, M., Furusho-Percot, C., Belleflamme, A., Chen, J.-Y., Trömel, S., and Kollet, S.: How uncertain are precipitation and peak flow estimates for the July 2021 flooding event?, Nat. Hazards Earth Syst. Sci., 23, 159–177, <a href="https://doi.org/10.5194/nhess-23-159-2023" target="_blank">https://doi.org/10.5194/nhess-23-159-2023</a>, 2023.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib37"><label>37</label><mixed-citation>
+      
+Schneider, D. and Gebauer, P.: Die Flutkatastrophe im Juli 2021 in
+Mitteleuropa aus meteorologischer Sicht, Beiträge zur Berliner
+Wetterkarte, Verein BERLINER WETTERKARTE e.V. zur Förderung der
+meteorologischen Wissenschaft, Berlin, Germany, ISSN 0177-3984,
+<a href="https://berliner-wetterkarte.de/Beilagen/2021/Die_Flutkatastrophe_2021.pdf" target="_blank"/> (last access: 23 February 2023), 2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib38"><label>38</label><mixed-citation>
+      
+Seydewitz, R.: Meteorologe warnt Region vor Starkregen und steigenden
+Pegeln, Trierischer Volksfreund, 13 July 2021 (in German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib39"><label>39</label><mixed-citation>
+      
+Spekkers, M., Rözer, V., Thieken, A., ten Veldhuis, M.-C., and Kreibich, H.: A comparative survey of the impacts of extreme rainfall in two international case studies, Nat. Hazards Earth Syst. Sci., 17, 1337–1355, <a href="https://doi.org/10.5194/nhess-17-1337-2017" target="_blank">https://doi.org/10.5194/nhess-17-1337-2017</a>, 2017.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib40"><label>40</label><mixed-citation>
+      
+Staib, J. and Steppat, T.: Flutnacht von Ahrweiler – Rekonstruktion eines
+politischen Versagens, Frankfurter Allgemeine Zeitung, 15 September 2021 (in
+German).
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib41"><label>41</label><mixed-citation>
+      
+Thieken, A. H., Kienzler, S., Kreibich, H., Kuhlicke, C., Kunz, M.,
+Mühr, B., Müller, M., Otto, A., Petrow, T., Pisi, S., and
+Schröter, K.: Review of the flood risk management system in Germany
+after the major flood in 2013, Ecol. Soc., 21, 51,  <a href="https://doi.org/10.5751/ES-08547-210251" target="_blank">https://doi.org/10.5751/ES-08547-210251</a>, 2016.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib42"><label>42</label><mixed-citation>
+      
+Thieken, A., Kreibich, H., Müller, M., and Lamond, J.: Data collection
+for a better understanding of what causes flood damage – experiences with
+telephone surveys, in: Flood damage survey and assessment: new insights from
+research and practice, edited by: Molinari, D., Menoni, S., and Ballio, F.,, AGU, Wiley,
+Chapter 7, 95–106; <a href="https://doi.org/10.1002/9781119217930.ch7" target="_blank">https://doi.org/10.1002/9781119217930.ch7</a>, 2017.
+
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib43"><label>43</label><mixed-citation>
+      
+Thieken, A. H., Müller, M., Kreibich, H., and Merz, B.: Flood damage and
+influencing factors: New insights from the August 2002 flood in Germany,
+Water Resour. Res., 41, W12430, <a href="https://doi.org/10.1029/2005WR004177" target="_blank">https://doi.org/10.1029/2005WR004177</a>, 2005.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib44"><label>44</label><mixed-citation>
+      
+Thieken, A. H., Samprogna Mohor, G., Kreibich, H., and Müller, M.: Compound inland flood events: different pathways, different impacts and different coping options, Nat. Hazards Earth Syst. Sci., 22, 165–185, <a href="https://doi.org/10.5194/nhess-22-165-2022" target="_blank">https://doi.org/10.5194/nhess-22-165-2022</a>, 2022.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib45"><label>45</label><mixed-citation>
+      
+UN – United Nations: Sendai Framework for Disaster Risk Reduction
+2015–2030, <a href="https://www.unisdr.org/files/43291_sendaiframeworkfordrren.pdf" target="_blank"/> (last access on 14 April 2022), 2015.
+
+    </mixed-citation></ref-html>
+<ref-html id="bib1.bib46"><label>46</label><mixed-citation>
+      
+Vorogushyn, S., Apel, H, Kemter, M., and Thieken, A. H.: Analyse der
+Hochwassergefährdung im Ahrtal unter Berücksichtigung historischer
+Hochwasser, Hydrol. Wasserbewirts., 66, 244–254, <a href="https://doi.org/10.5675/HyWa_2022.5_2" target="_blank">https://doi.org/10.5675/HyWa_2022.5_2</a>, 2022 (in German).
+
+    </mixed-citation></ref-html>--></article>

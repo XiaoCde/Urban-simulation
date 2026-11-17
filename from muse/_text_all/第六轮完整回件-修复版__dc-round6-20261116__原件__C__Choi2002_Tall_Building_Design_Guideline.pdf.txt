@@ -1,0 +1,771 @@
+
+
+===== [page 1] =====
+ARCHITECTURAL RESEARCH, Vol. 4, No. 1 (2002), pp. 1-6 
+The Preliminary Design Guideline for Tall Building: 
+Exploration of Planning Factors & Building Factors 
+ 
+ 
+Yong Sun Choi 
+Department of Architecture, University of Inchon, Inchon, Korea 
+ 
+ 
+Abstract 
+ 
+Every year new tall buildings are being conceived, designed, and built with new schemes. Thus it is important to explore the factors that af-
+fect tall building design. Thus it is important to explore the tall building design factors. The planning and design of tall buildings require different 
+criteria than those that exist in regular size buildings. Tall buildings are uniquely expressed by their structural systems where exterior esthetic 
+and requirements of space drive the form and composition of the structural systems. Therefore the exploration of design factors is the key to 
+achieve optimum building systems. Optimization as mentioned here is associated with the efficiency of the different building systems. To 
+achieve an optimal system, there is a need for an understanding of the factors that affect on overall tall building design such as planning mod-
+ule, building function, lease span, floor-to-floor-height, building height (aspect ratio), structural system, environmental systems.  
+In this paper a statistical approach will be used and will be based on data collected from the practice through a rigorous survey taken. This 
+information is tabulated and analyzed. The major target of investigation will be lease span related to space requirement in the tall building 
+planning. Factors related to lease spans, such as function, floor-to-floor height, planning module, building height, overall plan dimension, and 
+plan ratio (building geometry), will be looked at carefully. IN conclusion, this approach of optimization can introduce a preliminary design guide-
+line for tall building projects. The purpose of the paper should shed some light on the optimum tall building design criteria.   
+ 
+Keywords: Lease span, Function, Floor-to-floor Height, Planning Module, Building Geometry  
+ 
+ 
+ 
+1. INTRODUCTION 
+ 
+The tallness of a building cannot be defined in terms of 
+its height or number of floors since the appearance of tall-
+ness is a relative matter, which is associated with location, 
+culture, and other factors. According to L.S Beedle, the 
+multi-story building is not defined by its overall height or 
+by the number of stories, but only by the necessity of addi-
+tional operation and technical measures due to the actual 
+height of the building. And also the tallness of building 
+strongly influence planning, design, and use or a building 
+whose height create different conditions in the design, con-
+struction, and use than those that exist in common build-
+ings. (1)  
+Every year new tall buildings are being conceived, de-
+signed, and built with new schemes. Thus it is important to 
+explore the factors that affect tall building design. Histori-
+cally, the early development of the skyscraper occurred in 
+Chicago, from about 1880 to 1900, where tall building 
+reached around 20 stories. Then the architects and engi-
+neers in New York succeed to extend the development of 
+skyscrapers to new height because of favorable soil condi-
+tion. This early phase of tall building evolution was in-
+volved with the development of new technology such as 
+vertical transportation, and availability of structural steel. 
+After that the race for height moved from Chicago to New 
+York, the golden age of the American skyscraper was 
+crowned with the 102-story Empire State Building in 1932. 
+During this period, the concern of New York designers 
+were not in expressing the function or structure of the 
+building since their efforts were toward eclecticism, rather 
+than a new architectural expression. The needs to develop 
+an integrated design approach for tall buildings was recog-
+nized by a few architects and engineers when tall buildings 
+began to increase in height in many urban areas after 
+World War II. The planning and design of tall buildings 
+require different criteria than those that exist in regular size 
+buildings. Tall buildings are uniquely expressed by their 
+structural systems where exterior esthetic and requirements 
+of space drive the form and composition of the structural 
+systems. Therefore the exploration of design factors is the 
+key to achieve optimum building systems. Optimization as 
+mentioned here is associated with the efficiency of the 
+different building systems. To achieve an optimal system, 
+there is a need for an understanding of the factors that af-
+fect on overall tall building design such as planning mod-
+ule, building function, lease span, floor-to-floor-height, 
+building height (aspect ratio), structural system, environ-
+mental systems.  
+ 
+In this paper a statistical approach will be used and will be 
+based on data collected from the practice through a rigor-
+ous survey taken. This information is tabulated and ana-
+lyzed. The area of concern in this investigation will be 
+lease span and factors related to lease spans, such as func-
+tion, floor-to-floor height, planning module, building 
+height, overall plan dimension, and plan ratio (building 
+geometry), will be looked at carefully. To investigate the 
+optimization of tall building design factors, data from 137 
+tall buildings was collected and investigated. The investi-
+gation resulted in data for 58 buildings or 42% of all build-
+ings collected. These buildings are on the list of the world 
+100 tallest buildings. Based on the Council on Tall build-
+ing and Urban Habitat (CTBUH); these buildings are more 
+than 700ft high and/or 1,000,000sq.ft in area. CTBUH data 
+contained the name of the building, its location, its height, 
+number of stories, construction date, function, and building 
+materials. The survey of building in the Chicago area in-
+cluded buildings of more than 1,000,000 sq.ft and 40 sto-
+ries high. Buildings, such as Inland Steel Building, 860 
+
+
+===== [page 2] =====
+Yong Sun Choi 
+ 
+2
+Lake Shore Apartment and 900 Esplanade Apartment were 
+also included because of their significance in the history of 
+tall buildings in this area. This part of the investigation 
+covered 79 buildings or 58% of all building collected.       
+The information collected on 137 buildings included 
+62% that are included on the list of the 100 tallest build-
+ings, 71% on the list of the 50 tallest buildings that are 
+more than 840 ft high, which are presented most economic 
+feasibility. 
+ 
+2. DEFINITION OF DESIGN FACTORS  
+ 
+The shape, height and structural system in the tall build-
+ing design are more or less dictated by a number of related 
+factors. Probably the most obvious is the limitation im-
+posed by the functional requirement, the size of site and 
+the budget. The building shape is directly influenced by 
+the building function, zoning, and structural system, which 
+are intended to maximize building performance, accom-
+modation of function, siting, and structural serviceability. 
+The building height is limited by zoning, space needs, 
+structural material and constructability.  
+As above-mentioned several design factors, which im-
+pact on an overall tall building design, some of the design 
+factors have some correlation with lease span. Thus there 
+is a need to find out what design factors affect the lease 
+span and in what way. Obviously the most important factor, 
+which can determine the lease span, is a building function 
+because each different function requires a different lease 
+span. Other factors will be verified and explored such as; 
+building height, floor-to-floor height, planning module, 
+and building geometry. 
+  
+A. Lease Span: 
+The distance from a fixed interior element, such as the 
+building core to the exterior window wall is designated as 
+the lease span. This dimension is dependent upon the func-
+tional space requirement and user type. It is very important 
+consideration for interior planning as well as entire build-
+ing configurations. Acceptable lease spans are determined 
+by the building’s functional need such as office, commer-
+cial/retail, hotel, and residential.  
+ 
+ 
+ 
+Core 
+ 
+ 
+Figure-1, Definition of Lease Span 
+ 
+B. Function 
+1.Lease Span for Office: In the design of a highrise 
+building for purely office function, the acceptable lease 
+span is range from 10.6M to 13.8M(35 to 45ft) in practice. 
+When considering rentability and flexibility of office plan-
+ning, it is desirable to have as few columns as possible 
+within the lease span area. A column free floor from win-
+dow wall to building core would be an optimum solution 
+for all kind of buildings. 
+ 
+ 
+ 
+Core 
+ 
+ 
+Figure-2, Lease Span for Office 
+ 
+2.Lease Span for Residential; In a high-rise building for 
+only residential functions, the acceptable distance from the 
+perimeter to core range is from 6.1M to 9.2M(20 to 30ft) 
+in practice. The width of the building is limited by the 
+lease span, and since all inhabitable room must have out-
+side exposure that provide natural light and ventilation, 
+this lease span distance is very critical when considering 
+very tall buildings. 
+ 
+ 
+ 
+Core 
+ 
+ 
+Figure-3, Lease Span for Residential &Hotel 
+ 
+3.Lease Span for Hotel; In the design of a high-rise 
+building for hotel function, the lease span have almost 
+same lease span range of residential function. The depth of 
+hotel typical units including corridor determines the dis-
+tance from the outside to inside core wall.  
+ 
+4.Commercial/Retail; In multi-use high-rise building, 
+commercial and retail function require longer span than 
+residential and hotel function. These space types are placed 
+below hotel, residential, and office functions. The lease 
+span for commercial and retail space is restricted by upper 
+space function, especially in case of function combined in 
+tower. Thus in this investigation, the primary area of re-
+search is office function and residential & hotel function.  
+ 
+C. Floor-to-floor Height 
+The floor-to-floor height consists of two components; 
+ceiling height and depth of floor structure and space for 
+mechanical/electrical distribution. The overall depth of the 
+floor is crucial, since this also must accommodate the hori-
+zontal mechanical/electrical space as well the structure. 
+This depth may be in the range of 0.9 to 1.2M(3 to 4ft) for 
+typical tall office buildings.  In residential buildings, the 
+mechanical services are routed vertically consequently the 
+floor depth is much less than that of office. To obtain a 
+reasonable floor depth, construction systems should be 
+investigated for various floor-framing systems. In the de-
+sign of tall building, floor-to-floor height impacts on the 
+overall building economics. Since a small difference in this 
+dimension can have a great effect on exterior as well as on 
+the structure.(2) It also impacts the structure due to the 
+weight of the exterior wall and wind loads. In fact, I the 
+early development of tall building, the floor-to-floor height 
+was determined by the lese span in order to gain nature  
+ 
+ 
+ 
+Lease Span 
+Building 
+Perimeter 
+Core Area 
+ 
+ 
+35 to 45ft 
+Building 
+Perimeter 
+Core Area
+ 
+ 
+20 to 30ft 
+Building 
+Perimeter 
+Core Area
+
+
+===== [page 3] =====
+The Preliminary Design Guideline for Tall Building:Exploration of Planning Factors & Building Factors 
+ 
+3
+light and ventilation. Owing to the advance of electrical 
+lighting system and mechanical system, the floor-to-floor 
+height mainly should be dictated by the building economic. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figure-4, General Diagram for Floor-to-Floor Height 
+ 
+D. Planning Module: 
+Planning module is a standardized size that can be ar-
+ranged or fitted together in a variety of ways for space 
+planning. The space allocations are usually based on a 
+consistent space module. The modular approach is most 
+applicable to office (4) and it can be appropriate ap-
+proaches for space planning of residential and hotel func-
+tion too. Therefore the planning module and the sizes 
+could be considered in planning of tall building such as 
+3ft6in(1.1M) module, 4ft by 4ft, 4ft 6in by 4ft 6in, 5ft by 
+5ft, 6ft by 6ft and more than 6ft 6in module based on pre-
+vious design guideline. Generally the range between 5ft 
+and 6ft6in are generous for interior planning of office. But 
+in the some of cases, there are less than 4ft 6in module. In 
+residential function, 6ft module or even 7ft module were 
+found. 
+ 
+Figure-5, Examples of Office Planning Module 
+ 
+E. Building Geometry(Plan Width to Length Ratio) 
+The building floor plan is one of the most significant 
+components of the spatial allotments as well as overall 
+structure layout. Geometry holds the building plan together 
+and allows for the partitioning, zoning of space, and struc-
+tural stiffness. Geometry in its purest form gives us a more 
+sensible solution for tall building design. The tall building 
+can be created as a balance between the geometry figures. 
+The conventional plans are made up of rectangular, square, 
+cruciform, and other linked geometric figures.  
+There are several geometric samples for tall building 
+plan, which came from existing building condition. That is 
+square, rectangular, triangular, octagonal, circular, and  
+Figure-6, Geometry in Tall Building Plan 
+ 
+hybrid plan is simplified existing building geometric. Ac-
+cording to the data based on Council on Tall Building Ur-
+ban Habitat;100 World’s Tallest Building(5), 78% of tall 
+building, which range from 100 highest building has rec-
+tangular or square shape in building geometry. In the 
+meantime, there are several different geometric in plan 
+such as circular, triangular, octagonal and hybrid shape in 
+plan geometry. Hybrid shape for building plan usually 
+based on combined with different geometric; square with 
+circle, which imposed with each other and modification of 
+same geometric or two different geometric. Consequently, 
+the square and rectangular shape of building plan should 
+be major geometric. Examples of square geometry could 
+be illustrated by Sears Tower in Chicago(68.6M by 
+68.6M/225ft by 225ft), World trade Center in New 
+York(63.7M by 63.7M/209ft by 209ft), Citicorp Center in 
+New York(50.9M by 50.9M/167 ft by 167ft), Bank of  
+ 
+ 
+ 
+ 
+ 
+Figure-7, Example of Tall Buildings 
+ 
+China in Hong Kong (51.8M by 51.8M/170ft by 170ft),  
+and many tall buildings. In case of triangular, it could  
+illustrated by Central Plaza in Hong Kong, US Steel Build-
+ing in Pittsburgh, Commerzbank in Germany, and others. 
+Messeturm in Germany and Rialto Building in Sydney 
+Floor-to-floor Height 
+Ceiling Height: Range from 8
+to 12 feet 
+Floor 
+Floor 
+Overall Depth for 
+Structure & M/E 
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+square
+Rectangular
+Circle
+Triangular
+Octagonal
+Hybrid
+Geometry
+Number of Building
+   Sears Tower      Bank of China      MLC Tower
+  US Steel          311Wacker      First Interstate  
+
+
+===== [page 4] =====
+Yong Sun Choi 
+ 
+4
+were shown the example of octagonal plan geometry. 
+Petronas Tower in Malaysia, First Interstate World Center 
+in L.A and the other buildings showed examples of Hybrid 
+shapes. In fact, the most of tall buildings have rectangular 
+shape in plan geometric such as John Hancock Tower in 
+Chicago, 900 N. Michigan Building, Empire State building, 
+First Canadian Plaza, At & T Building, and many other 
+buildings. 
+ 
+3. OPTIMIZATION OF DESIGN FACTORS 
+To investigate the optimization of tall building design 
+factors, data of 130 tall buildings, based on Chicago area 
+and some of the significant building in the around world, 
+were collected and investigated very closely. Those build-
+ings are also represented economical building performance 
+based on practical resources. The overall percentages of 
+tall building by function are 21% of residential & hotel, 
+67% of office, and 12% of mixed-use building based on 
+building data analysis. (According to CTBUH, 18% of 
+mixed-use, 3% of hotel, and 79% of office were shown 
+based on 100 of the World’s Tallest Buildings) Optimizing 
+building design aimed to minimize cost, materials, and 
+such without sacrificing functional performances.   
+ 
+A.Lease Span & Function 
+1. Office Function: According to figure-10, the average 
+of office lease span is 13.5M(44ft4in) and statistically the 
+standard deviation of office function is 9.2, consequently 
+the range of optimum lease span for office function was 
+found to be 10.7M(35ft 2in) between 16.3M(53ft 5in). 
+However some of tall office buildings has been taking 
+more than average office lease span. In these cases, there 
+are obviously the special user needs to allow the longer 
+lease span such as Sears Tower in Chicago:22.8M(75ft) 
+and First Chicago Bank in Chicago:18.3M(60ft). 
+Figure-8, Distribution of Office Lease Span 
+ 
+ 2. Hotel & Residential Function:  
+Based on research, see figure-11, the average of residen-
+tial & hotel lease span is 10.2M(33ft 6in) and statistically 
+the standard deviation of residential & hotel function is 4.9, 
+thus the range of optimum lease span for  
+residential & hotel function was found to be 8.7M(28ft 
+6in) between 11.7M(38ft 4in). 
+ 
+ 
+ 
+B.Lease span & Floor-to-floor Height 
+Figure –9, Distribution of Residential & Hotel Lease Span 
+ 
+ Based on data, see figure-12, the most common floor-to-
+floor height for office is range from 3.5 to 4.1M(11ft 6in to 
+13ft 4in) and the floor-to-floor height for residential and 
+hotel function are ranges from 2.6 to 2.9M(8ft 6in to 9ft 
+6in). Consequently, the average for floor to floor height 
+should be 3.8M (12ft 5in) for office and 2.7M(9ft) for 
+residential & hotel. However, in the some of the cases, 
+there is more than 4.1M(13ft 6in) some examples indicated 
+5.5M(18ft) floor-to-floor height. Due to the space re-
+quirement and user type, these very high floor-to-floor 
+presented. For example, in Civic center, this building has 
+18ft(5.5M) high floor-to-floor height because function of 
+this building is court, which require high ceiling interior 
+space. In residential function, the most common floor-to-
+floor height is range from 2.6 to 2.9M(8ft 6in to 9ft 6in). 
+Since residential buildings employ the flat plate or flat slab 
+floor system, the residential height has a little bit lower 
+floor-to-floor height than office function 
+Figure-10, Distribution of Lease Span & Floor-to-floor Height 
+ 
+According to figure-13, as lease span become longer,  
+ 
+Figure-11, Correlation between Lease Span & Floor-to-floor Height 
+ 
+there is a tendency that floor-to-floor height also become 
+higher because of outside exposure and psychological as-
+pect. In some of the case, there is an odd point has found; 
+Chicago Civic Center. In fact this building is the court, 
+which need a high ceiling height because of functional 
+requirement as mentioned above. The correlation efficient 
+of lease span and floor-to-floor height is 0.51, which 
+means there is some tendency to increase floor-to-floor 
+height as lease span longer. 
+ 
+C. Planning Module 
+According to figure-14, the most acceptable planning 
+module should be 1.5 X 1.5M(5ft X 5ft) for office space. It 
+allows for a reasonable variety of office widths at the pe-
+rimeter beginning with the minimum 2 module office, 
+which is normally 3M(10 ft wide), ranging upward to 4 or 
+5 module offices, which is normally 6M to 7.6M(20 to 25 
+ft wide). However some buildings adopted different plan-
+ning module such as 1.2 X 1.2M(4ft X 4ft) or 1.8 X 
+0
+5
+10
+15
+20
+25
+30
+35
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Hotel/Residential Lease sapn(ft)
+Number of Building
+0
+5
+10
+15
+20
+25
+30
+35
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+Office Lease Span(ft)
+Number of Building
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+7
+7.5
+8
+8.5
+9
+9.5 10 10.
+5
+11 11.
+5
+12 12.
+5
+13 13.
+5
+14 14.
+5
+15 15.
+5
+16 16.
+5
+17 17.
+5
+18 18.
+5
+19 19.
+5
+20
+Floor-to-floor Height(ft)
+Number of Building
+0
+10
+20
+30
+40
+50
+60
+70
+80
+7
+7.5
+8
+8.5
+9
+9.5 10 10.
+5
+11 11.
+5
+12 12.
+5
+13 13.
+5
+14 14.
+5
+15 15.
+5
+16 16.
+5
+17 17.
+5
+18 18.
+5
+19 19.
+5
+20
+Floor-to-floor Height(ft)
+Lease Span(ft)
+
+
+===== [page 5] =====
+The Preliminary Design Guideline for Tall Building:Exploration of Planning Factors & Building Factors 
+ 
+5
+1.8M(6ftX6ft) other various module, because every each 
+building have very different space requirement and func-
+tion.  Again, the module of 1.5 X 1.5M (5ft X 5ft) should 
+be most appropriate planning module for office function 
+Figure-12, Distribution of Office Planning Module 
+ 
+For residential and hotel, see figure-15, the most appropri-
+ate planning module should be 5ft 3in and it is based on 
+room sizing, furniture layout, and lease span. It allows for 
+a reasonable variety of residential & hotel widths at the 
+perimeter beginning with the minimum 2 module room at 
+least 3.2M(10ft 6in wide-wide). However some buildings 
+adopted different planning module such as 3ft 6in(1.1M) 
+or 6ft(1.8M) and other various module, because every each 
+building have very different space requirement, site and 
+marketability. But the 5ft(1.5M) module is most common 
+planning module for residential and hotel. 
+Figure-13, Distribution of Residential &Hotel Planning Module 
+D. Building Geometry: Plan Width to Length Ratio 
+Square plan has advantages regarding geometric stiff-
+ness, core planning and structural behavior. The reason is 
+that, for lateral wind resistance, square geometry offers 
+same stiffness in both directions. Next to the square plan, 
+rectangular plans are most used. Rectangular geometry 
+with ratio of width to length close to 1:2, which is usually 
+range between 1.4 and 2.0. Normally as close to the ratio 
+of 2.0, there must be tremendous sail effect on building 
+elevation and the structural efficiency also lower than 
+square plan regarding geometric stiffness; a conventional 
+square plan has 67%, whereas rectangular plan has effi-
+ciency range from 43% to 32% (6).  
+Figure-14, Distribution of Plan Geometric 
+ 
+Therefore One Shell Plaza, in Houston, has a ratio of 
+1:1.45 rather than 1:2.0 in overall plan dimension. In the 
+early stages, this project was changed from an original 120 
+feet by 240 feet to 192 feet by 132 feet in plan dimen-
+sion(7). However the frequency of using rectangular plan 
+is almost 35% thus square and rectangular plan have al-
+most 80% in frequency regarding overall building plan 
+geometry. According to the data analysis, the ratio of 
+width-to-length in plan has tendency having square plan in 
+order to have planning and structural efficiency. Square 
+plan; 1:1 ratio, is the most used plan geometric in tall 
+building. Also the ratio of 1: 2.4 have found in the group of 
+350ft to 750ft high building whose are having 1: 1.4 to 2.4 
+geometry ratio, 42% of those building were high-rise resi-
+dential or hotel. Few building have the ratio of more than 
+1:2.6, these buildings are most high-rise hotel or residen-
+tial function. Since residential and hotel require more unit 
+per each floor, these ratio have been found; ratio of 1:1.8 
+to 1:2.2 has much residential including multi-use tall 
+building. Obviously the most of high-rise buildings (more 
+than 750 feet high buildings) are close to 1:1 ratio of over-
+all building plan in order to have the structural efficiency. 
+Therefore square plan should be optimal  
+ 
+Figure-15, Correlation Building Height & Plan Ratio 
+ 
+building geometric for tall building. 
+ 
+4. CONCLUSION REMARKS 
+Factors affecting tall building design are not only archi-
+tectural requirements (building form, floor-to-floor height, 
+lease span, elevator system, planning module), but also 
+structural constraints (overall building structure system, 
+building efficiency).  The selection of an overall tall 
+building system is primarily based on the relationship of 
+architectural planning factors and structural considerations. 
+Among those design parameters, several design factors are 
+explored and analyzed. In particularly lease span and re-
+lated topics were looked at closely. This approach of opti-
+mization can introduce a preliminary design guideline for 
+tall building projects in order to get the economical build-
+ing performances. In other word, this paper showed several 
+facts; 1.The identification of planning considerations re-
+garding existing tall buildings in order to achieve the ex-
+ploration of design factors. 2. The presentation of the cor-
+relation of design factors in tall building design. 3. The 
+refinement of previously accepted design guidelines. 
+ 
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+Office Planning Module(ft)
+Number of Building
+0
+10
+20
+30
+40
+50
+60
+70
+80
+90
+100
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+Hotel/Residential Planning Module(ft)
+Number of Building
+0
+100
+200
+300
+400
+500
+600
+700
+800
+900
+1000
+1100
+1200
+1300
+1400
+1500
+0.0 0.2 0.4 0.6 0.8 1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0 3.2 3.4 3.6 3.8 4.0 4.2 4.4 4.6 4.8 5.0 5.2 5.4
+Geometric Ratio
+Building Height(ft)
+0
+5
+10
+15
+20
+25
+30
+35
+40
+45
+50
+1.0 1.2 1.4 1.6 1.8 2.0 2.2 2.4 2.6 2.8 3.0 3.2 3.4 3.6 3.8 4.0 4.2 4.4 4.6 4.8 5.0 5.2 5.4
+Geometric Ratio
+Number of Building
+
+
+===== [page 6] =====
+Yong Sun Choi 
+ 
+6
+One purpose of the paper is to shed some light on the 
+optimum tall building design criteria.  
+ 
+Reference: 
+1) Architecture of Tall Buildings, CTBUH, 1995, p8 
+2) Tall Building Planning & Development, David 
+C.Sharpe, Research Report(unpublished), 1997, IIT 
+3) Ibid 
+4) Ibid 
+5) 100 World's Tallest Buildings, CTBUH, 1998 
+6) Structural Principles: Structural analysis, SOM.LLP, 
+1996, Internal Report 
+7) Optimizing the Structure of the Skyscraper, Architec-
+tural Record, Oct 1972    
+ 
+  

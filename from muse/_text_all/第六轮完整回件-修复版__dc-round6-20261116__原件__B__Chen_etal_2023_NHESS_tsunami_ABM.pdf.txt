@@ -1,0 +1,1678 @@
+
+
+===== [page 1] =====
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+© Author(s) 2023. This work is distributed under
+the Creative Commons Attribution 4.0 License.
+An interdisciplinary agent-based evacuation model: integrating the
+natural environment, built environment, and social system for
+community preparedness and resilience
+Chen Chen1, Charles Koll2, Haizhong Wang3, and Michael K. Lindell4
+1College of Engineering, Architecture and Technology, Oklahoma State University, Stillwater, OK 74078, USA
+2School of Electrical Engineering and Computer Science, Oregon State University, Corvallis, OR 97331, USA
+3School of Civil and Construction Engineering, Oregon State University, Corvallis, OR 97331, USA
+4Department of Urban Design and Planning, University of Washington, Seattle, WA 98195, USA
+Correspondence: Chen Chen (chen.chen10@okstate.edu)
+Received: 1 December 2021 – Discussion started: 13 December 2021
+Revised: 27 October 2022 – Accepted: 20 December 2022 – Published: 21 February 2023
+Abstract. Previous tsunami evacuation simulations have
+mostly been based on arbitrary assumptions or inputs adapted
+from non-emergency situations, but a few studies have used
+empirical behavior data. This study bridges this gap by inte-
+grating empirical decision data from surveys on local evacu-
+ation expectations and evacuation drills into an agent-based
+model of evacuation behavior for two Cascadia subduction
+zone (CSZ) communities that would be inundated within 20–
+40 min after a CSZ earthquake. The model also considers the
+impacts of liquefaction and landslides from the earthquake
+on tsunami evacuation. Furthermore, we integrate the slope-
+speed component from least-cost distance to build the sim-
+ulation model that better represents the complex nature of
+evacuations. The simulation results indicate that milling time
+and the evacuation participation rate have signiﬁcant non-
+linear impacts on tsunami mortality estimates. When people
+walk faster than 1 m s−1, evacuation by foot is more effec-
+tive because it avoids trafﬁc congestion when driving. We
+also ﬁnd that evacuation results are more sensitive to walk-
+ing speed, milling time, evacuation participation, and choos-
+ing the closest safe location than to other behavioral vari-
+ables. Minimum tsunami mortality results from maximizing
+the evacuation participation rate, minimizing milling time,
+and choosing the closest safe destination outside of the in-
+undation zone. This study’s comparison of the agent-based
+model and the beat-the-wave (BtW) model ﬁnds consistency
+between the two models’ results. By integrating the natu-
+ral system, built environment, and social system, this in-
+terdisciplinary model incorporates substantial aspects of the
+real world into the multi-hazard agent-based platform. This
+model provides a unique opportunity for local authorities to
+prioritize their resources for hazard education, community
+disaster preparedness, and resilience plans.
+1
+Introduction
+Recent devastating earthquakes and tsunamis have placed
+immense burdens on their affected communities, such as the
+2011 Tohoku tsunami (Mori et al., 2011), the 2009 Ameri-
+can Samoa tsunami (Lindell et al., 2015), and the 2018 In-
+donesia Sulawesi tsunami (Sassa and Takagawa, 2019). Due
+to a small evacuation time window between the end of earth-
+quake shaking and the arrival of the ﬁrst tsunami wave, a high
+level of evacuation efﬁciency is essential for minimizing the
+loss of life in low-lying coastal communities subject to lo-
+cal tsunamis (Wang et al., 2016; Raskin and Wang, 2017). To
+reduce evacuation clearance time (the sum of authorities’ de-
+cision time, warning dissemination time, households’ prepa-
+ration time, and evacuation travel time) and thus maximize
+survival rates during tsunamis, researchers and practitioners
+have developed evacuation simulations to support decision-
+making, public education, and community emergency plan-
+ning and management.
+Published by Copernicus Publications on behalf of the European Geosciences Union.
+
+
+===== [page 2] =====
+734
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+1.1
+Previous ABMSs for earthquake and tsunami
+evacuation
+Agent-based modeling and simulation (ABMS), as a type of
+a highly effective computational simulation model, has been
+applied to many research ﬁelds (Mas et al., 2013; Mostaﬁzi
+et al., 2019a). The unique characteristics of ABMS include a
+bottom-up structure and the ability to model heterogeneous
+agents and their interactions with other agents. These unique
+characteristics meet the needs of a disaster evacuation sim-
+ulation (Gilbert, 2007). The bottom-up structure provides an
+opportunity to analyze how changes in evacuation behavior
+affect the overall evacuation result. One concern about using
+ABMS is the computational expense, but this is less of an
+issue as computing costs continue to decrease (Lindell et al.,
+2019).
+This increase in computational power has allowed disas-
+ter researchers to apply ABMS to (1) simulate evacuation
+in large-scale communities and (2) integrate different lay-
+ers of data to comprehensively analyze evacuation with con-
+sideration of interactions between the natural environment,
+built environment, and social system. Table 1 identiﬁes re-
+cent tsunami evacuation ABMS studies and their content.
+In the absence of empirical behavior data, early-stage
+evacuation ABMSs were based on arbitrary assumptions, as
+had been the case for large-scale evacuation models (Lin-
+dell and Perry, 1992; Lindell and Prater, 2007). Chen and
+Zhan (2008) investigated the effectiveness of simultaneous
+and staged evacuation strategies using an ABMS for San
+Marcos, Texas. Although this study considered evacuees’
+car-following and dynamic-routing behaviors, it was based
+on many arbitrary assumptions about evacuation behavior,
+such as homogeneous milling time within a zone, a single
+evacuation mode, and evacuees selecting quickest evacua-
+tion route and destination. To reduce reliance on assump-
+tions, Mas et al. (2012) built an evacuation ABMS that in-
+cluded more empirical data from the natural system, built
+environment, and social system. In this model, agents are
+characterized by probabilistic distributions of milling time,
+evacuation mode choice, evacuation destination, and travel
+speed. By comparing the simulation with data from the 2011
+Japanese earthquake and tsunami, the authors concluded that
+the results from this simulation are consistent with the real
+event and can be used to analyze evacuation and shelter de-
+mand for future events. In 2013, Mas et al. (2013) expanded
+this ABMS to the city of La Punta, Peru, to conduct a vertical
+and horizontal shelter analysis.
+Practitioners and researchers have relied on similarities be-
+tween the 2011 Japanese earthquake event and the geologi-
+cally similar Cascadia subduction zone (CSZ) to encourage
+Oregon coastal residents to prepare for local tsunamis. Karon
+and Yeh (2011) used GIS (geographic information system)
+to build an evacuation ABMS by integrating tsunami inunda-
+tion, warning transmission, and travel speed to examine the
+impact of failures of critical infrastructure in Cannon Beach,
+Oregon. To model heterogeneous agent behaviors, Wang et
+al. (2016) established a scenario-based tsunami evacuation
+ABMS for Seaside, Oregon. This study examined the impact
+of variance in agent behaviors such as milling time, evacu-
+ation mode choice, and travel speed. In addition, it also in-
+cluded the impact of a tsunami, but not an earthquake, on
+the built environment such as damage to streets, bridges,
+and buildings. A later version of this study, Mostaﬁzi et al.
+(2019a), used a similar ABMS platform to identify optimum
+shelter locations considering the population distribution, het-
+erogeneous agent milling time, and walking speed. However,
+as with previous studies, agents were assumed to evacuate to
+the closest shelter, which may not accurately represent peo-
+ple’s destination choices when threatened by a tsunami.
+One common limitation of those evacuation models is that
+they have evacuation assumptions about the four evacuation
+time components – authorities’ decision delay time, house-
+holds’ warning receipt and decision time, households’ evac-
+uation preparation time, and households’ evacuation travel
+time. Warning receipt time, for example, can vary across
+communities and households. Nagarajan et al. (2012) used
+an ABMS to test the warning dissemination speed through
+formal channels transmitted by ofﬁcials and informal chan-
+nels transmitted by neighbors. They found that even a small
+proportion of people who were willing to warn their neigh-
+bors have a considerable impact on reducing warning dis-
+semination time. Several previous ABMS studies have also
+assumed arbitrary probability functions for milling time to
+represent the variance in evacuation departure times (Mas et
+al., 2012; Wang et al., 2016; Mostaﬁzi et al., 2019a).
+In addition, some recent evacuation simulations have
+also employed assumptions about the distribution of evac-
+uees’ walking speeds. For instance, Wang et al. (2016)
+and Mostaﬁzi et al. (2019a) assumed a normal distribution
+of evacuee walking speeds for which the mean was built
+based on a study of pedestrians walking on streets in non-
+emergency situations (Knoblauch et al., 1996). This assump-
+tion is likely to underestimate travel speeds in a tsunami
+evacuation and thus overestimate tsunami mortality rates.
+However, mortality rates might not be overestimated if travel
+speed is actually reduced by additional barriers such as land-
+slides, liquefaction, and other earthquake disturbances to the
+evacuation route system.
+Failure to consider “shadow evacuation” by residents of ar-
+eas outside the tsunami inundation zone can lead to unneces-
+sary evacuation that overwhelms the evacuation route system
+and impedes travel by people in the inundation zone (Lindell
+et al., 2019). Instead of assigning a probabilistic distribution
+to walking speed, Wood and Schmidtlein (2012) used a deter-
+ministic hiking function (Tobler, 1993) to deﬁne a least-cost
+distance (LCD) model for tsunami evacuation. This hiking
+function not only captured the impact of slope on walking
+speed but also assumed daily walking conditions rather than
+emergency conditions. Overall, existing evacuation models
+have assumed that pedestrians’ travel behavior in daily situ-
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 3] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+735
+Table 1. Recent earthquake and tsunami ABMS studies.
+Reference
+Study area
+Mode
+Model components
+Tested variables
+Natural
+Built
+Social system
+environment
+environment
+Chen and Zhan (2008)
+San Marcos,
+Car
+NA
+Road network;
+Hypothetical population
+Evacuation strategy
+Texas, USA
+artiﬁcial
+density; dynamic routing;
+safe zone
+car-following model
+Dawson et al. (2011)
+Towyn,
+Car
+Flood
+Road network;
+Population distribution;
+Warning time;
+United Kingdom
+inundation
+destination;
+warning time; driving
+water depth
+building
+speed; re-route
+Karon and Yeh (2011)
+Cannon Beach,
+Walk
+Tsunami
+Road network;
+Warning dissemination;
+Infrastructure-
+Oregon, USA
+inundation
+destinations
+shortest distance;
+retroﬁtting
+travel speed
+strategy
+Mas et al. (2012)
+Village of Arahama,
+Car/walk
+Tsunami
+Road network;
+Population distribution;
+Evacuation result
+Japan
+inundation
+destinations
+evacuation mode;
+compared with real
+milling time; speed
+event; milling time;
+destination
+Mas et al. (2013)
+La Punta,
+Car/walk
+Tsunami
+Road network;
+Population distribution;
+Evacuation result;
+Peru
+inundation
+destinations
+social status; evacuation
+shelter capacity
+mode; milling time; speed
+Wang et al. (2016)
+Seaside,
+Car/walk
+Tsunami
+Road network;
+Population distribution;
+Water depth;
+Oregon, USA
+inundation
+destinations
+milling time; evacuation
+milling time;
+mode; speed; route choice
+evacuation mode;
+destination location
+Mostaﬁzi et al. (2019a)
+Seaside,
+Walk
+Tsunami
+Road network;
+Population distribution;
+Shelter location
+Oregon, USA
+inundation
+destinations
+milling time; speed
+NA: not available.
+ations represents the corresponding behavior in evacuations,
+but ﬁeld or experimental data to conﬁrm this assumption are
+needed.
+Most of the aforementioned studies used census data to
+identify agents’ evacuation departure locations, so the sce-
+narios assumed people were at home. However, a disaster
+may happen at any time of the day. To account for the vari-
+ance in evacuees’ locations, Dawson et al. (2011) devel-
+oped a ﬂood management ABMS to support ﬂood emergency
+planning and evaluate ﬂood incident management measures.
+The authors used empirical survey data to integrate warning
+time and used the National Travel Survey to determine peo-
+ple’s locations and travel states (e.g., work, home, or school).
+1.2
+Other models for earthquake and tsunami
+evacuation
+Although scenario-based ABMSs have been employed to
+support evacuation decision-making for entire communities
+(or large areas), jurisdictions are also interested in the ques-
+tion of how quickly people should evacuate from differ-
+ent sub-areas in a community. Geographers used the LCD
+method to build the beat-the-wave (BtW) model to estimate
+the maximum travel time that people need to walk out of
+a tsunami inundation zone (Wood and Schmidtlein, 2012).
+This model deﬁned the distance cost by two variables – the
+evacuation route’s slope and its land cover. To determine the
+walking speed, they employed Tobler’s hiking function (To-
+bler, 1993) and the energy cost of the terrain category (Soule
+and Goldman, 1972). The output of this model provides the
+spatial distributions of maximum evacuation times to “beat
+the wave” and can be used for preparedness planning and
+education. The Oregon Department of Geology and Mineral
+Industries (DOGAMI) has implemented this model to iden-
+tify Oregon coastal communities’ evacuation route maps and
+to estimate evacuation travel times (DOGAMI, 2020; Gabel
+et al., 2019).
+Although DOGAMI has used the LCD method because it
+is relatively easy to calculate and provides reasonable evacu-
+ation time estimates (ETEs), it does have some limitations.
+First, it cannot examine social-system variables that inﬂu-
+ence tsunami evacuation outcomes (such as population distri-
+bution; milling time; and the choice of transportation mode,
+evacuation route, and evacuation destination). Second, it can-
+not incorporate dynamic travel costs due to crowding or con-
+gestion. Agent-based models can overcome those limitations
+but are sometimes criticized as difﬁcult to implement due to
+the magnitude of data required. As noted earlier, those data
+include the distribution of population locations, evacuees’
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 4] =====
+736
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+behaviors, and wave arrival time. However, the ABMS and
+LCD approaches are not incompatible, so a mixed-method
+approach could be used to better model the complex nature
+of evacuation (Wood and Schmidtlein, 2012).
+1.3
+Research objectives and questions
+The preceding literature review has revealed the need for an
+evacuation ABMS that can simultaneously consider the nat-
+ural environment, built environment, and social system to an-
+alyze complex evacuation scenarios. Although some studies
+have incorporated layers from those three systems, most of
+the data inputs were arbitrary assumptions – a problem that
+has plagued large-scale evacuation modeling (Lindell et al.,
+2019). To more completely integrate the three systems, this
+study established an ABMS for tsunami evacuation that inte-
+grates (1) the natural environment and its disruptions; (2) the
+built environment and its disruptions; and (3) the social sys-
+tem, as deﬁned by people’s protective actions – especially
+their evacuation behavior.
+Speciﬁcally, this ABMS integrates human decisions and
+evacuation logistics into an ABMS platform using empiri-
+cal behavior data that were collected through survey ques-
+tionnaires and evacuation drills from coastal residents fac-
+ing tsunami threats. This integration operationalizes the Pro-
+tective Action Decision Model (PADM) (Lindell and Perry,
+2012) within an ABMS by incorporating agents’ heteroge-
+neous behavior in emergencies, such as (1) evacuation par-
+ticipation; (2) choices of transportation mode, evacuation
+routes, and destinations; and (3) travel speeds. Furthermore,
+to accurately model the complex nature of evacuation, this
+ABMS also includes the impact of landslides and liquefac-
+tion on the road network during evacuation. Incorporating
+the essential components of the LCD model (slope and road
+surface) combines the advantages of the ABMS and BtW
+models (Wood and Schmidtlein, 2012). ABMS models are
+implemented for Coos Bay, Oregon, and sensitivity analyses
+are conducted in this study to answer the following questions:
+1. How do the evacuation participation rate, milling time,
+mode choice, destination choice, and travel speed affect
+mortality rates?
+2. Which of these variables have greater impact on mortal-
+ity rates, and which of them can be addressed in tsunami
+evacuation preparedness?
+3. How do the results from the ABMS compare with the
+results from the BtW model?
+This interdisciplinary ABMS not only can serve as an evac-
+uation planning tool for local agencies but also can be an ed-
+ucational and assessment tool for coastal residents to better
+prepare for the next threat.
+2
+Interdisciplinary tsunami evacuation ABMS
+2.1
+Agent-based modeling environment
+Simulating evacuation is a computationally intensive prob-
+lem due to the large scale of the built and natural environ-
+ments and the complexity of agent behaviors. Therefore, an
+ABMS typically has a high computational cost when applied
+to large-scale evacuation (Lindell et al., 2019). To overcome
+this issue, the tsunami evacuation ABMS was built using the
+Julia programming language, which is a just-in-time com-
+piled language, allowing for high performance and compu-
+tational speed (Bezanson et al., 2012). The high speed of
+the Julia language allows researchers to model large com-
+munities with detailed heterogeneous agent behaviors. This
+study’s ABMS modeling environment allows users to mod-
+ify parameters for natural, built, and social systems and also
+allows for stochastic inputs. Figure 1 shows the ABMS vi-
+sualization and real-time evacuation monitors. The details of
+the evacuation model environment are discussed in Sect. 2.3.
+2.2
+Study area
+A series of CSZ tsunami evacuation studies have used Sea-
+side, Oregon, as a study community because of its high level
+of vulnerability to local tsunamis (Connor, 2005; Wood et
+al., 2015; Wang et al., 2016; Chen et al., 2020, 2021). How-
+ever, other communities that differ from Seaside in their ge-
+ographic and demographic characteristics should also be ex-
+amined. This study chose the Coos Bay peninsula as a case
+study due to four features. First, it has a distinctly vulnerable
+geography. As Fig. 1 indicates, this peninsula is surrounded
+by bay water on its north, east, and west sides. In addition,
+its hilly spine in the middle provides ready access to higher
+ground for evacuation destinations. The bay serves as the sec-
+ond and the sixth largest estuary in Oregon and on the US
+west coast, respectively (CLW, 2015). Second, this commu-
+nity is located on the southern margin of the CSZ, where the
+rupture probability is higher and tsunami wave arrival time
+is shorter than communities farther north (Priest et al., 2014;
+Chen et al., 2021). Third, the Coos Bay peninsula has a total
+population of about 26 129, which is the largest population
+among Oregon coastal communities (United State Census
+Bureau, 2020). Moreover, a large proportion of the popula-
+tion (about 25 %) resides within the inundation zone. Fourth,
+this community has a high level of social vulnerability due
+to its demographic characteristics. The local population has
+a higher percentage of disabled residents and is poorer and
+less educated than the overall US population (United State
+Census Bureau, 2020; Chen et al., 2021).
+2.3
+Model components
+To more accurately model tsunami evacuation, this study
+proposes an ABMS that integrates components of the natural
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 5] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+737
+Figure 1. Simulation model visualization of Coos Bay, Oregon (1 ft = 0.30 m).
+environment, built environment, and social system. Speciﬁ-
+cally, this ABMS includes the components shown in Table 2.
+2.3.1
+Social system and agent behavior
+According to the PADM, people make protective action de-
+cisions based on environmental/social cues and warnings,
+which are affected by personal characteristics such as pre-
+existing beliefs about the hazard, protective actions, and
+community stakeholders (Lindell and Perry, 2012; Lindell,
+2018). The large number of these variables, the difﬁculty
+in measuring them, and their heterogeneity among agents
+makes it difﬁcult to model this part of the evacuation pro-
+cess (Mas et al., 2012). Previous evacuation simulation mod-
+els (Mas et al., 2012; Wang et al., 2016; Mostaﬁzi et al.,
+2017, 2019b) assumed that residents evacuate in the most
+efﬁcient manner (such as selecting the closest shelter) but ig-
+nored the heterogeneity in evacuation decisions and actions
+(Gwynne et al., 1999). One main reason is that these models
+lacked empirical data on evacuation decisions and actions.
+To ﬁll that gap, the evacuation model in this study integrates
+data on people’s evacuation decisions and actions that were
+collected from questionnaire surveys and evacuation drills.
+This study employed the PADM as the framework for
+a mail-based household questionnaire survey that collected
+data on household evacuation intentions in the Coos Bay
+area between May and September 2020. There were 258 re-
+spondents who returned the questionnaire, which covers their
+evacuation intentions, expected milling process, and choices
+of transportation modes and destinations, as well as psycho-
+logical variables and demographic characteristics. More in-
+formation can be found in Chen et al. (2021). Probability dis-
+tributions on these variables are utilized to model the hetero-
+geneous evacuation actions from the data shown in Table 2.
+The analyses that follow are based on the ETE model in
+which the time to clear the risk area is a function of author-
+ities’ decision time, warning dissemination time, evacuation
+preparation time, and evacuation travel time (Lindell et al.,
+2019). Evacuation preparation time, which is often called
+“milling” (Wood et al., 2018), has two components – (1) psy-
+chological preparation, which involves information seeking
+and processing to make evacuation decisions, and (2) logis-
+tical preparation, which involves performing essential tasks
+(e.g., packing bags and securing the home) before leaving
+(Lindell and Perry, 2012). Evacuation travel time is a func-
+tion of evacuees’ choices of transportation mode, evacuation
+route, and evacuation destination.
+Modeling evacuation from a distant tsunami requires data
+on authorities’ decision time and warning receipt time. In the
+absence of these data, the results of the following analyses
+do not apply to distant tsunamis. Modeling evacuation from
+a local tsunami is simpler because long and strong earth-
+quake shaking is a reliable environmental cue to tsunami on-
+set. Consequently, people who recognize this environmental
+cue have authorities’ decision time and warning dissemina-
+tion time equal to zero.
+Moreover, the following analyses include sensitivity anal-
+yses that examine the impact of a plausible range of varia-
+tion in the input variables on the estimated tsunami mortality
+rate. As discussed below, these sensitivity analyses can pro-
+vide useful information for decision-making and emergency
+planning.
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 6] =====
+738
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+Table 2. ABMS components.
+System
+Component
+Description
+Data sources
+Tsunami inundation layer
+Water depth per 30 s time frame (m)
+DOGAMI CSZ near-ﬁled
+M9 XXL scenario
+Natural
+Elevation and slope
+Use elevation digital model
+Oregon 10 m Digital
+environment
+to calculate slope
+Elevation Model (DEM)
+Landslide and
+Landslide and liquefaction
+DOGAMI project O-13-06
+liquefaction
+susceptibility to identify
+disrupted roads
+Road network
+Links
+OpenStreetMap and Google Earth
+Built environment
+Non-retroﬁtted bridges
+Manually identiﬁed by talking
+DOGAMI project O-19-07
+with local authorities
+Population distribution
+26 000 agents from US census by census
+US census
+block group, then randomly generate
+along transportation network
+Evacuation participation
+By attributes or proportion
+Survey
+(1: evacuate; 0: stay)
+Milling time
+Gamma distributions and a ﬁxed time
+Mode choice
+Proportion, controlled by a parameter
+Destination choice
+Probability distribution on the distance
+Survey: distance from home to
+Social system
+to shelter and use of soft-max function to
+destination separated by car/foot,
+calculate the discrete probability
+gamma distribution
+Evacuation speed – car
+Intelligent driver model (IDM) with
+Parameter chosen by common scenarios
+parameters and a speed limit
+Evacuation speed – foot
+Evacuation hiking function based on elevation
+Evacuation drills
+Route choice
+Shortest distance to the destination
+that agents chose
+Route diversion
+If next intersection is blocked, the agent
+selects another leg of the intersection,
+then chooses another destination
+Evacuation participation (0: stay; 1: leave) is the protec-
+tive action that an individual agent selects in response to
+earthquake shaking or a tsunami warning in this model. Ac-
+cording to the Coos Bay community survey, 81 % of the re-
+spondents intend to evacuate, regardless of their location in-
+side (“compliant evacuees”) or outside (“shadow evacuees”)
+of the tsunami inundation zone. Thus, 81 % is used as the
+evacuation participation rate in this model, with a sensitivity
+analysis on how a change in this rate would impact tsunami
+mortalities. Evacuees’ origins are determined by their loca-
+tions when an earthquake occurs or a tsunami warning is re-
+ceived. Thus, there is spatial and temporal variability in the
+distribution of population locations based on factors such as
+time of day, season, and weather (Wang et al., 2016). This
+study utilized 2020 US census (United State Census Bureau,
+2020) data to deﬁne the origins of 26 363 agents. The sce-
+nario examined in this study assumes that all residents are at
+home, as on a weekend or at night.
+The tsunami evacuation intentions questionnaire asked re-
+spondents to report how much time they expected it would
+take them to prepare to evacuate. As shown in Eq. (1),
+f (x;α,β) = βαxα−1e−βx
+0(α)
+for x > 0
+α,β > 0,
+(1)
+where x means the milling time and f (x) means the prob-
+ability of having that milling time for an individual. Ap-
+plying a maximum likelihood estimation to the survey data
+produced α = 1.659 and β = 6.494 as the estimated parame-
+ters of the gamma function for the milling time distribution.
+As Fig. 2 indicates, both the Weibull and lognormal distri-
+butions provided poorer ﬁts (Akaike information criterion,
+AIC; Bayesian information criterion, BIC) to the data.
+Transportation mode choice is a critical factor that affects
+evacuation success. Agents can choose to evacuate either by
+foot or by personal vehicle in this model (0: car; 1: foot). In
+Coos Bay, 70 % of the survey respondents reported that they
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 7] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+739
+Figure 2. Expected preparation time from survey data and ﬁtted models: (a) data histogram and probability density function, (b) quantile–
+quantile plot, (c) cumulative density function, and (d) probability–probability plot.
+would evacuate by car, and only 27 % expected to evacuate
+by foot (Chen et al., 2021).
+Destination choice is also obtained from the survey, and a
+probability of choosing a speciﬁc destination is assigned to
+each evacuee based on their distance from the available des-
+tinations. A gamma function yields the best goodness-of-ﬁt
+statistics among the three candidate functions for the des-
+tination selection probability, shown in Fig. 3. Probability
+functions were developed separately for evacuation by foot
+and by car, with maximum likelihood estimation yielding
+α = 1.920 and β = 500 for evacuation by foot and α = 1.646
+and β = 1.745 for evacuation by car.
+After agents choose their expected evacuation destina-
+tions, the model assigns them to the shortest route that is
+calculated by the A∗algorithm (Hart et al., 1968) on the road
+network. To simulate the behavior of people who encounter
+an evacuation impediment such as ﬂood on the road while
+evacuating, agents divert to an alternate route. Speciﬁcally,
+when agents observe that the next intersection is inundated
+by water or damaged by hazards (i.e., see Sect. 2.3.3), they
+select a different leg of the intersection. The model assumes
+an equal probability of choosing each of the unblocked legs.
+The mechanism for assigning a travel speed varies, de-
+pending on which transportation mode an agent chooses
+(foot or car). Driving speed is determined by the IDM car-
+following model (Treiber et al., 2000) and the vehicle speed
+limit on that roadway. Pedestrian walking speed is deter-
+mined by the slope of the ground on which the pedestri-
+ans are walking, through an advanced hiking function (To-
+bler, 1993; Wood and Schmidtlein, 2012). To adjust for dif-
+ferences in walking speeds between daily walking and a
+tsunami evacuation, we modiﬁed the hiking function based
+on tsunami evacuation drill data that were collected from
+2016–2018 (Cramer et al., 2018). In these evacuation drills,
+136 evacuees’ trajectory data (source: author) were recorded
+by GNSS-embedded (global navigation satellite system) mo-
+bile devices. Data on walking speed and slope were used to
+modify the hiking function; the modiﬁed function is shown
+in Eq. (2).
+Speed = 1.65 × e(−2.30×abs(Slope−0.004))
+(2)
+To reduce computational cost and optimize simulation
+speed, the model assigns an average slope to the road seg-
+ment between each pair of intersections, and agents who
+walk on that segment will have the walking speed that is
+determined by Eq. (2). When conducting sensitivity analy-
+ses for different values of walking speed, the modiﬁed hik-
+ing function is disabled when a ﬁxed walking speed is used.
+Moreover, pedestrian walking speed is reduced based on the
+conservative value when liquefaction and landslide block a
+road surface (Schmidtlein and Wood, 2015; Gabel et al.,
+2019). More details are discussed in Sect. 2.3.3.
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 8] =====
+740
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+Figure 3. Intended evacuation destination from survey data and ﬁtted models. Panels (a) and (c) are probability density functions; panels (b)
+and (d) are cumulative distribution functions.
+2.3.2
+Built environment
+The model’s built-environment components include the road
+network and non-retroﬁtted bridges. The transportation net-
+work was obtained from OpenStreetMap (OSM, 2021) and
+updated manually by the authors based on the 2020 Google
+Earth satellite image (Google, 2021). All roads are consid-
+ered to be two-way one-lane streets, as a conservative as-
+sumption (Wang et al., 2016). This model also assumes that
+all agents, whether as pedestrians or in cars, follow the road
+network to their destinations. Alternative evacuation routes
+are not included in this simulation, such as swimming across
+streams or cutting through open ﬁelds or parking lots.
+Non-retroﬁtted bridges were located using a study by
+Gabel et al. (2019). These bridges are not expected to survive
+after an M9 CSZ earthquake (Gabel et al., 2019), so they are
+assumed to be undrivable and unwalkable in this analysis.
+These bridges are the following:
+– Virginia Ave. on Pony Creek, (1) in Fig. 4
+– Vermont Ave. on Pony Creek, (2) in Fig. 4
+– Broadway Ave. on Pony Creek, (3) in Fig. 4.
+2.3.3
+Natural environment
+Natural-environment components that are integrated in this
+model include tsunami inundation, terrain elevation and
+slope, liquefaction susceptibility, and landslide susceptibil-
+ity.
+Tsunami inundation layer. This model simulates an M9
+CSZ earthquake and tsunami using the XXL tsunami inun-
+dation model (Witter et al., 2011; Priest et al., 2013). The
+tsunami inundation layer includes variation in the ﬂow depth
+and velocity every 30 s for each 15 m grid cell from the time
+the tsunami is generated to 8 h after it reaches the Coos Bay
+peninsula. The inundation model assumes “bare earth”, so
+the impact of large buildings on water ﬂow was not included.
+Topographical elevation and slope. A 10 m digital eleva-
+tion model created by the U.S. Geological Survey (USGS)
+(Oregon Geospatial Enterprise Ofﬁce, 2017) is included as
+the surface topographical elevation data. In this simulation,
+elevation data are utilized to calculate the surface slope to in-
+form agents’ walking speed using the modiﬁed hiking func-
+tion shown in Eq. (2). The slope is calculated by using ele-
+vation change (1y) divided by the Euclidean distance (1x)
+change between two points, expressed as (slope = 1y/1x).
+Landslides and liquefaction. Evacuation routes can be-
+come undrivable and even unwalkable due to liquefaction,
+rockfalls, and lateral spreading (Gabel et al., 2019). Sus-
+ceptibility to both landslide and liquefaction for Coos Bay
+(Franczyk et al., 2019) is included in this model to estimate
+which road segments will be disrupted.
+Landslide susceptibility is calculated based on proximity
+to landslide deposits, susceptible geologic units, slope an-
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 9] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+741
+Figure 4. Coos Bay landslide and liquefaction susceptibility.
+gles, and existing landslide inventory. Areas are classiﬁed
+into four susceptibility levels – low, moderate, high, and very
+high (Burns et al., 2016; Franczyk et al., 2019). Liquefaction
+susceptibility is calculated from the cohesionless sediments,
+based on Youd and Perkins (1978) and Madin and Burns
+(2013). Areas are classiﬁed into ﬁve susceptibility levels –
+very low, low, moderate, high, and very high. This produces
+conservative liquefaction levels because it assumes relatively
+shallow groundwater (Madin and Burns, 2013).
+Table 3 shows the landslide and liquefaction susceptibility
+levels that are used in this simulation. The spatial areas hav-
+ing a moderate or higher susceptibility level of either land-
+slide or liquefaction are assumed to be disrupted after an M9
+CSZ earthquake. We consider the moderate level as a thresh-
+old to be conservative and realistic. This threshold also has
+been used by local authorities (Gabel et al., 2019) to build
+the Coos Bay BtW model. As shown in Fig. 4, 54 % of the
+transportation network is exposed to at least a moderate level
+of liquefaction-landslide susceptibility and 21 % is exposed
+to at least a high level. Thus, the transportation network is
+likely to be signiﬁcantly disrupted after an M9 earthquake.
+In this simulation, a street that is predicted to be disrupted
+by landslide or liquefaction is assigned a rocky or muddy
+road surface that prevents evacuees from driving through the
+impediment and makes walking the only feasible transporta-
+tion mode from that point. Wood and Schmidtlein (2012)
+adapted a speed conservation value from Soule and Goldman
+(1972), which is applied to the travel speed of people walking
+on muddy or rocky terrain surfaces. These values are shown
+in Table 4.
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 10] =====
+742
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+Table 3. Landslide and liquefaction susceptibility for network disruption in ABMS.
+Landslide susceptibility
+Low (0)
+Moderate (1)
+High (1)
+Very high (1)
+Very low (0)
+0
+1a
+1b
+1b
+Low (0)
+0
+1a
+1b
+1b
+Liquefaction susceptibility
+Moderate (1)
+1a
+1a
+1b
+1b
+High (1)
+1b
+1b
+1b
+1b
+Very high (1)
+1b
+1b
+1b
+1b
+Using a disjunctive decision rule, a spatial area with an index value of at least a moderate (54 %) or high (21 %) level is assumed to
+be disrupted after an M9 earthquake.
+a Combined susceptibility level – moderate.
+b Combined susceptibility level – high.
+Table 4. Speed conservation values used in modeling pedestrian
+walking speed (Wood and Schmidtlein, 2012). Speed conservation
+values adapted from Soule and Goldman (1972).
+Feature type
+Speed conservation value
+Road (paved)
+1
+Unpaved trails
+0.9091
+Dune trails (packed sand)
+0.5556
+Muddy bog
+0.5556
+Beach (loose sand)
+0.476
+3
+Results and discussion
+Figure 5 shows the overall visualization of one run of the
+model from 0 to 60 min after the M9 earthquake. The model
+assumes that (1) the deformation of the subduction zone
+completes and tsunami is triggered at the source when t =
+0 min, (2) people start the milling process and evacuate ei-
+ther by foot or by car, and (3) the ﬁrst tsunami wave (the
+highest in a CSZ M9 scenario) arrives in the Barview area
+(due to being the most westward) at t = 15–20 min and starts
+to inundate to the west shoreline of the peninsula. The ﬁrst
+wave arrives at the north side around t = 30 min and the east
+side of Coos Bay around t = 40 min. Most mortalities are ob-
+served on roads located in the west shoreline area, followed
+by the north and east sides.
+Two scenarios are examined in this study. Scenario 1 as-
+sumes that the tsunami is the only cause of disaster impacts
+in the community. Consequently, the road network functions
+at full capacity until it is inundated by the tsunami waves.
+Thus, Scenario 1 provides a baseline for assessing the sensi-
+tivity of the modeling results to a plausible range of vari-
+ation in the values of the input variables. Scenario 2 as-
+sumes that an M9 earthquake damages the road network
+and impedes the evacuation process. According to this sce-
+nario, driving may not be possible due to the heavy dis-
+ruption of roads in large-scale landslides, liquefaction, lat-
+eral spreading, dropped power lines, debris, and trafﬁc con-
+gestion. This assumption has also been applied to previous
+studies of earthquake and tsunami preparedness in Washing-
+ton (WGS, 2021), Oregon (DOGAMI, 2020), and California
+(Cal OES, 2021).
+3.1
+Scenario 1: variable testing with no network
+disruption
+Sensitivity analysis is applied to examine the impact of vari-
+ation in each model variable on the expected tsunami mortal-
+ity rate. A Monte Carlo method is employed to capture the
+probabilistic nature of the inputs and to create an interpretive
+mean.
+3.1.1
+Evacuation decision and milling time
+Figure 6 shows the sensitivity analysis for the impact of the
+evacuation participation rate and milling time on the mortal-
+ity rate among the inundation zone population (100 % mea-
+sures only the population living in the inundation zone). Con-
+sistent with previous studies (Mas et al., 2013; Wang et al.,
+2016), these two variables have a signiﬁcant impact on the
+estimated mortality rate. The larger the percentage of people
+who decide to evacuate and the less time people delay be-
+fore departure, the lower the mortality rate will be. However,
+the impact of milling time on the mortality rate is complex,
+which yields two conclusions.
+First, the change in the evacuation participation rate shows
+a smaller impact when milling time increases. For example,
+there is no decrease in mortality rate when evacuation partici-
+pation changes from 10 % to 100 % at 50 min of milling time,
+whereas there is an 88 % mortality rate decrease when evac-
+uation participation changes from 10 % to 100 % at 5 min of
+milling time. That is, the effect of decreasing milling time
+depends on the evacuation participation rate.
+Second, the curves that represent high evacuation partici-
+pation rates in Fig. 6 show an “S” shape that indicates the rate
+of change in mortality is much larger in the middle range of
+the x axis from 15 to 25 min. Given that the ﬁrst tsunami
+wave will arrive on the west side of the Coos Bay penin-
+sula around 15 min after the earthquake, the mortality rate
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 11] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+743
+Figure 5. Model screenshot by time.
+Figure 6. Estimated mortality rate of the inundation zone population as a function of milling time and evacuation participation.
+will increase substantially as milling time increases past that
+threshold. Conversely, when milling time is less than 5 min
+and 100 % of people decide to evacuate, the curve shows that
+the mortality rate is extremely low (less than 2 %). Thus, the
+results indicate that reducing the milling time is an important
+objective for tsunami preparedness programs, but it will be
+most effective when the evacuation participation rate is high.
+This result conﬁrms the policy of public authorities on
+the US west coast (WGS, 2021; DOGAMI, 2020; Cal OES,
+2021) of emphasizing “Do Not Wait” in their tsunami edu-
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 12] =====
+744
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+cational brochures and other outreach products to encourage
+people to depart as soon as possible after earthquake shaking
+subsides. Although our simulation ﬁndings support this rec-
+ommendation, gaps remain in the response from local resi-
+dents. Comparing the survey results of the two variables from
+Coos Bay (gray areas) with the sensitivity analysis curves
+shows that the mortality rate is fairly low if based on resi-
+dents’ intended milling time, but it can still be improved by
+further decreasing milling time and encouraging more people
+to evacuate. The same holds true for Crescent City, Califor-
+nia (Chen et al., 2021).
+3.1.2
+Mode choice and walking speed
+Coastal authorities in the CSZ advise evacuating by foot if
+possible, not only because of potential trafﬁc congestion but
+also because the road network is likely to be so disrupted that
+driving may not be feasible to evacuate from a local tsunami.
+Of course, roads could be ﬂooded by a distant tsunami for
+which no earthquake shaking could be felt. However, dis-
+tant tsunamis such as those from the 1964 Alaska and 2011
+Japanese tsunamis will take hours to reach the Oregon coast.
+Consequently, people will have the option of driving when
+distant tsunamis threaten. Thus, research is needed to exam-
+ine authorities’ recommendation to evacuate by foot and help
+emergency managers decide when to advise pedestrian evac-
+uation instead of vehicular evacuation. This section analyzes
+the impact of mode choice and walking speed during evacua-
+tion from a local tsunami and answers the following question.
+Can walking beat driving? If so, in what situations?
+Figure 7 shows how the choice of walking speed and mode
+inﬂuence tsunami mortality estimates. As walking speed in-
+creases beyond 1 m s−1, the estimated mortality rate de-
+creases as the walking percentage increases. Conversely, as
+walking speed decreases below 1 m s−1, the estimated mor-
+tality rate decreases as fewer people choose to walk. This
+result indicates that if everyone can walk faster than 1 m s−1,
+it is beneﬁcial for more people to evacuate on foot. Given
+that 0.91 m s−1 is a slow walking speed and 1.22 m s−1 is
+the threshold for a moderate walking speed for unimpaired
+adults (Knoblauch et al., 1996; Langlois et al., 1997; Wood
+and Schmidtlein, 2012; Fraser et al., 2014), it follows that
+evacuating on foot is better than evacuating by car if peo-
+ple can walk faster than the threshold for a slow walking
+speed. This ﬁnding also implies that if people who can walk
+faster than 1 m s−1 choose to walk, road network capacity
+can be saved for mobility-impaired people so they can avoid
+trafﬁc congestion during their evacuation. This is consistent
+with the ﬁnding that 30 % evacuation by car and 70 % evac-
+uation by foot is the critical threshold for tsunami evacua-
+tion in Seaside (Mostaﬁzi et al., 2019b). Similarly, vehicular
+trafﬁc capacity can be saved for those 30 % of the risk area
+population so they can reach safety in time. However, the
+following question remains. Who should evacuate by car?
+Even though our ﬁnding suggests that most unimpaired peo-
+ple should walk to save trafﬁc capacity for the vulnerable
+population, risk area residents may behave differently. The
+survey results show that only 21 % of the respondents (95 %
+conﬁdence interval (C.I.): 16 %–27 %) expect to evacuate by
+foot in Coos Bay (Chen et al., 2021), even though Oregon
+authorities encourage everyone to do so (DOGAMI, 2020).
+It is unclear whether this disparity is due to people not hav-
+ing received this recommendation or if they have received it
+and have chosen not to comply with it.
+It should be noted that the results shown in Fig. 7 describe
+the overall picture of evacuation in Coos Bay, but the situa-
+tion may be different for people living in unique areas that are
+a long distance from safety, so smaller-scale ABMS or BtW
+analyses are needed. However, given that the high-ground
+spine in the middle of the Coos Bay peninsula provides a
+nearby evacuation destination, few people are likely to be in
+that situation.
+3.1.3
+Other variables and combinations of variables
+Many variables may vary during the evacuation, and local au-
+thorities need to prioritize resources by deciding which vari-
+ables or combinations of variables have the greatest impact
+on expected mortalities. Figure 8 shows the impact on the
+mortality rate of variation in the plausible range of single
+and multiple variables. The estimated mortality rate for the
+Coos Bay inundation zone is just over 57 % if all of the vari-
+ables are at their most probable values (the vertical line in the
+center of the ﬁgure) and the bottom bar shows that there is al-
+most no variation in mortality rate as car speed varies from
+its plausible lower bound (15 mph; 1 mph = 1.61 km h−1) to
+its plausible upper bound (35 mph), whereas it ranges from
+45 %–85 % if milling time ranges from 0–20 min. However,
+the results show that variation in milling time and evacua-
+tion decision have the greatest impact on expected mortality
+when these variables are analyzed individually. This result
+is consistent with the discussion for Figs. 6 and 7 and pre-
+vious simulation research (Mas et al., 2013; Mostaﬁzi et al.,
+2019b). Variation in distance to destination also has a rel-
+atively large impact range. Speciﬁcally, the lowest mortal-
+ity occurs when evacuees choose the closest destination and
+increases when they choose farther destinations. This is be-
+cause agents tend to spend more time traveling on the roads
+within the inundation area when they choose farther destina-
+tions. This is especially true for residents living on the west
+coastal shoreline where the Cape Arago Highway stretches
+along the shoreline in the inundation zone as the only major
+road to connect this area to other regions in Coos Bay. When
+a tsunami strikes, some people who lack knowledge about
+the inundation area and ﬁrst-wave arrival time may travel on
+this highway to seek safety farther inland. We observed this
+“overshooting” behavior in the survey data from both Coos
+Bay and Crescent City (Chen et al., 2021). The maximum car
+speed has the lowest impact (2 % on the mortality rate) of all
+variables, which is consistent with ﬁndings from Mostaﬁzi
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 13] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+745
+Figure 7. Mortality rate changes by mode choice and walking speed.
+et al. (2019b) showing the impact range of max car speed
+is about 2.5 percentage points from 15–35 mph. This ﬁnding
+conﬁrms that driving travel speed is not determined by the
+maximum speed one can drive at any moment but, rather, by
+overall road capacity and trafﬁc conditions, which are well-
+described in trafﬁc ﬂow theory.
+The upper panel in Fig. 8 shows the impact range of si-
+multaneously changing two or more variables to their lowest
+plausible levels. Although decision + distance and walking
+speed + decision have the largest ranges of impact for any
+pair of variables, there is a similar impact range for other
+pairs. However, the results show even greater reductions in
+mortality estimates when more than two variables are at their
+lowest plausible levels. For example, when optimizing evac-
+uation participation and milling time and removing desti-
+nations in the inundation zone, the estimated mortality rate
+shrinks to less than 20 %. When optimizing evacuation par-
+ticipation and milling time and choosing the closest destina-
+tions outside of the inundation zone (the bar second to the
+top), the results show that almost all residents can be saved.
+Moreover, increasing walking speed from 1.3 to 5 m s−1 in
+addition to four other factors (the top bar) produces a simi-
+lar result. This result indicates that even evacuees who walk
+slowly are very likely to reach safety in time if they leave
+immediately for a destination outside of the inundation zone
+by the shortest route. Local authorities should emphasize this
+ﬁnding when deciding what information to communicate in
+their tsunami preparedness programs.
+3.2
+Scenario 2: considering network disruption when
+only walking is available
+This section analyzes how network disruptions impact
+tsunami mortalities when walking is the only option due to
+road network disruption of the type described in Sect. 2.3.3.
+Three scenarios are included in this analysis: (1) when ar-
+eas with at least moderate landslide-liquefaction suscep-
+tibility are disrupted, (2) when only areas with at least
+high landslide-liquefaction susceptibility are disrupted, and
+(3) when there is no network disruption.
+As Fig. 9 indicates, there is a nonlinear decrease in esti-
+mated mortality as walking speed increases for all three sce-
+narios. That the slopes of the lines decrease as walking speed
+increases indicates that the marginal effect of changing walk-
+ing speed on estimated mortality is larger in the lower part
+of the range. For example, an increase from 0.5 m s−1 (slow
+walk) to 1 m s−1 (normal walk) would yield a 24 percent-
+age point decrease in estimated mortality. However, when ar-
+eas of the road network with at least moderate susceptibility
+are disrupted, the model shows an increase of 9 percentage
+points in estimated mortality for all walking speeds in the
+0.25–1.5 m s−1 range, compared with the results for no dis-
+ruption. When only areas with a high level of susceptibil-
+ity are disrupted, there is only a slight decrease in estimated
+mortality, compared with the results for moderate disruption.
+When walking speed increases to 1.5 m s−1 (fast walk), the
+impact of network disruption is minimal and almost all peo-
+ple can successfully evacuate. Previous research on Seaside
+(Wang et al., 2016) found a similar decrease to the one shown
+in Fig. 9. In their study, estimated mortality decreased to zero
+when walking speed increased to 2 m s−1 when there was no
+disruption. This similarity suggests that similar results would
+be found in communities whose inundation zones have simi-
+larly ready access to high ground.
+The results from the ABMS is consistent with the results
+from the BtW model established for Coos Bay (Gabel et al.,
+2019) with slight differences shown in Fig. 9. The similar-
+ity between the two models is likely due to the similar in-
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 14] =====
+746
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+Figure 8. Impact range of model variables.
+Figure 9. Network disruption impact: ABMS and BtW model result
+comparison.
+put parameters. For example, the survey data from Coos Bay
+suggest a gamma distribution (α = 1.66, β = 6.49) to model
+milling time with mean of 10.77 min; this distribution is used
+in the ABMS to deﬁne agents’ milling time, whereas the
+BtW model assumes a 10 min ﬁxed milling time (Gabel et
+al., 2019). The slight differences between the two results are
+also due to the inputs of the two models: the parameters are
+stochastic in the ABMS but ﬁxed in the BtW model, even
+though they have similar means. The resulting similarities
+provide convergent validation of the two models so that ju-
+risdictions can choose either one depending on the purpose
+of study. The two models should not be considered mutually
+exclusive; a mixed-method model could be applied to more
+accurately assess evacuation results (Wood and Schmidtlein,
+2012). However, the convergence is based on the assumption
+that the survey respondents have accurate estimates of the
+time it takes them to prepare to leave. This is probably the
+case for those who have “grab and go” kits but is less likely
+for those who do not. In particular, research on the planning
+fallacy suggests that the survey data are underestimates for
+some respondents (Buehler et al., 2010).
+4
+Conclusion
+Although previous tsunami evacuation simulations have con-
+sidered the natural environment, built environment, and so-
+cial system in their models, many data inputs were arbitrary
+assumptions or adapted from studies of non-emergency situ-
+ations, so the simulation results may not accurately reﬂect
+what would happen in a tsunami evacuation. The present
+study addressed this limitation by integrating behavior data
+from community surveys into an ABMS for a CSZ com-
+munity. Four distinct contributions of this study are the fol-
+lowing: (1) using the PADM as a guide for collecting data
+on people’s expected evacuation behavior and the integra-
+tion of these data into the ABMS, (2) using empirical data
+from evacuation drills to reﬁne people’s evacuation walk-
+ing speeds, (3) considering the impact of earthquake-caused
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 15] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+747
+landslides and liquefaction on tsunami evacuation as a sub-
+stantial aspect of the multi-hazard situation, and (4) integrat-
+ing the LCD component from the Wood and Schmidtlein
+(2012) BtW model – conservation of walking speed by sur-
+face terrain and slope. By integrating the natural environ-
+ment, built environment, and social system, this model in-
+corporates substantial aspects of the real world into a multi-
+hazard ABMS. The simulation results indicate that milling
+time and evacuation participation have signiﬁcant nonlinear
+impacts on tsunami mortality estimates, which is consistent
+with Wang et al. (2016). The impact of milling time on the
+mortality rate shows an “S” curve, so the impact of milling
+time on estimated mortality varies the most when evacuation
+participation is highest. When comparing which transporta-
+tion mode people should take, the model result shows that
+more people can reach safety in time when they choose to
+walk and are able to walk faster than 1 m s−1 (slow walk).
+These ﬁndings support an important point for tsunami edu-
+cation programs in CSZ communities. Since the majority of
+Coos Bay respondents expected to evacuate by car instead
+of on foot, local authorities need to emphasize the need for
+pedestrian evacuation in their tsunami education programs.
+This study also makes a signiﬁcant contribution to under-
+standing the impact of different variables on tsunami mortal-
+ity estimates. Evacuation success is more sensitive to walk-
+ing speed, milling time, evacuation participation, and choice
+of the closest safe location than to other variables. Consistent
+with previous research, car speed has little impact on evacua-
+tion results. Further, this study also compared the sensitivities
+of different combinations of variables. Tsunami mortality es-
+timates are minimized when maximizing evacuation partic-
+ipation, minimizing milling time, and choosing the closest
+safe destination outside of the inundation zone. Furthermore,
+to validate this model, this study compared the ABMS re-
+sults with the BtW model results from Gabel et al. (2019) for
+Coos Bay. Even though the BtW model relies on a geograph-
+ical information system rather than an ABMS, this study’s
+preliminary comparison indicates a good match between re-
+sults from the two models.
+Finally, every study has limitations, as does this one. The
+agent decision and behavior is based on survey data and
+drill data, rather than data from an actual tsunami evac-
+uation, so the results might not accurately predict the re-
+sponse to an actual tsunami. Future research should inves-
+tigate (1) the impact of more complex agent–agent interac-
+tions, such as leader–follower behaviors and grouping behav-
+iors (Chen et al., 2020), as well as car abandonment (Wang
+et al., 2016); (2) the impact of building damage from earth-
+quake before tsunami (Gomez-Zapata et al., 2021); (3) au-
+thorities’ decision and warning dissemination processes for
+distant tsunamis; and (4) validation of the model using data
+from actual tsunami evacuations.
+Code and data availability. The model codes and data used in this
+paper are available on request from the corresponding author, Chen
+Chen (chen.chen10@okstate.edu).
+Author contributions. CC developed the method and model, per-
+formed the analysis, and wrote the paper. CK developed the model
+and revised the paper. HW and MKL developed the method, per-
+formed the analysis, and revised the paper.
+Competing interests. The contact author has declared that none of
+the authors has any competing interests.
+Disclaimer. Any opinions, ﬁndings, and conclusion or recommen-
+dations expressed in this research are those of the authors and do
+not necessarily reﬂect the view of the funding agency.
+Publisher’s note: Copernicus Publications remains neutral with
+regard to jurisdictional claims in published maps and institutional
+afﬁliations.
+Acknowledgements. The authors would like to acknowledge the
+National Science Foundation for funding. We are also thankful
+to Laura Gabel and Jonathan Allan from DOGAMI for providing
+tsunami inundation model, as well as their constructive suggestions
+and advice. This project was approved by the Oregon State Univer-
+sity Human Research Protection Program (HRPP) and Institutional
+Review Board (IRB) and follows the regulations to protect partici-
+pants (project reference no. 0489).
+Financial support. This research has been supported by the
+National
+Science
+Foundation
+(grant
+nos.
+CMMI
+1563618,
+CMMI 1826407, and CMMI 1826455).
+Review statement. This paper was edited by Animesh Gain and re-
+viewed by Erick Mas and one anonymous referee.
+References
+Bezanson, J., Karpinski, S., Shah, V. B., and Edelman, A.: Ju-
+lia: A Fast Dynamic Language for Technical Computing, arXiv
+[preprint], arXiv:1209.5145, 24 September 2012.
+Buehler, R., Peetz, J., and Grifﬁn, D.: Finishing on time: When
+do predictions inﬂuence completion times?, Organ. Behav. Hum.
+Dec., 111, 23–32, https://doi.org/10.1016/j.obhdp.2009.08.001,
+2010.
+Burns, W. J., Mickelson, K. A., and Madin, I. P.: Landslide Suscep-
+tibility Overview Map of Oregon, Oregon Department of Geol-
+ogy and Mineral Industries, Tech. Rep. REPORT O-16-02, https:
+//www.oregongeology.org/pubs/ofr/p-O-16-02.htm (last access:
+4 May 2021), 2016.
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+
+
+===== [page 16] =====
+748
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+Cal OES: How to Survive a Tsunami, California Governor’s Ofﬁce
+of Emergency Services, https://www.conservation.ca.gov/cgs/
+Documents/Tsunami/How-to-Survive-a-Tsunami.pdf, last ac-
+cess: 13 May 2021.
+Chen, C., Buylova, A., Chand, C., Wang, H., Cramer, L. A., and
+Cox, D. T.: Households’ intended evacuation transportation be-
+havior in response to earthquake and tsunami hazard in a Cas-
+cadia Subduction Zone city, Transp. Res. Record, 2674, 99–114,
+https://doi.org/10.1177/0361198120920873, 2020.
+Chen, C., Lindell, M. K., and Wang, H.: Tsunami prepared-
+ness
+and
+resilience
+in
+the
+Cascadia
+Subduction
+Zone:
+A
+multistage
+model
+of
+expected
+evacuation
+decisions
+and mode choice, Int. J. Disast. Risk Re., 59, 102244,
+https://doi.org/10.1016/j.ijdrr.2021.102244, 2021.
+Chen, X. and Zhan, F. B.: Agent-based modelling and simula-
+tion of urban evacuation: relative effectiveness of simultaneous
+and staged evacuation strategies, J. Oper. Res. Soc., 59, 25–33,
+https://doi.org/10.1057/palgrave.jors.2602321, 2008.
+CLW:
+Geographic
+Features
+of
+the
+Coos
+Estuary
+and
+Lower
+Coos
+Watershed,
+The
+Communities,
+Lands
+&
+Waterways
+Data
+Source,
+http://www.
+partnershipforcoastalwatersheds.org/wordpress/wp-content/
+uploads/2015/08/FINAL-Geographic-Features-Data-Summary.
+pdf (last access: 4 December 2020), 2015.
+Connor, D.: Outreach assessment: How to implement an effec-
+tive tsunami preparedness outreach program, State of Ore-
+gon Department of Geology and Mineral Industries Open File
+Report OFR O-05-10, Nature of the Northwest Information
+Center, Portland, OR, https://www.oregongeology.org/pubs/ofr/
+O-05-10_onscreen.pdf (last access: 14 January 2021), 2005.
+Cramer, L., Cox, D. T., and Wang, H.: Preparing for The Re-
+ally Big One: The Importance of Understanding the Local Cul-
+ture of Resiliency, in: Coastal Heritage and Cultural Resilience,
+Springer Press, New York, NY, 243–264, ISBN: 978-3-319-
+99025-5, 2018.
+Dawson, R. J., Peppe, R., and Wang, M.: An agent-based model for
+risk-based ﬂood incident management, Nat. Hazards, 59, 167–
+189, https://doi.org/10.1007/s11069-011-9745-4, 2011.
+DOGAMI: Larger-Extent Evacuation Brochures, State of Oregon
+Department of Geology and Mineral Industries, https://www.
+oregongeology.org/tsuclearinghouse/pubs-evacbro.htm, last ac-
+cess: 30 November 2020.
+Franczyk, J. J., Burns, W. J., and Calhoun, N. C.: Statewide Land-
+slide Information Database for Oregon (SLIDO), Release 4.0,
+Oregon Department of Geology and Mineral Industries, Tech.
+Rep. ORS 516.030, https://www.oregongeology.org/slido/data.
+htm (last access: 5 April 2021), 2019.
+Fraser, S. A., Wood, N. J., Johnston, D. M., Leonard, G. S.,
+Greening, P. D., and Rossetto, T.: Variable population expo-
+sure and distributed travel speeds in least-cost tsunami evacua-
+tion modelling, Nat. Hazards Earth Syst. Sci., 14, 2975–2991,
+https://doi.org/10.5194/nhess-14-2975-2014, 2014.
+Gabel, L. L. S., O’Brien, F. E., Bauer, J. M., and Allan, J. C.:
+Tsunami evacuation analysis of communities surrounding the
+Coos Bay estuary: Building community resilience on the Ore-
+gon coast, Oregon Department of Geology and Mineral Indus-
+tries, Tech. Rep. O-19-07, https://www.oregongeology.org/pubs/
+ofr/p-O-19-07.htm (last access: 5 April 2021), 2019.
+Gilbert, N.: Agent-Based Models (Quantitative Applications in
+the Social Sciences), SAGE Publication Ltd, ISBN: 978-1-4129-
+4964-4, 2007.
+Gomez-Zapata, J. C., Brinckmann, N., Harig, S., Zafrir, R., Pittore,
+M., Cotton, F., and Babeyko, A.: Variable-resolution building
+exposure modelling for earthquake and tsunami scenario-based
+risk assessment: an application case in Lima, Peru, Nat. Hazards
+Earth Syst. Sci., 21, 3599–3628, https://doi.org/10.5194/nhess-
+21-3599-2021, 2021.
+Google: Google Earth, https://www.google.com/earth/versions/,
+last access: 4 May 2021.
+Gwynne, S., Galea, E. R., Owen, M., Lawrence, P. J., and Filippidis,
+L.: A review of the methodologies used in evacuation modelling,
+Fire Mater., 23, 383–388, 1999.
+Hart,
+P.,
+Nilsson,
+N.,
+and
+Raphael,
+B.:
+A
+Formal
+Ba-
+sis
+for
+the
+Heuristic
+Determination
+of
+Minimum
+Cost
+Paths,
+IEEE
+T.
+Syst.
+Sci.
+Cyb.,
+4,
+100–107,
+https://doi.org/10.1109/TSSC.1968.300136, 1968.
+Karon, J. and Yeh, H.: Comprehensive Tsunami Simulator
+for Cannon Beach, Oregon, City of Cannon Beach, Tech.
+rep.,
+https://www.ci.cannon-beach.or.us/sites/default/ﬁles/
+ﬁleattachments/demo_emergency_management/page/18691/
+cannon-beach-tsunami-ﬁnal-report-may-2011.pdf (last access:
+23 April 2021), 2011.
+Knoblauch,
+R.
+L.,
+Pietrucha,
+M.
+T.,
+and
+Nitzburg,
+M.:
+Field
+studies
+of
+pedestrian
+walking
+dpeed
+and
+start-up
+time,
+Transp.
+Res.
+Record,
+1538,
+27–38,
+https://doi.org/10.1177/0361198196153800104, 1996.
+Langlois, J. A., Keyl, P. M., Guralnik, J. M., Foley, D. J., Marottoli,
+R. A., and Wallace, R. B.: Characteristics of older pedestrians
+who have difﬁculty crossing the street, Am. J. Public Health, 87,
+393–397, https://doi.org/10.2105/AJPH.87.3.393, 1997.
+Lindell, M. K.: Communicating imminent risk, in: Handbooks of
+sociology and social research, 2nd edn., edited by: Rodríguez,
+H., Donner, W., and Trainor, J., Springer, New York, 449–477,
+ISBN: 978-3-319-63253-7, 2018.
+Lindell, M. K. and Perry, R. W.: Behavioral foundations of commu-
+nity emergency planning, Hemisphere Publishing Corp, Wash-
+ington, DC, US, xi, 309 pp., ISBN: 978-0-89116-620-7, 1992.
+Lindell, M. K. and Perry, R. W.: Theoretical modiﬁcations and addi-
+tional evidence: the protective action decision model, Risk Anal.,
+32, 616–632, https://doi.org/10.1111/j.1539-6924.2011.01647.x,
+2012.
+Lindell, M. K. and Prater, C. S.: Critical Behavioral Assump-
+tions in Evacuation Time Estimate Analysis for Private Vehi-
+cles: Examples from Hurricane Research and Planning, J. Ur-
+ban Plan. D., 133, 18–29, https://doi.org/10.1061/(ASCE)0733-
+9488(2007)133:1(18), 2007.
+Lindell, M. K., Prater, C. S., Gregg, C. E., Apatu, E. J., Huang, S.-
+K., and Wu, H. C.: Households’ immediate responses to the 2009
+American Samoa earthquake and tsunami, Int. J. Disast. Risk
+Re., 12, 328–340, https://doi.org/10.1016/j.ijdrr.2015.03.003,
+2015.
+Lindell, M. K., Murray-Tuite, P., Wolshon, B., and Baker, E. J.:
+Large-Scale Evacuation: The Analysis, Modeling, and Manage-
+ment of Emergency Relocation from Harzardous Areas, Rout-
+ledge, p. 22, 2019.
+Madin, I. P. and Burns, W. J.: Ground motion, ground deformation,
+tsunami inundation, coseismic subsidence, and damage poten-
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023
+https://doi.org/10.5194/nhess-23-733-2023
+
+
+===== [page 17] =====
+C. Chen et al.: An interdisciplinary agent-based evacuation model
+749
+tial maps for the 2012 Oregon Resilience Plan for Cascadia Sub-
+duction Zone Earthquakes, Tech. Rep. REPORT O-13-06, https:
+//www.oregongeology.org/pubs/ofr/p-O-13-06.htm (last access:
+4 May 2021), 2013.
+Mas, E., Suppasri, A., Imamura, F., and Koshimura, S.: Agent-
+based simulation of the 2011 Great East Japan Earthquake/T-
+sunami evacuation: An integrated model of tsunami inundation
+and evacuation, Journal of Natural Disaster Science, 34, 41–57,
+https://doi.org/10.2328/jnds.34.41, 2012.
+Mas, E., Adriano, B., and Koshimura, S.: An integrated sim-
+ulation of tsunami hazard and human evacuation in La
+Punta,
+Peru,
+Journal
+of
+Disaster
+Research,
+8,
+285–295,
+https://doi.org/10.20965/jdr.2013.p0285, 2013.
+Mori, N., Takahashi, T., Yasuda, T., and Yanagisawa, H.:
+Survey
+of
+2011
+Tohoku
+earthquake
+tsunami
+inunda-
+tion
+and
+run-up,
+Geophys.
+Res.
+Lett.,
+38,
+L00G14,
+https://doi.org/10.1029/2011GL049210, 2011.
+Mostaﬁzi, A., Wang, H., Cox, D., Cramer, L. A., and Dong,
+S.: Agent-based tsunami evacuation modeling of unplanned
+network disruptions for evidence-driven resource allocation
+and
+retroﬁtting
+strategies,
+Nat.
+Hazards,
+88,
+1347–1372,
+https://doi.org/10.1007/s11069-017-2927-y, 2017.
+Mostaﬁzi, A., Wang, H., Cox, D., and Dong, S.: An agent-based ver-
+tical evacuation model for a near-ﬁeld tsunami: Choice behavior,
+logical shelter locations, and life safety, Int. J. Disast. Risk Re.,
+34, 467–479, https://doi.org/10.1016/j.ijdrr.2018.12.018, 2019a.
+Mostaﬁzi,
+A.,
+Wang,
+H.,
+and
+Dong,
+S.:
+Understand-
+ing
+the
+multimodal
+evacuation
+behavior
+for
+a
+near-
+ﬁeld
+tsunami,
+Transp.
+Res.
+Record,
+2673,
+480–492,
+https://doi.org/10.1177/0361198119837511, 2019b.
+Nagarajan, M., Shaw, D., and Albores, P.: Disseminating a warn-
+ing message to evacuate: A simulation study of the be-
+haviour of neighbours, Eur. J. Oper. Res., 220, 810–819,
+https://doi.org/10.1016/j.ejor.2012.02.026, 2012.
+Oregon Geospatial Enterprise Ofﬁce: Oregon 10m Digital El-
+evation Model (DEM), Oregon Spatial Data Library [data
+set], https://spatialdata.oregonexplorer.info/geoportal/details;id=
+7a82c1be50504f56a9d49d13c7b4d9aa
+(last
+access:
+4
+May
+2021), 2017.
+OSM: OpenStreetMap, https://www.openstreetmap.org/, last ac-
+cess: 3 May 2021.
+Priest, G. R., Witter, R. C., Zhang, Y. J., Wang, K., Goldﬁnger,
+C., Stimely, L. L., English, J. T., Pickner, S. G., Hughes, K.
+L. B., Wille, T. E., and Smith, R. L.: Tsunami inundation sce-
+narios for Oregon, Oregon Department of Geology and Mineral
+Industries, Tech. Rep. Open_ﬁle Report O-13-19, https://www.
+oregongeology.org/pubs/ofr/O-13-19.pdf (last access: 20 August
+2021), 2013.
+Priest, G. R., Zhang, Y., Witter, R. C., Wang, K., Goldﬁn-
+ger, C., and Stimely, L.: Tsunami impact to Washington
+and northern Oregon from segment ruptures on the south-
+ern Cascadia Subduction Zone, Nat. Hazards, 72, 849–870,
+https://doi.org/10.1007/s11069-014-1041-7, 2014.
+Raskin, J. and Wang, Y.: Fifty-Year Resilience Strategies for
+Coastal Communities at Risk for Tsunamis, Nat. Hazards
+Rev., 18, B4016003, https://doi.org/10.1061/(ASCE)NH.1527-
+6996.0000220, 2017.
+Sassa, S. and Takagawa, T.: Liqueﬁed gravity ﬂow-induced
+tsunami: ﬁrst evidence and comparison from the 2018 Indone-
+sia Sulawesi earthquake and tsunami disasters, Landslides, 16,
+195–200, https://doi.org/10.1007/s10346-018-1114-x, 2019.
+Schmidtlein, M. C. and Wood, N. J.: Sensitivity of tsunami evacua-
+tion modeling to direction and land cover assumptions, Appl. Ge-
+ogr., 56, 154–163, https://doi.org/10.1016/j.apgeog.2014.11.014,
+2015.
+Soule, R. G. and Goldman, R. F.: Terrain coefﬁcients for
+energy
+cost
+prediction,
+J.
+Appl.
+Physiol.,
+32,
+706–708,
+https://doi.org/10.1152/jappl.1972.32.5.706, 1972.
+Tobler, W.: Three Presentations on Geographical Analysis and
+Modeling: Non-Isotropic Geographic Modeling; Speculations
+on the Geometry of Geography; and Global Spatial Analysis
+(93-1), National Center for Geographic Information and Anal-
+ysis, University of California at Santa Barbara, 26 pp., https:
+//escholarship.org/uc/item/05r820mz (last access: 26 October
+2020), 1993.
+Treiber,
+M.,
+Hennecke,
+A.,
+and
+Helbing,
+D.:
+Congested
+trafﬁc
+states
+in
+empirical
+observations
+and
+micro-
+scopic
+simulations,
+Phys.
+Rev.
+E,
+62,
+1805–1824,
+https://doi.org/10.1103/PhysRevE.62.1805, 2000.
+United State Census Bureau: QuickFacts: United States; Crescent
+City city, California; North Bend city, Oregon; Coos Bay
+city, Oregon, Tech. rep., https://www.census.gov/quickfacts/
+fact/table/US,crescentcitycitycalifornia,northbendcityoregon,
+coosbaycityoregon/PST045219, last access: 4 December 2020.
+Wang, H., Mostaﬁzi, A., Cramer, L. A., Cox, D., and Park,
+H.: An agent-based model of a multimodal near-ﬁeld tsunami
+evacuation: Decision-making and life safety, Transportat. Res.
+C Emerg., 64, 86–100, https://doi.org/10.1016/j.trc.2015.11.010,
+2016.
+WGS: Tsunami Hazards in Washington State, Washtington Geo-
+logical Survey, Washington State Department of Natural Re-
+sources, Tech. rep., https://www.dnr.wa.gov/publications/ger_
+tsunami_hazards_brochure.pdf, last access: 13 May 2021.
+Witter, R. C., Zhang, Y., Wang, K., Priest, G. R., Goldﬁnger,
+C., Stimely, L. L., English, J. T., and Ferro, P. A.: Simulating
+tsunami inundation at Bandon, Coos County, Oregon, using hy-
+pothetical Cascadia and Alaska earthquake scenarios, Oregon
+Department of Geology and Mineral Industries, Tech. Rep. Spe-
+cial Paper 43, https://www.oregongeology.org/tsuclearinghouse/
+resources/sp-43/SP-43_onscreen144dpi.pdf (last access: 20 Au-
+gust 2021), 2011.
+Wood, M. M., Mileti, D. S., Bean, H., Liu, B. F., Sutton, J., and
+Madden, S.: Milling and public warnings, Environ. Behav., 50,
+535–566, https://doi.org/10.1177/0013916517709561, 2018.
+Wood, N. J. and Schmidtlein, M. C.: Anisotropic path modeling
+to assess pedestrian-evacuation potential from Cascadia-related
+tsunamis in the US Paciﬁc Northwest, Nat. Hazards, 62, 275–
+300, https://doi.org/10.1007/s11069-011-9994-2, 2012.
+Wood, N. J., Jones, J., Spielman, S., and Schmidtlein, M. C.:
+Community clusters of tsunami vulnerability in the US Pa-
+ciﬁc Northwest, P. Natl. Acad. Sci. USA, 112, 5354–5359,
+https://doi.org/10.1073/pnas.1420309112, 2015.
+Youd, T. L. and Perkins, D. M.: Mapping Liquefaction-Induced
+Ground Failure Potential, J. Geotech. Eng.-ASCE, 104, 433–446,
+https://doi.org/10.1061/AJGEB6.0000612, 1978.
+https://doi.org/10.5194/nhess-23-733-2023
+Nat. Hazards Earth Syst. Sci., 23, 733–749, 2023

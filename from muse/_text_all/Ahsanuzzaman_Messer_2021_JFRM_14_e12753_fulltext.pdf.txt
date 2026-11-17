@@ -1,0 +1,2392 @@
+
+
+===== [page 1] =====
+O R I G I N A L A R T I C L E
+Motorists' willingness to drive through flooded roads:
+Evidence from a stated preference experiment
+Ahsanuzzaman1
+|
+Kent D. Messer2
+1Joint Institute for Food Safety and
+Applied Nutrition (JIFSAN), University of
+Maryland, College Park, Maryland, USA
+2Department of Applied Economics and
+Statistics, and Center for Experimental
+and Applied Economics, University of
+Delaware, Newark, Delaware, USA
+Correspondence
+Ahsanuzzaman, Joint Institute for Food
+Safety and Applied Nutrition (JIFSAN),
+University of Maryland, College Park, MD
+20742, USA.
+Email: ahsanmi@umd.edu
+Funding information
+National Science Foundation
+Abstract
+We conduct a stated-preference choice experiment to reveal motorists' driving-
+related behavioral responses to different types of signs indicating that the road
+is flooded and travel costs associated with avoidance of the flooded road. We
+use three flood-indicating visualization treatments and control group to iden-
+tify the effects of particular road signs and identify associations between
+drivers' behavior and their demographic characteristics and the cost (time) of
+taking an alternate route. Using responses from 714 adult participants from
+the coastal area of the Mid-Atlantic of the United States, we estimate willing-
+ness to drive additional minutes to avoid flooded roads using a random utility
+framework. Our results suggest that individuals are more likely to avoid
+flooded roads when shown flood-indicating road signs that do not indicate the
+exact depth of the water and signs that indicate that the water is relatively deep
+(more than 12 in.). We further find that individuals tend to persist in their ini-
+tial choices. They often make risky choices when high risk-indicating informa-
+tion is presented at the beginning of the decision-making process. The results
+of this study can help inform the sign design choices of transportation man-
+agers to help ensure driver safety in flood conditions.
+K E Y W O R D S
+data visualization, driving behavior, flooding
+1
+|
+INTRODUCTION
+Flooding is one of the world's most pervasive and
+destructive natural hazards. Few regions are unaffected
+by flood events, and, on a global scale, incidents of
+flooding outnumber all other natural hazards and have
+been increasing over the past three decades (Alipour
+et al., 2020; Berz et al., 2001). Consequently, the eco-
+nomic costs of flooding, arising from damage to human
+health, property, and assets and from inhibited travel
+(Grothmann & Reusswig, 2006; Hallenbeck et al., 2014),
+are almost unmatched by costs of other hazardous events
+and have been rising sharply (Ashley & Ashley, 2008;
+Berz et al., 2001; Grothmann & Reusswig, 2006). More
+concerning is the fact that flooding is one of the most
+common
+causes
+of
+death
+due
+to
+natural
+hazards
+(Ashley & Ashley, 2008; Drobot et al., 2007; Kellar &
+Schmidlin, 2012; Pearson & Hamilton, 2014) and is cited
+as the most common reason for drowning- related deaths
+worldwide (Ahmed et al., 2018; Ashley & Ashley, 2008;
+Received: 9 August 2020
+Revised: 18 May 2021
+Accepted: 22 August 2021
+DOI: 10.1111/jfr3.12753
+This is an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License, which permits use and distribution in any
+medium, provided the original work is properly cited, the use is non-commercial and no modifications or adaptations are made.
+© 2021 The Authors. Journal of Flood Risk Management published by Chartered Institution of Water and Environmental Management and John Wiley & Sons Ltd.
+J Flood Risk Management. 2021;14:e12753.
+wileyonlinelibrary.com/journal/jfr3
+1 of 19
+https://doi.org/10.1111/jfr3.12753
+
+
+===== [page 2] =====
+Hamilton et al., 2016; Hamilton, Price, et al., 2018). In
+the United States between 1959 and 2005, there was an
+average of 98 flood-related deaths per year, a truly signifi-
+cant loss of life (Ashley & Ashley, 2008).
+What is particularly striking about flood-related mor-
+tality in the United States and in other parts of the world,
+such as Australia and Greece, is the extent to which
+motor vehicles are involved in flood deaths (Ashley &
+Ashley, 2008; Diakakis & Deligiannakis, 2013; Haynes
+et al., 2017; Maples & Tiefenbacher, 2009; Sharif et al.,
+2012). For instance, Ashley and Ashley (2008) found that
+more
+than
+60%
+of
+flood-related
+deaths
+in
+the
+United States between 1995 and 2005 occurred in motor
+vehicles. Kellar and Schmidlin (2012) revealed that
+motor-vehicle-related drownings in floods have been
+increasing, rising from an average of 55.5 in 2005 to an
+average of 80 per year in the following decade. The
+increase in deaths occurred despite establishment of the
+National Weather Service's “Turn Around, Don't Drown”
+program in the mid-2000s (Becker et al., 2015) which is
+often due to different types of risk exposed by different
+groups of people (Diakakis et al., 2020). Therefore, devel-
+oping and testing a mechanism that can prevent motor-
+ists from driving through flood waters and therefore
+reduce flood-related mortality is urgently needed. This is
+of particular interest if such a mechanism, such as the
+road signage, clearly communicates the danger level
+posed by flooded road ahead. As noted by Becker
+et al. (2015), individuals' risk perception from the lack of
+awareness and/or the misunderstanding of the risk level
+can be a key determinant of entering into the flood water.
+Thus, our study seeks to identify the most effective road
+sign designs to convey the level of danger can be an
+important step forward in mitigating the risks associated
+with flooded roads. First, however, we must improve our
+understanding of factors that motivate motorists to risk
+their lives by driving through flood waters.
+Various research papers have sought to identify the
+reasons behind drivers' voluntary engagement in this
+dangerous
+and
+largely
+avoidable
+behavior
+(Becker
+et
+al.,
+2015;
+Coles
+&
+Hirschboeck,
+2020;
+Drobot
+et al., 2007; Hamilton et al., 2016; Hamilton, Price,
+et al., 2018; Pearson & Hamilton, 2014; Ruin et al., 2007).
+Ahmed et al. (2018), in a systematic review of 24 studies
+of the act of driving into flood waters, summarizes the
+current understanding of how people make this decision.
+The literature on this topic to date has identified several
+factors that collectively impact decision-making on such
+issues: individual preferences, demographic characteris-
+tics, environmental views, situational and social factors,
+their purpose for entering flood waters, flood-risk indica-
+tors (Ahmed et al., 2018), area of residence, previous
+flash
+flood
+experience,
+and
+profession
+(Coles
+&
+Hirschboeck, 2020; Ruin et al., 2007). The literature also
+suggests that individuals' decisions to drive into or avoid
+flood waters are motivated by their perceptions of the risk
+and
+awareness
+of
+flood
+threats
+(Maples
+&
+Tiefenbacher, 2009; Sharif et al., 2012).
+Ahmed et al.'s (2018) review also pointed to an impor-
+tant gap in our knowledge: the relative impacts of such
+factors on the decision to drive into flood waters. There is
+an opportunity, therefore, to contribute to the current lit-
+erature and to inform policy by determining which ele-
+ments of the decision-making process are the most
+significant in motivating motorists to engage in risky,
+flood-related driving behavior.
+Prior research on risky driving associated with flood
+waters has emphasized the extent to which the decision
+to enter flood water varies with demographic factors such
+as
+age,
+gender,
+and
+geographic
+location
+(Ahmed
+et al., 2018; Ashley & Ashley, 2008; Becker et al., 2015;
+Drobot et al., 2007; Hamilton, Peden, et al., 2018; Hamil-
+ton, Price, et al., 2018; Haynes et al., 2017; Kellar &
+Schmidlin,
+2012).
+Additionally,
+recent
+studies
+have
+emphasized the importance of conveying proper flood
+risk information to motivate safe behavior, including
+structural mechanisms such as road signs that warn of
+flood risks to promote safe driving (Ahmed et al., 2018;
+Becker et al., 2015; Diakakis & Deligiannakis, 2013;
+Hamilton et al., 2016). Several of these studies have
+found that the effectiveness of flood warnings depends on
+how they demonstrate the seriousness of the circum-
+stances to drivers (Ahmed et al., 2018; Drobot et al., 2007;
+Raska et al., 2020), and the cost associated with flood risk
+mitigation in general (Gordon & Yannakoulias, 2020).
+Hence, more information is needed about how drivers
+respond to various kinds of warnings such as road signs.
+A study integrating demographic factors and drivers' per-
+ceptions of different types of flooding-related road signs
+can reveal the relative extent to which these two factors
+affect driving behavior.
+We conduct a stated-preference choice experiment to
+reveal motorists' driving-related behavioral responses to
+viewing three flooding-related road signs warning them
+about flooding and travel costs associated with avoiding
+flooded roads. The three visualization treatments differ in
+what flooding-related information is presented in the
+road signs (an indication of the depth of the water versus
+no indication of the water depth) and how the informa-
+tion is conveyed (water depth indicated by exact inches
+versus images that imply different water depths by
+depicting how high the water is relative to a car's exte-
+rior). We compare the participants' driving choices in dif-
+ferent road signs to choices made by drivers in a control
+group who are not shown any flooding-related signs. We
+also analyze associations between participants' driving
+2 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 3] =====
+behaviors, their demographic characteristics, and the cost
+in terms of time of choosing an alternate route rather
+than driving over a flooded road. We account for the time
+difference in the current route and the alternate route
+that would take to reach destination in the motorists'
+decision-making as the value of travel time savings that
+is identified a critical parameter in transportation litera-
+ture (Hensher, 2001; Wardman, 1998). In addition to
+assessing the efficacy of the road signs in influencing
+motorists to avoiding flood waters, we use a random-
+utility model framework to estimate individuals' willing-
+ness to drive additional minutes to avoid the floodwater.
+By prompting behavioral responses to each road sign,
+this experiment design induces participants to make deci-
+sions about what they would do if they saw the signs.
+Thus, the experiment can reveal whether flood-risk-
+related road signs affect driving behavior and, if so, how
+effective the different methods of conveying the flood-risk
+information (explicit water depth vs. water depth through
+images) are. Using demographic information in the sys-
+tematic analysis allows us to demonstrate whether
+drivers engaging in risky behavior during a flood event
+are related solely to their demographic characteristics,
+solely to their perceptions of specific street signs, or a
+combination of both factors. Our novel approach, which
+integrates experimental methods with data visualization
+techniques, allows us to (1) determine the relative impor-
+tance of demographic factors and flood risk indicators in
+motivating driving behavior and (2) identify how best to
+convey flooding-related information in road signs.
+The novelty of our research is twofold. First, the study
+directly compares the driving behavioral decisions in
+response to seeing different road signs. In particular, this
+study often tests to see how driving decisions are similar
+or different when drivers are presented with two different
+road signs that both conveying a similar danger level.
+This study also investigates which road signs are most
+effective in inducing motorists to avoid flooded roads and
+instead select safe, but more costly from the perspective
+of miles and time, detours. A second strength of this
+study is that it uses an experimental design approach to
+randomly assign participants to the various treatments.
+This type of design helps reduce potential selection bias
+and can lead to statistically more precise estimates of
+behavior. One limitation of the study is that responses
+are stated preferences instead of revealed preferences as
+the decisions. Ideally, this study would be conducted in a
+field setting where the signs could be adjusted on a regu-
+lar basis and video recordings could be made that show
+whether or not drivers decide to take the costly detour in
+response to the various signs and road conditions. Our
+results suggest that motorists are more likely to avoid
+flooded roads when shown flood-indicating road signs
+that do not indicate the exact depth of the water relative
+to the control group where no road flooding sign is
+shown. In case of exact depth, on the other hand, motor-
+ists are more likely to avoid flooded roads when they are
+shown the signs that indicate that the water is relatively
+deep (more than 12 in.). We further find that individuals
+tend to persist in their initial choices. They often make
+risky choices when high risk-indicating information is
+presented at the beginning of the decision-making
+process.
+2
+|
+RESEARCH DESIGN AND
+PROCEDURE
+We conduct a stated-preference choice experiment to
+elicit motorists' behavioral responses in terms of crossing
+certain flooded roads after seeing different types of road
+signs warning of flooding ahead and travel costs (time)
+associated with avoidance of the flooded roads. The
+experiment was conducted in a laboratory-type setting
+using adult participants in a university- organized annual
+event, which takes place on a certain day each year. The
+event attracts both students and non-students who live
+nearby and historically has attracted a few thousand peo-
+ple each year, allowing us to recruit a sufficient number
+of representative adult participants.1 Administrators rec-
+ruited participants who were 18 years of age or older.
+This study was conducted in a coastal area of the mid-
+Atlantic region of the United States, where flooding of
+low-lying roads is common, especially whether due to
+storm events or large tides. In fact, 52% of the partici-
+pants reported having experience with flooded roads at
+least once a year. Thus, this participant pool seemed well
+position to consider questions about how they would
+respond to encountering flooded roads. Of course, the
+driving behavior of a population that generally lives at a
+higher elevation and has less exposure to flooded roads
+could well be different and was beyond the scope of this
+particular study.
+Prior to the research session, participants signed a
+consent form approved by the university's Institutional
+Review Board. The study was conducted on iPads using
+the program set on the SoPHIELabs platform. It required
+10 to 15 min to complete, and participants were paid $6
+as compensation at the end of the study, which was dis-
+closed to them prior to participating (see Appendix A for
+the experiment roadmap).
+The study presented flood-like scenarios in which
+participants were asked what they would have done if
+they had faced such flood-indicating road signs while
+driving. There were four between-subject treatments
+(Table 1) in which each participant made yes/no type
+AHSANUZZAMAN AND MESSER
+3 of 19
+
+
+===== [page 4] =====
+TABLE 1
+Experimental design and road signage
+Treatment 1 (T1)
+Treatment 2 (T2)
+Treatment 3 (T3)
+Treatment 4 (T4)
+No flood-related
+road signage
+(T4-1)
+(T3-1)
+(T3-2)
+(T4-2)
+(T3-3)
+(T4-3)
+4 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 5] =====
+choices in the given scenarios indicating whether they
+would continue driving the current route through flood
+water or would take an alternate route to avoid the flood
+water. As shown in Figure 1, participants in the treat-
+ment groups and control group first saw a general mes-
+sage that portrayed the driving conditions, such as
+ongoing heavy rain while driving a two-wheel sedan car
+such as a Toyota Camry, Honda Accord, Nissan Altima,
+or Chevy Malibu, which could be a risky choice when the
+road was flooded.2 In each decision scenario, participants
+were given the information that, if they wanted to take
+an alternate route, it would take additional time deter-
+mined by a random draw from 0 to 60 min and were
+shown the associated additional fuel cost.3
+Participants in the control group (T1) were shown no
+road signs. The road signs presented in the treatments
+displayed text and illustrations: (T2) Road Flooded;
+(T3) Road Flooded and text identifying four water depths
+expressed in inches; and (T4) Road Flooded and four
+water depths indicated by symbols of water waves next to
+a symbol of a car. The same scenarios were presented to
+the subjects in T3 and T4 as those. The only differences
+in each case were the different road signs, and the extra
+time taking a detour that was randomly drawn for each
+scenario (within subjects). Table 1 presents details of the
+treatments used, and Table 2 presents the road signs pres-
+ented to participants. The four variations in the road
+signs in T3 and T4 were presented to the participants in a
+random order to attempt to account for order effects. The
+between-subject design allowed us to estimate differential
+driving-related behavior in response to the road signs. In
+addition, the within-treatment variation in the road signs
+in T3 and T4 allowed us to estimate individuals'
+responses to similar risk-related road signs shown in dif-
+ferent orders. For example, motorists might, on average,
+decide not to continue on the flooded road when shown
+that the water depth is greater than 12 in., but their
+responses could depend on how many other water depths
+they had already viewed. In the process of eliciting partic-
+ipants' behavioral responses to data visualization, we did
+not provide any feedback to the participants about the
+choice(s) they made. This ensures that our design and
+implementation did not have any influence on the partic-
+ipants' subsequent decisions when applicable.
+In each decision, participants were presented with a
+statement of the additional time required to use the
+alternate route to reach the destination. The times pres-
+ented were randomly drawn from a distribution of 0 to
+60 min, and the average additional time required was
+30 min.
+After making their driving decisions, participants
+completed a short demographic survey before receiving
+their compensation. In total, 714 participants completed
+TABLE 1
+(Continued)
+Treatment 1 (T1)
+Treatment 2 (T2)
+Treatment 3 (T3)
+Treatment 4 (T4)
+(T3-4)
+# of participants
+179
+179
+178
+178
+# of observations
+179
+179
+712
+712
+Note: a: number of observations in Treatment groups T3 and T4 are different from the number of participants as each participant in those groups made four decisions associated with four different road signs.
+AHSANUZZAMAN AND MESSER
+5 of 19
+
+
+===== [page 6] =====
+the experiment in four between-subject design with
+179 participants assigned to treatment groups T1 (con-
+trol) and T2 and 178 participants assigned to the treat-
+ment groups T3 and T4 (Table 1). In the control group
+(T1) and T2, each of the participants made a single deci-
+sion. Each of treatments T3 and T4 had four within varia-
+tions indicating different water levels on the road. In
+particular, each participant in T3 and T4 made four
+driving-decisions in response to viewing four different
+water depth-indicating road signs. However, the addi-
+tional minutes that would take through an alternative
+route was randomly drawn for each of the four road signs
+in T3 and T4. The difference between T3 and T4 treat-
+ments is that road signs in T3 explicitly indicate flood
+depth by showing the inches of water, while the road-
+signs in T4 convey the same message showing different
+water waves surrounding a motor vehicle. Varying the
+water levels provides us with the scope to test the
+driving-related behavioral responses to different water
+levels. The novel design of showing a similar message dif-
+ferently (inches of water vs. different water waves sur-
+rounding a motor vehicle) gives us the opportunity to test
+for its impact on the presence of differential driving-
+related behavior. In order to control for potential order
+effects, each road sign in T3 and T4 was presented at ran-
+dom order. Therefore, participants made a total of
+712 driving decisions in T3 and T4 comprising total 1,782
+choice observations in the study (Table 1). Table 2 pre-
+sents the hypotheses tested in the study. There are nine
+hypotheses to be tested associated with decisions made
+by nine treatment (road signs) groups and compare them
+with the behavior of the control group (no road sign).
+2.1
+|
+Empirical strategy
+We use a single-bounded dichotomous-choice model to
+estimate
+motorists'
+behavioral
+responses
+to
+viewing
+flooding-related road signs in the study and the travel
+cost in terms of additional time required to take the alter-
+nate route as the price variable (McKean et al., 1996;
+Randall, 1994). Each respondent was shown flooding-
+related road sign j and choose whether to continue driv-
+ing the current route or take the alternate route, resulting
+in the following discrete outcomes for road sign j:
+Dj ¼
+0 if Benefit < TCi
+1 if Benefit ≥TCj
+
+ð1Þ
+in which D = 1 indicates that the participant chose to
+continue driving the current route at travel cost TCj and
+D = 0 indicates that the participant chose to take the
+alternate route and incur a greater travel cost based on
+the additional time needed to reach the destination.
+Thus, participants would choose to take the alternate
+route only when their benefit from it was greater than or
+equal to the associated cost of taking it. The probability
+of each outcome for individual i can be expressed as
+Πi ¼ Pr Y ¼ D
+ð
+Þ ¼
+F Vi TCj, Xi, Zj
+
+
+
+
+1F V i TCj, Xi, Zj
+
+
+
+ for D ¼
+0
+1
+(
+(
+ð2Þ
+where F() is a cumulative distribution function, Vi is the
+difference in indirect utility of individual i between con-
+tinuing and not continuing to drive the flooded road
+given the additional travel cost associated with alternate
+route j, X0
+i represents the set of individual i's socio-
+economic characteristics, and Zj is the set of treatments
+to which individual i is exposed.
+The participant's decision is based on random utility:
+Vi TCij, Xi, Zij
+
+
+¼ αþγTCij þX0
+iβþδZj þηi þεij
+ð3Þ
+where γ, β, and δ are the parameters of interest and rep-
+resent changes in utility associated with one-unit changes
+in travel time using the alternate route, the individual's
+demographic characteristics, and the type of road signs
+viewed, respectively. The set of treatments (Z) includes
+the information treatments (Road Flooded; Road Flooded
+plus depth in inches; Road Flooded plus number of
+waves indicating depth of flooding). The demographic
+characteristics included in X are age, highest level of edu-
+cation, income level, gender, frequency of driving in a
+FIGURE 1
+Example decision screen
+6 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 7] =====
+week, exposure to flooding, and past decisions when fac-
+ing road flooding. Finally, ηi represents individual spe-
+cific
+random
+effects
+and
+ϵiiјј
+is
+the
+idiosyncratic
+disturbance term that has standard logistic distribution.
+Using a sample of n independent observations, the log-
+likelihood function for estimating the parameters of inter-
+est in Equation (3) (α, γ, β, and δ) can be expressed as
+lnL ¼
+X
+n
+i¼1
+fID¼0lnF αþγTCij þX0
+iβ1 þβ2Zj
+
+
+þID¼1ln 1F αþγTCij þX0
+iβ1 þβ2Zj
+
+
+g
+
+ð4Þ
+where ID¼ 0,1
+f
+g is an indicator variable representing indi-
+vidual i's driving decision associated with a detour time
+for route j in response to road sign Zj (yes, D = 1;
+no, D = 0) and F() represents a standard logistic
+distribution.
+2.2
+|
+Data and results
+Table 3 reports the summary statistics for all variables for
+the 714 participants and resulting 1,782 choices. Overall,
+participants chose to drive the flooded road in 25% of the
+scenarios on average. They were least likely to choose to
+drive the flooded road when shown the sign stating Road
+Flooded and a symbol of a car with no water waves in
+front of it (T4-1), followed by the sign that showed only
+Road Flooded (T2).
+TABLE 2
+Hypotheses tested
+Hypotheses
+Results
+H0: Motorists are equally likely to drive on a road with flood-related road signs and without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and without any flood-related road
+sign.
+Reject H0
+p ≤0.05
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing <4 in. of water and
+without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing less than 4 in. of water
+and without any flood-related road sign.
+Reject H0
+p ≤0.01
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing 4–8 in. of water and
+without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing 4–8 in. of water and
+without any flood-related road sign.
+Fail to reject
+H0
+p > 0.1
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing 9–12 in. of water and
+without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing 9–12 in. of water and
+without any flood-related road sign.
+Fail to reject
+H0
+p > 0.1
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing greater than 12 in. of water
+and without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing greater than 12 in. of
+water and without any flood-related road sign.
+Reject H0
+p ≤0.05
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing a car and without any
+flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing a car and without any
+flood-related road sign.
+Reject H0
+p ≤0.1
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing a single water wave under
+a car and without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing a single water wave
+under a car and without any flood-related road sign.
+Fail to reject
+H0
+p > 0.1
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing two water waves under a
+car and without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing two water waves under
+a car and without any flood-related road sign.
+Fail to reject
+H0
+p > 0.1
+H0: Motorists are equally likely to drive on a road with flood-related road signs and showing three water waves under a
+car and without any flood-related road sign.
+H1: Motorists are not equally likely to drive on a road with flood-related road signs and showing three water waves
+under a car and without any flood-related road sign.
+Fail to reject
+H0
+p > 0.1
+AHSANUZZAMAN AND MESSER
+7 of 19
+
+
+===== [page 8] =====
+On average, the participants in the study were
+31 years old and 31% were male. Participants reported
+driving 2.62 times per week on average. In terms of edu-
+cation, 51% of the participants had at least a bachelor's
+degree, 38% had an associate degree or some college with
+no degree earned, and the remaining 11% had at most a
+high school education. The participants' annual incomes
+were relatively high; 29% earned between $75,000 and
+$99,999 and 42% earned between $100,000 and $149,999
+per year. The majority of the participants (80%) in the
+study identified themselves as white, 10% identified
+themselves as Asian, and 5% identified themselves as
+Black. Half (51%) of the participants had been exposed to
+road flooding as indicated by their knowledge of road-
+TABLE 3
+Summary statistics of the
+key variables
+Variable
+Mean
+SD
+Min
+Max
+Decision to continue (dependent variable)
+Control (no road sign control)
+0.28
+0.45
+0
+1
+T2 (Only road flooded sign)
+0.20
+0.40
+0
+1
+T3-1 (T2+ <4 in. water level)
+0.29
+0.45
+0
+1
+T3-2 (T2+ 4–8 in. water level)
+0.29
+0.46
+0
+1
+T3-3 (T2+ 9–12 in. water level)
+0.30
+0.46
+0
+1
+T3-4 (T2+ >12 in. water level)
+0.33
+0.47
+0
+1
+T4-1 (T2+ just car)
+0.15
+0.36
+0
+1
+T4-2 (T2+ single wave of water under car)
+0.25
+0.44
+0
+1
+T4-3 (T2+ two waves of water under car)
+0.29
+0.46
+0
+1
+T4-4 (T2+ >2 waves of water under car)
+0.23
+0.42
+0
+1
+Additional time in alternate route (min)
+30.31
+17.67
+0
+60
+Driving frequency (week)
+2.62
+1.47
+0
+4
+Age (years)
+31.15
+15.03
+18
+77
+Sex (1 = male)
+0.37
+0.48
+0
+1
+Education level
+Less than high school
+0.004
+0.06
+0
+1
+High school
+0.11
+0.31
+0
+1
+0.38
+0.49
+0
+1
+Associate and some college, no degree
+Bachelor degree
+0.28
+0.45
+0
+1
+Graduate/professional degree
+0.23
+0.42
+0
+1
+Income level
+Less than 25,000
+0.16
+0.36
+0
+1
+25,000–49,999
+0.13
+0.34
+0
+1
+50,000–74,999
+0.13
+0.34
+0
+1
+75,000–99,999
+0.16
+0.37
+0
+1
+100,000–149,999
+0.20
+0.40
+0
+1
+150,000–199,999
+0.11
+0.32
+0
+1
+200,000–249,999
+0.06
+0.24
+0
+1
+250,000 and above
+0.05
+0.22
+0
+1
+White (1 = yes; 0 = no)
+0.80
+0.40
+0
+1
+Black (1 = yes; 0 = no)
+0.05
+0.23
+0
+1
+Asian (1 = yes; 0 = no)
+0.10
+0.30
+0
+1
+Flood exposure (1 = yes; 0 = no)
+0.51
+0.50
+0
+1
+Generally take detour (1 = yes; 0 = no)
+0.37
+0.48
+0
+1
+N
+714
+8 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 9] =====
+flooding in daily commute in the past and 37% had taken
+an alternate route when confronted with a flood road
+while driving.
+To estimate participants' likelihood of driving through
+the flooded road in response to road signs conveying
+information about the flooding conditions, we estimate
+Equation
+(4)
+using
+the
+mixed
+effect
+logit
+model
+(Train, 1997, 1999) estimating participants specific ran-
+dom effects. The random effects that capture unobserved
+heterogeneity such as taste differences that is randomly
+distributed can induce correlation among the utilities of
+each
+alternative
+in
+the
+choice
+set
+(Bhat,
+1997;
+Hensher, 2001; McFadden & Train, 1997; Revelt &
+Train, 1999). In order to check the sensitivity of the
+results, we estimate Equation (4) with and without the
+demographic characteristics as covariates in the model.
+We interpret, however, the coefficients from the model
+with explanatory variables included.
+In the data matrix that was used to estimate Equa-
+tion (4), we stack four observations for each participant
+in T3 and T4 groups on top of other where each of the
+four corresponding road sign is represented by an indica-
+tor variable (T3-j, j = 1, … 4; and T4-j, j = 1, …, 4) that
+are included in Z in Equation (4). Also, we account for
+potential order effect in treatment groups T3 and T4 by
+adding dummy variables indicating the order of each of
+the road signs in T3 and T4 that was presented to the par-
+ticipants. In particular, the natural order of road sign
+from least to most risky road condition are as follows: <4
+in., 4–8 in., 9–12 in., and >12 in. (for T3) and just a car, a
+single wave in front of a car, 2 waves in front of a car,
+and 3 waves in front of a car (for T4). We included
+dummy variables indicating if the sequence of each road
+sign was shown in different order (higher order for first
+two signs and lower orders for the last two signs) or not
+with reference to the natural order indicating risk.
+Table 4 reports the resulting estimated logit coefficients,
+corresponding robust standard errors, and marginal
+effects (ME) that describe the change in probability of
+driving through the flooded road for any change in
+corresponding variables.
+We use additional driving time required by the alter-
+nate route as a travel cost that factors into participants'
+driving decisions since it involves both direct (fuel) and
+indirect (the opportunity cost of time spent driving that
+potentially captures both the labor and leisure value of
+time) costs. As shown in Table 4, the likelihood of a
+motorist continuing to driving the flooded road increases
+with the time required for the alternate route. This is log-
+ical as it implies that motorists intend to avoid alternate
+routes to avoid costs associated with driving extra miles.
+We next compare the results of motorists viewing the
+road signs warning of flooding compared to motorists
+who were not shown any road signs (T1). The Road
+Flooded sign (T2) reduced the likelihood of motorists
+continuing on the flooded route (by 9%) compared to no
+presentation of a road sign (T1) under similar conditions.
+The results also show that the depth of the flood water
+influenced
+drivers'
+decisions.
+The
+marginal
+effects
+(ME) (fourth and seventh columns in Table 4) indicate
+that participants' likelihood of driving the flooded road
+rose 22% in response to the Road Flooded sign that indi-
+cated that the flood waters were less than 4 in. deep
+(T3-1) and declined 21% in response to the Road Flooded
+sign that indicated that the flood waters were greater
+than 12 in. deep (T3-4).
+To examine the effectiveness of our two methods of
+conveying information about the depth of the flood
+water, we compare the results from T3 and T4 in which
+the signs in T3 explicitly stated the depth of the water in
+inches and the signs in T4 expressed water depth as one
+or more wave symbols depicted in front of a car symbol.
+The variations in depth in T3 were less than 4 in., 4 to
+8 in., 9 to 12 in., and greater than 12 in. Equivalent
+expressions of depth in T4 were the car symbol with no
+wave, one wave, two wave, and three wave symbols in
+front of it. Higher water levels indicated greater risk to
+the driver in choosing to cross the flood water.
+The motorists were less likely to drive the flooded
+road in T4 only when the road flooding information was
+conveyed by adding the car with no waves (T4-1) and
+with three waves (T4-4) to the Road Flooded sign relative
+to the baseline of no road sign. Thus, we find that how
+information conveys the depth of flood waters can have
+an impact on drivers' behaviors. We find that explicit
+statements of relatively low water levels (less than 4 in.,
+T3-1) increase the likelihood of motorists continuing and
+explicit statements of relatively high water levels (more
+than 12 in., T3-4) reduce the likelihood of their driving
+the flooded road. Likewise, the symbol of the car with the
+symbol with three waves indicating that the water is rela-
+tively deep (T4-4) decreases their likelihood of driving
+through the flood water. More importantly, however, the
+participants were more cautious and less likely to drive
+the flooded route when the signs provided only vague
+information about the severity of the flooding: Road
+Flooded (T2) and Road Flooded plus the car sym-
+bol (T4-1).
+Each of four different roads signs in treatment group
+T3 are intended to imply a similar flood risk to the four
+road signs in T4. In particular, the order of the severity of
+flood-indicating road signs and the expected behavioral
+responses to the corresponding road signs, from lowest to
+highest, is as follows: T3-1 = T4-1; T3-2 = T4 = 2;
+T3-3 = T4-3; T3-4 = T4-4. As a result, comparison of the
+corresponding pairs of coefficients in Table 4 tests
+AHSANUZZAMAN AND MESSER
+9 of 19
+
+
+===== [page 10] =====
+TABLE 4
+Logit estimation of decision to drive through the flooded road
+Without demographics
+With demographics
+Variables
+Coef.
+SE
+ME
+Coef.
+SE
+ME
+Time in alternate route
+0.04***
+0.00
+0.01
+0.04***
+0.00
+0.01
+Treatments
+Only road flooded (T2)
+0.64*
+0.34
+0.08
+0.71**
+0.26
+0.09
+T3-1 (<4 in.)
+1.73***
+0.43
+0.23
+1.67***
+0.34
+0.22
+T3-2 (4–8 in.)
+0.37
+0.39
+0.05
+0.35
+0.30
+0.05
+T3-3 (9–12 in.)
+0.30
+0.40
+0.04
+0.37
+0.40
+0.05
+T3-4 (>12 in.)
+1.57**
+0.66
+0.21
+1.56**
+0.60
+0.21
+T4-1 (just car)
+1.02*
+0.54
+0.14
+1.04*
+0.45
+0.14
+T4-2 (single wave +car)
+0.18
+0.39
+0.02
+0.24
+0.29
+0.03
+T4-3 (double-wave +car)
+0.29
+0.39
+0.04
+0.34
+0.29
+0.04
+T4-4 (>2 waves +car)
+1.31*
+0.70
+0.17
+1.37**
+0.56
+0.18
+Order of road signs in T3
+<4 in. in 2-4a
+2.42***
+0.47
+0.32
+2.43***
+0.38
+0.32
+4–8 in. in 3–4b
+0.31
+0.42
+0.04
+0.39
+0.35
+0.05
+9–12 in. in 1–2c
+0.87**
+0.43
+0.12
+0.89**
+0.36
+0.12
+>12 in. in 1–3d
+2.33***
+0.66
+0.31
+2.24***
+0.61
+0.30
+Order of road signs in T4
+No wave in 2–4a
+0.00
+0.56
+0.01
+0.02
+0.48
+0.00
+1 wave in 3–4b
+0.02
+0.45
+0.01
+0.04
+0.35
+0.01
+2 waves in 1–2c
+0.85**
+0.44
+0.11
+0.88**
+0.34
+0.12
+3 waves in 1–3d
+1.14*
+0.70
+0.15
+1.17*
+0.57
+0.15
+Demographic variables
+Driving frequency
+0.11*
+0.04
+0.01
+Age (year)
+0.03***
+0.01
+0.00
+Sex (1 = male)
+0.39**
+0.12
+0.05
+Education
+0.04
+0.08
+0.00
+Income
+0.01
+0.03
+0.00
+White
+0.37
+0.27
+0.056
+Black
+0.72
+0.35
+0.10
+Asian
+0.46
+0.33
+0.06
+Flood exposure (1 = Yes; 0 = No)
+0.15
+0.17
+0.02
+Detour habit (1 = Yes; 0 = No)
+0.77***
+0.18
+0.10
+Constant
+2.56***
+0.29
+2.18***
+0.42
+Random effect-variance
+2.10
+0.44
+1.83
+0.40
+N
+1782
+1782
+*Statistically significant at 10%.
+**Statistically significant at 5%.
+***Statistically significant at 1%.
+aDummy (1 = the order of this road sign was from 2 to 4; 0 otherwise).
+bDummy (1 = the order of this road sign was between 3 and 4; 0 otherwise).
+cDummy (1 = the order of this road sign was between 1 and 2; 0 = otherwise).
+dDummy (1 = the order of this road sign was from 1 to 3; 0 otherwise).
+10 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 11] =====
+whether a road sign in T3 is equally effective in inducing
+motorists' responses in a certain direction relative to its
+counterparts in T4. In other words, the equality of coeffi-
+cients is tested for each pair (T3-1 = T4-1; T3-2 = T4 = 2;
+T3-3 = T4-3; T3-4 = T4-4). Table 5 shows that both types
+of road signs conveying a similar flood risk are equally
+effective at changing participants' reported behavior
+except when the water depth is very shallow (T3-1 and
+T4-1). For the latter case, T4-1 that uses just a car image
+to indicate the least flood risk is more effective in induc-
+ing responses to desired direction (taking an alternate
+route) compared to the road sign (T3-1) that conveyed a
+similar flood risk. In sum, motorists respond in the
+desired direction to both types of road signs when road
+signs indicate medium to high-water depth. Road sign
+using just a car-image (T4-1) is more effective in generat-
+ing desired outcomes compared to the road sign explicitly
+indicating shallow water depth (<4 in.: T3-1). The oppo-
+site driving decisions in response to the two road signs
+that were designed to convey the similar danger level
+(T3-1 vs. T4-1) indicates that individuals can underesti-
+mate risk, reveal optimistic bias, and/or are unaware of
+the real threat conveyed by the warning sign (Becker
+et al., 2015; Hamilton et al., 2016; Weinstein, 1980).
+In terms of the influence of participants' demographic
+characteristics, the results of this study show that male
+drivers and more-frequent driving are associated with
+continuing on the flooded roads despite the presence of
+the road-flooding warning signs. Males' increased likeli-
+hood of being involved in flood fatalities than females is
+in line with those reported in literature (Diakakis &
+Deligiannakis, 2013). Age is also associated with a
+reduced likelihood of driving the flooded road. An
+increased likelihood of driving through flooded road by
+the younger respondents aligns with those in the litera-
+ture suggesting the increased risk-taking tendency and
+the likely flood fatalities in the U.S. (French et al., 1983;
+Mooney,
+1983;
+Sedwick,
+2008)
+and
+outside
+the
+U.S. (Coates & Haynes, 2008; FitzGerald et al., 2010;
+Shabanikiya et al., 2014; Wright et al., 2010). Of particu-
+lar interest is the effect of participants' knowledge about
+road flooding indicated by their prior habit of taking an
+alternate route in this type of road flooding, which
+reduces the likelihood of driving the flooded road by 10%.
+Thus, motorists who have knowledge about road flooding
+conditions and hence take a detour to avoid a flooded
+road on their daily commute in the past are less likely to
+drive the flooded road than motorists with no such expo-
+sure. The habit of taking a detour that is often based on
+knowledge and familiarity of the road conditions has also
+been found in the existing literature to be one of the fac-
+tors influencing the decision on driving through a
+flooded road. While the literature suggests that individ-
+uals' familiarity with the road condition leads to the
+underestimation of the risk causing a more likelihood
+crossing
+the
+flood
+(Maples
+&
+Tiefenbacher,
+2009;
+Petrucci & Pasqua, 2012), respondents in this study over-
+estimate it. This perhaps suggests that individuals with
+risk aversion overestimate the risk make the detour deci-
+sion seeing a road-flooding road signage.
+There were four road signs that were shown to partic-
+ipants in T3 and T4 treatment groups at random order.
+We accounted for potential order effects, if any, of those
+road signs by including dummy variables indicating if the
+corresponding road sign was shown at order that is differ-
+ent from natural order. The results show that, for T3,
+altering the order in which the signs are shown from nat-
+ural to random decreases the participants' likelihood of
+staying on the flooded route if the shallow water depth-
+indicating road signs are shown later than their natural
+order (see Table 4). The effect is opposite if the signs indi-
+cating relatively deep water are shown earlier. For exam-
+ple, when the road sign indicating less than 4 in. of water
+was shown in any order other than first, then participants
+were less likely to continue on the current route com-
+pared to when it was shown first. An opposite ordering
+effect was found when the road sign indicating water
+depth of greater than 12 in. of water as shown it in any
+order other than last, meant that participants were more
+likely to continue on the current route compared to when
+it was shown last.
+Our finding of an opposite driving decision using two
+different road signs (T3-1 vs. T4-1) but conveying a simi-
+lar level of danger is consistent with other findings in the
+literature that people who deliberately drive through
+floodwater have misperception about the real threat of
+flood warnings and associated risk from driving through
+floodwater that result in an optimistic biased behavior
+(Becker et al., 2015; Drobot et al., 2007; Hamilton
+et al., 2016; Weinstein, 1980). This study's findings on the
+TABLE 5
+Testing the equality of
+coefficients of treatment groups T3
+and T4
+Null hypothesis
+Z-val.
+p-val.
+Decision
+T3-1 = T4-1
+4.43
+0.000
+T3-1 and T4-1 do not have same effects
+T3-2 = T4-2
+1.32
+0.19
+T3-2 and T4-2 do not have differential effects
+T3-3 = T4-3
+0.08
+0.93
+T3-3 and T4-3 do not have differential effects
+T3-4 = T4-4
+0.22
+0.83
+T3-4 and T4-4 do not have differential effects
+AHSANUZZAMAN AND MESSER
+11 of 19
+
+
+===== [page 12] =====
+role of demographic characteristics on the driving deci-
+sion also align with those in the existing literature such
+as males, young people, and driving frequency are vari-
+ables associated with increased likelihood of driving
+through floodwater, while exhibiting a past habit of tak-
+ing detours reduces the likelihood of driving through
+floodwater
+(Coates
+&
+Haynes,
+2008;
+Diakakis
+&
+Deligiannakis, 2013; Drobot et al., 2007; FitzGerald
+et
+al.,
+2010;
+French
+et
+al.,
+1983;
+Mooney,
+1983;
+Sedwick,
+2008;
+Shabanikiya
+et
+al.,
+2014;
+Wright
+et al., 2010). Thus, informed policies for generating
+drivers' behavior in the desired direction requires a com-
+bination of foci, as Becker et al. (2015) report, on several
+factors—such as building awareness and risk perceptions,
+working with at-risk group particularly those who are
+more likely to enter the floodwater deliberately, and an
+effective warning system.
+2.2.1
+|
+Marginal rate of substitution:
+Willingness to drive additional minutes
+Following Hanemann (1999), we estimate individuals'
+willingness to pay (WTP) a premium for certain charac-
+teristics when valuing environmental and environmen-
+tally friendly goods and services such as food (Li
+et al., 2020) and when estimating travelers' variations in
+required compensation (contingent value) when valuing
+characteristics
+associated
+with
+beaches
+(Legget
+et al., 2017). These valuations are estimated using the
+ratio of the marginal rate of substitution (MRS) of charac-
+teristic k over characteristic m, which is expressed as
+MRS ¼
+δUV
+δxk
+δUV
+δxm
+:
+ð5Þ
+Since one of the explanatory variables in our model is
+the cost of additional minutes required to take the alter-
+nate route, the marginal willingness to avoid driving
+(WTAD) additional minutes associated with other attri-
+butes can be estimated using the ratio of the coefficient
+of the corresponding attribute to the coefficient of the
+additional-minutes variable. For example, WTAD for
+individual i in response to the road signs relative to the
+baseline of no
+road sign can be estimated as
+WTADi ¼ δ
+γ
+ð6Þ
+where δ is the coefficient associated with road sign j and
+γ is the coefficient associated with the additional minutes
+required
+to
+use
+the
+alternate
+route
+to
+reach
+the
+destination. The estimates in Equation (6) can be inter-
+preted as a participant's willingness to avoid the extra
+driving time by continuing the current route given the
+road conditions. A negative value indicates willingness to
+take the alternate route and drive the additional minutes;
+a positive value indicates unwillingness to spend the
+additional minutes. Therefore, WTAD is the number of
+minutes saved the driver requires as compensation for
+taking the alternate route due to flooding to maintain the
+level of welfare gained by continuing on the flooded
+route (the reference level). We use Equation (6) to esti-
+mate motorists' preferences for time saving (WTAD) by
+not driving additional minutes and hence choosing to
+travel the flooded road. Positive values indicate that
+motorists are unwilling to drive additional minutes in
+response to changes in corresponding characteristics,
+while negative values indicate that motorists are willing
+to drive the additional minutes. The results of this analy-
+sis are reported in Table 6. Since these measures are
+based on point estimates reported in Table 4, we check
+the robustness of the statistical significance of the results
+in Table 6 by constructing bias-corrected confidence
+intervals using bootstrapped standard errors. We use
+500 iterations to construct the confidence intervals and
+report the results in Table 7. We once again interpret the
+results from the full model that includes the demographic
+characteristics as variables.
+We find that participants were willing to drive an
+additional 18.47 min to avoid flooded roads in response
+to the Road Flooded (T2) sign (Table 6). However, in
+response to the Road Flooded sign with information
+about the water being less than 4 in. deep (T3-1), they
+preferred to remain on the flooded route and save the
+equivalent of 43.37 min. They were much more cautious
+in response to the Road Flooded sign stating that the
+water was more than 12 in. deep (T3-4) and were willing
+to drive approximately 40.63 additional minutes to avoid
+the risk. In response to road signs showing Road Flooded
+plus the car symbol with no wave symbol (T4-1, equiva-
+lent to T3-1) and with three wave symbols (T4-4, equiva-
+lent to T3-4), participants were willing to drive an
+additional 27.13 min and 35.55 min, respectively, to avoid
+the corresponding flooded road.
+The results show some differences associated with par-
+ticipants' demographic characteristics. A one-year increase
+in age leads to a 0.87 minute increase in willingness to
+drive (WTD) additional minutes to avoid the flooded road.
+Extrapolating from this estimate, this suggests that a
+50-year-old motorist would be willing to drive 16.4 min
+more than a 30-year-old motorist to avoid a flooded road.
+Experience with road flooding also affected WTD. Partici-
+pants who have past experience taking an alternate route
+to avoid flooding and view a flood warning sign are willing
+12 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 13] =====
+to drive approximately 20 (19.91) min more than partici-
+pants without such experience.
+As the existing literature suggests, conveying the
+flood risk information and promoting safe behavior are
+important strategies globally. The objective of this study
+is to identify the road sign(s) and the style of the road
+sign(s) that induce motorists to avoid risky driving on
+flooded roads so that associated damages of lives and
+livelihoods can be averted. This research bridges the
+gap in the existing literature on inducing safe behavior
+during flooding events. An important policy implication
+of our findings is that the road sign to use for achieving
+the desirable outcome depends on the type of rood
+flooding. If the desired outcome is to induce motorists
+to avoid flooded roads even with as shallow as 4 in. of
+water, use of road sign without explicit water depth
+might be more effective. As the flood water level rises,
+it is always desirable that motorists avoid flooded road
+and avert damages to lives and/or livelihoods that are
+more likely to occur. Though using both explicit state-
+ment of water depth and image indicating deep water
+on the road are effective, the former generates a higher
+TABLE 6
+Compensating variation for driving through flooded road associated with characteristics
+Model without demographics
+Model with demographics
+Variable
+WTD
+Upper
+Lower
+WTD
+Upper
+Lower
+Treatments
+Only road flooded (T2)
+16.54
+0.94
+34.03
+18.47
+0.92
+36.02
+T3-1 (<4 in.)
+44.78
+67.50
+22.07
+43.37
+65.93
+20.81
+T3-2 (4–8 in.)
+9.54
+29.24
+10.16
+9.09
+28.70
+10.52
+T3-3 (9–12 in.)
+7.76
+12.80
+28.31
+9.70
+10.77
+30.17
+T3-4 (>12in.)
+40.61
+6.34
+74.87
+40.63
+6.19
+75.10
+T4-1 (just car)
+26.46
+118
+54.11
+27.13
+0.54
+54.81
+T4-2 (single wave +car)
+4.53
+15.33
+24.39
+6.16
+13.78
+26.10
+T4-3 (double-wave +car)
+7.38
+12.23
+69.98
+8.72
+10.98
+28.43
+T4-4 (>2 waves +car)
+33.91
+1.93
+69.74
+35.55
+0.29
+71.39
+Order of road sign in T3
+<4 in. in 2–4
+62.74
+37.09
+88.39
+63.24
+37.53
+88.94
+4–8 in. in 3–4
+8.13
+13. 52
+29.52
+10.11
+11.33
+31.55
+9–12 in 1–2
+22.52
+45.08
+0.05
+23.24
+45.93
+0.54
+>12 in 1–3
+60.27
+95.35
+25.20
+58.25
+93.46
+23.04
+Order of road signs in T4
+No wave in 2–4
+0.04
+28.62
+28.69
+0.51
+28.15
+29.17
+1 wave in 3–4
+0.64
+22.19
+23.47
+1.12
+23.95
+21.70
+2 waves in 1–2
+22.11
+44.98
+0.76
+22.82
+45.81
+0.16
+>2 waves in 1–3
+29.41
+65.12
+6.31
+30.31
+65.99
+5.36
+Demographic characteristics
+Driving frequency
+2.90
+6.49
+0.70
+Age (year)
+0.87
+0.42
+1.32
+Sex (1 = male)
+10.24
+19.80
+0.68
+Education
+0.94
+6.81
+4.93
+Income
+0.23
+2.10
+2.56
+White
+9.52
+30.13
+11.09
+Black
+18.71
+46.98
+9.56
+Asian
+11.82
+36.34
+12.70
+Flood exposure (1 = Yes; 0 = No)
+3.90
+17.07
+9.27
+Detour habit (1 = Yes; 0 = No)
+19.91
+5.37
+34.45
+AHSANUZZAMAN AND MESSER
+13 of 19
+
+
+===== [page 14] =====
+likelihood of desired outcome. In addition to demo-
+graphic and environmental factors such as age, gender,
+habit formation, etc. the use of communication through
+proper road signage is also crucial in achieving the safe
+behavior from drivers. Therefore, applying evidence-
+based policy on road sign might avert damages that are
+associated with driving motor vehicles on flooded roads
+and save lives and livelihoods.
+3
+|
+CONCLUSION
+Floods are highly destructive natural disasters that have
+severe economic consequences in terms of damage to prop-
+erty and assets, inhibited travel, and significant losses of
+human life. Over the past three decades, the number of
+flooding events and their severity have increased signifi-
+cantly. Flooding is one of the most common causes of
+TABLE 7
+Bootstrapped standard errors and bias-corrected confidence intervals for compensating variation
+Excludes demographic variables
+Includes demographic variables
+Variable
+WTD
+Bias
+SE
+Lower
+Upper
+WTD
+Bias
+SE
+Lower
+Upper
+Treatments
+Only road flooded (T2)
+16.54
+0.82
+9.35
+0.94
+35.42
+18.47
+0.55
+9.40
+0.55
+37.39
+T3-1 (<4 in.)
+44.78
+0.65
+12.84
+4.38
+57.51
+43.37
+0.01
+12.41
+9.79
+56.29
+T3-2 (4–8 in.)
+9.54
+0.08
+10.43
+11.38
+31.22
+9.09
+0.43
+10.99
+13.11
+28.96
+T3-3 (9–12 in.)
+7.76
+0.45
+11.36
+38.19
+8.32
+9.70
+1.12
+11.21
+35.85
+7.75
+T3-4 (>12 in.)
+40.61
+11.21
+67.09
+100.11
+11.87
+40.63
+7.99
+59.00
+110.42
+12.85
+T4-1 (just car)
+26.46
+1.32
+16.51
+62.02
+2.24
+27.13
+0.04
+16.61
+75.38
+3.03
+T4-2 (single wave +car)
+4.53
+0.74
+10.16
+21.64
+18.20
+6.16
+0.59
+10.40
+26.30
+15.62
+T4-3 (double-wave +car)
+7.38
+0.03
+10.63
+31.11
+10.15
+8.72
+0.13
+10.82
+38.73
+8.04
+T4-4 (>2 waves +car)
+33.91
+14.09
+71.98
+93.49
+1.04
+35.55
+13.04
+76.32
+114.05
+4.60
+Order of road signs in T3
+<4 in. in 2–4
+62.74
+0.71
+13.99
+76.16
+22.61
+63.24
+0.14
+15.88
+85.95
+21.91
+4–8 in. in 3–4
+8.13
+0.62
+12.60
+27.65
+23.42
+10.11
+0.46
+12.84
+35.48
+15.86
+9–12 in 1–2
+22.52
+0.47
+13.66
+4.16
+58.62
+23.24
+2.19
+13.76
+8.33
+61.16
+>12 in 1–3
+60.27
+15.12
+77.02
+29.48
+130.48
+58.25
+9.80
+65.94
+21.89
+119.77
+Order of road signs in T4
+No wave in 2–4
+0.04
+0.11
+18.26
+34.21
+39.30
+0.51
+1.04
+18.10
+32.57
+40.06
+1 wave in 3–4
+0.64
+0.54
+13.29
+36.22
+18.20
+1.12
+0.52
+12.72
+26.23
+21.85
+2 waves in 1–2
+22.11
+0.53
+11.67
+3.62
+51.30
+22.82
+0.43
+12.96
+5.45
+57.45
+>2 waves in 1–3
+29.41
+11.83
+75.22
+0.20
+108.91
+30.31
+16.35
+84.91
+0.75
+436.69
+Demographic characteristics
+Driving frequency
+2.90
+0.02
+1.66
+0.36
+6.10
+Age (year)
+0.87
+0.00
+0.21
+1.33
+0.50
+Sex (1 = male)
+10.24
+0.08
+4.35
+1.45
+18.14
+Education
+0.94
+0.02
+2.88
+5.15
+6.27
+Income
+0.23
+0.00
+1.11
+2.85
+1.55
+White
+9.52
+0.86
+10.13
+7.60
+33.07
+Black
+18.71
+1.40
+13.53
+5.71
+46.04
+Asian
+11.82
+0.81
+12.35
+9.02
+37.01
+Flood exposure (1 = Yes;
+0 = No)
+3.90
+0.03
+5.95
+4.89
+18.41
+Detour habit (1 = Yes; 0 = No)
+19.91
+0.49
+6.64
+35.92
+8.93
+Note: Bootstrapped standard errors have been estimated using 500 iterations. Bias-corrected standard errors have been used to construct 95% confidence
+intervals.
+14 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 15] =====
+death due to natural hazards, and a substantial number of
+the deaths occur while driving. Unfortunately, the fre-
+quency of driving- related deaths has been gradually rising
+over time despite establishment of the National Weather
+Service's “Turn Around, Don't Drown” program in the
+mid-2000s (Becker et al., 2015). These trends to make clear
+that we need a better understanding of why individuals
+choose to drive into flood waters despite the significant risk
+to their health and survival and programs aimed to make
+them aware of the risk.
+We conducted a stated-preference choice experiment to
+reveal motorists' driving- related behavioral responses to
+road signs indicating road flooding ahead by presenting
+three types of warning messages and comparing their
+choice to drive the flooded road anyway or take a longer
+alternate route to choices made by participants who viewed
+no road signs. By using two road sign treatments that dif-
+fered in how the severity of the flooding was communi-
+cated, we identified thresholds of depth of the water that
+induced participants to avoid driving the flooded road. Our
+results indicate that participants are less likely to continue
+down a flooded road when shown either a simple sign stat-
+ing Road Flooded (no information about the severity of the
+flooding) and when shown a sign stating Road Flooded
+and displaying information indicating that the flood water
+is relatively deep at greater than 12 in.
+We find that they are more likely to remain on the
+flooded route when shown a sign stating Road Flooded
+and displaying information indicating that the flood water
+is shallow at less than 4 in. Drivers avoid the flooded road
+and take the alternate route when shown a simple Road
+Flooded sign and when shown a sign stating Road Flooded
+and showing the car symbol with no wave symbols
+(no information on depth) and the car symbol with three
+wave symbols indicating deep water. The significance of
+the responses to the simple Road Flooded sign and to the
+sign stating Road Flooded and displaying only a car symbol
+suggests that drivers will tend to be more cautious when
+warned by signs that do not provide information about the
+severity of the flooding and therefore of the risk they face
+in choosing to drive through the flood water.
+In terms of demographic characteristics, we find that
+older drivers report that they are less likely to drive
+through flood waters than younger drivers and that expe-
+rience with having to take a detour around a flooded
+section of road is associated with a greater willingness to
+take the additional time needed for the alternate route to
+avoid flooding-related risk. The results also suggest that
+the order in which drivers are confronted with warning
+signs about flooding can affect their decisions because
+they tend to persist in making the same choice in subse-
+quent decisions despite changes in the severity of
+the risk.
+The findings from this study have significant policy
+implications for efforts to induce motorists to avoid
+flooded roads and other flood waters. We find that the
+most effective signs do not provide information about the
+depth of the water (and severity of the risk) unless the
+flood water is quite deep. When the flood water is deep
+(more than 12 in. in this study), signs that explicitly
+inform drivers of the severity of the flooding convince
+many drivers to avoid the flooded road and take the alter-
+nate route despite the time cost required to do so. Our
+results should be viewed as evidence that drivers can
+have different behaviors based on sign designs, even
+when the designs are trying to communicate the same
+level of flood risk. This type of evidence can be helpful
+for transportation planners as they consider means to
+protect the public and discourage drivers from trying to
+cross flooded roads. The results also support the idea of
+designing signs to be dynamic to the actual flooding con-
+ditions as that could be quite helpful in preventing efforts
+to cross flooded roads. Given current and forthcoming
+digital technology, this type of signs should be quite pos-
+sible. While the primary focus of this study was on the
+coastal areas of the Mid-Atlantic of the United State,
+these findings are worth consideration of other areas that
+are subject to frequent flooding.
+ACKNOWLEDGEMENTS
+We acknowledge excellent research support from Stavroula
+Tsigkou, Liam Vita, and Marc Hinte. Funding support for
+this research came from the National Science Foundation
+(NSF) EPSCoR Track-1 project entitled Water in the
+Changing Coastal Environment of Delaware.
+CONFLICT OF INTEREST
+There is no conflict of interest of authors associated with
+this study. The authors declare that they have no known
+competing financial interests or personal relationships
+that could have appeared to influence the work reported
+in this paper. The data that support the findings of this
+study are available from the corresponding author upon
+request.
+DATA AVAILABILITY STATEMENT
+The data that support the findings of this study are avail-
+able from the corresponding author upon request.
+ORCID
+Ahsanuzzaman
+https://orcid.org/0000-0002-0868-721X
+ENDNOTES
+1 The internal review board (IRB) of the University of Delaware
+provided the ethics approval (exempt) of the study (IRB reference
+number: 1420358).
+AHSANUZZAMAN AND MESSER
+15 of 19
+
+
+===== [page 16] =====
+2 While adding actual photos of flooded roads, in addition to the
+road signs, might have provided participants additional different
+contexts for making their decisions, the primary objective of this
+study was to investigate the effects of different road signs on the
+motorists' willingness to drive through flooded roads. In particu-
+lar, given the existence of numerous road-flooding conditions and
+associated photos, the use of only the road signs and conveying
+the road condition and the detour time and cost by simple text
+made the decisions in this study more context independent.
+3 The total cost of driving the alternate route was calculated under
+the assumption that a 60-min drive in a city/suburb area would
+require 2.0 to 2.5 gallons of gas at a given market price of $2.40
+per gallon at the time of the experiment.
+REFERENCES
+Ahmed, M. A., Haynes, K., & Taylor, M. (2018). Driving into flood-
+water: A systematic review of risks, behaviour and mitigation.
+International Journal of Disaster Risk Reduction, 31, 953–963.
+Alipour, A., Ahmadalipour, A., & Moradkhani, H. (2020). Assessing
+flash flood hazard and damages in the southeast United States.
+Journal of Flood Risk Management, 13(2), e12605. https://doi.
+org/10.1111/jfr3.12605
+Ashley, S. T., & Ashley, W. S. (2008). Flood fatalities in the
+United States. Journal of Applied Meteorology and Climatology,
+47, 805–818. https://doi.org/10.1175/2007JAMC1611.1
+Becker, J. S., Taylor, H. L., Doody, B. J., & Wright, K. C. (2015). A
+review of people's behavior in and around floodwater. Ameri-
+can Meteorological Society, 7, 321–332.
+Bhat, C. (1997). Recent methodological advances relevant to activity
+and travel behavior analysis, Conference Pre-prints, IATBR'
+97, The 8th Meeting of the International Association of Travel
+Behavior Research, Austin, TX, September.
+Berz, G., Kron, W., Loster, T., Rauch, E., Schimetschek, J.,
+Schmider, J., Siebert, A., Smolka, A., & Wirtz, A. (2001). World
+map of natural hazard – A global view of the distribution and
+intensity
+of
+significant
+exposures.
+Natural
+Hazards,
+23,
+443–465.
+Coates, L., & Haynes, K. (2008). Flash flood shelter-in-place
+vs. evacuation research: Flash flood fatalities within Australia
+1950–2008. Melbourne State Emergency Services 26 pp.
+Coles, A. R., & Hirschboeck, K. K. (2020). Driving into danger: Per-
+ception and communication of flash-flood risk. Weather, Cli-
+mate, and Society, 12(3), 387–404.
+Diakakis,
+M.,
+Deligiannakis,
+G.,
+Andreadakis,
+E.,
+Katsetsiadou, K. N., Spyrou, N. I., & Gogu, M. E. (2020). How
+different surrounding environments influence the characteris-
+tics of flash flood-mortality: The case of 2017 extreme flood in
+Mandra, Greece. Journal of Flood Risk Management, 13(3),
+e12613. https://doi.org/10.1111/jfr3.12613
+Diakakis, M., & Deligiannakis, G. (2013). Vehicle-related flood
+fatalities in Greece. Environmental Hazards, 12, 278–290.
+https://doi.org/10.1080/17477891.2013.832651
+Drobot, S. D., Benight, C., & Gruntfest, E. C. (2007). Risk factors for
+driving into flooded roads. Environmental Hazards, 7, 227–234.
+FitzGerald, G., Du, W., Jamal, A., Clark, M., & Hou, X.-Y. (2010).
+Flood fatalities in contemporary Australia (1997–2008). Emer-
+gency Medicine Australasia, 22, 180–186. https://doi.org/10.
+1111/j.1742-6723.2010.01284.x
+French, J., Ing, R., von Allmen, S., & Wood, R. (1983). Mortality
+from flash flood: A review of national weather reports. Public
+Health Reports, 98(6), 584–588.
+Gordon, J., & Yannakoulias, N. (2020). A serious gaming approach
+to understanding household flood risk mitigation decisions.
+Journal of Flood Risk Management, 13(4), E12648. https://doi.
+org/10.1111/jfr3.12648
+Grothmann, T., & Reusswig, F. (2006). People at risk of flooding:
+Why some residents take precautionary action and others do
+not. Natural Hazards, 38, 101–120.
+Hallenbeck, M., Goodchild, A., & Drescher, J. (2014). Travel costs
+associated with flood closures of state highways near Cen-
+tralia/Chehalis,
+Washington
+(pp.
+1–69).
+Washington
+State
+Transportation Center.
+Hamilton, K., Peden, A. E., Keech, J. J., & Hagger, M. S. (2018).
+Changing people's attitudes and beliefs toward driving through
+floodwaters: Evaluation of a video infographic. Transportation
+Research Part F: Psychology and Behavior, 53, 50–60.
+Hamilton, K., Price, S., Keech, J. J., Peden, A. E., & Hagger, M. S.
+(2018). Drivers' experiences during floods: Investigating the
+psychological influences underpinning decisions to avoid driv-
+ing through floodwater. International Journal of Disaster Risk
+Reduction, 28, 507–518.
+Hamilton, K., Peden, A. E., Pearson, M., & Hagger, M. S. (2016).
+Stop, there's water on the road! Identifying key beliefs guiding
+people's willingness to drive through flooded waterways. Safety
+Science, 89, 308–314.
+Hanemann, W. B. (1999). The statistical analysis of discrete-
+response CV data. In I. J. Bateman & K. E. Willis (Eds.), Valu-
+ing environmental preferences: Theory and practices of the con-
+tingent valuation method in the US, EU, and developing
+countries. Oxford University Press.
+Haynes, K., Coates, L., van den Honert, R., Gissing, A., Bird, D.,
+Oliveira, F. D., D'Arcy, R., Smith, C., & Radford, D. (2017).
+Exploring the circumstances surrounding flood fatalities in
+Australia—1900–2015 and the implications for policy and prac-
+tice. Environmental Science and Policy, 76, 165–176.
+Hensher, D. A. (2001). Measurement of the valuation of travel time
+savings. Journal of Transport Economics and Policy, 35(1), 71–98.
+Kellar, D. M. M., & Schmidlin, T. W. (2012). Vehicle-related flood
+deaths in the United States, 1995–2005. Journal of Flood Risk
+Management, 5, 152–163.
+Legget,
+C.
+G.,
+Scherer,
+N.,
+Haab,
+T.
+C.,
+Bailey,
+R.,
+Landrum, J. P., & Domanski, A. (2017). Assessing the eco-
+nomic benefits of reductions in marine debris at Southern
+California beaches: A random utility travel cost model.
+Marine Resource Economics, 33(2), 133–153. https://doi.org/
+10.1086/697152
+Li, T., Ahsanuzzaman, & Messer, K. D. (2020). Is this food “local”?
+Evidence from a framed field experiment. Journal of Agricul-
+tural and Resource Economics, 45(2), 179–198. https://doi.org/
+10.22004/ag.econ.302449
+Maples, L. Z., & Tiefenbacher, J. P. (2009). Landscape, develop-
+ment, technology and drivers: The geography of drownings
+associated
+with
+automobiles
+in
+Texas
+floods,
+1950–2004.
+Applied
+Geography,
+29,
+224–234.
+https://doi.org/10.1016/j.
+apgeog.2008.09.004
+McFadden, D., & Train, K. (1997). Mixed MNL models for discrete
+response. Journal of Applied Econometrics, 15, 447–470.
+16 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 17] =====
+McKean, J. R., Walsh, R. G., & Johnson, D. M. (1996). Closely
+related good prices in the travel cost model. American Journal
+of Agricultural Economics, 78, 640–646.
+Mooney, L. E. (1983). Applications and implications of fatality sta-
+tistics to the flash flood problems. Proc. Fifth Conf. on Hydrome-
+terology, Tulsa, OK, Amer. Meteor. Soc. 127–129.
+Pearson, M., & Hamilton, K. (2014). Investigating driver willingness
+to drive through flooded waterways. Accident Analysis and Pre-
+vention, 72, 382–309.
+Petrucci, O., & Pasqua, A. A. (2012). Damaging events along roads
+during bad weather periods: A case study in Calabria (Italy).
+Natural Hazards and Earth System Sciences, 12, 365–378.
+https://doi.org/10.5194/nhess-12-365-2012
+Randall, A. (1994). A difficulty with the travel cost method. Land
+Economics, 70(1), 88–96.
+Raska, P., Warachowska, W., Slavikova, L., & Aubrechtova, T.
+(2020).
+Expectations,
+disappointments,
+and
+individual
+responses: Imbalances in multilevel flood risk governance rev-
+ealed by public survey. Journal of Flood Risk Management,
+e12615, 1–14. https://doi.org/10.1111/jfr3.12615
+Ruin, I., Gaillard, J., & Lutoff, C. (2007). How to get there?
+Assessing motorists’ flash flood risk perception on daily itiner-
+aries. Environmental Hazards, 7, 235–224.
+Sedwick, R. D. (2008). Texas war council—Declaring war on flash
+flood deaths. Presentation from Lower Colorado River Authority
+on Flood Related Drownings, Texas, 2008, 29 pp.
+Shabanikiya, H., Seyedin, H., Haghani, H., & Ebrahimian, A.
+(2014).
+Behavior of crossing flood on
+foot, associated
+risk factors and estimating a predictive model. Natural Haz-
+ards,
+73,
+1119–1126.
+https://doi.org/10.1007/s11069-014-
+1124-5
+Sharif, O. H., Hossain, M. M., Jackson, T., & Bin-Shafique, S.
+(2012). Person-place-time analysis of vehicle fatalities caused
+by flash floods in Texas. Geomatics, Natural Hazards, and
+Risk, 3(4), 311–323. https://doi.org/10.1080/19475705.2011.61
+5343
+Train, K. (1997). Mixed logit models for recreation demand. In C.
+Kling & J. Herrings (Eds.), Valuing the environment using recre-
+ation demand models (pp. 141–160). Elgar Press.
+Train, K. (1999). Halton sequences for mixed logits. Department of
+Economics, University of California at Berkeley.
+Wardman, M. (1998). The value of travel time: A review of British
+evidence. Journal of Transport Economics and Policy, 32(3),
+285–316.
+Weinstein, N. D. (1980). Unrealistic optimism about future life
+events.
+Journal
+Personality
+and
+Social
+Psychology,
+39(5),
+806–820.
+Wright, K., Doody, B. J., Becker, J., & McClure, J. (2010). Pedestrian
+and motorist flood safety study: A review of behaviours in and
+around floodwater and strategies to enhance appropriate
+behaviour. GNS Sci. Rep., 2010/51, 91 pp.
+How to cite this article: Ahsanuzzaman, &
+Messer, K. D. (2021). Motorists' willingness to drive
+through flooded roads: Evidence from a stated
+preference experiment. Journal of Flood Risk
+Management, 14(4), e12753. https://doi.org/10.
+1111/jfr3.12753
+APPENDIX A.: EXPERIMENT DESIGN
+ROADMAP
+Step 1. Experimental questions design. This step included
+experts' input, such as academic scholars contributing to
+policy related to road-signs in Delaware.
+Step 2. Developing program for running the experiment.
+Testing in experiment-like sessions prior to the actual session.
+Step 3. Design Implementation using dichotomous
+choice experiments. 714 Participants responded either yes
+or no to at least one dichotomous choice question.
+a. Participants were set up with $6.
+b. Participants made at least one dichotomous choice
+decision.
+c. Participants filled out a survey (Appendix B)
+Step 4. Data analysis and preparation of manuscript,
+outreach activities.
+Figures A1–A4
+FIGURE A1
+Screenshot of the general message about road
+condition shown to all
+AHSANUZZAMAN AND MESSER
+17 of 19
+
+
+===== [page 18] =====
+APPENDIX B.: SURVEY
+1. What is your age (in years):
+2. What is your sex?
+ Male
+ Female
+3. Are you Hispanic?
+ Yes
+ No
+4. How would you identify your race?
+ White
+ Middle Eastern or Arab
+ Black
+ East Asian
+ South Asian
+ Pacific Islander
+ Native American
+ Other (please specify)
+5. What is the highest level of education that you have
+completed?
+ Less than high school
+ High school graduate or equivalent (i.e., GED)
+ Some college, but no degree
+ Associate degree
+ Bachelor degree
+ Graduate degree or professional degree
+6. Which category best describes your household income
+(before taxes) in 2018
+ Less than $25,000
+ $25,000–$49,999
+ $50,000–$74,999
+ $75,000–$99,999
+ $100,000–$149,999
+ $150,000–$199,999
+ $200,000–$249,999
+FIGURE A2
+Decision-screen of treatment group 2 (T2)
+FIGURE A3
+Decision-screen of the second choices for
+treatment group 3 (T3-2)
+FIGURE A4
+Decision-screen of the second choice of
+treatment group 4 (T4-2)
+18 of 19
+AHSANUZZAMAN AND MESSER
+
+
+===== [page 19] =====
+ $250,000 and above
+7. How many days a week do you drive on average?
+ 1 day/ week or less
+ 2–3 days/week
+ 4–5 days/week
+ 6–7 days/week
+8. How frequently does your daily commute route ever
+get flooded?
+ Never
+ Once/year
+ Twice/year
+ Once/month
+ Once/week
+9. Have you ever taken a detour due to flooding in your
+daily commute route?
+ Yes
+ No
+AHSANUZZAMAN AND MESSER
+19 of 19

@@ -1,0 +1,2401 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ DC 洪水行人仿真 · 原始文件与数字 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ WASHINGTON DC · FLOOD PEDESTRIAN SIMULATION · RAW FILES & NUMBERS
+
+ DC 洪水行人仿真 · 原始文件与数字 
+ 
+ 实测日期 2026-11-14 · 第 3 轮核查 2026-11-15 · 第 4 轮核查 2026-11-15 （§Q） 
+ 地理范围 District of Columbia（FIPS 11） 
+ 标注 读到原文表格 · 经他人转述 · 未取得 
+
+
+
+
+ 
+
+ 
+ 
+ A · 原始文件 
+ A3 · 实算交叉表 
+ B · 系数表与行为数字 
+ C · 阈值与实测率 
+ D · 字段与验证口径 
+ R1 · 中科大涉水实验 
+ R2 · DTG 
+ R3 · PKU-FIM 
+ R4 · DC 本地实测 
+ R5 · 系数表补充/原始数据 
+ R6 · 选择实验与保护行动系数 
+ R7 · Chen 2023 
+ Q · 第 4 轮总览 
+ QA · 决策模型 
+ QB · 伤亡判定 
+ QC · 人群映射 
+ QD · 日程映射 
+ QE · 灾害输入与验证 
+ QF · 复核 / 索取信 
+ 没有 
+
+
+ 
+
+ 
+
+ 
+ 
+ 
+ A 
+ 原始文件 
+ 附件 = 本页 assets/ 内文件，2026-11-14 自官方地址下载 
+
+
+
+ A1. ACS PUMS 2020–2024（5-Year） 
+ 数据集全名：American Community Survey 2020–2024 ACS 5-Year PUMS。发布机构：U.S. Census Bureau。发布日期：2026-03-05。目录： www2.census.gov/programs-surveys/acs/data/pums/2024/5-Year/ 
+
+ 
+ 
+ 文件全名 大小 / 内容计数 官方链接 附件 
+ 
+ 
+ csv_pdc.zip 4,739,881 B。内含 psam_p11.csv （21,379,376 B）+ ACS2020_2024_PUMS_README.pdf 。实测：32,505 条 person 记录 × 285 列；STATE 全部 = 11；ΣPWGTP = 681,294 www2.census.gov/…/csv_pdc.zip csv_pdc.zip 
+
+ csv_hdc.zip 2,310,090 B。内含 psam_h11.csv （10,468,979 B）+ 同一 README。实测：19,477 条 housing 记录 × 241 列；STATE 全部 = 11；ΣWGTP = 361,014 www2.census.gov/…/csv_hdc.zip csv_hdc.zip 
+
+ PUMS_Data_Dictionary_2020-2024.csv 330,431 B，6,030 行。不在 5-Year 数据目录内，位于 tech_docs 目录；同名.txt /.pdf 同目录（均实测 HTTP 200） www2.census.gov/…/data_dict/PUMS_Data_Dictionary_2020-2024.csv PUMS_Data_Dictionary_2020-2024.csv 
+
+ variables.json （2024 ACS 5-Year） 10,508,565 B，无 key 可读（HTTP 200）。未作附件 api.census.gov/data/2024/acs/acs5/variables.json — 
+
+ 2020–2024 ACS 5-Year 汇总表 2026-01-29 发布（Detailed / Subject / Data Profile / Summary File） census.gov/…/data-releases/2024/release.html — 
+
+ 
+ 
+
+
+ Census API 无 key 实测返回（2026-11-14，原始响应）：
+
+ 
+ 复制 
+ GET https://api.census.gov/data/2024/acs/acs5?get=NAME,B01001_001E&for=state:11
+
+HTTP/1.1 302 Found
+Location: https://api.census.gov/data/missing_key.html
+X-DataWebAPI-KeyError: 1
+Content-Length: 0
+
+→ get= 数据查询无 key 不返回数据；variables.json 与 groups 页无 key 可读（HTTP 200）。 
+
+
+ ACS 2024 表号与官方标题（来源：Census API 2024 ACS5 subject / detailed groups 页，2026-11-14 读取）：
+
+ 
+ 
+ 表号 2024 官方标题 
+ 
+ 
+ S0101 Age and Sex 
+
+ B01001 Sex by Age 
+
+ S2401 Occupation by Sex for the Civilian Employed Population 16 Years and Over 
+
+ S2411 Occupation by Sex and Median Earnings in the Past 12 Months for the Civilian Employed Population 16 Years and Over 
+
+ S2403 Industry by Sex for the Civilian Employed Population 16 Years and Over 
+
+ S2405 Industry by Occupation for the Civilian Employed Population 16 Years and Over 
+
+ S0801 Commuting Characteristics by Sex 
+
+ S0802 Means of Transportation to Work by Selected Characteristics 
+
+ B08201 Household Size by Vehicles Available 
+
+ B11003 Family Type by Presence and Age of Own Children Under 18 Years（Universe: Families） 
+
+ B23025 Employment Status for the Population 16 Years and Over 
+
+ 
+ 
+
+
+ 
+ 复制 
+ # ACS API 查询（dataset 路径经 groups 页核实；get= 查询需 key，见上方实测返回）
+https://api.census.gov/data/2024/acs/acs5?get=NAME,B01001_001E,B01001_002E&for=state:11
+https://api.census.gov/data/2024/acs/acs5?get=group(B11003)&for=state:11
+https://api.census.gov/data/2024/acs/acs5?get=group(B08201)&for=county:*&in=state:11
+https://api.census.gov/data/2024/acs/acs5/subject?get=group(S0101)&for=state:11
+https://api.census.gov/data/2024/acs/acs5/subject?get=group(S2401)&for=state:11
+https://api.census.gov/data/2024/acs/acs5/subject?get=group(S0801)&for=state:11
+https://api.census.gov/data/2024/acs/acs5?get=group(B01001)&for=tract:*&in=state:11%20county:001
+https://api.census.gov/data/2024/acs/acs5/variables.json
+https://api.census.gov/data/2024/acs/acs5/subject/variables.json
+# data.census.gov 表页：https://data.census.gov/table/ACSDT5Y2024.B11003（替换表号） 
+
+
+ PUMS 变量（2020–2024 版字典；码值对照见 §C4）：
+
+ 
+ 
+ 变量 字段名含义 备注 
+ 
+ 
+ SERIALNO Housing unit serial number person / housing 两文件合并键 
+
+ STATE State code DC = 11（旧版变量名为 ST） 
+
+ PUMA Public Use Microdata Area 2020 版 PUMA 编码 
+
+ AGEP Age 0 = <1 岁，99 顶码 
+
+ SEX Sex 1 = Male，2 = Female 
+
+ OCCP Occupation recode 2018 OCC 代码体系 
+
+ SOCP Standard Occupational Classification 6 位 SOC 码 
+
+ NAICSP NAICS industry code 行业码 
+
+ RELSHIPP Relationship to reference person 码值见 §C4；旧版名 REL / RELP 
+
+ SPORDER Person number 户内序号 
+
+ OC Own child 0 = No，1 = Yes 
+
+ PAOC Presence and age of own children 码值见 §C4 
+
+ FER Gave birth to child within past 12 months 1 = Yes，2 = No；生育史变量 
+
+ JWTRNS Means of transportation to work 码值见 §C4；旧版名 JWTR 
+
+ JWMNP Travel time to work（分钟） 1–200 顶码 
+
+ PWGTP Person weight person 级权重 
+
+ PWGTP1–80 Person replicate weights 80 个，仅算标准误 
+
+ VEH （housing） Vehicles available 码值见 §C4 
+
+ WGTP / WGTP1–80 （housing） Housing weight 及 replicate weights 户级估计用 WGTP 
+
+ NOC — 2020–2024 版 person 文件中 不存在 （字典 CSV 全文检索 0 命中） 
+
+ JWCD — 2020–2024 版字典中 不存在 （0 命中）；通勤类变量只有 JWAP / JWDP / JWMNP / JWRIP / JWTRNS 
+
+ 
+ 
+
+
+ 
+ 复制 
+ # PUMS 联合分布构建（person + housing 按 SERIALNO 合并）
+merged = person.merge(housing, on='SERIALNO', how='left')
+dc = merged[merged.STATE == 11]
+# 四维交叉（权重 PWGTP）：AGEP 分组 × OCCP 大类 × PAOC 派生「有未成年子女」标志 × JWTRNS
+# VEH 为户级变量：按 SERIALNO 抽户，再展开到人 
+
+
+
+ A2. NHTS 2022 NextGen V2.1 
+ 数据集全名：2022 National Household Travel Survey (NextGen NHTS)。发布机构：Federal Highway Administration (FHWA)，托管 Oak Ridge National Laboratory。版本：Survey Data V2.1；Codebook V2.1 (April 2025)。数据收集期：2022-01 至 2023-01。官方引用： Federal Highway Administration. (2022). 2022 National Household Travel Survey, U.S. Department of Transportation, Washington, DC. https://nhts.ornl.gov 
+
+ 
+ 
+ 文件全名 大小 / 内容计数 官方链接 附件 
+ 
+ 
+ csv.zip （2022 Survey Data V2.1, CSV） 3,916,688 B。内含： tripv2pub.csv 14,864,099 B（31,074 行 × 85 列）、 perv2pub.csv 10,433,930 B、 ldtv2pub.csv 5,738,825 B、 vehv2pub.csv 3,868,524 B、 hhv2pub.csv 1,451,668 B、 Citation.pdf 49,313 B。样本：7,893 户（加权 127,544,707 户） nhts.ornl.gov/assets/2022/download/csv.zip （下载页： nhts.ornl.gov/downloads ） nhts2022_nextgen_v2.1_csv.zip 
+
+ codebook.pdf （Codebook V2.1, April 2025） 453,941 B（Last-Modified 2025-05-02），五文件合一 nhts.ornl.gov/media/2022/doc/codebook.pdf nhts2022_nextgen_v2.1_codebook.pdf 
+
+ User's Guide V2 — nhts.ornl.gov/assets/2022/doc/2022 NextGen NHTS User's Guide V2_PubUse.pdf — 
+
+ Derived Variables V2.1 原注「TRIPMODE 公式在第 17 页」经第 4 轮通读全文 更正 ：该文档无 TRIPMODE 条目，第 17 页为 TRIPPURP；权威出处为 V2.1 Release Notes p.1（见 §QC4）。§A3 自算频数与 codebook 逐项一致，不受影响 nhts.ornl.gov/media/2022/doc/2022 NextGen NHTS Derived Variables-PubUseV2.1.pdf — 
+
+ 
+ 
+
+
+ 地理标识：公开文件无 DC 子样本标识；公开地理变量仅 CDIVMSAR 、 CENSUS_D 类。
+
+ WHYTO 频数（Codebook V2.1；WHYFROM 用同一套码）：
+
+ 
+ 
+ 码 标签（原文） 未加权频数 加权量 
+ 
+ 
+ 01 Regular activities at home 11,445 93,356,345,132 
+
+ 03 Work at a non-home location 2,843 26,056,013,806 
+
+ 04 Work activity to drop-off/pickup someone/something 270 2,405,190,624 
+
+ 06 Attend school as a student 1,005 10,509,480,217 
+
+ 07 Attend childcare or adult care 76 775,503,546 
+
+ 10 Drop off/pick up someone (personal) 1,708 14,412,459,986 
+
+ 11 Health care visit 684 4,782,348,703 
+
+ 13 Shop/buy/pick-up or return goods 3,872 28,806,675,130 
+
+ 97 Something else 43 413,284,123 
+
+ 
+ 
+
+
+ WHYFROM 对应值：07 → 72 条 / 724,838,829；10 → 1,581 条 / 12,950,427,549。
+
+ WHYTRP1S （Trip purpose summary，未加权频数）：01 Home 11,891；10 Work 3,472；20 School/Daycare/Religious 1,861；30 Medical/Dental 684；40 Shopping/Errands 5,157；50 Social/Recreational 3,549；70 Transport someone 1,708；80 Meals 2,356；97 Something else 396。无码 07。
+
+ TRIPPURP （General purpose of trip）：01 Home-based work 4,871；02 Home-based shopping 6,884；03 Home-based social/recreational 4,546；04 Home-based other 7,714；05 Not home-based 7,035。2022 版无 TRPPURP 变量。
+
+ 
+ 
+ 变量（文件） 定义 / 码值 频数 / 范围 
+ 
+ 
+ LIF_CYC （household / trip） 01 one adult, no children；02 2+ adults, no children；03 one adult, youngest 0–5；04 2+ adults, youngest 0–5；05 / 06 youngest 6–15；07 / 08 youngest 16–21；09 / 10 retired, no children 户文件：01 = 1,281 户；04 = 645 户；06 = 772 户 
+
+ NUMADLT （trip） 户内 ≥18 岁成员数 — 
+
+ HHVEHCNT （household） 户车辆数 0 车 476 户；1 车 2,623 户；2 车 3,199 户 
+
+ R_AGE （person / trip） 年龄 trip 文件范围 5–92 岁 
+
+ STRTTIME / ENDTIME （trip） 出发 / 结束时间，24h 本地时间 HHMM 0000–2359；−9 = not ascertained（21 条） 
+
+ TRPTRANS （trip） 出行方式（细） 01 Car 11,777；02 Van 1,881；03 SUV/Crossover 10,384；04 Pickup 3,302；08 Public/commuter bus 190；09 School bus 650；11 Subway/elevated rail 109；18 Bicycle 298；20 Walked 2,103（加权 17,390,867,219） 
+
+ TRIPMODE 出行方式（粗）。公开 CSV 无此列，按 Derived Variables V2.1 p.17 公式自算（§A3） 01 POV-Driver 20,490；02 POV-Passenger 6,919；03 Public Transit 341；04 School Bus 650；05 Walk 2,103；06 Bike 298；07 Other 273 
+
+ TRVLCMIN （trip） 出行时长（分钟） 0–1425 
+
+ TRPMILES （trip） 出行距离（英里） — 
+
+ WTTRDFIN / WTTRDFIN2D / WTTRDFIN5D （trip） 三套 trip 权重，加权总和见 §A3 — 
+
+ WTHHFIN （household）/ WTPERFIN （person） 户 / 人权重（2022 命名；2017 旧称 WTHHFN） — 
+
+ HHLIFECYC / HHKIDS 2022 codebook 中无此二名；生命周期变量为 LIF_CYC — 
+
+ 
+ 
+
+
+ 合并键： HOUSEID + PERSONID 。trip 行自带 LIF_CYC、NUMADLT、R_AGE。
+
+ 
+
+ 
+ 
+ 
+ A3 
+ 实算加权交叉表 
+ 数据源：tripv2pub.csv + perv2pub.csv + hhv2pub.csv（§A2 附件原件），2026-11-14 实算 
+
+
+ 完整结果文件（同一实算，两格式）： nhts2022_crosstab_whyto_minor_age_time.csv （75,443 B，946 行）· nhts2022_crosstab_whyto_minor_age_time.xlsx （76,311 B，3 表： crosstab = 946 行主表； summary_whyto_by_minor = 按 WHYTO × 户型聚合的 40 行； README = 口径与权重说明）。列：WHYTO, HOUSEHOLD_MINOR, AGE_BAND, START_TIME_BAND, N_UNWEIGHTED, WEIGHTED_TRIPS, MODE_01_PCT … MODE_07_PCT, MEAN_TRVLCMIN。主表含 WHYTO 全部 20 个码（01–19、97），重点码 03 / 04 / 06 / 07 / 10 的聚合行见下方汇总表。
+
+ 
+ 
+ 口径项 取值 / 数字 
+ 
+ 
+ 权重 用 WTTRDFIN ：三套中唯一对全部 31,074 条出行都非零的权重，加权总和 = 253,754,536,507 ，与 codebook V2.1 的 trip 文件加权总量逐一对上，故全量交叉表只能用它。WTTRDFIN2D：仅 7,851 条非零，加权总和 = 71,543,767,987。WTTRDFIN5D：仅 23,223 条非零，加权总和 = 180,720,292,644。每条出行恰有一套窗口权重非零（2D 与 5D 互斥、两者合计覆盖全部 31,074 条），是分日记窗口的子权重，单独用会漏掉另一窗口的出行，不能当全量权重 
+
+ 有未成年子女 HOUSEHOLD_MINOR = with_minor_child 当该户（按 HOUSEID ）有任一成员年龄 < 18 岁。成员年龄取 perv2pub.csv 的 R_AGE ；person 文件只含受访成员（16,997 行， R_AGE 最小 5 岁），未受访成员（户名册共 17,932 人）以 hhv2pub.csv 的名册计数补齐： PPT517 （5–17 岁成员数）+ YOUNGCHILD （5 岁以下成员数）≥ 1 亦计入。判定式为「per 中任一 R_AGE < 18」或「PPT517 + YOUNGCHILD ≥ 1」取并集；per 中 R_AGE < 18 的 1,494 户全部落在名册计数判定的户内，无例外。全样本 7,893 户中 with_minor_child = 1,826 户，no_minor_child = 6,067 户 
+
+ 与 LIF_CYC 分组口径的差异 本维不用 LIF_CYC 划分： LIF_CYC 07 / 08 只标示最年幼子女 16–21 岁，分不出 16–17 岁与 18–21 岁。按上行口径， LIF_CYC 07 / 08 的 346 户中 162 户（07：46 户；08：116 户）户内有 < 18 岁成员，计入 with_minor_child； LIF_CYC 03–06 的 1,664 户全部仍为 with_minor_child。交叉表内随之由 no_minor_child 移入 with_minor_child 的出行 = 909 条（加权 8,981,316,920） 
+
+ 年龄段 R_AGE 分 [05–17, 18–34, 35–49, 50–64, 65+] 
+
+ 时段 STRTTIME 取小时分 [00–05, 06–08, 09–11, 12–13, 14–16, 17–19, 20–23]；STRTTIME = −9 的 21 条剔除，交叉表加权和 = 253,553,097,887 
+
+ 平均时长 MEAN_TRVLCMIN = Σ(WTTRDFIN × TRVLCMIN) / Σ WTTRDFIN，剔除 TRVLCMIN < 0 
+
+ TRIPMODE 校验 自算未加权频数 01 = 20,490 / 02 = 6,919 / 03 = 341 / 04 = 650 / 05 = 2,103 / 06 = 298 / 07 = 273，与 codebook 逐项一致 
+
+ 
+ 
+
+
+ 
+ 复制 
+ # TRIPMODE 自算公式（自算频数与 codebook 逐项一致；
+# 出处归属经第 4 轮更正：规则见 V2.1 Release Notes p.1，非 Derived Variables p.17，见 §QC4）
+IF TRPTRANS=(01,02,03,04,05,06,07) AND DRVR_FLG=01 THEN TRIPMODE=01
+ELSE IF TRPTRANS=(01,02,03,04,05,06,07) AND PSGR_FLG=01 THEN TRIPMODE=02
+ELSE IF TRPTRANS=(08,10,11,12) THEN TRIPMODE=03
+ELSE IF TRPTRANS=09 THEN TRIPMODE=04
+ELSE IF TRPTRANS=20 THEN TRIPMODE=05
+ELSE IF TRPTRANS=18 THEN TRIPMODE=06
+ELSE TRIPMODE=07 
+
+
+ 汇总行（同一实算结果按 WHYTO × 户型聚合；骑行 / 其他占比见 CSV 的 MODE_06_PCT / MODE_07_PCT）：
+
+ 
+ 
+ WHYTO 目的 户型 n 加权出行 占全部 % 平均 TRVLCMIN 司机 % 乘客 % 公交 % 校车 % 步行 % 
+ 
+ 
+ 03 工作 无未成年子女 1,860 15,178,448,547 5.98 29.0 88.2 4.1 3.0 0.5 2.4 
+
+ 03 工作 有未成年子女 980 10,861,225,084 4.28 27.1 87.3 5.5 2.5 0.1 2.6 
+
+ 04 工作性接送 无未成年子女 211 1,722,724,920 0.68 37.3 78.1 5.8 0.1 8.6 4.1 
+
+ 04 工作性接送 有未成年子女 57 636,252,638 0.25 32.0 68.3 29.3 1.4 0.0 1.1 
+
+ 06 上学 无未成年子女 84 663,099,734 0.26 26.4 53.4 17.2 4.3 13.9 7.9 
+
+ 06 上学 有未成年子女 918 9,819,761,248 3.87 20.8 6.9 43.1 0.8 35.9 10.6 
+
+ 07 照护 无未成年子女 10 42,821,825 0.02 30.0 42.4 49.4 0.0 0.0 8.2 
+
+ 07 照护 有未成年子女 66 732,681,720 0.29 15.0 47.8 42.8 3.8 5.7 0.0 
+
+ 10 私人接送 无未成年子女 580 4,123,953,081 1.63 23.9 72.6 19.4 0.7 5.6 1.7 
+
+ 10 私人接送 有未成年子女 1,128 10,288,506,904 4.05 16.4 71.0 23.0 0.5 1.9 2.6 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ B 
+ 系数表与行为数字 
+ 表格逐行复现；出处与样本量在每表标题行 
+
+
+
+ B1. 模型类型 × 有无完整数值表 
+ 
+ 
+ 模型类型 结果 
+ 
+ 
+ 离散选择 / logistic，实测拟合，完整系数表，协变量含年龄 / 灾害经历 / 社会关系 有，三份：Borowski & Stathopoulos 2023、Ha et al. 2025、Thieken et al. 2023（下方 B5(1)–(3) 全表） 
+
+ 贝叶斯网络疏散 CPT（年龄 + 经历 + 社会关系，经验数据拟合） 没有 。仅有地下空间洪水 BN（ Water 2018, 10:1112），CPT 由 Delphi 专家法赋值（如节点 X4 在父节点组合下 State1 = 0.9 / 0.7 / 0.75 / 0.65） 
+
+ 马尔可夫 / 隐马尔可夫转移矩阵（可引用数值） 没有 （指完整的状态转移概率数值矩阵）。Roy & Hasan 2021（ Transp. Res. Part C 123:102976，飓风 Irma，38,256 条推文 / 2,571 用户）为 IO-HMM：其 Table 3 的 80 个转移模型系数已发表并已录入 §QA8，可用；但完整的状态转移概率数值矩阵没有发表，只有图 5 热图与个别文本值（如 Home→Evacuation 强制令 0.25 vs 自愿 0.24），故本项仍为「没有」——系数表见 §QA8 
+
+ 泰国 2011 洪水庇护所选择 logistic（ Journal of EASTS Vol.9, 2013） 正文数字：KNOWLEDGE OR ≈ 2.52（p = 0.022）；EXPERIENCE OR ≈ 2.873（p = 0.039）。完整系数表未取得 
+
+ 
+ 
+
+
+
+ B5(1). Thieken et al. 2023 回归全表 
+ Thieken et al., NHESS 23: 973–990, 2023, DOI 10.5194/nhess-23-973-2023。在线调查 n = 1,315（NW 与 RP 两州）。 原文 XML 。Table 4：线性回归，因变量 = 情境知识，n = 1,097，R² = 0.33。
+
+ 
+ 
+ 变量 Coef. SE p 95% CI 
+ 
+ 
+ Age 0.003 0.003 0.285 [−0.003, 0.009] 
+
+ Gender 0.378 0.082 0.000 [0.216, 0.540] 
+
+ RP（base = NW） 0.336 0.087 0.000 [0.165, 0.507] 
+
+ Warning source: Own search（base = Not warned） 0.113 0.291 0.697 — 
+
+ Warning source: Friends or neighbours 0.036 0.155 0.819 — 
+
+ Warning source: National news 0.273 0.217 0.208 — 
+
+ Warning source: Official warning 0.328 0.150 0.029 [0.034, 0.622] 
+
+ Warning information indicator 0.107 0.049 0.028 [0.012, 0.202] 
+
+ 既往洪水次数: Once（base = Never） 0.525 0.125 0.000 — 
+
+ 既往洪水次数: Twice 0.702 0.195 0.000 — 
+
+ 既往洪水次数: Three times 1.466 0.324 0.000 — 
+
+ 既往洪水次数: Four+ 1.510 0.309 0.000 — 
+
+ Perceived surprise −0.491 0.045 0.000 — 
+
+ Perceived flood impact −0.065 0.024 0.006 — 
+
+ _cons 4.307 0.345 0.000 — 
+
+ 
+ 
+
+
+ Table 5：因变量 = 感知减损效果，n = 1,003，R² = 0.23。
+
+ 
+ 
+ 变量 Coef. SE p 95% CI 
+ 
+ 
+ 情境知识 0.205 0.034 0.000 [0.139, 0.270] 
+
+ Warning source 0.004 0.040 0.915 — 
+
+ Warning information 0.055 0.051 0.287 — 
+
+ Age −0.006 0.003 0.061 — 
+
+ Gender 0.161 0.092 0.079 — 
+
+ RP −0.279 0.099 0.005 — 
+
+ 既往洪水次数 0.188 0.061 0.002 — 
+
+ Surprise −0.209 0.056 0.000 — 
+
+ Water depth −0.213 0.026 0.000 — 
+
+ _cons 3.626 0.434 0.000 — 
+
+ 
+ 
+
+
+ 同文描述统计：未收到任何预警 NW 35% / RP 29%；已收到预警者中 85% 未预料到洪水严重程度；46% 缺乏「该怎么做」的情境知识。Supplement Table S2（有序 logit）：未取得。
+
+
+ B5(2). Ha, Dinh & Mizunoya 2025 二元 logistic 全表 
+ Int. J. Disaster Risk Reduction 119: 105315, 2025, DOI 10.1016/j.ijdrr.2025.105315。2020 年中越洪水，面对面访谈 407 户（Phong Dien / Quang Dien / Huong Tra），171 户（42.01%）撤离。 筑波大学仓储 PDF 。Table 5（df 均为 1）：
+
+ 
+ 
+ 变量 B S.E. Wald Sig. Exp(B) 95% CI 
+ 
+ 
+ Gender 0.58 0.37 2.47 0.12 1.79 [0.87, 3.68] 
+
+ Age 0.12 0.22 0.28 0.59 1.13 [0.73, 1.74] 
+
+ Education −0.33 0.26 1.58 0.21 0.72 [0.43, 1.20] 
+
+ Vulnerable members 0.39 0.29 1.73 0.19 1.47 [0.83, 2.62] 
+
+ High-risk area 0.64 0.46 1.97 0.16 1.90 [0.78, 4.66] 
+
+ 洪水经历 1：曾因未撤离陷入紧急 0.19 0.29 0.40 0.53 1.20 [0.68, 2.14] 
+
+ 洪水经历 2：见他人陷入紧急 0.27 0.30 0.86 0.35 1.32 [0.74, 2.35] 
+
+ Flood intensity ↑ 0.18 0.11 2.54 0.11 1.19 [0.96, 1.49] 
+
+ Unpredictable** 1.14 0.19 34.67 0.00 3.13 [2.14, 4.58] 
+
+ Trust housing solidity** −0.36 0.14 6.88 0.01 0.70 [0.54, 0.91] 
+
+ Trust preparedness** −0.80 0.16 26.39 0.00 0.45 [0.33, 0.61] 
+
+ Trust local gov** −0.84 0.17 23.95 0.00 0.43 [0.31, 0.61] 
+
+ Trust neighbours** −0.51 0.17 9.13 0.00 0.60 [0.43, 0.84] 
+
+ Concern living arrangements −0.19 0.19 1.06 0.30 0.82 [0.57, 1.19] 
+
+ Concern property loss* −0.38 0.15 6.15 0.01 0.68 [0.51, 0.92] 
+
+ Constant 4.56 1.96 5.42 0.02 95.59 — 
+
+ 
+ 
+
+
+ * = 5% 显著，** = 1% 显著。模型拟合（Table 4）：分类准确率 82.1%（Other 86.0%，Early complete evacuation 76.6%）；−2LL = 312.96；Cox & Snell R² = 0.45；Nagelkerke R² = 0.60；Hosmer–Lemeshow χ² = 11.36, p = 0.182。
+
+
+ B5(3). Borowski & Stathopoulos 2023 随机参数 logit 全表 
+ Natural Hazards Review 24(1): 04022045, DOI 10.1061/(ASCE)NH.1527-6996.0000577。在线 stated-choice 调查 600 人（2020-06-30 至 07-02，IL / MI / WI / GA / LA / MS 六州），建模 n = 586 人 / 5,274 outcomes。 NSF PAR 全文 PDF ，Table 4。微观数据不公开、未取得（人类受试者保护；索取信草稿见 §QF3，尚未索取、仅备草稿）。
+
+ 
+ 
+ 参数 Pref. Est. t p WTP Est. t p 
+ 
+ 
+ "Evacuate" ASC 4.22 8.64 0.000 4.20 8.61 0.000 
+
+ "Stay" ASC Fixed Fixed 
+
+ Cost (mean) −3.71 −36.44 0.000 −3.54 −46.50 0.000 
+
+ Cost (SD) 1.03 12.61 0.000 0.61 8.33 0.000 
+
+ Share peers choosing ride (mean) −1.27 −5.10 0.000 71.77 6.45 0.000 
+
+ Share peers choosing ride (SD) −1.91 −12.70 0.000 57.29 8.80 0.000 
+
+ Share peers staying (mean) 7.76 9.33 0.000 −271.13 −8.03 0.000 
+
+ Share peers staying (SD) 10.87 9.57 0.000 −57.81 −2.72 0.003 
+
+ Travel time −0.02 −11.61 0.000 0.63 8.31 0.000 
+
+ Wait time −0.03 −14.65 0.000 0.79 12.41 0.000 
+
+ Walking distance −1.08 −7.41 0.000 32.78 6.59 0.000 
+
+ Shared back seat −0.80 −10.03 0.000 36.74 8.86 0.000 
+
+ Shared front seat −0.84 −10.88 0.000 27.72 8.69 0.000 
+
+ Age 0.21 3.87 0.000 −5.75 −2.34 0.010 
+
+ Evacuation luggage 0.10 2.46 0.007 −4.36 −2.62 0.004 
+
+ Disability 1.13 2.55 0.005 −84.97 −2.49 0.006 
+
+ Pets 0.43 2.68 0.004 −7.54 −1.36 0.087 
+
+ Evacuation anxiety 0.37 2.97 0.002 −11.17 −2.09 0.018 
+
+ Evacuation fear −0.33 −2.87 0.002 14.74 3.37 0.000 
+
+ Major pandemic risk 3.33 9.27 0.000 −219.45 −7.08 0.000 
+
+ Peers ride × moderate 0.50 1.79 0.037 −43.60 −4.09 0.000 
+
+ Peers ride × extreme 1.11 4.15 0.000 −72.81 −6.51 0.000 
+
+ Peers staying × moderate −9.27 −7.68 0.000 227.24 7.22 0.000 
+
+ Peers staying × extreme −21.13 −8.92 0.000 347.97 9.07 0.000 
+
+ Flood threat × major pandemic −1.48 −10.09 0.000 85.02 7.97 0.000 
+
+ 
+ 
+
+
+ 拟合：1,000 Halton draws；Final LL = −5,645.22 ‖ −5,425.07；Adj. rho-square = 0.225 ‖ 0.255；COV Cost = −0.277 ‖ −0.171（Preference ‖ WTP）。派生 WTP 数字：同伴「留下」比例 0% → 100% 的疏散补偿 $271.13；moderate 威胁下 $271.13 − $227.24 = $43.89；extreme 威胁下 $271.13 − $347.97 = −$76.84（愿付）。同伴 ride 比例 0% → 100%：愿付 $71.77；moderate $28.17；extreme 补偿 $1.04。
+
+
+ B5(4). Reynaud, Aubert & Nguyen 2013 
+ "Living with Floods: Protective Behaviours and Risk Perception of Vietnamese Households", Geneva Papers on Risk and Insurance 38(3): 547–579, 2013, DOI 10.1057/gpp.2013.16。 Springer 原文 （HAL 存档 hal-01134702）。
+
+ 
+ 
+ 项 数字 
+ 
+ 
+ 样本量 n = 448 户 ；28 村 / 社、14 县（Nghe An 省），每村随机 16 户，2012 年春面对面调查 
+
+ 样本构成 过去 5 年住宅被淹 40.4%；曾撤离 20.3% 
+
+ 模型拟合 Tables 3/4 模型 R² / pseudo-R² 介于 0.220–0.378（Table 3 正文另述 0.25–0.32），整体 p < 0.001；Table 6 多项 logit pseudo-R² = 0.416 
+
+ 预期未来洪水增多比例 被淹水位 2 cm 户 13.91% vs > 50 cm 户（67 户）31.34%；未淹户 18.40% vs 年均被淹 > 10 天户 54.17%；撤离户 34.09% vs 未撤离户 14.49%（p < 0.001） 
+
+ 显著性（正文） 过去 5 年住宅被淹对四种自我保护策略均不显著；家庭成员受伤 → 拥有水泵概率显著提高；被撤离 → 楼层抬高与迁居意愿显著提高 
+
+ Tables 3/4/6/8 逐行系数 没有 （未取得；Springer 表格组件未能提取） 
+
+ 
+ 
+
+
+
+ B2. 水深 → 涉水 / 绕行 / 等待 
+ Arshaghi, Lawson, Briganti, Siebers：定稿版 NHESS 26: 981–1000, 2026 ，DOI 10.5194/nhess-26-981-2026（2025 EGUsphere preprint 已被取代）。 定稿版全文 。样本 84 人（男女各半，69% 为 20–30 岁，Nottingham 大学招募）。
+
+ 水位原文措辞（描述对象 = 场景 NPC）：Low = "reaching ankle height of NPCs and the base of the cars' wheels"；Medium = "approximately the NPCs' hip to waist level"；High = "approximately chest to shoulder height of NPCs"。分级依据 Quagliarini et al. 2023 四级定性分类（ankle 到 above chest）。 全文 cm 换算：没有。参与者身高数据：没有。 
+
+ 
+ 
+ 实验 条件 数字 
+ 
+ 
+ VR4（定稿版 Table 2，选安全路线 %） Safe 人群 + 高水位 100% 
+
+ VR4 Risky 人群 + 高水位（选危险路线 20.8%） 79.1% 
+
+ VR4 Safe 人群 + 低水位 83.3% 
+
+ VR4 Risky 人群 + 低水位（选危险路线 66.6%） 33.3% 
+
+ VR1 安全 / 对照 → 选安全路线 11/12 = 91.7% 
+
+ VR1 人群走危险路线 → 选安全路线（Cochran's Q, p = 0.04） 7/12 = 58.3% 
+
+ VR2 危险人群条件下跟随危险路线：小人群 / 大人群 22% / 30% 
+
+ VR3 pre-movement time：目的地不明确 + 危险人群 M = 14.9 s（SD 4.3） 
+
+ VR3 pre-movement time：安全-不明确 M = 11.9 s（SD 2.9）；ANOVA F(3,63) = 18.4, p =.001 
+
+ 
+ 
+
+
+ VR1–VR3 数字录自 preprint，定稿版未逐项复核；VR4 为定稿版 Table 2。
+
+ 
+ 
+ 来源 设计 数字 状态 
+ 
+ 
+ Dias, Abd Rahman & Zaiter 2021, IJDRR 58:102192 静水涉水行走实验 水深三档 0.08 / 0.43 / 0.90 m ，对应 ankle / knee / waist 档位 
+
+ 同上（步速） — 平均步速在 0.08 m 降 22%、0.90 m 降 41% 经 Sustainability 2022, 14:2866 转述 
+
+ Bernardini et al. 2020, Safety Science 123:104563 实验室涉水实验，> 200 名参与者 水深 20–70 cm ；步速随水深下降；年龄 / 身高 / 性别有显著作用 
+
+ Papagiannaki et al. 2021, Sustainability 13:4451 在线实验，希腊 驾驶者 进入洪水路段意愿，n = 1,940，TPB 中介模型 意愿量表（非行人涉水选择） 
+
+ Ishigaki 等（地下空间疏散） — 临界水深 0.3 m 
+
+ Lee et al.（地下空间） 32 名受试者（男 20、女 12） 理想疏散水深 < 40 cm 
+
+ 涉水 / 绕行 / 等待三分 stated-choice 实验（Arshaghi 之外） — 没有 检索式见 §没有清单 
+
+ 
+ 
+
+
+
+ B3. 日常出行分布 vs 灾害日行为：数字 
+ 
+ 
+ 来源 数字 状态 
+ 
+ 
+ Hurricane Rita (2005) shadow evacuation Harris County 非疏散区约 48% 居民撤离（Huang, Lindell et al. 2012: 283） 
+
+ 同上 模型预估 Houston 撤离 80 万–120 万人，实际约 250 万 人，堵车约 100 英里（Carpender et al. 2006: 777） 
+
+ Huang, Lindell, Prater, Wu & Siebeneck 2012, Nat. Hazards Rev. 13: 283–296（Hurricane Ike） 多数家庭在登陆前 2 天、NHC hurricane watch 与 warning 之间、白天撤离。 ASCE 原文 
+
+ 路线选择, Lindell et al. 2018 撤离者路线基于日常经验（routine experiences） 
+
+ PADM, Lindell & Perry 2012, Risk Analysis 32(4): 616–632, DOI 10.1111/j.1539-6924.2011.01647.x 定性阶段模型，无数值参数。三类核心感知：threat perceptions、protective action perceptions、stakeholder perceptions 
+
+ Wachinger et al. 2013, Risk Analysis 33(6): 1049–1065, DOI 10.1111/j.1539-6924.2012.01942.x 综述，无自有样本量，无百分比参数 
+
+ 
+ 
+
+
+
+ B4. ABM 验证数字与轨迹基准 
+ Silva et al. 2025, NHESS 25: 1501–1520（Ahr 谷 2021 重构，LifeSim ABM）。 原文 
+
+ 
+ 
+ 项 数字 
+ 
+ 
+ 首个警告发出时点 洪峰前约 13 h 
+
+ 收到带疏散指示警告的受影响者 17.5% 
+
+ 撤离或获救比例 约 34% 
+
+ Supplement 模式份额敏感性：100% 步行，中位死亡 229（IQR 210–245） 
+
+ 100% 驾车，中位死亡 133（IQR 124–142） 
+
+ 80% 驾车 / 20% 步行，室内死亡占比 69.3%（实际值 68.5%） 
+
+ 
+ 
+
+
+ Rhein & Kreibich 2025, NHESS 25: 581–589（检察官死亡调查档案）。 原文 ：德国共 190 死、Ahr 谷 134 死；死于底层 37%、室外街道 18%；> 60 岁占 78%；有行动 / 认知障碍 16%（分母定义引用前须再核原文）。
+
+ Thieken et al. 2026, Earth's Future , DOI 10.1029/2026EF008695（2021 年 7 月德 / 比洪水死亡个案重建）：死者总数 224；致死事件位于官方洪水危险区图之外 58%；室内死亡 131 例，其中 66% 在室内被水突袭；室外死亡 93 例。
+
+ CDC / NFR-CRS, Pediatrics 154(Suppl 3), 2024, DOI 10.1542/peds.2024-067043M（2005–2021 儿童死亡评审）：自然灾害 / 天气直接致溺 130 例（间接 14 例）；直接组 > 4 岁占 81%、农村 / 边远 63%、事发时有监管 61%、有其他儿童同时遇难 35%、有成人同时遇难 33%。
+
+ 公开的真实疏散逐人 GPS / 手机信令轨迹基准数据集： 没有 。
+
+ 
+
+ 
+ 
+ 
+ C 
+ 阈值与实测率（一手原文） 
+ 二手转引已逐项替换；替换不了的写「没有」 
+
+
+
+ C1. 失稳阈值：ARR Project 10 / DEFRA / Jonkman & Penning-Rowsell 
+ Cox, Shand & Blacka, Appropriate Safety Criteria for People , Australian Rainfall and Runoff Project 10, Stage 1 Report P10/S1/006, April 2010, ISBN 978-085825-9454，UNSW Water Research Laboratory。 主源 PDF 。执行摘要安全准则表（D·V 单位 m²/s）：
+
+ 
+ 
+ 人群 H·M（m·kg） 准则 
+ 
+ 
+ 婴幼儿 / 体弱 ≤ 25 任何流况不安全（需成人扶持） 
+
+ 儿童 25–50 D·V < 0.4 低危险；上限深度 0.5 m；浅水最大流速 3.0 m/s 
+
+ 成人 > 50 D·V < 0.6 低危险；上限深度 1.2 m；最大流速 3.0 m/s 
+
+ 成人 > 50 0.6–0.8 中等（< 0.8 为受训救援人员工作上限） 
+
+ 成人 > 50 0.8–1.2 显著（多数实验在此区间失稳） 
+
+ 成人 > 50 > 1.2 极端危险 
+
+ 
+ 
+
+
+ Jonkman & Penning-Rowsell 2008（ J. Am. Water Resour. Assoc. 44(5): 1208–1218, DOI 10.1111/j.1752-1688.2008.00217.x），ARR Table 1 行：受试者 1 名职业特技演员，H·M = 116 m·kg（1.7 m，68 kg），水温 10 °C。水深 0.35 m：站立失败流速 2.4–2.6 m/s（D·V = 0.84–0.91），1.8 m/s 开始滑动。水深 0.26 m：迎流行走跌倒 3.0 m/s、横流行走跌倒 3.1 m/s（D·V = 0.78 / 0.81），摩擦失稳。理论倾倒：深度 > 0.8 m 时倾倒主导，临界 D·V ≈ 1.32 m²/s（以 1.75 m、75 kg 计）。2021 Ahr 洪水 hindcast 采用 1 m²/s 为失稳阈值。
+
+ Ishigaki et al. (2009) 疏散判据（ARR 转引）： V²·D 安全疏散 老年男性 0.1 / 一般男性 0.125；自力疏散临界 老年男性 0.2 / 一般男性 0.25。
+
+ DEFRA / Environment Agency, Flood Risks to People Phase 2 (FD2321, 2006)。公式： HR = d × (v + 0.5) + DF （d 米，v m/s；DF：城市区水深 0.25–0.75 m 取 1，见 FD2321/TR2 Table 3.1）。 FD2321/TR2 PDF 。两套界值归属依据：EA / HR Wallingford 2008, Supplementary Note on Flood Hazard Ratings and Thresholds ："In FD2321 the threshold for 'danger for all' is 2.5 and it lowered to 2.0 in FD2320"。
+
+ 
+ 
+ 危险等级 FD2321 / TR1（原始集） FD2320（规划用途集） 
+ 
+ 
+ Low HR < 0.75 HR < 0.75 
+
+ Moderate（danger for some） 0.75–1.25 0.75–1.25 
+
+ Significant（danger for most） 1.25–2.5 1.25–2.0 
+
+ Extreme（danger for all） > 2.5 > 2.0 
+
+ 
+ 
+
+
+ 仿真引用集： FD2320 的 0.75 / 1.25 / 2.0 。「0.75 / 1.5 / 2.5」在 FD2321 与 FD2320 两份文件中均未出现。
+
+ 
+ 
+ 项 结果 
+ 
+ 
+ 按年龄分组的致死静水深度（儿童 62 / 老人 66 / 成人 115 cm） 没有 （灾害统计、法医、工程手册三路检索均无此表述） 
+
+ 「失稳 → 伤亡 / 溺亡」定量函数（由 D·V 或 HR 到受伤 / 死亡概率） 没有 。文献止于危险等级 → 定性人群描述（danger for some / most / all） 
+
+ 浸泡时长 / 水温 / 体力 → 涉水死亡定量函数 没有 。Jonkman 实验仅有定性记录：涉水行走 "exhausting" 
+
+ USCG 冷水浸泡表（全身浸泡 / 落水口径） 70–80 °F：力竭 3–12 h、存活 3 h–不限；60–70 °F：2–7 h、2–40 h；50–60 °F：1–2 h、1–6 h；40–50 °F：30–60 min、1–3 h；32.5–40 °F：15–30 min、30–90 min；< 32 °F：< 15 min、15–45 min。冷休克阈值约 < 15 °C。口径为全身浸泡，不适用于站立涉水 
+
+ 
+ 
+
+
+
+ C2. 车辆涉水 / 过街率与分母 
+ Smith, Modra, Tucker, Cox & Felder, Vehicle Stability Testing for Flood Flows , WRL Technical Report 2017/07, May 2017, UNSW Water Research Laboratory, DOI 10.26190/unsworks/27416。全尺寸拖曳水池实验。 WRL 项目页 
+
+ 
+ 
+ 车辆 失稳 完全漂浮 
+ 
+ 
+ Toyota Yaris（≈ 1.0–1.05 t） 0.15 m 深、流速 3.6 km/h（1 m/s）被推动 0.60 m 
+
+ Nissan Patrol 4WD（> 2.4 t） 0.45 m 失稳 0.95 m （几乎零力可推动） 
+
+ 
+ 
+
+
+ Yaris 水深 > 0.2 m 后侧向推力迅速下降，0.6 m 时后轮漂浮、侧推力 ≈ 0。中型车漂浮深度 0.30 m（VICSES 口径）。ARR 车辆判据：静水小车稳定性阈值约 0.3 m；常用 D·V ≤ 0.3 为稳定界（AIDR 2017；Martínez-Gomariz et al. 2018；Shand et al. 2011 转引）。
+
+ NOAA / NWS "Turn Around Don't Drown®"（公众安全宣传口径，无实验报告编号）：6 inches（≈15 cm）流动水击倒成人；12 inches（≈30 cm）流动水冲走小汽车；18–24 inches（≈46–61 cm）流动水冲走包括卡车 / SUV 的大多数车辆；6 inches 静水达多数乘用车底、致熄火 / 失控。来源： noaa.gov/jetstream/thunderstorms/flood 
+
+ Fitzpatrick et al. 2006, Improving Pedestrian Safety at Unsignalized Crossings , NCHRP Report 562 （= TCRP Report 112）。 报告 PDF ：中央 refuge island + 标线人行横道 6 站点驾驶人让行率 7–75%，平均 34% ；显示红色信号 / 信标的设施合规 90–100% ；行人步速建议 一般人群 3.5 ft/s（1.1 m/s）、老弱 3.0 ft/s（0.9 m/s）。分母定义："Percent Crossings – Driver Yield" = 驾驶人让行后完成过街次数 / 研究期总过街次数（staged + observed crossings），分母为 过街事件 ；其中 115 次（74%）过街为行人接受间隙、非驾驶人让行。
+
+ 
+ 
+ 实测 数字 分母 
+ 
+ 
+ FHWA RRFB 研究 FHWA-HRT-10-043 / -046，DC 站点 Brentwood Road & 13th St 基线让行 26% → 7 天 62% → 30 天 74% → 180 天 80%；全部 22 站点平均基线 4% → 730 天 84% 有行人过街机会时、接近车辆中让行车辆的比例 
+
+ DC PHB（Georgia Ave & Hemlock St，DDOT 2009 安装） 红灯相位驾驶人平均合规 97%；示例 230/247 = 93.1%；42% 行人未激活信号即过街 红灯相位应当停车的车辆数 
+
+ DC 行人安全电话调查（2012-11，n = 801） 过去一月走过 DC 街道者中 43% 自报曾闯信号灯过街；近 2/3 自报曾中段无斑马线过街 受访行人（自报，非实测率） 
+
+ DC side-of-street 标志研究（32 地点，2018-03 至 2019-02 视频） 实验标志 + RRFB 高于标准标志，差异在 95% CI 下不显著 行人在横道内时、接近驾驶人中停车 / 让行者比例 
+
+ Schneider et al. 2018, Milwaukee（TRR, DOI 10.1177/0361198118782251） 驾驶人让行 60 / 364 次机会 = 16%；各路口 0%–60%。20 处无信号两车道干道 / 集散路，限速 25–30 mph，2016 秋工作日下午高峰 让行机会 
+
+ Gitelman & Sharon 2025, Israel（ Sustainability 17(2):457） 中央式公交优先道：30% 行人至少在一个进口道闯红灯；路侧式：11%；全国观察调查 30% 闯红灯，其中 > 10% 未察看交通 被观察行人 
+
+ Qatar 干道研究 2021（ Open Transportation Journal 15:210–216, DOI 10.2174/1874447802115010210） 服从率 68.1%；14.6% 在 Flashing Don't Walk、17.3% 在 Steady Don't Walk 过街；25.7% 未等待即过街 被观察行人（信号路口，主要干道 ≤ 80 km/h） 
+
+ Speisser et al. 2018，法国五城 行人不守红灯：等待短时 64%，等待长（90–300 s）80%；可接受等待阈值 < 90 s。样本 8,000 行人 + 44,000 驾驶人 被观察行人 
+
+ Janssen & van der Horst（Delft, 1989–90） 红灯到达者中平均 45% 不等绿灯即过街（转引 Oude Egberink & Rothengatter 1984）；本研究六点位红灯过街率平均 18%（全体）/ 34%（红灯到达者） 全体行人 / 红灯到达者 
+
+ DC 按「行人红灯到达次数」为分母的实测红灯合规率 没有 — 
+
+ 以「每人每天过街机会数」为分母的率 没有 （上列各研究分母均为事件口径） — 
+
+ 
+ 
+
+
+ HCM / MUTCD 中的行人服从率数值：未核实（HCM 为通行能力 / 延误方法）。
+
+
+ C3. LLM 智能体论文：机制数字与版本 
+ AgentSociety（Piao et al., arXiv:2502.08691，v1 2025-02-12，v2 2026-04-10；代码 github.com/tsinghua-fib-lab/agentsociety ）：规模 > 10k agents、约 500 万次交互。情绪：OCC 式六情绪（sadness / joy / fear / disgust / anger / surprise），强度 0–10（alphaXiv 论文页摘要口径）。需求：Maslow 层级，满足度 0–1，由 LLM 提示词评估更新。 解析更新公式：没有。显式转移概率：没有。 COLM 2025 版附录 B.3 "Satisfaction Changes" 提示词原文片段：
+
+ 
+ 复制 
+ "You are an evaluation system for an intelligent agent…
+Current satisfaction: hunger / energy / safety / social satisfaction…
+Satisfaction values range from 0-1, where 1 means fully satisfied,
+0 means completely unsatisfied…" 
+
+
+ GATSim（Liu, Li & Ma, arXiv:2506.23306，v1 2025-06-29，v3 2026-02-06；期刊版 Transportation Research Part C ；代码 github.com/qiliuchn/gatsim ）：认知架构含双记忆（ short_term_memory.py / long_term_memory.py ）、 daily_reflections / weekly_reflections （ cognitive_modules/reflect.py 日末 / 周末生成）、 config.py 中 max_observations （据 DeepWiki 代码索引）。 数值型反思阈值：没有。显式转移概率：没有。 验证数字：role-play 中 agents 被判比人类标注更真实 46% vs 人类 40%（LLM-as-judge，92% 后验概率不劣于人类，v2 摘要口径）；仿真环境为 point-queue 交通流，无信号控制（作者自述）。
+
+ Generative Agents（Park et al. 2023, UIST '23, arXiv:2304.03442）：Smallville，25 agents，gpt-3.5-turbo。Memory stream 检索权重 = recency（指数衰减）+ importance（LLM 自评 1–10）+ relevance（embedding 余弦）。Reflection 触发阈值：近期事件 importance 累计 > 150 （约每天 2–3 次），输入约 100 条近期记忆。Planning：日计划 5–8 大块 → 小时块 → 5–15 分钟动作。 拟合参数 / 转移概率：没有。 
+
+ 
+ 
+ Generative Agent Simulations of 1,000 People（Park et al., arXiv:2411.10109） 日期 题名 / 数字 
+ 
+ 
+ v1 2024-11-15 "Generative Agent Simulations of 1,000 People"。样本 1,052 名美国成年人，每人 2 小时语音访谈（平均转录 6,491 词），GPT-4o。GSS normalized accuracy = 0.85 （agent 与本人原答一致 68.85%，本人两周自一致 81.25%）；Big Five 0.80；economic games 0.66；五个实验复现 4 个效应，效应量相关 r = 0.98 
+
+ v2 2026-04-22 同题名（过渡版） 
+
+ v3 2026-06-28 改题 "LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals"（新增作者 Jonne Kamphorst、Niles Egan）。访谈型 83% 、仅问卷型 82%、访谈 + 问卷 86% 、仅人口属性型 74% 
+
+ 
+ 
+
+
+ 引用规则：85% 对应 v1 (2024) 原题名；83% / 86% 对应 v3 (2026) 新题名。两版数字不可混搭。四篇论文 arXiv 页 / PDF： 2502.08691 · 2506.23306 · 2304.03442 · 2411.10109 （PDF 将 /abs/ 换 /pdf/）。
+
+
+ C4. PUMS 字典位置与码值对照（2023 版 vs 2020–2024 版） 
+ 
+ 
+ 文件 URL 
+ 
+ 
+ 2020–2024（5 年，2024 版）字典，2026-03-05 …/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2020-2024.txt （同名.pdf /.csv 同目录；.csv 为 §A1 附件） 
+
+ 2019–2023（5 年，2023 版）字典，2025-01-23 …/tech_docs/pums/data_dict/PUMS_Data_Dictionary_2019-2023.txt 
+
+ 2024 单年字典，2025-10-16 PUMS_Data_Dictionary_2024.pdf /.txt （同目录） 
+
+ 2020–2024 5 年 User Guide …/tech_docs/pums/2020_2024ACS_PUMS_User_Guide.pdf 
+
+ 
+ 
+
+
+ 
+ 
+ 变量 2020–2024（2024 版）码值 2019–2023（2023 版） 差异 
+ 
+ 
+ JWTRNS bb = N/A；01 Car, truck, or van；02 Bus；03 Subway or elevated rail；04 Long-distance train or commuter rail；05 Light rail, streetcar, or trolley；06 Ferryboat；07 Taxi or ride-hailing services；08 Motorcycle；09 Bicycle；10 Walked；11 Worked from home；12 Other method 代码值相同 代码无差异。2023 单年 字典 txt 中 07 写作 "Taxicab"，与 5 年字典不同。分配标志 FJWTRNSP 
+
+ RELSHIPP 20 Reference person；21 Opposite-sex husband/wife/spouse；22 Opposite-sex unmarried partner；23 Same-sex husband/wife/spouse … 相同 无差异。分配标志 FRELSHIPP 
+
+ PAOC b = N/A (male / female under 16 / GQ)；1 Females with own children under 6 years only；2 …6 to 17 years only；3 …under 6 and 6 to 17；4 Females with no own children 相同结构 无代码差异 
+
+ VEH （housing） b = N/A (GQ / vacant)；0 No vehicles；1–5 = 1–5 vehicles；6 = 6 or more vehicles（"capacity of 1 ton or less"） 相同 无差异 
+
+ OCCP 注："Occupation recode for 2018 and later based on 2018 OCC codes" 相同注记 代码体系两版同为 2018 OCC。逐项类目差异：未逐条提取，查 2024 User Guide 第 IX 节原表 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ D 
+ 字段清单与验证口径 
+ D1 计数来自 §A1 附件字典 CSV 逐行计数（2026-11-14） 
+
+
+
+ D1. PUMS 字段计数 
+ 
+ 
+ 计数项 数值 来源 
+ 
+ 
+ person record 变量条目总数 285 字典 CSV person record 部分 NAME 行计数；与 psam_p11.csv 实际列数 285 吻合 
+
+ 其中：实质变量（含 PWGTP） 130 同上 
+
+ 其中：复制权重 PWGTP1–PWGTP80 80 同上；仅用于方差 / 标准误估计 
+
+ 其中：分配标志 F…P 75 同上；标记变量是否经分配 / 插补 
+
+ housing record 变量条目总数 241 同上；与 psam_h11.csv 实际列数 241 吻合。含 WGTP1–80 共 80 个复制权重；VEH 属此部分 
+
+ Census 官方口径 > 250 培训讲稿 Introduction to the ACS PUMS Files （2026-02-25）："more than 250 variables on a single PUMS person record"。官方不给精确总数 
+
+ 
+ 
+
+
+ 字典分节（2020–2024 5 年字典）：person record — (1) BASIC VARIABLES：RT, SERIALNO, DIVISION, PUMA, REGION, STATE, SPORDER, PWGTP；(2) PERSON VARIABLES：AGEP, SEX, RELSHIPP, OCCP, INDP, JWTRNS, PAOC 等全部主题变量；(3) Replicate weights：PWGTP1–PWGTP80；(4) Allocation flags：F…P。housing record — 基本变量、住房单元变量、住户变量、WGTP 与 WGTP1–80、VEH 等。完整字段清单 = §A1 两附件 CSV 的表头。
+
+ 本仿真所选字段（全部为数据集自带，无自造）：SERIALNO、STATE、PUMA、AGEP、SEX、OCCP / SOCP / NAICSP、RELSHIPP、SPORDER、OC、PAOC、FER、JWTRNS、JWMNP、PWGTP、PWGTP1–80、VEH、WGTP / WGTP1–80、HHT / FPARC。选择依据：(a) 人口属性 AGEP / SEX / DIS / RELSHIPP 与户结构（SERIALNO 关联 NP、VEH）；(b) 移动性 JWTRNS / POWPUMA / VEH；(c) 脆弱性 PINCP / HINCP / PAOC / LANX / ENG；(d) 权重 PWGTP 及复制权重；(e) 分配标志 F…P 作数据质量过滤。未选自带字段示例：HINS1–HINS7（保险）。
+
+
+ D2. 分布一致性指标 
+ 
+ 
+ 指标 定义 / 出处 数值 / 容差 
+ 
+ 
+ SRMSE （Standardized Root Mean Square Error） Knudsen & Fotheringham (1986)；Pritchard 硕士论文（多伦多大学）Evaluation 章：SRMSE 与信息论类统计量为「最佳」。0 = 完美拟合，上限常假定 1.0。 原文 无统一容差 
+
+ SRMSE 实报值例 OLYMPUS-POPGEN（ PLOS ONE 2024, DOI 10.1371/journal.pone.0299383），区域尺度 SRMSE 0.01–2.5 ；文中称 "values up to 10 are generally [considered acceptable]"（个案口径） 
+
+ 分组验证框架 Pritchard Evaluation 章：5 组验证表（全 PUMA 一维边际、分区一维边际、全 PUMA 高维汇总表、分区高维表、PUMS 高维边际） 框架有，数值阈值无 
+
+ chi-square / TVD（总变差距离）/ Freeman–Tukey 的公认容差阈值 — 没有 （检索式："synthetic population validation chi-square threshold total variation distance tolerance Freeman-Tukey"；文献只报告统计量本身或个案值） 
+
+ 组比例绝对误差基准（调查方法学，如 Pew 面板平均绝对误差） 调查基准 非合成人口标准 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ R1 
+ 中科大涉水行人实验（第 3 轮） 
+ 来源：作者接受稿全文 / 出版者记录页，2026-11-15 读取 
+
+
+
+ R1(a). Li et al. 2026, Journal of Hydrology 672: 135395 
+ 全名： Pedestrian dynamics in flooding disasters: an experimental study of unidirectional pedestrian flow under multiple water depths 。作者：Xintong Li, Chenglin Guo, Jie Chen, Yufei Qin, Jun Zhang, Nikolai W.F. Bode, Weiguo Song（中国科学技术大学火灾科学国家重点实验室等）。Elsevier，2026 年，卷 672，文章号 135395，DOI 10.1016/j.jhydrol.2026.135395（print 2026-06；Crossref 元数据无 OA 许可，仅 TDM）。全文来源：University of Bristol Research Portal 作者接受稿（AAM，CC BY）： research-information.bris.ac.uk/…/manuscript_JOH_PDF.pdf （已读全文；ScienceDirect 出版者页被机器人验证拦截，未能核查其 supplementary 栏目）。
+
+ 实验范围：2024 年 7 月，中国科学技术大学；静水（零流速）游泳池与无水场地；单向行人流。样本： 188 名本科生志愿者 （男 101、女 87），年龄 22.3 ± 3.5 岁，身高 1.70 ± 0.10 m（1.51–1.90 m），体重 62.6 ± 12.0 kg；相机 1920×1080、25 fps；PeTrack 提取轨迹；Voronoi 法计算密度/速度；测量区 x∈[0, 6.2] m；基本图分析取每条件前 90 名行人、每 10 帧取 1 点，密度最高 4.5 ped/m²。
+
+ 表 1（逐 run 参与人数；b in 入口宽度、b out 出口宽度，通道宽 1.80 m；四列为各水深条件下人数）：
+
+ 
+ 
+ 条件索引 b_in (m) b_out (m) 0.90 m 0.60 m 0.35 m 0 m 
+ 
+ 
+ U-050-180-180 0.50 1.80 114 92 134 89 
+
+ U-060-180-180 0.60 1.80 111 91 134 89 
+
+ U-070-180-180 0.70 1.80 112 92 130 87 
+
+ U-110-180-180 1.10 1.80 111 92 132 87 
+
+ U-145-180-180 1.45 1.80 110 94 133 87 
+
+ U-180-180-180 1.80 1.80 112 94 132 87 
+
+ U-180-180-120 1.80 1.20 112 94 126 88 
+
+ U-180-180-095 1.80 0.95 112 94 133 89 
+
+ U-180-180-070 1.80 0.70 114 95 128 89 
+
+ 
+ 
+
+
+ 注：正文 §2.1 叙述的场次总人数（0.90 m 114 人、0.60 m 95 人、0.35 m 134 人、0 m 89 人）与表 1 逐 run 数略有出入，上表以表 1 印刷值为准。
+
+ 基本图数值（正文 §3.2 印刷值）：
+
+ 
+ 
+ 量 0 m 0.35 m 0.60 m 0.90 m 
+ 
+ 
+ 最大流量 ped/(m·s) 2.05 ± 0.038（密度 1.5–2.25 ped/m²） 1.86 ± 0.065 1.75 ± 0.071 1.50 ± 0.153 
+
+ 相对无水流量下降 — 9.3% 14.6% 26.8% 
+
+ 自由步频拟合 (Hz) 1.09 0.99 0.91 0.88 
+
+ 
+ 
+
+
+ 其他印刷值：相邻水深速度差 0.05 ± 0.024 m/s 与 0.06 ± 0.027 m/s；密度 ≥2.4 ped/m² 时各条件速度收敛；有水时自由步长骤降约 37.7%。
+
+ 表 2（Weidmann 方程拟合参数，正文 Eq. (5)、Eq. (6)；v₀ = 自由流速度，g = 拟合参数，ρ max = 速度近零时最大密度，R² = 拟合优度）：
+
+ 
+ 
+ 拟合对象 水深 v₀ g ρmax R² 
+ 
+ 
+ Speed 0 m 1.68 2.97 5.32 0.79 
+
+ Speed 0.35 m 0.96 6.06 6.56 0.48 
+
+ Speed 0.60 m 0.91 5.35 7.64 0.40 
+
+ Speed 0.90 m 0.88 5.06 6.69 0.37 
+
+ Flow 0 m 1.87 2.15 6.28 0.47 
+
+ Flow 0.35 m 0.94 6.61 6.31 0.61 
+
+ Flow 0.60 m 0.91 5.43 7.60 0.59 
+
+ Flow 0.90 m 0.85 5.88 6.12 0.430（原文末位印作 0.430） 
+
+ 
+ 
+
+
+ 附录：AAM 全文无 Data Availability 一节；Appendix A 仅轨迹图，无附表。 原始轨迹公开下载：没有。 
+
+
+ R1(b). Li et al. 2026, Chaos, Solitons & Fractals 205: 117805 
+ 全名： Complex dynamics of single-file pedestrian flow under varying flood water depths 。作者：Xintong Li, Jie Chen, Hang Yu, Chenglin Guo, Jun Zhang, Nikolai W.F. Bode, Weiguo Song。Elsevier，卷 205，文章号 117805，27 页，DOI 10.1016/j.chaos.2025.117805；Early online 2025-12-24，Published 2026-04-01（Crossref、RePEc、University of Bristol 记录三方一致）。
+
+ 摘要可核实内容（RePEc， ideas.repec.org/a/eee/chsofr/v205y2026i… ，页面明示 access restricted）：首个单列行人流多水深系统实验；水深 0.35、0.60、0.90 m，无水为基线；高分辨率轨迹数据；调节行为跨水深一致（∼1.41 s）。
+
+ 作者接受稿存在性：University of Bristol 记录页 research-information.bris.ac.uk/…/complex-dynamics-of-single-file… 载有 “Full-text PDF (accepted manuscript)”（Accepted author manuscript，3.72 MB，Licence CC BY），文件地址 https://research-information.bris.ac.uk/files/479827968/Latest_editable_source_file.pdf ；该文件经索引抓取返回 403、经实时浏览器被 Cloudflare 人机验证拦截（未解验证），内容未能读取。
+
+ 
+ 
+ 子项 结果 
+ 
+ 
+ 每水深样本量 n 没有 
+
+ 基本图数值 / 拟合参数 没有 
+
+ 补充材料 / 附表 没有 
+
+ 原始轨迹公开下载 没有 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ R2 
+ DTG · Transportation Research Part D 162: 105685 
+ 来源：Crossref 元数据，2026-11-15 核查 
+
+
+ 全名： Reconstructing flood-induced human mobility using LLM agent with disaster context adaptation 。作者：Zijing Zhang, Fengjue Huang, Junqing Tang, Pengjun Zhao。Elsevier BV（Transportation Research Part D: Transport and Environment），卷 162，文章号 105685，ISSN 1361-9209，DOI 10.1016/j.trd.2026.105685，PII S1361920926004773；Crossref 出版者存入元数据：issued/published-print 2027-01，created 2026-10-14，© 2026 Elsevier Ltd.，参考文献 64 条，无摘要、无 OA 许可（仅 TDM 条目）；元数据地址 api.crossref.org/works/10.1016/j.trd.2026.105685 。
+
+ 可达性核查（2026-11-15）：DOI 跳转的 ScienceDirect 文章页被机器人验证（“Are you a robot?”）拦截，未解验证；索引抓取该页返回 HTTP 400；Crossref 所列 Elsevier TDM 全文 API 返回 HTTP 403（需 API key）；多轮题名/关键词检索未发现作者稿、预印本或公式复现页面。全文付费墙且被机器人验证拦截，未能读取。
+
+ 
+ 
+ 子项 结果 
+ 
+ 
+ (a) 五个 baseline 模型的完整设置 没有 
+
+ (b) JSD 与 diff-ACC 的计算公式原文及符号定义 没有 
+
+ (c) 郑州 OD 数据集来源与可获得性 没有 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ R3 
+ PKU-FIM · Nature Sustainability 9: 1569–1581 
+ 来源：Nature 图页 + 补充信息 PDF + GitHub 仓库，2026-11-15 读取 
+
+
+ 全名： Human mobility dynamics for cost-effective flood emergency resource allocation 。作者：Tang, Lyu, Zhao et al.。Springer Nature（Nature Sustainability），2026 年，卷 9，页 1569–1581，DOI 10.1038/s41893-026-01886-9；Published 2026-07-14，Issue date October 2026；正文订阅付费（Buy USD 39.95），Fig. 2 独立图页与补充信息 PDF 公开。
+
+
+ R3(a). 正文 Fig. 2 验证指标 
+ 图页： nature.com/articles/s41893-026-01886-9/figures/2 。图题：“Model performance in the Zhengzhou and Shenzhen cases.” 图注印刷内容：a 空间分布对比（Box–Cox 变换 λ = 0.5）；b 精度随时间代数增加；c 模型结果与真实移动量关系；d、e 分别为郑州、深圳残差分布（直方图、KDE、Q–Q 图）；误差线为 95% CI；置信包络由 1,000 次 Monte Carlo 生成。
+
+ 图内印制数值（逐字）：面板 d（郑州）Q–Q 拟合线 y = 0.03 + 0.05x，R² = 0.49，纵轴 Frequency (×10³)；面板 e（深圳）Q–Q 拟合线 y = 0.05 + 0.12x，R² = 0.92，纵轴 Frequency (×10²)；面板 b 无数字标注（仅 “Fluctuation period”、“Stop moving” 文字）；面板 a、c 无印制指标值。
+
+ 补充信息（ static-content.springer.com/…/41893_2026_1886_MOESM1_ESM.pdf ）Supplementary Table 3 “Performance metrics for ABM at spatial resolutions of 1 km, 2 km and 3 km”（逐字；Accuracy/Precision/Recall/F1 属 “Trend” 类，余属 “Quantity” 类；** p < 0.01）：
+
+ 
+ 
+ 指标 郑州 1 km 郑州 2 km 郑州 3 km 深圳 1 km 深圳 2 km 深圳 3 km 
+ 
+ 
+ Accuracy 0.80 0.92 0.95 0.86 0.94 0.88 
+
+ Precision 0.98 0.98 0.98 0.94 0.96 0.88 
+
+ Recall 0.81 0.94 0.97 0.90 0.98 1.00 
+
+ F1 0.89 0.96 0.98 0.92 0.97 0.94 
+
+ MAE 0.04 0.05 0.06 0.09 0.12 0.12 
+
+ RMSE 0.09 0.10 0.11 0.14 0.18 0.18 
+
+ Pearson 0.70** 0.76** 0.64** 0.73** 0.64** 0.63** 
+
+ Spearman 0.69** 0.67** 0.56** 0.82** 0.79** 0.78** 
+
+ TOST p-value (Δ=0.1) 0.00 0.00 0.00 0.00 0.00 0.00 
+
+ 
+ 
+
+
+ 补充信息其他印刷值：Supplementary Fig. 3 时间转折点相似度：郑州 0.906、深圳 0.760；Supplementary Fig. 4：2 km Q–Q R² 深圳 0.93、郑州 0.60；Supplementary Table 2 为标定/验证全流程步骤（Phase 1–3，Step 1–13）。
+
+
+ R3(b). 官方 GitHub 仓库 
+ 仓库： github.com/WeiLyu59/PKU-FIM （论文 Code availability 以 .git 形式给出，ref. 72）；Public，master 分支，单次提交 76aaccb（2026-05-21），许可证 GPL-2.0；根目录：Code/、Datasets/、Input for demo/、LICENSE.txt、README.md。
+
+ 验证脚本：有。 Code/2_DataAnalysis/ 全量文件：1_CalAccuracy(Inflow).py（用 sklearn confusion_matrix，labels=[-1,1]；accuracy = 预测趋势标签与真实标签一致的网格占比；文件头注「计算Consusion Matrix、Accuracy、Prediction Map」）、2_Correlation.py、3_PredictedInflow.py、4_PredInflow_Shelter.py、5_match_stats.py、6_SP_sa_generation.py、7_SP_Mismatch centroids.py、8_SP_HDBSCAN.py、9_SP_Clusters_stats.py、10_Global SA and prop.py、11_ShelterDist.py、12_CBA_byCity(CI).py、13_CBA_CityStats.py。
+
+ 其他代码：Code/1_DataPreparation/ 下 3_ShelterFromPOI_Cali&Vali.py、4_ShelterGeocode_Cali&Vali.py、5_Shelter_sj_Cali&Vali(sz).py、5_Shelter_sj_Cali&Vali(zz).py；绘图 Code/4_Pic/1_Acc_Scatter.py（读取外部 inflowAccuracy.npy、inflowPredTru.csv，该数值文件不在仓库内）。
+
+ 参数值（逐字）：Input for demo/inputParam.csv：generation=200、pop_discount=100、pop_ratio=31、rows=194、cols=220、localRatio=1、cap=1、searchParams=21；代码常量（1_CalAccuracy(Inflow).py 与 1_Acc_Scatter.py）：flow_type='inflow'、granularity='3km'、shelter_weight=0.1、sigma=1、城市 ['zhengzhou','shenzhen']、flow_pred = flow_pred / pop_discount * 0.343。
+
+ 仓库 Datasets/ 子目录：‘1-km inflow mobility datasets during 1-in-100-year rainfall events’、‘1-km resolution map for the demand-supply relationship for emergency resources’、SHP。补充信息相关参数表：Supplementary Table 9：21 城 IGP 本地/非本地居民比例（ABM 输入，如郑州 5:1、深圳 3:2）；Supplementary Table 8：地表径流系数（不透水面 100 等）。
+
+
+ R3(c). 手机信令数据 
+ 论文 Data availability 逐字（Nature 文章页）：“The mobile phone signalling data for the 2021 Zhengzhou extreme flood and 2018 Shenzhen Typhoon Mangkhut-induced flood are fully anonymized and were provided by a third party.... hourly travel trip information... in a 1-km-spatial-unit grid, including origins and destinations... the data of the Zhengzhou case contain 1.32 billion high-fidelity geospatial records from the mobile phone devices of about 4.35 million traveller and those of the Shenzhen case cover 0.24 billion travel trip records from around 4.34 million travellers. Owing to privacy issues and legal agreements, we cannot share these data in any form or disclose them to any party or individual. For more information about the mobile phone data, please see http://www.smartsteps.com/product/dataset.php.”
+
+ 事件口径（补充信息 Table 1）：郑州事件 2021-07-17–23；深圳事件 2018-09-15–17。 供外部研究者申请的聚合版计划/门户：没有 （论文仅给出 SmartSteps 产品页链接 http://www.smartsteps.com/product/dataset.php 供了解数据，未命名任何申请渠道；论文明示数据不得以任何形式分享）。论文其余数据源：WorldPop、CBRA（Zenodo DOI 10.5281/zenodo.7500612）、GLC_FCS30D、国家青藏高原科学数据中心 1 km 月降水、NASADEM；metadata 可向通讯作者合理请求。
+
+ 
+
+ 
+ 
+ 
+ R4 
+ 华盛顿 DC 本地实证洪水数据 
+ 来源：DC 市长任务组报告 / FEMA FIS / NCEI / USGS / DC Open Data，2026-11-15 读取 
+
+
+
+ R4.1 实测街道积水点 — Bloomingdale / LeDroit Park 
+ 数据集/报告全名：Mayor's Task Force Report on the Prevention of Flooding in Bloomingdale and LeDroit Park（Section 3）。出版者：District of Columbia（市长任务组），2012 年 12 月。地理范围：Bloomingdale 与 LeDroit Park 社区，Washington, DC。下载： oca.dc.gov/…/Prevention of Flooding…Section 3 (Dec 2012).pdf 
+
+ Table 3-1（雨量：DC Water Bryant Street 雨量计；Source: DC Clean Rivers Project；重现期为 NOAA Point Precipitation Frequency Estimates，“Nearly” 口径）：
+
+ 
+ 
+ 日期 历时 雨量 (in) 重现期 
+ 
+ 
+ 6/29/12 “Derecho” 30-min 0.50 <1 年 
+
+ 7/10/2012 1-hour 1.96 10 年 
+
+ 7/18/2012 30-min 1.35 5 年 
+
+ 7/19/2012 15-min 0.94 5 年 
+
+ 9/2/2012 2-hour 2.78 10 年 
+
+ 
+ 
+
+
+ §3.3 房产受淹报告（口径：经 DC Water 调查渠道自报；Bloomingdale/LeDroit Park；2012 年 7 月与 9 月事件合并；原文逐字）：“more than 200 properties in total have reported some type of flooding through the DC Water channels. Specifically: 147 properties reported sewer backups; 88 properties reported overland flooding; 70 properties reported both sewer backups and overland flooding; 43 properties reported having an unspecified type of flooding”（注：类别重叠，147+88−70+43=208）。
+
+ 实测积水点位（§3.2/§3.5 印刷）：First Street and Rhode Island Avenue；Fourth Street and Florida Ave；Second Street and Florida；Flagler and V Street；1700 block of First Street（路口被淹）；First & V（井盖溢流）。
+
+ ARCADIS/Malcolm Pirnie 入户咨询（40+ 户，印刷值）：地下室水深 2–24 inches，平均 9.5 inches；积水持续 15–180 min，平均约 55 min；71% 户内进水、6% 仅院内、19% 两者皆有；约 85% 经历下水道倒灌；清理维修费用 $3,000–$18,000/户。
+
+ 常设实测街道积水数据集：没有 （DOEE Flood Risk Tool， doee.dc.gov/service/flood-risk-tool ，含 FEMA FIRM、DC Integrated Flood Model 模型图层、storm surge、sea level rise 图层及 “Flood Events” 历史事件页——为模型/风险口径，非实测数据集）。
+
+
+ R4.2 历史洪水事件表 — FEMA Flood Insurance Study 
+ 数据集/报告全名：Flood Insurance Study, District of Columbia（FIS 110001V000A，revised 2010-09-27，2024-12-06 重印更正；水文水力分析由 USACE 为 FEMA 完成）。出版者：FEMA。下载： map1.msc.fema.gov/data/11/S/PDF/110001V000A.pdf 。Table 3 “Historical significant flood event summary for Washington D.C.”（逐字；来源编号：1=USGS 1991、2=Henry 1918、3=Frankenfield 1924、4=Swenson 1937、5=Swenson 1942、6=Ambrose et al. 2002、7=DC HSEMA）：
+
+ 
+ 
+ 日期 类型 重现期（年） 描述（原文） 
+ 
+ 
+ June 1-2, 1889 Flood, Potomac River 50 to >100 Flood of 1936. Flood of 1889 
+
+ February 18, 1889 Ice Jam — 55K damages in 1918 dollars 
+
+ March 28-30, 1924 Snowmelt and intense rainfall runoff 20 to >100 5 Deaths, $4Million in Damage 
+
+ May 12-14, 1924 Rainfall — Greatest Damage since flood of 1889 
+
+ August 23, 1933 Tidal Surge — Chesapeake-Potomac Hurricane of 1933 
+
+ March 17-19, 1936 （洪水） 20 to >100 Greatest flood since 1889. Exceeded flood of May 1924 
+
+ April 25-28, 1937 Rainfall — Third Largest flood after 1936 and 1889. Comparable to May 1924 
+
+ October 13-17, 1942 （洪水） >100 Potomac River Stage at Washington 0.3 ft higher than in 1936 
+
+ August 12-13, 1955 Flood, Rock Creek/Potomac/Anacostia 5 to 10 Hurricanes Connie and Diane 
+
+ June 21-23, 1972 Flood, Rock Creek >100 Hurricane Agnes 
+
+ September 5-6, 1979 Flood Rock Creek 50 to >100 Hurricane David $374,000 in damage 
+
+ November 4-7, 1985 Flood, Potomac River 2 to >100 $9 million damage along C&O canal and $113 million along Potomac 
+
+ May 5, 1989 Flood — Three people killed, hundreds of homes and businesses destroyed 
+
+ January 19-21, 1996 Snowmelt Flood — Fifth highest flood on official record 
+
+ September 6-8, 1996 Flood, Potomac River — Hurricane Fran 
+
+ August 11, 2001 Flash Flood, Rock Creek — Rock Creek discharge at Sherrill Drive gage about 1.5 times the 100-yr discharge 
+
+ September 18-19, 2003 Flood, Potomac/Anacostia — Hurricane Isabel; closed 395 in both directions for 48-Hours. $125 million in property damages 
+
+ June 22-23, 2006 Rainfall — Localized flooding throughout region damaged major Federal buildings. $10 million in damages 
+
+ 
+ 
+
+
+ 正文印刷补充：1933 年事件中列车被 Anacostia River 洪水冲离轨道，10 人死亡（源 Ambrose et al. 2002）；1942 年 crest 高于洪水位 10.7 ft，为 official flood of record；1989-05-05 当日 DC 降雨达 5 inches（源 DC HSEMA）；2001-08-11 NW DC 降雨逾 7 inches；2006-06-25 累计降雨 7.09 inches，Constitution Avenue 积水，IRS 总部、国家档案馆、商务部、司法部及多座 Smithsonian 建筑关闭，Rock Creek Parkway 关闭。注：表中死亡数字为事件总死亡，非行人口径。
+
+
+ R4.3 逐事件风暴数据库 
+ 数据集全名：Storm Events Database。出版者：NOAA National Centers for Environmental Information (NCEI)。年份范围：1950 年 1 月–2026 年 7 月；可按 state/area（含 District of Columbia）检索；55 类事件（1996 年起含 Flash Flood/Flood 等）。口径：逐事件记录（one hazard type in one county/zone），字段含死亡/受伤人数、财产损失、flood_cause、事件叙述。下载： ncei.noaa.gov/access/storm-events-database/ （网页检索 CSV 下载；bulk CSV 文件经 Google Cloud Storage 公共桶提供）。注：本次未运行 DC 子集计数查询，DC 事件计数不在此列出。
+
+
+ R4.4 河流水文实测 
+ 站点：01646500 Potomac River near Washington, DC, Little Falls Pump Station。出版者：USGS（NWIS）；汇水面积 11,560 sq mi；日记录自 1930 年起。下载： nwis.waterdata.usgs.gov/nwis/peak?site_no=01646500… 。年峰值印刷示例（Water Year；日期；Gage Height ft；Streamflow cfs）：1936，1936-03-19，28.103，484,000；1943 (WY)，1942-10-17，26.88，447,000；1932，1932-05-14，15.25，168,000；1955，1955-08-20，17.60，216,000；1986 (WY)，1985-11-07，17.99，317,000；2018，2018-06-05，12.47，175,000；2025，2025-05-15，11.72，156,000。口径：河流站年峰值，非街道积水测量。
+
+
+ R4.5 服务请求原始记录（非暴雨专项统计） 
+ 数据集全名：311 City Service Requests in YYYY（逐年数据集，2011–2026）。出版者：DC Office of Unified Communications，经 DC Open Data 发布。口径：全部类型服务请求逐条记录（非暴雨专项发布统计）。下载：落地页示例 opendata.dc.gov/datasets/DCGIS::311-city-service-requests-in-2026 ；CSV 示例 opendata.dc.gov/api/download/…/csv?layers=21 （2026 年版；另有 GeoJSON/Shapefile/File Geodatabase/ArcGIS REST）。
+
+
+ R4.6 道路封闭 
+ 通用图层：HSEMA「Road Closures」ArcGIS 图层（current/planned/past road blocks/closures，Washington, D.C.；2021-04-15 建立，2023-05-22 更新），元数据 services.arcgis.com/…/RoadClosures…/FeatureServer/info/metadata ——非暴雨专用。个别事件叙述：FIS Table 3 载 2003 年 Hurricane Isabel 期间 “closed 395 in both directions for 48-Hours”；Bloomingdale 报告 §3.4.2 载 DDOT 于暴雨期监测已知积水区（Bloomingdale；Nannie Helen Burroughs Avenue、Malcolm X、Canal Road、Chain Bridge）并实施交通疏导绕行，无逐事件封路计数；DDOT TOPS 占用许可（ opendata.dc.gov/datasets/occupancy-permits-via-ddot-tops ）为施工占用许可，口径不符，不计入。 逐暴雨事件道路封闭统计：没有。 
+
+
+ R4.7 行人伤亡 
+ DC 行人洪水伤亡专项公开数据：没有。 全部交通事故口径（非洪水）：DDOT「District of Columbia Vision Zero Traffic Fatalities and Injury Crashes」仪表板， opendata.dc.gov/apps/DCGIS::district-of-columbia-vision-zero… ，数据 2017–present，每周五更新，可按 Mode/Severity/Date 筛选；DDOT《Vision Zero Rulemaking Report》（April 2017， ddot.dc.gov/…/Vision Zero Rulemaking Report_040317-FINAL.pdf ）Figure 1 表逐字（*2017 截至 3 月 28 日）：
+
+ 
+ 
+ 模式 2011 2012 2013 2014 2015 2016 2017* Total % of Total 
+ 
+ 
+ Pedestrian 11 8 12 10 15 9 4 69 41% 
+
+ Bicyclist 2 0 2 1 1 1 — 7 4% 
+
+ Motorcyclist 4 5 4 3 3 6 — 25 15% 
+
+ Driver/Passenger 15 6 11 12 7 12 4 67 40% 
+
+ Total 32 19 29 26 26 28 8 168 — 
+
+ 
+ 
+
+
+ 正文另载：2010–2014 年共 131 人死于交通事故（驾驶 67、步行 57、骑行 7）。
+
+
+ R4.8 911 / 紧急呼叫 
+ 暴雨期 911/紧急呼叫事件统计：没有。 仅年度全类型总量：OUC 911 Performance Dashboard（ ouc.dc.gov/page/911-performance-dashboard-beta ）：2024 年约 1.68 million、2023 年约 1.77 million 911 calls for service；DC FEMS FY2025-2026 Performance Oversight Testimony（2026-02-19，fems.dc.gov）：FY2025 响应逾 216,000 起 emergency incidents（约 600/日），含近 36,000 起 fire-related、167,000 起 EMS calls，转运 84,723 人。
+
+ 
+
+ 
+ 
+ 
+ R5 
+ 行为系数表的补充材料 / 原始数据 
+ 来源：补充材料 PDF / 全文 Data availability 声明，2026-11-15 读取 
+
+
+
+ R5(a). Thieken et al. 2023, NHESS 23:973–990（Table 4、Table 5；调查 n=1,315） 
+ 论文：Nat. Hazards Earth Syst. Sci. 23:973–990, 2023，DOI 10.5194/nhess-23-973-2023；全文 XML nhess.copernicus.org/articles/23/973/2023/nhess-23-973-2023.xml （正文 Table 4/5 全表见 §B5(1)）。 补充材料：有。 DOI doi.org/10.5194/nhess-23-973-2023-supplement （CC BY 4.0），内容：完整英文问卷（22 题）、Table S1（变量定义/编码/汇总统计，n=1315 数据集）、Table S2、Table S3。Data availability 逐字：“The survey data are owned by the authors and can currently be provided upon reasonable request only.”
+
+ Table S1 印刷值（节选）：Receipt of an official warning n=1250，Yes 42.7% / No 57.3%；Situational knowledge n=1302，2.62 (1.60)；Perceived effectiveness n=1303，2.37 (1.58)；Age n=1299，48.0 (13.2)；Gender n=1224，Female 54.0% / Male 45.8% / Non-binary 0.2%；Federal state n=1315，NW 67.8% / RP 32.2%；Flood pathway n=1315：No flood 6.6%、Sewage system 46.8%、Surface runoff 43.0%、Floor drains 18.6%、Fluvial flood 76.3%、Dike/dam breach 9.2%、Groundwater 28.8%；Warning source indicator n=1250：No warning 34.8%、Own search 2.4%、Friends 14.7%、National news 5.4%、Authority 42.7%；Warning information indicator n=1246：0=40.9%、1=1.8%、2=43.7%、4=13.6%；Number of floods experienced prior to 2021 n=1308，1.35 (0.87)；Perceived surprise n=1313，5.56 (0.97)；Perceived flood impact on own household n=1313，3.50 (1.78)；Water depth n=1248，3.57 (1.82)（编码：1=无水、2=仅地下室、3=≤0.5 m、4=>0.5–1 m、5=>1–2 m、6=>2–4 m、7=>4 m）。
+
+ Table S2（ordered logistic regression，预测 situational knowledge，n=1097；逐字）：
+
+ 
+ 
+ 变量 Coef. SE p 95% CI 
+ 
+ 
+ Age 0.003 0.004 0.530 [-0.006, 0.011] 
+
+ Gender 0.493 0.115 0.000 [0.268, 0.717] 
+
+ Rhineland-Palatinate（NW=base） 0.392 0.122 0.001 [0.153, 0.630] 
+
+ Own search 0.124 0.429 0.773 [-0.718, 0.965] 
+
+ Friends or neighbours 0.154 0.221 0.485 [-0.279, 0.587] 
+
+ National News 0.527 0.294 0.074 [-0.050, 1.104] 
+
+ Official warning 0.571 0.209 0.006 [0.162, 0.981] 
+
+ Warning information indicator 0.147 0.067 0.028 [0.016, 0.279] 
+
+ Once（既往洪水次数） 0.680 0.173 0.000 [0.342, 1.018] 
+
+ Twice 0.901 0.271 0.001 [0.370, 1.432] 
+
+ Three times 2.010 0.448 0.000 [1.132, 2.888] 
+
+ Four times or more 2.001 0.442 0.000 [1.135, 2.867] 
+
+ Perceived surprise -0.648 0.068 0.000 [-0.780, -0.516] 
+
+ Perceived flood impact on household -0.078 0.033 0.019 [-0.143, -0.013] 
+
+ 
+ 
+
+
+ Table S3（预测 perceived damage reduction，n=1003；逐字）：
+
+ 
+ 
+ 变量 Coef. SE p 95% CI 
+ 
+ 
+ Situational knowledge 0.296 0.046 0.000 [0.207, 0.385] 
+
+ Warning source indicator 0.029 0.052 0.574 [-0.073, 0.132] 
+
+ Warning information indicator 0.07 0.067 0.293 [-0.060, 0.200] 
+
+ Age -0.012 0.005 0.008 [-0.022, -0.003] 
+
+ Gender 0.216 0.123 0.081 [-0.026, 0.458] 
+
+ Federal state -0.224 0.068 0.001 [-0.357, -0.092] 
+
+ Number of floods experienced 0.212 0.081 0.008 [0.054, 0.370] 
+
+ Perceived surprise -0.248 0.073 0.001 [-0.392, -0.104] 
+
+ Water depth -0.28 0.036 0.000 [-0.351, -0.209] 
+
+ 
+ 
+
+
+ 原始/微观数据公开下载：没有 （仅按合理请求提供，无公开仓储）。注：本节 S2/S3 全表 supersede §B5(1) 末尾与 §没有清单中「Supplement Table S2 未取得」的旧记录。
+
+
+ R5(b). Ha, Dinh & Mizunoya 2025, IJDRR 119:105315（Table 5；407 户） 
+ 论文：International Journal of Disaster Risk Reduction 119:105315, 2025（CC BY-NC-ND）；407 户，越南承天顺化省 Phong Dien、Quang Dien、Huong Tra，2020 年洪水；全文 PDF tsukuba.repo.nii.ac.jp/…/IJDRR_119-105315.pdf （正文 Table 5 全表见 §B5(2)）。Data availability 逐字：“The data that has been used is confidential.” 补充材料/原始数据公开版：没有 （全文未见补充材料链接或仓储 DOI）。
+
+
+ R5(c). Borowski & Stathopoulos 2023, Nat. Hazards Rev. 24(1):04022045（Table 4） 
+ 论文：Natural Hazards Review 24(1):04022045, 2023，DOI 10.1061/(ASCE)NH.1527-6996.0000577；stated choice 在线调查 2020-06-30–07-02，600 人（IL/MI/WI/GA/LA/MS）；全文 NSF PAR par.nsf.gov/servlets/purl/10401527 （正文 Table 4 全表见 §B5(3)）。Data Availability Statement 逐字：“The survey data that support the findings of this study are not publicly available due to protection of human subjects. Data with appropriate protection is available on request from the corresponding author.”（通讯作者 Amanda Stathopoulos）。 公开原始数据：没有 （全文未见补充材料文件）。
+
+
+ R5(d). Arshaghi et al. 2026, NHESS 26:981–1000（VR 洪水实验） 
+ 论文：Nat. Hazards Earth Syst. Sci. 26:981–1000, 2026，DOI 10.5194/nhess-26-981-2026；84 名被试，VR1–VR4；全文 nhess.copernicus.org/articles/26/981/2026/ （行为数字见 §B2）。水位定义（§2.4，逐字，定性）：Low — “Water depth was shallower than the high water level, reaching ankle height of NPCs and the base of the cars' wheels.” Medium — “Water depth reached approximately the NPCs' hip to waist level and above the tyres of nearby flooded vehicles, depending on vehicle size.”（并注明依据 Quagliarini et al. 2023 ankle 至 above chest 四级定性分类）High — “Water depth reached approximately chest to shoulder height of NPCs and reached above the windows of nearby flooded vehicles (Fig. 4).”
+
+ 全文 “height” 命中均为定性描述；“metre”/“cm” 无任何数值命中；文章页无 supplement 一节，仅 Video supplement（DOI 10.5446/72397）。Code availability 逐字：“The software code is not publicly available due to ethical considerations and the inclusion of proprietary components.” Data availability 逐字：“The data used in this research are not publicly available due to ethical and confidentiality considerations.” 厘米换算 / NPC 或被试身高基准：没有。 
+
+ 
+
+ 
+ 
+ 
+ R6 
+ 选择实验原始数据与保护行动系数 
+ 来源：NSF PAR 全文 / Silva et al. 2025 补充材料，2026-11-15 读取 
+
+
+
+ R6(a). 「水深/危险等级 → 涉水/绕行/等待」结构原始数据 
+ 公开下载：没有。 检索记录（结构最接近者）：Ahsanuzzaman & Messer, “Motorists' willingness to drive through flooded roads: Evidence from a stated preference experiment”, Journal of Flood Risk Management 14(4): e12753（Wiley，CC BY-NC-ND），DOI 10.1111/jfr3.12753；全文 par.nsf.gov/servlets/purl/10333417 。结构：驾驶人二分选择（驶过被淹道路 / 绕行替代路线，绕行额外时间随机抽取）；处理组以道路标志呈现水深信息（精确英寸 / 以车身图像暗示深度 / 无深度信息），浅水 <4 in.、深水 >12 in.；n=714 名成年参与者，美国中大西洋沿海地区。其 DATA AVAILABILITY STATEMENT 逐字：“The data that support the findings of this study are available from the corresponding author upon request.”——仅按请求提供，无公开下载。另经 Zenodo/figshare/OSF 仓储关键词检索，未发现符合该结构且可公开下载的原始数据表；Xu et al. 2026（J Flood Risk Management，北京通惠河 SP 疏散选择）属性为距离/瓶颈/交通管制/组织方式，非该结构。
+
+
+ R6(b). 跨灾种 protective action initiation 拟合系数表 — Silva et al. 2025 Table S2 
+ 表名：Table S2 “First approach of alternative scenarios of early warning and evacuation. Warning diffusion and mobilisation bounds with their coefficients and rates for various scenarios: A1.1 (optimal scenario), A1.2 (intermediate scenario), A1.3 (suboptimal scenario), A1.4 (suboptimal with empirical warning diffusion curve), and A1.5 (suboptimal with empirical mobilisation curve)”。出处：Silva et al., “Assessing the impact of early warning and evacuation on human losses during the 2021 Ahr Valley flood in Germany using agent-based modelling”, Nat. Hazards Earth Syst. Sci. 25:1501–1520, 2025，Supplement（Copernicus，CC BY 4.0），DOI 10.5194/nhess-25-1501-2025-supplement，PDF nhess.copernicus.org/articles/25/1501/2025/nhess-25-1501-2025-supplement.pdf （正文验证数字见 §B4）。
+
+ 字段含义（补充材料 §S2 逐字口径）：B t = 警告扩散 Rayleigh 分布形状参数（广播渠道有效性）；C t = 时步 t 非官方广播手段效率；a m = mobilisation speed coefficient（动员速度系数，“As a m decreases from a value of 2, the response time accelerates”）；b m = median time for individuals to initiate mobilisation（个体启动动员/防护行动的中位时间）；公式：Eq. (S1) 警告扩散 P warned_t ，Eq. (S2) 动员累计概率 P mobilised_t （PDF 公式排版在文本抽取中破碎，此处仅注公式编号与符号定义）。
+
+ 跨灾种依据（补充材料逐字）：警告扩散十条推荐曲线源自六个历史案例 “including chemical spills, hazardous material flow, volcanic eruptions, and flash floods”；九条动员曲线源自三个化学品/危险品事故案例（Sorensen and Mileti, 2015a, b; USACE, 2020）。
+
+ Table S2（逐字；Maximum mobilisation rate 单位 %）：
+
+ 
+ 
+ 情景 Bounds B_t C_t a_m b_m 8 hours 24 hours 72 hours 
+ 
+ 
+ A1.1（Preparedness good, perception likely；Fast） Upper 5.0 0.100 1.00 25.0 100.0 100.0 100.0 
+
+ A1.1 Most likely 9.5 0.098 1.37 64.0 88.8 95.7 98.6 
+
+ A1.1 Lower 51.5 0.081 1.80 114.0 77.1 91.1 97.2 
+
+ A1.2（Preparedness poor, perception likely；Moderate） Upper 58.0 0.080 1.35 61.8 81.5 95.0 98.5 
+
+ A1.2 Most likely 100.0 0.060 1.79 111.8 74.3 90.0 95.0 
+
+ A1.2 Lower 142.0 0.043 2.20 161.9 67.1 85.0 92.0 
+
+ A1.3（Preparedness poor, perception unlikely；Slow） Upper 103.0 0.060 1.35 61.8 65.9 88.7 92.8 
+
+ A1.3 Most likely 145.0 0.042 1.79 111.8 57.0 84.2 90.0 
+
+ A1.3 Lower 150.0 0.040 2.20 161.9 48.0 79.8 87.2 
+
+ A1.4（经验警告扩散曲线） Upper Empirical Empirical 1.35 61.8 65.9 88.7 92.8 
+
+ A1.4 Most likely Empirical Empirical 1.79 111.8 57.0 84.2 90.0 
+
+ A1.4 Lower Empirical Empirical 2.20 161.9 48.0 79.8 87.2 
+
+ A1.5（经验动员曲线） Upper 103.0 0.060 Empirical Empirical — — — 
+
+ A1.5 Most likely 145.0 0.042 Empirical Empirical — — — 
+
+ A1.5 Lower 150.0 0.040 Empirical Empirical — — — 
+
+ 
+ 
+
+
+ 底层一手来源（补充材料参考文献逐字）：Sorensen, J. H. and Mileti, D. S.: First Alert or Warning Diffusion Time Estimation for Dam Breaches, Controlled Dam Releases and Levee Breaches or Overtopping, Lakewood, Colorado, 2015a；Sorensen, J. H. and Mileti, D. S.: Protective Action Initiation Time Estimation for Dam Breaches, Controlled Dam Releases, and Levee Breaches or Overtopping, Lakewood, Colorado, 1–51 pp., 2015b；USACE: HEC-LifeSim. Life Loss Estimation. Version 2.0. Technical Reference Manual. CPD-97a, Davis, California, 2020。
+
+ 
+
+ 
+ 
+ 
+ R7 
+ Chen et al. 2023 · NHESS 23: 733–749 
+ 来源：全文 XML，2026-11-15 读取 
+
+
+ 论文：Chen Chen, Charles Koll, Haizhong Wang, Michael K. Lindell，Nat. Hazards Earth Syst. Sci. 23:733–749, 2023，DOI 10.5194/nhess-23-733-2023；地理范围 Coos Bay, Oregon；灾种为海啸疏散 ABMS（按原文范围标注，非洪水）；全文 XML nhess.copernicus.org/articles/23/733/2023/nhess-23-733-2023.xml 。
+
+ 
+ 
+ 子项 结果 
+ 
+ 
+ (a) 代码可用性 “Code and data availability” 逐字：“The model codes and data used in this paper are available on request from the corresponding author, Chen Chen (chen.chen10@okstate.edu).” 仓库链接：没有。 补充材料 DOI https://doi.org/10.5194/nhess-23-733-2023-supplement 返回 404（不存在） 
+
+ (b) 问卷数据公开下载 没有 （仅按请求向通讯作者获取，同上声明） 
+
+ (c) PADM 问卷条目清单 没有。 正文未逐项列出问卷条目/量表，仅概括：邮寄家庭问卷，2020 年 5–9 月，258 名返回者，内容覆盖 evacuation intentions、expected milling process、transportation modes/destinations、psychological variables、demographic characteristics，并转引 “More information can be found in [Chen et al. 2021, IJDRR 59:102244]”。正文可编码数值：疏散参与率 81%；milling time Gamma 分布 α=1.659、β=6.494（对比处作 α=1.66、β=6.49，均值 10.77 min）；出行方式 car 70%、foot 27%；目的地距离 Gamma 分布：foot α=1.920、β=500，car α=1.646、β=1.745 
+
+ (d) 演练步行速度 正文印刷汇总值——2016–2018 年演练，136 名疏散者 GNSS 轨迹（source: author）；修正 hiking function 公式 Eq. (2) 逐字：“Speed = 1.65 × e^(−2.30 × abs(Slope − 0.004))”；敏感性分析步行速度范围 0.25–1.5 m/s；步行速度由 0.5 升至 1 m/s 时估计死亡率降 24 个百分点。 逐人原始速度记录：没有 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ Q 
+ 第 4 轮核查（2026-11-15） 
+ 逐项对应委托五节 + 末尾 8 项复核；全文读到的标「全文已读」，仅索引/摘要的标「索引」 
+
+
+ 
+ 本轮新拿到、可直接替换自设值的： Ahsanuzzaman & Messer 2021 各处理组「继续驶过」原始比例（§QA4）；Xu et al. 2026 通惠河 SP 条件 logit 系数（§QA4）；Bohannon & Andrews 2011 年龄别舒适步速（§QC2）；NHTS Summary of Travel Trends 的每人每天出行官方汇总（§QD3）；NCEI Storm Events 逐人死亡文件字段（§QB6）。另，Roy & Hasan 2021 IO-HMM 的 80 个转移模型系数（其 Table 3）已发表并已录入 §QA8，可用——但这不等于完整转移概率矩阵：完整的状态转移概率数值矩阵没有发表，只有图 5 热图与个别文本值（如 Home→Evacuation 强制令 0.25 vs 自愿 0.24），故按「完整转移矩阵数值」口径仍为「没有」（见 §QA8、§B1）。
+
+ 本轮更正三处旧记录： ① TRIPMODE 派生规则 不在 Derived Variables 第 17 页（该页是 TRIPPURP），权威出处是 V2.1 Release Notes 第 1 页（§QD / §QC4）；② 步速 meta 分析是 Bohannon & Andrews 2011（ Physiotherapy ），不是「Bohannon & Williams, J Geriatr Phys Ther」（§QC2）；③ 塞浦路斯演练 GPS 的 Zenodo 编号是 5466597 ，不是 5466596（§QE2）。另：Borowski 的属性表是 Table 3、Table 4 是结果表；FD2320 才拥有 0.75/1.25/2.0 界值集（与 §C1 一致）。
+
+ 索取数据（尚未索取、仅备草稿）： Thieken 2023、Borowski & Stathopoulos 2023、Ha et al. 2025 三篇的微观数据均未公开，目前仅备好索取信草稿、尚未发出（草稿与通讯作者公开邮箱在 §QF）。三篇的微观数据在真正发出并收到回复、实际取得前，一律按「没有（未取得）」处理，不得计为已完成索取。本页无法代发邮件——草稿需由你本人邮箱发出，或连接 Gmail 后代发。
+
+
+
+ 
+
+ 
+ 
+ 
+ QA 
+ 一、决策模型的实测依据（第 4 轮） 
+ 对应委托第一节 1–5 
+
+
+
+ QA1. Thieken et al. 2023 — 阈值 (cut points)：确认未印 
+ Thieken, A. H. et al., “Performance of the flood warning system in Germany in July 2021 – insights from affected residents”, NHESS 23: 973–990, 2023, DOI 10.5194/nhess-23-973-2023。全文 XML（1,985 行）、PDF、补充材料（735 行）均已逐行读完【全文已读】： XML · PDF · 补充材料 （DOI 10.5194/nhess-23-973-2023-supplement）。
+
+ 
+ 
+ 子项 结果 
+ 
+ 
+ (a) 任一版本是否印阈值 没有 正文、补充材料、EGUsphere 预印本（DOI 10.5194/egusphere-2022-244）三处均无 /cut1…/cut5 阈值行；Table S2 / S3 只印斜率系数、SE、p、95% CI（全表见 §R5(a)） 
+
+ (b) 作者发布的完整模型输出 没有 在 Copernicus、Google Scholar、Semantic Scholar、作者机构页检索 Zenodo / GitHub / OSF 仓储版本，无命中；补充材料（问卷 + Table S1 编码 + S2/S3）即全部公开输出 
+
+ (c) 通讯作者 Annegret H. Thieken，University of Potsdam, Institute of Environmental Science and Geography；公开邮箱 thieken@uni-potsdam.de （印于 XML 页眉与补充材料 “Correspondence to”） 
+
+ (d) 微观数据 未公开。Data availability 逐字：“The survey data are owned by the authors and can currently be provided upon reasonable request only.” 调查 n = 1,315（NW + RP）；未收到预警 NW 35% / RP 29% 
+
+ Table S1 水深变量编码（逐字） 1 = There was no water in or at the building；2 = There was only water in the cellar；3 = up to 0.5 meter；4 = more than 0.5 and up to 1 meter；5 = more than 1 and up to 2 meter；6 = more than 2 and up to 4 meter；7 = more than 4 meter（n = 1,248，均值 3.57，SD 1.82） 
+
+ 
+ 
+
+
+
+ QA2. Borowski & Stathopoulos 2023 — 属性水平在 Table 3；威胁等级无水深对应 
+ Borowski, E. & Stathopoulos, A., “Protection or Peril of Following the Crowd in a Pandemic-Concurrent Flood Evacuation”, Natural Hazards Review 24(1): 04022045, 2023, DOI 10.1061/(ASCE)NH.1527-6996.0000577。全文 par.nsf.gov/servlets/purl/10401527 【全文已读】；Table 4 结果全表见 §B5(3)。通讯作者 Amanda Stathopoulos， a-stathopoulos@northwestern.edu ；第一作者 elisaborowski2022@u.northwestern.edu 。微观数据不公开、未取得（人类受试者保护；索取信草稿见 §QF3，尚未索取、仅备草稿）。
+
+ 设计：2020-06-30 至 07-02 经 Prolific/Qualtrics 发放，600 人（IL / MI / WI / GA / LA / MS 六州），注意力检验剔除后 586 人 ；约 75 题，平均完成 23 min；预试 n = 30。每人 9 个假设疏散选择情景（27 个情景分 3 组 × 9），每情景 3 个乘车疏散方案 + 1 个「留下」opt-out；Ngene 贝叶斯 D-efficient 设计（预试先验）。混合 logit，1,000 Halton draws，5,274 个建模结果；Final LL = −5,645.22（偏好空间）/ −5,425.07（WTP 空间），Adj. rho-square = 0.225 / 0.255。
+
+ Table 3 设计变量描述统计（逐字；Variable, Min, Max, Mean, SD）：
+
+ 
+ 
+ 变量（单位） Min Max Mean SD 
+ 
+ 
+ Cost（货币成本，$） 0 40 11.60 15.65 
+
+ Peer fraction choosing ride（比例） 0 1 0.27 0.29 
+
+ Peer fraction staying（比例） 0 0.8 0.19 0.22 
+
+ Travel time（min） 0 60 25.96 23.83 
+
+ Wait time（min） 0 60 18.49 22.29 
+
+ Walking distance（miles） 0 0.5 0.18 0.21 
+
+ Shared back seat（二值，均值） 0.05 
+
+ Shared front seat（二值，均值） 0.07 
+
+ Extreme threat（二值，均值） 0.33 
+
+ Moderate threat（二值，均值） 0.33 
+
+ 
+ 
+
+
+ moderate / extreme 对应的水深：没有。 全文检索确认：论文从未把威胁等级映射到任何单位的水深。威胁只以颜色编码的情景标签呈现（逐字：3 个 “low” 绿色、3 个 “moderate” 黄色、3 个 “extreme” 红色，Figs. 2a–c）。此文不能用作「水深 → 行动」映射，给它配 cm 数只能是自造。
+
+
+
+ QA3. Ha, Dinh & Mizunoya 2025 — 问卷未公开；Table 3 编码逐字 
+ Ha, V. H., Dinh, N. C. & Mizunoya, T., “Staying or leaving…”, Int. J. Disaster Risk Reduction 119: 105315, 2025, DOI 10.1016/j.ijdrr.2025.105315。开放 PDF（CC BY-NC-ND）： 筑波大学仓储 【全文已读】；Table 5 全表见 §B5(2)。通讯作者 Takeshi Mizunoya， mizunoya.takeshi.ff@u.tsukuba.ac.jp ；合作者 vohoangha@hueuni.edu.vn 、 nguyencongdinh@hueuni.edu.vn 。
+
+ 问卷题项原文：没有公开。 Data availability 逐字：“The data that has been used is confidential.” 正文、出版者页、大学仓储均无问卷工具。论文自身披露的只有 Table 3 编码（N = 407 户，面对面访谈，承天顺化省 Phong Dien / Quang Dien / Huong Tra，针对 2020 年洪水）：
+
+ 
+ 
+ 变量 编码（逐字） 
+ 
+ 
+ Y 二值，1 = Evacuated / 0 = Did not evacuate（均值 0.42） 
+
+ X1 gender：1 = Male，0 = Female 
+
+ X2 age 有序：1 = Under 40，2 = 40–65，3 = Over 65 
+
+ X3 education：1 = Elementary，2 = Secondary，3 = High school 
+
+ X4 vulnerable members in household（二值） 
+
+ X5 housing in high-risk area（二值） 
+
+ X6 has fallen into emergencies due to not evacuating（二值） 
+
+ X7 has seen others fall into emergencies due to not evacuating（二值） 
+
+ X8 “Flood intensity tends to increase” 
+
+ X9 “Floods tend to be unpredictable” 
+
+ X10 “I trust in my housing solidity to withstand flood risks” 
+
+ X11 “I trust in my preparedness for emergency evacuation” 
+
+ X12 “I trust in the local government for emergency evacuation” 
+
+ X13 “I trust in my neighbors for emergency evacuation” 
+
+ X14 “I am concerned about the living arrangements at evacuation places” 
+
+ X15 “I am concerned about losing property while evacuating” 
+
+ 量表 X8–X15 均为 5 级 Likert：1 = Strongly disagree 至 5 = Strongly agree 
+
+ 
+ 
+
+
+ 正文实测行为：407 户中 171 户（42.01%）撤离；撤离者中 117 户（68.42%）在当局建议时于洪水初起即离开，54 户（31.58%）待水位上涨才离开；去向：邻居家 49.12%、亲属 35 户（20.46%）、宗教设施 33 户（19.30%）、政府庇护所 19 户（11.11%）。模型拟合：−2LL = 312.96；Nagelkerke R² = 0.60；Hosmer–Lemeshow χ² = 11.36, df = 16, p = 0.182；总分类准确率 82.1%。
+
+
+ QA4. 「水深/危险等级 → 继续 vs 保护性行动」：本轮两份可用实测 
+ (i) Ahsanuzzaman & Messer 2021（驾驶人） — “Motorists' willingness to drive through flooded roads: Evidence from a stated preference experiment”, Journal of Flood Risk Management 14(4): e12753, DOI 10.1111/jfr3.12753。全文 par.nsf.gov/servlets/purl/10333417 【全文已读】。通讯作者 Ahsanuzzaman（JIFSAN, University of Maryland）， ahsanmi@umd.edu 。SP 实验：n = 714 名成年参与者（美国中大西洋沿海）， 1,782 个选择观测 ；因变量 = 决定继续驶过被淹道路（1 = 继续）。处理：对照 T1（无标志）、T2（仅 “Road Flooded”）、T3（标志明示英寸水深）、T4（车 + 波浪符号暗示同一组水深）。绕行额外时间：均值 30.31 min，SD 17.67，min 0，max 60。
+
+ Table 3 各处理组「选择继续」的原始比例（逐字，Mean of DV）：
+
+ 
+ 
+ 处理 含义 继续比例 
+ 
+ 
+ Control 无道路标志 0.28 
+
+ T2 仅 “Road Flooded” 标志 0.20 
+
+ T3-1 明示 <4 in. 0.29 
+
+ T3-2 明示 4–8 in. 0.29 
+
+ T3-3 明示 9–12 in. 0.30 
+
+ T3-4 明示 >12 in. 0.33 
+
+ T4-1 仅车符号（无波浪） 0.15 
+
+ T4-2 单波浪 + 车 0.25 
+
+ T4-3 双波浪 + 车 0.29 
+
+ T4-4 >2 波浪 + 车 0.23 
+
+ 
+ 
+
+
+ 正文逐字：“participants chose to drive the flooded road in 25% of the scenarios on average.” Table 4 混合 logit（Coef. / SE / ME；无人口变量 / 有人口变量）：绕行时间 0.04*** / 0.04***（ME 0.01）；T2 0.64* / 0.71**（ME 0.08 / 0.09）；T3-1 1.73*** / 1.67***（ME 0.23 / 0.22）；T3-2 0.37 / 0.35（ME 0.05）；T3-3 0.30 / 0.37（ME 0.04 / 0.05）；T3-4 1.57** / 1.56**（ME 0.21）；T4-1 1.02* / 1.04*（ME 0.14）；T4-2 0.18 / 0.24；T4-3 0.29 / 0.34；T4-4 1.31* / 1.37**（ME 0.17 / 0.18）。人口变量（有变量模型）：驾驶频率 0.11*（ME 0.01）；年龄 0.03***；性别（1 = 男）0.39**（ME 0.05）；教育 0.04；收入 0.01；White 0.37（ME 0.056）；Black 0.72（ME 0.10）；Asian 0.46（ME 0.06）；洪水暴露 0.15（ME 0.02）；绕行习惯 0.77***（ME 0.10）；常数 2.56*** / 2.18***；N = 1782；随机效应方差 2.10 / 1.83。（*10%，**5%，***1%。）
+
+ 符号警告（录入前必读）： PDF 文本抽取中 Table 4 若干行的符号与正文叙述矛盾，而正文叙述的边际效应大小与表中 ME 绝对值逐一吻合——正文逐字：T2 使继续概率较无标志 降低 9%；T3-1（<4 in.）使继续概率 上升 22%；T3-4（>12 in.）使继续概率 下降 21%；绕行习惯使继续概率降低 10%；年龄与继续概率负相关。 Table 3 原始比例无歧义，应优先使用；Table 4 的符号须对照出版者 PDF 原页再编码。 原始数据仅按请求向通讯作者提供（见 §R6(a)）。
+
+
+ (ii) Xu et al. 2026（北京通惠河） — “Micro-Behavioral Responses for Enhancing Urban Flood Resilience: Stated Preference Analysis of Residents' Evacuation Choices in High-Density Urban Areas”, Journal of Flood Risk Management (2026), DOI 10.1111/jfr3.70272【全文已读】。研究区：北京朝阳区通惠河走廊。2025 年 6–9 月线上 + 线下调查：收回 335 份，有效 307 份 （有效率 91.64%）；每人 8 个选择任务（方案 A / B + “Neither”），共 2,456 个任务、 4,912 个选择观测 ；逐字：“In all 2456 choice tasks, no respondent selected the 'neither' option.” 情景前提为政府已发布疏散令—— 本文没有水深属性 ，作者明确把问题从「是否疏散」转为「如何疏散」。
+
+ Table 1 属性/水平（逐字）：交通瓶颈 — Underground passage (prone to waterlogging and limited capacity) / River crossing bridge congestion (few lanes, high risk of minor collisions) / Arterial road (inefficient signal timing)；疏散距离 — Within 3 km / 3–5 km / More than 5 km；交通管制 — Intelligent signals + government-planned routes / Fixed time signals + self-chosen routes / No signal control + self-navigation；疏散组织方式 — Community organized evacuation / Walking evacuation / Private car evacuation。
+
+ 
+ 
+ Table 3 条件 logit 系数 p 
+ 
+ 
+ Underground passage −1.482 0.009*** 
+
+ River crossing bridge −0.762 0.017** 
+
+ Arterial road 参照 
+
+ Evacuation distance 0.055 0.026** 
+
+ No signal control + self-navigation −0.471 0.053* 
+
+ Intelligent signals + government-planned routes 0.632 0.011** 
+
+ Fixed time signals + self-chosen routes 参照 
+
+ Private car evacuation −0.1468 0.138（不显著） 
+
+ Community organized evacuation 0.168 0.247（不显著） 
+
+ Walking evacuation 参照 
+
+ 
+ 
+
+
+ 拟合：观测数 4912；Log Likelihood = −1693.5151；Prob > chi2 = 0.0134；Pseudo R² = 0.0052。
+
+ (iii) Sorensen & Mileti 2015a/b 与 HEC-LifeSim： 两份 Lakewood, Colorado 技术报告（各 51 页）即 Silva et al. 2025 警告响应曲线的源头，参数化形式与取值见 §QE1 / §R6(b)；曲线由 52 题 Sorensen & Mileti 问卷生成【索引】。USACE HEC-LifeSim：User's Manual CPD-97, Version 1.0.1（2019-08） hec.usace.army.mil/…/CPD-97_Aug2019.pdf ；Technical Reference Manual 引作 USACE 2020, CPD-97a, Version 2.0【索引】。LifeSim 警告时间线 = 警告发布延迟 + 警告扩散 + 保护性行动启动，扩散/动员曲线为 Sorensen & Mileti 形式。
+
+
+ QA5. 「水深 → 涉水 / 绕行 / 等待」三分选择原始数据 
+ 没有 检索库：Google Scholar、Crossref、Semantic Scholar、ScienceDirect、Wiley、Springer、Zenodo、GitHub。本轮新关键词：“wading choice experiment”；“flood pedestrian route choice stated preference”；“detour flood experiment”；“"wade through" OR "detour" flood pedestrian route choice stated preference experiment water depth wait”；“pedestrian flood crossing choice experiment wait detour”。未找到任何三分（涉水 / 绕行 / 等待）学术实验或原始数据集。最接近的公开设计均为二选：Ahsanuzzaman & Messer 的驾驶人驶过 vs 绕行（§QA4）、Arshaghi 的安全路线 vs 危险路线 VR 选择（§QA6）。
+
+
+ QA6. Arshaghi et al. 2026 — 水位只有定性身体标志，无 cm 依据 
+ Arshaghi, B., Lawson, G., Briganti, R. & Siebers, P.-O., “Human decision-making in crowds in a virtual flood scenario”, NHESS 26: 981–1000, 2026, DOI 10.5194/nhess-26-981-2026。全文 XML nhess.copernicus.org/…/nhess-26-981-2026.xml 【全文已读】；预印本 egusphere-2025-5312 。通讯作者 Booloot Arshaghi（University of Nottingham）， booloot.arshaghi@gmail.com 。四个组内 VR 实验， 84 名参与者 （男女各半；VR1 n = 12，VR2–VR4 各 n = 24）。
+
+ §2.4 逐字：Medium — “Water depth reached approximately the NPCs' hip to waist level and above the tyres of nearby flooded vehicles, depending on vehicle size. This qualitative medium water level was defined following the categorization proposed by Quagliarini et al. (2023), who classified flood water depths into four qualitative levels ranging from ankle height to above chest height.”；High — “Water depth reached approximately chest to shoulder height of NPCs and reached above the windows of nearby flooded vehicles”；Low — “Water depth was shallower than the high water level, reaching ankle height of NPCs and the base of the cars' wheels.” VR4 只操纵 Low vs High。预印本评审回复同样承认等级为定性，并称 “future studies could include calibrated water depths”。 全文任何位置均无 cm 数值。 人群规模（§2.4）：Small = 5 NPCs；Medium = 15 NPCs；Large = 20 NPCs。
+
+ 
+ 
+ VR4（Table 2） 选安全路线 % 选危险路线 % pre-movement time 均值 (SD), s 
+ 
+ 
+ 4A Safe 人群 + High 水位 100 0 8.3 (4.5) 
+
+ 4B Risky 人群 + High 水位 79.1 20.8 9.4 (4.6) 
+
+ 4C Safe 人群 + Low 水位 83.3 16.6 7.9 (3.9) 
+
+ 4D Risky 人群 + Low 水位 33.3 66.6 9.5 (4.8) 
+
+ 
+ 
+
+
+
+ QA7. Li et al. 2026 逐人轨迹 
+ Li, X. et al., “Pedestrian dynamics in flooding disasters…”, Journal of Hydrology 672: 135395, 2026, DOI 10.1016/j.jhydrol.2026.135395（实验细节与聚合结果见 §R1(a)）。接受稿 Bristol Research Portal 【索引】。实验：188 名志愿者（男 101、女 87）；通道 1.8 m × 8 m；水深 0 / 0.35 / 0.60 / 0.90 m（无水 / 膝下 / 膝上 / 齐腰）；PeTrack 提取轨迹；速度自 0 → 0.35 m 下降男 38.6% / 女 44.8%；流量容量随水深下降 9.3% / 14.6% / 26.8%。
+
+ 没有 逐人原始轨迹：没有。 检索：ScienceDirect 文章页与补充链接、Bristol Research Portal、Google Scholar、Semantic Scholar、Zenodo、GitHub（“Li Song pedestrian flooding trajectories PeTrack”、“135395 trajectory data”、作者名 + “data availability”）。无补充材料、仓储记录或代码/数据发布，只有聚合结果。
+
+
+ QA8. Roy & Hasan 2021 — 是 IO-HMM，不是贝叶斯网络；80 个转移系数全表 
+ Roy, K. C. & Hasan, S., “Modeling the dynamics of hurricane evacuation decisions from twitter data: An input output hidden markov modeling approach”, Transportation Research Part C 123: 102976, 2021, DOI 10.1016/j.trc.2021.102976。预印本全文 par.nsf.gov/servlets/purl/10291203 【全文已读】。通讯作者 Samiul Hasan（University of Central Florida）， samiul.hasan@ucf.edu 。数据：word2vec 以四场飓风 >1 亿条推文训练；标注验证集 38,256 条推文（2017-09-02 至 09-19，2,571 名用户，佛罗里达，飓风 Irma）。隐状态 = 4 类活动（Home / Office / Other / Evacuation）；输入 I₁ = 距登陆时间差（小时）、I₂ = 登陆后指示、I₃ = 时间差 × 登陆前、I₄ = 家在强制疏散令区、I₅ = 家在自愿疏散令区。
+
+ 因为转移由输入驱动， 不存在单一固定转移矩阵 ；论文以多项 logit 系数 参数化（Table 2 输出模型 + Table 3 转移模型，原文：“We have 80 different coefficients to capture the dynamics of transition between any two states”）。Table 3 逐字（列：Intercept, I₁, I₂, I₃, I₄, I₅；*p<0.1, **p<0.05, ***p<0.01）：
+
+ 
+ 
+ 转移 Intercept I₁ I₂ I₃ I₄ I₅ 
+ 
+ 
+ Home:Home 0.034*** 0.253*** 0.0001*** 0.521*** 0.051 — 
+
+ Home:Office 0.037*** −0.084 0.002*** −0.032 0.083 — 
+
+ Home:Other 0.121*** 0.521*** −0.001*** 0.088* 0.067 — 
+
+ Home:Evacuation −0.191*** −0.691*** −0.0003 0.401*** 0.201*** — 
+
+ Office:Home 0.174*** 0.061 0.001*** −0.062** −0.293*** — 
+
+ Office:Office 0.393*** 0.450*** 0.002*** 0.588*** 0.391*** — 
+
+ Office:Other 0.282 0.364*** −0.001*** 0.196*** 0.069* — 
+
+ Office:Evacuation −0.242*** −0.875*** −0.003*** −0.722*** 0.167*** — 
+
+ Other:Home 0.159*** 0.023 0.001*** 0.228*** 0.065 — 
+
+ Other:Office −0.062*** −0.157 0.002*** 0.111* −0.088 — 
+
+ Other:Other 0.103*** 0.957*** −0.004** 0.187*** 0.233*** — 
+
+ Other:Evacuation −0.165*** −0.734*** −0.0002 0.236*** −0.177* — 
+
+ Evacuation:Home −0.099 0.103 0.010*** −0.072 0.137 — 
+
+ Evacuation:Office −0.132 −0.460 0.0008 0.049 0.237 — 
+
+ Evacuation:Other −0.053 0.025 −0.0009 −0.372*** 0.147 — 
+
+ Evacuation:Evacuation 0.283*** 0.332 −0.010*** −0.394*** −0.523*** — 
+
+ 
+ 
+
+
+ 注：研究报告转录的 Table 3 每行给 5 个数值列（Intercept + I₁–I₄ 的排版），I₅ 列在转录中未单列；上表按报告原样呈现，录入前请对照预印本 PDF 原表核对列位。
+
+ 由系数算出的转移概率只以 Figure 5 热图给出（四情景：登陆前/后 100 h × 自愿/强制令，在家），正文只逐字引用部分格：登陆前 100 h，自 Home 出发——疏散概率 0.25（强制）vs 0.24（自愿）；去 Office 0.16 vs 0.21；去 Other 0.26（强制）/ 0.30（自愿）；自 Other 出发——疏散 0.16（自愿）→ 0.21（强制）；自 Office 出发——疏散 0.28（自愿）vs 0.12（强制）[原文如此]；保持疏散状态 0.45（自愿）/ 0.56（强制）。登陆后 100 h——保持疏散 0.076（自愿）/ 0.11（强制）；Evacuation→Home 0.59 / 0.60。模型表现：活动识别准确率 Home 100%、Office 98.17%、Other 28.62%、Evacuation 77.03%；疏散识别 92%（未疏散）/ 94%（已疏散）；标注疏散中约 65% 来自强制令区、约 35% 为 shadow evacuation。
+
+ 没有 带完整数值的洪水疏散贝叶斯网络 CPT：没有。 检索 Crossref / Google Scholar / Semantic Scholar（“Bayesian network evacuation conditional probability table flood hurricane CPT”），无命中（另见 §B1 的地下空间 BN，CPT 为 Delphi 专家赋值）。
+
+
+ QA9. 「同伴留下/撤离比例」在 ABM 中的公开定义 
+ 
+ 
+ 实现 定义 / 口径（逐字要点） 
+ 
+ 
+ Borowski & Stathopoulos 2023（§QA2） 非空间口径：调查引出。对全部四个疏散方案，受访者被告知其 egocentric social network 中选各方案的百分比；网络由姓名生成题命名、 至多 5 人 。模型变量 “Share of peers choosing ride”（设计范围 0–1）与 “Share of peers staying”（0–0.8）；系数见 §B5(3) 
+
+ Data-Driven Modeling of Evacuation Decision-Making（Miami 合成社会网络；全文 par.nsf.gov/servlets/purl/10300635 【索引】） 同伴影响由两个阈值 c u 与 c d 进入，逐字：二者 “control the fraction of neighbors evacuating at which peer-influence for evacuating and for looting, respectively, become important”；拟合模型中户项 g hh 权重高于网络项 g net 
+
+ Arshaghi et al. 2026（§QA6） 实验设定而非计算：人群（5 / 15 / 20 名 NPC）全体走安全或全体走危险路线，比例按构造为 100% / 0%；被试的路线选择与 pre-movement time 为结果变量 
+
+ 巴黎高层住宅缓发洪水 ABM（ J. Integrated Disaster Risk Management , DOI 10.5595/001c.18160【索引】） 离开决策的社会传染在 14 栋住宅高层内的邻居间以概率 / Monte Carlo 方式传播。 确切半径 / 阈值参数本轮未从全文提取（未核实，见 §QF）。 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ QB 
+ 二、伤亡判定（第 4 轮） 
+ 对应委托第二节 
+
+
+
+ QB1. ARR Project 10 — 1.2 m / 0.5 m 是危险分级限值，不是实测失稳深度 
+ Stage 1（人）：Cox, R. J., Shand, T. D. & Blacka, M. J. (2010), Appropriate Safety Criteria for People , ARR Revision Project 10, Report P10/S1/006 （亦引作 WRL Research Report 240），UNSW Water Research Laboratory（细节见 §C1）。Stage 2（车辆）：Shand, T. D. et al. (2011), Appropriate Safety Criteria for Vehicles — Literature Review (Stage 2) , Report P10/S2/020 （2011-02-21，ISBN 978-0-85825-948-5），PDF arr-software.org/…/ARR_Project10_Stage2_Vehicle_Stability_Final.pdf 【索引】。合并危险曲线：Smith, G. P., Davey, E. K. & Cox, R. J. (2014), Flood Hazard , WRL Technical Report 2014/07 — ARR 2019 Book 6 采用的 H1–H6 分级源头。
+
+ H1–H6 分级（逐字；Smith et al. 2014，多处转引一致）：
+
+ 
+ 
+ 等级 D·V ≤ 限值深度 D (m) 限值流速 V (m/s) 描述（逐字） 
+ 
+ 
+ H1 0.3 0.3 2.0 Generally safe for vehicles, people and buildings 
+
+ H2 0.6 0.5 2.0 Unsafe for small vehicles 
+
+ H3 0.6 1.2 2.0 Unsafe for vehicles, children and the elderly 
+
+ H4 1.0 2.0 2.0 Unsafe for vehicles and people 
+
+ H5 4.0 4.0 4.0 Unsafe for vehicles and people. All buildings subject to structural damage… 
+
+ H6 > 4.0 — — Unsafe for vehicles and people. All building types considered vulnerable to failure 
+
+ 
+ 
+
+
+ 对模型现用两数的核验结论： 「成人 1.2 m」= H3 的限值静水深 ；「儿童 0.5 m」= H2 的限值深 。两者都是危险曲线分级系统的分类限值， 不是实验测得的个体失稳深度 。同源演示（Smith, WRL， arr.ga.gov.au/…/ARR_People_and_Vehicles_stability.pdf 【索引】）逐字：“EMA advice is that wading by adults becomes difficult and dangerous when the depth of still water exceeds 1.2 m or when the velocity of shallow water exceeds 0.8 m/s…”（出处标注 DPW 1986）；判据逐字：“The current AR&R guideline of D*V=0.4 m²/s is suitable for children (H*M 25 to 50 mKg) BUT conservative for healthy adults who if trained could be expected to work in conditions up to D*V= 0.8 m²/s. Extreme hazard is indicated for all adults at D*V > 1.2 m²/s.” 实验基础：Foster & Cox (1973) 对 9 岁与 13 岁 儿童的水槽暴露试验（小规模初步实验室工作）+ Cox, Shand & Blacka (2010) 文献综合；Shand et al. 另载 D·V ≤ 0.4 m²/s 判据保证儿童低危险的前提是最大深度限 0.5 m、最大流速限 3.0 m/s。车辆临时判据（Stage 2）：漂浮限值小乘用车 0.3 m、大乘用车 0.4 m、4WD 0.5 m，全部稳定性判据的限值流速 3.0 m/s。
+
+
+
+ QB2. DEFRA FD2321 / FD2320 — 碎屑因子全表与界值归属 
+ 依据文件：Environment Agency / HR Wallingford, “Supplementary Note on Flood Hazard Ratings and Thresholds for Development Planning and Control Purpose”, May 2008（澄清 FD2321/TR1 p.10 §3.5 与 FD2320/TR2 Table 13.1）；读取副本 docs.planning.org.uk（PDF） 【全文已读】。公式逐字： HR = d × (v + 0.5) + DF （原式中的 n 即 0.5；d = 水深 m，v = 流速 m/s，DF = 碎屑因子，取 0 / 0.5 / 1）。
+
+ 
+ 
+ FD2321/TR1 Table 3.1 碎屑因子 DF Pasture/Arable Woodland Urban 
+ 
+ 
+ 水深 0–0.25 m 0 0 0 
+
+ 水深 0.25–0.75 m 0 0.5 1 
+
+ d > 0.75 m 和/或 v > 2 0.5 1 1 
+
+ 
+ 
+
+
+ FD2320/TR2 Table 13.1 的实际取法不同：DF = 0.5（水深 ≤ 0.25 m）、DF = 1.0（水深 > 0.25 m）。界值归属：FD2321 Table 3.2 为 HR < 0.75 Low（“Caution”）、0.75–1.25 Moderate（“Dangerous for some (i.e. children)”）、1.25–2.5 Significant（“Dangerous for most people”）、> 2.5 Extreme（“Dangerous for all”）； FD2320 出于预防原则把 “danger for all” 阈值从 2.5 降到 2.0 （Project Board 决定）。故常用界值集 0.75 / 1.25 / 2.0 属 FD2320 ，FD2321 自身的顶阈值是 2.5（与 §C1 表一致）。
+
+
+ QB3. Jonkman — 失稳判据与死亡率函数是两回事 
+ 失稳： Jonkman, S. N. & Penning-Rowsell, E. (2008), “Human Instability in Flood Flows”, J. Am. Water Resour. Assoc. 44(5): 1208–1218, DOI 10.1111/j.1752-1688.2008.00217.x——给出临界深速积 (hv) c 失稳判据（细节见 §C1），是 稳定性限值，不是伤亡概率 。
+
+ 死亡率： Jonkman, S. N. & Vrijling, J. K. (2008), “Loss of life due to floods” 一系工作及 Jonkman et al. (2009, Katrina) 给出死亡比例 F D 关于水深（及深、速、到达时间的组合）函数。据 UNSW WRL Technical Report 2015/09, Approaches for Estimating Flood Fatalities Relevant to Floodplain Management （ UNSW（PDF） 【索引】）转述：决口区 h·v ≥ 5 时 F D = 0.053；其余区 F D (h) = Φ N ((ln(h) − μ N )/σ N )，该转述印 σ N = 5.20、μ N = 2.00；Waarts 型组合式 F D (h,v,T A ) = (F D (h) + F D (v))(1 − F E (T A )) 见 Jonkman & Vrijling (2008) Eq. 7。
+
+ ⚠ 参数核对警告： WRL 转述件的文本抽取在对数正态参数处部分乱码；μ N / σ N 录入前必须对照 Jonkman & Vrijling 原文核对。且：这组函数由 水深（及流速/到达时间）直接映射死亡比例 ，文献中不存在「失稳事件 → 伤亡概率」的函数（见 §QF R2）。
+
+
+
+ QB4. Thieken et al. 2026 — 年龄 × 水深 × 浸泡时长个案表 
+ Thieken, A. H. et al., “Understanding Flood Fatalities: Reevaluating Flood Risk Management”, Earth's Future 14(9): e2026EF008695, 2026, DOI 10.1029/2026EF008695， Wiley 文章页 【索引/摘要已读】。作者基于官方文件与家属访谈逐人重建全部死亡个案，编码沿 Thieken, Zenker & Bubeck (2023)。已发表聚合结果（逐字）：德/比 2021 年 7 月共 224 人 死亡； 58% 的死亡发生在官方洪水危险区图之外；室内死亡 131 人 、室外 93 人 ；“66% of the 131 people who died indoors were caught by surprise in basement apartments… or more often on the ground and upper floors”。论文实际编码的逐人变量是地点、楼层、活动/情境、是否收到警告、社会人口属性—— 死者处水深与浸泡/暴露时长不在已报告的编码变量内 。
+
+ 没有 公开的年龄 × 水深 × 浸泡时长交叉个案表：没有。 检索：Wiley 文章页及其 supporting information 列表、AGU、Google Scholar、Semantic Scholar、GFZ/Potsdam 仓储、新闻报道（phys.org, 2026-09-04）。无此补充表或仓储表。
+
+
+ QB5. 浸泡剂量–反应、滑倒、被困、弃车时长 
+ 冷水浸泡时间线（有出处的数字）： Golden, F. & Tipton, M. (2002), Essentials of Sea Survival 四阶段：Phase 1 冷休克，约前 3 分钟；Phase 2 游泳衰竭，其后约 30 分钟；Phase 3 失温，30 分钟以上；Phase 4 获救后（circum-rescue）崩溃。International Life Saving Federation, Medical Position Statement MPS-12: Cold Water Immersion (2016)， ilsf.org（PDF） 【索引】：冷水定义 <15 °C (59 °F)；冷休克约 2–3 min；呼吸效应 “quick onset (<30 seconds) uncontrollable rapid breathing”；水带走热量为冷空气的 25 倍。Tipton (2024), “Extreme environmental physiology in the dock”, PMC11264552【索引】：“it is physically impossible for an adult human to become hypothermic, even if naked in 0°C water, in less than about 30 minutes”；其 Table 1 将冷水死亡的 56% 归于 Stage 1 & 2、17% 归于 Stage 4。（USCG 全身浸泡存活表见 §C1，口径为落水全身浸泡，不适用于站立涉水。）
+
+ 
+ 
+ 子项 结果 
+ 
+ 
+ 涉水滑倒/跌倒的实测发生率 没有 检索 Google Scholar、Crossref、ScienceDirect、Springer、Wiley（“slipping falling wading flood incidence”、“pedestrian falls floodwater experiment slip”、“loss of footing flood experiment frequency”）。实验只报告失稳阈值（§QB1 / §QB3），不报告跌倒发生率 
+
+ 洪水伤亡统计中「被困 / stranded」的公布判定口径 没有 检索 NOAA/NWS Storm Data 指令、CDC/MMWR 洪水死亡报告、EM-DAT 文档、Google Scholar。无标准化定义，两词仅作叙述用语 
+
+ 涨水中弃车的实测决策时长 没有 检索 Google Scholar、Crossref、TRID、ScienceDirect（“vehicle abandonment decision time flood”、“drivers abandon car rising water time”、“vehicle evacuation decision latency flood”）。无实测值。（Arshaghi 2026 测的是行人 VR pre-movement time 约 7–15 s，且情景开始时被试已在车外，见 §QA6） 
+
+ 浸泡时长/水温/体力/年龄 → 死亡的定量函数 没有 （与 §C1 旧结论一致；只有上列阶段时间线，无剂量–反应函数） 
+
+ 
+ 
+
+
+
+ QB6. 洪水溺亡个案统计与分母 
+ 
+ 
+ 来源 可下载内容与字段 
+ 
+ 
+ NOAA/NCEI Storm Events Database （三者中唯一有真个案级死亡记录） 批量目录 ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/ ；格式文件 Storm-Data-Bulk-csv-Format.pdf 【索引】。每年三份 gzip CSV，以 EVENT_ID 关联：(1) details——每事件–县段一行，字段含 EPISODE_ID, EVENT_ID, STATE, CZ_NAME, WFO, EVENT_TYPE（含 “Flood” 与 “Flash Flood”）, BEGIN/END 时间, INJURIES_DIRECT / INDIRECT, DEATHS_DIRECT / INDIRECT, DAMAGE_PROPERTY / CROPS, FLOOD_CAUSE, EPISODE_NARRATIVE, EVENT_NARRATIVE；(2) fatalities——每名死者一行 ，字段 FATALITY_ID, EVENT_ID, FATALITY_TYPE（D = 直接, I = 间接）, FATALITY_DATE, FATALITY_AGE, FATALITY_SEX, FATALITY_LOCATION（如 in vehicle, in water, permanent home, mobile home, outdoors）；(3) locations。覆盖 1950–今；全部 55 类事件自 1996 年起（NWS Directive 10-1605）。可直接对 DC 洪水死亡按年龄/性别/地点制表 
+
+ CDC WONDER / MMWR WONDER 死因数据集 D76（1999–2017）与 D158（2018–2024）， wonder.cdc.gov ：可按 ICD-10 根本死因（意外溺亡 W65–W74）、年龄/性别/县查询； 洪水是外因码、不是溺亡的下位类别 ；1–9 例的单元格被抑制。WONDER 无洪水专项个案下载；MMWR 洪水死亡报告是逐事件的叙述/表格汇总，不是常设数据集 
+
+ EM-DAT（CRED, UCLouvain） emdat.be ：仅事件级（国家、事件、总死亡/受影响），需注册； 无个案级或年龄分层记录 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ QC 
+ 三、人群画像的工程映射（第 4 轮） 
+ 对应委托第三节 1–5 
+
+
+
+ QC1. 职业/行业 → 工作场所类型 
+ LEHD LODES： 版本 LODES8 ，按 2020 年人口普查街区枚举；文件类型 OD（起讫）、RAC（居住地特征）、WAC（工作地特征），均为街区级。浏览/下载 lehd.ces.census.gov/data/lodes/ ；技术文档 LODESTechDoc8.0.pdf 。WAC 文件名式样： lodes8_md_wac_S000_JT00_2019.csv.gz （州、文件类型、段 S000、岗位类型 JT00、年份）。WAC 行业字段 CNS01–CNS20 = 按 2 位 NAICS 部门的岗位数（CNS01 = NAICS 11 农林渔猎；CNS02 = NAICS 21 采矿…；全表见技术文档）。
+
+ ACS PUMS 2024 定义（逐字）： 2024 ACS PUMS Data Dictionary（U.S. Census Bureau, 2025-10-16； TXT / PDF ；文档 hub census.gov/…/microdata/documentation ）：“INDP Character 4 — Industry recode for 2023 and later based on 2022 IND codes; bbbb .N/A (less than 16 years old/NILF who last worked more than 5 years ago or never worked); 0170 .AGR-Crop Production…”；“NAICSP Character 7 — North American Industry Classification System (NAICS) recode for 2023 and later based on 2022 NAICS codes; bbbbbbb .N/A…”。
+
+ 没有 已发表的 SOC/NAICS → 工作场所设定对照表：没有。 检索 Google Scholar、Crossref、Census Bureau、BLS、GitHub（“NAICS workplace setting crosswalk”、“industry to workplace type mapping synthetic population”、“SOC workplace location crosswalk”）。合成人口文献的做法是直接用 LODES 流量 + 土地利用分配工作场所（见下），不经此类对照表。
+
+ DC 源： DCGIS/OCTO “Building Footprints 2023” opendata.dc.gov/datasets/DCGIS::building-footprints-2023 （全部 ≥100 sq ft 建筑，含 residential / commercial / industrial / apartment 等建筑类型属性）；土地利用：“Comprehensive Plan in 2021” 地图 与 “2021 Future Land Use” 数据集 ——发布者自注：这是 2021 Comprehensive Plan Amendment Act 的 规划 土地利用，“not a data set describing current land use”；现状土地利用查 DCGIS Planning_Landuse_and_Zoning 地图服务中的 “Existing Land Use” 图层（ maps2.dcgis.dc.gov/…/Planning_Landuse_and_Zoning_WebMercator/MapServer ）。OSM POI 类别是合成人口文献中工作场所分配的标准路径，但本轮未找到 DC 专门的已发表 OSM 工作场所分配方法。
+
+
+ QC2. 年龄别步速 — Bohannon & Andrews 2011（引文更正）+ Weidmann 1993 
+ 引文更正： 该 meta 分析是 Bohannon, R. W. & Andrews, A. W. (2011), “Normal walking speed: a descriptive meta-analysis”, Physiotherapy 97: 182–189 ——不是「Bohannon & Williams 2011, Journal of Geriatric Physical Therapy 」，未匹配到后者。样本：41 篇文章、23,111 名受试者，步行道 3–30 m，舒适（“normal”）速度。
+
+
+ Table 2 总平均步速（cm/s，括号为 95% CI；m/s 换算为二手来源转述）：
+
+ 
+ 
+ 年龄 男 cm/s 男 m/s 女 cm/s 女 m/s 
+ 
+ 
+ 20–29 135.8 (127.0–144.7) 1.36 134.1 (123.9–144.3) 1.34 
+
+ 30–39 143.3 1.43 [未逐字取得] 1.34 
+
+ 40–49 143.4 1.43 139.0 1.39 
+
+ 50–59 143.3 1.43 [未逐字取得] 1.31 
+
+ 60–69 133.9 1.34 124.1 (118.3–130.0) 1.24 
+
+ 70–79 [未逐字取得] 1.26 [未逐字取得] 1.13 
+
+ 80–99 96.8 (83.4–110.1) 0.97 [未逐字取得] 0.94 
+
+ 
+ 
+
+
+ 每格 n 在原文 Table 2，范围 83–8,591 / 层；本轮未逐字提取完整的每格 n 列（全文经 academia.edu 【索引】）——缺格与 n 列见 §QF 未核实清单，不以换算值冒充原文 cm/s。
+
+ Weidmann 1993： Weidmann, U., Transporttechnik der Fussgänger , IVT Schriftenreihe Nr. 90, ETH Zürich, 1993。二手文献所载关键参数：自由（无阻）速度 v₀ = 1.34 m/s ；速度–密度关系 v(k) = v m ·[1 − exp(−γ(1/k − 1/k M ))]，γ = 1.913 /m² ；阻塞密度 k M = 5.4 /m² ；最大比流量 J s,m = 1.22 (m·s)⁻¹ ，出现在密度 1.75 /m²、速度 0.7 m/s 处。 所查二手来源均未报告自由速度的标准差——不要自造。 年龄别洪水疏散步速实测：涉水实验（§QA7；Dias et al. 2021, IJDRR 58: 102192）只报告随水深变化的速度，没有年龄十年分档表。
+
+
+ QC3. JWTRNS 全码表（2024）与 VEH 的 NA 
+ JWTRNS 逐字（2024 ACS PUMS Data Dictionary；2020–2024 五年字典同表， 2020-2024 TXT ）：“JWTRNS Character 2, Means of transportation to work: bb .N/A (not a worker—not in the labor force, including persons under 16 years; unemployed; employed, with a job but not at work; Armed Forces, with a job but not at work); 01 .Car, truck, or van; 02 .Bus; 03 .Subway or elevated rail; 04 .Long-distance train or commuter rail; 05 .Light rail, streetcar, or trolley; 06 .Ferryboat; 07 .Taxicab; 08 .Motorcycle; 09 .Bicycle; 10 .Walked; 11 .Worked from home; 12 .Other method.” 分配标志 FJWTRNSP。（注：§C4 所录 2020–2024 五年字典 07 作 “Taxi or ride-hailing services”，与 2024 单年字典的 “Taxicab” 措辞不同，引用时注明所用字典版本。）
+
+ VEH 逐字（同字典）：“VEH Character 1, Vehicles available (capacity of 1 ton or less): b .N/A (GQ/vacant); 0 .No vehicles; 1 .1 vehicle; 2 .2 vehicles; 3 .3 vehicles; 4 .4 vehicles; 5 .5 vehicles; 6 .6 or more vehicles.” 即所谓「NA」是空白码 b ，不是数值码；分配标志 FVEHP。 2024 文件 DC 专门的 VEH / JWTRNS 项目分配率：本轮未在 Census PUMS 精度文档中找到 （精度/分配文档自 文档 hub 链接）。
+
+
+ QC4. TRIPMODE 派生规则的权威出处（更正 §A2 / §A3 的旧注） 
+ 更正：派生规则不在 Derived Variables 文档里。 2022 NextGen NHTS Derived Variables （Ipsos/MacroSys/ORNL，V2.1 修订 2025-04； nhts.ornl.gov（PDF） ）已通读全 26 页【全文已读】：变量序列 …TRIPPURP（p.17）→ TRPMILES（p.18）→ URBAN…， 根本没有 TRIPMODE 条目 。原以为「规则在 Derived Variables 第 17 页」不成立——第 17 页讲的是 TRIPPURP。§A3 中按 p.17 公式自算 TRIPMODE 的频数与 codebook 逐项一致这件事本身无误，但公式出处应改引下行。
+
+
+ 权威表述在 V2.1 Release Notes （ 2022 NHTS Version 2.1 Release Notes , April 2025, p.1； nhts.ornl.gov（PDF） 【全文已读】），逐字：“The variable TRIPMODE was created in Version 2.1. This variable summarizes TRPTRANS while also including driver/passenger status for private vehicle trips. The coding of this variable is as follows: 01=Privately Owned Vehicle-Driver; 02=Privately Owned Vehicle-Passenger; 03=Public Transit; 04=School Bus; 05=Walk; 06=Bike; 07=Other.” 完整的 TRPTRANS→TRIPMODE 对应与频数在 2022 NHTS Codebook V2.1 （ codebook.pdf ；文档 hub nhts.ornl.gov/documentation ）。
+
+
+ QC5. 驾驶风格分布；DC 让行率与红灯合规率 
+ SHRP2 NDS： 访问受控（VTTI InSight 门户，需数据使用许可）。已发表子集：Behavior-based Predictive Safety Analytics 试点最终数据集，VTTI Dataverse，DOI 10.15787/VTT1/464GB9（2,458 名驾驶人子集）【索引】。 SHRP2 中的 DBQ： de Winter et al. (2018), Accident Analysis & Prevention 118: 54–56【索引】——SHRP2 样本 3,215 名驾驶人；分析 n = 2,790（参与 ≥7 个月、≥100 英里）；DBQ 可用 n = 2,737；PCA 得三因子（slips / violations / lapses）；DBQ violations 与 near-crashes 相关 ρ = 0.20、与全部记录事故 ρ = 0.06、与自报事故 ρ = 0.13、与急转弯 ρ = 0.24。
+
+ DC 行人让行率： 本轮检索 DDOT、opendata.dc.gov、NCHRP Report 562（全国过街设施指南，非 DC 合规研究）、MUTCD 来源，未找到带已发表让行率与分母的 DDOT / opendata.dc.gov 研究（全国与 DC 个案数字见 §C2）。
+
+ 没有 以红灯到达次数为分母的红灯合规率（DC 或可供 DC 引用）：没有 （完整检索记录与非 DC 的到达分母研究见 §QF R7）。
+
+
+ QC6. 备伞率、信息层级 
+ 没有 检索 Google Scholar、Crossref、PubMed 索引的调查文献、Semantic Scholar（“umbrella carrying rate rain survey population”、“umbrella use prevalence rainfall pedestrians”、“warning information hierarchy who receives warning first empirical”）。结论：文献中不存在雨天人群备伞率（只有防晒调查——如过去一年用手持伞防晒的美国女性 12%，n = 382，Atlanta——以及 Xie & Lam 2017 HKUST/HK PolyU 人行横道实验，108 名参与者 / 97 情景，其中伞使用比例是实验 设定 变量、非观测率）；也不存在警告接收先后（「信息层级」）的实测数据集。 两项确认没有，不得用估计值顶替。 
+
+ 
+
+ 
+ 
+ 
+ QD 
+ 四、日程映射（第 4 轮） 
+ 对应委托第四节 
+
+
+
+ QD1. 时段分档：NHTS 无官方边界定义 
+ STRTTIME 是出行开始时间（HHMM），出行日为 凌晨 4:00 至次日凌晨 4:00 。本轮通查 2022 Codebook V2.1、User's Guide、Derived Variables 文档： 没有任何官方 TOD / TIMEOFDAY 分组变量或已发表分档定义 。二手论文中出现的分档（如某 2026 年 Smart Cities 文章的早高峰 06:00–09:59、日间 10:00–14:59、晚高峰 15:00–19:59、夜间 20:00–05:59）是 那些作者自行从 STRTTIME 派生 的，不得引作 NHTS 官方定义。§A3 交叉表所用 [00–05, 06–08, 09–11, 12–13, 14–16, 17–19, 20–23] 同理为本项目自设分档。
+
+
+ QD2. WHYTO → 地点类型：NHTS 码表 + ATUS TEWHERE 
+ WHYTO 码表逐字（2022 Derived Variables 文档 pp.20–21 的 WHYFROM 取值表，WHYFROM 与 WHYTO 同码）：01 = Regular activities at home；02 = Work from home (paid)；03 = Work at a non-home location；04 = Work activity to drop-off/pickup someone/something；05 = Other work-related activities；06 = Attend school as a student；07 = Attend childcare or adult care；08 = Volunteer activities (not paid)；09 = Change type of transportation；10 = Drop off/pick up someone (personal)；11 = Health care visit；12 = Buy meals；13 = Shop/buy/pick-up or return goods；14 = Other family/personal errands；15 = Recreational activities；16 = Exercise；17 = Visit friends or relatives；18 = Rest or relaxation/vacation；19 = Religious or other community activities；97 = Something else (specify)；−9 = Not ascertained。地点信息：日记工具中存在起讫 地点名称与类型字段 （派生代码引用 origin_locname 取值 'HOME'、'WORK'、'SCHOOL'），但公开文件抑制街道地址与普查分区以下地理（2022 版已移除州 / CBSA 标识，见 §QC4 来源）。
+
+ ATUS「何地」编码： 变量 TEWHERE （ATUS Activity 文件，“where were you when you did this activity?”；对除睡眠、梳洗与个人/私密活动外的全部活动采集）。官方文档：数据字典 bls.gov/tus/dictionaries ；活动词表（2003–24） bls.gov/tus/lexicons/lexiconnoex0324.pdf ；2024 编码规则 stats.bls.gov/tus/coderules/tu2024coderules.pdf 。TEWHERE 类别（ATUS 文档与使用该变量的同行评议文献所列标签）：respondent's home or yard；respondent's workplace；someone else's home；restaurant or bar；place of worship；grocery store；other store/mall；school；outdoors away from home；library；bank；gym/health club；post office；other place；unspecified location；以及在途码（按方式）：car/truck/motorcycle (driver)、car/truck/motorcycle (passenger)、bus、subway/train、boat/ferry、taxi/limousine service、airplane、other mode of transportation、unspecified mode of transportation。（TEWHERE 数字码以第一个 URL 的官方 ATUS 数据字典为准。）
+
+
+ QD3. 「每人每天出行次数 × 有无子女」官方汇总：不存在；官方总量在 Summary of Travel Trends 
+ 没有 按户内有无子女分组的官方汇总表：没有。 本轮复查 FHWA 汇总表，无此切分；该切分只能从原始微观数据自算（2022 公开文件：7,893 户、16,997 人、31,074 次出行）——§A3 的 946 格交叉表正是这一自算口径。 因此把 4.058% 出行占比折成概率时所乘的自设 12，在官方汇总中没有可替换的现成数；替换路径是直接用微观数据按人日计算，而不是找一个官方乘数。 
+
+ 2022 NHTS Summary of Travel Trends （FHWA）已发表的官方值（逐字）：全员每人每天出行 2.28 次（2017 年 3.37）；按年龄：<16 岁 2.0；16–20 岁 2.0；21–35 岁 2.4；36–65 岁 2.5；>65 岁 2.0；男 2.3、女 2.3；按目的（次/人/天）：shopping/errands 0.80、social/recreational 0.67、work 0.42、school/church 0.26。
+
+ 
+
+ 
+ 
+ 
+ QE 
+ 五、灾害输入与验证口径（第 4 轮） 
+ 对应委托第五节 1–4 
+
+
+
+ QE1. Silva et al. 2025 补充公式 (S1)/(S2) — (S2) 可复原，(S1) 出版 PDF 本身残损 
+ Silva, A. F. R. et al., “Assessing the impact of early warning and evacuation on human losses during the 2021 Ahr Valley flood in Germany using agent-based modelling”, NHESS 25: 1501–1520, 2025, DOI 10.5194/nhess-25-1501-2025。补充材料 nhess-25-1501-2025-supplement.pdf 【全文已读】。通讯作者 Heidi Kreibich， heidi.kreibich@gfz.de 。（正文验证数字见 §B4；Table S2 全表见 §R6(b)。）
+
+ §S2 定义（逐字）：“B t represents the effectiveness of the broadcast channels utilised and serves as the shape parameter of the Rayleigh distribution”；“C t indicates the efficiency of non-official broadcast means at time step t”；“Low values of B t correspond to more efficient broadcast channels, whereas higher values of C t correlate with an increased rate of the population being warned through informal means (Sorensen and Mileti, 2015a).” 动员：“the mobilisation speed coefficient (a m ) and the median time for individuals to initiate mobilisation (b m ). As a m decreases from a value of 2, the response time accelerates… higher values of b m indicate a longer duration to complete the initiation of protective action (Sorensen and Mileti, 2015b).”
+
+ 
+ 复制 
+ Eq. (S2) 动员曲线（补充材料 PDF 中清晰可读，Weibull 型）：
+P_mobilised_t = 1 − exp(−(t/bm)^(2/am))
+
+Eq. (S1) 警告扩散（出版者 PDF 文本层本身排版残损，可复原的结构）：
+P_warned_t = P_warned_{t−1} + (t/Bt²)·exp(−t²/(2Bt²))·(1 − P_warned_{t−1}) + Ct·(…)
+即：已警告比例的增量 = Rayleigh pdf（形状参数 Bt）在 t 处取值
+作用于尚未被警告的比例，再加非官方渠道项 Ct。
+⚠ Ct 项在 (S1) 中的确切位置无法从 PDF 逐字复原——这是出版文件的
+抽取限制，此处不以猜测补齐；录入前须对照 PDF 原页图像核对。 
+
+
+ Table S2（upper / most likely / lower bound；与 §R6(b) 同表，此处录 most likely 行要点）：A1.1（Fast；preparedness good, perception likely）：B t 5.0 / 9.5 / 51.5；C t 0.100 / 0.098 / 0.081；a m 1.00 / 1.37 / 1.80；b m 25.0 / 64.0 / 114.0；最大动员率 8 h：100.0 / 88.8 / 77.1；24 h：100.0 / 95.7 / 91.1；72 h：100.0 / 98.6 / 97.2。A1.2（Moderate；preparedness poor, perception likely）：B t 58.0 / 100.0 / 142.0；C t 0.080 / 0.060 / 0.043；a m 1.35 / 1.79 / 2.20；b m 61.8 / 111.8 / 161.9；8 h：81.5 / 74.3 / 67.1；24 h：95.0 / 90.0 / 85.0；72 h：98.5 / 95.0 / 92.0。A1.3（Slow；preparedness poor, perception unlikely）：B t 103.0 / 145.0 / 150.0；C t 0.060 / 0.042 / 0.040；a m / b m 同 A1.2；8 h：65.9 / 57.0 / 48.0；24 h：88.7 / 84.2 / 79.8；72 h：92.8 / 90.0 / 87.2。A1.4 = 经验警告扩散曲线 + A1.3 动员；A1.5 = 经验动员 + Slow 警告扩散（B t /C t 同 A1.3）。补充 Table S1（§S1）：按疏散方式分的死亡数——0% 车辆 / 100% 步行：中位 229（IQR 210–245）；100% 车辆：中位 133（124–142）；80/20 车辆/步行划分被选为最贴合室内死亡占比（模型 69.3% vs 实际 68.5%）。
+
+
+ QE2. 公开行为基准 — 三个候选逐一核验，均不满足「真实洪水逐人轨迹」 
+ 
+ 
+ 数据集 核验结果 
+ 
+ 
+ Zenodo 14568954 （瑞士 Zofingen 手机信令） “Mobile phone data to study the impacts of a severe local flood and social events on human mobility (in Switzerland)”，2024-12-31 发布，v1，DOI 10.5281/zenodo.14568954， zenodo.org/records/14568954 【索引】。Swisscom 信令数据（University of Bern），Zofingen 周边约 15 km × 20 km，44 天（2017-06-17 至 07-30，含一场严重局地洪水），内容为 按路段 / 轨道段聚合的匿名人数 （数据集 POSACT 与 PATHACT）。文件：explanation_of_POSACT_and_PATHACT.pdf（83.4 kB）、swisscom_datasets.zip（16.2 MB）、swisscom_network.zip。 是路段级计数，不是逐人轨迹。 
+
+ 塞浦路斯演练 GPS （编号更正） ⚠ 委托所引编号 5466596 有误，实际记录是 5466597 ：“First responders' mobile phone traces during a flood exercise scenario”，2021-09-06 发布，v1，KIOS Research and Innovation Center of Excellence, University of Cyprus（ARTION 项目）【索引】。 演练 中急救人员手机的 GPS 轨迹（约 1 s 间隔），2021-02-21 于塞浦路斯 Achna 人工湖（35.055556, 33.812222）；文件 mobApp_traces_flood_20210221.zip（219.0 kB，CSV）。 是演练，不是真实洪水。 
+
+ YJMob100K Yabe et al. (2024), “YJMob100K: City-scale and longitudinal dataset of anonymized human mobility trajectories”, Scientific Data 11: 397, DOI 10.1038/s41597-024-03237-9；数据集 DOI 10.5281/zenodo.10836269，CC-BY【索引】。100,000 人的匿名手机轨迹（Yahoo Japan / LY Corporation），时空离散化，未披露的日本都市圈；90 天 = 75 天常态 + 15 天应急期—— 该应急事件未指明为洪水 。 
+
+ DC 本地暴雨期数据 已确认：DCGIS 洪水图层服务（DCGIS_DATA/Environment_Flood， maps2.dcgis.dc.gov/dcgis/rest/services/DCGIS_DATA ）与 Building Footprints 2023（§QC1）；NCEI Storm Events（§QB6 / §R4.3）含 DC 洪水/山洪事件与个案级死亡记录和叙述，是本轮找到的唯一带分母与个案细节的 DC 来源。 opendata.dc.gov 上暴雨期实测封路、积水传感器点、911 洪水呼叫统计（带公布定义/分母）的数据集：没有 （检索 opendata.dc.gov、DDOT、DC Water、data.gov DC 目录；DC 本地实证补充见 §R4）。 
+
+ 
+ 
+
+
+
+ QE3. 分布一致性判据 — 被查文献只给质性标准，无数值容差 
+ 结论：所查验证文献规定的是质性、模式导向的判据；没有任何一篇给出卡方或总变差距离的数值截断值。 逐篇：Grimm et al. (2005), “Pattern-oriented modeling of agent-based complex systems: lessons from ecology”, Science 310: 987–991——验证 = 同时复现多个观测模式，无阈值；Grimm et al. (2006, 2010) ODD 协议——文档标准，无容差；Windrum, Fagiolo & Moneta (2007), “Empirical validation of agent-based models: alternatives and prospects”, JASSS 10(2): 8——输入验证、输出验证、以风格化事实做间接标定，无数值截断；Hartig et al. (2011), “Statistical inference for stochastic simulation models – theory and application”, Ecology Letters 14: 816–827, DOI 10.1111/j.1461-0248.2011.01640.x——基于似然与 ABC 的仿真模型推断，ABC 差异阈值由分析者逐案选定，未提议通用截断；Lee et al. (2015)——按 ABM 方法文献的概括为启发式、含临时决定的仿真分析，无标准化容差。（SRMSE 等个案实报值见 §D2，同样无统一容差。）
+
+
+ QE4. 北大 DTG（Transp. Res. D 162: 105685）— 书目已补全，全文仍不可得 
+ 书目（经 Crossref 记录 api.crossref.org/works/10.1016/j.trd.2026.105685 【全文已读】补全）：Zhang, Zijing; Huang, Fengjue; Tang, Junqing; Zhao, Pengjun, “Reconstructing flood-induced human mobility using LLM agent with disaster context adaptation”, Transportation Research Part D: Transport and Environment , Vol. 162, Article 105685；DOI 10.1016/j.trd.2026.105685；PII S1361920926004773；收稿 2026-05-02、接受 2026-10-08、在线 2026-10-14、纸刊 2027 年 1 月期（据 CrushSCI 期刊记录与 Crossref）。 机构更正：作者全部属北京大学 （城市规划与设计学院，北大深圳研究生院；城市与环境学院，北大北京）——委托所称「北大 / 北师大」中北师大无据，Crossref 无 BNU 机构。资助（Crossref）：NSFC 42376213、42525101、42130402；广东省珠江人才计划 2023QN10G243；深圳市科技创新计划 JCYJ20240813181002004。通讯作者邮箱式样（同组相关工作）：Pengjun Zhao, pengjun.zhao@pku.edu.cn （出自该组 NSR 2023 补充材料）。全文可达性核查见 §R2。
+
+ 
+ 
+ 子项 结果 
+ 
+ 
+ 五类基线设定（逐字） 没有 付费墙后，无预印本 
+
+ JSD 公式（逐字） 没有 同上 
+
+ diff-ACC 公式（逐字） 没有 同上 
+
+ 尝试过的路径 Crossref（仅元数据 + 参考文献表， 未存摘要 ）；Semantic Scholar API（记录存在，CorpusId 293046653；openAccessPdf 状态 CLOSED，摘要 null）；ScienceDirect（付费墙）；CrushSCI（仅书目/审稿日期）；按题名、DOI、“DTG” 的 X-MOL 型与一般网络检索（无预印本、ResearchGate 全文或大学仓储副本）；作者组已开放的 NSR 2023 补充材料不含本文设定 
+
+ 
+ 
+
+
+ 
+
+ 
+ 
+ 
+ QF 
+ 末尾 8 项复核 · 未核实清单 · 数据索取信草稿 
+ 第 4 轮换关键词复检，2026-11-15 
+
+
+
+ QF1. 八项复核：全部再次确认「没有」 
+ 
+ 
+ 项 结果 本轮检索库与新关键词 
+ 
+ 
+ R1 按年龄分组的致死静水深 没有 Google Scholar、Crossref、Semantic Scholar、ARR/UNSW WRL、DEFRA/EA、ScienceDirect、Springer。“fatal still water depth age group lethal depth cm children adults”；“drowning depth threshold age-specific flood mortality depth”；“lethal water depth by age flood”。文献中唯一的年龄分档数字是危险分级限值（§QB1 的 H2 0.5 m / H3 1.2 m），不是致死深度 
+
+ R2 失稳 → 伤亡定量函数 没有 Google Scholar、Crossref、JAWRA/Wiley、UNSW WRL TR 2015/09、USACE、ScienceDirect。“instability casualty transfer function flood”；“loss of footing injury probability flood”；“knockdown to fatality probability pedestrian flood”。Jonkman 死亡率函数由水深（及流速/到达时间）直接映射（§QB3），没有任何函数把「失稳事件本身」映射为伤亡概率 
+
+ R3 三分选择实验原始数据 没有 见 §QA5 的完整检索记录与关键词 
+
+ R4 可引用的转移矩阵 / CPT 全数值 没有 （按「单一、可引用、数值完整的转移矩阵或 CPT」这一规格） par.nsf.gov、Crossref、Google Scholar、Semantic Scholar、ScienceDirect、TRID。“Bayesian network evacuation conditional probability table values”；“hidden Markov model evacuation transition matrix published”；“Markov chain flood evacuation transition probabilities table”。最近的落空：Roy & Hasan (2021) 公布全部 80 个 IO-HMM 转移模型 系数 与情景热图（正文只引部分格），无完整数值矩阵；且委托前提有误——该文是 IO-HMM，不是贝叶斯网络（§QA8） 
+
+ R5 公开的真实洪水逐人轨迹基准 没有 Zenodo、Scientific Data、Google Scholar、GitHub、Figshare。“real flood individual GPS trajectories open dataset”；“per-person mobility flood benchmark zenodo”；“flood evacuation trajectory dataset public”。三个候选逐一核验均不合格（§QE2）：Zofingen = 路段聚合计数；塞浦路斯 = 急救人员演练轨迹（且编号 5466597）；YJMob100K = 真轨迹但应急期非洪水 
+
+ R6 VR 水位 cm 换算 没有 已对出版全文确认（§QA6）：等级只由 NPC 身体标志与车辆参照点定义，依 Quagliarini et al. (2023) 定性四分（“four qualitative levels ranging from ankle height to above chest height”）；正文、补充、预印本均无 cm 换算，作者评审回复把标定水深列为未来工作。来源：NHESS 文章 XML、EGUsphere 预印本与讨论、Semantic Scholar、Google Scholar（“Arshaghi virtual flood water level cm depth calibration”） 
+
+ R7 DC 红灯合规率（分母 = 红灯到达次数） 没有 DDOT、opendata.dc.gov、FHWA、NCHRP、TRID、Google Scholar。“red light running rate per arrival Washington DC DDOT”；“red-light compliance denominator arrivals intersection study”；“District of Columbia red light violation rate study”。仅供方法参照的非 DC 研究（分母为到达型）：FHWA-HRT-07-048 DDI 模拟研究（距停止线 30 m 内 886 个红灯实例：757 个在停止线处/前停、92 个其后停、37 个未停、13 个真违规）；Jason, Neal & Marinakis (1985), J. Appl. Behav. Anal. 18: 95–100（基线 46.8% 驾驶人在黄/红灯停车，信号序列改变后升至 88.8% 与 98.8%）；Fraboni et al. (2016) 骑行者（1,381 名红灯时到达者，62.9% 违规）。三者均非 DC 率 
+
+ R8 卡方 / 总变差距离的公认容差阈值 没有 Science、JASSS、Ecology Letters、Springer（ODD）、Google Scholar、Semantic Scholar。“agent-based model validation total variation distance threshold accepted”；“chi-square cutoff simulation distribution matching validation”；“pattern-oriented modeling quantitative tolerance criterion”。Grimm (2005)、ODD 各文、Windrum et al. (2007)、Hartig et al. (2011)、Lee et al. (2015) 均只给质性/多模式或分析者自选判据（§QE3） 
+
+ 
+ 
+
+
+
+ QF2. 未核实 / 开放问题（第 4 轮） 
+ 
+ 
+ # 事项 
+ 
+ 
+ 1 Ahsanuzzaman & Messer Table 4 符号：PDF 文本抽取与正文叙述在若干处理效应上符号相反（大小吻合）。Table 3 原始比例无歧义；Table 4 符号须在出版者 PDF 原页核对后使用（§QA4） 
+
+ 2 Jonkman & Vrijling 对数正态参数（μ N = 2.00、σ N = 5.20）出自 UNSW WRL TR 2015/09 转述件，其文本抽取部分乱码；须对照 2008 年原文核对（§QB3） 
+
+ 3 Bohannon & Andrews Table 2 每格 n：只核到范围（83–8,591 / 层）与表中列出的均值/CI；完整每格 n 列未逐字提取（§QC2） 
+
+ 4 巴黎 ABM（§QA9）：传染机制已确认，确切邻居半径/阈值参数未从全文提取 
+
+ 5 2024 PUMS 中 VEH / JWTRNS 的 DC 专门分配率：未在已发表 Census 精度文档中找到（§QC3） 
+
+ 6 Silva (S1)：C t 项的确切位置无法从出版者 PDF 文本层逐字复原；(S2) 与 Table S2 全部数值均为逐字（§QE1） 
+
+ 7 DTG：基线设定与评价公式仍在 Elsevier 付费墙后且无预印本；只补全了书目记录（§QE4） 
+
+ 8 CDC WONDER：洪水专项制表受 ICD-10 结构限制（洪水为外因码）；CDC 无洪水个案级下载（§QB6） 
+
+ 9 Roy & Hasan Table 3 转录：研究报告每行给 5 个数值而列头为 Intercept + I₁–I₅ 共 6 列，§QA8 已按转录原样呈现并标注，录入前须对照预印本 PDF 原表核对列位 
+
+ 
+ 
+
+
+
+ QF3. 向通讯作者索取微观数据的信件草稿（尚未索取、仅备草稿；英文，可直接复制发送） 
+ 状态：尚未索取、仅备草稿——以下三封信均未发出。 Thieken 2023、Borowski & Stathopoulos 2023、Ha et al. 2025 三篇的个体微观数据，在真正发出并收到回复、实际取得前，一律按「没有（未取得）」处理，不得计为已完成索取。三篇的数据可用性声明分别为：Thieken 2023 — “can currently be provided upon reasonable request only”；Borowski & Stathopoulos 2023 — “Data with appropriate protection is available on request from the corresponding author”；Ha et al. 2025 — “The data that has been used is confidential”（故第三封改为索取问卷工具与编码本，并询问可否在保密条件下共享匿名记录）。 本页不代发邮件 ：请用你本人邮箱发送，或连接 Gmail 后由 Muse 代发。方括号处填你的姓名、单位与项目名。
+
+ ① Thieken et al. 2023 → thieken@uni-potsdam.de （Annegret H. Thieken, University of Potsdam）
+
+ 
+ 复制 
+ Subject: Data request — Thieken et al. 2023 (NHESS 23:973–990), Tables S2/S3 complete output and survey microdata
+
+Dear Professor Thieken,
+
+I am [Your name], [affiliation], working on an agent-based simulation of
+pedestrian behaviour during urban pluvial flooding in Washington, DC.
+Your 2023 NHESS paper (DOI 10.5194/nhess-23-973-2023) is the empirical
+basis for our protective-behaviour module.
+
+The supplement's ordered logistic regressions (Tables S2 and S3) report
+slope coefficients but not the threshold (cut-point) estimates, which we
+need to reproduce the predicted category probabilities. Could you share
+(1) the complete model output for Tables S2/S3 including the cut points,
+and (2) if possible under your data availability statement ("provided
+upon reasonable request"), the individual-level survey records
+(CSV or Stata) together with the codebook / variable definitions
+(Table S1)?
+
+The data would be used only for model parameterisation in this research
+project, cited to your paper, and not redistributed.
+
+Thank you very much for your time.
+
+Best regards,
+[Your name] · [Affiliation] · [Email] 
+
+
+ ② Borowski & Stathopoulos 2023 → a-stathopoulos@northwestern.edu （Amanda Stathopoulos, Northwestern University）
+
+ 
+ 复制 
+ Subject: Data request — Borowski & Stathopoulos 2023 (Nat. Hazards Rev. 24(1):04022045), stated-choice microdata
+
+Dear Professor Stathopoulos,
+
+I am [Your name], [affiliation], working on an agent-based simulation of
+pedestrian behaviour during urban pluvial flooding in Washington, DC.
+Your 2023 paper with Dr Borowski (DOI 10.1061/(ASCE)NH.1527-6996.0000577)
+is the empirical basis for our evacuation-choice module, in particular
+the peer-share variables in Table 4.
+
+Your data availability statement notes that data with appropriate
+protection is available on request. Could we obtain the de-identified
+individual-level stated-choice records (CSV or Stata) and the codebook
+(attribute coding, scenario/block assignment, and the threat-level
+labels as shown to respondents)? We fully understand the human-subjects
+protections and are happy to sign a data-use agreement and to work with
+an aggregated or partially masked version if the full records cannot
+leave Northwestern.
+
+The data would be used only for model parameterisation in this research
+project, cited to your paper, and not redistributed.
+
+Thank you very much for your consideration.
+
+Best regards,
+[Your name] · [Affiliation] · [Email] 
+
+
+ ③ Ha, Dinh & Mizunoya 2025 → mizunoya.takeshi.ff@u.tsukuba.ac.jp （Takeshi Mizunoya, University of Tsukuba）
+
+ 
+ 复制 
+ Subject: Request — Ha, Dinh & Mizunoya 2025 (IJDRR 119:105315), questionnaire instrument and variable codebook
+
+Dear Professor Mizunoya,
+
+I am [Your name], [affiliation], working on an agent-based simulation of
+pedestrian behaviour during urban pluvial flooding in Washington, DC.
+Your 2025 IJDRR paper (DOI 10.1016/j.ijdrr.2025.105315) is one of the few
+empirically fitted evacuation-decision models we can build on, and we
+already use its Table 5 coefficients and Table 3 variable coding.
+
+I note your data availability statement describes the data as
+confidential. Two requests, in order of preference:
+(1) If an anonymised version of the household-level records (CSV or
+Stata) with a codebook can be shared under a data-use agreement, we
+would be grateful and would comply with any conditions.
+(2) If the records cannot be shared, could you share the questionnaire
+instrument itself (the item wording behind variables X1–X15 in Table 3)
+so that we can replicate the coding exactly in our own survey work?
+
+Either would be cited to your paper and used only within this research
+project.
+
+Thank you very much for your time.
+
+Best regards,
+[Your name] · [Affiliation] · [Email] 
+
+
+ 
+
+ 
+ 
+ 
+ ✕ 
+ 没有 
+ 下列各项答复为「没有」，不得当作已证实数据引用 
+
+
+ 
+ 
+ 按年龄分组的致死静水深度表 （含 62 / 66 / 115 cm 一组数字）：没有。 
+ 「失稳 → 伤亡 / 溺亡」定量函数、浸泡时长 / 水温 / 体力 → 涉水死亡定量函数 ：没有（见 §C1）。 
+ 水深 → 涉水 / 绕行 / 等待三分 stated-choice 实验（Arshaghi 之外） ：没有。检索式："stated choice wading willingness water depth detour wait"、"pedestrian route choice flood water depth experiment willingness to wade"。 
+ Arshaghi 2026 的水位 cm 换算与参与者身高数据 ：没有（原文只按 NPC 身体部位分级，见 §B2）。 
+ 经验数据拟合的贝叶斯网络疏散 CPT（年龄 + 经历 + 社会关系） ：没有（见 §B1）。 
+ 可引用的马尔可夫 / HMM 疏散状态转移概率矩阵数值 ：没有（Roy & Hasan 2021 的 80 个转移模型系数已发表并已录入 §QA8，但完整的状态转移概率数值矩阵没有发表，只有图 5 热图与个别文本值，见 §QA8、§B1）。 
+ 公开的真实疏散逐人 GPS / 手机信令轨迹基准数据集 ：没有。检索式："Ahr valley evacuation GPS dataset open"、"hurricane evacuation GPS trajectory dataset public benchmark"、"mobile phone signalling evacuation trajectory open data"。 
+ Reynaud et al. 2013 Tables 3/4/6/8 逐行系数 ：没有（样本量 n = 448 与正文数字已核，见 §B5(4)）。 
+ Thieken et al. 2023 Supplement Table S2（有序 logit）逐行系数 ：第 3 轮已取得，见 §R5(a)（本条旧记录作废）。 
+ DC 按「行人红灯到达次数」为分母的实测红灯合规率；以「每人每天过街机会数」为分母的过街率 ：没有（见 §C2）。 
+ AgentSociety 心理状态解析更新公式；GATSim 数值型反思阈值；四篇 LLM 论文的显式状态转移概率 ：没有（见 §C3）。 
+ chi-square / TVD / Freeman–Tukey 的跨研究公认容差阈值 ：没有（见 §D2）。 
+ 巴黎「2976 名地理标记人群」洪水研究 ：两轮定向检索无命中。最接近的一手研究：Yu et al. 2018, ISPRS Int. J. Geo-Inf. 7(2): 39，巴黎 2016-05-17 至 06-30（45 天）111,500 条带图 geotagged tweets，双确认洪水相关 690 条，人工核对 616 条正确（precision 89.3%）。 
+ PUMS 变量 NOC、JWCD ：2020–2024 版 person 文件 / 字典中不存在（见 §A1）。 
+ OCCP 2023 版与 2024 版逐项类目差异表 ：未逐条提取（查 2024 User Guide 第 IX 节原表）。 
+ ACS 表 B08201 逐行变量码、B11003 逐行变量码、DP03 / DP05 2024 标题 ：未逐行打开；以 variables.json 为最终依据。 
+ Abt et al. (1989) 与 Karvonen RESCDAM 原始实验逐点数据 ：仅经 ARR Project 10 报告二次汇编核实量级，未打开原文。 
+ HCM / MUTCD 中的行人服从率数值 ：未核实。 
+ Generative Agents 2023 消融 TrueSkill 逐数 ：未打开原文表格逐项核对。 
+ Thieken 2026 Earth's Future 各国别分项细节 ：仅核实摘要数字（224、58%、131、66%、93）。 
+ Rhein & Kreibich 2025 百分比的分母定义 ：引用前须再核原文。 
+ 第 3 轮（2026-11-15）答「没有」清单 ：Li 2026 (J. Hydrol.) 原始轨迹公开下载；Li 2026 (Chaos Solitons Fractals) 每水深样本量 n、基本图数值/拟合参数、补充材料/附表、原始轨迹公开下载；DTG 五个 baseline 完整设置、JSD 与 diff-ACC 公式原文及符号定义、郑州 OD 数据集来源与可获得性；PKU-FIM 供外部研究者申请的聚合版手机信令计划/门户；DC 行人洪水伤亡专项公开数据、暴雨期 911/紧急呼叫事件统计、逐暴雨事件道路封闭统计、常设实测街道积水数据集；Thieken 2023 原始/微观数据公开下载；Ha 2025 补充材料/原始数据公开版；Borowski 2023 公开原始数据；Arshaghi 2026 厘米换算 / NPC 或被试身高基准；「水深/危险等级 → 涉水/绕行/等待」结构原始数据的公开下载；Chen 2023 代码仓库链接、问卷数据公开下载、PADM 问卷条目清单、逐人原始步行速度记录（逐项见 §R1–§R7）。 
+ 第 4 轮（2026-11-15）换关键词复检后再次确认「没有」 ：Thieken 2023 有序 logit 阈值 (cut points)（任一版本均未印）；Borowski 2023 moderate/extreme 威胁的水深对应；Ha 2025 问卷题项原文；三分选择（涉水/绕行/等待）实验原始数据；Li 2026 逐人轨迹；带完整数值的洪水疏散贝叶斯网络 CPT 与单一固定马尔可夫转移矩阵；Thieken 2026 年龄 × 水深 × 浸泡时长个案表；涉水滑倒发生率；「被困/stranded」公布判定口径；弃车决策时长实测值；SOC/NAICS → 工作场所设定对照表；雨天备伞率与警告信息层级实测数据；NHTS 官方时段分档定义；按有无子女分组的每人每天出行官方汇总；DC 以红灯到达次数为分母的合规率；卡方/TVD 公认容差阈值；DTG 五类基线与 JSD/diff-ACC 公式（逐项检索记录见 §QA–§QF）。 
+ 
+
+
+ 
+
+ 
+ 一手来源链接 （读取 2026-11-14）：
+
+ 
+ PUMS 2024 / 5-Year 目录： www2.census.gov/…/pums/2024/5-Year/ ；字典目录： …/data_dict/PUMS_Data_Dictionary_2020-2024.txt ；Census API groups： subject · detailed 
+ NHTS： nhts.ornl.gov/downloads ；Codebook V2.1： nhts.ornl.gov/media/2022/doc/codebook.pdf 
+ Thieken et al. 2023： nhess.copernicus.org/articles/23/973/2023 ；Thieken et al. 2026： doi:10.1029/2026EF008695 ；Arshaghi et al. 2026： nhess.copernicus.org/articles/26/981/2026 
+ Ha et al. 2025： tsukuba.repo.nii.ac.jp（PDF） ；Borowski & Stathopoulos 2023： par.nsf.gov（PDF） ；Reynaud et al. 2013： link.springer.com 
+ ARR Project 10： arr-software.org（PDF） ；DEFRA FD2321/TR2： publishing.service.gov.uk（PDF） ；UNSW WRL： wrl.unsw.edu.au ；NCHRP 562： nacto.org（PDF） ；NWS： noaa.gov/jetstream/thunderstorms/flood 
+ Silva et al. 2025： nhess.copernicus.org/articles/25/1501/2025 ；Rhein & Kreibich 2025： …/25/581/2025 ；Pritchard 验证章： davidpritchard.org ；OLYMPUS-POPGEN： PLOS ONE 
+ LLM 论文： AgentSociety · GATSim · Generative Agents · 1,000 People 
+ 第 3 轮（读取 2026-11-15）：Li et al. 2026 J. Hydrol. AAM： Bristol Research Portal（PDF） ；Li et al. 2026 CSF 记录： Bristol 记录页 · RePEc ；DTG Crossref： api.crossref.org/works/10.1016/j.trd.2026.105685 
+ PKU-FIM： Fig. 2 图页 · 补充信息 PDF · github.com/WeiLyu59/PKU-FIM ；Thieken 2023 补充材料： doi:10.5194/nhess-23-973-2023-supplement ；Silva 2025 补充材料： nhess-25-1501-2025-supplement.pdf ；Chen 2023： nhess-23-733-2023.xml 
+ DC 本地： Bloomingdale 任务组报告 Section 3（PDF） · FEMA FIS 110001V000A（PDF） · NCEI Storm Events Database · 311 City Service Requests in 2026 
+ 第 4 轮（读取 2026-11-15）：Ahsanuzzaman & Messer 2021： par.nsf.gov（PDF） ；Xu et al. 2026： Wiley（DOI 10.1111/jfr3.70272） ；Roy & Hasan 2021： par.nsf.gov（预印本） ；Arshaghi et al. 2026 XML： nhess-26-981-2026.xml ；Silva et al. 2025 补充材料： nhess-25-1501-2025-supplement.pdf ；NHTS Release Notes： nhts.ornl.gov（PDF） ；Derived Variables V2.1： nhts.ornl.gov（PDF） ；2024 PUMS 字典： census.gov（PDF） ；DEFRA/EA Supplementary Note (2008)： docs.planning.org.uk（PDF） ；NCEI Storm Events 批量文件： ncei.noaa.gov/pub/data/swdi/stormevents/csvfiles/ ；LODES8： lehd.ces.census.gov/data/lodes/ ；Zenodo 14568954： zenodo.org/records/14568954 ；DTG Crossref： api.crossref.org/works/10.1016/j.trd.2026.105685 
+ 
+ 附件中 PUMS 两 zip、字典 CSV、NHTS csv.zip 与 codebook 为 2026-11-14 自官方地址下载的原件副本；实算交叉表 CSV / Excel 为同日按 §A3 口径自 trip / person / household 三文件计算生成。
+
+ 
+
+ 
+
+ 
+ 
+ 

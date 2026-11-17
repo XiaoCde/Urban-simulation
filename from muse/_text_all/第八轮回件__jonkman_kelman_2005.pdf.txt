@@ -1,0 +1,1475 @@
+
+
+===== [page 1] =====
+An  analysis  of  the  causes  and 
+circumstances  of  flood  disaster  deaths
+Sebastiaan N. Jonkman Road and Hydraulic Institute, Ministry of Transport, and 
+Faculty of Civil Engineering, Delft University of Technology, Netherlands
+Ilan Kelman Deputy Director, Cambridge University Centre for Risk in the Built 
+Environment
+The objective of this paper is to investigate and to improve understanding of the causes and 
+circumstances of flood disaster deaths. A standardised method of classifying flood deaths is proposed 
+and the difficulties associated with comparing and assessing existing information on flood deaths 
+are discussed. Thirteen flood cases from Europe and the United States, resulting in 247 flood disaster 
+fatalities, were analysed and taken as indicative of flood disaster deaths. Approximately two-thirds 
+of the deaths occurred through drowning. Thus, a substantial number of flood disaster fatalities are 
+not related to drowning. Furthermore, males are highly vulnerable to dying in floods and unnecessary 
+risk-taking behaviour contributes significantly to flood disaster deaths. Based on these results, 
+recommendations are made to prevent loss of life in floods. To provide a more solid basis for the 
+formulation of prevention strategies, better systematic recording of flood fatalities is suggested, 
+especially those caused by different types of floods in all countries.
+Keywords: disaster deaths, drowning, flood deaths, flood fatalities, flood mortality, 
+flooding.
+Introduction
+Flood fatalities in context
+During the twentieth century, floods killed at least eight million people (EM-DAT, 2004). 
+Floods are often cited as being the most lethal of all natural disasters (Alexander, 1993; 
+French and Holt, 1989), although numerous critiques of such statements are made 
+(EM-DAT, 2004; Jonkman, 2005). This paper examines some of the issues raised by 
+starting from basic definitions in order to identify, categorise, evaluate and understand 
+how people die in floods. A contribution towards more consistent recording of natural 
+disaster fatalities is made by focussing on individual fatalities in specific events.
+Definitions
+Due to the complex interrelated processes that can cause and influence floods, defining 
+and classifying them is not simple. Proposing definitive, legalistic definitions of ‘flood’, 
+‘flood disaster’ or ‘flood fatality’ is not attempted here. Instead, working definitions 
+are used:
+• Flood—the presence of water in areas that are usually dry.
+Disasters, 2005, 29(1): 75−97. © Overseas Development Institute, 2005
+Published by Blackwell Publishing, 9600 Garsington Road, Oxford, OX4 2DQ, UK and 350 Main Street, Malden, MA 02148, USA
+
+
+===== [page 2] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+7­ 
+• Flood disaster—a flood that significantly disrupts or interferes with human and 
+societal activity.
+• Flood fatality or flood-related fatality—a fatality that would not have occurred 
+without a specific flood event. Synonyms and related terms include ‘flood deaths’, 
+‘loss of life in floods’, ‘flood mortality’ and ‘killed by flooding’.
+ These definitions are imperfect and exceptions exist. For example, dams and locks 
+along a torrent may be affected by a flood, disrupting human and societal activity, yet 
+without causing any inundation in areas that are usually dry.
+ The definition of flood fatality also raises questions regarding the timing of death. 
+Kelman (2005) argues against labelling deaths as ‘direct’ or ‘indirect’, so this approach 
+is not adopted here; however, some flood deaths are immediate (like those resulting 
+from drowning) and others could be delayed (such as those due to psychological effects 
+or disease). To address this issue and the possible separation between the flood disaster 
+and the potentially associated death, the approach taken here emulates other work by 
+dividing the flood disaster into three phases: pre-impact; impact; and post-impact. 
+Nonetheless, inadequate data meant that long-term flood mortality could not be 
+explored in the post-impact phase.
+ Despite the concerns and inconsistencies, these definitions provide a useful and 
+necessary starting point for analysing flood fatalities.
+Scope and objective
+As figure 1 illustrates, floods are a subset of the effects of water on society. Water, floods 
+and flood disasters have positive and negative ramifications for society, including 
+economic, environmental, social, and health consequences. This paper focuses on 
+negative health effects.
+ Health effects (on human beings) can be psychological (mental) or physiological 
+(physical). One physical health effect associated with both water and flood disasters 
+is death. Death might result from an array of medical causes, three examples of which 
+are shown in figure 1—a more complete set is proposed below in the section entitled 
+‘Analysing flood disaster deaths’. The shaded area represents the scope of this paper: 
+flood deaths due to mainly physical causes.
+ Other health effects in figure 1 are important, but they have been well documented 
+in the literature already. Non-lethal health effects of floods have a wide body of references 
+for physical health effects (Marwick, 1997; Noji, 1993) and mental health effects (Price, 
+1978; Selten et al., 1999). Similarly, excellent work has been completed on all kinds 
+of drowning, not just flood-related (Ahmed et al., 1999; Mackie, 1999), and on more 
+general water safety (Gabe and Hite, 2003; LACOE, 1997).
+ In contrast, flood fatalities are rarely examined across several flood disasters to identify 
+trends with respect to medical causes of deaths along with the vulnerabilities that led 
+to those deaths. Many authors call for or propose uniform classification schemes for 
+disaster deaths (Combs et al., 1999) and flood disaster casualties (Hajat et al., 2003; 
+Legome et al., 1995; WHO, 2002). This paper aims to start filling this gap by approaching 
+
+
+===== [page 3] =====
+An analysis of the causes and circumstances of flood disaster deaths
+77
+the problem systematically and by drawing on the literature that examines individual 
+deaths due to specific flood events.
+ The objective of this paper is to investigate and to improve understanding of the causes 
+and circumstances of flood disaster deaths. In this context, a systematic scheme for report­
+ing flood disaster deaths is proposed. Based on the analysis, strategies can be formulated 
+to prevent flood disaster deaths.
+ This paper focuses on Europe and the US due to the information available, but other 
+locations are mentioned when appropriate sources exist. One unfortunate consequence 
+is limited discussion on flood deaths in less developed countries, which is where most 
+flood fatalities have occurred in the past (EM-DAT, 2004). Despite this paper’s lack of 
+focus on less developed countries, the results presented here should assist all nations.
+ The scope, objective and definitions have been set out. The next step is to review 
+past work. Section three then proposes frameworks for analysing flood fatalities. Section 
+four includes an assessment of flood deaths based on case studies. Finally, section five 
+offers some conclusions and recommendations.
+Previous studies
+Health effects leading to death
+The literature on flood disaster health effects that result in death rarely quantifies or 
+classifies the causes and circumstances of death. Ohl and Tapsell (2000) state that, in the 
+aftermath of a flood disaster, deaths and injuries not only result from the physical 
+WATER
+Asphyxiation
+Electrocution
+Physical trauma
+FLOODS
+DEATH
+HEALTH EFFECTS
+Figure 1 Schematic diagram showing the effects of water on society, of which flood 
+deaths are a subset
+Notes The shaded area is investigated in this study. Three examples of death are given.
+
+
+===== [page 4] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+78 
+characteristics of the event but also are determined by the prevailing socioeconomic 
+and health conditions of the community. Bennet (1970) investigated the longer-term 
+effects of floods on mortality after the 1968 floods in Bristol, United Kingdom. For 
+the 12 months after the flood event, he showed an increase in population mortality rates 
+of 50 percent in the flooded part of the city compared with no appreciable change 
+in mortality in the non-flooded part. Similar patterns in post-flood mortality were 
+observed in Canvey Island, UK, after the 1953 flood disaster (Baxter et al., 2001) and 
+on the Canary Islands, Spain, after the 1953 inundations (French and Holt, 1989).
+ Other studies do not report increases in post-flood mortality; for example, those 
+that have looked at the 1988 flood disaster in Nîmes, France (Duclos et al., 1991) and 
+the 1974 flood disaster in Brisbane, Australia (Abrahams et al., 1976). Overall, strong 
+evidence persists regarding the connections between psychological health effects and 
+mortality in flood disasters, but quantitative assessments are difficult due to the challenges 
+of long-term data collection and attributing definitively a specific death to a particular 
+cause long after an event.
+Studies on flood disaster deaths
+A few studies aggregate flood disaster deaths. Coates (1999), analysing Australian 
+flood deaths between 1788 and 1996, highlighted the large number of fatalities that 
+occurred as a result of people attempting to travel across floodwater, being caught in 
+a campsite, being trapped inside a building or attempting to rescue someone else.
+ Data on flood disaster deaths in the US are presented by French et al. (1983) and 
+Mooney (1983). Vehicle-related deaths were the dominant cause in both studies, consti­
+tuting 42 percent (French et al., 1983) and 49 percent (Mooney, 1983) of all recorded 
+fatalities. Significant numbers of fatalities also occurred in homes, on campsites, when 
+crossing bridges or when walking through floodwaters. Coates (1999), French et al. 
+(1983) and Mooney (1983) all highlight an overrepresentation of males in the death 
+statistics. In addition, they point to increased vulnerability of young and elderly people.
+ These studies on aggregated flood disaster death data provide a first indication of 
+vulnerability factors—namely age, gender and activity—which are important for analys­
+ing the causes of flood fatalities. These studies help in understanding the problem, but 
+do not yet provide adequate explanations and categorisation for developing solutions.
+ Some literature is dedicated to estimating loss of life due to floods in the context of 
+a safety assessment of flood protection systems, such as dams and dikes. Jonkman et al. 
+(2002) provide an overview. These assessments, though, do not offer insight into the root 
+causes and the mechanisms that determine loss of life due to floods. Human stability in 
+flowing water is also examined by some authors (such as Abt et al., 1989), indicating that 
+people lose their stability in relatively shallow depths and at relatively slow flow velocities.
+Specific cases of fatal flood disasters
+A third category of literature has emerged through the documentation of fatalities in 
+specific flood disasters. The event-based data and the descriptions offered in these 
+
+
+===== [page 5] =====
+An analysis of the causes and circumstances of flood disaster deaths
+79
+studies provide insight into the factors determining, and the causes of, loss of life in 
+floods, which form the basis for the work presented here.
+ Appendix A summarises the cases (table A.1) and other literature (table A.2) utilised 
+in this analysis. A total of 13 cases involving 247 flood disaster fatalities were analysed 
+and taken as representative of the literature and as indicative of flood disaster deaths 
+reported; however, this selection might not be representative of all flood disaster deaths. 
+In particular, the cases are from only specific locations in Europe and the US. As 
+discussed later, biases related to the event typology and the culture of these locations 
+could influence the results and caution is warranted in interpreting the conclusions 
+provided here more generally.
+ Possible case studies were limited because they had to provide adequate data on the 
+age and gender of each individual victim, timing of death, medical cause of death, and 
+activity or circumstances. For consistency, each case study is relatively recent (within 
+the past 20 years) and involved relatively few deaths (less than 50). The individual-by-
+individual data were then aggregated for analysis. To prevent loss of information on typical 
+event patterns or individual characteristics, the available information was investigated (see 
+the section entitled ‘Results and discussion’ below) on different levels: aggregated, event 
+and individual fatality level. Other events are used for comparison when appropriate.
+Analysing flood disaster deaths
+Framework proposal: overview of factors
+A combination of hazard factors and vulnerability factors result in a flood death due 
+to a specific medical cause (figure 2). For example, an ill girl (vulnerability) could lose 
+her stability in floodwater imparting a certain hydraulic load (hazard) on her resulting 
+in her drowning or dying as a consequence of physical trauma (medical cause of death). 
+Similarly, rising floodwater (hazard) could lead to the evacuation of a retirement home 
+in the flood plain (vulnerability) and two residents having heart attacks (medical cause 
+of death). Therefore, medical causes of death are not vulnerability factors in themselves 
+but are the product of the amalgamation of hazard and vulnerability elements.
+HAZARD FACTORS
+VULNERABILITY FACTORS
+MEDICAL CAUSE 
+OF DEATH
+LOSS OF LIFE
+Figure 2 Hazard and vulnerability factors that result in loss of life due to a specific 
+medical cause 
+
+
+===== [page 6] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+80 
+ To determine the effects of flood hazards on people, they could be interpreted as 
+‘flood actions’ (see Kelman and Spence, 2004); that is, how the flood acts on individuals. 
+Flood actions include forces, pressures, motion, oxygen deprivation, chemical reaction 
+due to contaminants, debris impacts and flood-related fire consequences. Flood hazard 
+variables used to calculate flood actions include water depth, water depth rise rate, water 
+velocity, wave characteristics, water temperature, and the amount and the nature of 
+debris and contaminants. Studies on flood deaths rarely provide adequate quantitative 
+data on flood actions.
+ Vulnerabilities of an individual potentially leading to death in a flood disaster include 
+age, gender, physical and mental health history, current physical and mental condi­
+tion, activity and behaviour (such as attempting a rescue, sleeping or evacuating), 
+clothing worn, swimming ability and experience (likely only to be relevant for non-
+moving water), temporary impairment (for instance, due to alcohol or drugs), 
+knowledge of the area where the flood is occurring, situation/place (for example, on 
+foot, on a bicycle, in a vehicle or in a building), and rescue (including self-rescue) and 
+medical response capabilities. As shown in Appendix A, age and gender are usually 
+reported in the flood disaster death literature. Other vulnerability factors considered 
+occasionally are impairment and timing. Appendix A further illustrates that medical 
+causes of flood disaster deaths are usually listed, which are then often misinterpreted as 
+being the fundamental cause of death. In the existing literature, though, links between 
+the flood actions (that is, hazard factors), individual vulnerabilities and medical causes 
+of death are rarely made. This paper strives to achieve more in this realm through the 
+classification method chosen.
+Developing a classification method for flood disaster deaths
+Consistency problems emerge when trying to define a flood death because a disaster 
+event might involve numerous different phenomena, leading to deaths from different 
+causes. The disaster might also appear to be of a different type than the phenomenon 
+that causes most fatalities. For example, two events in the US, Hurricane Floyd in 1999 
+and Tropical Storm Allison in 2001, are classified by EM-DAT (2004) as windstorms, 
+even though the majority of fatalities was the result of drowning in inland waterways 
+(MMWR, 2000; NOAA, 2001). The 1991 Bangladesh cyclone is also classified as a wind­
+storm by EM-DAT (2004), yet most of the 139,000 fatalities were the result of drowning 
+due to storm surge flooding (Haque and Blair, 1992; Chowdhury et al., 1993). The floods 
+in the UK in autumn 2000 (Kelman, 2001) are another ambiguous example, since they 
+resulted from several storm systems. Deaths were both wind-related, such as falling 
+overboard in choppy seas or being crushed by trees, and flood-related, such as drowning 
+in flooded rivers.
+ This paper relies on the definitions set out in the introduction. Deaths are flood-related 
+only if they occurred during an event involving the presence of water on land that is 
+usually dry. Thus, drownings and heart attacks during floodwater-induced evacuations 
+are flood disaster-related deaths, whereas people being blown off ships or off the road 
+(by wind) generally are not.
+
+
+===== [page 7] =====
+An analysis of the causes and circumstances of flood disaster deaths
+81
+ Further ambiguities emerge that make rigid application of this approach challenging. 
+Tropical cyclones tend to cause blackouts that lead to death from electrocution during 
+grid repairs, carbon monoxide poisoning due to improper use of personal generators, 
+and candle-induced fires. Normally, high winds are responsible for the blackouts, but 
+flood actions can also cause power outages. Classifying electricity-related deaths as wind-
+related or flood-related is not straightforward.
+ Rather than debating the classification of each individual death, a decision was taken 
+to catalogue each event as flood or non-flood based on the origin and extent of deaths 
+and damage and the resultant societal perception. Thus, despite ambiguities, the autumn 
+2000 floods in the UK and Tropical Storm Allison in the US in 2001 are considered 
+to be flood disasters, whereas Hurricanes Marilyn and Opal in 1995 (MMWR, 1996) 
+in the US are not. Some decisions could be contentious; the cases are listed in Appendix 
+A to permit discussion.
+ An important point to underline is that the flood disasters appraised constitute only 
+a selection, they are not comprehensive. Hence, excluding a flood disaster would have 
+less impact on the results than including a non-flood disaster. Irrespective, since drowning 
+naturally tends to indicate a flood event, a difficult-to-classify event involving few 
+instances of drowning would likely be excluded. Consequently, drownings might be 
+overrepresented in the fatality statistics.
+ This approach is challenging to implement consistently, particularly in light of 
+inconsistent data, ambiguous definitions, and differences among references for particular 
+events and specific fatalities. Therefore, the results here can be considered to be only 
+first-order, giving informative and practical insight into flood disaster deaths.
+Classification method for flood disaster deaths
+No generally accepted classification method for flood fatalities exists. Different classifi­
+cations with varying levels of detail for reporting flood-related deaths are found in 
+the literature, which are often poorly described or weakly documented. Consistency 
+problems might thus manifest themselves when comparing different flood disasters.
+ Hence, the interpretations in this study could reflect the choices made in previous 
+studies and the biases resulting from these choices. To attempt to minimise such biases 
+here, non-aggregated, raw data have been utilised as much as possible. Additionally, 
+long-term flood mortality is not explored. Instead, deaths that occurred just before, 
+during and shortly after flood events are considered. Despite potentially debatable 
+judgements, the advantages of this approach include the opportunities:
+• to compare different events and to examine simultaneously flood disaster deaths in 
+many flood disasters;
+• to develop a proposal for standardised data collection that factors in key vulnerabilities 
+leading to flood disaster deaths; and
+• to establish a relatively solid basis for mitigation and education.
+ Based on the literature review, a classification is proposed in table 1. Each category is 
+generally self-explanatory, but some notes are provided below.
+ 
+
+
+===== [page 8] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+82 
+     
+Table 1 Classification of flood disaster deaths
+Medical cause
+Activity
+Timing
+Gender
+Age
+Lack of 
+judgement1
+Drowning 
+As a 
+pedestrian
+Pre-impact 
+phase
+Female
+0–19 years
+Yes
+In a vehicle
+Impact phase
+Male
+20–59 years
+No
+From a boat
+Post-impact 
+phase
+Not reported
+Older than 60 
+years
+During 
+a rescue 
+attempt
+Not 
+determinable
+Not reported
+In a building
+Physical trauma
+In water
+As a 
+pedestrian
+In a vehicle
+On a boat
+During 
+a rescue 
+attempt
+In a building
+Heart attack
+Electrocution
+Carbon 
+monoxide 
+poisoning
+Fire
+Other
+Unknown or 
+not reported
+Notes
+1. If not enough information is available to record a definite ‘yes’, then ‘no’ is recorded.
+Each fatality in each event was given one classification in each column. That is, one medical cause and activity classification, one timing 
+classification, one gender classification, one age classification, and a decision on whether or not lack of judgement by that individual or 
+someone else was unambiguously to blame.
+ The category ‘other’ should be expanded when needed. For example, if many fatalities occurred due to snake bites, trampling by 
+hippopotamuses, jellyfish stings, water-related disease due to the flood, or other factors, then they should be listed explicitly. Similarly, 
+‘cold water shock’, where the heart stops due to the shock of being immersed in cold water, is occasionally suggested (and disputed) as 
+a cause of death rather than drowning. Expanding the ‘other’ category might also be useful for recording further details, if available, such as 
+the highly specific categories used by McClelland et al. (1999), and for identifying event sequences that cause flood-related mortality. 
+During a 1991 flood in Texas, a fatality in a non-flooded mobile home resulted from fire ants being flushed out of the ground by the 
+flood, which subsequently invaded the victim’s house and caused a short circuit in the electrical wiring that started a fire that killed the 
+occupant (Brenner et al., 1994). 
+
+
+===== [page 9] =====
+An analysis of the causes and circumstances of flood disaster deaths
+83
+ The World Congress on Drowning (WCD) (2003) has adopted the following as a 
+definition of drowning: ‘the process of experiencing respiratory impairment from 
+submersion/immersion in liquid’. According to Bierens (1996), both hypothermia and 
+asphyxiation occur during the drowning process, yet the former might cause the victim 
+to lose strength and thereby to drown. Either hypothermia or drowning/asphyxiation 
+could be selected to classify such deaths, but the literature tends to categorise them as 
+drownings. Thus, deaths from exposure, hypothermia or cold (in floods) are not accorded 
+separate categories in this study, and only one death in the case studies was explicitly 
+labelled as such.
+ Physical trauma includes people being killed as a result of being hit by debris in the 
+water, the collapse of a building due to the flood or vehicle crashes influenced by 
+floodwater.
+ The categories are not absolute. For instance, physical trauma that causes unconscious­
+ness could lead to either drowning or hypothermia. The classification results will thus 
+to some extent reflect the analyst’s judgments and the information available.
+Results and discussion: 
+factors influencing flood disaster deaths
+Cause of death and circumstances
+For the 13 studied flood cases the aggregated data on medical cause of death and the 
+surrounding circumstances are shown in table 2.
+ Drowning accounts for the majority of the fatalities (67.6 percent), with the implica­
+tion for education and mitigation that approximately one-third of flood disaster fatalities 
+are not due to drowning. Vehicle-related drowning occurs most frequently, mainly when 
+people try to drive across flooded bridges, roads or streams. Such instances of drowning 
+occur during several phases of the flood: at the onset, when people are surprised by the 
+floodwaters, and in the aftermath, such as after the storm system has passed but when 
+the waters are still high.
+ Low-water crossings, where a road traverses a normally dry stream bed or where there 
+is a slight dip in the road across a drainage area, are particularly dangerous (Kelman, 2005). 
+This may reflect motorists’ misconception that automobiles can provide adequate 
+protection from rising water (MMWR, 1993). Another especially dangerous activity is 
+driving over flooded bridges. In the 1992 Puerto Rico floods, 11 of the 14 fatal car crashes 
+happened on a flooded bridge (Staes et al., 1994).
+ Specific dangers are associated with attempted rescues, but the consequences vary. As 
+can be seen in table 2, three people lost their lives during the rescue process, only one 
+of whom was a rescuer. Other sources, not included in the data in table 2, confirm the 
+dangers associated with rescue. In North Carolina, when Hurricane Floyd hit in 1999, 
+five rescuer deaths were reported in a death toll of 52 (MMWR, 2000). In the 1988 
+floods in Nîmes, France, two of the nine people who lost their lives drowned during 
+rescue operations (Duclos et al., 1991).
+
+
+===== [page 10] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+84 
+Table 2 Distribution of the causes and circumstances of death for the 13 events 
+listed in Appendix A
+Cause of death and the 
+surrounding circumstances
+Total 
+deaths
+Total 
+deaths (%)
+Aggregates
+Drowning 
+As a pedestrian
+62
+25.1
+All drownings
+167 (67.6%)
+In a vehicle
+81
+32.8
+From a boat
+7
+2.8
+During a rescue attempt 2
+0.8
+In a building
+15
+6.1
+Physical trauma
+In water
+0
+0
+All physical 
+trauma
+29 (11.7%)
+As a pedestrian
+4
+1.6
+In a vehicle
+14
+5.7
+On a boat
+2
+0.8
+During a rescue attempt 1
+0.4
+In a building
+8
+3.2
+Heart attack
+14
+5.7
+Electrocution
+7
+2.8
+Carbon monoxide poisoning
+2
+0.8
+Fire
+9
+3.6
+Other
+3
+1.2
+Unknown or not reported
+16
+6.5
+Total
+247
+100
+ Fourteen (5.7 percent) heart attack fatalities were reported, three of which occurred 
+during the evacuation process following the 2002 floods in Germany. Better preparation 
+and planning, which would eliminate the need for sudden and stressful evacuations, 
+could save lives (Kelman, 2005).
+ All deaths due to fire and carbon monoxide poisoning happened in buildings. Also 
+in buildings, 15 (6.1 percent) fatalities were the result of drowning and eight (3.2 percent) 
+were due to physical trauma. In most events, people living in the affected areas could 
+be warned and evacuated, but those actions—and preparation for those actions—must 
+be effected properly (Handmer, 2000). In addition, the consequences of evacuation must 
+be less than the consequences of non-evacuation.
+ Differences between flood deaths in Europe and the US, as shown in table 2, are of 
+particular interest. The most striking difference to emerge is that drowning in vehicles 
+seems to be a worse problem in the US than in Europe. Possible reasons for this are:
+
+
+===== [page 11] =====
+An analysis of the causes and circumstances of flood disaster deaths
+85
+Europe 
+deaths
+Europe 
+deaths (%)
+Aggregates
+US 
+deaths
+US 
+deaths (%)
+Aggregates
+34
+35.8
+All drownings
+65 (68.4%)
+28
+18.4
+All drownings
+102 (67.1%)
+12
+12.6
+69
+45.4
+6
+6.3
+1
+0.7
+2
+2.1
+0
+0
+11
+11.6
+4
+2.6
+0
+0
+All physical 
+trauma
+14 (14.8%)
+0
+0
+All physical 
+trauma
+15 (9.8%)
+0
+0
+4
+2.6
+9
+9.5
+5
+3.3
+2
+2.1
+0
+0
+1
+1.1
+0
+0
+2
+2.1
+6
+3.9
+7
+7.4
+7
+4.6
+0
+0
+7
+4.6
+1
+1.1
+1
+0.7
+0
+0
+9
+5.9
+3
+3.2
+0
+0
+5
+5.3
+11
+7.2
+95
+100
+152
+100
+• a better understanding or stronger recollection of the dangers of flooding in Europe;
+• better warning systems combined with better compliance with warnings in Europe;
+• different nature of flooding in Europe and the US;
+• higher recurrence rates of floods that pose a danger to vehicles in the US, perhaps 
+due to differing road networks (for instance, fewer low-water crossings in Europe) 
+or different flood characteristics (for example, intensity of cloudbursts); and
+• different reporting systems for flood deaths.
+ Similarly, all reported deaths due to electrocution and fire occurred in the US. A differ­
+ent system of reporting data or different terminology could be reasons. Such differences 
+would be difficult to trace back without reconstructing the circumstances surrounding 
+each fatality.
+ Furthermore, the types of events considered might influence the outcomes. Most 
+US events analysed were associated with windstorms (that is, cyclones), while the Euro­
+
+
+===== [page 12] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+86 
+pean floods comprised mostly river floods. Inclusion of the 1999 floods in France would 
+have reduced the difference between the US and Europe with regard to car-related 
+drownings, as ten of the 24 fatalities in the former event were the result of drowning in 
+vehicles (ICPR, 2002). This event was not included here because the International 
+Commission for the Protection of the Rhine (ICPR) (2002) did not provide data on 
+individual fatalities. Due to the limited sample of case studies considered and the lack 
+of a standardised reporting scheme, no definitive conclusions on differences between 
+locations could be reached. The France 1999 example underscores that the small dataset 
+considered here leads to potentially unreliable conclusions.
+Age
+Three age bands were used to examine vulnerability due to being old or young, as 
+reported by Mooney (1983) and Coates (1999). For example, Mooney found that 55 
+percent of those who lost their lives in flash floods in the US were under the age of 21.
+ From table 3, the increased vulnerability of the young and elderly cannot be con­
+firmed; however, indications are that, as expected, some age groups might be more 
+vulnerable to certain causes of death. Of the 33 people who died who were under 20 
+and for whom the cause of death was identified, 15 drowned in vehicles, in most cases 
+as a passenger, seven died as pedestrians, five died in a single fire, three died due to physical 
+trauma, two died while boating and one drowned in a building. Seventy-nine percent 
+of the people under 20 who died lost their lives in floods in the US—by contrast, 60 
+percent of the deaths in the case studies occurred in the US—indicating higher vulner­
+ability among young people to floods in the US than in Europe.
+ The increased vulnerability of the elderly to heart attacks is confirmed to some extent 
+by the fact that five of the deaths due to a heart attack that occurred during the 2002 
+floods in Germany involved people over the age of 65 (Reimer, 2002). However, age 
+is not reported for the eight other heart attack deaths in the case studies examined here.
+ With regard to European flood fatalities, 25.3 percent of the people who lost their 
+lives were over the age of 60, compared with 11.2 percent in the US. Several factors 
+Table 3 Distribution of flood fatalities according to age 
+Age band
+Total
+Total 
+(%)
+In Europe
+In Europe 
+(%)
+In US
+In US 
+(%)
+0–19 years
+33
+13.4
+8
+8.4
+25
+16.4
+20–60 years
+98
+39.7
+47
+49.5
+51
+33.6
+> 60 years
+41
+16.6
+24
+25.3
+17
+11.2
+Not reported
+75
+30.4
+16
+16.8
+59
+38.8
+Total
+247
+100
+95
+100
+152
+100
+
+
+===== [page 13] =====
+An analysis of the causes and circumstances of flood disaster deaths
+87
+might influence these statistics. In the US, non-elderly people might take risks in floods 
+that their European counterparts do not. In Europe, the elderly might be left to fend 
+for themselves during floods more frequently than in the US; they might choose to 
+stay in flooded buildings; or they might experience difficulties in receiving, inter­
+preting and acting on flood warnings. The ICPR (2002) notes that, during the 1999 
+floods in France, eight of the nine drownings in buildings involved ‘pensioners’. In the 
+cases examined here, one-half of the drownings in buildings involved elderly people, 
+suggesting that this factor could be important.
+Gender
+Table 4 shows the distribution of flood fatalities according to gender. Of the fatalities 
+where gender is reported, 70 percent are male. For all flood events examined here, the 
+number of male deaths exceeds (11 cases) or equals (two cases) the number of female 
+deaths. One hundred and eighty-four fatalities report both individual cause of death 
+and gender. Males are significantly overrepresented in vehicle crashes, drowning and 
+physical trauma, and in cases of pedestrian drowning. Likely contributing factors are the 
+large number of males who drive, the high proportion of males who work for the emer­
+gency and supporting services, and the risk-taking behaviour of males (discussed further 
+below). For other causes of death, no apparent differences between males and females are 
+evident. Furthermore, the relationship between gender, cause of death and age category 
+has been checked, showing that males are overrepresented in all three age categories.
+Activity and behaviour
+The way in which people respond to floods is an important factor in the associated 
+morbidity and mortality (French and Holt, 1989). A substantial proportion of the flood-
+related deaths is believed to be attributable to unnecessary risk-taking behaviour.
+ The 2002 floods in Germany illustrate the preventable nature of such deaths. Reimer’s 
+(2002) descriptions of the circumstances surrounding individual deaths suggests that at 
+least eight of the 19 fatalities were due to unnecessary action:
+Table 4 Distribution of flood fatalities according to gender
+Gender
+Number
+Percent
+In Europe
+In Europe 
+(%)
+In US
+In US 
+(%)
+Male
+145
+58.7
+72
+75.8
+73
+48.0
+Female
+62
+25.1
+22
+23.2
+40
+26.3
+Not 
+reported
+40
+16.2
+1
+1.1
+39
+25.7
+Total
+247
+100
+95
+100
+152
+100
+
+
+===== [page 14] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+88 
+•   six people entered their home or the floodwaters to rescue belongings, such as laundry 
+or firewood;
+•  one person was boating in the floodwaters; and
+•   one person tried to drive across a flooded street.
+ Other reported examples of risk-taking behaviour in floods include driving around 
+barricades warning of the danger and attempting to wade across flooded watercourses. 
+During several recent European floods, different forms of flood tourism were reported, 
+including large crowds gathering on riverbanks and bridges and people engaging in 
+recreational boating activities on flooded streams.
+ Similar observations with respect to the contribution of risky behaviour to Australian 
+flood deaths are provided by Coates (1999). The Australian figures show that 8.3 percent 
+of the fatalities occurred when victims attempted to retrieve stock or property and that 
+5.7 percent of the fatalities resulted from persons undertaking recreational activities 
+in the flooded area. The World Health Organization (WHO) (2002) estimates that 40 
+percent of all health impacts in European floods are related to risk-taking behaviour. 
+The ICPR (2002) notes that, in Switzerland, 40 percent of the 67 flood fatalities that 
+occurred between 1972 and 2001 were due to what it terms ‘misconduct’. Sometimes, 
+unnecessary risky behaviour might lead to the death of another person, such as a 
+passenger in a vehicle.
+Timing of death
+Timing of death relative to flood occurrence has been deduced for 214 fatalities (see 
+table 5). Of these 214 fatalities, 87 percent occurred during the impact phase. Nonetheless, 
+a bias in the data is likely in terms of excluding pre-impact and many post-impact 
+fatalities while including most impact phase deaths (Duclos and Isaacson, 1987). For 
+example, Water Safety New Zealand maintains a database of cases of drowning in New 
+Zealand but does not consider post-impact flood-related drownings to be associated 
+Table 5 Distribution of flood fatalities according to timing of death 
+Timing
+Number
+Percent
+In Europe
+In Europe 
+(%)
+In US
+In US 
+(%)
+Pre-impact phase
+0
+0
+0
+0
+0
+0
+Impact phase
+187
+75.7
+83
+87.4
+104
+68.4
+Post-impact phase
+27
+10.9
+4
+4.2
+23
+15.1
+Not determinable
+33
+13.4
+8
+8.4
+25
+16.4
+Total
+247
+100
+95
+100
+152
+100
+ 
+
+
+===== [page 15] =====
+An analysis of the causes and circumstances of flood disaster deaths
+89
+with the flood event. Deaths that are reported in the post-impact phase of the case 
+studies examined here were mainly related to clean-up operations and include heart 
+attacks and vehicle-related drownings. 
+ The relationship between time of death and the issuance of official warnings could 
+not be investigated here due to lack of information. Staes et al. (1994) examines this issue 
+with respect to the 1992 Puerto Rico floods: three of the 23 deaths happened before 
+flash-flood watches were issued, while 17 deaths occurred before flash-flood warnings 
+were issued.
+ Similarly, at what point in the day death occurred could not be fully analysed, but 
+the available evidence suggests little pattern. In the 1997 Poland floods, all deaths occurred 
+during the day (M. Mierkiewicz, personal communication). For the 1992 Puerto Rico 
+floods, all deaths occurred during the evening (Staes et al., 1994).
+ Mooney (1983) shows that nearly 75 percent of flash-flood deaths in the US occurred 
+during the hours of twilight and darkness. This high percentage might be due to the 
+unexpected character of flash floods and their rapid onset, compounded by darkness. 
+Similar suggestions have been made for the 1953 North Sea storm surge in England 
+and the Netherlands (Grieve, 1959). This phenomenon might be less relevant for other 
+types of floods.
+ Season is also pertinent to flood fatalities. Enough data—mainly related to air and 
+water temperature—were not available to determine whether or not the mortality 
+rate was higher during certain seasons. Additionally, other seasonal factors, such as the 
+number of hours of darkness per day, might influence the number of deaths.
+Other factors
+Some studies highlight other factors relating to flood deaths, such as blood alcohol 
+content and ethnicity (Thorne and Ararat, 2002). Such data are useful for this analysis, 
+but did not appear in enough case studies to permit extensive comparisons to be made.
+ For the 1992 Puerto Rico floods (Staes et al., 1994), blood alcohol content was 
+measured with respect to 16 adult deaths: 12 had some alcohol in their blood, including 
+five who had levels greater than 0.1 percent. The flood event happened during a public 
+holiday, presumably contributing to the inebriation of the victims. Thorne and Ararat 
+(2002) show that 17 of the 23 fatalities in the area of Houston, Texas, during the 2001 
+Tropical Storm Allison floods had positive blood alcohol levels. In these cases, the flood 
+deaths point to an alcohol problem more than a drowning or flood fatality problem. 
+Given these results, a connection between drunk driving and vehicle-related flood 
+deaths should be investigated.
+ Thorne and Ararat (2002) also report that 20 of the 23 people who lost their lives 
+belonged to certain ethnic (black and Hispanic) groups. Based on their limited evidence 
+and lack of information about the ethnic breakdown of the wider population, no 
+definitive conclusions on the relevance of ethnicity could be drawn.
+ In the section above entitled ‘Framework proposal’, (potentially) relevant individual 
+vulnerability factors were outlined. The available dataset did not contain information 
+on more specific individual conditions of the people who died, such as physical and 
+
+
+===== [page 16] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+90 
+mental state, swimming ability, clothing worn and knowledge of the area. Similarly, 
+little information was provided on the flood actions and hazard variables, such as the 
+hydraulic conditions, the water temperature and the degree and nature of any water con­
+tamination. The analysis of causes of death, illustrating the perils of driving or walking 
+through floodwater, demonstrates the relevance of hazard factors in fully understanding 
+flood fatalities. Furthermore, no data were found on the effectiveness of rescue operations 
+and medical interventions.
+Further discussion
+The previous sections have mainly focussed on the influence of individual vulnerability 
+factors. Cross-checking analyses suggest that complex patterns among vulnerability 
+factors might exist. In some cases, they might be logical, such as the increased vulnerability 
+of the elderly to heart attacks. More complicated patterns—including interrelations 
+between cause of death, gender, ethnicity and alcohol abuse—might exist, but they 
+could not be examined without more data.
+ Preparation, warning and evacuation have a role to play in preventing flood fatalities. 
+The most lethal flood disasters, particularly flash floods and storm surges, appear to hit 
+with little warning and are of such a large scale that ad hoc escape is challenging. Two 
+examples are the 1953 North Sea storm surge (over 2,300 fatalities) and the 1991 
+Bangladesh cyclone (approximately 139,000 fatalities). These higher fatality events might 
+exhibit different mortality patterns to the smaller-scale events studied here.
+ In contrast to the overrepresentation of male deaths found here, the 1953 floods in 
+the Netherlands resulted in nearly equal distribution of fatalities between the genders 
+(Jonkman et al., 2003; Kelman, 2003). In the 1991 Bangladesh cyclone, death rates were 
+substantially higher for females than for males (Chowdhury et al., 1993). Possible 
+reasons indicated for women’s vulnerability are the social role of women, their style of 
+clothing, their lower physical ability and their level of nutrition. Similarly, while only 
+a few of the fatalities in this study occurred in buildings, a significant number of the 
+1,835 fatalities in the Netherlands during the 1953 storm surge were due to the collapse 
+of buildings (Slager, 1992).
+ The transferability of the results of this study to other regions could be questioned, 
+but transferring the methodology is recommended. Apart from the flood characteristics, 
+socio-economic factors could play an important role. The latter include the potential 
+to warn of, to respond to, and to cope with, a flood disaster. In Bangladesh, for instance, 
+600,000 people live on river islands called chars which are vulnerable to erosion and 
+flooding (Sarker et al., 2003). Livelihood interests, such as the availability of fertile soil 
+and the lack of space and opportunity elsewhere, lead—or force—people to live there 
+despite the flood risk. The conclusions of this study might apply to only the floods 
+examined: that is, smaller-scale floods in Europe and the US.
+ On a global scale, a comparison of average flood event mortality (number of fatalities 
+divided by number of affected persons) with other types of disasters is provided in 
+(Jonkman, 2005). Average flood mortality for slow-onset floods, such as drainage and 
+river floods, is relatively low (in the order of 0.01–0.5 percent). More rapid floods, 
+
+
+===== [page 17] =====
+An analysis of the causes and circumstances of flood disaster deaths
+91
+such as flash floods (average mortality equals 3.6 percent), tend to have death rates of 
+the same order of magnitude as an average earthquake (3.1 percent) or windstorm (2.6 
+percent). The relatively high average mortalities for events that occur with little or no 
+notice indicates the importance of suitable warnings, and acting appropriately to 
+warnings, for saving lives. This is also believed to be valid for other types of disasters. 
+With regard to landslides, for example, Guzzetti (2000) and Alexander (2004) show that 
+fast-moving failures were responsible for more than 80 percent of deaths and injuries, 
+while slow-moving landslides rarely resulted in casualties.
+Conclusions and recommendations
+Conclusions
+The objective of this paper is to investigate and improve understanding of the causes 
+and circumstances of flood disaster deaths. By analysing data on 247 deaths in 13 floods, 
+the reasons for these flood fatalities have been examined.
+ One of the main difficulties in collecting and appraising data relates to defining a flood 
+death. Different forms of data are published and different classifications are used. The 
+published data are limited, covering only part of the information needed to determine 
+the full cause of death. To start overcoming these issues, a set of working definitions 
+along with a standardised method of classification for flood disaster deaths have been 
+proposed.
+ Despite the limitations discussed, this study provides a representative analysis of 
+flood deaths for relatively small-scale floods in Europe and the US. The analysed data 
+illustrated that:
+•  approximately two-thirds of the analysed flood deaths were due to drowning. An 
+important implication of this is that a substantial proportion of the fatalities is due 
+to causes other than drowning, such as physical trauma, heart attack, fire, carbon 
+monoxide poisoning and electrocution;
+•  70 percent of flood deaths involve males, suggesting high flood vulnerability among 
+that gender;
+•  in contrast to previous studies, enough evidence was not available to draw conclusions 
+on age-related vulnerability;
+•  the response of people and their actions are critical and should be examined in closer 
+detail. Significant numbers of flood deaths are attributable to unnecessary risky 
+behaviour; and 
+•  in the two cases where the alcohol blood levels of the victims were measured, the 
+majority of the victims had positive alcohol blood levels.
+ Nonetheless, the available data have many weaknesses and there is scope for much 
+more work, particularly in terms of collecting comprehensive, standardised information. 
+If this could be done, the result could lead to policies and actions that reduce the 
+number of flood disaster deaths.
+
+
+===== [page 18] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+92 
+Recommendations
+Systematic data collection
+This study has highlighted many difficulties associated with identifying, defining and 
+classifying flood disaster deaths. A set of working definitions has been proposed, and 
+table 1 could be used as a first-order standardised ‘fact sheet’ for future data collection. 
+Decisions to include or exclude data should strike a balance between data collectability 
+and importance.
+ Potentially important vulnerability data are blood alcohol content, swimming ability 
+and factors related to receipt of, and compliance with, warnings. The influence of 
+hazard characteristics is poorly documented in the existing literature. Potentially impor­
+tant hazard data would relate to flood actions (Kelman and Spence, 2004) or more 
+generally to flood type (Jonkman, 2005).
+ Such systematic recording and tracking of flood fatalities would allow policy and 
+practice to be based on fundamental data. Insight gleaned from vulnerability charac­
+teristics could be used to target education, awareness and warning programmes at the 
+sub-populations that display a persistent tendency to be killed by floods. Improved 
+understanding of the relationship between hazard and vulnerability factors and potential 
+loss of life in floods would also provide a better basis for loss of life estimation and for 
+evaluating possible mitigation strategies.
+ These data should be collected for all areas of the world and for all types of floods. 
+Following previous recommendations (WHO, 2002; Hajat et al., 2003) the ‘fact sheet’ 
+could eventually be expanded into a broader system for reporting flood morbidity and 
+mortality, including the non-lethal health effects and longer-term mortality connected 
+with flood disasters.
+ A private, international foundation might be the most suitable choice for imple­
+menting and maintaining this scheme, while emulating the approach of EM-DAT 
+(2004) to making the data available. We estimate that the research and application benefits 
+of systematic data collection for the prevention of flood fatalities would far exceed 
+the costs.
+Preventing loss of life
+In general, education, awareness and warning appear to be key to preventing flood 
+mortality. For example, people should avoid entering floodwaters, either by vehicle 
+or on foot, and other risk-taking activities, generally associated with males, should be 
+curtailed. The issues pertain to all phases of the flood: before the water rises, during the 
+event, and especially after the storm system has passed but water levels remain high 
+and dangerous. Deaths due to causes other than drowning should also be specifically 
+targeted for reduction, in particular heart attacks and post-impact fatalities. However, 
+more evidence is needed to identify the underlying causes of death and the vulnerabilities.
+ Nonetheless, lack of adequate data is not an appropriate excuse for lack of action 
+to prevent flood fatalities. Anecdotal lessons have emerged, reiterating comments and 
+suggestions made by the likes of the Los Angeles County Office of Education (LACOE) 
+(1997) and Thorne and Ararat (2002):
+
+
+===== [page 19] =====
+An analysis of the causes and circumstances of flood disaster deaths
+93
+•  do not walk through, drive through or otherwise enter floodwater;
+•  do not drink and drown; and
+•  replacing possessions costs less than drowning.
+Acknowledgements
+The authors would like to express their gratitude to Herman van der Most and 
+Megan Morys for the comments that they provided on an earlier draft. Two anonymous 
+referees are thanked for the useful comments that they supplied on the submitted 
+manuscript.
+References
+Abrahams, M.J., J. Price, F.A. Whitlock and G. Williams (1976) ‘The Brisbane floods, January 1974: Their 
+impact on health’. Medical Journal of Australia. 2. pp. 936–939.
+Abt, S.R., R.J Wittler, A. Taylor and D.J. Love (1989) ‘Human Stability in a High Flood Hazard Zone’. 
+AWRA Water Resources Bulletin. 25. pp. 881–890.
+Ahmed, M.K., M. Rahman and J. van Ginneken (1999) ‘Epidemiology of Child Deaths Due to Drowning 
+in Matlab, Bangladesh’. International Journal of Epidemiology. 28. pp. 306–311.
+Alexander, D. (1993) Natural Disasters. UCL Press, London.
+Alexander, D.E. (2004) ‘Vulnerability to landslides’. In T. Glade, M. Anderson and M. Crozier (eds.) 
+Landslide Hazard and Risk. Wiley, Chichester.
+Baxter, P.J., I. Möller, T. Spencer, R.J. Spence and S. Tapsell (2001) ‘Flooding and Climate Change’. 
+Health Effects of Climate Change. Section 4.6. UK Department of Health Document 22452.2P.1K.APR 
+01 (WOR), Crown Copyright, London.
+Bennet, G. (1970) ‘Bristol Floods 1968—Controlled Survey of Effects on Health of Local Community 
+Disaster’. British Medical Journal. 3. pp. 454–458. 
+Bierens, J.J.L.M. (1996) Drowning in the Netherlands—Pathophysiology, Epidemiology and Clinical Studies. 
+PhD dissertation, University of Utrecht.
+Brenner, S.A., S.R. Lillibridge, D. Perrotta and E.K. Noji (1994) ‘Fire-Related Mortality in Floods (A Newly 
+Discovered Threat from Fire Ants)’. American Entomologist. Fall. p. 147.
+Chowdhury, A., R. Mushtaque, A.U. Bhuyia, A.Y. Choudhury and R. Sen (1993) ‘The Bangladesh Cyclone 
+of 1991: Why So Many People Died’. Disasters. Volume 17, Number 4. pp. 291–304.
+Coates, L. (1999) ‘Flood Fatalities in Australia, 1788–1996’. Australian Geographer. 30(3). pp. 391–408.
+Combs, D.L., L.E. Quenemoen, R.G. Parrish and J.H. Davis (1999) ‘Assessing Disaster-attributed Mortality: 
+Development and Application of a Definition and Classification Matrix’. International Journal of Epide­
+miology. 28. pp. 1124–1129.
+Duclos, P. and J. Isaacson (1987) ‘Preventable Deaths Related to Floods, Letters to the Editor’. American 
+Journal of Public Health. 77(11). p. 1474.
+Duclos, P., O. Vidonne, P. Beuf, P. Perray and A. Stoebner (1991) ‘Flash Flood Disaster—Nîmes, France, 1988’. 
+European Journal of Epidemiology. 7(4). pp. 365–371.
+EM-DAT: OFDA/CRED International Disaster Database (2004). Université Catholique de Louvain, 
+Brussels. http://www.em-dat.net.
+French, J.G. and K.W. Holt (1989) ‘Floods’, In M.B. Gregg (ed.) The public health consequences of 
+disasters. US Department of Health and Human Services, Public Health Service, CDC, Atlanta, GA. 
+pp. 69–78.
+
+
+===== [page 20] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+94 
+French, J., R. Ing, S. Von Allmen and R. Wood (1983) ‘Mortality from Flash Floods: A Review of National 
+Weather Service Reports, 1969–81’. Public Health Reports. 98(6). pp. 584–588.
+Gabe, T.M. and D. Hite (2003) ‘The Effects of Boating Safety Regulations’. Coastal Management. 31(3). 
+pp. 247–254.
+Grieve, H. (1959) ‘The Great Tide’. County Council of Essex, Essex, UK.
+Guzzetti F. (2002) ‘Landslide fatalities and the evaluation of landslide risk in Italy’. Engineering Geology. 58. 
+pp. 89–107.
+Hajat, S., K.L. Ebi, S. Kovats, B. Menne, S., Edwards and A. Haines (2003) ‘The Human Health Conse­
+quences of Flooding in Europe and the Implications for Public Health: A Review of the Evidence’. 
+Applied Environmental Science and Public Health. 1(1). pp. 13–21.
+Handmer, J. (2000) ‘Are Flood Warnings Futile? Risk communication in emergencies’. The Australasian 
+Journal of Disaster and Trauma Studies. Vol. 2000–2 (online). http://www.massey.ac.nz/~trauma/issues/
+2000-2/handmer.htm.
+Haque, C.E. and D. Blair (1992) ‘Vulnerability to Tropical Cyclones: Evidence from the April 1991 Cyclone 
+in Coastal Bangladesh’. Disasters. Volume 16, Number 3. pp. 217–229.
+International Commission for the Protection of the Rhine (ICPR) (2002) Non structural flood plain management: 
+measures and their effectiveness. ICPR, Koblenz.
+Jonkman, S.N. (forthcoming, 2005) ‘Global perspectives of loss of human life caused by floods’. Natural 
+Hazards. http://www.kluweronline.com/issn/0921-030X. 
+Jonkman, S.N., P.H.A.J.M. van Gelder and J.K. Vrijling (2002) ‘Loss of Life Models for Sea and River 
+Floods’. In B. Wu, Z.Y. Wang, G. Wang, G.G.H. Huang, H. Fang and J. Huang (eds.) Flood Defence 
+2002. Proceedings of the Second International Symposium on Flood Defence, Beijing, China, 10–13 
+September 2002. pp. 196–206.
+Jonkman, S.N., I. Kelman and P. Waarts (2003) ‘CURBE Fact Sheet 6: Netherlands Deaths from the 1953 
+Storm Surge, Version 1, 31 March 2003’. http://www.arct.cam.ac.uk/curbe/infosheets.html#factsheet6.
+Kelman, I. (2001) ‘The Autumn 2000 Floods in England and Flood Management’. Weather. 56(10). pp. 
+346–348 and 353–360.
+Kelman, I. (2003) ‘CURBE Fact Sheet 3: U.K. Deaths from the 1953 Storm Surge, Version 2, 11 January 
+2003’. http://www.arct.cam.ac.uk/curbe/infosheets.html#factsheet3.
+Kelman, I. (forthcoming, 2005) ‘Rights, Responsibilities, and Realities: A Societal View of Civil Care and 
+Security’. In R. Gerber and J. Salter (eds.) Civil Care and Security.
+Kelman, I. and R. Spence (2004) ‘An Overview of Flood Actions on Buildings’. Engineering Geology. 73. 
+pp. 297–309.
+Legome, E., A. Robins and D.A. Rund (1995) ‘Injuries Associated with Floods: The Need for an Inter­
+national Reporting Scheme’. Disasters. Volume 19, Number 1. pp. 50–54.
+Los Angeles County Office of Education (LACOE) (1997) No Way Out. Video from LACOE, Los Angeles 
+Department of Public Works.
+Mackie, I.J. (1999) ‘Patterns of drowning in Australia, 1992–1997’. Medical Journal of Australia. 171. pp. 587–590.
+Marwick, C. (1997) ‘Floods Carry Potential for Toxic Mold Disease. JAMA (Journal of the American Medical 
+Association). 277(17). p. 1342.
+McClelland D.M. and D.S. Bowles (1999) ‘Life-loss estimation: what can we learn from case histories’. 
+In the Proceedings of the Australian Committee on Large Dams (ANCOLD) Annual Meeting, Jindabyne, 
+New South Wales, Australia, November 1999.
+MMWR (1989) ‘Medical Examiner/Coroner Reports of Deaths Associated with Hurricane Hugo—
+South Carolina’. Morbidity and Mortality Weekly Report. 38(44). pp. 754 and 759–762.
+MMWR (1993) ‘Surveillance of Deaths Attributed to a Nor’easter—December 1992’. Morbidity and 
+Mortality Weekly Report. 42(1). pp. 4–5.
+MMWR (1994) ‘Flood-Related Mortality—Georgia, July 4–14, 1994’. Morbidity and Mortality Weekly Report. 
+43(29). pp. 526–530.
+
+
+===== [page 21] =====
+An analysis of the causes and circumstances of flood disaster deaths
+95
+MMWR (1996) ‘Deaths Associated with Hurricanes Marilyn and Opal—United States, September–October 
+1995’. Morbidity and Mortality Weekly Report. 45(2). pp. 32–38.
+MMWR (2000) ‘Morbidity and Mortality Associated With Hurricane Floyd—North Carolina, Septem­
+ber–October 1999’. Morbidity and Mortality Weekly Report. 49(17). pp. 369–372.
+Mooney, L.E. (1983) ‘Applications and Implications of Fatality Statistics to the Flash Flood Problems’. In 
+Proceedings of the 5th Conference on Hydrometeorology (Tulsa, US, 17–19 October 1983). pp. 127–129.
+National Oceanic and Atmospheric Administration (NOAA) (2001) Service Assessment: Tropical Storm Allison, 
+Heavy Rains and Floods, Texas and Louisiana, June 2001. US Department of Commerce, NOAA, National 
+Weather Service, Silver Spring, MD.
+National Weather Service (NWS) (c. 1994) Tropical Storm Alberto Floods of July 1994 Disaster Survey Report. 
+NWS, National Oceanic and Atmospheric Administration, US Department of Commerce, Silver 
+Spring, MD.
+National Weather Service (NWS) (c. 1996) Northeast Floods of January 1996 Disaster Survey Report. NWS, 
+National Oceanic and Atmospheric Administration, US Department of Commerce, Silver Spring, MD.
+Noji, E.K. (1993) ‘Analysis of Medical Needs During Disasters Caused by Tropical Cyclones: Anticipated 
+Injury Patterns’. Journal of Tropical Medicine and Hygiene. 96(6). pp. 370–376.
+Ohl, C.A. and S. Tapsell (2000) ‘Flooding and Human Health: The Dangers Posed are not Always Obvious’. 
+British Medical Journal. 321. pp. 1167–1168.
+Price, J. (1978) ‘Some Age-related Effects of the 1974 Brisbane Floods’. Australian and New Zealand Journal 
+of Psychiatry. 12(1). pp. 55–58.
+Reimer, N. (2002) Als der Regen kam, ein Fotolesebuch zur flut in Sachsen. (When the rain came—a book 
+about the floods in Sachsen). Michel Sandstein Verlag, Dresden.
+Sarker, M.H., I. Huque and M. Alam (2003) ‘Rivers, Chars and Char dwellers of Bangladesh’. International 
+Journal of River Basin Management. 1(1). pp. 61–80.
+Selten J.P., Y. van der Graaf, R. van Duursen, C.C. Gispen-de Wied R.S. and Kahn (1999) ‘Psychotic Illness 
+After Prenatal Exposure to the 1953 Dutch Flood Disaster’. Schizophrenia Research. 35. pp. 243–245.
+Slager K. (1992) De ramp—een reconstructie (The disaster—a reconstruction). De Koperen Tuin Publishers, 
+Goes. 
+Staes, C., J.C. Orengo, J. Malilay, J. Rullan and E. Noji (1994) ‘Deaths Due to Flash Floods in Puerto Rico, 
+January 1992. Implications for Prevention’. International Journal of Epidemiology. 23(5). pp. 968–975.
+Thorne, B.J. and R.R. Arafat (2002) ‘Mortality due to Tropical Storm Allison’ (unpublished presentation). 
+Department of Health and Human Services, Bureau of Epidemiology, Houston, TX.
+World Congress on Drowning (WCD) (2003) ‘Recommendations’. http://www.drowning.nl.
+World Health Organization (WHO) (2002) ‘Floods: climate change and adaptation strategies for human 
+health’. WHO, Regional Office for Europe, Geneva, Switzerland. 
+
+
+===== [page 22] =====
+Sebastiaan N. Jonkman and Ilan Kelman 
+96 
+Appendix A 
+Specific cases of flood disaster deaths examined
+Table A.1 Cases used to analyse flood disaster deaths
+Location
+Date
+Event
+Fatalities 
+with 
+data 
+Sources
+Data reported or inferred for most fatalities
+Age
+Gender
+Timing 
+of 
+death
+Activity
+Medical 
+cause 
+of 
+death
+Czech Republic 
+(Moldau, Elbe)
+9–11 
+August 
+2002
+River 
+floods
+17
+M. Veverka, 
+personal 
+communication
+Exact
+Yes
+Yes
+Yes
+Yes
+France 
+(Rhône 
+Valley, Lyon, 
+Marseille)
+1–5 
+December 
+2003
+Storms 
+and river 
+floods
+11
+Media reports
+Exact
+Yes
+Yes
+Yes
+Germany 
+(Elbe/Dresden)
+11–20 
+August 
+2002
+River 
+floods
+19
+Reimer, 2002
+Exact
+Yes
+Yes
+Yes
+Yes
+Poland 
+(Opolskie and 
+Małopolskie 
+provinces)
+4–28 July 
+1997
+River 
+floods
+14
+M. Mierkiewicz, 
+personal 
+communication
+Exact
+Yes
+Yes
+Some
+Yes
+Poland 
+(Wisla, 
+Malopolskie 
+and 
+Swietokrzyskie 
+provinces)
+9 July–mid-
+August 
+2001
+River 
+floods
+15
+M. Mierkiewicz, 
+personal 
+communication
+Exact
+Yes
+Yes
+Some
+Yes
+UK (England)
+9–15 April 
+1998
+Storms 
+and river 
+floods
+5
+Media reports
+Exact
+Yes
+Yes
+Yes
+Yes
+UK (England 
+and Wales)
+Autumn 
+2000
+Storms 
+and river 
+floods
+14
+Media reports
+Exact
+Yes
+Yes
+Yes
+USA 
+(northeast)
+10–13 
+December 
+1992
+Nor’easter 
+storm
+4
+MMWR, 1993
+Exact
+Yes
+Yes
+Yes
+Yes
+US (southeast)
+4–14 July 
+1994
+Tropical 
+Storm 
+Alberto
+33
+MMWR, 1994
+NWS, c. 1994
+Exact
+Yes
+Yes
+Yes
+Yes
+
+
+===== [page 23] =====
+An analysis of the causes and circumstances of flood disaster deaths
+97
+US (northeast)
+18–20 
+January 
+1996
+Storms 
+and river 
+floods
+33
+NWS, c. 1996
+Exact
+Yes
+Yes
+Yes
+Yes
+US (south)
+5–18 June 
+2001
+Tropical 
+Storm 
+Allison
+24
+NOAA, 2001
+Thorne et al., 
+2002
+Exact
+Yes
+Yes
+Yes
+Yes
+US (Puerto 
+Rico)
+5 January 
+1992
+Storms 
+and flash 
+floods
+23
+Staes et al., 
+1994
+Three 
+ranges
+Yes
+Yes
+Yes
+Yes
+US (South 
+Carolina)
+21 
+September 
+1989
+Hurricane 
+Georges
+35
+MMWR, 1989
+A few
+A few
+Yes
+Yes
+Yes
+Table A.2 Examples of other cases considered
+Location
+Date
+Event
+Fatalities 
+with 
+data 
+Number of 
+considered 
+events
+Sources
+Data reported or inferred for most fatalities
+Age
+Gender
+Timing 
+of 
+death
+Activity
+Medical 
+cause 
+of 
+death
+Australia
+1788–
+1996
+All 
+floods
+2,213
+926
+Coates, 
+1999
+Five-
+year 
+intervals
+No
+No
+Yes
+No
+Bangladesh
+1991
+Cyclone 
+Brendan
+1,206
+1
+Chowdhury 
+et al., 1993
+Five-
+year 
+intervals
+No
+No
+Some
+Some
+US
+1969–
+1981
+Flash 
+floods
+1,185
+32
+French et 
+al., 1983
+No
+No
+No
+Yes/
+some
+Yes
+US
+1977–
+1981
+Flash 
+floods
+582
+218
+Mooney, 
+1983
+Three 
+ranges
+No
+No
+Yes
+No

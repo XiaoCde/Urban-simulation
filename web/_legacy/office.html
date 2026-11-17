@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>马克的撤离 · 个体社会仿真</title>
+<link rel="icon" href="data:," />
+<style>
+  :root { color-scheme: dark; --panel: rgba(13,22,31,.88); --line: rgba(157,188,211,.24); --muted:#91a7b8; --accent:#77c7df; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html,body { width:100%; height:100%; overflow:hidden; background:#111820; font:13px/1.55 "Segoe UI","Microsoft YaHei",sans-serif; color:#e5edf2; }
+  #app { position:fixed; inset:0; }
+  canvas { display:block; width:100%; height:100%; }
+  button,select { font:inherit; }
+  button { cursor:pointer; color:#dce9f1; background:rgba(42,61,75,.88); border:1px solid var(--line); border-radius:7px; padding:6px 10px; }
+  button:hover,button.on { background:#28566b; border-color:#65b4d1; color:white; }
+  .panel { background:var(--panel); border:1px solid var(--line); border-radius:12px; box-shadow:0 10px 32px rgba(0,0,0,.24); backdrop-filter:blur(12px); }
+  #storyPanel { position:fixed; left:16px; top:16px; z-index:10; width:310px; padding:15px 16px; pointer-events:auto; }
+  #storyPanel .eyebrow { color:#7fc6dc; font-size:10px; letter-spacing:.18em; text-transform:uppercase; }
+  #storyPanel h1 { font-size:19px; font-weight:600; margin:3px 0 7px; }
+  #storyPanel p { color:#adbeca; font-size:12px; }
+  #storyPanel .person { margin-top:10px; padding-top:9px; border-top:1px solid var(--line); color:#d9e4ea; }
+  #views { position:fixed; right:16px; top:16px; z-index:11; display:flex; flex-direction:column; gap:6px; align-items:flex-end; }
+  #views .caption { color:#a8bbc8; font-size:11px; letter-spacing:.12em; text-shadow:0 1px 4px #000; }
+  #views button { min-width:112px; background:var(--panel); }
+  #agentBubble { position:fixed; z-index:15; display:none; max-width:230px; transform:translate(-50%,-100%); padding:7px 11px; border-radius:9px; background:rgba(20,46,58,.94); border:1px solid #78c7df; color:#f2fbff; box-shadow:0 4px 18px rgba(0,0,0,.32); white-space:nowrap; pointer-events:auto; }
+  #agentBubble:after { content:""; position:absolute; left:50%; bottom:-6px; width:10px; height:10px; background:rgba(20,46,58,.94); border-right:1px solid #78c7df; border-bottom:1px solid #78c7df; transform:translateX(-50%) rotate(45deg); }
+  #agentCard { position:fixed; right:16px; top:286px; z-index:12; width:310px; max-height:calc(100vh - 420px); overflow:auto; padding:14px 15px; display:none; }
+  #agentCard.open { display:block; }
+  #agentCard h2 { font-size:16px; margin-bottom:4px; }
+  #agentCard .sub { color:var(--muted); font-size:11px; margin-bottom:10px; }
+  #agentCard .muted { color:var(--muted); font-size:11px; }
+  #agentCard dl { display:grid; grid-template-columns:76px 1fr; gap:5px 8px; font-size:12px; }
+  #agentCard dt { color:#8fa8b8; }
+  #agentCard dd { color:#e0eaf0; overflow-wrap:anywhere; }
+  .meter { height:5px; background:#263844; border-radius:4px; margin-top:3px; overflow:hidden; }
+  .meter i { display:block; height:100%; background:#65c3bb; }
+  #agentEvents { margin-top:11px; padding-top:9px; border-top:1px solid var(--line); }
+  #agentEvents b { font-size:11px; color:#9fb4c2; }
+  #eventList { margin-top:5px; list-style:none; color:#b8c8d2; font-size:11px; }
+  #eventList li { margin:5px 0; padding-left:8px; border-left:2px solid #47768a; }
+  #eventList time { color:#72bfd6; margin-right:5px; font-variant-numeric:tabular-nums; }
+  #timeline { position:fixed; z-index:11; left:50%; bottom:16px; transform:translateX(-50%); width:min(850px,calc(100vw - 32px)); padding:10px 13px; }
+  #timeline .top { display:flex; align-items:center; gap:7px; flex-wrap:wrap; }
+  #timeline .spacer { flex:1; }
+  #timeLabel { color:#b9d9e5; font-variant-numeric:tabular-nums; min-width:126px; text-align:right; }
+  #timeRange { width:100%; margin:9px 0 3px; accent-color:#63b8d2; }
+  #timeline .foot { display:flex; justify-content:space-between; color:#8199aa; font-size:10px; }
+  #stat { color:#94a9b7; font-size:10px; }
+  #loading { position:fixed; inset:0; z-index:40; display:flex; align-items:center; justify-content:center; flex-direction:column; gap:12px; background:#111820; color:#b5c7d3; letter-spacing:.08em; transition:opacity .5s; }
+  #loading.done { opacity:0; pointer-events:none; }
+  #loading small { color:#6f899a; letter-spacing:0; }
+  #toast { position:fixed; left:50%; top:18px; transform:translateX(-50%); z-index:30; padding:8px 14px; border-radius:8px; background:#24566b; display:none; }
+  @media (max-width:760px) {
+    #storyPanel { width:250px; padding:11px; }
+    #storyPanel p { display:none; }
+    #agentCard { top:auto; bottom:125px; right:8px; width:280px; max-height:45vh; }
+    #views { right:8px; }
+    #views button { min-width:90px; padding:5px 7px; }
+    #timeline .foot #stat { display:none; }
+  }
+</style>
+<script type="importmap">
+{"imports":{"three":"/node_modules/three/build/three.module.js","three/addons/":"/node_modules/three/examples/jsm/"}}
+</script>
+</head>
+<body>
+<div id="app"></div>
+<section id="storyPanel" class="panel">
+  <div class="eyebrow">Individual social simulation · 001</div>
+  <h1>马克的撤离</h1>
+  <p>17:52 的华盛顿 FAA 办公楼。只追踪一个人：他何时知道、为什么迟疑，以及怎样一路回到家。</p>
+  <div class="person"><b>马克·詹森，36 岁</b><br><span style="color:#93a9b7">工程咨询公司项目职员 · 6F 工位 → 565 Penn 公寓 9F</span></div>
+</section>
+<nav id="views">
+  <div class="caption">镜头 / 建筑</div>
+  <a href="/" style="text-decoration:none;color:#dce9f1;background:var(--panel);border:1px solid var(--line);border-radius:7px;padding:6px 10px">返回全城演示</a>
+  <button data-view="follow" class="on">跟随马克</button>
+  <button data-view="desk">6F 工位</button>
+  <button data-view="cutaway">6F 室内剖面</button>
+  <button data-view="office">办公楼全景</button>
+  <button data-view="street">街道视角</button>
+  <button data-view="home">公寓 9F</button>
+  <button data-view="free">自由探索</button>
+</nav>
+<button id="agentBubble">正在整理报告</button>
+<aside id="agentCard" class="panel">
+  <h2>马克·詹森</h2>
+  <div class="sub">MARK-JENSEN-001 · 单一个体全程追踪</div>
+  <dl>
+    <dt>当前状态</dt><dd id="dState">—</dd>
+    <dt>当前动作</dt><dd id="dAction">—</dd>
+    <dt>行动原因</dt><dd id="dReason">—</dd>
+    <dt>所在位置</dt><dd id="dFloor">—</dd>
+    <dt>当前目标</dt><dd id="dTarget">—</dd>
+    <dt>脚下积水</dt><dd id="dDepth">—</dd>
+    <dt>改道次数</dt><dd id="dReroutes">—</dd>
+    <dt>最近判断</dt><dd id="dDecision">还没有需要判断的情况</dd>
+    <dt>信息记录</dt><dd id="dInfo">—</dd>
+    <dt>体力</dt><dd><span id="dStamina">—</span><div class="meter"><i id="staminaBar"></i></div></dd>
+    <dt>身体状态</dt><dd><span id="dHealth">—</span><div class="meter"><i id="healthBar"></i></div></dd>
+  </dl>
+  <div id="agentEvents"><b>关键事件</b><ul id="eventList"></ul></div>
+</aside>
+<section id="timeline" class="panel">
+  <div class="top">
+    <button id="playBtn">暂停</button>
+    <button id="stepBtn" title="前进1/30仿真秒">逐帧</button>
+    <button id="resetBtn">重新开始</button>
+    <select id="speedSel" title="只改变观看速度，不改变仿真结果">
+      <option value="1">1× 真实动作</option><option value="4">4×</option><option value="12">12×</option>
+    </select>
+    <button id="recordBtn">录制动画</button>
+    <button id="downloadBtn">下载逐帧轨迹</button>
+    <span class="spacer"></span><span id="timeLabel">17:52:00</span>
+  </div>
+  <input id="timeRange" type="range" min="52" max="95" step="0.1" value="52" />
+  <div class="foot"><span>17:52 办公中 · 雨开始变大</span><span id="stat">统一步长 0.25 仿真秒 · 固定人物与积水时间轴</span><span>18:35 到家后边界</span></div>
+</section>
+<div id="loading">正在搭建办公楼、公寓与个体故事…<small>加载西装男、六层办公、街道积水、565 Penn 公寓电梯</small></div>
+<div id="toast"></div>
+<script type="module" src="/src/office-main.js"></script>
+</body>
+</html>

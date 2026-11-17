@@ -1,0 +1,2633 @@
+ 
+ 
+ 
+ 
+ NHESS 
+ Natural Hazards and Earth System Sciences 
+ NHESS Nat. Hazards Earth Syst. Sci. 
+ 1684-9981 
+ Copernicus Publications 
+ Göttingen, Germany 
+ 
+ 
+ 10.5194/nhess-26-981-2026 Human decision-making in crowds in a virtual flood scenario Human decision-making in crowds in a virtual flood scenario 
+ 
+ 
+ 
+ Arshaghi Booloot 
+ booloot.arshaghi@gmail.com 
+ 
+ 
+ Lawson Glyn 
+ 
+ https://orcid.org/0000-0002-8906-4873 
+ 
+ Briganti Riccardo 
+ 
+ 
+ 
+ Siebers Peer-Olaf 
+ 
+ https://orcid.org/0000-0002-0603-5904 
+ 1 University of Nottingham, Faculty of Engineering, Human Factors Research Group, Nottingham, NG7 2RD, UK 
+ 
+ 2 Nottingham Trent University, School of Art and Design, Waverley Building, NG7 4HF, UK 
+ 
+ 3 University of Nottingham, Faculty of Engineering, Environmental Fluid Mechanics and Geo-processes Research Group, Coates Building, University Park, Nottingham, NG7 2RD, UK 
+ 
+ 4 University of Nottingham, School of Computer Science, Jubilee Campus, Wollaton Road, Nottingham, NG8 1BB, UK 
+ 
+ 
+ Booloot Arshaghi (booloot.arshaghi@gmail.com) 27 February 2026 
+ 
+ 26 
+ 2 
+ 981 1000 
+ 
+ 27 October 2025 
+ 7 November 2025 
+ 8 February 2026 
+ 
+ 
+ Copyright: © 2026 Booloot Arshaghi et al. 
+ 2026 
+ This work is licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this licence, visit https://creativecommons.org/licenses/by/4.0/ This article is available from https://nhess.copernicus.org/articles/26/981/2026/nhess-26-981-2026.html The full text article is available as a PDF file from https://nhess.copernicus.org/articles/26/981/2026/nhess-26-981-2026.pdf 
+ Abstract 
+
+ Flood evacuation outcomes are critically shaped by human behaviour, yet empirical data on individual decision-making remain scarce due to the dangers and logistical challenges of collecting data during real natural hazards. To address this gap, this study used Virtual Reality (VR) to examine how social cues, specifically crowd behaviour, interact with factors such as crowd size, clarity of the safe destination, and floodwater level to influence evacuation choices and delays. Four within-subjects VR experiments were conducted with 84 participants, systematically testing these variables in an immersive flood scenario. Results showed that crowd behaviour strongly determined both route choice and evacuation latency, often outweighing other factors. Participants tended to follow crowds into floodwater, demonstrating the influence of social information . However, this influence weakened when water levels were very high, indicating a threshold that overrides social cues. Larger crowds and unclear destination information further increased reliance on social information and pre-movement times. These findings highlight the powerful role of social dynamics in emergency decision-making and underscore the need to integrate realistic human behaviour, particularly social influence, into flood risk models, public warnings, and evacuation planning to improve community resilience and safety. 
+ 
+ 
+ 
+ 
+ Engineering and Physical Sciences Research Council 
+ EP/W524402/1 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 1 Introduction 
+ Floods are among the most devastating natural hazards, causing widespread fatalities and displacement globally (Petrucci, 2022). Intensified rainfall from climate change (Arias et al., 2021) and increasing population density in flood-prone areas (Ferdous et al., 2020) have heightened long-term risks to communities. As global displacement rises (Menne et al., 2013) prioritising climate adaptation and risk mitigation strategies, such as evidence-based evacuation planning, has become essential (Aerts et al., 2018; Alonso Vicario et al., 2020). Moreover, individuals often lack awareness or experience with extreme emergencies like flooding, leading to inadequate or inappropriate responses (Mol et al., 2022). As a result, evacuation decisions may undermine risk mitigation efforts. For example, people may voluntarily enter floodwater for reasons such as continuing daily activities, fulfilling work obligations, retrieving belongings, or even for recreational purposes (Petrucci, 2022; Becker et al., 2015). 
+ Traditional flood risk management has focused on hazard, exposure, and vulnerability assessments, including flood likelihood and structural interventions (Alonso Vicario et al., 2020), supported by well-established hydraulic models (Nkwunonwo et al., 2020). However, these approaches often overlook human responses during emergencies, which critically influence outcomes such as fatalities (Du et al., 2023; Hamilton et al., 2020; Simonovic and Ahmad, 2005). Recent research increasingly integrates human behaviour into flood modelling, offering a more comprehensive understanding of flood risk (Aerts et al., 2018; Shi et al., 2025; Zhang et al., 2024). While the simulation of human behaviour in emergencies has a long history in fire evacuation research, which captures complex behavioural patterns (e.g., Ronchi, 2021; Ronchi and Nilsson, 2013), flood-specific behavioural modelling remains less developed. The flood domain lacks a clearly defined framework integrating human behaviour (e.g., the influence of social cues or socio-demographics), due to limited empirical data and insufficient understanding of how individuals interact with flood hazards, environments, and others (Petrucci, 2022; Alonso Vicario et al., 2020; Aerts, 2020; Zhuo and Han, 2020; Irsyad and Hitoshi, 2022). Existing models often oversimplify behaviour, ignoring key social and psychological dimensions (Shirvani and Kesserwani, 2021). One such factor is the influence of crowd behaviour, which can significantly shape an individual's perception of risk and guide their decisions during evacuation. People often rely on the actions of others in uncertain situations, leading to patterns of social influence, where individuals follow the majority, driven more by group dynamics than individual assessment (Petrucci, 2022; Zhang et al., 2024; Becker et al., 2015; Huang et al., 2012; Wang et al., 2024). To build accurate, predictive models of human response during flood emergencies, robust empirical data are needed, yet such data are difficult to obtain due to the hazardous and unpredictable nature of real-world flood events. 
+ To address this gap, this study employed Virtual Reality (VR) technology to simulate immersive, controlled flood evacuation scenarios that approximate real-world conditions while safely capturing human behavioural responses. By investigating human behaviour under the influence of crowd dynamics during flood evacuation, this research aligns with the scope of Natural Hazards and Earth System Sciences by advancing the understanding of human and societal factors in the monitoring and modelling of flood as a natural hazard. 
+ VR has proven effective in emergency research, particularly fire evacuation, by enabling detailed, repeatable observation of behaviour under high-risk conditions without endangering participants (Deb et al., 2017; Kinateder and Warren, 2016; Lawson and Burnett, 2015; Liu and Liu, 2025). It allows for systematic analysis of variables such as hazard severity and social cues (Kinateder et al., 2014; Shaw et al., 2019). Though still emerging in flood studies (e.g., Mol et al., 2022; Aksa et al., 2025; D'amico et al., 2023; Denda and Fujikane, 2024; Fujimi and Fujimura, 2020; Simpson et al., 2022), VR offers a promising, non-invasive method for generating empirical data on human behaviour in flood scenarios. 
+ Studying the influence of social cues, particularly crowd behaviour on human decision-making is the primary focus of this research. This factor was incorporated into four VR experiments, while key environmental variables including floodwater level, destination clarity, and crowd size were systematically varied. There is limited knowledge on how each of these factors individually influences human decision-making during flood evacuation, which justifies examining them separately in a controlled, stepwise manner. In addition, given that measuring multiple complex decision factors and their interactions within a single VR scenario could overload participants and complicate result interpretation, the experiments were structured as a stepwise sequence, with each study building on the findings of the previous one and the outcomes reported in the literature. VR1 as a feasibility study, examined the baseline effect of crowd behaviour on route choice; VR2 explored how variations in crowd size influence this effect; VR3 investigated how destination clarity modulates reliance on social cues; and VR4 assessed how different floodwater levels alter the impact of crowd behaviour. Together, these controlled, interrelated studies provide a sequential and coherent examination of how social and environmental factors interact to shape human behaviour in flood evacuation scenarios. 
+ 
+ 
+ 2 Method 
+ 
+ 2.1 Experimental Framework 
+ This study used a controlled VR framework to examine how social cues, particularly crowd behaviour, influence human decision-making during flood evacuation. Four within-subject VR experiments (VR1–VR4) were conducted using a consistent evacuation scenario in which participants chose between a safe route and a risky route to reach a designated safe destination. 
+ Crowd behaviour was the primary variable across all experiments and was systematically combined with additional factors in a stepwise manner: crowd size (VR2), clarity of the safe destination (VR3), and floodwater level (VR4). VR1 served as a feasibility and baseline study which guided the rest of the research. This sequential design enabled isolation of individual effects to increase experimental control and allowing clear interpretation of how social and environmental cues together affect evacuation choices and decision latency. Figure 1 demonstrates the overall sequential experimental design, illustrating the manipulated variables and contextual factors across the four VR experiments. Crowd behaviour was manipulated across all experiments, with crowd size (VR2), destination clarity (VR3), and water level (VR4) varied sequentially. 
+
+ Figure 1 Sequential experimental design of the four VR studies (VR1–VR4). Orange boxes indicate variables manipulated in each experiment, while grey boxes represent contextual factors held constant. 
+ 
+
+ 
+
+ 
+ 
+ 2.2 Participants 
+ A total of 84 participants (50 % male, 50 % female) took part in the four VR experiments, each of which was run in a within subject design, with the majority of participants aged 20–30 (69 %). Recruitment was conducted through emails, posters, and flyers distributed among students and staff at the University of Nottingham. 
+ VR1 was conducted as a feasibility study to assess task flow, VR usability, and the suitability of the experimental measures, and to guide the design of subsequent experiments. Accordingly, the study was not intended for confirmatory hypothesis testing or precise effect size estimation. A power analysis was conducted using GPower 3.1.9.7 (Faul et al., 2007) to estimate a minimum sample size, assuming a large effect ( f = 0.40 ) for a one-way repeated-measures ANOVA with three conditions ( α = 0.05 , power = 0.80 ), resulting in a required sample of N = 12 . For VR2–VR4, each with four conditions, a power analysis using a smaller effect size ( f = 0.25 , α = 0.05 , power = 0.80 ) indicated a required sample of N = 24 per study. In each VR study, all participants completed all experimental conditions (VR1: 3 trials; VR2–VR4: 4 trials each) in a counterbalanced order to control for order effects. These sample sizes were sufficient to detect medium effects (Cohen, 2013) while providing meaningful insights into human decision-making under varying crowd and environmental conditions within the context of the present study. 
+ 
+ 
+ 2.3 Unity3D Setup 
+ The virtual environment was developed in Unity3D, a widely used game engine for immersive simulations. It is specifically used to model a realistic flood road scenario across four experimental conditions (Fig. 2). 
+
+ Figure 2 Experiment VR scene with scenario details (SP = Start Point, RR = Risky Route, SR = Safe Route, SD = Safe Destination). 
+ 
+
+ 
+
+ 
+ 2.3.1 Materials 
+ The model comprised three main components: the player, non-player characters (NPCs), and the environment, which included flooded roads, vehicles, and infrastructure. To enhance realism, the environment was augmented with rain effects and ambient sounds (e.g., heavy rain, helicopters, ambulance sirens). Animated NPCs sourced from the Unity Asset Store (N.D.) and Sketchfab (Sketchfab) represented crowds exhibiting either safe or risky behaviours, serving as social cues under different experimental conditions. Additional development tools included EasyRoad3D for road layout, Unity's terrain system and UK-specific assets for contextual realism, and a water shader from the Unity Asset Store to simulate floodwater. A link to example video footage of the VR scenario is provided in the Video Supplement section. 
+ The Unity3D scene was implemented with the three components, player, NPCs, and environment, whose movements and interactions were modelled as follows. 
+ 
+ 
+ 2.3.2 Components Setup 
+ 
+   
+
+ Player: Dynamic colliders with rigid bodies were assigned to the player, allowing it to respond to physics (gravity, forces, collisions), and to move with different speed, rotate, and interact with other colliders. 
+ 
+   
+
+ NPCs: NPCs were also assigned dynamic colliders with rigid-bodies, enabling them to respond to physics and interact mechanically with the environment. Their movement was governed by predefined destinations, which they approached either via the shortest path or through intermediate waypoints, depending on the experimental condition. 
+ 
+   
+
+ Environment (solid objects): Static colliders (without rigid-bodies) were applied to immovable objects such as cars, road elements, trees, and buildings. These colliders ensured that other components could collide with them, but the objects themselves remained unaffected by forces. 
+ 
+   
+
+ Flood water: Flood water was represented using static shaders simulating the water surface, with animated wave and current effects. These served as visual rather than mechanical components of the environment. 
+ 
+ 
+ 
+ 
+ 2.3.3 Interaction Modelling 
+ 
+   
+
+ Player-NPCs: Both the player and NPCs had dynamic colliders with rigid-bodies, preventing them from passing through each other. No psychological interactions were assigned to NPCs in response to the player; instead, interactions were driven by the participant's perception of the NPCs. 
+ 
+   
+
+ Player-NPCs (solid objects): A navigation mesh was defined over the terrain (including lower-height objects) to guide the movement of the player and NPCs. Additionally, static colliders prevented passing through solid objects. No psychological forces were defined for NPCs in this context, making interactions purely mechanical. For the player, interactions with solid objects were influenced both by the participant's perception of the objects and by the mechanical forces exerted through colliders. 
+ 
+   
+
+ NPC-NPC: Both mechanical and psychological interactions were modelled. Mechanical forces arose from the dynamic colliders, while psychological forces followed Helbing's social force model (Helbing et al., 2002), prompting NPCs to adjust their trajectories to maintain a certain minimum distance from each other. 
+ 
+   
+
+ Player-Flood Water: No mechanical interactions were implemented between the player and flood water. The interaction was entirely psychological, determined by the participant's perception of the situation and action. 
+ 
+   
+
+ NPC-Flood Water: NPC-water interactions were psychological and based on water depth. At each simulation step, if the water level within a defined radius around the NPC exceeded a scenario-specific threshold, the NPC altered its trajectory to avoid entering water deeper than that threshold, demonstrating safe crowd behaviour. In contrast, when this adjustment did not occur, NPCs passed through the floodwater, demonstrating risky crowd behaviour. 
+ 
+ 
+ 
+ 
+ 
+ 2.4 VR Configurations 
+ The VR setup was deployed on a PICO 4 headset (Xr) for VR1 and on a Meta Quest Pro for VR2 through VR4. 
+ To support clarity across experimental conditions, the following terms are defined:   
+ Rescue Team: This refers to the group of NPCs wearing yellow vests red helmets, standing still, positioned around an ambulance, with an emergency helicopter located above the bridge, representing the safe destination.   
+ Safe Destination: The designated end point where the rescue team is located, including an ambulance, an emergency helicopter, and several NPCs in yellow vests as rescue team. The following describe the states of the rescue team:   
+ Visible/Known Safe Destination: The condition in which the safe destination was clearly visible to participants from the starting point, located across the flooded road and elevated above the bridge.   
+ Invisible/Unknown Safe Destination: A condition in which participants started the experiment without seeing the safe destination and need to find it. The designated safe destination was at the end of the road over the bridge, on the opposite side of the experiment's starting point.   
+ Crowd: NPCs around participants at the start point took the route to the safe destination based on the experimental condition. The crowd behaviours were categorized as Risky and Safe. In the simulation, NPCs were allocated different speeds, with some running and others walking, to create a more realistic scenario. The different size of crowd is described as below:   
+ Medium/relatively large crowd: A group of fifteen NPCs departing from the starting point toward the designated safe destination. The number of NPCs was determined by the researchers based on an intuitive assessment of the environmental context in the first simulation as a base line in the first simulation design. The Large and Small size were defined based on the Medium/relatively large size and participants' feedback after VR simulations.   
+ Large Crowd: The group of twenty NPCs departing from the starting point toward the safe destination. After the VR1 experiment, participant feedback indicated that a crowd of fifteen NPCs was perceived as “medium” or “relatively large”. Therefore, the number of NPCs was increased to twenty when designing the Large Crowd condition for the VR2 experiment.   
+ Small Crowd: The group of five NPCs taking the same route from the start point (Fig. 3). This number was chose by researchers for VR2 experiment based on the feedback by participants on the group of fifteen NPCs in VR1 experiment.   
+ Path choice: The route that NPCs (crowd) and participants took in experiment. The following describes the two choices of path designed in the VR scene:   
+ Risky Route: The direct path to the safe destination that required participants and NPCs to cross the floodwater.   
+ Safe Route: The alternate path leaded to the same destination via a hilly route and over a bridge, allowing to avoid floodwater.   
+ Flooded Road: A road under the bridge, flooded with varying, relatively stagnant water levels depending on the experimental scenario. Following describe different water level:   
+ Medium Water Level: Water depth reached approximately the NPCs' hip to waist level and above the tyres of nearby flooded vehicles, depending on vehicle size. This qualitative medium water level was defined following the categorization proposed by Quagliarini et al. (2023), who classified flood water depths into four qualitative levels ranging from ankle height to above chest height. To represent an intermediate condition between the lowest and highest levels, water reaching the hip-to-waist region was designated as the medium water level for the first scenario.   
+ High Water Level: Water depth reached approximately chest to shoulder height of NPCs and reached above the windows of nearby flooded vehicles (Fig. 4).   
+ Low Water Level: Water depth was shallower than the high water level, reaching ankle height of NPCs and the base of the cars' wheels.   
+ Pre-test Simulation: the simplified version of the VR scene (without floodwater, vehicles, crowd, or rescue elements) used for participant familiarisation. 
+ 
+ 
+ 2.5 Rationales 
+ 
+ 2.5.1 VR1: Crowd Behaviour 
+ Past research has demonstrated that during natural hazards and emergency evacuations, individuals' decision-making is significantly influenced by the behaviour of those around them. The observation of crowd behaviour plays a crucial role in shaping individuals' perceptions of the situation and guiding their subsequent actions. This influence often manifests in behaviours such as following others or engaging in social information dynamics (Petrucci, 2022; Zhang et al., 2024; Becker et al., 2015; Helbing et al., 2002; Huang et al., 2012; Wang et al., 2024). Referred to as social cues , these subtle behavioural signals affect how people interpret events and respond to crises (Wang et al., 2024). Gaining a deeper understanding of the mechanisms and dynamics of human behaviour under the influence of social cues in flood emergencies is essential for developing accurate and realistic behavioural models. In response to this need, as a feasibility study, VR1 experiment was designed to examine the influence of crowd behaviour on individual decision-making during a simulated flood evacuation scenario. It served as a feasibility study to inform the subsequent research and to identify additional factors that could be systematically integrated with crowd behaviour. 
+
+ Figure 3 Experiment VR scenes demonstrating the large (left) and small (right) crowd. 
+ 
+
+ 
+
+ Figure 4 Experiment VR scenes demonstrating the high (left) and low (right) water levels. 
+ 
+
+ 
+
+ 
+ 
+ 2.5.2 VR2: Crowd Behaviour and Crowd Size 
+ Building on VR1, which demonstrated that crowd behaviour influences flood evacuation decisions, VR2 was designed to examine how crowd size modulates this effect, directly guided by the patterns observed in VR1. In VR1, while participants frequently reported perceiving the crowd size as large, the study confirmed relying on social cues and showed that individuals responded differently to the large crowd size, which directly informed the choice of experimental conditions in VR2. 
+ Research shows that group size shapes evacuation dynamics by increasing conformity and perceived legitimacy and trust (Kinateder and Warren, 2021). Yet, large crowds can also heighten anxiety, signal congestion or risk, and prompt avoidance, especially in ambiguous, high-risk settings. Most of this work, however, focuses on indoor or fire-related scenarios, with limited application to floods, which involve complex and visually deceptive hazards. 
+ VR1 also indicated that participants used crowd presence as a safety heuristic but interpreted their feeling about the large size of crowd differently depending on personal risk perception and environmental appraisal. Importantly, prior studies have not isolated the specific impact of crowd size from other factors like hazard severity or path clarity. Therefore, VR2 aims to explore how variations in crowd size influence individual evacuation decisions in a flood scenario by manipulating crowd size and their behaviour. 
+ 
+ 
+ 2.5.3 VR3: Crowd Behaviour and Clarity on Safe Destination 
+ Building on the findings of VR1 and VR2, this study (VR3) examined how the clarity and visibility of a safe evacuation destination influenced decision-making during floods in the presence of social cues. Leading on from the VR2 finding that participants reported on the influence of knowledge of destination, earlier studies similarly found that a clear, visible, and reachable safe destination strongly guides participants' path choice. Literature supports that spatial knowledge and destination visibility significantly influence path choices. When desired destinations are not visible, individuals rely on external cues like signage (Gärling et al., 1986) or, in our flood scenarios, social cues. A lack of knowledge about 
+ evacuation targets can increase flood risk (Sadeghi-Pouya et al., 2017). Fire evacuation research also shows that visible exits are more likely to be used (Haghani and Sarvi, 2017; Fu et al., 2024). Simulation studies further suggest that social settings and prior knowledge of a space (e.g., exits) shape crowd behaviour (Chu et al., 2015). Given these insights and prior findings, VR3 investigates how clarity on location of a safe destination affects evacuation decisions under different crowd behaviours. 
+ 
+ 
+ 2.5.4 VR4: Crowd Behaviour and Floodwater Level 
+ Building on the previous studies, VR4 study examines how the physical characteristics of floodwater, particularly water level, influenced decision-making during floods in the presence of social cues. VR studies 1–3 showed that floodwater conditions, despite being constant across scenarios, were perceived differently depending on social context, suggesting that crowd behaviour modulates risk perception. This effect, seen when participants followed a risky crowd and perceived deep water as “doable,” indicates a complex interplay between environmental appraisal and social influence. 
+ VR4 builds on this by isolating the effect of water level under varied social conditions. Previous research has shown that water depth affects evacuation speed and walking stability (Bernardini et al., 2020; Dias et al., 2021), and that increased water depth correlates with greater perceived risk and higher casualty rates (Arrighi et al., 2017; Quagliarini et al., 2023). However, people often voluntarily step into floodwater when its characteristics appear manageable, raising questions about which environmental thresholds alter behaviour (Becker et al., 2015). Moreover, familiarity with the environment, previously shown to reduce dependence on crowd cues, was also examined, as it may mitigate misperceptions in high-risk contexts (Fujimi and Fujimura, 2020; Papagiannaki et al., 2021). Thus, VR4 aims to advance understanding of how floodwater affordance, perceived risk, and social dynamics interact to influence real-time evacuation choices. 
+ 
+ 
+ 
+ 2.6 Procedure 
+ This research employed a within-subjects design across all four VR studies (Table 1), with conditions counterbalanced. After reading an information sheet, informed consent, and pre-experiment questionnaires, participants carried out a 2–3-min pre-trial to familiarise themselves with the VR environment and controllers. 
+
+ Table 1 VR experiments (VR1 to VR4) aim and design. 
+ 
+ 
+ 
+ 
+ 
+ 
+ Experiment 
+ Aim of Study 
+ Experimental Conditions (Within-subject) 
+ Number of participants 
+ 
+ 
+ 
+ 
+ Pre-Test Simulation 
+ To provide familiarity with the experiment environment to participants and learn how to navigate around the scene with controllers 
+ Carried out in advance of all VR1 to VR4 experiments 
+ All 
+ 
+ 
+ VR1 
+ To understand how the presence of a crowd exhibiting safe and risky behaviour can influence human decision making in choosing their route to a safe destination. 
+ 1A: Risky Behaviour of Crowd 1B: Safe Behaviour of Crowd 1C: No Crowd 
+ 12 
+ 
+ 
+ VR2 
+ To understand how the size of the crowd including small and large exhibiting safe or risky behaviour, can influence human decision making in choosing their route to a safe destination. 
+ 2A: Risky Behaviour of Crowd + Very Large Crowd 2B: Risky Behaviour of Crowd + Small Crowd 2C: Safe Behaviour of Crowd + Very Large Crowd 2D: Safe Behaviour of Crowd + Small Crowd 
+ 24 
+ 
+ 
+ VR3 
+ To understand how visibility and invisibility of the safe destination in presence of a crowd exhibiting safe and risky behaviour, can influence human decision making in choosing route to the safe destination. 
+ 3A: Risky Behaviour of Crowd + Visible Destination 3B: Risky Behaviour of Crowd + Invisible Destination 3C: Safe Behaviour of Crowd + Visible Destination 3D: Safe Behaviour of Crowd + Invisible Destination 
+ 24 
+ 
+ 
+ VR4 
+ To understand how different level of flood water including low and high, in presence of a crowd can influence human decision making in choosing their route to the safe destination. 
+ 4A: Risky Behaviour of Crowd + Low Water Level 4B: Risky Behaviour of Crowd + High Water Level 4C: Safe Behaviour of Crowd + Low Water Level 4D: Safe Behaviour of Crowd + High Water Level 
+ 24 
+ 
+ 
+ 
+
+ To begin the experiment, participants received the following instruction: 
+ On a heavily rainy day, you were driving home when your car got stuck on a flooded road. You heard a warning message on the radio stating that there is a chance of a flash flood and that you need to evacuate the area and reach the designated safe destination. Once the experiment begins, you will find yourself outside your car, standing next to the flooded road. Your task is to navigate to the designated safe destination where the rescue team is located in the virtual environment. 
+ Participants completed a series of standard and bespoke questionnaires designed by authors at key stages of the experiment, including a demographic survey, the Simulator Sickness Questionnaire (Kennedy et al., 1993), the Igroup Presence Questionnaire (IPQ) (Schubert, 2003), and a brief Likert-scale decision-making questionnaire designed by authors (Appendix A), assessing the influence of environmental and social factors on route choice. Qualitative data were also collected through post-condition interviews (Appendix B). 
+ In addition to self-reported data, behavioural measures including path choice and pre-movement time were extracted for analysis after each experimental condition. Pre-movement time, also referred to as response time or pre-evacuation time, describes the interval between a stimulus and the initiation of action (Adrian et al., 2025). In this study, pre-movement time was defined as the interval between the onset of the simulated flood warning within the VR environment and the participant's initiation of evacuation movement. Specifically, it was measured as the duration spent observing and assessing the environment before initiating movement toward the designated safe destination and was extracted from VR screen recordings. 
+ Quantitative data from questionnaires, behavioural measures, and pre-movement times were analysed using descriptive statistics to summarise central tendency and variability (mean/SD), followed by inferential statistical analyses to test differences across experimental conditions. Qualitative interview data were analysed using reflexive thematic analysis (Braun and Clarke, 2006), following an inductive approach. Interviews were transcribed verbatim and repeatedly reviewed to achieve familiarisation with the data. Meaningful segments related to participants' perceptions, decision-making processes, and experiences during the VR flood evacuation scenarios were systematically coded. Codes were then reviewed and grouped into candidate themes, which were iteratively refined through comparison across participants and experimental conditions. 
+ 
+ 
+ 
+ 3 Results 
+ 
+ 3.1 VR1: Crowd Behaviour 
+ 
+ 3.1.1 Chosen Path 
+ Participants' path choices across the three conditions are summarised in Table 2. In both the Safe (1A) and Control (1C) conditions, 11 / 12 participants (91.7 %) chose the safe route, while this dropped to 7 / 12 (58.3 %) in the Risky (1B) condition, suggesting that observing risky crowd behaviour prompted a shift toward riskier decisions. 
+ Cochran's Q test revealed a significant difference in decision patterns across conditions ( p = 0.04 ), indicating that crowd behaviour influenced evacuation choices. Post hoc McNemar's tests with Bonferroni adjustment ( α = 0.016 ) showed no significant pairwise differences ( p > 0.016 ), likely due to limited sample size (Field, 2024). Nevertheless, the trend is clear: participants were over four times more likely to select the risky route when exposed to risky crowd behaviour. This supports prior evidence of social information influence, where individuals follow the observable actions of others in uncertain or hazardous environments (Petrucci, 2022; Helbing et al., 2002; Wang et al., 2024), even when those actions involve crossing dangerous floodwaters (Fujimi and Fujimura, 2020). 
+ 
+ 
+ 3.1.2 Pre-movement Time 
+ Participants in the Risky condition exhibited the longest decision-making time (1B; M = 13.8 s, SD = 4.4), compared to the Safe condition (1A; M = 7.5 s, SD = 4.5) and Control condition (1C; M = 7.08 s, SD = 2.4) (Table 2). A one-way repeated measures ANOVA revealed a significant effect of condition on pre-movement time, F (1.46, 16.06) = 11.81, p = 0.001 . Post-hoc comparisons with Bonferroni correction showed that pre-movement time in the Risky condition was significantly longer than both the Safe ( p = 0.025 ) and Control conditions ( p = 0.001 ), while no significant difference was found between Safe and Control ( p = 1.0 ). 
+
+ Table 2 VR1 to VR4 results on choice of path and pre-movement time ( * indicates statistically significant differences). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+
+ 
+
+ Independent 
+
+ Participants Responses- 
+
+ Participants Pre- 
+
+ 
+ 
+
+ 
+
+ 
+
+ Variable 
+
+ Choice of Path 
+
+ movement Time 
+
+ 
+ 
+
+ VR Study 
+
+ Condition 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ Post Hoc 
+
+ 
+
+ One-Way 
+
+ 
+
+ 
+ 
+
+ Level 1: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ Pairwise 
+
+ 
+
+ Repeated 
+
+ Post Hoc 
+
+ 
+ 
+
+ Crowd 
+
+ 
+
+ 
+
+ Response 
+
+ Cochran's 
+
+ Comparisons: 
+
+ Mean 
+
+ Measures 
+
+ Pairwise 
+
+ 
+ 
+
+ 
+
+ 
+
+ Behaviour 
+
+ Level 2 
+
+ Value 
+
+ (Probability %) 
+
+ Q Test 
+
+ McNemar Test 
+
+ (SD) 
+
+ ANOVA Test 
+
+ Comparisons 
+
+ 
+ 
+
+ 
+
+ 
+
+ Value 
+
+ 
+
+ 
+
+ Safe 
+
+ Risky 
+
+ P 
+
+ P 
+
+ 
+
+ P 
+
+ P 
+
+ 
+ 
+ 
+ 
+
+ VR1 
+
+ 1A 
+
+ Safe 
+
+ n/a 
+
+ n/a 
+
+ 91.7 
+
+ 8.3 
+
+ 0.04* 
+
+ 1A vs. 1B = 0.125 
+
+ 7.5 (4.5) 
+
+ F (1.4,16.06) = 11.8 
+
+ 1A vs. 1B = .025 
+
+ 
+ 
+
+ 
+
+ 1B 
+
+ Risky 
+
+ 
+
+ 
+
+ 58.3 
+
+ 41.7 
+
+ 
+
+ 1A vs. 1C = 0.100 
+
+ 13.8 (4.4) 
+
+ p = 0.001* 
+
+ 1A vs. 1C = 1.0 
+
+ 
+ 
+
+ 
+
+ 1C 
+
+ Control 
+
+ 
+
+ 
+
+ 91.7 
+
+ 8.3 
+
+ 
+
+ 1B vs. 1C = 0.125 
+
+ 7.08 (2.4) 
+
+ 
+
+ 1B vs. 1C = 0.001* 
+
+ 
+ 
+
+ VR2 
+
+ 2A 
+
+ Safe 
+
+ Crowd Size 
+
+ Small 
+
+ 95.8 
+
+ 4.2 
+
+ 0.006* 
+
+ 2A vs. 2B = 0.125 
+
+ 8.6 (5.2) 
+
+ F (3,69) = 17.8 
+
+ 2A vs. 2B = 0.001* 
+
+ 
+ 
+
+ 
+
+ 2B 
+
+ Risky 
+
+ 
+
+ 
+
+ 79.2 
+
+ 20.8 
+
+ 
+
+ 2A vs. 2C = 1.00 
+
+ 13.5 (5.1) 
+
+ p = 0.001* 
+
+ 2A vs. 2C = 0.71 
+
+ 
+ 
+
+ 
+
+ 2C 
+
+ Safe 
+
+ 
+
+ Large 
+
+ 95.8 
+
+ 4.2 
+
+ 
+
+ 2A vs. 2D = 0.031 
+
+ 8.3 (5.1) 
+
+ 
+
+ 2A vs. 2D = 0.001* 
+
+ 
+ 
+
+ 
+
+ 2D 
+
+ Risky 
+
+ 
+
+ 
+
+ 70.8 
+
+ 29.2 
+
+ 
+
+ 2B vs. 2C = 0.125 
+
+ 15.4 (7.3) 
+
+ 
+
+ 2B vs. 2C = 0.001* 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 2B vs. 2D = 0.62 
+
+ 
+
+ 
+
+ 2B vs. 2D = 0.14 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 2C vs. 2D = 0.03 
+
+ 
+
+ 
+
+ 2C vs. 2D = 0.001* 
+
+ 
+ 
+
+ VR3 
+
+ 3A 
+
+ Safe 
+
+ Clarity on 
+
+ Known 
+
+ 100 
+
+ 0.0 
+
+ 0.001* 
+
+ 3A vs. 3B = 0.08 
+
+ 10.2 (3.6) 
+
+ F (3,63) = 18.4 
+
+ 3A vs. 3B = 0.05 
+
+ 
+ 
+
+ 
+
+ 3B 
+
+ Risky 
+
+ Location of 
+
+ 
+
+ 62.5 
+
+ 37.5 
+
+ 
+
+ 3A vs. 3C = n/a 
+
+ 8.1 (2.7) 
+
+ p = 0.001 * 
+
+ 3A vs. 3C = 0.001* 
+
+ 
+ 
+
+ 
+
+ 3C 
+
+ Safe 
+
+ the Safe 
+
+ Unknown 
+
+ 100 
+
+ 0.00 
+
+ 
+
+ 3A vs. 3D = 0.001* 
+
+ 11.9 (2.9) 
+
+ 
+
+ 3A vs. 3D = 0.001* 
+
+ 
+ 
+
+ 
+
+ 3D 
+
+ Risky 
+
+ Destination 
+
+ 
+
+ 50 
+
+ 50 
+
+ 
+
+ 3B vs. 3C = 0.008* 
+
+ 14.9 (4.3) 
+
+ 
+
+ 3B vs. 3C = 0.18 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 3B vs. 3D = 0.125 
+
+ 
+
+ 
+
+ 3B vs. 3D = 0.001* 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 3C vs. 3D = 0.001* 
+
+ 
+
+ 
+
+ 3C vs. 3D = 0.001* 
+
+ 
+ 
+
+ VR4 
+
+ 4A 
+
+ Safe 
+
+ Flood Water 
+
+ High 
+
+ 100 
+
+ 0.0 
+
+ 0.001* 
+
+ 4A vs. 4B = 0.001* 
+
+ 8.3 (4.5) 
+
+ F (3,66) = 14.8 
+
+ – 
+
+ 
+ 
+
+ 
+
+ 4B 
+
+ Risky 
+
+ Level 
+
+ 
+
+ 79.1 
+
+ 20.8 
+
+ 
+
+ 4A vs. 4C = 0.001* 
+
+ 9.4 (4.6) 
+
+ p = 0.28 
+
+ 
+
+ 
+ 
+
+ 
+
+ 4C 
+
+ Safe 
+
+ 
+
+ Low 
+
+ 83.3 
+
+ 16.6 
+
+ 
+
+ 4A vs. 4D = 0.21 
+
+ 7.9 (3.9) 
+
+ 
+
+ 
+
+ 
+ 
+
+ 
+
+ 4D 
+
+ Risky 
+
+ 
+
+ 
+
+ 33.3 
+
+ 66.6 
+
+ 
+
+ 4B vs. 4C = n/a 
+
+ 9.5 (4.8) 
+
+ 
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 4B vs. 4D = 0.008* 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 4C vs. 4D = 0.008* 
+
+ 
+
+ 
+
+ 
+
+ 
+ 
+ n/a: not applicable. 
+
+ These results suggest that observing a crowd engaging in risky behaviour increased participants' deliberation time before acting, possibly due to heightened uncertainty, cognitive conflict, or increased risk appraisal. This aligns with the notion that social cues influence not only the direction of movement but also the latency of evacuation decisions (Bode and Codling, 2019). 
+ 
+ 
+ 3.1.3 Decision Factors 
+ Participants rated how different factors influenced their route choices (Appendix C). The presence of the crowd and the crowd's choice of path were rated moderately to highly influential, with no significant differences between conditions 1A and 1B ( p = 0.95 and p = 0.46 respectively). Similarly, both the overall flood water condition and the flood water level were consistently rated as highly influential across conditions 1A, 1B, and 1C, although no significant differences were found ( p = 0.60 and p = 0.97 , respectively). These findings suggest that while participants acknowledged the importance of all four factors in their route choice decisions, the experimental variations did not significantly alter their perceived influence. 
+ Qualitative data revealed varied perceptions of flood severity. While some participants saw the water as highly dangerous, describing it as shoulder-deep or submerging cars, others downplayed it as “a little high” or “under the waist.” Misinterpretations, including mistaking the river for the road, indicated more uncertainty. Concerns about depth, flow, and hidden debris also influenced avoidance. Responses ranged from complete rejection (“I completely rejected that route”) to confidence (“It's easy to cross”). Decisions were also influenced by perceptions of flood severity, including submerged vehicles, unpredictable flow, and risks to personal belongings, reflected in high quantitative ratings of flood conditions across all scenarios. 
+ The crowd had a mixed influence: some found reassurance in following others, while others were indifferent, avoided the crowd, or remained unaware of it, focusing solely on reaching safety. Risk-taking was often influenced by observing others using the same route, with participants citing crowd behaviour as a cue for safety. In contrast, absence of a crowd led some to make independent and occasionally riskier choices due to a lack of social cues. Additional factors influencing decisions included path clarity, distance, environmental sounds (e.g. sirens), and obstacles like moving cars or slippery terrain. Some prioritized safety and chose longer, clearer routes, while others favoured the directness of the flooded path. In rare cases, moral or social responsibility, such as helping vulnerable individuals or seeking group support, also shaped choices. 
+ Overall, while the quantitative data showed consistent influence of all four main decision factors across conditions, the qualitative data revealed the nuanced and often conflicting personal interpretations that shaped individual decision-making during the simulated flood scenarios. 
+ 
+ 
+ 
+ 3.2 VR2: Crowd Behaviour and Crowd Size 
+ 
+ 3.2.1 Chosen Path 
+ Safe route selection was highest in Safe-Small (2A) and Safe-Large (2C) conditions (95.8 %), and notably lower in Risky-Small (2B, 79.2 %) and Risky-Large (2D, 70.8 %). This suggests that risky crowd behaviour decreased safe decisions, particularly when group size was large. These findings indicate that risky crowd behaviour reduced safe choices, especially with larger crowds. 
+ Cochran's Q test revealed a significant effect of condition on evacuation choices ( p = 0.006 ), however post hoc McNemar tests with Bonferroni correction ( α = 0.0083 ) showed no significant pairwise differences, Overall, VR2 findings highlight the influence of social cues on evacuation decisions. Participants were more likely to choose the risky path when in larger groups exhibiting risky behaviour. However, no significant difference emerged between any individual condition pairs, suggesting that the lack of significance failed to provide evidence for an influence of crowd size on chosen path. 
+ 
+ 
+ 3.2.2 Pre-movement Time 
+ Participants in Risky-Large (2D) exhibited the longest pre-movement time ( M = 15.4 s, SD = 7.3), followed by Risky-Small (2B; M = 13.5 s, SD = 5.1). In contrast, Safe-Small (2A; M = 8.6 s, SD = 5.2) and Safe-Large (2C; M = 8.3 s, SD = 5.1) conditions were associated with shorter decision times. A one-way repeated measures ANOVA revealed a significant effect of condition on pre-movement time in VR2, F (3, 69) = 17.8, p = 0.001 . Decision-making times varied notably with both crowd behaviour (Safe vs. Risky) and crowd size (Small vs. Large). 
+ Post hoc comparisons with Bonferroni correction ( α = 0.0083 ) showed that Risky-Small (2B) differed significantly from Safe-Small (2A) and Safe-Large (2C), and Risky-Large (2D) differed significantly from Risky-Small (2B), demonstrating significantly longer pre-movement times. However, no significant differences were found between the two risky conditions or between the two safe condition, as these did not meet the Bonferroni-adjusted threshold. 
+ In agreement with VR1 results, these findings indicate that risky crowd behaviour, irrespective of the size of the group, delayed participants' initiation of movement. The results reinforce the idea that social cues not only shape the direction of evacuation decisions but also affect the speed with which individuals choose to act in emergencies. 
+ 
+ 
+ 3.2.3 Decision Factors 
+ Participants' route choices were shaped by a combination of social and environmental factors across the four experimental conditions. A Friedman test revealed significant effects for four social variables, presence of the crowd, path choice, crowd size, and trust ( p < 0.05 ). The result showed that Safe-Large (2C) consistently received the highest ratings for these variables indicating that a large crowd exhibiting safe behaviour most strongly influenced participants' choices. In contrast, environmental factors such as floodwater condition and water level were not significantly different across conditions ( p = 0.34 ; p = 0.32 ) (Appendix D). 
+ Social influence was especially important in conditions 2B and 2D, where 22 % and 30 % of participants, respectively, followed a risky crowd. Some reported intuitive trust: “I followed the people through the water because I saw them go through again.” Others described being swept up by group urgency: “People were panicking and running, I was consciously following them.” 
+ In 2A, nearly all participants chose the safe route, with deviations attributed to mistrust or anxiety about flood water. In 2C, only one participant took the risky path, finding the crowd itself overwhelming: “I changed my mind... it was too huge.” 
+ Small crowds were sometimes viewed as untrustworthy or calming; large crowds as reassuring or stressful, depending on context: “If it was smaller, I might have taken a different route.” Trust in the crowd was particularly influential in Safe-Large (2C): “When more people walk together, it feels safer,” though some still saw large groups as confusing or obstructive. 
+ Similar to VR1 results, 46 % perceived differences in water level or force, despite no actual differences between conditions: “This time it was a lot higher.” These subjective hazard interpretations were shaped more by context and social cues than actual environmental variation. Additional concerns included contamination, electric hazards, moving vehicles, and debris. These were factored into participants' risk assessments, often outweighing visible conditions. 
+ Participants often perceived the safe route as longer but more reliable (“dry with no obstacle”), while the risky route was seen as shorter but more dangerous. Actual distance played little role in decisions; instead, safety dominated assessments, with 80 % in safe-behaviour conditions and 70 % in risky-behaviour conditions rating it highly influential. Ambient cues like sirens, helicopters and rain amplified urgency and emotional responses. Some followed crowds reflexively, occasionally overlooking key environmental signals, including the presence of floodwater. 
+ In summary, participants' route choices were shaped more by social cues than by actual environmental conditions. Trust in the crowd and observed behaviour significantly influenced decisions, with larger crowds amplifying these effects (however not significantly in Risky conditions being seen as either reassuring or overwhelming depending on context. Despite uniform flood hazards, subjective risk perceptions varied, driven by group dynamics, emotional responses, and ambient cues rather than objective danger. 
+ In summary, participants' route choices were shaped more by social cues than by actual environmental conditions. Trust in the crowd and observed behaviour significantly influenced decisions, with larger crowds amplifying these effects (however not significantly in Risky conditions) being seen as either reassuring or overwhelming depending on context. Despite uniform flood hazards, subjective risk perceptions varied, driven by group dynamics, emotional responses, and ambient cues rather than objective danger. 
+ 
+ 
+ 
+ 3.3 VR3: Crowd Behaviour and Clarity on Safe Destination 
+ 
+ 3.3.1 Chosen Path 
+ Under varying levels of clarity regarding the location of the safe destination, Cochran's Q test was conducted to determine whether the proportion of participants choosing the safe versus risky path differed significantly across the four VR3 conditions. The test revealed a statistically significant difference in participants' decision patterns ( p = 0.001 ), indicating that both crowd behaviour and destination clarity influenced path choice. However, post hoc pairwise comparisons using McNemar's test with Bonferroni correction showed no significant difference between Risky conditions (3B and 3D), suggesting that the lack of destination clarity did not exert a stronger effect on risky response when participants were exposed to risky crowd behaviour. No significant difference in path choices was observed between conditions 3A and 3C as well. 
+ These findings suggest that while crowd behaviour influences evacuation choices, the effect of destination clarity on selecting the safe route remains limited, particularly when individuals are exposed to risky crowd cues. 
+ 
+ 
+ 3.3.2 Pre-movement Time 
+ A one-way repeated measures ANOVA revealed a significant effect of condition on pre-movement time in VR3, F (3,63) = 18.4, p = 0.001 . Pre-movement times varied across the four experimental conditions that manipulated both the observed crowd behaviour (Safe vs. Risky) and the clarity of the safe destination (Known vs. Unknown). 
+ Post hoc comparisons with Bonferroni correction showed that participants in the Risky-Unknown (3D) exhibited the longest pre-movement time ( M = 14.9 s, SD = 4.3), which was significantly longer than all other conditions. Safe-Unknown (3C) also led to significantly longer decision times ( M = 11.9 s, SD = 2.9) compared to known conditions. The shorter pre-movement time were observed in known conditions. 
+ These findings indicate that both crowd behaviour and destination clarity significantly affect evacuation latency. The longest delays occurred under risky social cues combined with spatial uncertainty, suggesting increased cognitive load and hesitation. In contrast, the fastest decisions followed safe cues and clear destinations. Alongside VR1 and VR2, these results underscore that social and environmental factors jointly shape not only evacuation choices but also the speed of decision-making in emergencies. 
+ 
+ 
+ 3.3.3 Decision Factors 
+ In VR3, presence of the crowd and trust in the crowd were rated as significantly more influential than other factors ( p = 0.0117 and p = 0.033 , respectively). However, post hoc Wilcoxon paired comparisons with Bonferroni correction revealed no statistically significant pairwise differences. Ratings for floodwater condition and water level remained consistently high across all conditions but did not differ significantly ( p > 0.05 ), indicating uniform perception of environmental risk regardless of scenario variation (Appendix E). 
+ Qualitative data supported the quantitative findings by highlighting the dominant role of social context in shaping route choices. In conditions with safe crowd behaviour (3A, 3C), participants described the crowd as reassuring and often followed their direction without hesitation, especially in unfamiliar settings: “I felt safer because everyone was heading the same way, even if I didn't know where I was going.” In contrast, in risky crowd scenarios (3B, 3D), participants were more divided. Some followed the crowd out of urgency or perceived trust while unclear on the location of the safe destination, while others chose independent paths, expressing mistrust or relying on prior knowledge: “I didn't trust them, they were heading into the flood.” 
+ In agreement with VR1 and VR results, despite identical environmental setups, perceptions of floodwater level and danger varied. Participants often inferred risk based on crowd behaviour, with several noting the water seemed less threatening when others crossed it: “It didn't look too deep since they went through.” Others described the water as hazardous, citing hidden debris, electricity, or strong currents: “Even if it looked shallow, I wasn't going to risk it.” These findings point to socially modulated hazard perception. 
+ Prior experience played a critical role, particularly in conditions with a known destination (3A, 3B). Participants with earlier exposure to the environment reported greater confidence and chose safer routes more readily. Several stated that had the risky crowd and unknown destination (3D) appeared earlier in their sequence, they might have followed the crowd: “If this was my first condition, I probably would've gone with them.” The identification of high ground or familiar landmarks further anchored decision-making. 
+ Additional influences included auditory cues such as sirens and helicopter sounds, visual signals like light or vehicle movement, and emotional states such as panic or hesitation. Some participants reported misinterpreting cues, such as assuming police presence indicated a safe path: “I saw a policeman in the crowd, so I thought it must be the right way.” Others described following the crowd reflexively before realizing it led away from safety. 
+ Overall, VR3 results reinforce patterns observed in prior studies, emphasizing the significant influence of crowd behaviour, particularly under conditions of uncertainty, on route choice decisions. While flood-related environmental factors remained consistently rated as important, they did not drive differential behaviour across scenarios. Instead, the combination of crowd behaviour and destination familiarity most strongly shaped both perceived influence and observed decisions during simulated flood evacuations. 
+ 
+ 
+ 
+ 3.4 VR4: Crowd Behaviour and Floodwater Level 
+ 
+ 3.4.1 Chosen Path 
+ To examine how crowd behaviour and floodwater level affected path choices, Cochran's Q test was conducted across the four VR4 conditions revealing a significant overall difference ( p = 0.001 ). 
+ Focusing on the two risky crowd conditions, participants were significantly less likely to choose the risky path in the Risky-High condition (4B), where none selected the risky option (0 %), compared to the Risky-Low condition (4D), where 48 % chose the risky path. This difference was statistically significant ( p = 0.008 , McNemar's test). 
+ These results suggest that floodwater level moderated the influence of risky crowd behaviour. While risky crowd behaviour generally reduced safe path choices in earlier studies, in VR4, it was only effective in deterring risky decisions when paired with high water levels. In contrast, when floodwater was low, risky crowd behaviour no longer deterred participants from also choosing the risky path, indicating a boundary condition for the influence of social cues during evacuation. 
+ 
+ 
+ 3.4.2 Pre-movement Time 
+ VR4 tested the impact of crowd behaviour and flood water level on pre-movement time. A one-way repeated measures ANOVA found no significant effect, F (3, 66) = 1.48, p = 0.28 . Although Risky conditions (4B, 4D) showed slightly longer times ( M = 9.4 , 9.5 s) than Safe conditions (4A, 4C; M = 7.9 , 8.3 s), these differences were not significant. 
+ Unlike previous studies (VR1–VR3), neither social cues nor environmental risk alone significantly affected evacuation timing in this scenario, suggesting a possible reduced sensitivity to the variables tested. 
+ 
+ 
+ 3.4.3 Decision Factors 
+ Quantitative results showed that flood water level was the most influential decision factor. A Friedman test revealed significant differences across conditions ( p = 0.02 ), with condition 4B (risky behaviour high water) receiving the highest influence ratings. Post-hoc tests showed that 4B differed significantly from 4A ( p = 0.044 ) and 4C ( p = 0.008 ). In contrast, crowd-related factors presence, path choice, and trust did not vary significantly between conditions ( p > 0.10 ), suggesting a steady, moderate influence (Appendix F). 
+ Qualitative interviews supported these findings, with many participants emphasizing concerns about high water levels, especially when the water reached chest height. Around 38 % of participants mentioned their inability to swim as another key reason for avoiding flooded routes. Perceptions of water level were more accurate when it was shallow, but as depth increased, participants increasingly under or overestimated the hazard, sometimes mistaking chest-level water for waist-deep. These mis judgments, often shaped by stress and poor visibility, influenced decisions even when actual conditions were identical. 
+ Participants expressed mixed attitudes toward the crowd. In some cases, some found comfort and direction in following others. In contrast, large effect size or unclear crowd destination led some participants to intentionally diverge, expressing distrust or a preference for quicker or drier routes. Those who broke from the crowd often reported uncertainty about their decision, especially in the absence of social validation. Others described following the crowd reflexively, only later realizing the decision lacked conscious evaluation. 
+ Familiarity with the environment was another major influential factor. Participants who had completed earlier trials felt more confident making independent decisions. Several acknowledged that without prior exposure, they likely would have followed the crowd, highlighting the role of repeated experience in reducing reliance on social cues. This was consistent with participants' expressions in VR1 to VR3. 
+ Despite consistent environmental setups, nearly half of the participants reported perceiving changes in water depth or force. As in VR1–VR3, this indicates that subjective hazard perception, often guided by social behaviour, overrode the actual risk level. Some felt reassured after watching others cross safely, while others avoided water entirely based on general safety rules or instincts like “stay dry during floods.” 
+ Other influences included perceived distance, urgency, barriers, and sensory cues like sirens or flashing lights. While some participants chose longer dry paths for safety, others opted for quicker, riskier routes without fully assessing the conditions. A few disregarded environmental details entirely, acting on fixed rules or crowd movement alone. 
+ Overall, VR4 findings reinforce the central role of flood severity in decision-making, with crowd influence remaining secondary and context-dependent, shaped by experience, trust, and clarity of the environment, echoing patterns from earlier VR studies. 
+ 
+ 
+ 
+ 
+ 4 Discussion 
+ 
+ 4.1 Key Findings 
+ This study examined how social cues shape evacuation decision-making during flood events using a series of four immersive VR experiments. Overall, the results consistently highlighted the strong influence of social information, particularly crowd behaviour, on both route choice and decision latency, extending prior research on social influence in emergencies (Petrucci, 2022; Helbing et al., 2002; Wang et al., 2024). 
+ Across the first three experiments (VR1–VR3), decision-making was shaped more strongly by social dynamics than by physical environmental characteristics. Although environmental hazards such as floodwater depth (moderate, around waist level) were rated as important, they did not consistently produce independent behavioural effects. Instead, crowd-related cues, particularly behaviour, trust, and perceived intent, emerged as the primary determinants of route selection and pre-movement time. 
+ Findings from the VR4 experiment introduce an important nuance by highlighting the role of environmental severity. Specifically, floodwater level exerted a meaningful effect on route choice, with high water levels (around shoulder/chest level) significantly discouraging risky route selection. Importantly, this effect interacted with social cues: while risky crowd behaviour in earlier scenarios typically reduced safe route selection, this influence weakened when floodwater levels were low (around ankle level) and became substantially constrained when floodwater was visibly deep. This suggests a boundary condition in which objective environmental risk can override or diminish the impact of social cues on evacuation behaviour. 
+ Participants frequently relied on the behaviour of virtual crowds as heuristic indicators of safety, consistent with social influence theories (Helbing et al., 2002; Wang et al., 2024). Safe crowd behaviour increased selection of safer routes, while risky crowd behaviour encouraged following flooded paths, particularly under uncertainty, such as unclear destinations (VR3) or seemingly manageable water levels (VR4). These patterns align with previous work on the influence of social cue in emergencies and highlight the role of perceived group consensus in shaping individual risk perception (Wang et al., 2024). 
+ Crowd size also played a moderating role. While participants in VR1 frequently reported that crowd size affected perceived risk, VR2 showed that large crowds amplified social influence primarily when exhibiting safe behaviour. Large risky crowds increased uncertainty, reduced safe route selection, and prolonged pre-movement time, while also eliciting mixed emotional responses. These findings echo evidence that large groups can be perceived as either protective or threatening depending on context (Kinateder and Warren, 2021). Notably, large safe-behaving crowds produced the most consistent shift toward safe decisions, whereas crowd size alone was less effective when behaviour was risky. This pattern suggests that participants did not follow the majority automatically but instead evaluated the observed behaviour of others as informative cues for action, particularly when the crowd was perceived as relevant or credible. 
+ Destination visibility further moderated reliance on social cues. In VR3, visible safe destinations increased confidence and reduced dependence on crowd behaviour, whereas ambiguous spatial conditions intensified social influence. This aligns with spatial cognition research showing that environmental legibility reduces reliance on external cues (Gärling et al., 1986) and mirrors findings from fire evacuation studies (Fu et al., 2024). 
+ Environmental factors were consistently rated as influential but were experienced subjectively. Participants often inferred flood severity from others' behaviour rather than direct appraisal, reinforcing evidence that hazard perception is socially modulated (Becker et al., 2015; Bernardini et al., 2017). Even in VR4, where high water levels discouraged risky choices more effectively, social influence remained context dependent. 
+ Pre-movement time reflected internal conflict and uncertainty. In all studies except VR4, participants took significantly longer to act when exposed to risky social cues. VR4's lack of significant variation in pre-movement time may reflect a boundary effect, whereby the physical extremity of floodwater made the danger sufficiently salient that social influence played a secondary role in shaping response timing. 
+ Qualitative findings further indicated that trust and familiarity shaped responses. Some participants followed others for social validation, while others resisted crowd cues due to mistrust or prior knowledge. Repeated exposure increased confidence in ignoring misleading social information, suggesting adaptive learning effects across trials. 
+ 
+ 
+ 4.2 Implications for Policy and Practice 
+ These findings have important implications for flood risk management, evacuation planning, and emergency communication. Current evacuation models and warning systems often assume rational, hazard-based decision-making; however, the present results show that individuals frequently infer risk from the behaviour of others, particularly under uncertain conditions. 
+ The strong influence of crowd behaviour suggests that unmanaged social cues may propagate unsafe decisions during evacuation. Conversely, visible guidance from trained personnel, coordinated group movement, and clearly signposted safe routes and destinations may help counteract risky social influence. These findings highlight the importance of managing not only physical hazards but also social information during flood emergencies. 
+ The moderating role of floodwater severity further suggests that evacuation strategies should be adaptive. In low-to-moderate flood conditions, where social influence is strongest, targeted guidance and communication may be particularly critical. In high-severity scenarios, salient environmental cues may reduce reliance on social heuristics. 
+ From a modelling perspective, the results support the integration of empirically grounded social behaviour dynamics into flood evacuation models, including agent-based and socio-hydrological frameworks (Simonovic and Ahmad, 2005; Alonso Vicario et al., 2020). Accounting for context-dependent social influence can improve behavioural realism and predictive accuracy. 
+ 
+ 
+ 4.3 Limitations and Future Work 
+ Several limitations should be acknowledged. First, the sample size was relatively small and demographically narrow, which may limit the generalisability of the findings. Second, while immersive VR provides a safe and controlled environment for studying hazardous situations, questions remain regarding ecological validity, and caution is required when extrapolating results to real-world flood events. 
+ Furthermore, the virtual scenario represented a specific typology of built environment and transportation setting, which may not capture the full diversity of urban and public-use contexts. Behavioural responses observed in this study may therefore differ from those occurring in more complex urban environments or indoors where higher user density, multiple destinations, and competing social cues could influence decision-making and the activation of appropriate behaviours. This scenario specificity represents an additional limitation, and the applicability of the findings to dense urban areas and public-use buildings or outdoor spaces with larger crowds should be interpreted with caution. 
+ The within-subject design may also have introduced learning or carryover effects, despite counterbalancing. Participants appeared more confident and less reliant on social cues in later trials, suggesting that familiarity with the environment influenced decision-making. Future studies could address this through between-subject designs or varied scenario sequencing. 
+ Additionally, the Likert-scale questionnaire used to assess decision influences requires further validation. Future work should refine and validate measurement tools and explore additional factors such as emotional states, prior flood experience, and group-level interactions. 
+ Future research should also examine more diverse populations, particularly individuals from flood-prone communities, and integrate VR-derived behavioural data with real-world observations and computational models. Such approaches would further strengthen the ecological validity and practical relevance of this research. 
+ 
+ 
+ 
+ 5 Conclusions 
+ This study investigated the impact of social cues, particularly crowd behaviour, on human decision-making during flood evacuation using a series of controlled Virtual Reality experiments. The findings demonstrate that evacuation behaviour is strongly shaped by social dynamics, frequently exerting a greater influence than objective environmental factors such as floodwater depth or destination clarity. Across multiple experimental conditions, individuals consistently relied on the observed behaviour of others when forming risk judgements and selecting evacuation routes. 
+ Although environmental severity was shown to moderate this effect, particularly under high-risk conditions where physical hazards became more salient, social cues remained a critical determinant of both evacuation choices and decision latency. These results highlight the dynamic interplay between social and environmental information, indicating that evacuation decisions cannot be adequately explained by hazard characteristics alone. 
+ By providing empirically grounded evidence of how social influence operates under varying levels of uncertainty and risk, this research underscores the importance of incorporating realistic representations of human social behaviour into flood risk modelling, evacuation planning, and emergency management strategies. The use of immersive VR enabled the systematic examination of dangerous scenarios that are difficult to study in real-world settings, thereby contributing to the development of more human-centred, adaptive, and behaviourally informed approaches to flood risk reduction. 
+ 
+
+ 
+ 
+ 
+
+ 
+ Appendix A After Experiment Questionnaires 
+ The following table (Table A1) presents the questionnaires which participants completed after experiments. This questionnaire provided insight into the influence of decision factors on their decision making on choosing route to the safe destination in Likert scale. 
+
+ Table A1 Post Experiment Questionnaires. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ – Please rate to what extent the following factors 
+ VR 
+ 
+ 
+ influenced your decision-making in choosing your 
+ Experiment 
+ 
+ 
+ route to the safe destination: 
+ 
+ 
+ 
+ 1 = not at all to 5 = very high. 
+ 
+ 
+ 
+ 
+ 
+ Decision Factors 
+ 1 
+ 2 
+ 3 
+ 4 
+ 5 
+ 
+ 
+ 
+ Presence of the crowd 
+ 
+ 
+ 
+ 
+ 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ Crowd choice of path 
+ 
+ 
+ 
+ 
+ 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ Size of the crowd 
+ 
+ 
+ 
+ 
+ 
+ 2 
+ 
+ 
+ Flood water overall condition 
+ 
+ 
+ 
+ 
+ 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ Flood water level 
+ 
+ 
+ 
+ 
+ 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ Trust on the crowd 
+ 
+ 
+ 
+ 
+ 
+ 2 – 3 – 4 
+ 
+ 
+ 
+
+
+ 
+
+ 
+ Appendix B Interview Questions 
+ The following table (Table B1) shows the questions that participants responded to after the VR experiments. 
+
+ Table B1 Interview Questions. 
+ 
+ 
+ 
+ 
+ 
+ N 
+ Questions 
+ VR Experiments 
+ 
+ 
+ 
+ 
+ 1 
+ Did you notice the people walking toward the safe destination? Please explain. Do you believe that you were “consciously” following others/avoiding following them, to reach the destination/rescue team? 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ 2 
+ How did you assess that which route you need to go to reach the safe destination? 
+ 2 – 3 – 4 
+ 
+ 
+ 3 
+ Did you notice the size of the crowd present in the scene? How was it? Did the size of the crowd affect your decision to the destination? please explain how. 
+ 2 – 3 – 4 
+ 
+ 
+ 4 
+ Did you notice the level of water (water hight) before you chose your path to the destination? Did you have any concern to walk through the flood water? 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ 5 
+ Were you aware of the risk of passing through the water first when you decided on your path to the safe destination? If yes, to what extend do you think it affect your action in this experiment? 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ 6 
+ Did you notice the distance from the destination when you were deciding which path you want to go through? 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ 7 
+ What other factors influenced your decision on choosing the path to the destination? 
+ 1 – 2 – 3 – 4 
+ 
+ 
+ 8 
+ Do you think you could trust the crowd and the route they were taking to reach the safe destination? 
+ 2 – 3 – 4 
+ 
+ 
+ 
+
+ 
+
+ 
+ Appendix C VR1 Decision Factors Questionnaire Results 
+ Table C1 provides the results of VR1 Decision Factors Questionnaire. 
+
+ Table C1 VR1 Decision Factors Questionnaire Results (1A = Crowd bhvr: Safe; 1B = Crowd bhvr: Risky; 1C = No Crowd). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Post-Hoc 
+ 
+ 
+ Decision Factor 
+ Condition 
+ Mean (SD) 
+ Median 
+ Test 
+ P 
+ Comparisons 
+ 
+ 
+ 
+ 
+ Presence of the crowd 
+ 1A 
+ 3.5 (1.37) 
+ 4 
+ Wilcoxon Signed-Rank 
+ 0.95 
+ – 
+ 
+ 
+ 
+ 1B 
+ 3.7 (1.6) 
+ 4.5 
+ 
+ 
+ 
+ 
+ 
+ 
+ – 
+ – 
+ – 
+ 
+ 
+ 
+ 
+ 
+ Crowd choice of path 
+ 1A 
+ 3.1 (1.1) 
+ 3 
+ Wilcoxon Signed-Rank 
+ 0.46 
+ – 
+ 
+ 
+ 
+ 1B 
+ 3.6 (1.5) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 
+ – 
+ – 
+ – 
+ 
+ 
+ 
+ 
+ 
+ Flood water overall condition 
+ 1A 
+ 4.42 (1.1) 
+ 5 
+ Friedman's ANOVA 
+ 0.60 
+ – 
+ 
+ 
+ 
+ 1B 
+ 4.0 (1.4) 
+ 5 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1C 
+ 4.7 (0.4) 
+ 5 
+ 
+ 
+ 
+ 
+ 
+ Flood water level 
+ 1A 
+ 3.7 (1.7) 
+ 4.5 
+ Friedman's ANOVA 
+ 0.97 
+ – 
+ 
+ 
+ 
+ 1B 
+ 4.8 (0.9) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 
+ 1C 
+ 3.8 (1.4) 
+ 4.5 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+
+ 
+ Appendix D VR2 Decision Factors Questionnaire Results 
+ Table D1 provides the results of VR2 Decision Factors Questionnaire. 
+
+ Table D1 VR2 Decision Factors Questionnaire Results (2A = Crowd bhvr: Safe, Crowd size: Small; 2B = Crowd bhvr: Risky, Crowd size: small; 2C = Crowd bhvr: Safe, Crowd size: Large; 2D = Crowd bhvr: Risky, Crowd size: Large) ( * indicates statistically significant differences). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Friedman 
+ Post-Hoc Comparisons 
+ 
+ 
+ Decision Factor 
+ Condition 
+ Mean (SD) 
+ Median 
+ Anova test 
+ Wilcoxon Signed-Rank test 
+ 
+ 
+ 
+ 
+ Presence of the crowd 
+ 2A 
+ 2.83 (1.78) 
+ 2.5 
+ 0.003* 
+ 2A vs. 2B = 0.018 
+ 
+ 
+ 
+ 2B 
+ 2.04 (1.60) 
+ 1 
+ 
+ 2A vs. 2C = 0.061 
+ 
+ 
+ 
+ 2C 
+ 3.63 (1.58) 
+ 4.5 
+ 
+ 2A vs. 2D = 0.97 
+ 
+ 
+ 
+ 2D 
+ 2.79 (1.56) 
+ 2.5 
+ 
+ 2B vs. 2C = 0.001* 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2B vs. 2D = 0.014 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2C vs. 2D = 0.047 
+ 
+ 
+ Crowd choice of path 
+ 2A 
+ 2.7 (1.69) 
+ 2.5 
+ 0.001* 
+ 2A vs. 2B = 0.07 
+ 
+ 
+ 
+ 2B 
+ 2.0 (1.66) 
+ 1 
+ 
+ 2A vs. 2C = 0.012 
+ 
+ 
+ 
+ 2C 
+ 3.7 (1.6) 
+ 4.5 
+ 
+ 2A vs. 2D = 0.388 
+ 
+ 
+ 
+ 2D 
+ 2.4 (1.7) 
+ 1 
+ 
+ 2B vs. 2C = 0.003* 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2B vs. 2D = 0.41 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2C vs. 2D = 0.021 
+ 
+ 
+ Size of the crowd 
+ 2A 
+ 2.4 (1.5) 
+ 1.5 
+ 0.008* 
+ 2A vs. 2B = 0.19 
+ 
+ 
+ 
+ 2B 
+ 1.8 (1.3) 
+ 1 
+ 
+ 2A vs. 2C = 0.036 
+ 
+ 
+ 
+ 2C 
+ 3.2 (1.5) 
+ 3.5 
+ 
+ 2A vs. 2D = 0.87 
+ 
+ 
+ 
+ 2D 
+ 2.5 (1.5) 
+ 2 
+ 
+ 2B vs. 2C = 0.013* 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2B vs. 2D = 0.108 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2C vs. 2D = 0.093 
+ 
+ 
+ Flood water overall condition 
+ 2A 
+ 3.5 (1.4) 
+ 4 
+ 0.34 
+ – 
+ 
+ 
+ 
+ 2B 
+ 3.8 (1.3) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 2C 
+ 3.6 (1.6) 
+ 4.5 
+ 
+ 
+ 
+ 
+ 
+ 2D 
+ 3.3 (1.4) 
+ 4 
+ 
+ 
+ 
+ 
+ Flood water level 
+ 2A 
+ 3.5 (1.3) 
+ 4 
+ 0.32 
+ – 
+ 
+ 
+ 
+ 2B 
+ 3.8 (1.4) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 2C 
+ 3.8 (1.5) 
+ 5 
+ 
+ 
+ 
+ 
+ 
+ 2D 
+ 3.6 (1.5) 
+ 4 
+ 
+ 
+ 
+ 
+ Trust on the crowd 
+ 2A 
+ 2.5 (1.3) 
+ 2 
+ 0.01* 
+ 2A vs. 2B = 0.034 
+ 
+ 
+ 
+ 2B 
+ 1.7 (1.2) 
+ 0 
+ 
+ 2A vs. 2C = 0.086 
+ 
+ 
+ 
+ 2C 
+ 3.1 (1.7) 
+ 3.5 
+ 
+ 2A vs. 2D = 0.190 
+ 
+ 
+ 
+ 2D 
+ 2.0 (1.5) 
+ 1 
+ 
+ 2B vs. 2C = 0.008* 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2B vs. 2D = 0.47 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 2C vs. 2D = 0.021 
+ 
+ 
+ 
+
+
+ 
+
+ 
+ Appendix E VR3 Decision Factors Questionnaire Results 
+ Table E1 provides the results of VR3 Decision Factors Questionnaire. 
+
+ Table E1 VR3 Decision Factors Questionnaire Results (3A = Crowd bhvr: Safe, Clrty on Sfe Dstntn: Known; 3B = Crowd bhvr: Risky, Clrty on Sfe Dstntn: Known; 3C = Crowd bhvr: Safe, Clrty on Sfe Dstntn: Unknown; 3D = Crowd bhvr: Risky, Clrty on Sfe Dstntn: Unknown; ( * indicates statistically significant differences). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Friedman 
+ Post-Hoc Comparisons 
+ 
+ 
+ Decision Factor 
+ Condition 
+ Mean (SD) 
+ Median 
+ Anova test P 
+ Wilcoxon Signed-Rank test P 
+ 
+ 
+ 
+ 
+ Presence of the crowd 
+ 3A 
+ 3.6 (1.12) 
+ 4 
+ 0.0117* 
+ 3A vs. 3B = 0.09 
+ 
+ 
+ 
+ 3B 
+ 3.1 (1.19) 
+ 3 
+ 
+ 3A vs. 3C = 0.3 
+ 
+ 
+ 
+ 3C 
+ 3.9 (1.06) 
+ 4 
+ 
+ 3A vs. 3D = 0.39 
+ 
+ 
+ 
+ 3D 
+ 3.8 (1.04) 
+ 4 
+ 
+ 3B vs. 3C = 0.01 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3B vs. 3D = 0.03 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3C vs. 3D = 0.7 
+ 
+ 
+ Crowd choice of path 
+ 3A 
+ 3.6 (1.2) 
+ 4 
+ 0. 25 
+ – 
+ 
+ 
+ 
+ 3B 
+ 2.9 (1.4) 
+ 3 
+ 
+ 
+ 
+ 
+ 
+ 3C 
+ 3.8 (0.86) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 3D 
+ 3.6 (1.1) 
+ 4 
+ 
+ 
+ 
+ 
+ Flood water overall 
+ 3A 
+ 3.3 (1.3) 
+ 3.5 
+ 0.87 
+ – 
+ 
+ 
+ condition 
+ 3B 
+ 3.3 (1.1) 
+ 3.5 
+ 
+ 
+ 
+ 
+ 
+ 3C 
+ 3.2 (1.1) 
+ 3 
+ 
+ 
+ 
+ 
+ 
+ 3D 
+ 3.5 (1.06) 
+ 3.5 
+ 
+ 
+ 
+ 
+ Flood water level 
+ 3A 
+ 3.2 (1.3) 
+ 4 
+ 0.52 
+ – 
+ 
+ 
+ 
+ 3B 
+ 3.2 (1.1) 
+ 3.5 
+ 
+ 
+ 
+ 
+ 
+ 3C 
+ 2.9 (1.2) 
+ 2.5 
+ 
+ 
+ 
+ 
+ 
+ 3D 
+ 3.3 (1.2) 
+ 4 
+ 
+ 
+ 
+ 
+ Trust on the crowd 
+ 3A 
+ 3.7 (1.2) 
+ 4 
+ 0.033* 
+ 3A vs. 3B = 0.05 
+ 
+ 
+ 
+ 3B 
+ 2.8 (1.4) 
+ 2.5 
+ 
+ 3A vs. 3C = 0.63 
+ 
+ 
+ 
+ 3C 
+ 3.5 (1.0) 
+ 4 
+ 
+ 3A vs. 3D = 0.24 
+ 
+ 
+ 
+ 3D 
+ 3.3 (1.3) 
+ 3.5 
+ 
+ 3B vs. 3C = 0.06 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3B vs. 3D = 0.09 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 3C vs. 3D = 0.39 
+ 
+ 
+ 
+
+
+ 
+
+ 
+ Appendix F VR4 Decision Factors Questionnaire Results 
+ Table F1 provides the results of VR4 Decision Factors Questionnaire. 
+
+ Table F1 VR4 Decision Factors Questionnaire Results (4A = Crowd bhvr: Safe, Fld Wtr Lvl: High; 4B = Crowd bhvr: Risky, Fld Wtr Lvl: High; 4C = Crowd bhvr: Safe, Fld Wtr Lvl: Low; 4D = Crowd bhvr: Risky, Fld Wtr Lvl: Low) ( * indicates statistically significant differences). 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ Mean 
+ 
+ Friedman 
+ Post-Hoc Comparisons 
+ 
+ 
+ Decision Factor 
+ Condition 
+ (SD) 
+ Median 
+ Anova test P 
+ Wilcoxon Signed-Rank test P 
+ 
+ 
+ 
+ 
+ Presence of the crowd 
+ 4A 
+ 3.7 (1.1) 
+ 4 
+ 0.14 
+ – 
+ 
+ 
+ 
+ 4B 
+ 2.7 (1.5) 
+ 2 
+ 
+ 
+ 
+ 
+ 
+ 4C 
+ 3.0 (1.3) 
+ 3 
+ 
+ 
+ 
+ 
+ 
+ 4D 
+ 3.2 (1.2) 
+ 3 
+ 
+ 
+ 
+ 
+ Crowd choice of path 
+ 4A 
+ 3.7 (1.3) 
+ 4 
+ 0.10 
+ – 
+ 
+ 
+ 
+ 4B 
+ 2.8 (1.6) 
+ 2 
+ 
+ 
+ 
+ 
+ 
+ 4C 
+ 3.3 (1.4) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 4D 
+ 3.1 (1.4) 
+ 3 
+ 
+ 
+ 
+ 
+ Flood water overall 
+ 4A 
+ 3.5 (1.4) 
+ 4 
+ 1.5 
+ – 
+ 
+ 
+ condition 
+ 4B 
+ 4.3 (0.9) 
+ 5 
+ 
+ 
+ 
+ 
+ 
+ 4C 
+ 4.0 (0.9) 
+ 4 
+ 
+ 
+ 
+ 
+ 
+ 4D 
+ 3.7 (1.3) 
+ 4 
+ 
+ 
+ 
+ 
+ Flood water level 
+ 4A 
+ 3.7 (1.5) 
+ 4 
+ 0.02* 
+ 4A vs. 4B = 0.044 
+ 
+ 
+ 
+ 4B 
+ 4.4 (0.8) 
+ 5 
+ 
+ 4A vs. 4C = 0.9 
+ 
+ 
+ 
+ 4C 
+ 3.6 (1.2) 
+ 4 
+ 
+ 4A vs. 4D = 0.6 
+ 
+ 
+ 
+ 4D 
+ 3.8 (1.3) 
+ 4 
+ 
+ 4B vs. 4C = 0.008* 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 4B vs. 4D = 0.12 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 4C vs. 4D = 0.4 
+ 
+ 
+ Trust on the crowd 
+ 4A 
+ 3.5 (1.3) 
+ 4 
+ 1.9 
+ – 
+ 
+ 
+ 
+ 4B 
+ 2.6 (1.6) 
+ 2 
+ 
+ 
+ 
+ 
+ 
+ 4C 
+ 2.8 (1.0) 
+ 3 
+ 
+ 
+ 
+ 
+ 
+ 4D 
+ 2.9 (1.3) 
+ 3 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+ Code availability 
+
+ The software code is not publicly available due to ethical considerations and the inclusion of proprietary components. 
+ Data availability 
+
+ The data used in this research are not publicly available due to ethical and confidentiality considerations. 
+ Video supplement 
+
+ A video footage of the VR scenario is available at 10.5446/72397 (Arshaghi, 2026). 
+ Author contributions 
+
+ B. Arshaghi: Conceptualization, Methodology, Investigation, Writing – Original Draft, Visualization. G. Lawson: Supervision, Writing – Review & Editing. Conceptualization, Methodology, Funding acquisition. R. Briganti: Supervision, Reviewing. Conceptualization, Methodology, Funding acquisition. P. Siebers: Supervision, Reviewing. Conceptualization, Methodology, Funding acquisition. 
+ Competing interests 
+
+ The contact author has declared that none of the authors has any competing interests. 
+ Ethical statement 
+ 
+
+ This study was approved by the Ethics Committee of the Faculty of Engineering at the University of Nottingham. 
+ Disclaimer 
+
+ Publisher's note: Copernicus Publications remains neutral with regard to jurisdictional claims made in the text, published maps, institutional affiliations, or any other geographical representation in this paper. The authors bear the ultimate responsibility for providing appropriate place names. Views expressed in the text are those of the authors and do not necessarily reflect the views of the publisher. 
+ Acknowledgements Declaration of generative AI: During the preparation of this work the author(s) used ChatGPT in order to improve readability and language. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the publication. Financial support 
+
+ This research has been supported by the Engineering and Physical Sciences Research Council (EPSRC) (grant no. EP/W524402/1). 
+ Review statement 
+
+ This paper was edited by Olga Petrucci and reviewed by John Drury and one anonymous referee. 
+ 
+ References 
+
+ 1 Adrian, J., Amos, M., Appert-Rolland, C., Baratchi, M., Bode, N., Boltes, M., Chatagnon, T., Chraibi, M., Corbetta, A., and Cuesta, A.: Glossary for Research on Human Crowd Dynamics, Collective Dynamics, 2nd edn., 1–32, 10.1016/j.ijdrr.2021.102192 , 2025. 
+ 2 Aerts, J. C.: Integrating agent-based approaches with flood risk models: A review and perspective, Water Security, 11, 100076, 2020. 
+ 3 Aerts, J. C., Botzen, W. J., Clarke, K. C., Cutter, S. L., Hall, J. W., Merz, B., Michel-Kerjan, E., Mysiak, J., Surminski, S., and Kunreuther, H.: Integrating human behaviour dynamics into flood disaster risk assessment, Nature Climate Change, 8, 193–199, 2018. 
+ 4 Aksa, F. I., Ashar, M., Siswanto, H. W., and Malem, Z. Z.: Immersive virtual reality for improving flood evacuation behaviour and self-efficacy, Jàmbá-Journal of Disaster Risk Studies, 17, 1655, 2025. 
+ 5 Alonso Vicario, S., Mazzoleni, M., Bhamidipati, S., Gharesifard, M., Ridolfi, E., Pandolfo, C., and Alfonso, L.: Unravelling the influence of human behaviour on reducing casualties during flood evacuation, Hydrological Sciences Journal, 65, 2359–2375, 10.1080/02626667.2022.2100828 , 2020. 
+ 6 Arias, P., Bellouin, N., Coppola, E., Jones, C., Krinner, G., Marotzke, J., Naik, V., Plattner, G.-K., Rojas, M., Sillmann, J., Storelvmo, T., Thorne, P., Trewin, B., Achutarao, K., Adhikary, B., Armour, K., Govindasamy, B., Barimalala, R., Berger, S., and Zickfeld, K.: Climate Change 2021: The Physical Science Basis, Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change; Technical Summary, 10.1017/9781009157896.002 , 2021. 
+ 7 Arrighi, C., Oumeraci, H., and Castelli, F.: Hydrodynamics of pedestrians' instability in floodwaters, Hydrol. Earth Syst. Sci., 21, 515–531, 10.5194/hess-21-515-2017 , 2017. 
+ 8 Arshaghi, B.: Example Video Footage of Risky Crowd Behaviour in a Virtual Flood Evacuation Scenario, University of Nottingham, TIB AV-Portal [video], 10.5446/72397 , 2026. 
+ 9 Becker, J. S., Taylor, H., Doody, B. J., Wright, K. C., Gruntfest, E., and Webber, D.: A review of people's behavior in and around floodwater, Weather, Climate, and Society, 7, 321–332, 2015. 
+ 10 Bernardini, G., Camilli, S., Quagliarini, E., and D'Orazio, M.: Flooding risk in existing urban environment: From human behavioral patterns to a microscopic simulation model, Energy Procedia, 134, 131–140, 2017. 
+ 11 Bernardini, G., Quagliarini, E., D'Orazio, M., and Brocchini, M.: Towards the simulation of flood evacuation in urban scenarios: Experiments to estimate human motion speed in floodwaters, Safety Science, 123, 104563, 10.1016/j.ssci.2019.104563 , 2020. 
+ 12 Bode, N. W. and Codling, E. A.: Exploring determinants of pre-movement delays in a virtual crowd evacuation experiment, Fire Technology, 55, 595–615, 2019. 
+ 13 Braun, V. and Clarke, V.: Using thematic analysis in psychology, Qualitative Research in Psychology, 3, 77–101, 2006. 
+ 14 Chu, M. L., Parigi, P., Latombe, J.-C., and Law, K. H.: Simulating effects of signage, groups, and crowds on emergent evacuation patterns, Ai & Society, 30, 493–507, 2015. 
+ 15 Cohen, J.: Statistical power analysis for the behavioral sciences, Routledge, 10.4324/9780203771587 , 2013. 
+ 16 D'Amico, A., Bernardini, G., Lovreglio, R., and Quagliarini, E.: A non-immersive virtual reality serious game application for flood safety training, International Journal of Disaster Risk Reduction, 96, 103940, 10.1016/j.ijdrr.2023.103940 , 2023. 
+ 17 Deb, S., Carruth, D. W., Sween, R., Strawderman, L., and Garrison, T. M.: Efficacy of virtual reality in pedestrian safety research, Applied Ergonomics, 65, 449–460, 2017. 
+ 18 Denda, M. and Fujikane, M.: Development of a virtual flood experience system and its suitability as a flood risk communication tool, Proceedings of IAHS, 386, 21–26, 2024. 
+ 19 Dias, C., Abd Rahman, N., and Zaiter, A.: Evacuation under flooded conditions: Experimental investigation of the influence of water depth on walking behaviors, International Journal of Disaster Risk Reduction, 58, 102192, 10.1016/j.ijdrr.2021.102192 , 2021. 
+ 20 Du, E., Wu, F., Jiang, H., Guo, N., Tian, Y., and Zheng, C.: Development of an integrated socio-hydrological modeling framework for assessing the impacts of shelter location arrangement and human behaviors on flood evacuation processes, Hydrol. Earth Syst. Sci., 27, 1607–1626, 10.5194/hess-27-1607-2023 , 2023. 
+ 21 Ferdous, M. R., Di Baldassarre, G., Brandimarte, L., and Wesselink, A.: The interplay between structural flood protection, population density, and flood mortality along the Jamuna River, Bangladesh, Regional Environmental Change, 20, 1–9, 10.1007/s10113-020-01600-1 , 2020. 
+ 22 Field, A.: Discovering statistics using IBM SPSS statistics, Sage Publications Limited, 2024. 
+ 23 Fu, M., Liu, R., and Ragan, E.: An immersive virtual reality experimental study of occupants' behavioral compliance during indoor evacuations, International Journal of Disaster Risk Reduction, 107, 104420, 10.1016/j.ijdrr.2024.104420 , 2024. 
+ 24 Fujimi, T. and Fujimura, K.: Testing public interventions for flash flood evacuation through environmental and social cues: The merit of virtual reality experiments, International Journal of Disaster Risk Reduction, 50, 101690, 10.1016/j.ijdrr.2020.101690 , 2020. 
+ 25 Gärling, T., Böök, A., and Lindberg, E.: Spatial orientation and wayfinding in the designed environment: A conceptual analysis and some suggestions for postoccupancy evaluation, Journal of Architectural and Planning Research, 3, 55–64, 1986. 
+ 26 Haghani, M. and Sarvi, M.: Following the crowd or avoiding it? Empirical investigation of imitative behaviour in emergency escape of human crowds, Animal Behaviour, 124, 47–56, 2017. 
+ 27 Hamilton, K., Demant, D., Peden, A. E., and Hagger, M. S.: A systematic review of human behaviour in and around floodwater, International Journal of Disaster Risk Reduction, 47, 101561, 10.1016/j.ijdrr.2022.103275 , 2020. 
+ 28 Helbing, D., Farkas, I. J., Molnar, P., and Vicsek, T.: Simulation of pedestrian crowds in normal and evacuation situations, Pedestrian and Evacuation Dynamics, 21, 21–58, 2002. 
+ 29 Huang, S.-K., Lindell, M. K., Prater, C. S., Wu, H.-C., and Siebeneck, L. K.: Household evacuation decision making in response to Hurricane Ike, Natural Hazards Review, 13, 283–296, 2012. 
+ 30 Irsyad, H. A. and Hitoshi, N.: Flood disaster evacuation route choice in Indonesian urban riverbank kampong: Exploring the role of individual characteristics, path risk elements, and path network configuration, International Journal of Disaster Risk Reduction, 81, 103275, 10.1016/j.ijdrr.2022.103275 , 2022. 
+ 31 Kennedy, R. S., Lane, N. E., Berbaum, K. S., and Lilienthal, M. G.: Simulator sickness questionnaire: An enhanced method for quantifying simulator sickness, The International Journal of Aviation Psychology, 3, 203–220, 1993. 
+ 32 Kinateder, M. and Warren, W. H.: Social influence on evacuation behavior in real and virtual environments, Frontiers in Robotics and AI, 3, 43, 10.3389/frobt.2016.00043 , 2016. 
+ 33 Kinateder, M. and Warren, W. H.: Exit choice during evacuation is influenced by both the size and proportion of the egressing crowd, Physica A: Statistical Mechanics and its Applications, 569, 125746, 10.1016/j.physa.2021.125746 , 2021. 
+ 34 Kinateder, M., Müller, M., Jost, M., Mühlberger, A., and Pauli, P.: Social influence in a virtual tunnel fire–influence of conflicting information on evacuation behavior, Applied Ergonomics, 45, 1649–1659, 2014. 
+ 35 Lawson, G. and Burnett, G.: Simulation and digital human modelling, Boca Raton: CRC Press, 10.1201/b18362 , 2015. 
+ 36 Liu, Q. and Liu, R.: Virtual reality for indoor emergency evacuation studies: Design, development, and implementation review, Safety Science, 181, 106678, 10.1016/j.ssci.2024.106678 , 2025. 
+ 37 Menne, B., Murray, V., and Organization, W. H.: Floods in the WHO European Region: health effects and their prevention, in: Floods in the WHO European Region: health effects and their prevention, ISBN: 978-92-890-0011-6, 2013. 
+ 38 Mol, J., Botzen, W., and Blasch, J.: After the virtual flood: Risk perceptions and flood preparedness after virtual reality risk communication, Judgm. Decis. Mak., 17, 189–214, 2022. 
+ 39 Nkwunonwo, U., Whitworth, M., and Baily, B.: A review of the current status of flood modelling for urban flood risk management in the developing countries, Scientific African, 7, e00269, 10.1016/j.sciaf.2020.e00269 , 2020. 
+ 40 Papagiannaki, K., Diakakis, M., Kotroni, V., Lagouvardos, K., and Papagiannakis, G.: The role of water depth perception in shaping car drivers' intention to enter floodwaters: Experimental evidence, Sustainability, 13, 4451, 10.3390/su13084451 , 2021. 
+ 41 Petrucci, O.: Review article: Factors leading to the occurrence of flood fatalities: a systematic review of research papers published between 2010 and 2020, Nat. Hazards Earth Syst. Sci., 22, 71–83, 10.5194/nhess-22-71-2022 , 2022. 
+ 42 Quagliarini, E., Romano, G., and Bernardini, G.: Investigating pedestrian behavioral patterns under different floodwater conditions: A video analysis on real flood evacuations, Safety Science, 161, 106083, 10.1016/j.ssci.2023.106083 , 2023. 
+ 43 Ronchi, E.: Developing and validating evacuation models for fire safety engineering, Fire Safety Journal, 120, 103020, 10.1016/j.firesaf.2020.103020 , 2021. 
+ 44 Ronchi, E. and Nilsson, D.: Fire evacuation in high-rise buildings: a review of human behaviour and modelling research, Fire Science Reviews, 2, 1–21, 10.1186/2193-0414-2-7 , 2013. 
+ 45 Sadeghi-Pouya, A., Nouri, J., Mansouri, N., and Kia-Lashaki, A.: An indexing approach to assess flood vulnerability in the western coastal cities of Mazandaran, Iran, International Journal of Disaster Risk Reduction, 22, 304–316, 10.1016/j.ijdrr.2017.02.013 , 2017. 
+ 46 Shaw, E., Roper, T., Nilsson, T., Lawson, G., Cobb, S. V., and Miller, D.: The heat is on: Exploring user behaviour in a multisensory virtual environment for fire evacuation, Proceedings of the 2019 CHI Conference on Human Factors in Computing Systems, 1–13, 10.1145/3290605.3300856 , 2019. 
+ 47 Shi, D., Li, J., Wang, Q., Chen, J., Lovreglio, R., Lo, J. T., and Ma, J.: Modeling and simulation of crowd dynamics at evacuation bottlenecks during flood disasters, Transportation Research Part E: Logistics and Transportation Review, 198, 104064, 10.1016/j.tre.2025.104064 , 2025. 
+ 48 Shirvani, M. and Kesserwani, G.: Flood–pedestrian simulator for modelling human response dynamics during flood-induced evacuation: Hillsborough stadium case study, Nat. Hazards Earth Syst. Sci., 21, 3175–3198, 10.5194/nhess-21-3175-2021 , 2021. 
+ 49 Simonovic, S. P. and Ahmad, S.: Computer-based model for flood evacuation emergency planning, Natural Hazards, 34, 25–51, 10.1007/s11069-004-0785-x , 2005. 
+ 50 Simpson, M., Padilla, L., Keller, K., and Klippel, A.: Immersive storm surge flooding: Scale and risk perception in virtual reality, Journal of Environmental Psychology, 80, 101764, 10.1016/j.jenvp.2022.101764 , 2022. 
+ 51 Wang, D., Zhuang, Y., Riloff, E., and Kogan, M.: Recognizing social cues in crisis situations, Proceedings of the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024), 13677–13687, 2024. 
+ 52 Zhang, R., Liu, D., Du, E., Xiong, L., Chen, J., and Chen, H.: An agent-based model to simulate human responses to flash flood warnings for improving evacuation performance, Journal of Hydrology, 628, 130452, 10.1016/j.jhydrol.2023.130452 , 2024. 
+ 53 Zhuo, L. and Han, D.: Agent-based modelling and flood risk management: A compendious literature review, Journal of Hydrology, 591, 125600, 10.1016/j.jhydrol.2020.125600 , 2020. 
+
+ 
+ Human decision-making in crowds in a virtual flood scenario 
+ 
+ 1 
+ 
+Adrian, J., Amos, M., Appert-Rolland, C., Baratchi, M., Bode, N., Boltes,
+M., Chatagnon, T., Chraibi, M., Corbetta, A., and Cuesta, A.: Glossary for
+Research on Human Crowd Dynamics, Collective Dynamics, 2nd edn., 1–32,
+ https://doi.org/10.1016/j.ijdrr.2021.102192 , 2025.
+
+ 
+ 2 
+ 
+Aerts, J. C.: Integrating agent-based approaches with flood risk models: A
+review and perspective, Water Security, 11, 100076, 2020.
+
+ 
+ 3 
+ 
+Aerts, J. C., Botzen, W. J., Clarke, K. C., Cutter, S. L., Hall, J. W.,
+Merz, B., Michel-Kerjan, E., Mysiak, J., Surminski, S., and Kunreuther, H.:
+Integrating human behaviour dynamics into flood disaster risk assessment,
+Nature Climate Change, 8, 193–199, 2018.
+
+ 
+ 4 
+ 
+Aksa, F. I., Ashar, M., Siswanto, H. W., and Malem, Z. Z.: Immersive virtual
+reality for improving flood evacuation behaviour and self-efficacy,
+Jàmbá-Journal of Disaster Risk Studies, 17, 1655, 2025.
+
+ 
+ 5 
+ 
+Alonso Vicario, S., Mazzoleni, M., Bhamidipati, S., Gharesifard, M., Ridolfi, E., Pandolfo, C., and Alfonso, L.: Unravelling the influence of
+human behaviour on reducing casualties during flood evacuation, Hydrological Sciences Journal, 65, 2359–2375, https://doi.org/10.1080/02626667.2022.2100828 , 2020.
+
+ 
+ 6 
+ 
+Arias, P., Bellouin, N., Coppola, E., Jones, C., Krinner, G., Marotzke, J.,
+Naik, V., Plattner, G.-K., Rojas, M., Sillmann, J., Storelvmo, T., Thorne,
+P., Trewin, B., Achutarao, K., Adhikary, B., Armour, K., Govindasamy, B.,
+Barimalala, R., Berger, S., and Zickfeld, K.: Climate Change 2021: The
+Physical Science Basis, Contribution of Working Group I to the Sixth
+Assessment Report of the Intergovernmental Panel on Climate Change;
+Technical Summary, https://doi.org/10.1017/9781009157896.002 , 2021.
+
+ 
+ 7 
+ 
+Arrighi, C., Oumeraci, H., and Castelli, F.: Hydrodynamics of pedestrians' instability in floodwaters, Hydrol. Earth Syst. Sci., 21, 515–531, https://doi.org/10.5194/hess-21-515-2017 , 2017.
+
+ 
+ 8 
+ 
+Arshaghi, B.: Example Video Footage of Risky Crowd Behaviour in a Virtual Flood Evacuation Scenario, University of Nottingham, TIB AV-Portal [video], https://doi.org/10.5446/72397 , 2026.
+
+ 
+ 9 
+ 
+Becker, J. S., Taylor, H., Doody, B. J., Wright, K. C., Gruntfest, E., and
+Webber, D.: A review of people's behavior in and around floodwater, Weather,
+Climate, and Society, 7, 321–332, 2015.
+
+ 
+ 10 
+ 
+Bernardini, G., Camilli, S., Quagliarini, E., and D'Orazio, M.: Flooding
+risk in existing urban environment: From human behavioral patterns to a
+microscopic simulation model, Energy Procedia, 134, 131–140, 2017.
+
+ 
+ 11 
+ 
+Bernardini, G., Quagliarini, E., D'Orazio, M., and Brocchini, M.: Towards
+the simulation of flood evacuation in urban scenarios: Experiments to
+estimate human motion speed in floodwaters, Safety Science, 123, 104563, https://doi.org/10.1016/j.ssci.2019.104563 , 2020.
+
+ 
+ 12 
+ 
+Bode, N. W. and Codling, E. A.: Exploring determinants of pre-movement
+delays in a virtual crowd evacuation experiment, Fire Technology, 55,
+595–615, 2019.
+
+ 
+ 13 
+ 
+Braun, V. and Clarke, V.: Using thematic analysis in psychology, Qualitative
+Research in Psychology, 3, 77–101, 2006.
+
+ 
+ 14 
+ 
+Chu, M. L., Parigi, P., Latombe, J.-C., and Law, K. H.: Simulating effects
+of signage, groups, and crowds on emergent evacuation patterns, Ai &
+Society, 30, 493–507, 2015.
+
+ 
+ 15 
+ 
+Cohen, J.: Statistical power analysis for the behavioral sciences,
+Routledge, https://doi.org/10.4324/9780203771587 , 2013.
+
+ 
+ 16 
+ 
+D'Amico, A., Bernardini, G., Lovreglio, R., and Quagliarini, E.: A
+non-immersive virtual reality serious game application for flood safety
+training, International Journal of Disaster Risk Reduction, 96, 103940, https://doi.org/10.1016/j.ijdrr.2023.103940 , 2023.
+
+ 
+ 17 
+ 
+Deb, S., Carruth, D. W., Sween, R., Strawderman, L., and Garrison, T. M.:
+Efficacy of virtual reality in pedestrian safety research, Applied
+Ergonomics, 65, 449–460, 2017.
+
+ 
+ 18 
+ 
+Denda, M. and Fujikane, M.: Development of a virtual flood experience system
+and its suitability as a flood risk communication tool, Proceedings of IAHS,
+386, 21–26, 2024.
+
+ 
+ 19 
+ 
+Dias, C., Abd Rahman, N., and Zaiter, A.: Evacuation under flooded
+conditions: Experimental investigation of the influence of water depth on
+walking behaviors, International Journal of Disaster Risk Reduction, 58,
+102192, https://doi.org/10.1016/j.ijdrr.2021.102192 , 2021.
+
+ 
+ 20 
+ 
+Du, E., Wu, F., Jiang, H., Guo, N., Tian, Y., and Zheng, C.: Development of an integrated socio-hydrological modeling framework for assessing the impacts of shelter location arrangement and human behaviors on flood evacuation processes, Hydrol. Earth Syst. Sci., 27, 1607–1626, https://doi.org/10.5194/hess-27-1607-2023 , 2023.
+
+ 
+ 21 
+ 
+Ferdous, M. R., Di Baldassarre, G., Brandimarte, L., and Wesselink, A.: The
+interplay between structural flood protection, population density, and flood mortality along the Jamuna River, Bangladesh, Regional Environmental Change, 20, 1–9, https://doi.org/10.1007/s10113-020-01600-1 , 2020.
+
+ 
+ 22 
+ 
+Field, A.: Discovering statistics using IBM SPSS statistics, Sage
+Publications Limited, 2024.
+
+ 
+ 23 
+ 
+Fu, M., Liu, R., and Ragan, E.: An immersive virtual reality experimental
+study of occupants' behavioral compliance during indoor evacuations,
+International Journal of Disaster Risk Reduction, 107, 104420, https://doi.org/10.1016/j.ijdrr.2024.104420 , 2024.
+
+ 
+ 24 
+ 
+Fujimi, T. and Fujimura, K.: Testing public interventions for flash flood
+evacuation through environmental and social cues: The merit of virtual
+reality experiments, International Journal of Disaster Risk Reduction, 50,
+101690, https://doi.org/10.1016/j.ijdrr.2020.101690 , 2020.
+
+ 
+ 25 
+ 
+Gärling, T., Böök, A., and Lindberg, E.: Spatial orientation and
+wayfinding in the designed environment: A conceptual analysis and some
+suggestions for postoccupancy evaluation, Journal of Architectural and
+Planning Research, 3, 55–64, 1986.
+
+ 
+ 26 
+ 
+Haghani, M. and Sarvi, M.: Following the crowd or avoiding it? Empirical
+investigation of imitative behaviour in emergency escape of human crowds,
+Animal Behaviour, 124, 47–56, 2017.
+
+ 
+ 27 
+ 
+Hamilton, K., Demant, D., Peden, A. E., and Hagger, M. S.: A systematic
+review of human behaviour in and around floodwater, International Journal of Disaster Risk Reduction, 47, 101561, https://doi.org/10.1016/j.ijdrr.2022.103275 , 2020.
+
+ 
+ 28 
+ 
+Helbing, D., Farkas, I. J., Molnar, P., and Vicsek, T.: Simulation of
+pedestrian crowds in normal and evacuation situations, Pedestrian and
+Evacuation Dynamics, 21, 21–58, 2002.
+
+ 
+ 29 
+ 
+Huang, S.-K., Lindell, M. K., Prater, C. S., Wu, H.-C., and Siebeneck, L.
+K.: Household evacuation decision making in response to Hurricane Ike,
+Natural Hazards Review, 13, 283–296, 2012.
+
+ 
+ 30 
+ 
+Irsyad, H. A. and Hitoshi, N.: Flood disaster evacuation route choice in
+Indonesian urban riverbank kampong: Exploring the role of individual
+characteristics, path risk elements, and path network configuration,
+International Journal of Disaster Risk Reduction, 81, 103275, https://doi.org/10.1016/j.ijdrr.2022.103275 , 2022.
+
+ 
+ 31 
+ 
+Kennedy, R. S., Lane, N. E., Berbaum, K. S., and Lilienthal, M. G.:
+Simulator sickness questionnaire: An enhanced method for quantifying
+simulator sickness, The International Journal of Aviation Psychology, 3,
+203–220, 1993.
+
+ 
+ 32 
+ 
+Kinateder, M. and Warren, W. H.: Social influence on evacuation behavior in
+real and virtual environments, Frontiers in Robotics and AI, 3, 43, https://doi.org/10.3389/frobt.2016.00043 , 2016.
+
+ 
+ 33 
+ 
+Kinateder, M. and Warren, W. H.: Exit choice during evacuation is influenced
+by both the size and proportion of the egressing crowd, Physica A:
+Statistical Mechanics and its Applications, 569, 125746, https://doi.org/10.1016/j.physa.2021.125746 , 2021.
+
+ 
+ 34 
+ 
+Kinateder, M., Müller, M., Jost, M., Mühlberger, A., and Pauli, P.:
+Social influence in a virtual tunnel fire–influence of conflicting
+information on evacuation behavior, Applied Ergonomics, 45, 1649–1659, 2014.
+
+ 
+ 35 
+ 
+Lawson, G. and Burnett, G.: Simulation and digital human modelling, Boca
+Raton: CRC Press, https://doi.org/10.1201/b18362 , 2015.
+
+ 
+ 36 
+ 
+Liu, Q. and Liu, R.: Virtual reality for indoor emergency evacuation
+studies: Design, development, and implementation review, Safety Science,
+181, 106678, https://doi.org/10.1016/j.ssci.2024.106678 , 2025.
+
+ 
+ 37 
+ 
+Menne, B., Murray, V., and Organization, W. H.: Floods in the WHO European
+Region: health effects and their prevention, in: Floods in the WHO European
+Region: health effects and their prevention, ISBN: 978-92-890-0011-6, 2013.
+
+ 
+ 38 
+ 
+Mol, J., Botzen, W., and Blasch, J.: After the virtual flood: Risk
+perceptions and flood preparedness after virtual reality risk communication,
+Judgm. Decis. Mak., 17, 189–214, 2022.
+
+ 
+ 39 
+ 
+Nkwunonwo, U., Whitworth, M., and Baily, B.: A review of the current status
+of flood modelling for urban flood risk management in the developing
+countries, Scientific African, 7, e00269, https://doi.org/10.1016/j.sciaf.2020.e00269 , 2020.
+
+ 
+ 40 
+ 
+Papagiannaki, K., Diakakis, M., Kotroni, V., Lagouvardos, K., and
+Papagiannakis, G.: The role of water depth perception in shaping car
+drivers' intention to enter floodwaters: Experimental evidence,
+Sustainability, 13, 4451, https://doi.org/10.3390/su13084451 , 2021.
+
+
+ 
+ 41 
+ 
+Petrucci, O.: Review article: Factors leading to the occurrence of flood fatalities: a systematic review of research papers published between 2010 and 2020, Nat. Hazards Earth Syst. Sci., 22, 71–83, https://doi.org/10.5194/nhess-22-71-2022 , 2022.
+
+ 
+ 42 
+ 
+Quagliarini, E., Romano, G., and Bernardini, G.: Investigating pedestrian
+behavioral patterns under different floodwater conditions: A video analysis
+on real flood evacuations, Safety Science, 161, 106083, https://doi.org/10.1016/j.ssci.2023.106083 , 2023.
+
+ 
+ 43 
+ 
+Ronchi, E.: Developing and validating evacuation models for fire safety
+engineering, Fire Safety Journal, 120, 103020, https://doi.org/10.1016/j.firesaf.2020.103020 , 2021.
+
+ 
+ 44 
+ 
+Ronchi, E. and Nilsson, D.: Fire evacuation in high-rise buildings: a review of human behaviour and modelling research, Fire Science Reviews, 2, 1–21, https://doi.org/10.1186/2193-0414-2-7 , 2013.
+
+ 
+ 45 
+ 
+Sadeghi-Pouya, A., Nouri, J., Mansouri, N., and Kia-Lashaki, A.: An indexing
+approach to assess flood vulnerability in the western coastal cities of
+Mazandaran, Iran, International Journal of Disaster Risk Reduction, 22,
+304–316, https://doi.org/10.1016/j.ijdrr.2017.02.013 , 2017.
+
+ 
+ 46 
+ 
+Shaw, E., Roper, T., Nilsson, T., Lawson, G., Cobb, S. V., and Miller, D.:
+The heat is on: Exploring user behaviour in a multisensory virtual
+environment for fire evacuation, Proceedings of the 2019 CHI Conference on
+Human Factors in Computing Systems, 1–13, https://doi.org/10.1145/3290605.3300856 , 2019.
+
+ 
+ 47 
+ 
+Shi, D., Li, J., Wang, Q., Chen, J., Lovreglio, R., Lo, J. T., and Ma, J.:
+Modeling and simulation of crowd dynamics at evacuation bottlenecks during
+flood disasters, Transportation Research Part E: Logistics and
+Transportation Review, 198, 104064, https://doi.org/10.1016/j.tre.2025.104064 , 2025.
+
+ 
+ 48 
+ 
+Shirvani, M. and Kesserwani, G.: Flood–pedestrian simulator for modelling human response dynamics during flood-induced evacuation: Hillsborough stadium case study, Nat. Hazards Earth Syst. Sci., 21, 3175–3198, https://doi.org/10.5194/nhess-21-3175-2021 , 2021.
+
+ 
+ 49 
+ 
+Simonovic, S. P. and Ahmad, S.: Computer-based model for flood evacuation
+emergency planning, Natural Hazards, 34, 25–51, https://doi.org/10.1007/s11069-004-0785-x , 2005.
+
+ 
+ 50 
+ 
+Simpson, M., Padilla, L., Keller, K., and Klippel, A.: Immersive storm surge
+flooding: Scale and risk perception in virtual reality, Journal of
+Environmental Psychology, 80, 101764, https://doi.org/10.1016/j.jenvp.2022.101764 , 2022.
+
+ 
+ 51 
+ 
+Wang, D., Zhuang, Y., Riloff, E., and Kogan, M.: Recognizing social cues in
+crisis situations, Proceedings of the 2024 Joint International Conference on
+Computational Linguistics, Language Resources and Evaluation (LREC-COLING
+2024), 13677–13687, 2024.
+
+ 
+ 52 
+ 
+Zhang, R., Liu, D., Du, E., Xiong, L., Chen, J., and Chen, H.: An
+agent-based model to simulate human responses to flash flood warnings for
+improving evacuation performance, Journal of Hydrology, 628, 130452, https://doi.org/10.1016/j.jhydrol.2023.130452 , 2024.
+
+ 
+ 53 
+ 
+Zhuo, L. and Han, D.: Agent-based modelling and flood risk management: A
+compendious literature review, Journal of Hydrology, 591, 125600, https://doi.org/10.1016/j.jhydrol.2020.125600 , 2020.
+
+ --> 

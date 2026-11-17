@@ -31,13 +31,26 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { clone as skeletonClone } from 'three/addons/utils/SkeletonUtils.js';
 import { roofSurfaceY } from './terrain.js';
 import { createTrappedIndex } from './trapped.js';
+import { createRoutePlanner } from './route-brain.js';
+import { createLiveAgents, ACTION_SPEED_MUL } from './live-agent.js';
+import { createExperience } from './experience.js';
+import { STATUS_BASE } from './roles.js';
+import { WALK, ANIM, CAR, assertSpeedConsistency } from './motion-units.js';
+import { circleOf, summarize as summarizeCircles } from './social-circles.js';
+import { createIncidents } from './incidents.js';
+import { createDriveLayer } from './drive-layer.js';
+import { warnAtOf, WARNING_SELF_SET } from './kernel/warning.js';
+import { BASEMENT, goesToBasement, basementStayMin, basementElevationM }
+  from './kernel/floors.js';
 
 // ---------------------------------------------------------------- 常量
 const TARGET_H_MALE = 1.82;     // 男性身高（米）
 const TARGET_H_FEMALE = 1.68;
-const SPEED_WALK = 1.42;        // 米/秒（Mixamo walk 反推 1.517，取略慢更自然）
-const SPEED_RUN = 3.05;
-const VIS_DIST = 260;           // 超过这个距离整个隐藏（街景 100 m 内至少要有人）
+// 【2026-11-13 速度单一真值】步速/跑速/避险速度全部读 motion-units.js，
+// 不再各写一份 1.42 / 3.05 / 3.3 / 1.7。倍率只在 clock.js 乘一次。
+const SPEED_WALK = WALK.BASE;
+const SPEED_RUN = WALK.RUN;
+const VIS_DIST = 360;           // 超过这个距离整个隐藏（全城铺开后街景里也要看得见人）
 const SHADOW_DIST = 90;
 const MIXER_LOD_DIST = 70;
 const CELL_PED = 4.0;           // 人-人分离的空间哈希格
@@ -47,17 +60,28 @@ const PED_AVOID = 3.2;          // 前方多远算被人挡
 // ---------------------------------------------------------------- 积水避险（2026-10-26）
 // 用户要求：「让人对积水有反应，可以自主前往高处未有积水的地方，比如高地、高楼
 //          （不用真的进去，站在房顶就表示进入高楼）」。
-// 做法：人脚下的水深 ≥ FLEE_DEPTH 就切换成『逃难』——离开步行网直走最近的避难所；
-//      避难所只有两类，房顶（站到上表面）和地势高点（walknet 上高程靠前的点）。
-//      走到就转入『躲着』并停住，水退了再回步行网继续走。
+// 【2026-11-10 修正】用户反馈「好多人都在空中、有的在屋顶」——把人整批抬上
+// 屋顶（45 m 高、还从地面插值爬升）看起来就是悬浮。改为：
+//   · 高楼避难所（kind=1）＝「进楼」：人沿真实路网走到**楼边墙根/檐下**就停，
+//     站在地面高程，不再水平挪进楼心、更不再抬到顶面；
+//   · 高地避难所（kind=0）＝ walknet 上高程靠前的真实抬高点，人站在那块
+//     真实地面上（本来就是贴地的）。
+// 任何状态下都不再有「人凌空站立」的帧。
+// 做法：人脚下的水深 ≥ FLEE_DEPTH 就切换成『逃难』——沿路网走向最近的避难所；
+//      走到（或碰到墙）就转入『躲着』并停住，水退了再回步行网继续走。
 const FLEE_DEPTH = 0.12;        // 米。12 cm 齐踝，普通人不会继续走
-const FLEE_SPEED = 3.3;         // 逃难速度（米/秒，接近快跑）
-const RAIN_SPEED = 1.7;         // 避雨速度（米/秒，快步走；下雨不是着火，没人狂奔）
+const FLEE_SPEED = WALK.FLEE;    // 逃难速度（米/仿真秒，接近快跑）
+const RAIN_SPEED = WALK.RAIN;    // 避雨速度（米/仿真秒，快步走）
 const FLEE_TURN_IN = 0.55;      // 每帧朝目标转多少（0..1，越大越急）
 const REFUGE_MAX = 620;         // 最近避难所超过这个距离就不找了（不现实）
 const REFUGE_TRIES = 6;         // 直线被楼挡住时最多再换几个候选
 const SHELTER_CALM = 8.0;       // 水退干净这么久之后才敢回街上（秒）
 const HIGH_Q = 0.80;            // 「高地」定义：walknet 高程前 20% 的点
+// 决策运行时在下方装配；play() 的首次调用发生在装配之前（初始化动画），
+// 因此这里先声明为 null，避免 TDZ。clipTimeScale() 会自动走兜底。
+let LIVE = null;
+const RAIN_SHELTER_MMH = 10;    // 雨强超过这个（mm/h）才躲雨；毛毛雨照常走
+const RAIN_REFUGE_MAX = 220;    // 躲雨只找 220 m 内，不跨城冲向同一个高地
 
 // ---------------------------------------------------------------- 确定性随机
 function mulberry32(a) {
@@ -104,7 +128,24 @@ export async function loadPedAssets(base = 'assets/ped/') {
     lod.push(g);
   }
 
-  return { templates: [male, female], lod, net };
+  // 【马克】office_worker.glb 是之前给单人分镜导出的高模（65 骨骼 / 18 段动作，
+  // 动作名与 ped.js 的 idle / walk / run / look / side_l 一致，能直接复用状态机）。
+  // 只加载一份、只给一个人用，所以不进 LOD 列表。
+  let hero = null;
+  try {
+    const g = await loader.loadAsync(base + 'office_worker.glb');
+    g.scene.updateMatrixWorld(true);
+    const bb = new THREE.Box3().setFromObject(g.scene);
+    g.userData.height = Math.max(0.1, bb.max.y - bb.min.y);
+    g.userData.minY = bb.min.y;
+    g.userData.scale = TARGET_H_MALE / g.userData.height;
+    hero = g;
+    console.log(`[ped] 马克高模已载入：${(g.animations || []).length} 段动作`);
+  } catch (e) {
+    console.warn('[ped] 马克高模缺失，用普通模板代替', e && e.message);
+  }
+
+  return { templates: [male, female], lod, net, hero };
 }
 
 // ---------------------------------------------------------------- 步行图
@@ -215,22 +256,41 @@ function pointAt(c, s, out) {
  * @param {object} obs {blocked, nearEnd, rnd, cooldownOk}
  * @returns {string}
  */
+/**
+ * 【2026-11-16 阶段2B】行人微行为状态机。
+ * 用户反馈「走两步停一下，很呆板」。旧版 walk 每秒有 1% 概率转 look，
+ * look 又常转 idle，纯无记忆随机跳，没有「至少走满一段」的约束，于是
+ * 平均十几秒就被打断一次，看着一顿一顿。
+ *
+ * 依据（别人怎么做）：Springer 2023 疏散 ABM 的三层决策里，最底层
+ * 「操作层」每步都在走，只在被挡/避碰时才改；Christensen & Sasaki 的
+ * 离散步行模型里人一直走到格子被占才停。也就是说「走」是默认持续态，
+ * 「停/张望」由事件触发（被挡、到端点、决策层要求等），不是定时随机跳。
+ *
+ * 改法：walking 至少持续 WALK_MIN_SEC；这段时间内只响应 blocked/yield，
+ * 不随机转 look/idle。look 也设最短时长，避免 look↔idle 来回抖。
+ * 这些最低时长是工程实现，台账标「目前自己定的」。
+ */
+export const WALK_MIN_SEC = 2.2;   // 一次起步至少走这么久才允许随机张望
+export const LOOK_MIN_SEC = 0.8;
 export function nextState(st, obs) {
   const r = obs.rnd;
+  const t = Number.isFinite(obs.stateT) ? obs.stateT : 999; // 缺省视为已走够，兼容旧调用
   switch (st) {
     case 'idle':
       if (obs.nearEnd) return 'walk';
       if (r < 0.34) return 'walk';
-      if (r < 0.58) return 'look';
+      if (r < 0.50) return 'look';
       return 'idle';
     case 'look':
       if (obs.blocked) return 'yield';
-      if (r < 0.46) return 'idle';
-      if (r < 0.82) return 'walk';
-      return 'look';
+      if (t < LOOK_MIN_SEC) return 'look';     // 张望也要有个最短时长，不来回抖
+      if (r < 0.30) return 'idle';
+      return 'walk';
     case 'walk':
-      if (obs.blocked) return 'yield';
-      if (r < 0.010) return 'look';
+      if (obs.blocked) return 'yield';         // 被挡是事件，立刻响应，不受最短时长限制
+      if (t < WALK_MIN_SEC) return 'walk';     // 走满一段之前不随机停
+      if (r < 0.006) return 'look';            // 随机张望概率从 1%/s 降到 0.6%/s
       return 'walk';
     case 'yield':
       if (!obs.blocked && obs.cooldownOk) return 'walk';
@@ -349,8 +409,63 @@ function buildBlocker(B) {
  * @param {object} assets  loadPedAssets() 的返回
  * @param {object} opt     { T, B, count, seed }
  */
+/**
+ * 个体档案（A 档：20~30 人，每个人要是「一个人」而不是「一个模板换颜色」）。
+ *
+ * 【为什么要有 wade】原来所有人一踩到水就往高处跑 —— 3000 人整齐划一，
+ * 那不叫自主性。真实情况是：赶时间的硬涉，膝盖不好的见水就绕，
+ * 外卖员戴着耳机根本没听见预警，工头觉得「这边从来没淹过」。
+ * 所以每个人有自己的涉水上限、风险厌恶和职责，行为自然分叉。
+ */
+/**
+ * 马克的档案。**刻意不放进 PROFILES** —— 放进去会被 pickProfile 随机抽到，
+ * 于是场上出现好几个「马克」（实测 24 人里出现 3 个）。
+ * 他只是一个普通档案 + 高模，没有第二套逻辑。
+ */
+export const HERO_PROFILE = {
+  id: 'mark', label: '马克', wade: 0.26, risk: 1.2, duty: 'home',
+  note: '联邦雇员，今天本来只是来上班',
+};
+
+export const PROFILES = [
+  { id: 'commuter', label: '上班族',   wade: 0.30, risk: 1.0, duty: 'home',  note: '赶时间，水到小腿也硬走' },
+  { id: 'elder',    label: '老人',     wade: 0.10, risk: 1.7, duty: null,    note: '膝盖不好，见水就绕，宁可多走两公里' },
+  { id: 'parent',   label: '接孩子的家长', wade: 0.24, risk: 1.3, duty: 'school', note: '先往学校方向去，孩子还在那儿' },
+  { id: 'worker',   label: '工地工人', wade: 0.46, risk: 0.7, duty: 'site',  note: '干惯了，不当回事，还敢往回走' },
+  { id: 'rider',    label: '外卖员',   wade: 0.34, risk: 0.9, duty: null,    note: '耳机里在放歌，可能压根没听见预警' },
+  { id: 'nurse',    label: '护士',     wade: 0.26, risk: 1.1, duty: 'hospital', note: '要回医院接班，绕远也得去' },
+  { id: 'tourist',  label: '游客',     wade: 0.20, risk: 1.4, duty: null,    note: '不认路，容易跟着人群跑错方向' },
+  { id: 'resident', label: '本地居民', wade: 0.28, risk: 1.2, duty: 'home',  note: '认得哪条巷子不积水' },
+];
+
+/** 按随机数挑一个档案（带权重：上班族和居民最多）。 */
+function pickProfile(r) {
+  const w = [3, 1, 2, 1, 2, 1, 1, 3];      // 与 PROFILES 一一对应
+  const tot = w.reduce((a, b) => a + b, 0);
+  let x = r * tot;
+  for (let i = 0; i < w.length; i++) {
+    x -= w[i];
+    if (x <= 0) return PROFILES[i];
+  }
+  return PROFILES[0];
+}
+
 export function buildPedestrians(assets, opt = {}) {
   const T = opt.T;
+  // 【2026-11-07】随机行人的社会层（身份 / Brain / 生理 / 场景），无则退回纯随机游走
+  const CROWD = opt.crowdLife || null;
+  // 相机此刻进的是哪栋楼（main.js 的剖切判定）。楼里的人只有剖开那一栋
+  // 才显示，否则实心楼体外面会看到一群人穿墙站在半空。
+  const CAM_PLACE = typeof opt.camPlace === 'function' ? opt.camPlace : null;
+  // 统一实体碰撞层：灯杆 / 树 / 停放车 / 家具。行人是「人」，不该被楼体挡住
+  // （楼体由路网和出生点筛选负责），所以查询时忽略 building 标签。
+  const COLLIDE_PED = opt.collide || null;
+  const IGNORE_BUILDING = new Set(['building']);
+  // 【2026-11-13 建筑实体硬约束】可走链只在初始化时筛过一次，route 模式的
+  // A* 折线、flee 的直线兜底、以及 net 换链都可能把室外的人送进楼体 AABB。
+  // main.js 装配完 SOLIDS 后晚绑定进来，写位置的那一帧统一做「室内豁免」检查。
+  let SOLIDS = opt.solids || null;
+  const setSolids = (s) => { SOLIDS = s || null; };
   const B = opt.B;
   const count = opt.count || 1500;
   const rnd = mulberry32(opt.seed || 20261024);
@@ -388,15 +503,41 @@ export function buildPedestrians(assets, opt = {}) {
     }
     if (!bad) usable.push(ci);
   }
+  // 【只在一个街区里放人】默认 24 人如果撒在全城 16595 条链上，彼此相隔几公里，
+  // 谁也看不见谁，更谈不上「社会关系」。传 opt.center = [x, z, r] 就把出生地
+  // 收进半径 r 内 —— A 档的 20~30 人本来就该挤在同一条街上。
+  if (opt.center && usable.length) {
+    const [cx, cz, cr] = opt.center;
+    const near = [];
+    const _p = new THREE.Vector3();
+    for (const ci of usable) {
+      const c = G.chains[ci];
+      let best = 1e9;
+      for (let d = 0; d <= c.len; d += 12) {
+        pointAt(c, d, _p);
+        const dd = Math.hypot(_p.x - cx, _p.z - cz);
+        if (dd < best) best = dd;
+        if (best < cr) break;
+      }
+      if (best < cr) near.push(ci);
+    }
+    if (near.length >= 6) {
+      console.log(`[ped] 收拢到街区：${usable.length} 条链 → ${near.length} 条（半径 ${cr} m）`);
+      usable.length = 0;
+      usable.push(...near);
+    }
+  }
+
   if (!usable.length) throw new Error('没有可走的步行链（walknet 数据异常）');
 
   // ---------------------------------------------------------------- 避难所索引
   // 【积水避险】2026-10-26 按用户要求新增：
   //   「让人对积水有反应，可以自主前往高处未有积水的地方，比如高地、高楼
   //    （不用真的进去，站在房顶就表示进入高楼）」。
-  // 两类避难所：
-  //   ① 屋顶（kind=1）：height>=6 m、面积>=80 m² 的楼，站位取轮廓中心、高度取顶面。
-  //      人到楼下墙边就算「进去了」，直接站上屋顶（不做楼梯/电梯）。
+  // 【2026-11-10 修正】站屋顶在画面上就是「人悬在空中」。屋顶目标保留（它
+  // 仍代表「这栋楼可以进」），但人到达后停在楼边檐下的**地面**上：
+  //   ① 楼（kind=1）：height>=6 m、面积>=80 m²。目标点取楼心（A* 会把路线
+  //      引到楼附近），人走到墙边就算进去了 —— 不再爬上顶面。
   //   ② 高地（kind=0）：把可行走网按 24 m 采样，取高程前 20%（HIGH_Q）的点。
   //      这样「高地」是真实抬高的街区（国会山、山丘公园），不是凭空造的点。
   const refuges = [];
@@ -417,6 +558,30 @@ export function buildPedestrians(assets, opt = {}) {
     for (let i = 0; i < take; i++) {
       const [sx, sz, sy] = samples[i];
       refuges.push({ x: sx, z: sz, y: sy, kind: 0 });
+    }
+  }
+
+  // 【避免故意扎堆 2026-11-12】每个避难所有真实容量与当前占用。旧版所有人
+  // 一律选「最近且高出 1 m」的那一个点，实测 18:00 一个 120 m 网格挤了
+  // 240 人（224 个 shelter）。现在选点时把占用量折算成距离惩罚，并按人序
+  // 做确定性扰动，人自然铺到附近多处楼边/高地，而不是全城冲向同一栋楼。
+  for (let ri = 0; ri < refuges.length; ri++) {
+    const R = refuges[ri];
+    R.idx = ri;
+    R.cap = R.kind === 1 ? 12 : 8;
+  }
+  const refugeLoad = new Map();           // idx -> 当前占用人数
+  const rLoad = (R) => refugeLoad.get(R.idx) || 0;
+  // 【灾害履历验收接口】每次避险选址把「这个人经验多少 / 选了多高 / 走了多远」
+  // 记下来，探针可以逐人核对经验是不是真的改变了选址，而不是只看代码注释。
+  const refugePicks = new Map();
+  function syncRefugeLoad() {
+    refugeLoad.clear();
+    for (const p of peds) {
+      if (p.refugeRef && (p.mode === 'flee' || p.mode === 'shelter'
+        || (p.route && p.route.onArrive === 'shelter'))) {
+        refugeLoad.set(p.refugeRef.idx, rLoad(p.refugeRef) + 1);
+      }
     }
   }
 
@@ -454,15 +619,48 @@ export function buildPedestrians(assets, opt = {}) {
    * 而「最近避难所」可能只是一个比脚面高 20 cm 的路缘 —— 那不是避雨。
    * 先只挑「至少高 1.0 m」的候选；一个都没有时退回不限制（否则会有人原地不动）。
    */
-  function findRefuge(x, z, avoid, needHigh = false) {
-    const y0 = needHigh ? groundAt(x, z) : 0;
+  function findRefuge(x, z, avoid, needHigh = false, pedI = -1, maxDist = REFUGE_MAX,
+    forcedHz = null) {
+    // 基准高程始终是真地形高度：积水逃难时「哪儿更高」同样有意义。
+    const y0 = groundAt(x, z);
     const cand = [];
     const hi = [];
-    const push = (d, R) => { if (!avoid || R !== avoid) cand.push([d, R]); };
+    // 【灾害履历进避险选址】亲历过内涝 / 受过训的人更看重「真的高」和
+    // 「能进的楼」，并愿意为此多走一段；没有灾害经验的人更就近、更容易
+    // 跟着已经有人去的方向走。旧版所有人一律选最近且容量最空的点。
+    const per = (CROWD && CROWD.persons && pedI >= 0) ? CROWD.persons[pedI] : null;
+    const hzObj = per && (per.hazard || (per.citizen && per.citizen.hazard));
+    // forcedHz 只供验收探针做「同一位置、只换经验」的反事实对照；
+    // 正常运行永远是 null，读的是这个人真实的灾害履历。
+    const hz = forcedHz !== null ? forcedHz : (hzObj ? hzObj.score : 0);
+    const preferHigh = needHigh || hz > 0.45;
+    // 经验足的人对「高」要求更严：1 m 的路缘不算，要真的更高才进优先池。
+    const highGate = 1.0 + hz * 1.8;
+    // 同一街区的人给不同的确定性偏置，避免「最近的那一个」被全城选中。
+    const bias = pedI >= 0
+      ? ((((pedI * 2654435761) >>> 0) / 4294967296) - 0.5) * 34 : 0;
+    const push = (d, R) => {
+      if (avoid && R === avoid) return;
+      const load = rLoad(R);
+      // 每多一个人占着，等效远 52 m；满了直接排除。
+      const rise = Math.max(0, R.y - y0);
+      // 【高度分档而非线性累加】旧版 rise*1.5 对 6~50 m 的楼几乎全部撞到
+      // 130 m 上限，所有候选拿同一个减免，排序完全没变（实测避险高度只差
+      // 0.15 m）。现在按「楼 30 m / 高地 8 m」归一化：经验足的人会挑**更高**
+      // 的那栋楼或那片高地，经验不足的人仍主要就近。
+      const riseScore = R.kind === 1 ? Math.min(1, rise / 30) : Math.min(1, rise / 8);
+      const highBonus = hz * (riseScore * 100 + (R.kind === 1 ? 30 : 0));
+      // 没经验的人从众：已有 1~3 人在那儿的点略微更吸引，但远不足以
+      // 抵消容量惩罚，不会重新造成几百人扎堆。
+      const crowdPull = (1 - hz) * Math.min(load, 3) * 5;
+      const pen = load * 52 + (load >= R.cap ? 100000 : 0) + bias - highBonus - crowdPull;
+      const item = [d + pen, R, d, rise];
+      cand.push(item);
+      if (preferHigh && R.y >= y0 + highGate) hi.push(item);
+    };
     const c0x = Math.floor(x / RC), c0z = Math.floor(z / RC);
-    const maxRing = Math.ceil(REFUGE_MAX / RC) + 1;
+    const maxRing = Math.ceil(maxDist / RC) + 1;
     for (let ring = 0; ring <= maxRing; ring++) {
-      // 已经攒够 24 个候选就不用再外扩（近的优先，够挑了）
       if (cand.length >= 24) break;
       for (let i = -ring; i <= ring; i++) {
         for (let j = -ring; j <= ring; j++) {
@@ -471,28 +669,46 @@ export function buildPedestrians(assets, opt = {}) {
           if (!a) continue;
           for (const ri of a) {
             const R = refuges[ri];
-            if (avoid && R === avoid) continue;
             const d = Math.hypot(R.x - x, R.z - z);
-            if (d > REFUGE_MAX) continue;
+            if (d > maxDist) continue;
             push(d, R);
-            if (needHigh && R.y >= y0 + 1.0) hi.push([d, R]);
           }
         }
       }
     }
     if (!cand.length) return null;
-    // 避雨：优先只在高处挑；高处一个候选都没有（比如人已经在山上）才放开
-    const pool = (needHigh && hi.length) ? hi : cand;
+    // 避雨、以及有灾害经验的人逃难：优先只在高处挑；高处一个都没有才放开。
+    const pool = (preferHigh && hi.length) ? hi : cand;
+    const notePick = (R, item) => {
+      if (R && pedI >= 0) refugePicks.set(pedI, {
+        i: pedI, hazard: +hz.toFixed(3),
+        rise: +(item ? item[3] : Math.max(0, R.y - y0)).toFixed(2),
+        dist: item ? +item[2].toFixed(1) : +Math.hypot(R.x - x, R.z - z).toFixed(1),
+        kind: R.kind, highPool: !!(preferHigh && hi.length),
+      });
+      return R;
+    };
     pool.sort((a, b) => a[0] - b[0]);
     const tries = Math.min(REFUGE_TRIES, pool.length);
     for (let i = 0; i < tries; i++) {
-      const [d, R] = pool[i];
-      if (lineClear(x, z, R.x, R.z, R.kind === 1 ? 9 : 0)) return R;
-      void d;
+      const R = pool[i][1];
+      if (lineClear(x, z, R.x, R.z, R.kind === 1 ? 9 : 0)) return notePick(R, pool[i]);
     }
-    // 全都不可达：退一步，要最近的屋顶（哪怕穿墙，至少有个去处）
-    for (let i = 0; i < pool.length; i++) if (pool[i][1].kind === 1) return pool[i][1];
+    for (let i = 0; i < pool.length; i++) if (pool[i][1].kind === 1) return notePick(pool[i][1], pool[i]);
     return null;
+  }
+
+  /** 同一个楼边 / 高地按人序散到不同位置：真实地点不变，人不再叠成一个点。 */
+  function scatterRefuge(p, R) {
+    if (!blocker.blocked) return { x: R.x, z: R.z };
+    const ang = (p.i * 2.399963) % (Math.PI * 2);
+    for (let k = 0; k < 6; k++) {
+      const rad = 3 + ((p.i + k) % 7) * 2.4;
+      const a = ang + k * 0.42;
+      const x = R.x + Math.cos(a) * rad, z = R.z + Math.sin(a) * rad;
+      if (!blocker.blocked(x, z, 0.35)) return { x, z };
+    }
+    return { x: R.x, z: R.z };
   }
 
   // 链索引：水退后把人接回步行网用（60 m 一格）。每条链的**每个顶点**都登记，
@@ -553,6 +769,26 @@ export function buildPedestrians(assets, opt = {}) {
     return null;
   }
 
+  // ---------------------------------------------------------------- 决策寻路
+  // 【用户 2026-11-10】「日常决策肯定是要有路网的…不是让你意淫的故事」。
+  // 在真实 walknet（usable 链）上建链级 A*：边权含当前帧真实水深、实体阻挡，
+  // 经验决定绕水力度。它同时供：① 决策候选打分 ② 选中路线执行 ③ 积水逃难。
+  const DEPTH_AT = typeof opt.depthAt === 'function' ? opt.depthAt : () => 0;
+  const NOW_MIN = typeof opt.minute === 'function' ? opt.minute : () => 0;
+  const PLANNER = createRoutePlanner({
+    G, usable, groundAt,
+    blocked: (x, z, pad) => blocker.blocked(x, z, pad),
+    depthAt: (x, z, t) => DEPTH_AT(x, z, t) || 0,
+    minute: () => NOW_MIN(),
+    findRefuge: (x, z, avoid, needHigh) => findRefuge(x, z, avoid, needHigh),
+  });
+  // 回注给社会层：decide() 才能为每个候选生成真实折线、把选中路线交回来。
+  if (CROWD && CROWD.setRouting) CROWD.setRouting(PLANNER, () => peds);
+  const routeStats = {
+    started: 0, finished: 0, replanned: 0, arrivedShelter: 0,
+    held: 0, walked: 0, byKind: {}, zeroMoveFrames: 0,
+  };
+
   // 按「链长 × 区域密度」加权抽样。
   // 只按长度加权时，600 人摊在 1772 km 步行网上 = 每 3 km 才一个人，任何一条
   // 街景里都看不到人。真实城市的行人 90% 集中在国家广场/市中心/国会山，
@@ -597,20 +833,110 @@ export function buildPedestrians(assets, opt = {}) {
   //   长度加权 = 沿人行道**面积均匀**：某条街上人多，是因为那条路长，
   //   不是被指定的「热点」。用 ?seed=N 可以完全复现同一批站位。
   //   （`midX/midZ` 仍照旧算出来——以后想再开区域权重时直接用。）
-  const pickChain = pickGlobal;
+  // 【全城多中心（用户 2026-11-10「全城随机加人」）】
+  // 全城均匀撒虽然覆盖广，但几百人摊到 6km×5km 上每条街几乎看不见人；
+  // 只收在一个 340 m 街区又不是全城。折中：把可走链按 420 m 网格聚成若干
+  // 片区中心，选彼此相距 ≥420 m 的 K 个中心，每人固定属于一个片区，从该片区
+  // 280 m 内的链里出生 —— 既铺满全城，每个片区又有一小群人能互相看见。
+  let clusterPools = null;
+  if (opt.spread && usable.length > 20) {
+    const K = Math.max(6, Math.min(16, Math.round(count / 18)));
+    const CELL = 420, R = 280;
+    const grid = new Map();
+    for (let u = 0; u < usable.length; u++) {
+      const k = `${Math.floor(midX[u] / CELL)}|${Math.floor(midZ[u] / CELL)}`;
+      let a = grid.get(k); if (!a) grid.set(k, (a = []));
+      a.push(u);
+    }
+    const buckets = [...grid.values()].map((arr) => {
+      let sx = 0, sz = 0;
+      for (const u of arr) { sx += midX[u]; sz += midZ[u]; }
+      return { x: sx / arr.length, z: sz / arr.length, arr };
+    }).sort((a, b) => b.arr.length - a.arr.length);
+    const chosen = [];
+    for (const gap of [CELL, CELL * 0.6, 0]) {
+      for (const b of buckets) {
+        if (chosen.length >= K) break;
+        if (chosen.every((c) => Math.hypot(c.x - b.x, c.z - b.z) > gap)) chosen.push(b);
+      }
+      if (chosen.length >= K) break;
+    }
+    // 两个官方机位对应的街区必须各有一个片区：默认 FAA/MegaKit 街区 +
+    // 页面「9 行人近景 / 0 行人俯视」的白宫-拉斐特广场 (1060,-700)。
+    // 否则全城铺开以后，用户点官方行人机位反而看到一条空街。
+    const FOCUS = opt.focus
+      ? (Array.isArray(opt.focus[0]) ? opt.focus : [opt.focus]) : [];
+    const picked = [];
+    const focusFor = new Map();
+    for (const [fx, fz] of FOCUS) {
+      let best = null, bestD = Infinity;
+      for (const bk2 of buckets) {
+        const d = Math.hypot(bk2.x - fx, bk2.z - fz);
+        if (d < bestD) { bestD = d; best = bk2; }
+      }
+      if (best && !picked.includes(best)) {
+        picked.push(best);
+        focusFor.set(best, [fx, fz]);
+      }
+    }
+    if (picked.length) {
+      const rest = chosen.filter((b) => !picked.includes(b));
+      chosen.length = 0;
+      chosen.push(...picked, ...rest.slice(0, Math.max(0, K - picked.length)));
+    }
+    clusterPools = chosen.map((c) => {
+      // 官方机位街区：出生链要落在机位 110 m 内，否则「9 行人近景」眼高
+      // 机位下人还在几百米外，只有几个像素（实测 80 m 内 0–2 人）。
+      const f = focusFor.get(c);
+      const cx = f ? f[0] : c.x, cz = f ? f[1] : c.z;
+      const rr = f ? 110 : R;
+      const pool = [];
+      for (let u = 0; u < usable.length; u++) {
+        if (Math.hypot(midX[u] - cx, midZ[u] - cz) < rr) pool.push(usable[u]);
+      }
+      if (!pool.length && f) {
+        for (let u = 0; u < usable.length; u++) {
+          if (Math.hypot(midX[u] - cx, midZ[u] - cz) < R) pool.push(usable[u]);
+        }
+      }
+      return pool.length ? pool : [usable[0]];
+    });
+    // 每个焦点街区多给 2 个权重槽：夜里 / 上午街上人本来就少，槽太少会
+    // 出现「全城 90 人在走，官方机位下却空街」。
+    for (let j = 0; j < picked.length; j++) {
+      clusterPools.push(clusterPools[j], clusterPools[j]);
+    }
+    console.log(`[ped] 全城多中心：${clusterPools.length} 个片区 / ${usable.length} 条可走链`
+      + (picked.length ? ` · ${picked.length} 个官方机位街区加权` : ''));
+  }
+  const clusterOf = new Int16Array(count);
+  const pickChain = (i = 0) => {
+    if (!clusterPools) return pickGlobal();
+    const slot = i % clusterPools.length;
+    clusterOf[i] = slot;
+    const pool = clusterPools[slot];
+    return pool[(rnd() * pool.length) | 0];
+  };
 
   const group = new THREE.Group();
   group.name = 'L6_agents';
 
   const peds = [];
+  // 【马克的外部驱动】主场景把 _legacy 的单人故事迁进来后，第 0 个人不再走
+  // walknet：由 mark.js 每帧直接写位置/朝向/动作/决策。留一个 hook 而不是在
+  // main.js 里覆盖，是为了不让两套逻辑同时给他记录决策、同时抢 mixer。
+  let heroStep = null;
   const _v = new THREE.Vector3();
   const _v2 = new THREE.Vector3();
   const _tmp = new THREE.Vector3();
   const _sp0 = new THREE.Vector3();
 
   for (let i = 0; i < count; i++) {
-    const tpl = useTpl[Math.min(useTpl.length - 1, rnd() < 0.52 ? 0 : 1)];
-    let ci = pickChain();
+    // 第 0 个人是马克（如果高模载入了）；其余按性别随机
+    const isHero = (i === 0 && !!opt.hero);
+    const tpl = isHero ? opt.hero
+      : useTpl[Math.min(useTpl.length - 1, rnd() < 0.52 ? 0 : 1)];
+    let ci = pickChain(i);
     let c = G.chains[ci];
     let s0 = rnd() * c.len;
     // 【出生点不能在深水里】链级抽检只看了 3~9 个采样点，一条长链可能中间
@@ -620,7 +946,7 @@ export function buildPedestrians(assets, opt = {}) {
       for (let k = 0; k < 24; k++) {
         pointAt(c, s0, _sp0);
         if (LDT.spawnOk(_sp0.x, _sp0.z)) break;
-        ci = pickChain(); c = G.chains[ci]; s0 = rnd() * c.len;
+        ci = pickChain(i); c = G.chains[ci]; s0 = rnd() * c.len;
       }
     }
 
@@ -645,6 +971,8 @@ export function buildPedestrians(assets, opt = {}) {
     }
 
     const jogger = rnd() < 0.07;
+    obj.userData.pedIndex = i;
+    obj.traverse((o) => { o.userData.pedIndex = i; });
     peds.push({
       i, obj, mixer, acts, tpl,
       ci, dir: rnd() < 0.5 ? 1 : -1,
@@ -668,21 +996,112 @@ export function buildPedestrians(assets, opt = {}) {
       why: 'flood',      // 这次躲起来的原因：'flood' 踩水 / 'rain' 避雨
       lazy: rnd() < 0.45 ? 1 : 0,   // 1 = 下雨也不挪窝（撑伞/躲屋檐），模拟「不是所有人都会跑」
       trapped: 0,
+      // 【可拾取】点一下就要能查到「这是谁」——group 里是 SkinnedMesh 的若干 part，
+      // 命中后只能拿到 obj，所以把索引挂在 obj 上，raycast 一路向上找回来。
+      // 【个体档案 + 决策记录】profile 决定「他能涉多深、多怕、有什么职责」，
+      // decision 是他最近一次真正的权衡（UI 直接读这两个字段显示）。
+      profile: isHero ? HERO_PROFILE : pickProfile(rnd()),
+      hero: isHero,
+      decision: null,
+      wading: 0,                     // 正在硬涉水的累计秒数
+      decisions: [],                 // 最近几条判断（最多留 6 条）
+      // 供拾取反查（每个 part 都挂，命中任意一个 mesh 都能找回 ped）
     });
+    // 【社会层】确定性色相偏移 + 挂上身份 + 逐人独立的心理档案。
+    const pNew = peds[peds.length - 1];
+    if (CROWD && !pNew.hero) {
+      const q0 = CROWD.at(pNew.i);
+      pNew.lifeName = q0 ? q0.name : `路人${pNew.i}`;
+      pNew.baseSpeed = pNew.speed;
+      // ped.js 的 pickProfile() 返回模块级共享对象，若不复制，改一个人的
+      // 涉水线 / 风险偏好会污染同档案的所有市民（几百人共用一个 wade）。
+      pNew.profile = { ...pNew.profile };
+      if (q0) {
+        pNew.profile.wade = q0.wade;
+        pNew.profile.risk = 0.7 + (1 - q0.experience) * 1.1;
+        pNew.speed = q0.speedAbs || pNew.speed;
+        pNew.ageGroup = q0.ageGroup;
+        pNew.thinking = q0.thinking;
+      }
+      const hue = ((pNew.i * 0.137) % 1 - 0.5) * 0.34;
+      pNew.obj.traverse((o) => {
+        if (!o.isMesh || !o.material || Array.isArray(o.material)) return;
+        const mat = o.material.clone();
+        if (mat.color) mat.color.offsetHSL(hue, 0, ((pNew.i % 3) - 1) * 0.05);
+        o.material = mat;
+      });
+    }
   }
 
   const clipOf = (p) => {
-    if (p.state === 'idle') return 'idle';
-    if (p.state === 'look') return 'look';
-    if (p.state === 'yield') return rnd() < 0.5 ? 'side_l' : 'side_r';
+    // 【2026-11-08 全天审计】社会层的动作是唯一真值：在屋里就 sit，
+    // 通勤就 walk，避险就 run。旧版只有 run/idle 两个特例，导致「夜班
+    // 保安在街上站着不动」「在家的人播走路」。
+    if (CROWD) {
+      const q = CROWD.at(p.i);
+      if (q) {
+        // 【2026-11-08 用户「好多人物一直在原地跑步 / 下雨时很奇怪」】
+        // 社会层的 clip 是「这段作息该做什么」，不是「这一帧有没有位移」。
+        // 室内的人被钉在房间锚点、避雨的人站定在避难所，旧版仍硬套
+        // walk/run；暴雨段 24 人全员 run 原地踏步就是这么来的（实测 94–98%
+        // 的走跑分钟里锚点纹丝不动）。只有真的在步行网上移动才播走跑。
+        // net 模式只有状态机真的判成「walk」才算在走；yield / idle / look
+        // 都是站定。flee 由避险状态机单独驱动，不受这里限制。
+        const halted = p.mode !== 'flee' && p.state !== 'walk';
+        const routeMoving = p.mode === 'route' && p.route && p.route.speed > 0.001;
+        // 【2026-11-12】旧版把 route 模式排除在 movingNow 之外，导致沿真实
+        // 折线位移的人被帧末兜底切成 idle（滑步），而等规划的人反而播 walk
+        // （零位移走跑）。这里统一按「这一刻是否真的允许位移」判定。
+        const holding = (p.holdT || 0) > 0 || p.mode === 'shelter'
+          || (p.liveClipT > 0 && p.liveClip === 'idle');
+        const movingNow = (p.mode === 'net' || p.mode === 'flee' || routeMoving)
+          && !q.indoor && !halted && !holding && (Number(p.speed) || 0) > 0.25;
+        if (!movingNow) {
+          if (q.indoor) return p.acts.sit ? 'sit' : (p.acts.idle ? 'idle' : 'walk');
+          return p.acts.idle ? 'idle' : 'walk';
+        }
+        // 【动作跟着决策走】hurry 播跑、slow 播慢走、换街/掉头播走；
+        // 持续到下一次判断自动失效，不会出现「说继续却一直跑」。
+        if (p.liveClipT > 0 && p.liveClip) {
+          if (p.liveClip === 'run' && p.acts.run) return 'run';
+          if (p.liveClip === 'walk' && p.acts.walk) return 'walk';
+          if (p.liveClip === 'idle' && p.acts.idle) return 'idle';
+        }
+        if (q.clip === 'run' && p.acts.run) return 'run';
+        if (q.clip === 'walk' && p.acts.walk) return 'walk';
+        if (q.clip === 'sit') return p.acts.sit ? 'sit' : (p.acts.idle ? 'idle' : 'walk');
+        if (q.clip === 'idle' && p.acts.idle) return 'idle';
+      }
+    }
+    // 社会层给的作息动作优先：赶路播 walk/run，室内/待机播 idle；
+    // 【2026-11-07】用户反馈随机行人「经常转圈、倒退着转圈、侧身位移」。
+    // 来源就是 look / side_l / side_r / turn180 / back 这几段原地动作，再叠加
+    // 硬掉头时 p.yaw += Math.PI 的瞬时 180° 反转。随机行人只保留
+    // idle / walk / run 三个循环；转身一律交给已有的平滑 yaw 插值
+    // （p.yaw += dYaw * min(1, dt*6.5)），不会再出现原地打转。
+    if (p.state === 'idle' || p.state === 'look' || p.state === 'yield') return 'idle';
     return p.jogger ? 'run' : 'walk';
   };
 
+  /** 步频跟着真实步速走：加速时腿快、慢走/涉水时腿慢，不是恒定 1×。 */
+  function clipTimeScale(p, name) {
+    const cur = (p.mode === 'route' && p.route && p.route.speed > 0.01)
+      ? p.route.speed : (p.speed || WALK.BASE);
+    // 【唯一口径】实际 m/s ÷ 该 clip 的设计步速 m/s。旧版这里用「当前/本人基准」、
+    // people.js 用「当前/clip 设计速度」、mark.js 干脆不设，三套 timeScale
+    // 让同一个人换个模型步频就变；现在统一读 motion-units.ANIM。
+    let ts = ANIM.timeScale(cur, name);
+    if (name === 'run') ts = Math.max(ts, 1.05);
+    return ts;
+  }
+
   function play(p, name, fade = 0.28) {
     const a = p.acts[name] || p.acts.idle;
-    if (!a || p.cur === a) return;
+    if (!a) return;
+    const ts = clipTimeScale(p, name);
+    if (p.cur === a) { a.setEffectiveTimeScale(ts); return; }
     a.reset();
-    a.setEffectiveTimeScale(1);
+    a.setEffectiveTimeScale(ts);
     a.setEffectiveWeight(1);
     if (p.cur) { a.crossFadeFrom(p.cur, fade, false); a.play(); }
     else { a.fadeIn(fade).play(); }
@@ -704,6 +1123,66 @@ export function buildPedestrians(assets, opt = {}) {
     const gy = groundAt(_v.x, _v.z);
     p.obj.position.set(_v.x, gy + p.footFix, _v.z);
     p.obj.rotation.y = p.yaw;
+    // 这个人的「家所在的街区」：从屋里出来时回到自己这一片，而不是全部
+    // 瞬移到剧情楼门口（全城几百人不能一出门就挤到一个坐标）。
+    p.homeXZ = { x: _v.x, z: _v.z };
+  }
+
+  // ---------------------------------------------------------------- 实时决策主体
+  // 【2026-11-11】慢层目标（goal.js）+ 群体内核（cohort.js）+ 每 0.5~1 仿真秒
+  // 一次「此刻该干什么」的判断（live-agent.js）。时间表不再给台词，只给门牌
+  // 和时间窗；想法由状态与内核现算，动作由下面的 applyLiveAction 落到真实路网。
+  // 【今日经历】每子步从真实位移 / 水深 / 生理量 / 伞累积，再回灌决策打分。
+  const EXP = createExperience(peds, CROWD);
+  // ---- 细粒度圈层 / 驾驶层 / 伤亡台账（2026-11-13）----
+  // 圈层按「真实出生门牌坐标」分居住片区；用 p.homeXZ 而不是 CROWD.at()，
+  // 因为社会层的 bindResidents 要等本函数返回后才跑，此刻 at() 还没门牌。
+  const CIRCLES = peds.map((p) => circleOf(p.i,
+    CROWD && CROWD.persons ? CROWD.persons[p.i] : null,
+    () => ({ doors: { home: p.homeXZ || null } })));
+  const INC = createIncidents({ peds, clock: opt.clock || null,
+    circles: CIRCLES, crowd: CROWD });
+  const DRIVE = createDriveLayer({ traffic: opt.traffic || null, peds,
+    clock: opt.clock || null, circles: CIRCLES, incidents: INC,
+    flood: opt.flood || null });
+  LIVE = createLiveAgents({ peds, crowd: CROWD, seed: 20261111, experience: EXP,
+    circles: CIRCLES, drive: DRIVE, incidents: INC });
+  // 自检：任何一处速度常量和真值源不一致，启动时直接报出来。
+  const SPEED_AUDIT = assertSpeedConsistency({
+    walkBase: WALK.BASE, walkRun: WALK.RUN,
+    clipWalk: ANIM.CLIP_V0.walk, clipRun: ANIM.CLIP_V0.run,
+    carLimit: CAR.URBAN_LIMIT, laneOff: CAR.LANE_OFF, stopLine: CAR.STOP_LINE,
+    // 【跨模块真比对】决策层导出的系数、职业真值表里的各档步速，
+    // 都拿过来跟执行层的同一组常量核对，不是自己跟自己比。
+    slowDecision: ACTION_SPEED_MUL.slow,
+    hurryDecision: ACTION_SPEED_MUL.hurry,
+    statusSpeeds: Object.fromEntries(Object.entries(STATUS_BASE).map(([k, v]) => [k, v.speed])),
+  });
+  if (!SPEED_AUDIT.ok) console.warn('[speed] 一致性自检未通过', SPEED_AUDIT.errors);
+
+  // ---- 行人空间索引：交通层查「斑马线附近有没有人」用，O(1) 网格 ----
+  let pedBuckets = null;
+  const hashCell = (cx, cz) => cx * 73856093 ^ cz * 19349663;
+  function pedNear(x, z, r) {
+    if (!pedBuckets) return 0;
+    let n = 0;
+    const R = Math.ceil(r / CELL_PED);
+    const cx = Math.floor(x / CELL_PED), cz = Math.floor(z / CELL_PED);
+    for (let dx = -R; dx <= R; dx++) for (let dz = -R; dz <= R; dz++) {
+      const arr = pedBuckets.get(hashCell(cx + dx, cz + dz));
+      if (!arr) continue;
+      for (const p of arr) {
+        if (p.inVehicle || p.enabled === false) continue;
+        const ddx = p.obj.position.x - x, ddz = p.obj.position.z - z;
+        if (Math.abs(ddx) < r && Math.abs(ddz) < r && ddx * ddx + ddz * ddz < r * r) n++;
+      }
+    }
+    return n;
+  }
+  // 社会层统一接管：CROWD.at() 返回前就覆盖好 indoor / dest / wantDecision，
+  // 行人层、HUD、验收脚本看到的是同一份状态（不再各处偷偷改副本）。
+  if (CROWD && CROWD.setLiveOverride) {
+    CROWD.setLiveOverride((i, m, q) => LIVE.applySocial(q, peds[i]));
   }
 
   // ---------------------------------------------------------------- 每帧
@@ -737,16 +1216,81 @@ export function buildPedestrians(assets, opt = {}) {
    * 开始逃难：找最近可直达的避难所。返回是否找到。
    * @param why 'flood' 踩到水才跑 / 'rain' 一开下雨就去找高处避雨（用户 2026-10-29 要求）
    */
+  /**
+   * 记一条判断。UI 直接读 `ped.decision` / `ped.decisions`。
+   * 刻意保留「他不知道什么」——自主性的反面不是「选错」，是「全知」。
+   */
+  function recordDecision(p, kind, text, depth) {
+    const d = {
+      i: p.i,
+      t: NOW_MIN(),
+      kind, text,
+      depth: Math.round((depth || 0) * 100),
+      who: p.profile.label,
+      at: [+p.obj.position.x.toFixed(0), +p.obj.position.z.toFixed(0)],
+    };
+    p.decision = d;
+    p.decisions.push(d);
+    if (p.decisions.length > 6) p.decisions.shift();
+    return d;
+  }
+
+  /**
+   * 谁真的会去躲雨。伞只在后台状态里存在（用户明确说不用单独建模）：
+   * 带伞的人雨中继续赶路，只是淋得慢、步子略慢；没伞的人暴雨必躲，
+   * 中雨看已经淋湿多少。这样一场雨里人流自然分成两股，不会全城同时
+   * 涌向同一个楼边 —— 也就不存在「故意扎堆」。
+   */
+  function shouldShelter(p, mmh) {
+    const ps = CROWD && CROWD.persons[p.i] ? CROWD.persons[p.i].phys : null;
+    if (!ps) return true;
+    const wet = ps.wetness || 0;
+    if (ps.hasUmbrella) return mmh >= 18 && wet > 0.72;
+    if (mmh >= 16) return true;
+    return wet > 0.50;
+  }
+
   function startFlee(p, why = 'flood') {
-    const R = findRefuge(p.obj.position.x, p.obj.position.z, null, why === 'rain');
-    if (!R) return false;
-    p.mode = 'flee';
+    const isRain = why === 'rain';
+    // 躲雨是「就近找个檐下」，不是全城跑半公里冲向同一个高地。
+    const R0 = findRefuge(p.obj.position.x, p.obj.position.z, null, isRain,
+      p.i, isRain ? RAIN_REFUGE_MAX : REFUGE_MAX);
+    if (!R0) return false;
+    const t = scatterRefuge(p, R0);
+    const R = { ...R0, x: t.x, z: t.z, baseX: R0.x, baseZ: R0.z };
+    p.refugeRef = R0;
+    p.shelterRef = R;
     p.refuge = R;
     p.why = why;
+    if (EXP) EXP.note(p.i, 'shelter', isRain ? '下雨找檐下' : '积水找高处');
+    // 【逃难也走真实路网】旧版从当前位置拉一条直线冲向避难所，会横穿楼体、
+    // 横穿草地。现在先 A* 规划一条沿人行道、绕开深水的折线，人真的走过去。
+    const rt = PLANNER.planTo(R.x, R.z, p.obj.position, {
+      // 有灾害履历的人对「没走过的路 / 积水路段」更保守，逃难路线也更倾向
+      // 绕开深水；不额外加距离，只是改 A* 边权里的熟悉度罚分。
+      exp: (() => {
+        const per0 = CROWD && CROWD.persons[p.i];
+        const h0 = per0 && (per0.hazard || (per0.citizen && per0.citizen.hazard));
+        return Math.max(0, Math.min(1,
+          ((per0 && per0.citizen) ? per0.citizen.experience : 0.5)
+          + (h0 ? h0.score * 0.25 : 0)));
+      })(),
+      wade: p.profile.wade || 0.3,
+      minute: NOW_MIN(), speed: Math.max(1.2, (p.speed || 1.2) * 1.5),
+      refuge: R,
+    });
+    if (rt && rt.ok) {
+      startRoute(p, { ...rt, onArrive: 'shelter' },
+        why === 'rain' ? '下雨了，沿路网找高处' : '积水太深，沿路网逃向高处');
+      p.why = why;
+      p.refuge = R;
+      return true;
+    }
+    // 找不到路才退回原来的直线兜底（保证极端情况下人仍有去处）
+    p.mode = 'flee';
     p.state = 'flee';
     p.stateT = 0;
     p.calmT = 0;
-    // 避雨是走/小跑，不是逃命狂奔 —— 动画用 run 但速度降一档（见 FLEE_SPEED 用法）
     play(p, why === 'rain' ? 'walk' : 'run', 0.16);
     return true;
   }
@@ -761,6 +1305,8 @@ export function buildPedestrians(assets, opt = {}) {
     if (!hit) return false;
     p.mode = 'net';
     p.refuge = null;
+    p.refugeRef = null;
+    p.shelterRef = null;
     p.ci = hit.ci;
     p.s = Math.min(Math.max(hit.s, 0.4), Math.max(0.4, G.chains[hit.ci].len - 0.4));
     p.dir = rnd() < 0.5 ? 1 : -1;
@@ -769,6 +1315,313 @@ export function buildPedestrians(assets, opt = {}) {
     p.lat = 0; p.latTarget = 0;
     play(p, 'walk', 0.25);
     return true;
+  }
+
+  // ================================================================ 实时判断落地
+  // 【2026-11-11】live-agent 每 0.5~1 仿真秒算出一个动作，这里把它变成
+  // 真实位移：换街 / 改道一律重跑链级 A*，减速 / 等待 / 掉头改 p.route.speed，
+  // 放弃目标则换一条真实的路。HUD 那句话是结果的翻译，不是数据源。
+  function recordLive(p, act, minute) {
+    const d = {
+      i: p.i, t: minute,
+      kind: act.type === 'abandon' ? 'flee' : (act.type === 'wait' ? 'wade' : 'shelter'),
+      text: act.reason || '', depth: 0, who: p.profile.label,
+      at: [+p.obj.position.x.toFixed(0), +p.obj.position.z.toFixed(0)],
+    };
+    p.decision = d;
+    p.decisions.push(d);
+    if (p.decisions.length > 6) p.decisions.shift();
+  }
+
+  /** 目标 → 真实路网折线。全城换路只走这一条口子，绝不凭空拉直线。 */
+  function planToGoal(g, from, ctx, detours = 0) {
+    if (!g || !g.dest) return null;
+    const per = CROWD && CROWD.persons[ctx.i];
+    const baseExp = (per && per.citizen) ? per.citizen.experience : 0.5;
+    const exp = Math.max(0, Math.min(1, baseExp + (detours ? 0.25 : 0)));
+    const rt = PLANNER.planTo(g.dest.x, g.dest.z, from, {
+      exp,
+      wade: detours ? Math.max(0.12, (ctx.wade || 0.3) * 0.8) : (ctx.wade || 0.3),
+      minute: ctx.minute, speed: ctx.speed || 1.2,
+      refuge: { x: g.dest.x, z: g.dest.z, y: 0, kind: 0 },
+      maxEscape: 4000,
+    });
+    if (!rt || !rt.ok) return null;
+    return { ...rt, onArrive: 'arrive', kind: 'goal:' + (g.type || 'goal'),
+      speed: Math.max(0.6, Math.min(2.2, ctx.speed || 1.2)) };
+  }
+
+  /** 快判断产生的可见动作，持续到下一次判断（0.5~1 仿真秒）自动失效。 */
+  function setLiveClip(p, clip, secs) {
+    p.liveClip = clip;
+    p.liveClipT = secs;
+  }
+
+  function applyLiveAction(p, act, dInfo, ctx) {
+    if (!act) return;
+    recordLive(p, act, ctx.minute);
+    p.liveAction = act.type;
+    // 正在避险的人优先级最高，日常目标不打断逃难
+    if ((p.mode === 'flee' || p.mode === 'shelter') && act.type !== 'resume') return;
+    const from = { x: p.obj.position.x, z: p.obj.position.z };
+    const pc = { ...ctx, i: p.i, wade: p.profile.wade || 0.3, speed: p.speed || 1.2 };
+    switch (act.type) {
+      case 'goal':
+      case 'abandon': {
+        const g = act.goal;
+        const rt = g ? planToGoal(g, from, pc, 0) : null;
+        if (rt) {
+          setLiveClip(p, act.type === 'abandon' ? 'walk' : 'walk', 2.5);
+          startRoute(p, rt, act.reason);
+          LIVE.noteAction(p.i, { type: 'goal', goal: g, minute: ctx.minute });
+        } else if (act.type === 'abandon') {
+          // 放弃且没有「此刻该办」的下一件事：先站住一下，动作上看得见
+          // 「算了」，而不是毫无痕迹地继续随机走。
+          p.mode = 'net'; p.state = 'idle';
+          p.holdT = 1.5 + (p.i % 5) * 0.3;
+          setLiveClip(p, 'idle', 2.0);
+          play(p, 'idle', 0.22);
+        } else { p.mode = 'net'; rejoinNet(p, dInfo); }
+        break;
+      }
+      case 'detour':
+      case 'turnback': {
+        const g = act.goal;
+        const rt = g ? planToGoal(g, from, pc, act.detours || 1) : null;
+        if (rt) {
+          setLiveClip(p, 'walk', 2.5);
+          startRoute(p, rt, act.reason);
+        }
+        break;
+      }
+      case 'idle':
+        p.mode = 'net'; rejoinNet(p, dInfo);
+        setLiveClip(p, 'idle', 1.5);
+        break;
+      case 'wait':
+        if (p.route) p.route.speed = 0;
+        // 不在路线上（随机走网）也要真的停住，不能只改 route.speed。
+        p.holdT = Math.max(p.holdT || 0, act.seconds || 1);
+        p.state = 'idle';
+        setLiveClip(p, 'idle', (act.seconds || 1) + 0.4);
+        play(p, 'idle', 0.2);
+        break;
+      case 'resume':
+        // 只恢复步速，不立刻播 walk：等下一子步真的挪动了再切，避免
+        // 「说在走却原地跑」的那一帧。
+        if (p.route) p.route.speed = act.speed || p.speed || 1.2;
+        setLiveClip(p, null, 0);
+        break;
+      case 'slow':
+        if (p.route) p.route.speed = Math.max(WALK.SLOW_FLOOR, p.route.speed * WALK.SLOW_MUL);
+        setLiveClip(p, 'walk', 1.4);
+        // clipOf 不是每帧都跑（只在场景/状态切换时），所以决策产生的
+        // 动作必须在这里立刻落到动画上，否则「说加快却一直走」。
+        if (p.mode !== 'shelter' && p.mode !== 'flee') play(p, 'walk', 0.18);
+        break;
+      case 'hurry':
+        if (p.route) p.route.speed = Math.min(WALK.HURRY_CAP, p.route.speed * WALK.HURRY_MUL);
+        setLiveClip(p, p.acts.run ? 'run' : 'walk', 1.4);
+        if (p.mode !== 'shelter' && p.mode !== 'flee') {
+          play(p, p.acts.run ? 'run' : 'walk', 0.18);
+        }
+        break;
+    }
+  }
+
+  // ================================================================ 决策路线执行
+  // Brain 选中的不是一句文案，而是 route-brain 在真实 walknet 上算出的折线。
+  // 这里每帧沿折线推进**真实位移**，到终点才按目标收尾：上高处 / 到门牌 /
+  // 站定 / 回网。任何一帧没挪动就不许播走跑；卡死会从当前位置重新规划。
+  function startRoute(p, R, label) {
+    if (!R || !R.ok || !R.pts || R.pts.length < 2) {
+      // 「等雨小 / 先站着看 / 歇一会儿」也是真实决策：原地站定，不瞬移不跑
+      p.mode = 'net'; p.route = null;
+      p.holdT = 6 + (p.i % 7) * 0.8;
+      p.state = 'idle';
+      p.nextThink = Math.max(p.nextThink || 0, p.holdT);
+      play(p, 'idle', 0.25);
+      p.routeInfo = { kind: (R && R.kind) || 'wait', label, dist: 0,
+        walked: 0, onArrive: 'wait', done: false, pts: 0 };
+      routeStats.held++;
+      return false;
+    }
+    const speed = Math.max(WALK.ROUTE_MIN, Math.min(WALK.ROUTE_MAX, R.speed || p.speed || 1.2));
+    const r = {
+      pts: R.pts, i: 0, t: 0, cur: [R.pts[0][0], R.pts[0][1]],
+      goal: R.goal || null, onArrive: R.onArrive || 'arrive',
+      kind: R.kind || 'steady', label: label || '', speed,
+      dist: R.dist || 0, maxDepth: R.maxDepth || 0,
+      walked: 0, stuck: 0, replan: 0, minute: R.minute, done: false,
+    };
+    p.mode = 'route';
+    p.route = r;
+    p.routeInfo = r;
+    p.state = 'walk'; p.stateT = 0; p.holdT = 0;
+    play(p, speed > 2.1 ? 'run' : 'walk', 0.18);
+    routeStats.started++;
+    routeStats.byKind[r.kind] = (routeStats.byKind[r.kind] || 0) + 1;
+    return true;
+  }
+
+  function finishRoute(p, dInfo) {
+    const R = p.route;
+    if (!R) { p.mode = 'net'; return; }
+    routeStats.finished++;
+    routeStats.walked += R.walked;
+    R.done = true;
+    if (R.onArrive === 'shelter' && R.goal) {
+      p.mode = 'shelter';
+      p.refuge = p.shelterRef || R.goal.refuge || {
+        x: R.goal.x, z: R.goal.z, kind: R.goal.kind || 0,
+        y: R.goal.y || groundAt(R.goal.x, R.goal.z),
+      };
+      p.shelterRef = null;
+      p.state = 'shelter'; p.stateT = 0; p.calmT = 0; p.climb = 1;
+      p.baseY = groundAt(p.obj.position.x, p.obj.position.z);
+      p.fromX = p.obj.position.x; p.fromZ = p.obj.position.z;
+      play(p, 'idle', 0.22);
+      routeStats.arrivedShelter++;
+    } else {
+      // 到达真实门牌 / 领路人 / 街口：站定几秒再回步行网，不瞬移、不原地跑
+      p.mode = 'net';
+      p.holdT = 4 + (p.i % 6);
+      p.state = 'idle';
+      rejoinNet(p, dInfo);
+      p.nextThink = Math.max(p.nextThink || 0, p.holdT);
+      play(p, 'idle', 0.25);
+    }
+    p.route = null;
+  }
+
+  function updateRoute(p, dt, dInfo, fb) {
+    const R = p.route;
+    if (!R) { p.mode = 'net'; return; }
+    // 【等待】实时判断让人「等一下」时步速归零：不推进、不播走跑、
+    // 也不计零位移帧，保持 idle，恢复时再继续走。
+    if (R.speed <= 0.001) { placeShadow(p, dt); return; }
+    const x0 = p.obj.position.x, z0 = p.obj.position.z;
+
+    // 脚下突然涨水：立刻从当前位置重新规划一条到真实高处的路网逃生路线。
+    if (dInfo && R.onArrive !== 'shelter') {
+      dInfo(x0, z0, _ds);
+      if (fb && dt > 0 && _ds.d > 0.02) fb.wade(x0, z0, _ds.d, dt);
+      p.routeFleeCd = Math.max(0, (p.routeFleeCd || 0) - dt);
+      // 冷却：脚下一直有水时不能每帧都重新规划，否则人会被反复重启、
+      // 永远走不到第一步（暂停态 dt=0 时尤其明显）。
+      if (_ds.d > (p.profile.wade || 0.3) && p.routeFleeCd <= 0) {
+        const RR = findRefuge(x0, z0, null, true, p.i, REFUGE_MAX);
+        if (RR) {
+          const t = scatterRefuge(p, RR);
+          const R2 = { ...RR, x: t.x, z: t.z, baseX: RR.x, baseZ: RR.z };
+          const per = CROWD && CROWD.persons[p.i];
+          const rt = PLANNER.planTo(R2.x, R2.z, { x: x0, z: z0 }, {
+            exp: per ? per.citizen.experience : 0.5,
+            wade: p.profile.wade || 0.3, minute: NOW_MIN(),
+            speed: R.speed * 1.4, refuge: R2,
+          });
+          if (rt && rt.ok) {
+            p.why = 'flood'; p.refuge = R2; p.refugeRef = RR; p.shelterRef = R2;
+            if (EXP) EXP.note(p.i, 'shelter', '脚下涨水改走高处');
+            p.routeFleeCd = 3;
+            startRoute(p, { ...rt, onArrive: 'shelter' }, '遇深水，改走高处');
+            routeStats.replanned++;
+            return;
+          }
+        }
+      }
+    } else if (dInfo && fb && dt > 0) {
+      dInfo(x0, z0, _ds);
+      if (_ds.d > 0.02) fb.wade(x0, z0, _ds.d, dt);
+    }
+
+    let budget = R.speed * Math.max(0, dt);
+    let dx = 0, dz = 0;
+    while (budget > 1e-4 && R.i < R.pts.length - 1) {
+      const a = R.pts[R.i], b = R.pts[R.i + 1];
+      const L = Math.hypot(b[0] - a[0], b[1] - a[1]);
+      if (L < 1e-4) { R.i++; R.t = 0; continue; }
+      const step = Math.min(budget, L - R.t);
+      R.t += step; budget -= step;
+      dx = (b[0] - a[0]) / L; dz = (b[1] - a[1]) / L;
+      R.cur[0] = a[0] + dx * R.t;
+      R.cur[1] = a[1] + dz * R.t;
+      if (R.t >= L - 1e-4) { R.i++; R.t = 0; }
+    }
+    if (Math.abs(dx) + Math.abs(dz) < 1e-6) { dx = Math.sin(p.yaw); dz = Math.cos(p.yaw); }
+    let nx = R.cur[0], nz = R.cur[1];
+
+    // 实体避让：折线本身在 usable 人行道链上，但树 / 停放车 / 灯杆可能挡住末段
+    if (COLLIDE_PED) {
+      const gy0 = groundAt(nx, nz);
+      if (COLLIDE_PED.blockedCircle(nx, nz, 0.32, gy0 + 0.1, gy0 + 1.7,
+        { ignoreTags: IGNORE_BUILDING })) {
+        const sx = nx + dz * 0.6, sz = nz - dx * 0.6;   // 右法向侧滑
+        const gy1 = groundAt(sx, sz);
+        if (!COLLIDE_PED.blockedCircle(sx, sz, 0.32, gy1 + 0.1, gy1 + 1.7,
+          { ignoreTags: IGNORE_BUILDING })) {
+          R.cur[0] = sx; R.cur[1] = sz; nx = sx; nz = sz;
+        } else R.stuck++;
+      }
+    }
+    // 【屋顶/楼内目标不穿墙】避难路线的终点是楼心（kind=1 的目标点），
+    // 折线最后一段会穿墙进楼。人走到墙边就算到达：停在檐下（地面），
+    // 不钻进楼里、也不再被抬上屋顶 —— 「人在空中/屋顶」的根因之一。
+    if (R.onArrive === 'shelter' && blocker.blocked(nx, nz, 0.3)) {
+      finishRoute(p, dInfo);
+      return;
+    }
+    const gy = groundAt(nx, nz);
+    p.obj.position.set(nx, gy + p.footFix, nz);
+    const yawWanted = Math.atan2(dx, dz);
+    let dYaw = yawWanted - p.yaw;
+    while (dYaw > Math.PI) dYaw -= Math.PI * 2;
+    while (dYaw < -Math.PI) dYaw += Math.PI * 2;
+    p.yaw += dYaw * Math.min(1, dt * 7);
+    p.obj.rotation.y = p.yaw;
+
+    const stepReal = Math.hypot(nx - x0, nz - z0);
+    R.walked += stepReal;
+    // 等待结束 / 刚启动路线后，只有真的挪动了才把 idle 切回 walk
+    if (stepReal >= 0.004 && p.cur && /idle/.test(String(p.cur.getClip().name))) {
+      play(p, 'walk', 0.2);
+    }
+    // 折线已经走完的那一帧本来就不该再挪，也不算「零位移帧」
+    if (stepReal < 0.004 && R.i < R.pts.length - 1) {
+      routeStats.zeroMoveFrames++;
+      R.stuck++;
+      // 有步速却一帧没挪动（转弯 / 刚接上折线 / 被挡）：当帧就切 idle，
+      // 不等帧末的连续 3 帧兜底，绝不给观众「原地跑步」。
+      if (p.obj.visible && p.cur && /walk|run/.test(String(p.cur.getClip().name))) {
+        play(p, 'idle', 0.12);
+      }
+      if (R.stuck >= 4) play(p, 'idle', 0.2);
+    } else R.stuck = 0;
+
+    if (R.stuck >= 12) {
+      // 卡死：从当前位置重新规划到同一个真实目标，最多两次
+      if (R.goal && R.replan < 2) {
+        const per = CROWD && CROWD.persons[p.i];
+        const rt = PLANNER.planTo(R.goal.x, R.goal.z, { x: nx, z: nz }, {
+          exp: per ? per.citizen.experience : 0.5,
+          wade: p.profile.wade || 0.3, minute: NOW_MIN(),
+          speed: R.speed, refuge: R.goal.refuge,
+        });
+        if (rt && rt.ok) {
+          R.replan++;
+          startRoute(p, { ...rt, onArrive: R.onArrive }, R.label);
+          routeStats.replanned++;
+          return;
+        }
+      }
+      finishRoute(p, dInfo);
+      return;
+    }
+    p.dist = p.obj.position.distanceTo(camPos);
+    const rv = p.dist < VIS_DIST;
+    if (rv !== p.visible) { p.visible = rv; p.obj.visible = rv; }
+    placeShadow(p, dt);
+    if (R.i >= R.pts.length - 1) finishRoute(p, dInfo);
   }
 
   /** 阴影距离裁剪 + 动画降频（逃难和正常行走共用） */
@@ -794,25 +1647,21 @@ export function buildPedestrians(assets, opt = {}) {
     // ---- 已经站定了：等水退
     if (p.mode === 'shelter') {
       p.stateT += dt;
-      if (p.climb < 1) {
-        // 从楼下"上到屋顶"：1.2 秒内抬到位，不做楼梯（用户明说不用真进去）
-        p.climb = Math.min(1, p.climb + dt / 1.2);
-      }
-      // 水平：从进楼点平滑挪到屋顶中心；竖直：从地面抬到顶面
-      const k = p.climb;
-      const x = p.fromX + (R.x - p.fromX) * k;
-      const z = p.fromZ + (R.z - p.fromZ) * k;
-      const base = R.kind === 1 ? (p.baseY + (R.y - p.baseY) * k) : R.y;
-      p.obj.position.set(x, base + p.footFix, z);
-      // 水退判定：以避难所位置的地面水深为准，干满 SHELTER_CALM 秒才敢出来
+      // 【2026-11-10 修正「人在空中/屋顶」】屋顶避难所不再把人抬上顶面：
+      // 人就停在到达点（楼边檐下 / 高地真实地面），任何帧都不凌空。
+      // 水退判定：避水的人以避难所位置的地面水深为准；**避雨的人只看雨**——
+      // 雨小了就该回街上（他们脚下的路干不干由 rejoinNet 把关），不能跟着
+      // 等楼心处的积水退（旧逻辑让 80+ 人在 6 mm/h 的小雨里站到深夜）。
       let dry = true;
-      if (dInfo) { dInfo(R.x, R.z, _ds); dry = !_ds.wet; }
-      // 【避雨的人】雨没停就不走。否则 2 m 高的小土包上一块没水，人会立刻回街上淋雨。
+      if (p.why !== 'rain' && dInfo) { dInfo(R.x, R.z, _ds); dry = !_ds.wet; }
+      // 【避雨的人】雨还大（raining 参数此刻语义 = 雨强 ≥ 阈值）就不走。
+      // 否则 2 m 高的小土包上一块没水，人会立刻回街上淋雨。
       if (p.why === 'rain' && raining) dry = false;
       p.calmT = dry ? p.calmT + dt : 0;
-      // 【别在这里只判 dry 不回网】rejoinNet 会自己再查一次落点水深，
-      // 落点还湿就返回 false —— 那就把 calmT 归零，下一轮重新等。
-      if (p.climb >= 1 && p.calmT >= SHELTER_CALM) {
+      // 雨一停 1.5 s 就回街（避水的人仍等满 SHELTER_CALM）。顺带修复：
+      // 从雨夜往回拖时间轴到白天时，避雨的人不会在大太阳底下一直站着。
+      const need = (p.why === 'rain' && !raining) ? 1.5 : SHELTER_CALM;
+      if (p.calmT >= need) {
         if (!rejoinNet(p, dInfo)) p.calmT = 0;
       }
       placeShadow(p, dt);
@@ -821,20 +1670,10 @@ export function buildPedestrians(assets, opt = {}) {
 
     // ---- 还在跑
     const arrive = R.kind === 1 ? 4.5 : 2.4;
-    if (dist <= arrive) {
-      p.mode = 'shelter';
-      p.state = 'shelter';
-      p.stateT = 0;
-      p.calmT = 0;
-      p.climb = R.kind === 1 ? 0 : 1;
-      p.baseY = groundAt(px, pz);
-      p.fromX = px; p.fromZ = pz;
-      play(p, 'idle', 0.22);
-      placeShadow(p, dt);
-      return;
-    }
+    if (dist <= arrive) { arriveShelter(p); placeShadow(p, dt); return; }
 
-    // 朝避难所直走（忽略路网与楼，最后一小段是"进楼"）
+    // 朝避难所直走（沿路网规划失败时的直线兜底）；走到墙边就算「进楼」，
+    // 不再钻进楼体内部、也不再被抬上屋顶。
     const ux = dx / (dist || 1), uz = dz / (dist || 1);
     const yawWanted = Math.atan2(ux, uz);
     let dYaw = yawWanted - p.yaw;
@@ -844,19 +1683,74 @@ export function buildPedestrians(assets, opt = {}) {
 
     const step = Math.min(dist, (p.why === 'rain' ? RAIN_SPEED : FLEE_SPEED) * dt);
     const nx2 = px + ux * step, nz2 = pz + uz * step;
+    if (R.kind === 1 && blocker.blocked(nx2, nz2, 0.3)) {
+      // 下一脚要踩进楼体：停在墙根（檐下），视为已进楼避难
+      arriveShelter(p);
+      placeShadow(p, dt);
+      return;
+    }
     const gy = groundAt(nx2, nz2);
     p.obj.position.set(nx2, gy + p.footFix, nz2);
     p.obj.rotation.y = p.yaw;
     placeShadow(p, dt);
   }
 
+  /** 到达避难所：站定在当前位置的**地面**上（檐下 / 高地），等水退/雨停。 */
+  function arriveShelter(p) {
+    p.mode = 'shelter';
+    p.state = 'shelter';
+    p.stateT = 0;
+    p.calmT = 0;
+    p.climb = 1;                        // 兼容旧字段：不再有爬升动画
+    p.baseY = groundAt(p.obj.position.x, p.obj.position.z);
+    p.fromX = p.obj.position.x; p.fromZ = p.obj.position.z;
+    p.obj.position.y = p.baseY + p.footFix;
+    play(p, 'idle', 0.22);
+  }
+
+  let frameXZ = null;
   function update(dt, camera, flood) {
     frame++;
+    // 避难所占用每 30 帧按真实状态重算一次（O(n)），不依赖易漏的加减账。
+    if (frame % 30 === 1) syncRefugeLoad();
+    // 实时决策运行时按同一个子步累计仿真秒（判断间隔、等待、重规划预算都读它）
+    if (LIVE) LIVE.begin(dt);
+    // 【同一时间层】驾驶执行层也只吃这一个仿真秒 h：等灯时长、跟车距离、
+    // 涉水熄火计时、行驶里程、快层 driveJudge 的 0.5~1 秒判断全部按它推进。
+    // 倍率开到 24× 时，车、人、水、判断一起变快，不存在哪一层漏乘。
+    if (DRIVE) DRIVE.step(dt, NOW_MIN());
+    // 帧初位置：循环结束后统一核对「这一帧到底挪没挪」，覆盖 net / flee /
+    // shelter / 室内 / 换链所有分支，不再有漏网的原地跑步。
+    if (!frameXZ || frameXZ.length < peds.length * 2) frameXZ = new Float64Array(peds.length * 2);
+    for (let fi = 0; fi < peds.length; fi++) {
+      frameXZ[fi * 2] = peds[fi].obj.position.x;
+      frameXZ[fi * 2 + 1] = peds[fi].obj.position.z;
+    }
     camPos.copy(camera.position);
     const dInfo = (flood && flood.depthInfo) ? flood.depthInfo : null;
+    // 双向耦合的回写口：涉水的人把「这一格被踩过」写回去，积涝层据此拖慢退水
+    const FB = (flood && flood.fb) ? flood.fb : null;
     // 正在下雨？避雨触发条件（用户 2026-10-29：不该等人脚泡水才动）
     const raining = !!(flood && flood.raining);
     lastRaining = raining;
+    // 【雨强分级 2026-11-10】u_p8 工况 raining 全天为 true，但清早只有
+    // 2.5 mm/h 的毛毛雨 —— 旧逻辑让 180 人从早到晚站在楼边「躲雨」，街上
+    // 越走越空。现在读真实雨强：≥ RAIN_SHELTER_MMH（接近傍晚峰值）才躲，
+    // 小雨照常走（现实里撑伞赶路的人不会因为 3 mm/h 的雨站一小时）。
+    const rainMMH = raining && flood.rainRate ? flood.rainRate() : (raining ? 99 : 0);
+    const heavyRain = rainMMH >= RAIN_SHELTER_MMH;
+    // 实时判断的感知上下文：全部读这一子步的真实值，复用给所有人（不每人建对象）
+    // 预警发出后过了多少分钟：用离线水情帧里印刷的降雨起始时刻算，
+    // 供 kernel/choice-model.js 的 Silva 2025 实测动员曲线使用。
+    // 没有取到时用 0（雨刚开始），不自己编一个起始时间。
+    const rainStart = (flood && Number.isFinite(flood.rainStart)) ? flood.rainStart : null;
+    const liveCtx = {
+      minute: NOW_MIN(), dInfo, rainMMH,
+      minutesSinceWarning: rainStart === null ? 0 : Math.max(0, NOW_MIN() - rainStart),
+      officialWarning: rainStart !== null && NOW_MIN() >= rainStart,
+      blocked: (x, z, pad) => blocker.blocked(x, z, pad),
+      far: false, indoor: false, busy: false, sheltered: false,
+    };
     const simMin = (flood && typeof flood.tMin === 'number') ? flood.tMin : null;
 
     // ---- 被困判定用的连通域：换帧才重算
@@ -880,7 +1774,9 @@ export function buildPedestrians(assets, opt = {}) {
 
     // 人-人分离：4 m 空间哈希，O(n)
     const buckets = new Map();
-    const bk = (cx, cz) => cx * 73856093 ^ cz * 19349663;
+    const bk = hashCell;
+    // 人也是实体：本帧已摆位的人用来做「人对人」的最小间距检查（24 人，O(n²) 可接受）
+    const placedThisFrame = [];
     for (const p of peds) {
       if (!p.visible) continue;
       const a = buckets;
@@ -889,6 +1785,19 @@ export function buildPedestrians(assets, opt = {}) {
       if (!arr) a.set(k, (arr = []));
       arr.push(p);
     }
+    pedBuckets = null;
+    // 【交规用索引按「真实存在的人」建，不受相机距离裁剪影响】
+    // 旧版复用 buckets（只收 p.visible 的人），无头/远景时街上明明有人，
+    // 车却一个行人都查不到，礼让次数恒为 0。行人优先必须按真实人群算。
+    const yb = new Map();
+    for (const p of peds) {
+      if (p.enabled === false || p.inVehicle) continue;
+      const k = bk(Math.floor(p.obj.position.x / CELL_PED), Math.floor(p.obj.position.z / CELL_PED));
+      let arr = yb.get(k);
+      if (!arr) yb.set(k, (arr = []));
+      arr.push(p);
+    }
+    pedBuckets = yb;   // 交通层的行人优先查询复用同一份索引
 
     // LDT 余量按帧聚合：所有人共用同一个 nowMin，所以可以先攒再算
     let ln = 0;
@@ -896,12 +1805,311 @@ export function buildPedestrians(assets, opt = {}) {
     ldtDoomed = 0; ldtTight = 0; ldtCovered = 0; ldtMedian = null; ldtMin = 0;
 
     for (const p of peds) {
+      if (p.enabled === false) continue;   // 被 setCount 关掉的：不更新也不显示
+      // 【伤亡冻结】困死的人不再移动、不再判断，位置留原地供逐人回查。
+      if (INC.isDead(p.i)) { p.obj.visible = false; continue; }
+      // 【人在车里】行人模型隐藏，位置就是 traffic 认领车的真实位置
+      // （DRIVE.step 每个子步写回）。这里绝不跑步行位移，但生理 / 今日经历 /
+      // 伤亡判定仍按车所在的水深逐子步累积 —— 不是「换了个动画」。
+      if (p.inVehicle) {
+        p.obj.visible = false;
+        let vd = 0;
+        if (dInfo) { const dv = dInfo(p.obj.position.x, p.obj.position.z, _ds); vd = dv.d || 0; }
+        const vps = CROWD && CROWD.persons[p.i] ? CROWD.persons[p.i].phys : null;
+        const vSpeed = Math.max(0, p.driveSpeed || 0);
+        const vPhys = vps ? { wetness: vps.wetness * 100, hunger: vps.hunger,
+          stamina: vps.stamina, umbrella: vps.umbrella, hasUmbrella: vps.hasUmbrella }
+          : { wetness: 0, hunger: 30, stamina: 70, umbrella: 'none', hasUmbrella: false };
+        if (CROWD) CROWD.tick(p.i, CROWD.now(), {
+          depth: vd, speed: vSpeed, raining: rainMMH >= 2, rainMMH,
+          inVehicle: true, inBuilding: false, moving: vSpeed > 0.1, asleep: false,
+        });
+        EXP.tick(p.i, dt, { depth: vd, speed: vSpeed, mode: 'drive', indoor: false,
+          raining: rainMMH >= 2, minute: liveCtx.minute, phys: vPhys });
+        const vLive = LIVE && LIVE.agent ? LIVE.agent(p.i) : null;
+        const vGoal = vLive && vLive.plan && vLive.plan.active
+          ? vLive.plan.active() : null;
+        INC.tick(p.i, dt, {
+          x: p.obj.position.x, z: p.obj.position.z, depth: vd, speed: vSpeed,
+          indoor: false, sheltered: false, inVehicle: true,
+          carStalled: !!(p.driveInfo && p.driveInfo.stalled),
+          stamina: vPhys.stamina, rainMMH, umbrella: vPhys.umbrella, mode: 'drive',
+          action: (vLive && vLive.lastAction) || '',
+          reason: (vLive && vLive.lastReason) || '',
+          goalLabel: (vGoal && vGoal.label) || '',
+        });
+        continue;
+      }
+      // 被故事引擎接管的马克：整段常规更新（行走、避水、状态机）全部跳过。
+      // 放在循环最前面，连距离裁剪也交出去 —— 否则 ped.js 会把「人在车里」
+      // 那帧的 obj.visible 又改回 true。
+      if (p.hero && heroStep) {
+        // 马克由故事引擎管，但他也是人 —— 他在水里走同样要写回流场
+        if (FB && dt > 0 && dInfo) {
+          const dd = dInfo(p.obj.position.x, p.obj.position.z, _ds);
+          if (dd.d > 0.02) FB.wade(p.obj.position.x, p.obj.position.z, dd.d, dt);
+        }
+        heroStep(dt, p, { dInfo, raining, simMin, flood });
+        continue;
+      }
+      // q 已由 CROWD.at() 内的实时目标接管口对齐好（室内外 / 目的地 / 步速）。
+      const q = CROWD ? CROWD.at(p.i) : null;
+      // 帧末「室外不许在楼体里」的检查读这个标记，避免再查一次社会层。
+      p.qIndoor = !!(q && q.indoor);
+      // 【室外高度硬约束】从屋里/楼上切到街面时，旧位置可能还带着 6F/9F 的
+      // 楼板高度；若这一帧正好可见，就会看到“人在空中”。只要判定在室外，
+      // 就把脚底接回这一刻的真实地面，再继续走网/路线。
+      if (q && !q.indoor) {
+        const gyNow = groundAt(p.obj.position.x, p.obj.position.z);
+        // 0.9 m 是路缘/台阶/脚底修正的正常范围；超过 1.2 m 一律视为残留楼板高度。
+        if (p.obj.position.y - gyNow > 1.2) {
+          p.obj.position.y = gyNow + p.footFix;
+          if (p.mode === 'net') rejoinNet(p, dInfo);
+        }
+      }
+      if (LIVE) {
+        liveCtx.minute = NOW_MIN();
+        liveCtx.rainMMH = rainMMH;
+        liveCtx.far = p.visible === false;
+        liveCtx.indoor = !!(q && q.indoor);
+        // 【2026-11-17 A 预警按人分发】旧口径是「降雨开始之后就算收到预警」，
+        // 而这批工况降雨从 0 点起，等于午夜全城都收到、一路累积到傍晚十九小时。
+        // 现在：他脚下第一次见水（3 cm）的那一刻才确定预警时刻 = 见水 − 前置时间，
+        // 35.5% 的人自始至终收不到（Thieken 2022 表 4，内涝 n=448）。
+        // 只在第一次见水时算一次，之后记在 p.warnAt 上，不再逐帧查水深。
+        if (p.warnAt === undefined && dInfo
+          && (p.warnChk === undefined || NOW_MIN() - p.warnChk >= 1)) {
+          p.warnChk = NOW_MIN();
+          const dw = dInfo(p.obj.position.x, p.obj.position.z, _ds).d || 0;
+          if (dw >= WARNING_SELF_SET.wetThresholdM) {
+            p.warnAt = warnAtOf(NOW_MIN(), p.i);
+          }
+        }
+        const warnAt = p.warnAt;
+        const warned = Number.isFinite(warnAt) && NOW_MIN() >= warnAt;
+        liveCtx.officialWarning = warned;
+        liveCtx.minutesSinceWarning = warned ? Math.max(0, NOW_MIN() - warnAt) : 0;
+        // 正在跑向高处的人交给避险状态机；已经站在檐下的人仍每 0.5~1
+        // 仿真秒判断一次「继续等还是走」，只是候选池受限、动作不打断避险。
+        liveCtx.busy = (p.mode === 'flee');
+        liveCtx.sheltered = (p.mode === 'shelter');
+        const act = LIVE.stepOne(p, dt, liveCtx);
+        if (act) applyLiveAction(p, act, dInfo, liveCtx);
+      }
+      // 【放在所有 continue 之前】暴雨避险的人会走 flee 分支直接 continue，
+      // 决策若写在位移段就永远不触发。Brain 的感知 / 效用打分 / 生理累积
+      // 必须每帧都有机会跑，和 6 个具名角色一样。
+      if (q && CROWD) {
+        p.lazy = q.lazy ? 1 : 0;
+        p.wadeMax = q.wade;
+        // 涉水线按年龄 / 经验逐人不同（profile 已在初始化时复制成独立对象）。
+        p.profile.wade = q.wade;
+        if (q.speedAbs > 0) p.speed = q.speedAbs;
+        let dd0 = 0;
+        if (dInfo) { const ds0 = dInfo(p.obj.position.x, p.obj.position.z, _ds); dd0 = ds0.d || 0; }
+        // 【生理状态真的跟着人走】旧版这里写死 speed:0，于是体力永远按静止
+        // 恢复、饥饿永远按静止涨、淋湿与雨强脱钩 —— 状态值成了摆设。现在
+        // 用这一子步真实的步速 / 水深 / 雨强 / 室内外喂给 PersonState。
+        // 站定 / 等待 / 檐下躲避 / 路线速度为零时，真实步速就是 0：
+        // 否则体力与「今日走了多少米」会把站着不动的时间也算成赶路。
+        const standing = q.indoor || p.mode === 'shelter' || p.state === 'idle'
+          || (p.holdT || 0) > 0
+          || (p.mode === 'route' && p.route && p.route.speed <= 0.001);
+        const realSpeed = standing ? 0
+          : (p.mode === 'route' && p.route ? p.route.speed
+            : (p.mode === 'flee' ? (p.speed || 1.2) * WALK.FLEE_MUL : (p.speed || 0)));
+        const wetRain = rainMMH >= 2;         // 毛毛雨也算淋，但雨强决定淋湿速率
+        const dmNow = NOW_MIN();
+        // 【2026-11-17 B 地下室】人在家、脚下已经开始进水时，有一部分人会下去
+        // 抢救财物 / 查看水泵——Thieken 2026 里，室内死者有 22% 就是这么死的。
+        // 每人只有一次机会，下去待 10–25 分钟；这段时间按"地下室"判，
+        // 不受楼层保护（下面 incidents 走涉水暴露，不走楼层分支）。
+        const atHome = !!q.indoor && q.where === 'home';
+        if (p.basementTried !== true && atHome && dd0 >= BASEMENT.entryDepthM) {
+          p.basementTried = true;
+          if (goesToBasement(p.i)) p.basementUntil = dmNow + basementStayMin(p.i);
+        }
+        let inBasement = false;
+        if (p.basementUntil) {
+          if (dmNow < p.basementUntil) inBasement = true;
+          else p.basementUntil = 0;       // 待够时间就上来
+        }
+        CROWD.tick(p.i, CROWD.now(), {
+          depth: dd0, speed: realSpeed, raining: wetRain, rainMMH,
+          inVehicle: false, inBuilding: !!q.indoor, moving: realSpeed > 0.1,
+          asleep: !!q.indoor && (dmNow < 360 || dmNow > 1320),
+        });
+        const ps = CROWD.persons[p.i] ? CROWD.persons[p.i].phys : null;
+        EXP.tick(p.i, dt, {
+          depth: dd0, speed: realSpeed, mode: p.mode, indoor: !!q.indoor,
+          raining: wetRain, minute: liveCtx.minute,
+          phys: ps ? { wetness: ps.wetness * 100, hunger: ps.hunger,
+            stamina: ps.stamina, umbrella: ps.umbrella, hasUmbrella: ps.hasUmbrella } : q.phys,
+        });
+        // 【伤亡台账】逐子步读这一刻的真实水深 / 位移 / 室内外 / 体力，
+        // 判涉水、被困、滑倒受伤、困死、避险成功。没有任何预写数字。
+        const wLive = LIVE && LIVE.agent ? LIVE.agent(p.i) : null;
+        const wGoal = wLive && wLive.plan && wLive.plan.active
+          ? wLive.plan.active() : null;
+        INC.tick(p.i, dt, {
+          x: p.obj.position.x, z: p.obj.position.z, depth: dd0,
+          speed: realSpeed, indoor: !!q.indoor,
+          // 【阶段3】室内楼层：真实建筑高度派生，供回放把人摆在对应楼层。
+          // 相对楼层高度叠加地形，回放人偶 y 与场景里人的绝对高度一致。
+          // totalFloors 只在「在家」时给（家里真实建筑层数；工作场所没有真实
+          // 层数，不硬套，避免把办公楼按住宅层数误判）。
+          floor: inBasement ? 0 : (q.floor || 0),
+          // 【2026-11-17 B】地下室：不受楼层保护，按涉水暴露判。
+          basement: inBasement,
+          totalFloors: (q.indoor && q.where === 'home') ? (q.totalFloors || 0) : 0,
+          // 这栋楼的层高（住宅 2.7 m，Choi 2002）：淹到第几层、该层积多深，
+          // 都按它算，不用全局默认值。
+          floorHeightM: (q.indoor && q.where === 'home') ? (q.floorHeightM || 0) : 0,
+          floorY: inBasement
+            ? groundAt(q.x, q.z) + basementElevationM()
+            : ((q.indoor && Number.isFinite(q.floorRelY) && q.floorRelY > 0)
+              ? groundAt(q.x, q.z) + q.floorRelY : null),
+          sheltered: p.mode === 'shelter', inVehicle: false, carStalled: false,
+          stamina: ps ? ps.stamina : 70, rainMMH,
+          umbrella: ps ? ps.umbrella : null, mode: p.mode,
+          action: (wLive && wLive.lastAction) || '',
+          reason: (wLive && wLive.lastReason) || '',
+          goalLabel: (wGoal && wGoal.label) || '',
+        });
+        if (q.wantDecision && dt > 0) {
+          const rec = CROWD.decide(p.i, CROWD.now(), p.obj.position);
+          if (rec) {
+            const d = {
+              i: p.i, who: q.name, kind: 'decide', text: rec.chosen,
+              detail: rec.reason, at: [+p.obj.position.x.toFixed(0), +p.obj.position.z.toFixed(0)],
+            };
+            p.decisions.push(d);
+            if (p.decisions.length > 6) p.decisions.shift();
+            p.decision = d;
+            // 【闭环】选中的真实路网折线立刻执行：人从当前位置沿它走完。
+            // 只在正常走网时启动 —— 逃难路线 / 已在躲雨的人不能被一条日常
+            // 通勤决策覆盖掉，险情优先级更高。
+            if (!q.indoor && p.mode === 'net'
+              && (rec.route || rec.goalKind === 'wait')) {
+              startRoute(p, rec.route, rec.chosen);
+            }
+          }
+        }
+        // 【场景落地 + 动作连贯】旧版每次跨时段都 position.set 到房间锚点，
+        // 人会从街上瞬间跳到 9F。现在：
+        //   · 室外段之间不重挂，人继续沿步行网走（不瞬移）
+        //   · 进屋先沿步行网再走 enterDist 米（真实位移 + walk 动画），
+        //     到门口阈值 enterRadius 就直接收起 —— 用户明确说不用做精细进门动画
+        //   · 出屋回到自己那个片区的街面，挂回网，不全挤到剧情楼门口
+        if (p.lastScene !== q.sceneId || p.lastSeg !== q.segment) {
+          const first = p.lastSeg === undefined;
+          const wasIndoor = !!p.wasIndoor;
+          p.lastScene = q.sceneId; p.lastSeg = q.segment;
+          // 作息切到「该进屋」时结束未走完的路线并接回步行网：否则人会带着
+          // 几小时前的折线在屋里挂着，切回街上时被拉回旧坐标（可见瞬移）。
+          if (p.mode === 'route' && q.indoor) {
+            p.route = null;
+            rejoinNet(p, dInfo);
+          }
+          if (q.indoor) {
+            p.enterWalk = (!first && p.obj.visible)
+              ? { remain: q.enterDist, speed: Math.max(WALK.ENTER_MIN, q.speedAbs || 1.0) }
+              : null;
+          } else {
+            p.enterWalk = null;
+            // 只有「确实在屋里」（两种可见性都为 false）才允许重挂到片区街面。
+            // 可见的人保持在步行链上继续走 —— 否则出屋会从几百米外瞬移回来。
+            const hidden = !p.obj.visible && !p.visible;
+            if (wasIndoor && hidden) {
+              const h = p.homeXZ || { x: q.x, z: q.z };
+              const far = Math.hypot(h.x - p.obj.position.x, h.z - p.obj.position.z) > 80;
+              if (!far) {
+                const ang = (p.i * 2.399963) % (Math.PI * 2);
+                const rad = 2 + (p.i % 5);
+                const hx = h.x + Math.cos(ang) * rad, hz = h.z + Math.sin(ang) * rad;
+                p.obj.position.set(hx, groundAt(hx, hz) + p.footFix, hz);
+              }
+              // 出生片区在几公里外时（全城多中心），绝不跨城重挂：
+              // 留在当前街段，只把链索引接回最近的可走链。
+              rejoinNet(p, dInfo);
+            }
+          }
+          p.wasIndoor = !!q.indoor;
+          play(p, clipOf(p), 0.22);
+        }
+      }
       p.stateT += dt;
+      if (p.liveClipT > 0) {
+        p.liveClipT = Math.max(0, p.liveClipT - dt);
+        // 快判断的动作到期 → 立刻按此刻真实状态恢复常速动画，
+        // 不会「加快一次就一直跑」也不会「说继续却还停着」。
+        if (p.liveClipT === 0) { p.liveClip = null; play(p, clipOf(p), 0.22); }
+      }
 
       // ---- 距离裁剪
       p.dist = p.obj.position.distanceTo(camPos);
       const vis = p.dist < VIS_DIST;
       if (vis !== p.visible) { p.visible = vis; p.obj.visible = vis; }
+      // 真实社会状态：此刻在楼里的人（夜里睡觉、白天上班）不站在街上，
+      // 而是摆在 life-scenes 的真实房间锚点上；只有镜头剖开这一栋时才显示，
+      // 否则从实心外墙外会看到一群人穿墙浮在 9F。
+      if (q && q.indoor) {
+        // 【进屋过渡】沿当前步行链再走几米才收起：有真实位移才播 walk，
+        // 不会「说在走动却原地跑」；走满 enterDist / 已在门口 enterRadius
+        // 内就直接进去（模型收起），不做楼梯电梯等精细动作。
+        const nearDoor = Math.hypot(
+          p.obj.position.x - q.dest.x, p.obj.position.z - q.dest.z) <= q.enterRadius;
+        if (p.enterWalk && !nearDoor && p.enterWalk.remain > 0 && p.obj.visible && dt > 0
+          && p.mode === 'net') {
+          const cc = G.chains[p.ci];
+          const step = Math.min(p.enterWalk.remain, p.enterWalk.speed * dt);
+          if (step > 0) {
+            p.s = Math.min(cc.len, Math.max(0, p.s + step * p.dir));
+            pointAt(cc, p.s, _v);
+            const gy0 = groundAt(_v.x, _v.z);
+            p.obj.position.set(_v.x, gy0 + p.footFix, _v.z);
+            p.enterWalk.remain -= step;
+            play(p, p.acts.walk ? 'walk' : 'idle', 0.16);
+            p.mixer.update(Math.max(dt, 1 / 60));
+            p.stillFrames = 0;
+          }
+          if (p.enterWalk.remain > 0) continue;
+        }
+        p.enterWalk = null;
+        // 【阶段3】室内人脚底高度 = 门牌处真实地形高程 + 楼层相对高度。
+        // 内核只给相对高度 q.floorRelY（floorElevationM，来自真实建筑高度派生），
+        // 这里在显示层叠加地形，人就在对应楼层的绝对高度，不再贴地显示在楼外。
+        const indoorGround = groundAt(q.x, q.z);
+        const indoorY = (Number.isFinite(q.floorRelY) && q.floorRelY > 0)
+          ? indoorGround + q.floorRelY : (q.y || indoorGround);
+        const inside = CAM_PLACE ? CAM_PLACE() : null;
+        // 一个房间不必挤进 20 人：隔一个显示一个，仍然读得出「屋里有人」。
+        let show = !!inside && inside === q.place && q.interiorVisible !== false && (p.i % 2 === 0 || p.i < 1);
+        // 镜头剖楼时把「屋里的人」摆到房间锚点。若这一帧人还可见、且锚点
+        // 在几十米外，就会看到他从街上瞬间跳到 9F。先收起这一帧，下一帧
+        // 再从房间锚点出现（用户允许「到阈值直接进去」，不需要进门动画）。
+        const jumpToRoom = Math.hypot(q.x - p.obj.position.x, q.z - p.obj.position.z);
+        if (show && jumpToRoom > 3 && p.obj.visible) {
+          p.obj.position.set(q.x, indoorY + p.footFix, q.z);
+          show = false;
+        } else if (show) {
+          p.obj.position.set(q.x, indoorY + p.footFix, q.z);
+        } else if (!p.obj.visible) {
+          // 不可见时也要把脚底放到真实房间锚点：否则跟拍机位仍对着“楼门口
+          // + 街上高度”，用户点到人只看到一堵外墙。收起状态下的摆位不可见，
+          // 不是瞬移；镜头剖开这一栋时他已经在自己的房间里。
+          p.obj.position.set(q.x, indoorY + p.footFix, q.z);
+        }
+        play(p, clipOf(p), 0.2);
+        p.obj.visible = show;
+        p.visible = show;
+        // 屋里的人只有镜头剖开那一栋才可见；不可见时不跑骨骼动画。
+        // 1000 人里大半在室内，这一句省掉几百次 mixer.update / 子步。
+        if (show) p.mixer.update(Math.max(dt, 1 / 60));
+        // 生理状态 / 今日经历已在循环开头用真实参数统一推进过一次，
+        // 这里不再重复 tick（重复会让 dtMin=0 且覆盖即时位置位）。
+        continue;
+      }
 
       // ---- 被困判定：必须在**所有** continue 之前（全城 3000 人全要统计，
       // 不能只算看得见的；避险状态的人也要算 —— 他们最可能是被困的那批）
@@ -927,6 +2135,14 @@ export function buildPedestrians(assets, opt = {}) {
         }
       }
 
+      // ---- 决策路线执行（必须在 dInfo 的 net/flee 分支之前）
+      // 沿 Brain 选中的真实 walknet 折线逐帧走完；脚下突涨深水会在
+      // updateRoute 里重新规划一条通往真实高处的逃生路线。
+      if (p.mode === 'route') {
+        updateRoute(p, dt, dInfo, FB);
+        continue;
+      }
+
       // ---- 积水避险：先看脚下有没有水；没水但正在下雨也得先找高处
       // 【必须在距离裁剪之前】城市总览机位下 3000 人全在 VIS_DIST 之外，
       // 放在裁剪之后人就永远不动 —— 实测 5 秒后 flee 人数一直是 0。
@@ -934,18 +2150,46 @@ export function buildPedestrians(assets, opt = {}) {
       // 只有真的开了积涝叠层（flood 传进来且可见）才响应，否则人照常走路。
       if (dInfo) {
         dInfo(p.obj.position.x, p.obj.position.z, _ds);
+        // 涉水回写：脚在水里就记一笔（人·秒 + 排水体积）。走路的人自己也会被
+        // 这笔记账改写的水深反过来影响 —— 走的人越多，这格退水越慢，后来者
+        // 看到的水更久不散，于是更多人改道，负载下降，退水恢复。
+        if (FB && dt > 0 && _ds.d > 0.02) FB.wade(p.obj.position.x, p.obj.position.z, _ds.d, dt);
         if (p.mode === 'net') {
           p.tryT = (p.tryT || 0) - dt;
           if (p.tryT <= 0) {
             // ① 踩到水（≥12 cm）→ 逃难
             // ② 只是在下雨 → 找高处避雨（用户 2026-10-29：一开下雨人就该动）
             //    留一半的人不动，模拟「有人嫌麻烦 / 有地方躲」——全员同时上山不真实
-            if (_ds.wet) { p.tryT = 1.5; startFlee(p, 'flood'); }
-            else if (raining && p.lazy !== 1) { p.tryT = 2.5; startFlee(p, 'rain'); }
-            else p.tryT = 2.5;
+            if (_ds.wet) {
+              // 【按个人上限决定跑不跑】原来一踩水就全员逃跑，3000 人整齐划一。
+              // 现在：水没过他自己的涉水线才跑；没过就继续硬涉，并且把这件事记下来。
+              const wade = p.profile.wade;
+              if (_ds.d > wade) {
+                p.tryT = 1.5;
+                p.wading = 0;
+                recordDecision(p, 'flee', `前方积水 ${Math.round(_ds.d * 100)} cm，`
+                  + `超过我能走的 ${Math.round(wade * 100)} cm，先找高处`, _ds.d);
+                startFlee(p, 'flood');
+              } else {
+                p.wading += dt;
+                if (p.wading > 2.5 && !p.decision) {
+                  recordDecision(p, 'wade', `积水 ${Math.round(_ds.d * 100)} cm，还能走，`
+                    + `不绕（${p.profile.note}）`, _ds.d);
+                }
+              }
+            } else if (heavyRain && p.lazy !== 1 && shouldShelter(p, rainMMH)) {
+              p.tryT = 2.5;
+              const ps = CROWD && CROWD.persons[p.i] ? CROWD.persons[p.i].phys : null;
+              recordDecision(p, 'shelter',
+                ps && ps.hasUmbrella ? '伞也挡不住了，先找个檐下' : '雨下大了，先找地方避一下', 0);
+              startFlee(p, 'rain');
+            } else {
+              p.wading = 0;
+              p.tryT = 1.0;
+            }
           }
         } else {
-          updateFlee(p, dt, dInfo, raining);
+          updateFlee(p, dt, dInfo, heavyRain);
           continue;
         }
       } else if (p.mode !== 'net') {
@@ -1001,16 +2245,25 @@ export function buildPedestrians(assets, opt = {}) {
         p.dir = -p.dir;
         // 位置沿着当前链回退一点，避免卡在链尾
         p.s = Math.min(Math.max(p.s, 0.4), Math.max(0.4, c.len - 0.4));
-        play(p, 'turn180', 0.18);
-        p.state = 'walk'; p.stateT = 0;
-        // 用当前朝向反推：把 yaw 加 180°，这一刻不要向前走
-        p.yaw += Math.PI;
+        // 【不许倒着走】旧版翻转 p.dir 后立刻按新方向位移，而 yaw 靠
+        // dt*6.5 平滑插值，20h 实测有上万帧「位移方向与朝向相反」。
+        // 现在原地站 0.35 s 把身转过来，期间 state=idle 不产生位移。
+        p.state = 'idle'; p.stateT = 0;
+        p.holdT = Math.max(p.holdT || 0, 0.35);
+        play(p, p.acts.idle ? 'idle' : 'walk', 0.12);
         continue;
       }
       p.blockedT = 0;
 
       // ---- 状态推进（每 0.4~1.2 s 想一次）
       p.nextThink -= dt;
+      // 「先停一下 / 等雨小 / 刚走到真实目的地」：站定期间不许状态机把人
+      // 改回 walk，否则决策选了「等」却还在原地跑。
+      if (p.holdT > 0) {
+        p.holdT -= dt;
+        p.state = 'idle';
+        if (p.nextThink <= 0) p.nextThink = Math.max(0.2, p.holdT);
+      }
       if (p.nextThink <= 0) {
         p.nextThink = 0.4 + rnd() * 0.9;
         const ns = nextState(p.state, {
@@ -1018,6 +2271,7 @@ export function buildPedestrians(assets, opt = {}) {
           nearEnd: p.s > c.len - 2.0 || p.s < 2.0,
           rnd: rnd(),
           cooldownOk: p.stateT > 0.6,
+          stateT: p.stateT,   // 阶段2B：让状态机知道当前状态已持续多久
         });
         if (ns !== p.state) {
           p.state = ns; p.stateT = 0;
@@ -1026,8 +2280,9 @@ export function buildPedestrians(assets, opt = {}) {
       }
 
       // ---- 位移
+      const sBefore = p.s;
       let spd = 0;
-      if (p.state === 'walk') spd = p.speed * (pedAhead ? 0.55 : 1.0);
+      if (p.state === 'walk') spd = p.speed * (pedAhead ? WALK.CROWD_MUL : 1.0);
       else if (p.state === 'yield') spd = 0;
       p.s += spd * dt * p.dir;
 
@@ -1043,9 +2298,12 @@ export function buildPedestrians(assets, opt = {}) {
           p.dir = pick.dir;
           p.s = pick.dir > 0 ? 0.25 : nc.len - 0.25;
         } else {
+          // 死胡同才掉头，且不播 turn180（原地转圈）；同样先站定转身，
+          // 别让下一帧按新方向位移时人还是背朝前。
           p.dir = -p.dir;
           p.s = atHead ? c.len - 0.25 : 0.25;
-          play(p, 'turn180', 0.18);
+          p.state = 'idle'; p.stateT = 0;
+          p.holdT = Math.max(p.holdT || 0, 0.35);
         }
       }
 
@@ -1068,7 +2326,35 @@ export function buildPedestrians(assets, opt = {}) {
       p.lat += (p.latTarget - p.lat) * Math.min(1, dt * 3.2);
       const nx = Math.cos(p.yaw), nz = -Math.sin(p.yaw);   // 朝 +z 时的右向量
       const gy = groundAt(_v.x + nx * p.lat, _v.z + nz * p.lat);
-      p.obj.position.set(_v.x + nx * p.lat, gy + p.footFix, _v.z + nz * p.lat);
+      let px = _v.x + nx * p.lat, pz = _v.z + nz * p.lat;
+      // 【实体碰撞】灯杆 / 树 / 停放车 / 家具都登记在 COLLIDE 里。撞上就退回
+      // 上一帧的里程并把横向让路量往旁边推一点 —— 人贴着障碍滑过去，不穿模。
+      if (COLLIDE_PED) {
+        const hit = COLLIDE_PED.blockedCircle(px, pz, 0.32, gy + 0.1, gy + 1.7,
+          { ignoreTags: IGNORE_BUILDING });
+        if (hit) {
+          p.s = sBefore;
+          p.latTarget = Math.max(-1.1, Math.min(1.1, p.latTarget + (p.lat >= 0 ? 0.45 : -0.45)));
+          p.blockedT += dt;
+          const back = pointAt(c2, Math.min(Math.max(p.s, 0), c2.len), _v);
+          px = _v.x + nx * p.lat; pz = _v.z + nz * p.lat;
+        }
+      }
+      // 【人对人】0.62 m 内算碰到：停一下，并往右让一点，避免两个人叠着走
+      const fwdX = Math.sin(p.yaw), fwdZ = Math.cos(p.yaw);
+      for (const q2 of placedThisFrame) {
+        const dxp = px - q2.x, dzp = pz - q2.z;
+        if (dxp * dxp + dzp * dzp >= 0.62 * 0.62) continue;
+        // 只避让「身前的」人：否则两个人面对面会互相判定、一起钉死。
+        if (dxp * fwdX + dzp * fwdZ > -0.1) {
+          p.blockedT += dt;
+          p.latTarget = Math.max(-1.1, Math.min(1.1, p.latTarget + 0.3));
+          p.nextThink = Math.min(p.nextThink, 0.05);
+        }
+        break;
+      }
+      placedThisFrame.push({ x: px, z: pz });
+      p.obj.position.set(px, gy + p.footFix, pz);
       p.obj.rotation.y = p.yaw;
 
       // ---- 阴影距离 + 动画降频
@@ -1079,6 +2365,69 @@ export function buildPedestrians(assets, opt = {}) {
       }
       const far = p.dist > MIXER_LOD_DIST;
       if (!far || (frame + p.i) % 3 === 0) p.mixer.update(dt * (far ? 3 : 1));
+    }
+
+    // ---- 【整帧兜底】可见的人这一帧没挪动，就不许继续播 walk/run ----
+    // 被前车 / 灯杆 / 家具卡住、或社会层把人钉在室内锚点时，clipOf 仍可能
+    // 给 walk/run。连续 3 帧位移 <2 cm 才切 idle：转弯换链偶尔一帧不动不切，
+    // 避免动画来回闪。
+    // 【2026-11-12】不再只管「可见的人」：距离裁剪掉的人下一次可见时
+    // 不该带着上一帧的 walk 动画突然出现在原地。全城 3000 人一律核对。
+    if (dt > 0) for (let fi = 0; fi < peds.length; fi++) {
+      const p = peds[fi];
+      if (!p.cur) continue;
+      let moved = Math.hypot(p.obj.position.x - frameXZ[fi * 2],
+        p.obj.position.z - frameXZ[fi * 2 + 1]);
+      // 【建筑实体硬约束】室外的人不许停在楼体 AABB 内部。可走链只在初始化
+      // 筛过一次，A* 折线 / flee 直线兜底 / 换链都可能把人送进楼里；这里用
+      // 与出生门牌同一份 SOLIDS 把人推到最近的楼边，室内的人豁免。
+      // 静止的人位置不会新变，跳过哈希查询（全城 2 万栋楼，别每帧全量扫）。
+      if (moved > 0.02 && !p.qIndoor && !p.inVehicle && SOLIDS && SOLIDS.hit && SOLIDS.snapOut
+          && SOLIDS.hit(p.obj.position.x, p.obj.position.z, -1.0)) {
+        const out = SOLIDS.snapOut(p.obj.position.x, p.obj.position.z, 1.0);
+        p.obj.position.x = out.x;
+        p.obj.position.z = out.z;
+        p.buildingPush = (p.buildingPush || 0) + 1;
+        moved = 0;
+        // 路线撞楼就尽快重规划，别一直贴着同一面墙原地磨。
+        if (p.mode === 'route' && p.route) p.route.stuck = (p.route.stuck || 0) + 4;
+      }
+      // 【帧内瞬移保护】跨段出屋重挂 / 换链 / 避险落点偶尔会把人从几公里外
+      // 挪过来（全城多中心后片区相隔 2–3 km）。这种跳绝不能给观众看到：
+      // 这一帧收起模型，下一帧距离裁剪按真实距离重新显示。逻辑位置不回退，
+      // 状态机照常继续，所以不会卡住也不会丢人。
+      // 2 m/帧 已远超任何人一帧能走的量（1.5 m/s × 0.2 s ≈ 0.3 m）。
+      // 阈值放到 2 m，把「可见的人跨 2~3 m 重挂」也收进这一帧的隐藏保护。
+      if (moved > 2) {
+        p.obj.visible = false;
+        p.visible = false;
+        p.stillFrames = 0;
+        continue;
+      }
+      // 【隐藏只管一帧】net 模式刻意不做距离裁剪（全城 3000 人都要能看见），
+      // 旧版却没有任何恢复分支：被上面这次瞬移保护收起的人，会一直消失到
+      // 他切进 route / 室内分支为止。这里对普通步行的人立即放出来；室内
+      // 剖切与未启用的人仍由各自的分支管，不在这里乱改。
+      if (p.visible === false && p.enabled !== false
+          && p.mode === 'net' && !p.qIndoor) {
+        p.visible = true; p.obj.visible = true;
+      }
+      // 可见的人这一帧挪动不足 6 cm 就不许继续播 walk/run
+      p.stillFrames = moved < 0.06 ? (p.stillFrames || 0) + 1 : 0;
+      // 【姿态跟真实位移走】旧版 play() 只在状态切换时调用，决策层 slow /
+      // hurry / resume 改了 p.speed 或 p.route.speed 后，clip 的 timeScale
+      // 还停在旧值 —— 人「加快」了但腿还是原来的频率。这里每帧用**实测
+      // 位移速度**刷新播放速率；同时把「明明在走却还播 idle/sit」纠正回来。
+      const clipName = String(p.cur.getClip().name);
+      if (moved > 0.06) {
+        if (/idle|sit/i.test(clipName)) play(p, 'walk', 0.18);
+        else {
+          const realV = moved / Math.max(1e-3, dt);
+          p.cur.setEffectiveTimeScale(ANIM.timeScale(realV, clipName));
+        }
+      } else if (/walk|run/i.test(clipName)) {
+        play(p, p.acts.idle ? 'idle' : 'walk', 0.18);
+      }
     }
 
     // ---- 累计口径（用户 2026-10-29：「每次的困死数都一样吗？应该是随机的」）
@@ -1113,39 +2462,167 @@ export function buildPedestrians(assets, opt = {}) {
   function setVisible(on) { group.visible = !!on; }
   /** 换 LDT 表（切工况时用）。传 null = 关掉逃生余量统计。 */
   function setLdt(l) { LDT = l || null; }
+
+  /**
+   * 【缩小区域】按登记住址（homeXZ）把仿真限制在一个矩形片区里。
+   * 默认 null = 全城；传 {x0,x1,z0,z1} 时，住址在片外的人不推进、不绘制、
+   * 不进伤亡判定。这是「跟着具体的人看全过程」用的观察开关，
+   * 不改任何判断公式；片区外的人仍然登记存在，只是不参与这一段推演。
+   * 统计分母仍是全部登记人口，文档里已写明这个口径。
+   */
+  let regionRect = null;
+  function inRegion(p) {
+    if (!regionRect) return true;
+    const h = p.homeXZ;
+    if (!h) return true;
+    return h.x >= regionRect.x0 && h.x <= regionRect.x1
+      && h.z >= regionRect.z0 && h.z <= regionRect.z1;
+  }
+  function setRegion(rect) {
+    regionRect = rect || null;
+    let kept = 0;
+    for (const p of peds) {
+      const on = inRegion(p);
+      p.enabled = on;
+      p.obj.visible = false;
+      p.visible = false;
+      if (on) kept++;
+    }
+    return { enabled: kept, total: peds.length, rect: regionRect };
+  }
+
   function setCount(n) {
     n = Math.max(0, Math.min(peds.length, n | 0));
     for (let i = 0; i < peds.length; i++) {
-      peds[i].enabled = i < n;
-      if (!peds[i].enabled) peds[i].obj.visible = false;
+      // setCount 每帧会被 main 调用一次；让它也遵守片区，否则会把裁掉的人重新打开。
+      const on = i < n && inRegion(peds[i]);
+      peds[i].enabled = on;
+      // obj.visible 与 p.visible 必须同步：只改前者的话，距离裁剪看到
+      // vis === p.visible 就不会把人重新打开，被裁掉的行人永久隐身。
+      peds[i].obj.visible = false;
+      peds[i].visible = false;   // 下一帧由距离裁剪按真实距离重新决定
     }
     return n;
   }
 
   /**
    * 拖动进度条时把人「快进」到那一帧该有的样子。
+   * 【为什么需要】拖滑块水变了、人没变，那「困死数」就是「这批人 + 那一帧的水」
+   * 错位配对。这里在跳轴后补一小段，让行人和当前水深对齐。
    *
-   * 【为什么需要】用户 2026-10-29 的质疑：拖滑块水变了、人没变，那「困死数」就是
-   * 「这批人 + 那一帧的水」错位配对。这里在时间轴跳变超过 20 分钟时补跑：
-   * 用不超过 40 步的粗步长把整段补完（步长可以几十秒 ⇒ 人一步就走到避难所），
-   * 只用于跳帧这一下；正常播放仍走 update() 的真实 dt。
+   * 【2026-11-13 修复】旧版 n=ceil(sec/20)、dt=sec/n，sec 最大 120 ⇒ 6 步、
+   * 每步 20 仿真秒 ⇒ 一步跨 28 m，帧末「moved>2 隐藏保护」把全城人一次性
+   * 收起，拖完时间轴整城消失；同时 LIVE/EXP 被灌进 120 秒虚假经历。
+   * 现在步长锁死 ≤0.2 仿真秒（与 clock 子步一致），总补跑不超过 12 秒：
+   * 只负责对齐水深，不再假装补完 8 万秒。
    * @returns 补跑了几步
    */
   function catchUp(sec, camera, flood) {
     if (!(sec > 0)) return 0;
-    const n = Math.min(40, Math.max(1, Math.ceil(sec / 20)));
-    const dt = sec / n;
+    const total = Math.min(sec, 12);
+    const n = Math.max(1, Math.min(60, Math.ceil(total / 0.2)));
+    const dt = total / n;
     for (let i = 0; i < n; i++) update(dt, camera, flood);
     return n;
   }
 
+  /** 拖时间轴后清掉上一时刻残留的逐人执行状态，并强制恢复可见。
+   *  live-agent.restore 只重摆在家/在岗的人，p.mode / p.route / p.holdT /
+   *  liveClip / 动画 clip 这些执行层状态会跨时刻带过来；帧末隐藏保护也不会
+   *  自己把人放出来。不清理就会出现「拖完时间轴全城消失 / 站着播旧动画」。 */
+  function resetAfterSeek() {
+    if (!frameXZ || frameXZ.length < peds.length * 2) frameXZ = new Float64Array(peds.length * 2);
+    refugePicks.clear();
+    for (const p of peds) {
+      p.mode = 'net';
+      p.route = null;
+      p.holdT = 0;
+      p.state = 'idle';
+      p.stateT = 0;
+      p.nextThink = 0;
+      p.stillFrames = 0;
+      p.liveClip = null;
+      p.liveClipT = 0;
+      p.liveAction = null;
+      p.enterWalk = null;
+      p.justParked = false;
+      p.wasIndoor = false;
+      p.inVehicle = false;
+      p.driveSpeed = 0;
+      p.driveInfo = null;
+      p.visible = true;
+      p.obj.visible = true;
+      p.obj.scale.setScalar(1);
+      frameXZ[p.i * 2] = p.obj.position.x;
+      frameXZ[p.i * 2 + 1] = p.obj.position.z;
+      if (p.cur) play(p, p.acts.idle ? 'idle' : 'sit', 0.01);
+    }
+  }
+
   return {
-    group, peds, update, catchUp, setVisible, setCount, setLdt, graph: G,
+    group, peds, update, catchUp, resetAfterSeek, setSolids, setVisible,
+    setCount, setRegion, getRegion: () => regionRect, setLdt, graph: G,
+    crowdLife: CROWD, planner: PLANNER,
+    /** 实时决策主体：目标 / 群体内核 / 每 0.5~1 仿真秒的判断日志（演示与验收读它）。 */
+    live: LIVE,
+    /** 「今天干了什么 / 经历了什么」的真实累积状态，逐人可查。 */
+    experience: EXP,
+    /** 细粒度人群圈层：逐人画像 + 到底分了多少种。 */
+    circles: CIRCLES,
+    circleStats: () => summarizeCircles(CIRCLES),
+    /** 逐人避险选址记录：经验值 / 选了多高 / 走了多远（验收灾害履历用）。 */
+    /** 「同一位置、只换经验」的反事实对照，供专项探针验证避险选址偏好。 */
+    probeRefuge(x, z, forcedHz) {
+      const R = findRefuge(x, z, null, false, -1, REFUGE_MAX, forcedHz);
+      if (!R) return null;
+      return { x: +R.x.toFixed(1), z: +R.z.toFixed(1), y: +R.y.toFixed(2),
+        kind: R.kind, rise: +(R.y - groundAt(x, z)).toFixed(2),
+        dist: +Math.hypot(R.x - x, R.z - z).toFixed(1) };
+    },
+    refugePick: (i) => refugePicks.get(i) || null,
+    refugePicks: () => [...refugePicks.values()],
+    /** 伤亡 / 被困 / 事故台账：逐人可回查 minute / 坐标 / 水深 / 原因。 */
+    incidents: INC,
+    /** L3 出行方式 + L4 驾驶判断 + 交规统计。 */
+    drive: DRIVE,
+    /** 速度真值自检结果（启动即跑，不一致会 warn）。 */
+    speedAudit: SPEED_AUDIT,
+    /** 交通层做「斑马线行人优先」查询用的空间索引。 */
+    pedNear,
+    /** 帧末一次取走全部统计（HUD / 24h 验收用）。 */
+    fullStats() {
+      return {
+        live: LIVE ? LIVE.stats() : null,
+        circles: summarizeCircles(CIRCLES),
+        driving: DRIVE.stats(),
+        incidents: INC.stats(),
+        speed: SPEED_AUDIT,
+      };
+    },
+    /** 决策路线实时统计（HUD / 验收）：多少人真的在按自己选的路走。 */
+    routeStats() {
+      let active = 0, walking = 0, sumDist = 0, sumWalked = 0, toHigh = 0;
+      for (const p of peds) {
+        if (p.mode !== 'route' || !p.route) continue;
+        active++;
+        if (p.route.walked > 0.5) walking++;
+        sumDist += p.route.dist || 0;
+        sumWalked += p.route.walked || 0;
+        if (p.route.onArrive === 'shelter') toHigh++;
+      }
+      return { ...routeStats, active, walking, toHigh,
+        plannedDist: +sumDist.toFixed(1), walkedDist: +sumWalked.toFixed(1) };
+    },
+    /** 让外部（mark.js）完全接管第 0 个人；传 null 恢复常规行为。 */
+    setHeroStep(fn) { heroStep = fn; },
+    /** 供外部按剧情播动作（复用同一套 crossFade，避免和内部状态机打架）。 */
+    playFor(p, name, fade = 0.28) { play(p, name, fade); },
     /** 积水避险的实时状态（验收/截图时用：console 里看有多少人在跑、多少人躲着）。 */
     fleeStats() {
       let net = 0, flee = 0, shelter = 0, roof = 0, escaped = 0;
-      let rainShelter = 0, floodShelter = 0;
+      let rainShelter = 0, floodShelter = 0, routing = 0;
       for (const p of peds) {
+        if (p.mode === 'route') routing++;
         if (p.mode === 'flee') flee++;
         else if (p.mode === 'shelter') {
           shelter++;
@@ -1156,7 +2633,8 @@ export function buildPedestrians(assets, opt = {}) {
         if (p.mode === 'shelter') escaped++;
       }
       return {
-        net, flee, shelter, roof, refuges: refuges.length,
+        net, flee, shelter, roof, routing, refuges: refuges.length,
+        byProfile: peds.reduce((a, q) => { a[q.profile.id] = (a[q.profile.id] || 0) + 1; return a; }, {}),
         // 避雨 / 避水 分别有多少人躲在避难所（用户 2026-10-29 要求「下雨就动」）
         rainShelter, floodShelter, raining: lastRaining,
         // 【彻底被困】站在孤岛上、岛上没有任何高地的那些人 —— 洪水不走，他们就
@@ -1190,6 +2668,7 @@ export function buildPedestrians(assets, opt = {}) {
         ldtFirstDoomMin,      // 第一次出现「来不及」的情景时刻
       };
     },
+    clusterOf,
     stats: {
       usable: usable.length, total: G.chains.length, dropped, count: peds.length,
       // 站位策略：长度加权均匀随机（no hot spots）。改回热点配额会在这里反映。

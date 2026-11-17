@@ -1,0 +1,1514 @@
+
+
+===== [page 1] =====
+1
+WEB APPENDIX: NOT FOR PUBLICATION
+A
+Details on the Building Heights Data
+The original data set of CTBUH (2018) (accessed between January 2017 and January
+2018) has 27,652 tall buildings. Once we keep “buildings” and “tower-buildings” that are
+completed or about to be completed, we are left with 19,132 tall buildings.
+Heights.
+According to the website of CTBUH (2018), they do not use a consistent
+deﬁnition of tall buildings across all cities. We thus study how heights vary across the
+data set. To do so, we need to obtain height for as many buildings as possible.
+For most buildings, we know height to tip of the building (no matter the function
+of the highest element) and/or height to the architectural top of the building (which
+may include spires but excludes antennaes) and/or height to the highest occupied ﬂoor
+and/or height of the observatory of the building if there is one and/or the number of
+ﬂoors above ground. Height to the highest occupied ﬂoor may be the best measure but it
+is only available for 11.6% of buildings whereas architectural height is available for 84.7%
+of them, height to the tip 60.6% of them, height to the observatory 1.1% of them, and the
+number of ﬂoors 98.2% of them. We thus use architectural height as our main measure.
+Since it is missing for 15.3% of buildings, we impute it when possible with data on
+height to the tip (correlation between architectural height and this height = 0.99), then
+data on height to the highest occupied ﬂoor (correlation = 0.98), then data on height to the
+observatory (correlation = 0.96). We then regress our measure of height on the number
+of ﬂoors and ﬁnd a coefﬁcient of 3.8***, which indicates that a ﬂoor corresponds to 4
+meters for most buildings in the world (95% conf. interval = [3.77; 3.87]). We can then
+impute heights for the remaining buildings. In the end, we obtain a consistent measure
+of heights (m) for 99.6% of buildings (N = 19,132). We nonetheless verify results hold if
+we use architectural height or height not using information on number of ﬂoors.
+As can be seen in Web Appendix Figure A4 (on the next page) which plots the Kernel
+distribution of building heights in the data set, the mode of the distribution is 80 m.
+Since cities are likely to have more buildings below 80 m than above 80 m, and since
+the distribution of buildings is relatively smooth after 80 m, this suggests that the data set
+mostly captures buildings above 80 m. Thus, the data set is likely unreliable for buildings
+below 80 m. However, since some countries may have few tall buildings above 80 m, and
+since some height data may be available for some relatively important local buildings
+below 80 m, we keep the 16,369 buildings above 80 m and/or buildings in the top 10 in
+
+
+===== [page 2] =====
+2
+the country today. This guarantees that few countries have no building data at all.
+Year of Construction. For most buildings, we know the year of completion and/or the
+year construction started and/or the year construction was proposed. We use the year
+of completion as our main measure (available for 96.6% of buildings). For the remaining
+buildings, we impute the year of completion using information on the year construction
+started (corr. with the year of completion = 0.99), then the year construction was proposed
+(0.97). On average, a building is completed 5.5 years after construction is proposed and
+3.3 years after it starts. We obtain the year of completion for 96.8% of buildings.
+Function. The function(s) of the buildings is available for 98.9% of buildings. Many
+buildings have multiple functions. Among buildings for which we know the function,
+49.9% of them are used for residential purposes and 41.8% of them include ofﬁces. Other
+important functions include hotels (11.8%) and retail (3.9%). In our analysis, we deﬁne as
+commercial buildings with the function “ofﬁce”, “hotel” and/or “retail”.
+B
+Details on the Cost of the Building-Height Gaps
+Theoretically, by restricting housing supply, constraints on vertical development raise the
+price per unit of housing throughout the city while causing the urban footprint to expand.
+Residents experience a combination of higher housing prices and longer commutes. For
+the resident at the edge of the city, the welfare loss comes entirely from a longer commute.
+With utilities equalized within the city, the welfare loss for each resident equals the
+increase in commuting cost for the edge resident (Bertaud and Brueckner, 2005).
+Suppose a country has n identical cities and let urban area denote the size of each city.
+Then our dependent variable in the urban area regression is n ∗urban area, so that the
+regressions relate log(n∗urban area) to GAP and other variables, with the GAP coefﬁcient
+denoted β. Letting ∆GAP denote the change in GAP, differentiation of this relationship
+shows that
+n ∗△urban area
+n ∗urban area
+= △urban area
+urban area
+= β △GAP
+(1)
+With urban area equal to πx2 for a circular city, where x is the distance to the edge,
+△urban area
+urban area
+= 2πx △x
+πx2
+= 2△x
+x
+(2)
+Combining 1 and 2 yields △x/x = β∆GAP/2. If GAP increases by one standard
+deviation (≈2), then the percentage increase in x is equal to β. Finally, since commuting
+cost is proportional to distance traveled, β equals the percentage increase in the edge
+resident’s commuting cost. The ﬁnal step is to assume that the edge resident’s commuting
+
+
+===== [page 3] =====
+3
+cost is a ﬁxed proportion λ of individual gross income y. Then, the absolute increase in
+the edge resident’s commuting cost from the greater GAP equals βλy. Thus, βλy equals
+the individual welfare cost of a one standard deviation increase in GAP.
+In Brueckner (2007), the edge resident spends 14-19% of income on commuting. Given
+β = 0.05 (col. (9) of Table 7), βλ = 0.007-0.01. Thus, the welfare loss from a one-standard-
+deviation increase in GAP is close to one percent of urban income.
+C
+U.S. State Analysis and U.S. State and World Gaps
+In this section we perform a similar gap analysis using U.S. state-level data, which offers
+another opportunity to validate our methodology. The speciﬁcation that we use for this
+analysis differs from the one used for the international analysis. Indeed, due to interurban
+mobility within a country as well as agglomeration effects, population and income per
+capita are very strongly correlated across cities and urban areas. Therefore, on the left
+hand side, we do not divide the sum of heights by total urban population, and on the
+right hand side, we use total urban income instead of urban income per capita. However,
+we show below that world rankings are little affected if we use the U.S.-based coefﬁcients.
+Data. Our sample comprises 50 states almost annually from 1929 to 2017.1 For building
+heights, we use CTBUH. From Bureau of Economic Analysis (2019), we then obtain
+for the 1929-2017 period total income, farm income, and non-farm income, a proxy for
+urban income. Next, from United States Census Bureau (1975), we know state farmland
+area from 1929 to 1940.
+From United States Department of Agriculture (2017) and
+Wikipedia, we know agricultural land area and total land area.2 Knowing farm income
+and agricultural land area, we reconstruct agricultural land rent. We use agricultural land
+area for the U.S. analysis – we used total land area for the international analysis – because
+it is well measured for the whole period.3 From Wikipedia, we obtain the population and
+urbanization rate – and thus the total urban population – of each state in each year.4
+Results. Web Appx. Table A10 shows the baseline regression in column (1), where all
+three coefﬁcients are signiﬁcant.
+Columns (2), (3) and (4) then eliminate states with
+residuals below 0, the 75th percentile, and the 90th percentile in a 2017 regression using
+GDP and agricultural rent as covariates.
+The GDP and agricultural-rent coefﬁcients
+1We drop the District of Columbia because agricultural rent is unavailable for most of the period.
+2To obtain a consistent series of state agricultural land area from 1929 to 2017, we use cropland/pasture
+area from 1945 to 2017 as our benchmark. We then use the growth rate of farmland expansion in each state
+before 1940 to extend that variable to 1929. Total land area is obtained from Wikipedia (2020c).
+3We use the consumer price index of the United States to express the income variables and the
+agricultural land rent variables in constant 2017 dollars (Minneapolis Federal Reserve, 2020).
+4Sources are Wikipedia (2020a) and Wikipedia (2020b).
+
+
+===== [page 4] =====
+4
+increase as we do. Restricting the sample to the states with residuals above the 75th
+or 90th percentile (columns (3)-(4)) has little effect on the GDP coefﬁcient compared to
+restricting the sample to states with residuals above 0 (column (2) vs. column(1)). In
+order to keep more observations, we thus privilege the sample of states with residuals
+above 0.5
+The other columns present robustness checks similar to those in the country-level
+analysis. In column (5), we include nine census region dummies × year ﬁxed effects;
+adding them has little effect on the GDP coefﬁcient.
+Use of state time trends yields
+positive, yet insigniﬁcant, coefﬁcients (column (6)). Indeed, unlike in the international
+sample, no state has experienced a period of growth fast enough that the coefﬁcients
+survive the inclusion of state time trends. Column (7) shows the effect of adding ten-year
+leads of the GDP and agricultural-rent variables, whose coefﬁcients are insigniﬁcant.
+In column (8) we capture commuting costs by controlling for whether there is a
+subway and the logs of the number subway lines and subway stations (source: Gonzalez-
+Navarro and Turner (2018) and Gendron-Carrier et al. (2018)) and the log of the total
+mileages of paved roads corresponding to “municipal / urban extensions of highway
+systems” or “other municipal / urban streets” in the state in year t.6 One advantage of
+the U.S. regression over the international regression is that consistent panel data on urban
+road stocks is now available. As can be seen, the effects are mostly unchanged.
+In columns (9)-(12), we control for time-invariant geographical factors interacted with
+year ﬁxed effects: logged (population-weighted) average earthquake risk (col. (9)), the
+logged (population-weighted) average bedrock depth ((10)) and ruggedness in the state’s
+urban areas ((11)), and the (population-weighted) share of urban land below sea level
+((12)). Results appear to hold across all speciﬁcations. See table notes for details on the
+variables and the underlying sources.
+In column (13) we add geographical controls, each interacted with a year trend. These
+controls are total land area and the shares of land unavailable for development due to
+excessive slope, the presence of wetlands, or the presence of bodies of water (source:
+Lutz and Sand (2017)). In column (14), the geographical controls are replaced by time-
+interacted variables measuring the amounts of land under various types of government
+5Using the 75th percentile (p75) cutoff gives the following 13 states: Delaware, Georgia, Hawaii, Illinois,
+Kansas, Louisiana, Minnesota, Nevada, New York, Oklahoma, Rhode Island, Utah, Washington. Using the
+90th percentile (p90) cutoff gives the following 5 states: Hawaii, Illinois, Nevada, New York, Rhode Island.
+6The sources are A Quarter Century of Financing Municipal Highways, 1937-61 (Bureau of Public Roads)
+and the annual Highway Statistics reports of the U.S. Department of Transportation.
+
+
+===== [page 5] =====
+5
+ownership (source: NRCM (2017)).7 Again, the results are similar to those in column (2).
+Finally, in column (15), we control for the RSMeans construction cost in the state in the
+same year. Indeed, as income increases, construction costs could increase, thus depressing
+construction. Controlling for construction costs then allows us to capture the direct effect
+of income. As can be seen, the estimated effects are mostly unchanged.
+State Gaps. For the sample of observations used in col. (2)-(4), we take the antilog of the
+predicted heights and adjust it by a correction factor (Wooldridge, 2016)). We then obtain
+for each state the predicted sum of heights based on the regressions and compare these
+values with the actual stocks. In the U.S., the total stock in 2020 was 508 km of height.
+Using the estimates based on states above 0, the 75th percentile and the 90th percentile,
+we get 1,137, 1,474 and 2,317 km, respectively, hence gaps of 629-1,809 km, or a mid-value
+of 1,219 km. We found 1,468 km based on the H-set regressions in col. (3) of Table 2.
+Across the three benchmark sets, California accounts for 48-61% of the U.S. gap. If we
+use the “above 0” benchmark set, other states that contribute to the gap are New York,
+Pennsylvania, Texas and Florida. Altogether, they account for 24-32% of the U.S. gap.8
+Other Measures of Land-Use Regulations. Web Appx. Table A9 gives the results of
+regressions of measures of building regulations on the gaps. For the dependent variables,
+row 1 uses a measure of housing supply elasticity from Saiz (2010), but at the state level.9
+Row 2 uses an unweighted average of the Wharton Residential Land Use Regulation
+Index (Gyourko et al. (2008)), which measures the extent of building regulations for towns
+and cities across the U.S. The data set in Saiz (2010) also includes MSA-level values for
+the Wharton Index. We generate state-level weighted averages for this index, which are
+used as right-hand side variables in row 3. Finally, row 4 uses an index created by Saks
+(2008), which is the average of several building regulation indexes.
+For the right-hand side variable, col. (1)-(3) use the estimated gaps. Results are based
+on states with a laissez-faire value above 0 in col. (1), the 75th percentile in col. (2), and the
+90th percentile in col. (3). Across all gap measures, and all measures of building and land-
+use regulations across states, we ﬁnd statistically signiﬁcant relationships. These results
+suggest that the gaps might be useful indicators of supply responsiveness. However, the
+U.S. state gaps likely do not capture just land-use stringency.
+World Gaps. Overall, the qualitative similarity of the state-level regressions reported in
+7Federal Government, State Government, Bureau of Land Management, U.S. Forest Service, National
+Park Service, National Wildlife Refuge, Army Corps of Engineers, Military Bases, Tribal lands.
+8If we use the p75 benchmark set, we get California, New York, Florida, Pennsylvania and New Jersey.
+If we use the p90 benchmark set, we get California, New York, New Jersey, Massachusetts and Connecticut.
+9We create our state-level elasticities by taking a MSA-population weighted value for cities in each state.
+
+
+===== [page 6] =====
+6
+this section to the above country-level regressions increases our conﬁdence in the country-
+level benchmark regression as a tool for computing building-height across the world. In
+particular, if we use the U.S. state estimates to obtain predicted heights and the gaps for
+all countries in the world, the coefﬁcient of correlation between the H-based gap measure
+and the U.S. state-based gap measures is 0.74-0.76 (using urban population as weights).
+If we use the UMH set instead, the correlation is also high, from 0.72 when using states
+with a laissez-faire value above 0 to 0.89 when using states above the 90th percentile.
+REFERENCES
+Bertaud, Alain and Jan K. Brueckner, “Analyzing building-height restrictions: predicted impacts
+and welfare costs,” Regional Science and Urban Economics, 2005, 35 (2), 109 – 125.
+Brueckner, Jan K., “Urban growth boundaries: An effective second-best remedy for unpriced
+trafﬁc congestion?,” Journal of Housing Economics, November 2007, 16 (3-4), 263–273.
+Bureau of Economic Analysis, Regional Economic Accounts: Annual Personal Income by State 2019.
+CIESIN, Global Rural-Urban Mapping Project. Verion 1 (GRUMPv1): Urban Extent Polygons, Revision
+01. Center for International Earth Science Information Network 2017.
+CTBUH, The Skyscraper Database 2018.
+European Commission, Global Human Settlement 2018.
+Gendron-Carrier, Nicolas, Marco Gonzalez-Navarro, Stefano Polloni, and Matthew A. Turner,
+“Subways and Urban Air Pollution,” NBER Working Papers 24183, National Bureau of
+Economic Research, Inc January 2018.
+Gonzalez-Navarro, Marco and Matthew A. Turner, “Subways and urban growth: Evidence from
+earth,” Journal of Urban Economics, 2018, 108 (C), 85–106.
+Gyourko, Joseph, Albert Saiz, and Anita Summers, “A new measure of the local regulatory
+environment for housing markets: The Wharton Residential Land Use Regulatory Index,”
+Urban Studies, 2008, 45 (3), 693–729.
+Lutz, Chandler and ben Sand, “Highly Disaggregated Topological Land Unavailability,” Technical
+Report 2017.
+Minneapolis Federal Reserve, Consumer Price Index from 1800 2020.
+NRCM, Public Land Ownership by State. 2017.
+Saiz, Albert, “The geographic determinants of housing supply,” The Quarterly Journal of Economics,
+2010, 125 (3), 1253–1296.
+Saks, Raven E, “Job creation and housing construction:
+Constraints on metropolitan area
+employment growth,” Journal of Urban Economics, 2008, 64 (1), 178–195.
+Shangguan, Wei, Tomislav Hengl, Jorge Mendes de Jesus, Hua Yuan, and Yongjiu Dai, “Mapping
+the global depth to bedrock for land surface modeling,” Journal of Advances in Modeling Earth
+Systems, 2017, 9 (1), 65–88.
+United States Census Bureau, Historical Statistics of the United States, Colonial Times to 1957. Chaper
+K: Agriculture. 1975.
+United States Department of Agriculture, Total land, 1945-2012, by State: The sum of cropland,
+pasture/range, forest-use land, special uses, urban area, and other land 2017.
+USGS, Global Multi-resolution Terrain Elevation Data 2010.
+Wikipedia, List of States and Territories of the United States by Population 2020.
+, List of States and Territories of the United States by Urbanization Rate 2020.
+, List of U.S. States and Territories by Area 2020.
+Wooldridge, Jeffrey M, Introductory econometrics: A modern approach, Nelson Education, 2016.
+
+
+===== [page 7] =====
+7
+Figure A1: HEIGHTS & INCOME FOR 20 COUNTRIES OF TABLE 2 COL.(1) 1950-2020
+This ﬁgure shows for the period 1950-2020 the respective evolutions of (logged) urban height density and
+(logged) urban per capita GDP for the 20 countries with the highest H-based gaps.
+Figure A2: HEIGHTS & INCOME FOR THE 14 UMH COUNTRIES & THE U.S. 1950-2020
+This ﬁgure shows for the period 1950-2020 the respective evolutions of (logged) urban height density and
+(logged) urban per capita GDP for the 14 UMH countries as well as the U.S.
+
+
+===== [page 8] =====
+8
+Figure A3: PER CAPITA H-BASED GAPS FOR ALL COUNTRIES, 2020
+This ﬁgure shows the H-based gaps per urban capita (km per million urban inhabitants) for 158 countries circa 2020. Positive gaps are shown in
+dark brown, dark red, orange or yellow. Negative gaps (= excess of tall building heights) are shown in blue (dotted patterns).
+
+
+===== [page 9] =====
+9
+Figure A4: KERNEL DISTRIBUTION OF TALL BUILDING HEIGHTS
+The mode of the Kernel distribution of all building heights in the CTBUH data set is 80 m.
+Table A1: INCOME & LAND RENT & HEIGHTS, 1950-2020, ROBUSTNESS 1/2
+Dep. Var.:
+Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt)
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Selection Residual:
+≥p75
+≥p75
+≥p75
+≥p75
+≥p75
+≥p75
+Democracy Y/N:
+DEMO
+DEMO
+DEMO
+DEMO
+NONDEMO
+NONDEMO
+Income Group (2017) LM-UM-H
+LM2-UM-H
+UM-H
+H
+UM-H
+H
+LUPCGDPt
+1.06**
+1.39**
+1.54**
+3.23***
+0.25
+0.69
+[0.48]
+[0.56]
+[0.67]
+[0.61]
+[0.35]
+[0.74]
+LAGRENTt
+0.66**
+0.58**
+0.55**
+0.19
+0.15
+-0.18
+[0.24]
+[0.26]
+[0.26]
+[0.40]
+[0.19]
+[0.33]
+LUHTDENSt−10
+0.48***
+0.45***
+0.46***
+0.18
+0.44***
+0.25*
+[0.09]
+[0.10]
+[0.11]
+[0.12]
+[0.07]
+[0.09]
+Cntry FE, Yr FE
+Y
+Y
+Y
+Y
+Y
+Y
+Observations
+126
+112
+98
+56
+84
+35
+Countries
+18
+16
+14
+8
+12
+5
+Notes: “LM”, “UM” and “H” countries are lower-middle income countries, upper-middle income countries and high-income countries
+circa 2017, respectively. LM2: We exclude two lower-middle income countries, Honduras and Mongolia. “p75”correspond to the 75th
+percentile value of the selection residual. Robust SEs clustered at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+
+
+===== [page 10] =====
+10
+Table A2: POSSIBLE INSTITUTIONAL DETERMINANTS OF THE GAPS, 2020
+Dependent Variable: Pct Change-Change Gap 2020 (1st Column = H-Based; 2nd Column = UMH-Based)
+RHS:
+Democracy
+Polity Score
+WGI Rule of Law
+WGI Ctrl Corrupt.
+WGI Voice & Acct.
+β
+0.12
+0.2
+0.03
+0.02
+0.29
+0.19
+-0.07
+-0.34
+-0.04
+0.05
+[0.62]
+[0.88]
+[0.05]
+[0.07]
+[0.36]
+[0.56]
+[0.24]
+[0.42]
+[0.38]
+[0.26]
+Obs.
+158
+158
+156
+156
+157
+157
+157
+157
+157
+157
+RHS:
+WGI Gvt Effectiv.
+(-) Opacity Index
+Opportunity Index
+Transpar. 2010-20
+Transpar. 2004-20
+β
+0.09
+0.21
+0.03
+0.01
+0.01
+0.02
+0.29
+0.18
+0.16
+-0.09
+[0.65]
+[0.42]
+[0.04]
+[0.05]
+[0.01]
+[0.02]
+[0.61]
+[0.85]
+[0.56]
+[0.80]
+Obs.
+157
+157
+47
+47
+133
+133
+93
+93
+93
+93
+Notes: This table shows the correlations between the H-based gaps (1st column of each panel) or the UMH-based gaps (2nd column) and
+various potential institutional determinants of the gaps. We control for log national per capita GDP (PPP, cst 1990 intl $) ca. 2020 and use
+urban population weights. Each coefﬁcient corresponds to a separate regression. Robust SEs: * p<0.10, ** p<0.05, *** p<0.01.
+Table A3: GAPS & COMMERCIAL VACANCY RATES, 2005-2006
+Dependent Variable:
+Commercial Vacancy Rate (%) in ...
+June 2005
+December 2005
+June 2006
+Mean 2005-06
+GAPH (2010)
+-0.89*
+-0.49
+-0.22
+-0.53
+[0.48]
+[0.40]
+[0.43]
+[0.43]
+GAPUMH (2010)
+-0.88*
+-0.58
+-0.37
+-0.60
+[0.44]
+[0.36]
+[0.37]
+[0.39]
+Observations
+46
+50
+51
+51
+Notes: We control for log nominal (national) per capita GDP (2010) and use as weights urban population (2010). Robust
+SE. We thus use here the same speciﬁcation as for columns (1)-(7) of Table ?? except we focus on 2010 instead of 2020.
+Table A4: BUILDING-HEIGHT GAPS AND ECONOMIC OUTCOMES, WORLD
+Dep. Var.:
+Log PM10
+Log PM2.5
+Dep. Var.:
+Log PM10 ’17
+Log PM2.5 ’17
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+GapH
+0.05**
+0.03
+0.07**
+0.04
+1(100-500K)*GapH
+0.04
+0.02
+0.04
+0.03
+[0.02]
+[0.03]
+[0.03]
+[0.03]
+[0.03]
+[0.03]
+[0.03]
+[0.03]
+1(500-1000K)*GapH
+0.09**
+0.06*
+0.08*
+0.05
+[0.04]
+[0.04]
+[0.04]
+[0.04]
+1(1000K+)*GapH
+0.13**
+0.09
+0.14***
+0.09
+[0.05]
+[0.06]
+[0.05]
+[0.06]
+GapUMH
+0.05**
+0.03
+0.08***
+0.04
+1(100-500K)*GapUMH
+0.02
+0.01
+0.03*
+0.01
+[0.02]
+[0.02]
+[0.02]
+[0.03]
+[0.02]
+[0.02]
+[0.02]
+[0.02]
+1(500-1000K)*GapUMH
+0.06**
+0.04
+0.06***
+0.04**
+[0.02]
+[0.02]
+[0.02]
+[0.02]
+1(1000K+)*GapUMH
+0.07**
+0.03
+0.08***
+0.04
+[0.03]
+[0.04]
+[0.03]
+[0.04]
+Ctrls Sprawl
+N
+Y
+N
+Y
+Ctrls Sprawl
+N
+Y
+N
+Y
+Ctrls, Wgts
+Y
+Y
+Y
+Y
+Ctrls, Wgts
+Y
+Y
+Y
+Y
+Obs.
+146
+146
+156
+156
+Obs.
+1,473
+1,473
+1,473
+1,473
+This table shows that the effects of the gaps on pollution are strongly reduced when controlling for sprawl. The sprawl controls
+include log land area and log city population in 2015 (source: Global Human Settlements database), and their squares. See text for
+details. Robust SEs (clustered at the country level in columns (5)-(8)): * p<0.10, ** p<0.05, *** p<0.01.
+
+
+===== [page 11] =====
+11
+Table A5: COEFFICIENTS FOR THE SELECTED COUNTRIES, ROBUSTNESS CHECKS
+Dep. Var.:
+Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt)
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+(8)
+Baseline
+Incl. U.S.
+Incl. U.S.
+& JPN
+Incl. U.S.
+& CHN
+Incl. U.S.,
+JPN
+& CHN
+Excl. 3
+Largest
+Countries
+Excl. 2
+Smallest
+Countries
+No
+Land
+Rent
+Panel A: H Set
+LUPCGDP
+3.23***
+3.23***
+2.64***
+3.14***
+2.64***
+3.28***
+2.59***
+3.24***
+[0.61]
+[0.63]
+[0.70]
+[0.51]
+[0.59]
+[0.66]
+[0.41]
+[0.56]
+LAGRENT
+0.19
+0.24
+0.12
+0.03
+-0.01
+0.25
+-0.34
+[0.40]
+[0.39]
+[0.37]
+[0.23]
+[0.20]
+[0.48]
+[0.25]
+Panel B: UMH
+Set:
+LUPCGDP
+1.54**
+1.53**
+1.47**
+1.40**
+1.37**
+1.48*
+1.21**
+1.36***
+[0.67]
+[0.68]
+[0.60]
+[0.58]
+[0.52]
+[0.68]
+[0.53]
+[0.57]
+LAGRENT
+0.55**
+0.59**
+0.54**
+0.41
+0.38
+0.61*
+0.37
+[0.26]
+[0.25]
+[0.24]
+[0.24]
+[0.22]
+[0.29]
+[0.29]
+(9)
+(10)
+(11)
+(12)
+(13)
+(14)
+(15)
+(16)
+Buildings
+≥25p
+(100m)
+Buildings
+≥Med.
+(125m)
+Buildings
+≥Mean
+(135m)
+Buildings
+≥150m
+No
+Imput.
+Floors
+No Lag
+UHT
+Lag
+UHT
+squared
+Lag
+UHT
+fourth
+Panel A: H Set
+LUPCGDP
+2.53***
+2.32*
+2.39**
+2.32**
+3.07***
+3.73***
+3.25***
+3.36***
+[0.66]
+[1.05]
+[1.00]
+[0.75]
+[0.67]
+[0.32]
+[0.70]
+[0.72]
+LAGRENT
+0.31
+0.78
+0.67
+1.04
+0.55
+-0.10
+0.21
+0.21
+[0.56]
+[0.69]
+[0.69]
+[0.63]
+[0.41]
+[0.45]
+[0.44]
+[0.43]
+Panel B: UMH
+Set
+LUPCGDP
+1.92*
+2.02*
+2.09**
+2.06**
+1.75**
+2.51***
+1.64**
+1.56**
+[0.94]
+[0.96]
+[0.96]
+[0.79]
+[0.72]
+[0.70]
+[0.62]
+[0.60]
+LAGRENT
+0.53
+0.71*
+0.81**
+0.77*
+0.63**
+0.53
+0.12
+0.18
+[0.32]
+[0.35]
+[0.34]
+[0.37]
+[0.27]
+[0.33]
+[0.40]
+[0.41]
+Cntry FE, Yr FE
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Lag LHUT
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+This table shows that the baseline results based on the H- and UMH-based sets tend to hold if we implement various robustness
+checks related to speciﬁcation or choice of variables. The main H sample has 56 observations (8 countries) from 1950-2020. The main
+UMH sample has 98 observations (14 countries) from 1950-2020. Col. (2): Adding the U.S. to the set. Col. (3): Adding the U.S. and
+Japan to the set. Col. (4): Adding the U.S. and China to the set. Col. (5): Adding the U.S., Japan and China to the set. Col. (6): Excluding
+the 3 largest countries in terms of land area (Australia, Brazil, Canada). Col. (7): Excluding the 2 smallest countries in terms of land area
+(Hong Kong, Singapore). Col. (8): Omitting the land rent control. Col. (9)-(11): Keeping buildings above the 25th percentile (100m),
+median (125m) or mean (135m) height in the data. Col. (12): Ditto for buildings above 150m. Col. (13): Not using heights imputed
+based on the number of ﬂoors. Col. (14): Not adding a lag of log urban height density. Col. (15): Adding the square of log urban height
+density. Col. (16): Adding the square, the cube and fourth power of log urban height density. Robust SEs clust. at the country level.
+
+
+===== [page 12] =====
+12
+Table A6: INCOME & LAND RENT & HEIGHTS, 1950-2020, ROBUSTNESS 2/2
+Dep. Var.:
+Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt)
+(1)
+(2)
+(3)
+(4)
+(5)
+Income Group (2017)
+H
+UM-H
+LM2-UM-H
+LM2-UM-H
+LM2-UM-H
+LUPCGDPt
+3.23***
+1.54**
+1.39**
+1.53*
+1.74**
+[0.61]
+[0.67]
+[0.56]
+[0.81]
+[0.78]
+Q2
+-0.06
+-0.08*
+[0.05]
+[0.04]
+Q3
+0.04
+-0.02
+[0.07]
+[0.07]
+Q4
+-0.02
+-0.08
+[0.10]
+[0.08]
+LAGRENTt
+0.19
+0.55**
+0.58**
+0.65
+0.40
+[0.40]
+[0.26]
+[0.26]
+[0.45]
+[0.54]
+Q2
+-0.03
+-0.01
+[0.06]
+[0.06]
+Q3
+-0.03
+-0.01
+[0.07]
+[0.08]
+Q4
+-0.05
+-0.03
+[0.09]
+[0.10]
+LUHTDENSt−10
+0.18
+0.46***
+0.45***
+0.48***
+-4.56
+[0.12]
+[0.11]
+[0.10]
+[0.10]
+[3.97]
+Q2
+Q3
+4.86
+[3.64]
+Q4
+4.80
+[3.77]
+Cntry FE, Yr FE
+Y
+Y
+Y
+Y
+Y
+Observations
+56
+98
+112
+112
+112
+Number of Countries
+8
+14
+16
+16
+16
+Notes: “LM”, “UM” and “H” countries are lower-middle income countries, upper-middle income countries and high-income countries
+circa 2017, respectively. LM2: We exclude two lower-middle income countries, Honduras and Mongolia. For each explanatory
+variable, Q2, Q3 and Q4 is a dummy equal to one if the country-year observation belongs to the second, third or fourth quartile
+in the variable itself among the full sample of 158 countries x 8 years (1950-2020), respectively. For LUHTDENSt−10, the distribution
+of the variable is such that the ﬁrst quartile and the second quartile are not different. As a result, only the interacted effects for the
+third quartile and the fourth quartile are estimated. Robust SEs clustered at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+
+
+===== [page 13] =====
+13
+Table A7: COEFFICIENTS FOR THE SELECTED COUNTRIES, CAUSALITY
+Dep. Var.:
+Gap (Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt))
+Check:
+Baseline
+Continent
+Region
+Country
+Country
+Ctrls for
+-Year FE
+-Year FE
+Trend
+Trend Sq.
+Commuting
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+Panel A: H Set (56 Observations; 8 Countries)
+LUPCGDPt
+3.23***
+3.00***
+3.28***
+6.06**
+5.60*
+4.07***
+[0.61]
+[0.47]
+[0.49]
+[2.13]
+[2.80]
+[0.40]
+LAGRENTt
+0.19
+-0.07
+-0.25
+-0.45
+-0.35
+0.18
+[0.40]
+[0.48]
+[0.85]
+[0.59]
+[0.50]
+[0.31]
+Panel B: UMH Set (98 Observations; 14 Countries)
+LUPCGDPt
+1.54**
+1.97**
+1.95**
+3.32**
+1.80
+1.83*
+[0.67]
+[0.82]
+[0.75]
+[1.32]
+[2.55]
+[0.88]
+LAGRENTt
+0.55**
+0.63**
+0.59*
+-0.05
+-0.12
+0.55**
+[0.26]
+[0.29]
+[0.31]
+[0.61]
+[0.41]
+[0.22]
+Check:
+Effects of
+Price Level
+Log. Quake
+Log Bedrock
+Share
+the Variables
+Constr.
+Risk
+Depth (m)
+Mountainous
+t
+t+10 (Leads)
+x Year FE
+x Year FE
+x Year FE
+x Year FE
+(7)
+(8)
+(9)
+(10)
+(11)
+Panel A: H Set (56 Observations; 8 Countries)
+LUPCGDPt
+4.96**
+-1.43
+3.53***
+3.41***
+3.20***
+3.88***
+[1.99]
+[0.68]
+[0.80]
+[0.58]
+[0.65]
+[0.68]
+LAGRENTt
+0.08
+0.28
+0.05
+0.02
+0.01
+0.051
+[0.68]
+[0.71]
+[0.51]
+[0.36]
+[0.45]
+[0.44]
+Panel B: UMH Set (98 Observations; 14 Countries)
+LUPCGDPt
+2.35***
+-0.59
+1.58**
+1.92***
+1.77*
+2.03*
+[0.65]
+[0.83]
+[0.55]
+[0.54]
+[0.82]
+[0.68]
+LAGRENTt
+0.44
+0.31
+0.41***
+0.37***
+0.44***
+0.38***
+[0.78]
+[0.74]
+[0.11]
+[0.09]
+[0.10]
+[0.12]
+Col. (1) replicate the baseline results. Additional columns show that the results tend to hold for additional ten speciﬁcations. Col. (2)-(3)
+include continent (5)-year FE and World Bank region (7)-year FE, respectively. Col. (4)-(5) include country-speciﬁc linear trends and
+non-linear trends, respectively. Col. (6): We control for whether there is a subway and the log numbers of subway lines and subway
+stations in the country in t as well as the mean percentage share of country roads (incl. non-urban roads) that is paved during the
+period 1990-2017 interacted with a linear year trend. Col. (7) include the variables of interest deﬁned in t+10. Col. (8): We control for
+the log of average (pop.-weighted) earthquake risk in the country’s urban areas interacted with year FE. Col. (9): We control for the log
+of average (pop.-weighted) bedrock depth in the country’s urban areas interacted with year FE. Col. (10): We control for the share of
+the country’s population living in mountainous areas interacted with year FE. Col. (11): We control for the price level of construction
+in 2011 interacted with year FE. Robust SEs clust. at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+
+
+===== [page 14] =====
+14
+Table A8: INCOME & LAND RENT & HEIGHTS, 1950-2020, ALT. SPECIFICATIONS
+Benchmark Set:
+Columns (1)-(3): UMH
+Columns (4)-(6): H
+Dependent
+Variable:
+baseline
+inverse
+hyperbolic sin
+negative
+binomial
+baseline
+inverse
+hyperbolic sin
+negative
+binomial
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+LUPCGDPt
+1.54**
+1.72*
+2.92***
+3.23***
+3.92***
+4.48***
+[0.67]
+[0.81]
+[0.90]
+[0.61]
+[0.69]
+[0.97]
+LAGRENTt
+0.55**
+0.66**
+1.45***
+0.19
+0.19
+0.66
+[0.26]
+[0.30]
+[0.43]
+[0.40]
+[0.47]
+[0.45]
+LUHTDENSt−10
+0.46***
+0.45***
+0.24**
+0.18
+0.12
+-0.02
+[0.11]
+[0.10]
+[0.12]
+[0.12]
+[0.12]
+[0.10]
+Cntry FE, Yr FE
+Y
+Y
+Y
+Y
+Y
+Y
+Observations
+126
+112
+98
+56
+84
+35
+Countries
+18
+16
+14
+8
+12
+5
+Notes: Baseline: Baseline speciﬁcation with log urban height density as the dependent variable but in this case buildings under 80
+meters are used. Inverse hyperbolic sin and negative binomial: We use the following speciﬁcation to deal with the zeros. Robust SEs
+clustered at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+Table A9: GAPS & SUPPLY ELASTICITIES/LAND USE REGULATIONS, U.S., C. 2010
+Effect of the Estimated State Gap (circa 2010) Based on ...
+Residual Value:
+(1) States ≥0
+(2) States ≥p75
+(3) States ≥90
+Dep. Var.:
+Coef.
+Obs.
+R2
+Coef.
+Obs.
+R2
+Coef.
+Obs.
+R2
+1. Saiz Elasticity
+-0.54*
+47
+0.13
+-0.61**
+47
+0.13
+-1.30***
+47
+0.19
+[0.29]
+[0.30]
+[0.46]
+2. Wharton Index
+0.81**
+48
+0.14
+1.08**
+48
+0.20
+2.12***
+48
+0.24
+[0.40]
+[0.41]
+[0.64]
+3. Wharton (Saiz)
+0.69*
+47
+0.11
+0.91**
+47
+0.14
+1.89***
+47
+0.19
+[0.37]
+[0.39]
+[0.65]
+4. Saks: Combined
+0.63**
+33
+0.27
+0.74**
+33
+0.29
+1.45***
+33
+0.36
+[0.30]
+[0.32]
+[0.45]
+This table shows the correlation between the estimated U.S. state gaps based on states with a residual value above 0 (col. (1)) or the
+75th (col. (2)) or 90th (col. (3)) percentile of the residual value in the data (see Table A10) and existing measures of supply elasticities
+and land use regulations c. 2010 (see text for details on each measure). Robust SE: * p<0.10, ** p<0.05, *** p<0.01.
+
+
+===== [page 15] =====
+15
+Table A10: INCOME, LAND RENT & BUILDING HEIGHTS, U.S. STATES, 1930-2020
+Dep. Var.:
+Log Sum of Urban Heights (m) in Year t (LUHTt)
+(1)
+(2)
+(3)
+(4)
+(5)
+(6)
+(7)
+States:
+All
+Resid.’17
+Resid.’17
+Resid.’17
+≥0
+≥0
+≥0
+≥0
+Test:
+≥0
+≥p75
+≥p90
+Region
+State
+Effects of Vars
+Year FE
+Trend
+t
+t+10 (Leads)
+LUGDPt
+0.39***
+0.57***
+0.58***
+0.57**
+0.48**
+0.29
+0.56*
+0.11
+[0.09]
+[0.10]
+[0.11]
+[0.13]
+[0.23]
+[0.26]
+[0.29]
+[0.33]
+LAGRENTt
+0.08**
+0.1
+0.16
+0.48
+0.11*
+0.12
+0.13
+-0.04
+[0.04]
+[0.06]
+[0.11]
+[0.31]
+[0.06]
+[0.09]
+[0.08]
+[0.07]
+LUHTt−10
+0.83***
+0.76***
+0.71***
+0.76***
+0.80***
+0.38***
+0.75***
+[0.03]
+[0.04]
+[0.06]
+[0.08]
+[0.05]
+[0.07]
+[0.05]
+Observations
+447
+222
+116
+44
+222
+222
+222
+222
+State FE, Yr FE
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+(8)
+(9)
+(10)
+(11)
+(12)
+(13)
+(14)
+(15)
+States:
+≥0
+≥0
+≥0
+≥0
+≥0
+≥0
+≥0
+≥0
+Test:
+Ctrls
+L.Quake
+L.Bedrock Share Elev. Rugged.
+Geography
+Land
+Construct.
+Commut.
+Risk
+Depth (m) <SeaLevel SD Elev.
+U.S. Spec.
+Protect.
+Costs
+Costs
+x Yr FE
+x Yr FE
+x Yr FE
+x Yr FE
+x Yr FE
+x Yr FE
+Year t
+LUGDPt
+0.56***
+0.61***
+0.72***
+0.57***
+0.59***
+0.60***
+0.62***
+0.59***
+[0.12]
+[0.11]
+[0.12]
+[0.10]
+[0.10]
+[0.13]
+[0.21]
+[0.09]
+LAGRENTt
+0.08
+0.12*
+0.07
+0.10
+0.10*
+0.05
+0.09
+0.1
+[0.05]
+[0.06]
+[0.06]
+[0.07]
+[0.06]
+[0.04]
+[0.07]
+[0.06]
+LUHTt−10
+0.72***
+0.76***
+0.77***
+0.75***
+0.76***
+0.73***
+0.74***
+0.75***
+[0.04]
+[0.05]
+[0.06]
+[0.04]
+[0.04]
+[0.06]
+[0.06]
+[0.04]
+Observations
+222
+222
+222
+222
+222
+222
+222
+222
+State FE, Yr FE
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+This table shows for 50 U.S. states x 10 years (1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020) = 500 observations the effects
+of log total urban income (LUGDPt), log agricultural rent (LAGRENTt) and the log of the past urban height stock (LUHTt−10).
+Col. (2),(3) and (4) eliminate states with residuals below 0, the 75th percentile, and the 90th percentile in a 2017 regression using
+log total urban income and log agricultural rent as covariates. Col. (5)-(15): We keep states with residuals above 0. The columns
+show that results hold when we include additional controls (see table notes just below for details on each speciﬁcation). Since
+we control for the dependent variable in t-10, we lose one round of data. In addition, a few states have missing income data before
+1950, hence N = 447 (col. (1)). Col. (5)-(6): We include 9 census region-year FE and state-speciﬁc linear trends, respectively. Col. (7)
+shows the effect of adding ten-year leads of the GDP and agricultural-rent variables, whose coefﬁcients are insigniﬁcant. Col. (8): We
+capture commuting costs by controlling for whether there is a subway and the logs of the number subway lines and subway stations in
+the state in year t (source: Gonzalez-Navarro and Turner (2018) and Gendron-Carrier et al. (2018)) and the log of the total mileages of
+paved roads corresponding to “municipal / urban extensions of highway systems” or “other municipal / urban streets”. The sources
+are A Quarter Century of Financing Municipal Highways, 1937-61 (Bureau of Public Roads) and the annual Highway Statistics reports of
+the U.S. Department of Transportation. Col. (9): We control for the log of the average (pop.-weighted) earthquake risk in the state’s
+urban agglomerations (UAs) interacted with year FE. More precisely, we use the GIS data from ?. We then use city boundaries from
+European Commission (2018) (incl. all UAs ≥50,000) to obtain the mean pop.(2015)-weighted average of earthquake risk. Col. (10):
+We control for the log of average (pop.-weighted) bedrock depth in the state’s urban agglomerations (UAs) interacted with year FE.
+More precisely, we use the 30 seconds version of the bedrock depth data of Shangguan et al. (2017). We then use city boundaries from
+European Commission (2018) (incl. all UAs ≥50,000) to obtain the mean pop.(2015)-weighted average of bedrock depth (m). Col. (11)-
+(12): In col. (11), we control for the average (pop.-weighted) share of urban land that is located below sea level interacted with year FE.
+In col. (12), we control for the average (pop.-weighted) standard deviation of elevation in the state’s urban areas interacted with year FE.
+We use the 15 arc-seconds version (breakline emphasis) of the elevation data from USGS (2010) and construct pop.-weighted averages
+for all cities in CIESIN (2017). Col. (13): We add U.S.-speciﬁc geographical controls, each interacted with a year trend: total land area
+and the shares of land unavailable for development due to excessive slope, the presence of wetlands, or the presence of bodies of water
+(source: Lutz and Sand (2017)). Col. (14): The geographical controls are replaced by time-interacted variables measuring the amounts
+of land under various types of government ownership (source: NRCM (2017)): federal government, state government, Bureau of Land
+Management, U.S. Forest Service, National Park Service, National Wildlife Refuge, Army Corps of Engineers, Military Bases, Tribal
+lands. Col. (15): We control for the RSMeans construction cost in the state in the same year. Indeed, as income increases, construction
+costs could increase, thus depressing construction. Controlling for construction costs then allows us to capture the direct effect of
+income. Robust SEs clustered at the state level: * p<0.10, ** p<0.05, *** p<0.01.

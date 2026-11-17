@@ -1,0 +1,2290 @@
+
+
+===== [page 1] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+Paper:
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+Shoji Ohtomo∗1,†, Reo Kimura∗2, Yoshiaki Kawata∗3, and Keiko Tamura∗4
+∗1Konan Women’s University
+6-2-23 Morikita-machi, Higashinada-ku, Kobe, Hyogo 658-0001, Japan
+†Corresponding author, E-mail: s.ohtomo@konan-wu.ac.jp
+∗2School of Human and Environment, University of Hyogo, Hyogo, Japan
+∗3Faculty of Societal Safety Sciences, Kansai University, Osaka, Japan
+∗4Risk Management Ofﬁce, Headquarters for Risk Management, Niigata University, Niigata, Japan
+[Received May 28, 2020; accepted August 31, 2020]
+The torrential rain (named “the July 2018 heavy
+rain”) from June 28 to July 8 in 2018 resulted in
+tremendous human and property damage. There were
+237 deaths and 7,173 cases of ﬂooding above the ﬂoor
+level. During the torrential rain, the low rate of evac-
+uation behavior of residents in the affected area was
+also a problem. The Okayama prefecture conducted a
+mail survey with residents that suffered housing dam-
+age caused by the torrential rain (valid sample n =
+3,765). The survey measured what residents’ aware-
+ness and knowledge were of ﬂooding before the torren-
+tial rain, residents’ prediction of ﬂooding and choice
+and reason of evacuation behavior during the emer-
+gency heavy rain warning and the evacuation order
+(emergency). This study analyzed the determinants
+of residents’ evacuation behaviors during the torren-
+tial rain with the survey data. The results indicated
+that, although most residents were aware of hazard
+maps before the torrential rain, few predicted ﬂood-
+ing. Most residents were aware of the evacuation shel-
+ters and had a prior evacuation plan. However, some
+residents made no attempt to evacuate, even when
+their houses were damaged. During the emergency
+heavy rain warning, feeling a sense of crisis was an im-
+portant factor to promote evacuation behavior. And,
+during the evacuation order (emergency), the major-
+ity of those who took actual evacuation behaviors was
+those who were approached by public sectors such as
+the ﬁre department and the police. Moreover, resi-
+dents’ judgment based on scientiﬁc information such
+as hazard maps and prediction of ﬂooding before the
+torrential rain had little effect on evacuation behav-
+ior during the emergency heavy rain warning and the
+evacuation order (emergency). Therefore, the study
+indicates the importance of approaching residents’ af-
+fective decision-making, instead of relying on ratio-
+nal decision-making, to promote evacuation behavior
+when people are in unusual situations.
+Keywords:
+ﬂooding, torrential rain in western Japan
+in 2018, evacuation behavior, hazard map, decision-
+making
+1. Introduction
+From June 28 to July 8, 2018, there was a successive
+supply of warm and very moist air in Japan due to the in-
+ﬂuence of the East Asian rain front and a typhoon, caus-
+ing a record of heavy rain throughout a wide area; mainly
+in western Japan. As a result, this developed into tor-
+rential rain in western Japan (the July 2018 heavy rain),
+which caused tremendous human and property damage.
+According to the Cabinet Ofﬁce [1], the July 2018 heavy
+rain killed 237 people nationwide, of which 66 were
+in Okayama prefecture and 115 in Hiroshima prefec-
+ture. There were 7,173 cases of ﬂooding above the ﬂoor
+level nationwide, of which 1,131 were in Okayama pre-
+fecture and 2,119 in Hiroshima prefecture. There were
+21,296 cases of ﬂooding under the ﬂoor level nationwide,
+of which 5,446 were in Okayama prefecture and 5,779 in
+Hiroshima prefecture. Thus, the damages in these two
+prefectures account for about half-ﬁgure of the damage
+nationwide.
+The problem in the July 2018 heavy rain was the low
+percentage of residents who took evacuation actions; only
+22% of residents in Hiroshima city evacuated (includ-
+ing vertical evacuation) [2]. Another survey conducted
+in Hiroshima city found that 3.3% of residents evacuated
+in response to an evacuation advisory or an evacuation or-
+der [3]. It was also reported that only 0.5% of the total
+number of evacuation shelters were used in the 23 pre-
+fectures, where evacuation advisories and orders were is-
+sued [4]. According to a previous study, residents living
+in areas where evacuation advisories were issued when
+the 2017 Typhoon #21 hit the areas, only 4.4% of the res-
+idents evacuated to shelters, indicating that the rate of fol-
+lowing evacuation orders is generally very low [5]. It is
+important to consider that many residents did not take suf-
+Journal of Disaster Research Vol.15 No.7, 2020
+1011
+
+
+===== [page 2] =====
+Ohtomo, S. et al.
+ﬁcient action to evacuate during a disaster. In particular,
+it is required to examine residents’ behavior to determine
+why they chose to evacuate or not during a disaster.
+In psychology, two information processing processes,
+System 1 and System 2, have been hypothesized as risk-
+related judgment [6, 7]. System 1, which involves experi-
+ential decision-making based on affective experience and
+intuition, is a process in which immediate action is taken,
+depending on the given situation. System 2, involving
+rational decision-making based on knowledge and analy-
+ses, is a process in which deliberative action is performed
+based on consideration. It has been pointed out that in
+an emergency such as the choice of an evacuation be-
+havior in a natural disaster, it is difﬁcult to make a ratio-
+nal decision that is judged over time in normal times [8].
+Therefore, decision-making based on System 1 is likely
+to occur.
+It has been used as a framework to explain
+the inﬂuence of the experience of evacuation behavior
+during the Kumamoto Earthquake on the perception of
+earthquake risk [9], and the consumer’s process of hoard-
+ing and avoidant purchasing during the Great East Japan
+Earthquake [10], and it has been indicated that System 1
+was preferred in both cases.
+A similar process can be assumed for ﬂood disasters
+such as heavy rains. Risk communication with residents
+to facilitate disaster prevention measures and evacuation
+behaviors include the use of hazard maps. The risk as-
+sessment based on the hazard map requires the process
+of System 2. The residents must read the information on
+what damage may be caused by the natural disaster. The
+information processing by System 2 requires attention
+and effort and is therefore rarely performed. A previous
+study has indicated that residents’ judgment on ﬂood dis-
+aster risk is not affected by hazard maps information [11].
+Also, scientiﬁc knowledge on disasters has little rela-
+tion to disaster preventions [12, 13]. Kimura et al. [14]
+have reported that more than half of the residents who
+knew the active faults that cause earthquakes were aware
+that no earthquake would occur. There is likely a limit
+in the promotion of evacuation behaviors through scien-
+tiﬁc information. It is expected that people will not take
+evacuation action even if they receive disaster warnings.
+It has also been reported that few residents have taken ac-
+tual countermeasure actions even after receiving an earth-
+quake early warning (EEW) [15]. People tend to have op-
+timistic biases, by which the risk of disasters is underesti-
+mated and they are less likely to take disaster prevention
+actions [16].
+Affective factors such as a sense of crisis are the reason
+for evacuation behaviors and disaster preventions rather
+than judgments based on scientiﬁc information. A previ-
+ous study has indicated that the fears experienced due to
+natural disasters and the perceived threat of disasters re-
+lated to disaster preventions [17]. It is also pointed out
+that the sense of vulnerability enhances motivation for
+ﬂooding countermeasures [18]. A study on severe rainfall
+disasters in Japan highlighted that fear is more strongly
+associated with disaster preventions than the prediction of
+the severity of the disaster [19]. Thus, affective decision-
+making by System 1 directly triggers countermeasure be-
+haviors against ﬂood disasters. The approach from oth-
+ers has also been pointed out as an important factor fa-
+cilitating disaster preventions [20]. It has been reported
+that some who have not taken evacuation measures acted
+by the approach of their neighbors [9]. Such social net-
+works are considered normative behavior for disaster pre-
+vention [16]. Classical psychology has pointed out that
+people in an ambiguous situation tend to follow authori-
+ties without making their own judgments [21]. Previous
+study has also indicated that those close to people with
+special needs are more likely to facilitate evacuation dur-
+ing a disaster [22]. Therefore, this study identiﬁes factors
+of System 1 and System 2 that relate to the psychological
+reasons why many residents did not take sufﬁcient evacu-
+ation action in the July 2018 heavy rain.
+Okayama prefecture surveyed residents in areas with
+severe housing damage from late November to Decem-
+ber 2018, approximately ﬁve months after the July 2018
+heavy rain [23]. According to the Okayama prefecture
+report [24], the East Asian rain front activity caused the
+heavy rain in July 2018. From July 5 to 7, 453.0 mm of
+rainfall were observed in Tomi, Kagamino-cho, and ex-
+ceeded 300 mm on the Automated Meteorological Data
+Acquisition System (AMeDAS). In addition, it was ob-
+served that water levels in several places exceeded the
+level of danger. Under such circumstances, from night-
+time on July 6 to dawn of the 7th, evacuation advisories or
+evacuation orders (emergency) were issued in all 27 mu-
+nicipalities in the prefecture. Evacuation orders (emer-
+gency) were issued in 17 of the prefecture’s municipal-
+ities, and as the ﬂooding area expanded due to the col-
+lapse of the riverbank, the target area expanded, and
+the number of evacuees peaked around the morning of
+the 8th. The Okayama prefecture survey determines res-
+idents’ predictions of ﬂooding, choices, and reasons for
+evacuation behaviors during the following stages: before
+the heavy rains in July 2018, when they became aware of
+the emergency heavy rain warning, and during the evacu-
+ation order (emergency). Therefore, this study discusses
+how prior knowledge and recognition of disasters, such
+as residents’ awareness of hazard maps before disasters,
+ﬂood prediction, awareness of evacuation shelters, and the
+presence of evacuation plans, affect the choice of evacu-
+ation behaviors during disasters. In addition to the prior
+knowledge and recognition of disasters, this study exam-
+ines how a sense of crisis affects evacuation behaviors.
+A previous study has indicated out that the determinants
+of people’s responsive actions vary according to the stage
+of decision-making against disasters [25]. This study ana-
+lyzes what aspects of decision-making of System 2 factors
+related to disasters such as prior knowledge and System 1
+factors such as a sense of crisis act at what stage.
+1012
+Journal of Disaster Research Vol.15 No.7, 2020
+
+
+===== [page 3] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+2. Method
+2.1. Survey Data
+The survey data of “Questionnaire on Responsive Ac-
+tions to July 2018 Heavy Rain” conducted by Okayama
+prefecture was used [23].
+The survey was conducted
+from November 29 to December 20, 2018. It involved
+residents in three cities and one town in the Takahashi
+river system in Okayama prefecture (Kurashiki city, Soja
+city, Takahashi city, and Yakage town) that suffered severe
+housing damages.
+2.2. Respondents
+The survey covered a total of 6,644 households reg-
+istered in the “disaster victim ledger” of Okayama pre-
+fecture.
+Valid responses were n = 3,765 (Valid re-
+sponse rate of 56.7%).
+This study used the analysis
+data of n = 3,196, excluding missing values. In terms
+of gender, the respondents of the analysis data were
+2,293 males (72%) and 908 females (28%).
+The age
+was 62.15 (SD = 15.79) years. The length of residence
+was 28.78 (SD = 17.85) years.
+The number of dam-
+aged houses according to the victim’s certiﬁcates were as
+follows: 2,595 (82%) for completely destroyed houses,
+249 (8%) for massive half-destroyed houses, 292 (9%) for
+half-destroyed houses, and 19 (1%) for partially destroyed
+houses.
+2.3. Measurements
+For demographic variables other than personal at-
+tributes and housing damages, refer to the survey report
+of the Okayama prefecture [23].
+2.4. Awareness of Flooding Before the Disaster
+The question about the awareness of hazard maps be-
+fore the disaster was: “Have you ever seen the hazard map
+(ﬂood damage) of your residential area before the disas-
+ter?” The respondents could choose from the following:
+“I have seen the hazard map (ﬂood damage) and remem-
+bered the contents”; “I have seen the hazard map (ﬂood
+damage) but did not remember the contents”; “I knew
+the hazard map (ﬂood damage) but I had never seen it”;
+“I know the word hazard map but I did not know there
+was one in this area”; and “I did not know the word haz-
+ard map.”
+The question about the ﬂood prediction before the dis-
+aster was: “Before the disaster, did you think that your
+residential area would ever be in a situation where the res-
+idents had to evacuate due to ﬂooding?” The respondents
+could choose from the following: “I thought we would
+have one soon”; “I thought we would have one in 10 years
+or later”; “I thought we would have one in the 21st cen-
+tury”; “I did not think we would have ﬂoods causing dam-
+age”; and “Before the disaster, I did not think that this area
+would be damaged by a ﬂood.”
+The question about the awareness of evacuation shel-
+ters before the disaster was: “Before the disaster, did
+you know about the evacuation shelter?”
+The respon-
+dents could choose from the following: “I knew it accu-
+rately through public relations, hazard maps, drills, and
+the like”; “I had guessed its whereabouts”; “I knew we
+were going to an evacuation shelter, but I did not know
+where it was located”; and “I did not think I needed to go
+to an evacuation shelter.”
+The question about the presence of an evacuation plan
+before the disaster was: “Did you have a disaster evac-
+uation plan before the disaster?” The respondents could
+choose from the following: “I had made clear plans on the
+evacuation method and location of the evacuation shel-
+ter”; “I did not make a plan, but had a rough idea on where
+and how to evacuate”; “I gave little thought to a speciﬁc
+evacuation method and evacuation shelter during a disas-
+ter”; and “I did not think that I would need to evacuate
+during a disaster.”
+2.5. Prediction of Flooding and Evacuation Behav-
+ior During the Disaster
+The question about the ﬂood prediction immediately
+before and at the time of the emergency heavy rain warn-
+ing and the evacuation order (emergency) was: “At the
+time (when you heard the information) before the emer-
+gency heavy rain warning (the evacuation order (emer-
+gency)), did you think “a ﬂood may occur”?” The respon-
+dents could choose from the following: “I did not think
+about anything in particular”; “I thought we would have
+more rain but I did not think about a disaster”; “I imagined
+that the heavy rain would cause a disaster but I thought it
+was just ﬂooding below the ﬂoor level”; “I imagined that
+the heavy rain could cause a disaster and I thought ﬂood-
+ing above the ﬂoor level would be likely”; and “Other /
+I do not remember / I do not know.” Note that in the anal-
+ysis, “Other / I do not remember / I do not know,” were
+regarded as missing data.
+The question about the evacuation behavior at the time
+of being aware of the issuance of the emergency heavy
+rain warning and the evacuation order (emergency) was:
+“Had you evacuated (including vertical evacuation to the
+upper level of the house) at the time you were aware of
+the issuance of the emergency heavy rain warning (the
+evacuation orders (emergency))?” The respondents could
+choose from the following: “I did not take any particu-
+lar evacuation behavior”; “I consciously stayed at a safe
+home”; “I evacuated to the upper level of my house”;
+“I evacuated to a neighboring building (not a shelter) that
+I thought was safe”; “I evacuated to an evacuation shel-
+ter”; “Other”; and “I do not remember / I do not know.”
+Note that in the analysis, “I do not remember / I do not
+know” were regarded as missing data.
+In addition, after the question about the choice of evac-
+uation behavior at each time point, the respondents were
+asked to give multiple answers by choosing from 31 items
+regarding the reasons for evacuation and the reasons why
+they did not evacuate (see Appendix A).
+Journal of Disaster Research Vol.15 No.7, 2020
+1013
+
+
+===== [page 4] =====
+Ohtomo, S. et al.
+Table 1. Cross table of evacuation behavior by the levels of housing damages.
+Evacuation behavior
+Housing damage
+I did not take
+any particular
+evacuation behavior
+I consciously stayed
+at a safe home
+I evacuated to
+the upper level
+of my house
+I evacuated to
+a neighboring building
+that I thought was safe
+I evacuated to
+an evacuation shelter Other
+Completely destroyed
+34%
+9%
+21%
+7%
+21%
+8%
+Emergency
+Massive half-destroyed
+33%
+6%
+25%
+10%
+14%
+12%
+heavy rain
+Half-destroyed
+26%
+9%
+25%
+6%
+24%
+10%
+warning
+Partially destroyed
+53%
+0%
+27%
+7%
+13%
+0%
+χ2(15) = 29.71, p = .013
+Completely destroyed
+20%
+8%
+21%
+9%
+30%
+11%
+Evacuation
+Massive half-destroyed
+21%
+7%
+24%
+10%
+21%
+16%
+order
+Half-destroyed
+21%
+8%
+24%
+8%
+30%
+9%
+(emergency) Partially destroyed
+13%
+13%
+38%
+13%
+13%
+13%
+χ2(15) = 17.08, p = .314
+Table 2. Cross table of awareness of hazard maps before the disaster by the levels of housing damages.
+Awareness of hazard map
+Housing damage
+I did not know
+the word hazard map
+I did not know
+there was one
+in this area
+I had never seen
+I have seen
+I remembered
+the contents
+Completely destroyed
+8%
+15%
+17%
+37%
+24%
+Massive half-destroyed
+6%
+16%
+20%
+42%
+16%
+Half-destroyed
+12%
+17%
+18%
+32%
+21%
+Partially destroyed
+13%
+25%
+6%
+38%
+19%
+χ2(12) = 24.25, p = .019
+3. Result
+3.1. Evacuation Behavior During the Disaster
+In order to examine whether there is a difference in the
+choice of evacuation behavior at the time of being aware
+of the emergency heavy rain warning and the evacuation
+order (emergency) between the damage situations based
+on the housing damage, a cross-tabulation of the hous-
+ing damage × the evacuation behavior choice was car-
+ried out. According to the cross-tabulation results, at the
+time of being aware of the emergency heavy rain warning,
+more than 30% of residents took no action at all (Table 1).
+In particular, among the evacuation behaviors taken by the
+residents with partially destroyed houses, the percentage
+of “not taken any particular evacuation behavior” is 53%,
+the highest of all (χ2(15) = 29.71, p = .013). As for
+the evacuation behaviors actually carried out, the most
+frequent choice was evacuation to the upper ﬂoor (verti-
+cal evacuation), followed by evacuation to the evacuation
+shelters.
+Next, based on the cross-tabulation results, at the time
+of being aware of the issuance of the evacuation order
+(emergency) (Table 1), 13% of the residents with par-
+tially destroyed houses and more than 20% of the other
+residents took no action at all. However, there was no
+statistical difference in the choice of evacuation behaviors
+between the levels of housing damage (χ2(15) = 17.08,
+p = .314). As in the case of being aware of the emer-
+gency heavy rain warning, the most common choice was
+to evacuate to the upper level (vertical evacuation), fol-
+lowed by evacuation to the evacuation shelters.
+The above result indicates that, regardless of housing
+damage, many of them did not take any evacuation ac-
+tion; although, this percentage decreased as the situation
+worsened from the emergency heavy rain warning to the
+evacuation order (emergency).
+3.2. Awareness of Hazard Maps Before the Torren-
+tial Rain for Each Housing Damage
+In order to examine whether there is a difference in
+the residents’ awareness of hazard maps before the dis-
+aster between the damage situations based on housing
+damages, a cross-tabulation of the housing damage × the
+awareness of hazard maps (Table 2) was carried out. Ac-
+cording to the results, more than 50% have seen haz-
+ard maps. There was a difference in the percentage be-
+tween the housing damages (χ2(12) = 24.25, p = .019),
+where this percentage was the highest for the residents
+with completely destroyed houses at 61%. Although there
+are differences between the levels of housing damages,
+many residents had seen hazard maps before the July 2018
+heavy rain.
+3.3. Residents’ Prediction of Flooding Before the
+Torrential Rain for Each Housing Damage
+In order to examine whether there is a difference in
+the residents’ predictions of the ﬂooding before the dis-
+aster between the situations of damages based on housing
+damages, a cross-tabulation of the housing damage × the
+prediction of the ﬂooding was carried out (Table 3). Ac-
+cording to the results, more than 60% of the residents
+1014
+Journal of Disaster Research Vol.15 No.7, 2020
+
+
+===== [page 5] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+Table 3. Cross table of prediction of ﬂooding before the disaster by the levels of housing damages.
+Prediction of ﬂooding before the disaster
+Housing damage
+I did not think that
+this area would be
+damaged by a ﬂood
+I did not think
+we would have ﬂoods
+causing damage
+I thought
+we would have one
+in the 21st century
+I thought
+we would have one
+in 10 years or later
+I thought
+we would have one
+soon
+Completely destroyed
+17%
+62%
+6%
+6%
+10%
+Massive half-destroyed
+17%
+67%
+3%
+5%
+7%
+Half-destroyed
+14%
+63%
+4%
+8%
+11%
+Partially destroyed
+14%
+63%
+4%
+8%
+11%
+χ2(12) = 13.01, p = .368
+Table 4. Cross table of awareness of evacuation shelter before the disaster by the levels of housing damages.
+Awareness of evacuation shelter
+Housing damage
+I did not think
+I needed to go to
+an evacuation shelter
+I did not know
+where it was located
+I had guessed
+its whereabouts
+I knew it accurately
+Completely destroyed
+0%
+34%
+18%
+48%
+Massive half-destroyed
+0%
+38%
+15%
+47%
+Half-destroyed
+0%
+31%
+13%
+56%
+Partially destroyed
+0%
+35%
+18%
+47%
+χ2(6) = 7.76, p = .256
+Table 5. Cross table of evacuation planning before the disaster by the levels of housing damages.
+Evacuation planning
+Housing damage
+I did not think that
+I would need to evacuate
+I gave little thought
+I had a rough idea
+I had made clear plans
+Completely destroyed
+0%
+26%
+32%
+42%
+Massive half-destroyed
+0%
+32%
+34%
+34%
+Half-destroyed
+0%
+29%
+26%
+45%
+Partially destroyed
+0%
+47%
+24%
+29%
+χ2(6) = 14.03, p = .029
+did not predict the ﬂood.
+There was no difference in
+this percentage between the levels of housing damages
+(χ2(12) = 13.01, p = .368). Thus, although many resi-
+dents saw the hazard maps (see Table 2), it was indicated
+that less than 30% of residents assumed ﬂood damage.
+3.4. Awareness of Evacuation Shelter Before the
+Torrential Rain for Each Housing Damage
+In order to examine whether there is a difference in
+the residents’ awareness of the evacuation shelter dur-
+ing a disaster before the disaster is different between the
+damage situations based on the housing damage, a cross-
+tabulation of the housing damage × awareness of the
+evacuation shelter was carried out (Table 4). The result
+indicates that more than 60% of the residents were aware
+of the evacuation shelters. There was not much differ-
+ence in the percentage between the levels of housing dam-
+ages (χ2(6) = 7.76, p = .256). Thus, many residents were
+aware of the local evacuation shelters since many of them
+had lived there for a long time.
+3.5. Residents’ Evacuation Planning Before the
+Torrential Rain for Each Housing Damage
+In order to examine whether there is a difference in
+the planning of the residents’ evacuation plan during a
+disaster before the disaster is difference between the sit-
+uations of the damage based on the housing damage, a
+cross-tabulation of the housing damage × the evacuation
+planning during a disaster was carried out (Table 5). As a
+result, more than 50% of the residents had roughly made
+evacuation plans. The percentage of the residents who
+had made evacuation plans before the July 2018 heavy
+rain varies depending on the type of housing damages they
+had (χ2(6) = 14.03, p = .029). Among all levels of hous-
+ing damage, 74% of residents with completely destroyed
+houses had made evacuation plans before the July 2018
+heavy rain. This ﬁgure is the largest of all. Thus, although
+there were some differences between the levels of hous-
+ing damages, many residents had made evacuation plans
+to some extent before the July 2018 heavy rain.
+3.6. Residents’ Prediction of Flooding During the
+Torrential Rain
+In order to examine whether there are differences in the
+prediction of ﬂooding before and after the awareness of
+the emergency heavy rain warning and before and after
+the awareness of the evacuation order (emergency) be-
+tween the situations of damages based on the housing
+damage, a cross-tabulation of the housing damages at the
+time of each issuance × the prediction of ﬂooding was
+Journal of Disaster Research Vol.15 No.7, 2020
+1015
+
+
+===== [page 6] =====
+Ohtomo, S. et al.
+Table 6. Cross table of prediction of ﬂooding during the disaster by the levels of housing damages.
+Prediction of ﬂooding during the disaster
+Housing damage
+I did not think
+about anything
+in particular
+I did not think
+about a disaster
+Flooding below
+the ﬂoor level
+Flooding above
+the ﬂoor level
+Completely destroyed
+21%
+44%
+27%
+8%
+Immediately before
+Massive half-destroyed
+20%
+53%
+22%
+4%
+the emergency heavy
+Half-destroyed
+22%
+53%
+18%
+8%
+rain warning
+Partially destroyed
+33%
+56%
+6%
+6%
+χ2(9) = 24.10, p = .004
+Completely destroyed
+10%
+48%
+32%
+11%
+During
+Massive half-destroyed
+10%
+61%
+23%
+6%
+the emergency heavy
+Half-destroyed
+9%
+57%
+19%
+15%
+rain warning
+Partially destroyed
+7%
+73%
+13%
+7%
+χ2(9) = 39.00, p < .001
+Completely destroyed
+15%
+42%
+29%
+13%
+Immediately before
+Massive half-destroyed
+14%
+55%
+21%
+10%
+the evacuation order
+Half-destroyed
+19%
+47%
+18%
+16%
+(emergency)
+Partially destroyed
+33%
+56%
+11%
+0%
+χ2(9) = 38.99, p < .001
+Completely destroyed
+8%
+40%
+33%
+19%
+During
+Massive half-destroyed
+8%
+55%
+26%
+11%
+the evacuation order
+Half-destroyed
+7%
+49%
+22%
+23%
+(emergency)
+Partially destroyed
+0%
+69%
+25%
+6%
+χ2(9) = 36.71, p < .001
+carried out (Table 6). According to the cross-tabulation
+immediately before the emergency heavy rain warning,
+more than 60% of the residents did not think that the
+ﬂooding damage would occur. In particular, 89% of the
+residents with partially destroyed houses had not thought
+immediately before the emergency heavy rain warning
+that ﬂooding damage was going to occur. This ﬁgure is
+the largest percentage (χ2(9) = 24.10, p = .004). As a
+result of the cross-tabulation at the time of being aware
+of the emergency heavy rain warning, more than 60% of
+the residents did not think that ﬂooding would occur. In
+particular, 80% of the residents with partially destroyed
+houses did not think during the emergency heavy rain
+warning that ﬂooding damage was going to occur. This
+ﬁgure is the largest percentage (χ2(9) = 39.00, p < .001).
+Next, as a result of the cross-tabulation immediately be-
+fore the issuance of the evacuation order (emergency),
+more than 60% of the residents did not think that ﬂood-
+ing would occur. In particular, 89% of the residents with
+partially destroyed houses had not thought immediately
+before the issuance of the evacuation order (emergency)
+that disaster was going to occur. This ﬁgure is the largest
+percentage (χ2(9) = 38.99, p < .001). According to the
+cross-tabulation at the time of being aware of the evacua-
+tion order (emergency), more than 48% of the residents
+did not think that ﬂooding would occur. In particular,
+69% of the residents with partially destroyed houses did
+not think during the evacuation order (emergency) that
+ﬂooding damage was going to occur. This ﬁgure is the
+largest percentage (χ2(9) = 36.71, p < .001).
+The above results indicate that even among the resi-
+dents of the areas having housing damages, a large per-
+centage of the residents with partially destroyed houses
+thought that ﬂooding damage would not occur although
+the percentage decreased as the situation worsened from
+the emergency heavy rain warning to the evacuation order
+(emergency).
+3.7. The Determinants of Residents’ Evacuation
+Behaviors During the Emergency Heavy Rain
+Warning
+This study examines the residents’ characteristics and
+reasons for evacuation behavior choices at the time of be-
+ing aware of the emergency heavy rain warning will be
+discussed. Therefore, an analysis is carried out for n =
+1,789 residents who were at their homes in the affected
+areas during the emergency heavy rain warning. First, the
+items of the choice of evacuation behaviors at the time
+of becoming aware of the emergency heavy rain warning
+were made into binary dummy variables, where “I did not
+take any evacuation behavior in particular” was set as 0,
+and evacuation behaviors such as “I consciously stayed
+at a safe home,” “I evacuated to the upper level of my
+house,” “I evacuated to a neighboring building (not a shel-
+ter) that I thought was safe,” “I evacuated to an evacuation
+shelter,” and “Other” were set as 1. In the analysis, these
+variables were used as dependent variables of the evac-
+uation behavior choice. Next, the following were used
+as dummy variables: gender, level of housing damage,
+awareness of hazard maps before the disaster, ﬂood pre-
+diction before the disaster, awareness of disaster evacua-
+tion shelters before the disaster, disaster evacuation plan-
+ning before the disaster, ﬂood prediction immediately be-
+fore the emergency heavy rain warning, ﬂood prediction
+at the time of being aware of the emergency heavy rain
+warning, and 31 items listed as the reasons of having
+evacuated or not at the time of being aware of the emer-
+gency heavy rain warning. These variables were used as
+independent variables in the analysis. However, few peo-
+1016
+Journal of Disaster Research Vol.15 No.7, 2020
+
+
+===== [page 7] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+Table 7. Results of the Bayesian logistic regression for evacuation behavior during the emergency heavy rain warning.
+label
+odds rate
+mean
+se mean
+sd
+95%LCI
+95%UCI
+n eff
+Rhat
+Intercept
+.454
+−.789
+.002
+.339
+−1.455
+−.130 23939 1.000
+Gender(female)
+1.290
+.255
+.001
+.165
+−.065
+.576 41624 1.000
+Age
+1.504
+.408
+.001
+.102
+.208
+.607 26515 1.000
+Number of years of residence
+.850
+−.162
+.001
+.102
+−.364
+.038 29255 1.000
+Flood prediction (no ﬂoods causing damage)
+1.081
+.078
+.001
+.190
+−.294
+.448 23754 1.000
+Flood prediction (In the 21st century)
+.614
+−.488
+.002
+.385
+−1.244
+.265 30977 1.000
+Flood prediction (In 10 years or later)
+1.211
+.191
+.002
+.414
+−.595
+1.019 32515 1.000
+Flood prediction (Soon)
+.968
+−.033
+.002
+.367
+−.751
+.688 29721 1.000
+Hazard map (I did not know there was one in this area)
+1.087
+.083
+.002
+.288
+−.480
+.646 15558 1.000
+Hazard map (I have never seen one)
+1.215
+.194
+.002
+.285
+−.363
+.754 14375 1.000
+Hazard map (I have seen)
+.942
+−.060
+.002
+.264
+−.576
+.458 13554 1.000
+Hazard map (I remembered the contents)
+.906
+−.098
+.002
+.309
+−.705
+.512 15542 1.000
+Evacuation shelter (Guessed)
+.863
+−.147
+.001
+.220
+−.576
+.292 30750 1.000
+Evacuation shelter (I knew it accurately)
+.934
+−.068
+.001
+.178
+−.419
+.280 27356 1.000
+Evacuation planning (I had a rough idea)
+.970
+−.031
+.001
+.178
+−.385
+.318 26651 1.000
+Evacuation planning (I had made clear plans)
+.989
+−.011
+.001
+.211
+−.422
+.407 26586 1.000
+Flood prediction before the warning (not think about a disaster)
+1.081
+.078
+.001
+.201
+−.315
+.474 22010 1.000
+Flood prediction before the warning (Flooding below the ﬂoor level)
+1.362
+.309
+.002
+.267
+−.224
+.827 21586 1.000
+Flood prediction before the warning (Flooding above the ﬂoor level)
+.558
+−.584
+.004
+.530
+−1.631
+.472 22935 1.000
+Flood prediction during the warning (not think about a disaster)
+1.695
+.528
+.002
+.240
+.060
+1.000 21133 1.000
+Flood prediction during the warning (Flooding below the ﬂoor level)
+2.377
+.866
+.002
+.296
+.286
+1.453 18419 1.000
+Flood prediction during the warning (Flooding above the ﬂoor level)
+7.316
+1.990
+.004
+.507
+1.016
+3.011 20920 1.000
+Housing damage (Completely destroyed)
+.861
+−.149
+.001
+.279
+−.697
+.390 41720 1.000
+Housing damage (Half destroyed)
+.760
+−.274
+.001
+.277
+−.817
+.273 45836 1.000
+Housing damage (Partially destroyed)
+.506
+−.681
+.004
+.881
+−2.395
+1.129 43358 1.000
+It was raining
+1.412
+.345
+.001
+.216
+−.074
+.769 41680 1.000
+I felt insecure about the safety of the building
+8.714
+2.165
+.004
+.681
+.966
+3.641 32380 1.000
+The building was damaged
+12.675
+2.540
+.009 1.319
+.490
+5.671 22119 1.000
+It was a one-story house
+.390
+−.941
+.003
+.536
+−1.992
+.119 42509 1.000
+Lifelines such as electricity, gas, and water were available
+.700
+−.356
+.001
+.271
+−.891
+.170 34707 1.000
+The surroundings and roads were ﬂooded
+2.628
+.966
+.001
+.202
+.578
+1.371 38396 1.000
+I had an elderly member in my family
+2.133
+.757
+.002
+.341
+.105
+1.443 39483 1.000
+I had (an) infant(s) and/or (a) child(ren) in my family
+3.051
+1.115
+.001
+.295
+.547
+1.706 42242 1.000
+I had someone in need of special care in my family
+3.084
+1.126
+.003
+.534
+.129
+2.232 38937 1.000
+I had a pet
+1.019
+.019
+.001
+.228
+−.426
+.468 40351 1.000
+I thought I could get information and supplies
+2.980
+1.092
+.004
+.766
+−.333
+2.673 37572 1.000
+I thought I could get administrative support
+2.603
+.957
+.005
+.958
+−.710
+3.063 31857 1.000
+I was told by my neighbor(s)
+3.018
+1.105
+.002
+.317
+.499
+1.741 43936 1.000
+I was told by my family or relatives
+4.372
+1.475
+.001
+.277
+.951
+2.022 40563 1.000
+I was told by the ﬁre department and the police
+3.779
+1.330
+.004
+.716
+.055
+2.864 38278 1.000
+I received information from the disaster administration wireless communications
+4.033
+1.395
+.002
+.380
+.683
+2.175 36545 1.000
+It was not raining that much
+.623
+−.474
+.001
+.251
+−.966
+.017 43183 1.000
+I thought it would be safer staying there
+1.929
+.657
+.001
+.170
+.323
+.988 41232 1.000
+There was no damage to the building
+.853
+−.159
+.001
+.258
+−.673
+.351 38256 1.000
+It is sufﬁcient to go to the second ﬂoor or higher
+2.727
+1.003
+.001
+.174
+.666
+1.345 40717 1.000
+Lifelines such as electricity, gas, and water were not available
+.923
+−.080
+.003
+.662
+−1.343
+1.289 42506 1.000
+The surroundings and roads were not ﬂooded
+.419
+−.869
+.001
+.220
+−1.304
+−.436 38664 1.000
+I did not have someone in need of special care in my family
+1.191
+.175
+.002
+.483
+−.757
+1.117 45496 1.000
+I thought it was not serious
+.541
+−.614
+.001
+.171
+−.951
+−.278 38436 1.000
+It was troublesome to evacuate
+1.384
+.325
+.002
+.451
+−.566
+1.198 40484 1.000
+I did not feel the need to evacuate
+.296
+−1.219
+.001
+.178
+−1.573
+−.878 38715 1.000
+I could not evacuate even though I wanted to
+1.141
+.132
+.002
+.339
+−.520
+.803 39173 1.000
+I received information via TV, radio, etc.
+1.991
+.689
+.001
+.282
+.148
+1.252 45145 1.000
+I received information on social media (Twitter, Facebook, etc.)
+2.970
+1.088
+.002
+.504
+.137
+2.117 42695 1.000
+Other
+1.585
+.461
+.001
+.252
+−.035
+.955 42926 1.000
+lp
+−713.265
+.065 5.385 −724.868 −703.687
+6930 1.000
+Note: The interval estimation of coefﬁcients is signiﬁcant as long as 0 is not included between 95%LCI and 95%UCI.
+ple answered, “I wanted by all means to go to a place
+where people were,” which would cause over-dispersion,
+and thus they were excluded from the analysis. In addi-
+tion, age and residence variables were used as indepen-
+dent variables of quantitative variables. In order to es-
+timate the presence of evacuation behaviors, a Bayesian
+logistic regression with Bernoulli distribution was carried
+out. The analysis was performed in R and the brms pack-
+age [26]. All iterations were set to 10,000 and burn-in
+samples were set to 5,000, with the number of chains set
+to four. The value of Rhat for all parameters equaled 1.0,
+indicating convergence across the four chains. The analy-
+sis results are presented in Table 7. In addition, the odds
+rates of the estimated values based on the posterior distri-
+bution of Bayesian estimates are calculated, and the sta-
+tistically signiﬁcant variables are presented in Fig. 1(a).
+Journal of Disaster Research Vol.15 No.7, 2020
+1017
+
+
+===== [page 8] =====
+Ohtomo, S. et al.
+(a) During the emergency heavy warming
+(b) During the evacuation order (emergency)
+Note: For example, in the leftmost item of Fig. 1(a), the odds ratio of “12.68” given to the item “The building was damaged” means that those who
+select this item as a reason will be 12.68 times as likely to evacuate compared to those who do not select this. Similarly, “0.30” given to the item “I did
+not feel the need to evacuate” means that those who select this item as a reason will be 0.30 times as likely to evacuate compared to those who do not
+select this.
+Fig. 1. Odds rates of reasons for evacuation behavior during the emergency heavy rain warning and the evacuation order (emergency).
+According to the results, the most powerful reasons that
+triggered their evacuation behaviors were “The building
+was damaged” (odds = 12.68, b = 2.54, 95%CI = .490
+to 5.671), “I felt insecure about the safety of the building”
+(odds = 8.71, b = 2.17, 95%CI = .966 to 3.641), and the
+dummy of the ﬂood prediction at the time of the warning
+(degree of ﬂooding above the ﬂoor level: odds = 7.32,
+b = 1.99, 95%CI = 1.016 to 3.011). The larger the cri-
+sis they perceived was, the higher the rate at which they
+took evacuation action was.
+The next inﬂuential vari-
+able for the people to choosing an evacuation behavior
+was “I was told by my family or relatives” (odds = 4.37,
+b = 1.48, 95%CI = .951 to 2.022), “I received informa-
+tion from the disaster administration wireless communi-
+cations” (odds = 4.03, b = 1.40, 95%CI = .683 to 2.175),
+and “I was told by the ﬁre department and the police”
+(odds = 3.78, b = 1.33, 95%CI = .055 to 2.864). The ap-
+proach from others facilitated the choice of evacuation be-
+haviors. The next inﬂuential variables were “I had some-
+one in need of special care in my family” (odds = 3.08,
+b = 1.13, 95%CI = .129 to 2.232) and “I had (an) in-
+fant(s) and/or (a) child(ren) in my family” (odds = 3.05,
+b = 1.12, 95%CI = .547 to 1.706).
+The presence of
+someone with special needs during the disaster had in-
+creased the choice of evacuation action.
+On the other
+hand, those who chose “I did not feel the need to evacu-
+ate” (odds = .30, b = −1.22, 95%CI = −1.573 to −.878)
+and “I thought it was not serious” (odds = .54, b = −.61,
+95%CI = −.951 to −.278) were low in the probability of
+taking evacuation action. A further characteristic was that
+the awareness of hazard maps before the July 2018 heavy
+rain, ﬂood prediction, awareness of evacuation shelters,
+evacuation plans, and ﬂood prediction immediately before
+the issuance of the warning had not affected evacuation
+choice behavior.
+3.8. The Determinants of Residents’ Evacuation
+Behavior
+During
+the
+Evacuation
+Order
+(Emergency)
+This study examines the characteristics and residents’
+reasons that affected the choice of evacuation behavior
+at the time of becoming aware of the evacuation order
+(emergency).
+Therefore, an analysis is carried out for
+n = 438 residents who were not evacuated and were at
+their homes during the emergency heavy rain warning.
+First, similar to the analysis on the awareness of the emer-
+gency heavy rain warning, the items of the choice of evac-
+uation behaviors at the time of being aware of the evac-
+uation order (emergency) were made into binary dummy
+variables. In the analysis, these variables were used as de-
+pendent variables of the evacuation behavior choice. The
+following were used as dummy variables: gender, level
+of housing damage, awareness of hazard maps before the
+disaster, ﬂood prediction before the disaster, awareness
+of disaster evacuation shelters before the disaster, dis-
+aster evacuation planning before the disaster, ﬂood pre-
+diction immediately before the evacuation order (emer-
+gency), ﬂood prediction at the time of being aware of the
+evacuation order (emergency), and 31 items listed as the
+reasons of having evacuated or not having evacuated at the
+time of being aware of the evacuation order (emergency).
+These variables were used as independent variables in the
+analysis. However, few people answered “I wanted by
+all means to go to a place where people were,” “It was
+a one-story house,” and “I did not have someone in need
+of special care in my family,” which would cause over-
+dispersion, and thus they were excluded from the analysis.
+1018
+Journal of Disaster Research Vol.15 No.7, 2020
+
+
+===== [page 9] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+Table 8. Results of the Bayesian logistic regression for evacuation behavior during the evacuation order.
+label
+odds rate
+mean
+se mean
+sd
+95%LCI
+95%UCI
+n eff
+Rhat
+Intercept
+.169
+−1.776
+.005
+.644
+−3.064
+−.530 18092 1.000
+Gender(female)
+.760
+−.275
+.002
+.345
+−.963
+.394 29441 1.000
+Age
+1.241
+.216
+.001
+.190
+−.154
+.594 20197 1.000
+Number of years of residence
+.606
+−.501
+.001
+.193
+−.886
+−.124 20042 1.000
+Flood prediction (no ﬂoods causing damage)
+.905
+−.100
+.003
+.361
+−.802
+.599 19144 1.000
+Flood prediction (In the 21st century)
+.259
+−1.353
+.005
+.781
+−2.934
+.144 22508 1.000
+Flood prediction (In 10 years or later)
+3.383
+1.219
+.006 1.061
+−.798
+3.391 26818 1.000
+Flood prediction (Soon)
+.894
+−.112
+.005
+.771
+−1.652
+1.389 20933 1.000
+Hazard map (I did not know there was one in this area)
+1.286
+.252
+.005
+.560
+−.819
+1.349 10641 1.000
+Hazard map (I have never seen one)
+.741
+−.299
+.006
+.569
+−1.417
+.809 10148 1.000
+Hazard map (I have seen)
+1.114
+.108
+.005
+.524
+−.923
+1.135
+9617 1.000
+Hazard map (I remembered the contents)
+.619
+−.479
+.006
+.603
+−1.677
+.699 10949 1.000
+Evacuation shelter (Guessed)
+.661
+−.414
+.003
+.420
+−1.235
+.400 22998 1.000
+Evacuation shelter (I knew it accurately)
+.912
+−.093
+.002
+.328
+−.741
+.541 23464 1.000
+Evacuation planning (I had a rough idea)
+1.124
+.117
+.002
+.328
+−.543
+.753 20720 1.000
+Evacuation planning (I had made clear plans)
+1.278
+.245
+.003
+.401
+−.536
+1.022 19619 1.000
+Flood prediction before the evacuation order (not think about a disaster)
+2.187
+.783
+.003
+.422
+−.033
+1.613 14721 1.000
+Flood prediction before the evacuation order (Flooding below the ﬂoor level)
+.741
+−.300
+.005
+.562
+−1.403
+.792 13447 1.000
+Flood prediction before the evacuation order (Flooding above the ﬂoor level)
+.329
+−1.112
+.007
+.956
+−3.001
+.725 16299 1.000
+Flood prediction during the evacuation order (not think about a disaster)
+2.588
+.951
+.004
+.492
+−.006
+1.927 14001 1.000
+Flood prediction during the evacuation order (Flooding below the ﬂoor level)
+4.175
+1.429
+.005
+.602
+.278
+2.623 12351 1.000
+Flood prediction during the evacuation order (Flooding above the ﬂoor level)
+11.386
+2.432
+.007
+.787
+.938
+4.053 13134 1.000
+Housing damage (Completely destroyed)
+.471
+−.753
+.003
+.545
+−1.833
+.292 29888 1.000
+Housing damage (Half destroyed)
+.451
+−.796
+.004
+.647
+−2.098
+.436 29734 1.000
+Housing damage (Partially destroyed)
+.829
+−.188
+.012 2.048
+−4.471
+3.593 30777 1.000
+It was raining
+1.453
+.374
+.003
+.469
+−.541
+1.293 32312 1.000
+I felt insecure about the safety of the building
+4.674
+1.542
+.007 1.105
+−.488
+3.857 27722 1.000
+The building was damaged
+18.918
+2.940
+.010 1.528
+.371
+6.432 22525 1.000
+Lifelines such as electricity, gas, and water were available
+.518
+−.657
+.003
+.530
+−1.716
+.365 25226 1.000
+The surroundings and roads were ﬂooded
+1.638
+.493
+.002
+.391
+−.262
+1.272 30486 1.000
+I had an elderly member in my family
+2.098
+.741
+.005
+.798
+−.785
+2.352 26228 1.000
+I had (an) infant(s) and/or (a) child(ren) in my family
+2.120
+.751
+.004
+.644
+−.495
+2.043 29026 1.000
+I had someone in need of special care in my family
+.118
+−2.141
+.008 1.268
+−4.813
+.152 24490 1.000
+I had a pet
+1.681
+.519
+.002
+.399
+−.260
+1.313 31678 1.000
+I thought I could get information and supplies
+1.408
+.342
+.007 1.258
+−2.087
+2.806 30527 1.000
+I thought I could get administrative support
+2.272
+.821
+.008 1.327
+−1.676
+3.568 30404 1.000
+I was told by my neighbor(s)
+1.250
+.223
+.004
+.686
+−1.127
+1.576 30681 1.000
+I was told by my family or relatives
+5.732
+1.746
+.004
+.591
+.643
+2.943 27970 1.000
+I was told by the ﬁre department and the police
+43.458
+3.772
+.010 1.591
+1.134
+7.385 23502 1.000
+I received information from the disaster administration wireless communications
+3.433
+1.233
+.005
+.763
+−.196
+2.807 28592 1.000
+It was not raining that much
+.838
+−.176
+.003
+.441
+−1.067
+.679 31053 1.000
+I thought it would be safer staying there
+2.048
+.717
+.002
+.321
+.096
+1.343 28052 1.000
+There was no damage to the building
+.671
+−.399
+.003
+.424
+−1.233
+.436 27168 1.000
+It is sufﬁcient to go to the second ﬂoor or higher
+2.765
+1.017
+.002
+.355
+.319
+1.714 29970 1.000
+Lifelines such as electricity, gas, and water were not available
+8.676
+2.161
+.010 1.665
+−.854
+5.858 28551 1.000
+The surroundings and roads were not ﬂooded
+.740
+−.301
+.002
+.372
+−1.032
+.423 27771 1.000
+I thought it was not serious
+.494
+−.705
+.002
+.327
+−1.352
+−.068 30837 1.000
+It was troublesome to evacuate
+.560
+−.579
+.006
+.920
+−2.555
+1.099 24936 1.000
+I did not feel the need to evacuate
+.302
+−1.197
+.002
+.341
+−1.872
+−.541 27808 1.000
+I could not evacuate even though I wanted to
+.942
+−.060
+.004
+.622
+−1.303
+1.146 30812 1.000
+I received information via TV, radio, etc.
+2.897
+1.064
+.004
+.666
+−.210
+2.431 26032 1.000
+I received information on social media (Twitter, Facebook, etc.)
+3.786
+1.331
+.005
+.918
+−.387
+3.198 32252 1.000
+Other
+2.261
+.816
+.003
+.445
+−.042
+1.699 28610 1.000
+lp
+−256.660
+.067 5.565 −268.447 −246.745
+6926 1.000
+Note: The interval estimation of coefﬁcients is signiﬁcant as long as 0 is not included between 95%LCI and 95%UCI.
+In addition, age and residence variables were used as in-
+dependent variables of quantitative variables. In order to
+estimate the presence of evacuation behaviors, a Bayesian
+logistic regression with Bernoulli distribution was carried
+out. The analysis was performed in R and the brms pack-
+age [26]. All iterations were set to 10,000 and burn-in
+samples were set to 5,000, with the number of chains set
+to four. The value of Rhat for all parameters equaled 1.0,
+indicating convergence across the four chains. The analy-
+sis results are presented in Table 8. In addition, the odds
+rates of the estimated values based on the posterior distri-
+bution of Bayesian estimates are calculated, and the sta-
+tistically signiﬁcant variables are presented in Fig. 1(b).
+According to the results, the most powerful reason that
+triggered their evacuation behaviors was “Because I was
+told by the ﬁre department and the police” (odds = 43.46,
+b = 3.77, 95%CI = 1.134 to 7.385). The approach from
+public institutions was an important factor. The next fac-
+Journal of Disaster Research Vol.15 No.7, 2020
+1019
+
+
+===== [page 10] =====
+Ohtomo, S. et al.
+tors that increased the probability of choosing an evacua-
+tion behavior were “The building was damaged” (odds =
+18.92, b = 2.94, 95%CI = .371 to 6.432), and the dummy
+of the ﬂood prediction at the time of the issuance of the
+evacuation order (degree of ﬂooding above the ﬂoor level:
+odds = 11.39, b = 2.43, 95%CI = .938 to 4.053). The
+larger the crisis they perceived was, the higher the rate
+at which they took evacuation action was. On the other
+hand, the evacuation behaviors were inhibited by the in-
+ﬂuence of the length of residence (odds = .61, b = −.50,
+95%CI = −.886 to −.124), in addition to the reasons
+of “I did not feel the need to evacuate” (odds = .30,
+b = −1.20, 95%CI = −1.872 to −.541) and “I thought it
+was not serious” (odds = .49, b = −.71, 95%CI = −1.352
+to −.068). The less the residents felt insecure about the
+disaster and the longer the residents lived, the less they
+evacuated. In addition, similar to the evacuation behav-
+iors at the time of being aware of the emergency heavy
+rain warning, the awareness of hazard maps before the
+July 2018 heavy rain, ﬂood prediction, awareness of evac-
+uation shelters, evacuation plans, and ﬂood prediction im-
+mediately before the issuance of the evacuation order had
+not affected the choice of the evacuation behaviors.
+4. Discussion
+This study has examined the factors that affect evac-
+uation behaviors by examining the residents’ awareness
+of and the decision-making process before and during the
+July 2018 heavy rain. Although many residents had seen
+the hazard maps before the July 2018 heavy rain, the per-
+centage of the residents who predicted ﬂood damage was
+small. A previous study has indicated that awareness of
+a hazard map does not affect ﬂood risk perception [11].
+It has also been pointed out that knowledge of disasters
+does not encourage people to take response actions [12].
+Since an optimistic bias tends to act in normal times [16],
+scientiﬁc information about disasters does not possibly
+have a sufﬁcient impact on the formation of people’s sense
+of crisis. In particular, humans tend to fail to adequately
+respond to objective information such as that provided by
+hazard maps. For this reason, there is a need for designs
+that are responsive to the human perceptive mechanism.
+Expressions by which damage is intuitively grasped are
+required, such as inserting not only information on the es-
+timated damages but also images of the speciﬁc damages
+to be caused.
+Regarding the evacuation behaviors in the July 2018
+heavy rain, it was indicated that a certain number of res-
+idents did not take any evacuation behavior even in the
+situation where the houses were damaged. Due to the
+change from the emergency heavy rain warning to the
+evacuation order, the number of residents who did not
+take evacuation behavior was reduced, but residents still
+did not take action even after receiving each warning.
+A previous study has indicated that many people did not
+take safety ensuring actions, even after receiving an earth-
+quake early warning of which the urgency is obvious [15].
+In general, it has been pointed out that disaster preventive
+behaviors are less likely to be taken [16].
+Next, regarding the determinants for evacuation behav-
+iors at the time of being aware of the emergency heavy
+rain warning, those who evacuated were those who were
+aware of facing a crisis. Previous studies have indicated
+that affective factors such as fear of disasters trigger coun-
+termeasure actions [19, 25]. In addition, approaches from
+other people such as family members and relatives inﬂu-
+enced evacuation behaviors. A previous study has indi-
+cated that the approach from close people such as friends
+and family members facilitates disaster prevention behav-
+ior [20]. In addition, people who took care of others with
+special needs during a disaster, and people with infants
+and children took evacuation actions. A previous study
+has also pointed out that the presence of people with spe-
+cial needs during the disaster is a major factor in choosing
+evacuation behaviors [22].
+When the evacuation order was issued, the majority
+of those who took actual evacuation behaviors was those
+who were approached by public sectors such as the ﬁre
+department and the police. It has been indicated that even
+those who have not taken evacuation action, even though
+the disaster situation became serious, took evacuation ac-
+tion due to the approach from people around them [9].
+Solberg et al. [16] argue that an approach from a social
+network becomes a strong normative behavior.
+Those
+who were aware of facing a crisis also took evacuation
+action. However, unlike the time of being aware of the
+emergency heavy rain warning, it was the second factor
+that affects the choice of evacuation behaviors. A previ-
+ous study has indicated that the determinants for disas-
+ter preventions vary depending on the stage of individ-
+ual decision-making [25]. There was a difference in the
+inﬂuence of the determinant of the evacuation behaviors
+between the time of being aware of the emergency heavy
+rain warning and the time of being aware of the evacua-
+tion order. Those who took evacuation behaviors at the
+time of being aware of the emergency heavy rain warn-
+ing issued earlier strongly tend to choose behaviors on the
+basis of their sense of crisis. Those who took evacuation
+behaviors at the time of the evacuation order issued later
+did not take action at the time of being aware of the is-
+suance of the emergency heavy rain warning. Therefore,
+they were encouraged to act at the request of authorities
+such as public institutions rather than their own sense of
+crisis. Classical psychology has also pointed out that peo-
+ple are more likely to submit to authorities when faced
+with situations that are difﬁcult to judge [21].
+At the time of the emergency heavy rain warning and
+at the time of the issuance of the evacuation order, the
+awareness of hazard maps, ﬂood prediction, awareness of
+evacuation shelters, evacuation plans, and ﬂood predic-
+tion before the issuance of the warning had not affected
+the choice of the evacuation behaviors. Previous studies
+have indicated that intuitive System 1 acts in preference to
+deliberate System 2 in risk determination [6, 7]. Reason-
+able decisions such as hazard maps and ﬂood prediction
+are dependent on System 2, and hence they did not af-
+1020
+Journal of Disaster Research Vol.15 No.7, 2020
+
+
+===== [page 11] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+fect the choice of evacuation behaviors in the emergency.
+Instead, evacuation behaviors were chosen as a response
+of System 1 based on affective decisions such as a sense
+of crisis. Previous studies have indicated that residents’
+awareness of hazard maps [11] and ﬂood prediction prior
+to the occurrence of a disaster [19] do not affect ﬂooding
+countermeasures. Even the awareness of evacuation shel-
+ters and evacuation plans did not affect the choice of evac-
+uation behaviors during the disaster. This point may also
+be due to an extremely low relevance between the knowl-
+edge of disasters and countermeasure actions [12]. The
+way people react to natural disasters is not rational [13].
+Scientiﬁc information and knowledge about disasters may
+have limitations in facilitating people’s choice of evacua-
+tions behaviors.
+This study has some limitations. First, data were col-
+lected about ﬁve months after the July 2018 heavy rain. It
+is physically and ethically difﬁcult to conduct a survey im-
+mediately after a disaster. There is a certain limitation in
+interpretation as a judgment of the situation on the day of
+a disaster. Second, this study targeted residents who have
+been issued a “victim’s certiﬁcate of home” during the
+July 2018 heavy rain. Therefore, it is likely that the sur-
+vey results are overestimated. In particular, the residents
+in unaffected areas may have insufﬁcient information and
+knowledge before the disaster, and their proportion of tak-
+ing evacuation behaviors during the disaster may be even
+lower. Although this study has some limitations, it was
+possible to make the issues on evacuation behaviors clear
+by examining the determinants for the residents affected
+by the July 2018 heavy rain to take evacuation behaviors
+in accordance with the situation change from the emer-
+gency heavy rain warning to the issuance of the evacua-
+tion order.
+5. Conclusions
+In the July 2018 heavy rain, the low rate of evacuation
+behaviors became a problem. On the basis of a survey
+data of the disaster victim residents in Okayama prefec-
+ture, this study has examined the choice of the evacuation
+behaviors and its determinants at the time of the emer-
+gency heavy rain warning and at the time of being aware
+of the issuance of the evacuation order. As a result, the
+residents who took evacuation actions in the early stage
+took actions based on their sense of crisis; those who took
+actions in the later stage took evacuation behaviors on the
+basis of an external approach. It is indicated that scien-
+tiﬁc knowledge and information on disasters are insuf-
+ﬁcient to trigger evacuation behaviors during a disaster.
+As pointed out that there is a discrepancy between human
+judgment and behavior [13], disaster risk communication
+based on psychological mechanisms is important. The
+torrential rain disasters are often caused by long-lasting
+rain. A discrepancy is likely to occur between awareness
+of hazard maps and disaster prediction in normal times
+and residents’ awareness of the situation at the time of a
+disaster. During a disaster, communication that arouses an
+intuitive sense of crisis of System 1 is required in facilitat-
+ing evacuation behaviors. In the future, based on empir-
+ical ﬁndings obtained by analyzing the behaviors during
+a disaster, it is necessary to implement measures to guide
+people to evacuate following the characteristics of the ac-
+tual people’s decision-making process.
+Acknowledgements
+The data for this analysis was provided by Okayama prefec-
+ture [23].
+References:
+[1] Cabinet Ofﬁce, Government of Japan, “The report about the
+damage of the torrential
+rain in western Japan in 2018,”
+2018,
+http://www.bousai.go.jp/updates/h30typhoon7/pdf/310109
+1700 h30typhoon7 01.pdf (in Japanese) [accessed October 28,
+2019]
+[2] Hiroshima city,
+“The recommendations and examinations of
+strategies
+for
+public
+evacuation
+in
+the
+July
+2018
+heavy
+rain,” 2018, https://www.city.hiroshima.lg.jp/uploaded/attachment/
+54796.pdf (in Japanese) [accessed May 8, 2020]
+[3] Hiroshima Business and Management School (HBMS), “Sur-
+vey of attitude and behavior for evacuation in the July 2018
+heavy rain: Analysis by disaster marketing research team (brief
+report),” 2018, https://mba.pu-hiroshima.ac.jp/pdf/h30/180801a
+bousaipress.pdf (in Japanese) [accessed May 2, 2020]
+[4] “Alert level, the belief of evacuation, improvement of attitude and
+optimism feeling due to the torrential rain,” Yomiuri Shimbun,
+morning edition, June 16, 2019.
+[5] K. Ninomiya, E. Ikuta, and D. Saeki, “Effect of Consciousness
+and Preparedness for Disaster on Decision-Making during Disas-
+ter: Survey of Evacuation Behavior in the Case of Typhoon Lan,” J.
+of Social Safety Science, Vol.35, pp. 233-242, 2019 (in Japanese).
+[6] P. Slovic, ““If I look at the mass I will never act”: Psychic numbing
+and genocide,” Judgment and Decision Making, Vol.2, No.2, pp. 79-
+95, 2007.
+[7] K. E. Stanovich and R. F. West, “Individual differences in reason-
+ing: Implications for the rationality debate?,” Behavioral and Brain
+Sciences, Vol.23, Issue 5, pp. 645-665, 2000.
+[8] I. L. Janis and L. Mann, “Decision Making: A Psychological Anal-
+ysis of Conﬂict, Choice, and Commitment,” Free Press, 1977.
+[9] S. Ohtomo, R. Kimura, and N. Hirata, “The Inﬂuences of Residents’
+Evacuation Patterns in the 2016 Kumamoto Earthquake on Public
+Risk Perceptions and Trust Toward Authorities,” J. Disaster Res.,
+Vol.12, No.6, pp. 1139-1150, 2017.
+[10] S. Ohtomo and Y. Hirose, “Consumer’s psychological processes of
+hoarding and avoidant purchasing after the Tohoku earthquake,”
+The Japanese J. of Psychology, Vol.84, No.6, pp. 557-565, doi:
+10.4992/jjpsy.84.557, 2014 (in Japanese).
+[11] M. Siegrist and H. Gutscher, “Flooding Risks: A Comparison of
+Lay People’s Perceptions and Expert’s Assessments in Switzer-
+land,” Risk Analysis, Vol.26, No.4, pp. 971-979, 2006.
+[12] P. Bubeck, W. J. W. Botzen, and J. C. J. H. Aerts, “A Review of
+Risk Perceptions and Other Factors that Inﬂuence Flood Mitigation
+Behavior,” Risk Analysis, Vol.32, Issue 9, pp. 1481-1495, 2012.
+[13] G. Wachinger, O. Renn, C. Begg, and C. Kuhlicke, “The Risk Per-
+ception Paradox – Implications for Governance and Communica-
+tion of Natural Hazards,” Risk Analysis, Vol.33, No.6, pp. 1049-
+1065, 2013.
+[14] R. Kimura,
+S. Ohtomo,
+and N. Hirata,
+“A Study on the
+2016 Kumamoto Earthquake: Citizen’s Evaluation of Earthquake
+Information and Their Evacuation and Sheltering Behaviors,” J.
+Disaster Res., Vol.12, No.6, pp. 1117-1138, 2017.
+[15] K. Nakayachi, J. S. Becker, S. H. Potter, and M. Dixon, “Residents’
+Reactions to Earthquake Early Warnings in Japan,” Risk Analysis,
+Vol.39, No.8, pp. 1723-1740, 2019.
+[16] C. Solberg, T. Rossetto, and H. Joffe, “The social psychology of
+seismic hazard adjustment: re-evaluating the international litera-
+ture,” Natural Hazards and Earth System Sciences, Vol.10, Issue 8,
+pp. 1663-1677, 2010.
+[17] T. Grothmann and F. Reusswig, “People at Risk of Flooding: Why
+Some Residents Take Precautionary Action While Others Do Not,”
+Natural Hazards, Vol.38, No.1, pp. 101-120, 2006.
+[18] J. de Boer, W. J. W. Botzen, and T. Terpstra, “More Than Fear In-
+duction: Toward an Understanding of People’s Motivation to Be
+Well-Prepared for Emergencies in Flood-Prone Areas,” Risk Anal-
+ysis, Vol.35, No.3, pp. 518-535, 2015.
+Journal of Disaster Research Vol.15 No.7, 2020
+1021
+
+
+===== [page 12] =====
+Ohtomo, S. et al.
+[19] K. Takao, T. Motoyoshi, T. Sato, T. Fukuzondo, K. Seo, and S.
+Ikeda, “Factors determining residents’ preparedness for ﬂoods in
+modern megalopolises:
+the case of the Tokai ﬂood disaster in
+Japan,” J. of Risk Research, Vol.7, Issue 7-8, pp. 775-787, 2004.
+[20] K. Heller, D. B. Alexander, M. Gatz, B. G. Knight, and T. Rose,
+“Social and Personal Factors as Predictors of Earthquake Prepara-
+tion: The Role of Support Provision, Network Discussion, Nega-
+tive Affect, Age, and Education,” J. of Applied Social Psychology,
+Vol.35, Issue 2, pp. 399-422, 2005.
+[21] S. Milgram, “Behavioral Study of obedience,” The J. of Abnormal
+and Social Psychology, Vol.67, No.4, pp. 371-378, 1963.
+[22] R. Kimura, H. Hayashi, S. Tatsuki, K. Tamura, K. Horie, and A.
+Kuromiya, “Deﬁned Evacuation and Sheltering Processes of Disas-
+ter Victims in the 2004 Mid-Niigata Prefecture Earthquake,” J. of
+social safety science, Vol.7, pp. 161-170, 2005.
+[23] Okayama prefecture, “Questionnaire on Responsive Actions to
+July 2018 Heavy Rain,”
+2019,
+https://www.pref.okayama.jp/
+uploaded/life/601705 5031914 misc.pdf (in Japanese) [accessed
+May 8, 2020]
+[24] Okayama prefecture,
+“The disaster record of the July 2018
+heavy rain,”
+2019,
+http://kikikanri.pref.okayama.jp/saigai2018/
+kirokushi2018.pdf (in Japanese) [accessed May 8, 2020]
+[25] I. M. Martin, H. Bender, and C. Raish, “What Motivates Individuals
+to Protect Themselves from Risks: The Case of Wildland Fires,”
+Risk Analysis, Vol.27, Issue 4, pp. 887-900, 2007.
+[26] P.-C. B¨urkner, “brms: An R Package for Bayesian Multilevel Mod-
+els Using Stan,” J. of Statistical Software, Vol.80, No.1, 28pp.,
+2017.
+Appendix A. Reasons for Evacuation Decision
+Please tell us the reason(s) for having evacuated, and/or
+the reason(s) for not having evacuated. Please circle all
+the applicable below.
+1. It was raining
+2. I felt insecure about the safety of the building
+3. The building was damaged
+4. It was a one-story house
+5. Lifelines such as electricity, gas, and water were
+available
+6. The surroundings and roads were ﬂooded
+7. I had an elderly member in my family
+8. I had (an) infant(s) and/or (a) child(ren) in my family
+9. I had someone in need of special care in my family
+10. I had a pet
+11. I wanted by all means to go to a place where people
+were
+12. I thought I could get information and supplies
+13. I thought I could get administrative support
+14. I was told by my neighbor(s)
+15. I was told by my family or relatives
+16. I was told by the ﬁre department and the police
+17. I received information from the disaster administra-
+tion wireless communications
+18. It was not raining that much
+19. I thought it would be safer staying there
+20. There was no damage to the building
+21. It is sufﬁcient to go to the second ﬂoor or higher
+22. Lifelines such as electricity, gas, and water were not
+available
+23. The surroundings and roads were not ﬂooded
+24. I did not have someone in need of special care in my
+family
+25. I thought it was not serious
+26. It was troublesome to evacuate
+27. I did not feel the need to evacuate
+28. I could not evacuate even though I wanted to
+29. I received information via TV, radio, etc.
+30. I received information on social media (Twitter,
+Facebook, etc.)
+31. Other
+Name:
+Shoji Ohtomo
+Afﬁliation:
+Professor, Department of Psychology, Faculty of
+Human Sciences, Konan Women’s University
+Address:
+6-2-23 Morikita-machi, Higashinada-ku, Kobe, Hyogo 658-0001, Japan
+Brief Career:
+1998-2002 Faculty of Education, Aichi University of Education
+2002-2007 Graduate School of Environmental Studies, Nagoya University
+2007-2008 Assistant Professor, Graduate School of Information Sciences,
+Tohoku University
+Selected Publications:
+• “Public acceptance model for siting a repository of radioactive
+contaminated waste,” J. of Risk Research, doi:
+10.1080/13669877.2020.1750457, 2020.
+• “The Inﬂuences of Residents’ Evacuation Patterns in the
+2016 Kumamoto Earthquake on Public Risk Perceptions and Trust Toward
+Authorities,” J. Disaster Res., Vol.12, No.6, pp. 1139-1150, 2017.
+• “Exposure to diet priming images as cues to reduce the inﬂuence of
+unhealthy eating habits,” Appetite, Vol.109, No.1, pp. 83-92, doi:
+10.1016/j.appet.2016.11.022, 2017.
+Academic Societies & Scientiﬁc Organizations:
+• Japanese Psychological Association (JPA)
+• Society for Risk Analysis, Japan
+• European Health Psychology Society (EHPS)
+1022
+Journal of Disaster Research Vol.15 No.7, 2020
+
+
+===== [page 13] =====
+The Determinants of Residents’ Evacuation Behavior
+in the Torrential Rain in Western Japan in 2018:
+Examination of Survey Data of Victims in Okayama Prefecture
+Name:
+Reo Kimura
+Afﬁliation:
+Professor, School and Graduate School of Hu-
+man Science and Environment, University of
+Hyogo
+Address:
+1-1-12 Shinzaike-honcho, Himeji, Hyogo 670-0092, Japan
+Brief Career:
+1994-1998 School of Human Sciences, Waseda University
+1998-2003 Graduate School of Informatics, Kyoto University
+2003-2009 Assistant Professor, Graduate School of Environmental
+Studies, Nagoya University
+2009-2011 Associate Professor, Graduate School of Environmental and
+Disaster Research, Fuji Tokoha University
+Selected Publications:
+• “Recovery and Reconstruction Calendar,” J. Disaster Res., Vol.2, No.6,
+pp. 465-474, 2007.
+• “Implementation and Operation of a Cloud-Based Participatory Damage
+Recognition System to Obtain a Common Operational Picture that
+Supports a Quick Disaster Response,” Int. J. for Infonomics, Special Issue
+Vol.1, Issue 1, pp. 860-866, 2013.
+• “Current Status and Issues of Life Recovery Process Three Years After
+the Great East Japan Earthquake Questionnaire Based on Subjective
+Estimate of Victims Using Life Recovery Calendar Method,” J. Disaster
+Res., Vol.9, No.sp, pp. 673-689, 2014.
+• “Comparison Between the Life Recovery Processes After the
+Mid-Niigata Earthquake and the Chuetsu-Oki Earthquake – Results of a
+Random Sampled Social Survey Using the Life Recovery Calendar and
+GIS-Based Spatiotemporal Analysis,” J. Disaster Res., Vol.10, No.2,
+pp. 196-203, 2015.
+• “Issues Facing Voluntary Evacuees from the Fukushima Daiichi Nuclear
+Power Plant Accident Based on the Collection and Analysis of Cases of
+Voluntary Evacuation,” J. Disaster Res., Vol.10, No.sp, pp. 755-769, 2015.
+• “Development of a “Disaster Management Literacy Hub” for Collecting,
+Creating, and Transmitting Disaster Management Content to Increase
+Disaster Management Literacy,” J. Disaster Res., Vol.12, No.1, pp. 42-56,
+2017.
+• “A Study on the 2016 Kumamoto Earthquake: Citizen’s Evaluation of
+Earthquake Information and Their Evacuation and Sheltering Behaviors,”
+J. Disaster Res., Vol.12, No.6, pp. 1117-1138, 2017.
+• “Developing a Disaster Management Education and Training Program
+for Children with Intellectual Disabilities to Improve “Zest for Life” in the
+Event of a Disaster – A Case Study on Tochigi Prefectural Imaichi Special
+School for the Intellectually Disabled –,” J. Disaster Res., Vol.15, No.1,
+pp. 20-40, 2020.
+• “Research for Contributing to the Field of Disaster Science: A Review,”
+J. Disaster Res., Vol.15, No.2, pp. 152-164, 2020.
+Academic Societies & Scientiﬁc Organizations:
+• Institute of Social Safety Science (ISSS)
+• Japan Society for Natural Disaster Science (JSNDS)
+• Japanese Psychological Association (JPA)
+• Japanese Society of Social Psychology
+• Japan Sociological Society (JSS)
+• Seismological Society of Japan (SSJ)
+• Japan Society of Civil Engineering (JSCE)
+Name:
+Yoshiaki Kawata
+Afﬁliation:
+Faculty of Social Safety Sciences, Kansai Uni-
+versity
+Address:
+7-1 Hakubai-cho, Takatsuki, Osaka 569-1098, Japan
+Brief Career:
+1969- Graduated from Department of Civil Engineering, Kyoto University
+1976- Obtained Ph.D. from Kyoto University
+1981-1993 Associate Professor, Disaster Prevention Research Institute
+(DPRI), Kyoto University
+1981-1982 Research Fellow, University of Washington
+1992- Fullbright Senior Research Fellow, Princeton University
+1993-2002 Vice President, Natural Hazard Society
+1993-2009 Professor, DPRI, Kyoto University
+1993, 1994 Best Paper Award, Japan Society of Civil Engineers (JSCE)
+2002- Founding Director of Disaster Reduction and Human Renovation
+Institution
+2005-2007 Director, DPRI, Kyoto University
+2007-2008 President, Japan Society for Natural Disaster Science (JSNDS)
+2007 United Nations Sasakawa Award for Disaster Risk Reduction
+2008 Distinguished Services Commendation in the ﬁeld of disaster
+management, awarded by the Prime Minister
+2009-2011 Dean and Professor, Faculty and Graduate School of Social
+Safety Science, Kansai University
+2009-2012 President, Japan Society for Disaster Information Studies
+2010 Social Award of Hyogo Perfecture
+2016- Chair Professor and Director, Research Center for Social Safety
+Science, Kansai University
+2016 Achievement Award of JSCE
+Selected Publications:
+• More than 700 technical papers and 70 books were published in the
+ﬁelds of integrated disaster reduction system of catastrophic disasters
+including urban disasters and their emergency management.
+Academic Societies & Scientiﬁc Organizations:
+• American Society of Civil Engineers (ASCE)
+• International Association for Hydro-Environment Engineering and
+Research (IAHR)
+Journal of Disaster Research Vol.15 No.7, 2020
+1023
+
+
+===== [page 14] =====
+Ohtomo, S. et al.
+Name:
+Keiko Tamura
+Afﬁliation:
+Professor, Risk Management Ofﬁce, Headquar-
+ters for Risk Management, Niigata University
+Address:
+8050 Ikarashii 2-no-cho, Nishi-ku, Niigata, Niigata 950-2181, Japan
+Brief Career:
+2004-2006 Researcher, Research Center for Disaster Reduction Systems,
+Disaster Prevention Research Institute (DPRI), Kyoto University
+2006-2009 Associate Professor, Research Center for Natural Hazard &
+Disaster Recovery, Niigata University
+2009- Professor, Risk Management Ofﬁce/Research Center for Natural
+Hazard & Disaster Recovery, Niigata University
+Selected Publications:
+• K. Tamura, I. Raﬂiana, and P. Kovacs, “Formalizing the Concept of
+“Build Back Better” Based on the Global Forum on Science and
+Technology for Disaster Resilience 2017 WG4,” J. Disaster Res., Vol.13,
+No.7, pp. 1187-1192, 2018.
+• K. Tamura and M. Inoguchi, “Proposal of Elements for Creating
+Scenarios for Those Needing Support During National Disasters,” J.
+Disaster Res., Vol.11, No.5, pp. 870-880, 2016.
+Academic Societies & Scientiﬁc Organizations:
+• Institute of Social Safety Science (ISSS)
+• Japan Society for Natural Disaster Science (JSNDS)
+• Japan Society of Civil Engineers (JSCE)
+1024
+Journal of Disaster Research Vol.15 No.7, 2020

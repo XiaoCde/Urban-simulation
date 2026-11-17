@@ -377,14 +377,20 @@ function mergeGeos(geos) {
   return out;
 }
 
-export function buildTree(mats, kind, seed, px = 0, pz = 0) {
+export function buildTree(mats, kind, seed, px = 0, pz = 0, py = 0) {
   const r = rng(seed);
   const g = new THREE.Group();
   // 【坑】叶卡片要合并进全场景共享的 mesh，所以必须在"世界坐标"里生成。
   // 但 g.position 是外部调用者之后才设置的 —— 若在这里读 g.position，
   // 拿到的永远是 0，所有叶子会堆在原点、被建筑挡住（实测叶子全消失）。
   // 因此把落点显式传进来。
-  g.position.set(px, 0, pz);
+  //
+  // 【py 是什么】树脚的**地面高程**。白宫园林的地面是斜坡（南草坪往南掉 4~5 m），
+  // 以前所有树统一站在「白宫中心那一点的地面高」上，于是南坡的树整体浮空、
+  // 北坡的整体埋进地里 —— 用户看到的就是「树浮在空中」。
+  // 注意树干/投影斑是 g 的子件（跟着 g.position.y 走），
+  // 而叶子卡片是烘进共享 mesh 的独立几何（不吃 g 的变换），所以卡片必须自己加上 py。
+  g.position.set(px, py, pz);
 
   const profiles = {
     // 白宫南草坪那些大乔木（美国榆、悬铃木）：高、冠幅大、干明显
@@ -457,7 +463,7 @@ export function buildTree(mats, kind, seed, px = 0, pz = 0) {
         jitter(r, -0.10, 0.10)
       ));
       mtx.compose(
-        new THREE.Vector3(baseX + bx, by, baseZ + bz),
+        new THREE.Vector3(baseX + bx, by + py, baseZ + bz),
         q,
         new THREE.Vector3(1, 1, 1)
       );
@@ -491,15 +497,29 @@ export function updateTrees() { /* 保留接口：后续要做风摆再在这里
  * 花坛：红郁金香 + 蓝葡萄风信子（照片里那条花带）。
  * 每花一个十字卡片，数量可控（这里约 600 株），位置带抖动。
  */
-export function buildFlowerBed(mats, center, width, depth, seed) {
+export function buildFlowerBed(mats, center, width, depth, seed, yAt = null) {
   const g = new THREE.Group();
   g.position.copy(center);
   const r = rng(seed);
+  // 【跟着地形走】yAt(lx, lz) 返回局部坐标处的地面高程（相对 center.y）。
+  // 花坛横跨 104 m，南草坪在这段距离上要掉 0.9 m —— 用一个平面会一头扎进土里、
+  // 一头悬空。所以土床细分后逐点抬到地面，花也逐朵抬。
+  const dy = yAt || (() => 0);
 
-  // 土床
-  const soil = new THREE.Mesh(new THREE.PlaneGeometry(width, depth), mats.soil);
+  // 土床（细分后逐顶点贴地）
+  const soil = new THREE.Mesh(new THREE.PlaneGeometry(width, depth, 52, 2), mats.soil);
   soil.rotation.x = -Math.PI / 2;
   soil.position.y = 0.015;
+  {
+    // 平面在局部 XY 上；绕 X 转 -90° 后：世界 x = vx，世界 z = -vy，世界 y = vz。
+    const sp = soil.geometry.attributes.position;
+    for (let i = 0; i < sp.count; i++) {
+      const vx = sp.getX(i), vy = sp.getY(i);
+      sp.setZ(i, dy(vx, -vy) + 0.02);
+    }
+    sp.needsUpdate = true;
+    soil.geometry.computeVertexNormals();
+  }
   soil.receiveShadow = true;
   g.add(soil);
 
@@ -520,8 +540,9 @@ export function buildFlowerBed(mats, center, width, depth, seed) {
       const h = jitter(r, 0.20, 0.42);
 
       // 叶片（细长三角）
+      const gy2 = dy(x, z);
       const leaf = new THREE.Mesh(new THREE.PlaneGeometry(0.045, h * 0.9), greenMat);
-      leaf.position.set(x, h * 0.45, z);
+      leaf.position.set(x, gy2 + h * 0.45, z);
       leaf.rotation.y = jitter(r, 0, Math.PI);
       leaf.rotation.z = jitter(r, -0.18, 0.18);
       g.add(leaf);
@@ -532,7 +553,7 @@ export function buildFlowerBed(mats, center, width, depth, seed) {
       const fr = jitter(r, 0.035, 0.062);
       for (let c = 0; c < 2; c++) {
         const petal = new THREE.Mesh(new THREE.PlaneGeometry(fr * 2.4, fr * 2.0), fm);
-        petal.position.set(x, h, z);
+        petal.position.set(x, gy2 + h, z);
         petal.rotation.y = (c * Math.PI) / 2 + jitter(r, -0.3, 0.3);
         petal.rotation.z = jitter(r, -0.25, 0.25);
         g.add(petal);
@@ -544,10 +565,12 @@ export function buildFlowerBed(mats, center, width, depth, seed) {
 
 // ==================================================================== 绿篱
 /** 修剪的方形绿篱（照片里喷泉前那道深绿矮墙） */
-export function buildHedge(mats, center, w, h, d, seed) {
+export function buildHedge(mats, center, w, h, d, seed, yAt = null) {
   const r = rng(seed);
   const g = new THREE.Group();
   g.position.copy(center);
+  // 绿篱横跨 96 m，地面起伏 1.1 m：逐段贴地，否则一端悬空一端埋土（同 buildFlowerBed）
+  const dy = yAt || (() => 0);
 
   // 主体：多个盒子拼，表面做出起伏。
   // 【坑】第一版在盒子顶上撒叶卡片，结果卡片远看是一堆白点（alpha 边缘没压住）。
@@ -563,7 +586,7 @@ export function buildHedge(mats, center, w, h, d, seed) {
       boxWithBevel(w / segs + 0.10, hh, dd, 0.04),
       mats.hedge
     );
-    seg.position.set(x, hh / 2, jitter(r, -0.03, 0.03));
+    seg.position.set(x, dy(x, 0) + hh / 2 - 0.04, jitter(r, -0.03, 0.03));
     seg.castShadow = seg.receiveShadow = true;
     g.add(seg);
   }

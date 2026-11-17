@@ -1,0 +1,381 @@
+
+
+===== [page 1] =====
+Supplement of Nat. Hazards Earth Syst. Sci., 25, 1501–1520, 2025
+https://doi.org/10.5194/nhess-25-1501-2025-supplement
+© Author(s) 2025. CC BY 4.0 License.
+Supplement of
+Assessing the impact of early warning and evacuation on human losses
+during the 2021 Ahr Valley ﬂood in Germany using agent-based mod-
+elling
+André Felipe Rocha Silva et al.
+Correspondence to: Heidi Kreibich (heidi.kreibich@gfz.de)
+The copyright of individual parts of the supplement might differ from the article licence.
+
+
+===== [page 2] =====
+1 
+ 
+The evacuation mode statistics significantly impact the estimated fatalities across all scenarios and when compared 
+individually (p < 0.001). When 100 % of the population evacuates on foot, the median number of fatalities is 229, with an 
+interquartile range of 210–245. In contrast, if the entire population evacuates by vehicles, the median number of fatalities 
+decreases to 133, with an interquartile range of 124-142. These differences affect only fatalities during the evacuation, with 
+5 
+extreme median values ranging from 38 to 124 (Fig. S1 and Table S2). 
+ 
+Figure S1: 2021 Ahr Valley flood estimated fatalities and their location for several fractions of evacuation mode. 
+Table S1: 2021 Ahr Valley flood estimated fatalities statistics for several fractions of evacuation mode. 
+Evacuation 
+mode 
+(% by vehicles 
+/ % on foot) 
+Fatalities estimation 
+Fraction 
+of indoor 
+fatalities 
+(%) 
+Median 
+First 
+quartile 
+Third 
+quartile 
+Minimum 
+Maximum 
+Median 
+inside 
+structures 
+Median 
+during 
+evacuation 
+0/100 
+229 
+210 
+245 
+129 
+317 
+104 
+124 
+45.4 
+10/90 
+219 
+201 
+235 
+107 
+295 
+104 
+114 
+47.5 
+20/80 
+208 
+192 
+224 
+117 
+288 
+104 
+103 
+50.0 
+30/70 
+198 
+182 
+213 
+123 
+273 
+104 
+93 
+52.5 
+40/60 
+189 
+174 
+203 
+119 
+269 
+104 
+85 
+55.0 
+50/50 
+179 
+166 
+192 
+114 
+269 
+104 
+74 
+58.1 
+60/40 
+170 
+157 
+183 
+110 
+229 
+105 
+65 
+61.8 
+70/30 
+160 
+148 
+172 
+102 
+215 
+104 
+55 
+65.0 
+80/20 
+151.5 
+140 
+162 
+99 
+202 
+105 
+46 
+69.3 
+90/10 
+142 
+133 
+152 
+90 
+188 
+104 
+38 
+73.2 
+100/0 
+133 
+124 
+142 
+90 
+182 
+104 
+28 
+78.2 
+S1 – Fraction of evacuation mode choice 
+
+
+===== [page 3] =====
+2 
+ 
+Although the evacuation mode of 100 % of the population evacuating by vehicles results in a fatality count closest to the actual 
+10 
+number (118), the scenario where 80 % evacuate by vehicles and 20 % on foot most matches the proportion of indoor fatalities. 
+This scenario shows a fraction of indoor fatalities at 69.3 %, compared to 68.5 % in the actual event. 
+The principal factors affecting the dissemination of the first warning include the number of channels, their technologies, 
+frequency, and the time of day (Sorensen and Mileti, 2015a). Factors influencing most mobilisation times include, in addition 
+15 
+to the warning content and perception of personal impacts, environmental cues and impact intensity (Sorensen and Mileti, 
+2015b). Theorical models are proposed to represent each of these processes based on an extensive database of historical cases 
+involving various hazard sources and previous studies.  
+In order to estimate the population warned within a specific minute time step (𝑃𝑤𝑎𝑟𝑛𝑒𝑑𝑡), the Rayleigh distribution can be 
+employed in conjunction with a specific rate of unofficial means of warning (Equation S1). This model is influenced by two 
+20 
+key coefficients: 𝐵𝑡 and 𝐶𝑡. The coefficient 𝐵𝑡  represents the effectiveness of the broadcast channels utilised and serves as the 
+shape parameter of the Rayleigh distribution. Conversely, 𝐶𝑡 indicates the efficiency of non-official broadcast means at time 
+step t. Low values of 𝐵𝑡 correspond to more efficient broadcast channels, whereas higher values of 𝐶𝑡 correlate with an 
+increased rate of the population being warned through informal means. (Sorensen and Mileti, 2015a). For mobilisation, the 
+cumulative probability of being mobilised at minute time t (𝑃𝑚𝑜𝑏𝑖𝑙𝑖𝑠𝑒𝑑𝑡) is described by Equation S2. This probability depends 
+25 
+on the mobilisation speed coefficient (𝑎𝑚) and the median time for individuals to initiate mobilisation (𝑏𝑚). As 𝑎𝑚 decreases 
+from a value of 2, the response time accelerates. Conversely, when 𝑎𝑚 increases, the response time decelerates. Additionally, 
+higher values of 𝑏𝑚 indicate a longer duration to complete the initiation of protective action (Sorensen and Mileti, 2015b). 
+ 
+𝑃𝑤𝑎𝑟𝑛𝑒𝑑𝑡= 𝑃𝑤𝑎𝑟𝑛𝑒𝑑𝑡−1 + (
+𝑡
+𝐵𝑡
+2 𝑒
+−𝑡2
+2𝐵𝑡2) + (1 −𝑃𝑤𝑎𝑟𝑛𝑒𝑑𝑡−1) ∗(𝑃𝑤𝑎𝑟𝑛𝑒𝑑𝑡−1 ∗𝐶𝑡)  
+ 
+ 
+ 
+ 
+(S1) 
+30 
+𝑃𝑚𝑜𝑏𝑖𝑙𝑖𝑠𝑒𝑑𝑡= 1 −𝑒(−(𝑡2)/𝑎𝑚𝑏𝑚2)   
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+(S2) 
+ 
+A specific selection of these cases is utilised to define the proposed curves and their uncertainty bounds in LifeSim. There are 
+ten recommended curves (five for each period of the day) for warning diffusion in LifeSim, derived from six historical cases, 
+including chemical spills, hazardous material flow, volcanic eruptions, and flash floods. Additionally, nine mobilisation curves 
+35 
+are combined with levels of perception and preparedness, based on evaluations of three cases involving chemical and hazardous 
+material accidents (Sorensen and Mileti, 2015a, b; USACE, 2020). Table S2 presents the utilised curves, their respective 
+coefficients, and mobilisation rates for each scenario. 
+S2 – Alternative warning and evacuation scenarios 
+
+
+===== [page 4] =====
+3 
+ 
+Table S2: First approach of alternative scenarios of early warning and evacuation. Warning diffusion and mobilisation bounds with 
+their coefficients and rates for various scenarios: A1.1 (optimal scenario), A1.2 (intermediate scenario), A1.3 (suboptimal scenario), 
+40 
+A1.4 (suboptimal with empirical warning diffusion curve), and A1.5 (suboptimal with empirical mobilisation curve). 
+Alternative 
+scenario 
+Bounds 
+Warning diffusion 
+Mobilisation 
+Curve 
+𝐵𝑡 
+𝐶𝑡 
+Curve 
+𝑎𝑚 
+𝑏𝑚 
+Maximum mobilisation rate 
+8 hours 
+24 hours 
+72 hours 
+A1.1 
+Upper 
+Fast 
+5.0 
+0.100 
+Preparedness good  
+perception likely 
+1.00 
+25.0 
+100.0 
+100.0 
+100.0 
+Most likely 
+9.5 
+0.098 
+1.37 
+64.0 
+88.8 
+95.7 
+98.6 
+Lower 
+51.5 
+0.081 
+1.80 
+114.0 
+77.1 
+91.1 
+97.2 
+A1.2 
+Upper 
+Moderate 
+58.0 
+0.080 
+Preparedness poor  
+perception likely 
+1.35 
+61.8 
+81.5 
+95.0 
+98.5 
+Most likely 
+100.0 
+0.060 
+1.79 
+111.8 
+74.3 
+90.0 
+95.0 
+Lower 
+142.0 
+0.043 
+2.20 
+161.9 
+67.1 
+85.0 
+92.0 
+A1.3 
+Upper 
+Slow 
+103.0 
+0.060 
+Preparedness poor  
+perception unlikely 
+1.35 
+61.8 
+65.9 
+88.7 
+92.8 
+Most likely 
+145.0 
+0.042 
+1.79 
+111.8 
+57.0 
+84.2 
+90.0 
+Lower 
+150.0 
+0.040 
+2.20 
+161.9 
+48.0 
+79.8 
+87.2 
+A1.4 
+Upper 
+Empirical 
+Preparedness poor  
+perception unlikely 
+1.35 
+61.8 
+65.9 
+88.7 
+92.8 
+Most likely 
+1.79 
+111.8 
+57.0 
+84.2 
+90.0 
+Lower 
+2.20 
+161.9 
+48.0 
+79.8 
+87.2 
+A1.5 
+Upper 
+Slow 
+103.0 
+0.060 
+Empirical 
+Most likely 
+145.0 
+0.042 
+Lower 
+150.0 
+0.040 
+Figure S2 illustrates the estimated fatalities mean, standard deviation, skewness, and kurtosis over model iterations for the 
+reconstruction scenario and the first approach of alternative scenarios. The results indicate that 2,000 iterations are sufficient 
+for the convergence of these statistics.  
+45 
+ 
+ 
+S3 – Life loss model convergence 
+
+
+===== [page 5] =====
+4 
+ 
+ 
+Figure S2: Estimated fatalities Mean, standard deviation, skewness, and kurtosis trace for reconstructed scenario of the 2021 flood 
+and for the alternative early warning and evacuation scenarios, which focus on evaluating the warning diffusion and mobilisation 
+50 
+curves: RFEWE (reconstructed scenario of the 2021 flood), A1.1 (optimal scenario), A1.2 (intermediate scenario), A1.3 (suboptimal 
+scenario), A1.4 (suboptimal with empirical warning diffusion curve), and A1.5 (suboptimal with empirical mobilisation curve). 
+References 
+Sorensen, J. H. and Mileti, D. S.: First Alert or Warning Diffusion Time Estimation for Dam Breaches, Controlled Dam 
+Releases and Levee Breaches or Overtopping, Lakewood, Colorado, 2015a. 
+55 
+Sorensen, J. H. and Mileti, D. S.: Protective Action Initiation Time Estimation for Dam Breaches, Controlled Dam Releases, 
+and Levee Breaches or Overtopping, Lakewood, Colorado, 1–51 pp., 2015b. 
+
+
+===== [page 6] =====
+5 
+ 
+USACE: HEC-LifeSim. Life Loss Estimation. Version 2.0. Technical Reference Manual. CPD-97a, Davis, California, 2020. 
+  
