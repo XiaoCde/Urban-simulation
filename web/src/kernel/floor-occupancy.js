@@ -10,7 +10,7 @@
  * 数据来源与自设项见 kernel/floors.js 顶部与文末来源附录。
  */
 import { floorsFromHeight, floorElevationM, capacityPerFloor, assignFloor,
-  floodFloor, occupancyClass } from './floors.js';
+  floodFloor, occupancyClass, floorHeightFor } from './floors.js';
 
 /**
  * 建一个建筑空间索引（简单网格），用于把人按坐标就近分配到真实建筑。
@@ -23,8 +23,13 @@ export function buildBuildingIndex(buildings, cellM = 200) {
   for (const b of buildings) {
     const c = b && b.center;
     if (!Array.isArray(c) || !Number.isFinite(c[0]) || !Number.isFinite(c[1])) continue;
-    const item = { id: b.id, name: b.name, fn: b.function, height_m: b.height_m,
-      area_m2: b.area_m2, x: c[0], z: c[1],
+    // 【修 2026-11-17】assignFloor / capacityPerFloor 读的是 b.function，
+    // 这里原来只存了 fn，导致离线评估把每栋楼都当成 'other'（层高 3.3、
+    // 人均 46.8 m²），与运行时按真实功能取值不一致。两个字段都保留：
+    // fn 供返回对象用，function 供内核函数用。
+    const item = { id: b.id, name: b.name, fn: b.function, function: b.function,
+      height_m: b.height_m, area_m2: b.area_m2, x: c[0], z: c[1],
+      floorHeightM: floorHeightFor(b.function),
       // 层高按建筑功能取（办公 3.8／住宅 2.7／其他 3.3），不传 function 会用 3.3。
       floors: floorsFromHeight(b.height_m, null, b.function) };
     all.push(item);
@@ -70,7 +75,8 @@ export function assignPersonFloor(idx, x, z, ordinalFallback = 0, kind = 'home')
   const a = assignFloor(b, ord);
   return { buildingId: b.id, buildingName: b.name, floors: b.floors,
     floor: a.floor, elevationM: a.elevationM, indoor: a.indoor,
-    capacity: a.capacity, function: b.fn, kind, reason: a.reason };
+    capacity: a.capacity, floorHeightM: a.floorHeightM,
+    function: b.fn, kind, reason: a.reason };
 }
 
 /**

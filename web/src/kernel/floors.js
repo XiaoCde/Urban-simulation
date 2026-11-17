@@ -125,7 +125,10 @@ export const BASEMENT = Object.freeze({
 
 /** 这个人这次会不会下地下室。确定性哈希，同一个人永远同一答案。 */
 export function goesToBasement(i, share = BASEMENT.goesDownShare) {
-  return hash01(i, 0x5bd1) < share;
+  const s = Number(share);
+  // 【修 2026-11-17】share 为 NaN 时比较恒 false、>1 时恒 true，都不该发生。
+  const p = Number.isFinite(s) ? Math.max(0, Math.min(1, s)) : BASEMENT.goesDownShare;
+  return hash01(i, 0x5bd1) < p;
 }
 
 /** 下去待多少分钟。 */
@@ -176,9 +179,14 @@ export function floorsFromHeight(heightM, floorHeightM = null, functionName = ''
  */
 export function floorElevationM(floor, foundation = SELF_SET.foundationHeightM,
   floorHeightM = FLOOR_HEIGHT_M) {
-  const f = Math.max(1, Math.floor(Number(floor) || 1));
+  // 【修 2026-11-17】层号与基础高度都要挡非有限值：floor=Infinity 会算出
+  // Infinity 高程，foundation=NaN 会污染整栋楼的全部楼层判定。
+  const rawFloor = Number(floor);
+  const f = Number.isFinite(rawFloor) ? Math.max(1, Math.floor(rawFloor)) : 1;
+  const rawBase = Number(foundation);
+  const base = Number.isFinite(rawBase) ? rawBase : SELF_SET.foundationHeightM;
   const fh = Number.isFinite(floorHeightM) && floorHeightM > 0 ? floorHeightM : FLOOR_HEIGHT_M;
-  return foundation + (f - 1) * fh;
+  return base + (f - 1) * fh;
 }
 
 /**
@@ -196,10 +204,14 @@ export function floorElevationM(floor, foundation = SELF_SET.foundationHeightM,
  */
 export function capacityPerFloor(b) {
   const cls = occupancyClass(b && b.function);
-  const area = Math.max(0, Number(b && b.area_m2) || 0);
+  const raw = Number(b && b.area_m2);
+  // 【修 2026-11-17】area=Infinity 会让 cap=Infinity，所有人被塞进第 1 层，
+  // 且 capacity 序列化成 null。非有限面积按「无面积」处理，人判室外。
+  const area = Number.isFinite(raw) ? Math.max(0, raw) : 0;
   const per = SELF_SET.floorAreaPerPerson[cls] || SELF_SET.floorAreaPerPerson.other;
   // 每层面积按占地面积取；没有面积时给 0（不会被分配到这层）。
-  return area > 0 ? Math.max(1, Math.floor(area / per)) : 0;
+  return area > 0 && Number.isFinite(per) && per > 0
+    ? Math.max(1, Math.floor(area / per)) : 0;
 }
 
 /**
@@ -308,9 +320,18 @@ export function limitedMobilityByAge(age) {
  * @returns {{status:'safe'|'moveUp'|'drowning', targetFloor:number,
  *            safeFloor:number, reason:string}}
  */
+/** 楼层扫描的工程上限。【目前自己定的】只用于挡住病态输入（无限层数／极端高度），
+ *  不参与任何正常计算：真实建筑最多百余层，远低于此值。 */
+const MAX_FLOOR_SCAN = 1000;
+
 export function floodFloor(o) {
-  const w = Math.max(0, Number(o && o.waterDepthM) || 0);
-  const total = Math.max(1, Math.floor(Number(o && o.totalFloors) || 1));
+  const rawW = Number(o && o.waterDepthM);
+  const w = Number.isFinite(rawW) ? Math.max(0, rawW) : 0;
+  const rawTotal = Number(o && o.totalFloors);
+  // 【修 2026-11-17】totalFloors=Infinity 原先会让 targetFloor 变成 Infinity；
+  // 极大有限值还会让下面的逐层扫描跑不完成。统一夹到工程上限内。
+  const total = Number.isFinite(rawTotal)
+    ? Math.max(1, Math.min(MAX_FLOOR_SCAN, Math.floor(rawTotal) || 1)) : 1;
   const cur = clamp(Math.floor(Number(o && o.currentFloor) || 1), 1, total);
   const base = Number.isFinite(o && o.foundationM)
     ? o.foundationM : SELF_SET.foundationHeightM;

@@ -120,13 +120,24 @@ export const SELF_SET = Object.freeze({
  * 所以不再像旧版那样写 9 档各一个「致死水深」。
  */
 export function instabilityDepthFor(age) {
-  return age < 13 ? MEASURED.instabilityDV.childMaxDepthM
+  // 【修 2026-11-17】NaN 与 null 原先会落到错误档：NaN 走成人、null 走儿童
+  // （null < 13 为真）。取不到真实年龄时应走保守的成人档，与 incidents.js
+  // 的 vulnerabilityOf 口径一致。
+  const a = Number(age);
+  if (age === null || age === undefined || !Number.isFinite(a)) {
+    return MEASURED.instabilityDV.adultMaxDepthM;
+  }
+  return a < 13 ? MEASURED.instabilityDV.childMaxDepthM
     : MEASURED.instabilityDV.adultMaxDepthM;
 }
 
 /** 暴露耐受时长，只有儿童／成人两档，来自上面的自设表。 */
 export function exposureSecFor(age) {
-  return age < 13 ? SELF_SET.casualty.exposureSecChild
+  const a = Number(age);
+  if (age === null || age === undefined || !Number.isFinite(a)) {
+    return SELF_SET.casualty.exposureSecAdult;
+  }
+  return a < 13 ? SELF_SET.casualty.exposureSecChild
     : SELF_SET.casualty.exposureSecAdult;
 }
 

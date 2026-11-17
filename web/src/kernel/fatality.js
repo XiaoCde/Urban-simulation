@@ -44,6 +44,10 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
  */
 export function normalCdf(z) {
   const x = Number(z);
+  // ±无穷是合法极限：+∞ 应为 1、−∞ 应为 0。原先一律返回 0，会让
+  // 「极高水深」的死亡率被静默归零。NaN 仍按 0（无效输入不判死）。
+  if (x === Infinity) return 1;
+  if (x === -Infinity) return 0;
   if (!Number.isFinite(x)) return 0;
   const s = x < 0 ? -1 : 1;
   const a = Math.abs(x) / Math.SQRT2;
@@ -133,7 +137,10 @@ export const TYPICAL_INUNDATION_HOURS = 4.0;
 export function fatalRiskPerSecond(fd, tRefHours = TYPICAL_INUNDATION_HOURS) {
   const f = clamp(Number(fd) || 0, 0, 0.999999);
   if (f <= 0) return 0;
-  const T = Math.max(1, (Number(tRefHours) || TYPICAL_INUNDATION_HOURS) * 3600);
+  const raw = Number(tRefHours);
+  // 负数或非有限的参考时长不能进 Math.max(1, …)：−5 小时会被夹成 1 秒，
+  // 风险率一下放大几千倍。非法值一律退回自设的 4 小时。
+  const T = (Number.isFinite(raw) && raw > 0 ? raw : TYPICAL_INUNDATION_HOURS) * 3600;
   return -Math.log(1 - f) / T;
 }
 
@@ -144,7 +151,11 @@ export function fatalRiskPerSecond(fd, tRefHours = TYPICAL_INUNDATION_HOURS) {
  */
 export function personalThreshold(i) {
   // 加 1 再乘：i=0 时纯乘会让哈希全为 0，阈值变成 0，第一个人会被立刻判死。
-  let h = (Math.floor(Number(i) || 0) + 1) * 2654435761;
+  // 【修 2026-11-17】只挡 i=0 不够：i=−1 时 +1 又回到 0，Infinity 经 ToUint32
+  // 也是 0，两者都让阈值退化成 0。先把编号规范成有限非负整数再哈希。
+  const n = Number(i);
+  const idx = Number.isFinite(n) ? Math.max(0, Math.floor(n)) : 0;
+  let h = (idx + 1) * 2654435761;
   h = h >>> 0;
   h ^= h >>> 15;
   h = Math.imul(h, 2246822507) >>> 0;

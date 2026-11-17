@@ -113,8 +113,13 @@ export function warningLeadMin(i) {
  */
 export function warnAtOf(firstWetMin, i) {
   if (!receivesWarning(i)) return Infinity;
-  if (!Number.isFinite(firstWetMin)) return Infinity;
-  return Math.max(0, firstWetMin - warningLeadMin(i));
+  const raw = Number(firstWetMin);
+  if (!Number.isFinite(raw)) return Infinity;
+  // 【修 2026-11-17】时钟量程是 0–1440 分钟。见水时刻超过 1440（跨天的坏
+  // manifest）原先会返回 >1440 的预警时刻，而 NOW_MIN() 永远到不了，这个人
+  // 就永远收不到预警。显式夹进一天的量程。
+  const at = Math.max(0, Math.min(1440, raw));
+  return Math.max(0, at - warningLeadMin(i));
 }
 
 /** 供验收与文档引用。 */

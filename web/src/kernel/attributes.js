@@ -37,15 +37,17 @@ function normalise(value, range) {
  *   raw 里保留换算后的真实单位，供验收脚本和追溯用。
  */
 export function attributesFromSim(s = {}) {
+  // 【修 2026-11-17】默认参数不覆盖显式传入的 null。
+  const q = s && typeof s === 'object' ? s : {};
   const D = BOROWSKI_DESIGN;
-  const metresToGoal = Math.max(0, Number(s.distGoal) || 0);
+  const metresToGoal = Math.max(0, Number(q.distGoal) || 0);
   const miles = metresToGoal / METRES_PER_MILE;
-  const detourMiles = Math.max(0, Number(s.detourMetres) || 0) / METRES_PER_MILE;
+  const detourMiles = Math.max(0, Number(q.detourMetres) || 0) / METRES_PER_MILE;
   // 绕路的货币成本：正文印刷「每多走一英里需补偿 32.78 美元」。
   const costUSD = (detourMiles || miles) * D.walkingCompensationUSDPerMile;
   // timeToDue 在 perceive() 里是「分钟」；shelteredSec 是「仿真秒」，换分钟。
-  const travelTimeMin = Math.max(0, Number(s.timeToDue) || 0);
-  const waitTimeMin = Math.max(0, Number(s.shelteredSec) || 0) / 60;
+  const travelTimeMin = Math.max(0, Number(q.timeToDue) || 0);
+  const waitTimeMin = Math.max(0, Number(q.shelteredSec) || 0) / 60;
   // 同伴比例：仿真目前还没有把「周围人正在留下／撤离」统计进来，
   // 显式给 0，不编一个比例。第四轮 QA9 拿到了公开定义（自我中心网络
   // 最多 5 人），Table 3 的设计均值 0.19 / 0.27 保存在 BOROWSKI_DESIGN，
@@ -53,9 +55,9 @@ export function attributesFromSim(s = {}) {
   // 上限按 Table 3 印刷的实验设计范围截断：同伴留下 0–0.8、同伴搭车 0–1。
   // 之前两者都写成 0–1，同伴留下这一项会超出设计范围 25%，
   // 而它挂的系数是 7.76 与极端危险下的 −21.13，超出量直接放大交互项。
-  const peersStay = clamp(Number(s.peersStay) || 0,
+  const peersStay = clamp(Number(q.peersStay) || 0,
     D.peerFractionStay.min, D.peerFractionStay.max);
-  const peersRide = clamp(Number(s.peersRide) || 0,
+  const peersRide = clamp(Number(q.peersRide) || 0,
     D.peerFractionRide.min, D.peerFractionRide.max);
 
   return {

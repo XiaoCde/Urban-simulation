@@ -44,7 +44,11 @@ export function debrisFactorOf(depthM, velocityMs = 0) {
  * 速度没有实测流场时用 0（静水保守下限），这个「取 0」是目前自己定的近似。
  */
 export function hazardRatingValue(depthM, velocityMs = 0, debrisFactor = 0) {
-  return clamp(depthM * (velocityMs + 0.5) + debrisFactor, 0, 20);
+  const d = Number(depthM), v = Number(velocityMs), df = Number(debrisFactor);
+  // 非有限输入不能进比较链：NaN 参与 >= 会全为 false，把危险静默判成安全。
+  // 这里显式退回 0（无危险）而不是让 NaN 继续传播，调用方仍可从返回值看出是 0。
+  if (!Number.isFinite(d) || !Number.isFinite(v) || !Number.isFinite(df)) return 0;
+  return clamp(d * (v + 0.5) + df, 0, 20);
 }
 
 /**
@@ -97,13 +101,14 @@ function waterDepthOrdinal(depthM) {
 /** 行人是否失稳：ARR Project 10 的 D·V 分级，不是死亡判定。 */
 export function instability(depthM, velocityMs = 0, isChild = false) {
   const t = HAZARD_THRESHOLDS.humanInstabilityDV.value;
-  const dv = depthM * velocityMs;
+  const d = Number(depthM), v = Number(velocityMs);
+  const dv = (Number.isFinite(d) && Number.isFinite(v)) ? d * v : 0;
   const limit = isChild ? t.childLow : t.adultLow;
   const maxDepth = isChild ? t.childMaxDepthM : t.adultMaxDepthM;
   return {
     dv,
     limit,
-    unstable: dv > limit || depthM > maxDepth,
+    unstable: Number.isFinite(d) && (dv > limit || d > maxDepth),
     kind: '失稳（不是伤亡判定）',
     source: HAZARD_THRESHOLDS.humanInstabilityDV.source.report,
   };
@@ -116,14 +121,22 @@ export function instability(depthM, velocityMs = 0, isChild = false) {
 export function wadingSpeed(depthM) {
   const table = HAZARD_THRESHOLDS.wadingFreeSpeed.value;
   const keys = [0, 0.35, 0.60, 0.90];
-  const d = clamp(depthM, 0, 0.90);
+  // 【修 2026-11-17】表键印的是 '0.60'/'0.90'，而 String(0.60) 是 '0.6'、
+  // String(0.90) 是 '0.9'。原先直接拿 String(keys[i]) 取键，水深一过 0.35 m
+  // 就取到 undefined，插值变 NaN。这里显式写键名，不再靠浮点转字符串。
+  const labels = ['0', '0.35', '0.60', '0.90'];
+  const raw = Number(depthM);
+  const d = clamp(Number.isFinite(raw) ? raw : 0, 0, 0.90);
   for (let i = 0; i < keys.length - 1; i++) {
     if (d <= keys[i + 1]) {
       const f = (d - keys[i]) / (keys[i + 1] - keys[i]);
-      return table[String(keys[i])] * (1 - f) + table[String(keys[i + 1])] * f;
+      const v0 = Number(table[labels[i]]), v1 = Number(table[labels[i + 1]]);
+      if (!Number.isFinite(v0) || !Number.isFinite(v1)) return 0;
+      return v0 * (1 - f) + v1 * f;
     }
   }
-  return table['0.90'];
+  const last = Number(table[labels[labels.length - 1]]);
+  return Number.isFinite(last) ? last : 0;
 }
 
 /**
@@ -131,12 +144,20 @@ export function wadingSpeed(depthM) {
  * @param {object} raw 场景给出的原始观测量
  */
 export function buildHazardInput(raw = {}) {
-  const depthM = clamp(raw.depthM ?? 0, 0, 10);
-  const velocityMs = clamp(raw.velocityMs ?? 0, 0, 10);
+  // 【修 2026-11-17】默认参数不覆盖显式传入的 null；且 clamp 不拦 NaN，
+  // 一个 NaN 水深会顺着 threat / HR / 步速 / 失稳一路污染整包输入。
+  const q = raw && typeof raw === 'object' ? raw : {};
+  const num = (v, d) => {
+    if (v === null || v === undefined) return d;
+    const x = Number(v);
+    return Number.isFinite(x) ? x : d;
+  };
+  const depthM = clamp(num(q.depthM, 0), 0, 10);
+  const velocityMs = clamp(num(q.velocityMs, 0), 0, 10);
   // 没显式给 DF 时按 FD2321/TR1 Table 3.1 城市地表列取，不再一律取 0。
-  const debrisFactor = clamp(raw.debrisFactor ?? debrisFactorOf(depthM, velocityMs), 0, 3);
-  const minutesSinceWarning = Math.max(0, raw.minutesSinceWarning ?? 0);
-  const warningReached = raw.officialWarning ?? warningReachedBy(minutesSinceWarning);
+  const debrisFactor = clamp(num(q.debrisFactor, debrisFactorOf(depthM, velocityMs)), 0, 3);
+  const minutesSinceWarning = Math.max(0, num(q.minutesSinceWarning, 0));
+  const warningReached = q.officialWarning ?? warningReachedBy(minutesSinceWarning);
   return {
     // ---- 通用字段（换灾种不改）----
     threat: threatLevelOf(depthM, velocityMs, debrisFactor),
@@ -145,14 +166,14 @@ export function buildHazardInput(raw = {}) {
     hazardRatingValue: hazardRatingValue(depthM, velocityMs, debrisFactor),
     hazardRatingExtremeBound: HAZARD_THRESHOLDS.hazardRating.value.extreme,
     officialWarning: !!warningReached,
-    warningInformation: clamp(raw.warningInformation ?? 0, 0, 4),
-    surprise: clamp(raw.surprise ?? 0, 0, 1),
-    floodImpact: clamp(raw.floodImpact ?? 0, 0, 1),
-    peersStay: clamp(raw.peersStay ?? 0, 0, 1),
-    peersRide: clamp(raw.peersRide ?? 0, 0, 1),
-    priorFloods: clamp(raw.priorFloods ?? 0, 0, 4),
-    age: raw.age ?? 48,
-    female: !!raw.female,
+    warningInformation: clamp(num(q.warningInformation, 0), 0, 4),
+    surprise: clamp(num(q.surprise, 0), 0, 1),
+    floodImpact: clamp(num(q.floodImpact, 0), 0, 1),
+    peersStay: clamp(num(q.peersStay, 0), 0, 1),
+    peersRide: clamp(num(q.peersRide, 0), 0, 1),
+    priorFloods: clamp(num(q.priorFloods, 0), 0, 4),
+    age: num(q.age, 48),
+    female: !!q.female,
     // ---- 内涝专属输入（换灾种时由别的输入层提供同名位）----
     waterDepthM: depthM,
     velocityMs,
@@ -160,7 +181,7 @@ export function buildHazardInput(raw = {}) {
     minutesSinceWarning,
     // ---- 给路径执行层的量，有实测出处 ----
     walkSpeedMs: wadingSpeed(depthM),
-    instability: instability(depthM, velocityMs, raw.age != null && raw.age < 13),
+    instability: instability(depthM, velocityMs, q.age != null && Number(q.age) < 13),
     // ---- 动员时间曲线（Silva 2025）----
     warningReachedProbability: warningReachedBy(minutesSinceWarning),
     mobilisedProbability: mobilisedBy(minutesSinceWarning),

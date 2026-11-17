@@ -26,12 +26,18 @@ import { BOHANNON_GAIT, WEIDMANN } from './evidence-tables.js';
 export function measuredComfortableSpeedMs(age, female = false) {
   const a = Number(age);
   if (!Number.isFinite(a) || a < 20) return null;
-  let cell = BOHANNON_GAIT.cells[0];
-  for (const c of BOHANNON_GAIT.cells) {
-    if (a >= c.from) cell = c;
+  // 【修 2026-11-17】分档表为空时 cell 是 undefined，读 cell.female 会抛错；
+  // 表若被改成乱序也会取错档。这里显式按 from 升序取，不依赖数组顺序。
+  const cells = Array.isArray(BOHANNON_GAIT.cells) ? BOHANNON_GAIT.cells : [];
+  const ordered = cells.filter((c) => c && Number.isFinite(Number(c.from)))
+    .slice().sort((x, y) => Number(x.from) - Number(y.from));
+  if (!ordered.length) return null;
+  let cell = ordered[0];
+  for (const c of ordered) {
+    if (a >= Number(c.from)) cell = c;
   }
   const cmPerSec = female ? cell.female : cell.male;
-  return cmPerSec / 100;
+  return Number.isFinite(Number(cmPerSec)) ? Number(cmPerSec) / 100 : null;
 }
 
 /** 供验收与文档引用：实测表的分档与来源。 */

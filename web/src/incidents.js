@@ -108,7 +108,12 @@ export function createIncidents(o = {}) {
     stalled: 0, maxDepth: 0,
   }));
 
-  const minute = () => (clock ? clock.minute : 0);
+  const minute = () => {
+    // 【修 2026-11-17】坏 manifest / 拖时间轴 / 跨天会让 clock.minute 变成
+    // NaN 或 Infinity，下面 hourly[clamp(NaN,0,23)] 会取到 undefined 而抛错。
+    const m = clock ? Number(clock.minute) : 0;
+    return Number.isFinite(m) ? m : 0;
+  };
   const bandOf = (i) => {
     try {
       const q = crowd && crowd.at ? crowd.at(i, minute()) : null;
@@ -152,12 +157,29 @@ export function createIncidents(o = {}) {
     if (ctx.depth > stat.maxDepth) stat.maxDepth = ctx.depth;
   }
 
+  /**
+   * 死因的统计归类键。【修 2026-11-17】顶层被淹那支的 cause 里嵌了水深、
+   * 判据、死亡概率和分区，几乎每个死者字符串都不同，直接拿它当
+   * deathsByCause 的键会把统计碎成几十个「各计 1」的项，没法按类汇总。
+   * 这里只归一统计键；r.cause 与事件 reason 仍保留完整描述，回放不丢细节。
+   */
+  function causeKeyOf(cause) {
+    const s = String(cause == null ? '' : cause);
+    if (s.startsWith('顶层被淹')) return '顶层被淹没路可退';
+    if (s.includes('车内')) return '车内溺亡';
+    if (s.includes('地下室')) return '地下室进水溺亡';
+    if (s.includes('深水')) return '深水被困致死';
+    if (s.includes('涉水')) return '涉水溺亡';
+    return s || '未分类死亡';
+  }
+
   function die(i, cause, ctx) {
     const r = rows[i];
     if (!r || r.status === 'dead') return false;
     r.status = 'dead'; r.cause = cause; r.minute = minute();
     r.x = ctx.x; r.z = ctx.z; r.depth = ctx.depth;
-    stat.deathsByCause[cause] = (stat.deathsByCause[cause] || 0) + 1;
+    const key = causeKeyOf(cause);
+    stat.deathsByCause[key] = (stat.deathsByCause[key] || 0) + 1;
     push(i, 'dead', cause, ctx);
     // 终点帧：回放最后一格必须停在他实际出事的位置与水深。
     if (r.trace) r.trace.push(frameOf(i, ctx, 'dead'));

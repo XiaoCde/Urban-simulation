@@ -75,7 +75,12 @@ export const SOC_TO_PLACE = {
  * 只用来挂步速／体力／应激等「目前自己定的」行为系数，不用来决定人口占比。
  */
 export function behaviorBandOf(age) {
-  if (age < 5) return 'preschool';
+  // 【修 2026-11-17】NaN / undefined 参与裸比较全为 false，会落到最老的
+  // 'oldest' 档；null 又会被当成 0 落到 'preschool'。取不到年龄时走成年档，
+  // 与 incidents.js 的 vulnerabilityOf 一致。
+  if (age === null || age === undefined || !Number.isFinite(Number(age))) return 'prime';
+  const a = Number(age);
+  if (a < 5) return 'preschool';
   if (age < 13) return 'child';
   if (age < 18) return 'teen';
   if (age < 25) return 'young';
@@ -156,9 +161,13 @@ export function samplePerson(i, seed = 20261115) {
 
 /** 给验收脚本用：抽样分布的边际，和 ACS 官方加权分布对拍。 */
 export function sampleMarginal(n = 3000, seed = 20261115) {
+  // 【修 2026-11-17】n=Infinity / NaN 会让 for 循环跑不完或立刻结束，
+  // 抽样数必须是有限非负整数。上限只挡病态输入，不参与任何正常计算。
+  const raw = Number(n);
+  const count = Number.isFinite(raw) ? Math.max(0, Math.min(100000, Math.floor(raw))) : 3000;
   const rnd = mulberry32(seed * 31 + 17);
   const out = { ageBand5y: {}, sex: {}, socCode: {}, jwtrns: {}, hasMinor: {}, householdVehicles: {} };
-  for (let k = 0; k < n; k++) {
+  for (let k = 0; k < count; k++) {
     const row = ROWS[weightedIndex(WEIGHTS, rnd)];
     const bump = (key, v) => { const m = out[key]; m[v] = (m[v] || 0) + 1; };
     bump('ageBand5y', row[COL['五岁带']]);

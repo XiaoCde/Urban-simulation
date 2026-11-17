@@ -274,26 +274,30 @@ function pointAt(c, s, out) {
 export const WALK_MIN_SEC = 2.2;   // 一次起步至少走这么久才允许随机张望
 export const LOOK_MIN_SEC = 0.8;
 export function nextState(st, obs) {
-  const r = obs.rnd;
-  const t = Number.isFinite(obs.stateT) ? obs.stateT : 999; // 缺省视为已走够，兼容旧调用
+  // 【修 2026-11-17】obs 为空时原先直接抛错；rnd 为 undefined/NaN 时所有
+  // 比较为 false，idle 会变成吸收态（人永久站着不动）。
+  const o = obs && typeof obs === 'object' ? obs : {};
+  const rawR = Number(o.rnd);
+  const r = Number.isFinite(rawR) ? Math.max(0, Math.min(1, rawR)) : 0.5;
+  const t = Number.isFinite(o.stateT) ? o.stateT : 999; // 缺省视为已走够，兼容旧调用
   switch (st) {
     case 'idle':
-      if (obs.nearEnd) return 'walk';
+      if (o.nearEnd) return 'walk';
       if (r < 0.34) return 'walk';
       if (r < 0.50) return 'look';
       return 'idle';
     case 'look':
-      if (obs.blocked) return 'yield';
+      if (o.blocked) return 'yield';
       if (t < LOOK_MIN_SEC) return 'look';     // 张望也要有个最短时长，不来回抖
       if (r < 0.30) return 'idle';
       return 'walk';
     case 'walk':
-      if (obs.blocked) return 'yield';         // 被挡是事件，立刻响应，不受最短时长限制
+      if (o.blocked) return 'yield';         // 被挡是事件，立刻响应，不受最短时长限制
       if (t < WALK_MIN_SEC) return 'walk';     // 走满一段之前不随机停
       if (r < 0.006) return 'look';            // 随机张望概率从 1%/s 降到 0.6%/s
       return 'walk';
     case 'yield':
-      if (!obs.blocked && obs.cooldownOk) return 'walk';
+      if (!o.blocked && o.cooldownOk) return 'walk';
       return 'yield';
     default:
       return 'walk';
@@ -1927,12 +1931,28 @@ export function buildPedestrians(assets, opt = {}) {
         const atHome = !!q.indoor && q.where === 'home';
         if (p.basementTried !== true && atHome && dd0 >= BASEMENT.entryDepthM) {
           p.basementTried = true;
-          if (goesToBasement(p.i)) p.basementUntil = dmNow + basementStayMin(p.i);
+          // 【修 2026-11-17】时钟量程只有 0–1440 分钟。23:20 之后下去的人，
+          // 原本 basementUntil 会算到 >1440，而 dmNow 封顶 1440，
+          // 「dmNow < basementUntil」永远成立 —— 人一整天都出不来；
+          // 时间轴回拨到次日 0 点时「0 < 1450」同样恒真。
+          // 改为「起点 + 经过时长」：正常推进时与原来完全等价，
+          // 一旦回拨（dmNow < 起点）立即判为上楼。
+          if (goesToBasement(p.i)) {
+            p.basementFrom = dmNow;
+            p.basementStay = basementStayMin(p.i);
+            p.basementUntil = dmNow + p.basementStay;
+          }
         }
         let inBasement = false;
+        // 用「经过时长」而不是「绝对时刻是否小于 deadline」：日末段下去时
+        // deadline 会超过 1440，而 dmNow 封顶 1440，绝对时刻比较会永远成立。
         if (p.basementUntil) {
-          if (dmNow < p.basementUntil) inBasement = true;
-          else p.basementUntil = 0;       // 待够时间就上来
+          const elapsed = dmNow - (Number.isFinite(p.basementFrom) ? p.basementFrom : 0);
+          // 兼容一次性载入的旧状态（只有 deadline、没有 stay）：用差值兜底。
+          const stay = Number.isFinite(p.basementStay) ? p.basementStay
+            : (Number.isFinite(p.basementFrom) ? p.basementUntil - p.basementFrom : 0);
+          if (elapsed >= 0 && elapsed < stay) inBasement = true;
+          else p.basementUntil = 0;       // 待够时间／时间回拨就上来
         }
         CROWD.tick(p.i, CROWD.now(), {
           depth: dd0, speed: realSpeed, raining: wetRain, rainMMH,

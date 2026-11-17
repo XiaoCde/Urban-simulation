@@ -112,7 +112,21 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     const root = base + (curDir ? curDir.replace(/\/?$/, '/') : '');
     const res = await fetch(root + 'manifest.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('没有积水数据：' + res.status);
-    man = await res.json();
+    // 【修 2026-11-17】res.json() 对损坏文件 / 拦截页会抛 SyntaxError，
+    // 原先没有捕获，整个 load() 静默失败；frames 为空数组时后面
+    // man.frames.length - 1 = -1，showFrame 会读到 undefined 帧。
+    let parsed;
+    try { parsed = await res.json(); } catch (e) {
+      throw new Error('积水 manifest 不是有效 JSON：' + (e && e.message));
+    }
+    if (!parsed || !Array.isArray(parsed.frames) || parsed.frames.length === 0) {
+      throw new Error('积水 manifest 没有帧记录：' + curDir);
+    }
+    if (!Number.isFinite(Number(parsed.cols)) || !Number.isFinite(Number(parsed.rows))
+      || !Number.isFinite(Number(parsed.step_m)) || Number(parsed.step_m) <= 0) {
+      throw new Error('积水 manifest 的栅格参数无效：' + curDir);
+    }
+    man = parsed;
     man.root = root;
     cache.clear();
     _bt = NaN; _br = null;        // 换工况：帧表变了，夹帧记忆作废
@@ -181,7 +195,7 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     painted = [];
 
     mat = new THREE.ShaderMaterial({
-      uniforms: { uDepth: { value: tex }, uScale: { value: man.scale || 5 },
+      uniforms: { uDepth: { value: tex }, uScale: { value: man.scale || 2 },
                   uAlpha: { value: 1.0 },
     uLight: { value: 1.0 }, uPow: { value: man.quant_pow || 1.0 } },
       vertexShader: VERT, fragmentShader: FRAG,
@@ -220,11 +234,16 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
   // 之后照样 cache.set(旧键)。带上目录前缀后，旧请求落进的是旧键，无害。
   const ckey = (d, f) => d + '|' + f;
   async function frameBytes(f) {
+    if (!f || typeof f.file !== 'string') throw new Error('水深帧记录缺少 file 字段');
     const k = ckey(curDir, f.file);
     if (cache.has(k)) return cache.get(k);
     const root = man.root;
     const r = await fetch(root + f.file, { cache: 'no-cache' });
+    // 【修 2026-11-17】404 / 错误页不会 reject，arrayBuffer() 会正常返回一段
+    // HTML，被当成水深帧缓存起来，之后所有采样读到的是网页字节而不是水深。
+    if (!r.ok) throw new Error(`水深帧 ${f.file} 读取失败：HTTP ${r.status}`);
     const buf = new Uint8Array(await r.arrayBuffer());
+    if (buf.length === 0) throw new Error(`水深帧 ${f.file} 是空文件`);
     cache.set(k, buf);
     return buf;
   }
@@ -255,19 +274,23 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     if (t === _bt && _br) return _br;
     const fr = man.frames;
     if (!fr.length) return { i0: 0, i1: 0, f: 0 };
+    // 【修 2026-11-17】t 为 NaN/Infinity 时所有比较为 false，二分会落到第 0
+    // 帧并算出 NaN 的插值权重 f，进一步把采样水深污染成 NaN。
+    const tt = Number(t);
+    if (!Number.isFinite(tt)) return { i0: 0, i1: 0, f: 0 };
     const hi0 = fr.length - 1;
     let out;
-    if (t <= fr[0].t_min) out = { i0: 0, i1: 0, f: 0 };
-    else if (t >= fr[hi0].t_min) out = { i0: hi0, i1: hi0, f: 0 };
+    if (tt <= fr[0].t_min) out = { i0: 0, i1: 0, f: 0 };
+    else if (tt >= fr[hi0].t_min) out = { i0: hi0, i1: hi0, f: 0 };
     else {
       let lo = 0, hi = hi0;
       while (lo < hi) {
         const m = (lo + hi + 1) >> 1;
-        if (fr[m].t_min <= t) lo = m; else hi = m - 1;
+        if (fr[m].t_min <= tt) lo = m; else hi = m - 1;
       }
       const i1 = Math.min(hi0, lo + 1);
       const span = fr[i1].t_min - fr[lo].t_min;
-      out = { i0: lo, i1, f: span > 1e-6 ? (t - fr[lo].t_min) / span : 0 };
+      out = { i0: lo, i1, f: span > 1e-6 ? (tt - fr[lo].t_min) / span : 0 };
     }
     _bt = t; _br = out;
     return out;
@@ -310,6 +333,7 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
 
   /** 单格在时刻 t 的 u8 值（0..255 浮点）。没有可用帧时返回 -1。 */
   function u8AtCell(i, t) {
+    if (!Number.isFinite(i) || i < 0) return -1;
     const { i0, i1, f } = bracket(t);
     const b0 = bytesOf(i0);
     if (!b0 || i >= b0.length) return -1;
@@ -325,9 +349,13 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
   const _cs = [0, 0, 0, 0], _cw = [0, 0, 0, 0];
   function sampleAt(x, z, t) {
     const { cols, rows, step_m: step, x0, z0 } = man;
-    const fx = (x - x0) / step - 0.5;
-    const fz = (z - z0) / step - 0.5;
-    if (fx < -1 || fz < -1 || fx > cols || fz > rows) return 0;
+    // 【修 2026-11-17】NaN 坐标能让所有边界比较为 false，一路算出 NaN 权重，
+    // 最后 wsum>1e-9 不成立 → 静静返回 0，把深水说成干地。step=0 会除零。
+    const px = Number(x), pz = Number(z);
+    if (!Number.isFinite(px) || !Number.isFinite(pz) || !Number.isFinite(step) || step <= 0) return 0;
+    const fx = (px - x0) / step - 0.5;
+    const fz = (pz - z0) / step - 0.5;
+    if (!(fx >= -1) || !(fz >= -1) || fx > cols || fz > rows) return 0;
     let c0 = Math.floor(fx), r0 = Math.floor(fz);
     const tx = fx - c0, tz = fz - r0;
     const c1 = Math.min(cols - 1, c0 + 1), r1 = Math.min(rows - 1, r0 + 1);
@@ -384,11 +412,15 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
   function depthNow(x, z) {
     if (!man || !baseData) return 0;
     const { cols, rows, step_m: step, x0, z0 } = man;
-    const c = Math.floor((x - x0) / step), r = Math.floor((z - z0) / step);
+    const px = Number(x), pz = Number(z);
+    if (!Number.isFinite(px) || !Number.isFinite(pz) || !Number.isFinite(step) || step <= 0) return 0;
+    const c = Math.floor((px - x0) / step), r = Math.floor((pz - z0) / step);
     if (c < 0 || c >= cols || r < 0 || r >= rows) return 0;
     const i = r * cols + c;
     const d = baseData[i];
-    return lut ? lut[d] : 0;
+    // lut[undefined] 是 undefined，乘进任何数都会变 NaN。
+    const v = lut && Number.isFinite(d) ? lut[d | 0] : 0;
+    return Number.isFinite(v) ? v : 0;
   }
 
   function depthInfo(x, z, out) {
@@ -430,8 +462,8 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
   }
 
   async function showFrame(i) {
-    if (!man) return;
-    const want = Math.max(0, Math.min(man.frames.length - 1, i | 0));
+    if (!man || !Array.isArray(man.frames) || man.frames.length === 0) return;
+    const want = Math.max(0, Math.min(man.frames.length - 1, Number.isFinite(i) ? (i | 0) : 0));
     // 【两个坑，一起治】
     // ① 乱序覆盖：frameBytes 是异步的，预加载 f001 和 seek 的 f005 会同时在飞，
     //    f005 先回来、f001 后回来，idx 就被写回 1 —— 实测「拖到 18:20，画面
@@ -617,7 +649,9 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
 
   function togglePlay() {
     playing = !playing;
-    if (playing && idx >= man.frames.length - 1) showFrame(0);
+    // 【修 2026-11-17】未加载完就点播放时 man 还是 null，原先直接抛错。
+    if (playing && man && Array.isArray(man.frames)
+      && idx >= man.frames.length - 1) showFrame(0);
     updateHud();
   }
 

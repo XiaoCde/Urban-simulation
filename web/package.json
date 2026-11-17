@@ -12,6 +12,7 @@
   "name": "whitehouse-threejs",
   "version": "0.1.0",
   "scripts": {
-    "start": "node serve.js 8123"
+    "start": "node serve.js 8123",
+    "test": "node tests/run-node-checks.mjs"
   }
 }

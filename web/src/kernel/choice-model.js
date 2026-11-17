@@ -38,6 +38,14 @@ export { mobilisedBy, warningReachedBy };
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const sigmoid = (z) => 1 / (1 + Math.exp(-clamp(z, -30, 30)));
+// 【修 2026-11-17】?? 只挡 null/undefined，不挡 NaN。这些效用系数一旦乘上
+// NaN，整条概率链会静默变成 NaN，决策恒不触发。统一用「有限数或默认值」。
+const finiteOr = (v, d) => {
+  if (v === null || v === undefined) return d;
+  const x = Number(v);
+  return Number.isFinite(x) ? x : d;
+};
+const safeThreat = (t) => (t === 'none' || t === 'low' || t === 'moderate' || t === 'extreme') ? t : 'low';
 
 /**
  * Thieken et al. 2023, NHESS 23:973–990, DOI 10.5194/nhess-23-973-2023,
@@ -203,24 +211,26 @@ export const SCALING = {
  * **不输出绝对概率** —— 这个限制写进 docs/依据台账.md。
  */
 export function knowledgeScore(input) {
+  const q = input && typeof input === 'object' ? input : {};
   const c = KNOWLEDGE_LOGIT.coefficients;
-  const floods = clamp(Math.round(input.priorFloods || 0), 0, 4);
-  return c.female * (input.female ? 1 : 0)
-    + c.officialWarning * (input.officialWarning ? 1 : 0)
-    + c.warningInformation * clamp(input.warningInformation || 0, 0, 4)
-    + c.surprise * clamp(input.surprise || 0, 0, 1)
-    + c.floodImpact * clamp(input.floodImpact || 0, 0, 1)
+  const floods = clamp(Math.round(finiteOr(q.priorFloods, 0)), 0, 4);
+  return c.female * (q.female ? 1 : 0)
+    + c.officialWarning * (q.officialWarning ? 1 : 0)
+    + c.warningInformation * clamp(finiteOr(q.warningInformation, 0), 0, 4)
+    + c.surprise * clamp(finiteOr(q.surprise, 0), 0, 1)
+    + c.floodImpact * clamp(finiteOr(q.floodImpact, 0), 0, 1)
     + KNOWLEDGE_LOGIT.priorFloods[floods];
 }
 
 /** 行动层：Table S3 的线性预测子。 */
 export function actionScore(input, knowledge) {
+  const q = input && typeof input === 'object' ? input : {};
   const c = ACTION_LOGIT.coefficients;
-  return c.situationalKnowledge * knowledge
-    + c.age * ((input.age ?? SCALING.ageCentre) - SCALING.ageCentre)
-    + c.priorFloods * clamp(input.priorFloods || 0, 0, 4)
-    + c.surprise * clamp(input.surprise || 0, 0, 1)
-    + c.waterDepthOrdinal * waterDepthOrdinalOf(input.waterDepthM);
+  return c.situationalKnowledge * finiteOr(knowledge, 0)
+    + c.age * (finiteOr(q.age, SCALING.ageCentre) - SCALING.ageCentre)
+    + c.priorFloods * clamp(finiteOr(q.priorFloods, 0), 0, 4)
+    + c.surprise * clamp(finiteOr(q.surprise, 0), 0, 1)
+    + c.waterDepthOrdinal * waterDepthOrdinalOf(q.waterDepthM);
   // Table S3 的 Gender 系数 0.216 只有 p=0.081，边缘显著，默认不接入；
   // 敏感性分析时在 CHOICE_META 里登记后单独打开，不混进主结果。
 }
@@ -232,27 +242,30 @@ export function actionScore(input, knowledge) {
  * 这是原论文 random-parameter logit 的规格，不是自己加的噪声。
  */
 export function protectiveActionUtilities(input, rnd) {
+  const q = input && typeof input === 'object' ? input : {};
   const E = EVACUATION_LOGIT;
   const c = E.coefficients;
   const S = SCALING;
   const draw = rnd ? normal(rnd) : 0;
-  const peersStay = clamp(input.peersStay ?? 0, 0, 1);
-  const peersRide = clamp(input.peersRide ?? 0, 0, 1);
-  const threat = input.threat || 'low';   // low / moderate / extreme，来自 D·V 分级
+  const peersStay = clamp(finiteOr(q.peersStay, 0), 0, 1);
+  const peersRide = clamp(finiteOr(q.peersRide, 0), 0, 1);
+  // 【修 2026-11-17】非法档名（如 'foo'）会让 threatInteraction 查表得
+  // undefined，Ve/Vs 变 NaN。统一收敛到合法档，'none' 按 'low' 的语义处理。
+  const threat = safeThreat(q.threat || 'low');
 
   // ---- 疏散侧 ----
   let Ve = E.evacuateASC
-    + (c.cost + c.costSD * draw) * (input.cost ?? 0)
+    + (c.cost + c.costSD * draw) * finiteOr(q.cost, 0)
     + (c.peersRide + c.peersRideSD * draw) * peersRide
-    + c.travelTime * (input.travelTime ?? 0)
-    + c.waitTime * (input.waitTime ?? 0)
-    + c.walkDistance * (input.walkDistance ?? 0)
-    + c.age * (((input.age ?? S.ageCentre) - S.ageCentre) / S.ageScale);
-  if (threat !== 'low') Ve += E.threatInteraction.peersRide[threat] * peersRide;
+    + c.travelTime * finiteOr(q.travelTime, 0)
+    + c.waitTime * finiteOr(q.waitTime, 0)
+    + c.walkDistance * finiteOr(q.walkDistance, 0)
+    + c.age * ((finiteOr(q.age, S.ageCentre) - S.ageCentre) / S.ageScale);
+  if (threat !== 'low') Ve += (E.threatInteraction.peersRide[threat] || 0) * peersRide;
 
   // ---- 留下侧：同伴效应在这里，ASC 固定 0 ----
   let Vs = (c.peersStay + c.peersStaySD * draw) * peersStay;
-  if (threat !== 'low') Vs += E.threatInteraction.peersStay[threat] * peersStay;
+  if (threat !== 'low') Vs += (E.threatInteraction.peersStay[threat] || 0) * peersStay;
 
   return { evacuate: Ve, stay: Vs };
 }
@@ -270,14 +283,16 @@ export function protectiveActionUtilities(input, rnd) {
  * 截距 4.22 直接当成「99% 的人都会撤离」。
  */
 export function decideProtectiveAction(input, rnd) {
+  const q = input && typeof input === 'object' ? input : {};
+  const draw = typeof rnd === 'function' ? rnd : null;
   const S = SCALING;
-  const knowledge = knowledgeScore(input);
-  const aScore = actionScore(input, knowledge * S.knowledgeToActionScale);
-  const U = protectiveActionUtilities(input, rnd);
+  const knowledge = knowledgeScore(q);
+  const aScore = actionScore(q, knowledge * S.knowledgeToActionScale);
+  const U = protectiveActionUtilities(q, draw);
   const prior = (knowledge * S.knowledgeToActionScale + aScore)
     * S.actionToUtilityScale;
   // 危险等级主效应进入疏散效用；界值来自 DEFRA HR 分级，系数是目前自己定的。
-  const threatMain = S.threatUtility[input.threat || 'low'] ?? 0;
+  const threatMain = S.threatUtility[safeThreat(q.threat || 'low')] ?? 0;
   const V = (U.evacuate - U.stay) * S.borowskiUtilityScale + prior + threatMain;
   const raw = sigmoid(V);
   // 「危险暴露」是连续权重，不是二元门控。
@@ -285,32 +300,35 @@ export function decideProtectiveAction(input, rnd) {
   // 不是自设厘米阈值）；无水=1 级 → 暴露 0，人不会凭空启动保护行动。
   // 再乘 Silva 2025 的实测动员曲线：预警刚发出时几乎没人动，
   // 随暴露时长连续上升，24 小时到 95.7%。
-  const grade = waterDepthOrdinalOf(input.waterDepthM);
+  const grade = waterDepthOrdinalOf(q.waterDepthM);
   const depthExposure = clamp((grade - 1) / 6, 0, 1);
   // 时间暴露直接用 Silva 2025 Table S2 印刷的实测动员率（插值），
   // mobilisationPoints 只供敏感性分析注入，正常运行时不传。
-  const timeExposure = mobilisedBy(input.minutesSinceWarning ?? 0,
-    input.mobilisationPoints || MOBILISATION_OBSERVED.points);
+  const timeExposure = mobilisedBy(finiteOr(q.minutesSinceWarning, 0),
+    q.mobilisationPoints || MOBILISATION_OBSERVED.points);
   const baseline = S.baselineExposure;
   const exposure = clamp(
     depthExposure * (baseline + (1 - baseline) * timeExposure), 0, 1);
   // 不再额外乘一次 h24：timeExposure 本身已经是实测动员率，
   // 上一版乘两次时间把概率压低了，这里去掉重复。
-  const probability = clamp(raw * exposure, 0, 1);
+  // 【修 2026-11-17】clamp 不拦 NaN；概率与暴露都必须是有限数，否则
+  // rnd() < NaN 恒 false，人会静默「永远不动」而不报错。
+  const probability = Number.isFinite(raw * exposure) ? clamp(raw * exposure, 0, 1) : 0;
+  const safeExposure = Number.isFinite(exposure) ? exposure : 0;
   return {
-    protect: rnd() < probability,
+    protect: draw ? draw() < probability : false,
     probability,
     utility: V,
     utilities: U,
     knowledge,
     actionScore: aScore,
     components: {
-      warning: input.officialWarning ? 1 : 0,
-      priorFloods: clamp(input.priorFloods || 0, 0, 4),
-      waterDepthOrdinal: waterDepthOrdinalOf(input.waterDepthM),
-      peersStay: clamp(input.peersStay ?? 0, 0, 1),
-      threat: input.threat || 'low',
-      exposure: +exposure.toFixed(3),
+      warning: q.officialWarning ? 1 : 0,
+      priorFloods: clamp(finiteOr(q.priorFloods, 0), 0, 4),
+      waterDepthOrdinal: waterDepthOrdinalOf(q.waterDepthM),
+      peersStay: clamp(finiteOr(q.peersStay, 0), 0, 1),
+      threat: safeThreat(q.threat || 'low'),
+      exposure: +safeExposure.toFixed(3),
     },
   };
 }

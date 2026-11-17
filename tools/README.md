@@ -59,6 +59,19 @@
 
 这些是排查具体问题时写的，多数是一次性的。少数仍在用：`check_closed.py`、`check_features.py`、`check_osm.py`、`check_roof_match.py`、`check_root_motion.py`。
 
+## 自检入口（2026-11-17 补）
+
+`web/tests/` 下 40 个脚本里，13 个是纯 Node（不启浏览器），26 个是 Puppeteer 页面验收，另 1 个是总入口。改了内核或运行时代码，先跑总入口：
+
+```bash
+cd web
+npm test          # 等价于 node tests/run-node-checks.mjs
+```
+
+总入口会把 13 个纯 Node 自检一次跑完并汇总退出码，**不启动服务、不写文件**。要看画面那类验收，按项目约定自己临时起 8140、跑完即关，例如 `node tests/check-replay-visible.mjs`；服务不常驻，所以总入口不自动代劳。
+
+`tests/check-kernel-boundaries.mjs` 是 2026-11-17 新增的边界自检：一半断言钉住 28 组正常输入的黄金值（防「修边界改坏正常路径」），一半断言钉住 NaN／Infinity／空表／越界等病态输入（防崩溃与错误数字）。新增内核函数时，正常路径的黄金值要保持逐字段不变。
+
 ## 约定
 
 - 生成产物（大文件）放 `data/`、`web/assets/`，不进版本库；工具只负责重建它们。

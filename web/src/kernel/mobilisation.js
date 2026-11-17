@@ -94,22 +94,32 @@ export const MOBILISATION_OBSERVED = Object.freeze({
 export function mobilisationEqS2(minutes, am, bm) {
   const t = Math.max(0, Number(minutes) || 0);
   if (t === 0) return 0;
-  const a = Number(am) || 1.37;
-  const b = Number(bm) || 64.0;
+  // 【修 2026-11-17】原先 Number(am)||1.37 会把显式传入的 0 也吞成默认值。
+  // 改成「有限且为正才用传入值」，既保留显式合法值，也挡住 0 导致的除零。
+  const av = Number(am), bv = Number(bm);
+  const a = Number.isFinite(av) && av > 0 ? av : 1.37;
+  const b = Number.isFinite(bv) && bv > 0 ? bv : 64.0;
   return clamp(1 - Math.exp(-Math.pow(t / b, 2 / a)), 0, 1);
 }
 
 /** 按 Table S2 实测点插值的动员率上限。 */
 export function observedCapAt(minutes, points = MOBILISATION_OBSERVED.points) {
   const t = Math.max(0, Number(minutes) || 0);
+  // 【修 2026-11-17】空点表原先读 points[-1].rate 直接抛错；相邻点时刻相同
+  // 会除零得到 NaN；插值结果也没夹在 [0,1]。这三条都会让 NaN 流进决策概率。
+  if (!Array.isArray(points) || points.length === 0) return 0;
+  const finiteRate = (v) => clamp(Number.isFinite(Number(v)) ? Number(v) : 0, 0, 1);
+  if (t <= Number(points[0].minutes) || points.length === 1) return finiteRate(points[0].rate);
   for (let i = 1; i < points.length; i++) {
     const p0 = points[i - 1], p1 = points[i];
-    if (t <= p1.minutes) {
-      const f = (t - p0.minutes) / (p1.minutes - p0.minutes);
-      return p0.rate + (p1.rate - p0.rate) * f;
+    if (t <= Number(p1.minutes)) {
+      const span = Number(p1.minutes) - Number(p0.minutes);
+      const f = span > 0 ? clamp((t - Number(p0.minutes)) / span, 0, 1) : 1;
+      const r0 = finiteRate(p0.rate), r1 = finiteRate(p1.rate);
+      return clamp(r0 + (r1 - r0) * f, 0, 1);
     }
   }
-  return points[points.length - 1].rate;
+  return finiteRate(points[points.length - 1].rate);
 }
 
 /**
@@ -142,8 +152,18 @@ export function mobilisedShapeByEquation(minutes, scenarioName = DEFAULT_SCENARI
  */
 export function warningReachedBy(minutes, scenarioName = DEFAULT_SCENARIO, band = DEFAULT_BAND) {
   const sc = SILVA_SCENARIOS[scenarioName];
-  const Bt = sc && sc.Bt ? sc.Bt[band] : 9.5;
-  const Ct = sc && sc.Ct ? sc.Ct[band] : 0.098;
+  // 【修 2026-11-17】band 越界时 sc.Bt[band] 是 undefined，2·Bt² 变 NaN，
+  // 而 clamp 不拦 NaN，整条概率链被静默污染。取不到有效参数就退回默认值，
+  // 与同文件 mobilisedShapeByEquation 的口径保持一致。
+  const pick = (arr, fallback) => {
+    const v = Number(Array.isArray(arr) ? arr[band] : NaN);
+    return Number.isFinite(v) && v > 0 ? v : fallback;
+  };
+  const Bt = pick(sc && sc.Bt, 9.5);
+  const Ct = (() => {
+    const v = Number(Array.isArray(sc && sc.Ct) ? sc.Ct[band] : NaN);
+    return Number.isFinite(v) ? clamp(v, 0, 1) : 0.098;
+  })();
   const hours = Math.max(0, Number(minutes) || 0) / 60;
   const rayleigh = 1 - Math.exp(-(hours * hours) / (2 * Bt * Bt));
   return clamp(rayleigh + Ct * (1 - rayleigh), 0, 1);

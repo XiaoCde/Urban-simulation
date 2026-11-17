@@ -20,12 +20,21 @@ export function mulberry32(seed) {
 
 /** 按权重抽一个下标。weights 必须非负、总和大于 0。 */
 export function weightedIndex(weights, rnd) {
+  // 【修 2026-11-17】weights 为 null / 非数组时原先直接抛 TypeError；
+  // 负权重会让累计值倒退；rnd 缺失会在下面调用时抛错。
+  if (!Array.isArray(weights) || weights.length === 0) return 0;
+  const draw = typeof rnd === 'function' ? rnd : null;
+  if (!draw) return 0;
+  const w = weights.map((x) => {
+    const v = Number(x);
+    return Number.isFinite(v) && v > 0 ? v : 0;
+  });
   let total = 0;
-  for (let i = 0; i < weights.length; i++) total += weights[i];
+  for (let i = 0; i < w.length; i++) total += w[i];
   if (!(total > 0)) return 0;
-  let u = rnd() * total;
-  for (let i = 0; i < weights.length; i++) {
-    u -= weights[i];
+  let u = Math.max(0, Math.min(1, Number(draw()) || 0)) * total;
+  for (let i = 0; i < w.length; i++) {
+    u -= w[i];
     if (u <= 0) return i;
   }
   return weights.length - 1;
@@ -33,7 +42,13 @@ export function weightedIndex(weights, rnd) {
 
 /** 标准正态（Box-Muller），随机参数 logit 的个体差异要用。 */
 export function normal(rnd) {
+  // 【修 2026-11-17】rnd 恒返回 0 时 while 永不退出；返回 >1 或 NaN 时
+  // −2·log(u) 为负 / NaN，开方得 NaN。限制重抽次数并校验取值域。
+  if (typeof rnd !== 'function') return 0;
   let u = 0;
-  while (u === 0) u = rnd();
-  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rnd());
+  for (let k = 0; k < 32 && !(u > 0 && u <= 1); k++) u = Number(rnd());
+  if (!(u > 0 && u <= 1)) return 0;
+  const v = Number(rnd());
+  if (!Number.isFinite(v)) return 0;
+  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v);
 }

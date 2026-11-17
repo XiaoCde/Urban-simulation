@@ -14,7 +14,11 @@
 
 /** @param {number} i 人员编号 @param {number} salt 用途盐，区分不同用途的抽样 */
 export function hash01(i, salt) {
-  let h = Math.imul(Math.floor(Number(i) || 0) + 1, 0x27d4eb2d) ^ (salt >>> 0);
+  // 【修 2026-11-17】i=−1 时 +1 归零、Infinity 经 ToUint32 也归零，会让整条
+  // 哈希链退化成 0（同一个人每次都得到同一个极端值）。先规范成有限非负整数。
+  const n = Number(i);
+  const idx = Number.isFinite(n) ? Math.max(0, Math.floor(n)) : 0;
+  let h = Math.imul(idx + 1, 0x27d4eb2d) ^ (Number(salt) >>> 0);
   h = Math.imul(h ^ (h >>> 15), 0x2c1b3c6d);
   h = Math.imul(h ^ (h >>> 12), 0x297a2d39);
   h ^= h >>> 15;

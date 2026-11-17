@@ -68,7 +68,11 @@ const PURPOSE_TO_NODE = {
 
 /** 真实年龄段分档，和 NHTS 交叉表里的维度一致。 */
 export function nhtsAgeBand(age) {
-  if (age < 5) return '05-17';       // NHTS 没有 0–4 单独档，最小的 05-17 兜底
+  // 【修 2026-11-17】NaN 会让所有裸比较为 false 落到 '65+'，null 会被当成
+  // 0 落到 '05-17'。取不到真实年龄时按成年档处理。
+  if (age === null || age === undefined || !Number.isFinite(Number(age))) return '18-34';
+  const a = Number(age);
+  if (a < 5) return '05-17';       // NHTS 没有 0–4 单独档，最小的 05-17 兜底
   if (age < 18) return '05-17';
   if (age < 35) return '18-34';
   if (age < 50) return '35-49';
@@ -142,11 +146,16 @@ export function buildDayNodes(real, rnd, extras = []) {
   });
 
   // 接送孩子这类额外目标由 social-circles 按 NHTS 真实占比 + 官方出行次数生成。
-  for (const e of extras) {
+  // 【修 2026-11-17】extras 为 null 时 for...of 会抛错；e.minute 超过 1440
+  // 或为负 / NaN 时会生成 start > due 的倒挂节点，排序结果也不可靠。
+  for (const e of (Array.isArray(extras) ? extras : [])) {
+    const raw = Number(e && e.minute);
+    if (!Number.isFinite(raw)) continue;
+    const at = Math.max(0, Math.min(1440, raw));
     out.push({
       id: `pickup_${e.minute}`, label: e.label,
       type: 'pickup', destKey: e.destKey || 'street',
-      start: Math.max(0, e.minute - 25), due: Math.min(1440, e.minute + 20),
+      start: Math.max(0, at - 25), due: Math.min(1440, at + 20),
       purpose: '10', slot: null,
     });
   }
