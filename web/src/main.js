@@ -2261,7 +2261,7 @@ function frame(dt, skipRender = false) {
 /**
  * 手动推帧。无头浏览器（SwiftShader）里 requestAnimationFrame 完全不触发，
  * 截图永远停在首帧 —— 验收时必须能主动驱动，否则改了什么都看不出来。
- * 第三个参数 skipRender=true 时只跑仿真不渲染（_sim_day.mjs 连续跑 24h 用），
+ * 第三个参数 skipRender=true 时只跑仿真不渲染（web/sim/sim-day.mjs 连续跑 24h 用），
  * 倍率、判断、位移、积水的推进逻辑完全一样。
  */
 window.__frame = (dt = 1 / 60, n = 1, skipRender = false) => {

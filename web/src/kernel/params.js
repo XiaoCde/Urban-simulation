@@ -205,7 +205,7 @@ export const SELF_SET = {
 
 export const KERNEL_META = {
   ...KERNEL_DATA_META,
-  boundary: '本目录只放纯计算，不引用页面对象和 3D 对象；边界检查脚本 web/_check_kernel_boundary.mjs',
+  boundary: '本目录只放纯计算，不引用页面对象和 3D 对象；边界检查脚本 web/tests/check-kernel-boundary.mjs',
 };
 
 /** 给自检脚本用的摘要，不参与仿真。 */

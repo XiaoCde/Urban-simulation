@@ -1,5 +1,5 @@
 // trapped.js 单元测试：可涉水连通域 / 主城判定 / 被困分类
-import { createTrappedIndex, WADE_MAX, STATE } from './src/trapped.js';
+import { createTrappedIndex, WADE_MAX, STATE } from '../src/trapped.js';
 
 let pass = 0, fail = 0;
 function ok(cond, msg) {

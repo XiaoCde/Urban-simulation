@@ -1,0 +1,17 @@
+import puppeteer from 'puppeteer-core';
+import { existsSync } from 'node:fs';
+const C = ['C://Program Files\\Google\\Chrome\\Application\\chrome.exe','C://Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe'].find(existsSync);
+const b = await puppeteer.launch({executablePath:C,headless:'new',args:['--no-sandbox','--use-gl=angle','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const p = await b.newPage(); await p.setViewport({width:1400,height:800});
+p.on('pageerror', e => console.log('PAGEERROR', e.message));
+const u = new URL(process.argv[2] || 'http://127.0.0.1:8140/index.html');
+u.searchParams.set('capture','1'); u.searchParams.set('v', String(Date.now()));
+await p.goto(u.toString(), {waitUntil:'domcontentloaded'});
+await p.waitForFunction(()=>window.__ready===true,{timeout:180000,polling:300});
+await p.evaluate((m,f)=>{ if(window.__clock) window.__clock.seek(m); if(f&&window.__setFollow) window.__setFollow(true,f); }, Number(process.argv[4]||1095), process.argv[5]||'');
+await new Promise(r=>setTimeout(r,1400));
+await p.evaluate(()=>window.__frame(1/30, 6));
+await new Promise(r=>setTimeout(r,500));
+await p.screenshot({path: process.argv[3] || 'out/dom.png'});
+console.log('[dom]', process.argv[3]);
+await b.close();

@@ -23,6 +23,14 @@ D:\AI\node.exe serve.js 8123        # 浏览器 http://127.0.0.1:8123/
 - `行人Demo-计划表.md` — 行人 Demo 验收标准原文（B 线已冻结）
 - `历史文档-原文存档.md` — 15 份旧文档逐字原文
 - `web/` — 当前主线（Three.js 实时城市场景）
+  - `src/` — 运行时内核与显示层（`src/kernel/` 纯计算，不碰 window / three）
+  - `assets/` — 场景资源与积涝帧（生成产物，不进版本库）
+  - `tests/` — 验收与回归脚本（38 个），例：`cd web && node tests/check-floors.mjs`
+  - `sim/` — 连续 24h 仿真与多工况并行（`sim-day.mjs`、`sim-sweep.mjs`、`sweep-report.mjs`）
+  - `devtools/` — 一次性开发脚本：`probes/` 探针、`shots/` 截图、`diag/` 诊断、`misc/` 其他
+  - `out/` — 仿真输出；`serve.js` — 静态服务（启动脚本引用，位置不变）
+  - 2026-11-17 归组前这 104 个脚本全堆在 `web/` 根目录，新旧名对照见 `docs/脚本归组映射.md`
+- `tools/` — 数据、模型、报告工具，分组说明见 `tools/README.md`
 - `tools/flood/` — 排水与内涝模型，两套内核并存：
   - `simple_drainage.py` + `street_net.py` — 旧内核（fill-and-spill 填洼 + 一维街网），快、稳，但出不了路面连续水膜
   - `shallow2d.py` + `swe_numba.py` — **新内核**（二维浅水 inertial），路面上有连续水流；4 m 网格 6 h 工况约 4 min
