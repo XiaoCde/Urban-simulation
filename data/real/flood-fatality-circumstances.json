@@ -1,0 +1,359 @@
+{
+ "note": "洪水死亡个案库的按情境分类统计。用于报告层的非溺亡外推与车辆/步行权重，不参与内核计算。三篇均为国家级个案库，样本与口径不同，不能简单平均。",
+ "generated": "2026-11-19",
+ "sources": [
+  {
+   "id": "IT-2018",
+   "short": "意大利 1965–2014",
+   "citation": "Salvati, P., Petrucci, O., Rossi, M., Bianchi, C., Guzzetti, F. (2018). Gender, age and circumstances analysis of flood and landslide fatalities in Italy. Science of the Total Environment 610–611: 867–879.",
+   "doi": "10.1016/j.scitotenv.2017.08.064",
+   "local_file": "from muse/文献4/1-s2.0-S0048969717320624-main.pdf",
+   "table": "Table 2（p.876）",
+   "sample": {
+    "flood_fatalities_total": 771,
+    "flood_with_indoor_outdoor_info": 514,
+    "landslide_fatalities": 1292,
+    "备注": "摘要给 771 例洪水死亡、1292 例滑坡死亡；Table 2 的 514 是有室内外分类的子集，493 是有具体地点的子集"
+   },
+   "by_place": {
+    "分母": 493,
+    "building_indoor": {
+     "n": 122,
+     "pct": 24.7
+    },
+    "road_highway": {
+     "n": 188,
+     "pct": 38.1
+    },
+    "bridge": {
+     "n": 64,
+     "pct": 13.0
+    },
+    "river_bank": {
+     "n": 38,
+     "pct": 7.7
+    },
+    "campsite": {
+     "n": 21,
+     "pct": 4.3
+    },
+    "ford": {
+     "n": 20,
+     "pct": 4.1
+    },
+    "countryside": {
+     "n": 20,
+     "pct": 4.1
+    },
+    "proximity_of_house": {
+     "n": 13,
+     "pct": 2.6
+    },
+    "riverbed": {
+     "n": 5,
+     "pct": 1.0
+    },
+    "underpass": {
+     "n": 2,
+     "pct": 0.4
+    }
+   },
+   "by_transport": {
+    "分母": 362,
+    "on_foot": {
+     "n": 137,
+     "pct": 37.8
+    },
+    "by_car": {
+     "n": 203,
+     "pct": 56.1
+    },
+    "by_van_truck_tractor_bus": {
+     "n": 11,
+     "pct": 3.0
+    },
+    "by_boat": {
+     "n": 7,
+     "pct": 1.9
+    },
+    "by_bike": {
+     "n": 2,
+     "pct": 0.5
+    },
+    "备注": "车辆合计（轿车+厢式+卡车+拖拉机+公交）= 214，占 59.1%"
+   },
+   "by_dynamics": {
+    "分母": 499,
+    "dragged_by_water": {
+     "n": 289,
+     "pct": 57.9
+    },
+    "blocked_in_flooded_room": {
+     "n": 81,
+     "pct": 16.2
+    },
+    "bridge_collapse": {
+     "n": 61,
+     "pct": 12.2
+    },
+    "surrounded_by_floodwater": {
+     "n": 26,
+     "pct": 5.2
+    },
+    "building_collapse": {
+     "n": 19,
+     "pct": 3.8
+    },
+    "fallen_into_river": {
+     "n": 18,
+     "pct": 3.6
+    },
+    "boat_sinking": {
+     "n": 5,
+     "pct": 1.0
+    }
+   },
+   "dead_by_water_pct": 83.9,
+   "dead_by_structure_pct": 16.0,
+   "口径说明": "水淹类＝冲走+困在房间+围困+落水+翻船；结构类＝桥倒塌+建筑倒塌。结构类是明确的非溺亡，但本模型不建模结构破坏。"
+  },
+  {
+   "id": "IT-2026",
+   "short": "意大利 1965–2024",
+   "citation": "Salvati, P., Sessa, M., Carone, M.T., Coscarelli, R., et al. (2026). Gender differences in disaster mortality and risk perception: evidence from floods and landslides in Italy. International Journal of Disaster Risk Reduction 145: 106429.",
+   "doi": "10.1016/j.ijdrr.2026.106429",
+   "local_file": "from muse/文献4/1-s2.0-S2212420926004413-main.pdf",
+   "table": "Table 1（p.5）",
+   "sample": {
+    "flood_fatalities": 752,
+    "landslide_fatalities": 1188
+   },
+   "by_place_gender_ratio": {
+    "备注": "原表给的是男女比，不是占比；下表括号内为推导出的绝对数",
+    "road_highway": {
+     "male": 136,
+     "female": 73,
+     "total": 209
+    },
+    "inside_building": {
+     "male": 85,
+     "female": 82,
+     "total": 167
+    },
+    "mountain_hill": {
+     "male": 23,
+     "female": 25,
+     "total": 48
+    },
+    "levee_embankment": {
+     "male": 39,
+     "female": 4,
+     "total": 43
+    },
+    "ford_underpass": {
+     "male": 27,
+     "female": 11,
+     "total": 38
+    },
+    "proximity_house": {
+     "male": 12,
+     "female": 8,
+     "total": 20
+    },
+    "合计": 525
+   },
+   "备注": "与 IT-2018 同一团队的两代版本。IT-2018 时段 1965–2014 有 771 例洪水死亡，本篇时段 1965–2024 有 752 例——时段更长而总数更少，说明中间做过数据修订，差异原因需核原文方法节"
+  },
+  {
+   "id": "AU-2017",
+   "short": "澳大利亚 1900–2015",
+   "citation": "Haynes, K., Coates, L., van den Honert, R., McAneney, J., et al. (2017). Exploring the circumstances surrounding flood fatalities in Australia—1900–2015 and the implications for policy and practice. Environmental Science and Policy 76: 165–176.",
+   "doi": "10.1016/j.envsci.2017.07.003",
+   "local_file": "from muse/文献4/1-s2.0-S1462901117301818-main.pdf",
+   "table": "Table 1（p.168）、Table 2（p.169）、正文 §3.1",
+   "sample": {
+    "flood_fatalities": 1859,
+    "male": 1475,
+    "female": 365,
+    "unknown": 19
+   },
+   "annual_death_rate": "2.91 每十万人每年（全国平均）",
+   "by_flood_type": {
+    "分母": 1859,
+    "short_coastal_rapid": {
+     "n": 1005,
+     "pct": 54
+    },
+    "longer_coastal": {
+     "n": 320,
+     "pct": 17
+    },
+    "inland_rivers_long": {
+     "n": 295,
+     "pct": 16
+    },
+    "normally_dry_inland": {
+     "n": 68,
+     "pct": 4
+    },
+    "dam_failure": {
+     "n": 16,
+     "pct": 1
+    },
+    "urban_flash_local_nuisance": {
+     "n": 142,
+     "pct": 7
+    },
+    "unknown": {
+     "n": 13,
+     "pct": 1
+    }
+   },
+   "by_activity": {
+    "分母": 1859,
+    "crossing_watercourse_or_ford": {
+     "n": 844,
+     "pct": 45
+    },
+    "crossing_floodwater_away_from_watercourse": {
+     "n": 84,
+     "pct": 5
+    },
+    "near_water_bank_bridge": {
+     "n": 236,
+     "pct": 13
+    },
+    "stormwater_drain": {
+     "n": 53,
+     "pct": 3
+    },
+    "in_water_rescue_swimming": {
+     "n": 121,
+     "pct": 7
+    },
+    "on_water_boat": {
+     "n": 98,
+     "pct": 5
+    },
+    "not_near_watercourse_e_g_home": {
+     "n": 228,
+     "pct": 12
+    },
+    "other": {
+     "n": 6,
+     "pct": 0
+    },
+    "unknown": {
+     "n": 189,
+     "pct": 10
+    }
+   },
+   "not_near_watercourse_detail": {
+    "分母": 228,
+    "in_house": {
+     "n": 107,
+     "pct": 47,
+     "其中房屋被毁": 76
+    },
+    "on_house_roof": {
+     "n": 30,
+     "pct": 13,
+     "其中房屋被毁": 26
+    },
+    "outside": {
+     "n": 54,
+     "pct": 24
+    }
+   },
+   "by_reason": {
+    "分母": 1859,
+    "en_route_to_destination": {
+     "n": 598,
+     "pct": 32
+    },
+    "其中_way_home": {
+     "n": 192,
+     "pct": 10
+    },
+    "其中_from_home": {
+     "n": 112,
+     "pct": 6
+    },
+    "recreating": {
+     "n": 296,
+     "pct": 16
+    },
+    "rescuing": {
+     "n": 157,
+     "pct": 11,
+     "备注": "男性第三位"
+    },
+    "evacuating_incl_vertical": {
+     "n": 60,
+     "pct": 16,
+     "备注": "女性第三位"
+    },
+    "in_home_unaware_no_attempt": {
+     "n": 29,
+     "pct": 8,
+     "备注": "女性"
+    }
+   },
+   "vehicle_fatalities": {
+    "drivers": {
+     "n": 153,
+     "male": 130,
+     "female": 23
+    },
+    "passengers": {
+     "n": 139,
+     "male": 74,
+     "female": 65
+    },
+    "合计": 292,
+    "占总死亡比例": 15.7
+   },
+   "cause_of_death": {
+    "drowning_confirmed": {
+     "n": 1055,
+     "pct": 57
+    },
+    "likely_drowning_unconfirmed": {
+     "n": 691,
+     "pct": 37
+    },
+    "作者结论": "94% 的死因是溺亡，创伤/暴露/心脏病在很多案例中可能是促成因素"
+   }
+  }
+ ],
+ "cross_source_comparison": {
+  "非溺亡比例": {
+   "Jonkman_Kelman_2005": {
+    "pct": 32.4,
+    "sample": 247,
+    "note": "13 场洪水混合，含溃决与灾后公共卫生原因",
+    "existing_in_project": true
+   },
+   "IT_2018_structure_collapse_only": {
+    "pct": 16.0,
+    "sample": 514,
+    "note": "仅桥与建筑倒塌，明确的非溺亡；不含心脏病等"
+   },
+   "AU_2017": {
+    "pct": 6.0,
+    "sample": 1859,
+    "note": "作者结论 94% 溺亡"
+   }
+  },
+  "结论": "三个来源跨三个数量级边缘：6% / 16% / 32.4%。本项目原用 32.4%（最高值），可能高估近一倍。推荐改用 16%（意大利，场景最接近城市道路+车辆），并报 6–32% 区间。",
+  "建模注意": "意大利的 16% 几乎全是结构倒塌（桥与建筑），本模型不建模结构破坏，所以这 16% 是模型外的机制，只能作量级参照，不能说是模型算出来的。"
+ },
+ "model_mapping": {
+  "备注": "把意大利的动态分类映射到本模型的死因分类，用于给每类死亡一个情境参照",
+  "深水被困致死": "对应 blocked_in_flooded_room（16.2%）与 surrounded_by_floodwater（5.2%）",
+  "涉水溺亡": "对应 dragged_by_water（57.9%）中的步行部分",
+  "车内溺亡": "对应 dragged_by_water 中的车辆部分；意大利车辆占交通方式的 59.1%，澳大利亚车辆死亡占 15.7%",
+  "地下室进水溺亡": "意大利与澳大利亚的分类里都没有单列地下室，本项目这一类没有直接对照",
+  "顶层被淹没路可退": "对应 blocked_in_flooded_room"
+ }
+}

@@ -237,7 +237,7 @@ md = f'''# 两周工作汇报 · 数据与计划
 | 等红灯 / 礼让行人 | {n(I.get("redLightWaits"))} / {n(I.get("yields"))} 次 |
 | 车辆熄火 / 弃车 | {n(I.get("stalled"))} / {n(I.get("abandonedCar"))} |
 | 困死 / 累计被困 / 累计受伤 | {n(I.get("dead"))} / {n(I.get("everStranded"))} / {n(I.get("everInjured"))} 人 |
-| 若计非溺亡（文献比例外推，不是模型算的） | 约 {round((I.get("dead") or 0) / 0.676)} 人，其中非溺亡约 {round((I.get("dead") or 0) * 0.324 / 0.676)} 人 |
+| 若计非溺亡（文献比例外推，不是模型算的） | 约 {round((I.get("dead") or 0) / 0.84)} 人，其中非溺亡约 {round((I.get("dead") or 0) * 0.16 / 0.84)} 人；按另两个来源为 {round((I.get("dead") or 0) / 0.94)}–{round((I.get("dead") or 0) / 0.676)} 人 |
 | 避险成功 / 水位退下脱困 | {n(I.get("evacuated"))} / {n(I.get("rescued"))} 人 |
 | 事件最深水 | {n(round((I.get("maxDepth") or 0) * 100))} cm |
 

@@ -1,0 +1,118 @@
+{
+  "note": "社会影响与从众机制的实证依据。用于校验合成网络的合理性、给从众系数定区间，以及写方法对比。注意：没有一份能直接给出「同伴留下比例 → 个体决策」的系数，所以不能直接替换 Borowski 的 7.76。",
+  "generated": "2026-11-19",
+  "sources": [
+    {
+      "id": "SADRI-2017",
+      "short": "桑迪飓风 ego network（最贴合）",
+      "citation": "Sadri, A.M., Ukkusuri, S.V., Gladwin, H. (2017). Modeling joint evacuation decisions in social networks: The case of Hurricane Sandy. Journal of Choice Modelling 25: 50–60.",
+      "doi": "10.1016/j.jocm.2017.02.002",
+      "local_file": "from muse/文献4/1-s2.0-S1755534517300313-main.pdf",
+      "tables": "Table 1（p.55 描述统计）、Table 2（p.56 多项 logit 估计）",
+      "design": {
+        "ego_observations": 412,
+        "ego_alter_dyads": 1109,
+        "implied_network_size_mean": 2.69,
+        "region": "纽约与新泽西（桑迪）",
+        "method": "自我中心网络 + name generator + 多层多项 logit（dyadic 层与 ego 层）"
+      },
+      "ego_network_composition": {
+        "discussion_topic_family": 0.537,
+        "contact_almost_daily": 0.546,
+        "geographic_proximity_over_5mi": 0.343,
+        "altered_by_proxy_age_mean": 51.237
+      },
+      "evacuation_outcome": {
+        "evacuees_pct": 25.5,
+        "evacuees_alters_evacuated_pct": 39.6,
+        "non_evacuees_pct": 74.5,
+        "non_evacuees_alters_evacuated_pct": 15.1,
+        "ratio": 2.62,
+        "读法": "撤离者的同伴撤离率 39.6%，是不撤离者 15.1% 的 2.6 倍。这是本项目最需要的对照量——我们的 peersStay 就是它的补数（1 减撤离率）。"
+      },
+      "key_coefficients": {
+        "备注": "基准类别是「ego 与 alter 都撤离」；系数是相对该基准的 log-odds，括号内为 odds ratio",
+        "both_stay_vs_both_leave": {
+          "evacuation_order": { "beta": -3.709, "or": 0.02, "p": "<0.01" },
+          "geographic_over_5mi": { "beta": 1.482, "or": 4.40, "p": "<0.01" },
+          "evacuation_experience": { "beta": -1.329, "or": 0.26, "p": "<0.05" },
+          "married": { "beta": 0.577, "or": 1.78, "p": "<0.05" }
+        },
+        "ego_leaves_alter_stays": {
+          "geographic_over_5mi": { "beta": 2.162, "or": 8.68, "p": "<0.01" },
+          "contact_almost_daily": { "beta": -0.695, "or": 0.50, "p": "<0.01" },
+          "single_person_household": { "beta": 0.706, "or": 2.03, "p": "<0.01" },
+          "evacuation_order": { "beta": -1.443, "or": 0.24, "p": "<0.05" }
+        },
+        "alter_leaves_ego_stays": {
+          "evacuation_order": { "beta": -3.239, "or": 0.04, "p": "<0.01" },
+          "married": { "beta": 1.202, "or": 3.33, "p": "<0.01" },
+          "geographic_over_5mi": { "beta": 1.299, "or": 3.67, "p": "<0.01" },
+          "ego_65_plus": { "beta": -0.647, "or": 0.52, "p": "<0.05" }
+        },
+        "最重要的一条": "收到官方疏散令的 odds ratio 低到 0.02–0.04，比任何社会网络变量的作用都强一个数量级。这提示本项目把「官方预警」只当一个布尔字段处理，权重可能远远不足。"
+      },
+      "方法差异": "本篇建的是 ego 与 alter 的联合结果（四类），不是「给定同伴比例，个体选方案」。Borowski 2023 是后者。所以本篇系数不能与 7.76 互换，只能作量级参照。"
+    },
+    {
+      "id": "HASAN-2011",
+      "short": "阈值模型（方法框架）",
+      "citation": "Hasan, S., Ukkusuri, S.V. (2011). A threshold model of social contagion process for evacuation decision making. Transportation Research Part B 45: 1590–1605.",
+      "doi": "10.1016/j.trb.2011.07.008",
+      "local_file": "from muse/文献4/1-s2.0-S0191261511001081-main.pdf",
+      "结论": "用假设的社会网络（hypothetical social network）做仿真，推导级联发生的解析条件，讨论社区混合模式、种子节点度、时间步与关系强度对级联的影响。",
+      "重要限制": "**没有用真实数据标定阈值分布**。原文明确写「A simple threshold model of decision making is applied to a hypothetical social network」。所以它只能给方法框架与级联条件，给不出阈值实测值，**不能替代 7.76**。",
+      "可用之处": "若要改走阈值模型路线，本篇给的是建模脚手架：阈值从分布 f(θ) 采样、度从社区度分布抽样、级联条件的解析式。"
+    },
+    {
+      "id": "TANAKA-2026",
+      "short": "日本城市内涝的意图—行动阈值",
+      "citation": "Tanaka, K., Akaishi, K., Kusanō, F. 等 (2026). Crossing the behavioral threshold: social amplification and climate risk management in urban flood evacuation. Climate Risk Management.",
+      "doi": "10.1016/j.crm.2026.100901",
+      "local_file": "from muse/文献4/1-s2.0-S2212096326001142-main.pdf",
+      "核心": "Evacuation Threshold Framework：把「意图→行动」建成非线性的阈值门控过程，用 2018 年西日本洪水观测到的撤离遵从率做经验校准。",
+      "关键数字": {
+        "activation_threshold": 0.7,
+        "量表": "0–1 的意图指数，不是水深",
+        "对比": "常规做法用 0.5 切点；实测阈值 0.7 说明意图转行动前有很大心理惯性"
+      },
+      "可用之处": "支撑「大量人有意图但不行动」与「信息本身不足以弥合落差」两条结论，写进方法对比与局限。**不是水深阈值，不能进内核的水深分档。**"
+    },
+    {
+      "id": "QIN-2024",
+      "short": "俄亥俄与宾州的撤离时长",
+      "citation": "Qin, H., Zhai, W., Tang, J. (2024). Influences of social networks, demographics, and evacuation duration on evacuation decisions: Insights from Ohio and Pennsylvania. International Journal of Disaster Risk Reduction 111: 104701.",
+      "doi": "10.1016/j.ijdrr.2024.104701",
+      "local_file": "from muse/文献4/1-s2.0-S2212420924004631-main.pdf",
+      "样本": { "analytical_sample": 468, "one_week_model": 419, "long_term_model": 397, "permanent_model": 357 },
+      "变量": "邻里连通性用五个调查问题衡量；一周撤离中约 37% 搬到别的州",
+      "待抽": "各模型的回归系数（社会网络变量的 beta 与显著性）尚未抽出，需读 Table 2–4"
+    },
+    {
+      "id": "YANG-2019",
+      "short": "家—工作地双层网络",
+      "citation": "Yang, Y., Mao, L., Metcalf, S.S. (2019). Diffusion of hurricane evacuation behavior through a home-workplace social network: A spatially explicit agent-based simulation model. Computers, Environment and Urban Systems.",
+      "doi": "10.1016/j.compenvurbsys.2018.11.010",
+      "local_file": "from muse/文献4/1-s2.0-S0198971518302497-main.pdf",
+      "待抽": "两层网络的规模、重叠度、层间扩散速度；用什么真实数据标定"
+    },
+    {
+      "id": "SADRI-2021",
+      "short": "社会影响综述",
+      "citation": "Sadri, A.M., Ukkusuri, S.V., Ahmed, M.A. (2021). Review of social influence in crisis communications and evacuation decision-making. Transportation Research Interdisciplinary Perspectives.",
+      "doi": "10.1016/j.trip.2021.100325",
+      "local_file": "from muse/文献4/1-s2.0-S2590198221000324-main.pdf",
+      "待抽": "有没有跨研究的效应量对照表；网络规模与密度对影响强度的结论"
+    }
+  ],
+  "project_implication": {
+    "能不能直接替换 7.76": "不能。A 组五篇里只有 SADRI-2017 有真实估计，但它是 dyadic 联合决策模型，变量定义与 Borowski 的「同伴留下比例」不同；其余四篇或是假设网络（HASAN-2011）、或是意图指数阈值（TANAKA-2026）、或系数未抽（QIN-2024、YANG-2019）。",
+    "能做什么": [
+      "用 SADRI-2017 的 39.6% 与 15.1% 校验我们模型算出的同伴撤离率分布是否落在合理范围（这是校验，不是改参数）",
+      "用其网络规模 2.69 检查「上限 5 人」是否合理（实测 2.69，5 是上限，不冲突，但均值应该接近 2.7 而非 5）",
+      "把「疏散令 OR 0.02」这条提出来，检查我们模型里官方预警的权重是不是太弱",
+      "把 TANAKA-2026 的 0.7 阈值写进局限：意图转行动有高阈值，我们的选择模型可能高估行动率"
+    ],
+    "不能做": "不能拿任何一篇的具体系数去替换 7.76，也不能声称「从众系数已有实测依据」。能做到的是「有对照量、有区间、有方法路线」。"
+  }
+}

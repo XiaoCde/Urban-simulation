@@ -89,6 +89,10 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
   const counters = {
     judged: 0, replans: 0, budgetBlocked: 0, overflow: 0, earlyWarnings: 0,
     peersSum: 0, peersNonZero: 0,
+    // 【2026-11-19】peersStay 的十档直方图（0–0.1、…、0.9–1.0），
+    // 用来和 Sadri et al. 2017 桑迪样本的实测对照：撤离者同伴撤离率 39.6%、
+    // 不撤离者 15.1%（即 peersStay 约 0.60 与 0.85）。只计数，不参与任何判定。
+    peerBins: new Array(10).fill(0),
     byAction: { continue: 0, slow: 0, hurry: 0, wait: 0, detour: 0, turnback: 0, abandon: 0 },
     goals: { done: 0, abandoned: 0, timeout: 0, activate: 0 },
   };
@@ -190,6 +194,10 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     // 这两个计数让验收程序能看出它是否变成非零（不是每个判断都 >0，
     // 独居者没有同伴，本来就是 0）。
     if (s.peersStay) { counters.peersSum += s.peersStay; counters.peersNonZero++; }
+    if (Number.isFinite(s.peersStay)) {
+      const b = Math.min(9, Math.max(0, Math.floor(s.peersStay * 10)));
+      counters.peerBins[b]++;
+    }
     if (act === 'continue') return;                    // 继续占绝大多数，只计数不存
     if (events.length >= EVENT_CAP) { counters.overflow++; return; }
     const g = a.plan.active();
