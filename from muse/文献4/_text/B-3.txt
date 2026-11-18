@@ -1,0 +1,836 @@
+Transportmetrica A: Transport Science
+ISSN: 2324-9935 (Print) 2324-9943 (Online) Journal homepage: www.tandfonline.com/journals/ttra21
+Analysis of evacuation destination and departure
+time choices for no-notice emergency events
+Nima Golshani, Ramin Shabanpour, Abolfazl (Kouros) Mohammadian,
+Joshua Auld & Hubert Ley
+To cite this article: Nima Golshani, Ramin Shabanpour, Abolfazl (Kouros) Mohammadian,
+Joshua Auld & Hubert Ley (2019) Analysis of evacuation destination and departure time choices
+for no-notice emergency events, Transportmetrica A: Transport Science, 15:2, 896-914, DOI:
+10.1080/23249935.2018.1546778
+To link to this article: https://doi.org/10.1080/23249935.2018.1546778
+Published online: 20 Nov 2018.
+Submit your article to this journal 
+Article views: 706
+View related articles
+View Crossmark data
+Citing articles: 14 View citing articles
+Full Terms & Conditions of access and use can be found at
+https://www.tandfonline.com/action/journalInformation?journalCode=ttra21
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE
+2019, VOL. 15, NO. 2, 896–914
+https://doi.org/10.1080/23249935.2018.1546778
+Analysis of evacuation destination and departure time
+choices for no-notice emergency events
+Nima Golshania, Ramin Shabanpoura, Abolfazl (Kouros) Mohammadiana,
+Joshua Auldb and Hubert Leyc
+aDepartment of Civil and Materials Engineering, University of Illinois at Chicago, Chicago, USA; bSystems
+Modelling and Controls Group, Argonne National Laboratory, Argonne, USA; c
+Transportation Research and
+Analysis Computing Center, Argonne National Laboratory, Argonne, USA
+ABSTRACT
+Over the past decades, both the frequency and severity of disastrous
+events have increased all over the world. Thus far, many studies have
+focused on people’s evacuation behaviour during advance-notice
+events. However, little is known about their behaviour during nonotice events mainly because of the scarcity of available data. In an
+effort to address such a gap, this study presents a joint model to
+estimate evacuee’s destination and departure time choices in the
+context of no-notice emergency events. These two critical decisions
+can directly influence spatial and temporal traffic distributions in
+the network in case of disastrous events. A copula-based joint structure is proposed to explore the interdependencies between these
+evacuation attributes that stem from the shared factors influencing them and/or the causal effects that they might have on each
+other.
+ARTICLE HISTORY
+Received 12 September 2017
+Accepted 5 November 2018
+KEYWORDS
+No-notice evacuation;
+destination choice; departure
+time; joint
+discrete–continuous
+Introduction
+A disaster is a natural or man-made event which disrupts normal human activities and can
+lead to severe infrastructure damage and loss of life. It can be in the form of natural events
+such as tornados, hurricanes, floods, forest fires, and earthquakes, or man-made events
+such as nuclear seepages and terrorist attacks. These disasters have been increasing in frequency in recent years resulting in sizable economic losses and casualties. Only in 2016,
+315 disastrous events occurred around the world resulting in over 210 billion dollars of economic loss. Comparing these rates with the 16-year average of 271 events with the annual
+average economic loss of 174 billion dollars manifests this growing trend (Benfield 2016).
+Accordingly, it is vital for the governments to develop effective evacuation strategies to
+alleviate the damage and fatality caused by these tragedies. A growing number of studies have focused on the emergency evacuation process to predict public responses and
+optimize the evacuation procedure from the affected areas. This led to the development
+CONTACT Nima Golshani ngolsh2@uic.edu
+This work was performed under subcontract FP062899-D with the University of Chicago, and is part of contract D2015-SRER-007 between
+the Federal Transit Agency and the University of Chicago. The US Government retains for itself, and others acting on its behalf, a paid-up,
+non-exclusive, and irrevocable worldwide licence in said article to reproduce, prepare derivative works, distribute copies to the public, and
+perform publicly and display publicly, by or on behalf of the Government.
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 897
+of several methodological approaches ranging from statistical and optimization modelling to simulation-based methods to predict and simulate individuals’ evacuation
+behaviour.
+In general, disasters can be categorized into two groups based on their predictability; the
+first group comprises predictable disasters such as hurricanes in which treatments and possible evacuation procedures can be planned since the moment that they are predicted. In
+the case of these events, people in the affected areas are informed in advance by the officials
+and if required, are guided to safe places. These events are mostly referred to as advancenotice emergency events in the literature. The second group consists of disasters that are
+not predictable such as terrorist attacks, chemical spills, or earthquakes, where notifying
+the public prior to its occurrence is not feasible. In these situations, referred to as no-notice
+emergency events, it is generally considered that evacuation procedure starts immediately
+after the occurrence of the event. Thus, pre-disaster planning is of great importance for
+these events.
+Individuals’ evacuation behaviour during advance-notice emergency events has been
+extensively addressed in the literature (see, for example, Drabek and Boggs 1968; Baker
+1991; Drabek 1999; Hasan, Mesa-Arango, and Ukkusuri 2013; Sadri, Ukkusuri, and MurrayTuite 2013). However, only a few studies have attempted to address this issue in case of nonotice emergencies mainly due to the scarcity of data. This study aims to analyze evacuees’
+behaviour in the context of no-notice emergency events using an internet-based stated
+preference survey conducted in the Chicago metropolitan area. In the survey, respondents
+were faced with multiple emergency scenarios and were asked to report their evacuation
+plan including the destination and departure time choices.
+The destination and departure time choices are two critical dimensions of the evacuation plans as they directly affect the spatial and temporal distributions of traffic in the
+transportation network (Wang, Deng, and Guo 2014; Zhang, Wolshon, and Dixit 2015;
+Amirgholy and Gonzales 2017; Asgari and Jin 2018). Indeed, exploration of these attributes
+can specifically lead to preventing the occurrence of gridlocks in the network and ultimately reducing economic damage and loss of life. Considering the behavioural aspects of
+evacuees’ decision behaviour toward these parameters is imperative to identify the most
+influential factors in their evacuation planning process. From the methodological perspective, these two attributes have traditionally been modelled independently via a variety of
+modelling approaches. However, these decisions are closely intertwined due to the shared
+factors affecting them and/or the causal effects that they have on each other. Hence, it is
+necessary to investigate these two decisions in a joint structure to be able to capture their
+potential association.
+This study contributes to the emergency evacuation literature by presenting a discrete–continuous joint structure to explore the relationship between the decisions on
+evacuation destination choice and departure time choice. To achieve this goal, we propose
+a copula-based joint model which comprises a multinomial logit model as the discrete component to estimate destination choice and an accelerated hazard model as the continuous
+component to estimate departure time decision. The main motivation to adopt the copula
+approach is that it links the stochastic error terms without imposing restrictive assumptions
+on the dependency structure of the discrete and continuous components (Bhat and Eluru
+2009).
+
+898 N. GOLSHANI ET AL.
+Literature review
+This section reviews previous studies on people’s evacuation behaviour with a specificfocus
+on evacuation departure time and destination choices and highlights the need for capturing the interdependencies and underlying correlations between them. A substantial body
+of the evacuation-related literature has focused on evacuees’ behaviour in terms of evacuation participation (see, for example, Fu and Wilmot 2004; Dash and Gladwin 2007; Hasan
+et al. 2011; Murray-Tuite et al. 2012) and evacuation route choice behaviour (see, for example, Carnegie and Deka 2010; Robinson and Khattak 2010; Wu, Lindell, and Prater 2012;
+Sadri, Ukkusuri, and Murray-Tuite 2014; Andresen, Chraibi, and Seyfried 2018). However,
+relatively little attention has been paid to evacuees’ departure time and destination choice
+behaviour.
+As one of the earliest studies on evacuation departure time, Sorensen (1991) used ordinary least square regression to uncover the relationship between evacuee’s departure time
+and other explanatory variables. He found that the time of warning receipt and the amount
+of time that the evacuee needs to prepare to leave (mobilization time) are the most significant factors in departure time decision. By using data collected in southwestern Louisiana
+after Hurricane Andrew, Fu and Wilmot (2004) developed a sequential binary logit model to
+estimate the probability that people evacuate at each time period before hurricane landfall.
+In a later study, Fu and Wilmot (2006) estimated and compared two survival analysis models
+– the Cox proportional model and the piecewise exponential model. Similar to their previous study, they considered discrete time intervals with a coarse aggregation of six-hour
+time durations and derived the evacuation probability within each time interval as a function of the household’s socioeconomic characteristics, the characteristics of the hurricane,
+and policy decisions made by authorities.
+Using the same dataset, Dixit, Wilmot, and Wolshon (2012) presented an evacuation
+departure time choice model while controlling for risk attitudes. They found that factors
+such as length of time spent in a region, time of day, and whether a mandatory evacuation
+order was issued have significant effects on the risk attitudes. In another study, Dixit et al.
+(2008) showed how the psychological impact of a previous hurricane can affect the evacuation decisions in a subsequent hurricane. They used the data from a survey conducted with
+the evacuees of Hurricane Frances, which made landfall 3 weeks after Hurricane Charley
+in 2005. In this study, the effects of the preceding hurricane were accounted for by modelling departure times simultaneously with an ordinal variable representing evacuation
+participation levels during Hurricane Charley.
+Arguing that the risk responses are heterogeneous across the hurricane-affected individuals, Sadri, Ukkusuri, and Murray-Tuite (2013) proposed a random parameters ordered
+probit model to capture underlying unobserved characteristics in the timing behaviour of
+the evacuees. They estimated the evacuation mobilization time (time elapsed from the
+evacuation decision to the actual evacuation) using data from Hurricane Ivan on households from Alabama, Louisiana, Florida, and Mississippi. They reported that the variables
+related to household location, evacuation characteristics, and socio-economic characteristics are key determinants of the mobilization time. They also found that the effects
+of previous hurricane experience, source and time of evacuation notice received, work
+constraints, race, and income vary across the observations.
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 899
+Using the same dataset, Hasan, Mesa-Arango, and Ukkusuri (2013) proposed a continuous time approach for modelling the evacuation timing decision to overcome the
+limitations associated with the coarse discrete time intervals considered in the prior studies.
+They proposed a random-parameter hazard-based model to understand households’ evacuation timing behaviour. It is found that the hazard-based model can reasonably estimate
+the end of the duration from the moment of receiving a hurricane warning to the moment
+of actual evacuation. They could also capture the heterogeneous risk responses in the context of departure time decision by incorporating the random parameters approach in their
+model. As they reported, factors such as household’s geographic location, type of the shelter, location and time to reach the destination in normal time, time between decision and
+actual evacuation, whether to live in a mobile house, education status, income, type of evacuation notice (mandatory or optional) received have significant effect on departure time
+decision.
+From a different perspective, Ng, Diaz, and Behr (2015) investigated the departure time
+choice behaviour in hurricane evacuations of people with special needs; referred to as
+the medically fragile population in their study. Using data from a large-scale phone survey conducted after hurricane Irene, they applied the ordinal logistic regression model to
+uncover the differences between evacuation behaviour of the medically fragile and the
+non-medically fragile population groups. They identified key variables that influence the
+evacuation departure time of these two population groups and found that fundamental
+differences exist between their evacuation behaviour.
+Moving to evacuation destination choice models, earlier studies showed that if people
+decide to leave the affected area, they mostly go to public facilities or friends’ and relatives’
+homes. These studies have used a variety of methodological approaches that generally
+focus on aggregated (or zone-based) data. These methods rangefrom trip distribution gravity models (Wilmot, Modali, and Chen 2006) to zone-based discrete choice models (Cheng,
+Wilmot, and Baker 2008). In this line of research, Charnkol, Hanaoka, and Tanaboriboon
+(2007) developed an emergency trip destination model using the binary logistic regression
+and neural network approaches. They estimated the probability of selecting evacuation
+destinations between public and private shelters. Two separate sets of models for permanent residents and transients are presented. They found that variables such as safety and
+security, medical support, comfort and convenience, communication attribute, and availability of food and beverage attribute significantly affect the shelter choice behaviour of
+evacuees.
+Cheng, Wilmot, and Baker (2008) presented two separate zonal-level multinomial logit
+models for friends/relatives and hotel/motel choices. They aggregated destination zones
+based on the risk due to the hurricane and natural geographic features, and considered
+28 destination alternatives in their study. They found that destination choice is affected
+by the trip distance and the attributes of the destination zone including risk, white population, total population, presence of a major metropolitan area, number of hotels, and
+presence of an interstate highway. Later, Mesa-arango et al. (2013) developed a householdlevel nested logit model to identify the variables influencing destination type choice among
+four common alternatives: houses of friends and relatives; hotels; public shelters and
+churches; and other. They used data from Hurricane Ivan 2004 to calibrate the model. More
+recently, Parady and Hato (2016) estimated a spatially correlated logit model of evacuation destination choice and proposed an alternative allocation parameter to account for
+
+900 N. GOLSHANI ET AL.
+spatial correlation in the particular context of tsunami evacuation. They found that factors
+such as origin-destination (OD) distance, OD altitude difference, number of buildings, and
+number of officially designated shelters are statistically associated with evacuation destination choice. Their results suggest the existence of a high degree of correlation among
+unobserved attributes of zones which was suitably captured by the proposed allocation
+parameter.
+Shimamoto et al. (2018) presented a two-step approach for evacuation planning during tsunamis. In the first step, a linear programming model identifies possible scenarios
+of departure time, destination, and travel mode in the case of tsunami evacuation. These
+scenarios are then evaluated in the second step by solving a time-dependent traffic assignment model which incorporates congestion costs into the analysis. They later applied the
+proposed model to Osaka, Japan and found that allowing evacuation by a private vehicle
+in limited numbers and in a specific time can help the evacuation process.
+A summary of the reviewed studies is presented in Table 1. In conclusion, while individuals’ evacuation behaviour during advance-notice emergency events has been extensively
+studied in the literature, only afew studies have attempted to address this matter in the case
+of no-notice disasters. The scarcity of available data sources is the main reason behind this
+gap in the emergency evacuation literature. Furthermore, although the evacuation dimensions of destination and departure time choices are closely intertwined, no study has yet
+investigated them in a joint structure. This paper aims to contribute to the literature by estimating a joint discrete–continuous model of evacuation destination and departure time
+choices in the context of no-notice emergency events.
+Data analysis
+The data used in this study is extracted from the internet-based stated preference survey for
+no-notice emergency evacuations (Auld et al. 2012), which was conducted by the Argonne
+National Laboratory in 2012. The data was collected through an online platform with access
+to Google Maps application programming interface and consists of two parts. The first part
+focused on collecting detailed demographic, location, and vehicle use information of the
+500 survey participants and their household members for a typical weekday.
+The sample represents participants who reside in Chicago metropolitan area and is composed of 45% men and 55% women. Moreover, 7% of the participants hold high school
+degree or less, 19% passed some college credits, 29% hold a college degree, and 45% hold
+graduate or professional degrees. The average household size is 2.66 while the average
+number of adults and children in households are 2.09 and 0.57, respectively. Finally, 30% of
+the households have an annual income below $50,000, 40% have annual income between
+$50,000 and $100,000, and the remaining 30% earn more than $100,000 per year. A full
+description of the survey, descriptive statistics, and validation of the data can be found in
+Auld et al. (2012).
+In the second part of the survey, participants were presented with two random
+emergency scenarios. The designed scenarios vary in terms of timing, severity, risk, location,
+radius of the event, and government recommendation. The time of the event is randomly selected from three options of 9:00 am, 2:00 pm and 7:00 pm. The location of each
+household member was also asked at each time option. Considering the locations of the
+household members, an emergency scenario was designed in a proximity of one of the
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 901
+Table 1. Summary of studies on evacuation departure time and destination choice.
+Author Spatial context & data Model Choice set description
+Sorensen (1991) Hazardous materials
+incident (March 1987):
+Regression model Continuous time
+578 respondents in
+Nanticoke, Atlanta
+Fu and Wilmot
+(2004)
+Hurricane Andrew (August
+1992):
+156 households in
+southwest Louisiana
+Sequential logit model Discrete time intervals: 6–hour
+intervals starting from 12:00
+am (for 3 consecutive days)
+Fu and Wilmot
+(2006)
+Hurricane Andrew (August
+1992):
+Cox proportional
+hazard & piecewise
+exponential model
+Discrete time intervals: 6–hour
+intervals starting from 12:00
+156 households in am (for 3 consecutive days)
+southwest Louisiana
+Dixit et al. (2008) Hurricane Frances (August
+2004):
+Ordered probit model Discrete time intervals: 1 h or
+less, 2–3 h, 4–6 h, 7–24 h,
+454 respondents in Florida and more than 24 h
+Dixit, Wilmot, and
+Wolshon (2012)
+Hurricane Andrew (August
+1992):
+Regression model Discrete time intervals: 6–hour
+intervals starting from 12:00
+157 households in am
+southwest Louisiana
+Sadri, Ukkusuri, and
+Murray-Tuite
+(2013)
+Hurricane Ivan (September
+2004):
+Random parameters
+ordered probit
+model
+Discrete time intervals: 1 h or
+less, 2–3 h, 4–6 h, 7–12 h,
+457 randomly selected 12–24 h, and more than 24
+households in Florida,
+Alabama, Mississippi
+and Louisiana
+Hasan, MesaArango, and
+Ukkusuri (2013)
+Hurricane Ivan (September
+2004):
+Random-parameter
+hazard-based model
+Continuous time
+3200 households in Florida,
+Alabama, Mississippi,
+and Louisiana
+Ng, Diaz, and Behr
+(2015)
+Hurricane Irene (August
+2011):
+Ordered logit model Discrete time intervals: after
+landfall, up to 24 h prior to
+landfall, 24–48 h prior to
+landfall, and more than 48 h
+prior to landfall
+539 HH in Virginia and
+North Carolina
+Charnkol,
+Hanaoka, and
+Tanaboriboon
+(2007)
+Indian Ocean earthquake
+& tsunami (December
+2004):
+633 individuals in Phuket
+Thailand
+Binary logistic
+regression model
+& Neural Network
+model
+Public shelter vs. private shelter
+(two separate models for
+permanent residents and
+transients)
+Cheng, Wilmot,
+and Baker (2008)
+Hurricane Floyd (1999): Multinomial logit
+model
+28 TAZ options (two separate
+models for friends/relatives
+& hotel/motel)
+1040 HH in South Carolina
+Mesa-arango et al.
+(2013)
+Hurricane Ivan (September
+2004):
+Nested logit 4 options: Public shelters and
+churches, Hotels, Friends
+1419 HH in Florida, and Relatives, Other
+Alabama, Mississippi,
+and Louisiana
+Parady and Hato
+(2016)
+Great East Japan tsunami
+(March 2011):
+Spatially correlated
+logit model
+The study area is tessellated
+into a 1-km-square zone
+mesh, which is used as the
+spatial unit of analysis
+10,603 individuals in
+Kesennuma city, Japan
+household members at the randomly chosen time-of-day. There were also three levels
+considered for describing the impact radius of the event (i.e. 5, 10, and 20 miles) and the
+risk level (i.e. low, moderate, and high), which were randomly assigned to each scenario.
+Finally, two types of government recommendations (i.e. evacuate or shelter in place) were
+considered in the emergency scenario design.
+
+902 N. GOLSHANI ET AL.
+Figure 1. Destination choice distribution.
+Participants were then asked about their evacuation decision and potential trips after
+the occurrence of the emergency event. The collected trip information includes number of
+stops, the reason for each stop, stop locations (e.g. pick up children from their school), the
+type and location of final evacuation destinations. Destination types that are considered
+in this study are evacuation shelter, hotel/motel, stay/return home, and stay with family
+and friends, hereafter referred to as shelter, hotel, home, and family, respectively. Figure 1
+presents the distribution of destination choices in the dataset, which indicates that 53.54%
+of the participants would travel to shelters whereas only 4.17% would select hotel as their
+destination. Figure 1 also shows that 30.42% of participants would return home and 11.88%
+prefer to stay with their family.
+The data was further enriched by adding multiple land-use and built-environment
+variables (such as population and housing density at the census tract level) for Chicago
+metropolitan area, which were extracted based on the information about respondents’
+location at the time of the event. Further, by conducting an in-depth descriptive analysis
+and literature review, the potentially important parameters that may affect both decision
+variables were identified. Further, we formed participants’ stated tours (as illustrated in
+Figure 2 (right)) and extracted the corresponding tour- and trip-related variables such as
+total number of trips, trip travel time and distance, and total tour travel time and distance
+from Google Maps API. Figure 2 depicts the formed tours with red dots showing the final
+evacuation destinations.
+Moreover, Figure 3 presents the distribution of total distance of evacuation tours for
+each type of destination. The figure reveals that participants who prefer to stay with family/friends are willing to commute longer distances compared to those who select other
+destination alternatives.
+It is worth mentioning that to account for the availability of the destination alternatives,
+we generated availability indicator for the home alternative which is defined as 1 if the
+home location is outside of the affected area and is 0 if respondent’s home is located within
+the affected area. The indicator is used in the likelihood function of the model to personalize
+the choice set of individual’s destination decision.
+As previously highlighted, the second component of our proposed joint structure is
+evacuation departure time. Figure 4 presents the distribution of departure times in the
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 903
+Figure 2. Evacuation destination type (left) and tour formation (right).
+Figure 3. Total distances for each destination type.
+dataset, which reveals that 48% of participants start their tours within the first 30 min after
+the emergency event occurrence; that is expected in the case of no-notice evacuation. Further, more than 90% of the participants stated that they would evacuate within 180 min
+after the event occurrence. Moreover, to investigate the dependence of departure time
+and destination choice decisions, Figure 5 presents the distribution of evacuation departure time conditioned on the destination. Different patterns of departure time distributions
+reveal that this variable highly depends on the selected destination type, which reflects the
+need for a modelling approach that can account for the interdependence between the two
+variables. Table 2 presents the summary statistics of the key variables used (found to be
+significant) in the modelling structure.
+Modelling approach
+As discussed earlier, this study aims to jointly model the evacuation destination and departure time choices in case of no-notice emergency events. To achieve this goal, we adopt the
+
+904 N. GOLSHANI ET AL.
+Figure 4. Evacuation departure time distribution.
+Figure 5. Distribution of departure times across destination choices.
+copula-based modelling approach which is able to simultaneously estimate these interrelated decisions and capture the underlying correlation between them. In the proposed joint
+structure, destination choice is estimated using a multinomial logit model and departure
+time is estimated using accelerated hazard formulation.
+As the first component, evacuation destination choice is estimated using a multinomial
+logit model. The utility function of the choices can be written as:
+Udi = βdXdi + εdi (1)
+where Udi is the person-specific utility of destination d for individual i, Xdi is the set of
+explanatory variables, βd corresponds to the estimable parameters, and εdi is the random
+error term of the utility corresponding to unobserved factors, which is assumed to have
+standard type-I extreme value distribution.
+As the second component of this joint structure, continuous departure time can be suitably modelled using hazard duration approach. Hazard models focus on the elapsed time
+until occurrence of an event, which in this study would be equal to the ‘time until one
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 905
+Table 2. Summary statistics of the key variables.
+Variable Description Mean St. dev.
+Gender: male 1: if participant is male; 0: o/w 0.45 0.50
+Degree level: low 1: if participant has a high school degree or less; 0: o/w 0.07 0.25
+Degree level: high 1: if participant has a graduate or professional degree; 0: o/w 0.45 0.50
+Disability 1: if participant has a disability; 0: o/w 0.07 0.25
+House type: townhouse 1: if participant lives in a townhouse; 0: o/w 0.06 0.23
+House type: apartment 1: if participant lives in an apartment; 0: o/w 0.12 0.33
+House type: condominium 1: if participant lives in a condominium; 0: o/w 0.04 0.20
+Job type: retired 1: if participant is retired; 0: o/w 0.13 0.34
+Job type: homemaker 1: if participant is homemaker; 0: o/w 0.04 0.19
+Household size Number of household members 2.65 1.48
+Government evacuation order 1: if government has issued an evacuation order; 0: o/w 0.65 0.48
+Risk level: high 1: if risk of the event is high; 0: o/w 0.33 0.47
+Risk level: low 1: if risk of the event is low; 0: o/w 0.31 0.47
+Pop density Population density of the census tract (in thousand people) 4.59 6.09
+Ln (pop density) Natural log of the population density of the census tract (in thousand
+people)
+0.84 1.19
+Pop density ≥ 10,000 1: if population density of participants’ location during the event is
+greater than 10,000; 0: o/w
+0.11 0.32
+Pop density ≤ 3,000 1: if population density of participants’ location during the event is less
+than 3,000; 0: o/w
+0.57 0.50
+Tour distance Total distance of the evacuation tour (miles) 133.07 267.80
+Ln (tour distance) Natural log of the total distance of the tour 4.07 1.27
+Tour distance ≥ 10 1: total distance of the tour is greater than 10 miles; 0: o/w 0.95 0.22
+Tour distance ≥ 30 1: total distance of the tour is greater than 30 miles; 0: o/w 0.74 0.44
+Tour distance ≥ 50 1: total distance of the tour is greater than 50 miles; 0: o/w 0.54 0.50
+Travel time ≥ 40 1: if the total travel time of the tour is greater than 40 min; 0: o/w 0.58 0.49
+Intermediate stop 1: if there is any intermediate stop in participants’ evacuation tour; 0:
+o/w
+0.23 0.42
+Stop type: pickup child 1: if participant’s first trip is to pick up their child; 0: o/w 0.05 0.22
+Stop type: family meet up 1: if participant’s first trip is to meet up with family; 0: o/w 0.97 0.17
+evacuates’. In fact, hazard models estimate the conditional probability of event occurrence
+(i.e. evacuation action) between t and t + dt given that it has not happened up to t. This
+conditional probability can be formulated as follows:
+λ(t) = f(t)
+1 − F(t) (2)
+where, λ(t) is the hazard rate, f(t) is the probability density function of the elapsed time,
+and F(t) is the corresponding cumulative density function that represents the probability
+of event occurrence until t. From the available hazard models, accelerated hazard formulation allows the covariates to directly influence the length of the elapsed time until the
+event occurrence. Therefore, the effects of the estimated parameters on the elapsed time
+can be easily interpreted. In addition, this model assumes that the hazard rate can be accelerated/decelerated over time in direct response to changes in covariates. The accelerated
+time hazard model can be expressed as:
+λ(t|Z) = λ0[t.exp(αZ)]exp(αZ) (3)
+where Z is the set of explanatory variables affecting elapsed time, α is the vector of
+estimable parameters, and λ0 represents the baseline hazard function. As Kiefer (1988)
+stated, assuming that the covariates exponentially influence the duration, this formulation
+is mathematically equivalent to the log-linear regression model as (for each individual i and
+
+906 N. GOLSHANI ET AL.
+destination d):
+ln(tdi) = αdZdi + νdi (4)
+where ln(tdi) represents the natural logarithm of elapsed time for person i and destination choice d, only if choice d is selected as the evacuation destination, α is the vector
+of estimable parameters, Z is the vector of explanatory variables, and ν is the error term
+corresponding to unobserved factors.
+The linkage between destination choice and evacuation timing decisions depends on
+the type and the extent of the dependency between the stochastic terms νdi and εdi. To capture the dependency between these two decisions, this study applies the copula approach,
+which presents the joint probability distribution of random variables with pre-defined
+marginal distributions as follows (Sklar 1973):
+Fνdi,εdi(x1, x2) = Cθ (u1 = Fνdi(x1), u2 = Fεdi(x2)) (5)
+where, Fνdi,εdi(., .) is the multivariate joint distribution, Cθ (., .) is the copula function with θ
+as its corresponding copula parameter, Fνdi(.) and Fεdi(.) are marginal distributions.
+Using the Equations (3)–(5) for estimating the joint distribution, the likelihood function
+of the joint model can be formulated as (Nelsen 2006; Spissu et al. 2009):
+L = 
+N
+i=1
+[
+
+
+
+D
+d=1
+1
+σνdi
+× ∂Cθd(ud
+i1, ud
+i2)
+∂ud
+i2
+fνdi ln(tdi) − αdZdi
+σνdi
+Rdi]
+ (6)
+where, Rdi is the binary variable indicating whether destination d is selected by individual i,
+fνdi is the probability density function of ν, σνdi is the scale parameter of ν, Cθd is the copula
+corresponding to the joint distribution (Fνdi,εdi(ud
+i1, ud
+i2)) where:
+ud
+i1 = Fνdi ln(tdi) − αdZdi
+σνdi
+
+(7)
+ud
+i2 = Fεdi(βdxdi) (8)
+Model estimation results
+Several copulas have been introduced in the literature including, among others, Gaussian,
+FGM, and the Archimedean class of copulas. The Archimedean class of copulas has been
+widely used in the transportation literature because it offers a variety of closed-form copulas (e.g. Clayton, Gumbel, Frank, and Joe copulas) and covers a wide range of dependency
+structures (Bhat and Eluru 2009). The Clayton copula captures a strong left tail dependence
+and a weak right tail dependence where the dependence measure goes to zero at the
+extremes. The Gumbel and Joe copulas have strong right tail dependence whereas their
+left tail dependence is weak (left tail dependence in Joe is weaker than Gumbel). In contrast, Frank copula is radially symmetric with very weak tail dependencies (i.e. both left and
+right the dependence measures go to zero at the extremes). A comprehensive discussion
+of these copula structures can be found in (Nelsen 2006).
+In this study, three copulas, namely Clayton, Frank, and Joe with different types of dependency structures are estimated to find the best approach for modelling the evacuation
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 907
+Table 3. Estimation results of joint destination and departure time choice model.
+Shelter Hotel Home Family
+Variable Param. t-stat Param. t-stat Param. t-stat Param. t-stat
+Evacuation destination choice:
+Constant 6.33 7.54 3.90 7.84 5.11 4.44
+Disability 1.22 2.02
+Degree level: high 0.89 2.48 −0.70 −1.80
+House type: townhouse 6.38 7.62
+House type: apartment 5.33 9.74
+House type: condominium 4.82 8.94
+Job type: retired −2.17 −2.34 1.63 3.84
+Government evacuation order 0.61 2.15 −1.39 −3.19
+Risk level: high 1.22 2.35 0.93 1.72
+Ln (pop density) 0.38 2.63 0.21 4.19
+Pop density ≥ 10,000 −4.79 −8.56
+Tour distance ≥ 50 1.71 5.35
+Ln (tour distance) −0.27 −1.99 −0.56 −3.18
+Evacuation departure time:
+Constant 4.38 2.09 3.85 1.82 5.18 3.65 3.71 2.79
+Disability 2.71 2.30 4.43 6.21
+Gender: male 1.99 2.39 2.52 2.05
+Degree level: low 2.55 5.19
+Job type: retired 4.33 4.42
+Household size 0.73 2.03 0.64 2.71
+Government evacuation order −0.95 −2.26 −0.53 −1.88
+Risk level: low 1.49 2.93 1.65 1.84
+Tour distance ≥ 30 −1.97 −2.39 −1.28 −1.89 −2.42 −1.92
+Travel time ≥ 40 −2.61 −2.64
+Intermediate stop −2.78 −3.32
+Stop type: pickup child −4.01 −3.59 −3.45 −2.73
+Stop type: family meet up 2.17 2.08
+Copula parameter: θ −1.86 −3.80 −6.35 −2.07 −6.14 −2.40 −4.97 −2.98
+Scale parameter: σ 5.34 20.87 4.28 2.25 2.71 4.91 5.58 16.91
+Kendall’s τ −0.20 −0.53 −0.52 −0.46
+Restricted LL −1804.87
+LL at convergence −1485.67
+destination and departure time choices. We also estimated the independent destination
+choice and departure time models to evaluate the use of joint modelling structure. To find
+the best possible model among the four non-nested copula models, this study uses the
+Bayesian Information Criterion (BIC) defined as
+BIC =−2 × LLC + k ln N, (9)
+where LLC is the log-likelihood function at convergence, k is the number of estimated
+parameters, and N is the number of observations. The best statistical fit is achieved from
+the Frank copula model (as outlined in Table 3) with BIC of 3286.17 compared to 3304.25,
+3406.81, and 3498.67 for the Clayton copula, the Joe copula, and the independent model.
+The significance of the copula parameters confirms the existence of unobserved common factors in the destination and departure time choices. Furthermore, the significance of
+the scale parameters (which represent the variance of the error terms in continuous departure times) indicates the considerable effect of unobserved factors on the departure time
+for each destination. The reported BICs also confirms that regardless of the type of the joint
+structure, the joint modelling approach outperforms the independent modelling approach.
+
+908 N. GOLSHANI ET AL.
+The likelihood ratio test between the independent and Frank copula models results in a chisquare test statistic of 194.68 which strongly rejects the null hypothesis of independence
+with the 99% confidence level. In addition, the estimated copula parameters of the Shelter
+and Family alternatives in Clayton and Shelter and Home alternatives in Joe copula models
+were found to be insignificant. According to the above-mentioned discussions, this study
+presents the result of the best estimated model (i.e. Frank copula) for behavioural analysis of evacuation destination type and departure time choices during no-notice emergency
+events.
+A broad set of variables and their interactions are tested in the modelling procedure and
+only the ones with at least 10% significance level are kept in the final model. As presented in
+Table 3, a wide range of socio-demographic and land-use variables, event characteristics,
+and travel-related parameters affects evacuees’ decisions during emergency events. The
+following discussion is organized to explore the role of these variables in the evacuation
+decision process.
+The results indicate that disability significantly increases the probability of staying
+at/returning home during emergency events possibly because of evacuee’s mobility restrictions. Furthermore, retired participants tend to stay with their family whereas they are less
+likely to choose home, which is not surprising because seniors typically rely on their family members for emergency evacuation. The results also suggest that housing type plays
+an important role in evacuation destination choice. That is participants who live in houses
+tend to return home or shelter in their place whereas those who live in apartment and
+condominium are more likely to opt for shelters or hotels as their destination.
+In an interesting study, Huang, Lindell, and Prater (2016) present a statistical metaanalysis on more than 30 studies on hurricane evacuation to find the most common
+influential variables on evacuation decision. In contrast to the literature on advanced-notice
+emergency events where no significant effect of gender and education level on the evacuation decision has been reported (Huang, Lindell, and Prater 2016), we found that these
+variables play important roles in the evacuation destination and timing decisions in the case
+of no-notice disasters. More specifically, we found that male respondents generally tend to
+evacuate later, which can be attributed to the fact that females are more likely to evacuate sooner to pick-up their children during no-notice emergency events (Liu, Murray-Tuite,
+and Schweitzer 2012; Liu, Murray-Tuite, and Schweitzer 2014). Similar to the study by Liu,
+Murray-Tuite, and Schweitzer (2014), where the authors reported that education level significantly affects different dimensions of the evacuation decision at the time of no-notice
+emergency events, we found a significant effect of this variable on both destination and
+timing decisions.
+Further, positive sign of population density in the utility functions of shelter and family
+indicates that these destinations in areas with higher population densities (e.g. metropolitan areas) are more attractive to evacuees. Similar findings can be found in Cheng, Wilmot,
+and Baker (2008) for selecting to stay with family as evacuation destination.
+Other collected demographic information was found to have no significant effect on
+the destination choice model. For instance, the non-significant effect of respondents’ age
+is in line with what Huang, Lindell, and Prater (2016) found in about 60% of studies on
+hurricane evacuation. Similar to Huang, Lindell, and Prater (2016) that found consistent
+insignificant effect of race in the evacuation literature, we found this variable to have no
+significant effect on both studied evacuation dimensions. Furthermore, household income
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 909
+was tested both as a continuous variable and multiple dummy indicators, but no significant effect was found in the final model. This is in line with findings of 69% of studies on
+hurricane evacuation according to Huang, Lindell, and Prater (2016). On the other hand,
+Huang, Lindell, and Prater (2016) found that housing tenure has a significant effect on
+evacuation decision in the case of advanced-notice disasters, whereas we found no significant effect of this variable on the departure time and destination decisions of no-notice
+emergencies.
+Moreover, variables representing the characteristics of the emergency event significantly affect the evacuation destination choice. Per results, participants are less likely to
+return home if an evacuation order has been issued by the government while they are more
+willing to opt for shelters. On the same note, participants who are experiencing events associated with high risks tend to take refuge in hotels and shelters where medical assistance is
+usually provided. This finding is in line with previous studies on advanced-notice emergencies that suggest public perceptions towards shelters are associated with the availability
+of food, water, and basic medical facilities (Smitherman and Soloway-Simon 2002; Sadri,
+Ukkusuri, and Murray-Tuite 2013).
+Finally, it was found that distance significantly affects the evacuation destination choice.
+The results indicate that long-distance evacuation tours (greater than 50 miles) are more
+likely to associate with selecting family as evacuation destination. Further, increasing the
+distance leads to reducing the probability of selecting home and shelters. Similar results are
+found in Mesa-arango et al. (2013) in the context of hurricane evacuation. Also, Liu, MurrayTuite, and Schweitzer (2012) showed that distance significantly affects the decision to pickup children during no-notice emergency events.
+Turing to the departure time decision, the results show that participants with high school
+degree or less tend to evacuate in later times which in line with findings of previous studies on evacuation timing (see, for example, Hasan, Mesa-Arango, and Ukkusuri 2013). The
+positive sign of the variable representing participants with disability suggests that they are
+associated with later evacuation departure times. This can be because of their needfor more
+preparation time, mobility restrictions, and reliance on others to evacuate, which is specifically important during no-notice events. We also found that the higher the household size
+of the evacuees, the longer it takes for them to evacuate as opposed to the findings in
+advanced-notice emergency events where this variable generally has no significant effect
+on the evacuation decision (Huang, Lindell, and Prater 2016).
+As expected, participants who have received the government evacuation order tend to
+depart sooner to take refuge in shelters or hotels compared to those who have received a
+non-mandatory seek shelter order. These findings are similar to those from Hasan, MesaArango, and Ukkusuri (2013) in the context of hurricane evacuation where they stated that
+this variable may capture the severity of the event. On the same note, low risk of an emergency event leads to later departure times for trips destined to home or family. The level
+of risk of the event is also found to be a significant factor in evacuation decision during
+advanced-notice emergencies (Huang, Lindell, and Prater 2016).
+We also found that trip- and tour-related variables significantly influence the timing of
+evacuation. According to Table 3, participants tend to depart sooner if their final destinations are associated with travel distances longer than 30 miles and travel times greater
+than 40 min. The results also suggest that increasing the number of stops in the evacuation tour advances the departure time. Trip purpose is also confirmed to be influential. As
+
+910 N. GOLSHANI ET AL.
+expected, respondents who stated that they would first pick up their child and then evacuate to a shelter or a hotel tend to depart very soon. Participants who prefer to wait to
+be picked up by their family members tend to evacuate in later times. These variables are
+of great importance in the case of no-notice emergency events since household members
+are possibly dispersed throughout the network in the daytime. The dispersity of household
+members may result in additional trips (e.g. picking up family members) in the network,
+which can conflict with the evacuation procedure by adding extra trips in either the direction or the opposite direction of the expected routes (Zimmerman, Brodesky, and Karp
+2007; Liu, Murray-Tuite, and Schweitzer 2012). Failing to consider these additional trips
+may result in underestimation of travel time that can ultimately lead to higher number of
+fatalities during emergencies.
+Moving to the parameters of the joint modelling structure, the significance of the copula parameters confirms the existence of unobserved common factors in destination and
+departure time choices which, if ignored, can lead to inconsistent estimates. Furthermore,
+the significance of the scale parameters, which represent the variance of the error terms
+in continuous departure times, indicates the considerable effect of unobserved factors on
+departure time for each destination. To better show the dependency structure of destination and departure time choices, the Kendall’s τ measure of dependency is calculated and
+presented in Table 3. This measure of dependency (τ )transforms the copula parameter(θ )
+into a number between −1 and 1 (Nelsen 2006) and can be derived as follows:
+τ = 1 − 4
+θ
+
+1 − 1
+θ
+ θ
+t=0
+t
+et − 1
+dt
+
+, −1 ≤ τ ≤ 1 (10)
+The negative sign of the resulted Kendall’s τ indicates that the unobserved factors that
+increase the propensity to choose a destination tend to increase the departure time. Furthermore, the magnitude of the estimated Kendall’s τ for shelter is less than those for other
+destinations, which demonstrates that evacuees who decide to take refuge in a shelter, are
+more likely to start their trips sooner compared to other destinations. Moreover, to evaluate
+the model in terms of the predictive ability, we calculate the out-of-sample prediction accuracy measure for the discrete component. This measure which shows the estimated mean
+probability of the selected alternative (Chorus 2010) is calculated as 0.54 for the evacuation
+destination type model. With respect to the departure time component, Mean Absolute
+Percentage Error (MAPE) index is calculated as follows:
+MAPE = 1
+N
+
+N
+i=1
+|Oi − Pi|
+Oi
+(11)
+whereOi is the observed departure time, Pi is the predicted departure time, andNis the total
+number of observations in the sample. The overall MAPE index is calculated as 17.93%.
+Conclusions
+Although behavioural analysis of people’s response to advance-notice emergency events
+has been extensively addressed in the literature, only a few studies have focused on nonotice emergencies. Furthermore, modelling joint decisions in the context of these events
+to capture their interrelated decision mechanism is another potential gap in the literature.
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 911
+To tackle these issues, we presented a joint discrete–continuous model of destination and
+departure time choices during no-notice emergency events using an internet-based stated
+preference survey conducted in Chicago, US. These two decisions are of great importance
+because they directly impact the spatial and temporal distribution of traffic in the network
+in case of emergency events. Understanding evacuees’ behaviour towards these decisions
+can lead to development of effective policies to manage the evacuation-induced traffic in
+case of these events and ultimately reduce economic damage and loss of life.
+The proposed joint model consists of a multinomial logit model to estimate the destination choice and an accelerated hazard formulation to estimate the departure time of the
+evacuation. The results confirmed that a wide range of demographic variables (e.g. disability, education level, housing type, and employment status), land-use indicators (e.g.
+population density), characteristics of the event (e.g. type of the government order and
+event’s severity and risk) and travel-related variables (e.g. distance, travel time, number of
+intermediate stops, and trip purpose) are influential in evacuees’ decision behaviour during
+no-notice disasters.
+The significance of copula and scale parameters in the proposed joint structure confirms
+that there exist unobserved factors between the two attributes which, if ignored, can lead
+to inconsistent estimates. Furthermore, comparison of estimated Kendall’s τ measures indicates that the participants who select shelter as their final destination tend to start their trip
+sooner than others.
+This study has several potentials for future research directions. With regards to the
+data used in this study, one major limitation is associated with the low number of observations which leads to restricting the variations of decision variables. Another limitation
+corresponds to the geographical area covered for data, which prevents us from testing
+transferability of the proposed framework to other regions. Finally, infrastructure failure
+along the evacuation path to the selected location alternative cannot be accounted for in
+the model due to limitations of the utilized data.
+With respect to the modelling approach, the model can be expanded to account for
+unobserved heterogeneity in the dataset by incorporating random parameters or latent
+class modelling approaches. Also, the modelling framework can be expanded by developing a joint model that considers the correlation of other evacuation attributes such as mode
+choice with these two dimensions. Finally, all models can be used in a large-scale micro
+simulation model to develop a policy-sensitive framework that captures the dynamics in
+evacuees’ responses with respect to the traffic conditions in the network.
+Acknowledgments
+This work was performed under subcontract FP062899-D with the University of Chicago, and is part
+of contract D2015-SRER-007 between the Federal Transit Agency and the University of Chicago. The
+contract has been awarded as part of the broad agency announcement FTA-2013-005-TRI under the
+title ‘Coordinated Transit Response Planning and Operations Support Tools for Mitigating Impacts
+of All-Hazard Emergency Events’. However, the authors are solely responsible for the findings of this
+research.
+Disclosure statement
+No potential conflict of interest was reported by the authors.
+
+912 N. GOLSHANI ET AL.
+Funding
+This work was supported by University of Chicago [grant number FP062899-D].
+References
+Amirgholy, Mahyar, and Eric J. Gonzales. 2017. “Efficient Frontier of Route Choice for Modeling the
+Equilibrium Under Travel Time Variability with Heterogeneous Traveler Preferences.” Economics of
+Transportation 11-12: 1–14. doi:10.1016/J.ECOTRA.2017.09.001.
+Andresen, Erik, Mohcine Chraibi, and Armin Seyfried. 2018. “A Representation of Partial Spatial Knowledge: A Cognitive Map Approach for Evacuation Simulations.” Transportmetrica A: Transport Science
+14 (5): 433–467. doi:10.1080/23249935.2018.1432717.
+Asgari, Hamidreza, and Xia Jin. 2018. “An Evaluation of Part-Day Telecommute Impacts on Work Trip
+Departure Times.” Travel Behaviour and Society 12: 84–92. doi:10.1016/J.TBS.2017.04.002.
+Auld, Joshua, Vadim Sokolov, Angela Fontes, and Rene Bautista. 2012. “Internet-Based Stated
+Response Survey for No-Notice Emergency Evacuations.” Transportation Letters 4 (1): 41–53.
+doi:10.3328/TL.2012.04.01.41-53.
+Baker, E. J. 1991. “Hurricane Evacuation Behavior.” International Journal of Mass Emergencies and
+Disasters 9 (2): 287–310.
+Benfield, A. 2016. 2016 Annual Global Climate and Catastrophe Report. http://thoughtleadership.aon
+benfield.com/Documents/20150113_ab_if_annual_climate_catastrophe_report.pdf.
+Bhat, Chandra R., and Naveen Eluru. 2009. “A Copula-Based Approach to Accommodate Residential
+Self-Selection Effects in Travel Behavior Modeling.” Transportation Research Part B: Methodological
+43 (7): 749–765. doi:10.1016/j.trb.2009.02.001.
+Carnegie, Jon, and Devajyoti Deka. 2010. “Using Hypothetical Disaster Scenarios to Predict Evacuation
+Behavioral Response.” Transportation research board 89th annual meeting.
+Charnkol, Thai, Shinya Hanaoka, and Yordphol Tanaboriboon. 2007. “Emergency Trip Destination
+of Evacuation as Shelter Analysis for Tsunami Disaster.” Journal of the Eastern Asia Society for
+Transportation Studies 7: 853–868. doi:10.11175/easts.7.853.
+Cheng, Guangxiang, Chester G. Wilmot, and Earl Jay Baker. 2008. “Destination Choice Model for
+Hurricane Evacuation.” Transportation research board 87th annual meeting, Washington, DC.
+Chorus, Caspar G. 2010. “A New Model of Random Regret Minimization.” EJTIR 10 (2): 181–196.
+Dash, Nicole, and Hugh Gladwin. 2007. “Evacuation Decision Making and Behavioral Responses: Individual and Household.” Natural Hazards Review 8 (3): 69–77. doi:10.1061/(ASCE)1527-6988(2007)
+8:3(69).
+Dixit, Vinayak, Anurag Pande, Essam Radwan, and Mohamed Abdel-Aty. 2008. “Understanding the
+Impact of a Recent Hurricane on Mobilization Time During a Subsequent Hurricane.” Transportation
+Research Record: Journal of the Transportation Research Board 2041: 49–57. doi:10.3141/2041-06.
+Dixit, Vinayak, Chester Wilmot, and Brian Wolshon. 2012. “Modeling Risk Attitudes in Evacuation
+Departure Choices.” Transportation Research Record: Journal of the Transportation Research Board
+2312: 159–163. doi:10.3141/2312-17.
+Drabek, Thomas E. 1999. “Understanding Disaster Warning Responses.” The Social Science Journal 36
+(3): 515–523. doi:10.1016/S0362-3319(99)00021-X.
+Drabek, Thomas E., and Keith S. Boggs. 1968. “Families in Disaster: Reactions and Relatives.” Journal of
+Marriage and the Family 30 (3): 443–451.
+Fu, Haoqiang, and Chester Wilmot. 2004. “Sequential Logit Dynamic Travel Demand Model for Hurricane Evacuation.” Transportation Research Record: Journal of the Transportation Research Board
+1882: 19–26. doi:10.3141/1882-03.
+Fu, Haoqiang, and Chester Wilmot. 2006. “Survival Analysis-Based Dynamic Travel Demand Models for Hurricane Evacuation.” Transportation Research Record 1964: 211–218. doi:10.3141/
+1964-23.
+Hasan, Samiul, Rodrigo Mesa-Arango, and Satish Ukkusuri. 2013. “A Random-Parameter Hazard-Based
+Model to Understand Household Evacuation Timing Behavior.” Transportation Research Part C:
+Emerging Technologies 27: 108–116. doi:10.1016/j.trc.2011.06.005.
+
+TRANSPORTMETRICA A: TRANSPORT SCIENCE 913
+Hasan, Samiul, Satish Ukkusuri, Hugh Gladwin, and Pamela Murray-Tuite. 2011. “Behavioral Model
+to Understand Household-Level Hurricane Evacuation Decision Making.” Journal of Transportation
+Engineering 137 (5): 341–348. doi:10.1061/(ASCE)TE.1943-5436.0000223.
+Huang, Shih-Kai, Michael K. Lindell, and Carla S Prater. 2016. “Who Leaves and Who Stays? A Review
+and Statistical Meta-Analysis of Hurricane Evacuation Studies.” Environment and Behavior 48 (8):
+991–1029. doi:10.1177/0013916515578485.
+Kiefer, Nicholas M. 1988. “Economic Duration Data and Hazard Functions.” Journal of Economic
+Literature 26 (2): 646–679.
+Liu, Sirui, Pamela Murray-Tuite, and Lisa Schweitzer. 2012. “Analysis of Child Pick-up During Daily Routines and for Daytime No-Notice Evacuations.” Transportation Research Part A: Policy and Practice 46
+(1): 48–67. doi:10.1016/j.tra.2011.09.003.
+Liu, Sirui, Pamela Murray-Tuite, and Lisa Schweitzer. 2014. “Incorporating Household Gathering
+and Mode Decisions in Large-Scale No-Notice Evacuation Modeling.” Computer-Aided Civil and
+Infrastructure Engineering 29 (2): 107–122. doi:10.1111/mice.12008.
+Mesa-arango, Rodrigo, Samiul Hasan, Satish V Ukkusuri, A. M. Asce, and Pamela Murray-tuite. 2013.
+“Household-Level Model for Hurricane Evacuation Destination Type Choice Using Hurricane Ivan
+Data.” Natural Hazards Review 14: 11–20. doi:10.1061/(ASCE)NH.1527-6996.0000083.
+Murray-Tuite, Pamela M., Weihao Yin, Satish Ukkusuri, and Hugh Gladwin. 2012. “Changes in Evacuation Decisions Between Hurricanes Ivan and Katrina.” Transportation Research Record: Journal of the
+Transportation Research Board 2312: 98–107. doi:10.3141/2312-10.
+Nelsen, Roger B. 2006. An Introduction to Copulas. 2nd ed. New York: Springer-Verlag.
+Ng, Manwo, Rafael Diaz, and Joshua Behr. 2015. “Departure Time Choice Behavior for Hurricane Evacuation Planning: The Case of the Understudied Medically Fragile Population.” Transportation Research Part E: Logistics and Transportation Review 77: 215–226. doi:10.1016/j.tre.2015.
+03.002.
+Parady, Giancarlos Troncoso, and Eiji Hato. 2016. “Accounting for Spatial Correlation in Tsunami Evacuation Destination Choice: A Case Study of the Great East Japan Earthquake.” Natural Hazards 84
+(2): 797–807. doi:10.1007/s11069-016-2457-z.
+Robinson, R., and Asad Khattak. 2010. “Route Change Decision Making by Hurricane Evacuees Facing Congestion.” Transportation Research Record: Journal of the Transportation Research Board 2196:
+168–175. doi:10.3141/2196-18.
+Sadri, Arif Mohaimin, Satish V. Ukkusuri, and Pamela Murray-Tuite. 2013. “A Random Parameter Ordered Probit Model to Understand the Mobilization Time During Hurricane Evacuation.” Transportation Research Part C: Emerging Technologies 32: 21–30. doi:10.1016/j.trc.2013.
+03.009.
+Sadri, Arif Mohaimin, Satish V. Ukkusuri, and Pamela Murray-Tuite. 2014. “How to Evacuate: Model
+for Understanding the Routing Strategies During Hurricane Evacuation.” Journal of Transportation
+Engineering 140 (1): 61–69. doi:10.1061/(ASCE)TE.1943-5436.0000613.
+Shimamoto, Hiroshi, Jan-Dirk Schmöcker, Nagao Bunpei, Toshiyuki Nakamura, Nobuhiro Uno,
+and Hiroki Yamazaki. 2018. “Evaluation of Tsunami Evacuation Planning Considering Vehicle
+Usage and Start Timing of Evacuation.” Transportmetrica A: Transport Science 14(1–2), 50–65.
+doi:10.1080/23249935.2017.1290708.
+Sklar, Abe. 1973. “Random Variables, Joint Distribution Functions, and Copulas.” Kybernetika 9 (6):
+449–460.
+Smitherman, Hannah, and Deanna Soloway-Simon. 2002. “Special Needs of Children Following a Disaster.” Clinical Pediatric Emergency Medicine 3 (4): 262–267. doi:10.1016/S1522-8401(02)90039-X.
+Sorensen, J. H. 1991. “When Shall We Leave? Factors Affecting the Timing of Evacuation Departures.”
+International Journal of Mass Emergencies And 9 (2): 153–165.
+Spissu, Erika, Abdul Rawoof Pinjari, Ram M. Pendyala, and Chandra R. Bhat. 2009. “A Copula-Based
+Joint Multinomial Discrete–Continuous Model of Vehicle Type Choice and Miles of Travel.” Transportation 36 (4): 403–422. doi:10.1007/s11116-009-9208-x.
+Wang, Jian, Wei Deng, and Yuntao Guo. 2014. “New Bayesian Combination Method for ShortTerm Traffic Flow Forecasting.” Transportation Research Part C: Emerging Technologies 43: 79–94.
+doi:10.1016/J.TRC.2014.02.005.
+
+914 N. GOLSHANI ET AL.
+Wilmot, Chester G., Naveen Modali, and Bin Chen. 2006. Modeling Hurricane Evacuation Traffic: Testing the Gravity and Intervening Opportunity Models as Models of Destination Choice in Hurricane
+Evacuation.
+Wu, Hao-Che, Michael K. Lindell, and Carla S. Prater. 2012. “Logistics of Hurricane Evacuation in Hurricanes Katrina and Rita.” Transportation Research Part F: Traffic Psychology and Behaviour 15 (4):
+445–461. doi:10.1016/j.trf.2012.03.005.
+Zhang, Zhao, Brian Wolshon, and Vinayak V. Dixit. 2015. “Integration of a Cell Transmission Model
+and Macroscopic Fundamental Diagram: Network Aggregation for Dynamic Traffic Models.” Transportation Research Part C: Emerging Technologies 55: 298–309. doi:10.1016/J.TRC.2015.03.040.
+Zimmerman, Carol, Robert Brodesky, and Jordan Karp. 2007. Using Highways for No-Notice Evacuations: Routes to Effective Evacuation Planning Primer Series. https://ops.fhwa.dot.gov/publications/
+evac_primer_nn/primer.pdf.

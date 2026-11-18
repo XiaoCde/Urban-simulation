@@ -1,0 +1,696 @@
+Gender differences in disaster mortality and risk perception: 
+evidence from floods and landslides in Italy
+Paola Salvati a , Melissa Sessa a , Maria Teresa Carone b,c , Stefano 
+Luigi Gariano a,* , Mauro Rossi a , Roberto Coscarelli b , Cinzia Bianchi a , 
+Loredana Antronico b
+a Italian National Research Council, Institute of Geosciences (formerly Research Institute for Geo-Hydrological Protection), via Madonna Alta 126, 
+Perugia, I-06128, Italy b Italian National Research Council, Institute of Geosciences (formerly Research Institute for Geo-Hydrological Protection), via Cavour 4/6, Rende, 
+CS, I-87036, Italy c Currently independent Researcher, Italy
+ARTICLE INFO
+Keywords:
+Flood and landslide fatalities
+Gender and age analysis
+Risk perception
+Disaster risk reduction
+Italy
+ABSTRACT
+Studying human consequences caused by landslides and floods is important to understand their 
+impact and to investigate public risk perception. We analysed a catalogue of 1188 landslide and 
+752 flood fatalities that occurred in Italy during the 60-year period 1965–2024, for which information on sex, age, and circumstances of death was available. Observed fatalities were 
+compared with expected distributions modelled from census data by sex and age for two nonoverlapping 30-year periods. With the exception of children, male fatalities were consistently 
+over-represented relative to the census-based demographic expectations, whereas female fatalities were generally under-represented. To investigate possible relationships with risk perception, 
+we analysed responses from four nationwide surveys conducted in 2012, 2013, 2015, and 2023. 
+Women reported slightly higher levels of self-perceived exposure to natural and technological 
+risks than men, whereas no substantial gender differences emerged in the perceived threat posed 
+by landslides and floods to personal safety. The national-scale analysis was complemented by a 
+regional comparison between perceived threat and historical mortality. Regional Threat Indices 
+were calculated separately for floods and landslides across the 20 Italian regions. A moderate and 
+statistically significant positive association emerged between perceived flood threat and flood 
+mortality, whereas no association was found for landslide mortality. Overall, the results highlight 
+a persistent mismatch between gender patterns in mortality and perceived personal threat and 
+support targeted, gender-sensitive risk communication and disaster risk reduction strategies.
+1. Introduction
+Geo-hydrological hazards, which include landslides and floods, cause significant societal and economic damage and a large number 
+of fatalities worldwide [1–4]. Reducing the loss of life and the number of people affected by natural disasters, including landslides and 
+floods, is an expected outcome of the Sendai Framework for Disaster Risk Reduction (DDR) 2015–2030 [5] that integrates and 
+* Corresponding author.
+E-mail address: stefanoluigi.gariano@cnr.it (S.L. Gariano). 
+Contents lists available at ScienceDirect
+International Journal of Disaster Risk Reduction
+journal homepage: www.elsevier.com/locate/ijdrr
+https://doi.org/10.1016/j.ijdrr.2026.106429
+Received 5 July 2026; Received in revised form 8 September 2026; Accepted 8 September 2026 
+International Journal of Disaster Risk Reduction 145 (2026) 106429
+Available online 8 September 2026
+2212-4209/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+emphasizes the importance of a gender perspective in DRR policies and practices worldwide [6]. As stated by Erman et al. [7], natural 
+hazards are gender neutral, however, their effects are not. Gender dynamics impact both the way men and women are affected by 
+disasters and their capacity to withstand and recover from them. Neumayer and Plümper [8] emphasised how women were more 
+adversely affected by natural disasters and that, on average, disasters kill more women than men mostly depending on the severity of 
+the disaster and the poor socio - economic status of the women. The higher the status of women, the smaller the differential negative 
+effect on mortality, which means that men and women die in roughly equal numbers. With particular reference to the context of the 
+developing world researchers [9–12] highlights how women's vulnerability (and men's vulnerability as well, albeit in a different way) 
+to environmental risks is linked to caregiving roles, differences in access to resources, and cultural norms that shape behaviour in crisis 
+situations. Conversely, in high - income contexts, disaster - related mortality is higher for men than for women. This appears to be due 
+to exposure [7] and their willingness to take risks [13] during damaging events [14]. showed that in USA and Europe men account for 
+70% of flood - related deaths. Men are often over-represented in high-risk rescue work and other outdoor activities, increasing their 
+direct exposure to natural hazards and often results in more fatalities [15–17]. Understanding the relationship between types of 
+disaster and men's and women's mortality would shed further light on how natural disasters impact them differently. Causes, circumstances and behaviour that led to death due to a geo-hydrological hazard have already been examined ([18] and references 
+therein), while gender differences due to such phenomena are less investigated particularly in terms of how risk is perceived across 
+sexes. Perception of risk depends on the subjective judgment and evaluation by an individual of a specific risk [19–21]. However, what 
+a person perceives as potentially dangerous (i.e., risky), another person may consider safe (i.e., free of risk). Researchers agree that 
+people's behaviour, decisions and actions are dependent on their perceptions [22,23], and the gender differences in risk perception has 
+become an important research agenda in disaster risk science [12]. Numerous studies have suggested that, on average, women show a 
+slightly higher risk perception than men, regarding environmental, health [24] and natural risks [12,25,26]. This gap has been 
+interpreted as the result of different “risk cultures”, whereby men are often socialized to emphasize invulnerability and suppress fear, 
+whereas women are more often encouraged to adopt caution and attentiveness to potential threats [27]. Some authors hypothesise that 
+men may downplay certain dangers due to social pressures tied to self-presentation as “brave” or “capable of handling risk,” whereas 
+women, often bearing caregiving responsibilities and tasked with safeguarding family well-being, develop greater risk awareness and a 
+tendency to adopt preventive or protective behaviours [28]. Gender is not purely a biological variable but a cultural and relational 
+dimension that defines different expectations, duties, and roles for men and women [28]. Enarson [29] points out that there are 
+situations where men's and women's risk perceptions converge, especially when a community frequently experiences certain hazards 
+and develops protection and preparedness habits involving both genders. We can therefore state that gender differences in risk 
+perception should be viewed as a complex phenomenon in which social roles, cultural values, information opportunities, and territorial context interact dynamically, producing patterns that vary significantly from one situation to another [27,30,31].
+The goal of the present study is to investigate the relationship between landslide and flood mortality and risk perception in the 
+Italian context, and to assess whether differences in risk perception may contribute to understanding gender-related differences in 
+responses to potentially fatal geo-hydrological events. Although awareness of landslide and flood risk perception is increasing (e.g., 
+[32]), Italy still has limited quantitative studies that incorporate a gender perspective in this field of research at the synoptic scale. In 
+particular, this work will focus on three key questions. 
+1. How does the gender dimension manifest itself in mortality patterns related to landslides and floods?
+2. Are there gender differences in how landslide and flood risks are perceived?
+3. What are the temporal trends in the perception of threats to personal safety?
+The main objective and novelty of this work lie in combining the analysis of risk perception with the distribution and variation of 
+mortality (due to landslides and floods) by sex, in order to highlight a possible relationship between them. The ultimate goal is to 
+identify the most vulnerable or exposed categories of people to geo-hydrological events, with the aim of enhancing community 
+resilience and promoting greater social equity when responding to and preventing natural disasters.
+2. Research methodology and data
+The methodological design of this research is quantitative. To adopt a rigorous approach to gender analysis, we follow the decision 
+tree proposed in Tannenbaum et al. [33] and apply it to data on flood and landslide fatalities, for which information was collected by 
+sex. Data on risk perception come from four nationwide surveys carried out over an eleven-year period. We first analysed the temporal 
+distribution of landslide and flood fatality data in Italy over the 60-year period 1965–2024, disaggregated by sex. Similarly, the results 
+of the four surveys were analysed by considering gender-based differences in risk perception. We then integrated these results by 
+developing an index aimed at relating landslide and flood mortality data to the perceived threat of losing one's life due to a landslide or 
+flood.
+In this study, the term “sex” is used to refer to the presumed biological sex inferred from the victims’ names. The term “gender”, in 
+addition to its occurrence in bibliographic citations, is used when referring to survey responses disaggregated by men and women.
+2.1. Geo-hydrological fatalities in Italy by sex
+Extensive and detailed information on the consequences caused by geo-hydrological events on the Italian population is known and 
+has been collected in the historical catalogue of landslide and flood events with direct consequences to the population [4,13,17,34,35]. 
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+2
+
+The most up-to-date version of the national catalogue lists 2209 fatalities in the 60-year period 1965–2024, this corresponds to an 
+average of at least 37 fatalities per year (minimum, one, in 1997, maximum, 285, in 1985). The data allows to quantitatively estimate 
+levels of individual risk using the mortality rates given by the number of landslide and flood fatalities (deaths and missing persons) per 
+100,000 people over one year [36,37]. At the national scale, the average flood and landslide mortality is 0.07 in the considered period, 
+i.e. seven lives lost every 10 million people per year, with the average landslide-related mortality rate (0.04) higher than the 
+flood-related mortality rate (0.03).
+For this work, we used a set of 1188 landslide and 752 flood fatalities that occurred in Italy during the 60-year period 1965–2024, 
+for which joint information on sex, age and exact time of occurrence of the fatal events, and type of landslide and flood are available. 
+This subset corresponds to the 90% and the 85%, respectively, of the total landslide and flood fatalities that occurred in the 60-year 
+period in Italy. We consider it to be a representative sample of the human losses that have occurred in Italy as a result of geohydrological events. During the study period, landslides and floods in Italy caused more fatalities among males (1141; 58.8%) than 
+among females (799; 41.2%). In particular, 670 males lost their lives due to landslides and 471 due to floods, while 518 females died 
+due to landslides and 281 due to floods.
+2.2. Data on risk percetion
+To understand the public perception of geo-hydrological risks and assess awareness levels in Italy, four national surveys have been 
+designed and commissioned since 2012 by two leading Italian companies. Doxa Italia executed three surveys (in 2012, 2013 and 2015) 
+using their Computer Assisted Telephone Interview (CATI) system and their omnibus samples. Istituto Piepoli executed a fourth survey 
+in 2023 used the CATI/CAMI/CAWI (Computer Aided Telephone/Mobile/Web Interview) system. Across all surveys, 10,709 people 
+were interviewed and answered five questions related to risk perception, four of which were included in each survey (Table S1 in 
+supplementary material). We asked the companies to carry out the questionnaires to ensure that the sample was truly representative of 
+the Italian population, both in terms of stratification and in terms of size. The sampling strategy used a classification based on demographic variables, including: (i) the size and distribution of the population in each Italian region, (ii) gender by age, (iii) education, 
+and (iv) occupation. Specifically, questionnaires were designed to encourage respondents first to reflect on their general feelings about 
+environmental and natural risks and then on their specific understanding and fear of landslides and floods. To our knowledge, this 
+long-term effort to monitor risk perception related to geo-hydrological processes is unique at the national level in Italy. In the design of 
+the 2023 survey, particular attention was paid to the distribution of responses by gender and age. A weighting process was applied by 
+Doxa and Piepoli to all samples during the analysis, to have an accurate and proportional reconstruction with respect to gender and age; 
+in this way, it is possible to take advantage of valid information and data for the whole sample. The results of the 2012 and 2013 
+surveys, analysed at the regional scale in Italy, were previously published by Salvati et al. [38]. In that study, the authors compared 
+regional levels of risk perception with the individual risk estimated for each Italian region, for both landslides and floods. Differently, 
+the present study analyses the results of four surveys aggregated at the national level, with the aim of updating knowledge on risk 
+perception in Italy and identifying potential temporal trends over approximately ten years from a gender perspective. The national 
+scale was selected to allow a consistent comparison across the four surveys and to investigate temporal and gender-related patterns. 
+Risk perception is also influenced by the geographical distribution and frequency of hazards as well as by previous experience of 
+hazardous events and respondents’ age. Therefore, the local dimension was incorporated into the survey, as respondents were asked to 
+refer to their municipality or surrounding area when assessing hazard frequency and previous experience (Q2 and Q3 in Table S1).
+3. Data analysis
+3.1. Modelled versus empirical fatalities by sex and age
+In answering the first research question regarding how the gender dimension manifest itself in mortality patterns, we analysed the 
+distribution of landslide and flood fatalities compared to the census data disaggregated by sex and age. For this purpose, we adopted a 
+statistical approach, first used by Salvati et al. [17], to assess whether the observed differences in geo-hydrological fatalities by sex, 
+were significant and representative, given the relatively small number of fatalities (a few hundred) compared to the size of the 
+population of Italy. In addition, to explore possible temporal variations in how men and women experienced geo-hydrological hazards, 
+we split the 60-year period 1965–2024 dataset of fatalities in two, non-overlapping 30-year data subsets: t30y-1 (1965–1994) and 
+t30y-2 (1995–2024). To model the expected number of fatalities based on census data, we averaged information from the Italian 
+general censuses conducted every ten years by ISTAT (Italian National Institute of Statistics) in 1961, 1971, 1981 and 1991 to the 
+t30y-1 (1965–1994) subset. Similarly, for the more recent t30y-2 (1995–2024) subset, the 1991, 2001, 2011 and 2021 general censuses were used. The census data provide the demographic reference distribution used to model the expected fatalities. Thus, the 
+expected distributions account for differences in the demographic composition of the male and female populations by age. This demographic reference should be distinguished from event-specific exposure, i.e. the actual number of males and females present in 
+hazardous locations at the time of individual landslide or flood events, which cannot be systematically reconstructed from the 
+available historical information. The mean demographic distributions by sex and age used for the two periods are shown in Fig. S1 in 
+the supplementary material. These distributions explicitly account for differences in the relative size and age structure of the male and 
+female populations when estimating the expected number of fatalities. Using these data, a large set of samples was produced randomly 
+drawn from a multinomial distribution, with each sample having the same size (number) of fatalities as in the specific sex and age 
+category. Using the Gamma function notation [39], the probability mass function of the multinomial distribution is given by, 
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+3
+
+f(x1,…, xk; p1,…, pk) = Γ
+( ∑
+i
+xi + 1
+)
+∏
+i
+Γ(xi + 1)
+∏k
+i=1
+pi
+xi
+, eq. (1) 
+where: x1, …, xk represent the number of males (females) in each of the k age categories, and p1,…, pk represent the corresponding 
+probability.
+To show the expected distribution of the fatalities in each sex and age category, box and whisker plots were prepared and the 
+observed number of the flood and landslide fatalities was overlaid (Fig. 1A and B). The expected number of fatalities (the probability) is 
+graphically given by the box plot in which the 5th, 25th, 50th, 75th, and 95th percentiles are reported. The 50th, corresponding to the 
+median (Q2) of the modelled distribution and was used as the reference expected value for each age and sex group. For each observed 
+value (dots) the corresponding percentile of the model within the modelled distribution is reported in the table shown in Fig. 1C. Thus, 
+a percentile close to 0 indicates that the observed number of fatalities lies near the lower tail of the modelled distribution, with most 
+modelled values being higher than the observed value; conversely, a percentile close to 100 indicates that the observed value lies near 
+the upper tail of the modelled distribution. Comparison of the expected (modelled) fatalities based on the census data (the box plots) 
+with the observed fatalities (shown by green dots for males and orange dots for females) allowed the identification of the sex and age 
+categories that were respectively over- or underrepresented when the observed fatalities (dots) were higher or lower than expected 
+(box plots). Observed fatalities lying outside the 25th–75th percentile range (IQR) were interpreted as marked deviations from the 
+central modelled distribution, indicating over- or under-representation, while values outside the 5th–95th percentile range (whiskers) 
+represented more pronounced deviations.
+There are important differences between males and females in both 30-year periods. Men have confirmed that they are more at risk 
+than women, even at older ages, making the results even worse to what was found in Salvati et al. [17]. Except for the teen 
+age-categories, the observed data (the number of male fatalities) fall within an expected value > 75th percentile eight times in t30y-1 
+(1965–1994), and seven times in t30y-2 (1995–2024). Conversely, for females, the observed data (the number of female fatalities) fall 
+Fig. 1. Coloured dots connected by coloured lines show the observed number of fatalities due to both landsides and floods for different sex (females 
+in orange, males in green) and age categories in Italy in the two 30 - year periods (A) t30y-1 (1965–1994) and (B) t30y-2 (1995–2024). Box plots 
+show the expected distribution of the fatalities in each sex and age category in the same periods. (C) Table list the number of observed fatalities in 
+each group and the modelled percentile values corresponding to the observed data.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+4
+
+within an expected value > 75th percentile only three times in t30y-1 (1965–1994), and two times in t30y-2 (1995–2024), and are 
+related to old women (aged > 60 in t30y-1 (1965–1994) and > 70 in t30y-2 (1995–2024)).
+This means that the number of the observed male fatalities (green dots) is quite always higher than those statistically expected and 
+above the 75th: between 20 and 99 years old in t30y- 1 (1965–1994) and between 30 and 99 years old in t30y- 2 (1995–2024). 
+Conversely, the number of female fatalities up to the age of 59 is significantly lower than would be statistically expected with 
+percentile values of zero or close to zero. (Fig. 1 C).
+The second difference, which is very clear, concerns the females, who in the most recent period t30y-2 (1995–2024) are almost 
+always below the modelled data (between 0 and 69 years old), and when they are above, they almost reach the percentile maximum 
+value (97.4th) in the most vulnerable 80–89 age category. The largest negative deviations for women are recorded in the 0–9, 10–19, 
+20–29, 40–49, and 50–59 age categories, where the observed data is equal to zero or less than 1 respect to the model. Conversely, for 
+men, the highest deviations are between the ages of 50–59, 60–69 and 70–79, where the observed data correspond to the 100th 
+percentile, showing a large overrepresentation compared with the expected number.
+Although the fatality distributions for the two periods do not differ greatly, we showed that the over-representation of males 
+compared to females was statistically significant and did not vary over time, suggesting possible gender differences in risky behaviour 
+(for men) or prudent stance (for women).
+3.2. Behavioural analysis by sex
+In order to better investigate the dependency of male and female fatalities on their adopted behaviour, we calculated the ratio of 
+male to female fatalities, separately for landslides and floods, for some situation for which we know the exact place people were and 
+activities people were doing (Table 1). The majority of the road–related fatalities were male both for flood (ratio = 1.8) and landslide 
+processes (ratio = 3.2). During a flood event people killed along the levees or embankment were mostly males (ratio = 9.7), and the 
+crossing ford fatalities were males (ratio = 2.3). Of the 66 males that died along levees, underpass or crossing a ford only the 15% were 
+there because workers (e.g. farmer, shepherd). Overall, of the 111 victims with evidence of risk underestimation and therefore 
+inappropriate behaviour (i.e. trying to care for and secure goods and personal belongings, going down to a lower level, accessing 
+restricted areas), gathered from survivor testimonies and chronicles and news reports, the vast majority (79%) were males and only 
+21% females. The male percentage while attempting to rescue others is also very high (92%), showing their readiness to take risks to 
+save lives, both as trained rescuers (35%), and as occasional citizen rescuers (65%). These results suggest sex-related differences in 
+behavioural responses and in the circumstances in which fatal exposure occurred.
+3.3. Risk perception analysis
+Cumulatively, 10,709 persons were interviewed during the 11-year period between 2012 and 2023 through four national surveys 
+to identify potential temporal trend over about the long period. For this study, we analysed the responses to four questions, each 
+addressing a specific dimension of risk perception: Q1 assessed self-perceived exposure; Q2 assessed perceived hazard frequency; Q3 
+investigated respondents' direct or indirect knowledge of previous landslide and flood events; and Q4 assessed the perceived threat 
+posed by landslides and floods to personal safety. In this context, self-perceived exposure refers exclusively to respondents' subjective 
+assessment of how exposed they felt to each risk and should not be interpreted as a measure of actual physical or event-specific 
+exposure. Question 1 (Q1 in Table S1) assessed self-perceived exposure by asking respondents how exposed they felt to each of the 
+considered risks, using four response categories: “considerably”, “somewhat”, “little”, and “not exposed”. Fig. 2 shows the results for 
+the common questions. People in Italy perceive themselves as more exposed to technological risks than to natural risks, and in 
+particular people felt more exposed to environmental pollution, which increased from 65% in 2012 to 70% in 2023. For natural 
+hazards, the interviewees felt most exposed to earthquakes, with a similar increasing trend from 42% in 2012 to 49% in 2023. Floods 
+and landslides received much lower scores, and their temporal trends were not strictly linear. Landslides ranked lowest among the geohydrological hazards. In none of the examined surveys did the proportion of individuals who considered themselves considerably or 
+Table 1 
+Male/female ratio for flood and landslide fatalities in Italy, for different places.
+Process Place Male/Female ratio
+Landslides Road/Highway 128/40 = 3.2
+Mountain/Hill 72/16 = 4.7
+Proximity house 11/7 = 1.5
+Railway 47/18 = 2.6
+Rocky beach 10/9 = 1.1
+Inside building 225/246 = 0.9
+Floods Road/Highway 136/73 = 1.8
+Mountain/Hill 23/25 = 0.9
+Proximity house 12/8 = 1.5
+Levee/Embarkment 39/4 = 9.7
+Ford/Underpass 27/11 = 2.4
+Inside building 85/82 = 1.03
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+5
+
+somewhat exposed exceed 30%. For floods, a decrease is evident in 2023. It is important to note that the 2023 survey was conducted 
+two months before the two major and catastrophic floods that occurred in Emilia-Romagna, Italy [40,41]. Therefore, the data were not 
+influenced by the dissemination of information, images, and videos in the media during and after these catastrophic flood events, 
+which would likely have substantially increased citizens’ risk perceptions and reactions.
+Considering the 2% sampling error, the perception of volcanic risk remained very low and largely unchanged between 2012 and 
+2023, as active volcanoes are located only in two southern Italian regions. This geographical setting limits their influence on risk 
+perception mainly to the densely inhabited areas surrounding the Vesuvius, the Campi Flegrei caldera, and Ischia Island [42], 
+including the municipalities and neighbourhoods of the red zone in the Campania Region [43], and to the territories surrounding 
+Mount Etna and Stromboli in Sicily [44].
+The 2023 survey also investigates other important risks such as health risks, tsunami and terrorism to the list of choices in Q1. 
+Results from the 2023 survey are summarized in Fig. 3 providing a general overview of the Italian population divided by gender 
+(Fig. 3A).
+Histogram in Fig. 3A shows the summed percentage of the considerably and somewhat exposed answers and confirms that people 
+(both men and women) in Italy in 2023 felt more exposed to technological than to natural risks, and specifically to environmental 
+pollution for which the percentages have totalized 69% (Men = 66%, Women = 72%). The first and most important result is that, even 
+considering the 2% sampling error, the percentages of women (in orange) are always higher than those of men (in green) for all risks, 
+Fig. 2. Answers to Question 1 for 2012, 2013, 2015 and 2023 surveys. Bars show the percentage of interviewees that responded to be “considerably”, “somewhat”, “little”, or “not” exposed to natural hazards. The numbers are the sum of “considerably”, “somewhat”.
+Fig. 3. 2023 survey answers to Question 1. (A) Bars show the summed percentage of interviewees that responded to be “considerably” and 
+“somewhat” exposed divided by gender. (B) data by gender divided for the 4 possible answers for landslide and flood options.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+6
+
+with the largest gap being for terrorism at 7 percentage points (M = 18%, W = 25%), followed by pollution (M = 66%, W = 72%), road 
+accidents (M = 60%, W = 66%), and earthquakes (M = 45%, W = 51%) at six percentage points. The lowest gap is for floods (M = 21%, 
+W = 22%). Surprisingly, terrorism is the only non-natural risk that was felt similarly as landslides and floods, confirming previous 
+findings by Di Baldassarre et al. [45], that for Italy registered a low level of public risk perceptions about terrorist attacks. Since our aim 
+is to understand whether differences exist in the risk perception between men and women for landslides and floods, and to answer our 
+second research question, we examined the percentages distribution of the four answers disaggregated by gender, as shown in Fig. 3B.
+Men consider themselves less exposed to floods (39.7% of not exposed) and landslides (44.8% of not exposed) than women (36.4% 
+and 37.2%, respectively). For landslides the difference between men and women is larger (7.6%) than for floods (3.3%). Although 
+women show a low level of risk perception, with very low levels of 'considerable' answers (5.1% and 4.1% for landslides and floods 
+respectively), they are slightly more likely to acknowledge some degree of exposure, placing themselves in the 'considerable' category 
+higher than men's responses (3.9% and 4.0% for landslides and floods respectively). Though this difference is not dramatic, it signals a 
+discrepancy in how the two genders subjectively relate to risk.
+The second question (Q2 in Table S1) attempted to determine the ability of the interviewees to evaluate the frequency of the 
+different natural hazards, including landslides, floods, earthquakes, volcanic eruptions, and only in 2023 tsunami in the area or in the 
+municipality where they lived. Results are summarized in Fig. 4A, which shows the results of all the surveys for the whole of Italy. For 
+the 2023 survey gender differences are shown (Fig. 4B). At the national scale, earthquake was the natural hazard that the interviewees 
+felt was most likely to occur in their territory (39%, in the 2012 survey, 41% in the 2013 survey, 40% in the 2015 survey, and 46% in 
+the 2023 survey), followed by flooding (31%, 30%, 32%, 11%), landslides (9%, 10%, 9%, 13%), volcanic eruptions (4%, 2%, 2%, 3%) 
+and lastly tsunami (3%). The ranking over the four surveys was almost constant for earthquakes, landslides and volcanic eruptions, the 
+percentages were only slightly different in the range of the 2% of uncertainty. Remarkably, the percentage that decreased significantly 
+is that of floods falling from 32% in 2015 to 11% in 2023, while there is an increase in those who answered “none of these” (20%) in 
+2023 compared to previous surveys which stood at 15%. Considering the responses by gender (Fig. 4B), women (orange bars) seem to 
+underestimate the frequency of both landslides and floods, whereas men (green bars) seem to underestimate the frequency of 
+earthquakes. Specifically, 16% of males and 11% of females considered landslides to be more frequent, while 13% of males and 9% of 
+females considered floods to be more frequent.
+The third question (Q3 in Table S1) was specific for landslides and floods and attempted to investigate the direct or indirect 
+knowledge of the occurrence of such phenomena in the territory where they live. The results shown in Fig. 4C do not vary largely in 
+time. Half of the Italian population stated that they have not experienced, either directly or indirectly, a landslide or flood events in the 
+Fig. 4. (A) Answers to Question. 2 for 2012, 2013, 2015 and 2023 surveys. (B) data divided by gender, (C) Answers to Question 3 for 2012, 2013, 
+2015 and 2023 surveys, (D) data divided by gender.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+7
+
+municipality in which they live or in the surrounding area. Looking at differences by gender (Fig. 4D), the percentage of females who 
+have answered “no” (53%) is slightly higher than that of males (50%), suggesting that women are less informed than men. However not 
+an enormous gap, it is statistically significant and merits attention, 24% of males seems to have direct or indirect knowledge of floods 
+while 19% the females.
+A central question concerned the extent to which people view landslides and floods as a real threat to their personal safety which 
+corresponds to the third research question. For this purpose, the fourth question (Q4 in Table S1) was designed to determine if the 
+interviewees considered landslides and floods a threat to their personal safety. On this issue, the data show a marked shift: in 2012, 
+only 35% of respondents answered affirmatively, whereas in 2023 that figure rose to 51% (Fig. 5A). This is a significant increase, 
+indicating that over the span of ten years, the proportion of people worried about landslides and floods grew from just over one-third to 
+more than half of the population.
+The number of people that do not consider geo-hydrological events a threat to their life is decreasing from 65% in 2012 to 49% in 
+2023. To better investigate this increasing trend, we analysed the results of all the surveys (2012, 2013, 2015, 2023) separately for man 
+and women. The temporal analysis is reported in Fig. 5B.
+Looking at the data divided by gender, shown in Fig. 5B, we can see that the increasing sense of threat by time is evident, but does 
+not differ by gender. The symmetrical responses indicate that men and women fear landslides and floods equally as potentially deadly 
+events.
+3.4. Fear-Index and Regional Threat Index analysis
+The temporal analysis of responses to Question 4 across the four surveys indicates that no substantial differences emerged between 
+the sexes regarding the perceived fear of being affected by a landslide or a flood. Although perceived fear was similar between men and 
+women, mortality rates differed markedly. Using Italian census data, we calculated the cumulative mortality rates for landslides and 
+floods by sex over the 60-year period 1965–2024. The mortality rate was 2.8 and 4.2 for women and men, respectively, i.e. one and a 
+half times higher for men.
+We then compared mortality data with the results of Question 4 (Q4 in Table S1), which directly explores whether respondents 
+perceive landslides and floods as a threat to their personal safety. For this purpose, we calculated the Fear-Index, cumulatively for 
+floods and landslides, as the male-to-female ratio of “yes” responses (yes–flood; yes–landslide) and “no” responses. The Fear-Index 
+values were very similar, being 1.02 for “no” and 0.97 for “yes”, indicating comparable levels of perceived threat among men and 
+women. However, when these values were compared with the mortality rates, a marked discrepancy emerged between perceived fear 
+and observed mortality.
+To further investigate the relationship between perceived threat and the observed mortality rate, we performed an additional 
+analysis at the regional scale, considering floods and landslides separately (Fig. 6A). Regional historical mortality rates for both 
+hazards are available for Italy for the 50-year period 1975–2024 from the POLARIS website (https://polaris.irpi.cnr.it/report/). Using 
+respondents' region of residence, we calculated two Regional Threat Indices for each Italian region: the Flood Regional Threat Index 
+(FRTI) and the Landslide Regional Threat Index (LRTI). The indices were calculated as the ratio between positive and negative responses to Question 4 pooling males and females responses for each hazard. Values greater than 1 indicate a predominance of positive 
+responses, reflecting a higher perceived threat to personal safety, whereas values lower than 1 indicate a predominance of negative 
+responses and, therefore, a lower perceived threat. Spearman's rank correlation was used to assess the association between regional 
+Fig. 5. (A) Answers to Question 4 for 2012, 2013, 2015 and 2023 surveys. (B) Temporal trend divided by gender. Answers for women in orange, 
+answers for men in green. Negative (No) answers in dark colour, positive (Yes) in lightly colorur.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+8
+
+perceived threat and historically observed mortality. FRTI was compared with regional flood mortality rates, whereas LRTI was 
+compared with regional landslide mortality rates. A moderate and statistically significant positive association was found between FRTI 
+and flood mortality rates (Spearman's ρ = 0.53, p = 0.016; n = 20), indicating that regions characterised by higher historical flood 
+mortality generally tended to show higher levels of perceived flood threat. Conversely, no significant association emerged between 
+LRTI and regional landslide mortality rate (Spearman's ρ = 0.02, p = 0.940; n = 20), indicating that the regional pattern of perceived 
+landslide threat does not reflect the spatial distribution of historically observed landslide mortality.
+Inspection of Fig. 6B shows that for landslides, two regions showed Regional Threat Index values greater than 1, Liguria and 
+Calabria, whereas relatively high values (0.7 < LRTI < 1) were observed in Valle d’Aosta, Campania, and Sicily. Comparison with 
+regional landslide mortality rates revealed substantial spatial discrepancies. The highest mortality rates occurred in Trentino–Alto 
+Adige (0.73) and Valle d’Aosta (0.44), followed, at considerably lower levels, by Campania (0.08) and Basilicata (0.04). For floods, 
+Liguria and Calabria showed FRTI values greater than 1, while Sardinia had a value of 1.00. Relatively high values (0.7 < FRTI < 1) 
+were also observed in Valle d’Aosta, Veneto, Tuscany, Campania, and Sicily. In this case, the spatial correspondence with mortality was 
+stronger. The highest flood mortality rate occurred in Valle d’Aosta (0.10), followed by Liguria and Sardinia (both approximately 
+0.06). Piedmont, Basilicata, Calabria, and Sicily showed lower but still relatively high values of approximately 0.04 (Fig. 6C).
+Overall, the regional analysis highlights two main findings. First, floods are perceived as a threat to personal safety across a larger 
+number of regions than landslides. Second, the spatial pattern of perceived flood threat is more closely associated with regional 
+mortality than that observed for landslides.
+4. Discussion
+We analysed the distribution of landslide- and flood-related mortality in Italy between 1965 and 2024, disaggregating the data by 
+gender. We followed the scheme proposed by Tannenbaum et al. [33] to analyse potential gender differences. Having verified that the 
+Fig. 6. Regional distribution of mortality and perceived threat for floods and landslides in Italy. (A) Mean regional mortality rates for floods and 
+landslides for 1975–2024. (B) Flood Regional Threat Index (FRTI) and Landslide Regional Threat Index (LRTI), calculated as the ratio between 
+positive and negative responses to Question 4, pooling male and female respondents. Values > 1 indicate a predominance of positive responses and 
+higher perceived threat, whereas values < 1 indicate a predominance of negative responses. (C) Location of the 20 Italian regions and corresponding 
+mortality-rate and Threat-Index values. Mortality rates are expressed as fatalities per 100,000 inhabitants per year.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+9
+
+sample showed significant differences between males and females, we conducted further gender analysis to determine whether these 
+differences were statistically significant. The results (Fig. 1) confirm that the expected number of fatalities for men, modelled based on 
+census data, is consistently lower than the number actually recorded due to landslides and floods. Based on the information recorded 
+by sex, at the national scale, in the 60-year investigated period, landslides have killed more males (670; 56%) than females (518; 43%) 
+with a male-to-female (M/F) ratio of 1.3. Similar gender difference was found for flood. In the same period floods have killed 
+significantly more males (471; 62.6%) than females (281; 37.3%), resulting in a male-to-female gender ratio of M/F = 1.7, similar to 
+findings in Europe [15,46], USA [47–49], and Australia [50,51].
+Our statistical analysis by gender and age in the two different 30-year periods t30y-1 (1965–1994) and t30y-2 (1995–2024) 
+confirmed that, apart from children, the landslide and flood male fatalities are above the expected (modelled) values. The observed 
+number of fatalities (the dots in Fig. 1A and B) are outside the 25th–75th interquartile range (shown by the boxes), of the expected 
+number of fatalities (50th), given the size of the population in the same genders and age categories. In detail, in the period t30y-1 
+(1965–1994) males are over represented in the range 20 years and older up to the age of 89, and in the more recent period t30y-2 
+(1995–2024) males in the range 30 years and older up to the age of 89. This trend may reflect differences in both risk-taking propensity and exposure between males and females [50]. We note that in the studied period (1965–2024) males were certainly more 
+numerous than females in outdoor works and activities, and that until recently rescue services (e.g., fire fighters, police, and defence 
+forces) consisted entirely of males and therefore people involved in rescue operations were only males. It is confirmed by the available 
+(few) number of workers involved in a fatal landslide or flood that are 97.7% males and only 2.3% females. To our knowledge, these 
+kinds of male workers involved in the fatal events represent a minor percentage (7.5%) of all the males killed by a landslide or a flood 
+recorded in the catalogue. Although these observations support the hypothesis of differential exposure between males and females, the 
+available data do not allow event-specific exposure to be quantified systematically over the entire 60-year period. We consider the 
+overrepresentation of males to be independent of their efforts in working activities or in rescue operations. It seems likely that other 
+important causes include males' greater propensity for risky behaviour than females [52]. Our gender analysis identified some main 
+hazardous behaviour (Table 1) for males, in particular during flooding events: fording a river with a vehicle, moving towards (or 
+staying on) the banks or levees of a river, staying on a bridge during a flood, trying to care for and secure goods and personal belongings, going down to a lower level or accessing restricted areas. The data show that the people, in the majority males, were 
+generally unaware or underestimated the dangerousness of these potentially deadly actions. As reported by Pearson and Hamilton [53] 
+in their study on willingness to drive through flooded waterways, men were more willing to drive through the flooded waterway in the 
+20 cm scenario than women. Male drivers expected themselves to have adequate driving skills in uncommon conditions, and misjudged the ability of their vehicles to stay or travel on a road covered by water, debris or mud. The existence of gender differences in 
+propensity to take risks has been documented in a large number of studies in the literature [52,54–56] and has been linked to different 
+factors, such as a different perception of risk or interpreted as “showing off” for potential mates, as males are more likely to take risks 
+when there are females present around, whereas the reverse is not true [57]. In recent study the close association between risk-seeking 
+behaviour and the emotional-regulation network led Bajaj and Killgore [58] to hypothesize that the sex differences in risk tacking 
+propensity would be associated with sex differences in brain morphometry of the limbic network. Kruger and Nesse [59] studying the 
+external causes of death resulting directly from behaviour that contributes to the human sex differential in mortality, found that almost 
+all cases showing an increase in male mortality.
+The aim of our research was to analyse whether differences in landslide and flood mortality by gender exist and how these differences can be related to risk perception. There is a broad consensus among social scientists that considerable gender disparities in risk 
+perception exist, particularly in the context of natural risk [60,61].
+To this end, we used perception data from four national surveys to investigate different dimensions of risk perception, including 
+self-perceived exposure, perceived hazard frequency, direct or indirect knowledge of previous events, and perceived threat to personal 
+safety.
+The broad timeframe under study, with surveys from 2012 to 2023, allows, for the first time in Italy, to identify certain evolving 
+trends, revealing both progress in collective awareness and persistent challenges arising from the unequal distribution of information 
+and differences in the social roles of men and women. Three main lines of reasoning emerge from these survey findings. First, it is 
+evident that geo-hydrological risk perception struggles to become as prominent in public consciousness as other threats (Figs. 3 and 4). 
+Analysis of the survey's responses showed that people in Italy feel more exposed to technological risks (environmental pollution and 
+car accidents) than to natural risks and this in line with previous research [21]. Of the natural risks, people in Italy feel more exposed to 
+earthquakes, followed by floods, landslides, and volcanic eruptions. Focusing on Italy, Guzzetti et al. [62] and Salvati et al. [35] found 
+a similar ranking when estimating individual [36] and societal risk [63] levels associated with different natural hazards. In 2023 
+survey, we examined the responses to Question Q1 disaggregated by gender (Fig. 3). In general, both men and women reported 
+relatively low levels of perceived exposure to floods and landslides (Fig. 3A). Although it is necessary to consider the 2% uncertainty, 
+females are slightly more likely to acknowledge some degree of exposure of 'considerably' answers (5.1% and 4.1% for landslides and 
+floods, respectively), higher than men's responses (3.9% and 4.0% for landslides and floods, respectively). The results are in line with 
+previous studies on risk perception for natural hazards [12,25,26].
+When comparing the 2023 survey with those conducted in the past years, in none of the annual surveys did more than 30% of 
+respondents feel “considerably” or “somewhat” exposed to landslides or floods (Fig. 3B). This suggests a persistently low self-perceived 
+exposure to landslide and flood hazards, despite frequent media reports of disastrous events in different parts of the country (https:// 
+polaris.irpi.cnr.it/). Geo-hydrological risks often seem distant and sporadic, possibly because many landslides and floods are 
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+10
+
+“localized”—while they may devastate specific areas, they do not always trigger nationwide media coverage comparable to that of a 
+catastrophic earthquake. For instance, men were more likely to see themselves as “not at all” exposed to landslides and floods, whereas 
+women displayed a slightly greater inclination to recognize their vulnerability (Fig. 3B). These data confirm how men show a stronger 
+tendency to consider themselves not exposed to or distant from the dangers posed by landslides and floods—an attitude that may 
+reflect cultural models linked to invulnerability and the denial of fear, as discussed in the literature on “risk cultures” [64]. This lower 
+self-perceived exposure among men may be consistent with the greater propensity for risk-taking behaviour reported in the literature.
+Women, on the other hand, tend to express a more cautious perception and appear to have internalized more preventive attitudes 
+likely linked to social and family roles that place them in a position of heightened awareness of vulnerability. Special selection 
+pressures faced by females may also have increased gender differences in the tendency to engage in risky behaviours [65]. These roles 
+prompt women to take the possibility of danger more seriously and to adopt more cautious behaviour. The more cautious responses 
+provided by women may explain the significant discrepancies in the data relating to female and male fatalities (Fig. 1).
+At the same time, in terms of frequency estimate (Q2) and direct or indirect knowledge (Q3) of geo-hydrological events (Fig. 4A–D), 
+women appear less informed about the frequency of landslides and floods in the territories they lived and of the knowledge of floods. 
+The percentages of both men and women of “no” answers showed that half of the Italian population stated that they have not 
+experienced, either directly or indirectly, a landslide or flood in the municipality in which they live or in the surrounding area. This is 
+surprising, especially considering that Italy is one of the most hazard-prone countries in Europe. All the 20 Italian regions have 
+experienced recurrent landslides or floods, and 107 out of 110 (97%) Italian provinces have experienced at least one landslide or flood 
+with direct consequences to the population (https://polaris.irpi.cnr.it/report/last-report/).The Italian landslide inventory map of the 
+IFFI project, carried out by ISPRA and the Regions and Autonomous Provinces since 1998, has been updated several times and the 
+latest figure on the number of landslides detected is 620,808 [66], which is a density of 2.4 landslides per km2 and they affect an area of 
+almost 24,000 km2
+, or 7.9% of the national territory. This apparently very high figure represents only the "tip of the iceberg" of 
+landslides in our country. It is enough to say that more than 80,997 new landslides were recorded during the two alluvial events in 
+Emilia-Romagna in May 2023, when heavy rainfall hit the region and 21 rivers overflowed [67].
+The survey results show that half of the Italian population ignored the risk of landslides and floods, but there is not an enormous 
+gender gap. The small difference (5%) may reflect differences in previous experience, mobility, occupational context, or access to 
+information.
+The third major finding is the overall increase in the perception of threat to personal safety, rising from about 35% in 2012 to 51% 
+in 2023. This is an encouraging trend, suggesting that the public is gradually recognising that landslides and floods can indeed 
+jeopardise human life and well-being. However, when responses were disaggregated by gender, men and women showed very similar 
+levels of perceived threat (Fig. 5), in marked contrast with the substantial differences observed in male and female fatalities. The FearIndex, used to quantitatively compare the perceived fear (Q4) of being a victim of a landslide or flood event with the mortality rate, 
+confirmed that there are comparable levels of perceived fear among men and women confirmed this discrepancy between perceived 
+threat and observed mortality. We explain the mismatch between the perceived risk of threat and the react to a potentially fatal actual 
+risky situation, by considering that the latter can be the result of a sudden, instinctive reaction to an unexpected event rather than a 
+response to a survey mediated by a cognitive, albeit quick, reasoning process. As argued by Kruger and Nesse [65], however, male 
+mortality results from complex interactions among sex, behaviour, and culture, thus precluding any simple explanation. Nevertheless, 
+the greater propensity of males to engage in risky behaviour remains an important factor to consider in the prevention of avoidable 
+deaths associated with natural hazards.
+This study was primarily designed to provide a synoptic overview of gender differences in perception and mortality patterns across 
+Italy, with the aim of understanding the limits of knowledge, awareness, and perception through a broad comparative analysis. 
+However, because the spatial distribution, frequency, and experience of landslide and flood hazards vary considerably across Italy, the 
+national-scale perspective was complemented by a regional comparison between perceived threat and mortality, conducted separately 
+for landslides and floods. Further disaggregation by gender would have resulted in subsamples that were too small to provide statistically robust estimates. The regional analysis should therefore be regarded as complementary to the gender-based analysis, which 
+remains the main focus of this study.
+The regional comparison revealed contrasting patterns between the two hazards. A moderate and statistically significant positive 
+association emerged between regional flood mortality and the perceived flood threat measured using the regional threat index (FRTI 
+Spearman's ρ = 0.53, p = 0.016; n = 20) whereas no significant association was found between landslide mortality and the perceived 
+landslide threat (LRTI Spearman's ρ = 0.02, p = 0.940; n = 20). This suggests that the spatial pattern of historically observed flood 
+mortality is, at least partly, reflected in regional perceptions of personal threat, while no comparable relationship emerges for 
+landslides.
+One possible explanation may lie in differences in the spatial extent and public visibility of the impacts produced by the two 
+hazards. During extreme weather-related events, floods and landslides may occur simultaneously [68–70], but floods often affect 
+wider areas and larger populations and may therefore receive greater public and media attention. Landslide impacts, by contrast, are 
+generally more spatially localised as individual slope failures typically affect relatively limited areas [34,71–73], even when numerous 
+landslides occur during the same event, and their cumulative effects may consequently be less visible to the general public. More 
+generally, these results suggest that geographical differences in risk perception may be influenced not only by historical mortality, but 
+also by event frequency, direct or indirect experience, spatial extent, the number of people affected, and public and media visibility. 
+Likewise, it is important to scale down the analysis and investigate in greater depth, at the local level, the groups of people found to be 
+more vulnerable, less aware, or less prepared. To develop effective plans and allocate resources efficiently, it is crucial to assess the 
+critical factors that determine social vulnerability and disaster response capacity from a gender perspective.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+11
+
+5. Conclusions
+This study provides a comprehensive assessment of gender differences in flood- and landslide-related mortality in Italy by integrating a unique 60-year fatality database with evidence from four national surveys on risk perception. We used information on floods 
+and landslides with human consequences in Italy to analyse possible gender differences in the response to risky situations due to such 
+events. Levels of risk perception disaggregated by gender, observed in four national-scale surveys conducted between 2012 and 2023, 
+were used to investigate possible relations between the over representation of male fatalities, particularly due to evident risk-taking 
+behaviours during geo-hydrological disasters. The national-scale perspective, the granularity of the fatality database, and the integration of long-term empirical evidence with social survey data provide new insights into the relationships between gender, risk-taking 
+behaviour, and disaster vulnerability.
+Our gender analysis revealed that floods and landslides have killed more males (1141) than females (799) in Italy over the study 
+period. We compared the empirical data on fatalities by sex with the multinomial probability mass function of expected fatalities 
+estimated using census data by gender and age. The statistical analysis revealed a systematic over-representation of male fatalities, and 
+conversely an under-representation of female fatalities when compared with those modelled with the census data that do not change 
+significantly over the two non-overlapping 30-year periods (1965–1994 and 1995–2024).
+When we analysed the responses to the four surveys by gender, we found differences in risk perception, with women's risk 
+perception generally higher than men's. However, we observed a contrasting trend in the number of fatalities by gender and the 
+perceived threat to personal safety posed by landslides and floods. The answers to the specific question (Q4) do not show gender 
+differences in the surveys. The Fear Index values, measured as the male-to-female ratio of “yes” and “no” responses, resulted quite 
+identical, indicating comparable perceived treats among men and women. The results of the national-scale gender analysis were 
+complemented by a regional analysis of the Regional Threat Index, calculated separately for landslides (LRTI) and floods (FRTI) across 
+the 20 Italian regions and compared with the corresponding historical mortality rates. Spearman's rank correlation, used to assess the 
+association between regional perceived threat and mortality, revealed a moderate and statistically significant positive association for 
+floods, whereas no significant association was found for landslides. This suggests a closer correspondence between regional patterns of 
+perceived threat and historical mortality for floods than for landslides. Overall, these results indicate that risk perception alone cannot 
+explain disaster outcomes and that behavioural responses and exposure patterns should also be considered when developing disaster 
+risk reduction strategies. The combined results help identify population groups and behavioural contexts that may deserve targeted 
+risk communication and prevention strategies that can contribute to reduce the human toll of landslides and floods in Italy, and 
+elsewhere. In our research, we attempted to fully consider both the social actors in their entirety and the diversity of gender and 
+behaviour in response to risk.
+The analysis of the circumstances of deaths revealed unambiguously that (car) drivers, in particular males, often adopted hazardous 
+behaviour, and that the avoidance of the dangerous behaviour would have saved lives. A specific education effort needs to be targeted 
+to drivers, in particular young male adults.
+Our study would offer valuable recommendations for drawing up policies in disaster risk reduction management, particularly in 
+non-structural mitigation measures (e.g. early warning systems) also including a gender perspective, which is rarely considered [74]. 
+Since we recognize the riskiest situations and the most dangerous type of geo-hydrological process, we can use this knowledge to 
+design appropriate gender-differentiated non-structural risk reduction measures. Finally, the results provide new insights into the 
+social dimensions of disaster vulnerability and can support the development of gender-sensitive risk communication strategies and 
+targeted disaster risk reduction measures (e.g., training and communication campaigns for specific population groups) aimed at 
+reducing future loss of life.
+CRediT authorship contribution statement
+Paola Salvati: Writing – original draft, Visualization, Supervision, Methodology, Formal analysis, Data curation, Conceptualization, Writing – review & editing. Melissa Sessa: Writing – original draft, Visualization, Methodology, Writing – review & editing. 
+Maria Teresa Carone: Methodology, Formal analysis, Writing – review & editing. Stefano Luigi Gariano: Writing – original draft, 
+Visualization, Methodology, Formal analysis, Writing – review & editing. Mauro Rossi: Methodology, Formal analysis. Roberto 
+Coscarelli: Writing – original draft, Visualization, Writing – review & editing. Cinzia Bianchi: Visualization, Data curation. Loredana 
+Antronico: Writing – original draft, Visualization, Supervision, Writing – review & editing.
+Ethical statements
+Original data were collected by two leading market research Companies.
+Declaration of competing interests
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+12
+
+Acknowledgements
+The manuscript greatly benefited from the comments of two anonymous reviewers. This work has received no external funding. 
+Maria Teresa Carone was funded by the Next Generation EU - Italian NRRP, Mission 4, Component 2, Investment 1.5, call for the 
+creation and strengthening of 'Innovation Ecosystems', building 'Territorial R&D Leaders' (Directorial Decree n. 2021/3277) - project 
+Tech4You - Technologies for climate change adaptation and quality of life improvement, n. ECS0000009.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.ijdrr.2026.106429.
+Data availability
+Data will be made available on request.
+References
+[1] CRED, Human Cost of Disasters: an Overview of the Last 20 Years 2000-2019, 2020, p. 30. Brussels, Belgium.
+[2] D. Gomez, ´ E.F. García, E. Aristiz´
+abal, Spatial and temporal landslide distributions using global and open landslide databases, Nat. Hazards 117 (2023) 25–55, 
+https://doi.org/10.1007/s11069-023-05848-8.
+[3] D. Tin, L. Cheng, D. Le, R. Hata, G. Ciottone, Natural disasters: a comprehensive study using EMDAT database 1995–2022, Public Health 226 (2024) 255–260, 
+https://doi.org/10.1016/j.puhe.2023.11.017.
+[4] P. Salvati, M. Yazdani, C. Bianchi, M. Rossi, Flood risk to population in Italy: a synoptic overview based on fatality data, J. Environ. Manag. (2026) 48–2026, 
+https://doi.org/10.1016/j.jenvman.2026.129892.
+[5] UNISDR, Sendai framework for disaster risk reduction 2015-2030, United Nations Office for Disaster Risk Reduction (UNISDR) (2015) 32. https://www.unisdr. 
+org/we/inform/publications/43291.
+[6] G. Rubbia, Natural hazards and earthquake science: gender matters, Front. Earth Sci. 10 (2022), https://doi.org/10.3389/feart.2022.1033321.
+[7] A. Erman, S.A. De Vries Robb´e, F.S. Thies, K. Kabir, M. Maruo, Gender Dimensions of Disaster Risk and Resilience, GFDRR – World Wide Bank, 2021. Available 
+at: https://bit.ly/3pWsRHM. (Accessed 3 June 2025).
+[8] E. Neumayer, T. Plümper, The gendered nature of natural disasters: the impact of catastrophic events on the gender gap in life expectancy, 1981–2002, Ann. 
+Assoc. Am. Geogr. 97 (3) (2007) 551–566, https://doi.org/10.1111/j.1467-8306.2007.00563.x.
+[9] E. Enarson, Gender and natural disasters, Working paper 1 (2000) 58.
+[10] F. Sultana, Living in hazardous waterscapes: gendered vulnerabilities and experiences of floods and disasters, Environ. Hazards 9 (2010) 43–53, https://doi.org/ 
+10.3763/ehaz.2010.SI02.
+[11] S. Bradshaw, M. Fordham, Double disaster: disaster through a gender lens, in: J.F. Shroder, et al. (Eds.), Hazards, Risks and Disasters in Society, Academic Press, 
+Cambridge, MA, 2015, pp. 233–251, https://doi.org/10.1016/B978-0-12-396451-9.00014-7.
+[12] I.A. Rana, A. Jamshed, Z.I. Younas, S.S. Bhatti, Characterizing flood risk perception in urban communities of Pakistan, Int J Disast Risk Re 46 (2020) 101624, 
+https://doi.org/10.1016/j.ijdrr.2020.101624.
+[13] P. Salvati, C. Bianchi, M. Rossi, F. Guzzetti, People vulnerability to landslide: risky behaviour and dangerous conditions by gender and age, in: F. Guzzetti, et al. 
+(Eds.), Nderstanding and Reducing Landslide Disaster Risk. WLF 2020. ICL Contribution to Landslide Disaster Risk Reduction, Springer, Cham, 2021, 
+pp. 427–434, https://doi.org/10.1007/978-3-030-60227-7_49.
+[14] S. Doocy, A. Daniels, S. Murray, T.D. Kirsch, The human impact of floods: a historical review of events 1980-2009 and systematic literature review, PLoS Curr 5 
+(2013), https://doi.org/10.1371/currents.dis.f4deb457904936b07c09daa98ee8171a.
+[15] A. Badoux, N. Andres, F. Techel, C. Hegg, Natural hazard fatalities in Switzerland from 1946 to 2015, Nat. Hazards Earth Syst. Sci. 16 (2016) 2747–2768, 
+https://doi.org/10.5194/nhess-16-2747-2016.
+[16] P.L. Delaney, E. Shrader, Gender and Post-disaster Reconstruction: the Case of Hurricane Mitch in Honduras and Nicaragua, Report prepared for the World 
+Bank, 2000. Available on line: https://www.humanitarianlibrary.org/. (Accessed 3 June 2025).
+[17] P. Salvati, O. Petrucci, M. Rossi, C. Bianchi, A.A. Pasqua, F. Guzzetti, Gender, age and circumstances analysis of flood and landslide fatalities in Italy, Sci. Total 
+Environ. 610–611 (2018) 867–879, https://doi.org/10.1016/j.scitotenv.2017.08.064.
+[18] O. Petrucci, Review article: factors leading to the occurrence of flood fatalities: a systematic review of research papers published between 2010 and 2020, Nat. 
+Hazards Earth Syst. Sci. 22 (2022) 71–83, https://doi.org/10.5194/nhess-22-71-2022.
+[19] O. Renn, Concepts of risk: a classification, in: S. Krimsky, D. Golding (Eds.), Social Theories of Risk, Praeger, Westport, CT, 1992, pp. 53–79. London.
+[20] O. Renn, Perception of risks, Geneva Pap. Risk Insur. 29 (1) (2004) 102–114, https://doi.org/10.1111/j.1468-0440.2004.00275.x.
+[21] B. Rohrmann, O. Renn, Risk perception research - an introduction, in: O. Renn, B. Rohrmann (Eds.), Cross-Cultural Risk Perception. Technology, Risk, and 
+Society, vol. 13, Springer, Boston, MA, 2000, pp. 11–53, https://doi.org/10.1007/978-1-4757-4891-8_1.
+[22] P. Slovic, B. Fischhoff, S. Lichtenstein, Cognitive processes and societal risk taking, in: P. Slovic (Ed.), The Perception of Risk, 2001, pp. 32–50. London.
+[23] M.K. Lindell, S.N. Hwang, Households' perceived personal risk and responses in a multihazard environment, Risk Anal. 28 (2008) 539–556, https://doi.org/ 
+10.1111/j.1539-6924.2008.01032.x.
+[24] J. Flynn, P. Slovic, C.K. Mertz, Gender, race, and perception of environmental health risks, Risk Anal. 14 (1994) 1101–1108, https://doi.org/10.1111/j.1539- 
+6924.1994.tb00082.x.
+[25] W. Kellens, R. Zaalberg, T. Neutens, W. Vanneuville, P. De Maeyer, An analysis of the public perception of flood risk on the Belgian Coast, Risk Anal. 31 (7) 
+(2011) 1055–1068, https://doi.org/10.1111/j.1539-6924.2010.01571.x.
+[26] M. Mills, K. Mutafoglu, V.M. Adams, et al., Perceived and projected flood risk and adaptation in coastal Southeast Queensland, Australia, Clim. Change 136 
+(2016) 523–537, https://doi.org/10.1007/s10584-016-1644-y.
+[27] K. Tierney, Distasters: a Sociological Approach, Polity, Boston, 2019.
+[28] A. Oliver-Smith, Disaster risk reduction and applied anthropology, Ann Anthropol Practice 40 (2016) 73–85, https://doi.org/10.1111/napa.12089.
+[29] E. Enarson, Two Solitudes, many bridges, big tent: women's leadership in climate and disaster risk reduction, in: M. Alston, K. Whittenbury (Eds.), Research, 
+Action and Policy: Addressing the Gendered Impacts of Climate Change, Springer, Dordrecht., 2013, pp. 63–74, https://doi.org/10.1007/978-94-007-5518-5_5.
+[30] J.L. Hitchcock, Gender Differences in Risk Perception: Broadening the Contexts, 12 RISK 179, 2001.
+[31] M.T. Carone, L. Antronico, R. Coscarelli, C. Vennari, S.L. Gariano, M. Sessa, P. Salvati, Rethinking climate change perception: a multidimensional national study, 
+Environ. Res. Commun. 8 (3) (2026) 035011, https://doi.org/10.1088/2515-7620/ae4b93.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+13
+
+[32] L. Antronico, R. Coscarelli, S.L. Gariano, P. Salvati, Perception of climate change and geo-hydrological risk among high-school students: a local-scale study in 
+Italy, Int J Disast Risk Re 90 (2023) 103663, https://doi.org/10.1016/j.ijdrr.2023.103663.
+[33] C. Tannenbaum, R.P. Ellis, F. Eyssel, et al., Sex and gender analysis improves science and engineering, Nature 575 (2019) 137–146, https://doi.org/10.1038/ 
+s41586-019-1657-6.
+[34] P. Salvati, C. Bianchi, M. Rossi, F. Guzzetti, Societal landslide and flood risk in Italy, Nat. Hazards Earth Syst. Sci. 10 (3) (2010) 465–483, https://doi.org/ 
+10.5194/nhess-10-465-2010.
+[35] P. Salvati, C. Bianchi, M. Rossi, F. Guzzetti, Flood risk in Italy, in: Z. Kundzewicz (Ed.), Changes of Flood Risk in Europe. IAHS Special Publication 10, IAHS 
+Press, Wallingford, 2012, pp. 277–292.
+[36] D.M. Cruden, Estimating the risk from landslide using historical data, in: D.M. Cruden, R. Fell (Eds.), Landslide Risk Assessment. Rottherdam, Balkema, 1997, 
+pp. 177–184.
+[37] F. Guzzetti, Landslide fatalities and the evaluation of landslide risk in Italy, Eng Geol 58 (2) (2000) 89–107, https://doi.org/10.1016/S0013-7952(00)00047-8.
+[38] P. Salvati, C. Bianchi, F. Fiorucci, P. Giostrella, I. Marchesini, F. Guzzetti, Perception of flood and landslide risk in Italy: a preliminary analysis, Nat. Hazards 
+Earth Syst. Sci. 14 (2014) 2589–2603, https://doi.org/10.5194/nhess-14-2589-2014.
+[39] M. Evans, N. Hastings, B. Peacock, Statistical Distributions, Wiley, New York, 2000, pp. 134–136.
+[40] L. Cremonini, P. Randi, M. Fazzini, M. Nardino, F. Rossi, T. Georgiadis, Causes and Impacts of Flood Events in Emilia-Romagna (Italy) in May 2023, Land 13 
+(2024) 1800, https://doi.org/10.3390/land13111800.
+[41] C. Arrighi, A. Domeneghetti, Brief communication: on the environmental impacts of the 2023 floods in Emilia-Romagna (Italy), Nat. Hazards Earth Syst. Sci. 24 
+(2024) 673–679, https://doi.org/10.5194/nhess-24-673-2024.
+[42] S. Carlino, Review article: brief history of volcanic risk in the Neapolitan area (Campania, southern Italy): a critical review, Nat. Hazards Earth Syst. Sci. 21 
+(2021) 3097–3112, https://doi.org/10.5194/nhess-21-3097-2021.
+[43] A. Galderisi, G. Limongi, Living with risks: changes in risk perception in the campi Flegrei Volcanic Area (south Italy), Sustainability 16 (22) (2024) 9707, 
+https://doi.org/10.3390/su16229707.
+[44] M. Davis, T. Ricci, L. Mitchell, Perceptions of Risk for Volcanic Hazards at Vesuvio and Etna, Italy, Australasian Journal of Disaster and Trauma Studies, 2005.
+[45] G. Di Baldassarre, E. Mondino, M. Rusca, et al., Multiple hazards and risk perceptions over time: the availability heuristic in Italy and Sweden under COVID-19, 
+Nat. Hazards Earth Syst. Sci. 21 (2021) 3439–3447, https://doi.org/10.5194/nhess-21-3439-2021.
+[46] M. Diakakis, G. Deligiannakis, Flood fatalities in Greece:1970-2010, J Flood Risk Management 10 (1) (2015) 115–123, https://doi.org/10.1111/jfr3.12166.
+[47] S.N. Jonkman, I. Kelman, An analysis of the causes and circumstances of flood disaster deaths, Disasters 29 (1) (2005) 75–97, https://doi.org/10.1111/j.0361- 
+3666.2005.00275.x.
+[48] L.Z. Maples, J.P. Tiefenbacher, Landscape, development, technology and drivers: the geography of drownings associated with automobiles in Texas floods, 
+1950-2004, Appl. Geogr. 29 (2) (2009) 224–234, https://doi.org/10.1016/j.apgeog.2008.09.004.
+[49] Z. Han, H.O. Sharif, Analysis of flood Fatalities in the United States, 1959–2019, Water 13 (2021) 1871, https://doi.org/10.3390/w13131871.
+[50] L. Coates, Flood fatalities in Australia, 1788-1996, Austr Geogr 30 (1999) 391–408, 1080/00049189993657.
+[51] G. FitzGerald, W. Du, A. Jamal, M. Clark, X.Y. Hou, Flood fatalities in contemporary Australia (1997–2008), Emerg. Med. Australas. 22 (2010) 180–186, https:// 
+doi.org/10.1111/j.1742-6723.2010.01284.x.
+[52] C.R. Harris, M. Jenkins, Gender differences in risk assessment: why do women take fewer risksthan men? Judgm. Decis. Mak. 1 (1) (2006) 48–63, https://doi. 
+org/10.1017/S1930297500000346.
+[53] M. Pearson, K. Hamilton, Investigating driver willingness to drive through flooded waterways, Accident Anal Prev 72 (2014) 382–390, https://doi.org/ 
+10.1016/j.aap.2014.07.018.
+[54] E.U. Weber, A. Blais, E.N. Betz, A domain specific risk-attitude scale: measuring risk perceptions and risk behaviors, J. Behav. Decis. Making 15 (2002) 263–290, 
+https://doi.org/10.1002/bdm.414.
+[55] Y. Apalkova, M.L. Butovskaya, N. Bronnikova, et al., Assessment of Male physical risk-taking behavior in a sample of Russian men and women, Evol Psychol Sci 
+4 (2018) 314–321, https://doi.org/10.1007/s40806-018-0140-1.
+[56] J.P. Byrnes, D.C. Miller, W.D. Schafer, Gender differences in risk taking: a meta-analysis, Psychol. Bull. 125 (1999) 367–383, https://doi.org/10.1037/0033- 
+2909.125.3.367.
+[57] B. Pawlowski, R. Atwal, R.I.M. Dunbar, Sex differences in everyday risk-taking behavior in humans, Evol. Psychol. 6 (1) (2008) 29–42, https://doi.org/10.1177/ 
+147470490800600104.
+[58] S. Bajaj, W.D.S. Killgore, Sex differences in limbic network and risk-taking propensity in healthy individuals, J Neuro Res 98 (2020) 371–383, https://doi.org/ 
+10.1002/jnr.24504.
+[59] D.J. Kruger, R.M. Nesse, An evolutionary life-history framework for understanding sex-differences in human mortality rates, Hum. Nat. 7 (1) (2006) 74–97, 
+https://doi.org/10.1007/s12110-006-1021-z.
+[60] A. Fothergill, Gender, risk, and disaster, Int. J. Mass Emerg. Disasters 14 (1) (1996) 33–56, https://doi.org/10.1177/028072709601400103.
+[61] M. Fordham, Making women visible in disasters: problematising the private domain, Disasters 22 (2) (1998) 126–143, https://doi.org/10.1111/1467- 
+7717.00081.
+[62] F. Guzzetti, C.P. Stark, P. Salvati, Evaluation of flood and landslide risk to the population of Italy, Environ Manage 36 (1) (2005) 15–36, https://doi.org/ 
+10.1007/s00267-003-0257-1.
+[63] R. Fell, D. Hartford, Landslide risk management, in: D.M. Cruden, R. Fell, R. Balkema (Eds.), Landslide Risk Assessment. Rotterdam, 1997, pp. 51–109.
+[64] E. Enarson, B. Pease (Eds.), Men, Masculinities and Disaster, Routledge, London and New York, 2016.
+[65] D.J. Kruger, R.M. Nesse, Sexual selection and the Male: female mortality ratio, Evol. Psychol. 2 (1) (2004), https://doi.org/10.1177/147470490400200112.
+[66] A. Trigila, C. Iadanza, M. Bussettini, B. Lastoria, Dissesto Idrogeologico in Italia: Pericolosita ` E Indicatori Di Rischio. Edizione 2018, ISPRA, 2018. Rapporti 287/ 
+2018 (ISBN 978-88-448-0901-0) (in Italian).
+[67] M. Berti, M. Pizziolo, M. Scaroni, et al., RER2023: the landslide inventory dataset of the May 2023 Emilia-Romagna meteorological event, Earth Syst. Sci. Data 
+17 (2025) 1055–1074, https://doi.org/10.5194/essd-17-1055-2025.
+[68] E. Napolitano, I. Marchesini, P. Salvati, M. Donnini, C. Bianchi, F. Guzzetti, LAND-deFeND – an innovative database structure for landslides and floods and their 
+consequences, J. Environ. Manag. 207 (2018) 203–218, https://doi.org/10.1016/j.jenvman.2017.11.022.
+[69] C. Vennari, P. Salvati, C. Bianchi, D. Casarano, M. Parise, A. Basso, I. Marchesini, AReGeoDatHa: apulian Regional GeoDatabase for geo-hydrological Hazards, 
+J Environ Manage 322 (2022) 116051, https://doi.org/10.1016/j.jenvman.2022.116051.
+[70] A. Gatto, S. Clo, ` F. Martellozzo, S. Segoni, Tracking a decade of hydrogeological emergencies in Italian municipalities, Data 8 (2023) 151, https://doi.org/ 
+10.3390/data8100151.
+[71] F. Guzzetti, A.C. Mondini, M. Cardinali, F. Fiorucci, M. Santangelo, K.-T. Chang, Landslide inventory maps: new tools for an old problem, Earth Sci. Rev. 112 
+(1–2) (2012) 42–66, https://doi.org/10.1016/j.earscirev.2012.02.001.
+[72] P.J. Ward, V. Blauhut, N. Bloemendaal, et al., Natural hazard risk assessments at the global scale, Nat. Hazards Earth Syst. Sci. 20 (2020) 1069–1096, https:// 
+doi.org/10.5194/nhess-20-1069-2020.
+[73] S. De Angeli, B.D. Malamud, L. Rossi, F.E. Taylor, E. Trasforini, R. Rudari, A multi-hazard framework for spatial-temporal impact analysis, Int. J. Disaster Risk 
+Reduct. 73 (2022) 102829, https://doi.org/10.1016/j.ijdrr.2022.102829.
+[74] R. Saki ˇ ´c Trogrli´c, M. van den Homberg, M. Budimir, C. McQuistan, A. Sneddon, B. Golding, Early warning systems and their role in disaster risk reduction, in: 
+B. Golding (Ed.), Towards the “Perfect” Weather Warning, Springer, Cham, 2022, pp. 11–46, https://doi.org/10.1007/978-3-030-98989-7_2.
+P. Salvati et al. International Journal of Disaster Risk Reduction 145 (2026) 106429
+14

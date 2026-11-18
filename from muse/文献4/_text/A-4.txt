@@ -1,0 +1,880 @@
+Crossing the behavioral threshold: social amplification and 
+climate risk management in urban flood evacuation
+Katsuya Tanaka a,b,c,*
+, Kazuhide Akaishi d
+, Takashi Yokota e
+, Fujio Kusano f
+a Faculty of Economics, Shiga University, Japan b National Research Institute for Earth Science and Disaster Resilience, Japan c The Center for Public Service, Portland State University, USA d Japan Meteorological Agency, Japan e Disaster Prevention Research Center, Aichi Institute of Technology, Japan f Crisis and Environment Management Policy Institute, Japan
+ARTICLE INFO
+Keywords:
+Behavioral thresholds
+Flood evacuation
+Climate risk management
+Inferred valuation
+Social amplification
+Factorial survey experiment
+ABSTRACT
+Early warnings save lives only when they move people to act. Yet during recent urban flood 
+disasters in Japan, evacuation compliance remained extremely low, revealing a substantial 
+intention–action gap at the heart of climate risk management. This study addresses that gap by 
+proposing an Evacuation Threshold Framework (ETF), which extends the Protective Action Decision Model by conceptualizing the conversion from intention to action as a non-linear, 
+threshold-gated process. The framework is tested using a factorial survey experiment conducted in Hiroshima, Japan (n = 1324), in which each respondent evaluated identical flood scenarios 
+under both Standard Valuation and Inferred Valuation framings. The latter is used as the primary 
+inferential basis because it yields more conservative estimates of evacuation propensity and helps 
+attenuate self-presentation bias. The results yield three main findings. First, the behavioral 
+activation threshold is calibrated at approximately 0.7 on a 0–1 scale, well above the conventional 0.5 cutoff, indicating substantial psychological inertia before intention translates into action. Second, evacuation intention is driven less by logistical frictions than by social and 
+environmental cues: visible peer evacuation exerts a strong contagion effect, while improved 
+shelter privacy substantially raises predicted evacuation rates. Third, even under extremely high 
+perceived risk, predicted evacuation rates remain near zero when pull and contagion cues are 
+absent, indicating that information alone is insufficient to close the intention–action gap. These 
+findings suggest that effective climate risk management must move beyond information transmission toward the behavioral design of protective environments — lowering psychological 
+thresholds and amplifying visible action. Although grounded in urban flood risk in Japan, the 
+proposed framework offers a generalizable behavioral perspective for climate risk management 
+across hazards and settings.
+1. Introduction
+As climate-related hazards intensify in frequency and magnitude, the persistent gap between early warning issuance and protective 
+* Corresponding author at: Faculty of Economics, Shiga University, 1-1-1 Bamba, Hikone, Shiga 522-8522, Japan.
+E-mail address: tanakak@biwako.shiga-u.ac.jp (K. Tanaka). 
+Contents lists available at ScienceDirect
+Climate Risk Management
+journal homepage: www.elsevier.com/locate/crm
+https://doi.org/10.1016/j.crm.2026.100901
+Received 23 October 2025; Received in revised form 30 April 2026; Accepted 11 October 2026 
+Climate Risk Management 54 (2026) 100901
+Available online 12 October 2026
+2212-0963/© 2026 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license
+(http://creativecommons.org/licenses/by/4.0/).
+
+action has emerged as one of the most critical failures of global climate adaptation (UNDRR, 2020). Despite major advances in 
+meteorological forecasting and digital alert systems, extreme events—particularly floods—continue to cause catastrophic loss of life 
+and livelihoods worldwide. Even in technologically advanced nations such as Japan, the 2018 West Japan Floods demonstrated that 
+timely and accurate warnings are necessary but not sufficient: official evacuation orders were issued to hundreds of thousands of 
+residents across affected prefectures, yet actual compliance averaged only 4.6% (Nikkei, 2018; The City of Hiroshima, 2018).
+This enduring failure reflects not a shortcoming of information systems but a deeper challenge of human behavior. Evacuation is a 
+complex social and psychological decision-making process under uncertainty, in which individuals must balance perceived risk of 
+staying with the tangible costs of leaving—property protection, travel difficulty, family logistics, and the discomfort or perceived 
+indignity of public shelters. Cognitive biases such as normalcy and status-quo bias reinforce inertia, leading individuals to underestimate their exposure and delay action until it is too late. Effective adaptation therefore requires more than improved forecasts or 
+communication technology—it requires an understanding of the behavioral thresholds that determine when intention becomes action.
+Yet, while research has identified many correlates of evacuation, the relative strength and interaction of these factors remain poorly 
+understood. Do people move because of the warnings they receive, or because others around them are moving? Are they constrained 
+more by logistical barriers, or by the unattractiveness of the protective options available? And crucially, how can policy design lower 
+these behavioral thresholds in a world of escalating climate extremes?
+This study addresses these questions through a large-scale factorial survey experiment (n = 1324) conducted in Hiroshima, 
+Japan—one of the country's most disaster-prone urban regions. We propose the Evacuation Threshold Framework (ETF), a downstream extension of the Protective Action Decision Model (PADM; Lindell and Perry, 2012) that explicitly theorizes the conversion 
+from intention to action as a non-linear, threshold-gated process. To mitigate the social-desirability and hypothetical-response biases 
+that pervade stated-intention research, we deploy an Inferred Valuation (IV) design in which every respondent evaluates each scenario 
+under both self (“Standard Valuation”) and neighbor (“Inferred Valuation”) framings, with order randomized between blocks. The 
+activation threshold is empirically calibrated against observed evacuation compliance from the 2018 West Japan Floods.
+The remainder of the paper is organized as follows. Section 2 reviews the existing protective-action literature and develops the ETF, 
+with a flagship Fig. 2 that contrasts PADM's implicit linear assumption with ETF's threshold-gated reality. Section 3 describes the 
+survey design, beta-regression specification, and threshold-calibration procedure. Section 4 reports the empirical results, including 
+tests of four falsifiable predictions derived from ETF. Section 5 discusses the policy implications for behavioral adaptation governance, 
+presents study limitations, and outlines directions for future research. Section 6 concludes.
+2. Literature review and conceptual framework
+2.1. Protective action and the behavioral limits of existing frameworks
+The study of protective behavior during environmental hazards has been shaped by theoretical frameworks such as the Protective 
+Action Decision Model (PADM) (Lindell and Perry, 2012), which conceptualizes evacuation as a multi-stage process of perception, 
+evaluation, and decision under risk. A robust body of evidence confirms that subjective risk perception and social influence are among 
+the most powerful drivers of protective action (Wachinger et al., 2013; Huang et al., 2012). In particular, social proof—observing 
+others taking action—has been found to accelerate behavioral convergence during crises (Drabek and Stephenson, 1971; Lovreglio 
+et al., 2016; Collins et al., 2018), transforming individual uncertainty into collective motion.
+However, this literature also reveals the profound barriers that impede evacuation, even when warnings are clear. Logistical 
+constraints such as travel time and mobility limitations exert modest influence compared to the more significant deterrent of perceived 
+destination quality (Morss et al., 2011). Concerns about overcrowding, lack of privacy, and safety in shelters are especially salient for 
+elderly or health-vulnerable populations (Al-Rousan et al., 2014; Eisenman et al., 2007; Dash and Gladwin, 2007). These findings 
+suggest that effective adaptation policy cannot be limited to hazard communication; it must also redesign the behavioral environment 
+in which decisions occur.
+At the same time, empirical studies of evacuation remain constrained by self-report bias and the intention–behavior gap. When 
+asked directly, individuals tend to overstate their willingness to evacuate, driven by social desirability (Sheeran and Webb, 2016). This 
+limits the realism of conventional surveys and undermines the policy relevance of their findings. Furthermore, the widely assumed 
+knowledge-deficit model—that more information yields more adaptive behavior—fails to explain paradoxical patterns observed in 
+disaster response. Research increasingly suggests that excessive familiarity or technical literacy may foster overconfidence or risk 
+habituation, reducing protective action even among the well-informed (Wachinger et al., 2013; Paton, 2013). Cognitive biases such as 
+normalcy and status-quo bias (Samuelson and Zeckhauser, 1988; Kuhlicke et al., 2020) further reinforce inertia.
+These theoretical and methodological limitations motivate the framework developed in Section 2.2. Three observations need to be 
+addressed. First, PADM and related models implicitly assume that intention translates proportionally into action—an assumption 
+inconsistent with the empirical record of low evacuation compliance. Second, the relative effectiveness of different intervention 
+types—information-based versus environment-based—is poorly theorized. Third, the role of social proof as both an upstream input 
+and a downstream amplifier of action remains under-formalized. The Evacuation Threshold Framework explicitly addresses each of 
+these gaps.
+2.2. The Evacuation Threshold Framework
+The Protective Action Decision Model (PADM; Lindell and Perry, 2012) provides the most influential theoretical scaffold for 
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+2
+
+understanding how individuals respond to environmental hazards. PADM conceptualizes protective behavior as the product of a 
+sequential cognitive pathway: environmental and social cues are received and attended to, generate core perceptions of threat and 
+protective action, and are integrated through stakeholder-aware decision-making to produce a behavioral response. Within this architecture, perceived risk, response efficacy, and social influence are well-established correlates of evacuation intention, and the 
+model's empirical robustness has been confirmed across hurricanes (Huang et al., 2016; Morss et al., 2011), earthquakes (Becker et al., 
+2017), wildfires (McCaffrey et al., 2018; Strahan and Watson, 2019), and floods (Terpstra and Lindell, 2013) over more than a decade 
+of application.
+Yet most applications of PADM share an implicit assumption that has rarely been examined: that the conversion from intention to 
+behavioral response is direct and proportional, such that individuals who form sufficient intention to evacuate will, in fact, do so. This 
+assumption underpins the conventional binary classification rule in stated-preference and decision-tree models, which treats a 
+midpoint cutoff (typically a 0.5 likelihood) as the boundary between predicted action and inaction. The empirical record, however, is 
+inconsistent with this assumption. Reviews of intention–behavior correspondence across health and risk domains consistently find that 
+a substantial share of people who form intentions fail to act on them (Sheeran and Webb, 2016). Disaster-specific evidence is even 
+sharper: in the 2018 West Japan Floods, the average evacuation rate across affected prefectures was only 4.6% (Nikkei, 2018), despite 
+official orders reaching hundreds of thousands of residents who had previously expressed strong willingness to comply. The intention–action gap is therefore not a measurement artifact but a structural feature of human behavior under disaster risk.
+The Evacuation Threshold Framework (ETF) addresses this gap by explicitly theorizing the conversion from intention to action as a 
+threshold-gated, non-linear process rather than a continuous one. The framework rests on a single thesis: protective action emerges 
+Fig. 1. Study region (5 Wards in Hiroshima City).
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+3
+
+only when intention crosses a behaviorally meaningful activation threshold; that threshold sits well above the conventional midpoint; 
+and the region between conventional cutoff and activation threshold defines an intention–action gap that climate-adaptation policy 
+must close. Fig. 2 visualizes this thesis. The dashed diagonal in the lower panel represents PADM's implicit linear assumption—that 
+action rate rises proportionally with intention. The solid sigmoid represents the ETF reality—action stays near zero until intention 
+exceeds the activation threshold, then jumps sharply. The amber lens between the two curves is the intention–action gap, the central 
+object of the framework.
+ETF preserves rather than displaces the upstream architecture of PADM. The cognitive pathway from cues through perception and 
+appraisal to intention remains intact, and the established PADM factors—perceived risk, response efficacy, perceived behavioral 
+control, social cues, and institutional trust—continue to operate as determinants of intention formation. In Fig. 2, this preservation is 
+shown explicitly in the middle strip: cues feed into perception, perception generates intention, and amplifiers and frictions modulate 
+the strength of intention through the same PADM pathway that has been validated across hazards and decades. ETF therefore does not 
+propose an alternative theory of how intention forms; it inherits PADM's well-tested account of upstream cognition.
+The framework's distinct contribution lies in the downstream conversion that PADM treats as direct. ETF makes four extensions. 
+First, it introduces threshold-gated activation: the intention-to-action mapping is non-linear, with a region of inaction even for 
+moderately high intentions. Second, it identifies a structural intention–action gap that has theoretical, not stochastic, origins. This gap 
+is jointly produced by loss aversion (Tversky and Kahneman, 1991), normalcy and status-quo bias (Samuelson and Zeckhauser, 1988), 
+and hypothetical-response bias in stated-preference elicitation (Murphy et al., 2005; Loomis, 2011); the convergence of these three 
+rationales places the activation threshold systematically above the conventional midpoint. Third, ETF reframes adaptation interventions through a push–pull dichotomy (Thaler and Sunstein, 2008): information-based interventions (warnings, comprehension, 
+trust) raise intention through cognitive channels, while environment-based interventions (shelter dignity, social proof, peer cues) raise 
+intention through affective and normative channels. Although both ultimately move intention along the same axis, their magnitudes 
+differ—and our empirical estimates show pull effects to be considerably larger than push effects. Fourth, ETF integrates social 
+contagion as a structural feature of the activation curve rather than as a one-shot upstream input (Centola, 2018): visible action raises 
+others' intention through social-proof perception, and as more individuals cross the threshold, the population-level response steepens 
+and accelerates. The upper strip of Fig. 2 summarizes these three intervention mechanisms.
+Fig. 2. The intention–action gap and the architecture of the Evacuation Threshold Framework.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+4
+
+ETF's conceptual claims map directly onto observable, testable quantities. Intention is operationalized as a continuous behavioral 
+measure on a 0–10 scale, transformed and modeled through a beta regression that respects the bounded, asymmetric, and heteroscedastic nature of stated likelihoods (see Section 3.3). The factorial survey experiment manipulates five contextual attributes that map 
+onto the channels and frictions visualized in Fig. 2. Three of the five operationalize the policy-modifiable amplifiers shown in the upper 
+strip: 
+– Perceived flood risk operationalizes the PUSH (Information & Cognition) channel — the perceived risk level that effective risk 
+communication, source credibility, and message clarity are designed to produce;
+– Neighbor evacuation status operationalizes the CONTAGION (Social Feedback) channel through visible peer evacuation, the 
+central social-proof signal in the framework;
+– Shelter privacy operationalizes the PULL (Environment & Incentive) channel through its privacy dimension, drawn from the 
+broader set of dignity, comfort, privacy, and accessibility levers depicted in Fig. 2.
+The remaining two attributes — time of evacuation order and travel time to shelter — operate as study-specific frictions, capturing 
+timing and logistical costs that shift intention along the activation curve in the lower panel of Fig. 2 without themselves serving as 
+amplifier channels. Individual covariates (literacy, trust, social ties, vulnerability) operate upstream within the PADM cognitive 
+pathway preserved by ETF (the Cues → Perception → Intention flow in Fig. 2).
+The activation threshold T* is empirically calibrated such that the model reproduces evacuation rates comparable to the 4.6% 
+observed in the 2018 West Japan Floods; in our analysis this calibration yields T* ≈ 0.7, well above the conventional 0.5 cutoff and 
+consistent in direction with the systematic overstatement of stated relative to actual behavior documented in the meta-analytic 
+literature (Murphy et al., 2005; Loomis, 2011). To address the residual social-desirability bias inherent in stated-preference designs, every respondent evaluates each scenario under both Standard Valuation (SV; “what would I do”) and Inferred Valuation (IV; 
+“what would my neighbors do”) framings, with order randomized between blocks (Lusk and Norwood, 2009). The IV estimates, which 
+suppress respondent self-presentation, serve as the primary inferential basis for the framework's predictions.
+The framework generates four sharp, falsifiable predictions that anchor the empirical analysis. (i) Models that adopt the conventional 0.5 cutoff will overstate observed evacuation; the calibrated threshold should fall closer to 0.7. (ii) Pull- and contagion-type 
+amplifiers (shelter dignity, social proof) will exhibit larger marginal effects than push-type amplifiers (information, trust). (iii) The 
+response to neighbor evacuation will be non-linear, accelerating sharply as visibility crosses an inflection point—the social-contagion 
+signature. (iv) Even under maximal information provision, residual gaps will persist when pull factors are absent, demonstrating that 
+information alone cannot close the intention–action gap. Section 3 specifies the survey instrument and estimation procedure that test 
+these predictions; Section 4 reports the results; Section 5 returns to the framework to draw policy implications for adaptation 
+governance.
+A final clarification on the status of the activation threshold itself. In this study T* is treated as exogenous and population-level—a 
+single calibrated constant, identified by match to observed compliance under typical urban-flood conditions. The framework's amplifiers and frictions therefore operate by moving intention along the horizontal axis of Fig. 2 rather than by modifying T* directly. This 
+treatment is parsimonious and corresponds precisely to the empirical model used here. A more general formulation in which T* itself 
+becomes endogenous to context—varying across individuals, hazards, or institutional settings—is conceptually consistent with ETF 
+and a natural target of future research, but lies beyond the scope of the present analysis.
+3. Methods
+3.1. Study area and context
+This study focuses on Hiroshima City, Japan, a coastal metropolis of approximately 1.17 million residents located in the western 
+part of the country along the Ota River basin (Fig. 1). The city occupies a distinctive geomorphological setting in which multiple 
+tributaries converge into a low-lying delta before flowing into Hiroshima Bay. Much of the central urban area lies below high-tide level, 
+while surrounding residential districts—particularly in the Naka, Higashi, Nishi, Asaminami, and Asakita wards—extend into steep, 
+geologically fragile hillsides. This combination of low-lying floodplains and steep slopes produces a highly complex risk environment 
+where riverine flooding, inland inundation, landslides, and even storm surges can occur concurrently during extreme rainfall events. 
+Hiroshima's exposure to such compound hazards makes it one of Japan's most disaster-prone cities and a representative case for 
+understanding the social and behavioral dimensions of urban flood resilience.
+Hiroshima's disaster history over the past decade vividly illustrates this vulnerability. In August 2014, record-breaking rainfall 
+triggered massive landslides and debris flows across the northern districts of Asaminami and Asakita, killing 77 people, injuring 68, 
+and destroying or severely damaging more than 600 houses. Merely four years later, in July 2018, the West Japan Floods struck the 
+region with unprecedented intensity, causing widespread river flooding, inland inundation, and slope failures across the metropolitan 
+area. Hiroshima Prefecture recorded 153 deaths, five missing persons, and over 6900 damaged houses, including 1176 that were 
+completely destroyed. Despite major investments in warning technologies and evacuation planning following the 2014 disaster, the 
+2018 floods revealed a persistent behavioral gap: evacuation orders were issued to hundreds of thousands of residents, yet actual 
+compliance remained in the low single digits even in the most severely affected districts. Post-event analyses indicated that many 
+residents underestimated their personal risk or hesitated to leave due to uncertainty about shelter conditions, family coordination, or 
+the perceived inconvenience of night-time evacuation. These findings highlight that the challenge in Hiroshima is not merely technical 
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+5
+
+but behavioral, rooted in cognitive biases and social inertia that inhibit timely protective action.
+From a broader climate adaptation perspective, Hiroshima exemplifies the urban compounding hazards increasingly faced by 
+coastal cities worldwide. As climate change accelerates sea-level rise and intensifies extreme rainfall, many metropolitan areas in East 
+and Southeast Asia will confront conditions strikingly similar to those of Hiroshima—aging infrastructure, densely populated floodplains, and limited evacuation compliance despite sophisticated warning systems. Understanding the psychological and social 
+mechanisms that govern evacuation behavior in this setting therefore provides insights of global relevance, illuminating the human 
+limits of early-warning effectiveness and the behavioral foundations of climate resilience.
+3.2. Survey design and experimental structure
+The survey was designed to capture both attitudinal and behavioral dimensions of flood preparedness among residents of Hiroshima City. It consisted of three major components: (1) general questions on flood risk perception and experience, (2) a factorial 
+survey experiment (FSE) eliciting behavioral intentions under controlled hypothetical conditions, and (3) socio-demographic and 
+household characteristics.
+The questionnaire was administered online via Qualtrics between January and February 2024, targeting residents of five high-risk 
+wards—Naka, Higashi, Nishi, Asaminami, and Asakita. The questionnaire was developed and administered in Japanese; all English 
+text provided in this manuscript is for presentation purposes only. A quota-based sampling strategy ensured representativeness across 
+gender, age, and residential areas, yielding a balanced sample of urban residents exposed to varying degrees of flood risk.
+The first section of the questionnaire collected baseline information on participants' awareness and experience related to flood 
+hazards. Respondents were asked whether they had previously experienced flood damage or evacuation, how frequently they checked 
+official disaster information, and how much they trusted different sources such as television, local government alerts, and social media. 
+These responses provided essential context for interpreting behavioral heterogeneity, linking situational choices to personal risk 
+perception and communication trust.
+The second section implemented a Factorial Survey Experiment (FSE) to quantify how contextual and social cues shape the decision 
+to evacuate. Each participant was presented with a short vignette describing a hypothetical flood emergency in Hiroshima, designed to 
+evoke realistic but controlled conditions (Fig. 3). The vignette text began by describing a record-breaking rainstorm exceeding the 
+scale of the 2014 disaster, noting extensive landslides, flooding, and the issuance of an official citywide evacuation order. This 
+contextual preamble ensured that all respondents shared a common situational frame—one of imminent, high-impact flooding with 
+credible government alerts—before evaluating their behavioral response.
+Following the vignette, participants were shown a visual interface depicting five key situational factors—the time of evacuation, 
+perceived flood risk, the evacuation status of neighbors, travel time to the nearest shelter, and the level of shelter privacy—each 
+Fig. 3. Scenario description in vignettes.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+6
+
+represented along a horizontal scale with a red indicator showing their assigned condition (Fig. 4). These five factors and their 
+respective levels are summarized in Table 1. The time factor (3 a.m., 9 a.m., 3 p.m., 9 p.m.) captured the influence of timing on decision 
+difficulty, as night-time evacuation may entail greater physical and psychological resistance. Perceived risk varied from “no perceived 
+risk” to “extremely high risk,” representing the subjective hazard severity. Neighbor evacuation operationalized social proof, ranging 
+from “none evacuated” to “most evacuated,” reflecting the behavioral influence of community actions. Travel time to shelter varied 
+from 5 to 45 min on foot, quantifying logistical constraints, while shelter privacy—ranging from “no privacy” to “high privacy”—represented the perceived dignity and comfort of the destination shelter. Together, these factors formed an orthogonal factorial 
+structure designed to disentangle the relative contributions of environmental, social, and logistical determinants of evacuation 
+behavior.
+After reviewing the information, respondents were asked to rate their likelihood of evacuation on a continuous 0–10 scale, where 
+0 = “definitely not evacuating” and 10 = “definitely evacuating.” Each participant evaluated multiple randomly assigned scenarios, 
+enabling within-person comparisons and minimizing individual fixed effects. To mitigate potential social desirability bias, the survey 
+adopted a within-subject Standard–Inferred Valuation (SV/IV) design: every respondent evaluated each scenario under both 
+framings—as themselves (Standard Valuation; “how likely are you to evacuate?”) and as their neighbors (Inferred Valuation; “how 
+likely are your neighbors to evacuate?”)—with the order of the two blocks randomized across participants. Comparing the inferred 
+responses to the matched self-assessments provides a within-respondent test of reporting bias and yields more conservative, behaviorally realistic estimates of evacuation intention (Lusk and Norwood, 2009). This design generates 5296 observations per valuation 
+framing (1324 respondents × 4 scenarios) and ensures that any observed SV–IV differences cannot be attributed to sample 
+composition.
+The final section of the questionnaire gathered information on socio-demographic and household attributes, including gender, age, 
+marital status, education, income, health status, dwelling type, and proximity to rivers or slopes. It also measured the strength of local 
+social ties by asking respondents whether they knew their neighbors and had participated in community disaster preparedness activities. These variables served as covariates in subsequent regression analyses, allowing the model to account for heterogeneity in 
+social connectedness, vulnerability, and access to information.
+3.3. Analysis of evacuation intention
+To quantify the determinants of evacuation intention, we employ a beta-regression framework suitable for continuous responses on 
+the open unit interval (0,1). The dependent variable—evacuation likelihood rated on a 0–10 scale—was transformed to the open unit 
+interval using the Smithson–Verkuilen adjustment (Smithson and Verkuilen, 2006), which avoids boundary inflation at 0 and 1 and 
+Fig. 4. Sample questions in vignettes.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+7
+
+accommodates the asymmetry and heteroskedasticity typical of behavioral intention data.
+Formally, we model yi ∼ Beta(μi
+, φ) with link logit(μi) = Xiβ, where μi is the conditional mean, and Xi stacks vignette attributes 
+(time of evacuation order, perceived flood risk, neighbor evacuation status, travel time to shelter, and shelter privacy level) and individual covariates (e.g., gender, age, and trust in government). Because the model is nonlinear, coefficients are not directly interpretable as marginal effects. We therefore report average marginal effects (AMEs), computed by numerically differentiating the fitted 
+mean with respect to each covariate and averaging across observations. Standard errors for AMEs are obtained via the delta method, 
+with 1000 bootstrap replications used as a robustness check.
+We estimate two parallel specifications: (i) a Standard Valuation (SV) model based on respondents' own stated intentions and (ii) an 
+Inferred Valuation (IV) model based on respondents' predictions of neighbors' behavior. Because the SV and IV outcomes differ by 
+construction, likelihood-based fit indices (e.g., AIC) are not commensurate across models. We therefore compare them primarily via 
+McFadden's pseudo-R2 (each relative to its own null model). For completeness, we also report each model's maximized log-likelihood 
+without cross-model interpretation.
+Table 1 
+Experimental factors and their levels in the factorial survey.
+Factor Description Levels
+Time of evacuation 
+order
+Indicates the time of day when residents are instructed to 
+evacuate.
+9 a.m. (Baseline), 3 p.m., 9 p.m., 3 a.m.
+Perceived flood risk Represents respondents' perceived level of flood risk in the given 
+scenario.
+No perceived risk (Baseline), Some risk, High risk, Extremely high 
+risk
+Neighbor evacuation 
+status
+Indicates the extent to which nearby residents have already 
+evacuated.
+None evacuated (Baseline), Some evacuated, Many evacuated, 
+Most evacuated
+Travel time to shelter Specifies the walking time required to reach the nearest 
+designated shelter.
+5 min (Baseline), 15 min, 30 min, 45 min
+Shelter privacy level Indicates the degree of personal privacy provided at the nearest 
+shelter.
+No privacy (Baseline), Minimal privacy, Moderate privacy, High 
+privacy
+Note: All scenarios were constructed by orthogonally combining these five factors. Each respondent evaluated four randomly assigned profiles. The 
+factors were selected based on prior literature and expert consultation to reflect both psychological and logistical dimensions of evacuation behavior.
+Table 2 
+Comparison between the sample and population characteristics in Hiroshima City.
+Characteristic Total Naka Higashi Nishi Asaminami Asakita
+Sample
+Total respondents 1324 (100.0%) 229 (17.3%) 187 (14.1%) 296 (22.4%) 392 (29.6%) 220 (16.6%)
+Gender
+Male 661 (50.8%) 108 (47.8%) 103 (56.3%) 148 (51.0%) 191 (49.6%) 111 (51.2%)
+Female 640 (49.2%) 118 (52.2%) 80 (43.7%) 142 (49.0%) 194 (50.4%) 106 (48.8%)
+Age group
+18–24 35 (2.7%) 6 (2.7%) 5 (2.7%) 7 (2.4%) 12 (3.1%) 5 (2.3%)
+25–34 140 (10.7%) 30 (13.3%) 19 (10.3%) 29 (9.9%) 49 (12.6%) 13 (5.9%)
+35–44 266 (20.3%) 44 (19.5%) 32 (17.3%) 65 (22.3%) 81 (20.8%) 44 (20.1%)
+45–54 368 (28.1%) 61 (27.0%) 58 (31.4%) 80 (27.4%) 112 (28.8%) 57 (26.0%)
+55–64 225 (17.2%) 39 (17.3%) 33 (17.8%) 57 (19.5%) 61 (15.7%) 35 (16.0%)
+65+ 277 (21.1%) 46 (20.4%) 38 (20.5%) 54 (18.5%) 74 (19.0%) 65 (29.7%)
+Population
+Total adult (18+) 692,882 (100.0%) 119,118 (17.2%) 98,837 (14.3%) 157,702 (22.8%) 198,125 (28.6%) 119,100 (17.2%)
+Gender
+Male 329,619 (47.6%) 54,781 (46.0%) 46,923 (47.5%) 75,763 (48.0%) 95,706 (48.3%) 56,446 (47.4%)
+Female 363,263 (52.4%) 64,337 (54.0%) 51,914 (52.5%) 81,939 (52.0%) 102,419 (51.7%) 62,654 (52.6%)
+Age group
+18–24 57,992 (8.4%) 9579 (8.0%) 7752 (7.8%) 13,164 (8.3%) 18,893 (9.5%) 8604 (7.2%)
+25–34 87,734 (12.7%) 17,740 (14.9%) 11,451 (11.6%) 21,608 (13.7%) 26,425 (13.3%) 10,510 (8.8%)
+35–44 99,653 (14.4%) 18,117 (15.2%) 13,914 (14.1%) 23,314 (14.8%) 30,449 (15.4%) 13,859 (11.6%)
+45–54 132,270 (19.1%) 22,146 (18.6%) 17,993 (18.2%) 30,208 (19.2%) 41,604 (21.0%) 20,319 (17.1%)
+55–64 101,011 (14.6%) 17,028 (14.3%) 15,575 (15.8%) 23,938 (15.2%) 27,525 (13.9%) 16,945 (14.2%)
+65+ 214,222 (30.9%) 34,508 (29.0%) 32,152 (32.5%) 45,470 (28.8%) 53,229 (26.9%) 48,863 (41.0%)
+Note: Sample proportions exclude non-responses. Population data are based on the Hiroshima City Statistical Yearbook (2023). The sample slightly 
+underrepresents the youngest and oldest cohorts but closely matches the overall demographic distribution, indicating that the collected data 
+reasonably approximate the target population.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+8
+
+To align continuous intention with observed behavior, we map ̂μito a binary evacuation prediction using a calibrated behavioral 
+threshold T. While the conventional cut-off T = 0.5 overpredicts evacuations, Section 4.3 details a data-driven calibration showing 
+that T = 0.7 reproduces empirically low evacuation rates observed in recent Japanese floods. All simulations in Section 4.4 use this 
+calibrated threshold.
+All analyses were conducted in R (version 4.3.1) using custom scripts and the FactorialSurvey toolkit (in-house package; https:// 
+tanakak.github.io/fs.html), which automates the variable transformation, beta-regression estimation, and AME computation to ensure 
+reproducibility. As policy applications, we conduct counterfactual simulations by systematically varying key factors (e.g., shelter 
+privacy level, neighbor evacuation status) while holding others at baseline values, thereby deriving predicted evacuation rates under 
+policy-relevant scenarios. Results are robust to alternative links (probit, complementary log–log) and to exclusion of outliers; substantive conclusions remain unchanged across specifications.
+3.4. Survey implementation and data quality
+The empirical data used in this study were collected through an online survey conducted in January and February 2024 among 
+adult residents of five flood-prone wards in Hiroshima City—Naka, Higashi, Nishi, Asaminami, and Asakita (Fig. 1). The survey was 
+administered through the Japanese research panel of Intage Inc., whose standard panel-management protocol permits only one 
+registered respondent per household and applies IP-based duplicate-response screening at the time of fielding. These procedures 
+support the household-level independence of observations and minimize duplicate or invalid responses. In addition, the analysis focuses on within-sample experimental contrasts rather than household-level prevalence estimates.
+The questionnaire was designed and hosted on Qualtrics. To ensure representativeness, a stratified sampling procedure was 
+employed, balancing the sample by gender and age distribution based on the latest census statistics of the target wards. A total of 1324 
+valid responses were obtained after excluding incomplete entries, providing a robust empirical basis for behavioral modeling. All 
+participants gave informed consent before participation, and no personally identifiable information was collected, in compliance with 
+ethical research standards.
+Table 2 compares the demographic characteristics of the sample with those of the corresponding adult population, both in 
+aggregate and disaggregated across the five study wards. Population figures are drawn from the Hiroshima City Statistical Yearbook 
+(2023) and restricted to residents aged 18 and older. At the ward level, the sample distribution closely mirrors the population: 
+respondent shares from Naka, Higashi, Nishi, Asaminami, and Asakita (17.3%, 14.1%, 22.4%, 29.6%, and 16.6%, respectively) deviate 
+by no more than 1.0 percentage point from the corresponding ward-level population shares (17.2%, 14.3%, 22.8%, 28.6%, and 
+17.2%), indicating successful geographic stratification.
+At the aggregate level, the gender distribution closely tracks the population (50.8% male in the sample versus 47.6% in the 
+population). The age distribution shows modest underrepresentation in the youngest (18–24 years: 2.7% versus 8.4%) and oldest 
+(65+: 21.1% versus 30.9%) cohorts—a pattern characteristic of online panel-based recruitment in Japan. Conversely, the middle-age 
+groups (35–64 years) are correspondingly overrepresented; because these cohorts constitute the most active segment in household 
+flood preparedness and evacuation decision-making, the analytic sample adequately captures the population most relevant to the 
+behavioral mechanisms under investigation. Within each ward, gender and age compositions follow the same overall pattern, indicating that the recruitment skew is structural to the online panel rather than ward-specific. Overall, the demographic correspondence 
+Table 3 
+Descriptive statistics of variables (n = 1324).
+Category Variable Mean SD Min. Max.
+Outcome variable Likelihood of evacuation (0–10; higher = more likely to evacuate) 5.18 3.02 0 10
+Flood risk perception and literacy Expectation of flood occurrence within 5 years (binary) 0.32 – 0 1
+Expected flood depth < 1 m (binary) 0.14 – 0 1
+Expected flood depth 1–3 m (binary) 0.09 – 0 1
+Expected flood depth > 3 m (binary) 0.03 – 0 1
+Disaster literacy: Low (binary) 0.57 – 0 1
+Disaster literacy: High (binary) 0.10 – 0 1
+Information sources and trust Uses smartphone as primary source of disaster information (binary) 0.28 – 0 1
+Disaster warnings are easy to understand (binary) 0.10 – 0 1
+Lacks trust in flood warnings (binary) 0.11 – 0 1
+Lacks trust in government disaster management (binary) 0.12 – 0 1
+Socio-demographic factors Gender: Male (binary) 0.50 – 0 1
+Age: Over 65 (binary) 0.21 – 0 1
+Homeowner (binary) 0.55 – 0 1
+No social ties with neighbors (binary) 0.25 – 0 1
+Poor health condition (binary) 0.21 – 0 1
+Marital status: Single (binary) 0.21 – 0 1
+Special needs: Pregnant (binary) 0.01 – 0 1
+Special needs: Illness (binary) 0.02 – 0 1
+Special needs: Pet ownership (binary) 0.15 – 0 1
+Risk preference score (0–10; higher = more risk-seeking) 4.06 2.23 0 10
+Note: All binary variables are coded as 0 = ‘No’ and 1 = ‘Yes.’ The outcome variable and risk preference score are measured on 11-point scales (0− 10).
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+9
+
+between the survey sample and the broader population can be considered reasonable and analytically valid for the purposes of this 
+study.
+Potential selection bias associated with online data collection is further mitigated by the study's focus on intra-sample behavioral 
+variation rather than absolute estimates of evacuation rates. In other words, the factorial survey experiment (FSE) design evaluates 
+how individuals respond to systematically varied information scenarios rather than how frequently they evacuate in real life. This 
+relative, within-subject structure substantially reduces the impact of demographic imbalance on parameter estimates. Moreover, 
+sensitivity checks confirmed that excluding the youngest and oldest age cohorts did not materially alter the model results, reinforcing 
+the robustness of the findings.
+Descriptive statistics of the key variables used in the beta regression analysis are presented in Table 3. On average, respondents 
+reported a moderate evacuation intention (mean = 5.18 on a 0–10 scale, SD = 3.02), with substantial heterogeneity across individuals. 
+Approximately one-third of participants (32%) believed flooding could occur within five years, and 12% expected flood depths 
+exceeding one meter. While 28% relied primarily on smartphones for disaster information, only 10% considered current warnings easy 
+to understand—suggesting persistent challenges in risk communication clarity. Trust-related variables indicate that roughly one in ten 
+respondents expressed skepticism toward flood warnings or government disaster management, consistent with previous national 
+surveys in Japan. Socio-demographic indicators reveal a balanced gender ratio, a majority of homeowners (55%), and a moderate 
+proportion reporting weak social ties with neighbors (25%). Together, these descriptive patterns suggest a diverse yet internally 
+coherent dataset suitable for behavioral modeling of evacuation intentions under compound flood risks.
+Table 4 
+Beta regression results: determinants of evacuation intention (Standard vs. Inferred Valuation).
+Variable SV IV SV (AME) IV (AME)
+Time: 3 AM 0.00 (0.05) − 0.14*** (0.05) − 0.00 (0.01) − 0.03*** (0.01)
+Time: 3 PM − 0.02 (0.05) − 0.05 (0.05) − 0.01 (0.01) − 0.01 (0.01)
+Time: 9 PM 0.11** (0.05) 0.11** (0.05) 0.03** (0.01) 0.02** (0.01)
+Perceived risk: Some 0.51*** (0.05) 0.48*** (0.05) 0.11*** (0.01) 0.11*** (0.01)
+Perceived risk: High 0.83*** (0.05) 0.83*** (0.05) 0.19*** (0.01) 0.19*** (0.01)
+Perceived risk: Extremely high 1.16*** (0.05) 1.05*** (0.05) 0.26*** (0.01) 0.24*** (0.01)
+Neighbors: Some evacuated 0.28*** (0.05) 0.41*** (0.05) 0.06*** (0.01) 0.09*** (0.01)
+Neighbors: Many evacuated 0.52*** (0.05) 0.66*** (0.05) 0.12*** (0.01) 0.15*** (0.01)
+Neighbors: Most evacuated 0.86*** (0.05) 0.90*** (0.05) 0.19*** (0.01) 0.20*** (0.01)
+Travel time: 15 min − 0.12** (0.05) − 0.08 (0.05) − 0.03** (0.01) − 0.02* (0.01)
+Travel time: 30 min − 0.14*** (0.05) − 0.12** (0.05) − 0.03*** (0.01) − 0.03** (0.01)
+Travel time: 45 min − 0.29*** (0.05) − 0.08 (0.05) − 0.06*** (0.01) − 0.02* (0.01)
+Shelter privacy: Minimal 0.38*** (0.05) 0.27*** (0.05) 0.08*** (0.01) 0.06*** (0.01)
+Shelter privacy: Moderate 0.45*** (0.06) 0.23*** (0.05) 0.10*** (0.01) 0.05*** (0.01)
+Shelter privacy: High 0.65*** (0.05) 0.47*** (0.05) 0.15*** (0.01) 0.11*** (0.01)
+Flood expected within 5 years 0.22*** (0.04) 0.13*** (0.04) 0.05*** (0.01) 0.03*** (0.01)
+Flood depth < 1 m − 0.11* (0.05) − 0.14*** (0.05) − 0.03** (0.01) − 0.03*** (0.01)
+Flood depth 1–3 m 0.16*** (0.06) 0.10* (0.06) 0.04** (0.01) 0.02* (0.01)
+Flood depth > 3 m − 0.13 (0.11) − 0.21** (0.10) − 0.03 (0.02) − 0.05** (0.02)
+Disaster literacy: Low 0.00 (0.04) − 0.15*** (0.04) 0.00 (0.01) − 0.03*** (0.01)
+Disaster literacy: High − 0.20*** (0.06) − 0.25*** (0.06) − 0.04*** (0.01) − 0.06*** (0.01)
+Smartphone main source 0.10*** (0.04) 0.13*** (0.04) 0.02*** (0.01) 0.03*** (0.01)
+Warnings easy to understand 0.16*** (0.06) 0.16*** (0.06) 0.04*** (0.01) 0.04*** (0.01)
+Distrust in flood warnings − 0.18*** (0.05) − 0.11** (0.05) − 0.04*** (0.01) − 0.02** (0.01)
+Distrust in government management − 0.25*** (0.06) − 0.22*** (0.06) − 0.06*** (0.01) − 0.05*** (0.01)
+Gender: Male − 0.22*** (0.04) − 0.20*** (0.03) − 0.05*** (0.01) − 0.04*** (0.01)
+Age: Over 65 0.08* (0.05) 0.14*** (0.05) 0.02* (0.01) 0.03*** (0.01)
+Homeowner − 0.13*** (0.04) − 0.14*** (0.04) − 0.03*** (0.01) − 0.03*** (0.01)
+No social ties − 0.22*** (0.05) − 0.27*** (0.04) − 0.05*** (0.01) − 0.06*** (0.01)
+Poor health − 0.26*** (0.04) − 0.22*** (0.04) − 0.06*** (0.01) − 0.05*** (0.01)
+Single 0.03 (0.05) 0.02 (0.05) 0.01 (0.01) 0.00 (0.01)
+Pregnant 0.00 (0.18) − 0.36** (0.17) 0.00 (0.04) − 0.08** (0.04)
+Illness − 0.11 (0.14) − 0.44*** (0.13) − 0.02 (0.03) − 0.10*** (0.03)
+Pet 0.01 (0.05) 0.08 (0.05) 0.00 (0.01) 0.02 (0.01)
+Risk preference (0–10) 0.00 (0.01) 0.02*** (0.01) 0.00 (0.00) 0.01*** (0.00)
+Intercept − 0.82*** (0.26) − 1.77*** (0.24)
+n 5296 5296
+Log-likelihood 3167 1700
+AIC − 6076 − 3142
+Pseudo-R2 0.25 0.46
+Note: Standard errors in parentheses. Significance levels: *p < .10; **p < .05; ***p < .01.
+AME = average marginal effect, computed from fitted beta regression estimates.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+10
+
+4. Results
+4.1. Model comparison: standard and inferred valuation approaches
+To identify the most appropriate analytical framework for understanding evacuation intention, we estimated two alternative beta 
+regression models: a Standard Valuation (SV) model based on respondents' self-reported intentions, and an Inferred Valuation (IV) 
+model in which respondents predicted the likely behavior of their neighbors. This comparison provides a test of whether social 
+desirability bias affects conventional self-reported responses in disaster behavior research.
+Table 4 summarizes the key estimation results. Because the SV and IV outcomes are different dependent variables, their pseudo-R2 
+values are not directly comparable across models and should be read only as descriptive within-model fit statistics; we therefore do not 
+interpret the SV–IV gap (0.25 vs 0.46) as evidence of causal superiority. The interpretive case for adopting IV as the primary inferential 
+framework rests instead on its theoretical basis: inferred valuations re-route the response through respondents' own social embedding 
+and thereby attenuate the self-presentation bias that pervades direct self-reports of socially desirable behavior (Lusk and Norwood, 
+2009). This logic is consistent with the well-documented intention–behavior gap, in which individuals systematically overstate 
+their own readiness for action relative to their assessment of collective behavior (Sheeran and Webb, 2016; Paton, 2013), and with the 
+meta-analytic evidence that hypothetical responses systematically overstate actual behavior (Murphy et al., 2005; Loomis, 2011) — 
+the rationale for the threshold calibration in Section 4.3.
+A graphical comparison of SV and IV predictions is provided in Fig. 5, which plots the predicted evacuation rate under baseline 
+conditions—the share of predicted intentions exceeding each threshold—across thresholds from 0.5 to 0.9 (the IV curve lies below the 
+SV curve across the scanned range, with the gap narrowing at higher thresholds). This downward shift indicates that the IV approach 
+produces systematically lower predicted intentions and is therefore consistent with a more conservative interpretation of evacuation 
+propensity. On this basis, the IV model is adopted as the main framework for subsequent analyses. This finding supports Prediction (i): 
+the conventional 0.5 cutoff is inconsistent with observed evacuation compliance, motivating the threshold recalibration developed in 
+Section 4.3.
+4.2. Behavioral determinants of evacuation intention
+Table 4 reports the estimated marginal effects from the IV model. These results reveal the relative influence of risk perception, 
+social cues, logistical factors, and individual characteristics on evacuation intention. Perceived risk was the single strongest driver. 
+Respondents who assessed the flood risk as “extremely high” exhibited, on average, a 24 percentage-point higher intention to evacuate 
+than those perceiving no risk. This finding underscores that the sense of immediacy and severity of threat is a crucial psychological 
+trigger for behavioral activation.
+Social influence also had a powerful effect. When respondents believed that “most of their neighbors had evacuated,” their predicted intention to evacuate increased by 20 points compared to those who believed no neighbors had left. This strong effect supports 
+the concept of social proof—individuals are more likely to act when they perceive others taking similar protective measures.
+In contrast, logistical constraints—while statistically significant—exerted smaller effects. Increasing the travel time to a shelter 
+from 5 to 15 min decreased intention by about 2 percentage points, and to 30 min by approximately 3 points. Similarly, evacuation 
+orders issued at 3:00 a.m. led to an average reduction of 3 percentage points in intention relative to those issued at 9:00 a.m. These 
+modest yet consistent effects suggest that convenience and timing influence decisions, but only to a limited degree compared with 
+cognitive and social factors.
+Social and institutional trust further shaped behavioral intentions. Respondents who reported a lack of neighborhood connections 
+had a 6-point lower predicted intention, while those expressing low trust in government disaster management had a 5-point reduction. 
+Fig. 5. Simulated evacuation response by behavioral threshold. 
+Note: Under baseline conditions (9 a.m.; extremely high risk; some neighbors evacuated; 30-min travel; no privacy), we varied the threshold from 
+0.5 to 0.9 in 0.01 increments to convert intentions to binary evacuation. At T* = 0.7, the model predicts ≈3% evacuation; results are qualitatively 
+robust across the scanned range.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+11
+
+These findings imply that both horizontal and vertical trust networks—among residents and between residents and authorities—are 
+key components of effective evacuation behavior.
+Health-related vulnerability also emerged as an important determinant. Respondents reporting poor health showed a 5-point lower 
+intention, and those with a household member in ill health exhibited a 10-point reduction. These effects are consistent with past studies 
+indicating that physical vulnerability can lead to immobility or reluctance to relocate during emergencies (Eisenman et al., 2007).
+Finally, disaster literacy demonstrated a non-linear relationship with evacuation intention. Compared with respondents of moderate literacy, both low- and high-literacy groups showed significantly lower intention (by about 3 and 6 percentage points, respectively). This inverted U-shaped pattern indicates that knowledge does not translate linearly into action; excessive familiarity with 
+disaster information may produce overconfidence or complacency, while insufficient knowledge may lead to helplessness. These 
+patterns suggest that evacuation behavior reflects a complex interplay between cognitive understanding, emotional confidence, and 
+perceived control.
+These coefficient magnitudes confirm Prediction (ii): the average marginal effects of contagion- and pull-type amplifiers — most 
+neighbors evacuated (0.20) and high shelter privacy (0.11) — exceed those of push-type information factors such as warnings being 
+easy to understand (0.04) and smartphone as the main information source (0.03), by factors of 3–5×. Pull and contagion channels 
+therefore exert systematically larger marginal effects on intention than push-type amplifiers.
+4.3. Calibrating the behavioral evacuation threshold
+To translate continuous intention scores into binary behavioral outcomes, we calibrated the behavioral threshold that separates 
+stated willingness from actual evacuation. A conventional cut-off of 0.5—often adopted in behavioral prediction models—would imply 
+an unrealistically high evacuation rate of nearly 60%, which is inconsistent with real-world evidence. Empirical data from the 2018 
+West Japan Floods show that the average evacuation rate across affected prefectures was only 4.6% (Nikkei, 2018). Because this figure 
+includes rural areas, the actual rate in urban contexts such as Hiroshima is likely even lower. To align the simulation with these 
+observed urban evacuation patterns, we identified the intention threshold that reproduces a comparable outcome in our model.
+Fig. 5 presents the simulated evacuation response under typical conditions of recent Japanese urban flood disasters—specifically, 
+9:00 a.m. evacuation time, extremely high perceived risk, some neighbors evacuated, 30-min travel time to shelter, and no privacy at 
+the shelter. By incrementally varying the threshold from 0.5 to 0.9 (in 0.01 intervals), we found that the predicted evacuation rate fell 
+to approximately 3% when the threshold reached 0.7. This threshold therefore provides the most realistic correspondence between 
+modeled intention and observed evacuation behavior.
+The resulting cut-off of 0.7 quantifies the substantial inertia that must be overcome before intention becomes action. Conceptually, 
+this value marks the activation point within the Evacuation Threshold Framework (ETF), representing the psychological and social 
+tipping point beyond which awareness is converted into movement. In practical terms, the result implies that even respondents 
+expressing moderately high intentions (around 7 on a 0–10 scale) are unlikely to act unless motivational, social, or environmental cues 
+further reinforce their decision.
+It is important to note that while alternative thresholds slightly shift the absolute level of predicted evacuation rates, they do not 
+Fig. 6. Predicted evacuation rates under key scenarios (threshold = 0.7). 
+Note: Predicted evacuation rates derived from the Inferred Valuation model under extremely high flood-risk perception. Each panel shows the effect 
+of one contextual factor while holding others at their baseline levels (9 a.m. evacuation, some neighbors evacuated, 30-min travel time, no privacy). 
+Rates are expressed as proportions of the population predicted to evacuate.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+12
+
+alter the substantive implications of the analysis. The core behavioral mechanisms—namely, the dominance of perceived risk and 
+social influence over logistical constraints—remain stable across the entire plausible range of thresholds. Thus, the empirical and 
+theoretical insights drawn from the calibrated threshold of 0.7 are robust to reasonable variations in parameterization.
+Quantitatively, the calibrated T* ≈ 0.7 confirms Prediction (i): aligning the model with observed compliance requires a 0.2 upward 
+shift from the conventional 0.5 cutoff on the intention scale — a shift in the direction predicted by the systematic overstatement of 
+stated relative to actual behavior documented in the stated-preference literature (Murphy et al., 2005; Loomis, 2011).
+4.4. Predicted evacuation rates under key scenarios
+To operationalize these findings, we simulated predicted evacuation rates under different policy and behavioral scenarios using the 
+newly calibrated threshold (0.7). The results, visualized in Fig. 6, demonstrate how modifiable factors—social influence, timing, travel 
+time, and shelter quality—jointly determine collective outcomes under extreme flood-risk conditions.
+The most striking pattern emerges from social amplification. When respondents perceived an extremely high flood risk but believed 
+that no neighbors had evacuated, the model predicted an evacuation rate of only 0.2%. When some neighbors had left, the rate 
+increased modestly to 2.6%, while many evacuees raised it to 9.8%, and most neighbors evacuated pushed the rate up to 23.3%. This 
+exponential progression confirms that social proof acts as a powerful behavioral multiplier: once visible community action exceeds a 
+critical threshold, evacuation cascades rapidly through imitation and normative convergence. These dynamics mirror contagion 
+processes found in pro-environmental behavior, underscoring the potential for risk-communication strategies to harness social networks as accelerators of adaptation.
+A similarly revealing pattern concerns evacuation timing. Orders issued during the night, especially around 3 a.m., produced the 
+lowest predicted evacuation rate (≈ 1.3%), compared with 2.6% at 9 a.m., 2.0% at 3 p.m., and 4.2% at 9 p.m. This sharp nighttime 
+decline reflects both perceptual and logistical barriers—darkness, fear of venturing out, and uncertainty about route safety—that 
+substantially increase behavioral inertia. Real-world disasters illustrate the same pattern: during the 2018 West Japan Floods, 
+many residents of Mabi District in Kurashiki City failed to evacuate after official orders were issued around midnight, and more than 50 
+people lost their lives as floodwaters rose rapidly. The simulation results therefore capture not only statistical trends but also the lived 
+behavioral reality of nocturnal evacuation failures.
+In contrast, travel-time frictions were modest. When the walking time to a shelter increased from 5 to 30 min, the predicted rate 
+declined from 4.2% to 2.6%, and even 45 min reduced intention only slightly (3.2%). These results indicate that while convenience 
+matters, its impact is secondary once motivational and social cues are engaged.
+The transformative influence of shelter quality was even more pronounced. Under otherwise identical conditions, upgrading from a 
+no-privacy shelter (2.6%) to minimal privacy (11.2%), moderate privacy (9.4%), or high privacy (22.1%) dramatically increased 
+predicted evacuation rates. The shift from “no privacy” to “high privacy” thus produced nearly a nine-fold increase, a behavioral gain 
+comparable to the effect of strong social proof. These findings suggest that dignified, secure, and trust-enhancing shelter environments 
+are not peripheral amenities but core instruments of behavioral adaptation.
+Overall, these simulations provide behavioral evidence that adaptation outcomes hinge less on physical hazard intensity or 
+logistical barriers than on the design of behavioral environments that align motivation, trust, and opportunity. Policies that enhance 
+the attractiveness, visibility, and equity of protective actions—by improving shelter dignity, accounting for nighttime barriers, and 
+amplifying social proof—can lower the effective behavioral threshold, transforming passive awareness into collective resilience.
+Two of the framework's predictions are confirmed quantitatively in these simulations. The exponential progression of evacuation 
+rates with peer visibility — 0.2% (none) → 2.6% (some) → 9.8% (many) → 23.3% (most) — confirms Prediction (iii): the populationlevel response to neighbor evacuation is sharply non-linear and accelerates once visibility crosses an inflection point, the contagion 
+signature predicted by ETF. The persistence of a 0.2% evacuation rate under “extremely high” perceived risk when no neighbors 
+evacuate confirms Prediction (iv): even maximal information-driven risk perception cannot close the intention–action gap when 
+contagion and pull cues are absent.
+4.5. Summary of key results: tests of ETF predictions
+Synthesizing the above analyses, four key empirical findings emerge.
+(1) Model performance: The Inferred Valuation model yields more conservative estimates of evacuation propensity than conventional self-reported intention models. This demonstrates the analytical value of indirect elicitation in capturing the hidden determinants of disaster behavior.
+(2) Drivers of intention: Risk perception and social influence are the dominant predictors of evacuation intention, while logistical 
+frictions—such as travel time or timing—exert only secondary effects. The steep, nonlinear rise in predicted evacuation rates as more 
+neighbors evacuate highlights the power of social proof as a behavioral multiplier.
+(3) Behavioral threshold: The calibrated activation threshold of 0.7 quantifies the substantial intention–behavior gap underlying 
+low evacuation rates in Japan's recent flood disasters. This value marks the psychological point at which awareness transitions into 
+action, explaining why even “high” intentions often fail to produce movement.
+(4) Policy relevance: Scenario simulations reveal that interventions targeting social visibility (e.g., leveraging community norms) 
+and shelter dignity (e.g., ensuring privacy and comfort) produce the largest behavioral gains—up to an order of magnitude increase in 
+predicted evacuation. Conversely, nighttime evacuation (e.g., around 3 a.m.) sharply suppresses response rates, echoing the tragic 
+outcomes observed in real events such as the 2018 West Japan Floods.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+13
+
+Overall, the results provide quantitative evidence that evacuation behavior is governed less by information availability and more 
+by behavioral environment design—the alignment of motivation, trust, and opportunity. These findings form the empirical foundation 
+for the next section, which interprets their broader implications for behavioral adaptation and climate-resilient governance.
+5. Discussion
+5.1. Behavioral foundations of evacuation: the psychology of action and inertia
+The results reveal that the act of evacuation is governed not by the accuracy of warning systems but by deep-seated psychological 
+thresholds that must be surpassed before intention becomes action. The calibrated intention threshold of 0.7 demonstrates empirically 
+that even individuals who express moderately high willingness often fail to act. This behavioral inertia reflects the combined influence 
+of normalcy bias and status quo bias, whereby individuals underestimate the likelihood of extreme events and favor inaction as the 
+default (Samuelson and Zeckhauser, 1988; Kuhlicke et al., 2020). The threshold thus represents more than a statistical calibration—it 
+is a behavioral signal of resistance to change. Similar thresholds have been observed in climate adaptation, where households delay 
+adopting protective measures until personal experience or peer behavior disrupts complacency (Grothmann and Patt, 2005; Van 
+Valkengoed and Steg, 2019).
+From a theoretical standpoint, this finding extends the Protective Action Decision Model (PADM) by introducing a nonlinear 
+intention–action linkage. Whereas PADM depicts a sequential process—receiving, believing, personalizing, and acting—our data 
+indicate that each stage must surpass a latent threshold of salience and urgency before behavioral activation occurs. This aligns with 
+behavioral models of climate adaptation that conceptualize protective action as a tipping process rather than a continuous response 
+(Moser and Ekstrom, 2010). It also supports the emerging notion of “behavioral bottlenecks” in adaptation governance, where psychological frictions—not information deficits—constitute the primary barriers to action (Bubeck et al., 2012).
+Importantly, the analysis also reveals a temporal barrier to action: evacuation rates drop sharply when warnings are issued during 
+the night. In our simulation, orders given at 3 a.m. produced the lowest predicted compliance. This finding is tragically mirrored in real 
+events—most notably during the 2018 West Japan Floods, when evacuation orders in Mabi District, Kurashiki City, were issued at 
+23:45 and 1:30 a.m., long after residents had gone to bed. Many did not evacuate, and more than 50 people lost their lives as 
+floodwaters rose rapidly (Kurashiki City, 2019). This case exemplifies how late-night warnings can inadvertently amplify risk: even 
+accurate alerts may fail to trigger movement when issued after circadian and perceptual barriers to action have set in.
+From a policy perspective, this insight underscores the importance of anticipatory timing in warning issuance. If there is a foreseeable possibility that an alert may need to be issued late at night, authorities should err on the side of early activation. Proactive 
+issuance of warnings before nightfall may increase false alarms but can substantially increase life-saving compliance. In short, delaying 
+an evacuation order until midnight may protect institutional credibility but at the cost of human lives.
+Notably, the non-linear influence of disaster literacy underscores that knowledge alone cannot guarantee behavioral activation. 
+Respondents with both very low and very high literacy exhibited lower evacuation intention than those with moderate literacy. This 
+inverted-U relationship challenges the knowledge-deficit model and introduces the concept of cognitive overconfidence: highly 
+informed individuals may rationalize non-evacuation by assuming control or superior judgment (Wachinger et al., 2013; Paton, 2013). 
+Meanwhile, those with limited literacy may simply fail to comprehend or personalize risk information. Effective risk communication 
+must therefore focus on calibrating rather than increasing knowledge—helping individuals to correctly appraise their vulnerability 
+and recognize when self-reliance becomes dangerous.
+From a policy perspective, behavioral thresholds invite a paradigm shift in early warning systems—from emphasizing technical 
+precision to emphasizing behavioral design. Information that remains below the activation threshold will not produce movement, no 
+matter how accurate. Warning systems must therefore incorporate cues that heighten psychological immediacy—such as localized 
+narratives, emotional salience, or dynamic visualizations—bridging the final gap between awareness and action. These insights position behavioral science as a critical complement to engineering in disaster-risk management, redefining preparedness as the art of 
+lowering the threshold for action.
+5.2. The behavioral meaning of the activation threshold
+The calibrated threshold T* ≈ 0.7 should not be read as a study-specific tuning parameter. Three convergent rationales—drawn 
+from stated-preference methodology, prospect theory, and the behavioral economics of inertia—together place the activation point 
+systematically above the conventional 0.5 cutoff and elevate it from an empirical artifact to a theoretically grounded behavioral 
+quantity.
+The first rationale comes from the meta-analytic literature on hypothetical bias in stated-preference research, which finds that 
+hypothetical responses systematically overstate actual behavior (Murphy et al., 2005; Loomis, 2011). This directional bias is consistent 
+with the upward shift from 0.5 to 0.7 required to align our model with observed evacuation compliance during the 2018 West Japan 
+Floods. Because the bias is documented independently of any particular sample or hazard, it provides external support for an activation 
+threshold above the conventional midpoint, although the specific magnitude of the shift remains an empirical calibration.
+The second and third rationales are psychological. Prospect theory predicts that loss aversion (Tversky and Kahneman, 1991) 
+elevates the activation point above any naive midpoint because the disutility of leaving—loss of normalcy, comfort, and control over 
+one's home environment—is weighted more heavily than the prospective utility of shelter; the threshold thereby encodes the asymmetric reference dependence that pervades risk-domain decision-making. Reinforcing this, normalcy and status-quo biases (Samuelson 
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+14
+
+and Zeckhauser, 1988) place a behavioral premium on inaction as the default, requiring abnormally salient cues to displace it. 
+Together, these biases predict that protective action requires not merely a balance of perceived costs and benefits but a substantial 
+overshoot of intention beyond neutrality.
+The convergence of these three independent rationales—methodological, behavioral-economic, and psychological—suggests that 
+an activation threshold substantially above 0.5 is not specific to the present sample but reflects a structural property of stated-intention 
+data in disaster contexts. Future studies in different populations and hazard types may calibrate slightly different values, but a substantial elevation above 0.5 should be expected as a generic feature of the intention–action gap.
+5.3. Social dynamics and collective behavior: evacuation as a social process
+The second central insight is that evacuation is not an individual decision in isolation but a collective behavior embedded in social 
+networks. The powerful effect of “neighbors evacuating” demonstrates the primacy of social proof: individuals interpret others' actions 
+as credible signals of reality under uncertainty (Cialdini and Goldstein, 2004; Centola, 2018). In our model, the presence of visible 
+community action increased evacuation intention by about 20 percentage points—an effect nearly as large as perceiving “extremely 
+high risk.” This finding confirms that social contagion, rather than rational calculation, often governs crisis response.
+Social influence theory suggests that imitation in high-uncertainty environments serves adaptive purposes—it substitutes social 
+information for incomplete personal data. Yet, in modern disaster management, official communications are typically designed as oneway broadcasts, detached from this social logic. Integrating peer cues into warning design—e.g., messages such as “many households 
+nearby have already evacuated”—could dramatically enhance compliance by legitimizing protective behavior as normative. Empirical 
+evidence from other pro-social domains, such as energy conservation and vaccination uptake, shows that social-norm messaging can 
+outperform factual appeals (Goldstein et al., 2008; Benartzi et al., 2017). The same principle can be strategically deployed in flood risk 
+communication, where real-time visualization of local evacuation activity can transform passive awareness into social momentum.
+However, reliance on social cues introduces a critical inequality: communities with stronger social capital are better positioned to 
+trigger collective action, while socially isolated individuals remain inert. Trust and reciprocity thus become behavioral infrastructure. 
+Our analysis revealed that low trust in government disaster management and weak social ties reduced evacuation intention by 5–6 
+percentage points. This echoes Adger's (2010) argument that social capital constitutes adaptive capacity—those embedded in cohesive 
+networks not only access information faster but also perceive collective efficacy. Yet excessive trust in institutions can backfire, 
+breeding complacency or “blind trust bias,” where individuals expect authorities to manage risks for them (Tierney, 2014). Effective 
+governance therefore requires a balanced ecosystem of trust: sufficient faith in institutions to heed warnings, but enough autonomy 
+within communities to self-mobilize.
+These findings highlight the necessity of shifting from individual-based communication to community-based activation systems. 
+Policies that invest in neighborhood organizations, volunteer networks, and local disaster councils do more than distribute 
+information—they create the social scaffolding through which action diffuses. In this light, building social capital is not a post-disaster 
+recovery goal but a form of anticipatory adaptation. Equitable adaptation must recognize that social connectedness is itself a determinant of safety.
+5.4. Incentive design and adaptive infrastructure: from push to pull
+A third major contribution of this study lies in quantifying the immense leverage of positive incentives. Simulations revealed that 
+improving shelter privacy increased the predicted evacuation rate nearly nine-fold—far exceeding the marginal effects of logistical 
+frictions like travel time or time of day. This confirms that individuals are more responsive to attractive opportunities than to coercive 
+pressures. Behavioral economics describes this as the asymmetry between push and pull: while removing barriers is necessary, genuine 
+motivation arises from perceived gains (Thaler and Sunstein, 2008).
+Psychologically, evacuation is framed not as the avoidance of loss but as a transition toward a safer, more dignified state. When 
+shelters are perceived as chaotic or unsafe, staying home—despite evident danger—appears rational under the logic of loss aversion 
+(Tversky and Kahneman, 1991). Conversely, when shelters offer privacy, comfort, and security, they generate a positive utility that can 
+offset inertia. This insight extends beyond disaster contexts to the broader field of adaptive infrastructure design. Public facilities are 
+not neutral spaces; they function as behavioral architectures that can invite or repel participation (Gehl, 2013). By designing shelters as 
+psychologically supportive environments, authorities convert evacuation from a reluctant necessity into a socially acceptable and 
+emotionally viable choice.
+The implications for policy are profound. Investments in shelter quality—often dismissed as secondary to warning 
+technology—constitute a behavioral adaptation strategy. Providing privacy partitions, clean sanitation, and medical support particularly benefits vulnerable groups such as the elderly, the sick, or caregivers of dependents, who face the steepest behavioral barriers. 
+Our findings thus bridge behavioral science and social equity: improving comfort and dignity is not a matter of luxury but of justice. In 
+this sense, dignified safety becomes a measurable public good.
+Furthermore, integrating behavioral incentives into spatial planning can yield systemic resilience. Municipalities can develop a 
+tiered network of “magnet shelters,” strategically located and designed to serve as both safe havens and visible signals of collective 
+movement. These facilities can also double as community hubs during normal times, reinforcing social ties that later facilitate coordinated evacuation. Such multifunctional design embodies the core principle of adaptive infrastructure—spaces that evolve with 
+both environmental and behavioral contingencies.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+15
+
+5.5. Implications for climate adaptation governance
+Taken together, these findings call for a re-conceptualization of climate adaptation as behavioral governance. Traditional approaches equate adaptation with physical protection—levees, sensors, and forecasts—while neglecting the social and psychological 
+dimensions that determine whether such systems actually save lives. Our results demonstrate that effective adaptation depends on 
+lowering behavioral thresholds, activating social contagion, and designing environments that make protective choices easy, attractive, 
+and equitable. These components form a unified framework for behaviorally informed adaptation policy.
+At the institutional level, this implies a shift from risk communication to risk orchestration. Agencies must coordinate information, 
+incentives, and community engagement as interdependent levers rather than isolated instruments. Embedding behavioral expertise 
+within disaster-management agencies could enable the design of messages and infrastructures that resonate with human cognition. 
+Moreover, the recognition of social capital and trust as adaptive assets demands cross-sectoral collaboration—linking urban planning, 
+health care, and social welfare under the umbrella of resilience policy.
+Equity considerations further reinforce the need for a governance model that prioritizes capability over mere exposure reduction 
+(Adger et al., 2009). Vulnerable populations—those in poor health, limited mobility, or social isolation—face compounded disadvantages across behavioral, social, and physical dimensions. An inclusive adaptation strategy must therefore guarantee not only access 
+to warnings but also the practical and psychological means to act upon them. This entails targeted investment in accessible shelters, 
+localized outreach programs, and participatory drills that normalize collective action.
+While this study is situated in Japan's urban flood context, its implications are globally transferable. The behavioral thresholds 
+identified here—rooted in cognitive biases, social contagion, and perceived dignity—are not culturally unique but structurally universal across hazard contexts. Comparative research across Asia and Europe could test the generalizability of this behavioral framework, advancing the global understanding of climate adaptation as a social process.
+Finally, the study underscores the potential of integrating behavioral metrics into adaptation assessment. Traditional evaluations 
+focus on physical outcomes—such as reduced flood depth or infrastructure loss—but overlook behavioral indicators like evacuation 
+uptake or response latency. Measuring these outcomes can provide a more accurate gauge of real resilience. In an era where climate 
+risks increasingly outpace institutional capacity, adaptive governance must evolve toward systems that not only inform but actively 
+mobilize populations. In short, saving lives in the Anthropocene will depend less on how well we forecast hazards, and more on how 
+well we design societies that are psychologically prepared to move.
+5.6. Limitations and future directions
+The present analysis carries three sets of limitations, each pointing to a specific extension of the framework. They concern, in turn, 
+the methodology of stated-intention elicitation, the scope of the empirical setting, and the theoretical treatment of the activation 
+threshold itself. Setting these out explicitly clarifies what the study has and has not established, and identifies the most productive 
+avenues for follow-up research.
+The first set concerns the underlying use of stated rather than revealed preferences. Although the Inferred Valuation design substantially attenuates social-desirability bias by re-routing the response through respondents' inferences about neighbors, residual 
+hypothetical-response bias cannot be eliminated entirely; integration with revealed-preference data from real disaster events—postevent evacuation registries, mobility traces, or shelter occupancy records—would further strengthen the framework's empirical 
+grounding. A closely related concern is that, when respondents form Inferred-Valuation judgments about their neighbors, the social 
+reference group is implicitly self-defined; in heterogeneous neighborhoods with mixed age, language, or mobility profiles, this 
+reference group may be poorly anchored, and explicit elicitation of the relevant peer set is a useful methodological extension.
+The second set concerns the empirical setting and design. The study focuses on a single metropolitan area (Hiroshima City), and 
+although the behavioral mechanisms identified here are theorized to be structurally general, cross-city and cross-hazard 
+replication—particularly in coastal Asian cities facing comparable urban-flood compounding—will be required before strong claims 
+of generalizability can be made. In addition, the factorial survey design holds attribute combinations at orthogonally varied levels and 
+does not directly model higher-order interactions among amplifiers and frictions; subsequent work could specify and estimate such 
+interactions to refine the framework's policy implications, particularly for understanding how multiple pull factors (such as shelter 
+dignity combined with strong social proof) jointly shift the activation point.
+The third and most theoretically substantive limitation concerns the treatment of the activation threshold itself. The present 
+analysis takes T* as exogenous and population-level—a single calibrated constant—and the framework's amplifiers and frictions 
+therefore operate by moving intention along the horizontal axis of Fig. 2 rather than by modifying T* directly. A more general 
+formulation in which T* itself becomes endogenous to context—varying across individuals (e.g., by mobility status or prior experience), hazards (riverine versus coastal versus landslide), or institutional settings (warning trust, governance quality)—is conceptually 
+consistent with the ETF and a natural target of follow-up research. We anticipate addressing this generalization in a forthcoming 
+companion study using a finite-mixture beta-regression approach with covariate-dependent threshold estimation. Together, these 
+extensions promise a richer behavioral architecture in which the threshold itself becomes a designable feature of climate-adaptation 
+governance, deepening rather than displacing the empirical framework developed here.
+6. Conclusions
+This study investigated the complex determinants of flood evacuation decisions, employing an Inferred Valuation (IV) methodology 
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+16
+
+to provide a realistic assessment less affected by social desirability bias. Our findings reveal three critical insights into the challenge of 
+promoting public safety in the face of catastrophic flooding.
+First, a profound intention–behavior gap persists, as evidenced by the high activation threshold of 0.7 required to align simulated 
+intentions with observed evacuation rates of only a few percent. This empirically quantifies the powerful psychological inertia—rooted 
+in normalcy and status quo biases—that inhibits protective action even under extreme risk. The finding underscores that warnings 
+alone, however precise, cannot overcome this latent behavioral resistance.
+Second, our analyses identify the strongest behavioral drivers unequivocally: evacuation is dictated less by logistical barriers and 
+more by risk perception and, above all, social proof. When residents observe others taking protective action, intention rises nonlinearly, triggering collective evacuation cascades. Conversely, the timing of warnings plays a crucial role. Orders issued during latenight hours—such as those in Mabi District, Kurashiki City during the 2018 West Japan Floods—face profound psychological and 
+logistical barriers, often resulting in fatal inaction. These insights emphasize the necessity of anticipatory decision-making and the lifesaving value of issuing alerts before nightfall whenever potential escalation is foreseen.
+Third, the study reveals that neither knowledge nor infrastructure alone guarantees safety. High disaster literacy may foster 
+overconfidence rather than compliance, while dignified and private shelter environments can increase predicted evacuation rates 
+nearly nine-fold. The implication is clear: evacuation behavior responds not to information quantity but to the quality of behavioral 
+environments—those that align motivation, trust, and opportunity.
+The practical and policy implications of these findings are substantial. For emergency managers, risk communication must evolve 
+from broadcasting information to orchestrating behavior. Messages should integrate social-norm cues (“many households nearby have 
+already evacuated”) and leverage real-time visibility of community actions. Moreover, if late-night issuance is likely, proactive prenightfall alerts should be institutionalized as standard operating practice. Simultaneously, investment in dignified 
+shelters—offering privacy, sanitation, and safety—should be recognized not as amenities but as essential behavioral infrastructure. 
+These dual strategies—enhancing social visibility and environmental dignity—form the behavioral foundation of climate-resilient 
+evacuation systems.
+In conclusion, this research provides a behaviorally grounded understanding of how individuals and communities respond to flood 
+risks. It demonstrates that saving lives depends not only on the accuracy of forecasts but on our ability to design environments—social, 
+physical, and psychological—that pull people toward safety. As climate extremes intensify, adaptation policy must embrace this 
+behavioral paradigm: resilience is not merely about resisting hazards, but about enabling movement. Understanding and shaping 
+human behavior is no longer an adjunct to adaptation—it is its very core.
+CRediT authorship contribution statement
+Katsuya Tanaka: Writing – review & editing, Writing – original draft, Visualization, Validation, Supervision, Software, Resources, 
+Project administration, Methodology, Investigation, Funding acquisition, Formal analysis, Data curation, Conceptualization. Kazuhide Akaishi: Investigation, Funding acquisition, Formal analysis, Data curation, Conceptualization. Takashi Yokota: Investigation, 
+Funding acquisition, Formal analysis, Data curation, Conceptualization. Fujio Kusano: Conceptualization.
+Funding
+This research was funded by a grant from the Foundation of River and Basin Integrated Communications (4–2).
+Declaration of competing interest
+The authors declare the following financial interests/personal relationships which may be considered as potential competing interests: Katsuya Tanaka reports financial support was provided by Foundation of River and Basin Integrated Communications. If there 
+are other authors, they declare that they have no known competing financial interests or personal relationships that could have 
+appeared to influence the work reported in this paper.
+Acknowledgment
+An earlier version of this paper was presented at the Japan Society for Disaster Information Studies (JASDIS) 2024 Annual Conference. The authors thank Koji Ikeuchi and Motoyuki Ushiyama for their helpful comments. The authors also thank Tatsuro Tatsugami 
+and Tomoya Yazaki for their support on the development of the vignettes.
+Data availability
+Data will be made available on request.
+References
+Adger, W.N., 2010. Social capital, collective action, and adaptation to climate change. In: Der klimawandel: Sozialwissenschaftliche perspektiven. VS Verlag für 
+Sozialwissenschaften, Wiesbaden, pp. 327–345. https://doi.org/10.1007/978-3-531-92258-4_19.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+17
+
+Adger, W.N., Dessai, S., Goulden, M., Hulme, M., Lorenzoni, I., Nelson, D.R., Wreford, A., 2009. Are there social limits to adaptation to climate change? Clim. Chang. 
+93 (3), 335–354. https://doi.org/10.1007/s10584-008-9520-z.
+Al-Rousan, T.M., Rubenstein, L.M., Wallace, R.B., 2014. Preparedness for natural disasters among older US adults: a nationwide survey. Am. J. Public Health 104 (3), 
+506–511. https://ajph.aphapublications.org/doi/abs/10.2105/AJPH.2013.301559.
+Becker, J.S., Paton, D., Johnston, D.M., Ronan, K.R., McClure, J., 2017. The role of prior experience in informing and motivating earthquake preparedness. Int. J. 
+Disaster Risk Reduct. 22, 179–193. https://doi.org/10.1016/j.ijdrr.2017.03.006.
+Benartzi, S., Beshears, J., Milkman, K.L., Sunstein, C.R., Thaler, R.H., Shankar, M., Galing, S., 2017. Should governments invest more in nudging? Psychol. Sci. 28 (8), 
+1041–1055. https://doi.org/10.1177/0956797617702501.
+Bubeck, P., Botzen, W.J.W., Aerts, J.C., 2012. A review of risk perceptions and other factors that influence flood mitigation behavior. Risk Anal. 32 (9), 1481–1495. 
+https://doi.org/10.1111/j.1539-6924.2011.01783.x.
+Centola, D., 2018. How Behavior Spreads: The Science of Complex Contagions, vol. 3. Princeton University Press, Princeton, NJ. https://psycnet.apa.org/doi/10. 
+23943/9781400890095. 
+Cialdini, R.B., Goldstein, N.J., 2004. Social influence: compliance and conformity. Annu. Rev. Psychol. 55, 591–621. https://doi.org/10.1146/annurev. 
+psych.55.090902.142015.
+Collins, J., Ersing, R., Polen, A., Saunders, M., Senkbeil, J., 2018. The effects of social connections on evacuation decision making during Hurricane Irma. Weather 
+Clim. Soc. 10 (3), 459–469. https://doi.org/10.1175/WCAS-D-17-0119.1.
+Dash, N., Gladwin, H., 2007. Evacuation decision making and behavioral responses: individual and household. Nat. Hazards Rev. 8 (3), 69–77. https://doi.org/ 
+10.1061/(ASCE)1527-6988(2007)8:3(69).
+Drabek, T.E., Stephenson III, J.S., 1971. When disaster strikes. J. Appl. Soc. Psychol. 1 (2), 187–203. https://doi.org/10.1111/j.1559-1816.1971.tb00362.x.
+Eisenman, D.P., Cordasco, K.M., Asch, S., Golden, J.F., Glik, D., 2007. Disaster planning and risk communication with vulnerable communities: lessons from hurricane 
+Katrina. Am. J. Public Health 97 (Supplement_1), S109–S115. https://doi.org/10.2105/AJPH.2005.084335.
+Gehl, J., 2013. Cities for People. Island Press.
+Goldstein, N.J., Cialdini, R.B., Griskevicius, V., 2008. A room with a viewpoint: using social norms to motivate environmental conservation in hotels. J. Consum. Res. 
+35 (3), 472–482. https://doi.org/10.1086/586910.
+Grothmann, T., Patt, A., 2005. Adaptive capacity and human cognition: the process of individual adaptation to climate change. Glob. Environ. Chang. 15 (3), 
+199–213. https://doi.org/10.1016/j.gloenvcha.2005.01.002.
+Huang, S.K., Lindell, M.K., Prater, C.S., Wu, H.C., Siebeneck, L.K., 2012. Household evacuation decision making in response to Hurricane Ike. Nat. Hazards Rev. 13 
+(4), 283–296. https://doi.org/10.1061/(ASCE)NH.1527-6996.0000074.
+Huang, S.K., Lindell, M.K., Prater, C.S., 2016. Who leaves and who stays? A review and statistical meta-analysis of hurricane evacuation studies. Environ. Behav. 48 
+(8), 991–1029. https://doi.org/10.1177/0013916515578485.
+Kuhlicke, C., Seebauer, S., Hudson, P., Begg, C., Bubeck, P., Dittmer, C., Bamberg, S., 2020. The behavioral turn in flood risk management, its assumptions and 
+potential implications. Wiley Interdiscip. Rev. Water 7 (3), e1418. https://doi.org/10.1002/wat2.1418.
+Kurashiki City, 2019. Report on the Verification of the Heavy Rain Disaster in Mabi District, Kurashiki City. https://www.bousai.go.jp/fusuigai/suigai_dosyaworking/ 
+pdf/kurashikikensyou.pdf.
+Lindell, M.K., Perry, R.W., 2012. The Protective Action Decision Model: theoretical modifications and additional evidence. Risk Anal. 32 (4), 616–632. https://doi. 
+org/10.1111/j.1539-6924.2011.01647.x.
+Loomis, J., 2011. What’s to know about hypothetical bias in stated preference valuation studies? J. Econ. Surv. 25 (2), 363–370. https://doi.org/10.1111/j.1467- 
+6419.2010.00675.x.
+Lovreglio, R., Ronchi, E., Nilsson, D., 2016. An evacuation decision model based on perceived risk, social influence and behavioural uncertainty. Simul. Model. Pract. 
+Theory 66, 226–242. https://doi.org/10.1016/j.simpat.2016.03.006.
+Lusk, J.L., Norwood, F.B., 2009. An inferred valuation method. Land Econ. 85 (3), 500–514. https://doi.org/10.3368/le.85.3.500.
+McCaffrey, S., Wilson, R., Konar, A., 2018. Should I stay or should I go now? Or should I wait and see? Influences on wildfire evacuation decisions. Risk Anal. 38 (7), 
+1390–1404. https://doi.org/10.1111/risa.12944.
+Morss, R.E., Wilhelmi, O.V., Meehl, G.A., Dilling, L., 2011. Improving societal outcomes of extreme weather in a changing climate: an integrated perspective. Annu. 
+Rev. Environ. Resour. 36 (1), 1–25. https://doi.org/10.1146/annurev-environ-060809-100145.
+Moser, S.C., Ekstrom, J.A., 2010. A framework to diagnose barriers to climate change adaptation. Proc. Natl. Acad. Sci. 107 (51), 22026–22031. https://doi.org/ 
+10.1073/pnas.1007887107.
+Murphy, J.J., Allen, P.G., Stevens, T.H., Weatherhead, D., 2005. A meta-analysis of hypothetical bias in stated preference valuation. Environ. Resour. Econ. 30 (3), 
+313–325. https://doi.org/10.1007/s10640-004-3332-z.
+Nikkei, 2018. Evacuation Rate Remained 4.6% during the 2018 West Japan Floods: Analysis of 17 Municipalities in Three Affected Prefectures. Nikkei Inc. September 
+5. https://www.nikkei.com/article/DGXMZO35031380V00C18A9AC8Z00/.
+Paton, D., 2013. Disaster resilient communities: developing and testing an all-hazards theory. IDRiM J. 3 (1), 1–17. https://doi.org/10.5595/idrim.2013.0050.
+Samuelson, W., Zeckhauser, R., 1988. Status quo bias in decision making. J. Risk Uncertain. 1 (1), 7–59. https://doi.org/10.1007/BF00055564.
+Sheeran, P., Webb, T.L., 2016. The intention–behavior gap. Soc. Personal. Psychol. Compass 10 (9), 503–518. https://doi.org/10.1111/spc3.12265.
+Smithson, M., Verkuilen, J., 2006. A better lemon squeezer? Maximum-likelihood regression with beta-distributed dependent variables. Psychol. Methods 11 (1), 
+54–71. https://doi.org/10.1037/1082-989X.11.1.54.
+Strahan, K., Watson, S.J., 2019. The Protective Action Decision Model: when householders choose their protective response to wildfire. J. Risk Res. 22 (12), 
+1602–1623. https://doi.org/10.1080/13669877.2018.1501597.
+Terpstra, T., Lindell, M.K., 2013. Citizens’ perceptions of flood hazard adjustments: an application of the Protective Action Decision Model. Environ. Behav. 45 (8), 
+993–1018. https://doi.org/10.1177/0013916512452427.
+Thaler, R.H., Sunstein, C.R., 2008. Nudge: Improving Decisions about Health, Wealth, and Happiness. Yale University Press.
+The City of Hiroshima, 2018. Final Report on the July 2018 Flood Disaster. Hiroshima City Government. https://www.bousai.go.jp/fusuigai/suigai_dosyaworking/ 
+pdf/hiroshimasaisyu.pdf.
+Tierney, K., 2014. The Social Roots of Risk: Producing Disasters, Promoting Resilience. Stanford University Press. https://doi.org/10.1515/9780804791403.
+Tversky, A., Kahneman, D., 1991. Loss aversion in riskless choice: a reference-dependent model. Q. J. Econ. 106 (4), 1039–1061. https://doi.org/10.2307/2937956.
+UNDRR, 2020. Human Cost of Disasters: An Overview of the Last 20 Years (2000–2019). United Nations Office for Disaster Risk Reduction. https://www.undrr.org/ 
+publication/human-cost-disasters-overview-last-20-years-2000-2019.
+Van Valkengoed, A.M., Steg, L., 2019. Meta-analyses of factors motivating climate change adaptation behaviour. Nat. Clim. Chang. 9 (2), 158–163. https://doi.org/ 
+10.1038/s41558-018-0371-y.
+Wachinger, G., Renn, O., Begg, C., Kuhlicke, C., 2013. The risk perception paradox—implications for governance and communication of natural hazards. Risk Anal. 33 
+(6), 1049–1065. https://doi.org/10.1111/j.1539-6924.2012.01942.x.
+K. Tanaka et al. Climate Risk Management 54 (2026) 100901
+18

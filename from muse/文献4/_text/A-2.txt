@@ -1,0 +1,780 @@
+Contents lists available at ScienceDirect
+Computers, Environment and Urban Systems
+journal homepage: www.elsevier.com/locate/ceus
+Diffusion of hurricane evacuation behavior through a home-workplace
+social network: A spatially explicit agent-based simulation model
+Yan Yanga,1
+, Liang Maob
+, Sara S. Metcalfa,⁎
+a Department of Geography, The State University of New York at Buffalo, Buffalo, NY 14261, USA
+b Department of Geography, University of Florida, Gainsville, FL 32611, USA
+ARTICLE INFO
+Keywords:
+Agent-based modeling
+Social network
+Geographic information science
+Hurricane evacuation
+Florida Keys
+ABSTRACT
+With coastal populations experiencing the growing threat of hurricanes as a consequence of global climate
+change, models for predicting how household evacuation behavior may diffuse over time and space are needed
+for emergency management. This study models the effects of social influence on household evacuation behavior
+in anticipation of a hurricane event. An agent-based model was developed in this study to simulate: 1) a homeworkplace social network between households residing in the Florida Keys, 2) the communication of a hurricane
+evacuation order among socially linked households, and 3) the resulting spatio-temporal diffusion of household
+evacuation behavior. Data sources informing model implementation include U.S. Census block group data,
+business databases, and statistics from hurricane evacuation surveys. Simulated model results from the model
+were validated with empirical traffic records observed at a Florida Keys monitoring station during evacuation
+from Hurricane Georges in 1998. This model builds upon previous research using agent-based models to simulate hurricane evacuation by incorporating multiple data sources and validating results with empirical traffic
+patterns. Such an empirically-grounded model facilitates locally relevant exploration of evacuation behavior to
+support the development of more effective evacuation plans and preparedness for future hurricane events.
+1. Introduction
+The arrival of Hurricanes Harvey, Irma, and Maria in 2017 was a
+stark reminder of the danger of these extreme events and their increased risk with global climate change. Meanwhile, growing populations along the Atlantic U.S. coast have become vulnerable to hurricanes, because a large number of households cannot be protected by
+staying in their homes or in shelters and must therefore evacuate to
+survive (Barrett, Ran, & Pillai, 2000; Urbina & Wolshon, 2003). In response to a hurricane evacuation order issued by local government,
+households must decide whether to evacuate, and their choices tend to
+vary over space and time (Baker, 1991; Dow & Cutter, 2000). Indeed, a
+household's decision-making about evacuation is not an easily predictable but rather a complex process (Gladwin, Lazo, Morrow,
+Peacock, & Willoughby, 2007). Modeling such a complex process for
+different households is thus critical to improving understanding and
+planning ahead for evacuation from future hurricanes and other natural
+disasters.
+1.1. Study aim
+The aim of this study is to simulate the hurricane evacuation process
+using a model that accounts for social influence on household decisions
+of whether to evacuate. In particular, this research explores the question: How might social influence affect household decisions to evacuate
+from a hurricane, and how do these decisions affect the resulting
+traffic? Taking a novel and empirically grounded approach to model
+development, this study contributes to research on hurricane evacuation by generating a home-workplace social network to mediate social
+influence, embedding this network in a spatially explicit agent-based
+model (ABM) to simulate the diffusion of household evacuation behavior, and using empirical data to calibrate model elements and validate
+simulated evacuation traffic. This model provides a virtual platform for
+experimentation with alternative strategies for emergency management
+planning.
+https://doi.org/10.1016/j.compenvurbsys.2018.11.010
+Received 12 June 2018; Received in revised form 10 October 2018; Accepted 27 November 2018
+⁎ Corresponding author: Department of Geography, 105 Wilkeson Quad, Ellicott Complex, The State University of New York at Buffalo, Buffalo, NY 14261-0055,
+USA.
+E-mail address: smetcalf@buffalo.edu (S.S. Metcalf). 1 Present address: Institute of Food and Agricultural Sciences, University of Florida, Gainsville, FL 32611, USA
+Computers, Environment and Urban Systems 74 (2019) 13–22
+Available online 07 December 2018
+0198-9715/ © 2018 Elsevier Ltd. All rights reserved.
+T
+
+1.2. Background
+Evacuation is a response to an emergency situation that generates
+distinct travel demand patterns in terms of who will evacuate and when
+they will depart (Pel, Bliemer, & Hoogendoorn, 2012). Evacuation decision-making is primarily determined by risk perception, as contextualized by the level of the threat, the vulnerability of the household,
+and the content of the message issuing a warning or evacuation order
+(Lindell & Perry, 2004). Evacuation behavior has been linked to a
+variety of factors, such as the intensity and proximity of the disaster, the
+structure of the traffic network, and demographic characteristics of
+households (Baker, 1991; Chen & Zhan, 2008; Hobeika & Jamei, 1985;
+Sheffi, Mahmassani, & Powell, 1982; Stern & Sinuany-Stern, 1989;
+Wilmot & Mei, 2004).
+Studies examining demographic and socio-economic characteristics
+of households as determinants of evacuation behavior often assume that
+households make decisions independently from one another (Baker,
+1991; Chen, Meaker, & Zhan, 2006; Wilmot & Mei, 2004). However,
+evidence suggests that social influence between households also plays
+an important role in affecting whether households decide to evacuate
+(Horney, 2009; Lindell, Lu, & Prater, 2005). Such social influence includes communication of risk (Lindell & Perry, 2004) and knowledge of
+others' behavior (Horney, 2009). In their review of activity-based simulation models for emergency situations, Henson and Goulias (2006)
+underscored the need for models that acccount for interactions between
+households and also called for simulation at finer scales of spatiotemporal resolution. By simulating social influence on evacuation in a
+rich spatio-temporal context, the present study thereby adds to an extensive body of research using evacuation models.
+Two types of models, statistical and computational models, have
+been used to predict travel demand patterns associated with hurricane
+evacuation. Statistical models use methods such as logistic regression to
+understand contributing factors to evacuation decision, often based on
+empirical data collected through surveys. For instance, Fu and Wilmot
+(2004) estimated a binary logit model for Hurricane Andrew and
+identified statistically significant factors including: the distance to the
+storm, the forward speed of the hurricane, time-of-day (morning,
+afternoon, and night), the presence of an evacuation order, possibility
+of flooding, and housing type. These statistical models can then be
+extended from the survey sample to to the entire study area to predict
+which households will evacuate and thereby create travel demand.
+In contrast to statistical models, computational models estimate the
+travel demand by simulating households' decision-making process,
+based on established psychological and/or behavioral theories, such as
+risk perception, social learning, and innovation diffusion. As a class of
+computational models, ABMs have been increasingly used to simulate
+households' decision-making processes about evacuation (Chen et al.,
+2006; Cova & Johnson, 2002; Widener, Horner, & Metcalf, 2013;
+Zhang, Chan, & Ukkusuri, 2009). Cova and Johnson (2002) developed a
+microscopic traffic model to simulate neighborhood evacuation that
+could be used not only to locate bottlenecks, but also to identify which
+evacuees were delayed at a given bottleneck. Chen et al. (2006) estimated the clearance time for evacuees along the Florida Keys' transport
+network and the number of evacuees needing accommodation if the
+main evacuation route were not available.
+An agent-based modeling approach was taken in this study to incorporate household characteristics and social interactions among
+households as influences on the decision to evacuate from a hurricane.
+This bottom-up approach to dynamic modeling allows for simulation of
+individuals as heterogeneous agents that interact and make decisions
+that affect patterns of collective behavior (Grimm & Railsback, 2005).
+When appropriately calibrated and validated, ABMs can provide simulated predictions under plausible scenarios to support evacuation
+planning (Crooks & Wise, 2013).
+Some recent ABMs of evacuation have simulated social influence on
+evacuation in such a way that households decide to evacuate in part
+because of knowledge about their friends' evacuation behavior
+(Madireddy, Kumara, Medeiros, & Shankar, 2015; Widener et al.,
+2013). These models use computer algorithms to generate abstract social networks, such as random, small-world and scale-free networks
+(Hasan & Ukkusuri, 2011; Madireddy et al., 2015; Widener et al.,
+2013). An advantage of these algorithms is that little information is
+required to construct the social networks. However, these abstractions
+can limit model utility for local evacuation planning.
+This study addresses three main challenges faced by these social
+network ABMs (Hasan & Ukkusuri, 2011; Madireddy et al., 2015;
+Widener et al., 2013). First, actual social networks among households
+are generally unknown and thus difficult to construct accurately.
+Second, the model outcomes are often difficult to validate because they
+use abstract networks or lack reference data about evacuation dynamics. Third, geospatial location is often excluded from these models,
+which instead simulate diffusion dynamics among households in an
+abstracted topological or social space. This study addresses these
+challenges by developing a home-workplace social network using information on both residential and workplace locations, by validating
+model results with observed traffic during evacuation, and by rendering
+the model spatially explicit for the geographical context of the Florida
+Keys.
+In this study, households are modeled as individual agents that
+make decisions about whether to evacuate after learning about an
+evacuation order from mass media or through their social network.
+These socially influenced decisions then manifest in spatial and temporal traffic patterns associated with the simulated evacuation rate.
+These spatio-temporal patterns are needed to infer where people are
+more likely to evacuate so as to coordinate evacuation traffic and avoid
+congestion. This simulation study contributes to previous ABM research
+on evacuation of populations at risk from Hurricane Georges in the
+Florida Keys (Chen et al., 2006; Chen & Zhan, 2008). The present study
+differs from this previous research in accounting for social influence
+among households and heterogeneity in households' evacuation tendencies.
+1.3. Study area
+The Florida Keys was chosen as the study area to provide a geographic context for the model that is particularly vulnerable to hurricanes (Blake, Rappaport, & Landsea, 2007). Frequently visiting hurricanes expose the population of the Florida Keys to a high risk of impact
+that is exacerbated by its situation as a low-lying area with access to
+only one arterial road for evacuation. Even as it is uniquely constrained,
+this linear transportation route facilitates demonstration of how to
+apply the model algorithms and interpret model results. The Florida
+Keys thus provides a relatively simple and yet relevant case study for a
+model that involves diffusion of evacuation behavior in a home-workplace social network. This modeling framework is capable of being
+extended to other vulnerable areas by accounting for other types of
+transportation networks and urban populations informed by GIS data.
+This area is a chain of islands extending southwest from the
+southern tip of the Florida Peninsula (Fig. 1). More than 32% of its
+population is concentrated at its southernmost tip in the city of Key
+West (Fig. 1c), which is the farthest away from the outlet to the
+mainland. Since there are no shelters safe for hurricanes with Category
+3 or higher, residents of the Florida Keys must evacuate to the mainland
+to ensure their safety (Chen et al., 2006). The United States Highway 1
+(U.S.1), extending easterly 112 miles from Key West, is a single arterial
+road connecting islands together and with the mainland. In a hurricane
+event, it is the only viable evacuation route to the mainland. The single
+evacuation route along a linear transportation network is thus vulnerable to becoming a bottleneck of acute traffic congestion during evacuation.
+A practical consideration for this study area was the availability of
+traffic data during hurricane evacuation that could be used for model
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+14
+
+validation. In this study, the simulated traffic patterns resulting from
+hurricane evacuation dynamics were compared with observed traffic
+data for evacuation from Hurricane Georges (Category 4), which hit the
+Florida Keys on September 25, 1998. These data were obtained from a
+traffic monitoring station located at the outlet of Florida Keys (Fig. 1b)
+that records hourly traffic between the Florida Keys and the mainland.
+The following sections describe model development and implications of results from virtual experimentation with the model. Section 2
+provides an overview of model design in terms of network-based diffusion dynamics. Section 3 then provides details of its implementation,
+including the household-level evacuation decision process and calibration of household evacuation thresholds. Results from experimentation with the model are then presented and discussed in section 4,
+followed by conclusions in section 5.
+2. Model design
+The model design consists of three interrelated components, including a social contact network among households, a diffusion process
+of evacuation order, and a diffusion process of evacuation behavior.
+After the evacuation order is issued by authorities in response to an
+incoming hurricane, households being informed first would discuss it
+with their social links, leading to communication of the hurricane
+evacuation order. As shown in Fig. 2, household a is first aware of the
+evacuation order and then spreads this information to social links b, c,
+d, and e through the social network. After being informed about the
+evacuation order, each household starts to make a decision on evacuation. The decision-making process is influenced not only by a
+household's own characteristic evacuation tendency, but also by the
+evacuation behavior of linked households in its social contact network.
+It is expected that a household would decide to evacuate if most of its
+social links have evacuated, due to peer pressure associated with social
+contagion (Widener et al., 2013; Hasan & Ukkusuri, 2011). For example, once household a observes the evacuation of household b,
+household a may decide to evacuate as well. The evacuation of both
+household a and b (indicated by red shading) may further motivate
+household c and d to evacuate. In such a way, evacuation behavior
+diffuses from one household to another through the social network.
+Fig. 3 illustrates how the social network is conceptualized as a
+home-workplace social network, which has been demonstrated as an
+improvement upon residential-based networks alone for modeling
+contagion (Bian et al., 2012). In this study, social links to both residential neighbors and workplace colleagues are assumed to be sufficient to influence a household's decision on hurricane evacuation. The
+assumption that co-workers are part of social networks that influence
+household evacuation behavior is based upon findings from two lines of
+research. First, previous research has found that friendship plays an
+important role in evacuation behavior (Hasan & Ukkusuri, 2011;
+Messias, Barrington, & Lacy, 2012). Second, many friendships are
+formed among workplace colleagues (De Souza Briggs, 2007; Due,
+Holstein, Lund, Modvig, & Avlund, 1999). Moreover, this assumption
+has also been applied in other models simulating evacuation behavior
+(Lindell, 2008; Murray-Tuite, Schweitzer, & Morrison, 2012).
+As illustrated in Fig. 3, two households can be socially linked in the
+model under either of two conditions: 1) both households reside in the
+same neighborhood (such as a Census block group); or 2) at least one
+member from each household works at a common workplace, i.e., colleague relationship. The resulting network follows a basic small-world
+structure (Watts & Strogatz, 1998), where most of social links are highly
+localized around households, but a few links can reach distant households due to working at same place. Further, since where people live and
+work can be estimated from Census data, the home-workplace social
+network may be considered more plausible than an abstract network.
+3. Model implementation
+3.1. Synthesis of households and workplaces
+A synthetic population was created to initialize the simulation
+Fig. 1. These maps illustrate: a) the location of the Florida Keys in south Florida, USA; b) the extent of the Florida Keys study area; and c) the city of Key West at the
+southwestern tip of the study area.
+Fig. 2. Illustration of diffusion of evacuation order and evacuation behavior
+through a social network of households.
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+15
+
+model in concordance with empirical data for the Florida Keys.
+Specifically, a population of 79,547 individuals was synthesized in the
+study area and grouped into 35,064 households, according to U.S.
+Census block group data from 2000 (Census Bureau, 2000). Two sets of
+information were extracted from the Census data: individual-level data
+and household-level data (Table 1). Using algorithms developed by Mao
+and Bian (2010), table cross-referencing and Monte–Carlo simulation
+were performed to assign attribute values to individuals and households
+for each Census block group, so that the synthesized distributions fit
+real demographic distributions. Then, synthetic individuals were filled
+into a synthetic household based on its household type, size, and
+number of children and disabilities. To further allocate synthetic
+households to spatial location, i.e., (x, y) coordinates, residential land
+parcel data were obtained from the Florida Geographic Data Library
+and then synthetic households were randomly assigned to those parcels
+of the same Census block group and same household type. A residential
+parcel could contain more than one household.
+Individuals were assigned to workplaces based on their household
+location (as origins) and estimated travel distance to work (travel time
+× speed of travel mode in Census data). Workplace destinations were
+determined from a set of 6459 business locations in the study area,
+including schools, that were obtained from a commercial database
+(ReferenceUSA, 2003). Each worker was assigned to a business location
+in which: 1) the industrial code matched that of the worker's occupation; 2) the distance by road to the worker's household matched the
+estimated travel distance to work from Census data; 3) the maximum
+number of employees for the business was not yet reached. Unlike
+workers, school-aged individuals in each household were assigned to a
+nearest school as their workplace. These algorithms for synthesizing
+households and workplaces were previously validated by Mao and Bian
+(2010) using the Census Transportation Planning Products (CTPP) data.
+Because the synthesized population has the same statistical distribution
+as the actual population, it is considered broadly representative of the
+empirically observed reality. Therefore, while the synthetic population
+necessarily differs from the actual population, its correspondence with
+empirical data provides a plausible basis for the simulation experiments
+conducted with the model.
+3.2. Construction of home-workplace social network among households
+Each synthetic household was assigned a total number of social links
+n drawn from a Poisson distribution with a parameter λ that indicates
+the average number of links in the network. Among the n links, a
+uniformly distributed random integer number k was then generated
+between 0 and n to determine how many workplace colleagues would
+be linked to the household. To do so, k colleagues of household members were selected at random from their synthetic workplaces. Each
+household was then linked to the households of those k colleagues. The
+rest of n-k social links were randomly wired to other households in the
+same block group as their residential neighbors. These procedures were
+repeated for every household, which completed a home-workplace social network of the study area. This empirically based method of social
+network simulation is distinct from the abstract networks simulated in
+other social network ABMs of evacuation (Hasan & Ukkusuri, 2011;
+Madireddy et al., 2015; Widener et al., 2013).
+3.3. Diffusion of evacuation order
+Because hurricane evacuation warnings are generally given at least
+a day in advance of its expected landfall, the model was simulated for a
+24-h period using an hourly time step. In the baseline case, the evacuation order is issued at the beginning of the simulation.
+In the model, the evacuation order diffuses through two channels:
+the mass media and the social network among households. Once an
+evacuation order is issued by authorities, it is broadcast through mass
+media, such as television, radio and newspaper, and delivered to a
+given household at a certain probability, named media coverage rate.
+The baseline media coverage rate was set at 1.1% in the model, indicating that a given broadcast would be expected to reach 1.1% of
+households per hour. Although this value represents a theoretical rather
+than empirical assumption, it was determined to be both a plausible and
+conservative estimate after conducting sensitivity analysis using a range
+of media coverage rates and broadcast frequencies (Yang, 2013).
+If a household was informed about the evacuation order, it would
+discuss with other households in its social network with a probability
+referred to as discussion rate d. Through discussion, households unaware of evacuation order were informed and then would discuss with
+their social contacts, leading to a cascaded diffusion of the evacuation
+order through the social network. The initial discussion rate d(0) is set
+to 80% when a household first receives the message and diminishes
+with the passage of time, as formulated in Eq. 1 (Deffuant, Huet, &
+Amblard, 2005, p. 1052):
+d t
+d t if d t
+if d t
+( )
+(0) , (0) 0
+0, (0) 0 = >
+(1)
+Fig. 3. Illustration of home-workplace social network. Households are connected due to either living in the same neighborhood or having members at the same
+workplace.
+Table 1
+Attributes of synthesized individuals and households from Census and land
+parcel data.
+Individual Household
+Gender Census block group
+Age group House type
+Working status (worker, student, or retired) Number of household members
+Employer type (Industrial code) Number of children
+Disability status Number of disabilities
+Transportation mode to workplace Vehicle ownership
+Transportation time to workplace Spatial location (x, y)
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+16
+
+where t indicates a certain time step. γ is a coefficient affecting the
+diminishing of discussion with time and was set to 0.017 (Deffuant
+et al., 2005).
+3.4. Diffusion of evacuation behavior
+In this study, the diffusion of evacuation behavior among households was modeled with a classic threshold model (Granovetter, 1978),
+which has also been applied in other hurricane evacuation models
+(Hasan & Ukkusuri, 2011; Widener et al., 2013). Using the threshold
+model, a household would decide to evacuate if it learns that at least a
+threshold fraction of links in its social network are evacuating. Support
+for this heuristic can be found in the empirical correlation between the
+decision to evacuate and the influence of peers (Lindell et al., 2005). As
+illustrated in Fig. 4, once a household i receives the evacuation order,
+either from the mass media or their social network, this household is
+considered informed. Following a discussion with their social links,
+informed household i will evaluate the proportion pi of social links that
+have already evacuated or decided to do so. If pi is higher than their
+evacuation threshold Ti, the household i would decide to evacuate;
+otherwise, household i would stay and continue the discussion and
+evaluation in the next time step.
+The value of threshold Ti can vary from 0 to 100% over households
+due to different risk perception and household characteristics (Hasan &
+Ukkusuri, 2011). Different households have different thresholds, which
+are assigned on the basis of empirical evacuation surveys as described
+in the following section.
+3.5. Model calibration
+Surveys conducted after major hurricane events were used to
+estimate households' evacuation thresholds as part of a model calibration process. First, a logistic regression was run on the basis of
+survey data collected by Irwin and Hurlbert (1995) to identify
+household characteristics contributing to evacuation from Hurricane
+Andrew in 1992.2 The dependent variable for this logistic regression
+model indicated whether each of 466 households in southwestern
+Louisiana evacuated from Hurricane Andrew, following the analysis
+by Wilmot and Mei (2004). Independent variables included household type (mobile home, single family house, multi-family building,
+and others), ownership (owned or rented), size of household members, marital status, age, race, gender of householder, and presence
+of children. In addition, a binary independent variable was included
+to indicate whether a mandatory evacuation order was issued or not.
+The significant results from this logistic regression model are shown
+in Table 2, with a corresponding R2 of 35%. For example, as a reflection of the vulnerability context associated with a household's
+risk perception, living in a mobile home has a significant and strong
+positive effect on the likelihood of evacuation. In contrast, less vulnerable households living in a single family home were less likely to
+evacuate.
+Second, the results of this logistic regression model were applied to
+estimate the evacuation tendency of every household in the Florida
+Keys as a value ranging from 0 to 100%, as presented in Table 3.
+Overall, the model predicted a 53% evacuation rate of households in
+the Florida Keys, which is consistent with the observed rate during
+Hurricane Georges (Dash, 2002; Dash & Morrow, 2001).
+Based on the predicted evacuation tendency from this regression
+model, each household in the agent-based model was assigned an
+evacuation threshold, assuming that households with lower tendency
+to evacuation would have higher thresholds. The disribution of
+evacuation threshold assignments for the Florida Keys presented in
+Table 3 was estimated using the regression model with Census data
+for the Florida Keys. The estimated proportions were partially validated with results of evacuation surveys for Hurricane Isabel
+(Horney, 2009) and Hurricane Georges (Dash, 2002). On one hand,
+the survey of 2003 Hurricane Isabel indicated 12.5% of residents in
+the affected area of North Carolina chose to evacuate even though
+none of their neighbors did (Horney, 2009). To approximate this
+observed rate, households with the highest evacuation tendency
+(> 0.9) were assigned a threshold value of zero; these accounted for
+15.2% of households in the Florida Keys study area. On the other
+hand, the survey of Hurricane Georges showed about 35% of respondents would “only consider what is best for them no matter what
+authorities say” (Dash, 2002), and those households were reluctant
+to evacuate. To approximate this rate, households with an extremely
+low evacuation tendency (< 0.4) were either designated as stayers or
+assigned extremely high thresholds (0.8 and 1.0). As indicated in
+Fig. 4. Flowchart of household decision process toward evacuation.
+2 We thank Drs. Irwin and Hurlbert for sharing their survey data on evacuation from Hurricane Andrew for use in this study. Details about the data are
+provided in the report by Irwin and Hurlbert (1995).
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+17
+
+Table 3, these three categories accounted for a total of 35.2% of
+households in the study area. Thresholds for the rest of the households were assigned using an equal interval method.
+4. Results and discussion
+4.1. Social influence on temporal diffusion of evacuation behavior
+To assess the effects of social influence on evacuation behavior, a
+sensitivity analysis was undertaken for the model in which the average
+number of links λ per household was varied from 2 to 8 with an increment of 1 to construct different network scenarios, as shown in
+Fig. 5. This range was chosen based on statistical results from the
+General Social Survey (Davis, Smith, & Marsden, 2005), and to be
+consistent with the assumption that given the limited time and emergency situation, households would only contact those trustworthy
+friends and neighbors who are closely connected to them. Since only a
+small number of trusted contacts would be consulted by each household, limiting the most connected of these network structures to 8
+average contacts may be considered as allowing a generous upper
+bound.
+Fig. 5 shows the simulated number of households evacuating each
+hour under these different network structures (λ from 2 to 8). For each
+social network structure, an evacuation curve was plotted to depict
+temporal patterns of evacuation behavior in terms of the number of new
+households evacuating over a 24-h period. Each evacuation curve depicted in Fig. 5 represents an average across 50 model realizations for
+each social network structure so as to reduce the effect of stochastic
+variation on the overall evacuation trend. These results show that when
+households have more social links, evacuation behavior diffuses faster
+with a higher peak and earlier peak time. For example, diffusion in the
+social network with an average of 8 links peaked 4 h earlier than the
+social network with an average of 2 links. The corresponding peak size
+was almost doubled from 1800 to 3500 households. This pattern arises
+because more social links facilitate the spread of the evacuation order,
+triggering more rapid social contagion of evacuation behavior.
+The overall evacuation rate, derived from the area under the curves
+shown in Fig. 5, also improved as the average number of social links
+increased. The overall evacuation rate ranged from 43.6% to 54.5%
+under different social networks. The network structure with an average
+of 4 social links produced an evacuation rate of 53.2% (95% CI: [52.6,
+54.3]) was the closest to the observed evacuation rate of 53% from the
+survey (Dash, 2002). Thus, this social network was selected to further
+explore the spatial dynamics of evacuation behavior and simulate
+evacuation traffic for evaluation.
+4.2. Spatial-temporal patterns of evacuation behavior
+To illustrate the spatial spread of evacuation, a series of maps was
+created to display evacuation intensity over time and location, as shown
+in Figs. 6 and 7. The evacuation intensity was estimated with a kernel
+density function as the number of newly households to evacuate during
+a 4-h interval in a 50 m cell location. The cell size was set to approximate the average size of land use parcels. All results were averaged
+from 50 model realizations to reduce the effect of stochastic variation
+on the results of each simulation run.
+The map in Fig. 6 presents the evacuation intensity in the most
+populous area, the city of Key West. A full view of entire Florida Keys is
+shown in Fig. 7. Evacuation intensity was classified into 5 categories:
+extremely low (0–50 households per km2
+), low (50–200), moderate
+(200–500), high (500–1000), extremely high (> 1000). After the evacuation order was issued at Hour 1, the evacuation behavior was at a
+low to moderate level for the first 4 h (Fig. 6a). The evacuation intensity
+was under 50 households per km2 for most areas in the city. There were
+only three small spots with high evacuation intensity (> 500), all of
+which were in the central and eastern part of Key West. These hot spots
+emerged in areas with high household density and households that had
+a very low evacuation threshold.
+As time proceeded, the evacuation peaked between Hour 5 and 8
+(Fig. 6b). Evacuation intensity was above 200 households per km2 in
+most areas, and the maximum evacuation intensity exceeded 3000 in
+the central Key West. As more households decided to evacuate, they
+imposed increasing peer pressure to their social contacts and motivated
+them to follow the same behavior. During the third 4-h period (Fig. 6c),
+the intensity of evacuation dropped quickly to a low level (50–200
+households per km2
+). The most active areas moved from the central city
+to the western side of the city, where the intensity remained at a
+moderate level. This map suggested that after 8 h there were still many
+households left in the western city having not yet decided to evacuate.
+Fig. 6d-f shows that evacuation intensity gradually receded during the
+last 12 h of simulation, due to three reasons: 1) the pool of households
+to evacuate was depleting; 2) the discussion rate between households
+was approaching zero; 3) households leftover had extremely high
+thresholds and strong will to stay rather than evacuate.
+Table 2
+Household characteristics that significantly⁎ contribute to evacuation tendency.
+Variable Coefficient Significance
+Intercept −0.8000 0.0769
+Living in a mobile home 2.3613 0.0002
+Living in a single-family house −0.8580 0.0474
+Evacuation order given 1.2346 < 0.0001
+Presence of children 0.6186 0.0127
+Female householder 0.3424 0.0029
+Senior householder (Age > 65) −0.9791 0.0369
+⁎ Statistical significance is shown for variables with p < 0.05.
+Table 3
+Assignment of household evacuation thresholds based on evacuation tendency.
+Evacuation
+tendency
+Evacuation
+threshold Ti
+% of
+householdsa
+Supporting source
+0–0.37 Stayer (decline to
+evacuate)
+12.5 Dash (2002)
+0.37–0.38 1 10.9
+0.38–0.4 0.8 12.3
+0.4–0.5 0.5 9.9 Equal interval
+0.5–0.6 0.4 8.3 assignment
+0.6–0.7 0.3 21.6
+0.7–0.8 0.2 4.1
+0.8–0.9 0.1 5.3
+0.9–1 0 15.2 Horney (2009)
+a The percentage of households assigned to each category was estimated
+from the logistic regression model indicated in Table 2 on the basis of Census
+data for the Florida Keys.
+Fig. 5. Diffusion of evacuation behavior over time under different social networks (λ from 2 to 8 average links).
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+18
+
+Fig. 6. Evacuation intensity in the city of Key West at 4-h intervals under the social network (λ = 4). The intensity of evacuation (in households per km2
+) was
+classified into 5 categories: extremely low (0–50), low (50–200), moderate (200–500), high (500–1000), extremely high (> 1000).
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+19
+
+Fig. 7 maps hurricane evacuation intensity over time for the entire
+Florida Keys. Beyond the city of Key West, the urban areas of Marathon
+(in the Middle Keys) and Key Largo (in the Upper Keys) had clusters of
+moderate evacuation intensity in the first 4 h, while the rest of areas
+were at a low level. From hour 5 to 8, those clusters expanded
+throughout the entire Florida Keys. The maximum intensity at Marathon was about half of that at the central Key West. In the period of
+hour 9–12, the areas with moderate evacuation intensity shrunk dramatically in the Marathon and Key Largo areas. For the last 12 h, the
+intensity of evacuation dropped back to the low level for the entire
+study area.
+Spatio-temporal patterns shown in Figs. 6 and 7 shed insights into
+evacuation management for local authorities; for instance, the allocation of traffic control efforts. The number of households to evacuate
+increases exponentially after hour 3, and reaches a peak about 6 h after
+the evacuation order is issued, indicating that local authorities have
+such amount of time to distribute traffic control personnel. The city of
+Key West should be given priority in evacuation, not only because of its
+highest intensity of evacuation, but also the farthest distance to the
+mainland. For evacuating this city's population, the traffic control efforts should be first allocated to the eastern side in hour 1–9, and then
+gradually move to the western side from hour 10 to 16. In addition to
+Key West, another area in need of attention is the urban area of
+Marathon (in the Middle Keys). This area has high traffic demands from
+evacuation that are synchronous to Key West and encountered midway
+along the evacuation route for people from Key West. An ability to
+maintain the flow of traffic in Marathon thus determines the overall
+efficiency of evacuation for the entire Florida Keys.
+Fig. 7. 3D view of spatial distribution of households with evacuation decision over a day at 4-h intervals under the social network (λ = 4). The intensity of
+evacuation (in households per km2
+) at a given cell is classified into 5 categories: extremely low (0–50), low (50–200), moderate (200–500), high (500–1000),
+extremely high (> 1000); each cell is extruding to a height proportional to its evacuation intensity.
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+20
+
+4.3. Model validation
+As an imitation of the real, a simulation model will never be valid in
+an absolute sense. Nonetheless, model validation is an important kind
+of model analysis, given that a model's utility arises in part from the
+authenticity with which it mimics that reality. Here, the model validation process involves a comparison of simulated and empirically
+observed evacuation traffic over time. Different data were used for
+validation than for calibration of the evacuation threshold assignments.
+Efforts to validate the model were undertaken using empirical traffic
+data for evacuation from Hurricane Georges in the Florida Keys. In this
+process, the simulated spatial-temporal dynamics of household evacuation behavior were first input into the TRANSIMS (TRansportation
+ANalysis SIMulation System) software package (Barrett et al., 2001).
+The simulated traffic pattern was then compared to empirical observations of evacuation traffic recorded at a traffic monitoring station
+during the evacuation from Hurricane Georges (FDOT, 2012). Evacuation of residents from the Florida Keys occurred primarily over one
+day (FDOT, 2012), in line with the 24-h time horizon used for simulation.
+Three evacuation orders were issued on September 23, 1998 for
+different parts of the Florida Keys. The orders were given during daytime hours in part because most households prefer diurnal travel. The
+first evacuation order was issued between 6:00 and 7:00 am for the
+Lower Keys; the second evacuation order was issued at 11:00 am for the
+Middle Keys; and the third evacuation order was issued at 4:00 pm for
+the Upper Keys (Dash & Morrow, 2001). These evacuation orders were
+input into the model for the affected areas, and the resulting simulated
+hourly traffic was compared to the recorded traffic at the entrance to
+the mainland (Fig. 8). In general, the simulation results align with the
+observed traffic in terms of both timeline and magnitude. After the
+evacuation order was issued, the traffic rose fast after some delay
+caused by discussion or packing. The simulated evacuation traffic
+peaked at 1:00 pm, approximately the same time as the recorded traffic
+peaks. The peak size of simulated traffic was also similar to that of the
+recorded traffic volume, within a range of 1500–1700 vehicles per
+hour. The simulated peak was close to the designed capacity, 1600
+vehicles per hour, of a two-lane road. These results indicate that traffic
+congestion might occur on the two-lane part of the Florida Keys road
+network. From this comparison of recorded and simulated traffic patterns during evacuation, the reasonableness of the model is established
+as a platform for predicting evacuation traffic and supporting policy
+design.
+4.4. Model extensions
+Having established a correspondence between the simulated and
+observed evacuation patterns for the case of Hurricane Georges, the
+model was used as a virtual platform for further experimentation with
+alternative warning strategies and transportation planning to inform
+local evacuation policy during future hurricane events (Yang, 2013).
+Simulation of door-to-door notices, for example, produced greater
+evacuation rates in the model than could be achieved from a single
+order issued as a mass media broadcast. Inclusion of the bus as a public
+transit option was also tested and demonstrated an increased evacuation rate. These experiments show that encouraging residents and
+tourists to evacuate by bus not only alleviates congestion but also ensures that those who lack access to private cars can evacuate safely.
+While these model extensions are particularly relevant to the study
+area of the Florida Keys, the model itself may be adapted to other
+coastal areas that are vulnerable to hurricanes. Insights from such
+adaptation to other geographic contexts would reveal relative effects of
+more complex transport networks and different population characteristics on simulated evacuation behavior. Using empirical data to ground
+the development of a locally relevant simulation model facilitates the
+exploration of alternative scenarios and identification of effective plans
+for future evacuation needs. Furthermore, the approach presented
+herein may also be extended to model evacuation from areas impacted
+by other natural disasters.
+4.5. Model limitations
+Although any model is inherently a simplification of reality, there
+are at least two limitations of this study that could be addressed in
+future research. First, this research drew upon survey data from
+Hurricane Andrew to parameterize evacuation thresholds for the model
+due to the lack of comparable surveys conducted in the Florida Keys
+after Hurricane Georges. While the survey of Hurricane Andrew in
+southwestern Louisiana provided a reasonable proxy due to the demographic characteristics of the affected population, such calibration
+would be improved if similarly detailed survey data were available for
+the Florida Keys.
+Second, the island-chain of the Florida Keys extends more than one
+hundred miles. When a hurricane hits this area, its impact varies in
+different parts of the Keys, and so do the risks perceived by residents. It
+is likely that residents in the area where the hurricane will land would
+perceive much higher risks than those who live far away from the
+landfall. This research assumed that all residents, no matter where they
+reside, perceived the same level of risk toward an incoming hurricane,
+and overlooked the spatial heterogeneity of risk among residents.
+Extensions of this research include consideration of alternative scenarios for the location of a hurricane landing, whether in the Lower,
+Middle, or Upper Keys areas. For these location-specific landing scenarios, the distance between the residence and the location of hurricane
+landfall could be used to estimate the level of perceived risk that is
+incorporated into the model of household decision toward evacuation.
+5. Conclusions
+This study enriches the research on hurricane evacuation by integrating a home-workplace social network into an agent-based simulation model so as to experiment with social influence on household
+evacuation behavior. The spatial diffusion process of evacuation behavior was emphasized and explicitly represented for the geographical
+context of the Florida Keys. The model was empirically grounded in
+several ways: construction of the social network incorporated information about residential and workplace locations; household evacuation thresholds were estimated using data from hurricane evacuation surveys; and resulting traffic patterns were validated with
+observations from traffic records. The model enables iterative
+Fig. 8. Simulated and recorded hourly traffic volume on Sept. 23, 1998. The Y
+axis represents the traffic volume per hour; X axis represents the 24 h of a day.
+Hour 1 represents the hour between 6:00–7:00.
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+21
+
+exploration of how the evacuation process may proceed to encourage
+appropriate questions and alternative assumptions. The results generated from experiments with this model provide valuable insight for
+designing future hurricane evacuation plans in the Florida Keys. More
+broadly, the approach taken in this study may be extended to other
+areas affected by hurricanes and other natural disasters.
+Acknowledgements
+We are grateful to several people for their advice on the presentation of research from this study, including two anonymous reviewers
+who provided thoughtful comments on this paper. We thank Drs. Irene
+Casas and Peter Rogerson for the detailed feedback they gave on the
+dissertation research that formed the basis of this study. We also thank
+Dr. Harvey Palmer for his helpful suggestions on improving this paper.
+References
+Baker, E. J. (1991). Hurricane evacuation behavior. International Journal of Mass
+Emergencies and Disasters, 9(2), 287–310.
+Barrett, B., Ran, B., & Pillai, R. (2000). Developing a dynamic traffic management
+modeling framework for hurricane evacuation. Transportation Research Record, 1733,
+115–121. https://doi.org/10.3141/1733-15.
+Barrett, C., Beckman, R., Berkbigler, K., Bisset, K., Bush, B., Campbell, K., ... Kubicek, D.
+(2001). TRANSIMS: Transportation Analysis Simulation System. Los Alamos National
+Laboratory Unclassified Report LA-UR-00-1725.
+Bian, L., Huang, Y., Mao, L., Lim, E., Lee, G., Yang, Y., ... Wilson, D. (2012). Modeling
+individual vulnerability to communicable diseases: A framework and design. Annals
+of the Association of American Geographers, 102(5), 1016–1025. https://doi.org/10.
+1080/00045608.2012.674844.
+Blake, E. S., Rappaport, E. N., & Landsea, C. W. (2007). The deadliest, costliest, and most
+intense United States tropical cyclones from 1851 to 2006 (and other frequently requested
+hurricane facts). NOAA (National Oceanic and Atmospheric Administration)
+Technical Memorandum NWS TPC-5.
+Census Bureau, U. S. (2000). Census 2000 data. URL https://www.census.gov/main/
+www/cen2000.html, Accessed date: 1 June 2018.
+Chen, X., Meaker, J. W., & Zhan, F. B. (2006). Agent-based modeling and analysis of
+hurricane evacuation procedures for the Florida Keys. Natural Hazards, 38, 321.
+https://doi.org/10.1007/s11069-005-0263-0.
+Chen, X., & Zhan, F. B. (2008). Agent-based modelling and simulation of urban evacuation: Relative effectiveness of simultaneous and staged evacuation strategies. Journal
+of the Operational Research Society, 59(1), 25–33. https://doi.org/10.1057/palgrave.
+jors.2602321.
+Cova, T. J., & Johnson, J. P. (2002). Microsimulation of neighborhood evacuations in the
+urban-wildland interface. Environment and Planning A, 34(12), 2211–2230. https://
+doi.org/10.1068/a34251.
+Crooks, A. T., & Wise, S. (2013). GIS and agent-based models for humanitarian assistance.
+Computers, Environment and Urban Systems, 41, 100–111. https://doi.org/10.1016/j.
+compenvurbsys.2013.05.003.
+Dash, N. (2002). Decision-making Under Extreme Uncertainty: Rethinking Hazard Related
+Perceptions and Action. PhD Dissertation in Global and Sociocultural StudiesNorth
+Miami, FL: Florida International University.
+Dash, N., & Morrow, B. H. (2001). Return delays and evacuation order compliance: The
+case of Hurricane Georges and the Florida Keys. Global Environmental Change Part B:
+Environmental Hazards, 2(3), 119–128. https://doi.org/10.1016/S1464-2867(01)
+00008-0.
+Davis, J. A., Smith, T. W., & Marsden, P. V. (2005). General Social Surveys, 1972–2004
+[cumulative file]. Inter-university Consortium for Political and Social Research. URL
+https://www.icpsr.umich.edu/icpsrweb/IFSS/studies/36319, Accessed date: 1 June
+2018.
+De Souza Briggs, X. (2007). “Some of my best friends are…”: Interracial friendships, class,
+and segregation in America. City & Community, 6(4), 263–290. https://doi.org/10.
+1111/j.1540-6040.2007.00228.x.
+Deffuant, G., Huet, S., & Amblard, F. (2005). An individual-based model of innovation
+diffusion mixing social value and individual benefit. American Journal of Sociology,
+110(4), 1041–1069. https://doi.org/10.1086/430220.
+Dow, K., & Cutter, S. L. (2000). Public orders and personal opinions: Household strategies
+for hurricane risk assessment. Global Environmental Change Part B: Environmental
+Hazards, 2(4), 143–155. https://doi.org/10.1016/S1464-2867(01)00014-6.
+Due, P., Holstein, B., Lund, R., Modvig, J., & Avlund, K. (1999). Social relations: Network,
+support and relational strain. Social Science & Medicine, 48(5), 661–673.
+FDOT (2012). Traffic Volume Telemeter Recorded Data. Transportation Data and Analytics
+Office. Florida Department of Transportation. URL http://www.fdot.gov/statistics/
+trafficdata/, Accessed date: 1 June 2018.
+Fu, H., & Wilmot, C. (2004). Sequential logit dynamic travel demand model for hurricane
+evacuation. Transportation Research Record: Journal of the Transportation Research
+Board, 19–26.
+Gladwin, H., Lazo, J. K., Morrow, B. H., Peacock, W. G., & Willoughby, H. E. (2007).
+Social science research needs for the hurricane forecast and warning system. Natural
+Hazards Review, 8(3), 87–95. https://doi.org/10.1061/(ASCE)1527-6988(2007)
+8:3(87.
+Granovetter, M. (1978). Threshold models of collective behavior. American Journal of
+Sociology, 83(6), 1420–1443.
+Grimm, V., & Railsback, S. F. (2005). Individual-based Modeling and Ecology. Princeton, NJ:
+Princeton University Press.
+Hasan, S., & Ukkusuri, S. V. (2011). A threshold model of social contagion process for
+evacuation decision making. Transportation Research Part B: Methodological, 45(10),
+1590–1605. https://doi.org/10.1016/j.trb.2011.07.008.
+Henson, K. M., & Goulias, K. G. (2006). Preliminary assessment of activity analysis and
+modeling for homeland Security applications. Transportation Research Record: Journal
+of the Transportation Research Board, 1942, 23–30.
+Hobeika, A. G., & Jamei, B. (1985). MASSVAC: A model for calculating evacuation Times
+under natural Disasters. Proceedings of the Conference on Computer Simulation in
+Emergency Planning. La Jolla, CA: Society of Computer Simulation.
+Horney, J. A. (2009). Hurricane Evacuation failure: The Role of Social Cohesion, Social
+Capital, and Social Control. PhD Dissertation in EpidemiologyChapel Hill, NC:
+University of North Carolina at Chapel Hill.
+Irwin, M. D., & Hurlbert, J. S. (1995). A Behavioral Analysis of Hurricane Preparedness and
+Evacuation in Southwestern Louisiana. Baton Rouge, LA: Louisiana State University/
+Louisiana Population Data Center.
+Lindell, M. K. (2008). EMBLEM2: An Empirically based large Scale Evacuation Time
+Estimate Model. Transportation Research Part A: Policy and Practice, 42(1), 140–154.
+https://doi.org/10.1016/j.tra.2007.06.014.
+Lindell, M. K., Lu, J.-C., & Prater, C. S. (2005). Household decision making and evacuation in response to Hurricane Lili. Natural Hazards Review, 6(4), 171–179. https://doi.
+org/10.1061/(ASCE)1527-6988(2005)6:4(171.
+Lindell, M. K., & Perry, R. W. (2004). Communicating Environmental Risk in Multiethnic
+Communities. Thousand Oaks, CA: Sage Publications.
+Madireddy, M., Kumara, S., Medeiros, D., & Shankar, V. N. (2015). Leveraging social
+networks for efficient hurricane evacuation. Transportation Research Part B:
+Methodological, 77, 199–212. https://doi.org/10.1016/j.trb.2015.03.016.
+Mao, L., & Bian, L. (2010). Spatial–temporal transmission of influenza and its health risks
+in an urbanized area. Computers, Environment and Urban Systems, 34(3), 204–215.
+https://doi.org/10.1016/j.compenvurbsys.2010.03.004.
+Messias, D. K. H., Barrington, C., & Lacy, E. (2012). Latino social network dynamics and
+the Hurricane Katrina disaster. Disasters, 36(1), 101–121. https://doi.org/10.1111/j.
+1467-7717.2011.01243.x.
+Murray-Tuite, P. M., Schweitzer, L., & Morrison, R. (2012). Household no-notice evacuation logistics: How well do households optimize? Journal of Transportation Safety
+& Security, 4(4), 336–361. https://doi.org/10.1080/19439962.2012.660562.
+Pel, A. J., Bliemer, M. C., & Hoogendoorn, S. P. (2012). A review on travel behaviour
+modelling in dynamic traffic simulation models for evacuations. Transportation, 39,
+97–123. https://doi.org/10.1007/s11116-011-9320-6.
+ReferenceUSA (2003). US businesses Database. InfoGroup. URL http://resource.
+referenceusa.com/available-databases/, Accessed date: 1 June 2018.
+Sheffi, Y., Mahmassani, H., & Powell, W. B. (1982). A transportation network evacuation
+model. Transportation Research Part A, 16(3), 209–218.
+Stern, E., & Sinuany-Stern, Z. (1989). A behavioural-based simulation model for urban
+evacuation. Papers in Regional Science, 66(1), 87–103.
+Urbina, E., & Wolshon, B. (2003). National review of hurricane evacuation plans and
+policies: A comparison and contrast of state practices. Transportation Research Part A:
+Policy and Practice, 37(3), 257–275. https://doi.org/10.1016/S0965-8564(02)
+00015-0.
+Watts, D. J., & Strogatz, S. H. (1998). Collective dynamics of ‘small-world’ networks.
+Nature, 393, 440–442.
+Widener, M. J., Horner, M. W., & Metcalf, S. S. (2013). Simulating the effects of social
+networks on a population's hurricane evacuation participation. Journal of
+Geographical Systems, 15(2), 193–209. https://doi.org/10.1007/s10109-012-0170-3.
+Wilmot, C. G., & Mei, B. (2004). Comparison of alternative trip generation models for
+hurricane evacuation. Natural Hazards Review, 5(4), 170–178.
+Yang, Y. (2013). Agent-based Modeling of Social Influence, Traffic patterns, and Warning
+strategies during Hurricane Evacuation. PhD Dissertation in GeographyBuffalo, NY: The
+State University of New York at Buffalo.
+Zhang, B., Chan, W. K. V., & Ukkusuri, S. V. (2009). Agent-based modeling for household
+level hurricane evacuation. Proceedings of the Winter Simulation Conference,
+2778–2784.
+Y. Yang et al. Computers, Environment and Urban Systems 74 (2019) 13–22
+22

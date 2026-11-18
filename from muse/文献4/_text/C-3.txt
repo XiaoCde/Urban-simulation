@@ -1,0 +1,975 @@
+Contents lists available at ScienceDirect
+Environmental Science and Policy
+journal homepage: www.elsevier.com/locate/envsci
+Exploring the circumstances surrounding flood fatalities in
+Australia—1900–2015 and the implications for policy and practice
+Katharine Haynesa,b,c,⁎
+, Lucinda Coatesa,c
+, Rob van den Honerta,c
+, Andrew Gissinga,c
+,
+Deanne Birda,c,d
+, Felipe Dimer de Oliveiraa,c
+, Rebecca D’Arcya
+, Chloe Smitha
+, Deirdre Radforda
+a Risk Frontiers, Macquarie University, NSW 2109, Australia
+b Department of Geography and Planning, Macquarie University, NSW 2109, Australia
+c Bushfire & Natural Hazards CRC, 340 Albert St., East Melbourne, VIC 3002, Australia d Institute of Life and Environmental Sciences, University of Iceland, 101 Reykjavik, Iceland
+ARTICLE INFO
+Keywords:
+Vulnerability
+Fatality
+Flood
+Hazard
+Gender
+Youth
+ABSTRACT
+This paper documents the analysis of the circumstances surrounding fatalities due to flooding in Australia between 1900 and 2015. This longitudinal investigation is important to understand changing trends in social
+vulnerability and to inform efficient and strategic risk reduction strategies. The basis of this analysis was
+PerilAUS, Risk Frontiers’ database of historical natural hazard impacts in Australia. This data was augmented and
+verified using coronial inquest records which provide detailed data concerning the social, demographic and
+environmental circumstances of each fatality. A statistical analysis of the data was undertaken, examining demographics (age, gender), location (state), seasonality, circumstances surrounding the fatality, environmental
+factors (e.g. the event intensity) and social factors (e.g. the decisions or actions which led to death). Overall there
+have been 1859 fatalities identified, with distinct trends in relation to gender, age, activity and reason behind the
+activity. Flood deaths have been declining. The majority of the fatalities are male (79.3%): however, since the
+1960s the proportion of female to male fatalities has increased. Children and young adults (< 29 years) make up
+the greatest proportion of the fatalities (53.8% of cases where age is known). The highest proportions of fatalities
+occurred while victims attempted to cross a flood-impacted bridge or road. The recommendations for emergency
+management policy and practice are discussed, outlining the need for a new approach that accounts for a
+continuum of measures including regulation and incentive, education and structural intervention.
+1. Introduction and background
+This paper updates and expands on previous work on Australian
+flood fatalities conducted by Coates (1999) and Haynes et al. (2009).
+This is particularly important as floods are ranked second, following
+heatwaves, in terms of the total number of natural hazard fatalities
+since 1900 (Coates et al., 2014).
+The investigation explores the social and environmental circumstances surrounding all documented fatalities due to flooding in
+Australia from 1900 to 2015, presenting a longitudinal understanding
+of changes in vulnerability to flooding over time. This examination
+provides an evidence base for emergency management policy and resource allocation, and is a first step to enabling efficient and strategic
+risk reduction strategies. The methodology and analysis employed is
+based on similar published work on heatwaves (Coates et al., 2014) and
+bushfires (Haynes et al., 2010; Blanchi et al., 2014).
+Globally, flooding is a significant cause of death (World Health
+Organization, 2014; Jonkman and Kelman, 2005; Ahern et al., 2005).
+According to the International Federation of Red Cross and Red
+Crescent Societies (2015) some 59,092 flood fatalities have occurred
+worldwide between 2005 and 2014. Substantial research into floodrelated fatalities has been undertaken by Diakakis and Deligiannakis
+(2017), Hamilton et al. (2016), Haynes et al. (2009), Jonkman and
+Kelman (2005), Jonkman et al. (2009) and Kundzewicz and
+Kundzewicz (2005), Peden et al. (2017) amongst others. A full literature review is contained in the online Supplementary material (link).
+2. Methodology
+The foundation for this work is the use of the Risk Frontiers’ database PerilAUS, which contains historical data on the incidence (magnitude and affected locations, etc.) and consequences (property damage
+and fatalities, etc.) of natural hazard events in Australia. Detailed data
+ranges from European settlement (1788) to the present day. PerilAUS is
+http://dx.doi.org/10.1016/j.envsci.2017.07.003
+Received 2 March 2017; Received in revised form 4 July 2017; Accepted 4 July 2017
+⁎ Corresponding author at: Department of Geography and Planning, Macquarie University, NSW 2109, Australia.
+E-mail address: haynes.katharine@gmail.com (K. Haynes).
+Environmental Science and Policy 76 (2017) 165–176
+Available online 15 July 2017
+1462-9011/ © 2017 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/BY-NC-ND/4.0/).
+MARK
+
+based on material collected from news media, government reports,
+published literature, jurisdictional coroners’ records, the Australian
+Bureau of Statistics, and registries of Births, Deaths and Marriages for
+Australia’s states and territories.
+The data covers the following natural hazards: floods, extreme heat,
+bushfires, tropical cyclones, earthquakes, hailstorms, landslides, lightning strikes, rainstorms, tornadoes, tsunamis and windstorms. A
+number of published studies have utilised PerilAUS, including: Blanchi
+et al. (2014), Coates (1999), Coates et al. (1993, 2014), Crompton et al.
+(2010) and Haynes et al. (2009, 2010).
+An important component of the current project was the further
+detailed examination, where possible, of coronial data relating to flood
+fatalities. The availability of victims’ names in the original Risk
+Frontiers’ database allowed the retrieval of witness and police statements and forensic documents contained in coronial inquest reports.
+This process was found to be a crucial means of verification and adding
+further detail to the circumstances surrounding flood fatalities, especially by enabling a better determination of the social, demographic and
+environmental circumstances of the deceased.
+The classification of the data followed the same numerical coding
+methodology as that developed and outlined in Haynes et al. (2010).
+The coding scheme was initially developed and refined by the two lead
+authors who worked together through a number of the fatality records.
+The wider team then completed the bulk of the coding, with crosschecking of the entire database conducted by the two lead authors.
+The data was classified into the following categories:
+2.1. Demographics
+Age and gender.
+2.2. Location, seasonality and flood characteristics
+Details of the location where the fatality occurred, the date and time
+and the physical characteristics of the flood: flood type and severity
+(e.g. “a one-in-100 event”). Table 2 outlines the detailed coding categories used for flood type and severity.
+2.3. Mode of transport
+Details on the mode of transport used by the deceased prior to and
+at the time of their death: walking, in a closed or open vehicle, on a boat
+or ship, on a makeshift or inflatable raft etc.
+2.4. Actions taken and reasoning, awareness and capacity to act
+This category classifies the actions taken by the deceased at the time
+of their death. Where information from witness statements was available it categorises their level of awareness or knowledge of the flooding
+and possible dangers. Information on the capacity of the victim to act
+was also captured and coded. Inferring people’s decision making, their
+level of awareness and their capacity to act is problematic, particularly
+due to the varying levels of detail in the fatality records early in the last
+century. Where there was not enough information available to make
+sensible judgments, these deaths were labelled as unknown. Tables 3–9
+outline the detailed coding categories used for these classifications.
+3. Results and discussion
+The total number of individually identified flood-related deaths
+between 1900 and 2015 was 1859, with an average national annual
+death rate of 2.91 fatalities per 100,000 people per year.
+3.1. Demographics
+Fig. 1 shows a time series of fatalities by gender since 1900. The
+majority of the deaths have been males (79%), a percentage which is
+statistically significantly greater than 50% (p < 0.0001).
+Death rates relative to the national population have declined over
+the years (Fig. 2).
+Between 1900 and 1959 there is a significant decrease in the flood
+fatality rate (slope = −0.05449, p < 0.02). This means the fatality
+rate was decreasing by 0.55 deaths per 100,000 in the population per
+year. In contrast, from 1960 to 2015 the fatality rate has been decreasing by 0.0645 per 100,000 in the population per year. However,
+this decrease in flood fatality rate is not statistically significant. The
+ratio of male-to-female fatalities has steadily decreased over time, with
+a statistically significant decline (p < 0.01) from the 1960s. This indicates an increasing proportion of female fatalities in more recent
+times. The majority of deaths have occurred in events where two or less
+people died (67%, n = 1248 in 1076 flood events). Events where 5 or
+more people have died correspond to 19% of the fatalities (n = 352 in
+35 flood events).
+A total of 35 people of Australian indigenous heritage are listed
+within the data set, making up 2% of the total fatalities. However, it is
+likely that a large proportion of indigenous deaths, particularly during
+the first two thirds of the last century, were unrecorded and their deaths
+are underrepresented.
+Given the differences in the way of life and the trends seen in the
+data since 1960, a detailed exploration of the data pre- and post-1960
+was conducted. However, the trends seen in terms of demographics,
+locations and actions taken are very similar in both time periods.
+Therefore, the results presented below are for the full data set with only
+unique differences in the recent data, such as fatalities in motor vehicles, explored.
+The breakdown by age (Fig. 3, and Table S1 in the Supplementary
+material) demonstrates the distinct high-risk groups of children and
+young adults (< 29 years), who make up the greatest proportion of
+deaths (43%, n = 807 out of 1859). When the gender is examined, the
+highest proportion of male fatalities are seen in the 10–29 year age
+brackets (38% of all male fatalities in which age is known) and the
+highest proportion of female fatalities is seen in the younger 0–19 year
+age brackets (54% of all female fatalities in which age is known). For
+both genders these proportions are statistically significantly greater
+than what would be expected if fatalities were evenly distributed across
+age ranges. For both genders the proportion of fatalities then decreases
+steadily with age. Over 50% of the female deaths occur in those under
+29 years of age (56%, n = 206) and over 50% of the male deaths occur
+in those under 39 years of age (51%, n = 756). A detailed examination
+of the fatalities under 18 years of age by gender shows the heightened
+vulnerability of males, particularly among two-year olds, children
+(8–11 years old) and young adults (18 years old). Interestingly, numbers of fatalities are raised for two-year old females and six- and sevenyear old females.
+In terms of cause of death, the majority died from drowning (57%,
+n = 1055), followed by those who were likely to have died from
+drowning (37%, n = 691). The latter group cannot be accurately categorised as drowned due to a lack of specific data about whether
+drowning, injury, exposure or heart attack was the root cause. As many
+of the early deaths were often classified as drowning without a proper
+autopsy it would be most correct to state that 94% of deaths were
+caused by drowning, with injury, exposure or heart attack likely to be a
+contributing factor in many of these.
+3.2. Location and seasonality
+When the location of deaths is examined across Australia (Fig. 4 and
+Fig. S1), Queensland (38%, n = 702) and New South Wales (37%,
+n = 683) account for 75% of the overall fatalities. The third highest
+number of fatalities occurred in Victoria, with 13% of fatalities
+(n = 245). When population size (Fig. S1) is considered, the heightened
+level of risk in the Northern Territory is revealed: the fatality rate is
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+166
+
+almost double that of the state with the next highest fatality rate. When
+fatalities in the various jurisdictions are examined longitudinally, an
+expected downward trend in deaths over time is observed, apart from in
+the Northern Territory.
+Most fatalities in Queensland, New South Wales and the Northern
+Territory occurred during the summer/monsoon season, predominantly
+in December, January, February and March, although there is a fairly
+high proportion of New South Wales deaths in June which are associated with winter storms (East Coast Lows). In contrast, flood deaths in
+South Australia, Victoria, Western Australia and Tasmania are more
+Fig. 1. Time series of fatalities by gender since 1900.
+Fig. 2. National death rates due to flood 1900–2015.
+Fig. 3. Breakdown of fatalities by age and gender.
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+167
+
+evenly distributed throughout the year.
+The greater level of detail included in coronial data between 2000
+and 2015 enabled a spatial analysis on the location of each fatality
+compared to distance from home. Of the total 178 records, 121 contained data on the location of the fatality and their home address. Of
+these 121 fatalities, more than a quarter occurred within 5 km of their
+home (26%, n = 32) and 58% (n = 70) were within 20 km. Fewer than
+22% of fatalities occurred more than 100 km from the victim’s home
+(n = 26). There were no age or gender trends evident in this data, with
+57% male (n = 45) and 60% female (n = 25) fatalities occurring
+within 20 km of their home (p > 0.5, no statistically significant difference in proportion between males and females).
+3.3. Flood type and severity
+Most fatalities (71%, n = 1325) occurred close to the coast, either
+on short coastal rivers (54%, n = 1005) associated with heavy rainfall
+within a small catchment, causing a short duration rapid flood or flash
+flood event, or longer coastal rivers (17%, n = 320), where floodwater
+rose rapidly over a longer period (up to 4 days) (Table 1). A further 295
+(16%) deaths occurred along inland rivers, where extensive but slow
+moving flooding was caused by widespread rainfall, followed by those
+in an urban setting in a local flash flood or low-level short duration
+flood (8%, n = 142).
+Table 1 shows that a statistically significantly higher proportion of
+females died than males in floods on short coastal rivers during short
+duration heavy rains (z = −2.02, p < 0.05) and in local urban flash
+floods or low-level short duration flooding (z = −5.22, p < 0.001).
+By contrast, statistically significantly higher proportions of males than
+females died on inland rivers which experienced long duration, low
+moving floods (z = 3.51, p < 0.005), and in floods on normally dry
+inland rivers involving sudden rapid runoff (z = 2.54, p < 0.02).
+3.4. Activity prior to death, gender, age and reason behind action
+Tables 2–6 display two-way cross-tabulations of the numbers of
+fatalities by activity prior to death, the reason behind the action, and
+the victim’s gender and age.
+The highest proportions of both men and women died while attempting to cross a bridge, causeway, culvert, road, etc. (men: 47%,
+n = 689; women: 41%, n = 149) (Table 2). The majority of these
+people (60%, n = 507) were en route to a destination at the time
+(Table 3).
+For females, the second highest activity at the time of death, accounting for nearly a quarter of all female fatalities, was being engaged
+in an activity not near a usual watercourse, e.g. driving through town or
+in their home and unaware of the flood waters (23%, n = 82). In
+general, this group did not attempt to cross floodwaters but were surprised by flash flooding outside of a usual water channel. For men, this
+was the third highest cause of death (10%, n = 143).
+A test of association between activity at time of death and gender
+shows a highly significant relationship (χ2
+6 = 43.8, p < 0.0001).
+Further investigation of Table 2 shows that a significantly higher proportion of males died than females whilst crossing a bridge, causeway
+or other watercourse crossing (z = 2.02, p < 0.05), whilst a significantly higher proportion of females died than males whilst engaged
+in an activity not near a usual watercourse (for example in their own
+home or garden) (z = −6.67, p < 0.001). For other activities, the
+proportions of male and female victims were not significantly different.
+Of the total number engaged in an activity not near a usual watercourse at the time of death (n = 228), 47% (n = 107) were in a
+house (71%, n = 76 of these were in a house that was destroyed), 13%
+(n = 30) were on a house (87%, n = 26 of these were on a house that
+was destroyed) and 24% (n = 54) were outside. Prior to death, the
+majority of these victims were in their home and taken by surprise or
+engaged in a last minute evacuation or a vertical evacuation (45%,
+Fig. 4. Number of fatalities per states and territories from
+1900 to 2015.
+Table 1
+Fatalities by ‘flood type/severity’ and gender (% of column totals)a
+.
+Male Female Unknown Total
+Short coastal rivers, heavy rain over small catchment, rapid rise, short duration 782 (53%) 215 (59%) 8 (42%) 1005 (54%)
+Longer coastal rivers, larger catchment, rapid rise, longer duration (up to 4 days) 265 (18%) 50 (14%) 5 (26%) 320 (17%)
+Inland rivers, long duration, widespread rains, extensive floods, slow moving 256 (17%) 36 (10%) 3 (16%) 295 (16%)
+Normally dry inland rivers, sudden quick runoff 61 (4%) 5 (1%) 2 (11%) 68 (4%)
+Dam failure 12 (1%) 4 (1%) 0 (0%) 16 (1%)
+Urban, flash, local, low-level, short duration, nuisance 90 (6%) 52 (14%) 0 (0%) 142 (7%)
+Unknown 9 (1%) 3 (1%) 1 (5%) 13 (1%)
+Total 1475 (100%) 365 (100%) 19 (100%) 1859 (100%)
+a There may be small rounding errors in tables.
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+168
+
+n = 102) (Table 3).
+Being engaged in an activity near the water (i.e. on the creek or
+river bank) was the second highest cause of death for men (13%,
+n = 191) and the third highest for women (12%, n = 45) (Table 3).
+Most of these victims were participating in recreational activities at the
+time (41%, n = 96) (Table 3).
+A test of association between activity at the time of death and the
+reason behind the action taken shows a very highly significant relationship between these two variables (χ2
+96 = 1,793.3, p < 0.0001).
+When the reasons behind the actions taken prior to death are examined
+in detail (Table 3), the highest numbers of fatalities occurred en route to
+a destination (32%, n = 598). Of these, where information is known,
+the greatest proportion were on their way home (10%, n = 192), followed by those who were en route from home (6%, n = 112). When
+this data is examined by gender (Table 4), a very similar proportion of
+fatalities are seen for both men (32%, n = 472) and women (33%,
+n = 120). The second highest reason behind death for both genders is
+recreating (16%, n = 296). However, the highest proportion of these
+deaths is seen among females with 21% (n = 75), compared to 15% for
+males (n = 221). For men, the third highest reason leading to flood
+deaths is rescuing people, property, pets or livestock (11%, n = 157).
+The third highest reason for death amongst women is evacuating (including vertical evacuation, being rescued, awaiting a rescue and late
+evacuation), which accounts for 16% (n = 60), followed by those who
+were in their homes and unaware, and therefore made no attempt at
+evacuation (8%, n = 29).
+A test of association between activity at the time of death and
+gender shows a very highly significant relationship (χ2
+16 = 137.3,
+p < 0.0001). A closer examination of the data in Table 3 shows that a
+statistically significantly higher proportion of males died than females
+whilst working or carrying out livelihood activities (z = 4.63,
+p < 0.0001), and whilst carrying out attempted rescues of other
+people, property, pets and livestock (z = 4.53, p < 0.0001). A significantly higher proportion of females died than males whilst attempting to evacuate (including vertical and late evacuations)
+(z = −7.36, p < 0.0001), and whilst recreating (z = −2.59,
+p < 0.01). For other activities, the proportions of male and female
+victims were not significantly different.
+A test of association between activity at the time of death and age
+(Table 5) shows a very highly significant relationship (χ2
+36 = 234.6,
+p < 0.0001), implying a very strong relationship between age and
+activity at the time of death.
+For those attempting to cross a flooded bridge, causeway, culvert,
+road or watercourse, the risk is broadly split across all age ranges, although the highest number of fatalities are seen within the 10–29 year
+age groups (32%, n = 269) (Table 5).
+The data shows that there are high numbers of fatalities in the 0–9
+and 10–19 year age ranges for victims engaged in this activity type.
+However, the proportions of victims in the 0–9 and 10–19 year age
+ranges in this activity type are smaller than for all the other age ranges,
+except the oldest range (80–89 years). Thus, fatalities in the younger
+age groups are more evenly spread across the various activity types. In
+particular, those in the 0–9 year age range are relatively evenly split
+across activities, with 26% (n = 64) attempting to cross a flooded
+bridge, causeway, culvert, road or watercourse, 27% (n = 66) engaged
+in an activity near the bank, and 17% (n = 41) engaged in an activity
+not near a usual watercourse. In the 10–19 year age range a higher
+proportion are attempting to cross a flooded bridge, causeway, culvert,
+road or watercourse (41%, n = 129) than any other activity. However,
+this age group also has the highest proportion of all those engaged in an
+activity in the water (18% of all fatalities in this age group, n = 55).
+In terms of other activities engaged in at the time of death, the
+highest proportion of fatalities occurring in activities near the water
+(e.g. bank or bridge) and in or near a stormwater drain are in the
+0–19 year age ranges (51%, n = 119; 72%, n = 38, respectively). For
+those engaged in activities in the water, the majority of fatalities (65%,
+n = 79) are in the 10–29 year age range. The highest proportion of
+victims engaged in an activity not near a usual watercourse, e.g. being
+driven through town or in their home and unaware of the floodwaters,
+is in the 0–9 year age range (18%, n = 41).
+When the ‘reason behind action’ is explored by age ranges (Table 6),
+the highest proportions of those in the 0–19 year age groups were recreating at the time of their death (35%, n = 195), followed by those en
+route to a destination (27%, n = 151). For all older age groups where
+the reason behind the action could be identified, the highest proportions were en route to a destination, from between 36% to 49% of all
+fatalities in the age range.
+3.5. Capacity and awareness
+Table 7, and Tables S2 and S3 display two-way cross-tabulations of
+the numbers of fatalities by the victim’s awareness of the flood, the
+victim’s capacity to act in the event of a flood, and the victim’s gender
+and age.
+The largest proportion of victims were aware of the flood but the
+depth and/or speed of the water took them by surprise (44%, n = 811)
+(Table 7). In terms of the victim’s ‘capacity to act’, the majority of
+fatalities were considered to be capable of independent action (54%,
+n = 1001): i.e., not following the decision making of others. Of these,
+59% (n = 593) of victims were aware of the flood but the depth and/or
+speed of the water took them by surprise. In terms of ‘capacity to act’,
+the second highest proportion of victims were those following the decision making of others (such as children, or passengers in a car) (16%,
+n = 293), followed by a child or group of children on their own who
+are under the age of 11 (9%, n = 173).
+When the age ranges of those following the decision making of
+others are examined (Table S2), 37% (n = 108) of fatalities were found
+to be in the 0–9 category and 21% (n = 62) in the 10–19 category: i.e.,
+children under the supervision of others − generally adults. The
+breakdown of ‘capacity to act’ by gender (Table S3) shows that the
+majority of male victims (60%, n = 879) were capable of independent
+action, a far higher proportion than for females (33%, n = 119). This
+Table 2
+Fatalities by ‘activity prior to death’ and gender (% of column totals).
+Male Female Unknown Total
+Attempting to cross bridge/causeway/crossing/culvert/ford/watercourse 689 (47%) 149 (41%) 6 (32%) 844 (45%)
+Attempting to cross floodwaters away from watercourses (water over fields/town) 73 (5%) 11 (3%) 0 (0%) 84 (5%)
+Engaged in an activity near the water (on the bank/bridge) 191 (13%) 45 (12%) 0 (0%) 236 (13%)
+Engaged in an activity in/near stormwater drain 40 (3%) 13 (4%) 0 (0%) 53 (3%)
+Engaged in an activity in the water (rescue, swimming) 98 (7%) 23 (6%) 0 (0%) 121 (7%)
+Engaged in an activity on the water (boat) 82 (6%) 16 (4%) 0 (0%) 98 (5%)
+Engaged in an activity not near usual watercourse (e.g. in their home) 143 (10%) 82 (23%) 3 (16%) 228 (12%)
+Other 5 (0%) 1 (0%) 0 (0%) 6 (0%)
+Unknown 154 (10%) 25 (7%) 10 (53%) 189 (10%)
+Total 1475 (100%) 365 (100%) 19 (100%) 1859 (100%)
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+169
+
+Table 3
+Fatalities by ‘reason behind action’ and ‘activity prior to death’ (% of column totals).
+Attempting to cross bridge/
+causeway/crossing/culvert/
+ford/road/watercourse
+Attempting to
+cross floodwaters
+Engaged in an
+activity near the
+water (bank/bridge)
+Engaged in an activity
+in/near a stormwater
+drain
+Engaged in an activity in
+the water (rescue,
+swimming, joyride etc)
+Engaged in an
+activity on the
+water (boat)
+Engaged in an activity
+not near a usual
+watercourse
+Other Unknown Total
+Attempting vertical
+evacuation
+0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 41 (18%) 0 (0%) 0 (0%) 41 (2%)
+Being rescued/
+evacuated
+0 (0%) 8 (10%) 2 (1%) 0 (0%) 0 (0%) 11 (11%) 9 (4%) 0 (0%) 1 (1%) 31 (2%)
+Awaiting a planned
+rescue/evacuation
+0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 5 (2%) 0 (0%) 0 (0%) 5 (0%)
+Refused to be evacuated 1 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 6 (3%) 0 (0%) 1 (1%) 8 (0%)
+Evacuating 7 (1%) 9 (11%) 2 (1%) 0 (0%) 1 (1%) 0 (0%) 24 (11%) 0 (0%) 3 (1%) 46 (3%)
+Late evacuation 0 (0%) 0 (0%) 0 (0%) 5 (9%) 0 (0%) 0 (0%) 8 (4%) 0 (0%) 0 (0%) 13 (1%)
+No attempt at
+evacuation as
+unaware
+0 (0%) 1 (1%) 17 (7%) 0 (0%) 0 (0%) 0 (1%) 53 (23%) 0 (0%) 0 (0%) 71 (4%)
+En route 242 (29%) 13 (16%) 10 (4%) 4 (8%) 0 (0%) 14 (14%) 4 (2%) 0 (0%) 7 (4%) 294 (16%)
+En route from home 97 (12%) 3 (4%) 7 (3%) 2 (4%) 0 (0%) 1 (0%) 2 (1%) 0 (0%) 0 (0%) 112 (5%)
+En route to home 168 (20%) 8 (10%) 3 (1%) 2 (4%) 2 (2%) 3 (3%) 1 (0%) 0 (0%) 5 (3%) 192 (10%)
+Recreating 38 (5%) 2 (2%) 96 (41%) 27 (51%) 94 (78%) 27 (28%) 8 (4%) 1 (17%) 3 (1%) 296 (16%)
+Carrying out repairs
+due to flood
+damage etc
+4 (1%) 0 (0%) 11 (5%) 2 (4%) 0 (0%) 2 (2%) 1 (0%) 0 (0%) 1 (1%) 21 (1%)
+Collecting provisions 20 (2%) 2 (2%) 1 (0%) 0 (0%) 0 (0%) 2 (2%) 0 (0%) 0 (0%) 0 (0%) 25 (1%)
+Attempting to retrieve
+flotsam
+0 (0%) 0 (0%) 8 (3%) 0 (0%) 1 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 9 (1%)
+Collecting people 2 (0%) 0 (0%) 1 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 3 (0%)
+Rescuing People,
+Property Livestock
+79 (9%) 22 (26%) 20 (9%) 1 (2%) 18 (15%) 18 (18%) 6 (3%) 1 (17%) 3 (1%) 168 (9%)
+Working, attending
+livestock or
+livelihood
+54 (6%) 6 (7%) 24 (10%) 3 (6%) 0 (0%) 8 (8%) 19 (8%) 0 (0%) 4 (2%) 118 (6%)
+Other 2 (0%) 0 (0%) 4 (2%) 0 (0%) 1 (1%) 3 (3%) 0 (0%) 1 (17%) 0 (0%) 11 (1%)
+Unknown 130 (15%) 10 (12%) 30 (13%) 7 (13%) 4 (3%) 9 (9%) 41 (18%) 3 (50%) 161 (85%) 395 (21%)
+Total 844 (100%) 84 (100%) 236 (100%) 53 (100%) 121 (100%) 98 (100%) 228 (100%) 6 (100%) 189 (100%) 1859
+(100%)
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+170
+
+difference is statistically highly significant (z = 9.27, p < 0.0001). By
+comparison, the highest proportion of female victims were following
+the decision making of others (36%, n = 133). For males, only 10% of
+victims were following the decision making of others (n = 152), a
+highly significantly lower proportion than for females (z = −12.36,
+p < 0.0001). In terms of young children who were on their own or in a
+group of children, 69% were male (n = 120) and 29% were female
+(n = 50). This difference in proportions between the genders of young
+children is statistically highly significant (z = −3.29, p < 0.001).
+Similarly, the proportion of young female victims (as a percentage of all
+female victims) is significantly greater than the proportion of young
+male victims (as a percentage of all male victims) (z = −7.28,
+p < 0.0001).
+3.6. Time of day and flood awareness
+Table 8 displays counts of fatalities by the victim’s awareness of the
+flood and the time of day of death. The data shows that a greater
+proportion of fatalities, 37%, occurred in daylight (n = 685), compared
+to 24% (n = 436) that occurred during twilight or darkness (z = 8.90,
+p < 0.0001, proportions significantly different).
+Of interest is that almost half of all fatalities (44%, n = 811) were
+aware that there was a flood or imminent risk of a flood, but its depth,
+speed, debris and/or a stormwater drain surprised them.
+A test of association between awareness of the flood and time of day
+of death (Table 8) shows a statistically significant relationship
+(χ2
+4 = 13.1, p < 0.05). On closer examination, it is evident that a
+significantly greater proportion of victims who were aware of the flood
+but did not respond to the danger died during darkness (z = 1.96,
+p < 0.05), and a significantly greater proportion of children under 11
+years old died during daylight hours (it was assumed that young children would not consciously be aware of flooding) (z = −3.11,
+p < 0.002).
+3.7. Fatalities using transport at the time of death
+The majority of flood victims were using a form of transport at the
+Table 4
+Fatalities by ‘reason behind action’ and gender (% of column totals).
+Male Female Unknown Total
+Attempting vertical
+evacuation
+20 (1%) 21 (6%) 0 (0%) 41 (2%)
+Being rescued/evacuated 15 (1%) 16 (4%) 0 (0%) 31 (2%)
+Awaiting a planned rescue/
+evacuation
+5 (0%) 0 (0%) 0 (0%) 5 (0%)
+Refused to be evacuated 7 (1%) 1 (0%) 0 (0%) 8 (0%)
+Evacuating 25 (2%) 18 (5%) 3 (16%) 46 (3%)
+Late evacuation 9 (1%) 4 (1%) 0 (0%) 13 (1%)
+No attempt at evacuation
+as unaware
+42 (3%) 29 (8%) 0 (0%) 71 (4%)
+En route 238 (16%) 52 (14%) 4 (21%) 294 (16%)
+En route from home 77 (5%) 33 (9%) 2 (11%) 112 (6%)
+En route to home 157 (11%) 35 (10%) 0 (0%) 192 (10%)
+Recreating 221 (15%) 75 (21%) 0 (0%) 296 (16%)
+Carrying out repairs due to
+flood damage
+21 (1%) 0 (0%) 0 (0%) 21 (1%)
+Collecting provisions 23 (2%) 2 (1%) 0 (0%) 25 (1%)
+Attempting to retrieve
+flotsam
+8 (1%) 1 (0%) 0 (0%) 9 (1%)
+Collecting people 1 (0%) 2 (1%) 0 (0%) 3 (0%)
+Rescuing people, property,
+pets
+157 (11%) 11 (3%) 0 (0%) 168 (9%)
+Working, attending to
+livestock or livelihood
+114 (8%) 4 (1%) 0 (0%) 118 (6%)
+Other 8 (1%) 3 (1%) 0 (0%) 11 (1%)
+Unknown 327 (22%) 58 (16%) 10(53%) 395 (21%)
+Total 1475
+(100%)
+365 (100%) 19 (100%) 1859
+(100%)
+Table 5
+Fatalities by ‘activity at time of death’ and age (% of column totals).
+Attempting to cross bridge/
+causeway/crossing/culvert/
+ford/road/watercourse
+Attempting to cross
+floodwaters. (fields,
+town)
+Engaged in an
+activity near the
+water (bank)
+Engaged in an activity
+in/near stormwater
+drain
+Engaged in an activity in
+the water (rescue,
+swimming)
+Engaged in an
+activity on the
+water (boat)
+Engaged in an activity
+not near usual
+watercourse
+Other Unknown Total
+0−9 64 (8%) 5 (6%) 66 (28%) 22 (42%) 14 (12%) 13 (13%) 41 (18%) 2 (33%) 18 (10%) 245 (13%)
+10–19 129 (15%) 15 (18%) 53 (22%) 16 (30%) 55 (45%) 12 (12%) 15 (7%) 1 (17%) 16 (8%) 312 (17%)
+20–29 140 (17%) 12 (14%) 20 (9%) 6 (11%) 24 (20%) 17 (17%) 16 (7%) 1 (17%) 14 (7%) 250 (13%)
+30–39 104 (12%) 11 (13%) 16 (7%) 1 (2%) 13 (11%) 16 (16%) 11 (5%) 1 (17%) 15 (8%) 188 (10%)
+40–49 96 (11%) 10 (12%) 22 (9%) 1 (2%) 5 (4%) 6 (6%) 15 (7%) 0 (0%) 9 (5%) 164 (9%)
+50–59 79 (9%) 10 (12%) 12 (5%) 1 (2%) 4 (3%) 2 (2%) 20 (9%) 0 (0%) 12 (6%) 140 (8%)
+60–69 50 (6%) 4 (5%) 13 (6%) 3 (6%) 2 (2%) 9 (9%) 16 (7%) 1 (17%) 20 (11%) 118 (6%)
+70–79 40 (5%) 3 (4%) 6 (3%) 1 (2%) 0 (0%) 2 (2%) 8 (4%) 0 (0%) 5 (3%) 65 (4%)
+80–89 6 (1%) 1 (1%) 4 (2%) 0 (0%) 0 (0%) 2 (2%) 4 (2%) 0 (0%) 1 (1%) 18 (1%)
+Unknown 136 (16%) 13 (16%) 24 (10%) 2 (4%) 4 (3%) 19 (19%) 82 (36%) 0 (0%) 79 (42%) 359 (19%)
+Total 844 (100%) 84 (100%) 236 (100%) 53 (100%) 121 (100%) 98 (100%) 228 (100%) 6 (100%) 189 (100%) 1859
+(100%)
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+171
+
+time of their death − only 8% (n = 146) of victims were in or on a
+house or caravan at the time of death (Table S4).
+Forms of transport have been categorised as:
+• pedestrian transport
+• water transport
+• horse-borne transport
+• vehicular transport, or
+• other transport (e.g. bicycle).
+The highest proportion of fatalities were amongst those on foot or
+being carried by another person (28% of all fatalities, n = 516).
+Fatalities using vehicular transport account for 19% (n = 351) of all
+fatalities, followed by fatalities using horse-borne transport (18%,
+n = 326). 16% (n = 297) of fatalities were using a form of transport in
+or on the water (on the water: e.g., a boat, canoe etc. − 8%, n = 139; in
+the water: e.g., swimming, bodyboarding etc. − 9%, n = 158).
+Furthermore, eight fatalities were on a pushbike/bicycle, and eight on a
+rope or cable above or in the water (Table S4). The majority of flood
+deaths when pedestrian transport, swimming, watercraft, horse-borne
+transport and vehicular transport have been involved have been males,
+with a statistically significant percentage above 50% (p < 0.0001). A
+greater proportion of female deaths have occurred when no transport
+was involved (z = −6.28, p < 0.0001) (Table S4).
+Of those who were driving a vehicle (i.e. capable of independent
+action), 84% were men (n = 130) and 15% were females (n = 23), a
+statistically significant difference (z = 12.29, p < 0.0001). Of those
+who were passengers (i.e. following the decision making of others),
+53% were males (n = 74) and 46% were females (n = 65) (z = 1.07,
+not significantly different). That is, most flood-related vehicle fatalities
+have involved male drivers, with passengers roughly equally distributed
+between the genders.
+Table S5 displays mode of transport amongst flood fatalities and
+decade of death. This is useful to examine whether the mode of transport involved in flood fatalities has changed over the past century.
+Table S6 is a subset of the data in Table S5 (only the five transport
+categories defined previously) summarised into two non-overlapping
+periods: 1900–1959 and 1960–2015.
+Overall, 69% (n = 1038) of flood fatalities involving transport occurred in the 50 years before 1960, and 471 in the 55 years from 1960
+to the present. These translate to 20.8 deaths per year before 1960 and
+8.4 deaths per year from 1960 onwards, a statistically very significant
+decrease in deaths due to flooding.
+Table S6 points to a change in transport-related flood death rates
+due to technology. In the early part of the twentieth century, horses and
+horse-drawn transport were common, and 315 deaths were recorded
+(30% of all deaths are transport related). Since 1960, deaths due to this
+form of transport have reduced to only 11 (3% of all transport related
+deaths), a very highly statistically significant decrease (z = 12.25,
+p < 0.0001). Similarly, flood fatalities mirror the recent popularity in
+four-wheel drive and pick-up vehicles: these were involved in just two
+deaths prior to 1960, but 51 since 1960 (11% of transport related
+deaths), a very highly statistically significant increase (z = −10.40,
+p < 0.0001). The ubiquity of the sedan car is also evident here: flood
+fatalities involving sedan cars have been recorded in 76 deaths before
+1960 (7% of transport-related deaths during that period), but 147 since
+1960 (31% of deaths from a known form of transport), a very highly
+statistically significant increase (z = −12.12, p < 0.0001).
+Flood deaths involving pedestrian transport have decreased significantly since 1960: there were 348 deaths before 1960 (36% of
+transport-related deaths), but 138 since 1960 (29% of transport related
+deaths) (z = 2.70, p < 0.01). There has been no change in the relative
+incidence of flood deaths due to swimming or boating between the two
+periods (z = 0.50, p > 0.4).
+Table 9 displays flood fatalities by ‘mode of transport’ and ‘capacity
+Table 6
+Fatalities by
+to act’. In cases where a form of transport was involved, a total of 5% of
+‘reason behind action’ and age (% of column totals).
+0−9 10–19 20–29 30–39 40–49 50–59 60–69 70–79 80–89 Unknown Total
+Attempting vertical evacuation 6 (2%) 1 (0%) 0 (0%) 1 (1%) 5 (3%) 3 (2%) 0 (0%) 1 (2%) 2 (11%) 22 (6%) 41 (2%)
+Being rescued/evacuated 14 (6%) 4 (1%) 2 (1%) 1 (1%) 2 (1%) 1 (1%) 2 (2%) 2 (3%) 1 (6%) 2 (1%) 31 (2%)
+Awaiting a planned rescue/evacuation 1 (0%) 0 (0%) 1 (0%) 0 (0%) 0 (0%) 0 (0%) 2 (2%) 0 (0%) 0 (0%) 1 (0%) 5 (0%)
+Refused to be evacuated 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 3 (2%) 1 (1%) 1 (2%) 0 (0%) 3 (1%) 8 (0%)
+Evacuating 8 (3%) 3 (1%) 7 (3%) 5 (3%) 2 (1%) 6 (4%) 3 (3%) 3 (5%) 0 (0%) 9 (3%) 46 (3%)
+Late evacuation 7 (3%) 1 (0%) 2 (1%) 1 (1%) 0 (0%) 0 (0%) 1 (1%) 0 (0%) 0 (0%) 1 (0%) 13 (1%)
+No attempt at evacuation as unaware 17 (7%) 8 (3%) 3 (1%) 4 (2%) 6 (4%) 6 (4%) 7 (6%) 2 (3%) 1 (6%) 17 (5%) 71 (4%)
+En route 25 (10%) 40 (13%) 47 (19%) 32 (17%) 31 (19%) 25 (18%) 24 (20%) 11 (17%) 4 (22%) 55 (15%) 294 (16%)
+En route from home 14 (8%) 24 (8%) 16 (6%) 12 (6%) 10 (6%) 12 (9%) 2 (2%) 7 (11%) 2 (11%) 13 (4%) 112 (6%)
+En route to home 23 (9%) 21 (7%) 28 (11%) 23 (12%) 23 (14%) 18 (13%) 17 (14%) 14 (22%) 2 (11%) 23 (6%) 192 (10%)
+Recreating 88 (36%) 107 (34%) 39 (16%) 20 (11%) 14 (9%) 6 (4%) 9 (8%) 1 (2%) 3 (17%) 9 (3%) 296 (16%)
+Carrying out repairs due to flood damage etc 0 (0%) 3 (1%) 4 (2%) 2 (1%) 2 (1%) 2 (1%) 3 (3%) 1 (2%) 0 (0%) 4 (1%) 21 (1%)
+Collecting provisions 2 (1%) 8 (3%) 4 (2%) 3 (2%) 1 (1%) 0 (0%) 1 (1%) 1 (2%) 0 (0%) 5 (1%) 25 (1%)
+Attempting to retrieve flotsam 2 (1%) 6 (2%) 0 (0%) 0 (0%) 1 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 9 (1%)
+Collecting people 1 (0%) 0 (0%) 0 (0%) 1 (1%) 1 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 3 (0%)
+Rescuing People, Property Livestock 3 (1%) 33 (11%) 40 (16%) 23 (12%) 17 (10%) 15 (11%) 8 (7%) 2 (3%) 2 (11%) 25 (7%) 168 (9%)
+Working, attending livestock or livelihood 1 (0%) 8 (3%) 25 (10%) 19 (10%) 17 (10%) 16 (11%) 5 (4%) 6 (9%) 0 (0%) 21 (6%) 118 (6%)
+Other 1 (0%) 3 (1%) 0 (0%) 3 (2%) 1 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 3 (1%) 11 (1%)
+Unknown 32 (13%) 42 (13%) 32 (13%) 38 (20%) 31 (19%) 27 (19%) 33 (28%) 13 (20%) 1 (6%) 146 (41%) 395 (21%)
+Total 245 (100%) 312 (100%) 249 (100%) 188 (100%) 164 (100%) 140 (100%) 117 (100%) 65 (100%) 18 (100%) 361 (100%) 1859 (100%)
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+172
+
+victims (n = 79 out of 1509) were influenced by drugs (including recreational and/or above-normal doses of prescription drugs) or alcohol
+at the time of death. Of these, 80% (n = 63) were male, a proportion
+not statistically different from the overall gender split in flood fatalities
+(p > 0.2).
+38% (n = 30) of drug- or alcohol-influenced victims were on foot,
+while 41% (n = 32) were in a vehicle. Of all those victims who were in
+a four-wheel drive vehicle at the time of death, 27% (n = 12) were
+influenced by drugs or alcohol, accounting for a high portion of recent
+vehicle-related deaths in floods.
+Where the time of day of the fatality was known, the highest proportions of those on foot perished during daylight hours (70%,
+n = 242). In contrast, the highest proportion of those in a motorised
+vehicle perished at night or during twilight (65%, n = 154).
+4. Discussion and recommendations for policy and practice
+1859 individually identified flood fatalities have been recorded in
+Australia from 1900 to 2015 and, of these 79% have been males. Death
+rates have steadily declined over this time. However, while there was a
+steep statistically significant decline up to 1960, the death rates over
+the most recent 55 years have remained at a more constant level. It is
+likely that investments in flood mitigation, technology, warning and
+communication systems, and the work of emergency service organisations such as the Australian State Emergency Services (SES), have had a
+major impact on death rates, particularly in the years following World
+War II. The SES is a largely volunteer run organisation assisting with all
+emergencies, but particularly floods and storms. However, the negligible decrease in flood fatalities since the 1960s raises questions about
+the efficacy of current risk mitigation strategies − particularly efforts
+related to flood mapping, land-use planning and the implementation of
+community education programs. It is likely that structural mitigation,
+such as levees, have actually increased risks − as development continues people may assume they are protected and as such do not prepare or evacuate in time. Furthermore, the female-to-male fatality ratio
+has steadily increased, indicating a greater proportion of female fatalities over time. Although this certainly reflects the fact that women and
+men in Australia now face similar levels of flood risk exposure, the fact
+that there are distinct differences in the activities and reasons behind
+their deaths warrants the need for a gendered approach to risk mitigation. This trend reflects that seen in Australian bushfire fatalities
+where similar calls for policy change have been made (see Whittaker
+et al., 2016).
+The data highlights the distinct high-risk groups of children and
+young adults (< 29 years of age) who make up the greatest proportion
+of deaths (44%). Across all ages, male fatalities are higher apart from
+two, six and seven year olds, where deaths are more gender balanced.
+In particular, both genders show a high and equal death rate for those
+who are two years old and it is likely that this is when children have
+learnt to walk and are able to quickly wander from adult supervision.
+The greatest number of fatalities occurred in Queensland and New
+South Wales, accounting for 75% of the overall fatalities across the
+nation. However, when deaths are examined in relation to the per capita population, the heightened level of risk in the Northern Territory is
+shown. This is particularly the case in recent years where an increasing
+proportion of flood deaths are seen in the Northern Territory. This
+warrants further detailed investigation, particularly around the efficacy
+of current mitigation and education strategies employed within the
+Northern Territory.
+A spatial analysis of fatalities between 2000 and 2015 shows that
+58% of victims died within 20 km of their home. This suggests that the
+victims knew the areas well and, for the majority of people who died
+while en route, had likely travelled on those roads before. Although the
+highest proportions of children and youth perished while attempting to
+Table 7
+Fatalities by ‘capacity to act’ and ‘awareness of the flood’ (% of column totals).
+Aware but did not
+expect to encounter the
+flood
+Aware but depth and
+or speed took them by
+surprise
+Unaware and
+taken by surprise
+Not applicable −
+child under 11
+Not applicable −
+other
+Unknown Total
+Capable of independent action 160 (67%) 593 (73%) 148 (60%) 2 (1%) 10 (59%) 88 (34%) 1001
+(54%)
+Physically and or mentally
+disabled or incapable
+3 (1%) 13 (2%) 4 (2%) 1 (0%) 3 (18%) 4 (2%) 28 (2%)
+Cannot swim 14 (6%) 28 (4%) 7 (3%) 1 (0%) 2 (12%) 2 (1%) 54 (3%)
+Influenced by drugs or alcohol 9 (4%) 49 (6%) 20 (8%) 0 (0%) 0 (0%) 7 (3%) 85 (5%)
+Following the decision making of
+others
+40 (17%) 81 (10%) 39 (16%) 126 (44%) 2 (12%) 5 (2%) 293 (16%)
+A child or group of children on
+their own under 11 years old
+6 (3%) 6 (1%) 1 (0%) 156 (54%) 0 (0%) 4 (2%) 173 (9%)
+Unfamiliar with the area 1 (0%) 13 (2%) 11 (5%) 0 (0%) 0 (0%) 1 (0%) 26 (1%)
+Encumbered with clothing,
+possessions or equipment
+1 (0%) 11 (1%) 2 (1%) 0 (0%) 0 (0%) 0 (0%) 14 (1%)
+Looking after dependents 0 (0%) 5 (1%) 3 (1%) 0 (0%) 0 (0%) 0 (0%) 8 (0%)
+Not applicable 0 (0%) 0 (0%) 3 (1%) 0 (0%) 0 (0%) 0 (0%) 3 (0%)
+Unknown 6 (3%) 12 (1%) 7 (3%) 2 (1%) 0 (0%) 147 (57%) 174 (9%)
+Total 240 (100%) 811 (100%) 245 (100%) 288 (100%) 17 (100%) 258 (100%) 1859
+(100%)
+Table 8
+Fatalities by ‘awareness of the flood’ and ‘time of day’ (% of column totals).
+Dark Daylight Unknown Total
+Aware, but did not expect to encounter the flood 73 (17%) 86 (13%) 81 (11%) 240 (13%)
+Aware, but depth and or speed took them by surprise 192 (44%) 317 (46%) 302 (41%) 811 (44%)
+Unaware and taken by surprise 73 (17%) 97 (14%) 75 (10%) 245 (13%)
+Not applicable − child under 11 years old 59 (14%) 143 (21%) 86 (12%) 288 (16%)
+Not applicable − other 4 (1%) 4 (1%) 9 (1%) 17 (1%)
+Unknown 35 (8%) 38 (6%) 185 (25%) 258 (14%)
+Total 436 (100%) 685 (100%) 738 (100%) 1859 (100%)
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+173
+
+Table 9
+Fatalities by ‘mode of transport’ and ‘capacity to act’ (% of column totals).
+Capable of
+independent
+action
+Physically and or
+mentally disabled
+or incapable
+Cannot
+swim
+Influenced by
+drugs or
+alcohol
+Following the
+decision making
+of others
+A child or group of
+children on their
+own < 11 years old
+Unfamiliar
+with the area
+Encumbered with
+clothing,
+possessions,
+equipment
+Looking after
+dependents
+Not applicable Unknown Total
+Pedestrians
+On foot 252 (25%) 15 (54%) 16 (30%) 30 (35%) 29 (10%) 127 (73%) 8 (31%) 4 (29%) 1 (13%) 0 (0%) 22 (13%) 504
+(27%)
+Carried by others 1 (0%) 0 (0%) 0 (0%) 0 (0%) 9 (3%) 2 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 12 (1%)
+In/on the water
+Swimming 106 (11%) 0 (0%) 10 (19%) 10 (12%) 1 (0%) 21 (12%) 6 (23%) 2 (14%) 0 (0%) 0 (0%) 2 (1%) 158 (9%)
+On boat/watercraft 81 (8%) 1 (4%) 6 (11%) 4 (5%) 36 (12%) 1 (1%) 1 (4%) 2 (14%) 1 (13%) 0 (0%) 6 (3%) 139 (8%)
+Horse-borne transport
+On a horse 156 (16%) 2 (7%) 16 (30%) 1 (1%) 5 (2%) 1 (1%) 2 (8%) 5 (36%) 1 (13%) 0 (0%) 8 (5%) 197
+(11%)
+Horse-drawn
+vehicle
+91 (9%) 2 (7%) 3 (6%) 1 (1%) 24 (8%) 0 (0%) 2 (8%) 0 (0%) 0 (0%) 0 (0%) 6 (3%) 129 (7%)
+Vehicular transport
+Sedan car 103 (10%) 3 (11%) 0 (0%) 16 (19%) 91 (31%) 2 (1%) 0 (0%) 0 (0%) 0 (0%) 2 (67%) 6 (3%) 223
+(12%)
+4-wheel drive 13 (1%) 1 (4%) 0 (0%) 12 (14%) 16 (6%) 0 (0%) 0 (0%) 0 (0%) 1 (13%) 0 (0%) 2 (1%) 45 (2%)
+Truck 7 (1%) 0 (0%) 0 (0%) 0 (0%) 18 (6%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 1 (1%) 26 (1%)
+Pick-up truck 4 (0%) 0 (0%) 0 (0%) 3 (4%) 1 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 8 (0%)
+Train 5 (1%) 0 (0%) 1 (2%) 0 (0%) 6 (2%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 1 (33%) 0 (0%) 13 (1%)
+Other vehicle (e.g.
+bus, tractor
+etc)
+11 (1%) 0 (0%) 2 (4%) 0 (0%) 4 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 17 (1%)
+Unknown vehicle
+type
+10 (1%) 1 (4%) 0 (0%) 1 (1%) 5 (2%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 2 (1%) 19 (1%)
+Other
+Push bike/ bicycle 6 (1%) 0 (0%) 0 (0%) 1 (1%) 0 (0%) 1 (1%) 0 (0%) 0 (0.%) 0 (0%) 0 (0%) 0 (0%) 8 (0%)
+On a rope/cable 6 (1%) 0 (0%) 0 (0%) 0 (0%) 2 (1%) 0 (0%) 0 (0%) 0 (0%) 0 (0.0%) 0 (0%) 0 (0%) 8 (0%)
+Other transport 3 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 0 (0%) 3 (0%)
+Not applicable −
+no transport
+involved
+66 (7%) 3 (11%) 0 (0%) 5 (6%) 40 (14%) 4 (2%) 4 (15%) 1 (7%) 4 (50%) 0 (0%) 19 (11%) 146 (8%)
+Unknown 80 (8%) 0 (0%) 0 (0%) 1 (1%) 6 (2%) 14 (8%) 3 (12%) 0 (0%) 0 (0%) 0 (0%) 100 (58%) 204 (11.
+%)
+Total 1001 (100%) 28 (100%) 54
+(100%)
+85 (100%) 293 (100%) 173 (100%) 26 (100%) 14 (100%) 8 (100%) 3 (100%) 174 (100%) 1859
+(100%)
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+174
+
+cross a watercourse, the overall data also shows their heightened vulnerability to activities in or near the water whilst recreating. For those
+between the age of 10 and 29 years, these latter activities become the
+dominant actions at the time of death when the data between 2000 and
+2015 is examined in isolation. Higher proportions of deaths occurred
+among children and females who were following the decisions of others
+and among children and youths who were on their own or in a group of
+children. Of this latter group the majority were boys (69%).
+The increase in fatalities associated with four-wheel drive (4WD)
+vehicles from the year 2000 likely reflects a combination of increased
+4WD ownership and the more detailed information available in coronial inquest reports over this period. The vast majority of those driving
+a vehicle were men (85%), while the gender breakdown of the passengers shows slightly more men. A quarter of the fatalities in vehicles
+were children and youth, the majority of whom were passengers. The
+highest proportion of those in a vehicle perished at night or during
+twilight (45%). Explanations within the wider literature for motorists
+deliberately entering floodwater include: not taking warnings seriously
+and not understanding the dangers (Drobot et al., 2007), underestimating the risk (Diakakis and Deligiannakis, 2013; Maples and
+Tiefenbacher, 2009), being impatient and thinking that they are invincible (Franklin et al., 2014), considering that risks do not apply to
+them (Pearson and Hamilton, 2014), having previous experience in
+successfully driving through floodwater (Pearson and Hamilton, 2014;
+Royal Life Saving, 2016), being under pressure to reach a destination,
+being under pressure from other drivers to go through, receiving encouragement from passengers, having a sense of security that they
+would be rescued if something went wrong, witnessing other motorists
+successfully drive through floodwater, and making self-efficacy judgements where drivers had belief in themselves and their vehicle to successfully drive through floodwater (Royal Life Saving Society, 2016).
+It is likely that many motorists may not fully appreciate flood
+conditions such as the depth and speed of floodwaters and the influence
+such conditions may have on safety (Diakakis and Deligiannakis, 2013;
+Yale et al., 2003). However, the results presented here show that a
+significant proportion of motorists died while entering floodwaters in
+the dark or twilight when visibility would have been poor. It is therefore likely that they were unaware of the extent of the danger and may
+not have known that they were actually entering floodwater until it was
+too late. This points to the need for structural measures including
+barricades and road design, as risk communication and education may
+have little impact in such situations.
+4.1. Specific recommendations for policy and practice
+There is limited research evaluating the many initiatives utilised to
+reduce the instances of people entering floodwater (Gissing et al.,
+2016). Typically, flood risk management strategies have relied upon
+education and rescue interventions. However, a more holistic behavioural change focus implementing a continuum of measures is required, such as that recommended by Rothschild (1999). Such an approach should include:
+• Education − containing messages to attempt to voluntarily change
+behaviour
+Typically, flood safety campaigns comprise signs, commercials, digital media and broadcast media engagement. However, few outreach
+campaigns have been properly evaluated or actively target specific
+groups with tailored messaging. Media engagement is also necessary to
+ensure images of risky behaviour portrayed as “cool and fun” are not
+broadcast. Education programs should also address the motivations for
+people entering floodwater and their perceptions of the dangers
+(Pearson and Hamilton, 2014; Hamilton et al., 2016).
+• Incentives and consequences − to encourage voluntary behaviour
+change
+Regulation is often used to change behaviour: for example, enforcing speed limits, seat belt use and swimming pool fencing. Regulation,
+however, has not been widely employed to stop motorists from driving
+though floodwater, although examples do exist from Australia and the
+USA (Gissing et al., 2016; Wogan, 2013).
+• Structural intervention
+Due to the portable nature of barricades, motorists are able to relocate them or possibly drive around them, although often flooding may
+also occur before authorities can establish barriers. The manning of
+barricades and the establishment of automatic gates in high-risk areas
+may enhance their effectiveness. Road design in flood prone areas could
+have a critical influence on the survival outcomes of motorists once
+their vehicle becomes buoyant and should be an area of further research.
+In conclusion, many communities have inherited the legacy of poor
+land use planning decisions that do not sufficiently address the safety of
+people living, working and traveling across floodplains. The risks associated with any densification or new development on floodplains
+must be considered in a holistic manner, including any resulting increase in the flow of traffic on access roads that are liable to flooding
+and the consequences of extreme events. In terms of existing risks, it is
+critical that safety strategies, as outlined above, are implemented to
+reduce the number of lives lost. Rigorous research on the efficacy of
+these strategies will form the much needed evidence base on which
+further policy decision can be made.
+Acknowledgments
+This research was funded by a research grant from the Bushfire and
+Natural Hazards Cooperative Research Centre (BNHCRC). Ethical approval for the project was granted from the Macquarie University
+Human Research Ethics Committee, reference no. 5201400073. This
+research would not have been possible without the services and assistance of the National Coronial Information System based in Melbourne,
+the Victorian Department of Justice Human Research Ethics Committee,
+the Victorian Public Archives Services, the Public Records Office of
+Tasmania, the coronial office and State Records Authority New South
+Wales, The Northern Territory Archives Centre, Queensland State
+Archives and State Records of South Australia. Thanks to Kerrie Sydee,
+Justin Hendry and Avianto Amri who assisted with data entry. Thanks
+are also due to Michael Rumsewicz BNHCRC, New South Wales SES,
+Tasmanian SES and Chas Keys for comments and advice on earlier
+drafts.
+Appendix A. Supplementary data
+Supplementary data associated with this article can be found, in the
+online version, at http://dx.doi.org/10.1016/j.envsci.2017.07.003.
+References
+Blanchi, R., Leonard, J., Haynes, K., Opie, K., James, M., Dimer de Oliveira, F., 2014.
+Environmental circumstances surrounding bushfire fatalities in Australia 1901–2011.
+Environ. Sci. Policy 37, 192–203.
+Coates, L., Blong, R.J., Siciliano, F., 1993. Lightning fatalities in Australia, 1824–1991.
+Nat. Hazards 8, 217–233.
+Coates, L., Haynes, K., O’Brien, J., McAneney, K., Dimer de Oliveira, F., 2014. Exploring
+167 years of vulnerability: an examination of extreme heat events in Australia
+1844–2010. Environ. Sci. Policy 42, 33–44. http://dx.doi.org/10.1016/j.envsci.
+2014.05.003.
+Coates, L., 1999. Flood fatalities in Australia, 1788–1996. Aust. Geogr. 30 (3), 391–408.
+Crompton, R., McAneney, K., Chen, K., Pielke Jr., R., Haynes, K., 2010. Influence of location, population, and climate on building damage and fatalities due to Australian
+bushfire: 1925–2009. Weather Clim. Soc. 2, 300–310.
+Diakakis, M., Deligiannakis, G., 2013. Vehicle-related flood fatalities in Greece. Environ.
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+175
+
+Hazards 12, 278–290.
+Diakakis, M., Deligiannakis, G., 2017. Flood fatalities in Greece: 1970–2010. J. Flood Risk
+Manage. 10, 115–123. http://dx.doi.org/10.1111/jfr3.12166.
+Drobot, S.D., Benight, C., Gruntfest, E., 2007. Risk factors for driving into flooded roads.
+Environ. Hazards 7, 227–234.
+Franklin, R.C., King, J.C., Aitken, P.J., Leggat, P.A., 2014. Washed away—assessing
+community perceptions of flooding and prevention strategies: a North Queensland
+example. Nat. Hazards 73, 1977–1998.
+Gissing, A., Haynes, K., Coates, L., Keys, C., 2016. Motorist behaviour during the 2015
+Shoalhaven floods. Aust. J. Emergency Manage. 31, 23–27.
+Hamilton, K., Peden, A., Pearson, M., Hagger, M., 2016. Stop there’s water on the road!
+Identifying key beliefs guiding people’s willingness to drive through flooded waterways. Saf. Sci. 89, 308–314.
+Haynes, K., Coates, L., Leigh, R., Handmer, J., Whittaker, J., Gissing, A., Mcaneney, J.,
+Opper, S., 2009. ‘Shelter-in-place' vs. evacuation in flash floods. Environ. Hazards 8,
+291–303.
+Haynes, K., Handmer, J., McAneney, K., Tibbits, A., Coates, L., 2010. Australian bushfire
+fatalities 1900–2008: exploring trends in relation to the ‘prepare, stay and defend or
+leave early’ policy. Environ. Sci. Policy 13 (3), 185–194.
+International Federation of Red Cross and Red Crescent Societies, 2015. World Disasters
+Report. Geneva, Switzerland.
+Jonkman, S., Kelman, I., 2005. An analysis of the causes and circumstances of flood
+disaster deaths. Disasters 29, 75–97.
+Jonkman, S., Maaskant, B., Boyd, E., Levitan, M.L., 2009. Loss of life caused by the
+flooding of New Orleans after Hurricane Katrina: analysis of the relationship between
+flood characteristics and mortality. Risk Anal. 29, 676–698.
+Kundzewicz, Z., Kundzewicz, W., 2005. Mortality in flood disasters. Extreme Weather
+Events and Public Health Responses. Springer.
+Maples, L., Tiefenbacher, J., 2009. Landscape, development, technology and drivers: the
+geography of drownings associated with automobiles in Texas floods, 1950–2004.
+Appl. Geogr. 29, 224–234.
+Pearson, M., Hamilton, K., 2014. Investigating driver willingness to drive through flooded
+waterways. Accid. Anal. Prev. 72, 382–390.
+Peden, A.E., Franklin, R.C., Leggat, P., Aitken, P., 2017 May 18. Causal Pathways of Flood
+Related River Drowning Deaths in Australia. PLOS Currents Disasters. http://dx.doi.
+org/10.1371/currents.dis.001072490b201118f0f689c0fbe7d437. Edition 1.
+Rothschild, M., 1999. Carrot, sticks and promises: a conceptual framework for the management of public health and social issue behaviours. J. Marketing 63, 24–37.
+Royal Life Saving, 2016. Deciding to Drive Through Floodwater – A Qualitative Analysis
+Through the Lived Experience. [Available Online] www.royallifesaving.com.au.
+(Accessed 14 December 2016).
+Whittaker, J., Eriksen, C., Haynes, K., 2016. Gendered responses to the 2009 Black saturday bushfires in Victoria, Australia. Geogr. Res. 54, 203–215. http://dx.doi.org/
+10.1111/1745-5871.12162.
+Wogan, J., 2013. More States Consider Billing Rescues to Make Thrill Seekers Think
+Again. [Available Online] http://www.governing.com/topics/public-justice-safety/
+gov-states-consider-billing-reckless-rescues.html (Accessed 16 December 2015).
+World Health Organization, 2014. Global Report on Drowning – Preventing a Leading
+Killer. World Health Organisation, Geneva, Switzerland.
+Yale, J.D., Cole, T.B., Garrison, H.G., Runyan, C.W., Ruback, J.K.R., 2003. Motor vehiclerelated drowning deaths associated with inland flooding after Hurricane Floyd: a field
+investigation. Traffic Inj. Prev. 4, 279–284.
+K. Haynes et al. Environmental Science and Policy 76 (2017) 165–176
+176

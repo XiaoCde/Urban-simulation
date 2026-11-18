@@ -1,0 +1,1307 @@
+Review of social influence in crisis communications and evacuation
+decision-making
+Arif Mohaimin Sadri a,⇑
+, Satish V. Ukkusuri b
+, Md Ashraf Ahmed c
+a Moss School of Construction, Infrastructure, and Sustainability, College of Engineering and Computing, Florida International University, 10555 West Flagler Street, EC 2934, Miami,
+FL 33174, USA
+b Lyles School of Civil Engineering, Purdue University, 550 Stadium Mall Drive, West Lafayette, IN 47907, USA
+cDepartment of Civil and Environmental Engineering, College of Engineering and Computing, Florida International University, 10555 West Flagler Street, EC 2900, Miami, FL 33174, USA
+ARTICLE INFO
+Keywords:
+Social networks
+Social influence
+Evacuation modeling
+Decision making
+Crisis communications
+Resilience
+ABSTRACT
+Topography and dynamics of real networks' enable network agents to alter their functional behavior.
+Theoretical and analytical advancements in network science have furthered our understanding of the effects
+of social network characteristics on peer influence and engagement. Influence of social network occurs when
+network players alter their decisions and behavior based on others’ influence in the social network which is
+evident in different disciplines. Crisis communication networks have significant impact during disasters as people often spread pertinent information in social media due to presence of limited access to conventional information sources. Existing researches in social science and sociology indicate that social networks benefit
+spreading warning message and disseminate information about an imminent risk, nevertheless, the existing
+studies do not provide enough understanding on how to quantify such influences and how this map into
+decision‐making during emergency evacuations. This study provides a robust review of the studies exploring
+how individuals are socially influenced, both on‐line and off‐line, while communicating risk during extreme
+weather events such as hurricanes. The scope of this review primarily includes studies that look into how
+our social networks influence the way we decide to evacuate and how crisis information spread from one agent
+to another agent in a network. The insights and findings obtained through this comprehensive review will be
+useful to diverse set of stakeholders such as emergency managers, planners, policy makers and practitioners.
+These include identifying and implementing targeted strategies for different groups of people in similar crisis
+events based on their social network properties, interactions, and activities.
+Contents
+1. Background and motivations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 2
+2. Social capital theory . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.1. Classical definition . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+2.2. Network capital as opposed to social capital . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3. Behavioral modeling of hurricane evacuations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.1. Overall hurricane evacuation. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.2. Evacuation decision making . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 3
+3.3. Evacuation timing decision . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3.4. Evacuation mobilization time . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3.5. Evacuation destination choice . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 4
+3.6. Evacuation routing strategy . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+3.7. Evacuation mode choice . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 5
+4. Social influence in evacuation modeling . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+5. Social influence in crisis communications . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 6
+6. Synthesis of literature and future recommendations . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 8
+https://doi.org/10.1016/j.trip.2021.100325
+Received 26 October 2020; Revised 2 February 2021; Accepted 8 February 2021
+Available online 26 February 2021
+2590-1982/© 2021 The Authors. Published by Elsevier Ltd.
+This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/by-nc-nd/4.0/).
+⇑ Corresponding author.
+E-mail addresses: asadri@fiu.edu (A.M. Sadri), sukkusur@purdue.edu (S.V. Ukkusuri), mpave002@fiu.edu (M.A. Ahmed).
+Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+Contents lists available at ScienceDirect
+Transportation Research Interdisciplinary Perspectives
+journal homepage: www.elsevier.com/locate/trip
+
+7. Summary and conclusions . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+Declaration of Competing Interest . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+References . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 9
+1. Background and motivations
+The methodological and analytical advances in social network
+research have extended the understanding of the effects of the personal network of individuals on normative social influence and social
+engagement. Information from the social network provides better
+insights into the thought, skills, values, goals, attitudes, habits, and
+relational environment of an individual. Real social networks '
+dynamic topology enables their agents to change their practical behavior. Through applying network models and observing the complexities
+in the ways network players communicate and change their behavior,
+the evolutionary mechanisms of being responsible for the growth of
+such networks gained better understanding. In order to develop novel
+network modeling techniques, extensive research efforts are required
+to understand the basic properties of such networks, replicating similar
+properties based on empirical evidence, and effectively design such
+networks.
+An individuals’ beliefs, emotions, thoughts, opinions, or behaviors
+are often affected by others in the social network which is defined as
+social influence. In a plentitude of several disciplines such as conformity, socialization, emergency decisions, peer pressure, obedience,
+leadership, persuasion, sales, and marketing sectors are often influenced by social factors. Recent studies have shown that individuals
+are more biased by their friends as compared to strangers. For an
+example, 68% of consumers consult their close friends and family
+members before home electronics purchase (Burke, 2003). Social
+influence on individuals’ behavior has been the emphasis of travel
+behavior and evacuation modeling for a long time. The influence of
+an individual’s social network on evacuation decision‐making and crisis
+communications is an evolving concept in their respective literature; which
+is also the core idea of this study. The overall decision‐making of an individual depends on his/her interaction to the society which is significantly defined by his/her personal constraints. These interactions
+with society are determined by an individual's social network. Hence,
+the social network has immense influences on the resulting interdependent behavior of the network agents. This study provides an overall
+understanding of social network influence on underlying evacuation
+behavior and related crisis communications that is currently available
+in the evacuation‐modeling literature.
+Different types of natural and man‐made disasters are recurrently
+experienced by individuals and communities all over the world
+(Nelson, 2013). Over the past three decades, disasters triggered by natural hazards alone have perpetrated billions of dollars in property
+damage and killed 2.5 million people (Emergency Events Database,
+0000; Klomp and Valckx, 2014; Roy et al., 2020). Although large‐
+scale disasters (2010 Haiti earthquake and 2009 Italy earthquake for
+example), have received substantial media coverage, small‐scale local
+disasters such as floods, typhoons, hurricanes, tornadoes, wildfires and
+mudslides (among others) also need to be acknowledged that killed
+thousands of people as well (Hoyois et al., 2007). On Increasing
+National Resilience, the National Academies Committee works
+towards Hazards and Disaster which recognized disaster resilience as
+a national authoritative at different levels (individual, local, interstate,
+and national). Enhanced policy requirements by the government have
+been suggested by this imperative that would enable people to rely less
+on governmental support while responding to such disasters (Cutter
+et al., 2013). Disaster resilience received more emphasis related to
+functioning and operations of physical infrastructure systems (Cutter
+et al., 2013), however, this should include more social factors and considerations (Sadri et al., 2016b).
+To promote disaster resilience minimizing the adverse impacts of
+disasters, communities need to be proactive with sufficient preparation
+(Diffenbaugh and Field, 2013; Guikema, 2009; Kennedy, 2002;
+Mortula et al., 2020; Press and Hamilton, 1999). Information spreading effectively establishes the basics to increase the awareness to every
+individual in a community (Cutter and Finch, 2008; Helbing, 2013;
+Vespignani, 2009). Organized planning, collection, systems, and delivery techniques are required for this awareness before approaching to
+the desired people using various social media and communication
+resources. Online social media (such as Facebook, Twitter, YouTube
+among others), unlike traditional ones, can serve as suitable ways to
+spread information during crisis. Recent researches have recognized
+the importance and need to analyze effectively, obtain and use of
+the comprehensive and huge information of these online information
+sources provide (Ahmed et al., 2020b; Lazer et al., 2009). In many
+experimental studies, examples of such practices related to emergency
+response (Bagrow et al., 2011; Hughes and Palen, 2009; Li and Rao,
+2010; Van Hentenryck, 2013; Wang et al., 2014; Watts et al., 2013)
+and crisis informatics (Caragea et al., 2011; Earle et al., 2012;
+Freeman, 2011; Guy et al., 2010; Pickard et al., 2011; Sakaki et al.,
+2010; Skinner, 2013; Ukkusuri et al., 2014) can be found. Additionally, connectivity and activity through social media permit researchers
+to examine and forecast what occurs in the actual world through social
+network magnification (Korolov et al., 2015; Kryvasheyeu et al.,
+2016).
+People often learn about weather status through conventional
+sources like television or radio and non‐conventional sources like
+internet or social media, hence crisis communication networks play
+a prominent role during emergency situations. Many researchers identified different organizations, news media, peers and government
+agencies as emergency warning sources (Drabek, 1969). From social
+science research, the literature exhibits that the socio‐psychological
+variables help to translate and map disaster warning into decision‐
+making (Gladwin et al., 2007; Lindell et al., 2005; Lindell and
+Prater, 2007a, 2007b). Emergency evacuation studies have shown
+how evacuation scenarios are strong affected by internet, media, peer
+influence, local agencies and organizations (Lindell et al., 2005). For
+an example, people in New Jersey (NJ) and New York (NY) had better
+communication experience in social media as compared to traditional
+sources during Sandy (Kaufman et al., 2012). Such online communications persisted during the recovery phases of the hurricane even in the
+areas with power outage (Midtown Manhattan), based on the continuous distribution of tweets observed throughout the affected areas
+(Floating Sheep, 2012). During Sandy, twitter data analysis explored
+that evacuees were more likely to rely on social media for weather‐
+related information rather that other information sources (Sadri
+et al., 2016a). Overall, social media (e.g. twitter), survey, and census
+data have been used to understand the dynamics of social influence
+on evacuation decision making. Twitter data can be collected using
+twitter application programing interface (API) and ego‐centric network survey data by using Personal Network Research Design (PNRD)
+approach.
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+2
+
+2. Social capital theory
+2.1. Classical definition
+As far as the literature related to the theory of social capital (linkage among the society members’) is concerned, it has been demonstrated in two related, however distinct ways. One way to approach
+social capital is to see it as the degree to which a person participates
+in various informal relationships (Hudson et al., 2020; Putnam,
+1995, 2001). Based on this, social capital refers to the mechanism
+how community members communicate one another and provides
+the overall pattern of the organizational life and public health of that
+society. This may include engaging in recreational, political or neighborhood activities, participating in groups for the environment, etc.
+Another way of approaching social capital is to deliberate it as the
+resources that individuals are able to only exchange through relationships with other people such as information, ideas, support, etc. as
+opposed to human (education) or physical (technology) capital. This
+definition calls for considering the structure of a given social network
+that can explain the resource flow mechanism within the network
+based on network density and size, frequency of contact, length of relationship etc. (Burt, 1984, 1985, 2000; Malual and Mazur, 2020). Coleman showed how social capital helps to generate human capital in U.S.
+high schools and revealed that increased community involvement of
+school parents can help reduce student dropouts while ensuring quality (Coleman, 1988). The study explained different aspects of social
+network structures and how they can facilitate functioning of network
+actors. Aldrich (2016) provided the evidence that civil society has the
+ability to alter state policies in advanced industrial democracies (a) by
+pushing siting authorities to choose localities with diminished social
+capital as host communities for public odds in a dense local network
+settings and (b) by obliging responsible organizations to retreat from
+ordinary compelling policy instruments in managing conflict and
+developing new policies and tools in the case of a stronger civil society
+(Aldrich, 2016). In 2012, Aldrich empirically explored how social capital can help shaping strong and resilient neighborhood and communities where they can make more proactive decisions and absorb shocks
+rapidly in post‐disaster scenarios (Aldrich, 2012). The study was based
+on several forms of natural hazards such as tsunami (Indian Ocean,
+2004), earthquake (Kobe, 1995 and Tokyo, 1923) and hurricane
+(Katrina, 2005). The study also revealed that people with weaker
+social relationships struggled more because of insufficient interactions
+with groups that are more organized. Three distinct forms of capital
+were introduced in this study that include: bridging (between networks), bonding (within network), and linking (across vertical
+gradients).
+2.2. Network capital as opposed to social capital
+A more network viewpoint of social capital can be found in classical studies that employed personal network research design (PNRD)
+approach to retrieve network information by interviewing people
+and establishing their relationships (Ahmed et al., 2020a; Borgatti
+and Halgin, 2011; Burt, 1984, 1985, 2000; Halgin and Borgatti,
+2012). The General Social Survey (GSS) was conducted for the first
+time in 1972 by measuring Americans ' core communication networks
+(Burt, 1985; Marsden, 1987) and several studies used GSS to measure
+discussion networks (Brashears, 2011; Wellman, 1979). The original
+questions from GSS have been used by many scholars due to its flexibility to adapt to various contexts and shape the relationships of people and their close contacts (Bailey and Marsden, 1999; Burt, 1984;
+Carrasco et al., 2013; Kowald et al., 2010; van den Berg et al.,
+2009). However, Burt proposed the upper limit of the network size
+to be five based on his experiments that accounts for increased measurement precision and reduced measurement bias while accounting
+for severe time constraint (Burt, 1984). Miller and Simon also found
+that five to seven data “chunks” that can be comfortably retained at
+once in human memory (Miller, 1956; Simon, 1974). On the other
+hand, Granovettor stressed more on the collective potential of loose
+relationships and proposed that occasional and informal relations were
+capable of linking diverse set of individuals allowing scope to access
+unique opportunities (Granovetter, 1973). But this is applicable more
+from a complete network perspective when two or more dense clusters
+are connected by weak ties which could potentially link them and serving as bridge in between. This is not within the scope of an ego‐centric
+network approach where the core discussion network of individuals is
+obtained and the behavior associated with the network members is
+analyzed. However, this issue, to some extent, could potentially be
+resolved by measuring the social capital according to Putnam's definition (Putnam, 1995, 2001) which is more aggregated in terms collecting relevant data as compared to a network approach discussed above.
+In this regard, Grootaert et al. suggested that the conceptual debates
+on social capital is hard to resolve and provided a list of well‐
+defined core questions to obtain numerical data on numerous extents
+of social capital as a section of a bigger household survey (Grootaert
+et al., 2003).
+3. Behavioral modeling of hurricane evacuations
+3.1. Overall hurricane evacuation
+In the coastal areas with high population and inadequate road network, evacuation scenarios turn to a complex phenomenon (Cepeda
+et al., 2010; Dow and Cutter, 2002). The need for effective management of evacuation and for stakeholder coordination have been identified for such areas (Gladwin et al., 2007; Lindell et al., 2005).
+Evacuation preparedness organizations usually identify the alternative
+evacuation routes in the event of short‐notice disasters like the hurricanes according to the predicted trajectory of the hurricane before the
+evacuation process and evacuees receive formal routing suggestions
+(Kim and Kang, 2010). Evacuation orders must give traffic clearance
+time to get through bottlenecks such as bridges or traffic‐limited roads.
+Nevertheless, evacuees often postpone departure and wind up leaving
+together and displaying coordination in terms of their evacuation
+behavior along similar routes (Wolshon, 2002). Previous studies analyzed various influential factors such as evacuee and household characteristics (type and location), path and hurricane alert mechanism,
+etc. to illustrate how evacuation patterns can change as influenced
+by such factors(Baker, 1991; Carnegie and Deka, 2010; Ehrhart
+et al., 2012; Gladwin et al., 2001, 2007; Lindell et al., 2005; Lindell
+and Prater, 2007b; Urbina and Wolshon, 2003).
+3.2. Evacuation decision making
+From the hurricane evacuation behavioral perspective, the key
+challenge is to predict the evacuation demand i.e. identifying households who are likely to evacuate. Although studies on evacuations during hurricane is major, however studies on household decisions to
+evacuate is limited. One interesting finding by Dash and Gladwin
+revealed households supposed to evacuate end up not evacuating
+whereas the reverse is true as estimated by emergency mangers
+(Dash and Gladwin, 2007). This is why evacuation decision making
+is a complex process during an active hurricane threat and is influenced by several underlying factors (Drabek, 1992; Gladwin et al.,
+2007). In this regard, several other studies could be referred (Baker,
+1979, 1991; Cross, 1979; Dow and Cutter, 1998; Drabek, 1999;
+Drabek and Boggs, 1968; Fischer et al., 1995). Dash and Gladwin have
+identified causal factors such as household location, age, sex, race and
+ethnicity, earning, elderly people and children in the household and
+past experience among others to have a significant impact on the conA.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+3
+
+duct of evacuation decision‐making (Dash and Gladwin, 2007). The
+Huang et al. (Huang et al., 2016) statistical meta‐analysis (SMA) determined, however, coherent with Baker (Baker, 1991), that demographic characteristics normally had weak and inconsistent
+interrelations with evacuation.
+In terms of statistical modeling, Gladwin and Peacock represented
+variables influencing evacuation. As example, household size, senior
+personnel and infants in the household, households located in zones
+of evacuation, are notable (Peacock et al., 1997). Another study used
+intensity of storms in developing their model with example scenarios
+storms and found such intensities strongly influencing evacuation decisions (Whitehead et al., 2000). However, some studies developed
+behavioral models without considering the existence of heterogeneity
+among different households (Fu and Wilmot, 2004, 2006)(Solis et al.,
+2009). Lindell et al. used correlation analysis to investigate evacuation
+decision making behavior and the study revealed that evacuation decisions are strongly correlated with geographic characteristics, agencies
+and peer influence, evacuation orders from the officials, warning information, along with other demographics (Lindell et al., 2005). But, such
+correlation analysis does not account for the combined effect of the
+influencing factors on the decision to evacuate.
+The ways people perceive different risks also influence household
+level evacuation decisions. Mileti and Sorenson mentioned that individuals convert immaterial risk concepts into concrete adapted valuations of risk for them, their relatives, and their ménages through the
+personalization process (Mileti and Sorensen, 1987). All the existing
+models of evacuation decision making did not consider for the heterogeneity which remains from person to person due to variances in the
+risk discernment’s production. In this context, Hasan et al. (2010)
+established a random parameters logit model of household‐level
+decision‐making with Hurricane Ivan data (Hasan et al., 2010). This
+research explored dissimilarities of spatial location, obligation to work
+commitments, order of evacuation, infants in households to understand evacuation behavior and decision making. Nevertheless, this
+revealed evacuation decision making behavior at the household level
+without any sign of communal influence on the evacuation decision
+by accounting preliminary household and demographic criterions
+(Hasan et al., 2010).
+3.3. Evacuation timing decision
+There are many studies on the departure time of evacuation wherever the most focus is to derive empirical distributions while
+not the inclusion of various potent factors. The analysis by Lindell and
+Prater may be said for a close review on evacuation temporal
+order studies (Lindell and Prater, 2007a). However, few efforts have
+been produced in literature as regards behavioral studies relating to
+choices on evacuation timing (Kolen and Helsloot, 2012). In order to
+explain evacuation timing behavior, Sorensen included path analysis
+along with a sequential choice sets that are in par with the development of hurricane predictions (Sorensen, 1991). In the research, the
+connection between time of departure and several important factors
+was regarded as an ordinary least square regression (OLS). Fu and Wilmot created a sequential logit selection model that identifies whether
+or not to evacuate for each family when examining the circumstances
+around a hurricane. (Fu and Wilmot, 2004). Hazard‐based evacuation
+model was developed to interpret evacuation decision‐making behavior in addition with evacuation timing decisions (Fu and Wilmot,
+2006). A major hypothesis of the established pattern is that the decision on evacuation and on time for evacuation are taken concurrently
+and all the comparable influential factors are affected by both choices.
+But this interesting assumption for the hazard model may not be true,
+as the variables influencing those two choices may differ, although
+they are linked to each other. The model also includes homes that have
+not evacuated, when the relevant observations are considered to be
+censored correctly, overestimating amount of families evacuated.
+The above mentioned temporal models (Fu and Wilmot, 2004,
+2006; Lindell and Prater, 2007a; Sorensen, 1991) are mostly focused
+on environmental, social and demographic aspects. Another hazard‐
+based approach modeled finishing point of a duration given such durations continued for some time. (Hasan et al., 2013). In case of hurricane evacuation, hazard‐based strategy could capture the expiry of
+the time span between receiving warning information and actual evacuations. This research offers useful insights into the time dynamics of
+the decision making method of evacuation in the homes. In addition,
+the modeling framework included random parameters to capture the
+heterogeneous risk reaction. The main focus of this article was to
+gather information from Hurricane Ivan's information on the causes
+that affect the decision on the evacuation timing.
+3.4. Evacuation mobilization time
+Observing cyclone Frances evacuation behavior and the evacuees,
+Dixit et al. modeled evacuation mobilization time i.e. time elapsing
+between evacuation order being received and actual evacuations.
+(Dixit et al., 2008). In this study, the authors explained effects of a past
+hurricane in a subsequent hurricane impacting time of mobilization by simultaneously estimating two models which was also
+described as the time elapsed between the receipt of the alert and the
+time of departure (Sorensen, 1991). In certain other research, the time
+to mobilize was referred to as an “evacuation delay” (Heath et al.,
+2001; Stopher et al., 2005; Voght, 1991). Dixit et al. (Dixit et al.,
+2008) explored such time to mobilize to explain perceptions of danger
+structurally which can predict the overall amount of evacuees and time
+of departure. Sadri et al. recently launched random parameters for
+understanding this time gap between the evacuation choice and actual
+leaving time from the house or evacuation area if an evacuation alert is
+relevant (Sadri et al., 2013a).
+3.5. Evacuation destination choice
+In a specific transport network, Lindell and Prater referred to the
+point as the nearest location where the evacuee is coming outside of
+the hazard zone. They also examined the accommodation type and
+the city or the town evacuees stayed before coming back to their
+homes (Lindell and Prater, 2007a). Besides, Barrett et al. defined the
+ultimate evacuation destination as the locations which evacuees considered safe on their own or locations which were suggested in the
+evacuation plans. (Barrett et al., 2000). Southworth acknowledged
+that evacuees show dispersive nature and are affected by various factors in the selection of their destinations: location of friends and family
+members, speed of risk among others (Southworth, 1991). Mei (2002)
+and Modali (2005) did not find any credible trip distribution models
+other than the OREMS package, the Emergency Management System
+from Oak Ridge. In order to distribute evacuation trips, one study used
+both gravity‐based approach along with an intervening opportunity
+technique where gravity‐based approach turned out to be more efficient (Wilmot et al., 2006). But such approaches do not apply to disaggregated areas, and additional calibration is required in such cases.
+Cheng et al. (2008) have created two distinct multinomial (MNL) logits, one for families and friends, and another for the selection of motel
+or hotel / motel in different zones.
+Places of families and friends were among favored evacuation destinations with highest popularity, hotels were among the second most
+popular (Smith and McCarty, 2009). For other possible hazards like
+nuclear plants, public shelter is required and, such shelters supply critical resources despite limited availability (Mileti et al., 1992). Among
+the people who evacuate, low income people consider public shelters
+as evacuation destination (Mileti et al., 1992; Moore et al., 1963). A
+recent research (Mesa‐Arango et al., 2012) has introduced a model
+of type of evacuation destinations at the household‐level based on data
+from Ivan (2004) to account for differences of use among the diverse
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+4
+
+destination options (Morrow and Gladwin, 2005). In this study, a
+Nested Logit model (NL) is developed, in which variables are found
+to affect the choice of a destination in the household location, its
+socio‐economic features, evacuation features, hurricanes and other
+conditions.
+3.6. Evacuation routing strategy
+A number of study could be cited with regard to emergency planning and network level assessment. As an example, the relative exactness of various types of trip generation was distinguished by Wilmot
+and Mei (Wilmot and Mei, 2004) for evacuation. Another research
+expounded and guided the formation of hurricane evacuation dynamic
+models by Barrett et al. (Barrett et al., 2000). In order to prevent excessive traffic delays and densities in evacuations using trip chain simulation, one study provided a comprehensive framework and solution to
+such issues (Murray‐Tuite and Mahmassani, 2004). The effect of the
+events on the completion time of an evacuation of a big metropolitan
+region was assessed by Robinson et al. (Robinson et al., 2009). The
+study by Wolshon et al. (2005a, 2005b)) is concentrating on fields
+for consideration in order to implement an effective evacuation plan.
+Dixit et al. (2011) have used microscopic modelling for external checks
+on the entrance and exit of cars into the evacuation network, and
+implemented a “network breathing” method to enhance the general
+outflow. In order to determine the best arrangements to decrease
+chances of gridlocks in major hurricanes through efficiently distributed demand, one study introduced cell‐based traffic assignment
+model (Liu et al., 2006). They presumed that only the beginning time
+could be regulated to evacuate each staged area.
+With regard to evacuation routing strategy, a network‐based model
+of traffic flow was proposed to define ideal lane‐dependent plans of
+evacuation for more rigorous highway topology with the main concept
+of reducing traffic delay at intersection during evacuation (Cova and
+Johnson, 2003). Two separate models were proposed to respond during disturbance to account for extreme uncertainty and dynamics of
+such networks (Shen et al., 2008). While one framework provided
+time‐dependent traffic control strategies that vary with the transportation networks, where shortest routes were chosen by taking into
+account of possible delays owing to congestive conditions. In a
+multi‐agent simulation, one study contrasted between two distinct
+routing methods (Lämmel and Flötteröd, 2009). While the proposed
+cooperative technique produces significantly greater evacuees as
+opposed to the non‐cooperative counterpart. Another study examined
+the route choice conduct of evacuees and found that evacuation efficiency subsequently degrades. They implemented an information feedback induced approach to increase efficiency in the ideal scenario
+(Chiu and Mirchandani, 2008). The proposed routing framework
+was calibrated using the preferential strategy indicated and it was
+not designed to replicate real evacuation scenarios, rather explaining
+how such scenarios deviate from ideal routing strategies.
+One study claimed that it is possible to control and predict the likelihood of detouring from a path that is congested (Robinson and
+Khattak, 2010). Analysis of stated preferences shows that riders preferred alternative path if there are delays on the planned path longer
+than anticipated when ATIS data is accessible on alternative paths.
+The survey aimed to provide sufficient behavioral information with
+non‐representative experimental data. Therefore, they decided that
+before using the results to replicate actual scenarios, a demographic
+survey has to be obtained. Research conducted in nine districts /
+parishes during hurricanes Katrina and Rita by Wu et al. (2012) also
+focused on household evacuation logistics. The study jointly considered route and destination choice and urged the necessity of developing evacuation routing strategies. A follow‐up study reported that in
+most cases route choice is based on shortest and/or most common
+route assumptions. (Murray‐Tuite et al., 2012b). Sadri et al. have
+recently proposed a random parameters multinomial logit framework
+explaining evacuation routing strategies using Hurricane Ivan data in
+2004 during evacuation scenario (Sadri et al., 2013b). The model recognized and discussed several key factors affecting the routing performance of evacuees, among three major alternatives: selection of the
+usual route, following recommended emergency routes and possibly
+bypassing or diverting routes. A recent study explored the selection
+of major bridges by random logit‐based approach for Miami Beach
+evacuees (Sadri et al., 2015b).
+3.7. Evacuation mode choice
+Moreover, several studies deal in specific with evacuation modes of
+transportation. During Hurricane Lili, Kang et al. (2007) likened their
+real behaviors to their reported (two years before) hurricane evacuation reaction. The respondents showed that their real conduct for evacuation, data sources, transportation methods for evacuation, amount
+of cars carried and kinds of evacuation shelters were exactly as
+expected. Lindell and Prater have disclosed that those capable of taking private cars, both from the citizens and management agencies, are
+still widely presumed to take these cars. They also proposed to take
+into account the vehicles which pull boat trailers in the evacuation
+of hurricanes (Lindell and Prater, 2007a).
+The necessities of captive riders’ and people needing special accommodation depending on families, neighbors, friends or transit services
+were explored by Renne et al. (2009, 2008)). The potent preferences
+for private cars (84%) were identified by Deka and Carnegie (2010)
+on the basis of specified preference study information and the selection of other methods depending on their familiarity with the options
+and the lack of access to personal vehicles. Using information from
+hurricane Katrina / Rita, Wu et al. (2012), verified that the most
+prevalent way to evacuate families is to take their own cars. According
+to them, an exception is that elderly evacuees are less probable to have
+a licensed car and are therefore more dependent on carpooling than on
+public transport. Only 11% of evacuees did not take their own vehicles, 71% of whom drove with someone else, and 28% used another
+type of transport.
+During Hurricane Gustav, about ninety six percent of those who
+evacuated took own van or car (Wilmot and Gudishala, 2013). A minor
+portion took transit (0.8%)or did carpool (2.8%). Murray‐Tuite et al.
+(Murray‐Tuite et al., 2012a, 2012b) created a concurrent optimization
+model which included various transport modes and discovered that
+the findings of the optimization model did not always correspond to
+the expected conduct of the evacuees. Another research established
+higher inclination to family togetherness while evacuating with lower
+number of cars, while inclination towards individual belongings were
+observed if more vehicles were used(Murray‐Tuite et al., 2012a). An
+interesting study examined the special features of visitors who have
+an impact on their feeling and mental reactions to the warning notice
+of the hurricane (Villegas et al., 2013). The process of transport did not
+affect perceptions of danger and fear except for visitors in surveyed
+coastal locations. Lindell et al. noted that the bulk of evacuees
+(90%) traveled by their own cars, while 9% were riding with colleagues during the hurricane Lili, and less than 1% used government
+transport (Lindell et al., 2011). The average amount of cars per family,
+according to their assessment, was close to 2.
+A structure for incorporating both gathering of households and
+choice of evacuation mode into a model in a no‐notice emergency
+was proposed to study impacts of such problems and evacuation effectiveness (Liu et al., 2014). As such, a decision tree‐based method by
+introducing the option of evacuation mode in cases without notice.
+This framework considered socio‐demographics such as gender,
+elderly people in family, distance and type of commuting, driving permit ownership, private vehicle accessibility, vehicular ownership as
+potential factors while predicting evacuation modal split including
+ride share, riding alone, taxi and transit. Another comprehensive evacuation study suggested that evacuation modal split is influenced by
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+5
+
+proximity of evacuation destination, hazard type and evacuee location
+when an order is mandated among others (Murray‐Tuite and Wolshon,
+2013). Sadri et al. recently studied in a major hurricane about the non‐
+household mode choice conduct of evacuees ' and the variables influencing the choice of a particular mode (Sadri et al., 2014).
+4. Social influence in evacuation modeling
+While a major hurricane approaches, people tend to communicate
+their families, friends or neighbors in the community to prepare for the
+hurricane. As such, evacuation decisions are influenced at different
+levels: personal, family or community. Besides, the demographic factors as well as human race, religion and societal classification also
+influence the evacuation decisions (Sadri et al., 2017b, 2018b,
+2016b). Predictions of evacuation demand start from the decision to
+evacuate followed by evacuation timing; evacuation mobilization
+time; evacuation destination; evacuation mode and evacuation route.
+One study acknowledged the influence of social networks as one the
+three socio‐psychological processes combined with individual characteristics to influence the critical occurrence of the reason of why people sometimes decide not to evacuate from a dangerous situation (Riad
+et al., 1999). According to this study, how people perceive risk and
+find resources are also two key aspects. Along with individual risk discernment, influence of social networks affects evacuation decisions
+although an individual is responsible ultimately for his/her personal
+decisions (Riad et al., 1999). Several studies on hurricane evacuation
+(Baker, 1991, 1995; Dash and Gladwin, 2007; Miller, 2012) found several contributors such as personal and household‐level criteria, ordering evacuation notice, and perception of risks, while the most
+influential factor is the personal risk perception that shapes evacuation
+decision making. Hasan and Ukkusuri (2011) found that the influence
+of social network characteristics on how people perceive risk is not
+comprehensively explored in existing studies. However, it is possible
+that the risk observation of an individual can be communally subjective as evacuation resolutions spread from person to person thorough
+the social network configuration. Gladwin et al. (2007) revealed that,
+personal social networks based on families, relatives, friends, neighbors, and co‐workers impact evacuation decisions and information
+propagation. The research also outlined the steps needed to promote
+work in social sciences on the high priority problems in the hurricane
+prediction and warning system by appropriate agencies and
+organizations.
+Existing studies also indicate that social relationships influence the
+spreading of extreme event warning (i.e., extent, information contents
+and sources, and amount of warning to the audience) and the ways to
+adapt (Clifford, 1956; Messias et al., 2012). One study found higher
+possibility of receiving information on evacuation situations if having
+stronger connections and relationships in the neighborhood (Perry,
+1979). Sometimes authorized information during warning phase provide ambiguous messages that are generally established through other
+available information sources such as individual’s social network
+(Mileti and Beck, 1975; Yore and Walker, 2020). It is usually found
+that the role of family relationships has more impact in compared to
+community relationships for making evacuation decisions (Perry,
+1979). Nevertheless, logical that when the strength of family relationships is less, community connections can perform corresponding purpose regarding a behavioral model of evacuation decision making.
+Individual social network parameters can be the effective tool to
+predict emergency evacuation patterns. As an example, it is explored
+in evacuation literature that people who normally evacuate during disaster have a large and interactive social network and vice versa
+(Drabek and Boggs, 1968). Existing researches on hurricane evacuation from social science also recommend that households of African
+American usually obtain more unified family relationship and greater
+social networks and more community interactions compared to Caucasian communities, as a result have a faster emergency warning information dissemination (Perry, 1979). Existing research also explored
+that indigenous groups (i.e. African American households) keenly
+comprise their elderly people as part of family and result in higher
+evacuations (Quarantelli, 1985). A contagion‐based evacuation decision framework was proposed to illustrate the neighborhood or peer
+pressure on evacuation decisions based on network science principles
+(Hasan and Ukkusuri, 2011). This study suggested that individual
+social relationship is considered as the unification of family affairs
+(such as parents, siblings and relatives) and other social connections
+(such as neighbors, colleagues, and friends).
+Another research identified that planning through social networks
+in groups of extremely vulnerable individuals such as inhabitants in
+mobile homes can be a significant evacuation readiness identification
+(Kusenbach and Taylor, 2012). Hasan and Ukkusuri (Hasan and
+Ukkusuri, 2011) proposed that the perception of risk of a person can
+spread within the social network from person to person. Their research
+created a model of contagion and used a simulation‐based strategy to
+know the function of distinct patterns of community mixing to explain
+the decision making of information cascade and evacuation. Sadri
+et al. (2015a) has recently studied the resemblance of social partners'
+evacuation decision choices based on ego‐centric social network of
+individuals. Their results indicate that, along with predominant effects
+of socio‐demographic variables, characteristics of relationships including intervals of interactions, conversation contexts and distance or
+proximity substantially effect joint evacuation decisions. In this study,
+Hurricane Sandy's initial information is used within a logit‐based
+framework to explain decision‐making of evacuation conduct at both
+individual and dyadic level (social tie). Another research by Sadri
+et al. (2017b) disclosed that evacuation choice behavior of individuals
+in vulnerable areas is considerably affected by household and
+individual‐level aspects along with the structure of networks of social
+relations. This research also makes significant contributions to the literature linked to the logistics of hurricane evacuation by defining the
+impact/preface of social networks on decision‐making during the scenario of hurricane Sandy evacuation based on a carefully designed
+household‐level network survey in the aftermath of Hurricane Sandy
+that included southeastern United States (NY and NJ).
+5. Social influence in crisis communications
+Computing for disasters, a new research area, can potentially benefit the overall preparedness and community resilience by collecting
+data and transforming data into usable and secured forms specifically
+for the emergency officials (Consortium, 2012; Herrmann‐Lunecke and
+Villagra, 2020). This requires examining multi‐disciplinary areas and
+addressing challenges related to scope, scale, complexity and uncertainty. While previous studies suggested that 'systems approaches' will
+provide more success instead of individually exploring the new
+advances such as wireless communication, data fusion, embedded sensors, pattern recognition and so on (Association, 2003; Mason, 2006;
+Sircar et al., 2009). Computing for disaster has the ability to increase
+the number of lives saved, improved quality of life for the injured people, accelerated economic recovery, creating new job sectors, etc.
+There are two major sources of big data: dedicated sensor networks
+(for example, earthquake detection using seismometers) and multi‐
+purpose sensor networks (for example, social media such as Twitter
+using smartphones), both of them have demonstrated their usefulness
+in disasters such as the Tohoku Earthquake (Pu and Kitsuregawa,
+2013). According to this report, large‐scale data could potentially benefit several inter‐related phases in disasters starting from preparedness
+then warning to recovery.
+In recent times, Microblog service providers such as Twitter, Facebook, etc. are serving as potential source for handling relevant information during major crisis or emergencies. Social media has the
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+6
+
+ability to reach the ground truth, sharing information, crowd sourcing
+as well as interactions of a diverse set of social media users. In addition
+to the traditional information sources i.e. newspapers, radio and television, newspaper, etc., data from social media offers innovative ways
+to share, collect and disseminate targeted information during emergency events. Due to these additional features, social media has the
+potential to perform critical activities in different phases of major disasters. Crisis Informatics is the new area of studying peoples’ interactions and response in major crisis events by using such large‐scale
+behaviorally enriched data with increasingly pervasive information
+and communication technology (Mahdi et al., 2020; Palen et al.,
+2007). Example of such studies include man‐made hazards such as
+shooting (Palen et al., 2009; Vieweg et al., 2008), earthquakes (Qu
+et al., 2011, 2009; Zhao et al., 2017) and wildfires (Mottershead
+et al., 2020), grassfires (Vieweg et al., 2010), tsunamis ((Arai, 2013)
+etc.. These studies used data from different social sharing platforms
+such as Flickr, Twitter and Facebook. Ukkusuri et al. (2014) recently
+provided new insights on crisis interactions by analyzing microblogs
+related to 2013 Moore tornado in Oklahoma posted on Twitter and
+examined public emotions and sentiments in the tornado aftermath.
+The sharing capability and reproducibility nature of social sharing
+platforms allow faster propagation of user information. As a result,
+such data are becoming more prevalent in producing new methods
+and insights on crisis communication patterns of various users, groups
+and agencies from different locations.
+Users can post (Tweet) on Twitter small information up to 280 letters and also can follow other users making a large network of an
+increased number of accounts with criterions of both social and informational network (Myers et al., 2014). Twitters’ social network characteristics gives access to both individual and geographical level of
+messages and the criterions of communication network initiate information impurity universally (Kryvasheyeu et al., 2016). For information spreading efficiently during crises, particularly Twitter became
+more useful by these specific features. Several researchers have used
+Twitter data to study the service criterions from the emergency
+research perspective (Guy et al., 2010; Li and Rao, 2010), retweeting
+activity (Kogan et al., 2015; Starbird and Palen, 2010), situational
+awareness (Power et al., 2014; Vieweg et al., 2010), real‐time communication among emergency officials (Hughes et al., 2014; St Denis
+et al., 2014), detection of events and text mining (Caragea et al.,
+2011; Earle et al., 2012; Imran et al., 2013; Kumar et al., 2014;
+Sakaki et al., 2010), rapid sensing approaches (Kryvasheyeu et al.,
+2015), understanding mobility patterns of people (Wang and Taylor,
+2014, 2015), and disaster relief efforts (Gao et al., 2011). Recently,
+Sadri et al. analyzed large‐scale social media data (both network data
+and text data) obtained from Twitter and identified subgraphs of Twitter that was active before, during, and after Hurricane Sandy’s landfall
+at different scales of user activity. The study contributes in establishing
+the relationship between network topology and user activity in such
+social interaction platforms and reveal numerous insightful crisis communication patterns (Sadri et al., 2017a). From existing literature, it is
+one of the first few studies construct social interaction networks of
+people as derived from social media data and then predict communities i.e. groups of like‐minded users based on interaction covering
+diverse set of common topics. Studies have also demonstrated how
+social media interaction network properties can be traced over time
+to identify influential nodes in such networks (Sadri et al., 2018a)
+and developed data‐driven methods to infer communities of common
+interests using large scale social media data from large scale special
+events (Sadri et al., 2019).
+The concerns about spread of misinformation and fake news are
+becoming prevalent on social media platforms recently. Mesnards
+et al. found out that online social networks are frequently subject to
+the control of malicious actors' campaigns through the use of automated accounts known as bots (Mesnards et al., 2018). Twitter bot
+is software that sends fake tweets automatically to users (Battur and
+Yaligar, 2020). Kouzy et al. explored Twitter using 14 separate trending hashtags and keywords linked to the COVID‐19 epidemic. A total
+of 153 tweets (24.8%) contained misinformation and 107 (17.4%)
+included unverifiable details (Kouzy et al., 2020). Besides, Buntain
+et al. developed a framework by learning to predict accuracy tests
+for automating fake news detection on Twitter (Buntain and
+Golbeck, 2017). Singh et al. illustrated how misconceptions and correlations to knowledge of low quality occur, but are less prominent than
+other themes specific to the COVID‐19 pandemic (Singh et al., 2020).
+However, there is a lack of studies focusing on misinformation in the
+context of communicating crisis risk in social networks and how such
+misinformation weigh into evacuation decision‐making.
+Fig. 1. The ecosystem of cross-disciplinary efforts studying crisis communication and evacuation decision making (major focus, key approach and factors).
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+7
+
+6. Synthesis of literature and future recommendations
+The core objective of this study is to synthesize existing studies on
+several dimensions of evacuation behavior (decision‐making, timing,
+mobilization time, destination choice, modal split and route choice)
+and influence of social and information networks on crisis communications and evacuation decisions. The whole evacuation process is a
+combination of diverse perspectives from psychology to sociology to
+communications to emergency management to transportation. This
+complex process is explained in the following diagram (Fig. 1) which
+creates an ecosystem of these diverse perspectives.
+Existing literature of social influence on evacuation decision during
+disaster did not reveal several interesting research questions yet, such
+as (i) analyzing risk perception of individuals for evacuation decision
+making; (ii) new models for encouraging shared mobility during the
+extreme event; (iii) possible solutions to address the lack of external
+resources (grocery, medicine, gas among others) during disaster; (iv)
+revealing authentic information sources of evacuation order (as government or other official authorities are not considered as reliable
+sources) and role of local leaders for effective information spreading
+to mass people; (v) use of different types of data (other than survey
+and social media data) to analyze social influence; (vi) revealing systematic way of information dissemination by social media for effective
+crisis communication to make better decision in extreme events; (vii)
+training on effective evacuation or evacuation education can be
+another emerging topic; (viii) developing new agent‐based model
+(ABM) simulation tool for evacuating traffic influenced by social network; (ix) new social contagion model can be proposed to validate
+Table 1
+Synthesis of literature, key insights and paper referenced.
+Topic Key Insight Papers Referenced
+Overall Evacuation
+Scenarios
+Complex mechanism involving several factors, such as hurricane path, dynamic
+evacuation demand, information sources and other uncertainties.
+(Dow and Cutter, 2002); (Lindell et al., 2005); (Gladwin et al.,
+2007); (Wolshon, 2002); (Baker, 1991; Carnegie and Deka, 2010;
+Gladwin et al., 2001, 2007; Lindell et al., 2005; Lindell and Prater,
+2007b; Urbina and Wolshon, 2003); (Ehrhart et al., 2012); (Kim
+and Kang, 2010); (Cepeda et al., 2010)
+Evacuation
+Decision making
+Primarily depends on several household-level factors, such as risk perception, peer
+influence, previous experience, work constraint, family size among other sociodemographic characteristics.
+(Dash and Gladwin, 2007); (Gladwin et al., 2007); (Baker, 1979,
+1991; Cross, 1979; Dow and Cutter, 1998; Drabek, 1999; Drabek
+and Boggs, 1968; Fischer et al., 1995); (Dash and Gladwin, 2007);
+(Huang et al., 2016); (Baker, 1991); (Peacock et al., 1997);
+(Whitehead et al., 2000); (Fu and Wilmot, 2004, 2006); (Solis
+et al., 2009); (Lindell et al., 2005); (Mileti and Sorensen, 1987);
+(Hasan et al., 2010); (Drabek, 1992)
+Evacuation Timing This is vastly correlated with household (family size, work constraints), traffic related
+factors (destination, mode, route choice) and also affected by hurricane path.
+(Lindell and Prater, 2007a); (Sorensen, 1991); (Fu and Wilmot,
+2004); (Fu and Wilmot, 2006); (Fu and Wilmot, 2004, 2006;
+Lindell and Prater, 2007a; Sorensen, 1991); (Hasan et al., 2013);
+(Kolen and Helsloot, 2012)
+Evacuation
+Mobilization
+Time
+Mobilization time varies for evacuee’s based on their income, ethnicity, work
+commitments, past experiences, sources of information, and the timing of evacuation
+order.
+(Dixit et al., 2008); (Sorensen, 1991); (Heath et al., 2001; Stopher
+et al., 2005; Voght, 1991); (Sadri et al., 2013a)
+Evacuation
+Destination
+Choice
+The dynamic destination choice for evacuation is influenced by socioeconomic
+criteria, household location, hurricane experience, and hurricane path
+(Lindell and Prater, 2007a); (Barrett et al., 2000); (Southworth,
+1991); (Mei, 2002); (Modali, 2005); (Wilmot et al., 2006); (Cheng
+et al., 2008); (Smith and McCarty, 2009); (Mileti et al., 1992);
+(Moore et al., 1963); (Mesa-Arango et al., 2012); (Morrow and
+Gladwin, 2005)
+Evacuation Routing
+Strategy
+Lack of systematic routing strategy results in congestion cascades during evacuation
+and enhanced coordination between route guidance (by officials) and route choice (by
+evacuees) is needed.
+(Wilmot and Mei, 2004); (Barrett et al., 2000); (Murray-Tuite and
+Mahmassani, 2004); (Robinson et al., 2009); (Wolshon et al.,
+2005a, 2005b); (Dixit et al., 2011); (Liu et al., 2006); (Cova and
+Johnson, 2003); (Shen et al., 2008); (Lämmel and Flötteröd,
+2009);(Chiu and Mirchandani, 2008); (Robinson and Khattak,
+2010); (Wu et al., 2012); (Murray-Tuite et al., 2012b); (Sadri
+et al., 2013b); (Sadri et al., 2015b)
+Evacuation Mode
+Choice
+Different variables influence evacuation mode choice including past experience, sociodemographics, destination to safety and travel time, disaster characteristics and
+evacuee’s location at evacuation order. Besides, most of the evacuee prefer personal
+vehicle rather than public transit and other shared mobility
+(Kang et al., 2007); (Lindell and Prater, 2007a); (Renne et al.,
+2009, 2008); (Wu et al., 2012); (Wilmot and Gudishala, 2013);
+(Murray-Tuite et al., 2012a, 2012b); (Murray-Tuite et al., 2012a);
+(Villegas et al., 2013); (Lindell et al., 2011); (Liu et al., 2014);
+(Murray-Tuite and Wolshon, 2013); (Sadri et al., 2014)
+Social Influence in
+Evacuation
+Modeling
+Individuals evacuation decision is mostly influenced by the family, relatives and
+friends; not by any formal (local or government) organizations
+(Riad et al., 1999); (Baker, 1991, 1995; Dash and Gladwin, 2007);
+(Hasan and Ukkusuri, 2011); (Gladwin et al., 2007); (Clifford,
+1956); (Perry, 1979); (Mileti and Beck, 1975); (Drabek and Boggs,
+1968); (Quarantelli, 1985); (Kusenbach and Taylor, 2012); (Sadri
+et al., 2015a); (Sadri et al., 2017b); (Miller, 2012); (Messias et al.,
+2012); (Yore and Walker, 2020)
+Social Influence in
+Crisis
+Communications
+Systematic way of information dissemination through social network in crisis, disaster
+communication network, online social media (Facebook, Twitter) are the most
+effective methods of crisis communication
+(Consortium, 2012); (Association, 2003; Mason, 2006; Sircar
+et al., 2009); (Pu and Kitsuregawa, 2013); (Palen et al., 2007);
+(Palen et al., 2009; Vieweg et al., 2008); (Qu et al., 2011, 2009);
+(Vieweg et al., 2010); (Ukkusuri et al., 2014); (Myers et al., 2014);
+(Kryvasheyeu et al., 2016); (Guy et al., 2010; Li and Rao, 2010);
+(Kogan et al., 2015; Starbird and Palen, 2010); (Power et al.,
+2014; Vieweg et al., 2010); (Hughes et al., 2014; St Denis et al.,
+2014); (Caragea et al., 2011; Earle et al., 2012; Imran et al., 2013;
+Kumar et al., 2014; Sakaki et al., 2010); (Kryvasheyeu et al.,
+2015); (Wang and Taylor, 2014, 2015); (Gao et al., 2011); (Sadri
+et al., 2017aa, 2017ab); (Sadri et al., 2018a); (Sadri et al., 2019);
+(Arai, 2013); (Mahdi et al., 2020); (Zhao et al., 2017);
+(Mottershead et al., 2020); (Herrmann-Lunecke and Villagra,
+2020)
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+8
+
+the social influence in crisis; (x) new methods for identifying influential nodes in such networks and disseminating targeted information
+more efficiently in similar crisis events. A summary of the synthesis
+of the reviewed studies is presented in Table 1.
+Future research should aim to measure the underlying properties of
+the informal social networks and relating them to develop more
+advanced network models of social influence on evacuation behavior.
+Such efforts should capture the social contagion process more accurately, quantify the propagation of shared decisions during crisis,
+answer specific questions such as: (a) Under what condition evacuees
+make a shared trip for a given activity in extreme events? (b) Based on
+the number of trips shared by different agents, can we obtain total
+shared trips for a given evacuation scenario? (c) How strength of social
+relationships induces evacuation risk contagions and affect decision
+making? (d) Do denser social networks help to produce more shared
+trips during an evacuation? (e) Can local contagion of ridesharing during crisis turn to a global cascade for an extreme event to which agents
+have common interest? (f) Do we see a pattern from different mixing
+distributions of agents (car owners vs. non‐owners, low income vs.
+high income) in terms of how they share rides while evacuating.
+7. Summary and conclusions
+To explore how human social networks can be leveraged so that
+people make better and more strategic joint decisions during a crisis
+is the primary objective of this study. The prevalence of social networks in recent times influence people’s decision making in so many
+ways. The proposed review work contributes towards exploring novel
+methodologies available in the literature for analyzing social network
+data related to extreme weather events and provides a holistic understanding of the role of social and information networks on the underlying travel behavior of people in terms of reacting to a major disaster
+such as hurricanes. Given the potential availability of social network
+datasets in near future and the lack of appropriate methodologies to
+connect social influence with travel behavior, this study makes significant contribution to the synthesis of complex contagion in evacuation
+decision‐making and crisis communication dynamics. The empirical
+models reviewed in this study could benefit practitioners and emergency officials to derive evacuation demand based on social network
+data. While the overarching goal of this review is to provide a holistic
+understanding of social network influence on travel behavior during
+extreme weather events, the role of social and information networks
+needs to be assessed at different stages of a disaster such as emergency
+preparedness, evacuation, and recovery by adopting a holistic interdisciplinary approach to minimize the overall impact caused by a given
+disaster. Resiliency cannot be ensured to a reasonable extent unless
+all these interconnected phases are considered altogether.
+This review study also makes significant contribution in terms of
+policy implications. By identifying the key social network effects on
+individuals travel decisions, policy makers would be able to make
+strategies for targeted groups or communities instead of implementing
+individual‐level policies. In addition, as compared to traditional policy
+making strategy based on observed data, public communication officials can provide real time guidance based on real time data. The discussion of findings presented this review also provide important
+implications in making communities more resilient and proactive in
+terms of how individuals react to certain types of information and
+make decisions. With the recent advancement in information technologies, real time information update and social media applications, these
+methodologies can become useful in transportation analysis in near
+future. Transportation engineers and traffic managers can be benefited
+by using the key findings of this review study to predict the social network influence on evacuation decisions, evacuation and mobilization
+time, destination, mode and route choice in future evacuation scenarios. The evacuation demand predicted from the empirical models
+would also help emergency managers and officials to find out more
+efficient techniques to control the evacuating traffic in future hurricanes. In sum, this research aims to serve as a key to demonstrate
+the usefulness of the theoretical and methodological approaches of
+social network analysis for an in‐depth understanding of how personal
+network connections impact evacuation decision‐making.
+Although previous evacuation research analyzed the dynamics of
+the actions people take during major hurricanes, including the impact
+of social networks and communication media on the effectiveness of
+evacuation choice, quantitative studies of how social network effects
+on evacuation decisions are limited. Evacuation decisions are, in some
+cases, based solely on personal responsibilities and desires. However,
+sometimes individuals, especially acquaintances, may affect them.
+Existing researches in sociology recommend that social networks influence the objective of spreading warning message through information
+dissemination about an imminent risk and people having higher social
+contacts are assumed to obtain more warning information. Nevertheless, the experimental literature is inadequate about the evaluation
+process of warning messages obtained from social networks into
+decision‐making during evacuation. The quantitative models reviewed
+here will better predict evacuation demand by practitioners and emergency authorities and make effective preparations during a major hurricane. It may also be useful for researchers and other stakeholders to
+explore other essential aspects of evacuation behaviors such as destination selection, departure time, choice of route, modal split, and so
+on. It is found that individuals with different sets of constraints and
+characteristics react differently to a risk of hurricane. Important conclusions are drawn from relevant studies to tailor and support the complex nature of evacuation decisions. These insights and implications
+are particularly meaningful for effective information dissemination
+and real time crisis management.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial
+interests or personal relationships that could have appeared to influence the work reported in this paper.
+References
+Ahmed, M.A., Sadri, A.M., Hadi, M., 2020a. The role of social networks and day-to-day
+sharing activity on hurricane evacuation decision consistency and shared
+evacuation capacity. In: Proceedings of the 99th Annual Meeting of
+Transportation Research Board, Washington, DC, USA.
+Ahmed, M.A., Sadri, A.M., Pradhananga, P., Elzomor, M., Pradhananga, N., 2020b.
+Social Media Communication Patterns of Construction Industry in Major Disasters
+Construction. Research Congress Proceedings-2020.
+Aldrich, D.P., 2012. Building Resilience: Social Capital in Post-disaster Recovery.
+University of Chicago Press.
+Aldrich, D.P., 2016. Site Fights: Divisive Facilities and Civil Society in Japan and the
+West. Cornell University Press.
+Arai, K., 2013. How to transmit disaster information effectively: a linguistic perspective
+on Japan’s tsunami warnings and evacuation instructions. Int. J. Disaster Risk Sci. 4,
+150–158.
+Association CR Grand research challenges in information systems. In: A conference
+Series on Grand Research Challenges in Computer Science and Engineering, 2003.
+Bagrow, J.P., Wang, D., Barabasi, A.-L., 2011. Collective response of human populations
+to large-scale emergencies. PloS One 6, e17680.
+Bailey, S., Marsden, P.V., 1999. Interpretation and interview context: examining the
+General Social Survey name generator using cognitive methods. Social Netw. 21,
+287–309.
+Baker, E.J., 1979. Predicting response to hurricane warnings: a reanalysis of data from
+four studies. Mass Emerg. 4, 9–24.
+Baker, E.J., 1991. Hurricane evacuation behavior. Int. J. Mass Emerg. Disasters 9,
+287–310.
+Baker, E.J., 1995. Public response to hurricane probability forecasts. Professional Geogr.
+47, 137–147.
+Barrett, B., Ran, B., Pillai, R., 2000. Developing a dynamic traffic management modeling
+framework for hurricane evacuation. Transp. Res. Rec. J. Transp. Res. Board,
+115–121.
+Battur, R., Yaligar, N., 2020. Twitter bot detection using machine learning algorithms.
+Int. J. Sci. Res. (IJSR), ISSN: 2319-7064 8
+Borgatti, S.P., Halgin, D.S., 2011. On network theory. Organization Sci. 22, 1168–1181.
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+9
+
+Brashears, M.E., 2011. Small networks and high isolation? A reexamination of American
+discussion networks. Social Netw. 33, 331–341.
+Buntain, C., Golbeck, J., 2017. Automatically identifying fake news in popular Twitter
+threads. In: 2017 IEEE International Conference on Smart Cloud (SmartCloud),
+IEEE, pp 208–215.
+Burke, K., 2003. As consumer attitudes shift, so must marketing strategies. In: Twelfth
+ACM Conference on Electronic Commerce (EC'11), pp. 157–166.
+Burt, R.S., 1984. Network items and the general social survey. Social Netw. 6, 293–339.
+Burt, R.S., 1985. General social survey network items. Connections 8, 19–23.
+Burt, R.S., 2000. The network structure of social capital. Res. Organizational Behav. 22,
+345–423.
+Caragea, C., et al., 2011. Classifying text messages for the Haiti earthquake. In:
+Proceedings of the 8th International Conference on Information Systems for Crisis
+Response and Management (ISCRAM2011). Citeseer,
+Carnegie, J., Deka, D., 2010. Using hypothetical disaster scenarios to predict evacuation
+behavioral response. Transp. Res. Board 89th Annual Meeting 10, 1175.
+Carrasco, J.A., Bustos, C., Cid Aguayo, B., 2013. Affective personal networks versus daily
+contacts: analyzing different name generators in an social activity-travel behaviour
+context. Transport Survey Methods: Best Practice for Decision Making. 409.
+Cepeda, A., Valdez, A., Kaplan, C., Hill, L.E., 2010. Patterns of substance use among
+hurricane Katrina evacuees in Houston. Texas Disasters 34, 426–446.
+Cheng, G., Wilmot, C.G., Baker, E.J., 2008. A destination choice model for hurricane
+evacuation. In: Proceedings of the 87th Annual Meeting Transportation Research
+Board, Washington, DC, USA. pp. 13–17.
+Chiu, Y.-C., Mirchandani, P.B., 2008. Online behavior-robust feedback information
+routing strategy for mass evacuation. IEEE Trans. Intell. Transp. Syst. 9, 264–274.
+Clifford, R.A., 1956. The Rio Grande flood: a comparative study of border communities
+in disaster, vol. 7. National Academy of Sciences-National Research Council.
+Coleman, J.S., 1988. Social capital in the creation of human capital. Am. J. Sociol.
+S95–S120.
+Consortium, C.C., 2012. Computing for Disasters: A Report from the Community
+Workshop.
+Cova, T.J., Johnson, J.P., 2003. A network flow model for lane-based evacuation
+routing. Transp. Res. Part A: Policy Pract. 37, 579–604.
+Cross, J., 1979. The association between previous residence and hurricane hazard
+perception and adjustments. In: 75th Annual Meeting of the Association of
+American Geographers.
+Cutter, S.L. et al, 2013. Disaster resilience: a national imperative. Environ. Sci. Policy
+Sustain. Dev. 55, 25–29.
+Cutter, S.L., Finch, C., 2008. Temporal and spatial changes in social vulnerability to
+natural hazards. Proc. Natl. Acad. Sci. 105, 2301–2306.
+Dash, N., Gladwin, H., 2007. Evacuation decision making and behavioral responses:
+individual and household. Nat. Hazard. Rev. 8, 69–77.
+Deka, D., Carnegie, J., 2010. Analyzing evacuation behavior of transportationdisadvantaged populations in northern New Jersey. Transp. Res. Board 89th
+Annual Meeting 10, 1584.
+Diffenbaugh, N.S., Field, C.B., 2013. Changes in ecologically critical terrestrial climate
+conditions. Science 341, 486–492.
+Dixit, V., Pande, A., Radwan, E., Abdel-Aty, M., 2008. Understanding the impact of a
+recent hurricane on mobilization time during a subsequent hurricane. Transp. Res.
+Rec. J. Transp. Res. Board:49–57.
+Dixit, V.V., Radwan, E.A., Board, T., 2011. Strategies to improve dissipation into
+destination networks using macroscopic network flow models. The Fundamental
+Diagram for Traffic Flow Theory 212.
+Dow, K., Cutter, S.L., 1998. Crying wolf: repeat responses to hurricane evacuation
+orders.
+Dow, K., Cutter, S.L., 2002. Emerging hurricane evacuation issues: hurricane Floyd and
+South Carolina. Nat. Hazard. Rev. 3, 12–18.
+Drabek, T.E., 1969. Social processes in disaster: family evacuation. Social Problems 16,
+336–349.
+Drabek, T.E., 1992. Variations in disaster evacuation behavior: public responses versus
+private sector executive decision-making processes. Disasters 16, 104–118.
+Drabek, T.E., 1999. Disaster-induced Employee Evacuation. University of Colorado,
+Institute of Behavioral Science.
+Drabek, T.E., Boggs, K.S., 1968. Families in disaster: reactions and relatives. J. Marriage
+Family, 443–451.
+Earle, P.S., Bowden, D.C., Guy, M., 2012. Twitter earthquake detection: earthquake
+monitoring in a social world. Ann. Geophys. 54.
+Ehrhart, B., Mildenhall, S., Jakubowski, S., Podlaha, A., Bowen, S., 2012. Annual Global
+Climate and Catastrophe Repor.
+Emergency Events Database http://www.emdat.be/. Accessed 04/25/2016.
+Fischer, H.W., Stine, G.F., Stoker, B.L., Trowbridge, M.L., Drain, E.M., 1995. Evacuation
+behaviour: why do some evacuate, while others do not? A case study of the Ephrata,
+Pennsylvania (USA) evacuation. Disaster Prev. Manag. Int. J. 4, 30–36.
+Sheep, F., 2012. Floating Sheep Accessed 07/29/2016 http://www.floatingsheep.org/
+2012/10/the-urban-geographies-of-hurricane.html,.
+Freeman, M., 2011. Fire, wind and water: social networks in natural disasters. J. Cases
+Inform. Technol. (JCIT) 13, 69–79.
+Fu, H., Wilmot, C., 2004. Sequential logit dynamic travel demand model for hurricane
+evacuation. Transp. Res. Rec. J. Transp. Res. Board:19–26.
+Fu, H., Wilmot, C., 2006. Survival analysis-based dynamic travel demand models for
+hurricane evacuation. Transp. Res. Record J. Transp. Res. Board:211–218.
+Gao, H., Barbier, G., Goolsby, R., Zeng, D., 2011. Harnessing the crowdsourcing power
+of social media for disaster relief. DTIC Document.
+Gladwin, C.H., Gladwin, H., Peacock, W.G., 2001. Modeling hurricane evacuation
+decisions with ethnographic methods. Int. J. Mass Emerg. Disasters 19, 117–143.
+Gladwin, H., Lazo, J.K., Morrow, B.H., Peacock, W.G., Willoughby, H.E., 2007. Social
+science research needs for the hurricane forecast and warning system. Nat. Hazard.
+Rev. 8, 87–95.
+Granovetter, M.S., 1973. The strength of weak ties. Am. J. Sociol. 1360–1380.
+Grootaert, C., Narayan, D., Jones, V.N., Woolcock, M., 2003. Integrated questionnaire
+for the measurement of social capital. The World Bank Social Capital Thematic
+Group.
+Guikema, S.D., 2009. Infrastructure design issues in disaster-prone regions. Science 323,
+1302–1303.
+Guy, M., Earle, P., Ostrum, C., Gruchalla, K., Horvath, S., 2010. Integration and
+dissemination of citizen reported and seismically derived earthquake information
+via social network technologies. In: International Symposium on Intelligent Data
+Analysis. Springer, pp. 42–53.
+Halgin, D.S., Borgatti, S.P., 2012. An introduction to personal network analysis and Tie
+Churn statistics using E-NET. Connections 32, 37–48.
+Hasan, S., Mesa-Arango, R., Ukkusuri, S., 2013. A random-parameter hazard-based
+model to understand household evacuation timing behavior. Transp. Res. Part C:
+Emerg. Technol. 27, 108–116.
+Hasan, S., Ukkusuri, S., Gladwin, H., Murray-Tuite, P., 2010. Behavioral model to
+understand household-level hurricane evacuation decision making. J. Transp. Eng.
+137, 341–348.
+Hasan, S., Ukkusuri, S.V., 2011. A threshold model of social contagion process for
+evacuation decision making. Transp. Res. Part B: Methodol. 45, 1590–1605.
+Heath, S.E., Kass, P.H., Beck, A.M., Glickman, L.T., 2001. Human and pet-related risk
+factors for household evacuation failure during a natural disaster. Am. J. Epidemiol.
+153, 659–665.
+Helbing, D., 2013. Globally networked risks and how to respond. Nature 497, 51–59.
+Herrmann-Lunecke, M.G., Villagra, P., 2020. Community resilience and urban planning
+in tsunami-prone settlements in Chile. Disasters 44, 103–124.
+Hoyois, P., Scheuren, J., Below, R., Guha-Sapir, D., 2007. Annual disaster statistical
+review: numbers and trends 2006. Catholic University of Louvain (UCL). Centre for
+research on the epidemiology of disasters (CRED).
+Huang, S.-K., Lindell, M.K., Prater, C.S., 2016. Who leaves and who stays? A review and
+statistical meta-analysis of hurricane evacuation studies. Environ. Behav.
+0013916515578485.
+Hudson, P., Hagedoorn, L., Bubeck, P., 2020. Potential linkages between social capital,
+flood risk perceptions, and self-efficacy. Int. J. Disaster Risk Sci. 1–12.
+Hughes, A.L., Palen, L., 2009. Twitter adoption and use in mass convergence and
+emergency events. Int. J. Emerg. Manag. 6, 248–260.
+Hughes, A.L., St Denis, L.A., Palen, L., Anderson, K.M., 2014. Online public
+communications by police & fire services during the 2012 Hurricane Sandy. In:
+Proceedings of the 32nd Annual ACM Conference on Human Factors in Computing
+Systems. ACM, pp. 1505–1514.
+Imran, M., Elbassuoni, S.M., Castillo, C., Diaz, F., Meier, P., 2013. Extracting information
+nuggets from disaster-related messages in social media Proc of ISCRAM. BadenBaden, Germany.
+Kang, J.E., Lindell, M.K., Prater, C.S., 2007. Hurricane evacuation expectations and
+actual behavior in Hurricane Lili1. J. Appl. Social Psychol. 37, 887–903.
+Kaufman, S., Qing, C., Levenson, N., Hanson, M., 2012. Transportation during and after
+Hurricane Sandy, 1–34.
+Kennedy, D., 2002. Science, terrorism, and natural disasters. Science 295, 405–405.
+Kim, Y.C., Kang, J., 2010. Communication, neighbourhood belonging and household
+hurricane preparedness. Disasters 34, 470–488.
+Klomp, J., Valckx, K., 2014. Natural disasters and economic growth: a meta-analysis.
+Global Environ. Change 26, 183–195.
+Kogan, M., Palen, L., Anderson, K.M., 2015. Think local, retweet global: Retweeting by
+the geographically-vulnerable during Hurricane Sandy. In: Proceedings of the 18th
+ACM Conference on Computer Supported Cooperative Work & Social Computing.
+ACM, pp 981–993.
+Kolen, B., Helsloot, I., 2012. Time needed to evacuate the Netherlands in the event of
+large-scale flooding: strategies and consequences. Disasters 36, 700–722.
+Korolov, R., Peabody, J., Lavoie, A., Das, S., Magdon-Ismail, M., Wallace, W., 2015.
+Actions are louder than words in social media. In: Proceedings of the 2015 IEEE/
+ACM International Conference on Advances in Social Networks Analysis and Mining
+2015. ACM, pp. 292–297.
+Kouzy, R., et al., 2020. Coronavirus goes viral: quantifying the COVID-19
+misinformation epidemic on Twitter Cureus 12.
+Kowald, M., Frei, A., Hackney, J.K., Illenberger, J., Axhausen, K.W., 2010. Collecting
+data on leisure travel: The link between leisure contacts and social interactions.
+Procedia-Social Behav. Sci. 4, 38–48.
+Kryvasheyeu, Y., Chen, H., Moro, E., Van Hentenryck, P., Cebrian, M., 2015.
+Performance of social network sensors during Hurricane Sandy. PLoS one 10,
+e0117288.
+Kryvasheyeu, Y., Chen, H., Obradovich, N., Moro, E., Van Hentenryck, P., Fowler, J.,
+Cebrian, M., 2016. Rapid assessment of disaster damage using social media activity.
+Sci. Adv. 2, e1500779.
+Kumar, S., Hu, X., Liu, H., 2014. A behavior analytics approach to identifying tweets
+from crisis regions. In: Proceedings of the 25th ACM Conference on Hypertext and
+Social Media, ACM, pp. 255–260.
+Kusenbach, M., Taylor, C., 2012. Hurricane evacuation among mobile home residents in
+Florida: the complex role of social networks Suriving Disaster: The Role of Social.
+Lyceum Books:63–83, Netowrks Chicago, IL.
+Lämmel, G., Flötteröd, G., 2009. Towards system optimum: finding optimal routing
+strategies in time-dependent networks for large-scale evacuation problems. In:
+Annual Conference on Artificial Intelligence. Springer, pp. 532–539.
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+10
+
+Lazer, D., et al., 2009. Life in the network: the coming age of computational social
+science. Science (New York, NY) 323, 721.
+Li, J., Rao, H.R., 2010. Twitter as a rapid response news service: an exploration in the
+context of the 2008 China earthquake. Electron. J. Inform. Syst. Dev. Countries 42.
+Lindell, M.K., Kang, J.E., Prater, C.S., 2011. The logistics of household hurricane
+evacuation. Nat. Hazard. 58, 1093–1109.
+Lindell, M.K., Lu, J.-C., Prater, C.S., 2005. Household decision making and evacuation in
+response to Hurricane Lili. Nat. Hazard. Rev. 6, 171–179.
+Lindell, M.K., Prater, C.S., 2007a. Critical behavioral assumptions in evacuation time
+estimate analysis for private vehicles: examples from hurricane research and
+planning. J. Urban Plann. Dev. 133, 18–29.
+Lindell, M.K., Prater, C.S., 2007b. A hurricane evacuation management decision support
+system (EMDSS). Nat. Hazard. 40, 627–634.
+Liu, S., Murray-Tuite, P., Schweitzer, L., 2014. Incorporating household gathering and
+mode decisions in large-scale no-notice evacuation modeling. Comput.-Aided Civil
+Infrastruct. Eng. 29, 107–122.
+Liu, Y., Lai, X., Chang, G.-L., 2006. Cell-based network optimization model for staged
+evacuation planning under emergencies. Transp. Res. Rec. J. Transp. Res.
+Board:127–135..
+Mahdi, F., Zeinab, G., Mansourian, A., 2020. Dynamic spatio-temporal tweet mining for
+event detection: a case study of hurricane florence. Int. J. Disaster Risk Sci. 11,
+378–393.
+Malual, J.D., Mazur, R.E., 2020. Social capital and food security in post‐conflict rural
+Lira district, northern Uganda Disasters.
+Marsden, P.V., 1987. Core discussion networks of Americans. Am. Sociol. Rev. 122–131.
+Mason, B., 2006. Community disaster resilience. Publisher not identified.
+Mei, B., 2002. Development of trip generation models of hurricane evacuation. Faculty
+of the Louisiana State University and Agriculture and Mechanical College in partial
+fulfillment of the requirements for the degree of Master of Science in Civil
+Engineering in The Department of Civil and Environmental Engineering by Bing Mei
+BS. Southeast University, China.
+Mesa-Arango, R., Hasan, S., Ukkusuri, S.V., Murray-Tuite, P., 2012. Household-level
+model for hurricane evacuation destination type choice using hurricane Ivan data.
+Nat. Hazard. Rev. 14, 11–20.
+Mesnards, N.G.d., Hjouji Ze, Zaman, T., 2018. Detecting Bots and Assessing Their Impact
+in Social Networks arXiv preprint arXiv:181012398.
+Messias, D.K.H., Barrington, C., Lacy, E., 2012. Latino social network dynamics and the
+Hurricane Katrina disaster. Disasters 36, 101–121.
+Mileti, D.S., Beck, E.M., 1975. Communication in crisis explaining evacuation
+symbolically. Commun. Res. 2, 24–49.
+Mileti, D.S., Sorensen, J.H., 1987. Natural hazards and precautionary behavior Taking
+care: understanding and encouraging self-protective behavior, 189–207.
+Mileti, D.S., Sorensen, J.H., O'Brien, P.W., 1992. Toward an explanation of mass care
+shelter use in evacuations. Int. J. Mass Emerg. Disasters 10, 25–42.
+Miller, G.A., 1956. The magical number seven, plus or minus two: Some limits on our
+capacity for processing information. Psychol. Rev. 63, 81.
+Miller, L.M., 2012. Controlling disasters: recognising latent goals after Hurricane
+Katrina. Disasters 36, 122–139.
+Modali, N.K., 2005. Modeling destination choice and measuring the transferability of
+hurricane evacuation patterns. Faculty of the Louisiana State University and
+Agricultural and Mechanical College in partial fulfillment of the requirements for
+the degree of Master of Science in Civil Engineering in The Department of Civil and
+Environmental Engineering by Naveen Kumar Modali BE. Andhra University.
+Moore, H.E., Bates, F.L., Layman, M.V., Parenton, V.J., 1963. Before the Wind. A Study
+of the Response to Hurricane Carla. DTIC Document.
+Morrow, B., Gladwin, H., 2005. Hurricane Ivan behavioral analysis, 2004. Hurricane
+Assessments US Army Corps of Engineers.
+Mortula, M.M., Ahmed, M.A., Sadri, A.M., Ali, T., Ahmad, I.U., Idris, A., 2020.
+Improving resiliency of water supply system in arid regions: integrating centrality
+and hydraulic vulnerability. J. Manag. Eng.
+Mottershead, K.D., McGee, T.K., Christianson, A., 2020. Evacuating a first nation due to
+wildfire smoke: the case of dene the first nation. Int. J. Disaster Risk Sci. 1–13.
+Murray-Tuite, P., Mahmassani, H., 2004. Transportation network evacuation planning
+with household activity interactions. Transp. Res. Record J. Transp. Res.
+Board:150–159.
+Murray-Tuite, P., Wolshon, B., 2013. Evacuation transportation modeling: an overview
+of research, development, and practice. Transp. Res. Part C: Emerg. Technol. 27,
+25–45.
+Murray-Tuite, P., Yin, W., Ukkusuri, S., Gladwin, H., 2012a. Changes in evacuation
+decisions between Hurricanes Ivan and Katrina. Transp. Res. Rec. J. Transp. Res.
+Board:98–107..
+Murray-Tuite, P.M., Schweitzer, L., Morrison, R., 2012b. Household no-notice
+evacuation logistics: how well do households optimize? J. Transp. Safety Security
+4, 336–361.
+Myers, S.A., Sharma, A., Gupta, P., Lin, J., 2014. Information network or social
+network?: the structure of the twitter follow graph. In: Proceedings of the 23rd
+International Conference on World Wide Web. ACM, pp 493-498.
+Nelson, B., 2013. Natural disasters: a calculated risk Nature 495, 271–273.
+Palen, L., Vieweg, S., Liu, S.B., Hughes, A.L., 2009. Crisis in a networked world features
+of computer-mediated communication in the April 16, 2007. Virginia Tech Event
+Social Sci. Comput. Rev. 27, 467–480.
+Palen, L., Vieweg, S., Sutton, J., Liu, S.B., Hughes, A.L., 2007. Crisis informatics:
+Studying crisis in a networked world”. In: Proceedings of the Third International
+Conference on E-Social Science.
+Peacock, W.G., Morrow, B.H., Gladwin, H., 1997. Hurricane Andrew: Ethnicity, gender,
+and the sociology of disasters. Psychology Press.
+Perry, R.W., 1979. Evacuation decision-making in natural disasters. Mass Emerg. 4,
+25–38.
+Pickard, G., Pan, W., Rahwan, I., Cebrian, M., Crane, R., Madan, A., Pentland, A., 2011.
+Time-critical social mobilization. Science 334, 509–512.
+Power, R., Robinson, B., Colton, J., Cameron, M., 2014. Emergency situation awareness:
+Twitter case studies. In: International Conference on Information Systems for Crisis
+Response and Management in Mediterranean Countries. Springer, pp. 218–231.
+Press, F., Hamilton, R.M., 1999. Mitigating natural disasters. Science 284, 1927–1927.
+Pu, C., Kitsuregawa, M., 2013. Big data and disaster management: a report from the jst/
+nsf joint workshop Georgia Institute of Technology, CERCS.
+Putnam, R.D., 1995. Bowling alone: America's declining social capital. J. Democracy 6,
+65–78.
+Putnam, R.D., 2001. Bowling Alone: The Collapse and Revival of American Community.
+Simon and Schuster.
+Qu, Y., Huang, C., Zhang, P., Zhang, J., 2011. Microblogging after a major disaster in
+China: a case study of the 2010 Yushu earthquake. In: Proceedings of the ACM 2011
+Conference on Computer Supported Cooperative Work. ACM, pp. 25–34.
+Qu, Y., Wu, P.F., Wang, X., 2009. Online community response to major disaster: a study
+of Tianya forum in the 2008 Sichuan earthquake. In: System Sciences, 2009.
+HICSS'09. 42nd Hawaii International Conference on. IEEE, pp. 1–11.
+Quarantelli, E.L., 1985. Social support systems: Some behavioral patterns in the context
+of mass evacuation activities.
+Renne, J., Sanchez, T., Jenkins, P., Peterson, R., 2009. Challenge of evacuating the
+carless in five major US cities: identifying the key issues. Transp. Res. Rec. J. Transp.
+Res. Board:36–44.
+Renne, J.L., Sanchez, T.W., Litman, T., 2008. National study on carless and special needs
+evacuation planning: a literature review.
+Riad, J.K., Norris, F.H., Ruback, R.B., 1999. Predicting evacuation in two major
+disasters: risk perception, social influence, and access to Resources1. J. Appl. Social
+Psychol. 29, 918–934.
+Robinson, R., Khattak, A., 2010. Route change decision making by hurricane evacuees
+facing congestion. Transp. Res. Rec. J. Transp. Res. Board:168–175.
+Robinson, R.M., Khattak, A.J., Sokolowski, J.A., Foytik, P., 2009. Wang X Role of traffic
+incidents in hampton roads hurricane evacuations. Transp. Res. Board 88th Annual
+Meeting 9, 1339.
+Roy, K.C., Ahmed, M.A., Hasan, S., Sadri, A.M., 2020. Dynamics of Crisis
+Communications in Social Media: Spatio-temporal and Text-based Comparative
+Analyses of Twitter Data from Hurricanes Irma and Michael Proceedings of the
+International Conference on Information Systems for Crisis Response and
+Management (ISCRAM) 2020.
+Sadri, A.M., Hasan, S., Ukkusuri, S.V., 2019. Joint inference of user community and
+interest patterns in social interaction networks. Social Netw. Anal. Mining 9, 11.
+Sadri, A.M., Hasan, S., Ukkusuri, S.V., Cebrian, M., 2017a. Understanding Information
+Spreading in Social Media during Hurricane Sandy: User Activity and Network
+Properties arXiv preprint arXiv:170603019.
+Sadri, A.M., Hasan, S., Ukkusuri, S.V., Cebrian, M., 2017a. Crisis communication
+patterns in social media during hurricane sandy. Transp. Res. Rec.
+0361198118773896.
+Sadri, A.M., Hasan, S., Ukkusuri, S.V., Lopez, J.E.S., 2018. Analysis of social interaction
+network properties and growth on Twitter. Social Netw. Anal. Mining 8, 56.
+Sadri, A.M., Ukkusuri, S.V., Gladwin, H., 2015a. Social Network Influence on Evacuation
+Bhavior: The Case of Hurricane Sandy. United Kingdom.
+Sadri AM, Ukkusuri SV, Gladwin H (2016a) The Role of Social Networks and
+Information Sources on Hurriacne Evacuation Decision Making Natural Hazards
+Review (accepted).
+Sadri, A.M., Ukkusuri, S.V., Gladwin, H., 2017b. The role of social networks and
+information sources on hurricane evacuation decision making. Nat. Hazard. Rev. 18.
+https://doi.org/10.1061/(ASCE)NH.1527-6996.0000244.
+Sadri, A.M., Ukkusuri, S.V., Gladwin, H., 2017b. The role of social networks and
+information sources on hurricane evacuation decision making. Nat. Hazard. Rev. 18
+(3), 04017005.
+Sadri, A.M., et al., 2018b. The role of social capital, personal networks, and emergency
+responders in post-disaster recovery and resilience: a study of rural communities in
+Indiana. Nat. Hazard. 90, 1377–1406.
+Sadri, A.M., et al., 2016b. The Role of Social Capital, Personal Networks, and Emergency
+Responders in Post-Disaster Recovery and Resilience Natural Hazards Review
+(under review).
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., 2013a. A random parameter ordered
+probit model to understand the mobilization time during hurricane evacuation.
+Transp. Res. Part C: Emerg. Technol. 32, 21–30.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2013b. How to evacuate:
+model for understanding the routing strategies during hurricane evacuation. J.
+Transp. Eng. 140, 61–69.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2014. Analysis of hurricane
+evacuee mode choice behavior. Transp. Res. Part C: Emerg. Technol. 48, 37–46.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2015b. Hurricane evacuation
+route choice of major bridges in miami beach, Florida Transp. Res. Rec. J. Transp.
+Res. Board, 164–173.
+Sakaki, T., Okazaki, M., Matsuo, Y., 2010. Earthquake shakes Twitter users: real-time
+event detection by social sensors. In: Proceedings of the 19th international
+conference on World wide web, 2010. ACM, pp. 851–860.
+Shen, Z.-J.-M., Pannala, J., Rai, R., Tsoi, T.S., 2008. Modeling transportation networks
+during disruptions and emergency evacuations. University of California
+Transportation Center.
+Simon, H.A., 1974. How big is a chunk? Science 183, 482–488.
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+11
+
+Singh, L. et al., 2020. A first look at COVID-19 information and misinformation sharing
+on Twitter arXiv preprint arXiv:200313907
+Sircar, J., Damnjanovic, I., Mander, J., Aslan, Z., 2009. Catastrophe Bonds for
+Transportation Assets: Feasibility Analysis for Bridges Transportation Research
+Record. J. Transp. Res. Board:12–19.
+Skinner, J., 2013. Natural disasters and Twitter: Thinking from both sides of the tweet
+First Monday 18.
+Smith, S.K., McCarty, C., 2009. Fleeing the storm (s): An examination of evacuation
+behavior during Florida’s 2004 hurricane season. Demography 46, 127–145.
+Solis, D., Thomas, M., Letson, D., 2009. Hurricane evacuation household makingdecision: Lessons from Florida. In: Selected Paper prepared for presentation at the
+Southern Agricultural Economics Association Annual Meeting, Atlanta, Georgia.
+Sorensen, J.H., 1991. When shall we leave? Factors affecting the timing of evacuation
+departures. Int. J. Mass Emerg. Disasters 9, 153–165.
+Southworth, F., 1991. Regional evacuation modeling: a state-of-the-art review.
+St Denis, L.A., Palen, L., Anderson, K.M., 2014. Mastering social media: an analysis of
+Jefferson county’s communications during the 2013 Colorado floods. In: 11th
+International ISCRAM Conference, pp. 737–746.
+Starbird, K., Palen, L., 2010. Pass it on?: Retweeting in mass emergency. International
+Community on Information Systems for Crisis Response and Management.
+Stopher, P., Alsnih, R., Rose, J., 2005. Developing decision support system for
+emergency evacuation: case study of bush fires. 84th Annual Meeting of the
+Transportation Research Board.
+Ukkusuri, S., Zhan, X., Sadri, A.M., Ye, Q., 2014. Use of social media data to explore
+crisis informatics: study of 2013 Oklahoma tornado Transportation Research
+Record. J. Transp. Res. Board:110–118.
+Urbina, E., Wolshon, B., 2003. National review of hurricane evacuation plans and
+policies: a comparison and contrast of state practices. Transp. Res. Part A: Policy
+Pract. 37, 257–275.
+van den Berg, P., Arentze, T., Timmermans, H., 2009. Size and composition of egocentered social networks and their effect on geographic distance and contact
+frequency Transportation Research Record. J. Transp. Res. Board:1–9.
+Van Hentenryck, P., 2013. Computational Disaster Management IJCAI.
+Vespignani, A., 2009. Predicting the behavior of techno-social systems. Science 325,
+425–428.
+Vieweg, S., Hughes, A.L., Starbird, K., Palen, L., 2010. Microblogging during two natural
+hazards events: what twitter may contribute to situational awareness. In:
+Proceedings of the SIGCHI conference on human factors in computing systems.
+ACM, pp. 1079–1088.
+Vieweg, S., Palen, L., Liu, S.B., Hughes, A.L., Sutton, J., 2008. Collective intelligence in
+disaster: An examination of the phenomenon in the aftermath of the 2007 Virginia
+Tech shootings. Proceedings of the information systems for crisis response and
+management conference (ISCRAM).
+Villegas, J., Matyas, C., Srinivasan, S., Cahyanto, I., Thapa, B., Pennington-Gray, L.,
+2013. Cognitive and affective responses of Florida tourists after exposure to
+hurricane warning messages. Nat. Hazard. 66, 97–116.
+Voght, B., 1991. Issues in nursing home evacuations. Int. J. Mass Emerg. Disasters 9,
+247–265.
+Wang, D., Lin, Y.-R., Bagrow, J.P., 2014. Social networks in emergency response. In:
+Encyclopedia of Social Network Analysis and Mining. Springer, pp. 1904–1914.
+Wang, Q., Taylor, J.E., 2014. Quantifying human mobility perturbation and resilience in
+Hurricane Sandy. PLoS one 9, e112608.
+Wang, Q., Taylor, J.E., 2015. Resilience of human mobility under the influence of
+typhoons. Procedia Eng. 118, 942–949.
+Watts, D., Cebrian, M., Elliot, M., 2013. Dynamics of social media. Public Response to
+Alerts and Warnings Using Social Media. Report of a Workshop on Current
+Knowledge and Research Gaps. The National Academies Press, Washington, DC.
+Wellman, B., 1979. The community question: the intimate networks of East Yorkers.
+Am. J. Sociol. 1201–1231.
+Whitehead, J.C., Edwards, B., Van Willigen, M., Maiolo, J.R., Wilson, K., Smith, K.T.,
+2000. Heading for higher ground: factors affecting real and hypothetical hurricane
+evacuation behavior. Glob. Environ. Change Part B Environ. Hazards 2, 133–142.
+Wilmot, C.G., Gudishala, R., 2013. Development of a Time-Dependent Hurricane
+Evacuation Model for the New Orleans Area.
+Wilmot, C.G., Mei, B., 2004. Comparison of alternative trip generation models for
+hurricane evacuation. Nat. Hazards Rev. 5, 170–178.
+Wilmot, C.G., Modali, N., Chen, B., 2006. Modeling hurricane evacuation traffic: testing
+the gravity and intervening opportunity models as models of destination choice in
+hurricane evacuation.
+Wolshon, B., 2002. Planning for the evacuation of New Orleans Institute of
+Transportation Engineers. ITE J. 72, 44.
+Wolshon, B., Urbina, E., Wilmot, C., Levitan, M., 2005a. Review of policies and practices
+for hurricane evacuation. I: Transportation planning, preparedness, and response.
+Nat. Hazards Rev. 6, 129–142.
+Wolshon, B., Urbina Hamilton, E., Levitan, M., Wilmot, C., 2005b. Review of policies
+and practices for hurricane evacuation. II: Traffic operations, management, and
+control. Nat. Hazard Rev. 6, 143–161.
+Wu, H.-C., Lindell, M.K., Prater, C.S., 2012. Logistics of hurricane evacuation in
+Hurricanes Katrina and Rita Transportation research part F: traffic psychology and
+behaviour 15, 445–461.
+Yore R, Walker JF (2020) Early Warning Systems and Evacuation: Rare and Extreme vs
+Frequent and Small‐Scale Tropical Cyclones in the Philippines and Dominica
+Disasters.
+Zhao, X., Xu, W., Ma, Y., Qin, L., Zhang, J., Wang, Y., 2017. Relationships between
+evacuation population size, earthquake emergency shelter capacity, and evacuation
+time International Journal of Disaster Risk. Science 8, 457–470.
+A.M. Sadri et al. Transportation Research Interdisciplinary Perspectives 9 (2021) 100325
+12

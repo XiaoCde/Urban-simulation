@@ -1,0 +1,656 @@
+Nuisance flood risk: Defining a new horizon in urban flood risk 
+management through hydrodynamic flood hazard modelling and 
+indicator-based vulnerability assessment
+Dev Anand Thakur, Vishveshwari Tukaram Shirsath , Mohit Prakash Mohanty *
+Department of Water Resources Development and Management, Indian Institute of Technology Roorkee, Roorkee, 247667, India
+ARTICLE INFO
+Keywords:
+Bivariate flood risk
+Critical and infrastructure vulnerability
+Flood risk management
+MIKE+ 1D–2D
+Nuisance flooding
+Shannon entropy-cum-TOPSIS
+ABSTRACT
+In recent years, rapid and unregulated urbanization has significantly intensified the challenges of 
+urban flooding, particularly through the increasing prevalence of Nuisance Flooding (NF), a form 
+of low-depth, low-velocity inundation that disproportionately affects densely populated megacities. While NF typically lacks the large-scale destructiveness, its frequent recurrence leads to 
+persistent disruptions in mobility, public services, and the operation of critical infrastructure. 
+Despite its growing significance, NF remains largely underrepresented in existing literature, 
+which tends to overlook its widespread but subtle impacts, even though the associated social and 
+economic losses are substantial. For the first time in flood management literature, this study 
+proposes a flood risk assessment framework explicitly tailored to NF conditions over Mumbai, the 
+financial capital of India. A sophisticated 1D–2D coupled hydrodynamic model was employed to 
+simulate high-resolution flood hazards, while vulnerability to critical and infrastructure facilities 
+was assessed using a Shannon Entropy-cum-TOPSIS framework. We employ a novel concept of 
+Bivariate Flood Risk Classifier to integrate hazard and vulnerability information, producing 
+spatially explicit NF risk maps. Our observations indicate that vulnerability drives flood risks over 
+nearly half of the region, while more than 40 % of grids exhibit an equal contribution from both 
+hazard and vulnerabilities. Sensitivity analysis revealed that slums are among the most critical 
+contributors to vulnerability; excluding slum indicators resulted in a reduction in vulnerability 
+across two-thirds of the wards. The framework offers a first-of-its-kind, robust methodology for 
+NF risk assessment and provides crucial inputs for integrated, socially responsive flood resilience 
+planning in rapidly urbanizing regions.
+1. Introduction
+Recent years have seen widespread devastation caused by catastrophic flooding worldwide, resulting in significant loss of life and 
+severe economic consequences [1]. Torrential downpours and coastal surges have rendered large-scale impacts over the Asian 
+countries like India, China, Japan, and South Korea [2–4]. Experts postulate that climate warming is already showing its impacts 
+vehemently, the most serious and profound on the hydrological cycle [5–7]. Apart from alterations in water availability [8,9] and 
+water security [10,11], the prominent impacts are manifested in the form of extreme hydrological incidents, such as floods and 
+* Corresponding author.
+E-mail address: mohit.mohanty@wr.iitr.ac.in (M.P. Mohanty). 
+Contents lists available at ScienceDirect
+International Journal of Disaster Risk Reduction
+journal homepage: www.elsevier.com/locate/ijdrr
+https://doi.org/10.1016/j.ijdrr.2025.105969
+Received 18 August 2025; Received in revised form 25 November 2025; Accepted 13 December 2025 
+International Journal of Disaster Risk Reduction 132 (2026) 105969
+Available online 14 December 2025
+2212-4209/© 2025 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+
+droughts [12–14]. Floods, in particular, have been a serious concern for humankind since time immemorial. CRED (2021) reports that 
+floods are the most disastrous among all known hydro-climatological disasters. They further add that their global occurrences in 2022 
+alone have surpassed the earlier decadal average of 163.
+Growing urbanization has resulted in reduced infiltration capacities of the landscape [15,16]. This leads to increased runoff during 
+heavy rainfalls, ultimately resulting in urban flooding [17]. The existing urban drainage systems are testified as inefficient to 
+accommodate such large water volumes, as they were originally designed to handle lower rainfall intensities [18–20]. Exorbitant and 
+haphazard population density in the urban centers adds to the adverse impacts [18,21]. Past literature reflects that urban flooding is a 
+growing concern in several pockets worldwide and will do so in the future [22,23]. In the context of urban flooding over coastal 
+regions, a special characteristic of the inundation pattern has been noticed in recent years, famously referred to as Nuisance Flooding 
+(NF). NF is subtlety to urban flooding, per se, it is inconsequential, and non-destructive like the latter; but associated with discomfort to 
+the communities and causes minor impacts and damages to the infrastructure facilities and public utilities such as shopping malls, 
+subways, airport runways, railways tracks, and traffic systems [24]. The severity and occurrence of nuisance flooding (NF) are strongly 
+influenced by the capacity and efficiency of urban infrastructure, particularly stormwater drainage networks and pumping systems. 
+Even moderate rainfall events can trigger localized flooding when these systems are undersized, poorly maintained, or obstructed by 
+debris. Moreover, NF typically manifests near critical hydrological or tidal thresholds, where even a slight increase in rainfall intensity 
+or tidal elevation can shift conditions from normal to inundated. This threshold-sensitive behavior makes NF highly unpredictable and 
+emphasizes the importance of maintaining resilient and well-functioning urban drainage infrastructure. In the beginning, Ray and 
+Foster [25–27], and Karegar et al. (2017) conceived the generation of NF from sea-level rise only. A few years later, the necessity of 
+expanding the concept to pluvial and fluvial flooding was ascertained [28]. Based on the impacts of flooding on transportation networks, public health facilities, and properties, Moftakari et al. [29] define NF as “flooding characterized by depths between 3 and 10 cm 
+with velocities not exceeding 3 m/s”, regardless of the source.
+By definition, NF represents a dynamic process; hence, it requires sophisticated approaches for its quantification. Coastal catchments are characterized as multi-hazard environments as they witness flooding by an intricate interaction of multiple flood mechanisms, e.g., pluvial flooding in the floodplains due to riverine overflow, pluvial flooding in the inland regions due to rainfall excess, and 
+tidal flooding in the coastal belt due to storm surges [30–33]. In such cases, numerical flood models that utilize physics-based laws to 
+represent the flow of water offer an ideal solution [34,35]. Teng et al. [36] and Mignot & Dewals [37] provide a comprehensive review 
+of various types of flood models, viz., simple, 1D, 2D, 1D-2D coupled, and 3D models. Past literature indicates that the strength and 
+capability of the 1D-2D coupled approach is by far superior to others while capturing the multi-hazard driven phenomenon over 
+coastal regions [38,39]. A 1D-2D coupled approach essentially combines the interactions in the channel and overland flow patterns to 
+provide a realistic representation of the flow of water. By doing so, it provides critical insights into the dynamics of flow, including 
+depth, celerity, flux, and direction of propagation. The information on depth and velocity apprehends flood hazards; a dimension of 
+flood risk that provides crucial information on the degree of impacts to any entity [40–42].
+Recent studies and policy briefs highlight the vitality of accounting for flood risk as a holistic approach to guarantee the protection 
+of communities and building resilience, if at all. The AR6 (Sixth Assessment Report) of IPCC categorically mentions the need to 
+consider the vulnerability dimension together with hazards to portray flood risk. In the context of urban flooding, numerous studies 
+have accounted vulnerability of physical and economic assets. A set of indicators within the urban environment that are susceptible to 
+flood damages is usually considered, and their responses are determined through indicator-based approaches, e.g., Multi-Criteria 
+Decision Approaches, such as Analytical Hierarchical Process [43–45], TOPSIS [46–48], etc. The contribution of each indicator to 
+the overall vulnerability scores is crucial to identify, which will form a platform to provide adequate attention to it in the process of 
+diminishing vulnerability.
+NF is an emerging disaster in coastal urban centers and hence requires critical attention. As cities and populations grow together 
+within aging infrastructure, it is important to tilt our attention towards risk from NF risk, which will form a solid foundation for 
+building resilience. Although past efforts have identified the “cause”, little attention has been rendered to understanding their “impacts” 
+through data-driven approaches. In other words, the degree of risk emerging from NF is yet to be comprehensively understood. Since 
+coastal urban centers contain a wide variety of economic resources that are susceptible to even minor levels of flooding, it is vital to 
+acquire adequate information on both flood hazards and vulnerability. The present study, for the first time, addresses a major research 
+gap in flood management literature by proposing a novel framework in mapping and quantifying NF risks over a coastal flood-prone 
+catchment in India. Design rainfalls, design storm-tides, and design discharges are derived for various return periods through extreme 
+value statistics. The design hydraulic variables are fed to a state-of-the-art 1D-2D coupled numerical flood model to derive flood 
+inundation and hazards at high resolution. The vulnerability of NF on a comprehensive set of critical and infrastructure facilities is 
+determined through the Shannon Entropy-cum-TOPSIS approach. The hazard and vulnerability estimates are threaded together to 
+determine flood risks; however, in a unique, unconventional approach through the concept of a Bivariate Flood Risk Classifier (BFRC). 
+The identification of NF risks for the first time in flood management research provides valuable insights into its damage-inducing 
+attributes, thus adding to the recommendations for effective flood management.
+2. Study area and data inventory
+2.1. Mithi Catchment in Mumbai city, India
+Mumbai (Maharashtra), a coastal megacity also famously known as the “Financial capital of India”, is located on the west coast of 
+India. The geographical stature of Mumbai exposes it to heavy rainfalls and storm-tides during the monsoon months, often resulting in 
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+2
+
+disastrous flood events [49,50]. Dhiman et al. (2018) highlight that Mumbai is currently the 5th largest city in the world, but also the 
+most vulnerable to flood risks. Dilapidated urban drainage system [51,52], land reclamation [27,53,54], reduction in flood-combating 
+mangrove cover [55,56], unplanned development [57] have led to such a dismal situation. In the present study, one of the most 
+significant flood-affected urban centers that resides in the heart of Mumbai city is considered.
+The Mithi River Catchment (MRC) (geographical coordinates: 19◦1′36″ N and 19◦10′9″ N and 72◦49′59″ E and 72◦56′33″ E, and area 
+~73 km2) consists primarily of the Mithi River and the Vakola River (Fig. 1). The Mithi River originates from the Vihar Lake and drains 
+to the Arabian Sea, crossing the suburbs of Powai and areas surrounding the Chhatrapati Shivaji International Airport [58]. The 
+topography of the Mithi catchment is diverse, with undulating terrain, hills, and low-lying areas, and is characterized by a mix of land 
+use classes, including residential, commercial, industrial, slum settlements, and institutional areas [59]. In fact, the Mithi River has 
+undergone haphazard changes since 1966, owing to economic developments and infrastructure. The river was deliberately made to 
+pass through an underground tunnel below the runway of the international airport (as can be seen in Fig. 1). MRC is exposed to 
+Fig. 1. Description of the study area detailing (a) the location of the Mithi Catchment in Mumbai, (b) key infrastructure elements such as airport and 
+river bodies, (c) ward locations.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+3
+
+multiple flood drivers that act antagonistically, such as storm-tide, fluvial impacts due to river overflow (from Vihar and Powai lakes), 
+and pluvial impacts. During flooding events, it is challenging for the floodwaters to find a suitable way to drain out. This leads to a 
+larger residence time of standing floodwaters, and hence aggravates the impacts. Such a phenomenon is a usual story every monsoon 
+[60]. Although MRC has witnessed deluge from extreme floods such as those in 2005 [61], the perturbations from nuisance flooding 
+characterized by depths and velocities unlike extreme flooding are noticeable in every monsoon season.
+2.2. Data catalog
+This study leverages a comprehensive consortium of datasets encompassing meteorological, hydrological, spatial, and demographic information (see Table 1).
+Hourly rainfall data from 1970 to 2011, recorded at the Santacruz monitoring station, was sourced from the Indian Meteorological 
+Department in Pune, India. Similarly, daily discharge data were obtained from the Central Water Commission, India, and hourly 
+astronomical data from 1900 to 2100, and minute-wise observed storm-tide information from 2011 to 2015 were procured from the 
+Indian National Centre for Ocean Information Services (INCOIS), India.
+Among spatial datasets, a very high-resolution LiDAR Digital Elevation Model (DEM) with a vertical accuracy of 15 cm–25 cm and a 
+horizontal resolution of 2 m × 2 m was considered. Similarly, Land Use Land Cover information for the Mithi catchment was obtained 
+from the National Remote Sensing Centre, Hyderabad (India). For vulnerability assessment, demographic information pertaining to 
+infrastructure and critical facilities was considered from the data from the Census of India in 2011.
+3. Proposed methodology
+The present study aims to quantify nuisance flood risk over a sensitive urbanized coastal catchment while accounting for hazard 
+and vulnerability dimensions. In order to do so, the present study adopts the following steps: (1) Estimation of design hydrometeorological variables, (2) Mapping high-resolution flood hazard information, (3) Vulnerability assessment using Shannon Entropy and TOPSIS framework, (4) Quantifying bivariate nuisance flood risk. Fig. 2 provides an overview of the proposed methodology.
+3.1. Estimation of design hydro-meteorological variables
+3.1.1. Design rainfall
+In the present study, design hydro-meteorological variables, which include design rainfall, design discharge, and design storm tide, 
+were considered as forcing for the hydrodynamic model setup. Design rainfall for the entire study area was derived considering the 
+hourly rainfall data for the Santacruz monitoring station. The process involved deriving the annual maxima series and fitting a set of 
+probability distributions, details of which can be found in Supplementary Table 1. In the next stage of the analysis, the best-fit marginal 
+distribution for the rainfall data was determined using the Kolmogorov–Smirnov (K-S) test and the Anderson–Darling (A-D) test. The 
+distributions were ranked based on the calculated K-S and A-D statistics, with lower statistic values indicating a closer fit to the 
+empirical data. The distribution yielding the lowest K-S and A-D values was selected as the best-fit distribution. Using this best-fit 
+distribution, design rainfall estimates were computed for return periods of 2,10, and 20 years.
+3.1.2. Design storm-tide
+In this study, the design storm tide comprising both astronomical tide and surge was estimated following the methodology outlined 
+by Mohanty et al. [62]. Minute-wise astronomical tide elevations from 1900 to 2100, simulated by INCOIS, were used as the basis for 
+this analysis. Harmonic analysis of the tidal time series was performed using the MATLAB T_Tide package [63,64] to extract the key 
+diurnal and semi-diurnal tidal constituents. In the subsequent step, observed minute-wise storm-tide elevation data from 2011 to 2015 
+were adjusted to the Mean Sea Level (MSL). The surge component was then derived by subtracting the astronomical tide series from the 
+MSL-corrected storm tide during the same period. The design astronomical tide height (dAT) was estimated by fitting the Generalized 
+Table 1 
+Details of the datasets utilized in the study.
+Nature of the 
+datasets
+Datasets Description Source(s)
+Metrological Rainfall Hourly rainfall data for Santacruz monitoring station 
+(1970–2011)
+Indian Meteorological Department, 
+Pune (India)
+Hydrological Streamflow Daily discharge data from 1970 to 2011 Central Water Commission (India)
+Tide Elevation Hourly astronomical (1900–2100) and minute-wise observed 
+storm-tide information (2011–2015)
+INCOIS, Hyderabad (India)
+Spatial Digital Elevation Model 
+(DEM)
+LiDAR DEM
+Horizontal resolution: 2 m × 2 m
+Vertical accuracy: 15 cm–25 cm
+Land Use Land Cover Horizontal resolution: 56m × 56 m National Remote Sensing Centre, 
+Hyderabad (India)
+Demographic Infrastructure and Critical 
+Facilities
+Location and numbers of relevant infrastructure and critical 
+indicators
+Census of India, 2011
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+4
+
+Extreme Value (GEV) distribution (equation (1)). Concurrently, the design surge height (dS) was derived using the Generalized Pareto 
+Distribution (GPD) (equation (2)). Finally, the estimates of design astronomical tide and surge heights for a given return period were 
+combined, as per equation (3), to determine the design storm-tide elevation (dST) for return periods of 50-yr, 100-yr, and 200-yr. It is 
+worth noting that while this approach captures the extreme design condition, it is intended to represent the worst-case design scenario, 
+thereby providing an opportunity to assess the system’s response under extreme coastal impact conditions and to evaluate its resilience 
+to such events. 
+F(x) =
+{
+exp (
+-(1 + kz)
+(-1/k)
+}
+, k ∕= 0, σ > 0 (1) 
+where κ is the shape parameter. 
+F(x) =
+{
+1-(
+1 + k (x-μ)
+σ
+)(-1/k)
+}
+, k ∕= 0, σ > 0 (2) 
+where μ is the location parameter, α is the scale parameter, and κ is the shape parameter. 
+Fig. 2. Overview of the proposed methodology.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+5
+
+dST = dAT + dS (3) 
+3.1.3. Design discharge
+Daily discharge data spanning from 1970 to 2011, obtained from the Central Water Commission (India), were collected for this 
+analysis. From this dataset, the annual maxima series representing the highest discharge recorded each year was extracted for use in 
+flood frequency analysis. To estimate design discharge values for different flood scenarios, the Generalized Extreme Value (GEV) 
+distribution (equation (1)) was applied to calculate design discharges corresponding to return periods of 50-yr, 100-yr, and 200-yr.
+3.2. Mapping and quantifying high-resolution nuisance flood hazard
+In this study, we employed the MIKE+ 1D-2D flood model setup to generate high-resolution nuisance flood hazard data. The MIKE 
++ flood model is renowned for its ability to simulate complex hydrodynamic processes with fine spatial resolution, making it an ideal 
+tool for detailed flood hazard assessments [65]. Its effectiveness in producing accurate, high-resolution flood hazard information has 
+been widely validated and acknowledged in numerous previous studies, further supporting its use in this research [66–68]. The MIKE+
+1D–2D hydrodynamic flood model was adopted because nuisance flooding over the Mithi catchment is driven by the combined and 
+time-dependent effects of rainfall, tidal fluctuations, and river water levels. These factors often overlap within short time intervals, 
+making their temporal evolution essential to capture accurately. Unlike static bathtub models, which impose a uniform water surface 
+and cannot reflect the timing or interaction of multiple drivers, MIKE + simulates the dynamic progression of flood depths and extent 
+under compound forcing. This enables a more realistic representation of localized nuisance flooding patterns as they develop, peak, 
+and recede over time. In this study, the MIKE + River module was used for the 1D simulations, while the MIKE + Overland Flow 
+module was utilized for the 2D simulations. Lateral linkages were established to couple the outputs from both the MIKE + River and 
+Overland Flow modules. For accurate bathymetry generation, we employed a high-resolution Digital Elevation Model (DEM) which 
+has a precise a vertical accuracy of 15 cm–25 cm. Additionally, high-resolution land use and land cover (LULC) data were utilized to 
+assign Manning’s roughness coefficients to different LULC classes. The design hydro-meteorological variables, as previously discussed, 
+were employed as input boundary conditions for the MIKE+ 1D-2D model setup. The governing equations and a detailed description of 
+the MIKE+ 1D–2D flood model are provided in Supplementary Text 1. The detailed information on the various model editors of MIKE 
++ Hydro River and MIKE + Overland Flow Module is provided in Supplementary Table 2.
+3.2.1. Calibration and validation of the flood model
+To assess the performance of the developed MIKE+ 1D–2D hydrodynamic model, calibration and validation analyses were carried 
+out using historical flood events. The July 2013 flood event was selected for calibration, during which Manning’s roughness coefficients for the Mithi River were systematically adjusted. The simulated discharge time series generated by the MIKE+ 1D Hydro 
+River module was then compared against observed discharge data to determine the optimal roughness parameters. Model performance 
+was evaluated using three statistical indicators: Percentage Deviation in Peak (%Dp), Root Mean Square Error (RMSE), and the Index of 
+Agreement (D), as summarized in Supplementary Table 3.
+The MIKE+ 1D–2D flood model was validated for the July 2023 flood event using Sentinel-1 Synthetic Aperture Radar (SAR) 
+observations. In this study, Sentinel-1 SAR data were obtained in Ground Range Detected (GRD-HD) format and subjected to a series of 
+pre-processing steps, including orbit correction, radiometric calibration, speckle filtering, and terrain correction. The processed imagery was subsequently converted to decibel (dB) values, and thresholding was applied to delineate flooded and non-flooded regions. 
+Daily records of hydrometeorological variables for the July 2023 event were used as boundary inputs in the MIKE+ 1D–2D model to 
+simulate flood inundation. The simulated flood extent was then compared with the inundation area derived from Sentinel-1 SAR data 
+using four performance indicators: Hit Rate (HR), Critical Success Index (CSI), False Alarm Ratio (FAR), and Error Bias (EB) 
+(Supplementary Table 4). Supplementary Fig. 1 provides an illustrative representation of the developed MIKE+ 1D-2D flood model.
+3.2.2. Discretization of the flood hazard
+The flood hazard information generated by the MIKE+ 1D-2D model was quantified in terms of floodwater depth, velocity, and 
+momentum. In line with the study’s objective of assessing nuisance flood risks, we not only analyzed the depth of floodwater but also 
+incorporated the velocity and momentum of the floodwaters. This comprehensive approach ensures a more accurate representation of 
+flood hazards, taking into account both the water’s impact force and potential threat to infrastructure and human safety. Flood hazard 
+information (depth, velocity, and momentum of the flooding water) was categorized into four discrete classes: low, medium, high, and 
+very high. The classification of hazard levels and their corresponding threshold ranges was developed following the methodologies 
+proposed by Mani et al. (2014), Moftakhari et al. [29], Mohanty et al. [62], and Thakur et al. [30]. These standards are derived based 
+on the impacts of the flood to human-entities and economic assets. While these earlier studies primarily focused on urban flooding 
+scenarios, the present work adapts and refines these classifications to address the specific context of nuisance flooding. While Moftakhari et al. [29] identified nuisance flooding as occurring when the inundation depth is below 0.10 m and velocity is less than 3 m/s, 
+building on this foundation, the current study introduces, a more detailed discretization of nuisance flood hazards by delineating low, 
+medium, high, and very high hazard levels within this shallow-depth regime. This refinement provides a more nuanced understanding 
+of risk under frequently occurring, low-intensity flood conditions. The detailed classification criteria for each of these hazard levels are 
+outlined in Supplementary Table 5.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+6
+
+3.3. Integrating Shannon Entropy and TOPSIS for flood vulnerability assessment
+Flood vulnerability assessment is vital for identifying risks to critical infrastructure [69]. Infrastructure and critical facilities are 
+vital for the functioning of society, directly impacting daily life, businesses, and government operations. Critical facilities such as fire 
+stations, hospitals, police stations, railway stations, and petrol pumps are essential for effective emergency response during floods. 
+Their functionality is severely impacted by floodwaters, which can hinder rescue operations, disrupt medical services, and limit access 
+to fuel for emergency vehicles. Similarly, infrastructure facilities, including higher education buildings, schools, flyovers, slums, and 
+roads, also contribute to flood vulnerability. Higher education institutions and schools can serve as evacuation centers, while flyovers 
+and roads are vital for transportation; however, floods can damage these structures, complicating emergency access and community 
+stability. Collectively, the vulnerability of these facilities highlights the urgent need for improved flood preparedness and risk mitigation strategies to enhance resilience in affected communities.
+To assess the nuisance flood vulnerability of critical and infrastructure facilities, this study employs a comprehensive set of 18 
+indicators. Supplementary Table 6 provides the list of critical and infrastructure indicators adopted in the study. The first step in the 
+vulnerability assessment involves assigning weights to these indicators. Traditionally, index weights are determined using subjective 
+methods, such as the Delphi method, expert surveys, or the Analytic Hierarchy Process (AHP), which can introduce variability due to 
+subjective influences [70]. In contrast, objective fixed-weight methods rely on the intrinsic data of the indicators to generate weights, 
+minimizing human interference and yielding more accurate results. In this study, we utilize the Shannon entropy technique, which 
+evaluates the degree of disorder related to system information [67,71]. Furthermore, to derive vulnerability scores, this study applies 
+the weights obtained from the Shannon Entropy method within the TOPSIS framework, facilitating the generation of detailed 
+vulnerability assessments. The comprehensive procedure for vulnerability assessment utilizing the Shannon Entropy and TOPSIS 
+framework is outlined in Supplementary Text 2.
+3.4. Understanding nuisance flood risk through flood hazard and vulnerability dimensions
+This study represents the first attempt to quantify nuisance flood risk by integrating both hazard and vulnerability dimensions. To 
+achieve this, the study employs the novel concept of a bivariate choropleth, which incorporates both hazard and vulnerability information. Specifically, this study builds on the bivariate flood risk framework introduced by Mohanty et al. [62] to assess the marginal 
+and compound contributions of hazard and vulnerability. While bivariate choropleth mapping has indeed been applied in various 
+hazard-related studies, such as those addressing flood or drought risk, our study represents the first application of this approach to 
+nuisance flooding. The novelty lies in integrating both hazard and vulnerability dimensions within a single spatial framework specific 
+to nuisance flood contexts. Unlike traditional flood risk assessments that primarily focus on major flood events, our approach enables 
+simultaneous visualization and interpretation of the intensity of nuisance flood hazards alongside the degree of community vulnerability. This dual-layered representation allows for a more comprehensive understanding of localized risk dynamics, highlighting 
+zones where frequent, low-intensity flooding intersects with high vulnerability. Such insights are crucial for formulating targeted 
+mitigation and adaptation strategies for recurrent, small-scale flooding events that have often been overlooked in prior studies. Since 
+hazard and vulnerability are each categorized into four classes, we develop a 4 × 4 bivariate choropleths using a spectrum of hues to 
+illustrate varying levels of flood risk. The cells in the upper triangular section of the choropleth represent flood risk predominantly 
+influenced by hazard, whereas the lower triangular cells reflect risk primarily driven by vulnerability. The diagonal cells, meanwhile, 
+signify areas where both hazard and vulnerability equally contribute to the flood risk. Detailed visualization of this bivariate choropleth is presented in Supplementary Fig. 2. The integration of flood risk assessment using a bivariate choropleth mapping approach 
+offers a comprehensive spatial representation of both hazard intensity and vulnerability levels simultaneously at any given location. 
+This dual-layered visualization not only enhances the clarity of risk distribution but also serves as a strategic tool for decision-making 
+by facilitating the prioritization of targeted mitigation measures. By distinctly identifying areas where hazard levels are predominant, 
+appropriate structural interventions such as improved flood defenses, drainage enhancements, or river embankments can be implemented to minimize potential damage. Conversely, in regions where vulnerability surpasses hazard intensity, emphasis can be placed 
+on non-structural measures, such as capacity building, community preparedness, early warning systems, and policy interventions.
+4. Results and discussions
+4.1. High-resolution flood hazard at the finest grid level
+During the calibration process, it was observed that a Manning’s roughness coefficient (n) of 0.030 produced the closest agreement 
+between the observed and simulated discharge time series, indicating that this value represents the optimal parameter for the river 
+channel roughness in the model. The model achieved a Root Mean Square Error (RMSE) of 0.24 m, an Index of Agreement (D) of 0.99, a 
+Deviation in Peak (Dp) of 0.07, and a Percentage Deviation in Peak (%Dp) of 0.25, demonstrating excellent model performance and 
+calibration accuracy. Similarly, during validation, a high degree of consistency was observed between the flooded areas simulated by 
+the hydrodynamic model and those delineated from the Sentinel-1 SAR imagery. The spatial comparison revealed that the model 
+effectively reproduced the observed flood patterns, accurately capturing the inundation extents across the low-lying and river-adjacent 
+regions of the catchment. The flood extent maps derived from both the MIKE+ 1D–2D simulations and the SAR data are presented in 
+Supplementary Fig. 3. The quantitative validation results further confirm the model’s robustness, with a Hit Rate (HR) of 0.82, a False 
+Alarm Ratio (FAR) of 0.17, a Critical Success Index (CSI) of 0.72, and an Error Bias (EB) of 1.39. These metrics collectively demonstrate 
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+7
+
+the high accuracy, spatial reliability, and predictive capability of the developed model in replicating real-world flood inundation 
+patterns.
+Initially, we derive the design hydro-meteorological variables, including, as highlighted in Supplementary Fig. 4. Our analysis 
+indicates that even at relatively shorter return periods, these parameters have significant flood-causing potential. Since this study 
+addresses nuisance flooding, which occurs rapidly and frequently, it is crucial to focus on these shorter return periods. For example, 
+even at the 2-year return period, we observe design rainfall exceeding 50 mm, which can lead to significant nuisance flooding. This is 
+particularly relevant for Mumbai, a highly urbanized city where the prevalence of nuisance flooding is a common issue. The frequent 
+occurrence of such floods disrupts public life and puts a strain on infrastructure, highlighting the need to consider these smaller return 
+periods in flood risk assessments. The city’s stormwater drainage system has been reported to handle rainfall intensities of only up to 
+25 mm h− 1 under ideal conditions, and its efficiency is further reduced by frequent blockages and structural obstructions such as 
+siphons and utility crossings [72]. As a result, even moderate rainfall events often lead to localized inundation, traffic disruption, and 
+waterlogging in low-lying neighborhoods, underscoring the importance of considering such short-return-period events in urban flood 
+risk assessments. On the other hand, Mumbai, as a coastal city, experiences semi-diurnal tides regularly. Even at lower return periods, 
+Fig. 3. Flood hazard map for (a) 2-yr, (b) 10-yr, and (c) 20-yr return periods. The inset maps show the percentage of grids under each hazard class.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+8
+
+the high tide values are significant enough to allow seawater to penetrate low-lying areas, potentially flooding them and damaging 
+property. This tidal surge also poses a threat to coastal defense structures, which may be compromised by such events. Along with the 
+design discharge values for the Mithi River, we also incorporated the design rainfall and design storm-tide values as input boundary 
+conditions into the flood model setup.
+The flood hazard map based on depth, velocity, and the momentum of the flooding water for the 2-yr, 5-yr, and 20-yr return 
+periods, derived using the corresponding design rainfall, design discharge, and design storm-tide, is presented in Fig. 3. When 
+considering the depth of the flooding water (A1, B1, C1), we observe that 18.10 %, 19.76 %, and 19.96 % of the grids exhibited "high" 
+and "very high" hazard levels for the 2-yr, 10-yr, and 20-yr return periods, respectively. In contrast, when flood hazard is defined by the 
+velocity of the flooding water (A2, B2, C2), 7.16 %, 6.91 %, and 6.12 % of the grids showed "high" and "very high" hazard levels for the 2- 
+yr, 10-yr, and 20-yr return periods, respectively. In terms of the momentum of the flooding water (A3, B3, C3), a significantly larger 
+proportion of grids, 16.32 %, 21.39 %, and 22.13 %, were categorized under "high" and "very high" hazard levels for the 2-yr, 10-yr, and 
+20-yr return periods, respectively. We notice a clear distinction in the flood hazard assessment depending on whether depth, velocity, 
+or momentum is used as the defining criterion. This variation emphasizes the importance of selecting the appropriate parameter for 
+accurately characterizing flood hazard in different scenarios. Furthermore, we notice that the influence of higher design discharge, 
+precipitation, and tidal values is most pronounced near the river, around the lake, and in coastal regions. These areas exhibit a significant escalation in hazard levels, underscoring the critical impact of extreme hydrological and tidal events on flood hazards in these 
+locations. Across all three parameters and return periods analyzed, a substantial portion of the area falls within the low and medium 
+hazard categories. Although these regions are categorized as relatively low-hazard zones, they remain critical from the standpoint of 
+nuisance flooding, which captures the recurrent, low-intensity flood events that cumulatively affect urban functioning. While the 
+hazard magnitude is low, such events cause considerable discomfort to public movement, particularly for the elderly, children, and 
+differently abled individuals. These floods often result in traffic congestion, temporary disruption of essential services, and localized 
+waterlogging, which can contribute to the spread of waterborne diseases in densely populated neighborhoods. Therefore, even areas 
+with lower hazard levels demand focused attention, as the repetitive occurrence of these minor floods imposes significant social and 
+economic costs. Recognizing and addressing these impacts is crucial for developing effective urban flood resilience strategies that 
+account for both the frequency and persistence of localized flooding, rather than focusing solely on large-scale or high-return-period 
+events.
+Fig. 4. Weightage of critical and infrastructure facilities.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+9
+
+4.2. Vulnerability information for Mithi Catchment through critical and infrastructure indicators
+In the initial step of deriving vulnerability, we assigned weights to the critical facilities and infrastructure from the Shannon Entropy analysis. Among the critical facilities, the fire station holds the highest weight, followed by the railway station, petrol pump, 
+police station, and hospital. From the perspective of nuisance flooding, the weighted values indicate that fire stations, with the highest 
+weight, are critical in managing flood impacts, as they play a key role in emergency responses. Although police stations and hospitals 
+have lower weights, their vulnerability to nuisance flooding is still significant, emphasizing the need to protect all critical infrastructure to ensure resilience during flood events. Among the infrastructure facilities, we observe that the Skywalk holds the highest 
+weight, followed by the mall and the fire station, highlighting their critical roles in flood resilience.
+We particularly note the importance of slums and hospitals, which have relatively high weights in the Mithi catchment area of 
+Mumbai.
+The weight of slums indicates their considerable vulnerability due to inadequate infrastructure and limited access to basic services, 
+making them highly susceptible to the impacts of nuisance flooding. Hospitals, despite their critical role in healthcare, also face 
+significant challenges in flood events, as their functionality could be severely compromised by flooding. These observations underscore 
+the need to prioritize flood risk management for these vulnerable areas, especially slums and hospitals, to improve resilience and 
+ensure the continued operation of essential services during flood events. Fig. 4 (a &b) shows the weightage of critical and infrastructure 
+facilities.
+An analysis of the vulnerability distribution across the surveyed wards reveals that 30 % fall within the low vulnerability category. 
+In contrast, 25 % are classified as moderately vulnerable, while an additional 25 % exhibit high vulnerability. The remaining 25 % (5 
+wards) are identified as being in the very high vulnerability category. Collectively, these findings indicate that 75 % of the wards 
+experience moderate to very high levels of vulnerability (Fig. 4c). This pronounced concentration in the higher vulnerability classes 
+highlights the critical need for targeted policy interventions and resilience-enhancing strategies to mitigate existing risks and reduce 
+future susceptibility. It is evident that wards exhibiting high concentrations of informal settlements, inadequate access to critical 
+infrastructure, and extensive encroachments along riverbanks consistently correspond to areas classified under the high and very high 
+vulnerability categories. This spatial pattern is especially pronounced in the central and lower reaches of the Mithi River catchment, 
+where unregulated urban development and limited resilience capacity have significantly amplified exposure to environmental and 
+infrastructural risks. The convergence of these socio-physical stressors in these zones underscores their heightened susceptibility to 
+flood events and related hazards. The areas classified as very high vulnerable within the Mithi River catchment are primarily located 
+along its southern and southeastern stretches, particularly near Mahim Creek, Bandra-Kurla Complex (BKC), and the surrounding 
+neighborhoods of Dharavi, Saki Naka, and Kurla. The very high vulnerability observed across the wards in Dharavi is consistent with 
+expectations, given its unique demographic and geographic characteristics. Dharavi, situated along the banks of the Mithi River, is 
+recognized as the largest informal settlement in Mumbai, accommodating nearly one million residents within an area of about 2.1 km2
+. 
+Historically, the locality originated as a small fishing village on the city’s periphery but has since evolved into a densely populated 
+urban enclave (Samaddar et al., 2021). Within this settlement, approximately 25,000 inhabitants occupy just 0.94 km2 of land, 
+resulting in one of the highest population densities in the world. The Municipal Corporation of Greater Mumbai (MCGM) has identified 
+Dharavi as a highly flood-prone and low-lying zone, frequently exposed to inundation from the Mithi River during intense rainfall 
+events.
+These zones are densely populated with large informal settlements, where encroachment on the riverbanks has significantly 
+compromised the natural drainage system, reduced the river’s flood-carrying capacity and exacerbated inundation risk during extreme 
+rainfall events. These settlements often occupy low-lying land, which is highly prone to flooding due to poor elevation, unplanned 
+construction, and insufficient stormwater infrastructure. These findings highlight the urgent need for integrative flood risk management that combines infrastructure upgrades, socio-economic resilience, and inclusive urban planning.
+4.2.1. Assessing vulnerability through sensitivity analysis of critical indicators
+A sensitivity analysis was conducted by sequentially removing important indicators to assess their individual influence on the 
+overall vulnerability scores across the wards in the Mithi River catchment. The findings reveal significant spatial variations in 
+vulnerability response depending on the excluded variable. When hospitals were excluded from the analysis, 52.3 % of the wards 
+exhibited an increase in vulnerability, while 47.6 % experienced a decrease, indicating the dual role of healthcare accessibility in 
+influencing vulnerability patterns. In contrast, the exclusion of road infrastructure led to a sharp rise in vulnerability scores in over 90 
+% of the wards, highlighting the critical role of transport connectivity in reducing flood-related and systemic vulnerabilities. Removal 
+of buildings resulted in a decrease in vulnerability for approximately 62 % of the wards, suggesting that dense built-up areas may, in 
+certain contexts, exacerbate local risk conditions. Notably, the exclusion of subways led to an increase in vulnerability in nearly 95 % of 
+the wards, underscoring the importance of subterranean connectivity and evacuation pathways in risk mitigation. Interestingly, when 
+slum areas were excluded from the analysis, approximately one-third of the wards exhibited an increase in vulnerability, whereas the 
+remaining two-thirds experienced a decrease. This finding indicates that informal settlements exert a highly variable influence on 
+vulnerability, likely shaped by factors such as their geographic concentration, lack of infrastructure, and high population densities. The 
+fact that more than two-thirds of the wards showed a reduction in vulnerability upon excluding slum indicators is a particularly 
+noteworthy and encouraging outcome, suggesting that targeted interventions addressing slum conditions, such as upgrading basic 
+services, improving structural safety, or enabling resettlement from high-risk zones, could substantially lower overall vulnerability 
+across the catchment. This underscores the strategic importance of slum-focused urban resilience planning in flood-prone metropolitan 
+areas like Mumbai. Supplementary Fig. 5 illustrates the changes in vulnerability scores derived from the sensitivity analysis conducted 
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+10
+
+by systematically excluding key influential indicators.
+4.3. A first-of-its-kind bivariate nuisance flood risk
+Fig. 5 presents a series of bivariate nuisance flood risk maps developed for 2-yr, 10-yr, and 20-yr return periods, effectively 
+illustrating the combined influence of hazard and vulnerability components on overall flood risk. The spatial analysis of flood risk 
+revealed three distinct patterns in the relative influence of hazard and vulnerability across the study area. A substantial proportion of 
+the grids exhibited an equal contribution of hazard and vulnerability, accounting for 44.97 %, 42.2 %, and 41.6 % of the area for the 2- 
+Fig. 5. Bivariate Nuisance Flood Risk for 2-yr, 10-yr, and 20-yr return periods. The inset map shows the zoomed view of the risk profiles at 
+critical locations.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+11
+
+yr, 10-yr, and 20-yr return periods, respectively. This balanced interaction indicates that both physical flood hazards and infrastructure 
+conditions play an equally significant role in shaping flood risk across much of the catchment. In contrast, areas dominated by hazard 
+alone were comparatively limited in extent but showed a slight increase with longer return periods, comprising 6.35 % of the grids for 
+the 2-yr, 12.41 % for the 10-yr, and 13.53 % for the 20-yr scenario. This trend suggests that as flood intensity increases, the physical 
+characteristics of the hazard become more dominant in determining risk in certain locations. However, the most prominent pattern 
+across all return periods was the dominance of vulnerability, which influenced 48.68 %, 45.39 %, and 44.87 % of the grids for the 2-yr, 
+10-yr, and 20-yr return periods, respectively. These findings underscore the pervasive role of underlying infrastructural factors in 
+driving flood risk and emphasize the need for targeted vulnerability reduction measures alongside traditional hazard mitigation 
+approaches.
+As emphasized in the prior studies by Thakur and Mohanty [67,73], understanding the dominant drivers of flood risk is essential for 
+tailoring appropriate mitigation strategies, especially in the context of nuisance flooding, where floodwaters are typically shallow and 
+slow-moving, but nonetheless disruptive. In areas where hazard dominance was identified, the focus should be on minimizing the 
+frequency and spatial extent of surface water accumulation through lightweight structural interventions. These may include enhanced 
+stormwater drains, permeable pavements, bioswales, and urban retention ponds, which are designed to improve localized drainage 
+and prevent waterlogging without necessitating large-scale flood control infrastructure. In contrast, zones where vulnerability is the 
+primary contributor require targeted non-structural measures that enhance the coping capacity of residents and reduce exposure to 
+even minor flooding. This includes improved waste management to prevent drain blockages, revised land use policies to discourage 
+settlement in low-lying areas, community-level flood preparedness training, and improved access to municipal services such as health 
+care, mobility support, and sanitation. These interventions can significantly reduce the disruptive impacts of nuisance flooding on 
+everyday life, particularly for vulnerable populations in informal settlements. In areas where hazard and vulnerability contribute 
+equally, a combined approach is essential. Integrated strategies should couple moderate infrastructure upgrades, such as low-cost 
+retrofitting of drains or culverts, with social interventions like participatory planning, risk communication campaigns. In the 
+context of nuisance floods, such hybrid measures are not only cost-effective but also critical for maintaining urban functionality, public 
+health, and economic continuity, particularly in densely populated urban neighborhoods.
+5. Conclusions
+Nuisance Flooding (NF), characterized by shallow and low-velocity inundation, is an increasingly pervasive yet under-recognized 
+urban hazard. Although non-catastrophic, its recurrent nature disrupts mobility, affects livelihoods, and strains public infrastructure, 
+particularly in densely built coastal cities such as Mumbai.
+This study presents the first integrated framework for quantifying and mapping NF risk by combining hydrodynamic flood 
+modeling with spatial vulnerability analysis through a Bivariate Flood Risk Classifier (BFRC). Using the coupled MIKE+ 1D–2D model, 
+design rainfall, storm-tide, and discharge values for multiple return periods were simulated to generate high-resolution flood hazard 
+maps. These were integrated with a Shannon Entropy–TOPSIS-based vulnerability index to capture infrastructural vulnerability to 
+flooding.
+The results demonstrate that even short-return-period events (e.g., 2-year) can cause significant nuisance flooding due to limited 
+drainage capacity and extensive impervious surfaces. While most areas fall within low to medium hazard levels, critical zones near 
+rivers, lakes, and the coast consistently show higher hazard values. Vulnerability mapping indicates that nearly three-fourths of the 
+city’s wards exhibit moderate to very high vulnerability, largely influenced by informal settlements, infrastructure exposure, and 
+encroachments along natural drainage channels. The BFRC results further reveal that vulnerability is the dominant driver of NF risk 
+across much of the catchment, while compounded hazard–vulnerability interactions account for nearly half the affected area. Overall, 
+this study introduces a novel bivariate approach that enhances understanding of localized NF risk by simultaneously visualizing hazard 
+intensity and vulnerability distribution.
+The framework provides a practical decision-support tool for identifying priority zones and balancing structural measures (e.g., 
+drainage upgrades, embankments) with non-structural strategies (e.g., preparedness, policy interventions, and awareness). The study 
+highlights the value of combining flood hazard modeling with infrastructure-based vulnerability assessment for managing nuisance 
+flooding. However, there is scope to further strengthen the framework. Future research can incorporate socio-economic indicators at a 
+much finer scale than wards, such as household data and demographics at grid level. Special attention should be given to vulnerable 
+groups like children, the elderly, and the disabled, who face greater risks during even minor flood events. Including transportation 
+network data, traffic flows, and public transit disruptions can also add depth to urban risk analysis. Moreover, integrating temporal 
+exposure patterns, such as rush hour mobility, can help capture daily variations in flood impact. These enhancements will support 
+more inclusive, data-rich, and adaptive flood resilience planning in the context of urban nuisance flood risk management.
+CRediT authorship contribution statement
+Dev Anand Thakur: Writing – review & editing, Writing – original draft, Visualization, Validation, Software, Resources, Methodology, Investigation, Formal analysis, Conceptualization. Vishveshwari Tukaram Shirsath: Writing – review & editing, Writing – 
+original draft, Visualization, Software, Methodology, Formal analysis, Conceptualization. Mohit Prakash Mohanty: Writing – review 
+& editing, Writing – original draft, Visualization, Supervision, Resources, Project administration, Methodology, Investigation, Formal 
+analysis, Conceptualization.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+12
+
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgement
+The authors wish to express their sincere gratitude to Sherly M A from TERI School of Advanced Studies, New Delhi, for her 
+invaluable guidance and support. The authors would like to express their sincere gratitude to the Indian Meteorological Department, 
+Pune (India), for providing essential meteorological data. We also extend our gratitude to the Central Water Commission (India) for 
+sharing valuable hydrological data. We also thank INCOIS, Hyderabad (India), for providing oceanographic and coastal data that were 
+instrumental for this study. The authors are grateful to the National Remote Sensing Centre, Hyderabad (India), for providing spatial 
+datasets. Additionally, the authors thank the Census of India, 2011, for providing demographic and spatial data that were crucial for 
+the research analysis. The computational resources provided by the Department of Water Resources Development and Management, 
+Indian Institute of Technology Roorkee, are also gratefully acknowledged.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.ijdrr.2025.105969.
+Data availability
+Data will be made available on request.
+References
+[1] R. Singh, D.A. Thakur, M.P. Mohanty, Can satellite precipitation products comprehend rainfall extremes over disaster-sensitive mountainous basins? An 
+exhaustive inter-comparison and assessment over Nepal, Earth Systems and Environment (2024) 1–21.
+[2] The CNN, New Delhi records wettest July day in decades as deadly floods hit northern India. https://edition.cnn.com/2023/07/10/india/india-delhi-wettestday-flood-deaths-intl-hnk/index.html, 2023. (Accessed 24 October 2024).
+[3] The Guardian, Airport submerged as widespread flooding continues in China – video report. https://www.theguardian.com/world/video/2023/aug/01/rescueefforts-under-way-as-beijing-faces-fourth-day-of-torrential-downpours-video-report, 2023. (Accessed 27 October 2024).
+[4] The Mint, Global weather alert: heatwave engulfs US, Europe, Japan while floods wreak havoc in India and South Korea. https://www.livemint.com/news/ 
+world/global-weather-alert-heatwave-engulfs-us-europe-japan-while-floods-wreak-havoc-in-india-and-south-korea-11689482448730.html, 2023. (Accessed 28 
+October 2024).
+[5] R.P. Allan, M. Barlow, M.P. Byrne, A. Cherchi, H. Douville, H.J. Fowler, O. Zolina, Advances in understanding large-scale responses of the water cycle to climate 
+change, Ann. N. Y. Acad. Sci. 1472 (1) (2020) 49–75.
+[6] I. Haddeland, J. Heinke, H. Biemans, S. Eisner, M. Florke, ¨ N. Hanasaki, D. Wisser, Global water resources affected by human interventions and climate change, 
+Proc. Natl. Acad. Sci. 111 (9) (2014) 3251–3256.
+[7] D. Yang, Y. Yang, J. Xia, Hydrological cycle and water resources in a changing world: a review, Geogr. Sustain. 2 (2) (2021) 115–122.
+[8] W. Xiong, I. Holman, E. Lin, D. Conway, J. Jiang, Y. Xu, Y. Li, Climate change, water availability and future cereal production in China, Agric. Ecosyst. Environ. 
+135 (1–2) (2010) 58–69.
+[9] G. Konapala, A.K. Mishra, Y. Wada, M.E. Mann, Climate change will affect global water availability through compounding changes in seasonal precipitation and 
+evaporation, Nat. Commun. 11 (1) (2020) 3044.
+[10] C. Allan, J. Xia, C. Pahl-Wostl, Climate change and water security: challenges for adaptive water management, Curr. Opin. Environ. Sustain. 5 (6) (2013) 
+625–632.
+[11] G. Yin, G. Wang, X. Zhang, X. Wang, Q. Hu, S. Shrestha, F. Hao, Multi-scale assessment of water security under climate change in north China in the past two 
+decades, Sci. Total Environ. 805 (2022) 150103.
+[12] Z. Kalantari, C.S.S. Ferreira, S. Keesstra, G. Destouni, Nature-based solutions for flood-drought risk mitigation in vulnerable urbanizing parts of East-Africa, 
+Current Opinion in Environmental Science & Health 5 (2018) 73–78. Chicago.
+[13] N. Arunrat, S. Sereenonchai, W. Chaowiwat, C. Wang, Climate change impact on major crop yield and water footprint under CMIP6 climate projections in 
+repeated drought and flood areas in Thailand, Sci. Total Environ. 807 (2022) 150741.
+[14] J. Birkmann, A. Jamshed, J.M. McMillan, D. Feldmeyer, E. Totin, W. Solecki, A. Alegría, Understanding human vulnerability to climate change: a global 
+perspective on index validation for adaptation planning, Sci. Total Environ. 803 (2022) 150065.
+[15] J. Jain, F. Munoz-Arriola, ˜ D. Khare, Evidencing sources of flood disaster policy improvement leveraging flood risk attributes in India, Nat. Hazards 121 (7) 
+(2025) 8011–8038.
+[16] A. Yadav, M.L. Kansal, A. Singh, Ecosystem health assessment based on the VORS framework for the Upper Ganga Riverine Wetland in India, Environ. Sustain. 
+Indic. 25 (2025) 100580.
+[17] S.H. Pour, A.K. Abd Wahab, S. Shahid, M. Asaduzzaman, A. Dewan, Low impact development techniques to mitigate the impacts of climate-change-induced 
+urban floods: current trends, issues and challenges, Sustain. Cities Soc. 62 (2020) 102373.
+[18] Y. Huang, Z. Tian, Q. Ke, J. Liu, M. Irannezhad, D. Fan, L. Sun, Nature-based solutions for urban pluvial flood risk management, Wiley Interdiscip. Rev.: Water 7 
+(3) (2020) e1421.
+[19] B. Ma, Z. Wu, C. Hu, H. Wang, H. Xu, D. Yan, Process-oriented SWMM real-time correction and urban flood dynamic simulation, J. Hydrol. 605 (2022) 127269.
+[20] J. Jain, F. Munoz-Arriola, ˜ D. Garg, D. Khare, Assessing urban community resilience to flood using a hybrid multi-criteria decision-making approach: a case of 
+Guwahati City, Assam, India, Earth Systems and Environment (2024) 1–17.
+[21] F.K.S. Chan, L.E. Yang, J. Scheffran, G. Mitchell, O. Adekola, J. Griffiths, A. McDonald, Urban flood risks and emerging challenges in a Chinese delta: the case of 
+the Pearl River Delta, Environ. Sci. Pol. 122 (2021) 101–115.
+[22] B. Wang, B.P. Loo, F. Zhen, G. Xi, Urban resilience from the lens of social media data: responses to urban flooding in Nanjing, China, Cities 106 (2020) 102884.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+13
+
+[23] S. Dong, T. Yu, H. Farahmand, A. Mostafavi, Probabilistic modeling of cascading failure risk in interdependent channel and road networks in urban flooding, 
+Sustain. Cities Soc. 62 (2020) 102398.
+[24] W. Sweet, J. Park, J. Marra, C. Zervas, S. Gill, Sea Level Rise and Nuisance Flood Frequency Changes Around the United States, 2014.
+[25] R.D. Ray, G. Foster, Future nuisance flooding at Boston caused by astronomical tides alone, Earths Future 4 (12) (2016) 578–587.
+[26] H.R. Moftakhari, A. AghaKouchak, B.F. Sanders, D.L. Feldman, W. Sweet, R.A. Matthew, A. Luke, Increased nuisance flooding along the coasts of the United 
+States due to sea level rise: past and future, Geophys. Res. Lett. 42 (22) (2015) 9846–9852.
+[27] H.R. Moftakhari, A. AghaKouchak, B.F. Sanders, R.A. Matthew, Cumulative hazard: the case of nuisance flooding, Earths Future 5 (2) (2017) 214–223.
+[28] B.R. Rosenzweig, L. McPhillips, H. Chang, C. Cheng, C. Welty, M. Matsler, C.I. Davidson, Pluvial flood risk and opportunities for resilience, Wiley Interdiscip. 
+Rev.: Water 5 (2018) e1302, https://doi.org/10.1002/wat2.1302.
+[29] H.R. Moftakhari, A. AghaKouchak, B.F. Sanders, M. Allaire, R.A. Matthew, What is nuisance flooding? Defining and monitoring an emerging challenge, Water 
+Resour. Res. 54 (7) (2018) 4218–4227.
+[30] D.A. Thakur, M.P. Mohanty, A. Mishra, S. Karmakar, Quantifying flood risks during monsoon and post-monsoon seasons: an integrated framework for resourceconstrained coastal regions, J. Hydrol. 630 (2024) 130683.
+[31] X. Ming, Q. Liang, R. Dawson, X. Xia, J. Hou, A quantitative multi-hazard risk assessment framework for compound flooding considering hazard interdependencies and interactions, J. Hydrol. 607 (2022) 127477.
+[32] E.E. Koks, J. Rozenberg, C. Zorn, M. Tariverdi, M. Vousdoukas, S.A. Fraser, S. Hallegatte, A global multi-hazard risk analysis of road and railway infrastructure 
+assets, Nat. Commun. 10 (1) (2019) 2677.
+[33] J. Verschuur, E.E. Koks, S. Li, J.W. Hall, Multi-hazard risk to global port infrastructure and resulting trade and logistics losses, Commun. Earth Environ. 4 (1) 
+(2023) 5.
+[34] R. Deopa, D.A. Thakur, S. Kumar, M.P. Mohanty, P. Asha, Discerning the dynamics of urbanization-climate change-flood risk nexus in densely populated urban 
+mega cities: an appraisal of efficient flood management through spatiotemporal and geostatistical rainfall analysis and hydrodynamic modeling, Sci. Total 
+Environ. 952 (2024) 175882.
+[35] C. Kelleher, L. McPhillips, Exploring the application of topographic indices in urban areas as indicators of pluvial flooding locations, Hydrol. Process. 34 (3) 
+(2020) 780–794.
+[36] J. Teng, A.J. Jakeman, J. Vaze, B.F. Croke, D. Dutta, S.J.E.M. Kim, Flood inundation modelling: a review of methods, recent advances and uncertainty analysis, 
+Environ. Model. Software 90 (2017) 201–216.
+[37] E. Mignot, X. Li, B. Dewals, Experimental modelling of urban flooding: a review, J. Hydrol. 568 (2019) 334–342.
+[38] T. Namgyal, D.A. Thakur, M.P. Mohanty, Are open-source hydrodynamic models efficient in quantifying flood risks over mountainous terrains? An exhaustive 
+analysis over the hindu-kush-himalayan region, Sci. Total Environ. 897 (2023) 165357.
+[39] G. Forzieri, L. Feyen, S. Russo, M. Vousdoukas, L. Alfieri, S. Outten, A. Cid, Multi-hazard assessment in Europe under climate change, Clim. Change 137 (2016) 
+105–119.
+[40] P. Costabile, C. Costanzo, G. De Lorenzo, F. Macchione, Is local flood hazard assessment in urban areas significantly influenced by the physical complexity of the 
+hydrodynamic inundation model? J. Hydrol. 580 (2020) 124231.
+[41] T. Lazzarin, D.P. Viero, D. Molinari, F. Ballio, A. Defina, Flood damage functions based on a single physics-and data-based impact parameter that jointly 
+accounts for water depth and velocity, J. Hydrol. 607 (2022) 127485.
+[42] D.A. Thakur, M.P. Mohanty, Do disparities exist in flood risks during monsoon and post-monsoon seasons? Comprehending diametric behaviors over coastal 
+multi-hazard catchments, Environ. Res. Lett. 19 (12) (2024) 124094.
+[43] M. Eini, H.S. Kaboli, M. Rashidian, H. Hedayat, Hazard and vulnerability in urban flood risk mapping: machine learning techniques and considering the role of 
+urban districts, Int. J. Disaster Risk Reduct. 50 (2020) 101687.
+[44] K.I. Abdrabo, S.A. Kantoush, A. Esmaiel, M. Saber, T. Sumi, M. Almamari, S. Ghoniem, An integrated indicator-based approach for constructing an urban flood 
+vulnerability index as an urban decision-making tool using the PCA and AHP techniques: a case study of Alexandria, Egypt, Urban Clim. 48 (2023) 101426.
+[45] S. Kittipongvises, A. Phetrak, P. Rattanapun, K. Brundiers, J.L. Buizer, R. Melnick, AHP-GIS analysis for flood hazard assessment of the communities nearby the 
+world heritage site on Ayutthaya Island, Thailand, Int. J. Disaster Risk Reduct. 48 (2020) 101612.
+[46] E. Rafiei-Sardooi, A. Azareh, B. Choubin, A.H. Mosavi, J.J. Clague, Evaluating urban flood risk using hybrid method of TOPSIS and machine learning, Int. J. 
+Disaster Risk Reduct. 66 (2021) 102614.
+[47] C. Luu, J. von Meding, M. Mojtahedi, Analyzing Vietnam’s national disaster loss database for flood risk assessment using multiple linear regression-TOPSIS, Int. 
+J. Disaster Risk Reduct. 40 (2019) 101153.
+[48] Z. Zhang, J. Zhang, Y. Zhang, Y. Chen, J. Yan, Urban flood resilience evaluation based on GIS and multi-source data: a case Study of Changchun City, Remote 
+Sens. 15 (7) (2023) 1872.
+[49] N. Ranger, S. Hallegatte, S. Bhattacharya, M. Bachu, S. Priya, K. Dhore, J. Corfee-Morlot, An assessment of the potential impact of climate change on flood risk in 
+Mumbai, Clim. Change 104 (2011) 139–167.
+[50] K. Gupta, Urban flood resilience planning and management and lessons for the future: a case study of Mumbai, India, Urban Water J. 4 (3) (2007) 183–194.
+[51] V. Ramesh, S.S. Iqbal, Urban flood susceptibility zonation mapping using evidential belief function, frequency ratio and fuzzy gamma operator models in GIS: a 
+case study of Greater Mumbai, Maharashtra, India, Geocarto Int. 37 (2) (2022) 581–606.
+[52] Hindustan Times, Mithi River an open drain, another 2005-like deluge inevitable in Mumbai: panel report to SC. https://www.hindustantimes.com/mumbainews/mithi-river-an-open-drain-another-2005-like-deluge-inevitable-in-mumbai-panel-report-to-sc/story-zC34A8YYvrziLDBTPNcO8I.html, 2018. (Accessed 29 
+October 2024).
+[53] P.E. Zope, T.I. Eldho, V. Jothiprakash, Impacts of urbanization on flooding of a coastal urban catchment: a case study of Mumbai City, India, Nat. Hazards 75 
+(2015) 887–908.
+[54] P.E. Zope, T.I. Eldho, V. Jothiprakash, Impacts of land use–land cover change and urbanization on flooding: a case study of Oshiwara River Basin in Mumbai, 
+India, Catena 145 (2016) 142–154.
+[55] R.M. Murali, M.J. Riyas, K.N. Reshma, S.S. Kumar, Climate change impact and vulnerability assessment of Mumbai city, India, Nat. Hazards 102 (2020) 
+575–589.
+[56] A. Azeez, L. Gnanappazham, K.R. Muraleedharan, C. Revichandran, S. John, G. Seena, J. Thomas, Multi-decadal changes of mangrove forest and its response to 
+the tidal dynamics of thane creek, Mumbai, J. Sea Res. 180 (2022) 102162.
+[57] L. Weinstein, A. Rumbach, S. Sinha, Resilient growth: fantasy plans and unplanned developments in India’s flood-prone coastal cities, Int. J. Urban Reg. Res. 43 
+(2) (2019) 273–291.
+[58] S. Pathak, M. Liu, D. Jato-Espino, C. Zevenbergen, Social, economic and environmental assessment of urban sub-catchment flood risks using a multi-criteria 
+approach: a case study in Mumbai City, India, J. Hydrol. 591 (2020) 125216.
+[59] M. Ghosh, M.P. Mohanty, P. Kishore, S. Karmakar, Performance evaluation of potential inland flood management options through a three-way linked 
+hydrodynamic modelling framework for a coastal urban watershed, Hydrology Research 52 (1) (2021) 61–77.
+[60] The Indian Express, WRI identifies 5 open spaces along Mithi river to help mitigate floods. https://indianexpress.com/article/cities/mumbai/wri-identifies-5- 
+open-spaces-along-mithi-river-to-help-mitigate-floods-8481081/, 2023. (Accessed 2 November 2024).
+[61] S. Hallegatte, N. Ranger, S. Bhattacharya, M. Bachu, S. Priya, K. Dhore, C. Herweijer, Flood Risks, Climate Change Impacts and Adaptation Benefits in Mumbai: 
+an Initial Assessment of socio-economic Consequences of Present and Climate Change Induced Flood Risks and of Possible Adaptation Options, 2010.
+[62] M.P. Mohanty, M.A. Sherly, S. Ghosh, S. Karmakar, Tide-rainfall flood quotient: an incisive measure of comprehending a region’s response to storm-tide and 
+pluvial flooding, Environ. Res. Lett. 15 (6) (2020) 064029.
+[63] M. Solano, M. Canals, S. Leonardi, Barotropic boundary conditions and tide forcing in split-explicit high resolution coastal ocean models, J. Ocean Eng. Sci. 5 
+(2020) 249–260, https://doi.org/10.1016/j.joes.2019.12.002.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+14
+
+[64] I. Turki, L. Baulon, N. Massei, B. Laignel, S. Costa, M. Fournier, O. Maquaire, A nonstationary analysis for investigating the multiscale variability of extreme 
+surges: case of the English Channel coasts, Nat. Hazards Earth Syst. Sci. 20 (2020) 3225–3243, https://doi.org/10.5194/nhess-20-3225-2020.
+[65] D.A. Thakur, M.P. Mohanty, Utilizing multi-criteria decision-making techniques for computing composite vulnerability over a severely flood-prone multi-hazard 
+catchment, in: Progress in Multicriteria Decision Making Models: a New Paradigm to Monitor Hazards, Springer Nature Switzerland, Cham, 2025, pp. 291–309.
+[66] S. Patro, C. Chatterjee, S. Mohanty, R. Singh, N.S. Raghuwanshi, Flood inundation modeling using MIKE FLOOD and remote sensing data, J. Indian Soc. Remote 
+Sens. 37 (1) (2009) 107–118.
+[67] D.A. Thakur, M.P. Mohanty, A synergistic approach towards understanding flood risks over coastal multi-hazard environments: appraisal of bivariate flood risk 
+mapping through flood hazard, and socio-economic-cum-physical vulnerability dimensions, Sci. Total Environ. 901 (2023) 166423.
+[68] Y. Li, H. Li, Y. Han, T. Huang, Q. Wang, X. Wang, Impact analysis of urban super-standard flood disasters based on MIKE+, Nat. Hazards (2025) 1–15.
+[69] A. Fekete, K. Tzavella, R. Baumhauer, Spatial exposure aspects contributing to vulnerability and resilience assessments of urban critical infrastructure in a flood 
+and blackout context, Nat. Hazards 86 (Suppl 1) (2017) 151–176.
+[70] G. Lee, K.S. Jun, E.S. Chung, Integrated multi-criteria flood vulnerability approach using fuzzy TOPSIS and Delphi technique, Nat. Hazards Earth Syst. Sci. 13 (5) 
+(2013) 1293–1312.
+[71] W. Yang, K. Xu, J. Lian, C. Ma, L. Bin, Integrated flood vulnerability assessment approach based on TOPSIS and Shannon entropy methods, Ecol. Indic. 89 (2018) 
+269–280.
+[72] Times of India, Inadequate drain infra a lacuna in Mumbai flood management: CAG. https://timesofindia.indiatimes.com/city/mumbai/inadequate-drain-infraa-lacuna-in-mumbai-flood-management-cag/articleshow/70046487.cms, 2019. (Accessed 10 October 2024).
+[73] D.A. Thakur, M.P. Mohanty, Exploring the fidelity of satellite precipitation products in capturing flood risks: a novel framework incorporating hazard and 
+vulnerability dimensions over a sensitive coastal multi-hazard catchment, Sci. Total Environ. 920 (2024) 170884.
+D.A. Thakur et al. International Journal of Disaster Risk Reduction 132 (2026) 105969
+15

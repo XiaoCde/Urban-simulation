@@ -1,0 +1,837 @@
+Context matters when evacuating large cities: Shifting the focus from 
+individual characteristics to location and social vulnerability
+Samuel Rufat a,b,*,1
+, Emeline Comby c,2
+, Serge Lhomme d,3
+, Victor Santoni e
+a CY Cergy Paris University, Cergy 9500, France b Center for Research in Economics and Statistics, CNRS UMR 9194 CREST, Palaiseau 91120, France c Lumi`ere Lyon 2 University, CNRS UMR 5600 EVS, Bron 69342, France d Paris-East Creteil University, Cr´eteil 94010, France e CY Cergy Paris University, Cergy 9500, France
+ARTICLE INFO
+Keywords:
+Climate change
+Flood
+Evacuation
+Location
+Social vulnerability
+ABSTRACT
+Climate change is driving extreme weather, heat and flooding, which increasingly require evacuations. Recent 
+studies have found inconclusive results on the determinants of evacuation-related decisions and have reported 
+widely varying evacuation rates, especially in high-density areas. We use a large dataset of geotagged evacuation 
+choices in Paris, France (n = 2976) during a flood, to show that while they are rarely addressed, location, social 
+vulnerability, length of residence, and hazard exposure are critical predictors. They can be used to infer the 
+impact of previous experience on evacuation intentions, which is usually difficult to collect at scales relevant to 
+decision-making. We address multiple evacuation choices over time that have previously been overlooked, 
+including gradually self-fueling spontaneous evacuations after observations of peers evacuating or flooding 
+proximity and post-impact evacuation due to infrastructure disruption. Our findings reveal that many people 
+wait until their home is flooded to evacuate. The gap between the initial share of people leaving immediately and 
+the minority refusing to leave in any case even after their housing is flooded gradually fills when considering 
+different evacuation behaviors over time. Such chronology might explain the wide range of evacuation rates 
+reported in the literature. However, people in vulnerable situations and with increased hazard exposure are more 
+likely to declare that they would disregard evacuation instructions. One key implication is that policies aimed at 
+reducing social vulnerability might be more effective than communication campaigns to increase preparedness 
+and support evacuation.
+1. Introduction
+Impacts from flooding are expected to increase due to climate change 
+and continued development in flood-prone areas, despite the trillions of 
+dollars of public funds allocated to flood risk reduction (Bloschl ¨ et al., 
+2019; Coronese et al., 2019; Ward et al., 2020). In Europe, flood damage 
+is expected to rise to €44 billion per year by 2100, with half a million 
+Europeans exposed to river flooding (Dottori et al., 2023). The United 
+Nations regularly acknowledges the need for early warnings and evacuation plans to reduce exposure (World Meteorological Organization 
+WMO, 2022). While inequality affects flood mortality, some behaviors, 
+such as evacuating, requesting help, and escaping, decrease human 
+losses and urban dysfunction due to flooding (Yari et al., 2021). However, the evacuation of high-density districts before or during a disaster 
+is proving increasingly challenging, as illustrated by the people refusing 
+to evacuate during the 2016 flood in Paris (OECD, 2018). Recent studies 
+have reported widely varying evacuation rates across contexts and 
+continents, from 29 % (Parker et al., 2009) to over 90 % (Thieken et al., 
+2022). Meta-analyses have found that many individual determinants – 
+notably socio-demographic characteristics – have either minor or 
+inconsistent effects on household evacuation (Huang et al., 2016). 
+Whilst some reviews of the literature associate female gender, younger 
+* Correspondence to: CY Cergy Paris University, 33 boulevard du Port, Cergy-Pontoise 95011, France.
+E-mail addresses: samuel.rufat@u-cergy.fr (S. Rufat), e.comby@univ-lyon2.fr (E. Comby), serge.lhomme@u-pec.fr (S. Lhomme), victor.santoni@cyu.fr
+(V. Santoni). 
+1 ORCID 0000–0001-6356–1233 2 ORCID 0000–0003-4057–3623 3 ORCID 0009-0006-9291-9576
+Contents lists available at ScienceDirect
+Environmental Science and Policy
+journal homepage: www.elsevier.com/locate/envsci
+https://doi.org/10.1016/j.envsci.2024.103925
+Received 1 December 2023; Received in revised form 25 September 2024; Accepted 30 September 2024 
+Environmental Science and Policy 162 (2024) 103925
+Available online 4 October 2024
+1462-9011/© 2024 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/bync-nd/4.0/).
+
+age, and white ethnicity with evacuation (Thompson et al., 2017), 
+studies outside the United States have found weak (Yin et al., 2022) or 
+no association (Thieken et al., 2022), with other reviews pointing toward highly hazard-specific and context-specific factors (Wang et al., 
+2021). Although many studies disagree on the factors, understanding 
+the motivation for various evacuation choices remains critical 
+(Reghezza-Zitt and Rufat, 2015).
+Risk awareness campaigns are sometimes assumed to be sufficient 
+for fostering the desired judgment, motivation, and behavior (Rufat 
+et al., 2020). Previous studies on flood evacuation focused on compliance and protective actions through surveys (Botzen et al., 2022), 
+computer simulations (Kubo et al., 2021), controlled experiments (Dias 
+et al., 2022), or field observations (Armijos et al., 2017). These studies 
+often focus on the individual level and while a few exceptions consider 
+the interaction of official warning systems with informal warning networks (see Lindell et al., 2019b) or social cues, how people interact with 
+others in search for additional information (Wood et al., 2018), most 
+overlook interactions, particularly among social groups (Rufat et al., 
+2020). Robust quantitative data are still lacking, and evacuation 
+modeling is often based on oversimplifications of behavioral dynamics 
+(Wang et al., 2021), social factors, and/or group dynamics (Aerts et al., 
+2018). To fill these gaps, we surveyed evacuation strategies and 
+expressed preferences in the Paris metropolitan area after a series of 
+floods.
+While it remains difficult to predict compliance with evacuation 
+instructions, spontaneous evacuation, and post-impact evacuation due 
+to infrastructure disruption from individual characteristics, ranging 
+from demographic to social, physical, or previous experience characteristics, we argue that context, location, and social vulnerability matter. 
+The contribution of this study is to address multiple evacuation behaviors over time, one previously neglected (post-impact evacuation due to 
+degraded living conditions exhaustion, with the exception of Huang 
+et al., 2017) and two previously studied as predictors but not as a 
+dependent variable (observations of peers evacuating and flooding 
+proximity), while identifying the interactions among predictors, 
+including social vulnerability, exposure and location which are rarely 
+addressed. We suggest that the location of residence indirectly captures 
+a wide range of predictors, and the ways they overlap, including previous hazard experience, which are difficult to capture with the usual 
+social and demographic proxies.
+2. Risk perception, social vulnerability, and evacuations
+Evacuation to safer areas has been made even more complex by the 
+COVID-19 pandemic (Botzen et al., 2021; Page-Tan, Fraser, 2022). The 
+literature focuses on compliance with protective action instructions and 
+mandatory evacuations, as well as re-entry management, as they play 
+key roles in the success of emergency operations (Lindell et al., 2019a). 
+The evacuation rate reported in previous studies varies widely, with 
+29 % in the United Kingdom (Parker et al., 2009), 33 % in Iran (Yari 
+et al., 2021), 40 % in Tokyo (Otsuka et al., 2022), 46 % in Accra (Yin 
+et al., 2022), 67 % in South Carolina (Martin et al., 2020), and over 90 % 
+in Germany (Thieken et al., 2016). Different compliance rates have also 
+been reported from one event to another at a given location, for example 
+in South Carolina in different storms (Huang et al., 2016). Conversely, 
+spontaneous evacuation refers to people leaving their location because 
+of perceived risk without being directed to do so (Lindell et al., 2011). 
+Empirical studies have found mixed and inconclusive results on the effects of social and demographic variables – including education, gender, 
+age, income, health, physical mobility, and costs incurred from previous 
+floods (Baker, 1991; Wang et al., 2021). While many quantitative studies 
+inquire about evacuation intentions or expectations rather than actual 
+behavior, they have been shown to be related (Kang et al., 2007), and 
+both have the same predictors (Huang et al., 2016). Another challenge is 
+that social vulnerability, risk perception, capacity, and behavior are 
+rarely linked (exceptions include Armas et al., 2015; Cruz-Bello, 
+Alfie-Cohen, 2022). Some meta-analyses suggest that 
+socio-demographic factors are highly context-specific (Wang et al., 
+2021). As a result, disentangling the various drivers is challenging 
+(Rufat, 2015), and the uncertainty about citizens’ responses weighs on 
+forecasts, shelter distribution, and infrastructure decisions (Kolen and 
+Helsloot, 2014).
+While the Protective Action Decision Model (PADM) asserts that 
+evacuation decisions are also influenced by environmental and social 
+cues, such as warnings relayed by peers (Lindell and Perry, 2012), many 
+studies assume a top-down flow of information to a complying public or 
+develop modeling tools disconnected from empirical data (Aerts et al., 
+2018). Apart from hurricanes in the United States (Kim, Oh, 2015) and 
+tsunamis in Japan (Mas et al., 2012), quantitative studies on evacuations 
+are still in the minority (Huang et al., 2016; Kreibich et al., 2017), 
+especially in large metropolises. The lack of quantitative knowledge on 
+social and demographic drivers makes it challenging to calibrate simulations (Haer et al., 2017). Social and technological changes have 
+widened the knowledge gaps about behavior (Santoni, Rufat, 2021). 
+While tackling the interplay between risk perception, social vulnerability and evacuation is challenging, especially across space (O’Neill 
+et al., 2015), spatial approaches are currently limited to the spatial 
+distribution of shelters and resources (Karaye et al., 2020) or the impact 
+of disaster distance on perception (Osberghaus, Fugger, 2022). Recent 
+studies have shown that socially vulnerable communities have lower 
+levels of self-protection and risk knowledge (Rufat and Botzen, 2022). It 
+was not the isolated effect of age, class, immigration status, language 
+barriers, lack of mobility or dependence of care that explained in situ 
+sheltering, impediments to evacuation and the disproportionate burden 
+during and after disasters, but rather multiple dimension of vulnerability 
+combining and compounding inequities (Rufat et al., 2015). This 
+renewed focus deepens the understanding of how people facing multiple 
+social inequities affect and are affected by the impacts of various crises 
+(Kuran et al., 2020).
+Following these less explored approaches, we hypothesize that the 
+neighborhood of residence indirectly captures a wide range of predictors 
+(including previous hazard experience, residential segregation, and 
+environmental inequalities), which are difficult to capture with the 
+typical socio-demographic proxies. The Hazards-of-Place (HoP) model 
+emphasizes that many people do not have access to the resources 
+necessary to respond safely to hazards (Cutter, 1996), in agreement with 
+other social vulnerability theories (Rufat et al., 2020). While social 
+vulnerability can limit protective decision-making, including evacuation 
+behavior (First et al., 2022), there is no definitive list of variables to 
+implement the HoP model, and it requires to focus on the combined 
+impact from multiple variables (Drakes and Tate, 2022). Indeed, while 
+sociodemographic factors are often studied in isolation, intersectional 
+approaches highlight the impact of compounded vulnerability (Versey, 
+2021): social vulnerability requires a multivariate analysis implementing its various dimensions (Rufat et al., 2015). Moreover, the combination of the same factors affects residential locations in high-hazard 
+areas (Koks et al., 2015) and socially vulnerable groups disproportionately inhabit flood-prone areas (Tate et al., 2021). This points out to the 
+neighborhood of residence being an additional proxy of social vulnerability and compounding inequities, and when controlling for the underlying individual characteristics, to being a possible predictor of limits 
+to protective decision-making and evacuation intentions. While PADM 
+includes a wider series of informational steps in the decision-making 
+process (Lindell and Perry, 2012), it could be argued that risk information campaigns and evacuation exercises are place-based, resulting in 
+memory of exercises and official information varying according to the 
+neighborhood of residence. Moreover, PADM focuses on the specific 
+socio-environmental context a person finds themselves within as 
+framing factors, making the official hazard exposure level and the 
+neighborhood of residence all the more relevant to decision-making and 
+evacuation intentions. We use a multiple correspondence analysis 
+(MCA) and a random forest analysis (RFA) to evaluate the most 
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+2
+
+important predictors associated with evacuation behavior during a flood 
+in the 13 million-person Paris metropolitan area in France.
+3. Methods
+3.1. Context and survey
+The Paris metropolitan area (13 million people; 17,000 km2
+) is the 
+second largest in Europe. Located on the flood plain of the Seine River 
+and with an oceanic climate, the capital of France is exposed to river 
+lowland floods, urban floods with drainage issues paralyzing the historical core, and other weather-related hazards (Baubion, 2016). In 
+2014, the Organization for Economic Co-operation and Development 
+(OECD) estimated that a flood similar to the 1910 disaster could affect 
+up to five million people and cause damages up to €30 billion 
+(Organisation for Economic Cooperation and Development OECD, 
+2014). In March 2016, the EU funded the Sequana flood simulation, a 
+two-week international field exercise replicating the 1910 flood in the 
+Paris metropolitan area (November and Cr´eton-Cazanave, 2017). This 
+simulation took place because massive evacuation was not a behavior 
+anchored in the French mindset, due to a lack of training and preparedness (Vinet et al., 2012). Not long after, the June 2016 flood 
+affected 486 municipalities over several weeks, causing €1 billion in 
+damages when the Seine River reached a level of 6.3 m in Paris: 18,000 
+people were evacuated, 750 refused to evacuate, and four people died 
+(Richert et al., 2017). In January 2018, the Seine River reached a level of 
+5.9 m in Paris, causing €200 million in damages and affecting 242 
+municipalities over several weeks: 2500 people were evacuated, and 
+over 300 refused to evacuate (OECD, 2018).
+We surveyed households about flood risk perception and evacuation 
+behavior six months after the 2018 flood in Paris, France (Fig. 1). We 
+used a stratified random representative large sample (n = 2976) of the 
+population (Table 1).
+We ensured representativeness at different scales with spatial and 
+social stratification. Half of the sample comprised residents living in the 
+official 100-year floodplain. One-third were living in indirect impact 
+zones, indicating that they could face power, water, heating, or phone 
+outages, and sewer backflows, even if their home was not directly 
+flooded. The rest of the respondents lived outside of these exposure 
+zones. For each location, the participants were randomly recruited until 
+the location-specific social quotas were fulfilled. The use of geographically based strata allowed for a representative sample at several scales 
+(municipality, county, metropolitan region) and across all exposure 
+levels (none, indirect, direct). We conducted a face-to-face survey 
+because Martín et al., (2020) confirmed that an online study might 
+ineffectively capture evacuation behavior, despite its low cost to 
+administer. The questionnaire was administered from September to 
+December 2018 with geotagging of the place of residence, with a 
+100-meter buffer to ensure privacy.
+We selected four evacuation intentions of interest, including some 
+rarely studied: expected compliance with evacuation instructions, 
+spontaneous evacuation (readiness to spontaneously evacuate according 
+to the proportion of neighbors who have already left), expected 
+degraded living conditions exhaustion (post-impact spontaneous evacuation only after 24 hours of power, water, heating, or phone outages 
+and sewer backflows), and flooding proximity (readiness to spontaneously evacuate only after housing is flooded).
+3.2. Multiple correspondence analysis (MCA)
+We used Multiple correspondence analysis (MCA) from the R library 
+FactoMineR to analyze the relationships between demographic, social, 
+behavioral, and psychological factors associated with evacuations. We 
+Fig. 1. Map of the Paris metropolitan area, presenting the 100-year flood exposure and the geotagged respondents.
+Table 1 
+Description of the spatially and socially stratified random sample (n = 2976).
+Gender n % Age n %
+Female 1529 51 % 18–29 years 916 31 %
+Male 1436 49 % 30–44 years 808 27 %
+Other 11 0 % 45–59 years 637 21 %
+Exposure to floods 60–74 years 423 14 %
+Direct 1520 51 % 75 years and over 192 6 %
+Indirect 873 29 % Education
+None 583 20 % primary 348 12 %
+Location technical 160 5 %
+Downtown Paris 994 33 % secondary 565 19 %
+Inner suburbs 1026 34 % bachelor 1055 35 %
+Outer suburbs 956 32 % higher 848 28 %
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+3
+
+grouped the answers to the survey into socio-demographic factors 
+considered predictors, perception factors, and behavior, including 
+evacuation. This allowed us to assess any association between these 
+three classes of indicators, beyond the patterns and associations between 
+individual variables. We precede the analysis with a Kendall’s Tau-b 
+correlation matrix to report intercorrelations among the 30 demographic, social, psychological and behavioral variables. The matrix is 
+reordered according the angular order of the eigenvectors to reveal the 
+patterns. The results are presented as a heatmap, with statistically significant correlations (p<0.01) highlighted in red for positive and in blue 
+for negative correlations. Subsequently, for the MCA, each answer 
+category to the survey questions was implemented as an individual 
+variable. There are consequently a greater number of variables. We 
+dropped answers chosen by less than 1 % of respondents and “I don’t 
+know” answers to avoid overfitting. We randomly imputed them using 
+the proportion of the other answer categories for that specific question 
+in the overall sample.
+We used the MCA to model the answers to the survey as clouds of 
+points to analyze the associations between variables and the links between categories. MCA makes it possible to describe the trends of the 
+different answers and explore the links between all variables from an 
+explanatory perspective (D’Enza and Greenacre, 2012). The results were 
+interpreted based on the relative positions of the points representing the 
+answer categories and their distribution along the two top MCA dimensions, which summarize the largest part of the overall variance. Less 
+distance between points shows a stronger positive association, and 
+categories shared among respondents’ groups are located close together, 
+forming point clouds. Conversely, diametrically opposed categories are 
+negatively associated, meaning that respondents giving one of the answers were less likely to subsequently assert the opposite category. The 
+weight of each category was derived from the sum of their squared 
+correlations with the MCA dimensions. For clarity, only the 68 categories with a weight equal to or greater than 0.5 are represented, with a 
+size proportional to their weight, categories toward the center of the 
+figure capture less variance.
+The MCA allows a synthetic mapping of the results by emphasizing 
+both the differences or similarities between answers and between respondents. This makes it possible to confront all evacuation choices and 
+perceived characteristics with hazard exposure, geographical location, 
+and individual differences.
+3.3. Random forest analysis (RFA)
+Random forest analysis (RFA) is a non-parametric recursive partitioning algorithm in machine learning used for classification or regression. A random forest is a series of classifications, where each regression 
+tree is created by recursive partitioning. As a data mining technique, it is 
+used for variable screening and dimension reduction when analyzing 
+large data sets containing many indicators and categories of positional 
+responses. Random forests have been repeatedly shown to achieve 
+higher predictive accuracy compared to more conventional regression 
+methods (Lee et al., 2015). They provide an unbiased and robust ranking 
+of variable importance even in the presence of complex interactions, 
+measuring the effect of each predictor individually and also in multiple 
+interactions with other variables, independent of overfitting and pruning, even among highly correlated predictors (Scornet et al., 2015).
+We used RFA on the same dataset to build multiple conditional trees, 
+portray observations with replacements, and find the best nodes split 
+within a random subset. Conditional inference trees rely on a treestructured regression model to perform recursive partitioning and use 
+a permutation test, a recursive significance test of the null hypothesis to 
+select at each split the covariate with the highest p-value with response 
+variable. This technique is suitable for non-parametric data, including 
+nominal variables with many levels, and minimizes bias deriving from 
+missing data, deletion, or imputation by using surrogates.
+We generated 1000 trees for each outcome using the R package party. 
+We used random training and testing samples to compute the prediction 
+accuracy for each conditional inference tree. We used the unbiased 
+permutational variable importance measure to select the most influential variables, as it is suited for unbalanced response categories observed 
+in our data. The selected variables were then used to build a unique tree 
+for visualization and analysis. This approach is designed to identify the 
+most important predictors for each outcome of interest, accounting for 
+possible interactions and handling non-linear or non-monotonic relationships. It is robust (without data assumptions) and unbiased 
+(without missing data imputation). This approach is allowing to 
+consider all variables (including those with numerous categorical levels) 
+and highlighting the most important predictors (including their highlevel interactions).
+Hence, we carried out both MCA and RFA to evaluate the most 
+influential predictors associated with the interaction of risk perception 
+and evacuation behavior and examine links and patterns among all 
+variables for the 2976 respondents to our survey. The combination of 
+MCA and RCA allows for an in-depth study of patterns and identification 
+of the factors contributing to a wide range of evacuation behaviors, 
+while minimizing information loss.
+4. Results
+4.1. Risk perceptions, previous experience, and expected evacuation 
+compliance
+We surveyed 2976 households six months after the 2018 flood in 
+Paris (Fig. 1). We found that 60 % of respondents expected to comply 
+with evacuation instructions, 33 % would refuse, and 7 % were uncertain (Fig. 2).
+We found some effect of flooding proximity, with 33 % of respondents declaring that they would only evacuate after their home was 
+flooded (Fig. 2). If they were not directly threatened, only 8 % would 
+leave right after an alert; a cumulative 20 % would leave if parts of the 
+city were already flooded; a cumulative 31 % if their workplace or their 
+children’s school were flooded; 45 % if their street was flooded; and 
+54 % if their building’s basement was flooded. Twelve percent said they 
+would refuse to evacuate and 1 % did not know.
+Only a quarter of respondents would not engage in a spontaneous 
+evacuation (Fig. 2). Twelve percent would spontaneously evacuate if 
+10 % of their neighbors had already left, 15 % more if one-third were 
+already gone, a cumulative 46 % if half, a cumulative 60 % if two-third, 
+and 69 % if 90 % of their neighbors had left, while 7 % did not know. 
+Respondents expected to have some resistance to degraded living conditions exhaustion with only 26 % declaring that they would spontaneously evacuate after 24 hours of power, water, heating, and phone 
+outages or sewer backflows. This proportion rises to 53 % after two days 
+and 72 % after one week, leaving only 8 % that would refuse to evacuate 
+and 6 % undecided.
+Respondents had a wide range of risk perception and previous 
+experience: 26 % declared that they never worry about floods, whereas 
+8 % said that they often worry. Additional variables represent the specific context of the rapid succession of two flood events and one major 
+international exercise right before the study. Only 17 % of respondents 
+remembered the 2016 flood simulation exercise. Twenty-two percent 
+were affected by the 2016 or 2018 floods, whereas only 14 % had 
+knowledge of official information on floods.
+4.2. Results of the MCA
+In Fig. 3, the flood risk perception variables are positively and 
+significantly related to each other (bottom right), as well as with age, 
+flood exposure, previous flood experience, and the memory of the flood 
+exercise. Evacuation intentions are also, to a lesser extent, positively and 
+significantly related to each other (top left), as well as with education, 
+location (neighborhood of residence), and feeling responsible for one’s 
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+4
+
+own safety. Conversely, this cluster is negatively related to risk 
+perception variables (bottom left), as well as age, exposure, experience, 
+memory, and flooding proximity. Expected evacuation compliance and 
+flooding proximity have less significant correlations and stand closer to 
+the center of Fig. 3 with most socio-demographic variables. However, 
+Rufat and Botzen (2022) have demonstrated that simple correlation 
+Fig. 2. The evacuation choices of respondents and their answers to the risk perception questions. “I don’t know” answers are coded as NA.
+Fig. 3. Correlation matrix heatmap (p<0.01).
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+5
+
+analyses can be misleading, as they stumble on multicollinearity and fail 
+to disentangle the independent effects of the various explanatory 
+variables.
+The MCA allowed us to analyze all evacuation choices (in green) in 
+terms of perceived flood characteristics (in blue), as well as hazard 
+exposure, geographical location, and individual differences (in red). 
+Worry, anxiety, trust, feeling responsible for their own safety, memory 
+(of the last exercise), or awareness (of the official flood risk information) 
+are among the perception variables, whereas social capital, income, 
+profession (managers, blue collar workers, inactive, etc.), education 
+levels, household size, housing size or walking comfort are among the 
+socio-demographic variables.
+Fig. 4 quantifies the proximity of categories if many respondents 
+chose the two same answers. This biplot is the best possible summary of 
+the data, based on the two top dimensions explaining 31 % of the total 
+variance. The size of the categories is represented according to their 
+overall weight, or the sum of their squared correlations with the dimensions. Evacuation refusals, existing special needs to evacuate, 
+perceived flood frequency, and previous hazard experience are among 
+the most contributing factors. While evacuation refusals and special 
+needs are associated with many geographical and individual differences 
+– as represented by their proximity to factors such as low income, lack of 
+social capital, and disability – this is not the case for flood risk perceptions or previous hazard experience.
+The MCA associations between variables show two main patterns. 
+Fig. 4 shows the opposition between respondents who follow the rules 
+and change their behavior (on the right), such as not crossing flooded 
+roads, and those that refuse to abide (left). The top left shows people 
+defying the orders, regardless of the threat level, and refusing to evacuate even if their home is flooded. Most proxies of social vulnerability, 
+such as being a newcomer, having low income, lacking a car, lacking 
+social capital, or speaking French as a second language, are associated 
+with such behavior and a lack of trust in forecasts (left). The sociodemographic predictors are forming a cluster including living in small 
+housing or high-rise buildings; being single, a newcomer, or low income; 
+lacking a car or social capital; and speaking French as a second language. 
+This cluster on distant from the variables of direct flood exposure 
+(bottom left) and indirect flood exposure (center), reflecting that this 
+group also faces more flood exposure. Towards the right, respondents 
+abide by the rules and demonstrate benevolent behavior. The main 
+predictors of this behavior are being older or retired, having walking 
+difficulties, living in a single-family home, or regularly using a car. The 
+right end shows a cluster of respondents declaring that the previous 
+floods made them change their behavior and adapt their houses. While 
+this cluster has no demographic predictor, it is associated with previous 
+flood experience, awareness of living in a flood zone, and greater flood 
+risk perception, meaning that although this behavior cannot be predicted from demographic or social characteristics, it can be inferred 
+from the location and exposure of their residence.
+The second pattern shown in Fig. 4 is the opposition between respondents refusing or needing help to evacuate (top) and those spontaneously evacuating (if 10 % had already left) to their second homes 
+(downwards to the right). There is no single predictor, which reflects the 
+intersection of situations often derived from the neighborhood and local 
+context. The predictors of the top cluster include low levels of income, 
+education, and social capital; disability; needing assistance to evacuate; 
+lack of insurance; unemployment; blue-collar work; a lack of trust (“no 
+one”); high anxiety levels; and a lack of feeling responsible for one’s own 
+safety. Conversely, people evacuating spontaneously are associated with 
+home ownership, large homes, higher income, more education, management positions, knowledge of official risk information, trust in 
+mayors for risk information, trust in the government for evacuation 
+instructions, memory of the flood exercise, and higher flood risk 
+perception, as well as, further down, acknowledgment of electricity 
+dependence.
+Fig. 4. Results of the multiple correspondence analysis (MCA), including the diversity of evacuation behavior predictors.
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+6
+
+4.3. Results of the RFA
+We further discriminated among the predictors with conditional 
+trees (Fig. 5). We inquired about the respondents’ expected compliance 
+with mandatory evacuation instructions in cases of major flooding. We 
+then measured spontaneous evacuation according to the readiness to 
+spontaneously evacuate depending on the proportion of neighbors who 
+have already left. We subsequently measured degraded living conditions 
+exhaustion according to the readiness to spontaneously evacuate only 
+after 24 hours of power, water, heating, and phone outages, and sewer 
+backflows. Finally, we measured flooding proximity reactions by the 
+readiness to spontaneously evacuate only after the housing is flooded.
+The main predictors of compliance are income, place of residence, 
+age, and education (Fig. 5A). People aged 45–59 in the low-income 
+bracket (15–25k) have the lowest compliance levels (33 %, n = 119), 
+followed by people with lower levels of education (primary 45 % 
+n = 324, secondary 59 % n = 230). Conversely, people living in downtown Paris with medium to high education levels and from all other 
+income brackets have the highest levels of compliance (75 %, n = 385). 
+People living in the inner and outer suburbs (61 %, n = 1489), as well as 
+those with medium education levels (63 %, n = 429), fall in the middle.
+The predictors of spontaneous evacuation are income, place of residence, gender, age, and disability (Fig. 5B). People with a disability and 
+medium to high income (>25k) who live in the outer suburbs have the 
+lowest thresholds. They are followed by the middle-class (25–50k) living 
+in the inner suburbs, or young (18–29 y) and older (>75 y) people living 
+in downtown Paris. Conversely, males with low income (15–25k) have 
+higher thresholds, i.e. the highest proportion of people refusing to 
+evacuate. They are followed by middle-aged people (30–59 y) living in 
+downtown Paris.
+Spatial and educational predictors are critical indicators of degraded 
+living conditions exhaustion (Fig. 5C). People in downtown Paris have 
+the highest exhaustion levels, whereas people with higher education 
+levels living in the suburbs have the lowest. However, the difference 
+between these groups remains small, the share of affirmative responses 
+varying only from 20 % to 35 %.
+The main predictors of flooding proximity are income, place of 
+residence, flood exposure, and age (Fig. 5D). Those living downtown 
+Paris, either with low income (15–30k), or under 60 years old, have the 
+least delayed reactions. They are followed by people living in a floodprone area, except in the richest bracket (>75k). Conversely, older 
+people (>60 y) living in downtown Paris and people in the richest 
+bracket (>75k) have the highest delayed reaction. These groups are 
+most likely to wait until their housing is flooded before considering 
+evacuation. Overall, we found that the main predictors of evacuation 
+decisions are income and place of residence, and, to a lesser extent, 
+education level, age, length of residence, social vulnerability, and flood 
+exposure.
+5. Discussion
+In accordance with PADM suggestion that evacuations are impacted 
+by warnings, environmental cues, and social cues (Lindell and Perry, 
+2012), we found four behaviors: i) 8–10 % of people evacuate immediately, ii) 60 % comply with evacuation instructions at some point, 
+including weeks after the warning, iii) 12–27 % increasingly follow or 
+imitate others as in a snowballing effect, but in the end, iv) 12–15 % do 
+not evacuate. We offer a substantial empirical basis by revealing the 
+social chronology in different scenarios. Even with no warning or instruction, we found accelerating thresholds, with 12 % of respondents 
+saying they would spontaneously evacuate if 10 % of their neighbors 
+had already left, cumulatively 27 % of respondents if as many as 30 % of 
+their neighbors were gone, 46 % if as many as 50 %, and so on. This 
+gradually fills the gap between the people leaving immediately and 
+those refusing to leave in any case. This unique chronology is a novelty 
+that might explain the wide range of evacuation rates reported in the 
+literature. One-third of residents would spontaneously evacuate only if 
+their home was already flooded. These intentions are in line with the 
+Fig. 5. Results from the random forest analysis (RFA) and conditional inference trees.
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+7
+
+many observations that evacuations came too late when there were no 
+instructions (Vinet et al., 2012), the warning was delayed (Thieken 
+et al., 2022), or some people did not receive the warnings or instructions 
+(Yari et al., 2021). We show that the timing of the first 10 % of departures is critical in all scenarios to accelerate the pace of departure in 
+each neighborhood and the overall final rate of evacuation. The effect of 
+neighbors or peer evacuation rates might also arise from the Theory of 
+Planned Behavior’s subjective norms increasing the motivation to avoid 
+being left behind (Ajzen, 1991). A combination of improved or earlier 
+warnings and a specific plan to ensure the fastest possible evacuation of 
+the first critical segment of each neighborhood might speed up the 
+triggering of the accelerating thresholds of follow-up spontaneous 
+evacuations, resulting in higher evacuation rates.
+Location might explain why previous studies found that individual 
+characteristics were insufficient for explaining evacuation behavior 
+(Bubeck et al., 2018; Mahdavian et al., 2020) and the inconclusive results on characteristics such as gender or age (Huang et al., 2016; Lindell 
+et al., 2019a). Age has been shown to be associated with the length of 
+residence (Seebauer, Winkler, 2020; Yin et al., 2022). Following Drabek 
+(1986), we argue that length of residence can be a proxy for previous 
+experience for the most exposed households. This is supported by our 
+finding that the impact of age on respondents’ evacuation intentions 
+varies according to neighborhood and hazard exposure (Fig. 5). It should 
+be emphasized that in our data, testing for simple correlations with age 
+in isolation would lead to the misleading conclusion that age (or length 
+of residence) had no impact (Fig. 3). The nonsignificant or inconclusive 
+results on characteristics such as gender or age reported in meta analyses 
+might stem from the diversity of statistical methods and methodological 
+choices, as simple correlation analyses are failing to disentangle the 
+independent effects of the various socio-demographic variables, 
+whereas the effects reported from regression models have been found to 
+be dependent on variable choice (Rufat and Botzen, 2022). In hurricane 
+studies, controlling for exposure and multidimensional socioeconomic 
+status has been shown to allow for deeper exploration of the effects of 
+age and gender on evacuation intentions (Bateman, Edwards, 2002).
+Additionally, our study reveals the impact of social vulnerability and 
+shows that there is no single predictor of any given behavior in any 
+scenario, including older age. Ethnicity (Hamilton et al., 2020), income 
+(Martin et al., 2020), and education (Yin et al., 2022) have been found to 
+be unreliable predictors of evacuation on their own. We show that 
+locally intersecting social vulnerability situations increase the likelihood 
+of defying the rules while lowering trust, compliance, and the rate of 
+spontaneous evacuation. Previous studies have found that low trust in 
+authorities is a barrier to evacuation (Mahdavian et al., 2020); we argue 
+that this is mediated by social vulnerability. Our results also associate 
+this with high anxiety levels and not feeling responsible for one’s own 
+safety. We offer a novel and broader perspective on the interplay of age, 
+income, education, and vulnerability with evacuation choices, with the 
+support of a large sample size. They often converge to make the place of 
+residence and exposure to floods among the main predictors. As they are 
+all linked by underlying residential segregation (Rufat et al., 2020), we 
+suggest focusing on social vulnerability, location, and hazard exposure.
+People with higher flood risk perception, worry, or experience are 
+more likely to evacuate, comply with instructions, and abide by the 
+rules. Previous studies have shown that they are more likely to collect 
+information on floods (Otsuka et al., 2022) or acknowledge the importance of preparedness (Osberghaus, 2017). We find that they are also 
+more likely to have adapted their homes to floods. While such sought 
+after behaviors have no social or demographic predictor, our study reveals their association with previous flood experience. Although desired 
+behaviors cannot be predicted by individual characteristics, they can be 
+inferred from location, length of residence (rather than age), and flood 
+exposure, which indirectly capture a wide range of predictors, even 
+though some are very difficult to capture with the usual proxies, 
+including perception and experience (Rufat and Howe, 2022). We argue 
+that this is the reason why location and exposure are among the main 
+predictors of evacuation in all our scenarios.
+After the 2018 floods in Paris, a study found that 75 % of the respondents (n = 325) in two municipalities in the suburbs had to evacuate (Pottier et al., 2020). One year after the flood, only 10 % mentioned 
+the official instructions as their evacuation driver – at least 66 % 
+remembered receiving the instructions, whereas 34 % cited power 
+shortages, and 21 % declared that their house was already flooded when 
+they left. This confirms that many people engage in post-impact evacuation due to infrastructure disruption. Another empirical study focused 
+on high-rise buildings in downtown Paris (Edjossan-Sossou et al., 2020). 
+In contrast to data on past behaviors collected in the suburbs, statements 
+of intentions collected downtown (n = 521) showed that official instructions were the main evacuation driver (75 %), followed by 
+degraded conditions exhaustion (52 %). It could be inferred that expected evacuation compliance is overestimated by respondents. We 
+argue however that the difference stems from the very different social 
+composition of downtown Paris, where residential segregation pushes 
+social vulnerability toward the suburbs (Le Roux et al., 2017), and 
+where flood exposure is predominantly indirect. This is convergent with 
+our finding that place of residence and exposure are critical to anticipating evacuation behavior.
+In Paris, official flood information was found to have little effect on 
+awareness (Rufat and Botzen, 2022), while large-scale flood risk 
+awareness campaigns were found to be ineffective to raise preparedness 
+levels in neighboring countries (Osberghaus and Hinrichs, 2021). 
+Focusing on the exposed neighborhoods that have not experienced any 
+disaster in recent years, those with indirect exposure, and targeting 
+locally intersecting social vulnerability situations might be more effective (Rufat et al., 2023). We find that “captive populations,” those 
+trapped both in vulnerable situations and with a higher hazard exposure 
+(Rufat et al., 2020), are more prone to declare that they do not trust 
+forecasts or authorities and would not follow evacuation instructions. 
+We argue that previous studies that have found that misperception and 
+mistrust are barriers to flood preparedness (Otsuka et al., 2022) and 
+evacuation intentions (Mahdavian et al., 2020) overlook social vulnerability, which mediates such a link. We suggest that reducing social 
+vulnerability in the most exposed neighborhoods might be the single 
+best approach to increasing preparedness and evacuation compliance.
+6. Conclusion
+Climate change is driving extreme weather, heat, and flooding, 
+which increasingly require the evacuation of dense areas. While it remains difficult to predict evacuation behavior from individual characteristics, location and social vulnerability are often overlooked. Our 
+findings reveal that location, length of residence (rather than age), and 
+hazard exposure are critical predictors in slow-onset flooding. They can 
+be used to infer the impact of previous experience, which is usually 
+difficult to collect at scales relevant to decision-making. In our study 
+based on a large sample, the main predictors of evacuation intentions 
+were place of residence, experience and income, followed by length of 
+residence, age, education, social vulnerability, and flood exposure. We 
+suggest focusing on the intersecting social vulnerability dimensions, 
+location and exposure – all linked by underlying residential segregation 
+– because individual characteristics have previously yielded inconclusive results. In our slow-onset riverine flooding case study, many people 
+wait until their housing is flooded to evacuate, particularly among 
+groups captive to vulnerable situations and neighborhoods. People in 
+vulnerable situations and with more hazard exposure are more likely to 
+mistrust forecasts, authorities, or disregard evacuation instructions. One 
+key implication is that policies aimed at reducing social vulnerability 
+might be more effective than communication campaigns to increase 
+preparedness and support evacuation.
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+8
+
+Funding
+This work was supported by the Agence Nationale de la Recherche, 
+France [ANR-20-CE03–0009]; Forum Vies Mobiles, Paris, France [498- 
+C02-A0]; and the Institut Universitaire de France [IUF-2016–5296].
+CRediT authorship contribution statement
+Victor Santoni: Writing – review & editing, Writing – original draft, 
+Data curation. Serge Lhomme: Writing – review & editing, Writing – 
+original draft, Visualization. Emeline Comby: Writing – review & 
+editing, Writing – original draft. Samuel Rufat: Writing – review & 
+editing, Writing – original draft, Visualization, Project administration, 
+Methodology, Investigation, Funding acquisition, Formal analysis, 
+Conceptualization.
+Declaration of Competing Interest
+The authors declare the following financial interests/personal relationships which may be considered as potential competing interests: 
+Samuel Rufat reports financial support was provided by Agence Nationale de la Recherche, France. Samuel Rufat reports financial support was 
+provided by Forum Vies Mobiles, Paris, France. Samuel Rufat reports 
+financial support was provided by Institut Universitaire de France.
+Data Availability
+Data will be made available on request.
+References
+Aerts, J.C.J.H., Botzen, W.J., Clarke, K.C., Cutter, S.L., Hall, J.W., Merz, B., 
+Kunreuther, H., 2018. Integrating human behaviour dynamics into flood disaster risk 
+assessment. Nat. Clim. Change 8 (3), 1–8.
+Ajzen, I., 1991. The theory of planned behavior. Organ. Behav. Hum. Decis. Process. 50 
+(2), 179–211.
+Armas, I., Ionescu, R., Posner, C.N., 2015. Flood risk perception along the Lower Danube 
+river, Romania. Nat. Hazards 79, 1913–1931.
+Armijos, M.T., Phillips, J., Wilkinson, E., Barclay, J., Hicks, A., Palacios, P., Stone, J., 
+2017. Adapting to changes in volcanic behaviour: formal and informal interactions 
+for enhanced risk management at Tungurahua Volcano, Ecuador. Glob. Environ. 
+Change 45, 217–226.
+Baker, E.J., 1991. Hurricane evacuation behavior. Int. J. Mass Emergencies Disasters 9 
+(2), 287–310.
+Bateman, J.M., Edwards, B., 2002. Gender and evacuation: a closer look at why women 
+are more likely to evacuate for hurricanes. Nat. Hazards Rev. 3 (3), 107–117.
+Baubion, C., 2016. Losing memory–the risk of a major flood in the Paris region: 
+Improving prevention policies. Water Policy 17 (S1), 156–179.
+Bloschl, ¨ G., Hall, J., Viglione, A., Perdigao, ˜ R.A., Parajka, J., Merz, B., Boha´ˇc, M., 2019. 
+Changing climate both increases and decreases European river floods. Nature 573 
+(7772), 108–111.
+Botzen, W.J.W., Mol, J.M., Robinson, P.J., Zhang, J., Czajkowski, J., 2021. Individual 
+hurricane evacuation intentions during the COVID-19 pandemic: insights for risk 
+communication and emergency management policies. Nat. Hazards 111, 507–522.
+Bubeck, P., Botzen, W.J., Laudan, J., Aerts, J.C., Thieken, A.H., 2018. Insights into floodcoping appraisals of protection motivation theory: empirical evidence from Germany 
+and France. Risk Anal. 38 (6), 1239–1257.
+Coronese, M., Lamperti, F., Keller, K., Chiaromonte, F., Roventini, A., 2019. Evidence for 
+sharp increase in the economic damages of extreme natural disasters. PNAS 116 
+(43), 21450–21455.
+Cruz-Bello, G.M., Alfie-Cohen, M., 2022. Capturing flood community perceptions for 
+social vulnerability reduction and risk management planning. Environ. Sci. Policy 
+132, 190–197.
+Cutter, S.L., 1996. Vulnerability to environmental hazards. Prog. Hum. Geogr. 20 (4), 
+529–539.
+D’Enza, A., Greenacre, M., 2012. Multiple correspondence analysis for the quantification 
+and visualization of large categorical data sets. In: Advanced Statistical Methods for 
+the Analysis of Large Datasets. Springer, Berlin, 453–63. 
+Dias, C., Rahman, N.A., Zaiter, A., 2022. Evacuation under flooded conditions: 
+Experimental investigation of the influence of water depth on walking behaviors. Int. 
+J. Disaster Risk Reduct. 58, 102192.
+Dottori, F., Mentaschi, L., Bianchi, A., Alfieri, L., Feyen, L., 2023. Cost-effective 
+adaptation strategies to rising river flood risk in Europe. Nat. Clim. Change 13, 
+196–202.
+Drabek, T.E., 1986. Human System Responses to Disaster. An Inventory of Sociological 
+Findings. Springer, New York. 
+Drakes, O., Tate, E., 2022. Social vulnerability in a multi-hazard context: a systematic 
+review. Environ. Res. Lett. 17 (3), 033001.
+Edjossan-Sossou, A., Vuillet, M., Mehdizadeh, R., Deck, O., 2020. Agent-based model for 
+simulating households’ self-evacuation decision in high-rise buildings under critical 
+infrastructure failures induced by a slow-onset flood conditions – a case study in 
+Paris. IDRiM J. 10. https://doi.org/10.5595/001c.18160.
+First, J.M., Ellis, K., Strader, S., 2022. Double trouble: examining public protective 
+decision-making during concurrent tornado and flash flood threats in the US 
+Southeast. Int. J. Disaster Risk Reduct. 81, 103297.
+Haer, T., Botzen, W.W., de Moel, H., Aerts, J.C., 2017. Integrating household risk 
+mitigation behavior in flood risk analysis: an agent-based model approach. Risk 
+Anal. 37 (10), 1977–1992.
+Hamilton, K., Demant, D., Peden, A.E., Hagger, M.S., 2020. A systematic review of 
+human behaviour in and around floodwater. Int. J. Disaster Risk Reduct. 47, 101561.
+Huang, S.K., Lindell, M.K., Prater, C.S., 2016. Who leaves and who stays? A review and 
+statistical meta-analysis of hurricane evacuation studies. Environ. Behav. 48 (8), 
+991–1029.
+Huang, S.-K., Lindell, M.K., Prater, C.S., 2017. Toward a multi-stage model of hurricane 
+evacuation decision: an empirical study of Hurricanes Katrina and Rita. Nat. Hazards 
+Rev. 18 (3), 05016008 1-15. 
+Kang, J.E., Lindell, M.K., Prater, C.S., 2007. Hurricane evacuation expectations and 
+actual behavior in Hurricane Lili. J. Appl. Soc. Psychol. 37 (4), 887–903.
+Karaye, I.M., Thompson, C., Perez-Patron, M., Taylor, N., Horney, J.A., 2020. Estimating 
+evacuation shelter deficits in the houston–galveston metropolitan area. Risk Anal. 40 
+(5), 1079–1091.
+Kim, J., Oh, S.S., 2015. Confidence, knowledge, and compliance with emergency 
+evacuation. J. Risk Res. 18 (1), 111–126.
+Koks, E.E., Jongman, B., Husby, T.G., Botzen, W.J., 2015. Combining hazard, exposure 
+and social vulnerability to provide lessons for flood risk management. Environ. Sci. 
+Policy 47, 42–52.
+Kolen, B., Helsloot, I., 2014. Decision-making and evacuation planning for flood risk 
+management in the Netherlands. Disasters 38 (3), 610–635.
+Kreibich, H., Pech, I., Schroter, ¨ K., Müller, M., Thieken, A.H., 2017. New insights into 
+flood warning and emergency response from the perspective of affected parties. Nat. 
+Hazards Earth Syst. Sci. 17, 2075–2092.
+Kubo, S., Yoshida, H., Ichimura, T., Wijerathne, M.L.L., Hori, M., 2021. Study on 
+influence of prior recognition of flooding state on evacuation behavior. Int. J. 
+Disaster Risk Reduct. 63, 102437.
+Kuran, C.H.A., Morsut, C., Kruke, B.I., Krüger, M., Segnestam, L., Orru, K., Torpan, S., 
+2020. Vulnerability and vulnerable groups from an intersectionality perspective. Int. 
+J. Disaster Risk Reduct. 50, 101826.
+Le Roux, G., Vall´ee, J., Commenges, H., 2017. Social segregation around the clock in the 
+Paris region (France). J. Transp. Geogr. 59, 134–145.
+Lee, T.M., Markowitz, E.M., Howe, P.D., Ko, C.Y., Leiserowitz, A.A., 2015. Predictors of 
+public climate change awareness and risk perception around the world. Nat. Clim. 
+Change 5 (11), 1014.
+Lindell, M.K., Arlikatti, S., Huang, S.K., 2019b. Immediate behavioral response to the 
+June 17, 2013 flash floods in Uttarakhand, North India. Int. J. Disaster Risk Reduct. 
+34, 129–146.
+Lindell, M.K., Murray-Tuite, P.M., Lindell, M.K., Wolshon, P.B., Baker, E.J., 2019a. 
+Large-scale evacuation: The analysis, modeling, and management of emergency 
+relocation from hazardous areas. Routledge/Taylor & Francis Group.
+Lindell, M.K., Perry, R.W., 2012. The protective action decision model: theoretical 
+modifications and additional evidence. Risk Anal. 32 (4), 616–632.
+Mahdavian, F., Wiens, M., Platt, S., Schultmann, F., 2020. Risk behaviour and people’s 
+attitude towards public authorities–a survey of 2007 UK and 2013 German floods. 
+Int. J. Disaster Risk Reduct. 49, 101685.
+Martín, Y., Cutter, S.L., Li, Z., 2020. Bridging twitter and survey data for evacuation 
+assessment of Hurricane Matthew and Hurricane Irma. Nat. Hazards Rev. 21 (2), 
+04020003.
+Mas, E., Suppasri, A., Koshimura, S., Imamura, F., 2012. Agent based simulation of the 
+2011 Great East Japan earthquake tsunami evacuation procedure. introduction to an 
+integrated model of tsunami inundation and evacuation. J. Nat. Disaster Sci. 34 (1), 
+41–57.
+November, V., & Cr´eton-Cazanave, L. (2017). La gestion de crise a ` l′´epreuve de l′exercice 
+EU SEQUANA. Paris: La documentation Française.
+O’Neill, E., Brennan, M., Brereton, F., Shahumyan, H., 2015. Exploring a spatial 
+statistical approach to quantify flood risk perception. Nat. Hazards 76 (3), 
+1573–1601.
+OECD (2018). Preventing the Flooding of the Seine in the Paris–Ile de France Region. 
+Progress Made and Future Challenges. Paris: OECD Publishing. Available online at 
+https://www.oecd.org/governance/risk/preventing-the-flooding-of-the-seine-2018. 
+pdf.
+Organisation for Economic Cooperation and Development (OECD) (2014). Seine Basin, 
+Ile-de-France: Resilience to major floods. Main results and recommendations. Paris: 
+OECD Publishing. Available online at https://www.oecd.org/gov/risk/Flood-riskmanagement-seine-river-executive979 summary.pdf.
+Osberghaus, D., 2017. The effect of flood experience on household mitigation—evidence 
+from longitudinal and insurance data. Glob. Environ. Change 43, 126–136.
+Osberghaus, D., Fugger, C., 2022. Natural disasters and climate change beliefs: the role of 
+distance and prior beliefs. Glob. Environ. Change 74, 102515.
+Osberghaus, D., Hinrichs, H., 2021. The effectiveness of a large-scale flood risk 
+awareness campaign: evidence from two panel data sets. Risk Anal. 41 (6), 944–957.
+Otsuka, C., Fukutomi, H., Niwa, Y., 2022. Effect of cost–benefit perceptions on 
+evacuation preparedness for urban flood disasters. Int. J. Disaster Risk Reduct. 81, 
+103254.
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+9
+
+Page-Tan, C., Fraser, T., 2022. COVID-19 to go? The role of disasters and evacuation in 
+the COVID-19 pandemic. Glob. Environ. Change 73, 102471.
+Parker, D.J., Priest, S.J., Tapsell, S.M., 2009. Understanding and enhancing the public’s 
+behavioural response to flood warning information. Meteorol. Appl. 16 (1), 
+103–114.
+Pottier, N., Vuillet, M., Edjossan-Sossou, A., Abboud, H., 2020. Anticiper l′´evacuation en 
+cas d′inondation. Retour sur enquˆete aupr`es de sinistr´es. Risqu-.-. -Infos 40, 6–8.
+Reghezza-Zitt, M., Rufat, S., 2015. Resilience Imperative: Uncertainty, Risks and 
+Disasters (eds). Elsevier.
+Richert, C., Erdlenbruch, K., Figui`eres, C., 2017. The determinants of households’ flood 
+mitigation decisions in France. On the possibility of feedback effects from past 
+investments. Ecol. Econ. 131, 342–352.
+Rufat, S., 2015. Towards a social and spatial risk perception framework. Cyber, Eur. J. 
+Geogr. 725.
+Rufat, S., Botzen, W., 2022. Drivers and dimensions of flood risk perceptions. Revealing 
+an implicit selection bias and lessons for communication policies. Glob. Environ. 
+Change 73, 102465.
+Rufat, S., Botzen, W., Robinson, P., 2023. Insights into the complementarity of natural 
+disaster insurance purchases and risk reduction behaviour. Risk Anal. 17665123. 
+https://doi.org/10.1111/risa.14130.
+Rufat, S., Fekete, A., Armas, I., Hartmann, T., Kuhlicke, C., Prior, T., Wisner, B., 2020. 
+Swimming alone? Why linking flood risk perception and behavior requires more. 
+WIREs Water 7 (5), e1462, 7. 
+Rufat, S., Howe, P.D., 2022. Small-area estimations from survey data for high-resolution 
+maps of urban flood risk perception and evacuation behavior. Ann. Am. Assoc. 
+Geogr. 113 (2), 425–447.
+Rufat, S., Tate, E., Burton, C.G., Maroof, A.S., 2015. Social vulnerability to floods: review 
+of case studies and implications for measurement. Int. J. Disaster Risk Reduct. 14, 
+470–486.
+Santoni, V., Rufat, S., 2021. How fast is fast enough? twitter usability during 
+emergencies. Geoforum 124, 20–35.
+Scornet, E., Biau, G., Vert, J.P., 2015. Consistency of random forests. Ann. Stat. 43 (4), 
+1716–1741.
+Seebauer, S., Winkler, C., 2020. Should I stay or should I go? Factors in household 
+decisions for or against relocation from a flood risk area. Glob. Environ. Change 60, 
+102018.
+Tate, E., Rahman, M.A., Emrich, C.T., Sampson, C.C., 2021. Flood exposure and social 
+vulnerability in the United States. Nat. Hazards 106 (1), 435–457.
+Thieken, A.H., Bessel, T., Kienzler, S., Kreibich, H., Müller, M., Pisi, S., Schroter, ¨ K., 
+2016. The flood of June 2013 in Germany: how much do we know about its impacts? 
+Nat. Hazards earth Syst. Sci. 16 (6), 1519–1540.
+Thieken, A.H., Bubeck, P., Heidenreich, A., von Keyserlingk, J., Dillenardt, L., Otto, A., 
+2022. Performance of the flood warning system in Germany in July 2021–insights 
+from affected residents. Nat. Hazards Earth Syst. Sci. 23 (2), 973–990.
+Thompson, R.R., Garfin, D.R., Silver, R.C., 2017. Evacuation from natural disasters: a 
+systematic review of the literature. Risk Anal. 37 (4), 812–839.
+Versey, H.S., 2021. Missing pieces in the discussion on climate change and risk: 
+intersectionality and compounded vulnerability. Policy Insights Behav. Brain Sci. 8 
+(1), 67–75.
+Vinet, F., Lumbroso, D., Defossez, S., Boissier, L., 2012. A comparative analysis of the loss 
+of life during two recent floods in France: the sea surge caused by the storm Xynthia 
+and the flash flood in Var. Nat. Hazards 61, 1179–1201.
+Wang, Y., Kyriakidis, M., Dang, V.N., 2021. Incorporating human factors in emergency 
+evacuation – an overview of behavioral factors and models. Int. J. Disaster Risk 
+Reduct., 102254
+Ward, P.J., Blauhut, V., Bloemendaal, N., Daniell, J.E., Ruiter, M.C.D., Duncan, M.J., 
+Winsemius, H.C., 2020. Natural hazard risk assessments at the global scale. Nat. 
+Hazards Earth Syst. Sci. 20 (4), 1069–1096.
+Wood, M.M., Mileti, D.S., Bean, H., Liu, B.F., Sutton, J., Madden, S., 2018. Milling and 
+public warnings. Environ. Behav. 50 (5), 535–566.
+World Meteorological Organization (WMO) (2022). The UN Global Early Warning 
+Initiative for the Implementation of Climate Adaptation. A world with zero climate 
+disasters needs early warnings for all. Executive Action Plan 2023-2027.
+Yari, A., Yousefi Khoshsabegheh, H., Zarezadeh, Y., Ardalan, A., Soufi Boubakran, M., 
+Ostadtaghizadeh, A., Motlagh, M.E., 2021. Behavioral, health-related and 
+demographic risk factors of death in floods: a case-control study. PLoS One 16 (12), 
+e0262005.
+Yin, Q., Ntim-Amo, G., Xu, D., Kimayong Gamboc, V., Ran, R., Hu, J., Tang, H., 2022. 
+Flood disaster risk perception and evacuation willingness of urban households: the 
+case of Accra, Ghana. Int. J. Disaster Risk Reduct. 78, 103126.
+S. Rufat et al. Environmental Science and Policy 162 (2024) 103925
+10

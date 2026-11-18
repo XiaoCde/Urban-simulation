@@ -1,0 +1,411 @@
+A random-parameter hazard-based model to understand household
+evacuation timing behavior
+Samiul Hasan, Rodrigo Mesa-Arango, Satish Ukkusuri ⇑
+School of Civil Engineering, Purdue University, 550 Stadium Mall Drive, West Lafayette, IN 47907, USA
+article info
+Article history:
+Received 28 November 2010
+Received in revised form 22 June 2011
+Accepted 23 June 2011
+Keywords:
+Hurricane evacuation timing
+Hazard-based model
+Random-parameter model
+Hurricane evacuation behavior
+Hurricane Ivan
+abstract
+The goal of this paper is to develop a random-parameter hazard-based model to understand hurricane evacuation timing by individual households. The choice of departure time
+during disasters is a complex dynamic process and depends on the risk that the hazard represents, the characteristics of the household and the built environment features. However,
+the risk responses are heterogeneous across the households; this unobserved heterogeneity is captured through random parameters in the model. The model is estimated with data
+from Hurricane Ivan including households from Alabama, Louisiana, Florida and Mississippi. It is found that the variables related to household location, destination characteristics, socio-economic characteristics, evacuation notice and household decision making
+are key determinants of the departure time. As such the developed model provides some
+fundamental inferences about hurricane evacuation timing behavior.
+ 2011 Elsevier Ltd. All rights reserved.
+1. Introduction
+Hurricanes cause extensive damage to property and loss of lives especially in the coastal areas. For instance, the 2005
+Atlantic hurricane season in the United States had an estimated direct social cost of approximately 2300 deaths and record
+damages of over $130 billion (NHC, 2006). The experiences from these hurricanes compelled various stakeholders (agencies,
+emergency providers and researchers) to realize the critical role of evacuations (e.g., Houston evacuation during hurricane
+Rita caused considerable traffic delays). Effective evacuation management planning is therefore absolutely necessary for
+coastal regions as identified by many previous researchers (Dow and Cutter, 2002; Lindell et al., 2005; Gladwin et al.,
+2007; Lindell and Prater, 2007a). Evacuation problems in these regions are complicated by the limited growth of road network compared to the population growth and the diverse transportation needs (Dow and Cutter, 2002).
+Hurricane evacuation is a complex dynamic process governed by many factors such as hurricane trajectory, household
+locations, hurricane warning system, and characteristics of the evacuees and their households (Baker, 1991; Gladwin
+et al., 2001; Urbaina and Wolshon, 2003; Gladwin et al., 2007; Lindell and Prater, 2007a; Carnegie and Deka, 2010). A significant research question is related to understanding and predicting household behavior before and after the disaster.
+However, despite significant research efforts on the issue of evacuation, the understanding of household evacuation decision-making issues are limited (Dash and Gladwin, 2007). One key question that should be understood with respect to
+household decision making is the evacuation departure time. An accurate estimate of the departure time will allow the prediction of dynamic evacuee demand and develop effective evacuation strategies.
+The central idea of this paper therefore is to understand, using original data gathered from Hurricane Ivan, the causal
+factors which influence the household-level evacuation timing decision. There are a modest number of studies on evacuation
+0968-090X/$ - see front matter  2011 Elsevier Ltd. All rights reserved.
+doi:10.1016/j.trc.2011.06.005
+⇑ Corresponding author. Tel.: +1 765 494 2296; fax: +1 765 496 7996.
+E-mail addresses: samiul.hasan@gmail.com (S. Hasan), rmesaa@gmail.com (R. Mesa-Arango), sukkusur@purdue.edu (S. Ukkusuri).
+Transportation Research Part C 27 (2013) 108–116
+Contents lists available at ScienceDirect
+Transportation Research Part C
+journal homepage: www.elsevier.com/locate/trc
+
+departure time though most of them focus on deriving empirical distributions without considering the influences of different
+factors. For a detailed review on evacuation timing studies, the readers may refer to the study by Lindell and Prater (2007b).
+On the contrary there have been few attempts in literature to develop behavioral models for evacuation timing decisions. For
+example, Sorensen (1991) made one of the earliest attempts using path analysis for evacuation timing behavior. The process
+involved in this approach is a set of sequential decisions made over time with evolving hurricane forecasts. The study used
+ordinary least square regression to determine the relationship between departure time and other explanatory variables. Fu
+and Wilmot (2004) developed a sequential logit choice model, where each household reviews the conditions surrounding an
+approaching hurricane and makes the decision of whether to evacuate or not.
+Fu and Wilmot (2006) developed a hazard-based modeling approach to understand decisions of whether to evacuate or
+not and when to evacuate as a joint model. While it provides important insights on individual’s evacuation timing behavior,
+it has some limitations. First, one of the implicit assumptions of the model is that the decision of whether to evacuate and the
+decision of when to evacuate are made simultaneously and both decisions are influenced by the same set of variables. However, although these two decisions are linked, the factors and their associated influences for each kind of decision may be
+different. For example, the decision of whether to evacuate or not might be influenced by perception of danger of life (Hasan
+et al., 2011); while the decision of when to evacuate are influenced by the preparation time, the destination and perception
+of the required time to reach that destination, and the transportation system characteristics. Second, their model included
+the households who did not evacuate assuming the corresponding observations as right censored. However, this censoring
+assumption implicitly considers that every household will eventually evacuate which is not the case. As a result, this
+approach may overestimate the number of households who evacuate ignoring the factors that influence households who
+do not evacuate. Third, their model is estimated based on discrete time intervals with a coarse aggregation of six hour time
+durations. However individuals’ evacuation timing decisions within this six hour interval (particularly the interval close to
+the hurricane landfall time) may be needed for developing efficient evacuation management strategies.
+Most of the previously developed evacuation timing models (Sorensen, 1991; Fu and Wilmot, 2004, 2006; Lindell and
+Prater, 2007b) included environmental, social and demographic factors. However, in addition to these factors, ‘‘risk perception’’ is another key element to understand how households make decisions on when to evacuate. Dash and Gladwin (2007)
+pointed out that risk is not perceived in the same fashion for all decision makers but it is influenced by social dimensions and
+particular contexts. Therefore it is expected that individuals’ actions are based on their perceptions of risk which may depend
+on their characteristics and the context or constraints they live in. However, it is difficult to model individuals’ risk perception behavior for which no rigorous approach exists. One alternative would be to model the decision making behavior considering individuals’ responses under risks. However, such individualized risk responses will be heterogeneous among the
+population and hence warrants techniques different than the traditional evacuation behavioral models that assume constant
+parameters for variables determining the time of evacuation.
+In this paper, we examine the timing of evacuation for a household when impacted by a hurricane. We use a hazard-based
+modeling approach to model this evacuation time. Hazard-based models focus on occurrence of the end of duration (such as
+end of the duration from the moment of receiving a hurricane warning to the moment of actual evacuation) given that the
+duration has lasted for a specified time (Hensher and Mannering, 1994). This kind of model reports the conditional probability of the termination of the duration. This concept of conditional probability of the end of duration recognizes that the
+likelihood of evacuation time depends on the length of elapsed time since the start of the hurricane warning process. Thus
+the dynamics of the duration until evacuation is reflected through this conditional likelihood value. Therefore, the hazard
+model can provide valuable insights to understand the temporal dynamics of the household’s evacuation decision making
+process. Furthermore to incorporate the heterogeneous risk response in the modeling framework, we introduce random
+parameters in our model. This paper also uses the continuous time approach to model evacuation time which overcomes
+the limitations associated with the coarse discrete time intervals mentioned above. Specifically this paper will make the
+following contributions:
+ Develops a model of evacuation timing behavior using hazard-based duration modeling approach.
+ Incorporates the random-parameter modeling to represent the unobserved heterogeneity across households particularly
+with respect to the risk response.
+ Provides fundamental inferences on hurricane evacuation timing behavior based on empirical model using Hurricane
+Ivan evacuation data.
+2. Methodology
+Hazard-based duration models were originally developed for problems in biometrics and industrial engineering. More
+recently they were used to model duration times in economics, marketing and transportation. Hensher and Mannering
+(1994) provide a review of the applications of the hazard-based duration models in transportation up to the early 1990s.
+For instance, using hazard-based approach, Mannering and Hamed (1990) developed a model for the time duration that travelers delay their departure time from work to home to avoid congestion. Bhat (1996a,b) studied factors affecting shopping
+activity duration during the trip from work to home. As mentioned above, Fu and Wilmot (2006) studied hurricane evacuation timing as a function of household’s socioeconomic characteristics, the characteristics of the hurricane and management
+S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116 109
+
+practice (issuance of an evacuation order) using hazard-based model. In the following paragraphs we present the structure of
+the hazard-based duration models for modeling hurricane evacuation time.
+Let T be a non-negative random variable representing the duration (in hours) between the beginning of a hurricane warning and the evacuation time for a household, and t is a specified time in the continuous time scale. Then the hazard function
+for household h at time t is defined as:
+khðtÞ¼ limDt!0
+prob½t þ Dt > T P tjT P t
+Dt ð1Þ
+where khðtÞDt is the conditional probability that household h will evacuate between time t and t + Dt given that it has not
+evacuated up to time t.
+To capture the influence of the covariates on the duration until the evacuation we use the accelerated life-time modeling
+approach. The accelerated life-time model assumes that the covariates rescale time directly (i.e., accelerate time) in a baseline hazard function, k0ðtÞ. Assuming that covariates influence the process in the form eb0
+X, the hazard function for household
+h can be written as:
+khðtjXhÞ¼ k0½teb0
+Xh eb0
+Xh ð2Þ
+where Xh is a vector of the factors or covariates and b is a vector of estimable parameters.
+Similar to other kind of mixture models (e.g., mixed logit model), random parameters can also be introduced in the hazard
+model. To allow for random parameters to capture the unobserved heterogeneity, estimable parameters are written as
+(Washington et al., 2011)
+bh ¼ b þ xh ð3Þ
+where xh is a randomly distributed term. With this equation the hazard function for household h can be written as:
+khðtjXh;xhÞ¼ k0½teb0
+hXh eb0
+hXh ð4Þ
+Notice that, in the case of fixed parameters model, explanatory variables are included as eb0
+Xh to hazard function as shown
+in Eq. (2) (i.e., all the households have the same parameter for a particular explanatory variable). However, in the case of
+random-parameters model, the explanatory variables act as eb0
+hXh allowing the parameters to vary across households. A simulation-based maximum likelihood method is usually used to estimate the parameters of such models. The simulation procedure involves drawing the values of b given a distribution. Previous studies (Train, 1999; Bhat, 2003) show that it is
+efficient to use Halton draws as compared to random draws. Our model estimation procedure (Greene, 2007) also uses Halton draws.
+We assume that the baseline hazard function, k0ðtÞ, follows a Weibull distribution which is widely used in duration modeling. The hazard function for Weibull distribution is (with parameters k and P)
+kðtÞ¼ kP½kt
+P1 ð5Þ
+Parameter P captures the duration dependence, if P is greater than 1 hazard increases with the increase of duration and if
+P is less than hazard decreases with the increase of duration. Typically few other duration distributions such as exponential,
+log–logistic and lognormal are available for parametric approach of duration modeling as followed in this paper. Weibull
+distribution is a generalization of exponential distribution and it’s appropriateness over exponential distribution can be justified based on the significance of the P parameter. We also attempted log–logistic and lognormal distribution; however the
+estimation procedure fails to converge for these duration distributions.
+3. Data
+To demonstrate the applicability of the random-parameter hazard-based model for household-level evacuation timing
+behavior, data is used from a household survey conducted after the landfall of Hurricane Ivan in the region of Gulf Shores,
+Alabama, in September 2004 (Morrow and Gladwin, 2005). Hurricane Ivan, the third and most dangerous storm to hit Gulf
+Shores in 2004, was a long-lived storm that reached Category 5 strength three different times before its first landfall as a
+Category 3 storm in Alabama at 2 AM CDT on September 16th (Stewart, 2004). Hurricane warnings and evacuation orders
+for Hurricane Ivan varied from region to region. For example, a mandatory evacuation was ordered on September 10th in
+Florida Keys. However, on September 11th Ivan shifted westward from the Keys and Florida’s southern coastline. On September 14th, a hurricane watch was issued for the northwestern Florida panhandle region; this hurricane watch soon became a
+hurricane warning for the area. Ivan was the most destructive hurricane to impact this region in more than 100 years. The
+Alabama coastline was included in the September 14th warning area. A mandatory evacuation was ordered for Gulf Shores,
+Orange Beach and Fort Morgan of Alabama. A mandatory evacuation was also ordered for the 78 miles of coastline of Mississippi. The New Orleans area of Louisiana was included in the warning on September 14th and 1.4 million residents were
+urged to leave. It is estimated that about 600,000 citizens of New Orleans tried to evacuate during Ivan (Morrow and
+Gladwin, 2005).
+110 S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116
+
+The data was collected as part of the post-storm assessment of the impact of Hurricane Ivan on households in Florida,
+Alabama, Mississippi and Louisiana (Morrow and Gladwin, 2005). Several counties and parishes in and adjacent to the path
+of Hurricane Ivan in these four states were selected to be included in the original data collection. A random sample of 3200
+households was selected from these regions for telephone interviews. Data collected included household socio-demographic
+information, housing type and location, house ownership status, past hurricane experience, reasons for evacuating or not
+evacuating, whether a hurricane evacuation notice was received, type of the notice received (mandatory or voluntary), media
+thorough which the evacuation notice was received (i.e., TV/Radio, Friends, Relatives, etc.), the time of evacuation if evacuation occurred, the destination, the normal travel time to reach the destination and others. Table 1 provides the summary
+statistics of the dependent variable and the explanatory variables selected for the model. Fig. 1 presents the distribution
+of the departure times of the households. The number of departures is not very high at the beginning of the evacuation; with
+the passage of time the departure rate increases significantly; however at hours very close to the landfall time the number of
+departures become very low.
+4. Empirical results
+In this section, the results of the estimation of a random-parameter hazard-based model for evacuation time are presented (Table 2). The model is estimated by specifying a distribution of the baseline hazard function, the functional form
+of the distributions of the random parameter and by using the simulation-based maximum likelihood estimation with
+200 Halton draws (Bhat, 2003). For baseline hazard function Weibull, Weibull with gamma heterogeneity, log–logistic
+and lognormal distribution are tested. However, the model only converges for the Weibull duration distribution. The
+functional form of the distributions of the random parameters is tested with a normal, uniform and triangular distribution.
+For all the parameters that are found to be random, the normal distribution assumption provides the best statistical fit in
+terms of t-statistic of the parameters and the log-likelihood at convergence.
+Regarding the interpretation of the results, a positive sign for the coefficient of a particular variable indicates that hazard
+increases with the increase of that variable and hence duration until evacuation decreases, i.e., the household will evacuate
+earlier. All the parameters of the model are found statistically significant and have reasonable signs. Table 2 indicates that
+three of the parameters are found as random. We also report the influence of the explanatory variables on the changes in
+duration.
+The region specific indicator variables can capture the proximity to the projected path of the hurricane. The regionspecific indicator variables associated with Alabama and Florida have positive parameters (Table 2). These positive parameters indicate that hazard for households located in Alabama and Florida increases implying earlier evacuation than those
+households located in Mississippi (i.e., indicator variable for households from Mississippi is treated as base in model
+specification).
+Table 1
+Summary statistics of explanatory variables.
+Variables Mean Standard deviation Min Max
+Duration* 51.4270 16.6782 1 126
+Location
+From Alabama 0.1250 0.3308 0 1
+From Florida 0.4063 0.4912 0 1
+From Louisiana 0.2813 0.4497 0 1
+From Mississippi 0.1875 0.3904 0 1
+Evacuation characteristics
+Evacuated to a public shelter 0.0279 0.1646 0 1
+Time to get to the destination (hours) 3.7166 4.4896 0 50
+Evacuated to the neighborhood 0.1338 0.3406 0 1
+1 or less hour duration between evacuation decision and actual evacuation 0.1498 0.3570 0 1
+2–3 h duration between evacuation decision and actual evacuation 0.1780 0.3827 0 1
+Received a non-mandatory evacuation notice 0.2996 0.4582 0 1
+Received a mandatory evacuation notice 0.3381 0.4732 0 1
+Socio-economic characteristics
+White race 0.8583 0.3488 0 1
+Education status: high school graduate 0.2465 0.4311 0 1
+Education status: post graduate 0.1597 0.3664 0 1
+Annual household income less than $15,000 0.1036 0.3048 0 1
+Lives in a mobile house 0.0677 0.2513 0 1
+Has one child 0.1583 0.3651 0 1
+Has two or more children 0.2071 0.4053 0 1
+* Duration is the dependent variable in hours. Hour 0 corresponds to Monday September 13th 2004 at 0:00 h and hour 126 corresponds to Saturday
+September 18th 2004 at 6:00 h (24-h clock convention).
+S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116 111
+
+Evacuation time also depends on the type and location of the destination. The indicator variable for the households who
+evacuate to public shelter has a negative parameter (Table 2) indicating that for such households hazard decreases and the
+duration until evacuation increases. This implies that household evacuating to public shelter are more likely to evacuate later
+compared to the households moving to other types of shelters; this may reflect the reluctance of the households to be in this
+kind of places and therefore waiting longer before evacuation. In other words this means that evacuees prefer to take the risk
+of staying longer at home than going to the public shelter. However, an alternative explanation could be that households that
+evacuate late are more likely to choose public shelter as their destinations as there are less time available to go to other types
+of places such as friend’s or relative’s house and hotels. Similarly, for those who evacuate to a neighborhood area hazard
+decreases and duration until evacuation increases (Table 2). This is expected since these households can wait longer period
+of time until evacuation as there would be less time involved to reach the neighborhood destinations.
+We also use the time between the evacuation decision and the actual evacuation as a variable for our model estimation
+(Table 2). This time could not be used as a continuous variable as the survey asked the respondents to categorize among various time intervals (i.e., 1 h, 2–3 h, 4–6 h, etc.); hence we include indicator variables representing these intervals. The values
+of the parameters associated with these indicator variables show that as this duration (time between the evacuation decision
+and the actual evacuation) increases hazard increases and duration until evacuation decreases. This suggests that the longer
+time a household takes between the evacuation decision and the actual evacuation the more likely is it to hasten its departure time. In literature, Sorensen (1991) reports that departure time is strongly influenced by mobilization time and time of
+warning receipt. Mobilization time was defined in Sorensen (1991) as the duration between warning receipt time and departure time. The variables used in our model represent a proxy of the mobilization time and provide interesting insights on its
+influences on evacuation timing behavior. For instance, households taking one hour time between evacuation decision and
+actual evacuation (i.e., leave shortly after making the evacuation decision) are more likely to evacuate later compared to the
+households taking longer time between evacuation decision and actual evacuation. This is intuitively plausible as households
+that evacuate late have less time available to spare and therefore have shorter mobilization time.
+Socio-economic characteristics such as the race, income and education level of the respondent also influence the timing of
+evacuation. For example, the indicator variable for the respondent being white has a positive parameter value indicating an
+increase in hazard for households with such respondents and a decrease in the time until evacuation; that is such households
+respond to the risks by taking quick actions (i.e., earlier evacuation). Similarly the indicator variables representing the education level of the respondents (high school graduate, and post graduate) result in increase of hazard and decrease the time
+until evacuation. It is interesting to note that these groups represent both low (high school graduate) and high (post graduate) education level. Households with members from these education levels evacuate early. Also notice that for households
+with postgraduate members’ hazard increases as compared to the households with high-school graduate members.
+A particular group for income level of households is found to have significant influence on evacuation timing. Model
+results (Table 2) indicate that, for households having low income (less than $15,000 per year), hazard decreases with the
+passage of time and hence the duration until evacuation increases compared to the households with annual income more
+than $15,000. This reflects the fact that such households have lesser resources which facilitate evacuation (e.g., availability
+of personalized transport, resources to rent a hotel) and wait longer until evacuation. This may also reflect the fact that these
+households may have to depend on organized transport initiative which starts at the later stage of the evacuation process.
+Fig. 1. Distribution of the departure times of the households.
+112 S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116
+
+Table 2
+Estimation results of the random-parameter hazard-based duration models for the decision of the timing of evacuation (random parameters are assumed to be normally distributed).
+Variable description Coeff. t-Stat. Change in
+duration (%)
+Sample 1 Sample 2
+Coeff. t-Stat. Coeff. t-Stat.
+Constant 4.186 179.859 – 4.241 128.071 4.130 104.542
+Location
+Alabama indicator variable (1 if HH is From Alabama, 0 otherwise) 0.029 1.310 2.8 0.039 1.319 0.025 0.779
+Florida indicator variable (1 if HH is From Florida, 0 otherwise) 0.051 2.774 5.0 0.097 3.698 0.021 0.770
+Evacuation characteristics
+Indicator variable evacuated to a public shelter (1 if HH moved to a public shelter, 0 otherwise) 0.120 3.528 12.7 0.056 1.038 0.183 3.945
+Indicator variable for neighborhood evacuation (1 if HH evacuated to a neighborhood area, 0 otherwise) 0.070 2.969 7.3 0.128 3.410 0.044 1.500
+Indicator variable for 1 h duration between evacuation decision and actual evacuation (1 if HH took 1 h between
+evacuation decision and actual evacuation, 0 otherwise)
+0.068 3.310 7.0 0.019 0.661 0.107 3.634
+Indicator variable for 2–3 h duration between evacuation decision and actual evacuation (1 if HH took 2–3 h
+between evacuation decision and actual evacuation, 0 otherwise)
+0.042 2.620 4.3 0.062 2.807 0.027 1.108
+Indicator variable non-mandatory notice (1 if the HH received a non-mandatory evacuation notice, 0 otherwise) 0.068 4.758 6.5 0.030 1.482 0.118 5.393
+Indicator variable mandatory notice (1 if the HH received a mandatory evacuation notice, 0 otherwise) 0.068 4.394 6.5 0.069 3.211 0.084 3.628
+Socio-economic characteristics
+Indicator variable white (1 if the ethnicity is white, 0 otherwise) 0.029 1.711 2.9 0.086 3.370 0.027 1.056
+Indicator variable education status high school graduate (if the respondent was a high school graduate, 0
+otherwise)
+0.030 1.791 2.9 0.045 1.877 0.025 1.044
+Indicator variable education status post graduate (1 if the respondent was a graduate, 0 otherwise) 0.061 3.899 5.9 0.072 3.063 0.035 1.530
+Indicator variable for low income (1 if annual household income is less than $15,000, 0 otherwise) 0.074 2.874 7.7 0.027 0.753 0.128 3.313
+Indicator variable mobile house (1 if HH is a mobile home, 0 otherwise) 0.034 1.530 3.5 0.026 0.845 0.037 1.065
+More than one child indicator variable (1 if HH had more than one child below age 18, 0 otherwise) 0.035 2.386 3.4 0.025 1.235 0.021 0.983
+Random parameters
+Travel time to the evacuation area at normal time (hour) 0.023 13.466 2.2 0.018 8.407 0.025 8.707
+(Standard deviation of parameter distribution) (0.005) (3.546) – (0.001) (0.728) (0.004) (1.723)
+Louisiana indicator variable (1 if HH is from Louisiana, 0 otherwise) 0.050 3.201 4.9 0.101 4.452 0.005 0.188
+(Standard deviation of parameter distribution) (0.055) (5.331) – (0.022) (1.539) (0.001) (0.064)
+One Child indicator variable (1 if HH had one child below age 18, 0 otherwise) 0.043 2.611 4.4 0.055 2.493 0.028 1.086
+(Standard deviation of parameter distribution) (0.019) (1.189) – (0.042) (1.986) (0.001) (0.025)
+P (distribution parameter) 3.906 71.768 – 4.016 48.203 3.922 52.160
+Number of observations 751 383 368
+Log-likelihood with constant only 295.726 146.098 149.452
+Log-likelihood at convergence 230.456 109.457 110.004
+Adjusted q2c 0.1463 0.1002 0.1167
+Adjusted q2c ¼ 1  Log-likelihood at convergenceNumber of parameters Log-likelihood with constant only .
+S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116 113
+
+Receiving evacuation notice either mandatory or optional also results in the increase of hazard and thereby results into an
+earlier evacuation than those who have not received any form of evacuation notice. These variables also represent the proximity of households to the landfall sites. Clearly households receiving notices can be assumed to be closer to hurricane landfall sites. Therefore these households would respond to the risk or threat quickly and hence leave early.
+Similar to the low-income households, the parameter for the households living in a mobile home has negative values
+(Table 2). However, it is usually expected that these households will evacuate earlier; but our model results indicate that
+for such households, hazard decreases and time until evacuation increases. This may reflect the fact that such households
+might wait longer to observe the direction of the hurricane; therefore their duration until evacuation increases.
+Travel time to the evacuation area under normal situation produces a normally distributed parameter with a mean of
+0.023 and a standard deviation of 0.005 (Table 2). This implies that most of the households have a positive value for this
+parameter which is intuitively plausible. But the distribution shows that there is a variable perception of the distance to
+the destination (due to the congestion while evacuation) resulting in a variable increase of hazard across the households.
+The travel time under normal situation can be used as a proxy for the distance that the household has to travel when evacuating. The positive value for all the households suggests that with the increase of distance to the safe destinations, hazard
+will increase and duration until evacuation will decrease. This implies that those households which decided to evacuate to
+places that usually require longer time to be reached (i.e., places far away) will evacuate earlier than those household that
+decided to evacuate to places that require shorter time.
+The indicator variable for Louisiana households also produces a normally distributed parameter with a mean of 0.05 and a
+standard deviation of 0.055 (Table 2). This means that, given that everything else remains the same, for a majority (81.83%) of
+Louisiana households, it results in an increase of hazard implying earlier evacuations. The variability in parameters captures the
+unobserved heterogeneity in the responses of households from Louisiana. As Louisiana was on the safe side of the storm but
+with evacuation orders (possibly overreaction from past hurricanes) and prior experience of the households to past hurricane
+evacuation, households from this state are expected to behave heterogeneously in terms of their evacuation time choice.
+For majority of the households, the presence of one child decreases hazard and thereby increases duration until evacuation. The indicator variable related to this produces a normally distributed parameter with a mean of -0.043 and a standard
+deviation of 0.019 (Table 2). This means that for majority (98.8%) of the households having one child result in decrease of
+hazard and duration until evacuation increases; these household will evacuate later than households with no children. However, the interesting finding from the model is that households with one child respond to the risks differently. This suggests
+that the majority of the households with one child respond to evacuation warning lately while for other households such risk
+is compensated by other considerations resulting in early departure. The risk response due to one child is not uniform across
+the households. The differences in risk responses might be attributed to the age of the child. For example, households with a
+child aged less than six years may respond to the risk more seriously than households with children aged above six years. To
+investigate this further, we require the distribution of the age of the children in the sample. However, the survey questionnaire does not include the specific ages of the children; rather they are included under a broad category of children under
+18 years. Finally, this parameter indicates the strength of our modeling methodology through capturing the unobserved heterogeneity in the evacuation behavior. In contrast to the above finding related to the household with one child, the indicator
+variable representing households with more than one child is found to be fixed with a positive parameter. This suggests that
+households with more than one child would perceive the risk uniformly resulting into an earlier evacuation.
+Fig. 2 presents the actual and predicted hazard for the households. The predicted hazard captures the trends of the actual
+hazard values. The unusual drop in the hazard is due to the hurricane landfall event when no households actually evacuate.
+Fig. 2. Actual and predicted hazard at different departure times.
+114 S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116
+
+Given the complexity involved in the decision making process during hurricane evacuation, our model performs reasonably
+in terms of predicting the hazard values.
+5. Model validation
+In this section we present a validation test for our proposed model. To investigate the validity of the model specification,
+we first split the data into two parts (Sample 1 and Sample 2) each having about half of the observations. We estimate two
+separate models with the same specification using these two samples.
+Table 2 presents the estimation results for these two samples. The hypothesis for this specification test is that model
+parameters are equal for the models estimated on these two datasets. If we fail to reject the hypothesis then the validity
+of our specification is established. We calculate a test statistics based on likelihood ratio (LR) as shown in Eq. (6):
+LR ¼2½LLðbFullDataÞ LLðbSample1Þ LLðbSample2Þ ð6Þ
+where LLðbFullDataÞ is the log-likelihood at convergence of the model estimated using the full data, LLðbSample1Þ is the log-likelihood at convergence of the model estimated using Sample 1, and LLðbSample2Þ is the log-likelihood at convergence of the
+model estimated using Sample 2. The likelihood ratio is obtained as 21.99 with degrees of freedom equal to 22. Since
+v2
+22;0:05 ¼ 33:924, we fail to reject the hypothesis that the parameters across different samples are equal. Thus this test validates the model specification presented in the paper.
+6. Summary and conclusions
+In this paper, we present the results of a hurricane evacuation timing model using a random-parameter hazard-based
+modeling approach. To the best of our knowledge, this is the first attempt to model household’s heterogeneous risk response
+behavior for evacuation timing decisions using a random-parameter model. Traditionally evacuation planners use response
+curves showing the distribution of departure time of evacuees to predict the departure rate in each time interval. However, a
+probabilistic model incorporating the socio-economic characteristics of household and evacuation destination characteristics would predict the temporal distributions of evacuation in a better way. Therefore the proposed quantitative model of
+evacuation timing behavior would help planners and managers to develop better evacuation strategies.
+Findings from the model also contribute to a better understanding of household evacuation timing behavior. Several
+important factors that influence a household’s evacuation timing decision are found from our empirical analysis. These factors include household’s geographic location, type of the shelter, location and time to reach the destination in normal time,
+time between decision and actual evacuation, whether or not to live in a mobile house, education status, income, type of
+evacuation notice (mandatory or optional) received. Three variables have been found to have random parameters. These
+variables include usual travel time to reach the destination, location of household and the number of children. These parameters reflect the heterogeneous influences of the associated variables on evacuation departure time. The findings from this
+study provide us useful insights to understand hurricane evacuation timing behavior. Such insights include:
+ Travel time to destinations under normal condition influences the timing decision. Households moving to places that usually require longer time to be reached in normal situations will evacuate earlier.
+ Households that evacuate late are likely to leave shortly after making the evacuation decision (i.e., low mobilization time)
+compared to the households evacuating earlier.
+ Socio-economic characteristics such as the race, income, education level, and housing type of the respondent also influence the timing of evacuation. For example, low-income households are likely to evacuate later.
+ Households receiving evacuation notice (either mandatory or optional) are likely to evacuate early.
+The above findings have important implications for effective evacuation planning. For example, since travel time information significantly influences the evacuation time of a household, provision of a real-time traffic information source can
+play an important role for distributing the evacuation demand over time. Strategies can also be devised so that low-income
+households or families living in mobile homes can evacuate early. Thus the study, using sophisticated methodological
+approach, provides some fundamental insights on hurricane evacuation timing behavior.
+Acknowledgments
+This research presented in this paper was supported by National Science Foundation Award SES-0826874 ‘‘Incorporating
+Household Decision Making and Dynamic Transportation Modeling in Hurricane Evacuation: An Integrated Social ScienceEngineering Approach’’ for which the authors are grateful. However, the authors are solely responsible for the findings of
+the research work. The writers also acknowledge Prof. Fred Mannering of Purdue University for his valuable suggestions
+on estimating the hazard-based model and three anonymous referees, who provided useful comments on an earlier draft
+of the paper.
+S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116 115
+
+References
+Baker, E.J., 1991. Hurricane evacuation behavior. International Journal of Mass Emergencies and Disasters 9 (2), 287–310.
+Bhat, C.R., 1996a. A hazard-based duration model of shopping activity with nonparametric baseline specification and nonparametric control for unobserved
+heterogeneity. Transportation Research Part B: Methodological 30 (3), 189–207.
+Bhat, C.R., 1996b. A generalized multiple durations proportional hazard model with an application to activity behavior during the evening work-to-home
+commute. Transportation Research Part B: Methodological 30 (6), 465–480.
+Bhat, C.R., 2003. Simulation estimation of mixed discrete choice models using randomized and scrambled Halton sequences. Transportation Research Part B:
+Methodological 37 (1), 837–855.
+Carnegie, J.A., Deka, D., 2010. Using hypothetical disaster scenarios to predict evacuation behavioral response. In: Proceedings of the 89th Annual Meeting of
+the Transportation Research Board, Washington, DC, USA.
+Dash, N., Gladwin, H., 2007. Evacuation decision making and behavioral responses: individual and household. Natural Hazards Review 8 (3), 69–77.
+Dow, K., Cutter, S.L., 2002. Emerging hurricane evacuation issues: Hurricane Floyd and South Carolina. Natural Hazards Review 3 (6), 12–18.
+Fu, H., Wilmot, C.G., 2004. Sequential logit dynamic travel demand model for hurricane evacuation. Transportation Research Record: Journal of the
+Transportation Research Board 1882, 19–26.
+Fu, H., Wilmot, C.G., 2006. Survival analysis-based dynamic travel demand models for hurricane evacuation. Transportation Research Record: Journal of the
+Transportation Research Board 1964, 211–218.
+Gladwin, C.H., Gladwin, H., Peacock, W.G., 2001. Modeling hurricane evacuation decisions with ethnographic methods. International Journal of Mass
+Emergencies and Disasters 19 (2), 117–143.
+Gladwin, H., Lazo, J.K., Morrow, B.H., Peacock, W.G., Willoughby, H.E., 2007. Social science research needs for the hurricane forecast and warning system.
+Natural Hazards Review 8 (3), 87–95.
+Greene, W., 2007. Limdep, Version 9.0. Econometric Software Inc., Plainview, New York.
+Hasan, S., Ukkusuri, S., Gladwin, H., Murray-Tuite, P., 2011. A behavioral model to understand household-level hurricane evacuation decision making.
+Journal of Transportation Engineering 137 (5), 341–348.
+Hensher, D.A., Mannering, F.L., 1994. Hazard-based duration models and their application to transport analysis. Transport Reviews 14 (1), 63–82.
+Lindell, M.K., Lu, J.C., Prater, C.S., 2005. Household decision making and evacuation in response to Hurricane Lili. Natural Hazards Review 6 (4), 171–179.
+Lindell, M.K., Prater, C.S., 2007a. A hurricane evacuation management decision support system (EMDSS). Natural Hazards 40 (3), 627–634.
+Lindell, M.K., Prater, C.S., 2007b. Critical behavioral assumptions in evacuation time estimate analysis for private vehicles: examples from hurricane
+research and planning. Journal of Urban Planning and Development 133 (1), 18–29.
+Mannering, F.L., Hamed, M., 1990. Occurrence, frequency, and duration of commuters’ work-to-home departure delay. Transportation Research Part B:
+Methodological 24 (2), 99–109.
+Morrow, B.H., Gladwin, H., 2005. Hurricane Ivan Behavioral Analysis, 2004 Hurricane Assessments. US Army Corps of Engineers. <http://
+chps.sam.usace.army.mil/USHESdata/Assessments/2004Storms/2004_hurricane_season_page.htm> (accessed 10.12.09).
+NHC, National Hurricane Center, 2006. Tropical Cyclone Report: 2005 Atlantic Hurricane. Washington, DC: NOAA.
+Sorensen, J.H., 1991. When shall we leave? Factors affecting the timing of evacuation departures. International Journal of Mass Emergencies and Disasters 9
+(2), 153–165.
+Stewart, S.R., 2004. Tropical Cyclone Report: Hurricane Ivan. National Hurricane Center. <www.nhc.noaa.gov/2004ivan.shtml> (accessed 10.12.09).
+Train, K., 1999. Halton Sequences for Mixed Logit. Working Paper, University of California Berkley, Department of Economics.
+Urbaina, E., Wolshon, B., 2003. National review of hurricane evacuation plans and policies: a comparison and contrast of state practices. Transportation
+Research Part A: Policy and Practice 37 (3), 257–275.
+Washington, S.P., Karlaftis, M.G., Mannering, F.L., 2011. Statistical and Econometric Methods for Transportation Data Analysis, second ed. Chapman Hall/
+CRC, Boca Raton, FL.
+116 S. Hasan et al. / Transportation Research Part C 27 (2013) 108–116

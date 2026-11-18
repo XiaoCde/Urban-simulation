@@ -1,0 +1,578 @@
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+Available online 3 August 2024
+2212-4209/© 2024 Elsevier Ltd. All rights are reserved, including those for text and data mining, AI training, and similar technologies.
+Contents lists available at ScienceDirect
+International Journal of Disaster Risk Reduction
+journal homepage: www.elsevier.com/locate/ijdrr
+Influences of social networks, demographics, and evacuation
+duration on evacuation decisions: Insights from Ohio and
+Pennsylvania
+Haoming Qin
+a
+, Wei Zhai b, *
+, Junqing Tang c
+a School of Civil & Environmental Engineering, and Construction Management, University of Texas at San Antonio, USA
+b School of Architecture and Planning, University of Texas at San Antonio, USA
+c School of Urban Planning and Design, Peking University, China
+ARTICLE INFO
+Keywords:
+Evacuation behavior
+Neighborhood connectivity
+Evacuation distance
+Decision making
+ABSTRACT
+Understanding post-hazard evacuation decisions poses challenges due to the complex interplay
+between individual behaviors and community influences. This study investigates the evacuation
+decisions made by residents from three counties of Ohio and Pennsylvania, correlating their
+choices with various sociodemographic and behavioral factors. By analyzing diverse evacuation
+durations—spanning a week, two months, and a permanent period—the research identifies patterns in distance preference, influenced by attributes such as gender, race, social networks, and
+travel habits. Evacuation duration emerged as a significant predictor of the distance traveled,
+with prolonged durations leading to farther evacuations. The research highlights the importance
+of leveraging local social networks for effective communication during hazards and informs policy recommendations for tailored evacuation advisories and inter-state evacuation collaborations.
+1. Introduction
+Climate-induced hazards are on an unprecedented rise, posing escalating threats to urban landscapes across the globe [1,2,3].
+Cities, often densely populated and complex in their infrastructure, are particularly vulnerable, necessitating strategic evacuation
+plans for the safety of their inhabitants [4–7]. Evacuations, frequently triggered by emerging climate threats or unforeseen emergencies, are fundamentally linked to the multifaceted human decision-making processes [8,9,10]. The decision of “how far to evacuate”
+emerges from various factors, including social factors [11–14], sociodemographic attributes [15,16], personal beliefs [17], past experiences [18], and the projected duration of evacuation [19,20]. As climate change impacts continue to exacerbate, elucidating these
+evacuation decision determinants becomes crucial, holding implications for the safety and well-being of vast populations at risk
+[21,22].
+Despite the extensive exploration of evacuation behaviors, significant gaps remain in understanding how diverse evacuation durations impact decision-making processes, particularly in non-specific hazard contexts. Ersing et al. [23] underscores the complexity of
+evacuation decision-making by examining both geophysical and social influences during Hurricane Irma, suggesting that a multitude
+of factors contribute to the evacuation process. Furthermore, [24] delve into the nuances of evacuation behavior during multi-hazard
+scenarios, emphasizing the balancing act between following peers and assessing risk, thereby illuminating the intricate dynamics at
+play in evacuation decisions. This study addresses these gaps by focusing on the influence of social connections and the interplay of
+* Corresponding author.
+E-mail addresses: haoming.qin@my.utsa.edu (H. Qin), wei.zhai@utsa.edu (W. Zhai), junqingtang@pku.edu.cn (J. Tang).
+https://doi.org/10.1016/j.ijdrr.2024.104701
+Received 26 October 2023; Received in revised form 19 July 2024; Accepted 25 July 2024
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+2
+H. Qin et al.
+sociodemographic factors in evacuation decisions across varying durations. Na & Grace [25] also highlight the importance of social
+support in evacuation logistics, emphasizing how the geographical proximity of social networks influences evacuation destinations.
+Questions concerning the role of social networks during short-term evacuations and how personal experiences, information access,
+and the broader social environment influence evacuation distance choices are pivotal yet underexplored aspects.
+This research builds upon the existing body of knowledge by explicitly focusing on three counties from Ohio and Pennsylvania,
+aiming to disentangle the complexities of evacuation decision-making. By employing survey data that explores evacuation distances
+and destinations without specifying hazard types, our study fills a critical gap in the literature, offering empirical insights into the determinants of evacuation distances based on three distinct durations.
+The structure of this paper is as follows. Section 2 delves into a comprehensive literature review, shedding light on how individual
+characteristics, social support networks, and other factors influence evacuation decisions. In Section 3, we provide a detailed
+overview of the Neighborhood Connectivity Survey, elucidating the methodology, sample population, and the variables under
+scrutiny. Section 4 presents the empirical results, categorizing responses based on varying evacuation durations and offering insights
+into the interplay of sociodemographic and social factors on evacuation distances. Section 5 discusses the broader implications of our
+findings in both academic research and policy formulation. Lastly, Section 6 gives conclusions drawn from our research and contemplates potential avenues for future exploration.
+2. Literature review
+2.1. Demographics and evacuation information
+Demographic attributes play a pivotal role in evacuation decisions, with recent studies elucidating the nuanced impacts of various
+factors. For instance, gender significantly influences evacuation likelihood [26–31], with women often more likely to evacuate than
+men, reflecting heightened risk perception or concern for dependents [32,33]. Age is another critical factor [34]; older adults exhibit
+higher evacuation rates, possibly due to increased vulnerability or previous experiences [13,30]. Ethnicity and race not only affect
+evacuation decisions but also the resources available for evacuation [17,35,36], with minority groups sometimes facing barriers due
+to socioeconomic factors or mistrust in official communications [13,37]. The presence of children or elderly [38] in the household
+significantly elevates the likelihood of evacuation, underscoring the protective instincts of caregivers or concerns over the dependents' safety and well-being during hazards [29,30]. Moreover, individuals with disabilities or specific medical needs require tailored
+evacuation plans and additional support, highlighting the importance of inclusive hazard preparedness efforts [39,40].
+Income levels also play a crucial role, with lower-income households facing more significant challenges in evacuating due to financial constraints, pointing to the need for equitable access to evacuation resources and support services [31,41]. For example, a
+study on coastal residents under typhoon threat [37] demonstrated that higher family income significantly increases the likelihood of
+evacuation, underscoring socioeconomic factors' role in hazard response. Additionally, a study has further detailed how evacuation
+decisions are influenced by a complex interplay of these demographic factors alongside individual and household characteristics, underscoring the multifaceted nature of evacuation behavior [42].
+A multitude of studies have investigated the effects of evacuation orders during hazard evacuation process. Some studies noted
+that mandatory evacuation orders are more effective than mere evacuation recommendations ([43]; Wong et al., 2023). Individuals
+who rely on radio, television, and social media for weather-related updates are more likely to evacuate than those predominantly dependent on internet sources. Lindell et al. [29] corroborated this by stating that, besides geographical attributes, evacuation warnings
+and mandates from authorities strongly impact the evacuation decision-making process. Sadri et al. [43] illustrated the influence of
+warning information sources on evacuation choices, drawing from egocentric network data gathered during Hurricane Sandy. Risk
+perception is pivotal in grasping the evacuation decision-making framework [44]. Discerning how individuals acquire and assimilate
+information enables researchers to gauge human responses to hazard alerts. Individual process data influenced by specific attributes
+like cultural backdrop, education, past experiences, etc. [45]. As a result, different people might interpret identical pieces of information in varying ways.
+The research conducted by Dash & Gladwin [30] highlighted that individual factors like geographical location and prior evacuation experiences significantly influence evacuation decisions. Similarly, recent studies such as one by Kuligowski [31] emphasize that
+timely and clear evacuation orders are crucial as they substantially impact the decision to evacuate, particularly during wildfires, due
+to a combination of perceived threat and communication clarity. Wong et al. [46] further reinforced that proximity to the hazard, previous evacuation experiences, and household composition significantly shape evacuation behaviors, underscoring the importance of
+tailored communication strategies to different demographic groups to enhance evacuation compliance. Additionally, the study by
+Collins [47] illustrates how public health crises can complicate evacuation behaviors, with concerns like fear of contagion at shelters
+dissuading some from evacuating, highlighting the necessity for integrated emergency management planning that accommodates
+multiple concurrent hazards.
+2.2. Risk assessment and physiological concerns
+Risk perception also remains central to understanding the evacuation decision-making framework. Several studies have posited
+that individuals frequently grapple with risk assessment. This challenge encompasses both gauging the likelihood of an event and
+weighing the options available [48,49]. Some studies have emphasized that evacuation decisions are often more influenced by one's
+own first-hand assessment of the danger, which is additionally shaped by private communications and established social relationships
+[50]. For example, the quality of relationships with friends, family members, neighbors and co-workers can significantly affect one's
+decision-making [38]. The nature of an individual's social network and their relationships therein can shape their perception of risk
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+3
+H. Qin et al.
+and thereby influence evacuation decisions. Using data from Hurricane Sandy, Sadri et al. (2017) deduced that an individual's evacuation decision was influenced by a mix of personal and family characteristics, the composition of their social network and their reliance on various information sources. Horney et al. [51] further noted that understanding the relationship between social factors and
+evacuation behavior can provide insights into the evacuation patterns of different groups, thereby aiding in enhancing the evacuation
+rate and better preparing identified groups that may face challenges evacuating ahead of a hazard.
+2.3. Social ties, networks, and connections
+Other research has delved deeply into the influence of social factors, such as churches, community organizations, or voluntary associations on the evacuation decision-making process. A review by Sadri et al. [52] focuses on the role of social influence in evacuation decision-making, concluding that evacuation behavior is heavily influenced by peer actions and community norms. Observing
+others preparing to evacuate significantly increases the probability that an individual will decide to evacuate, indicating the potential
+effectiveness of community-based preparedness programs. Additionally, community behavior and perceived norms were highlighted
+in a study by Siam et al. [53], which found that households are more likely to evacuate if they perceive their community is also evacuating. This emphasizes the importance of social influences on evacuation decisions. Sadri et al. [43] explores the impact of social networks and information sources on evacuation decisions during hurricanes, concluding that individuals embedded in richer social networks who receive consistent and credible information from trusted sources are more likely to evacuate. The study also highlights the
+significant role of social media in spreading information and influencing evacuation decisions, illustrating that modern communication tools are crucial in shaping public responses to hurricane warnings.
+Sadri et al. [54] further emphasizes that the density of an individual's social networks is particularly crucial. A dense interpersonal
+network, signifying close connections between individuals, often facilitates the efficient sharing of information and resources. Murphy [55] also emphasizes the importance of social capital resources, such as networks of both strong and weak ties, positing that such
+networks bolster community resilience in the face of hazards. Some studies have demonstrated that families with relatives outside the
+hazard-affected area are more inclined to evacuate [56,57]. These “invited evacuations” are typically influenced by weaker ties in
+one's network. Furthermore, compared to weak ties, strong/close ties are more effective buffers against the effects of stress and other
+emergencies rather than the hazard itself [51]. During the time when hazards such as hurricanes and earthquakes affect the whole
+community, small, dense, and close tie may not be able to function effectively. Lin et al. [58] emphasized that post-major life events,
+such as a divorce, assistance is predominantly derived from close ties rather than weak ones. Studying 40 families affected by Hurricane Katrina in New Orleans, Louisiana, [59] highlighted the significance of bonding social relationships (close ties) for immediate
+support.
+Yamamura [60] observed that social capital can mitigate the damage caused by hazards through cooperative efforts among residents. Lyu [61] delved into how social capital influences individuals to evacuate without official orders during rainstorm events in
+China. Their research highlights that all forms of social capital—bonding, bridging, and linking—significantly increase the likelihood
+of shadow evacuation, emphasizing the vital role of strong social connections in hazard response.
+Additionally, social capital emerges as a critical asset for receiving assistance both before and after hazards. However, some studies suggest that social capital may be a weaker predictor of evacuation behavior before hazards strike. In certain communities with
+high levels of social capital, the peer pressure from individuals opting not to evacuate may lead others to ignore mandatory evacuation orders. Social influences also play a significant role in the psychological process of deciding whether to evacuate. Hasan &
+Ukkusuri [62] further corroborate this by noting that the perception of danger can spread through social networks. However, various
+studies indicate that certain strong social factors might deter individuals from evacuating preemptively. For example, elements such
+as social cohesion, territorial markers, civic engagement and volunteerism have been associated with decreased hurricane evacuation
+rates. This potential counterproductive effect was echoed in Cordasco's [63] research, which revealed that some respondents, despite
+having the means and financial ability to evacuate, based their decisions on local culture, social obligations, and a greater trust in
+their networks over official authorities.
+Moreover, Adger et al. [64] suggest that individuals and communities consider mobilizing assets, networks, and social capital to
+cope with potential hazards through adaptive strategies. Sadri et al. [65] highlighted that the frequency of contact, discussion topics,
+and geographical proximity significantly influence evacuation decision-making among social relations. Consequently, they advocate
+for community leaders and policymakers to consider social, neighborhood, and community factors when preparing for hazards, recommending community activities to strengthen social ties and plan for specific hazard scenarios. Later, Sadri et al. [52] examined the
+impact of household characteristics such as transportation access on evacuation decisions. They found that households with readily
+available private vehicles and clear evacuation routes are more likely to evacuate compared to those reliant on public transport or residing in areas with congested routes.
+2.4. Research gaps
+Existing research has elucidated numerous aspects of evacuation behaviors, yet several research gaps persist. Firstly, a particularly
+under-researched facet is the impact of evacuation distance on behavior and decision-making. Preliminary studies have indicated that
+the anticipated distance of evacuation could significantly influence preparedness, route choice, and mode of transportation [20].
+However, there is a lack of extensive studies connecting evacuation distance with evacuation duration. Secondly, the influence of regular social interactions on evacuation decisions, especially during short-term evacuations, is another under-researched area. Studies
+by Smith & McCarty [12] hinted at the influence of social networks but did not delve deeply into their relationship with evacuation
+distance. Lastly, while personal experiences, information access, and the broader social environment are acknowledged as factors influencing evacuation behaviors, their specific roles in shaping evacuation distances need clearer elucidation. The work of Dash &
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+4
+H. Qin et al.
+Gladwin [30] suggests that personal experiences and perceptions play pivotal roles, but there is a dearth of literature specifically correlating them with evacuation distances.
+3. Data and Methods
+3.1. Survey data and analysis
+To gather insights into people's reactions to evacuation scenarios, we utilized data from the Neighborhood Connectivity Survey
+(Appendix 1). This mail-based survey from 2019 targeted residents in three locations: Akron, State College, and Philadelphia County
+in Ohio and Pennsylvania (Fig. 1). The data is not collected for a specific hazard event. The survey received funding from the John S.
+and James L. Knight Foundation. All participants volunteered to take part.
+Out of the 1030 respondents, 562 did not provide evacuation locations for the various scenarios or omitted essential background
+information—such as social support, connectivity patterns, and demographic characteristics—needed for further analysis. As a result,
+they were excluded, leaving an analytical sample size of 468. Given the multiple evacuation scenarios, there were instances of missing
+values. Specifically, the sample size for the multiple linear regression model for a one-week evacuation stands at 419. The two-month
+evacuation model incorporates 397 respondents, and the permanent evacuation model comprises 357.
+The evacuation distance was conceptualized as the distance between a respondent's home and their chosen evacuation destination. Respondents indicated different locations (neighborhood, city, state) when asked about potential evacuation durations: a week,
+two months, or a permanent period, particularly in response to events that only affected their city. The demographic factors we examined included age, gender, race, relationship status, political orientation, household size, highest level of education, employment status, and the presence of children under the age of 18 in the household.
+Neighborhood connectivity was gauged through five survey questions that inquired about participants' social habits. Specifically,
+participants were asked about their frequency of.
+1. Eating lunch with coworkers.
+2. Socializing in person with friends.
+3. Having lunch with friends.
+4. Inviting people over to their homes for social gatherings.
+5. Visiting others' homes for social purposes.
+The survey also collected data on the number of friends respondents felt at ease with when asking to go out for dinner and the
+number of friends they would feel comfortable visiting without prior notice. Detailed findings from these queries are presented in
+Tables 1 and 2. Table 1 offers a demographic snapshot, showing a broad age range of respondents with the majority being White, reflecting the predominant ethnicity of the sampled regions. Notably, a significant portion of the survey population possesses at least a
+bachelor's degree, suggesting a relatively high education level among participants, which could influence their access to and interpretation of evacuation information. Furthermore, the survey reveals a considerable percentage of the population strongly values neighborhood ties, with a high frequency of socializing at home and with friends, potentially affecting their willingness to evacuate and
+preferred distance. However, it is essential to acknowledge that our final sample has a higher representation of white and female respondents compared to the general population of Akron, State College, and Philadelphia County, as per the demographic data available from the U.S. Census Bureau.
+Fig. 1. Evacuation destinations for a week.
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+5
+H. Qin et al.
+Table 1
+Demographic and social interaction characteristics.
+Variable name Total Percentage Variable description Total Percentage Variable description
+Age Gender
+18–35 years 102 21.79 Female 322 68.8
+35–65 years 233 49.79 Male 128 27.35
+65 years or
+older
+133 28.42 Undisclosed 18 3.85
+Race Relationship Current relationship status
+White 392 83.76 Married 228 48.72
+Black African 50 10.68 Divorced 54 11.54
+Hispanic_Latino 7 1.5 In relationship 73 15.6
+Bi_Racial 7 1.5 Single 82 17.52
+Other 12 2.56 Widowed 31 6.62
+Political_orient Political orientation Employment Employment status
+Conservative 117 25 Employed 271 57.91
+Independent 122 26.07 Retired 130 27.78
+Liberal 173 36.97 Student 27 5.77
+Undisclosed 56 11.97 Unemployed 40 8.55
+Home_pop Home population Highest_edu Highest level of education
+1-2 302 64.53 < Bachelor's
+degree
+204 43.59
+3-4 137 29.27 = Bachelor's
+degree
+136 29.06
+Higher than 4 29 6.2 > Bachelor's
+degree
+128 27.35
+Child_18 Have children under the age of 18 Local_news learn local news from other places
+Yes 104 22.22 Yes 231 49.36
+No 248 52.99 Only local news 173 36.97
+Undisclosed 116 24.79 Not follow news 64 13.68
+Sn_here I have a good social network here Socialize_other How often go to others' homes to
+Strongly agree 141 30.13 Daily 2 0.43 socialize
+Agree 235 50.21 Weekly 108 23.08
+Neither 51 10.9 Monthly 217 46.37
+Disagree 33 7.05 Yearly 109 23.29
+Strongly
+disagree
+8 1.71 Never 32 6.84
+Strongly agree 141 30.13
+Lunch_cowork How often eat lunch with coworkers Socialize_friends How often socialize in person with
+Daily 83 17.74 Daily 102 21.79 friends
+Weekly 84 17.95 Weekly 219 46.79
+Monthly 83 17.74 Monthly 117 25
+Yearly 39 8.33 Yearly 20 4.27
+Never 164 35.04 Never 10 2.14
+Undisclosed 15 3.21
+Lunch_friends How often eat lunch with friends Socialize_home How often have people to home to
+Daily 20 4.27 Daily 21 4.49 socialize
+Weekly 109 23.29 Weekly 84 17.95
+Monthly 204 43.59 Monthly 199 42.52
+Yearly 85 18.16 Yearly 115 24.57
+Never 50 10.68 Never 49 10.47
+Consider_moving Consider moving to a different city or
+Yes 291 62.18 neighborhood
+No 177 37.82
+Note: N (number of observations) = 468.
+Table 2 provides insights into social and transportation habits, indicating the number of close friends and the frequency of visits,
+which have implications for evacuation behavior. For example, those with a higher number of friends they frequently visit or invite
+over might choose to evacuate to a friend's place rather than a distant shelter. In terms of transportation habits, reliance on personal
+vehicles is the norm, which aligns with the preference for longer evacuation distances as personal mobility offers greater flexibility in
+destination choice.
+3.2. Methods
+In our study we utilized the multiple linear regression function in R to understand the impact of various sociodemographic factors
+like gender, age and relationship status on evacuation distance, a continuous variable that is well-suited for this type of analysis. This
+method was selected because of its capacity to account for multiple predictors simultaneously, offering a comprehensive view of how
+each variable contributes to the outcome of interest while controlling for other factors. Moreover, assumptions of linearity, indepen-
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+6
+H. Qin et al.
+Table 2
+Social and transportation habits Statistics.
+Mean SD Min Max Variable description
+Friends_area_dinner 4.11 5.01 0 50 How many friends do you feel comfortable asking to get dinner on a typical night
+Friends_area_visit 2.26 5.44 0 100 How many friends' homes do you feel comfortable visiting unannounced?
+Travel_long 19.21 22.44 0 100 How many times have you used the public transportation to travel in different distance: long
+Ttravel_short 21.14 19.31 0 83.33 distance/short distance/drive own car
+Drive 92.53 25.19 0 100
+Distance_wek 315.115 659.95 0.649 5903.66 Evacuation distance (km) when leave the area for a week in response to an event that only
+affected your city
+Distance_mon 504.131 998.232 1.484 12294.08 Evacuation distance (km) when leave the area for two months in response to an event that only
+affected your city
+Distance_ind 761.263 1483.163 1.484 12308.71 Evacuation distance (km) when leave the area indefinitely and did not know when you would be
+able to return
+Note: N (number of observations) = 468.
+dence, homoscedasticity, and normality of residuals were tested and met using diagnostic plots based on each model. The independent variables were selected based on their theoretical relevance, as depicted in Fig. 2, ensuring our model reflects well-established
+predictors of evacuation behavior. Each predictor was examined for its individual effect on the dependent variable and then collectively to understand the compounding influences within the context of evacuation scenarios.
+Furthermore, we employed a model optimization process, removing variables that did not significantly contribute to explaining
+the variation in evacuation distance. This was done systematically, ensuring that groups of related indicator variables such as dummy
+variables for categorical predictors were considered as a block. We followed a conservative p-value threshold of ≤0.20 for variable inclusion, as recommended by [66], to mitigate the risk of excluding potentially important predictors. This approach balances model
+parsimony with the inclusivity of significant variables, allowing us to build a model that is both robust and relevant.
+Variables such as gender, race, and employment status were categorical. These were included in the regression analysis through
+dummy coding, a standard method that transforms categorical variables into a series of binary variables. This process allows us to
+quantify the effects of different categories on the dependent variable, facilitating their interpretation within the linear regression
+framework.
+4. Results
+4.1. Response to evaluation scenarios
+In this part we looked into the decisions people in OH and PA make when they need to evacuate. This evacuation duration varied
+in a week, two months, or a permanent period. One clear trend is that the longer the evacuation, the more people considered moving
+further away (Fig. 3). The data showed a progressive increase based on the duration: for a one-week evacuation, the mean distance
+was 315.12 km; this jumped to 504.13 km for a two-month period and surged to 761.26 km when the evacuation duration is permanent. This further underscores the trend of people opting to move further away as the uncertainty or duration of their evacuation extends. Moreover, for a week-long evacuation, around 37 % of respondents are moving to another state. When that timeline stretched
+to two months, this number jumped to about 47 %. And if people didn't know when they'd be coming back, a significant 54 % were
+considering a move across state lines. While both OH and PA shared this general trend, PA consistently had a higher percentage of its
+residents evacuate out-of-state compared to OH across all three timeframes. Interestingly, the thought of leaving the U.S. mainland
+wasn't widespread, but it did become a slightly more popular option for those facing a permanent evacuation.
+Fig. 2. Visualizing the determinants of post-hazard evacuation decisions.
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+7
+H. Qin et al.
+Fig. 3. Distance traveled & interstate relocation rate across durations.
+4.2. One-week evacuation
+In our study, we determined that factors such as race, gender, travel experiences, local social networks, and the regularity of social
+interactions with friends significantly influence evacuation distance during short-term evacuations, spanning periods like one week
+and two months.
+When people need to evacuate for a week in the face of a hazard (Table 3), gender and race proved to be a significant predictor of
+evacuation distance. Specifically, males tended to evacuate further compared to females and Black or African individuals evacuated
+further than White individuals. Socializing habits yielded mixed results. Participants who strongly agree they have a good social network but never had people to home to socialize with had a notable decrease in their evacuation distance. Conversely, individuals who
+socialized daily with friends but rarely went to others’ homes to socialize had a significant increase in their evacuation distance.
+4.3. Two-month evacuation
+When the duration of the evacuation was extended to two months (Table 3), gender and race remained statistically significant predictor of evacuation distance. The Black or African category showed an increase in evacuation distance, though this was borderline
+significant (p = 0.08). Individuals of Hispanic or Latino descent exhibited a significant increase in evacuation distance compared to
+the reference White racial group. Those who never had people over to socialize evacuated 0.769 units less than those who socialized
+at home monthly. Neither following news nor focusing only on local news showed a significant relationship with evacuation distance,
+suggesting that information consumption patterns may not play a critical role in this extended evacuation scenario. Interestingly,
+transportation habits indicated that people who drive and have long-distance travel experience with public transportation tend to
+evacuate further during this period.
+4.4. Permanent evacuation
+In the face of a permanent evacuation (Table 3), factors such as gender, political orientation, specific social habits, and travel experiences play a crucial role in shaping evacuation distances. Males exhibited a trend towards evacuating further than females, although this result was borderline significant (p = 0.05). Notably, those with undisclosed gender were found to evacuate significantly
+further by 1.073 units compared to females. Participants identifying as conservative politically showed a decrease in evacuation distance compared to the reference liberal group. However, other political affiliations, such as independent and undisclosed, did not reveal any significant association with evacuation distance.
+The number of friends, participants felt comfortable inviting for dinner on a typical night (Friends_dinner), showed a borderline
+significant positive correlation with evacuation distance. Participants who strongly agree they had a good social network had a notable decrease in their evacuation distance under both permanent and one-week evacuation scenarios. Contrastingly, individuals who
+reported never having lunch with friends evacuated less than those who had lunch with friends monthly. Those who socialized
+weekly at others’ homes were also found having longer evacuation distance.
+Travel experience revealed a significant positive relationship with the evacuation distance. Specifically, people with more experience using public transportation to travel long distance evacuated further during the permanent evacuation scenario.
+5. Discussion
+5.1. Contributions and limitations
+Our findings augment the existing literature on evacuation behaviors, resonating with Horney et al. [51] and Sadri et al. [65] regarding the influence of sociodemographic factors. These studies underscored how such variables impact evacuation decisions, with
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+8
+H. Qin et al.
+Table 3
+Estimation results for the model of evacuation.
+Model of one-week evacuation Model of two-month evacuation Model of permanent evacuation
+Parameter Estimate P value Estimate P value Estimate P value
+Intercept 3.379 <0.001a
+3.621 <0.001a
+4.845 <0.001a
+Gender Male 0.545 0.006
+b
+0.739 0.001
+b
+0.454 0.052
+Undisclosed 0.539 0.268 0.636 0.183 1.073 0.040
+c
+Race Bi_Racial −0.596 0.373 −0.328 0.687 – –
+Black_African 0.652 0.024
+c
+0.564 0.081 – –
+Hispanic_Latino 0.991 0.141 1.662 0.046
+c
+– –
+Other 0.989 0.089 0.719 0.217 – –
+Political_orient Conservative – – – – −0.569 0.029
+c
+Independent – – – – −0.231 0.369
+Undisclosed – – – – 0.008 0.980
+Highest_edu Bachelor's degree 0.323 0.129 – – – –
+> Bachelor's degree 0.258 0.238 – – – –
+Employment Retired −0.332 0.177 −0.129 0.624 – –
+Student 0.309 0.469 0.528 0.191 – –
+Unemployed −0.116 0.735 0.095 0.791 – –
+Sn_here Disagree −0.639 0.094 −0.030 0.938 0.286 0.463
+Neither 0.297 0.302 0.453 0.165 0.481 0.162
+Strong agree −0.590 0.003
+b
+−0.296 0.167 −0.670 0.004
+b
+Strongly disagree −0.197 0.768 1.016 0.157 0.429 0.559
+Lunch_cowork Daily −0.484 0.101 −0.330 0.278 – –
+Monthly −0.358 0.217 −0.315 0.297 – –
+Undisclosed 0.469 0.360 0.044 0.934 – –
+Weekly 0.120 0.680 0.544 0.073 – –
+Yearly 0.587 0.091 −0.157 0.673 – –
+Socialize_friends Daily 0.506 0.039
+c
+– – – –
+Monthly −0.268 0.247 – – – –
+Never 0.659 0.309 – – – –
+Yearly −0.134 0.767 – – – –
+Lunch_friends Daily −0.178 0.716 −0.534 0.276 −0.612 0.221
+Never 0.038 0.907 −0.555 0.111 −1.000 0.007
+b
+Weekly 0.149 0.531 0.036 0.886 0.048 0.854
+Yearly 0.364 0.157 0.155 0.565 0.115 0.686
+Socialize_home Daily 0.470 0.315 0.667 0.181 – –
+Never −0.855 0.013
+c
+−0.769 0.037
+c
+– –
+Weekly −0.040 0.886 0.252 0.392 – –
+Yearly −0.338 0.149 0.149 0.550 – –
+Socialize_other Daily −1.072 0.414 0.317 0.870 1.534 0.424
+Never 0.578 0.141 0.772 0.076 0.198 0.663
+Weekly 0.079 0.754 0.403 0.131 0.618 0.016
+c
+Yearly 0.812 0.001
+b
+0.443 0.076 0.246 0.346
+Local_news Not follow news – – −0.204 0.489 – –
+Only local news – – −0.225 0.283 – –
+Friends_dinner – – – – 0.055 0.052
+Travel_long – – 0.014 0.002
+c
+0.012 0.006
+b
+Drive 0.006 0.084 0.008 0.047
+c
+– –
+N = 419 N = 397 N = 357
+Note.
+a P < 0.001.
+b P < 0.01.
+c P < 0.05.
+Horney et al. revealing significant gender and race effects on evacuation likelihood during Hurricane Isabel, and Sadri et al. highlighting evacuation route preferences during Hurricane Irma. Our research stands out by exploring the nuanced interplay between social
+support networks and evacuation decisions, a dynamic somewhat overlooked in previous works. Additionally, we delve into the temporal dynamics of evacuation, examining how decision-making processes shift from short-term to permanent scenarios, thereby providing nuanced insights invaluable for policy formulation and emergency management.
+Another contribution of our study lies in the emphasis on temporal factors during evacuation scenarios. While Buckland & Rahman [67] touched upon the broad behavioral tendencies during evacuations, our study dives into how people's decisions change
+when confronted with the uncertainties of short-term versus permanent evacuations. This distinction offers more granularity and can
+be invaluable for policymakers and emergency management professionals.
+Our exploration into the influence of political orientation on evacuation distances during permanent scenarios fills a gap in the existing literature, where the confluence of personal beliefs and evacuation behaviors hasn't been sufficiently analyzed. Our findings
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+9
+H. Qin et al.
+dovetail with Cordasco's [63] research, which suggested that personal beliefs can often influence decisions even in emergency situations.
+However, our study also has its limitations. As mentioned in the Data and Methods section, our sample was biased toward white,
+female residents, potentially affecting the interpretation of our findings and limiting their generalizability to the broader population.
+The underrepresentation of other racial, gender, and demographic groups might have resulted in missed nuances or distinctive behavioral patterns inherent to those communities. Additionally, the inherent biases and constraints of the population data used as benchmarks, often based on self-reported information, may not fully encapsulate the community's diversity. Such discrepancies between
+the sampled and actual populations remind us that both our findings and the demographic benchmarks they are compared against
+carry limitations that must be carefully navigated when drawing conclusions from the data.
+Moreover, as our study primarily focused on residents of OH and PA, the findings might not be generalizable to other regions or
+countries with different sociopolitical and environmental contexts. Many other factors, such as income level, physical disabilities, and
+resource accessibility, might also shape evacuation decisions but weren't evaluated in this study. Additionally, while our multivariate
+analysis is robust, it is also based on the voluntary responses of individuals, which may introduce response biases.
+5.2. Policy implications
+Our findings have several policy implications for urban planning and disaster management. Authorities should recognize the distinct evacuation patterns across different demographic groups and tailor their evacuation advisories and support services accordingly.
+Given the evidence that people with strong local social networks tend to stay closer, authorities can harness these networks for communication and support during hazards. Since a significant proportion considers moving across state lines during longer evacuations,
+states should collaborate to streamline inter-state evacuation processes, share resources, and provide support as needed. Moreover,
+given the indication that past experiences with long-distance travel influence evacuation distances, promoting familiarization trips,
+especially using public transport, can be beneficial. Such initiatives can equip residents with the confidence and know-how to evacuate farther when needed. Finally, our findings on the influence of political orientation on permanent evacuation decisions suggest that
+risk communication strategies need to be politically sensitive and diversified. Authorities should develop communication tools that
+resonate with different political groups to ensure the message's effectiveness.
+6. Conclusions
+In this study, sociodemographic factors such as gender and race are consistent predictors of evacuation distance. Notably, specific
+demographic groups, like males and Black or African individuals, typically travel farther during evacuations than their counterparts.
+There is also a clear and direct relationship between the duration of evacuation and the distance people are willing to travel. Longer
+evacuations invariably lead to people considering more distant destinations, with the distances progressively increasing from one
+week to permanent evacuations. This indicates the importance of temporal factors in evacuation planning and decisions.
+Consistent with pervious study [51,63,65,67], we find that people with strong local social networks tend to remain closer, while
+those regularly socialize with friends might travel farther. The interplay between local social connections and the urge to evacuate
+provides an interesting dichotomy for further exploration. The study also suggested that information consumption patterns may not
+be a primary influencer for evacuation decisions. Interestingly, political orientation influenced evacuation distances during permanent scenarios. This raises pertinent about whether personal beliefs and ideologies can influence decisions even during emergencies.
+Our findings also indicate that familiarity and comfort with long-distance travel, especially using public transportation, appear to affect their evacuation decisions, suggesting that past experiences shape responses during emergencies.
+Future research should delve deeper into the roles of cultural factors and personal ideologies in shaping evacuation decisions. Additionally, while our study focused on three specific regions, expanding the geographical scope can provide a more comprehensive
+understanding and guide national evacuation policies. Exploring the role of technology and real-time information dissemination in
+evacuation decisions also presents a promising avenue for future research.
+CRediT authorship contribution statement
+Haoming Qin: Writing – original draft, Formal analysis, Conceptualization. Wei Zhai: Writing – review & editing, Supervision,
+Data curation, Conceptualization. Junqing Tang: Writing – review & editing.
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to
+influence the work reported in this paper.
+Data availability
+The authors do not have permission to share data.
+Appendix A. Supplementary data
+Supplementary data to this article can be found online at https://doi.org/10.1016/j.ijdrr.2024.104701.
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+10
+H. Qin et al.
+References
+[1] Intergovernmental Panel on Climate Change, Mitigation of Climate Change. Contribution of Working Group III to the Fifth Assessment Report of the
+Intergovernmental Panel on Climate Change, IPCC, 2014, p. 147 [Report No. 1454.
+[2] B. Neumann, A.T. Vafeidis, J. Zimmermann, R.J. Nicholls, Future coastal population growth and exposure to sea-level rise and coastal flooding - a global
+assessment, PLoS One 10 (3) (2015) e0118571.
+[3] Wei Zhai, Zhong-Ren Peng, Yuan Faxi, Examine the effects of neighborhood equity on disaster situational awareness: Harness machine learning and geotagged
+Twitter data, International Journal of Disaster Risk Reduction 48 (2020) 101611.
+[4] S.L. Cutter, B.J. Boruff, W.L. Shirley, Social vulnerability to environmental hazards, Soc. Sci. Q. 84 (2) (2003) 242–261.
+[5] Y. Depietri, T. McPhearson, Changing urban risk: 140 years of climatic hazards in New York City, Climatic Change 148 (1–2) (2018) 95–108.
+[6] J.V. Tuccillo, S.E. Spielman, A method for measuring coupled individual and social vulnerability to environmental hazards, Ann. Assoc. Am. Geogr. 112 (6)
+(2022) 1702–1725.
+[7] W. Zhai, Z.R. Peng, Damage assessment using google street view: Evidence from hurricane Michael in Mexico beach, Florida, Applied Geography 123 (2020)
+102252.
+[8] E.L. Quarantelli, Patterns of sheltering and housing in US disasters, Disaster Prev. Manag.: An International Journal. 4 (3) (1995) 43–53.
+[9] R.M. Stein, L. Dueñas-Osorio, D. Subramanian, Who evacuates when hurricanes approach? The role of risk, information, and location, Soc. Sci. Q. 91 (3) (2010)
+816–834.
+[10] W. Zhai, H. Yu, C.Y. Song, Disaster Misinformation and Its Corrections on Social Media: Spatiotemporal Proximity, Social Network, and Sentiment Contagion,
+Annals of the American Association of Geographers 114 (2) (2024) 408–435.
+[11] T.E. Drabek, Disaster warning and evacuation responses by private business employees, Disasters 25 (1) (2001) 76–94.
+[12] L. Smith, C. McCarty, Fleeing the storm(s): an examination of evacuation behavior during Florida’s 2004 hurricane season, Demography 46 (1) (2009) 127–145.
+[13] S.K. Huang, M.K. Lindell, C.S. Prater, Who leaves and who stays? A review and statistical meta-analysis of hurricane evacuation studies, Environ. Behav. 48 (8)
+(2016) 991–1029.
+[14] P. Chen, W. Zhai, X. Yang, Enhancing resilience and mobility services for vulnerable groups facing extreme weather: lessons learned from Snowstorm Uri in
+Harris County, Texas, Natural Hazards 118 (2) (2023) 1573–1594.
+[15] E.J. Baker, Hurricane evacuation behavior, Int. J. Mass Emergencies Disasters 9 (2) (1991) 287–310.
+[16] F. Yuan, M. Li, R. Liu, W. Zhai, B. Qi, Social media for enhanced understanding of disaster resilience during Hurricane Florence, International Journal of
+Information Management 57 (2021) 102289.
+[17] J.K. Riad, F.H. Norris, R.B. Ruback, Predicting evacuation in two major disasters: risk perception, social influence, and access to resources 1, J. Appl. Soc.
+Psychol. 29 (5) (1999) 918–934.
+[18] L.K. Siebeneck, T.J. Cova, Spatial and temporal variation in evacuee risk perception throughout the evacuation and return-entry process, Risk Anal.: Int. J. 32 (9)
+(2012) 1468–1480.
+[19] J.H. Sorensen, B.V. Sorensen, Community processes: warning and evacuation, in: Handbook of Disaster Research, Springer, New York, NY, 2007, pp. 183–199.
+[20] M.K. Lindell, C.S. Prater, A hurricane evacuation management decision support system (EMDSS), Nat. Hazards 40 (3) (2007) 627–634.
+[21] R.J. Burby, Hurricane Katrina and the paradoxes of government disaster policy: bringing about wise governmental decisions for hazardous areas, Ann. Am.
+Acad. Polit. Soc. Sci. 604 (1) (2006) 171–191.
+[22] J.K. Maldonado, C. Shearer, R. Bronen, K. Peterson, H. Lazrus, The impact of climate change on tribal communities in the US: displacement, relocation, and
+human rights, Climate change and indigenous peoples in the United States: Impacts, experiences and actions (2014) 93–106.
+[23] R.L. Ersing, C. Pearce, J. Collins, M.E. Saunders, A. Polen, Geophysical and social influences on evacuation decision-making: the case of Hurricane Irma,
+Atmosphere 11 (8) (2020) 851.
+[24] E. Borowski, A. Stathopoulos, Protection or peril of following the crowd in a pandemic-concurrent flood evacuation, Nat. Hazards Rev. 24 (1) (2023) 04022045.
+[25] H.S. Na, R. Grace, Influence of social networks and opportunities for social support on evacuation destination decision-making, Saf. Sci. 147 (2022) 105564.
+[26] J. Whitehead, J. Maiolo, B. Edwards, K. Wilson, C.W. Marieke Van Willigen, M. Meekins, A Socioeconomic Impact Analysis for Hurricanes Bonnie, Dennis and
+Floyd, 2001 Report prepared for: North Carolina Department of Emergency Management Grant HMGP, 1240-0012.
+[27] J.M. Bateman, B. Edwards, Gender and evacuation: a closer look at why women are more likely to evacuate for hurricanes, Nat. Hazards Rev. 3 (3) (2002)
+107–117.
+[28] B.H. Morrow, H. Gladwin, Hurricane Ivan Behavioral Analysis, Federal Emergency Management Agency and US Army Corps of Engineers, 2005.
+[29] M.K. Lindell, J.C. Lu, C.S. Prater, Household decision making and evacuation in response to Hurricane Lili, Nat. Hazards Rev. 6 (4) (2005) 171–179.
+[30] N. Dash, H. Gladwin, Evacuation decision making and behavioral responses: individual and household, Nat. Hazards Rev. 8 (3) (2007) 69–77.
+[31] E. Kuligowski, Evacuation decision-making and behavior in wildfires: past research, current challenges and a future research agenda, Fire Saf. J. 120 (2021)
+103129.
+[32] Z.I. Farid, M. Nasreen, Where lies the problem with elderly population beneath the non-response to evacuation order?: a study on cyclone bulbul in cycloneaffected islands of Bangladesh, in: Coastal Disaster Risk Management in Bangladesh, Routledge, 2023, pp. 193–213.
+[33] W. Zhai, W. Hu, Z. Yuan, Y. Li, Examining disaster resilience perception of social media users during the billion-dollar hurricanes, Natural Hazards 120 (1)
+(2024) 701–727.
+[34] K. Katzilieris, E.I. Vlahogianni, H. Wang, Evacuation behavior of affected individuals and households in response to the 2018 Attica wildfires: from empirical
+data to models, Saf. Sci. 153 (2022) 105799.
+[35] R.W. Perry, A.H. Mushkatel, Minority Citizens in Disasters, University of Georgia Press, 2008.
+[36] M. Van Willigen, B. Edwards, S. Lormand, K. Wilson, Comparative assessment of impacts and recovery from Hurricane Floyd among student and community
+households, Nat. Hazards Rev. 6 (4) (2005) 180–190.
+[37] A. Pan, Study on the decision-making behavior of evacuation for coastal residents under typhoon storm surge disaster, Int. J. Disaster Risk Reduc. 45 (2020)
+101522.
+[38] H. Gladwin, J.K. Lazo, B.H. Morrow, W.G. Peacock, H.E. Willoughby, Social science research needs for the hurricane forecast and warning system, Nat. Hazards
+Rev. 8 (3) (2007) 87–95.
+[39] J.R. Maiolo, J.C. Whitehead, M. McGee, L. King, J. Johnson, H. Stone, Facing Our Future: Hurricane Floyd and Recovery in the Coastal Plain, 2001.
+[40] M. Van Willigen, T. Edwards, B. Edwards, S. Hessee, Riding out the storm: experiences of the physically disabled during hurricanes bonnie, dennis, and floyd,
+Nat. Hazards Rev. 3 (3) (2002) 98–106.
+[41] J.E. Yusuf, J.L. Whytlaw, N. Hutton, T. Olanrewaju-Lasisi, B. Giles, K. Lawsure, G. McLeod, Evacuation behavior of households facing compound hurricanepandemic threats, Publ. Adm. Rev. 83 (5) (2023) 1186–1201.
+[42] R. Alawadi, P. Murray-Tuite, D. Marasco, S. Ukkusuri, Y. Ge, Determinants of full and partial household evacuation decision making in hurricane Matthew,
+Transport. Res. Transport Environ. 83 (2020) 102313.
+[43] A.M. Sadri, S.V. Ukkusuri, H. Gladwin, The role of social networks and information sources on hurricane evacuation decision making, Nat. Hazards Rev. 18 (3)
+(2017) 04017005.
+[44] N. Xu, R. Lovreglio, E.D. Kuligowski, T.J. Cova, D. Nilsson, X. Zhao, Predicting and assessing wildfire evacuation decision-making using machine learning:
+findings from the 2019 kincade fire, Fire Technol. 59 (2) (2023) 793–825.
+[45] E.D. Felix, W. Afifi, The role of social support on mental health after multiple wildfire disasters, J. Community Psychol. 43 (2) (2015) 156–170.
+[46] S.D. Wong, A.J. Pel, S.A. Shaheen, C.G. Chorus, Fleeing from hurricane Irma: empirical analysis of evacuation behavior using discrete choice theory, Transport.
+Res. Transport Environ. 79 (2020) 102227.
+[47] J. Collins, A. Polen, E. Dunn, L. Maas, E. Ackerson, J. Valmond, D. Colón-Burgos, Hurricane hazards, evacuations, and sheltering: evacuation decision-making in
+the prevaccine era of the COVID-19 pandemic in the PRVI region, Weather, climate, and society 14 (2) (2022) 451–466.
+
+International Journal of Disaster Risk Reduction 111 (2024) 104701
+11
+H. Qin et al.
+[48] P. Slovic, H. Kunreuther, G. White, Decision processes, rationality and adjustment to natural hazards, in: The Perception of Risk, Routledge, 2016, pp. 39–69.
+[49] R. Bian, P. Murray-Tuite, J. Trainor, P. Edara, K. Triantis, Modeling evacuees’ intended responses to a phased hurricane evacuation order, Appl. Sci. 13 (8)
+(2023) 5194.
+[50] S. Arlikatti, M.K. Lindell, C.S. Prater, Y. Zhang, Risk area accuracy and hurricane evacuation expectations of coastal residents, Environ. Behav. 38 (2) (2006)
+226–247.
+[51] J.A. Horney, P.D. MacDonald, M.V. Willigen, P.R. Berke, J.S. Kaufman, Factors associated with evacuation from hurricane Isabel in North Carolina, 2003, Int. J.
+Mass Emergencies Disasters 28 (1) (2010) 33–58.
+[52] A.M. Sadri, S.V. Ukkusuri, M.A. Ahmed, Review of social influence in crisis communications and evacuation decision-making, Transp. Res. Interdiscip. Perspect.
+9 (2021) 100325.
+[53] M.R. Siam, H. Wang, M.K. Lindell, C. Chen, E.I. Vlahogianni, K. Axhausen, An interdisciplinary agent-based multimodal wildfire evacuation model: critical
+decisions and life safety, Transport. Res. Transport Environ. 103 (2022) 103147.
+[54] A.M. Sadri, S.V. Ukkusuri, S. Lee, R. Clawson, D. Aldrich, M.S. Nelson, D. Kelly, The role of social capital, personal networks, and emergency responders in postdisaster recovery and resilience: a study of rural communities in Indiana, Nat. Hazards 90 (3) (2018) 1377–1406.
+[55] B.L. Murphy, Locating social capital in resilient community-level emergency management, Nat. Hazards 41 (2) (2007) 297–315.
+[56] T.E. Drabek, K.S. Boggs, Families in disaster: reactions and relatives, J. Marriage Fam. (1968) 443–451.
+[57] T.E. Drabek, I.I.I.J.S. Stephenson, When disaster strikes 1, J. Appl. Soc. Psychol. 1 (2) (1971) 187–203.
+[58] N. Lin, M.W. Woelfel, S.C. Light, The buffering effect of social support subsequent to an important life event, J. Health Soc. Behav. (1985) 247–263.
+[59] R.L. Hawkins, K. Maurer, Bonding, bridging and linking: how social capital operated in New Orleans following Hurricane Katrina, Br. J. Soc. Work 40 (6) (2010)
+1777–1793.
+[60] E. Yamamura, Effects of interactions among social capital, income and learning from experiences of natural disasters: a case study from Japan, Reg. Stud. 44 (8)
+(2010) 1019–1032.
+[61] M. Lyu, B. Sun, X. Tian, Y. Wang, How does social capital influence shadow evacuation behavior under rainstorm disaster in China, Saf. Sci. 162 (2023) 106098.
+[62] S. Hasan, S.V. Ukkusuri, A threshold model of social contagion process for evacuation decision making, Transp. Res. Part B Methodol. 45 (10) (2011)
+1590–1605.
+[63] K.M. Cordasco, The paradox of social capital as a liability in disaster management: understanding the evacuation failure of Hurricane Katrina, Nat. Hazards Obs.
+30 (3) (2006) 5–6.
+[64] W.N. Adger, T.P. Hughes, C. Folke, S.R. Carpenter, J. Rockstrom, Social-ecological resilience to coastal disasters, Science 309 (5737) (2005) 1036–1039.
+[65] A.M. Sadri, S.V. Ukkusuri, P. Murray-Tuite, H. Gladwin, Hurricane evacuation route choice of major bridges in Miami Beach, Florida, Transport. Res. Rec. 2532
+(1) (2015) 164–173.
+[66] D.G. Kleinbaum, M. Klein, E.R. Pryor, Logistic Regression: a Self-Learning Text, vol. 94, Springer, New York, 2002.
+[67] J. Buckland, M. Rahman, Community-based disaster management during the 1997 red river flood in Canada, Disasters 23 (2) (1999) 174–191.

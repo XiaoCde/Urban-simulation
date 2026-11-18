@@ -1,0 +1,1077 @@
+H2Open Journal 9 (2026) 100019
+Contents lists available at ScienceDirect
+H2Open Journal
+journal homepage: www.elsevier.com/locate/issn/2616-6518/
+Human impacts of flood disasters: A global systematic review 
+(1980–2025)
+Isaac Kwesi. Noonia
+, Linda Sarpongb
+, Naomi Kumic
+, Nana Agyemang Prempehc,⁎
+, 
+Samuel Koranteng Fiankod
+, Zhongfang Jina
+a School of Atmospheric Science and Remote Sensing, Wuxi University, Wuxi 214105, China b Nuclear Regulatory Authority, Atomic Energy, P.O. Box AE 50, Kwabenya-Accra, Ghana c Department of Atmospheric and Climate Science, School of Geosciences, University of Energy and Natural Resources, P.O. Box 214, Sunyani, Ghana d Department of Business Support Studies, Faculty of Business Management, Central University of Technology, Bloemfontein 9301, South Africa 
+ARTICLE INFO
+Keywords: 
+Flood
+Human impacts
+Vulnerability
+Mortality
+Displacement
+Systematic review
+ABSTRACT
+Floods are the most frequent and destructive natural hazards globally, yet the human impacts 
+remain unevenly documented across regions. Evidence on mortality, displacement, health outcomes, and livelihood disruption remains incomplete, particularly in low- and middle-income 
+countries. This review investigates global evidence on the human impacts of floods published 
+from 1980 to 2025, focussing on vulnerability patterns, reporting gaps, and socio-spatial inequities. The systematic Scopus search yielded 19,105 records, where 82 met the inclusion criteria. The reviewed studies examined outcomes related to mortality, displacement, injuries, 
+health effects, and livelihood consequences. A formal meta-analysis was not undertaken because 
+of methodological heterogeneity. Instead, we applied narrative synthesis, complemented by 
+methodological quality assessment using the Mixed Methods Appraisal Tool (MMAT). Among the 
+outcomes examined, mortality was reported most consistently, appearing in 86.6% of studies, 
+whereas displacement, health effects, and livelihood impacts were documented less consistently. 
+The literature was geographically skewed toward Asia and North America, while Africa, Latin 
+America, and the Middle East remained underrepresented despite substantial exposure and 
+vulnerability. Risk was socially uneven, with older adults, children, low-income households, rural 
+populations, and marginalized groups experiencing disproportionate vulnerability. Cross-study 
+comparability and risk estimation are constrained by inconsistent reporting, limited outcome 
+standardization, and the underrepresentation of non-fatal impacts. Flood impacts are strongly 
+mediated by the interaction of hazard, exposure, governance, infrastructure, and social vulnerability. Global understanding remains constrained by systematic gaps in the literature, especially 
+in relation to displacement, long-term health effects, and livelihood consequences. Expanding 
+research coverage, standardizing reporting, and integrating social vulnerability metrics are critical to support evidence-based, equitable flood risk reduction strategies.
+https://doi.org/10.1016/j.htopen.2026.100019 
+2616-6518/© 2026 Published by Elsevier Ltd on behalf of IWA Publishing Ltd. This is an open access article under the CC BY-NC-ND license (http:// 
+creativecommons.org/licenses/by-nc-nd/4.0/). 
+]]]] 
+]]]]]]
+⁎ Corresponding author.
+E-mail address: agyemang.prempeh@uenr.edu.gh (N.A. Prempeh).
+
+1. Introduction
+Floods are the most frequent and geographically widespread natural disasters worldwide and affect more people each year than 
+any other natural hazard (Doocy et al., 2013; Jonkman & Vrijling, 2008). Flood risk arises from the interaction of multiple drivers, 
+including hydro-metrological hazards (e.g., rainfall intensity), land-use and land-cover change, urban expansion, infrastructure 
+conditions, and patterns of human exposure and vulnerability. Their impacts extend far beyond immediate physical destruction, 
+resulting in substantial mortality, injury, displacement, and long-term socioeconomic disruption. Between 1980 and 2009 alone, 
+floods were responsible for an estimated 539,811 deaths, 361,974 injuries, and affected approximately 2.8 billion people globally 
+(Doocy et al., 2013). In recent decades, increasing flood risk has been linked not only to climate variability and change, but also to 
+rapid urbanisation, deforestation, and unsustainable land-use practices that modify catchment hydrology and increase exposure 
+(Hirabayashi et al., 2013; Winsemius et al., 2016). The Intergovernmental Panel on Climate Change (IPCC) projects that flood risks 
+will continue to intensify throughout the twenty-first century, particularly in developing regions where adaptive capacity and disaster 
+preparedness remain limited (IPCC, 2021). Thus, to monitor and minimize disaster and adapt to climate, it is relevant to understand 
+the drivers and mechanism of flooding.
+Many interacting processes are known to cause and amplify floods when it occurs. First, heavy precipitation episodes due to 
+hydrometeorological factors, while deforestation (changes in land use land-cover change (LULC)) tend to increase in surface runoff 
+and acceleration of catchment response. Also, deforested regions increase erosion and sediment delivery in water bodies, thereby 
+causing siltation and reduction in drainage or river carrying capacity. Urban sprawl which increases impervious surfaces limit natural 
+drainage to amplify flood-risk while, exacerbating flood conditions when inadequate infrastructure and poor waste management can 
+obstruct drainage systems. Thus, making these interactive drivers into a multi-causal process to understand the mechanism of 
+flooding.
+Floods generate diverse human impacts across health, social, and economic domains, including mortality, injury, displacement, 
+disease risk, mental health effects, and livelihood disruption (Alderman et al., 2012; Fernandez et al., 2015). However, these impacts 
+are unevenly distributed across populations and places. Vulnerability is shaped by interacting demographic, socioeconomic, environmental, and infrastructural factors, making flood outcomes highly context-specific (FitzGerald et al., 2010; Jonkman et al., 
+2008; Tapsell et al., 2002). While these impacts are substantial, they are best understood as downstream outcomes of interacting 
+drivers of hazard, exposure, and vulnerability, rather than as standalone phenomena.
+The human impacts of floods are multidimensional and extend across health, social, and economic domains. Direct impacts 
+include mortality and physical injuries, while indirect consequences include infectious disease outbreaks, mental health disorders, 
+livelihood disruption, and prolonged displacement (Alderman et al., 2012; Fernandez et al., 2015). Drowning is widely recognised as 
+the leading cause of flood-related deaths and accounts for a large proportion of reported fatalities in flood events (Ashley & Ashley, 
+2008; Jonkman, 2005). However, developing nations, where health infrastructure is generally limited, contend with indirect mortality related disease outbreaks that significantly adds the total problem of flood-related disasters (Agampodi et al., 2014; Ahern 
+et al., 2005; Brown et al., 1998). Also, during disaster episodes and clean-up campaigns, people are exposed to either contaminated 
+water and hazardous materials, or long-term mental health conditions, which contributes to flood-related morbidity(Duclos et al., 
+1991; Lowe et al., 2013). Another crucial human impact is displacement, where millions of homes are destroyed and forced into 
+overcrowded housings with poor sanitation facilities (Aditi & Ganapathy, 2022).
+Notwithstanding the increasing scale and complexity of global flood disasters, evidence on human impacts still remained incomplete and unevenly distributed across regions. Though earlier reviews have made valuable insights, most studies concentrated on 
+specific flood types, or on selected outcome categories, rather than providing a more comprehensive account of human flood impacts 
+(Ahern et al., 2005; Alderman et al., 2012). Although these studies offer valuable understandings, they capture only part of the 
+broader range of human consequences associated with flooding. Additionally, the existing literature is heavily concentrated in highincome countries, mainly in North America, Europe, and Australia, leaving significant evidence gaps in low to middle-income areas 
+with highest regular flood vulnerability (Ashley & Ashley, 2008; FitzGerald et al., 2010). Earlier analyses have also tended to cover 
+shorter time periods and have not fully captured more recent patterns associated with climate change, urban expansion, land-cover 
+change, and increasing disaster exposure (Ababakr et al., 2023; Ahmed et al., 2026; Alcântara et al., 2023; Amini et al., 2025; 
+Hamaamin et al., 2025; Hamza et al., 2022; Jonkman, 2005; Tapsell et al., 2010).
+Moreover, prior reviews have rarely linked global evidence analysis with national-scale spatial analysis to show how broader 
+patterns of flood risk and vulnerability are expressed in specific local contexts. These gaps limit the capacity of policymakers and 
+disaster management agencies to design targeted interventions and allocate resources effectively for disaster risk reduction. To 
+address these limitations, this study presents a systematic review of global evidence on the human impacts of floods between 1908 
+and 2025. The review analyses findings across multiple impact domains, including mortality, displacement, injuries, health outcomes, and livelihood disreuption, and examine how these impacts vary across geographic regions, population groups, and exposure 
+contexts.
+The study carried out the following objectives: 
+1. To systematically review published global evidence on the human impacts of floods between 1980 and 2025.
+2. To identify temporal, geographic, and thematic patterns in flood impact research, with particular attention to evidence gaps 
+across regions and among vulnerable populations.
+3. To examine variations in flood-related impacts by flood type, demographic context, and degree of exposure and vulnerability.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+2
+
+This study contributes to the literature by presenting an updated and complete synthesis of global evidence on the human impacts 
+of floods over more than four decades. It draws attention to pronounced geographic inequalities in the distribution of research and to 
+critical evidence gaps in highly vulnerable regions. By bringing uneven evidence together within a coherent framework, the study 
+provides informed disaster risk reduction, enhanced early warning systems, and targeted climate adaptation policies.
+The remainder of this paper is organised as follows. Section 2 describes the systematic review methodology. Section 3 presents the 
+results of the global evidence analysis. Section 4 discusses the implications for disaster risk reduction and climate adaptation. The 
+final section outlines study limitations and proposes directions for future research.
+2. Methods
+2.1. Review design and protocol
+This study used systematic review based on the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA 
+2020) guidelines (Page et al., 2021). It ensures the study is transparent, reproducible, and consistently reported. An a priori review 
+protocol was developed to define the research questions, eligibility criteria, search strategy, screening procedures, data extraction 
+framework, and quality assessment methods.
+The main review question was: What is the global evidence on the human impacts of floods between 1980 and 2025 in relation to 
+mortality, displacement, injuries, health outcomes, and livelihood impacts? Secondary questions examined geographic patterns in the 
+literature, vulnerable populations, temporal trends in reported flood impacts, and variation across flood types. The review was not 
+registered in PROSPERO.
+2.2. Search strategy and information sources
+A comprehensive literature search was conducted in Scopus, a large multidisciplinary citation database covering peer-reviewed 
+research in the environmental, health, and social sciences (Baas et al., 2020). Scopus was selected because of its broad interdisciplinary coverage relevant to flood impacts. The search was conducted on 15 December 2025 and targeted studies published 
+between 1980 and 2025. The search strategy combined flood-related terms and human-impact terms using Boolean operators (AND/ 
+OR). Flood-related terms included: flood, flooding, flash flood, riverine flood, coastal flood, urban flood, pluvial flood, and inundation. 
+These were combined with impact-related terms such as human impact, mortality, fatality, casualty, displacement, evacuation, injury, 
+morbidity, health impact, public health, livelihood, socioeconomic impacts, and affected population. The search was limited to Englishlanguage peer-reviewed journal articles. No geographic restrictions were applied. The search strategy was refined iteratively through 
+pilot searches to improve sensitivity and relevance, resulting in 19,105 records for screening.
+2.3. Eligibility criteria
+Studies were eligible if they examined human populations affected by flood events in any geographic region or demographic 
+context. Eligible flood exposures included riverine, coastal, flash, urban, pluvial, and hybrid flood events, provided that flooding was 
+a major hazard component. Eligible outcomes included: mortality and fatality counts, injuries and morbidity, displacement and 
+evacuation, physical and mental health outcomes, livelihood and socioeconomic impacts and affected population statistics. All 
+empirical study designs were considered eligible, including quantitative, qualitative, and mixed-methods studies, as well as epidemiological, cohort, cross-sectional, ecological, and case-based studies with extractable human-impact data. Studies were excluded if 
+they: 
+1. examined hazards unrelated to floods
+2. focused only on property, infrastructure, or economic losses without human-impact outcomes
+3. modelling or simulation studies without empirical disaster data
+4. not peer-reviewed journal articles
+Studies focused solely on environmental or ecological impacts without human dimensions were also excluded. Duplicate publications and secondary analyses of already included datasets were removed during screening.
+2.4. Study selection
+Study selection followed a multi-stage screening process. All 19,105 records retrieved from Scopus underwent title and abstract 
+screening by two reviewers using the predefined eligibility criteria. A pilot screening exercise involving 50 randomly selected records 
+was conducted before formal screening to improve consistency in the application of inclusion and exclusion criteria. Disagreements 
+were resolved through discussion. Any record considered potentially relevant by either reviewer proceeded to full-text review. At the 
+title and abstract stage, 18,685 records were excluded, mainly because they were unrelated to floods, lacked human-impact outcomes, were modelling studies without empirical data, or were not peer-reviewed journal articles.
+The remaining 420 full-text articles were assessed independently by two reviewers. Disagreements were resolved through discussion and, where necessary, consultation with a third reviewer. Most were excluded primarily due to the absence of extractable 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+3
+
+human-impact data or because floods were not the primary hazard. The justification for excluding them were systematically 
+documented. A total of 82 studies were included in the final review, and the study selection process is presented in the PRISMA 2020 
+flow diagram (Fig. 1).
+2.5. Data extraction
+The study designed a standardized data extraction form. Based on a pilot-test, about five studies was tested to improve reliability 
+and extensiveness in data collection. Two independent reviewers performed the data extraction, whereas a third reviewer randomly 
+sampled about 10% to check and verify reliability and quality. Extracted variables included: 
+• bibliographic information: author, year, title, journal
+• study characteristics: study design, country, region, urban/rural context
+• flood characteristics: flood type, temporal scale, spatial scale, duration, recurrence interval (where available)
+• human-impact outcomes: mortality, injuries, displacement, health effects, livelihood impacts, and affected population statistics
+• methodological quality indicators
+For clarity in this review, affected population refers broadly to individuals experiencing adverse consequences of a flood event, 
+including injury, evacuation, displacement, livelihood disruption, or other direct impacts, whereas displaced population refers 
+specifically to people forced to leave their usual place of residence, either temporarily or permanently, because of flooding. Quality 
+indicators were also extracted for subsequent methodological assessment. As part of quality control, all extracted numeric values 
+were cross-checked against the original source material, and any affected summary totals were recalculated following correction of 
+identified extraction or classification errors.
+Fig. 1. presents the PRISMA 2020 flow diagram for study identification, screening, eligibility assessment, and inclusion. 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+4
+
+2.6. Quality assessment
+Methodological quality and risk of bias were assessed using criteria adapted from the Newcastle–Ottawa Scale for observational 
+studies and the Mixed Methods Appraisal Tool (MMAT) (Hong et al., 2018; Wells et al., 2014). Studies were evaluated across several 
+domains, including: 
+• representativeness of the study population
+• sampling strategy
+• adequacy of outcome measurement and case definitions
+• control of confounding
+• robustness of the analysis
+• transparency in reporting limitations
+Quality assessment was performed independently by two reviewers, with disagreements resolved through discussion. Studies were 
+not excluded on the basis of quality; instead, quality ratings informed interpretation of the evidence.
+2.7. Data synthesis and analysis
+A formal meta-analysis was not feasible because of substantial heterogeneity in study design, flood type, outcome definition, 
+exposure classification, and reporting format. Accordingly, a narrative analysis approach was used (Popay et al., 2006). The analysis 
+included: 
+1. Descriptive analysis of study characteristics, including publication year, region, country income level, flood type, study design, 
+and outcome category.
+2. Thematic synthesis of major human-impact outcomes, grouped into mortality, displacement, injuries and morbidity, health effects, and livelihood impacts.
+3. Subgroup analysis was undertaken to examine differences across geographic region, flood type, and vulnerable population groups.
+4. A comparative analysis was undertaken to examine areas of convergence and divergence across the reviewed studies.
+5. Quantitative summary statistics, including counts, proportions, ranges, and medians, were generated where data permitted.
+This approach enabled identification of broad global patterns in the human impacts of floods, as well as major evidence gaps 
+across regions, outcomes, and vulnerable populations.
+3. Results
+3.1. Study selection and characteristics
+A total of 82 studies were included in the review. A total of 82 studies were included in the review. Considerable heterogeneity 
+was observed across the included studies with respect to research design, geographic setting, flood type, and outcome measures. A 
+broad range of study designs was represented, including time-series epidemiological studies, retrospective observational analyses, 
+cross-sectional surveys, case-control studies, prospective cohort studies, interrupted time-series analyses, outbreak investigations, 
+ecological studies, randomized controlled trials of interventions, qualitative case studies, mixed-methods studies, GIS-based analyses, 
+and event-based disaster assessments. This diversity of evidence base highlights the multidisciplinary scope of flood-impact research, 
+drawing on epidemiology, public health, disaster management, geography, hydrology, engineering, and the social sciences. The 
+reviewed studies covered several geographic scales, ranging from ranging from community-level investigations to regional multicountry analyses and global assessments. The flood events addressed in previous studies extended from single discrete events, such as 
+hurricanes or flash floods, to multiple events within defined periods, seasonal flooding patterns, and long-term historical analyses. 
+Human impacts were reported across a wide range of outcomes, with some studies focusing solely on mortality, while others examined injuries, displacement, infectious disease outbreaks, mental health effects, and livelihood disruption.
+Although the search covered studies published between 1980 and 2025, the included evidence was concentrated in more recent 
+years, with most studies published from 1997 onward. To facilitate interpretation, graphical summaries were prepared to illustrate 
+temporal trends, geographic distribution, and the frequency of reported impact categories.
+3.2. Geographic distribution of studies
+The geographic distribution of the included studies was highly uneven across world regions and income groups] (Figs. 1 and 2). 
+The evidence base was heavily concentrated in Asia and North America, with Africa and other underrepresented regions contributing 
+markedly fewer studies.
+At the national level, a limited number of countries were disproportionately represented, especially those with greater research 
+capacity, more developed disaster reporting systems, and higher visibility in the academic literature. Contrarily, many highly floodprone regions, especially those in low-income settings, were either sparsely represented or entirely absent from the literature. This 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+5
+
+finding suggests that the geography of research does not necessarily mirror the geography of flood vulnerability. This imbalance was 
+further reinforced by income-based patterns, with studies concentrated in high-income and upper-middle-income countries, while 
+low-income countries remained underrepresented despite high exposure and lower adaptive capacity. This disparity likely reflects 
+wider structural inequalities in research infrastructure, disaster surveillance capacity, and data availability (Ababakr et al., 2023; 
+Ahmed et al., 2026; Alcântara et al., 2023; Amini et al., 2025; Bwire et al., 2023; Hamaamin et al., 2025; Hamza et al., 2022). Overall, 
+the pattern presented in Figs. 1 and 2 demonstrate that the current evidence base is shaped not only by the distribution of flood 
+impacts, but also by unequal research visibility across regions and income groups.
+Fig. 2. Geographic distribution of included studies by continent and income level. 
+Fig. 3. Distribution of included studies by World Bank income classification. 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+6
+
+3.3. Temporal Trends in Research Publication
+The temporal distribution of the included studies revealed a strong concentration of publications in recent years Fig. 3). While the 
+review spans several decades, the majority of included studies were published from 2010 onward, with the most recent years 
+contributing the largest share.
+This increases likely reflects growing global concern about climate-related disasters, improvement disaster data systems, advances 
+in geospatial and interdisciplinary research, and methods, and expanding policy interest in disaster risk reduction and climate 
+adaptation. Recent studies appear to engage more explicitly than earlier work with questions of vulnerability, displacement, health 
+impacts, and governance.
+Yet, the historical evidence base gives rise to a measure of recency bias. Although the literature captures contemporary flood-risk 
+conditions, it is less informative about longer-term historical changes in flood impacts and adaptation. Generally, Fig. 3 suggest that 
+the evidence base remains temporally uneven and concentrated heavily in the last decades, despite the evidence base rapidly grew.
+3.4. Flood types examined
+The included studies represented a broad spectrum of flood types, underscoring the diversity of hydrological and meteorological 
+processes that produce inundation events (Fig. 4). The most commonly reported category was unspecified flood type, followed by 
+riverine floods, flash floods, and flooding associated with hurricanes or cyclones]. Studies of riverine flooding primarily examined 
+events resulting from river overflow following prolonged rainfall or snowmelt, typically affecting extensive geographic areas and 
+producing prolonged inundation. Flash flood studies focussed on rapid-onset events triggered by intense rainfall over short durations, 
+particularly in urban or mountainous environments. Hurricane- and cyclone-related studies addressed compound hazards, including 
+storm surge, heavy rainfall, and associated flooding.
+Other flood types were less frequently represented, including monsoon floods, pluvial (rainfall-induced) flooding, urban flooding, 
+and compound flood-landside events. Monsoon floods were primarily reported in South and Southeast Asia, where seasonal flooding 
+is recurrent. Pluvial flooding referred to surface water accumulation exceeding drainage capacity, while urban flooding highlighted 
+vulnerabilities in densely built environment with limited infiltration and inadequate drainage systems. Only a small number of 
+studies addressed coastal flooding outside storm surge contexts or landslide-related flooding.
+A notable limitation in the literature is the high proportion of studies that did not specify, flood type, which restricts the ability to 
+compare impacts across hazard categories. The absence of classification is significant because flood type can strongly influence 
+patterns of mortality, displacement, infrastructure damage, and post-disaster recovery processes. The distribution of studies across 
+flood types also reveals important evidence gaps, with very limited attention to hazards such as ice-jam floods, dam-failure floods, 
+and glacial lake outburst floods, despite their potentially severe impact in specific regions Flood type distribution studies further 
+underscores important evidence gaps, especially the limited attention given to hazards such as ice-jam floods, dam-failure floods, and 
+glacial lake outburst floods, notwithstanding their potentially severe consequences in specific regions.
+Fig. 4. Temporal distribution of included studies by publication period (1990–2025). 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+7
+
+General, the literature is disproportionately concentrated on rapid-onset and highly visible events, such as flash floods and 
+hurricanes, whereas slower-onset or recurrent flooding processes, despite their association with substantial displacement and livelihood disruption, remain comparatively understudied.
+3.5. Human impact outcomes
+3.5.1. Overview of outcome reporting
+The 82 included studies documented a broad range of human impact outcomes, highlighting the multidimensional consequences 
+of flooding (Fig. 5). Mortality was the most commonly reported outcome, whereas injuries, displacement, health effects, and livelihood impacts were documented less consistently across the literature less consistently. This pattern suggests that the studies remain 
+disproportionately focused on acute, measurable outcomes, with comparatively less attention to longer-term and more complex 
+impacts. A vital aspect of evidence base is that various forms of harm are unevenly represented. Mortality was systematically 
+documented, probably because deaths are more consistently recorded in official records and disaster reporting systems. On the 
+contrary, outcomes such as prolonged displacement, mental health effects, disruption of chronic disease care, and livelihood erosion 
+were less consistently quantified, even when identified as major consequences. This finding implies that measurable and institutionally recorded outcomes are more likely to be reported, while longer-term and socially mediated impacts remain comparatively neglected.
+This pattern is further influenced by methodological differences. Quantitative epidemiological and disaster-event studies are 
+generally more likely to report mortality and injury counts, whereas qualitative and mixed-methods studies more capture displacement experiences, psychosocial impacts, and livelihood disruption. For this reason, the frequency with with certain outcomes 
+are reported in the literature should be interpreted with causion. Livelihood impacts were frequently identified, but they were 
+generally reported in aggregated terms rather than documented through detailed household-level evidence. In general, Fig. 5 produces both the human burden of floods and the methodological biases influencing the evidence base, signaling that immediate 
+impacts are documented more effectively than longer-term consequences..
+3.5.2. Mortality impacts
+As shown in Table 1, flood-related mortality varied substantially across studies, ranging from small-scale events to major catastrophic disasters. These differences may be explained by variation in hazard intensity, exposure levels, and reporting practices. 
+Drowning was the main direct cause of death, especially in flash floods and rapidly inundated settings. At the same time, indirect 
+factors, including infrastructure failure, delayed evacuation, and transport-related risks, also contributed to mortality, pointing to the 
+importance of exposure, infrastructure, and vulnerability. The evidence on mortality is disproportionately shaped by large, highvisibility disasters, whereas smaller and more frequent events remain less consistently documented. This introduces a visibility bias, 
+with extreme events disproportionately shaping the evidence base. General, patterns of flood mortality are highly variable, yet they 
+are consistently shaped by the interaction between hazard characteristics and underlying vulnerability.
+Fig. 5. Distribution of flood types reported across the reviewed studies. 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+8
+
+Fig. 6. Frequency of human impact outcome reporting across included studies. 
+Table 1 
+Flood events extracted from quantitative mortality information from included studies. 
+Study Flood Event & Location Deaths Key Findings
+(Ban et al., 2023) Flooding exposure, North 
+Carolina, USA (2015−2019)
+≈ 201/year 
+attributable
+446,807 total deaths in the underlying datasets; 
+flooding exposure associated with approximately 201 
+attributable deaths annually
+(Syvitski & Brakenridge, 
+2013)
+Monsoon riverine flooding, 
+Indus River, Pakistan (2010)
+∼2000 Major monsoon disaster
+(Trigo et al., 2016) Flash floods, Lisbon 
+metropolitan area, Portugal 
+(1967)
+495−700 Estimates vary; several hundred injured
+(Hadjij et al., 2021) Flash floods, NW Algeria 
+(1966−2019)
+324 52 flood events; drowning dominant cause
+(Alcântara et al., 2023) Flash floods & landslides, 
+Petrópolis, Brazil (2022)
+231 ∼60 houses destroyed; 1021 buildings on slopes
+(Stewart & Cangialosi, 2012) Tropical Storm Agatha, 
+Guatemala (2010)
+190 Rain-induced floods & mudslides
+(Gathen. et al., 2022) Flash flood & mudslide, 
+Germany (July 2021)
+≥ 184 63 treated at trauma centre; 22 hospitalised
+(Fazel-Rastgar & Sivakumar, 
+2023)
+Flash flood, Charikar, 
+Afghanistan (August 2020)
+150 Localised catastrophic event
+(Ahmed et al., 2020) Vehicle-related incidents, 
+Australia (2001−2017)
+96 74 incidents; alcohol/drugs risk factor
+(Stephens et al., 2020) Hurricane Harvey, Texas, USA 
+(2017)
+88 + 11% ED visits; evacuee ED visits + 127%
+(Dinis et al., 2021) Flash floods, Benguela, Angola 
+(2015, 2019)
+71 2015 event; ≥ 28 injured in 2019
+(Ansah et al., 2020) Urban floods, Accra & Kumasi, 
+Ghana (2018)
+14 Urban infrastructure failures
+(Diakakis et al., 2022) Catastrophic flash floods, E. 
+Mediterranean (1882−2021)
+≥ 10 132 events ≥ 10 deaths; return period 1.56 years
+Note: The reported values are reproduced as presented in the source studies and have not been fully standardized across study designs. Some entries correspond to 
+event-specific death counts, whereas others represent modeled attributable mortality estimates, minimum reported values, or reported ranges. The table should 
+therefore be interpreted as illustrating variation in the reporting of flood-related mortality rather than as a basis for direct cross-study comparison.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+9
+
+3.5.3. Displacement and evacuation
+Displacement occurrences were frequently significant but not adequately quantified (Table 2). Both immediate evacuation and 
+longer-term displacement lasting weeks, months or years werer reported in the 21 studies. The main drivers that emerged were 
+housing damage, continued flood risk, contamination, infrastructure disruption, and economic constraints on recovery. Quantitative 
+evidence on displacement was scare, with only one study providing an extractable estimate. This highlights a significant gap in the 
+evidence base when considered against the global scale displacement caused by flooding. People displaced by flooding experienced a 
+range of overlapping hardships, including inadequate shelter, loss of privacy, disruption of social networks, interruption of education 
+and employment, psychological distress, and heightened disease risk in shelters. Displacement was also socially differentiated, with 
+low-income households, renters, older adults, and persons with disabilities experiencing disproportionate difficulties during evacuation and recovery. Overall, the findings suggest that displacement remains a central but under quantified aspect of flood impacts, 
+with important consequences for equity and long-term vulnerability.
+3.5.4. Injuries and morbidity
+Flood-related morbidity includes both direct physical injuries and substantial indirect health effects (Table 3). Reported injuries 
+included fractures, lacerations, puncture wounds, near-drowning cases, burns, and injuries associated with debris, structural collapse, 
+and vehicle incidents. Most injuries were minor to moderate, but severe trauma was more common in flash floods and structurally 
+destructive events. Evidence from trauma centre studies confirmed the presence of multi-trauma cases requiring hospitalisation and 
+surgery. Beyond acute injuries, floods were associated with worsening of chronic diseases, including cardiovascular, respiratory, and 
+metabolic conditions. These effects arose from medication interruption, reduced access to healthcare, evacuation-related stress, and 
+deteriorating living conditions. Healthcare systems were also disrupted by flooding, leading to increased demand for services and 
+changes in care-seeking behavior. For example, significant increases in emergency department utilization were observed after major 
+flood events, reflecting both the direct and indirect health burdens of flooding. The available literature shows that non-fatal morbidity is possibly underestimated, specifically in low-resource settings where early warning systems are weak or non-existent and 
+informal treatment is widely used. Overall, morbidity extends well beyond immediate injury and represents a substantial but underrecognised component of flood impacts.
+3.5.5. Health effects
+Flooding was associated with a wide range of infectious, mental, and chronic health outcomes (Table 4), many of which persisted 
+beyond the acute disaster phase. Infectious diseases were among the most frequently reported outcomes, including cholera, typhoid, 
+hepatitis A and E, diarrhoeal diseases, malaria, and dengue. These were linked to water contamination, sanitation breakdown, and 
+vector proliferation. Mental health impacts—including post-traumatic stress disorder, depression, anxiety, and grief—were consistently reported and often persisted for months or years. Vulnerability was higher among children, older adults, and socially 
+isolated individuals. Floods also exacerbated chronic diseases through medication disruption, reduced healthcare access, and stressrelated deterioration. These findings indicate that flood-related health impacts are multi-system, prolonged, and socially patterned.
+3.5.6. Livelihood and economic impacts
+Floods produced multidimensional livelihood impacts (Table 5), affecting income, employment, food security, assets, and longterm economic stability. Income loss resulted from business interruption, crop failure, and asset destruction, disproportionately 
+affecting informal workers, farmers, and small enterprises. Infrastructure damage and displacement contributed to employment 
+disruption through job loss, reduced working hours, and unstable earnings. Reduced availability, rising prices, and disrupted supply 
+chains contributed to food insecurity, while asset loss further limited recovery capacity. Floods also strained household finances by 
+reducing savings and increasing debt burdens, often resulting in prolonged financial hardship. Households’ need to redirect resources 
+toward recovery disrupted educational continuity and may have had lasting consequences for human capital development. Repeated 
+exposure to flooding contributed to the persistence of poverty and constrained social mobility, especially among already vulnerable 
+populations. General, livelihood impacts were rarely discrete and were typically characterized by overlapping and mutually reinforcing forms of economic hardship.
+3.6. Quantitative analysis of numerical impact data
+Extractable numerical data were available in only a subset of studies (Table 6), which constrained the potential for quantitative 
+synthesis. Mortality data were the most consistently reported, whereas data on displacement and affected populations remained 
+sparse and highly heterogeneous. Displacement data were especially limited, as only one study reported extractable numerical 
+estimates. This substantially limits comparative analysis and underscores a major gap in the literature. Heterogeneity in definitions, 
+temporal scope, and reporting formats further limited comparability.
+3.7. Vulnerable populations
+The reviewed studies identified multiple vulnerable groups (Table 7), including older adults, low-income populations, children, 
+rural populations, women, persons with disabilities, and socially marginalised groups. Vulnerability was shaped by interacting social, 
+economic, and environmental factors, including mobility constraints, health status, housing quality, access to resources, and social 
+support. However, several groups—including migrants, homeless populations, and linguistic minorities—were largely absent from 
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+10
+
+Table 2 
+Major displacement and evacuation outcomes associated with flooding, principal mechanisms, and recovery implications. 
+Category Main outcomes reported Principal mechanisms / 
+pathways
+Key observations from the reviewed studies Implications
+Immediate evacuation Emergency evacuation • Rising floodwaters
+• Unsafe housing
+• Emergency orders
+• Service disruption
+• Evacuation was a common early response
+• Reporting was usually descriptive rather 
+than systematically quantified
+Extensive emergency planning (e.g., 
+evacuation logistics, warning systems etc.).
+Short- to long-term 
+displacement
+Displacement were both short- and 
+long-term
+• Housing destruction or 
+severe damage
+• Consistent flood risk
+• Sewage, debris, or 
+hazardous contamination
+• Economic barriers to 
+rebuilding
+• Land-use restrictions or 
+managed retreat
+• Documented 21 studies on displacement
+• Reporting was quantitative in nature and 
+limited
+• A study reported a directly extractable 
+estimate
+Resource to monitor displacement. Necessary 
+to capture floods scale and duration.
+Drivers of prolonged 
+displacement
+•Delayed return 
+•Displacement were persistent
+• Flood depth and duration
+• Housing loss
+• Damaged infrastructure
+• Interrupted water, power, 
+and sanitation
+• Fear of recurrence
+• Weak recovery capacity
+• Displacement was shaped not only by flood 
+severity but also by recovery conditions 
+and household capacity to rebuild or 
+relocate
+Recovery policy should address both physical 
+reconstruction and the social and economic 
+conditions needed for safe return or 
+resettlement.
+Hardships experienced by 
+displaced populations
+•Inadequate shelter conditions 
+•Lack of privacy and dignity 
+•Disruption of social support networks 
+•Interrupted education and employment 
+•Psychological distress 
+•Infectious disease risk in shelters 
+•Barriers to accessing disaster assistance
+• Overcrowded shelters
+• Prolonged instability
+• Social dislocation
+• Administrative barriers to 
+assistance
+• Displaced populations faced multiple 
+overlapping burdens
+• Flood impacts often continued well beyond 
+the immediate event
+Flood response should integrate shelter 
+quality, public health protection, social 
+services, education continuity, and livelihood 
+recovery.
+Unequal displacement 
+experiences
+Greater displacement burden among 
+low-income households, renters, older 
+adults, and persons with disabilities
+• Limited evacuation 
+resources
+• Weaker housing
+• Mobility constraints
+• Dependence on assistance 
+systems
+• Unequal recovery support
+• Displacement was socially differentiated
+• Some groups faced greater barriers both to 
+evacuation and to longer-term recovery
+Displacement planning and recovery support 
+be equity-sensitive and tailored to the needs 
+of high-risk groups.
+Evidence and reporting gap Underreporting of displacement scale, 
+duration, and outcomes
+• Qualitative reporting
+• Lack of systematic 
+enumeration
+• Weak monitoring 
+frameworks
+• Greater attention to 
+mortality than 
+displacement
+• The evidence base remains thin relative to 
+the scale of the problem
+• Peer-reviewed studies likely underreport 
+displacement burdens
+More systematic and standardized 
+displacement tracking is needed in flood 
+research,
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+11
+
+Table 3 
+Major flood-related injuries and morbidity outcomes identified in the reviewed studies. 
+Category Main outcomes reported Principal mechanisms / 
+pathways
+Key observations from the reviewed studies Implications
+Acute physical injuries Falls, fractures, lacerations, abrasions, 
+contusions, puncture wounds, sprains, 
+strains, near-drowning cases, burns, animal 
+bites, injuries from structural collapse, and 
+motor vehicle-related injuries
+• Contact with debris and 
+polluted floodwater
+• Evacuation and rescue 
+activities
+• Debris flows
+• Structural collapse
+• Fire or chemical exposure
+• Vehicle incidents during 
+floods
+• The 15 studies reported diverse injury 
+patterns
+• Minor to moderate injuries were most 
+common overall
+• Severe trauma was more frequent in flash 
+floods and structurally destructive events
+Emergency preparedness should include 
+trauma care capacity, safe evacuation 
+planning, and rescue protocols tailored 
+to high-risk flood contexts.
+Severe trauma cases Multi-trauma, fractures, and major soft 
+tissue injuries requiring hospitalization or 
+surgery
+• High-energy impacts from 
+debris, collapsing 
+structures, and rapid flood 
+forces
+• A German Level I trauma centre study after 
+the July 2021 flash floods reported 63 
+injured patients, 22 hospitalizations, and 15 
+surgeries
+• Fractures and soft tissue trauma were the 
+dominant patterns (Gathen. et al., 2022).
+Severe injury burden may be 
+concentrated in flash floods and 
+structurally destructive flood events, 
+highlighting the need for specialized 
+trauma response systems.
+Indirect morbidity: chronic 
+disease worsening
+Exacerbation of cardiovascular disease, 
+diabetes, respiratory disorders, and other 
+chronic illnesses
+• Medication interruption
+• Disrupted healthcare 
+access
+• Evacuation stress
+• Worsening living 
+conditions
+• Interrupted routine care
+• Several studies showed that floods 
+aggravated pre-existing chronic disease
+• Morbidity extended beyond direct injuries 
+into the longer recovery period
+Flood response should ensure continuity 
+of care, medication access, referral 
+pathways, and targeted support for 
+people with chronic conditions.
+Indirect morbidity: 
+healthcare disruption 
+and increased service 
+demand
+Increased emergency department (ED) 
+visits; treatment for both flood-related and 
+non-flood-related illnesses worsened by 
+disaster conditions
+• Displacement
+• Health service disruption
+• Delayed treatment
+• Stress-related 
+deterioration
+• Changed care-seeking 
+patterns
+• After Hurricane Harvey, emergency 
+department data showed an 11-percentagepoint rise in total ED visits and a 127- 
+percentage-point rise in evacuee ED visits 
+(Stephens et al., 2020)
+• This indicates both direct morbidity and 
+major disruption to care access
+Disaster planning should account not 
+only for direct injury treatment but also 
+for secondary health system pressure 
+caused by disrupted care-seeking 
+patterns.
+Measurement and 
+surveillance gap
+Underestimation of non-fatal injury and 
+morbidity burden
+• Informal treatment rarely 
+recorded
+• Many affected individuals 
+do not seek formal care
+• Weak surveillance systems
+• Priority given to mortality 
+over non-fatal outcomes
+• Several studies suggested that the true nonfatal burden is underestimated
+• This problem is especially acute in lowresource settings with weak health 
+information systems
+Stronger injury surveillance and postdisaster morbidity monitoring are 
+needed to capture the full health burden 
+of flood events.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+12
+
+Table 4 
+Major health effects of flooding identified in the reviewed studies. 
+Health effect 
+category
+Main health outcomes reported Principal mechanisms / pathways Key observations from the reviewed 
+studies
+Implications
+Infectious 
+diseases
+Cholera, typhoid fever, hepatitis A and E, acute 
+diarrhoeal illness, malaria, dengue fever, Rift 
+Valley fever, skin and soft tissue infections, 
+respiratory illnesses
+• Contamination water supplies
+• Sanitation failure
+• Stagnant water supporting vector
+• Contact with polluted floodwater
+• Damp, crowded post-flood living 
+conditions
+• Among the most frequently 
+reported post-flood outcomes
+• Outbreak studies showed clear 
+temporal and spatial links with 
+flooding
+• Cholera and diarrhoeal disease 
+increased where water and 
+sanitation systems were disrupted
+Flood response must include disease surveillance, 
+water, sanitation and hygiene (WASH) measures, 
+vector control, and rapid outbreak response.
+Mental health 
+effects
+Post-traumatic stress disorder (PTSD), 
+depression, anxiety, grief, complicated 
+bereavement, substance use disorders
+• Threats to life
+• Death of relatives or community 
+members
+• Property loss
+• Prolonged displacement
+• Economic disruption
+• Weak social support
+• Pre-existing mental health 
+conditions
+• Reported consistently across 
+studies
+• Often persisted for months or 
+years
+• Children, older adults, and 
+socially isolated individuals were 
+at higher risk
+• One trial showed that structured 
+mental health support reduced 
+symptoms (Müller et al., 2024).
+Flood preparedness and recovery planning should 
+include mental health and psychosocial support, 
+with targeted services for high-risk groups.
+Chronic disease 
+impacts
+Worsening of diabetes, cardiovascular disease, 
+and other chronic illnesses
+• Medication interruption
+• Disrupted healthcare access
+• Dietary disruption during 
+displacement
+• Stress-related deterioration
+• Reduced follow-up care
+• Floods commonly worsened preexisting chronic conditions
+• These effects extended the health 
+burden beyond the immediate 
+disaster phase
+• Risks were greatest where 
+continuity of care was disrupted
+Public health responses should ensure continuity 
+of chronic disease care, access to medication, and 
+functioning referral systems during and after 
+floods.
+Cross-cutting 
+pattern
+Multi-system and prolonged health burdens • Combined effects of exposure, 
+displacement, service disruption, 
+and social vulnerability
+• Health effects extended well 
+beyond the acute phase
+• Impacts were socially patterned 
+and more severe in already 
+vulnerable populations
+• Flood health burdens were 
+overlapping rather than isolated
+Comprehensive flood-health policy should 
+integrate infectious disease control, mental health 
+care, and chronic disease management into 
+preparedness and response systems.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+13
+
+the literature. Overall, vulnerability is uneven, context-specific, and underexamined for several high-risk populations, indicating 
+important research gaps.
+3.8. Study quality assessment
+The methodological quality and risk of bias of the 82 included studies were assessed using criteria adapted from the 
+Newcastle–Ottawa Scale and the Mixed Methods Appraisal Tool (Table 8). The MMAT-based quality assessment showed that 15 
+studies were rated as low risk of bias, 62 as moderate risk, and 5 as high risk. Common methodological limitations included incomplete ascertainment of non-fatal outcomes, reliance on secondary data sources, recall bias in self-reported measures, exposure 
+misclassification, and limited adjustment for confounding. These findings were taken into account when interpreting the strength and 
+consistency of the evidence, although no studies were excluded on the basis of quality assessment alone.
+Studies rated as low risk of bias generally relied on stronger data sources, clearer outcome measurement, and more appropriate 
+analytical methods. By contrast, the much larger group of moderate-risk studies often depended on secondary data, ecological 
+designs, self-reported outcomes, or incomplete adjustment for confounding. A much smaller number of studies were classified as high 
+risk of bias because of substantial methodological weaknesses, including incomplete datasets, poorly described methods, and heavy 
+dependence on historical or highly aggregated sources. Across the evidence base, recurring strengths included clear description of 
+flood events, transparent acknowledgement of study limitations, and appropriate use of analytical methods for the available data. 
+Frequently identified methodological weaknesses included incomplete ascertainment of injuries, displacement, and longer-term 
+health effects; short follow-up periods; ecological fallacy associated with area-level exposure assignment; recall bias; exposure 
+misclassification; and inadequate control for confounding. These limitations are consequential because they may contribute to the 
+underestimation or distortion of flood impacts, particularly in relation to non-fatal, long-term, or socially mediated outcomes.
+General, in Table 8, evidence base show offers useful, though methodologically uneven, support for understanding the human 
+impacts of flood. The high proportion of moderate-risk studies suggests that literature is capable of identifying broad patterns, 
+despite, it is not consistently robust enough to support precise comparisons across regions, outcomes, or contexts. This is particularly 
+significant in the interpretation of less visible or less consistently measured outcomes, including displacement, injury burden, and 
+long-term health effects. The limited proportion of low-risk studies further emphasizes the need for more rigorous disaster epidemiology, including prospective designs, validated measurement instruments, representative sampling, and more comprehensive 
+outcome assessment.
+Table 5 
+Main livelihood and economic impacts of floods. 
+Impact category Summary of reported effects and implications
+Income loss Floods caused partial or complete income loss through business interruption, crop failure, and destruction of 
+productive assets, with daily wage earners, informal workers, farmers, and small business owners most affected.
+Employment disruption Temporary or permanent job loss, reduced working hours, and unstable earnings were linked to workplace closure, 
+damaged transport, displacement, and injury, especially among informal and low-income workers.
+Food insecurity Reduced food access, lower availability, rising prices, and nutritional stress were driven by income loss, destruction 
+of food stocks, market disruption, and agricultural damage, particularly among poor and displaced households.
+Asset destruction Floods damaged or destroyed housing, household goods, livestock, tools, and other productive resources, weakening 
+recovery capacity, especially for low-income households, farmers, and informal traders.
+Savings depletion Emergency expenditures and loss of reserves eroded household savings and reduced financial resilience, particularly 
+among poor, uninsured, and unbanked households.
+Debt burden Borrowing for reconstruction, food, healthcare, and livelihood recovery increased household debt and prolonged 
+financial strain, especially where formal safety nets were absent.
+Education-related effects Households often redirected spending away from schooling toward survival and recovery, leading to interrupted 
+education and potential long-term human capital loss, especially among low-income and displaced families.
+Long-term poverty Repeated losses, weak recovery support, and dependence on flood-sensitive livelihoods contributed to persistent 
+poverty, reduced social mobility, and intergenerational disadvantage.
+Gender-differentiated impacts Women and female-headed households often faced greater livelihood insecurity because of concentration in informal 
+work, caregiving burdens, and weaker access to recovery resources.
+Agricultural livelihood loss Flooded farmland, crop destruction, soil degradation, livestock loss, and disrupted market access caused major 
+livelihood losses among smallholder farmers, agricultural labourers, and rural communities.
+Note: Across the 30 studies, flood-related livelihood losses were rarely discrete and typically involved overlapping impacts on income, assets, food security, and longterm recovery.
+Table 6 
+Summary Statistics for Numerical Human Impact Data Extracted from Included Studies. 
+Impact Category Studies with Data Minimum Maximum Median Total
+Deaths 14 10 446,807 167 450,960
+Displaced 1 900 900 900 900
+Affected Population 10 120 14,800,000 2057,809 50,155,738
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+14
+
+4. Discussion
+This study synthesizes the global evidence on the human impacts of floods spanning over four decades of published research. The 
+results suggest that flood impacts are multidimensional, socially and spatially uneven, and unevenly represented in literature. 
+Mortality was the most commonly reported outcome, followed by displacement and injuries, whereas health effects, livelihood 
+disruption, and longer-term social consequences received less consistent attention in the literature. These patterns suggest that the 
+prevailing evidence base remains disproportionately focused on acute and immediately measurable outcomes, with comparatively 
+less attention given to the broader and more enduring human consequences of flooding (Doocy et al., 2013; Jonkman, 2005).
+A key finding of the review is the predominance of mortality in the literature on flood impacts. This is largely consistent with previous 
+global assessments (Doocy et al., 2013; Jonkman, 2005), however, the current review expands the evidence base by covering a longer time 
+period and a wider diversity of study designs. The importance of mortality possibly reflects both the immediate visibility of deaths in postdisaster reporting and the relative ease of measuring mortality compared with less visible outcomes, including displacement, mental health 
+effects, and livelihood disruption (Ahern et al., 2005; Alderman et al., 2012). Contrarily, extractable numerical data on displacement were 
+reported in relatively few studies, despite displacement being a major humanitarian consequence of flooding. This imbalance suggests that 
+flood research remains weighted toward acute and institutionally recorded outcomes, while medium- and long-term social consequences 
+remain under-documented (UNHCR 2023; UNHCR, 2024; WMO, 2023). Although displacement emerged as an important theme across the 
+reviewed studies, the very limited availability of extractable numerical data means that conclusions about its aggregate magnitude remain 
+tentative and should be interpreted primarily as evidence of underreporting and inconsistent measurement.
+Table 7 
+Vulnerable populations identified in the included studies, frequency of reporting, and principal mechanisms of flood vulnerability. 
+Population group Summary of vulnerability and evidence gaps
+Older adults Vulnerability was linked to reduced mobility, chronic illness, social isolation, weaker housing, and greater 
+physiological susceptibility to flood-related harm. Although frequently reported, evidence on excess 
+mortality remains inconsistent across contexts.
+Low-income / poor populations Exposure was shaped by residence in high-risk areas, poor housing, limited evacuation resources, 
+dependence on flood-sensitive livelihoods, and weak access to insurance or credit. More disaggregated 
+analysis of urban versus rural poverty is still needed.
+Children Risks arose through dependence on caregivers, drowning exposure, school disruption, malnutrition, 
+infectious disease exposure, and psychosocial stress. Longitudinal evidence on developmental, 
+educational, and mental health outcomes remains limited.
+Rural populations Vulnerability reflected remoteness from emergency services, weaker warning systems, and dependence on 
+agriculture. Despite likely high risk, rural populations remain underexamined in the literature.
+Women Reported risks included caregiving burdens, mobility constraints, unequal access to resources, and postdisaster social and economic stress. Gendered flood vulnerability remains markedly underrepresented.
+Persons with disabilities Vulnerability was associated with barriers to evacuation, warning access, shelter use, and recovery. Floodspecific disability analysis remains a major gap.
+Racial / ethnic minorities Social exclusion, structural inequality, and unequal access to services were identified as key mechanisms. 
+Evidence remains sparse and highly context-specific.
+Urban poor / informal settlement residents High exposure in low-lying settlements, weak infrastructure, overcrowding, insecure tenure, and low 
+coping capacity increased vulnerability. Despite well-known risks, this group was rarely analysed directly.
+Pregnant women Not specifically reported, but likely vulnerable because of disrupted maternal care, displacement, 
+nutritional stress, and emergency conditions.
+People living with chronic disease Usually discussed indirectly through health outcomes rather than explicit vulnerability profiling. Risks 
+included medication interruption and disrupted continuity of care.
+Linguistic minorities Not specifically reported, although barriers to warnings, communication, and relief information suggest an 
+important evidence gap.
+Undocumented migrants / refugees Not specifically reported in most flood studies, despite likely risks linked to legal insecurity, exclusion from 
+services, and weak social protection.
+Homeless populations Largely absent from the reviewed literature, despite likely high exposure and weak access to shelter and 
+recovery support.
+Incarcerated persons Not specifically reported, although restricted mobility and institutional dependence suggest important but 
+neglected vulnerability.
+Note: Frequency of reporting in the review indicates the degree of attention given to different groups and should not be interpreted as a direct measure of actual 
+vulnerability.
+Table 8 
+Distribution of Study Quality Ratings Based on Risk of Bias Assessment. 
+Risk of Bias Category Number of Studies Percentage Quality Interpretation
+Low risk of bias 15 18.3% High quality
+Moderate risk of bias 62 75.6% Acceptable quality
+High risk of bias 5 6.1% Low quality
+Total 82 100%
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+15
+
+The temporal distribution of the included studies further indicates that the evidence base is strongly concentrated in recent years. 
+This likely reflects growing scholarly and policy attention to climate-related disasters, improved disaster reporting systems, and 
+expanding interest in disaster risk reduction and climate adaptation rather than serving as a direct indicator of increasing flood 
+frequency alone (IPCC, 2021; WMO, 2023). More broadly, this pattern suggests that the literature on flood impacts is expanding, but 
+remains temporally uneven, with contemporary research priorities influencing which outcomes and populations become visible in the 
+published evidence base. While climate change is expected to influence the frequency and intensity of extreme precipitation events, 
+the evidence reviewed does not support direct attribution of observed mortality patterns to climate change alone, as outcomes are 
+shaped by interacting factors including exposure, infrastructure, and social vulnerability.
+One of the most important contributions of this review is the identification of persistent geographic imbalances in flood-impact 
+research. Asia and North America were relatively well represented, while Africa, Latin America, and the Middle East remained markedly 
+underrepresented despite experiencing substantial flood burdens. This uneven distribution reflects wider structural inequalities in research 
+funding, institutional capacity, surveillance systems, publication access, and disaster documentation (Di Baldassarre et al., 2010; Douglas 
+et al., 2008). Consequently, some of the populations most vulnerable to flooding remain among the least visible in the international 
+evidence base. Thus, the geography of flood research does not fully reflect the geography of flood risk.
+The limited representation of African studies is especially concerning. Although the continent faces high exposure to climate 
+variability, limited early warning systems, weak drainage infrastructure, rapid urbanisation, and substantial socioeconomic vulnerability, only a small proportion of the studies in this review were performed in Africa. This finding is consistent with earlier studies 
+indicating that flood disasters in Africa often have severe human consequences but remain underrepresented in the global evidence 
+base (Di Baldassarre et al., 2010; Douglas et al., 2008). This persistent gap constrains understanding of how flood impacts unfold in 
+setting characterized by infrastructure deficits, informal settlement growth, limited institutional capacity, and intersecting social 
+vulnerabilities.
+The review also shows that flood type plays an important role in influencing both flood impacts visibility and its interpretation. 
+The literature focused disproportionately on rapid-onset and highly visible events, particularly flash floods and hurricane- or cyclonerelated floods, whereas slower-onset, recurrent, or less clearly classified flood processes remained comparatively understudied. This 
+imbalance results in an interpretive bias, as highly visible disasters are more likely to appear in the peer-reviewed literature than 
+smaller but recurrent events, even though such events may also produce substantial displacement, livelihood loss, and chronic 
+hardship. Moreover, the high proportion of studies that did not specify flood type reduces analytical precision and constrains direct 
+comparison across hazard categories.This review also makes an important contribution by highlighting the socially unequal distribution of flood impacts. The evidence indicates that flood impacts fall most heavily on populations already facing poverty, insecure 
+housing, limited early warning access, fragile livelihoods, inadequate healthcare access, and constrained capacity to recover. Older 
+adults, children, low-income populations, rural populations, and socially marginalised groups were repeatedly identified as vulnerable, although important population groups—such as migrants, linguistic minorities, homeless populations, and incarcerated 
+persons—were rarely addressed directly. Taken together, these findings support a wider body of disaster research showing that 
+vulnerability does not arise from hazard exposure alone. It is also influenced by socioeconomic conditions, demographic characteristics, environmental settings, and institutional capacity (FitzGerald et al., 2010; Tapsell et al., 2002). Accordingly, flood risk is 
+best understood as multidimensional and context dependent, rather than as a function of rainfall intensity or national wealth alone.
+The review also demonstrates that flood impacts reach far beyond mortality. The broader burden of flooding includes non-fatal 
+injury, infectious disease, mental health effects, disruption of chronic disease care, displacement, and livelihood erosion. These 
+outcomes receive far less consistent measurement and reporting. Such uneven visibility reflects both methodological and institutional 
+biases, with quantitative epidemiological and disaster-event studies tending to document mortality and injury, while qualitative and 
+mixed-methods studies more often capture displacement experiences, psychosocial stress, livelihood disruption, and recovery 
+challenges. Consequently, the frequency with which a given outcome appears in the literature should not be interpreted as a direct 
+proxy for its severity in real-world settings.
+At the same time, these findings need to be read against important limitations in the available evidence. Cross-study comparison 
+remains difficult because the reviewed literature varies considerably in study design, the classification of flood types, temporal coverage, 
+spatial scale, and the definition of outcomes (Popay et al., 2006). Mortality may be reported as direct flood deaths, all-cause deaths during 
+the flood period, or modelled attributable mortality. Displacement may be defined inconsistently, reported qualitatively, or omitted 
+entirely. In addition, the literature is likely affected by reporting bias. The evidence base is more reliable for outcomes that are acute, 
+visible, and routinely captured in institutional records, particularly mortality, than for consequences that are less visible or unfold over 
+time, such as prolonged displacement, disruption of chronic disease care, mental health effects, and livelihood erosion (Alderman et al., 
+2012; Fernandez et al., 2015). A similar bias is evident in the types of events that enter the literature: large catastrophic floods are more 
+likely to be published than smaller recurrent ones. As a result, this review supports stronger conclusions about overall patterns and gaps in 
+the evidence than about precise estimates of flood impact magnitude across different contexts.
+Several policy and practice lessons emerge from the review. One is that mortality should not remain the dominant lens through 
+which flood impacts are understood, as displacement, chronic health effects, and livelihood disruption can also produce severe and 
+lasting harm. Another is that the uneven geography of the evidence base calls for stronger research support in regions that remain 
+poorly represented, especially Africa and other low-visibility settings. The findings further suggest that effective flood risk reduction 
+cannot rely on hazard control alone, but must also address the social and structural conditions that shape vulnerability, including 
+poverty, insecure housing, weak infrastructure, and limited access to health and social protection. In addition, the lack of consistency 
+in outcome reporting across studies points to the need for better disaster data systems and more standardized approaches to documenting non-fatal and longer-term impacts.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+16
+
+Another significant understanding is that forecasting alone does not guarantee lower flood losses. In many settings, technical capacity 
+for hazard monitoring has improved, but persistent mortality and other human impacts point to continuing weaknesses in disaster governance and warning delivery. Earlier studies indicate that stronger early warning systems are generally associated with lower disaster 
+mortality, although their effectiveness remains highly uneven across contexts (UNDRR & WMO, 2023; WMO, 2023). In practice, many 
+systems still face last-mile problems, including weak communication, low trust, limited accessibility, poor institutional coordination, and 
+constraints on households’ ability to respond. As a result, effective warning systems depend not only on accurate forecasts, but also on risk 
+awareness, preparedness, timely communication, and the broader social and institutional capacity to turn warnings into action.
+In general, the review highlights several key priorities for future research and practice. These priorities involve expanding the 
+literature in poorly represented regions, ensuring ore consistent documentation of non-fatal and longer-term impacts improving the 
+ways vulnerability is conceptualised and assessed aross different social groups and flood setting. Broadly, flood disasters are not soley 
+as a result of hydrological processes. The human impacts of flooding are shaped by social inequality, infrastructure conditions, 
+governance capacity, and geographic context. Addressing these gaps in literature is important for supporting flood risk reduction 
+strategies that are more equitable, evidence-informed, and sensitive to local realities.
+5. Policy implications and recommendations
+The findings indicate that flood risk is influenced not only by hazard processes, but also by governance, infrastructure, and social 
+vulnerability. Furthermore, the current evidence base remains geographically uneven and disproportionately focused on mortality, which 
+limits the visibility of non-fatal and longer-term impacts such as displacement, health effects, and livelihood disruption. Accordingly, flood 
+policy must not focus on hazard control alone, but also address the spatial and social inequalities that shape vulnerability.
+The findings also indicate that future research should give greater priority to underrepresented regions, more consistent disaster 
+reporting, standardized outcome definitions, and better documentation of non-fatal and longer-term impacts. Flood risk reduction 
+should also incorporate social vulnerability metrics, strengthen early warning systems, support local research capacity, and advance 
+more integrated, context-sensitive approaches to governance.
+6. Limitations
+The review observed some limitations. 
+1. The review was limited to peer-reviewed studies indexed in Scopus in English language. This may contribute to some regions and 
+context under-represented.
+2. The review was based on narrative analyses due to many factors such as research designs, heterogeneity in flood types, outcome 
+definitions, and reporting formats prevented formal meta-analysis
+3. Reporting was particularly inconsistent for displacement, non-fatal injury, long-term health effects, and livelihood disruption, 
+thereby constraining cross-context comparison.
+4. The evidence base also showed a clear imbalance, favoring acute and measurable outcomes such as mortality over more diffuse 
+and longer-term consequences.
+5. These limitations also point to the need for future research to expand database coverage, include grey literature where possible, 
+and improve the consistency and standardization of flood-impact reporting.
+7. Future research directions
+Table 9 shows key future studies proposed based on identified research gaps in the review.
+Table 9 
+Priority directions for future flood impact research. 
+Priority area Summary of research need and expected contribution
+Long-term impacts Research remains concentrated on immediate mortality and displacement. Longitudinal studies are needed to examine 
+chronic health outcomes, mental health, livelihood recovery, and intergenerational effects, improving understanding 
+of the longer-term human burden of floods.
+Risk reduction effectiveness Robust evidence on the effectiveness of early warning systems, building codes, land-use planning, and protective 
+infrastructure remains limited. Comparative and quasi-experimental approaches could strengthen the evidence base for 
+policy and investment.
+Emerging hotspots Future flood risk under climate and demographic change is still insufficiently assessed. Integrating climate scenarios, 
+population projections, and vulnerability analysis would support anticipatory adaptation and targeted resilience 
+planning.
+Compound risks Floods are rarely studied together with interacting hazards or concurrent crises. Research on links with landslides, 
+infrastructure failure, conflict, pandemics, and sequential disasters would improve multi-hazard risk assessment.
+Governance and inequality Structural drivers of unequal vulnerability remain poorly understood. Research on governance, power relations, and 
+resource allocation would support more equitable flood risk reduction policy.
+Methodological innovation Conventional data sources often underreport or delay flood impacts. Expanded use of remote sensing, social media, 
+mobile phone data, and citizen science could improve the timeliness, quality, and coverage of flood impact assessment.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+17
+
+8. Conclusions
+This review examines evidence published between 1980 and 2025 on the human impacts of floods, with attention to mortality, 
+displacement, injury, health outcomes, and livelihood disruption. The findings show that both the distribution of flood impacts across 
+populations and regions and their representation in the literature are uneven. Of the outcomes reviewed, mortality remains the most 
+frequently reported and most readily quantifiable, whereas displacement, health effects, and livelihood disruption receive less 
+consistent documentation and are rarely presented in standardized forms for comparison. The evidence base also reveals a marked 
+geographic imbalance, as Africa, Latin America, and parts of Asia remain underrepresented despite their high flood vulnerability. 
+These patterns point to central limitations in the existing literature’s ability to capture the full social, temporal, and regional dimensions of flood impacts.
+The review suggests that flood impacts arise from the interaction of hazard, exposure, infrastructure, and social vulnerability, 
+rather than from hydrometeorological factors alone. Research attention is concentrated on acute and highly visible outcomes, 
+especially mortality associated with rapid-onset floods, whereas medium- and long-term effects such as displacement, mental health 
+impacts, and livelihood disruption are still reported less consistently. The social distribution of flood risk is also uneven, with older 
+adults, children, low-income households, rural populations, and marginalized groups experiencing heightened vulnerability]. The 
+heterogeneity of study design, outcome definitions, and reporting practices further limits cross-context comparison and requires 
+caution in interpreting the findings. These review findings have important implications for research, policy, and practice. Improving 
+comparability and evidence synthesis will require more standardized reporting, especially for displacement and other non-fatal 
+outcomes. More effective, equitable, and context-sensitive flood risk reduction depends on better documentation of the scale, 
+duration, and long-term consequences of displacement, stronger integration of social vulnerability metrics, and expanded research in 
+underrepresented regions.
+Ethics statement
+Ethical approval was not required for this study because it is based solely on the analysis of published literature and does not 
+involve human or animal subjects.
+Funding
+The authors received no specific funding for this work.
+Data Availability
+This article is based exclusively on published literature. No new data were created or analysed. Details of the PRISMA methodology are provided in the Supplementary Information.
+Declaration of Competing Interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+References
+Ababakr, F. A., Ahmed, K. O., Amini, A., Karami Moghadam, M., & Gökçekuş, H. (2023). Spatio-temporal variations of groundwater quality index using geostatistical 
+methods and GIS. Applied Water Science, 13, 206.
+Aditi, N., & Ganapathy, G. P. (2022). Emergency preparedness of flood affected communities in Assam to respond COVID-19 pandemic pro-actively. Disaster Advances, 
+15, 39–50.
+Agampodi, S. B., Dahanayaka, N. J., Bandaranayaka, A. K., Perera, M., Priyankara, S., Weerawansa, P., Matthias, M. A., & Vinetz, J. M. (2014). Regional differences of 
+leptospirosis in Sri Lanka: observations from a flood-associated outbreak in 2011. PLoS neglected tropical Diseases, 8, Article e2626.
+Ahern, M., Kovats, R. S., Wilkinson, P., Few, R., & Matthies, F. (2005). Global health impacts of floods: Epidemiologic evidence. Epidemiologic Reviews, 27, 36–46.
+Ahmed, K. O., Malaekah, M. H., Bahrami, J., & Mostafazadeh, R. (2026). Assessment of groundwater quality for drinking purposes in Herat Province, Afghanistan: A 
+water quality index approach. Journal of Studies in Civil Engineering, 1 -1.
+Ahmed, M. A., Haynes, K., & Taylor, M. (2020). Vehicle‐related flood fatalities in Australia, 2001–2017. Journal of flood risk Management, 13, Article e12616.
+Alcântara, E., Marengo, J. A., Mantovani, J., Londe, L. R., San, R. L. Y., Park, E., Lin, Y. N., Wang, J., Mendes, T., & Cunha, A. P. (2023). Deadly disasters in 
+southeastern South America: flash floods and landslides of February 2022 in Petrópolis, Rio de Janeiro. Natural hazards and earth System Sciences, 23, 1157–1175.
+Alderman, K., Turner, L. R., & Tong, S. (2012). Floods and human health: a systematic review. Environment International, 47, 37–47.
+Amini, A., Othman, K., Abassi, F., & Booij, M. (2025). Determining virtual water, physical and economic indices to optimize agricultural water consumption in three 
+different climates. International Journal of Environmental Science and Technology, 22, 2941–2954.
+Ansah, S. O., Ahiataku, M. A., Yorke, C. K., Otu-Larbi, F., Yahaya, B., Lamptey, P., & Tanu, M. (2020). Meteorological analysis of floods in Ghana. Advances in 
+Meteorology, 2020, Article 4230627.
+Ashley, S. T., & Ashley, W. S. (2008). Flood fatalities in the United States. Journal of Applied Meteorology and Climatology, 47, 805–818.
+Baas, J., Schotten, M., Plume, A., Côté, G., & Karimi, R. (2020). Scopus as a curated, high-quality bibliometric data source for academic research in quantitative science 
+studies. Quantitative Science Studies, 1, 377–386.
+Ban, J., Sutton, C., Ma, Y., Lin, C., & Chen, K. (2023). Association of flooding exposure with cause-specific mortality in North Carolina, United States. Nature Water, 1, 
+1027–1034.
+Brown, V., Issak, M. A., Rossi, M., Barboza, P., & Paugam, A. (1998). Epidemic of malaria in north-eastern Kenya. The Lancet, 352, 1356–1357.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+18
+
+Bwire, G., Tumuhairwe, I., Kwagonza, L., Wetaka, M. M., Nakinsige, A., Arinitwe, E. S., Kemirembe, J., Muruta, A., Mugero, C., Nalwadda, C. K., & SI, O. (2023). Rapid 
+cholera outbreak control following catastrophic landslides and floods: A case study of Bududa district, Uganda. Afr Health Sci, 23, 203–215.
+Di Baldassarre, G., Montanari, A., Lins, H., Koutsoyiannis, D., Brandimarte, L., & Blöschl, G. (2010). Flood fatalities in Africa: From diagnosis to mitigation. Geophysical 
+Research Letters, 37.
+Diakakis, M., Papagiannaki, K., & Fouskaris, M. (2022). The occurrence of catastrophic multiple-fatality flash floods in the Eastern Mediterranean region. Water, 15, 
+119.
+Dinis, P. A., Huvi, J., Cabral Pinto, M., & Carvalho, J. (2021). Disastrous flash floods triggered by moderate to minor rainfall events. Recent cases in coastal Benguela 
+(Angola). Hydrology, 8, 73.
+Doocy, S., Daniels, A. E., Murray, S., & Kirsch, T. D. (2013). The Human Impact of Floods: a Historical Review of Events 1980-2009 and Systematic Literature Review. 
+PLoS Currents 5.
+Douglas, I., Alam, K., Maghenda, M., Mcdonnell, Y., McLean, L., & Campbell, J. (2008). Unjust waters: climate change, flooding and the urban poor in Africa. 
+Environment and urbanization, 20, 187–205.
+Duclos, P., Vidonne, O., Beuf, P., Perray, P., & Stoebner, A. (1991). Flash flood disaster-nîmes, France, 1988. European Journal of Epidemiology, 7, 365–371.
+Fazel-Rastgar, F., & Sivakumar, V. (2023). A case study of an extreme flooding episode in Charikar, Eastern Afghanistan. Journal of Water and Climate Change, 14, 
+4689–4707.
+Fernandez, A., Black, J., Jones, M., Wilson, L., Salvador-Carulla, L., Astell-Burt, T., & Black, D. (2015). Flooding and mental health: a systematic mapping review. PloS 
+One, 10, Article e0119929.
+FitzGerald, G., Du, W., Jamal, A., Clark, M., & Hou, X. Y. (2010). Flood fatalities in contemporary Australia (1997–2008). Emergency Medicine Australasia, 22, 180–186.
+Gathen, M., Welle, K., Jaenisch, M., Kasapovic, A., Rommelspacher, C., Novosel, S., Roos, J., & Kabir, K. (2022). Are orthopaedic surgeons prepared? An analysis of 
+severe casualties from the 2021 flash flood and mudslide disaster in Germany. European Journal of Trauma and Emergency Surgery, 48, 4233–4241.
+Hadjij, I., Sardou, M., Missoum, H., & Maouche, S. (2021). Flood-related deaths in Northwestern Algeria from 1966 to 2019. Arabian Journal of Geosciences, 14, 1923.
+Hamaamin, F. A., Hamaamin, Y., Ahmed, K., & Bahrami, J. (2025). Optimizing low-impact development placement for urban stormwater management using GIS-based 
+BMPs and AHP modeling. Advances in Civil Engineering and Environmental Science, 2, 107–120.
+Hamza, A. A., Mizzouri, N. S., Aziz, S. Q., Hawez, D. M., Manguri, S. B. H., Ahmed, K. O., & Ali, S. M. (2022). GIS visualization of solid waste disposal sites and 
+environmental impacts in Kurdistan region-Iraq. Eurasian Journal of Science and Engineering, 8, 169–187.
+Hirabayashi, Y., Mahendran, R., Koirala, S., Konoshima, L., Yamazaki, D., Watanabe, S., Kim, H., & Kanae, S. (2013). Global flood risk under climate change. Nat 
+Climate Change, 3, 816–821.
+Hong, Q. N., Fàbregues, S., Bartlett, G., Boardman, F., Cargo, M., Dagenais, P., Gagnon, M. P., Griffiths, F., Nicolau, B., O’Cathain, A., & Rousseau, M. C. (2018). The 
+Mixed Methods Appraisal Tool (MMAT) version 2018 for information professionals and researchers. Education for Information, 34, 85–291.
+IPCC (2021). In V. Masson-Delmotte, P. Zhai, A. Pirani, S. L. Connors, C. Péan, S. Berger, N. Caud, Y. Chen, L. Goldfarb, M. I. Gomis, M. Huang, K. Leitzell, E. Lonnoy, J. 
+B. R. Matthews, T. K. Maycock, T. Waterfield, O. Yelekçi, R. Yu, & B. Zhou (Eds.). Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to 
+the Sixth Assessment Report of the Intergovernmental Panel on Climate Change. Cambridge, United Kingdom and New York, NY, USA: Cambridge University Press.
+Jonkman, S. N. (2005). Global perspectives on loss of human life caused by floods. Natural Hazards, 34, 151–175.
+Jonkman, S. N., Maaskant, B., Boyd, E., & Levitan, M. (2008). Loss of life caused by the flooding of New Orleans after hurricane Katrina: A preliminary analysis of the 
+relationship between flood characteristics and mortality. 4th International Symposium on Flood Defence, 6–8.
+Jonkman, S. N., & Vrijling, J. K. (2008). Loss of life due to floods. Journal of Flood Risk Management, 1, 43–56.
+Lowe, D., Ebi, K. L., & Forsberg, B. (2013). Factors increasing vulnerability to health effects before, during and after floods. International Journal of Environmental 
+Research and Public Health, 10, 7015–7067.
+Müller, L., Rapoport, O., & Rahe, M. (2024). Mindfulness meditation improves mental health in flood survivors and disaster volunteers: A randomized wait-list 
+controlled trial. Mindfulness, 15, 2750–2764.
+Page, M. J., McKenzie, J. E., Bossuyt, P. M., Boutron, I., Hoffmann, T. C., Mulrow, C. D., Shamseer, L., Tetzlaff, J. M., Akl, E. A., Brennan, S. E., & Chou, R. (2021). The 
+PRISMA 2020 statement: an updated guideline for reporting systematic reviews. bmj 372.
+Popay, J., Roberts, H., Sowden, A., Petticrew, M., Arai, L., Rodgers, M., Britten, N., Roen, K., & Duffy, S. (2006). Guidance on the conduct of narrative synthesis in 
+systematic reviews. A Product from the ESRC Methods Programme Version, 1, 92.
+Stephens, W., Wilt, G. E., Lehnert, E. A., Molinari, N. M., & LeBlanc, T. T. (2020). A spatial and temporal investigation of medical surge in Dallas–Fort Worth During 
+Hurricane Harvey, Texas 2017. Disaster Medicine and Public Health preparedness, 14, 111–118.
+Stewart, S. R., & Cangialosi, J. P. (2012). Eastern North Pacific hurricane season of 2010. Monthly Weather Review, 140, 2769–2781.
+Syvitski, J. P., & Brakenridge, G. R. (2013). Causation and avoidance of catastrophic flooding along the Indus River, Pakistan. GsA Today, 23, 4–10.
+Tapsell, S., McCarthy, S., Faulkner, H., Alexander, M., 2010. Social vulnerability to natural hazards. State of the art report from CapHaz-Net’s WP4, London.
+Tapsell, S. M., Penning-Rowsell, E. C., Tunstall, S. M., & Wilson, T. L. (2002). Vulnerability to flooding: health and social dimensions. Philosophical transactions of the royal 
+society of London. Series A, 360, Mathematical, Physical and Engineering Sciences,1511–1525.
+Trigo, R. M., Ramos, C., Pereira, S. S., Ramos, A. M., Zêzere, J. L., & Liberato, M. L. (2016). The deadliest storm of the 20th century striking Portugal: Flood impacts and 
+atmospheric circulation. Journal of Hydrology, 541, 597–610.
+UNDRR, W.M.O., 2023. Global status of multi-hazard early warning systems. United Nations Office for Disaster Risk Reduction and World Meteorological Organization, 
+Geneva, Switzerland.
+UNHCR (2023). Climate crisis fuels flooding and deepens displacement. United Nations High Commissioner for Refugees,.
+UNHCR (2024). Global Trends Report 2024: Forced displacement in 2023 and 2024. Geneva, Switzerland: United Nations High Commissioner for Refugee,.
+Wells, G.A., Wells, G., Shea, B., Shea, B., O'Connell, D., Peterson, J., Welch, Losos, M., Tugwell, P., Ga, S.W., Zello, G.A., Petersen, J.A., 2014. The Newcastle-Ottawa 
+Scale (NOS) for Assessing the Quality of Nonrandomised Studies in Meta-Analyses.
+Winsemius, H. C., Aerts, Jeroen C. J. H., van Beek, Ludovicus P. H., Bierkens, Marc F. P., Bouwman, A., Jongman, B., Kwadijk, Jaap C. J., Ligtvoet, W., Lucas, Paul L., 
+van Vuuren, Detlef P., & Ward, Philip J. (2016). Global drivers of future river flood risk. Nature Climate Change, 6, 381–385.
+WMO (2023). State of the Climate in Africa 2023. Geneva, Switzerland: World Meteorological Organization,.
+I.K. Nooni, L. Sarpong, N. Kumi et al. H2Open Journal 9 (2026) 100019
+19
