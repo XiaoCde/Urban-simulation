@@ -531,12 +531,28 @@ def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00
     fp = os.path.join(DERIVED, "buildings_footprints.json")
     if os.path.exists(fp):
         bj = json.load(open(fp, encoding="utf-8"))
-        # 【2026-11-18 首层标高】逐栋台基高（DCGIS 3D 建筑 minz），用来判断
-        # 「水有没有淹过一楼地面」，而不是「轮廓里有没有一点水」。缺数据按 0。
+        # 【2026-11-18 首层标高】逐栋台基高，用来判断「水有没有淹过一楼地面」，
+        # 而不是「轮廓里有没有一点水」。
+        #
+        # 数据演变（都在 docs 里留了记录）：
+        #   最初：DCGIS lidar 3D 建筑的 minz 直接当台基高。中位 1.86 m，
+        #         而 FEMA 的规范值里最高也才 2.13–2.44 m（桩基），中位建筑不可能是桩基，
+        #         说明 lidar 有系统偏差。
+        #   后来：截断到 1.2 m 当上限（工程处理，不是实测），仍偏高 3–4 倍。
+        #   现在：分位数映射到 FEMA 2015 的默认台基高度（按基础类型给的规范值）。
+        #         排序保留、绝对值拉回规范范围，见 tools/calibrate_foundation_fema.py。
+        # 缺数据的楼按 DC 旧规 0.457 m（不是 0，按 0 会高估）。
+        SCENARIO = "A_全国河岸"      # FEMA 2015 河岸地区的建筑基础类型分布
         found = {}
+        found_map = {}
+        fp3 = os.path.join(DERIVED, "building_foundation_fema.json")
+        if os.path.exists(fp3):
+            fj = json.load(open(fp3, encoding="utf-8"))
+            found_map = (fj.get("per_scenario") or {}).get(SCENARIO) or {}
         fp2 = os.path.join(DERIVED, "building_foundation.json")
-        if os.path.exists(fp2):
+        if os.path.exists(fp2) and not found_map:
             found = json.load(open(fp2, encoding="utf-8"))
+        DEFAULT_FOUNDATION = 0.457
         for b in bj.get("features", []):
             rings = b.get("rings") or []
             if not rings or len(rings[0]) < 3:
@@ -563,10 +579,16 @@ def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00
             if c1 <= c0 or r1 <= r0:
                 continue
             d = float(d_land[r0:r1, c0:c1].max())
-            # 【2026-11-18】逐栋首层高：DCGIS minz 截断到 [0,1.2]，缺数据按 0。
-            # 1.2 m 是宽松上限，超过当 lidar 归一化的异常。
-            fr = found.get(str(b.get("id")))
-            fh = min(max(float((fr or {}).get("minz") or 0.0), 0.0), 1.2)
+            # 【2026-11-18】逐栋首层高：优先用 FEMA 规范值校正后的逐栋台基高；
+            # 没有新文件的楼退回 DCGIS minz（截断 1.2 m，旧的工程处理）；
+            # 连 minz 都没有的按 DC 旧规 0.457 m。三种来源都在台账里标了性质。
+            bid = str(b.get("id"))
+            if bid in found_map:
+                fh = float(found_map[bid])
+            else:
+                fr = found.get(bid)
+                fh = min(max(float((fr or {}).get("minz") or DEFAULT_FOUNDATION),
+                            0.0), 1.2)
             d_floor = d - fh                      # 一楼地面以上的水深
             # 旧口径（轮廓内任意点有水）保留，只作对照，不再当结论。
             if d > 0.05:
