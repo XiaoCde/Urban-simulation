@@ -23,6 +23,7 @@ p.on('pageerror', (e) => errs.push('PAGEERROR ' + e.message));
 p.on('console', (m) => { if (m.type() === 'error') errs.push('CONSOLE ' + m.text().slice(0, 160)); });
 const u = new URL('http://127.0.0.1:8140/index.html');
 u.searchParams.set('capture', '1'); u.searchParams.set('v', String(Date.now()));
+u.searchParams.set('seed', '20261117');
 await p.goto(u.toString(), { waitUntil: 'domcontentloaded' });
 await p.waitForFunction(() => window.__ready === true, { timeout: 300000, polling: 300 });
 

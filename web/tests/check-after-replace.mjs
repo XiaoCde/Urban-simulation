@@ -23,7 +23,7 @@ p.on('pageerror', (e) => errors.push('pageerror: ' + e.message));
 p.on('console', (m) => { if (m.type() === 'error') errors.push('console: ' + m.text()); });
 p.on('requestfailed', (r) => errors.push('requestfailed: ' + r.url().split('/').pop() + ' ' + r.failure()?.errorText));
 
-await p.goto('http://127.0.0.1:8140/index.html?ped=300&capture=1', { waitUntil: 'load', timeout: 90000 });
+await p.goto('http://127.0.0.1:8140/index.html?ped=300&capture=1&seed=20261117', { waitUntil: 'load', timeout: 90000 });
 await new Promise((r) => setTimeout(r, 9000));
 
 const probe = await p.evaluate(() => {

@@ -1744,14 +1744,13 @@ export function buildPedestrians(assets, opt = {}) {
     const rainMMH = raining && flood.rainRate ? flood.rainRate() : (raining ? 99 : 0);
     const heavyRain = rainMMH >= RAIN_SHELTER_MMH;
     // 实时判断的感知上下文：全部读这一子步的真实值，复用给所有人（不每人建对象）
-    // 预警发出后过了多少分钟：用离线水情帧里印刷的降雨起始时刻算，
-    // 供 kernel/choice-model.js 的 Silva 2025 实测动员曲线使用。
-    // 没有取到时用 0（雨刚开始），不自己编一个起始时间。
-    const rainStart = (flood && Number.isFinite(flood.rainStart)) ? flood.rainStart : null;
+    // 【2026-11-18】删掉旧的「降雨一开始就算全城收到预警」初值。预警时刻一律
+    // 由 kernel/warning.js 的 warnAtOf() 按人算，在下面逐人分支里写入 liveCtx；
+    // 这里只给安全默认值（0 分钟、未收到），避免旧口径在分支条件变化时复活。
     const liveCtx = {
       minute: NOW_MIN(), dInfo, rainMMH,
-      minutesSinceWarning: rainStart === null ? 0 : Math.max(0, NOW_MIN() - rainStart),
-      officialWarning: rainStart !== null && NOW_MIN() >= rainStart,
+      minutesSinceWarning: 0,
+      officialWarning: false,
       blocked: (x, z, pad) => blocker.blocked(x, z, pad),
       far: false, indoor: false, busy: false, sheltered: false,
     };

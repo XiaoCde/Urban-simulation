@@ -31,6 +31,7 @@ async function open(search) {
   u.searchParams.set('capture', '1');
   u.searchParams.set('ped', '300');
   u.searchParams.set('v', String(Date.now()));
+  u.searchParams.set('seed', '20261117');
   for (const [k, v] of Object.entries(search || {})) u.searchParams.set(k, v);
   await p.goto(u.toString(), { waitUntil: 'domcontentloaded' });
   await p.waitForFunction(() => window.__ready === true, { timeout: 300000, polling: 300 });

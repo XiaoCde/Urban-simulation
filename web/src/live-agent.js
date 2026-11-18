@@ -88,6 +88,7 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
   const events = [];                 // 非「继续」的判断（验收程序读）
   const counters = {
     judged: 0, replans: 0, budgetBlocked: 0, overflow: 0, earlyWarnings: 0,
+    peersSum: 0, peersNonZero: 0,
     byAction: { continue: 0, slow: 0, hurry: 0, wait: 0, detour: 0, turnback: 0, abandon: 0 },
     goals: { done: 0, abandoned: 0, timeout: 0, activate: 0 },
   };
@@ -101,6 +102,20 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     if (used >= cap) { counters.budgetBlocked++; return false; }
     used++; counters.replans++;
     return true;
+  }
+
+  /** 同户同伴里当前没在避险（flee/shelter）的比例。合成网络见 crowd-life.js。 */
+  function peersStayOf(a) {
+    const list = a.person && a.person.peers;
+    if (!list || !list.length) return 0;
+    let stay = 0, n = 0;
+    for (const j of list) {
+      const q = peds[j];
+      if (!q) continue;
+      n++;
+      if (q.mode !== 'flee' && q.mode !== 'shelter') stay++;
+    }
+    return n ? stay / n : 0;
   }
 
   /** 感知：全部来自这一子步的真实世界，不用任何预置剧本。 */
@@ -140,10 +155,13 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
       overdue: g ? Math.max(0, ctx.minute - g.dueMin) / 60 : 0,
       timeToDue, pressure: clamp(1 - timeToDue / 60, 0, 1),
       rain: ctx.rainMMH || 0,
-      // 预警到达时长 / 是否收到预警，来自离线水情帧的降雨起始时刻，
+      // 预警到达时长 / 是否收到预警，一律由 kernel/warning.js 按人算（见 ped.js），
       // 送进 Silva 2025 的实测动员曲线，不是自设的倒计时。
       minutesSinceWarning: ctx.minutesSinceWarning || 0,
       officialWarning: !!ctx.officialWarning,
+      // 从众：同户同伴里还没避险的比例（合成网络，见 crowd-life.js）。
+      // Borowski 2023 的系数要的就是这个比例，之前恒 0，从众支路等于没开。
+      peersStay: peersStayOf(a),
       fatigue: clamp(1 - stamina / 100, 0, 1),
       stuck: p.route ? (p.route.stuck || 0) : 0,
       detours: a.detours,
@@ -168,6 +186,10 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
   function pushEvent(a, p, act, s, minute) {
     counters.judged++;
     counters.byAction[act] = (counters.byAction[act] || 0) + 1;
+    // 【2026-11-18】诊断从众支路是否真的取到值：peersStay 之前恒 0，
+    // 这两个计数让验收程序能看出它是否变成非零（不是每个判断都 >0，
+    // 独居者没有同伴，本来就是 0）。
+    if (s.peersStay) { counters.peersSum += s.peersStay; counters.peersNonZero++; }
     if (act === 'continue') return;                    // 继续占绝大多数，只计数不存
     if (events.length >= EVENT_CAP) { counters.overflow++; return; }
     const g = a.plan.active();

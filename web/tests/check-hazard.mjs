@@ -29,6 +29,7 @@ const u = new URL('http://127.0.0.1:8140/index.html');
 u.searchParams.set('capture', '1');
 u.searchParams.set('ped', String(N));
 u.searchParams.set('v', String(Date.now()));
+u.searchParams.set('seed', '20261117');
 await p.goto(u.toString(), { waitUntil: 'domcontentloaded' });
 await p.waitForFunction(() => window.__ready === true, { timeout: 300000, polling: 300 });
 await p.evaluate(() => { window.__manualDrive = true; });

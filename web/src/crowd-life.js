@@ -219,6 +219,24 @@ export function createCrowdLife({
     });
   }
 
+  // 【2026-11-18 从众支路：合成自我中心网络】
+  // ACS microsample 没有户号（SERIALNO），无法把具体的人还原成真实同户。
+  // 这里按每人的真实户规模（ACS 记录的 householdSize）连续组户，同户互为
+  // 同伴，上限 5 人（Borowski 2023 对自我中心网络的定义）。
+  // 这是合成网络：户规模分布来自 ACS 真实记录，但「谁和谁一户」是合成的，
+  // 不是真实社会网络调查数据；拿到真实网络后应替换这里。
+  // 目的：让 kernel/cohort.js 的 peersStay 不再恒 0，而是由同伴的实时避险
+  // 状态算出来（见 live-agent.js 的 peersStayOf）。
+  (function buildPeerNetwork() {
+    let k = 0;
+    while (k < persons.length) {
+      const hs = Math.max(1, Math.min(5, Number(persons[k].real && persons[k].real.householdSize) || 1));
+      const grp = [];
+      for (let m = 0; m < hs && k < persons.length; m++, k++) grp.push(k);
+      for (const a of grp) persons[a].peers = grp.filter((b) => b !== a);
+    }
+  })();
+
   // 前 7 个行人与具名角色一一对应，共享同一目标、位置与判断，不再另跑剧本。
   // 【2026-11-15】具名演示角色是**手写的展示人物，不属于 ACS 抽样人群**。
   // 旧名册会覆盖年龄和职业，若不标明，决策内核会拿真实记录的年龄去判断一个
