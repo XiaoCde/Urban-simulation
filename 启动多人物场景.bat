@@ -15,14 +15,14 @@ if not errorlevel 1 goto OPENONLY
 echo.
 echo   District scene server
 echo   ----------------------------------------
-echo   multi-agent   http://127.0.0.1:%PORT%/district.html
-echo   single-agent  http://127.0.0.1:%PORT%/office.html
+echo   multi-agent   http://127.0.0.1:%PORT%/_legacy/district.html
+echo   single-agent  http://127.0.0.1:%PORT%/_legacy/office.html
 echo   whole city    http://127.0.0.1:%PORT%/
 echo   ----------------------------------------
 echo   Opening the multi-agent page in 2 seconds...
 echo   Keep this window open while you use the page.
 echo.
-start "" /min powershell -NoProfile -WindowStyle Hidden -Command "Start-Sleep 2; Start-Process 'http://127.0.0.1:%PORT%/district.html'"
+start "" /min powershell -NoProfile -WindowStyle Hidden -Command "Start-Sleep 2; Start-Process 'http://127.0.0.1:%PORT%/_legacy/district.html'"
 "D:\AI\node.exe" serve.js %PORT%
 echo.
 echo   server stopped
@@ -31,7 +31,7 @@ exit /b 0
 
 :OPENONLY
 echo   Port %PORT% already serving, opening the page directly.
-start "" "http://127.0.0.1:%PORT%/district.html"
+start "" "http://127.0.0.1:%PORT%/_legacy/district.html"
 exit /b 0
 
 :NONODE
