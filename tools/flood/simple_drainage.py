@@ -526,11 +526,17 @@ def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00
         }
 
     # ---- 淹没建筑：按轮廓 bbox 取峰值水深的最大值 ----
-    bld = {"total": 0, "touched_m5cm": 0, "gt30cm": 0, "gt100cm": 0,
-           "list": []}
+    bld = {"total": 0, "touched_m5cm": 0, "flooded_above_floor": 0,
+           "gt30cm": 0, "gt100cm": 0, "list": []}
     fp = os.path.join(DERIVED, "buildings_footprints.json")
     if os.path.exists(fp):
         bj = json.load(open(fp, encoding="utf-8"))
+        # 【2026-11-18 首层标高】逐栋台基高（DCGIS 3D 建筑 minz），用来判断
+        # 「水有没有淹过一楼地面」，而不是「轮廓里有没有一点水」。缺数据按 0。
+        found = {}
+        fp2 = os.path.join(DERIVED, "building_foundation.json")
+        if os.path.exists(fp2):
+            found = json.load(open(fp2, encoding="utf-8"))
         for b in bj.get("features", []):
             rings = b.get("rings") or []
             if not rings or len(rings[0]) < 3:
@@ -557,18 +563,28 @@ def flood_impact(depth, grid, res, cell_area, lc, tier_m=(0.01, 0.15, 0.30, 1.00
             if c1 <= c0 or r1 <= r0:
                 continue
             d = float(d_land[r0:r1, c0:c1].max())
+            # 【2026-11-18】逐栋首层高：DCGIS minz 截断到 [0,1.2]，缺数据按 0。
+            # 1.2 m 是宽松上限，超过当 lidar 归一化的异常。
+            fr = found.get(str(b.get("id")))
+            fh = min(max(float((fr or {}).get("minz") or 0.0), 0.0), 1.2)
+            d_floor = d - fh                      # 一楼地面以上的水深
+            # 旧口径（轮廓内任意点有水）保留，只作对照，不再当结论。
             if d > 0.05:
                 bld["touched_m5cm"] += 1
-                if d > 0.30:
+            # 新口径：水要淹过一楼地面，才算这栋楼进水。
+            if d_floor > 0.05:
+                bld["flooded_above_floor"] += 1
+                if d_floor > 0.30:
                     bld["gt30cm"] += 1
-                if d > 1.00:
+                if d_floor > 1.00:
                     bld["gt100cm"] += 1
-                if d > 0.30:
+                if d_floor > 0.30:
                     bld["list"].append({
                         "id": b.get("id"), "name": b.get("name") or "",
                         "building": b.get("building") or "",
                         "area_m2": round(float(b.get("footprint_area_m2") or 0)),
-                        "max_depth_m": round(d, 3)})
+                        "max_depth_m": round(d, 3),
+                        "depth_above_floor_m": round(d_floor, 3)})
         bld["list"].sort(key=lambda q: -q["max_depth_m"])
         bld["list"] = bld["list"][:200]
 
