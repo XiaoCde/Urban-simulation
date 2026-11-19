@@ -1,0 +1,623 @@
+This article appeared in a journal published by Elsevier. The attached
+copy is furnished to the author for internal non-commercial research
+and education use, including for instruction at the authors institution
+and sharing with colleagues.
+Other uses, including reproduction and distribution, or selling or
+licensing copies, or posting to personal, institutional or third party
+websites are prohibited.
+In most cases authors are permitted to post their version of the
+article (e.g. in Word or Tex form) to their personal website or
+institutional repository. Authors requiring further information
+regarding Elsevier’s archiving and manuscript policies are
+encouraged to visit:
+http://www.elsevier.com/copyright
+
+Author's personal copy
+Physiotherapy 97 (2011) 182–189
+Systematic review
+Normal walking speed: a descriptive meta-analysis
+Richard W. Bohannon a,∗
+, A. Williams Andrews b
+a Program in Physical Therapy, Department of Kinesiology, Neag School of Education, University of Connecticut, Storrs, CT 06268-2101, USA
+b Department of Physical Therapy Education, Elon University, Elon, NC 27244, USA
+Abstract
+Background Walking speed has implications for community functioning and is predictive of important outcomes. Determining whether an
+individual’s walking speed is limited requires normal values for comparison.
+Objectives To use meta-analysis to describe normal gait speed for healthy individuals within age and gender strata.
+Data sources PubMed, the Cumulative Index of Nursing and Allied Health (CINAHL), Scopus, Science Citation Index and articles identified
+by hand searches.
+Study selection criteria Inclusion required that the gait speed of apparently healthy adults was documented as they walked at a normal pace
+over a course of 3 to 30 m. Summary data were excluded unless obtained from at least 10 participants within a gender and decade stratum.
+Study appraisal and synthesis methods The two authors independently reviewed articles and extracted data. Accuracy was confirmed by
+the other author. Data were grouped within gender and decade strata. A meta-analysis macro was used to consolidate data by strata and to
+determine homogeneity.
+Results Forty-one articles contributed data to the analysis. Combined, they provided data from 23 111 subjects. The gait speed was homogeneous within strata and ranged from a mean of 143.4 cm/second for men aged 40 to 49 years to a mean of 94.3 cm/second for women aged
+80 to 99 years.
+Limitations The data presented herein may not be useful as a standard of normal if gait is measured over short distances from the command
+‘go’ or if a turn is involved.
+Conclusions and implications The consolidation of data from multiple studies reported in this meta-analysis provides normative data that
+can serve as a standard against which individuals can be compared. Doing so will aid the interpretation of their performance.
+© 2011 Chartered Society of Physiotherapy. Published by Elsevier Ltd. All rights reserved.
+Keywords: Gait; Measurement; Meta-analysis; Normative values
+Introduction
+Walking is second only to private cars as the most common means by which individuals get from place to place in
+the USA and Europe [1]. The speed at which individuals walk
+is relevant to their functioning in the community [2,3]. Moreover, gait speed is an important predictor of outcomes such
+as: length of stay and discharge disposition for patients admitted for acute rehabilitation after stroke [4], mortality of older
+adults [5], incident ischaemic stroke among postmenopausal
+women [6], and incident dementia among older adults [7]. It
+should not be surprising, therefore, that gait speed is com-
+∗ Corresponding author. Tel.: +1 860 486 0048; fax: +1 860 486 1588.
+E-mail address: richard.bohannon@uconn.edu (R.W. Bohannon).
+monly measured by physical therapists and other clinicians
+[8,9].
+Judgements about how an individual’s task performance
+compares with that of a relevant population requires the
+availability of normative reference values (norms) for that
+population [10]. Several studies have presented data purported to be normative for comfortable walking speed
+[12–17]. Other studies, not normative by intent, present walking speed data for apparently healthy individuals. These
+studies, regardless of purpose, involve samples that vary
+greatly in number and composition. They also incorporate
+instructions, courses and timing procedures that vary considerably [18].
+If the data from these seemingly diverse studies could
+be legitimately consolidated, a better sense of normal might
+0031-9406/$ – see front matter © 2011 Chartered Society of Physiotherapy. Published by Elsevier Ltd. All rights reserved.
+doi:10.1016/j.physio.2010.12.004
+
+Author's personal copy
+R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189 183
+be obtained than is provided by individual studies. Metaanalysis is a means by which relevant data from multiple
+sources can be consolidated if homogeneous. Such analysis
+has been used previously to estimate norms for other physical performance tests, such as the single-limb stance test [19],
+five repetition sit-to-stand test [20], and 6-minute walk test
+[21]. The purpose of this meta-analysis was to use the data
+from multiple relevant but diverse studies to estimate norms
+for normal gait speed that could be used in clinical practice.
+Methods
+Identification of potentially relevant literature began with
+the electronic search of four databases: PubMed, the Cumulative Index of Nursing and Allied Health (CINAHL), Scopus
+and Science Citation Index. The terms and Boolean mode
+used were (gait speed OR walking speed) AND (normal
+OR comfortable OR usual OR preferred OR self-selected).
+Databases were searched up to the end of 2008. Searches were
+limited to human subjects, adults aged ≥19 years and published in the English language. The two authors examined the
+search outputs for articles independently with a focus on articles that purported to report normative or reference values or
+values for population-based samples. The abstracts of articles
+deemed to be potentially relevant by either author were examined to determine if perusal of the full-text was warranted.
+Each author inspected the full-text of articles that he deemed
+likely to contain relevant information on gait speed. Thereafter, hand searches of articles in reference lists and personal
+files were performed. These searches permitted the inclusion
+of articles published after the electronic search end-date.
+For data in an article to be included, the source article had
+to describe: (1) normal speed (or equivalent) as opposed to
+fast or maximum speed gait; (2) overground gait as opposed
+to treadmill gait; (3) gait speed measured over a distance of
+at least 3 m (10 feet) but no more than 30.5 m (100 feet); and
+(4) gait speed measured with an allowance for acceleration
+and deceleration (i.e. not from the command ‘go’) unless the
+distance was more than 25 m. This last criterion was included
+to exclude reaction time and to help ensure that steadystate speed was approached before timing began. Previous
+research has shown that steady-state speed can be reached by
+the end of a first step [22]. Data were excluded if they were:
+(1) gathered from patients with pathology (e.g. stroke); (2)
+obtained from a decade and age stratum with less than 10
+male or female subjects; (3) collected from walking trials
+involving a turn [23]; or (4) acquired by the observation of
+pedestrians. Potentially relevant literature was abstracted for
+the following information: (1) source; (2) participants’ characteristics (sample type, country, number, age and gender);
+(3) method of measuring speed; and (4) mean and standard
+deviation of walking speed. Where important information
+regarding methods or walking speed was not presented in an
+article, the authors were contacted by e-mail to obtain the
+necessary details. Of the 39 authors contacted, 26 responded
+with the necessary information. Data were entered into a Statistical Package for the Social Sciences database (SPSS Inc.,
+Chicago, IL, USA). The inverse variance of gait speed was
+computed from the standard deviation of gait speed. A macro
+provided by Wilson [24] used this inverse variance along
+with the mean gait speed and sample size (n) for each gender
+and age stratum (e.g. male, 20 to 29 years) from all relevant
+studies to determine effect size (weighted grand mean) and
+homogeneity. Homogeneity, the degree to which the effect
+sizes from contributing studies estimate the same population
+mean, was described using the Q statistic [25].
+Results
+The yield of potentially relevant articles for the four
+databases was: PubMed, 621; CINAHL, 509; Scopus, 1622;
+and Science Citation Index, 674. Based on the focus of
+this study, adherence to inclusion and exclusion criteria, and
+ability to obtain clarification from authors, 41 articles were
+ultimately judged to be relevant sources of data for normal
+gait speed (Table 1) [12–17,26–61]. Most of the investigations employed convenience samples. However, 15 articles
+presented data gathered, at least in part, from populationbased samples. Individual studies contributed from 10 to
+8883 subjects. The total number of subjects for all studies
+was 23 111. The distances over which speed was measured
+ranged from 3.7 to 30 m. A stopwatch was used in most studies (n = 19), but instrumented walkways, photocells and other
+methods were also used.
+The results of the meta-analysis are presented by strata
+in Table 2. Depending on the stratum, grand mean speed
+ranged from 94.3 cm/second (women aged 80 to 99 years) to
+143.4 cm/second (men aged 40 to 49 years). The grand mean
+gait speed was relatively consistent for the decades 20 to 29
+years to 60 to 69 years for men (133.9 to 143.3 cm/second)
+and women (124.1 to 139.0 cm/second). Thereafter, the grand
+means fell outside the lower level of the confidence intervals
+of all previous decades. By the time subjects were aged 80
+years or more, their mean gait speed declined to less than
+100 cm/second. The Q statistics for all strata had probability
+levels exceeding 0.05. Consequently, within strata, studies
+were homogeneous and consolidation of their data was justified [25].
+Discussion
+Given the relevance of gait speed to community ambulation [2,3] and its value as a predictor of important outcomes
+[4–9], it should not be surprising that gait speed has been
+recommended as a ‘vital sign’ [62,63]. As such, an individual’s gait speed can be interpreted relative to a criterion
+reference or a normative reference [10,11], the focus of this
+meta-analysis. By consolidating data from numerous diverse
+studies, this meta-analysis provides strata-specific estimates
+
+Author's personal copy
+184 R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189
+Table 1
+Summary of studies included in meta-analysis.
+Study Study sample Test specifics Stratified speed
+data (cm/second)
+Type (location) Distance (m) Timing Gender (n) Age group
+(years)
+Mean (SD)
+Al-Obaidi 2003 [17] Convenience (Kuwait) 3.8 Gait mat Male (15) 20 to 29 121.7 (19.9)
+Female (15) 20 to 29 108.2 (14.6)
+Aniansson 1980 [26] Population-based (Sweden) 30 Stopwatch Male (160) 70 to 79 120.0 (20.0)
+Female (194) 70 to 79 110.0 (20.0)
+Aoyagi 2001 [27] Population-based (Japan)a 6 Stopwatch Female (82) 60 to 69 108.0 (32.0)
+Female (50) 70 to 79 99.0 (29.0)
+Female (19) 70 to 79 89.0 (31.0)
+Female (12) 80 to 99 86.0 (28.0)
+Population-based (Japan and USA)b 6 Stopwatch Female (113) 60 to 69 118.0 (38.0)
+Female (273) 70 to 79 112.0 (34.0)
+Female (218) 70 to 79 101.0 (38.0)
+Female (76) 80 to 99 87.0 (36.0)
+Population-based (USA)c 6 Stopwatch Female (3535) 60 to 69 97.0 (30.0)
+Female (2557) 70 to 79 90.0 (26.0)
+Female (1258) 70 to 79 83.0 (36.0)
+Female (690) 80 to 99 74.0 (27.0)
+Arnadottir 2000 [28] Convenience (USA) 10 Stopwatch Female (14) 70 to 79 126.0 (28.0)
+Female (17) 80 to 99 117.0 (24.0)
+Atkinson 2007 [29] Population-based (USA)d 20 Stopwatch Male (1120) 70 to 79 120.0 (21.0)
+Female (1229) 70 to 79 111.0 (21.0)
+Ble 2005 [61] Population-based (Italy)e 4 Photocell Male (27) 20 to 29 131.1 (19.7)
+Male (30) 30 to 39 137.5 (18.3)
+Male (27) 40 to 49 127.0 (16.8)
+Male (28) 50 to 59 126.5 (16.4)
+Male (157) 60 to 69 119.4 (23.1)
+Male (213) 70 to 79 106.8 (23.9)
+Male (65) 80 to 99 87.6 (25.7)
+Male (15) 80 to 99 60.8 (30.3)
+Female (24) 20 to 29 126.6 (21.5)
+Female (32) 30 to 39 125.6 (15.5)
+Female (27) 40 to 49 128.3 (14.6)
+Female (37) 50 to 59 123.9 (18.2)
+Female (180) 60 to 69 105.7 (18.8)
+Female (253) 70 to 79 94.7 (25.6)
+Female (111) 80 to 99 71.2 (25.0)
+Female (22) 80 to 99 55.7 (24.5)
+Bohannon 1997 [12] Convenience (USA) 7 Stopwatch Male (15) 20 to 29 139.3 (15.3)
+Male (13) 30 to 39 145.8 (9.4)
+Male (22) 40 to 49 146.2 (16.4)
+Male (22) 50 to 59 139.3 (22.9)
+Male (18) 60 to 69 135.9 (20.5)
+Male (22) 70 to 79 133.0 (19.6)
+Female (22) 20 to 29 140.7 (17.5)
+Female (23) 30 to 39 141.5 (12.7)
+Female (21) 40 to 49 139.1 (15.8)
+Female (21) 50 to 59 139.5 (15.1)
+Female (18) 60 to 69 129.6 (21.3)
+Female (20) 70 to 79 127.2 (21.1)
+Bohannon 2008 [31] Population-based (USA)f 6.1 Stopwatch Male (311) 50 to 59 112.2 (21.0)
+Male (292) 60 to 69 103.3 (21.0)
+Male (237) 70 to 79 95.7 (22.9)
+Male (134) 80 to 99 83.2 (22.2)
+Female (281) 50 to 59 110.9 (22.2)
+Female (318) 60 to 69 100.6 (22.9)
+Female (210) 70 to 79 93.0 (22.9)
+Female (140) 80 to 99 78.3 (21.9)
+Bohannon 1996 [30] Convenience (USA) 7.6 Stopwatch Male (20) 50 to 59 149.1 (19.0)
+Male (22) 60 to 69 147.9 (11.3)
+Male (22) 70 to 79 141.8 (21.3)
+Female (20) 50 to 59 140.4 (21.0)
+
+Author's personal copy
+R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189 185
+Table 1 (Continued)
+Study Study sample Test specifics Stratified speed
+data (cm/second)
+Type (location) Distance (m) Timing Gender (n) Age group
+(years)
+Mean (SD)
+Female (27) 60 to 69 143.2 (16.8)
+Female (21) 70 to 79 134.3 (19.6)
+Brach 2007 [32] Population-based (USA)g 4 Gait mat Male (108) 70 to 79 112.0 (20.0)
+Male (84) 80 to 99 106.0 (21.0)
+Female (183) 70 to 79 104.0 (19.0)
+Female (120) 80 to 99 94.0 (20.0)
+Busse 2006 [34] Convenience (UK) 10 Camera Male (11) 30 to 39 153.8 (16.0)
+Female (15) 20 to 29 149.9 (18.9)
+Female (14) 30 to 39 138.1 (23.5)
+Female (13) 40 to 49 133.6 (27.6)
+Female (11) 50 to 59 123.2 (10.5)
+Button 2005 [35] Convenience (UK) 15 Camera Male (17) 20 to 29 147.4 (13.6)
+Male (14) 30 to 39 143.2 (13.6)
+Female (22) 20 to 29 144.8 (25.1)
+Callisaya 2008 [36] Population-based (Australia)h 4.2 Gait mat Male (15) 60 to 69 126.3 (21.0)
+Male (28) 60 to 69 120.6 (15.0)
+Male (27) 70 to 79 113.7 (12.4)
+Male (26) 70 to 79 108.6 (22.0)
+Male (24) 80 to 99 103.9 (14.9)
+Female (22) 60 to 69 116.5 (17.0)
+Female (21) 60 to 69 116.6 (15.5)
+Female (15) 70 to 79 121.9 (19.2)
+Female (27) 70 to 79 104.4 (16.4)
+Female (18) 80 to 99 88.6 (19.4)
+Cyarto 2004 [37] Convenience (Canada) 7 Photo cell Female (14) 70 to 79 122.0 (18.0)
+Delval 2006 [38] Convenience (France) 10 Camera Male (11) 20 to 29 135.3 (9.3)
+DePasquale 2009 [43] Convenience (USA) 3 Stopwatch Male (13) 80 to 99 117.9 (32.2)
+Female (10) 70 to 79 117.5 (18.0)
+Female (23) 80 to 99 110.8 (20.9)
+Fitzpatrick 2007 [33] Population-based/convenience (USA)i 4.6 Stopwatch Male (1083) 70 to 79 98.9 (20.1)
+Male (564) 80 to 99 93.4 (27.3)
+Female (939) 70 to 79 94.3 (23.0)
+Female (467) 80 to 99 87.0 (23.0)
+Freiberger 2007 [40] Population-based (Germany) 8 Stopwatch Male (141) 70 to 79 139.6 (27.6)
+Male (35) 80 to 99 122.1 (29.7)
+Female (106) 70 to 79 129.9 (25.2)
+Female (35) 80 to 99 113.8 (24.0)
+Goble 2003 [41] Convenience (USA) 4 Radar gun Male (20) 20 to 29 138.0 (16.0)
+Haghani 2000 [42] Convenience (Canada) 8 Stopwatch Male (10) 20 to 29 144.0 (25.0)
+Hansen 2004 [44] Convenience (USA) 3.7 Camera Female (12) 20 to 29 137.0 (22.0)
+Hill 1999 [45] Convenience (Australia) 6 Stopwatch Female (60) 70 to 79 116.3 (66.8)
+Female (27) 70 to 79 109.2 (77.8)
+Hollman 2007 [46] Convenience (USA) 8.3 Gait mat Female (10) 20 to 29 138.7 (12.6)
+Kamide 2009 [59] Convenience (Japan) 7.0 Stopwatch Female (20) 60 to 69 143.0 (16.0)
+Female (56) 70 to 79 135.0 (22.0)
+Female (23) 80 to 99 116.0 (16.0)
+Laufer 2003 [60] Convenience (Israel) 3.7 Gait mat Male (14) 20 to 29 146.5 (18.5)
+Female (15) 20 to 29 144.5 (16.6)
+Female (11) 70 to 79 96.2 (27.2)
+Leiper 1991 [47] Convenience (USA) 3.8 Gait mat Female (20) 60 to 69 113.0 (13.0)
+Female (35) 70 to 79 97.0 (21.0)
+Female (26) 80 to 99 86.0 (22.0)
+Lindsey 2005 [48] Convenience (USA) 8 Stopwatch Female (10) 50 to 59 155.0 (25.0)
+Female (67) 60 to 69 145.0 (22.0)
+Female (34) 70 to 79 136.0 (28.0)
+Lord 1996 [49] Population-based (Australia)j 7.2 Sensors Female (21) 20 to 29 138.0 (16.0)
+Female (20) 30 to 39 132.0 (17.0)
+Female (19) 40 to 49 129.0 (12.0)
+Female (18) 50 to 59
+
+Author's personal copy
+186 R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189
+Table 1 (Continued)
+Study Study sample Test specifics Stratified speed
+data (cm/second)
+Type (location) Distance (m) Timing Gender (n) Age group
+(years)
+Mean (SD)
+124.0 (19.0)
+Female (37) 60 to 69 113.0 (16.0)
+Female (22) 70 to 79 107.0 (17.0)
+Female (26) 70 to 79 101.0 (19.0)
+Female (11) 80 to 99 96.0 (19.0)
+Lusardi 2003 [13] Convenience (USA) 3.7 Gait mat Female (10) 70 to 79 125.0 (18.0)
+Female (17) 80 to 99 87.0 (16.0)
+Mills 2001 [50] Convenience (Australia) 5 Photocell Male (10) 20 to 29 141.0 (12.6)
+Mündermann 2004 [50] Convenience (USA) 9.1 Camera Male (18) 60 to 69 107.7 (16.0)
+Female (10) 40 to 49 122.0 (11.0)
+Female (14) 50 to 59 135.0 (24.0)
+Female (18) 60 to 69 119.0 (10.0)
+Nagasaki 1996 [52] Population-based (Japan) 5.0 Stopwatch Male (208) 60 to 69 128.6 (23.8)
+Male (135) 70 to 79 118.0 (24.3)
+Male (84) 70 to 79 110.5 (26.5)
+Male (48) 80 to 99 92.3 (21.8)
+Female (260) 60 to 69 118.3 (24.0)
+Female (213) 70 to 79 103.8 (27.0)
+Female (108) 70 to 79 97.0 (23.2)
+Female (75) 80 to 99 80.3 (24.2)
+Öberg 1993 [14] Convenience (Sweden) 5.5 Photocell Male (15) 20 to 29 123.0 (11.0)
+Male (15) 30 to 39 132.0 (15.0)
+Male (15) 40 to 49 133.0 (10.0)
+Male (15) 50 to 59 125.0 (18.0)
+Male (15) 60 to 69 128.0 (12.0)
+Male (15) 70 to 79 118.0 (15.0)
+Female (15) 20 to 29 124.0 (17.0)
+Female (15) 30 to 39 128.0 (19.0)
+Female (15) 40 to 49 125.0 (14.0)
+Female (15) 50 to 59 110.0 (10.0)
+Female (15) 60 to 69 116.0 (17.0)
+Female (15) 70 to 79 111.0 (12.0)
+Obuchi 1994 [53] Population (Japan) 5 Stopwatch Male (107) 60 to 69 126.2 (23.7)
+Female (146) 60 to 69 116.5 (19.7)
+Purser 2003 [54] Convenience (USA) 10 Stopwatch Male (10) 60 to 69 121.3 (11.8)
+Male (28) 70 to 79 119.8 (14.7)
+Female (38) 60 to 69 112.8 (15.0)
+Female (48) 70 to 79 108.9 (18.3)
+Rogers 2005 [55] Convenience (USA) 10 Camera Female (10) 20 to 29 135.0 (15.9)
+Steffen 2002 [15] Convenience (USA) 6 Stopwatch Male (15) 60 to 69 159.0 (24.0)
+Male (14) 70 to 79 138.0 (23.0)
+Female (22) 60 to 69 144.0 (25.0)
+Female (22) 70 to 79 133.0 (22.0)
+Female (15) 80 to 99 115.0 (21.0)
+Tiedemann 2005 [56] Population-based (Australia) 6 Stopwatch Male 124) 70 to 79 115.6 (24.9)
+Male (98) 80 to 99 109.6 (23.9)
+Male (11) 80 to 99 86.0 (18.9)
+Female (225) 70 to 79 110.8 (19.9)
+Female (199) 80 to 99 98.2 (22.3)
+Female (11) 80 to 99 79.6 (25.2)
+Van Iersel 2007 [57] Convenience (Holland) 6 Gait mat Male (17) 70 to 79 140.7 (13.1)
+Female (41) 70 to 79 150.0 (18.7)
+Willén 2004 [58] Population-based (Sweden) 30 Stopwatch Male (16) 40 to 49 147.0 (22.0)
+Male (20) 50 to 59 143.0 (16.0)
+Male (18) 60 to 69 139.0 (13.0)
+Male (15) 70 to 79 132.0 (16.0)
+Female (18) 40 to 49 140.0 (14.0)
+Female (14) 50 to 59 143.0 (19.0)
+Female (27) 60 to 69 128.0 (24.0)
+Female (14) 70 to 79 116.0 (23.0)
+
+Author's personal copy
+R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189 187
+Table 1 (Continued)
+Study Study sample Test specifics Stratified speed
+data (cm/second)
+Type (location) Distance (m) Timing Gender (n) Age group
+(years)
+Mean (SD)
+Wolfson 1996 [39] Population-based (USA) 8 Photo cell Male (39) 70 to 79 123.2 (16.3)
+Male (24) 80 to 99 113.0 (25.1)
+Female (26) 70 to 79 113.2 (19.1)
+Female (20) 80 to 99 99.1 (18.4)
+SD, standard deviation.
+a Mitsugi Bone and Joint Study.
+b Hawaii Osteoporosis Study.
+c Study of Osteoporotic Fractures.
+d Health Male: ABC.
+e
+InCHIANTI.
+f NHANES.
+g Cardiovascular Health Study.
+h TASCOG.
+i Ginkgo Evaluation of Memory Study.
+j Radwich Falls and Fractures Study.
+Table 2
+Results of meta-analysis.
+Strata gender (age in years) Source articles (n) Subjects (n) Gait speed (cm/second) Grand mean (95% CI) range Homogeneity Q (P)
+Men (20 to 29) 10 155 135.8 (127.0 to 144.7) 121.7 to 147.4 3.255 (0.953)
+Men (30 to 39) 5 83 143.3 (131.6 to 155.0) 132.0 to 153.8 1.169 (0.883)
+Men (40 to 49) 4 96 143.4 (135.3 to 151.4) 127.0 to 147.0 2.609 (0.625)
+Men (50 to 59) 6 436 143.3 (137.9 to 148.8) 112.2 to 149.1 4.721 (0.580)
+Men (60 to 69) 12 941 133.9 (126.6 to 141.2) 103.3 to 159.0 15.217 (0.294)
+Men (70 to 79) 18 3671 126.2 (121.0 to 132.2) 95.7 to 141.8 12.848 (0.914)
+Men (80 to 99) 10 1091 96.8 (83.4 to 110.1) 60.8 to 122.1 4.159 (0.940)
+Women (20 to 29) 11 180 134. 1 (123.9 to 144.3) 108.2 to 149.9 5.307 (0.870)
+Women (30 to 39) 5 104 133.7 (119.3 to 148.2) 125.6 to 141.5 0.785 (0.940)
+Women (40 to 49) 7 142 139.0 (133.9 to 141.1) 122.0 to 142.0 5.666 (0.579)
+Women (50 to 59) 10 456 131.3 (122.2 to 140.5) 110.0 to 155.5 12.291 (0.266)
+Women (60 to 69) 17 5013 124.1 (118.3 to 130.0) 97.0 to 145.0 11.515 (0.932)
+Women (70 to 79) 29 8591 113.2 (107.2 to 119.2) 83.0 to 150.0 16.775 (0.998)
+Women (80 to 99) 17 2152 94.3 (85.2 to 103.4) 55.7 to 117.0 11.428 (0.954)
+CI, confidence interval.
+of normal gait speed that are more precise than those possible
+with individual studies. Despite the diversity of subject pools
+and procedures employed in studies included in this metaanalysis, the consolidated studies were homogeneous. While
+this was not a foregone conclusion, many of the factors that
+might have influenced gait speed [64] were controlled via
+inclusion and exclusion criteria.
+This study does have several limitations. First, it is not
+comprehensive. Although four databases were used to find
+relevant literature, the final search was up to the end of 2008.
+Between that time and the present, relevant articles other than
+the two identified through hand searches may have been published. Of the relevant articles identified, some did not provide
+data in a manner that enabled inclusion. If the authors of
+a study could not be reached, failed to respond or refused
+to provide the necessary information, the data could not be
+incorporated. This resulted in the loss of several thousand
+subjects. Second, the quality of the studies included was
+not rated. While quality ‘is of obvious relevance to metaanalysis’ [65], quality rating scales are typically designed
+for use with clinical trials. This meta-analysis merely used
+descriptive data. Third, no sensitivity analysis was performed.
+As data within strata were homogeneous, such analysis was
+not deemed to be necessary or informative. Fourth, factors
+other than age and gender (e.g. stature) that are known to
+affect gait speed [66] were not addressed. They were too
+infrequently reported to consider.
+Conclusions
+This meta-analysis consolidates measurements of normal
+gait speed from over 23 000 subjects tested in 41 different studies. Normative reference values are provided for
+gender- and age-specific strata. The norms provided can be
+used to determine how an individual’s speed compares with
+the average for healthy individuals of the same gender and
+age.
+
+Author's personal copy
+188 R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189
+Ethical approval: Not applicable.
+Conflict of interest: None declared.
+References
+[1] Mitchell C. Pedestrian mobility and safety. A key to independence for
+older people. Top Geriatr Rehabil 2006;22:45–52.
+[2] Robinett CS, Vondran MA. Functional ambulation velocity and distance requirements in rural and urban communities. Phys Ther
+1988;68:1371–2.
+[3] Langlois JA, Keyl PM, Guralnik JM, Foley DJ, Marottoli RA, Wallace
+RB. Characteristics of older pedestrians who have difficulty crossing
+the street. Am J Publ Health 1997;87:393–7.
+[4] Rabadi MH, Blau A. Admission ambulation velocity predicts length of
+stay and discharge disposition following stroke in an acute rehabilitation hospital. Neurorehabil Neural Repair 2005;19:20–6.
+[5] Ostir GV, Kuo Y-F, Berges IM,Markides KS, Ottenbacher KJ.Measures
+of lower body function and risk of mortality over 7 years of follow-up.
+Am J Epidemiol 2007;166:599–605.
+[6] McGinn AP, Kaplan RC, Verghese J, Rosenbaum DM, Psaty BM, Baird
+AE, et al. Walking speed and risk of incident ischemic stroke among
+postmenopausal women. Stroke 2008;39:1233–9.
+[7] Waite LM, Grayson DA, Piguet O, Creasey H, Bennett HP, Broe
+GA. Gait slowing as a predictor of incident dementia: 6-year longitudinal data from the Sydney Older Persons Study. J Neurol Sci
+2005;229–230:89–93.
+[8] Andrews AW, Folger SE, Norbet SE, Swift LC. Tests and measures
+used by specialist physical therapists when examining patients with
+stroke. J Neurol Phys Ther 2008;32:122–8.
+[9] Howard LS, Doherty P, Boyes C. A survey of outcome measurement
+of balance, walking and gait amongst physiotherapists working in neurology in the UK. Physiotherapy 2008;94:125–32.
+[10] Rothstein JM, Echternach JL. Primer on measurement: an introductory guide to measurement issues. Alexandria, VA: American Physical
+Therapy Association; 1993. pp. 46–54.
+[11] Mitrushina M, Boone KB, Razani, D’Elia LF. Handbook of normative
+data for neuropsychological assessment. 2nd edn. New York: Oxford
+University Press; 2005.
+[12] Bohannon RW. Comfortable and maximum walking speed of adults
+aged 20 to 79 years: reference values and determinants. Age Ageing
+1997;26:15–9.
+[13] Lusardi MM, Pellecchia GL, Schulman M. Functional performance in
+community living older adults. J Geriatr Phys Ther 2003;26:14–22.
+[14] Öberg T, Karsznia A, Öberg K. Basic gait parameters: reference
+data for normal subjects, 10 to 79 years of age. J Rehabil Res Dev
+1993;30:210–23.
+[15] Steffen TM, Hacker TA, Mollinger L. Age- and gender-related test
+performance in community-dwelling elderly people: six minute walk
+test, Berg balance scale, timed up & go test, and gait speeds. Phys Ther
+2002;82:128–37.
+[16] Hinman JE, Cunningham DA, Rechnitzer PA, Paterson DH. Agerelated changes in gait speed of walking. Med Sci Sports Exerc
+1988;20:161–6.
+[17] Al-Obaidi S, Wall JC, Al-Yaqoub A, Al-Ghanim M. Basic gait parameters: a comparison of reference data for normal subjects 20–29 years of
+age from Kuwait and Scandinavia. J Rehab Res Devel 2003;40:361–6.
+[18] Graham JE, Ostir GV, Fisher SR, Ottenbacher KJ. Assessing walking speed in clinical research: a systematic review. J Eval Clin Pract
+2008;14:552–62.
+[19] Bohannon RW. Reference values for single limb stance: a descriptive
+metaanalysis. Top Geriatr Rehabil 2006;22:70–7.
+[20] Bohannon RW. Reference values for the five-repetition sit-to-stand test:
+a descriptive meta-analysis of data from elders. Percept Motor Skills
+2006;103:215–22.
+[21] Bohannon RW. Six-minute walk test: a meta-analysis of data from
+apparently healthy elders. Top Geriatr Rehabil 2007;23:155–60.
+[22] Breniere Y, Do MC. When and how does steady state gait movement
+induced from upright posture begin? J Biomech 1986;19:1035–40.
+[23] Van Herk IEH, Arendzen JH, Rispens P. Ten-metre walk, with or without a turn? Clin Rehabil 1998;12:30–5.
+[24] Wilson DB. Meta-analysis stuff. Available at: http://mason.gmu.
+edu/∼dwilsonb/home.html (last accessed 01.07.2009).
+[25] Lipsey MW, Wilson DB. Practical meta-analysis. Thousand Oaks, CA:
+Sage Publications; 2001.
+[26] Aniansson A, Rungren Å, Sperling L. Evaluation of functional capacity
+in activities of daily living in 70-year-old men and women. Scand J
+Rehab Med 1980;12:145–54.
+[27] Aoyagi K, Ross PD, Nevitt MC, Davis JW, Wasnich RD, Hayashi
+T, et al. Comparison of performance-based measures among native
+Japanese, Japanese-Americans in Hawaii and Caucasian women in the
+United States, ages 65 years and over: a cross-sectional study. BMC
+Geriatr 2001;1:3.
+[28] Arnadottir SA, Mercer VS. Effects of footwear on measurements of
+balance and gait in women between the ages of 65 and 93 years. Phys
+Ther 2000;80:17–27.
+[29] Atkinson HH, Rosano C, Simonsick EM, Williamson JD, Davis C,
+Ambrosius WT, et al. Cognitive function, gait speed decline, and
+comorbidities: the Health, Aging and Body Composition Study. J
+Gerontol Med Sci 2007;62A:844–50.
+[30] Bohannon RW, Andrews AW, Thomas MW. Walking speed: reference values and correlates for older adults. J Orthop Sports Phys Ther
+1996;24:86–90.
+[31] Bohannon RW. Population representative gait speed and its determinants. J Geriatr Phys Ther 2008;31:49–52.
+[32] Brach JS, Studenski SA, Perera S, VanSwearingen JM, Newman
+AB. Gait variability and the risk of incident mobility disability in community-dwelling older adults. J Gerontol Med Sci
+2007;62A:983–8.
+[33] Fitzpatrick AL, Buchanan CK, Nahin RL, Dekosky ST, Atkinson HH,
+Carlson MC, et al. Association of gait speed and other measures of
+physical function with cognition in a healthy cohort of elderly persons.
+J Gerontol A Biol Sci Med Sci 2007;62:1244–51.
+[34] Busse ME, Wiles CM, van Deursen RWM. Community walking activity in neurological disorders with leg weakness. J Neurol Neurosurg
+Psychiatry 2006;77:359–62.
+[35] Button K, van Deursen R, Price P. Measurement of functional recovery
+in individuals with acute anterior cruciate ligament rupture. Br J Sports
+Med 2005;39:866–71.
+[36] Callisaya ML, Blizzard L, Schmidt MD, McGinley JL, Srikanth VK.
+Sex modifies the relationship between age and gait: a population-based
+study of older adults. J Gerontol Med Sci 2008;63A:165–70.
+[37] Cyarto EV, Myers AM, Tudor-Locke C. Pedometer accuracy in nursing
+home and community-dwelling older adults. Med Sci Sports Exerc
+2004;36:205–9.
+[38] Delval A, Krystkowiak P, Blatt J-L, Labyt E, Dujaardin K, Destée A,
+et al. Role of hypokinesia and bradykinesia in gait disturbances in
+Huntington’s disease. J Neurol 2006;253:73–80.
+[39] Wolfson L, Whipple R, Derby C, Judge J, King M, Amerman P, et al.
+Balance and strength training in older adults: intervention gains and Tai
+Chi maintenance. J Am Geriatr Soc 1996;44:498–506.
+[40] Freiberger E, Menz HB, Abu-Omar K, Rütten A. Preventing
+falls in physically active community-dwelling older people: a
+comparison of two intervention techniques. Gerontology 2007;53:
+298–305.
+[41] Goble DJ, Marino GW, Potvin JR. The influence of horizontal
+velocity on interlimb symmetry in normal walking. Hum Mov Sci
+2003;22:271–83.
+[42] Haghani H, Marks R. Relationship between maximal isometric knee
+extensor and flexor strength measures, age and walking speed of
+healthy men and women aged 18 to 74. Physiother Can 2000;52:
+33–8.
+
+Author's personal copy
+R.W. Bohannon, A. Williams Andrews / Physiotherapy 97 (2011) 182–189 189
+[43] DePasquale L, Toscano L. The Spring Scale Test: a reliable and valid
+tool for explaining fall history. J Geriatr Phys Ther 2009;32:159–67.
+[44] Hansen AH, Childress DS, Miff SC, Gard SA, Mesplay KP. The human
+ankle during walking: implications for design of biomimetic ankle
+prostheses. J Biomech 2004;37:1467–74.
+[45] Hill K, Schwarz J, Flicker L, Carroll S. Falls among healthy,
+community-dwelling, older women: a prospective study of frequency,
+circumstances, consequences and predictive accuracy. Aust N Z J Public
+Health 1999;23:41–4.
+[46] Hollman JH, Kovash FM, Kubik JJ, Linbo RA. Age-related differences
+in spatiotemporal markers of gait stability during dual task walking.
+Gait Posture 2007;26:113–9.
+[47] Leiper CI, Craik RL. Relationships between physical activity and
+temporal-distance characteristics of walking in elderly women. Phys
+Ther 1991;71:791–803.
+[48] Lindsey C, Brownbill RA, Bohannon RW, Illich JZ. Association of
+physical performance measures with bone mineral density in postmenopausal women. Arch Phys Med Rehabil 2005;86:1102–7.
+[49] Lord SR, Lloyd DG, Li SK. Sensori-motor function, gait patterns and
+falls in community-dwelling women. Age Ageing 1996;25:292–9.
+[50] Mills PM, Barrett RS. Swing phase mechanics of healthy young and
+elderly men. Hum Mov Sci 2001;20:427–46.
+[51] Mündermann A, Dyrby CO, Hurwitz DE, Sharma L, Andriacchi
+TP. Potential strategies to reduce medial compartment loading in
+patients with knee osteoarthritis of varying severity. Arthritis Rheum
+2004;50:1172–8.
+[52] Nagasaki H, Itoh H, Hashizume K, Furuna T, Maruyama H, Kinugasa
+T. Walking patterns and finger rhythm of older adults. Percept Motor
+Skills 1996;82:435–47.
+[53] Obuchi S, Shibata H, Yasumura S, Suzuki T. Relationship between
+walking ability and risk of falls in community dwelling elderly in Japan.
+J Phys Ther Sci 1994;6:39–44.
+[54] Purser JL, Pieper CF, Poole C, Morey M. Trajectories of leg strength
+and gait speed among sedentary older adults: longitudinal pattern and
+dose response. J Gerontol Med Sci 2003;58A:1125–34.
+[55] Rogers HL, Cromwell RL, Newton RA. Association of balance measures and perception of fall risk on gait speed: a multiple regression
+analysis. Exper Aging Res 2005;31:191–203.
+[56] Tiedemann A, Sherrington C, Lord SR. Physiological and psychological predictors of walking speed in older community-dwelling people.
+Gerontology 2005;51:390–5.
+[57] Van Iersel MB, Olde Rikkert MG, Borm GF. A method to standardize gait and balance variables for gait velocity. Gait Posture
+2007;26:226–30.
+[58] Willén C, Sunnerhagen KS, Ekman C, Grimby G. How is walking
+speed related to muscle strength? A study of healthy persons and
+persons with late effects of polio. Arch Phys Med Rehabil 2004;85:
+1923–8.
+[59] Kamide N, Shiba Y, Koide K, Haga H, Shibata H. The timed up
+and go test is related to quantitative ultrasound parameters of bone
+strength in Japanese community-dwelling older women. J Phys Ther
+Sci 2009;21:373–8.
+[60] Laufer Y. Age- and gender-related changes in temporal-spatial characteristics of forwards and backwards gaits. Physiother Res Int
+2003;8:131–42.
+[61] Ble A, Volpato S, Zuliana G, Guralnik JM, Bandinelli S, Lauretani F,
+et al. Executive function correlates with walking speed in older persons:
+the InCHIANTI study. J Am Geriatr Soc 2005;53:410–5.
+[62] Studenski S, Perera S, Wallace D, Chandler JM, Duncan PW, Rooney E,
+et al. Physical performance measures in a clinical setting. J Am Geriatr
+Soc 2003;51:314–22.
+[63] Fritz S, Lusardi M. White paper: ‘Walking speed: the sixth vital sign’.
+J Geriatr Phys Ther 2009;32:2–5.
+[64] Graham JE, Ostir GV, Kuo Y-F, Fisher SR, Ottenbacher KJ. Relationship between test methodology and mean velocity in timed walk tests:
+a review. Arch Phys Med Rehabil 2008;89:865–72.
+[65] Jüni P, Witschi A, Bloch R, Egger M. The hazards of scoring the quality
+of clinical trials for meta-analysis. JAMA 1999;282:1054–60.
+[66] Bendall MJ, Bassey EJ, Pearson MB. Factors affecting walking speed
+of elderly people. Age Ageing 1989;18:327–32.
+Available online at www.sciencedirect.com

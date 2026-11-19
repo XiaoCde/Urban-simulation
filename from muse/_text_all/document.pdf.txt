@@ -1,0 +1,1358 @@
+Risk Analysis, Vol. 29, No. 5, 2009 DOI: 10.1111/j.1539-6924.2008.01190.x
+Loss of Life Caused by the Flooding of New Orleans After
+Hurricane Katrina: Analysis of the Relationship Between
+Flood Characteristics and Mortality
+Sebastiaan N. Jonkman,1,2,∗ Bob Maaskant,1,3 Ezra Boyd,4 and Marc Lloyd Levitan4
+In this article a preliminary analysis of the loss of life caused by Hurricane Katrina in the
+New Orleans metropolitan area is presented. The hurricane caused more than 1,100 fatalities
+in the state of Louisiana. A preliminary data set that gives information on the recovery locations and individual characteristics for 771 fatalities has been analyzed. One-third of the analyzed fatalities occurred outside the flooded areas or in hospitals and shelters in the flooded
+area. These fatalities were due to the adverse public health situation that developed after
+the floods. Two-thirds of the analyzed fatalities were most likely associated with the direct
+physical impacts of the flood and mostly caused by drowning. The majority of victims were
+elderly: nearly 60% of fatalities were over 65 years old. Similar to historical flood events, mortality rates were highest in areas near severe breaches and in areas with large water depths.
+An empirical relationship has been derived between the water depth and mortality and this
+has been compared with similar mortality functions proposed based on data for other flood
+events. The overall mortality among the exposed population for this event was approximately
+1%, which is similar to findings for historical flood events. Despite the fact that the presented
+results are preliminary they give important insights into the determinants of loss of life and
+the relationship between mortality and flood characteristics.
+KEY WORDS: Consequences; floods; Hurricane Katrina; loss of life; mortality; public health impacts
+1. INTRODUCTION
+Despite the enormous impacts of floods, there is
+relatively limited insight into the factors that determine the loss of life caused by flood events. A review of historical flood events showed that the num1 Delft University, Faculty of Civil Engineering and Geosciences,
+Delft, The Netherlands.
+2 Royal Haskoning, Coastal and Rivers Division, Rotterdam, The
+Netherlands.
+3 HKV Consultants, Lelystad, The Netherlands.
+4 Louisiana State University, Hurricane Center, Baton Rouge, LA,
+USA.
+∗Address correspondence to Sebastiaan N. Jonkman, Delft
+University, Faculty of Civil Engineering and Geosciences, Stevinweg 1, 2628 CN, Delft, The Netherlands; tel: +316-1594-3962;
+s.n.jonkman@tudelft.nl.
+ber of fatalities due to a flood event is determined
+by the characteristics of the flood (depth, velocity,
+rise rate), the possibilities for warning, evacuation,
+and shelter, and the loss of shelter due to the collapse of buildings.(1) In the literature several methods have been developed that can be used to assess
+the loss of life for flood events and to identify mitigation measures.(2,3) In general these methods consist of a quantitative relationship between the flood
+characteristics and the mortality in the flooded area.
+In this context mortality is defined as the number of
+fatalities divided by the number of people exposed.
+Mainly due to limitations in data collection and documentation, the existing methods and relationships
+have been derived based on events that occurred several decades ago, mainly in the 1950s and 1960s.
+676 0272-4332/09/0100-0676$22.00/1 C 2009 Society for Risk Analysis
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 677
+In late August 2005, the New Orleans metropolitan area suffered the destructive power of Hurricane
+Katrina. Large parts of the city flooded. The objective of this article is to present the available data
+and provide an analysis of the relationship between
+flood characteristics and mortality for the flooded
+parts of New Orleans.
+Empirical relationships are developed by relating the observed spatial distribution of mortality to
+simulated flood characteristics. Analysis of this tragic
+event enables the analysis of the influence of different flood and event characteristics on mortality for
+such a recent event. Findings can be compared to existing studies and methods that have been derived for
+flooding of similar types of areas, i.e., low-lying areas
+protected by flood defenses.
+The focus in this article is on the mortality during
+and directly after the flood event in the flooded areas
+of the city of New Orleans and the consequences for
+other areas are not treated in detail. A more comprehensive presentation of the available data regarding the fatalities and their causes and circumstances
+is found in Reference 4. Stephens et al.(5) provide an
+analysis of the longer term impacts of the event. Data
+regarding loss of life for states other than Louisiana
+that were affected by Katrina is not discussed in detail here. MMWR (Reference 6, pp. 239–242) provides a review of mortality for the states of Florida
+(14 fatalities) and Alabama (15 fatalities). It is estimated in press reports that more than 230 fatalities
+occurred in the state of Mississippi, but no official list
+of victims is available.
+This study focuses on loss of life. Several sources
+provide comprehensive discussions of other types of
+consequences, such as economic losses,(7–11) physical and mental health impacts,(6,12–14) and pollution from industrial and household chemicals that
+mixed with floodwaters.(15–17) A general analysis
+of different types of consequences is given in the
+report of the Interagency Performance Evaluation
+Taskforce.(10)
+The outline of this article is as follows. After a
+general description of relevant events and processes
+during Hurricane Katrina (Section 2), Section 3 reports the results of flood simulations that give insight into the flood characteristics. Section 4 provides
+an overview of the available information regarding
+Katrina-related fatalities. Characteristics and circumstances of Katrina-related fatalities are described in
+Section 5. The relationship between flood characteristics and mortality is analyzed in Section 6. Section 7
+provides a discussion of various issues, such as a comFig. 1. Location of the city of New Orleans.
+parison with existing loss of life models and the uncertainties in the data. Concluding remarks and recommendations are given in Section 8.
+2. GENERAL INFORMATION REGARDING
+HURRICANE KATRINA
+This section gives a general description of Hurricane Katrina, mainly focusing on the New Orleans
+area and issues most relevant for analysis of loss of
+life. Several other studies give a more comprehensive description of the characteristics of Hurricane
+Katrina,(18) and the performance of the flood protection system.(19–21)
+2.1. General Situation and Past Studies
+New Orleans is situated in the delta of the
+Mississippi River (Fig. 1). The city and its surrounding suburbs make up a metropolitan area that is
+largely below sea level and entirely surrounded by
+levees (synonyms: flood defenses or dikes). Therefore, the area has a so-called polder,1 bowl, or bathtub character. As a consequence of its geographical situation, the area is vulnerable to flooding from
+1 Polder: relatively low-lying area protected from flooding by flood
+defenses, such as dikes/levees. Drainage systems are needed to
+discharge rainwater from the polder and to prevent rise of the
+groundwater table.
+
+678 Jonkman et al.
+hurricanes, high discharges of the Mississippi River,
+and heavy rains.
+The possibility of a major storm surge flood disaster in New Orleans was already known long before Hurricane Katrina formed. In the 20th century
+the city experienced floods after hurricanes in 1915,
+1947, and 1965 (Hurricane Betsy). During Betsy, an
+estimated 13,000 people were rescued from floodwaters and approximately 40 drowned in floodwaters.
+Numerous publications have reported the threats associated with hurricanes. In June 2002, the TimesPicayune newspaper published a five-part series entitled “Washing Away.” This series of articles claims
+that as many as 200,000 residents of the area would
+not be able to evacuate and that “between 25,000 and
+100,000 people would die.”(22) One year before Hurricane Katrina, a joint federal, state, and local planning exercise looked at a fictitious Hurricane Pam
+scenario: a slow moving Category 3 hurricane passes
+just west of New Orleans with a 20 ft (approximately
+6.5 m) storm surge that overtops levees and inundates the entire city. In this scenario, search and
+rescue (S&R) crews would have to conduct over
+22,000 boat and helicopter missions, 1.1 million people would experience long-term displacement, nearly
+400,000 suffer injury or illness, and over 60,000 people would perish.(23)
+2.2. General Characteristics of Hurricane Katrina
+Hurricane Katrina formed as a tropical storm in
+the Atlantic Ocean southeast of Florida. On August
+25, 2005 Katrina made landfall near Miami, Florida,
+as a Category 1 hurricane on the Saffir-Simpson
+scale. In Florida it resulted in 14 fatalities.(6) The
+storm weakened slightly as it crossed Florida and entered the Gulf of Mexico on August 26 as a tropical storm. Katrina quickly regained hurricane status
+and it began to take aim for southeast Louisiana (see
+Fig. 2). Between August 26 and 28 the storm initially
+strengthened to a Category 5, peaking at 1:00 pm
+August 28 with maximum sustained wind speeds of
+175 mph (280 km/h) and wind gusts up to almost 220
+mph (350 km/h). Before making its second landfall
+near Buras, Louisiana, it weakened to a Category 3
+status with sustained winds of 125 mph (200 km/h).
+2.3. Preparation: Evacuation, Shelter in Place
+In the days before landfall, computer models
+predicted possible flooding of New Orleans. The
+first evacuation orders came early Saturday mornSource: Wikipedia; map from NASA; hurricane track from the
+U.S. National Hurricane Center.
+Fig. 2. Track of Hurricane Katrina.
+ing (August 27) for the outlying coastal areas, such
+as Plaquemines and St. Bernard parish.2 Utilizing
+lessons learned one year earlier from Hurricane Ivan,
+state and local officials initiated the staged hurricane evacuation plan officially on Saturday. The
+next morning, shortly after Katrina was upgraded to
+Category 5 strength, Mayor Nagin issued a mandatory evacuation order for New Orleans. By the time
+storm conditions reached New Orleans, 430,000 vehicles had fled the metropolitan region using primary roads(24,25) with an estimated additional 10,000–
+30,000 using secondary roads. Based on these traffic
+counts, Wolshon(24,26) estimates that 1.1 million people, or 80% to 90% of the population at risk in southeast Louisiana, evacuated the area before the storm.
+In addition to the evacuation of the general population, Hurricane Katrina forced the nursing homes
+and hospitals in the region to quickly make hard
+decisions about who to evacuate and in what way.
+These challenges presented no easy solutions, as both
+evacuation and sheltering-in-place presented risks to
+nursing home and hospital patients. Among the nursing homes in the area at risk, 21 homes evacuated
+before the storm and 36 did not.(27) Local authorities set up various shelters in the city. In St. Bernard
+parish, two schools were offered as shelters. In Orleans parish, the Superdome was set up as a shelter.
+Boyd(28) estimates that of the 72,000 people who remained in the city after the evacuation an estimated
+26,000 individuals sheltered in the Superdome(29) but
+2 Parish: administrative subdivision that is used in Louisiana. Note
+that the parish name does not always correspond to the name
+of the flooded “bowl.” For example, Orleans parish covers the
+Orleans bowl, Orleans East bowl, and a small part of the St.
+Bernard bowl.
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 679
+Fig. 3. Overview of flooded area, levee
+breach locations, and maximum water
+depths. (Breach locations are based on
+field observations and data of the LSU
+Hurricane Center. Water depth for the
+Orleans and St. Bernard bowls is based
+on flood simulations (see Section 3),
+water depth for New Orleans East is
+based on data provided by LSU
+Hurricane Center.)
+in later estimates a number of 10,000 to 15,000 is
+used. Initially, the Superdome served its purpose as
+a shelter of late resort well. The problems that developed later mainly resulted from the heat and humidity, lack of supplies and delays in the post-storm
+evacuation, and the difficult conditions.
+2.4. Impacts: Levee Breaches and Flooding
+During its final landfall on August 29, Katrina’s
+storm surge caused massive flooding and devastation along a 170-mile (approximately 270 km) stretch
+of the U.S. Gulf Coast. The entire coastline of the
+state Mississippi suffered massive destruction due to
+surge flooding. The storm surge also caused massive overtopping and breaching of levees around
+New Orleans. The flooded area of the city basically
+consists of three bowls: the central part of the city
+(Orleans), New Orleans East, and St. Bernard; see
+Fig. 3. The first flooding of residential areas in greater
+New Orleans occurred almost two hours before the
+storm’s landfall. Between 4:30 am and 5:00 am water was already rising in the Industrial Canal.3 The
+waters flowed into the Orleans bowl to the west, and
+into the New Orleans East bowl on the east side of
+the Industrial Canal. Later that morning more catastrophic breaching occurred along the southern arm
+of the Industrial Canal. Two major breaches in the
+floodwalls resulted in a rapidly rising and fast mov3 The official name of the Industrial Canal is the Inner Harbor
+Navigation Channel (IHNC).
+ing flood of the St. Bernard bowl, with catastrophic
+consequences.
+Especially the neighborhood of Lower 9th Ward,
+which was closest to the breach, was most severely
+affected. In the Orleans bowl the levees in the 17th
+Street and London Avenue drainage canals failed,
+leading to floods in a large part of the central area.
+The New Orleans East bowl flooded more gradually
+due to a number of smaller breaches and overtopping
+cases. An area of approximately 260 km2 of the city
+flooded, at some locations more than 4 m deep. Fig. 3
+gives an overview of the flooded area and the locations of the levee breaches. It took over 40 days to
+dewater the city.
+2.5. Aftermath: Search and Rescue Operations
+The flooding of large parts of metropolitan New
+Orleans necessitated a massive urban search and rescue effort that involved numerous local, state, federal, and private organizations. Individuals in peril
+had to be rescued from roofs and attics. Patients,
+staff, and family members had to be evacuated as
+hospitals and nursing homes flooded. In the five
+days that followed Hurricane Katrina, rescue workers completed an estimated 62,000 water, roof, and
+attic rescues by either boat or helicopter. Over 100
+helicopters and 600 boats were utilized.(30) Reflecting
+their first priority to protect the lives of those trapped
+by the flood, search and rescue (S&R) teams initially transported people from attics and floodwaters
+to higher ground, such as elevated highways and
+
+680 Jonkman et al.
+bridges. Following this immediate rescue, available
+ground transportation was used to bring people to
+the Superdome, the Convention Center, and the I-10
+Cloverleaf.(31) The sheltering population at these locations continued to grow in the days that followed
+the hurricane. As the days passed before relief arrived, hunger, thirst, and desperation took hold. Finally, on Thursday, September 1, three days after
+Hurricane Katrina made landfall, buses began evacuating people from the Superdome. The evacuation
+of the Convention Center began the next day. When
+the poststorm evacuation of New Orleans finished on
+September 4, an estimated 78,000 displaced persons
+had been relocated to shelters set up across the nation.(32) In the first phase that covered approximately
+10 days, search and rescue operations focused on saving the living. After that the sad task of recovering
+the deceased began.
+3. SIMULATION OF FLOOD
+CHARACTERISTICS
+3.1. Background
+Several organizations, including the Federal
+Emergency Management Agency (FEMA) and the
+Louisiana State University (LSU) Hurricane Center,
+have made floodmaps that provide insight into the
+water depths in the flooded parts of New Orleans.
+These maps have been made by combining terrain elevation data, information regarding the extent of the
+flooded area, and the water levels.(33) The size of the
+flooded area can be derived from aerial photography
+or satellite imagery. Water levels in the flooded area
+can be identified based on watermarks on buildings;
+see Fig. 4 for an example. However, due to effects of
+the tide and pumping, multiple watermarks are visible and a uniform interpretation is often difficult.
+For an analysis of flood fatalities, other flood
+characteristics than water depth will be relevant as
+well. These include flow velocity, rise rate, and arrival time of floodwater. These characteristics have
+not been observed in the field during the flood
+event. However, there might be some indirect and
+mostly qualitative evidence, such as eyewitness accounts that describe flood conditions, and damage
+patterns that indicate the severity of local flow conditions (e.g., damage to buildings due to flow velocity). To gain more insight into these flood characteristics, simulations have been made for two of the New
+Orleans bowls (Orleans and St. Bernard). The results
+of these simulations have been used to analyze the reFig. 4. Water marks on a building near the breach in the 17th
+Street Canal.
+lationship between the flood characteristics and mortality in Section 6. In addition, the simulations could
+be useful for visualization and communication of the
+course of flooding.
+3.2. Approach for the Flood Simulations
+The flood simulations of overland flow have
+been made by means of a two-dimensional hydraulic
+model, SOBEK-1D2D, developed by WL|Delft Hydraulics. De Bruijn(34) and Maaskant(35) give further
+background information. The following points summarize the approach used for the flood simulations:
+(1) For terrain height a digital elevation model
+was made using data from U.S. Geological
+Survey (USGS).
+(2) Levee heights and breach locations are based
+on information provided by the LSU Hurricane Center. This information is based on
+field observations.
+(3) In the flood simulation a terrain model has
+been used with a rectangular raster with grid
+cells of 28 m × 28 m.
+(4) A uniform terrain roughness has been assumed in the simulation with a manning value
+of 0.3 m. This value is representative for rural terrain. The effect of single objects such as
+buildings on the roughness is not directly assessed, but it is assumed to be included in the
+average roughness.
+(5) Only inflow through the main breaches has
+been considered. Overtopping of levees, the
+effects of rainfall, drainage canals, and pumping have not been considered.
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 681
+Fig. 5. Maximum water depth. (For the
+Orleans and St. Bernard bowls it is
+obtained from simulations. Water depth
+for the Orleans East bowl is based on the
+flood depth map provided by the LSU
+Hurricane Center.)
+Fig. 6. Maximum flow velocity for the
+Orleans and St. Bernard bowls.
+(6) Breach widths are based on descriptions by
+IPET(20) and Seed et al.
+(21,22) Based on these
+reports the growth rate of the breach has
+been estimated. Inflow discharges through
+breaches are determined based on the outside water levels reported in(36) and estimates
+of the development of the breach profile over
+time.
+(7) Simulations have been made for the Orleans(34) and St. Bernard(35) bowls. No simulations are available for New Orleans East.
+(8) To reduce the calculation time for the St.
+Bernard bowl, only flooding of the residential
+area is simulated; the wetlands between the
+40-Arpent levee and Lake Borgne have not
+been taken into account.
+Given the above assumptions and limitations regarding the input data it is important to realize that these
+simulations give a first-order insight into flood conditions in the affected area, but are not detailed or
+exact approximations of the flood flow conditions.
+
+682 Jonkman et al.
+Fig. 7. Product of maximum water depth
+and maximum flow velocity (hv) for the
+Orleans and St. Bernard bowls.
+(These results are conservative as
+maximum values of depth and velocity
+need not have occurred simultaneously,
+i.e., hmaxvmax > (hv)max.)
+Fig. 8. Rise rate for the Orleans and St.
+Bernard bowls over the first 1.5 m of
+water depth.
+3.3. Simulation Results
+Information on the water depth, flow velocity,
+rise rate, and arrival time is obtained as output from
+the simulations. Figures 5 to 9 show the simulated water depth, flow velocity, the product of depth and velocity, rise rate, and arrival time of the water for the
+Orleans and St. Bernard bowls.
+The simulations show that the most severe conditions occurred in the St. Bernard bowl. Very high
+flow velocities (3–10 m/s) occurred near the catastrophic breaches in the levees along the Industrial
+Canal. These effects caused destruction in the Lower
+9th Ward. Water depths in St. Bernard reached 3 to
+4 meters in the deepest parts and rise rates were high
+(>5 m/hr) for most of the area.
+The Orleans bowl also suffered large water
+depths. In some locations (especially in the Lakefront area) the water depth was more than 5 meters. However, the flow velocities and rise rates were
+lower than in St. Bernard. Based on the simulations
+it is estimated that in the Orleans bowl only very near
+the breaches were the flow velocities high (larger
+than 1 m/s to 2 m/s). For most of the area rise rates
+were relatively small. The highest rise rates in this
+area (1 to 2 m/hr) occurred in the northern part. Most
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 683
+Fig. 9. Arrival time of the water for the
+Orleans and St. Bernard bowls after the
+initial breaches.
+of the Orleans bowl flooded within a day. In the middle of the Orleans bowl there are the Gentilly and
+Metairie ridges that blocked the flow from north to
+south for some period.
+The results of the simulations have been verified with available information regarding flood characteristics.(33,35) Comparison with the flood depth
+maps provided by LSU Hurricane Center shows that
+the flood depth is approximated well for the Orleans bowl (the difference for 90% of the grid cells
+was smaller than 0.3 m).(34) Somewhat larger differences between the simulated depths and the LSU
+flood maps were found for the St. Bernard bowl. For
+the southeastern part of the bowl the difference exceeded 1m.(35) Calculated arrival times of the water
+flow are compared with eyewitness descriptions from
+Reference 36 and these show good agreement (on
+average 20 minutes difference) for the St. Bernard
+bowl.(35) For the Orleans bowl the agreement between simulations and eyewitnesses differs between
+locations,(34) ranging from no almost no deviation in
+arrival time for locations near the breaches in the
+London Avenue Canal to several hours for locations
+in the southern part of the Orleans bowl. Differences between observations and simulations could
+be caused by the fact that overtopping of levees and
+effects of rainfall were not considered in the simulations. In addition, important assumptions that influence the flooding course in the simulations concern the starting time of breaching and the hydraulic
+roughness of the area.
+4. DATA REGARDING KATRINA-RELATED
+FATALITIES
+4.1. General
+In the period after Katrina, deceased victims (fatalities) were recovered in a search process that involved governmental and private organizations. The
+buildings that were searched by rescue teams were
+marked by a sign that indicated the date and outcomes of the search operation; see Fig. 10. For each
+victim who was recovered there exists a “receipt of
+remains.” This form includes basic information such
+as the date, time, and location of recovery, along
+with the agency that recovered and the agency that
+transported the remains. It also includes some basic
+comments about the scene and sometimes lists a presumptive identification of the victim.
+The Department of Health and Hospitals
+(DHH) of the state of Louisiana coordinated the
+data collection. This agency also provides the official
+figures on dead and missing on their “Katrina Missing” website.4 As of August 2, 2006 this site listed
+1,464 deceased victims and it is noted that the cases
+of an additional 135 missing have been turned over
+to law enforcement. Of the confirmed dead, 1,118
+victims perished within Louisiana, while 346 victims
+perished outside of the state of Louisiana. Statistics
+regarding ethnicity, age, and gender have been made
+4 http://www.dhh.louisiana.gov/offices/page.asp?ID=192&Detail=
+5248, accessed July 2008.
+
+684 Jonkman et al.
+Fig. 10. Signs on a home indicating the outcomes of a search
+operation.
+public for 853 of the Louisiana fatalities identified at
+the St. Gabriel and Carville morgues.
+4.2. Description of the Data Set of
+Recovery Locations
+The LSU Hurricane Center established a collaborative effort with the DHH and the Medical Examiner’s Office of the state of Louisiana. As part of
+this collaboration, DHH provided the LSU Hurricane Center with data on the recovery locations for
+the deceased victims.(4) The latest data set, obtained
+on September 14, 2006, lists 771 fatalities with recovery locations in the state of Louisiana. This corresponds to 69% of the victims recovered within the
+state. The recovery locations have been geocoded,
+i.e., the locations have been identified on a map and
+entered into a GIS layer.
+The obtained data set of recovery locations is
+based on the information from the receipts of remains. However, a number of these forms lack complete information, limiting the ability to map all the
+recovery locations. The data set used in this article has been supplied by the LSU Hurricane Center
+and it includes the following information: date of recovery, recovery location (geographical coordinates,
+state, parish), type of facility in which the body was
+found, and information regarding the organizations
+that performed recovery and transportation. Each
+entry in the data set describes the recovery of one
+victim. In some cases, multiple victims are recovered
+from one location. The recovery locations data set
+has been used for further analysis of the spatial distribution of the recoveries (see Section 5.3) and the
+relationship between flood characteristics and mortality (Section 6).
+4.3. Brief Discussion of the Data Set
+Several issues are associated with the interpretation and analysis of the data:
+(1) At the time of the analysis the total list of
+deceased victims was still incomplete; 135
+people are missing and in the period after
+Katrina remains of people have been found
+sporadically in collapsed buildings and more
+remote areas, such as the marshes.
+(2) A broad operational definition has been used
+for a Katrina-related fatality. It concerns anyone from the affected areas that died between
+August 28 and October 1, 2005 for which the
+circumstances of death can be linked to Hurricane Katrina.
+(3) The recovery location of a body does not necessarily equal the location of death. Bodies
+could have been moved by the flood flow or
+by other people before final recovery. This is
+most relevant for recoveries in open, public
+locations. However, analysis of the recovery
+locations (see below) shows that most fatalities were recovered in buildings. A limited
+number of bodies have been recovered along
+the edge of the flood zone, possibly indicating
+that they were moved by the flood. Despite
+these uncertainties, it is assumed that the recovery location is identical to the location of
+the fatality in the analysis that follows.
+Given these issues it is emphasized that the data sets
+used in this study are preliminary and not fully complete. Nevertheless it is expected that the data sets
+give a representative impression of loss of life caused
+by Hurricane Katrina. First, the majority of recoveries has been completed and the final number of fatalities is not expected to grow substantially. Second, the
+data set includes the majority of recoveries inside the
+flooded areas and it is therefore expected that it gives
+a good insight into the spatial distribution of fatalities
+and the mortality in these areas. Overall, the recovery data include more than two-thirds of the officially
+reported number of fatalities in the state Louisiana.
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 685
+5. CHARACTERISTICS AND
+CIRCUMSTANCES OF KATRINARELATED FATALITIES
+5.1. Individual Characteristics of Fatalities
+Based on the data set of deceased victims, the
+characteristics of Katrina-related fatalities, such as
+age, gender, and race, are discussed. Data are available for 853 Katrina-related fatalities. Information
+regarding other potentially important factors, such as
+medical cause of death, activity, and behavior during
+the hurricane impact, was not available.
+5.1.1. Age
+The age distribution of fatalities is given for 829
+fatalities and is presented in Fig. 11. Age is unknown
+for 24 fatalities. The majority of victims were elderly.
+Out of 829 victims of whom age is known, less than
+1% were children and just over 15% were under
+51. Older people comprise the majority of the deceased: nearly 85% are older than 51 years, nearly
+60% are over 65, and almost half are older than 75
+years of age. Population statistics for Orleans and St.
+Bernard parish5 show that of the pre-Katrina population about 25% were older than 50, 12% older than
+65, and 6% older than 75.
+A possible explanation of the vulnerability of the
+elderly is the following. Members of this population
+group are the most likely to need assistance to evacuate before the storm and are the least capable to survive the physical hazards of the flood (e.g., by moving to higher floors or shelters) and the delays before
+being rescued and the deterioration of basic public
+health services both inside and outside flooded area.
+Another factor that could have contributed to the
+large number of older fatalities in residential areas is
+that elderly might be less able or willing to evacuate
+before a hurricane. A past survey(37) indicated that
+there is a slight decline in the evacuation rate with
+age. However, only very limited information is available for evacuation rates among different age groups
+for Katrina.
+5.1.2. Gender
+The available data do not indicate that gender
+played a dominant role in Katrina-related mortality
+in Louisiana. For the 853 victims for which gender is
+5 Data source: Greater New Orleans Community Data Center,
+http://www.gnocdc.org/, accessed July 2007.
+Fig. 11. Age distribution of 829 fatalities.
+known, 432 (50.6%) are male and 421 (49.3%) are
+female. A general comparison with the gender distribution of the affected population (47.1% males;
+52.9% females) shows that males are slightly overrepresented in the fatality data set. In a simple statistical analysis the hypothesis has been tested that
+the fatality data set is a random sample from the total population in the affected area by means of Pearson’s χ2 test (see the Appendix). A significance level
+of 5% has been chosen. The assessment shows that
+the probability of obtaining a result at least as extreme as the one that was actually observed, given
+that the null hypothesis is true, equals p = 0.039 and
+the null hypothesis can be rejected.
+5.1.3. Race
+Of 818 fatalities for which race is listed, 451
+(55%) are African American and 334 (40%) are Caucasian (white). Of the others, 18 (2%) victims are
+listed as Hispanic, 6 (1%) are listed as Asian Pacific,
+4(<1%) are listed as Native American, and 5 (<1%)
+are listed as other. The race of 35 victims was unknown. In general terms this distribution is similar to
+the racial distribution of the affected population (see
+the Appendix). The observed percentage of AfricanAmerican fatalities (55%) is smaller than the percentage of this group in the overall affected population (59%) and these results do not directly support
+claims that African Americans were more likely to
+become fatalities.(38) In a preliminary and simple statistical analysis the null hypothesis has been tested
+that the fatality data set is a random sample from the
+total population of the affected area for the percentage of African Americans. Analysis with Pearson’s
+χ2 test (see the Appendix) shows that the probability of obtaining a result at least as extreme as the
+one that was actually observed, given that the null
+
+686 Jonkman et al.
+hypothesis is true, equals p = 0.013. A significance
+level of 5% has been chosen and the null hypothesis
+can be rejected. However, given the large spatial variation in the race distribution of the population in the
+New Orleans area, a more detailed statistical analysis of the relationship between mortality and population characteristics at the neighborhood level is recommended.
+5.1.4. Discussion
+The above outcomes concerning the causes and
+circumstances of fatalities can be compared with
+earlier findings. Jonkman and Kelman(39) showed
+that, for small-scale river floods in Europe and the
+United States, males are highly vulnerable to dying in floods and that unnecessary risk-taking behavior contributes significantly to mortality. In addition,
+that study did not indicate that elderly were more
+vulnerable. The individual characteristics of Katrinarelated fatalities are different and likely characteristic of large-scale and more unexpected flooding. During such events survival chances will be related to
+individual endurance, which is generally less for elderly. In that respect the outcomes for Katrina are
+comparable with characteristics of the fatalities for
+the 1953 flood in the Netherlands. This event also
+exhibited a higher vulnerability of elderly and an
+almost an equal distribution of fatalities over the
+genders.(1)
+5.2. Type of Recovery Locations
+The data set of recovery locations provides information regarding the type of location where the body
+was recovered for 746 victims; see Table I. The majority of victims (53%) were recovered from individual residences. Fieldwork shows that many of the residential recovery locations were single-story homes
+that were either not elevated or elevated less than
+three feet. Medical locations, such as hospitals and
+medical centers, comprise 147 (20%) of the recovery locations and nursing homes make up 76 (10%)
+of the recovery locations. 54 (7%) victims were recovered from open street locations. Twenty-six (3%)
+victims were recovered from public shelters, 18 from
+the Convention Center, and 8 from the Superdome.
+These latter two facilities served as shelters of last
+resort for tens of thousands of people before, during,
+and after the storm. Twenty (3%) victims were recovered from commercial and public buildings, such
+as churches and schools.
+Table I. Recovered Victims from the Data Set of Recovery
+Locations by Location Type
+Location Type Fatalities
+Residence 404 54%
+Medical 147 20%
+Nursing home 76 10%
+Open/street 54 7%
+Morgue/coroner’s office/funeral home 39 5%
+Public shelter 26 3%
+Public building 20 3%
+Total 746
+5.3. Spatial Distribution of Recoveries
+The majority of victims were recovered from
+parishes that suffered the direct flood impacts of
+Katrina, such as Orleans and St. Bernard parishes. In
+addition, a substantial number of fatalities occurred
+in parishes that did not suffer the direct impact of
+Katrina. In total, 147 fatalities were recovered outside the flooded area.
+Fig. 12 gives an overview of the spatial distribution of recoveries in and near the flooded parts of
+New Orleans. A distinction is made between two categories of fatalities:
+(1) Recoveries from residential locations such as
+residences, nursing homes, street locations,
+and public buildings. In these facilities fatalities can often be directly related to the flood
+effects.
+(2) Recoveries from medical locations, shelters,
+and morgues/funeral homes. These recovery
+locations indicate that these fatalities were
+not directly related to the impacts of floodwaters. For example, while the Superdome
+was inside the flood zone, the raised sections of this facility protected those sheltering from floodwaters. Similarly, for hospitals
+in the flooded areas the ground floors were
+evacuated as part of storm preparations.
+A similar map was published in the Times-Picayune
+newspaper under the title “Where they were
+found.”6 Although many of the recovery locations
+shown in that article correspond to the map here,
+it differs for a substantial number of recovery locations.
+6 http://www.nola.com/katrina/pdf/katrina dead 122005.pdf, accessed July 2008.
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 687
+Fig. 12. Recovery locations and flooded area.
+5.4. Discussion of Circumstances of
+Katrina-Related Fatalities
+A first discussion of the causes and circumstances
+of different groups of fatalities is presented below
+that is based on the available information that has
+been described in the previous sections. As no data
+were available for a substantial number of fatalities in the state of Louisiana (31%) the findings and
+discussions are preliminary and not necessarily fully
+representative for all fatalities in Louisiana.
+Of the 771 recovered fatalities, 147 (19%) occurred outside the flooded area in Louisiana. Most of
+these fatalities were evacuees and their occurrence
+is likely related to the adverse public health situation that affected those who evacuated as a result of
+Hurricane Katrina. Likely death causes include lack
+of necessary medical services, chronic conditions,
+stress-induced heart attacks or strokes, violence, and
+suicide.(13)
+In total, 624 of the 771 recovered fatalities (81%)
+occurred inside the flooded area. Of these, 106 were
+recovered from locations such as public shelters and
+hospitals that indicate that these fatalities were not
+directly related to the impacts of floodwaters. Most
+of these fatalities, about 90, occurred in hospitals.
+For these groups of fatalities death causes are likely
+similar to those who died outside the flooded area,
+i.e., lack of necessary medical services, chronic conditions, stress-induced heart attacks or strokes, or violence. Several sources document the critical public
+health conditions that developed in medical facilities.(40–42)
+This leaves 518 recovered fatalities (67% of the
+total recoveries) that most likely resulted from direct
+exposure to the physical impacts of the flood. Typical death causes for people exposed to the floodwaters include drowning (in a building or in the
+street) or physical trauma due to impacts from debris
+and/or building collapse.(39) Many of these fatalities
+occurred in areas near large breaches in the Lower
+9th Ward in the St. Bernard bowl and in areas where
+large water depths occurred. Available data indicate
+that a substantial number of victims (more than 20)
+were recovered from residences inside the flooded
+areas from attics or floors that were not flooded.
+This suggests that these people died due to adverse
+conditions associated with extended exposure in the
+flooded area in the days after Katrina. Typical death
+causes could include dehydration/heat stroke, heart
+attack/stroke, or other causes associated with lack of
+sustaining medical supplies. Initially thought to be a
+major threat to those remaining in the flooded area,
+disease and toxic contamination do not appear to explain many of the deaths.
+
+688 Jonkman et al.
+Analysis of individual characteristics of victims
+showed that the majority of victims were elderly (see
+Section 5.1). The specific vulnerability of this group
+is sadly illustrated by the large numbers of fatalities
+in nursing homes in flooded area, where 65 fatalities
+occurred in total. Thirty-one victims were recovered
+from St. Rita’s nursing home in the southeastern part
+of the St. Bernard bowl.
+6. ANALYSIS OF THE RELATIONSHIP
+BETWEEN FLOOD CHARACTERISTICS
+AND MORTALITY
+6.1. General Approach
+6.1.1. Past Work and Approach
+An estimate of loss of life due to a flood event
+can be given based on: (1) information regarding the
+flood characteristics; (2) an analysis of the exposed
+population and evacuation; and (3) an estimate of
+the mortality among the exposed population.(1) Mortality is defined as the number of fatalities divided
+by the number of people exposed to the flooding in
+that area. It has been observed from historical disasters that mortality rates are the highest near breaches
+and in areas with a large water depth, a high rise rate,
+and a large number of buildings collapsed. By analyzing empirical information from historical floods, such
+as the floods in the Netherlands in 1953, mortality
+functions have been developed that are particularly
+applicable to floods of low-lying areas that are protected by flood defenses.(1,2) These functions relate
+the mortality among the exposed population to the
+flood characteristics for different zones in the flooded
+area. Analysis showed that different zones can be distinguished in an area that floods due to breaching of
+flood defenses. In a zone near a breach flow velocities
+are high, leading to the collapse of buildings and instability of people standing in the flow. Another zone
+is characterized by rapidly rising waters and people
+in this zone may have difficulties in reaching shelters
+or higher grounds. Third, a remaining zone is distinguished in which the flooding is more slow-onset. In
+the breach zone the flow velocity is the most important factor. In the other two zones the water depth
+and the rise rate were found to be the most important factors. An example of the mortality function is
+shown in Fig. 13.
+The existing empirical relationships are based
+on historical flood events that mainly occurred several decades ago, such as the coastal flooding in
+the Netherlands in 1953. As the consequences of
+Fig. 13. Mortality function for the zone with rapidly rising
+waters.(1)
+the flooding of New Orleans were relatively welldocumented these data provide additional insight
+into the relationship between flood characteristics
+and mortality. In the following sections this relationship is further analyzed based on observed and simulated data for the Hurricane Katrina flood event.
+6.1.2. Input Data and Assumptions
+General approach. It is analyzed whether a statistical relationship between mortality and flood characteristics (a so-called mortality function) can be derived based on the empirical data for New Orleans.
+Several types of distribution functions have been
+tested (exponential, lognormal, normal, etc.) and the
+functions have been derived by means of a least
+square fit. The correlation coefficient R2 is used to
+express the strength of the relationship between the
+observed mortality and the predicted mortality with
+the derived function. In the analysis the study area is
+divided into different locations of similar flood characteristics. For each location average mortality is determined and an average value for the flood depth
+is estimated. Existing spatial subdivisions of the city
+(e.g., tracts, neighborhoods, blockgroups) have been
+examined. If the spatial unit is too small the number
+of locations will be large relative to the number of
+fatalities. Then there will be many locations without
+fatalities and the randomness in the occurrence of fatalities will become important. If the chosen spatial
+unit is too large then it is no longer correct to assume
+constant flood conditions in one spatial unit because
+spatial variations become too large. As a practical
+choice for balancing the number of locations and the
+level of detail the neighborhood level has been chosen in the analysis; see Fig. 14 for the subdivision.
+Application of the previously described approach
+requires insight into the flood characteristics, the
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 689
+Fig. 14. Mortality by neighborhood.
+(A high mortality occurred in the
+neighborhood in the southeast because
+30 fatalities occurred in one nursing
+home.)
+number of fatalities, and the number of people exposed. For these three factors the most important
+sources of input data and assumptions are described
+below.
+Flood characteristics. The influence of the factors
+water depth, rise rate, flow velocity, and arrival time
+of the water has been analyzed, as these are expected
+to be important determinants of loss of life.(1) The
+results from the flood simulations have been used to
+determine values for flood characteristics at different
+locations. The influence of other potentially relevant
+factors, such as the effects of waves, the local level of
+warning, etc., has not been examined due to lack of
+data. In the analysis only the Orleans and St. Bernard
+bowls were considered as no results of flood simulations were available for the New Orleans East bowl.
+Fatalities. The analysis only includes the fatalities in
+the flooded area that are expected to be directly associated with the flood conditions,7 i.e., the recoveries
+in residential locations (see also Section 5.3). Fatalities in medical locations and shelters are not included
+in the analysis because these are generally not di7 A limited number of fatalities in the flooded area might be caused
+by wind effects. However, it is expected that the number of wind
+fatalities will be limited as (a) most people found shelter during
+the passage of the storm; (b) storms in the past with comparable
+strength and no flooding have caused much fewer fatalities. For example, Hurricane Betsy (1965) and Hurricane Frederic (1979) occurred in the same area and were of similar strength (Category 3).
+The numbers of fatalities for these storms are considerably smaller
+than for Katrina. Betsy caused 76 fatalities (of which a substantial
+part were due to local flooding) and Frederic caused five fatalities
+(Reference 53; pp. 1–28).
+rectly related to the physical flood impacts. Information regarding the New Orleans fatalities is based on
+the GIS data set that indicates the spatial distribution
+of recovery locations (Section 5.3). It is noted that
+the recovery data set does not include all the fatalities reported in the state of Louisiana. Although most
+of the missing data concern fatalities from parishes
+outside of the flooded area, the reported mortality
+fractions could still be underestimates of the eventual
+mortality fractions in the flood zone.
+The exposed population. The population that is exposed to the floodwaters (NEXP) can be found by subtracting the evacuated (F E) and sheltering (FS) fractions of the population from the original population
+at risk (NPAR):
+NEXP = NPAR(1 − FE − FS).
+The population at risk (NPAR) is defined as the
+original population in the area prior to Hurricane
+Katrina. In a first-order and general analysis the
+evacuation and shelter fractions are assumed constant for the whole exposed area. In reality there
+likely were differences in evacuation rates between
+neighborhoods, but the limited data that are available regarding the Katrina evacuation do not provide sufficient information on evacuation rates at a
+neighborhood level. Overall, the presented estimates
+are crude, but necessary given the limited amount of
+data.
+Data from the U.S. Census 2000 have been
+used to determine the population at risk. Due to
+the effects of evacuation and shelter the number
+
+690 Jonkman et al.
+Table II. Overview of Number of Inhabitants, Exposed, and Fatalities for the Three Flooded Bowls
+Bowl Inhabitants (flooded area) Exposed Recovered No. of Fatalities∗ Mortality
+Orleans 255,860 25,590 260 1.02%
+St. Bernard 85,420 8,540 190 2.22%
+New Orleans East 96,290 9,620 68 0.71%
+Total 437,570 43,750 518 1.18%
+∗This column includes the number of recovered people in residential locations. Fatalities in special facilities, such as hospitals and shelters,
+are not included as these are expected not to be related to flood characteristics.
+of exposed population was reduced before the hurricane. Based on the analysis of traffic counts it
+is estimated that 80–90% of the “at risk” population in southeast Louisiana evacuated the area before the storm.(24,26) In this study we assume an
+evacuation rate of 80% for New Orleans (a number
+that was also stated by the mayor of New Orleans,
+Ray Nagin). In addition, based on available descriptions, it is assumed that another 10% found shelter
+in special facilities, such as the Superdome and Convention Center.8 This results in an estimate of the
+exposed population in the flooded area of approximately 10% of the inhabitants, corresponding to approximately 44,000 people exposed (see Table II).
+6.2. Results
+6.2.1. Mortality by Bowl and Neighborhood
+Table II summarizes the number of exposed, fatalities, and mortality rates for the three bowls of
+New Orleans. For all three bowls the average mortality fractions are in the order of magnitude of 1%. Differences in mortality between these bowls are likely
+related to the severity of the flood impacts, as is discussed later.
+A general overview of mortality rates by neighborhood is shown in Fig. 14. The flooding of the
+Orleans bowl was caused by breaches along the Industrial Canal in the east and the 17th Street and
+London Avenue canals in the north. These resulted
+8 Boyd(27) estimates that 72,000 people remained in the city after evacuation. This corresponds to approximately 18% of the initial population of the flooded areas. He also mentions that 26,000
+people (6.3% of the population in flooded areas) found shelter in
+the Superdome.(29) The estimate of a shelter percentage of 10%
+results when additional populations in other shelters are also included. It is noted that a later report issued by the Louisiana National Guard estimates the sheltered population in the Superdome
+to be in 10,000–12,000 range. As such, the above numbers have to
+be considered as preliminary.
+in the flooding of large parts of the central city. The
+largest water depths and mortality rates are found for
+the deeper parts of the bowl, mainly in the north near
+Lake Pontchartrain. The relatively high mortality in
+the St. Bernard Bowl (2.2% on average for the whole
+area) is mainly due to the severe flood conditions and
+the large number of fatalities near the breaches. In
+the St. Bernard bowl the highest mortality values (5–
+7%) occurred in the neighborhood Lower 9th Ward
+next to the two large breaches in the Industrial Canal
+levees. The quantitative relationship between mortality and flood characteristics is discussed further in
+the next sections.
+6.2.2. Relationship Between Water Depth
+and Mortality
+The relationship between mortality and flood
+characteristics has been analyzed. Assessments have
+been made for the following flood characteristics: water depth, rise rate, velocity, and arrival time of the
+water after breaching. Only for water depth (see below) and flow velocity (see next section) do there appeared to be significant relationships. Fig. 15 shows
+the relationship between average water depth by
+neighborhood and mortality. A distinction has been
+made between observations in the Orleans bowl and
+the St. Bernard bowl. The observations for the Lower
+9th Ward neighborhood in the St. Bernard bowl have
+not been included in this analysis as the effects of
+flow velocity played an important role in this area,
+see also Fig. 6 and Section 6.2.3 for further discussion. It is noted that the New Orleans East bowl was
+not included in the analysis as no simulations of flood
+characteristics were available. The figure shows that
+mortality increases with the water depth. Fig. 15 displays the best fit trendlines for the Orleans and St.
+Bernard bowls and the best fit trendline for the combined data set with observations from the two bowls.
+The following relationship between water depth and
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 691
+0.00
+0.01
+0.02
+0.03
+0.04
+0.05
+01234
+water depth (m)
+mortality (-)
+observations Orleans
+observations St. Bernard
+best fit trendline
+trendline Orleans
+trendline St. Bernard
+Fig. 15. Relationship between water depth and mortality for the Orleans and St. Bernard bowls.
+mortality is found for the combined data set:
+FD(h) = N
+ln(h) − μN
+σN
+
+μN = 5.20 σN = 2.00
+where F D(h) is the mortality fraction as a function
+of water depth h; h the water depth (m); μN, σN
+are the average and standard deviation for the lognormal distribution (m); N the cumulative normal
+distribution.
+The correlation between observations and predictions with the function is R2 = 0.42, which is moderate. The best fit function is described with a lognormal distribution. It is interesting to note that this
+type of function is also applied in other fields to describe the relationship between dose and (human) response, for example, for lethality due to exposure to
+toxic substances.(43)
+The derived mortality function can be used to
+provide a point estimate of mortality for a given water level. Although a clear trend can be observed
+from the data set, there is considerable uncertainty
+associated with this mortality function due to the
+variation in the observations. The model uncertainties in the mortality function have been determined
+for the 95% confidence interval (results not shown
+in the figure). These bandwidths have been derived
+by statistical analysis of the available observations,
+while assuming that all fitted curves should lead to
+a mortality of zero for a flood depth of zero meter. Within the 95% confidence interval the mortality varies approximately plus or minus 50% from
+the central point estimate. Thereby the uncertainty
+in the mortality and loss of life predictions can be
+quantified.
+6.2.3. Mortality in the Breach Zone: Lower 9th Ward
+In total, 184 fatalities in the data set were recovered in the St. Bernard bowl. Many of these fatalities
+(73) occurred in the neighborhood of the Lower 9th
+Ward. This neighborhood is located next to the two
+large breaches in the Industrial Canal levees. Various
+eyewitness accounts tell how the floodwater entered
+this neighborhood through the breaches with great
+force and how it caused death and destruction in the
+areas near the breaches. This observation is further
+confirmed by the large number of homes destroyed
+and the patterns in residential damage in this area.
+The relationship between flood characteristics
+and mortality has been analyzed further for the St.
+Bernard bowl. The large number of fatalities near the
+breaches in the Lower 9th Ward appears to be related to the large number of collapsed buildings in
+the area and the consequent loss of shelter. Areas
+with high levels of building damage are characterized by large values of the product of water depth and
+flow velocity; see Fig. 16. Past work shows that water
+depth-flow velocity is strongly related to the extent
+of building damage(44,45) and loss of human stability
+in flood flows.(46) Most of the collapsed buildings and
+fatalities were found in the area where hv > 5m2/s.
+Observations in the field show that the area with
+
+692 Jonkman et al.
+Fig. 16. Spatial distribution of the recovered fatalities and the depth-velocity product for the Lower 9th Ward (left) and building damage
+levels (Right—Source: http://www.unifiedneworleansplan.com/home2/section/24, accessed December 2006. Damage levels determined in
+post-Katrina damage assessments conducted by the city of New Orleans and FEMA.)
+large-scale structural damage to houses covers almost the whole Lower 9th Ward. Average mortality for this neighborhood was FD = 0.053 (or 5.3%)
+and the mortality varied between FD = 0.033 and
+FD = 0.07 for the locations within this neighborhood.
+In the Orleans bowl higher flow velocities only
+occurred locally very near the breaches; see also
+Fig. 6. Comparison with the building damage and visual observations in the field shows that hardly any
+buildings collapsed near these breaches in Orleans
+along the 17th Street and London Avenue Canals.
+Comparison with the data set of recovery locations
+shows that no fatalities were found in the zones near
+breaches. Based on these observations it is expected
+that the flow velocity did not have a substantial influence on mortality in the Orleans bowl.
+6.2.4. Summary of Mortality Functions
+The derived mortality functions for the flooding
+of New Orleans are summarized in Fig. 17. FollowFig. 17. Mortality functions and zones
+derived based on data for the flooding of
+New Orleans.
+ing the general approach for loss of life estimation
+that has been developed in earlier work (see Section
+6.1) different zones are distinguished. The findings
+for Lower 9th Ward are considered representative
+for the breach zone and the mortality function that
+has been derived for the other areas is applied to the
+so-called remaining zone.
+When this approach is applied to the analyzed
+locations in the Orleans and St. Bernard bowls the
+estimated number of fatalities is 395, while the actual observed number for the considered locations
+is 404. There is a good correlation (R2 = 0.74) between observed and calculated mortality fractions by
+location.
+The proposed mortality functions are applicable
+to calculate mortality associated with the physical impacts of the flood. The occurrence of fatalities associated with the adverse public health situation is
+not included in the proposed functions. This group of
+fatalities proved to be substantial, covering approximately one-third of the total number of recovered
+(see also Section 5.4).
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 693
+7. DISCUSSION
+In this section a number of issues are discussed.
+These include a comparison of the findings with existing methods for loss of life estimation (Section 7.1).
+Consequently, the development of loss of life patterns over time is discussed (Section 7.2). Section 7.3
+discusses the main uncertainties and the status of the
+results.
+7.1. Comparison with Existing Methods for Loss of
+Life Estimation
+The first general finding relates to overall mortality fraction for the whole event. Based on available event statistics it has been shown that a firstorder estimate of loss of life due to historical coastal
+flood events can be obtained by assuming that 1%
+of the exposed population will not survive.(1) The average mortality associated with the flooding of New
+Orleans (1.2%) is thereby similar to the average
+event mortalities due to flood disasters in history.
+The mortality fractions for the three bowls (see Table II) are also in this order of magnitude.
+In general it is found that, similar to the historical flood events, the mortality rates were the highest
+in areas near breaches and in areas with large water
+depths. The findings of the above analysis are compared to the mortality functions that have been derived mainly based on the data for the 1953 flood
+in the Netherlands (see Section 6.1). In this Dutch
+method it was found that the mortality would become substantially higher if a certain threshold value
+of the rise was exceeded. Fig. 18 shows the mortality observations for New Orleans plotted against the
+values of the rise rate. For the New Orleans data set
+there does not appear to be a relationship between
+Fig. 18. Relationship between rise rate and mortality for the
+Orleans and St. Bernard bowls.
+Fig. 19. Mortality function for New Orleans and mortality functions for the Dutch method.
+the mortality and the value of the rise rate. The factors depth and velocity appeared to be most relevant
+for this event.
+The derived mortality functions for new Orleans are compared with those derived for the Dutch
+1953 floods (see Fig. 19). For water depths below
+2.5 m the function for New Orleans gives a somewhat higher mortality fraction than the Dutch functions. The derived function for New Orleans is in
+between the earlier proposed functions for larger water depths (h > 2.5 m). The uncertainty margins for
+the Dutch mortality function are approximately plus
+or minus 50% within the 95% confidence interval(1)
+and thereby similar to the bandwidth for the mortality function for New Orleans (see Section 6.2.2).
+It is interesting to note that the Dutch method has
+been applied after the New Orleans flood disaster to
+give a hindcast of the observed number of fatalities.
+The total number of fatalities that is predicted for
+the New Orleans flood with the Dutch method was
+within a factor of 2 with the (preliminary) number
+of observed recoveries in the flooded area. This is a
+relatively good result. Other estimates in the period
+shortly after the disaster gave numbers that ranged
+up to 72,000 fatalities.(47) It is also interesting to mention that both methods (New Orleans and Dutch)
+give very similar outcomes when they are applied
+to (hypothetical) flood scenarios for an area in the
+Netherlands.(35) For most of these scenarios the New
+Orleans method resulted in a somewhat higher estimate of loss of life (on average 15%) than the Dutch
+method.
+7.2. Discussion Regarding the Effects of Changes
+in Time on the Loss of Life Caused by Floods
+The Dutch method has been mainly derived
+based on events that occurred in the 1950s, while
+
+694 Jonkman et al.
+the New Orleans flood occurred in 2005. Certain circumstances that affect flood mortality could have
+changed over time. Some argue that these changes
+will have mainly reduced the loss of life caused by
+flood events.(48) Potentially positive developments
+include improvements of prediction, transportation,
+building quality, communication and possibilities of
+warning of those in the flood zone, emergency response, and rescue. However, there are also developments that could have a negative influence, e.g.,
+the dependence of modern societies on technical systems, such as electricity and communication and the
+fact that people are less used to withstand harsh natural conditions. The New Orleans flood event gave
+some insight into the potential relevance of such
+factors.
+The event showed the limitations of evacuation
+and emergency response. A majority of the population (80–90%) evacuated before the floods and
+this probably saved thousands of lives. However,
+the consequences for the people who stayed and
+were exposed to the floods were still disastrous. In
+addition, a severe crisis situation developed among
+evacuees and the people in hospitals and shelters.
+The situation after the flooding illustrated the difficulties in organizing a fast and effective rescue
+action.(32)
+In many respects the New Orleans flood is very
+comparable to historical large-scale flood events.
+Similar to historical events the mortality fractions in
+New Orleans were the highest in areas near breaches
+and in areas with large water depths. The overall
+mortality fraction among those exposed for the New
+Orleans flood is approximately 1.2%. This is comparable to the average event mortalities observed for
+historical events, such as the floods in 1953 in the
+Netherlands (0.7%) and the floods in 1959 in Japan
+(1.2%).(1) In addition, the New Orleans flood disaster
+was also characterized by some circumstances that
+were more favorable than during historical floods.
+For example, most people were warned of the hurricane and the water temperature was higher than
+during historical disasters and this reduced the risk
+of hypothermia.
+Overall, the available data for New Orleans do
+not support the claim that mortality among those exposed during a contemporary flood event is lower
+than during historical events. Based on analysis of
+dam break flood events from the 19th and 20th centuries, McClelland and Bowles(49) come to a similar
+conclusion and mention that mortality patterns are
+consistent across the centuries.
+7.3. Status of the Results
+This section concerns a brief discussion of the
+status of the analyses that have been reported in the
+previous sections. It is important to stress that the results are preliminary for a number of reasons.
+First, the applied mortality data are still incomplete and cover approximately 70% of all fatalities.
+In addition, the analysis of mortality functions is
+limited to the Orleans and St. Bernard bowls. The
+Orleans East bowl is excluded from the analysis because no results of flood simulations were available
+for this bowl.
+Second, various crude assumptions have been
+made in the analysis of the number of people exposed. For all the considered areas it has been assumed that 10% of the original population was exposed. However, spatial differences in evacuation
+rates and exposed populations could have an effect
+on the resulting mortality values. It is recommended
+to investigate the spatial distribution of evacuation
+and shelter rates for the flooded areas of New Orleans.(50)
+Third, results of the flood simulations have been
+used to estimate flood characteristics. Limitations in
+these simulations could influence the outcomes. Examples of limitations are the capabilities to model
+breaches or neglecting of the effects of rainfall.(34,35)
+Also the fact that flood characteristics (e.g., depth
+and rise rate) have been averaged out per neighborhood could affect the outcomes because variations
+between flood characteristics within one neighborhood could exist.
+Given the above issues, the detailed results regarding the influence of flood characteristics on mortality have to be considered as indicative and preliminary. Despite the limitations, the reported results
+give important insight into the relationship between
+flood characteristics and mortality.
+8. CONCLUDING REMARKS
+The flooding of New Orleans due to Hurricane
+Katrina showed the catastrophic consequences of
+large-scale floods. A preliminary data set that gives
+information on the recovery locations for 771 fatalities has been analyzed and this resulted in the following conclusions:
+(1) Two-thirds of the analyzed fatalities were
+most likely associated with the direct physical impacts of the flood and mostly caused by
+drowning. One-third of the analyzed fatalities
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 695
+occurred outside the flooded areas or in hospitals and shelters in the flooded area due to
+causes such as strokes, heart attacks, and lack
+of medical services. These fatalities were due
+to the adverse public health situation that developed after the floods. Overall, the elderly
+were the most vulnerable. Nearly 60% of fatalities were over 65 years and 85% of fatalities were over 51 years.
+(2) Similar to historical flood events, mortality
+rates were highest in areas near breaches and
+in areas with large water depths. The highest
+mortality fractions were observed near the severe breaches in Lower 9th Ward. An earlier
+proposed approach, in which mortality functions for different zones in a flooded area are
+distinguished, is also applicable to New Orleans. A relationship has been found between
+the water depth and mortality. One difference
+with earlier findings is that the data for New
+Orleans do not show an influence of the rise
+rate of the water on mortality.
+(3) The available data for New Orleans do not
+support the claim that mortality during a contemporary flood event is lower than during
+historical events. The overall mortality among
+the exposed population for this event was approximately 1%, which is similar to findings
+for historical flood events.
+The derived mortality functions can be used to provide quantitative estimates of loss of life for different flood scenarios, either in deterministic (scenario)
+or probabilistic (risk) calculations. By combination
+with information on the probability of flood scenarios the risk to life can be quantified with different risk
+measures. The individual risk indicates the probability of death for a person at a certain location in the
+area. The societal risk expresses the probability of
+a disaster with many fatalities. These results can be
+used as input for decision making about the acceptable level of flood risk.(51) Risk assessment will also
+be used for decision support in the development of
+plans for future protection of New Orleans against
+flooding.(52) The approach for loss of life estimation
+that has been described in Section 6.1.1 of this article includes the most relevant factors that determine
+loss of life. With the method the effectiveness of measures to reduce the consequences of flooding, such as
+evacuation, shelter, compartment dikes, and land-use
+planning can be evaluated. The outcomes obtained
+with the method are also applicable to compile flood
+risk maps that indicate most hazardous areas and
+these results can also be used for risk communication and the preparation of emergency management
+strategies.
+The presented results and analyses are preliminary. The analyzed mortality data are incomplete
+(they cover 69% of all fatalities in the state of
+Louisiana) and first estimates have been used for the
+estimation of the size of the population exposed. It
+is recommended to collect more accurate data regarding fatalities, the exposed population, and the
+flood characteristics. Important factors that deserve
+further investigation are the influence of the collapse of buildings and the effects of rise rate on
+mortality. Based on more complete analyses, an improved method for loss of life estimation may be derived from the New Orleans data in the future. Further cross-analysis of individual characteristics, death
+causes, and spatial patterns in fatality rates is recommended to gain more insight into the causes of death
+in different affected regions. Information regarding
+social factors (income, poverty, ethnicity) could be
+added in the analysis to gain more insight into the
+effects of social vulnerability factors.
+ACKNOWLEDGMENTS
+Dr. Karin de Bruijn (Deltares) is gratefully acknowledged for her work on the flood simulations.
+We thank Dr. Pieter van Gelder (Delft University)
+for his advice regarding the statistical analyses.
+In addition, we acknowledge Dr. Louis Cataldie
+and Frances Kosak of the Louisiana State Medical
+Examiner’s Office for their efforts to compile and
+help us interpret the dataset regarding fatalities due
+to Hurricane Katrina’s impact in Louisiana.
+APPENDIX: STATISTICAL ANALYSIS
+FOR RACE AND GENDER
+In this simple and preliminary analysis the outcomes for gender and race for the fatality data set
+are compared with the characteristics of the overall
+population.
+Data for the affected population were obtained
+from the Greater New Orleans Community Data
+Center for the pre-Katrina population. These data
+were derived from the U.S. Census of the year 2000.
+Data were used for Orleans and St. Bernard parishes
+as these correspond to the flooded areas and both
+sub data sets were combined to create one total data
+set (see Table A1). It is assumed that this total joint
+data set corresponds to the overall population. In this
+simple analysis it is also assumed that the gender and
+
+696 Jonkman et al.
+Table A1. Overview of Population
+Statistics for Gender and Racial
+Diversity for the Affected Area
+Affected Area
+Orleans St. Bernard Fatality
+Parish Parish Total Data Set
+Population/number 484,647 67,229 551,876 853
+Male 46.9% 48.3% 47.1% 50.6%
+Female 53.1% 51.7% 52.9% 49.4%
+Racial and ethnic diversity
+Population/number 484,647 67,229 551,876 818
+African American 66.6% 7.6% 59.4% 55.1%
+White 26.6% 84.3% 33.6% 40.8%
+Hispanic 3.1% 5.1% 3.3% 2.2%
+Asian Pacific 2.3% 1.3% 2.2% 0.7%
+Native American 0.2% 0.5% 0.2% 0.5%
+Other 1.2% 1.2% 1.2% 0.6%
+Source: U.S. Census Bureau. Census 2000 Full-Count Characteristics (SF1). From a compilation by the Greater New Orleans Community Data Center; http://www.gnocdc.org/prekat
+rinasite.html, accessed November, 2008, and the fatality data set.
+race distribution are spatially homogeneous; see also
+the short discussion at the end of this appendix.
+Hypothesis and Statistical Test Method
+In a simple statistical analysis the null hypothesis
+has been tested that the fatality data set is a random
+sample from the total population in the affected area.
+In that case it is likely that the race and gender distribution of the fatality data set corresponds to the
+total population. The hypothesis has been tested by
+means of Pearson’s χ2 test with one degree of freedom. A significance level of 5% has been used and
+the hypothesis is rejected if the observed χ2 value
+is larger than the critical χ2 value that corresponds
+with the chosen significance level. This critical value
+equals χ2 = 3.8.
+Gender
+For the 853 victims for which gender is known in
+the fatality data set, 432 (50.6%) are male and 421
+(49.3%) are female. The expected number of male
+and female fatalities can be determined based on the
+percentages for the population in the affected area
+(see Table A2).
+This results in the following value χ2 = 4.23.
+Table A2.
+Male Female Total
+Observed 432 421 853
+Expected 402 451 853
+The assessment shows that the probability of obtaining a result at least as extreme as the one that
+was actually observed, given that the null hypothesis
+is true, equals p = 0.039 and the null hypothesis can
+be rejected.
+Race
+Of 818 fatalities for which race is listed, 451
+(55%) are African American and 367 (35%) were
+non African American. The expected number of
+African American and non African American fatalities can be determined based on the percentages for
+the population in the affected area (see Table A3).
+This results in the following value χ2 = 6.21.
+The assessment shows that the probability of obtaining a result at least as extreme as the one that
+was actually observed, given that the null hypothesis
+is true, equals p = 0.013 and the null hypothesis can
+be rejected.
+Closing Remark
+It is noted that the spatial variation in the ethnic distribution in the New Orleans area is large.
+Therefore, the presented results are no more than
+preliminary and first-order estimates. Given the high
+spatial variation of the race distribution of the
+Table A3.
+African American Non African American Total
+Observed 451 367 818
+Expected 486 332 818
+
+Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina 697
+population in the New Orleans area, a more detailed
+statistical analysis of the relationship between mortality and population characteristics at the neighborhood level is recommended.
+REFERENCES
+1. Jonkman SN. Loss of life estimation in flood risk assessment,
+Ph.D. Thesis, Delft University, 2007.
+2. Jonkman SN, Vrijling JK, Vrouwenvelder ACWM. Methods
+for the estimation of loss of life due to floods: A literature review and a proposal for a new method. Natural Hazards, 2008;
+46(3):353–389.
+3. DeKay ML, McClelland GH. Predicting loss of life in cases
+of dam failure and flash flood. Risk Analysis, 1993; 13(2):193–
+205.
+4. Boyd E, Jonkman B, Levitan M, van Heerden I, Kosak F,
+Cataldie L, McGulla S. Hurricane Katrina related fatalities in
+Louisiana. Draft article, 2008.
+5. Stephens KU, Grew D, Chin K, Kadetz P, Greenough G,
+Burkle FM, Robinson SL, Franklin ER. Excess mortality in
+the aftermath of Hurricane Katrina: A preliminary report. Disaster Medicine and Public Health Preparedness, 2007; 1(1):15–
+20.
+6. MMWR (Morbidity and Mortality Weekly Report). Public health response to Hurricanes Katrina and Rita—United
+Sates, 2005. MMWR, 2006; 55(9):229–268.
+7. Risk Management Solutions. Hurricane Katrina: Profile of a
+super cat; lessons and implications for catastrophe risk management. Newark, NJ: Risk Management Solutions, 2005.
+8. Brinkmann E, Ragas W. An estimate of the cost of Hurricane
+Katrina flood damage to single-family residential structures
+in Orleans parish. Mortgage Bankers Association, 6 Feburary
+2006.
+9. DHS (Department of Homeland Security). Current housing
+unit damage estimates Hurricanes Katrina, Rita and Wilma,
+DHS February 12, 2006, 2006.
+10. IPET (Interagency Performance Evaluation Task Force).
+Performance evaluation of the New Orleans and southeast
+Louisiana hurricane protection system—Volume VII: The
+consequences, Final Report 26 March 2007.
+11. LACPR (Louisiana Coastal Protection Recovery Authority).
+Enclosure C: Louisiana economy and 2005 hurricane damage,
+Preliminary Technical Report to Congress, June 2006.
+12. Bourque LB, Siegel JM, Kano M, Wood MM. Weathering the
+storm: The impact of hurricanes on physical and mental health.
+Annals of the American Academy of Science (AAPPS), 2006;
+604:129–151.
+13. MMWR (Morbidity and Mortality Weekly Report). Public
+health response to Hurricanes Katrina and Rita—Louisiana,
+2005. MMWR, 2006; 55(2):29–64.
+14. Sullivent EE, West CA, Noe RS, Thomas KE, Wallace LJD,
+Leeb RT. Nonfatal injuries following Hurricane Katrina—
+New Orleans, Louisiana, 2005. Journal of Safety Research,
+2006; 37:213–217.
+15. Pardue JH, Moe WM, Mcinnes D, Thibodeaux LJ, Valsaraj
+KT, Maciasz E, van Heerden I, Korevec N, Yuan QZ. Chemical and microbiological parameters in New Orleans floodwater
+following Hurricane Katrina. Environmental Science & Technology, 2006; 39(22):8591–8599.
+16. Presley SM, Rainwater TR, Austin GP, Platt SG, Zak JC,
+Cobb GP, Marsland EJ, Tian K, Zhang B, Anderson TA,
+Cox SB, Abel MT, Leftwich BD, Huddleston JR, Jeter RM,
+Kendall RJ. Assessment of pathogens and toxicant in New Orleans, LA, following Hurricane Katrina. Environmental Science & Technology, 2006; 40(2):468–474.
+17. Reible DD, Haas CN, Pardue JH, Walsh WJ. Toxic and contaminant concerns generated by Hurricane Katrina. Bridge,
+2006; 36(1):5–13.
+18. Knabb R, Rhome J, Brown D. Tropical Cyclone Report: Hurricane Katrina 23–30 August 2005. National Hurricane Center,
+20 December 2005, updated August 2006.
+19. IPET (Interagency Performance Evaluation Task Force).
+Performance evaluation of the New Orleans and southeast Louisiana hurricane protection system—Volume V—The
+performance—Levees and floodwalls. Final Report 26 March
+2007.
+20. Seed RB, Bea RG, Abdelmalak RI, Athanasopoulos AG,
+Boutwell GP, Bray JD, Briaud, J-L, Cheung C, Cobos-Roa D,
+Cohen-Waeber J, Collins BD, Ehrensing L, Farber D, Hanemann M, Harder LF, Inkabi KS, Kammerer AM, Karadeniz
+D, Kayen RE, Moss RES, Nicks J, Nimmala S, Pestana JM,
+Porter J, Rhee K, Riemer MF, Roberts K, Rogers JD, Storesund R, Govindasamy AV, Vera-Grunauer X, Wartman JE,
+Watkins CM, Wenk E Jr, Yim SC. Investigation of the performance of the New Orleans flood protection systems in Hurricane Katrina on August 29, 2005, Final Report. Independent
+Levee Investigation Team, July 31 2006.
+21. Seed RB, Nicholson PG, Dalrymple RA, Battjes JA, Bea RG,
+Boutwell GP, Bray JD, Collins BD, Harder LF, Headland JR,
+Inamine MS, Kayen RE, Kuhr RA, Pestana JM, Silva-Tulla F,
+Storesund R, Tanaka S, Wartman J, Wolff TF, Wooten RL,
+Zimmie TF. Preliminary Report on the Performance of the
+New Orleans Levee Systems in Hurricane Katrina on August
+29, 2005. Report No. UCB/CITRIS—05/01, 2005.
+22. Schleifstein. Washing away: Special report from the TimesPicayune. June 23–27, 2002. Available at http://www.nola.
+com/hurricane/?/washingaway/, 2002.
+23. IEM (Innovative Emergency Management). Damage and
+Consequences, Hurricane Pam: Exercise Participant Information Package. July 16–23, 2004.
+24. Wolshon B. Evacuation planning and engineering for Hurricane Katrina. Bridge, 2006; 36(1):27–34.
+25. Wolshon B, Catarella MA, Lambert L. Louisiana highway
+evacuation plan for Hurricane Katrina: Proactive management
+of a regional evacuation. ASCE Journal of Transportation Engineering, 2006; 132(1):1–10.
+26. Wolshon B. Brotherly advice: Learning from Hurricanes
+Georges and Ivan, Louisiana avoids Katrina massacre. Roads
+and Bridges, 2006; March 2006:22–26.
+27. Donchess J. Prepared Statement of Joseph A. Donchess, Executive Director, Louisiana Nursing Home Association, January 31, 2006. U.S. Senate Committee on Homeland Security
+and Governmental Affairs, 2006.
+28. Boyd E. New Orleans was prepared but it was overwhelmed
+(correspondence). Nature, 2006; 442:244.
+29. Anonymous. 26,000 shelter at the superdome. Times Picayune
+28 August 2005.
+30. LaOHSEP (Louisiana Office of Homeland Security and
+Emergency Preparedness). Lessons Learned—Hurricanes
+Katrina and Rita, LaOHSEP Report, 2006.
+31. LaCaze K. Activity Report on Hurricane Katrina. U.S. Senate
+Committee on Homeland Security and Governmental Affairs,
+2006.
+32. Select Bipartisan Committee to Investigate the Preparation
+for and Response to Hurricane Katrina. A Failure of Initiative. U.S. Government Printing Office, 2006.
+33. Cunningham RH, Braud DH, Gisclair D, Kemp GP. A Shining Star in the Katrina Disaster: Lidar. Presented at the Remote Sensing and Photogrammetric Society Annual Conference, Fitzwilliam College, Cambridge University, Cambridge
+UK, September 7, 2006.
+34. De Bruijn. Improvement of casualty functions based on data
+of the flooding of New Orleans in 2005—Preliminary report.
+WL Delft Hydraulics Report Q3668.00, 2006.
+
+698 Jonkman et al.
+35. Maaskant B. Research on the relationship between flood characteristics and fatalities-based on the flooding in New Orleans
+caused by Hurricane Katrina. Interim Report January 2007.
+MSc Research, Delft University, 2007.
+36. Interagency Performance Evaluation Task Force. Performance evaluation of the New Orleans and southeast Louisiana
+hurricane protection system–Volume IV–The storm. Final Report 26 March 2007.
+37. Hurlbert JS, Beggs JJ. New Orleans population survey—
+Hurricane evacuation and sheltering. Pp. 14–16 in van Heerden I (Ed.), Annual Interim Progress Report, Assessment and
+Remediation of Public Health Impacts due to Hurricanes and
+Major Flooding Event, 2004.
+38. Sharkey P. Survival and death in New Orleans: An empirical
+look at the human impact of Katrina. Journal of Black Studies,
+2007; 37(4):482–501.
+39. Jonkman SN, Kelman I. An analysis of causes and circumstances of flood disaster deaths. Disasters, 2005; 29(1):75–97.
+40. Delacroix SE. In the wake of Katrina: A surgeon’s firsthand report of the New Orleans tragedy. Medscape General
+Medicine, 2005; 7:56.
+41. Berger E. Charity hospital and disaster preparedness. Annals
+of Emergency Medicine, 2006; 47(1):53–56.
+42. Deichmann RE. Code Blue: A Katrina Physician’s Memoir.
+Bloomington, IN: Rooftop Publising, 2007.
+43. De Weger D, Pietersen CM, Reuzel PGJ. Consequences of
+exposure to toxic gasses following industrial disasters. Journal of Loss Prevention in the Process Industries, 1991; 4:272–
+276.
+44. Clausen LK. Potential Dam Failure: Estimation of Consequences, and Implications for Planning. Unpublished M.Phil.
+Thesis at the School of Geography and Planning at Middlesex
+Polytechnic collaborating with Binnie and Partners, Redhill,
+1989.
+45. Karvonen RA, Hepojoki A, Huhta HK, Louhio A. The use
+of physical models in dam-break analysis, RESCDAM Final
+Report. Helsinki University of Technology, Helsinki, Finland,
+2000.
+46. Jonkman SN, Penning-Rowsell E. Human instability in flood
+flows. Journal of the American Water Resources Association
+(JAWRA), 2008; 44(4):1–11.
+47. Reichhardt T. Counting the dead. Nature, 2005; 437:176.
+48. Klijn F, Baan P, de Bruijn K, Maaten R. Huidige en toekomstige overstromingsrisico’s in Nederland—Schattingen voor
+het project Nederland Later & Water. WL Delft Hydraulics
+Report Q4290.00, 2006.
+49. McClelland DM, Bowles DS. Estimating life loss for dam
+safety risk assessment—A review and new approach, IWR Report 02-R-3, 2002.
+50. Boyd E, Wolshon B, van Heerden I. Risk communication and
+public response during evacuations: The New Orleans experience of Hurricane Katrina. Public Performance and Management Review. 2009; 32(3).
+51. Jonkman SN, Vrijling JK, Kok M. Flood risk assessment in the
+Netherlands: A case study for dike ring South Holland. Risk
+Analysis, 2008; 28(5):1357–1373.
+52. LACPR (Louisiana Coastal Protection Recovery Authority). Interim report for risk-informed planning for Louisiana
+coastal protection and restoration, LACPR Report, October
+2006.
+53. FEMA (Federal Emergency Management Agency). Hurricane Katrina in the Gulf Coast, Mitigation assessment team
+report, Building performance observations, recommendations
+and technical guidance. FEMA Report 549, 2006.

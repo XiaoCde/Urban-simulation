@@ -1,0 +1,1795 @@
+Vehicle stability testing for flood 
+flows
+By G P Smith, B D Modra, T A Tucker and R J Cox
+WRL TR 2017/07, May 2017
+
+Vehicle Stability Testing for Flood Flows
+WRL Technical Report 2017/07
+May 2017
+by
+G P Smith, B D Modra, T A Tucker and R J Cox
+
+Project Details
+Report Title Vehicle Stability Testing for Flood Flows
+Report Author(s) G P Smith, B D Modra, T A Tucker and R J Cox
+Report No. 2017/07
+Report Status Final
+Date of Issue 1 May 2017
+WRL Project Number 2016003
+Project Manager G P Smith
+Client Name NSW State Emergency Service, NSW Office of Environment and Heritage
+Client Address
+Client Contact SES, Belinda Davies belinda.davies@ses.nsw.gov.au
+OEH, Duncan Mcluckie duncan.mcluckie@environment.nsw.gov.au
+Client Reference
+Document Status
+Version Reviewed By Approved By Date Issued
+1 Draft S Felder G P Smith 23 March 2017
+Final Draft S Felder G P Smith 19 April 2017
+Final S Felder G P Smith 01 May 2017
+This report was produced by the Water Research Laboratory, School of Civil and Environmental Engineering, 
+University of New South Wales for use by the client in accordance with the terms of the contract.
+Information published in this report is available for release only with the permission of the Director, Water 
+Research Laboratory and the client. It is the responsibility of the reader to verify the currency of the 
+version number of this report. All subsequent releases will be made directly to the client.
+The Water Research Laboratory shall not assume any responsibility or liability whatsoever to any third 
+party arising out of any use or reliance on the content of this report.
+
+- i -
+Executive Summary
+Every year floods cause enormous damage and loss of life on a global scale. An analysis of 
+global statistics for loss of life showed that inland floods (river floods, flash floods and drainage 
+floods) caused 175,000 fatalities and affected more than 2.2 billion people between 1975 and 
+2002 (Jonkman, 2005). More recent global analysis noted that 59,092 flood fatalities occurred 
+worldwide between 2005 and 2014 (International Federation of Red Cross and Red Crescent 
+Societies, 2015).
+In a recent detailed analysis of flood fatalities in Australia, Haynes et al. (2016) noted that 1,859 
+people have died in floods since 1900 and that 178 of these flooding related deaths have 
+occurred since 2000. The study noted that while flood fatality rates are generally falling per 
+capita, the number of fatalities that occurred in vehicles, particularly four wheel drive (4WD) 
+vehicles has increased in the last fifteen years.
+Beyond the unfortunate occurrence of flood related fatalities, an enormous amount of time and 
+resources are invested by emergency response organisations rescuing people who have entered 
+floodwaters. Information sourced from the NSW SES website to the end of September 2016 
+indicates that nearly 550 flood rescues have been performed by NSW SES in 2016 alone (NSW 
+SES, 2016). During the flooding of June 2016, NSW SES performed 300 flood rescues, 
+approximately a third of which involved rescuing people from flooded vehicles (NSW SES, 2016).
+It is clear that there is a need to better understand and quantify the mechanisms by which 
+vehicles can become unstable in floodwaters. The research and analysis described in this report 
+aims to improve the knowledge and information available to describe the vulnerability of vehicles 
+as they enter floodwaters and to quantify the flow conditions that might cause vehicles to 
+become vulnerable to being washed away. This knowledge can be used to better inform 
+emergency managers and floodplain managers seeking to plan for, and respond to, flood 
+emergencies.
+This report describes an investigation of vehicle stability recently conducted at the UNSW Water 
+Research Laboratory of the School of Civil and Environmental Engineering, UNSW Sydney. The 
+report includes:
+• A comprehensive literature review of pre-existing research and anecdotal evidence 
+describing the vulnerability of vehicles in floodwaters;
+• A description of the research scope;
+• A description of the test methodology and test results;
+• Discussion of the measured data;
+• Interpretation of the data for use by decision makers in floodplain management and 
+emergency planning.
+Vehicle stability testing incorporated measurement of full prototype scale traction and buoyancy 
+forces for threshold of movement of a vehicle in various depths of water in WRL’s tow tank, and 
+hydrodynamic force measurement on a 1:18 scale model vehicle to determine the equivalent 
+hydrodynamic flow forces to reproduce the measured, full scale threshold of movement forces.
+The traction force tests are considered novel in research on the stability of vehicles, and show 
+that traction decreases rapidly with floodwater depths above the vehicle’s floor pan level. The 
+testing confirmed that the rear wheels (wheels not weighted by the engine) break traction far 
+earlier than the front wheels.
+
+- ii -
+Hydrodynamic testing showed that coefficients of drag for a vehicle in free surface water flows, 
+perpendicular to the vehicle, are far higher than typical wind tunnel based aerodynamic drag 
+coefficients. Flooded vehicle drag coefficients are consistent with the drag coefficients predicted 
+by Hoerner (1965) for water surface piercing drag and are complicated by the vehicle geometry 
+and low depth to vehicle length ratios. The coefficient of drag for a flooded vehicle varies nonlinearly with the flow condition, but is generally within the range 1.2 and 2.0 for typical, 
+dangerous flood conditions.
+The test program and analysis presents a novel approach to the derivation of stability curves for 
+vehicles in flood flows, by dissecting the forces that impact the vehicle, applying appropriate 
+factors of safety for real-life flood conditions (as opposed to controlled laboratory conditions), 
+and evaluating vehicle stability directly from the stability balance equation.
+Observations from the testing confirm that where floodwaters impact the body of the vehicle, the 
+vehicle is at greater risk of losing traction and being washed downstream. Flows that do not 
+impact the body of the vehicle (hitting the wheels only) are generally considered safer for that 
+vehicle.
+Analysis of raw results from this investigation showed that the subject test vehicles were more 
+stable in flood flows than the flood hazard vulnerability thresholds typically applied for floodplain 
+management and emergency management as documented by guidelines such as Australian 
+Rainfall and Runoff Review Project 10 (ARR P10) by Shand et al. (2011) and AEMI Handbook 7 
+(2014). However, mitigating factors described in this report, notably i) that the tested vehicles, 
+while representative, were not the smallest and therefore the most vulnerable in their vehicle 
+class and ii) that controlled laboratory conditions need to be interpreted to uncontrolled real life 
+flood conditions meaning that a level of conservatism on this study’s results is required. On this 
+basis, the interim flood hazard threshold curves from ARR P10 summarised below for the two 
+vehicle classes tested in this investigation are confirmed as appropriate for floodplain 
+management and emergency planning.
+Table ES-1: Proposed flood hazard thresholds for vehicle stability
+Class of 
+Vehicle
+Length 
+(m)
+Kerb 
+Weight 
+(kg)
+Ground 
+Clearance 
+(m)
+Limiting 
+Still Water 
+Depth1
+Limiting 
+High 
+Velocity 
+Flow 
+Depth2
+Limiting 
+Velocity3
+Equation of 
+Stability
+Small 
+passenger
+< 4.3 < 1250 < 0.12 0.3 0.15 3.0 D.V ≤ 0.3
+Large 4WD > 4.5 > 2000 > 0.22 0.5 0.3 3.0 D.V ≤ 0.6
+1 At velocity = 0 m/s; 2 At velocity = 3 m/s; 3 At low depth
+Regardless of these findings, it should be noted that estimation of the depth and velocity 
+characteristics of floodwaters over a roadway in a real life flood emergency situations is fraught 
+with difficulty. Floodwaters are often sediment laden and murky, making it difficult to assess the 
+flow depth. In many cases, the flows overtopping flooded bridges or roadways may have been 
+washed out below the floodwaters making the roadway unpassable. Without sophisticated 
+equipment, flow velocities are notoriously difficult to assess, even to the trained eye. For these 
+
+- iii -
+reasons, the ad-hoc use of the above tabulated stability criteria by individuals in real flood 
+situations to assess the safety of a road crossing is actively discouraged.
+This report does not account for behaviour of drivers in flood emergencies, which remains a 
+substantial factor in the ongoing loss of life in vehicles in floodwaters.
+Having gained substantial knowledge of the vulnerability of vehicles exposed to floodwater, the 
+authors of this report support the best advice of the Australian State Emergency Services to 
+individual drivers which remains ‘Never drive, ride or walk through floodwater’.
+
+- i -
+Contents
+Executive Summary i
+1. Introduction 1
+2. Background: Vehicle Stability in Floodwaters 2
+2.1 Vehicle stability information– literature review 3
+2.1.1 Anecdotal evidence 9
+2.1.2 Summary findings 10
+3. Research Scope 11
+4. Methodology 12
+4.1 Overview 12
+4.2 Formulation of the problem 14
+4.2.1 Friction force of a vehicle 14
+4.2.2 Hydrodynamic drag on a vehicle 16
+5. Full Scale Vehicle Traction Tests 21
+5.1 Overview 21
+5.2 Test vehicles 21
+5.3 Tyre coefficient of friction 23
+5.4 Overview of traction tests 24
+5.5 Test results 26
+6. Hydrodynamic Force Testing (1:18 Scale) 32
+6.1 Overview 32
+6.2 Subcritical flows (tailwater controlled) 34
+6.3 Critical flows (broad crested weir) 34
+6.4 Supercritical flow (undershot gate) 35
+6.5 Horizontal force testing results 36
+7. Discussion of Results 39
+7.1 Observations 39
+7.2 Comparison of tested vehicles to other vehicles 41
+7.3 Testing uncertainties 43
+7.4 Interpretation of test information for floodplain management and emergency 
+management 43
+7.4.1 Preamble 43
+7.4.2 Comparison with existing flood hazard curves 44
+8. Conclusions 49
+8.1 Recommendations 49
+9. Acknowledgements 51
+10. References 52
+
+- ii -
+List of Tables
+Table ES-1: Proposed flood hazard thresholds for vehicle stability ii
+Table 2-1: Proposed draft interim criteria for stationary vehicle stability (after Shand et 
+al., 2011) 8
+Table 4-1 Coefficient of Friction (adhesion) values between tyres and road surfaces, 
+from Wong (1993) 15
+Table 5-1: Vehicle specifications of prototype vehicles in present study 21
+Table 5-2: Coefficient of friction results* 24
+Table 5-3: Measured peak horizontal traction force results for the Toyota Yaris 29
+Table 5-4: Measured peak horizontal traction force results for the Nissan Patrol 31
+Table 6-1: Summary of Horizontal Force Testing (prototype) 36
+Table 7-1 Comparison of smaller sized vehicle weights and dimensions 42
+Table 7-2: Proposed flood hazard thresholds for vehicle stability 48
+List of Figures
+Figure 2-1: Combined flood hazard curves (after Smith et al., 2014; AEMI, 2014) 2
+Figure 2-2: Vehicle stability failure mechanisms (after Shand et al., 2011) 3
+Figure 2-3: Car floating in deep, slow flow 
+https://www.youtube.com/watch?v=LC5ld79joIA (accessed 23 March
+2017) 4
+Figure 2-4: Car washed down an urban street in shallow, fast flow
+https://www.youtube.com/watch?v=3HrdgaiM9sY (accessed 23 March 
+2017) 5
+Figure 2-5: 4WD utility washed off a causeway in Australia 
+https://www.youtube.com/watch?v=Va8w7Jng9rM (accessed 22 March 
+2017) 5
+Figure 2-6: Representation of all the results from literature (instability points and limit 
+functions) obtained in experimental and theoretical studies (after 
+Martinez-Gomariz et al., 2016) 8
+Figure 2-7: Youtube footage of flooded cars in the Toowoomba floods of January 2010 
+(https://www.youtube.com/watch?v=kYUpkPTcqPY accessed 20 January
+2017) 10
+Figure 4-1: Schematic illustration of prototype scale test rig 12
+Figure 4-2: Nissan Patrol in WRL’s wave basin facility, preparing for a winch test from 
+the rear axle 13
+Figure 4-3: Slip curves for various road surfaces, extracted from Gerard (2006) 16
+Figure 4-4 Drag coefficient of surface-piercing circular cylinders (on area d times h) 
+as a function of Froude number, extracted from Hoerner (1965) 18
+Figure 4-5 Drag coefficient of surface–piercing flat plates (on area b times h), 
+extracted from Hoerner (1965) 19
+Figure 4-6: Hoerner’s (1965) formulation for surfacing piercing drag, extracted from 
+Bowen et. al. (2011) 19
+Figure 4-7: Flood flows over a causeway approaching Froude Fr = 1 20
+Figure 5-1: Toyota Yaris in WRL’s test facility, preparing for a winch test from both 
+axles 22
+
+- iii -
+Figure 5-2: Nissan Patrol in WRL’s wave facility, preparing for a winch test from the 
+rear axle 22
+Figure 5-3: Winch assembly in WRL Lab#2, including (a) framework, winch and 
+dynamometer, (b) pulley and wheel attachment 23
+Figure 5-4: Rapid filling of WRL’s test tank (wave basin). The winch assembly is also 
+shown. 25
+Figure 5-5: Toyota Yaris in WRL’s wave basin facility, in 0.6 m water depth with rear 
+wheels clear of the floor 26
+Figure 5-6 The lead author demonstrating zero traction at the rear wheels for the 
+Nissan Patrol 4WD in WRL’s Lab#2 testing tank. Water depth is 
+approximately 1.0m. 26
+Figure 5-7: Traction force time series for tests on the Toyota Yaris with one driver 
+occupant, winched from the rear axle only 27
+Figure 5-8: Traction force time series for tests on the Toyota Yaris with four 
+occupants, winched from the rear axle only 28
+Figure 5-9: Traction force time series for tests on the Toyota Yaris with one driver 
+occupant, winched from both axles 28
+Figure 5-10 Traction force time series for tests on the Nissan Patrol with one driver 
+occupant, winched from the rear axle 29
+Figure 5-11: Measured peak horizontal traction force for a Toyota Yaris 2006 in varying 
+static water levels. Tests were conducted on three scenarios with varying 
+passenger loads and tow points 30
+Figure 5-12: Measured peak horizontal traction force for a Nissan Patrol 4WD 1998, 
+winched from the rear axle only, with one occupant 31
+Figure 6-1: Test assembly for testing of the horizontal hydrodynamic forces. Flow is 
+from the left of the picture 33
+Figure 6-2: Testing of the model in subcritical flows: Fr = 0.3, d= 0.71m, v = 
+0.80m/s (prototype) 34
+Figure 6-3 Testing of the model on a broad crested weir 35
+Figure 6-4: Testing of the model in supercritical flows d = 0.225m, v=4.0m/s 
+(prototype), CD = 1.86, Fr = 2.66 36
+Figure 6-5 Coefficient of Drag for a Toyota Yaris based on the horizontal 
+hydrodynamic force tests 38
+Figure 7-1: Vehicle stability deducted from prototype scale measurements – rear 
+wheel horizontal force thresholds versus water depth 39
+Figure 7-2: Comparison of the Force vs Depth relationship for the Hydrodynamic Tests 
+and the Winch Tests; Toyota Yaris 41
+Figure 7-3: Stability Curve for a Toyota Yaris based on full scale traction tests, upper 
+limits for the Coefficient of Drag CD = 2.0 based on scale testing, and 
+points scaled to a flood condition Coefficient of Friction of 0.3 45
+Figure 7-4: Stability Curve for a Nissan Patrol based on full scale traction tests, upper 
+limits for the Coefficient of Drag CD = 2.0 based on scale testing, and 
+points scaled to a flood condition Coefficient of Friction of 0.3 46
+
+WRL Technical Report 2017/07 FINAL May 2017 1
+1. Introduction
+Every year floods cause enormous damage and loss of life on a global scale. An analysis of 
+global statistics for loss of life showed that inland floods (river floods, flash floods and drainage 
+floods) caused 175,000 fatalities and affected more than 2.2 billion people between 1975 and 
+2002 (Jonkman, 2005). More recent global analysis noted that 59,092 flood fatalities occurred 
+worldwide between 2005 and 2014 (International Federation of Red Cross and Red Crescent 
+Societies, 2015).
+In a recent detailed analysis of flood fatalities in Australia, Haynes et al., (2016) noted that 
+1,859 people have died in floods since 1900 and that 178 of these flooding related deaths have 
+occurred since 2000. The study noted that while flood fatality rates are generally falling per 
+capita, the number of fatalities that occurred in vehicles, particularly four wheel drive (4WD) 
+vehicles has increased in the last fifteen years.
+When discussing flood fatalities, Haynes et al., (2016) also notes:
+• That the greatest proportion of flood related fatalities occurred while the person was 
+attempting to cross a bridge causeway or road, whether the person was in a vehicle or 
+on foot;
+• Most victims were capable of independent action (not impaired in any way e.g. by 
+alcohol consumption) and aware of the flood, however the speed and depth of the water 
+took them by surprise.
+Beyond the unfortunate occurrence of flood related fatalities, an enormous amount of time and 
+resources are invested by emergency response organisations rescuing people who have entered 
+floodwaters. Information sourced from the NSW SES website to the end of September 2016 
+indicates that nearly 550 flood rescues have been performed by NSW SES in 2016 alone (NSW 
+SES, 2016). During the flooding of June 2016, NSW SES performed 300 flood rescues, 
+approximately a third of which involved rescuing people from flooded vehicles (NSW SES, 2016).
+It is clear from this brief introduction that there is a need to understand the mechanisms by 
+which vehicles become unstable in floodwaters. The research and analysis described in this 
+report aims to improve the knowledge and information available, to describe the vulnerability of 
+vehicles as they enter floodwaters and to quantify the flow conditions that might cause vehicles 
+to become vulnerable in floodwaters. This knowledge can be used to better inform emergency 
+managers and floodplain managers seeking to plan for, and respond to, flood emergencies. 
+
+WRL Technical Report 2017/07 FINAL May 2017 2
+2. Background: Vehicle Stability in Floodwaters
+Baseline information on the stability of vehicles in floodwaters is used by floodplain managers 
+and emergency managers to support important planning decisions. Vehicle stability information 
+can be used in various ways, but typically it is used to quantify and classify the vulnerability of 
+vehicles when exposed to floodwaters. One pertinent example of the use of vehicle stability 
+information is illustrated in Figure 2-1. This figure shows a set of flood hazard1
+threshold curves 
+used to classify the vulnerability of a community exposed to flood. The figure is based on the 
+premise that people can be vulnerable in three general locations on a floodplain: on foot; in a 
+vehicle; or in a building (Smith et al., 2014, AEMI, 2014; Haynes et al., 2016). Figure 2-1 
+shows that for a given flow velocity, flood hazard increases with increasing flow depth and that 
+for a given flow depth the flood hazard increases with increasing flow velocity. Often the 
+vulnerability of people and infrastructure on a floodplain is expressed as product of velocity V 
+and flow depth D ( V.D values).
+Figure 2-1: Combined flood hazard curves (after Smith et al., 2014; AEMI, 2014)
+Vehicle stability thresholds expressed in the form illustrated in Figure 2-1 or similar can be 
+applied in various ways. In a generic sense, the information can be applied to support decisions 
+where vehicular access to a potentially flooded area might need to be controlled or restricted. 
+For example, an emergency manager might use the thresholds to classify available flood 
+ 
+1
+Flood Hazard: Potential loss of life, injury and economic loss caused by future flood events. The degree of hazard varies 
+with the severity of flooding and is affected by flood behaviour (extent, depth, velocity, isolation, rate of rise of floodwaters, 
+duration), topography and emergency management.
+
+WRL Technical Report 2017/07 FINAL May 2017 3
+mapping in order to define a safe vehicle evacuation route or the information might be used to 
+support guidance on when a particular causeway or roadway crossing a stream or floodplain 
+might need to be closed to traffic. The information could also be used to support an education 
+campaign to inform community members of the dangers of driving through flood waters.
+2.1 Vehicle stability information– literature review
+The UNSW Water Research Laboratory (WRL) has previously conducted a literature review of 
+vehicle stability as Australian Rainfall and Runoff Review Project 10 (ARR P10) (Shand et al., 
+2011). Readers are directed to this review for a detailed summary of various referenced 
+documents.
+This report section summarises the ARR P10 review, but has been extended with references 
+published in the intervening period.
+There are essentially three reasons why vehicles are vulnerable in floodwaters:
+• Though many 4WD vehicles are designed to be driven in water, the reality is that 
+for many vehicles, entering water causes the engine to stop, preventing the 
+vehicle from being driven further into, or out of the water by the driver;
+• The vehicle floats; and
+• The vehicle becomes difficult to control.
+The safety of people during flood events can be compromised when vehicles they are travelling 
+in are exposed to flood flows which cause the vehicle to become unstable by losing traction 
+(frictional instability through sliding), to topple because of uneven surfaces or to become 
+buoyant (floating). These mechanisms can lead to a complete loss of control over the vehicle 
+resulting in the vehicle being swept downstream (Shand et al., 2011; Haynes et al., 2016). 
+These stability failure mechanisms are illustrated in Figure 2-2.
+Figure 2-2: Vehicle stability failure mechanisms (after Shand et al., 2011)
+
+WRL Technical Report 2017/07 FINAL May 2017 4
+A distinction should be made between flow-induced stability loss and stability loss induced by the 
+interaction of a vehicle at high speed and evenly distributed water, commonly referred to as 
+hydroplaning (Gallaway et al., 1979). This phenomenon is of concern for vehicle stability but 
+generally occurs at high vehicle speeds and at low water depth. Hydroplaning is therefore not 
+considered further within this study.
+Once the flow thresholds for vehicle stability have been exceeded (Figure 2-1) and the vehicle 
+becomes unstable, the vehicle will typically be moved by the force of the water in the direction 
+of flow and observations of video footage of actual floods demonstrate that the vehicle often 
+then drifts under the influence of the floodwaters into deeper, faster moving, more dangerous 
+flow. Figures 2-3 to 2-5 (and the linked videos) illustrate situations where vehicles floated in 
+deep subcritical flood waters or were swept away by supercritical flood waters with high flow 
+velocity and relatively low flow depth. 
+Figure 2-3: Car floating in deep, slow flow
+https://www.youtube.com/watch?v=LC5ld79joIA (accessed 23 March 2017)
+
+WRL Technical Report 2017/07 FINAL May 2017 5
+Figure 2-4: Car washed down an urban street in shallow, fast flow 
+https://www.youtube.com/watch?v=3HrdgaiM9sY (accessed 23 March 2017)
+Figure 2-5: 4WD utility washed off a causeway in Australia 
+https://www.youtube.com/watch?v=Va8w7Jng9rM (accessed 22 March 2017)
+The weight distribution in most vehicles is uneven with a greater proportion of the weight 
+located near the engine. In most vehicles, this means that the rear of the vehicle floats first (as 
+illustrated in Figure 2-2) with the front wheels below the engine remaining on the ground for 
+longer. Where floodwaters have adequate velocity, the rear of the vehicle is prone to swing 
+around, pivoting on the front wheels until the vehicle is aligned with the flow direction.
+
+WRL Technical Report 2017/07 FINAL May 2017 6
+While there is general agreement on the mechanisms for vehicle instability (Figure 2-2), a 
+collation of literature on the flow conditions which induce vehicle instability notes a wide range of 
+values. Shand et al., (2011) highlights that guidelines provided for vehicle stability on floodways 
+have generally been based on the product of depth and velocity, as derived by scaled 
+experimental investigations of stationary vehicle stability. Shand et al., (2011) provides a 
+comprehensive summary of literature published prior to 2010. These studies, highlighted
+substantial changes in vehicle design since the original studies of vehicle stability by Bonham 
+and Hattersley (1967) and Gordon and Stone (1973) which have been used as the basis of flood 
+hazard policy in Australia. There was no significant research published in this field of vehicle 
+stability in the intervening period between Gordon and Stone’s work in 1973 and Shand et al.’s 
+literature review in 2011.
+More recent investigations of vehicle stability are not included in the review by Shand et al.,
+(2011). Recent experimental investigations have been undertaken using scale model die-cast 
+vehicles in a horizontal hydraulic flume at the Hydro-environmental Research Centre of Cardiff 
+University, United Kingdom (Shu et al., 2011; Xia et al., 2011). These studies evaluated the 
+theoretical forces exerted on a fully submerged and static vehicle under flow conditions to derive 
+an expression for the instability threshold. The drag and frictional coefficients were included 
+implicitly within the expression and derived by laboratory flume testing using model vehicles. 
+This methodology differed from previous studies, where reaction forces were measured for a 
+geometrically scaled vehicle subject to flows and the instability threshold was calculated for 
+various coefficients of friction.
+Xia et al., (2011) tested three types of vehicle using an initial geometric scale of 1:43 with 
+verification tests at a larger 1:18 scale. Shu et al. (2011) tested the same three vehicle types
+namely Mitsubishi Pajero, BMW M5, Mini Cooper, undertaking all tests at 1:18 scale. Both 
+testing programs assumed all wheels to be locked and the vehicle orientated parallel to the flow 
+direction. Velocity was increased for a given depth until vehicle motion was initiated. 
+Experimental results were used to calibrate the parameters within the theoretical expression for 
+instability thresholds.
+The studies differed in that Xia et al., (2011) did not correctly scale the vehicle density, and 
+therefore mass of the model vehicles, according to dynamic similarity principles but rather used 
+a relative density term in the analytical solution to adjust the measured data to match the 
+prototype. The resultant values of Xia et al. (2011) differed significantly from other studies (by 
+up to an order of magnitude) with vehicles becoming submerged before moving and were 
+inconsistent with qualitative evidence from the field (i.e. during the Queensland floods in 
+February 2011 (https://www.youtube.com/watch?v=kYUpkPTcqPY accessed 24 March 2017) and 
+the Japan Tsunami in March 2011 (https://www.youtube.com/watch?v=7trfmf5SuQs accessed 
+24 March 2017) where cars floated well before they became submerged.
+Shu et al., (2011) correctly scaled the density and mass of model vehicles and obtained D.V 
+values slightly higher than those found in earlier investigations. Shu et al., (2011) had the 
+model test vehicles filled with foam to resist ingress of water. This was thought to better 
+represent modern vehicles with significantly improved dust seals than the older cars tested in 
+most other investigations. Shu et al., (2011) determined the friction coefficients to range from 
+0.39 to 0.68 for their models, quoted to be within prototype ranges given by Gerard (2006). 
+The differences in stability thresholds noted in Shu et al., (2011) are likely due to the higher 
+coefficient of friction in the Shu et al., (2011) models (µ = 0.39 to 0.68) compared to the lower 
+friction coefficients (µ = 0.3) adopted by earlier studies (e.g. Bonham and Hattersley, 1967; 
+Keller and Mitsch, 1992). Sensitivity testing of Shu et al., (2011) using a reducing frictional 
+
+WRL Technical Report 2017/07 FINAL May 2017 7
+coefficient (µ = 0.5) gave lower critical D.V values and may tend toward those found in earlier 
+studies. The authors of Xia et al., (2011) and Shu et al., (2011) acknowledge that in prototype 
+vehicles, mass is not evenly distributed leading to the rear of a vehicle often floating first. This 
+prevents the rear wheels from contributing friction to prevent motion. The model vehicles have 
+more evenly distributed mass and therefore do not accurately represent this occurrence and may 
+therefore overestimate the friction resistance of vehicles.
+Shu et al., (2011) verified their results against two field observations of cars moving during flood 
+events. The threshold of vehicle motion and the flow rate, which may be considered safe for 
+vehicle passage are likely to be lower than values observed for vehicles already moving in flood 
+flow.
+Toda et al., (2013) also completed scale model testing of a sedan at 1:10 scale and a minivan at 
+1:18 scale in a 1 m wide flume. Froude similarity principles were used for scaling. Considerable 
+effort was invested in adequately representing the weight distribution between front and rear of 
+the vehicles and buoyancy of the scale models. Models were tested with the vehicle oriented so 
+the vehicle pointed into the direction of flow (0 degree) and oriented across the flow (90 degree) 
+to determine instability. Friction coefficients were measured at both 0 and 90 degree orientation 
+to the flow with friction values of 0.26 and 0.57, respectively, for the sedan and friction 
+coefficients of 0.42 and 0.65 for the minivan. The authors provided a simplified conclusion that 
+cars would move in floodwaters greater than 0.5 m deep and flowing at a velocity greater than 
+2 m/s.
+Martínez-Gomariz et al., (2016) provided an excellent compilation of all previous literature 
+including a graphical comparison of all available experimental and theoretical results. The 
+graphical comparison is reproduced in Figure 2-6. A comparison with the findings of these 
+experimental studies shows the vehicle stability threshold data proposed by Shand et al., (2011)
+and adopted by Australian Rainfall and Runoff and the Australian Emergency Management 
+Institute (AEMI, 2014) for flood hazard estimates are conservative compared to the compiled 
+data sets.
+
+WRL Technical Report 2017/07 FINAL May 2017 8
+Figure 2-6: Representation of all the results from literature (instability points and limit 
+functions) obtained in experimental and theoretical studies (after Martinez-Gomariz et al., 2016)
+The criteria proposed by Shand et al., (2011) presented in Table 2-1 have taken into 
+consideration the safety criteria for people (Cox et al., 2010), ensuring that, in event of vehicle 
+failure, safety was not compromised once people abandoned their cars.
+Table 2-1: Proposed draft interim criteria for stationary vehicle stability 
+(after Shand et al., 2011)
+Class of 
+Vehicle
+Length 
+(m)
+Kerb 
+Weight 
+(kg)
+Ground 
+Clearance 
+(m)
+Limiting 
+Still Water 
+Depth1
+Limiting 
+High 
+Velocity 
+Flow 
+Depth2
+Limiting 
+Velocity3
+Equation of 
+Stability
+Small 
+passenger
+< 4.3 < 1250 < 0.12 0.3 0.1 3.0 D.V ≤ 0.3
+Large 
+passenger
+> 4.3 > 1250 > 0.12 0.4 0.15 3.0 D.V ≤ 0.45
+Large 4WD > 4.5 > 2000 > 0.22 0.5 0.2 3.0 D.V ≤ 0.6
+1 At velocity = 0 m/s; 2 At velocity = 3 m/s; 3 At low depth
+
+WRL Technical Report 2017/07 FINAL May 2017 9
+Importantly, Shand et al., (2011) highlighted and Martinez-Gomariz et al., (2016) agreed, that 
+the available scaled experimental data is being applied beyond its limits, and that the criteria are 
+unlikely reliable enough to be adopted permanently as safety criteria. Shand et al., (2011) 
+noted particularly that this is due to the data not allowing adequate assessment of:
+• Appropriate coefficients of friction for use in flood flows;
+• Buoyancy of modern cars;
+• The effect of vehicle orientation to flow direction (including vehicle movement); and
+• Information for additional categories including small and large commercial vehicles and 
+emergency service vehicles.
+Many of the studies listed above, particularly Shand et al., (2011), Xia et al., (2011) and Shu et 
+al., (2011) recommended full scale testing to investigate thresholds of flooded vehicles under 
+real and more complex circumstances. 
+2.1.1 Anecdotal evidence
+The internet, particularly web sites such as youtube.com, provides a wealth of documented 
+anecdotal observations of vehicles in floodwaters. Internet video footage sampled as part of this 
+research generally validates the conclusion of Haynes et al., (2016) that vehicles most 
+commonly come into contact with floodwaters when they are deliberately driven into 
+floodwaters, either at a bridge or causeway crossing.
+Observations of vehicles in these circumstances show that most commonly the vehicle enters the 
+flood waters with flow passing perpendicular to the vehicle direction, i.e. the road or causeway 
+that is being overtopped by floodwater is more or less perpendicular to the flow direction. This 
+is generally the worst orientation for vehicle stability as it provides the greatest vehicular crosssectional area to the flow, and therefore the highest possible hydrodynamic flow force is applied 
+to the vehicle.
+Video footage also demonstrates, that in this scenario, the most common mode of failure is for 
+the vehicle’s rear wheels to lose traction causing the vehicle to rotate nose first into the flow and 
+in many cases then be washed off the roadway into deeper water as illustrated in Figure 2-7.
+This mode of failure is reasonably anticipated since the typical configuration of modern vehicles 
+is with a forward mounted engine, in front of a near water-tight cabin and boot/trunk rearwards 
+of the rear axle. As the vehicle becomes inundated, the rear of the vehicle is more buoyant than 
+the front with less downwards force due to the vehicle weight at the rear wheels. Less weight 
+over the rear axle means less friction available from the tyres, and so the rear wheels break 
+traction first. 
+If the rear wheels break traction in moving floodwaters, the vehicle has a tendency to pivot on 
+the front wheels eventually pointing the front of the vehicle into the direction of flow. If the 
+vehicle remains on a reasonably flat surface, then with water pressure sometimes rising over the 
+bonnet of the vehicle, the vehicle may become more stable and stop moving. However, in many 
+recorded instances the vehicle rolls off the road over the edge of a causeway or bridge, or may 
+simply roll away downstream. For this reason, the point of instability of the vehicle is defined in 
+this study as the point at which any axle (two wheels) loses traction and the vehicle rotates or 
+translates sideways.
+
+WRL Technical Report 2017/07 FINAL May 2017 10
+Figure 2-7: Youtube footage of flooded cars in the Toowoomba floods of January 2010 
+(https://www.youtube.com/watch?v=kYUpkPTcqPY accessed 20 January 2017)
+2.1.2 Summary findings
+The review of currently available literature concluded that that there are a number of limitations 
+to the previous research on vehicle stability in floodwaters, including:
+• There is currently no full scale testing of the stability of vehicles in floodwaters;
+• Only one test program considered testing of the forces on a vehicle at full scale (Kramer 
+et. al., 2016), but this suffered from ingress of water into the vehicle, and ignored the 
+effect of changing vehicle height and aspect/tilt due to unloading of the springs.
+• No validation of the limit to model scaling has been conducted. It is likely that scales 
+smaller than 1:20 will be undermined by scale effects. Even at larger scales some 
+forces, such as surface tension, may affect the results.
+• The orientation of the vehicle in some studies is not particularly relevant to the exposure 
+of the risk to life of people in vehicles which encounter floodwaters. Evidence presented 
+shows that vehicles driven into floodwaters most commonly do so perpendicular to the 
+direction of travel.
+• Testing of fully submerged vehicles is not relevant to risk to life in vehicles exposed to 
+floodwaters as the vehicle would need to be fully flooded, which is clearly a hazard for 
+any occupants.
+Little previous work has aimed to separate and understand the various forces that act on a 
+vehicle in floodwaters. This limits the ability of the scientific community to study specific aspects 
+of vehicle stability in detail, such as buoyant behaviour, tyre-road friction or hydrodynamic 
+forces. This limits the ability to determine uncertainty in testing programs, or develop suitable 
+factors of safety, and to recommend defensible parameters to use in floodplain management or 
+emergency management and operations when considering vehicular access in flood prone areas.
+
+WRL Technical Report 2017/07 FINAL May 2017 11
+3. Research Scope
+The research scope for this project was driven by the need to better understand and quantify the 
+mechanisms by which vehicles become unstable in floodwaters. By better understanding the 
+stability limits of vehicles in flood flows, and quantifying the flow conditions that might cause 
+vehicles to become vulnerable to being washed away by floodwaters, better informed emergency 
+managers and floodplain managers can more effectively plan for, and respond to, flood 
+emergencies.
+The research and analysis described in this report aims to improve the knowledge and 
+information available. The study aims were to:
+1. Determine the likely conditions in which a vehicle may be washed away in floods;
+2. Determine the buoyant behaviour of vehicles and the subsequent impact on road-tyre 
+friction by direct measurement of a sample of full scale vehicles in water;
+3. Determine the hydrodynamic forces on a vehicle and the vehicle’s coefficient of friction 
+by scale physical modelling;
+4. Develop a method of analysing vehicle stability in floodwaters that allows component 
+forces to be considered and allows a robust approach to evaluating uncertainty in the 
+results;
+5. Based on the results of testing the friction and hydrodynamic forces, as well as other 
+available literature, determine suitable stability curves for passenger vehicles and large 
+4WD vehicles.
+Direction for the research scope was also derived from the key findings of Haynes et al. (2016) 
+that:
+• The greatest proportion of flood related fatalities occurred while the person was 
+attempting to cross a bridge, causeway or road, whether the person was in a vehicle or 
+on foot;
+• Most victims were capable of independent action (not impaired in any way e.g. by 
+alcohol consumption) and aware of the flood, however the speed and depth of the water 
+took them by surprise.
+The following research scope was proposed to address these primary research needs:
+i. Measure the stability of vehicles when exposed to floodwaters at prototype (full) scale
+using real vehicles;
+a. Devise tests that are representative of typical scenarios where vehicles on 
+bridges or causeways have been washed away in floodwaters;
+ii. Based on these measurements, review the flood hazard vulnerability criteria for flood 
+exposed vehicles.
+
+WRL Technical Report 2017/07 FINAL May 2017 12
+4. Methodology
+4.1 Overview
+The overriding limitation with currently available research of vehicle stability is that all previous 
+research assessment has been conducted at model scale. A particularly novel aspect of this 
+current research is the world first, direct measurement of the forces required to cause a 
+passenger vehicle to become unstable in floodwaters at full scale.
+The test methodology was designed to separate the response of the vehicle exposed to 
+floodwaters to both friction and hydrodynamic forces. Two rounds of testing were completed:
+a) Full scale measurement of the force required to overcome the friction force of a vehicle’s 
+tyres on the roadway surface in various water depths;
+b) Knowing the full scale forces required to initiate vehicle instability, scale model testing of 
+the hydrodynamic forces to reproduce the vehicle instability.
+Full scale testing of moving flows around the subject vehicle could not be employed in this study 
+due to the very large flows (upwards of 12 m3
+/s) required to achieve it. Instead a number of 
+tests were conducted by winching the test vehicle relative to a water body at various depths in a 
+tow tank. This allowed full scale testing of buoyant friction forces under varying water levels.
+Moving of the full scale vehicle to determine the vehicle instability force was achieved using a 
+high powered winch to drag the vehicle sideways as illustrated schematically in Figure 4-1 and in 
+practice in Figure 4-2.
+Figure 4-1: Schematic illustration of prototype scale test rig
+
+WRL Technical Report 2017/07 FINAL May 2017 13
+Figure 4-2: Nissan Patrol in WRL’s wave basin facility, preparing for a winch test from the rear 
+axle
+Forces were considered separately at the vehicle front and rear axles. This allowed 
+consideration of stability of the vehicle as a whole, or stability failure when traction is lost at one 
+axle first and then rotated into alignment with the direction of flow. Specifically, a substantial 
+part of the testing focused on the stability of the rear axle as floating of the rear of the vehicle 
+has previously been identified as the most likely initiation point of instability of a vehicle exposed 
+to floodwaters.
+The choice of the axles as reference points on the vehicle provides a number of advantages. 
+Fundamentally it allows consideration of the forces through their point of action (i.e. friction at 
+the wheels) and particularly the separation of forces at the front and rear axles allows the 
+measurement of the instant of traction loss at the rear axle. The axle provides a convenient 
+location for vehicle force measurement that does not load or unload the vehicle suspension.. 
+Scale model testing was then completed to determine the equivalent hydrodynamic forces 
+required to reproduce the prototype scale vehicle instability forces. Further, detailed description
+of the experiment methodology is provided in the following sections.
+
+WRL Technical Report 2017/07 FINAL May 2017 14
+4.2 Formulation of the problem
+The point of loss of traction, and therefore vehicle stability, is that point at which the 
+hydrodynamic force (FH) applied to the vehicle overcomes the friction force (FF) of the wheels:
+FH > FF ( 1 )
+The friction force is dependent on the downward force on the wheels, and may be considered as 
+a vehicle as a whole, at an individual wheel, or at an axle:
+FF = µ (W – B – L) ( 2 )
+Where:
+W is the weight of the vehicle;
+B is the buoyancy which is dependent on the water depth (d);
+L is the uplift force due to water impacting the vehicle which is dependent on the water depth 
+and velocity; and 
+µ is the coefficient of friction between the tyres and the road. 
+Note that once the tyres are sliding, the coefficient of force (µ) decreases and it becomes more 
+difficult for the vehicle to regain traction.
+The hydrodynamic force can be expressed in the form of a drag force as:
+FH =0.5.ρ.A.CD.v
+2
+( 3 )
+Where:
+ρ is the water density;
+A is the projected (profile) area of the vehicle impacted by water;
+CD is the coefficient of drag which is dependent on the water velocity and depth; and
+v is the depth-averaged flow velocity.
+The coefficient of drag is a complex term capturing the influence of the shape of the vehicle and 
+the response of the flow to the obstruction. The coefficient of drag needs to be determined 
+experimentally for each vehicle, and varies with flow depth and velocity.
+Combining equations (1), (2) and (3), including the dependencies, a vehicle is stable when:
+µ (W – B(d) – L(d,v) ) > 0.5.ρ.A(d).CD(d,v).v
+2
+( 4 )
+In determining the conditions for vehicle stability, the focus of this research is the investigation 
+of factors that affect the friction force (µ and B), and the coefficient of drag for the vehicle. A 
+discussion of the theoretical background and relevant knowledge on each of these parameters is 
+provided in the following sections. 
+4.2.1 Friction force of a vehicle
+Bonham and Hattersly (1967), after a detailed review of studies completed between 1930-1936 
+at the Road Research Laboratory in England (Bird et al., 1936) and consultation with Olympic 
+Tyre and Rubber Co., arrived at a single conservative value for the coefficient of tyre friction. 
+This was based on a braking force coefficient of 0.5 on a worst case scenario of “a smooth 
+causeway surface on a wet country road”. Adjustments were made for a reduced sideways force 
+compared with braking force (10%), the reduced slipping force compared with peak braking 
+
+WRL Technical Report 2017/07 FINAL May 2017 15
+force (20%), and a further reduction due to debris that may become caught under the wheels 
+(20%). This resulted in a friction coefficient of µ = 0.3 that was used uniformly across all their 
+tests. This value has been widely adopted in subsequent studies of vehicle stability in water, 
+including Keller (1992) and Kramer (2016).
+While this is a suitably conservative value where actual data is limited, it is worth revisiting the 
+range of friction coefficients likely to be encountered in real world conditions. This review
+considers both changes in tyre and road technology and modern motoring conditions for the 
+interpretation of measured test results.
+Most available tyre traction data relates to straight line traction (braking), or cornering at speed. 
+Limited analysis is available on the lateral grip of tyres while stationary. Rubber has a unique 
+property whereby the force required to initially break traction is higher than the force required to 
+maintain motion once traction is lost (Wong, 1993). In the available literature, these forces are 
+known as Peak and Sliding forces. It is important to distinguish between these forces for vehicle 
+stability, where it is unlikely that a vehicle will regain traction once it has been lost. 
+Wong (1993) provides typical coefficient of friction values for a range of conditions as
+reproduced in Table 4-1. This information is derived from an investigation in 1957 (Taborek, 
+1957), so is somewhat dated, but broadly consistent with values for modern tyres and 
+conditions. Note that the values in Table 4-1 are for the coefficient of adhesion between rubber 
+and concrete, rather than the braking effort coefficient. The braking effort coefficient more 
+broadly includes the dynamics of the tyre at speed and under braking loads. 
+Table 4-1 Coefficient of Friction (adhesion) values between tyres and road surfaces, from Wong 
+(1993)
+Road Surface Peak Value Sliding Value
+Asphalt and concrete (dry) 0.80 − 0.90 0.75
+Asphalt (wet) 0.50 − 0.70 0.45 − 0.60
+Concrete (wet) 0.80 0.70
+Gravel 0.60 0.55
+Earth road (dry) 0.68 0.65
+Earth road (wet) 0.55 0.40 − 0.50
+Snow (hard-packed) 0.20 0.15
+Ice 0.10 0.07
+A number of important conclusions can be drawn from this information. Significantly, concrete 
+surfaces perform significantly better than asphalt in the wet by up to 40%. This alone is an 
+important factor in the stability of vehicles on bridges and causeways. The presence of dirt and 
+gravel on the roadway surface significantly decreases traction. Causeways will likely be affected 
+during floods as mud, sand, gravel and debris are washed downstream and over the causeway. 
+In particular, once vehicle sliding is initiated, the friction force reduces markedly (see sliding 
+factors in Table 4-1), meaning that it is likely that the vehicle will continue to move once initial 
+traction is lost.
+There is a wealth of more recent information on tyre friction, largely targeted at vehicle accident 
+forensics. However the focus of this traction research is on braking deceleration as an average 
+over a distance, rather than the instantaneous peak traction, and is based on the braking effort 
+rather than coefficient of adhesion. As such many of the quoted values are lower than those 
+provided in Wong (1993) (see http://www.mfes.com/friction.html for many references). 
+
+WRL Technical Report 2017/07 FINAL May 2017 16
+A valid conclusion is that it is likely that the coefficient of friction from traction tests on a 
+stationary vehicle will be somewhat higher than those of a vehicle at speed.
+Figure 4-3: Slip curves for various road surfaces, extracted from Gerard (2006)
+Figure 4-3 presents the friction slip curves from Gerard (2006). This figure demonstrates that 
+there is a peak in the friction coefficient at low slip rates that is significantly larger than for a 
+fully slipping tyre. The peak is exaggerated for higher friction surfaces, but almost non-existent 
+for slippery surfaces. 
+In the traction tests conducted in the present investigation, the vehicle is towed at a near 
+constant rate set by the capability of the winch, which in turn varies with the load on the winch. 
+As the winch pulls the vehicle through the peak of the slip friction it slows down, then as the 
+vehicle begins to move and slip increases, the speed of the winch also increases. Thus a quasibalance is achieved on the falling part of the slip curve where load on the winch is balanced by 
+the friction of the tyres.
+4.2.2 Hydrodynamic drag on a vehicle
+A detailed literature review found that there is extensive data on aerodynamic drag on vehicles 
+travelling forwards in air. However, there is very limited data in available literature on 
+hydrodynamic drag forces on a vehicle motoring in an open channel water flow (i.e. water with a 
+free surface) and even less information for the specific case associated with vehicle fatalities in 
+floods where the flows are perpendicular to the vehicle.
+Early work by Hoerner (1965) provides detail on the components that contribute to the drag of a 
+partially submerged object analogous to a vehicle in flood water. The drag on an object in a flow 
+can be broken into two components: 
+1. Profile Drag: due to the displacement of flow around the object which is dependent on 
+the shape and cross-sectional area of the object; and
+2. Viscous Drag (Skin Friction): caused by the interaction of the objects surface with the 
+viscous fluid, which is dependent on the length of the body and surface roughness.
+
+WRL Technical Report 2017/07 FINAL May 2017 17
+If the object is in an open channel flow, the surface of the water may not be steady resulting in 
+additional drag components:
+3. Wave Drag: due to the deformation of the water surface, i.e. the generation of a wake; 
+and
+4. Spray Drag: the upward jetting of water into the air at the object.
+Hoerner (1965) investigated drag forces on bodies in free-surface flows in detail, and provided 
+drag coefficients for flat plates and cylinders piercing the surface of water flow in different flow 
+regimes (Figure 4-4 and Figure 4-5). The cylinder provided substantially less drag than a flat 
+plate, with a peak coefficient of drag for a short flat plate of approximately 1.7. This drag 
+coefficient is also consistent with typical drag coefficients for a flat plate with infinite length (CD
+= 1.8).
+The relative contributions of the three components of form drag for a surfacing piercing plate 
+was summarised in Bowen et. al. (2011), see Figure 4-6. This is for the specific case where the 
+depth of penetration into water is equal to the plate width, so the peak in CD is expected at a 
+Froude number Fr=1.
+By way of background, the Froude number, Fr, is a dimensionless value that describes different 
+flow regimes of the open channel flow encountered on floodplains. The Froude number is a ratio 
+of inertial and gravitational forces of the flow and can be described by the equation:
+𝑭𝒓 =
+𝑽
+√𝒈𝑫
+( 5 )
+Where:
+v = Depth-averaged flow velocity
+D = Hydraulic depth (cross sectional area of flow / top width)
+g = Gravity acceleration
+When:
+Fr = 1, critical flow,
+Fr > 1, supercritical flow (fast rapid flow),
+Fr < 1, subcritical flow (slow / tranquil flow)
+Hoerner’s (1965) description of drag on a surface piercing object provides some important 
+insights for this study. A significant peak in the coefficient of drag on a flat plate occurs around 
+a Froude Fr=1, which may be around 50% higher than in other flow regimes. This peak moves 
+to higher Froude numbers as the depth to width ratio of the object decreases. This may be a 
+particularly important point of interest for the case of a vehicle passing over a bridge or 
+causeway on a floodplain where the change in floodway flow area as is conducive to producing 
+flood flow conditions approaching Froude Fr = 1 (see Figure 4-7). At the condition near Froude 
+Fr = 1, the free-surface becomes undular since small changes in flow energy lead to large 
+changes in flow depth, substantially increasing the drag on the object. This flow behaviour can 
+also be observed anecdotally in photos and videos of flooded vehicles crossing causeways and in 
+scale laboratory testing, with deep standing waves occurring at each end of the vehicle.
+The plate scenarios tested by Hoerner (1965) are somewhat different to the case of a vehicle on 
+a road because: 
+• The vehicle shape is significantly more complex including a void underneath the vehicle 
+above the road surface; 
+
+WRL Technical Report 2017/07 FINAL May 2017 18
+• The width versus depth of the vehicle is outside the range of conditions covered by 
+Hoerner; and 
+• There is a bottom boundary, being the road surface, that is not covered by Hoerner. 
+The situation of a vehicle in floodwaters is substantially more complex than the simple shapes 
+studied by Hoerner (1965). The vehicle may be exposed to shallow water flows leading to an 
+additional interaction with the lower (road surface) boundary. The width verses depth of the 
+vehicle is outside the range of conditions covered by Hoerner (1965) and the vehicle itself has a 
+complex shape, particularly with the presence of a second set of wheels behind the first, as well 
+as a relatively rough vehicle underbody.
+The additional component of skin friction underneath the vehicle is acknowledged, but has not 
+been addressed as it is considered to be small compared to the form drag components of the 
+vehicle.
+Figure 4-4 Drag coefficient of surface-piercing circular cylinders (on area d times h) as a function 
+of Froude number, extracted from Hoerner (1965)
+
+WRL Technical Report 2017/07 FINAL May 2017 19
+Figure 4-5 Drag coefficient of surface–piercing flat plates (on area b times h), extracted from 
+Hoerner (1965)
+Figure 4-6: Hoerner’s (1965) formulation for surfacing piercing drag, extracted from
+Bowen et. al. (2011)
+
+WRL Technical Report 2017/07 FINAL May 2017 20
+Figure 4-7: Flood flows over a causeway approaching Froude Fr = 1
+Uplift forces
+Vertical forces on the vehicle due to hydrodynamic effects are referred to here as uplift forces, 
+though it has been observed that these may also be negative, pulling the vehicle downwards.
+Discussions with the authors of Gordon and Stone (1973) suggest that uplift due to the impact of 
+flow into a vehicle’s wheel would contribute to destabilisation of the vehicle. But like horizontal 
+drag, the processes leading to a vertical uplift force are complex. Flows impacting the upstream 
+underbody may force the vehicle upwards. Alternatively, accelerated flows under the vehicle 
+may act to pull the vehicle downwards. Rocking of the vehicle on its suspension would present 
+an angled underbody to the flow. Differential water levels upstream and downstream of the 
+vehicle lead to an uneven buoyancy. The nature and magnitude of each of these factors will 
+vary in different flow depths, velocities and flow regimes. These aspects could not be quantified 
+in the present study.
+Variable Flow Conditions
+The flows impacting a vehicle during actual flooding conditions will typically be far from steady or 
+uniform. The flows may be turbulent and pulsating, include eddies, and vary as the flood 
+progresses. Flows may also contain high sediment loads, affecting the floodwater’s viscosity or 
+have high debris load which will impart impact forces on the vehicle if the debris is large.
+Unsteady flows will rock the vehicle from side to side, affecting both hydrodynamic forces on the 
+vehicle (horizontal and vertical) and the instantaneous traction force available at the tyres. This 
+is particularly pertinent to vehicle stability due to the difficulty in regaining tyre traction once it is 
+lost. 
+While the additional complexity from variable flow conditions is acknowledged, this study only 
+considered the conservative case of steady flows. 
+
+WRL Technical Report 2017/07 FINAL May 2017 21
+5. Full Scale Vehicle Traction Tests
+5.1 Overview
+The aim of the traction tests was to measure the force required to break traction at varying 
+water depths.
+The friction of the tyres against the road is directly related to the weight at the tyre-road 
+interface and the coefficient of friction between the tyres and the road. As the water level rises, 
+the vehicle becomes more buoyant and less vertical force is available at the tyres to maintain 
+traction.
+The testing procedure was designed to, as closely as possible, mimic the conditions of a vehicle 
+entering a flood flow. By flooding the test tank quickly to ensure minimal water ingress into the 
+vehicle cabin, and then towing the vehicle sideways (perpendicular to the direction of travel) 
+using a winch assembly attached to the wheel hub, it was possible to measure the force required 
+to break traction for the entire vehicle or specifically at the rear axle. 
+A rapid flood situation is typical of rising flood waters or driving into floodwaters, where the 
+ingress of water into the vehicle is limited by the effective cabin and door seals found in modern 
+vehicles. This situation when the vehicle is at its most buoyant, and therefore most vulnerable, 
+is considered the worst-case scenario. A vehicle submerged for some time will be filled with 
+water, be less buoyant and therefore require more force to move. 
+The winch test assembly consisted of a vertically arranged vehicle winch, a dynamometer (to 
+measure the forces), and a pulley. This allowed the winch and instrumentation to be clear of the 
+water during testing (see Figure 4-1).
+5.2 Test vehicles
+Two vehicles were tested in this study. Their selection was based predominantly on availability 
+and the representativeness of two ends of the vehicle spectrum: a lighter modern vehicle that 
+would be more easily swept away in flood waters (Toyota Yaris), and a typical large 4WD (Nissan 
+Patrol). Specifications for each vehicle are provided in Table 5-1.
+Table 5-1: Vehicle specifications of prototype vehicles in present study
+Toyota Yaris Sedan 2006 Nissan Patrol GRII 1998
+Vehicle Weight 1045 kg 2478 kg
+Length 4.3 m 4.97 m
+Width 1.69 m 1.84 m
+Floorpan Height
+(measured) 0.155 m 0.50 m
+Modifications None Front Bull Bar, Kick Plates
+Tyres Front:
+Bridgestone Potenza
+195/60R15
+Rear:
+Hankook Optimo
+185/60R15
+Dunlop Grandtrek
+265/70R16
+The Toyota Yaris is representative of smaller vehicles most vulnerable to instability in 
+floodwaters and therefore of interest for defining limits for floodplain management and 
+
+WRL Technical Report 2017/07 FINAL May 2017 22
+emergency planning. Characteristics such as light body weight, watertight body, and relatively 
+low floor pan level make these types of vehicles more vulnerable to floodwaters. 
+Recent research by Haynes et al., (2016) noted that vehicle related flood fatalities in 4WDs have 
+increased in the last 15 years in Australia. Testing of the Nissan Patrol 4WD provided further 
+information for vehicles that may be more likely to be deliberately driven into floodwaters. This 
+test case is also relevant to flood rescue vehicles, which are generally by 4WD vehicles or larger. 
+Photographs of the test vehicles are provided in Figure 5-1 and Figure 5-2.
+Figure 5-1: Toyota Yaris in WRL’s test facility, preparing for a winch test from both axles
+Figure 5-2: Nissan Patrol in WRL’s wave facility, preparing for a winch test from the rear axle
+
+WRL Technical Report 2017/07 FINAL May 2017 23
+Figure 5-3: Winch assembly in WRL Lab#2, including (a) framework, winch and dynamometer, 
+(b) pulley and wheel attachment
+5.3 Tyre coefficient of friction
+The coefficient of friction between the concrete floor of the test facility and the vehicle tyre was 
+tested. Testing was performed on a tyre set to specified pressure, with the vehicle winched 
+sideways (perpendicular to the direction of motion), and wheels locked (handbrake on and 
+automatic transmission set to “park”). The results include the effect of tyre deformation, so are 
+somewhat different to the coefficient of friction between surfaces provided by Wong (1993), and 
+the coefficient of friction under braking more generally tested (both discussed in Section 4.2.1).
+The Toyota Yaris was tested in WRL’s tow tank. The vehicle weight was estimated using the 
+specified vehicle wet weight (1045 kg) plus the driver load of 60 kg (chosen for a small to 
+medium sized adult). The tow force is the average of two tests conducted on the vehicle towed 
+from both axles on a wet concrete floor.
+The Nissan Patrol 4WD coefficient of friction was tested twice, on both a wet floor and dry floor. 
+Tests of the coefficient of friction were conducted by towing the vehicle from the rear axle only. 
+The weight of the 4WD vehicle at the rear axle was measured directly by using the dynamometer 
+to lift the rear wheel vertically. The wheel was lifted only enough for the tyre to clear the 
+ground, to minimise unloading of the other tyres. This approach may overestimate the vehicle 
+weight, resulting in an underestimate of the coefficient of friction.
+The results of these tests are provided in Table 5-2. A comparison between the two conditions 
+for the Nissan Patrol is consistent with Wong (1993) which indicates that there is little difference 
+in the coefficient of friction on wet or dry concrete.
+
+WRL Technical Report 2017/07 FINAL May 2017 24
+Appropriate corrections to the traction force due to the difference between the coefficient of 
+friction in the ideal laboratory conditions provided here and a suitably conservative coefficient of 
+friction to be used in estimating the stability of vehicles in flood waters is discussed in detail in 
+Section 4.2.1.
+Table 5-2: Coefficient of friction results*
+Nissan Patrol Nissan Patrol
+Method Wet Floor,
+Rear Axle
+Dry Floor,
+Rear Axle
+Vehicle Weight (1290kg) (1290kg)
+Tow Force (964kg) (1011kg)
+Coefficient of Friction μ 0.75 0.78
+Conservative Coefficient of Friction
+μ
+0.3 0.3
+*Unfortunately direct measurements for coefficient of friction were not completed for the Toyota Yaris
+5.4 Overview of traction tests
+Tractions tests were conducted on the two vehicles in varying water depths. This demonstrated 
+the reduction in traction force required to move the vehicle as static buoyancy lifted the vehicle.
+In all cases the vehicle was winched sideways (the winching cable was perpendicular to the 
+driving direction). The cable arrangement was set so that the cable was perpendicular to the 
+ground and no vertical loading was applied by the winch. Tyres were checked daily to ensure 
+the specified tyre pressure was used throughout the testing program. The dynamometer was 
+zeroed immediately prior to each test. The output from the dynamometer was logged at 5Hz for 
+data post-processing. The accuracy of the dynamometer is 8 kg, being 0.1% of its full scale 8 
+tonnes, and has a measurement error of +/-2 kg. 
+The resulting time series of traction force as measured by the dynamometer were subsequently 
+analysed. The peak traction reading for each test was logged and was used for the analysis of 
+vehicle stability later in this study.
+The Toyota Yaris testing was conducted for three (3) scenarios:
+• With an equivalent driver occupant only of weight 60 kg (small adult), winched from the 
+rear axle.
+• With a driver occupant only of weight 60kg, winched from both axles.
+• With four occupants having a combined weight of 240 kg distributed between 4 seats, 
+winched from the rear axle.
+Vehicle occupants were represented using sandbags.
+The rear axle only tests provided the stability limit state as it is expected that the reduced 
+vehicle weight over this axle will lose traction first (see discussion in Section 2). The tests on 
+winching the whole vehicle (both axles) provided data for the calculation of the coefficient of 
+friction, as well as validation data for assessment of the vehicle stability as a whole. To ensure 
+the minimum amount of water ingress into the Toyota Yaris, the basin was rapidly filled in less 
+than two minutes from an adjacent reservoir basin using a flood gate (Figure 5-4).
+
+WRL Technical Report 2017/07 FINAL May 2017 25
+Figure 5-4: Rapid filling of WRL’s test tank (wave basin). The winch assembly is also shown.
+The Nissan Patrol 4WD, was tested in two (2) WRL facilities. Initial tests in the first facility 
+(wave basin) provided water depths up to 660 mm. Subsequent modelling in the second facility
+provided deeper water conditions (of up to 1.3 m) which enabled the 4WD vehicle to float with 
+the rear wheels lifted off the ground. All 4WD testing was conducted with loading for a single 
+driver occupant (60kg), and was winched from the rear axle only.
+Due to the slower fill time of the second laboratory facility (Lab 2), accessible leakage points in 
+the 4WD cabin were sealed with silicon, and a submersible pump was used to evacuate water 
+ingress. In this way the vehicle would remain buoyant for an indefinite period, even at high 
+water levels.
+For both test methods, there was some small pooling of water towards the front of the vehicle
+cabin, estimated to be less than 50L in both cases. Pooling in the floor of the cabin was always 
+at the front of the vehicle because the higher rate of buoyancy at the rear of the vehicle tilted 
+the vehicle forwards. This filling would increase the resulting measured traction force somewhat. 
+However, it is considered negligible because the majority of the effect would be at the front 
+wheels, while the rear is the critical point of vehicle instability. Some ingress of water would be 
+anticipated into vehicles in real world flood emergencies in all but the most extreme rapid 
+submersion scenarios (e.g. driving at speed into rapidly deepening waters).
+
+WRL Technical Report 2017/07 FINAL May 2017 26
+Figure 5-5: Toyota Yaris in WRL’s wave basin facility, in 0.6 m water depth with rear wheels clear 
+of the floor
+Figure 5-6 The lead author demonstrating zero traction at the rear wheels for the Nissan Patrol 
+4WD in WRL’s Lab#2 testing tank. Water depth is approximately 1.0m.
+5.5 Test results
+Time series of traction force for each test is provided in Figure 5-7 to Figure 5-9 for the Toyota 
+Yaris, and Figure 5-10 for the Nissan Patrol 4WD. Note that the forces have been converted to 
+kN for these figures, while the data recorded by the dynamometer is in metric tonnes.
+Results of the peak measured traction force (the maximum force measured) for tests on the 
+three (3) cases for the Toyota Yaris are provided in Table 5-3. Results of the peak measured 
+traction force for tests on the Nissan Patrol 4WD are provided in Table 5-4.
+
+WRL Technical Report 2017/07 FINAL May 2017 27
+Points on the vertical axis (traction force ≈ 0kN) indicate those depths where the vehicle could be 
+pushed by hand. In these tests, the vehicle floated while a constant hand pressure applied by 
+an observer. The instant at which the vehicle would move sideways, the water level was 
+recorded. In all cases the rear wheels would rise off the ground while the front wheels remained 
+grounded. Pushing the side of the vehicle towards the rear would pivot the vehicle around the 
+front wheels.
+Measurement Uncertainty
+The accuracy of the dynamometer is 0.1% of full deflection (8kg or 78.48N). Other sources of 
+error, such as pulley friction, are estimated to be less than 100N. Error in the measurement of 
+water depth is largely due to water level fluctuations following rapid filling and are estimated to 
+be less than 20 mm.
+Figure 5-7: Traction force time series for tests on the Toyota Yaris with one driver occupant, 
+winched from the rear axle only
+
+WRL Technical Report 2017/07 FINAL May 2017 28
+Figure 5-8: Traction force time series for tests on the Toyota Yaris with four occupants, winched 
+from the rear axle only
+Figure 5-9: Traction force time series for tests on the Toyota Yaris with one driver occupant, 
+winched from both axles
+
+WRL Technical Report 2017/07 FINAL May 2017 29
+Figure 5-10 Traction force time series for tests on the Nissan Patrol with one driver occupant, 
+winched from the rear axle
+Table 5-3: Measured peak horizontal traction force results for the Toyota Yaris
+One Occupant, Rear Axle One Occupant, Both Axles Four Occupants, Rear Axle
+Water 
+Depth (m)
+D
+Horizontal Force 
+(kN)
+Water 
+Depth D 
+(m)
+Horizontal Force 
+(kN)
+Water 
+Depth D 
+(m)
+Horizontal Force 
+(kN)
+0.00 4.670 0.00 10.202 0.00 7.083
+0.00 4.728 0.00 9.653 0.00 7.828
+0.00 4.513 0.10 9.398 0.07 6.200
+0.10 4.199 0.10 9.947 0.15 6.396
+0.16 4.258 0.10 9.280 0.15 6.377
+0.16 4.925 0.15 9.143 0.20 6.789
+0.19 4.081 0.15 9.849 0.30 5.847
+0.20 3.885 0.19 7.770 0.42 4.885
+0.25 3.983 0.21 9.575 0.52 3.983
+0.28 4.218 0.30 7.848 0.57 3.178
+0.35 4.042 0.30 7.495
+0.40 2.786 0.40 6.239
+0.49 1.373 0.40 7.652
+0.50 2.021 0.41 5.886
+0.56 0.000 0.48 5.454
+0.60 0.000 0.50 6.710
+0.61 0.000 0.52 5.808
+
+WRL Technical Report 2017/07 FINAL May 2017 30
+Figure 5-11: Measured peak horizontal traction force for a Toyota Yaris 2006 in varying static 
+water levels. Tests were conducted on three scenarios with varying passenger loads and tow 
+points
+Two passenger scenarios i) driver only; and ii) driver plus three (3) passengers were tested in 
+the Toyota Yaris. These results showed that the number of passengers in the car affected the 
+vehicle stability threshold and that the limiting case was the case with the driver only. The 
+additional passengers increased the overall vehicle weight resulting in an increase in the traction 
+force. Tests were also conducted to determine the difference between the threshold force to 
+move sideways by pulling both front and rear axles and the rear axle only. Test results noted 
+that, as is observed in video footage of real flood situations, the limiting case is the case of rear 
+axle instability where the rear (no engine) end of the car floats first causing the car to pivot on 
+the front wheels an roll in the direction of flow. Since the limiting case was shown to be rear 
+axle instability, further testing of the Nissan Patrol 4WD was for the rear axle only.
+
+WRL Technical Report 2017/07 FINAL May 2017 31
+Table 5-4: Measured peak horizontal traction force results for the Nissan Patrol
+One Occupant, Rear Axle
+Water 
+Depth D
+(m)
+Horizontal Force 
+(kN)
+0 9.633
+0 9.280
+0.265 9.339
+0.4 8.535
+0.505 7.102
+0.61 5.964
+0.63 6.455
+0.655 5.180
+0.66 6.298
+0.73 4.455
+0.84 3.277
+0.88 2.903
+0.92 2.139
+0.97 0.000
+0.98 0.000
+Figure 5-12: Measured peak horizontal traction force for a Nissan Patrol 4WD 1998, winched from 
+the rear axle only, with one occupant
+
+WRL Technical Report 2017/07 FINAL May 2017 32
+6. Hydrodynamic Force Testing (1:18 Scale)
+6.1 Overview
+Hydrodynamic force testing was conducted on a scale model vehicle to determine the coefficient 
+of drag (CD) for the vehicle by direct measurement of hydrodynamic drag forces on the vehicle. 
+The tested flows were typical of those capable of destabilising a vehicle and ranged from 
+subcritical (Fr = 0.3) to supercritical (Fr = 4.2) flows. The resulting coefficient of drag 
+determined in the testing was used in Equation ( 4 ) to develop the stability curves presented in 
+Section 7.
+Hydrodynamic testing was conducted in a 1 m wide tilting flume. The flume was a rectangular 
+channel with a parabolic entrance condition providing smooth and calm inflows. The tail water 
+condition could be controlled with a hinged gate at the tail of the flume. In all tests the flume 
+was kept horizontal to ensure the horizontal force component was accurately measured.
+The model scale was chosen to suit available diecast model vehicles. A scale of 1:18 is 
+commonly used for scale cars and provides very good replication of body dimensions and detail, 
+including underbody roughness. Unfortunately a model identical to the vehicle used in the winch 
+tests could not be sourced. Instead a Toyota Yaris 2005 Hatch (rather than a sedan) was used 
+in the testing. This provided similar body features, curvature and underbody roughness, though 
+the overall body length was different.
+Model scaling was based on geometric similarity with an undistorted length scale of 1:18 used 
+for all tests. The scaling relationship between length and time was determined by Froude 
+similitude, with the following relevant scale ratios (prototype divided by model) being adopted 
+for the model:
+• Length ratio LR = 18
+• Time ratio TR = LR
+0.5 = 4.243
+• Velocity ratio VR = LR
+0.5 = 4.243
+• Discharge ratio QR = LR
+2.5 = 1374.62
+• Force ratio FR = LR
+3 = 5832
+The model vehicle was suspended by fine wire cables to a rigid frame and an adjustment 
+mechanism that allowed the vehicle tyres to be held just above the surface of the flume. The 
+cables were attached to each of the four wheels. The vehicle was oriented so that the flow was 
+directly perpendicular to the vehicle (90 degrees to the direction of vehicle travel).
+The weight of the model was such that the vehicle was never buoyant under any flow condition, 
+so that only the hydrodynamic forces were measured. Buoyancy, friction and other forces were 
+not measured in the model. The vehicle was held at a fixed level, such that loading and 
+unloading of the springs due to buoyancy or rolling of the vehicle from side impact forces was 
+not considered.
+For the horizontal hydrodynamic force tests, fine wire cables were attached between the 
+upstream side wheels (front and rear) and load cells mounted on a rigid frame upstream of the 
+vehicle, see Figure 6-1. The load cells both constrained the vehicle in the longitudinal direction, 
+as well as measuring the horizontal hydrodynamic forces on the vehicle. Forces were logged at 
+20Hz.
+
+WRL Technical Report 2017/07 FINAL May 2017 33
+The impact on the calculation of the coefficient of drag using a scale model sedan rather than a 
+hatch body type, is considered to be negligible as the form of the two body shapes is similar 
+(curves at the front and rear of the vehicle) and the difference in cross-sectional area is 
+accounted for in the coefficient of drag calculation.
+Figure 6-1: Test assembly for testing of the horizontal hydrodynamic forces. Flow is from the left
+of the picture
+Instrumentation
+Forces in the model were measured using Futek LSB210 submersible load cells with full scale 
+range of 10 Lbs (4.536 kg). A coupled amplifier was used, and sampled at 20 Hz with a National 
+Instruments acquisition card () and LabVIEW. 
+Flow rates were measured using an electromagnetic flow meter with pipe diameter 100 mm. 
+Flow depths were measured using a point gauge.
+
+WRL Technical Report 2017/07 FINAL May 2017 34
+6.2 Subcritical flows (tailwater controlled)
+Subcritical flows are commonly found in flood conditions. They are typically deeper, slower 
+moving waters as demonstrated in Figure 6-2. For the experimental test under subcritical flow 
+conditions, the Froude number range was 0.30 < Fr < 0.76.
+Figure 6-2: Testing of the model in subcritical flows: Fr = 0.3, d= 0.71m, v = 0.80m/s
+(prototype)
+6.3 Critical flows (broad crested weir)
+Critical flows are less commonly found in floodwaters than subcritical flows, but these conditions 
+could be approached on broad crested weir-like structures such as bridges and causeways (see 
+Section 4). Since these floodplain structures are often used by vehicles to cross waterways, 
+there is a reasonable likelihood that vehicles crossing floodwaters might be exposed to undular 
+and wavy flows with near-critical flow conditions (Fr ≈ 1).
+The model was tested by suspending the vehicle and test rig over a broad-crested weir. The 
+weir was constructed using a single sheet of plywood, approximately 19 mm thick, on the bed of 
+the flume (Figure 6-3). No tail water control was used in these tests as flow over a broad 
+crested weir is designed to transition the flows from subcritical flows upstream of the crest to 
+supercritical flow downstream (i.e. the broad-crested weir acts as a flow control).
+Note that it is difficult to determine the exact Froude number in these conditions. The flow over 
+the weir is undulating, so that the Froude number varies above and below unity with distance. 
+Since the width of the vehicle covers some distance it also covers a range of Froude numbers.
+
+WRL Technical Report 2017/07 FINAL May 2017 35
+Figure 6-3 Testing of the model on a broad crested weir
+6.4 Supercritical flow (undershot gate)
+Supercritical flows (shallow fast flows) occur less commonly in natural systems however they 
+may be encountered at bridges or road embankments where the water transitions through 
+critical flow depth. Supercritical flow may also be found in urban environments where steep 
+slopes could exist. Under flash flood conditions, steeper roadways in the upper parts of a 
+catchment are often the predominant pathway for overland flows moving down the catchment 
+towards pit and pipe stormwater systems and creek channels. During smaller storms, these 
+kerb and gutter type flows would typically be well below the floor pan level of most vehicles and 
+safely trafficable. However, in larger storms when these flows become deeper and above the 
+floor level of exposed vehicles, the fast and turbulent nature of the flood waters may have the 
+force to push a vehicle sideways and make it unstable.
+Supercritical flows were developed in the scale test facility using an undershot gate as presented 
+in Figure 6-4.
+
+WRL Technical Report 2017/07 FINAL May 2017 36
+Figure 6-4: Testing of the model in supercritical flows d = 0.225m, v=4.0m/s (prototype), 
+CD = 1.86, Fr = 2.66
+6.5 Horizontal force testing results
+Horizontal force test results are summarised in Table 6-1. The drag coefficient results are 
+plotted against Froude number Fr in Figure 6-5.
+Coefficient of Drag
+Testing showed a range in the coefficient of drag across all flow regimes from 1.0 to 1.8. Values 
+in the subcritical range were quite scattered, but showed a slight trend upwards over the range 
+of Froude number from 0.30 to 0.76.
+Critical flows through the tested range of supercritical flows (up to Fr= 4.2), showed a smaller 
+range of coefficient of drag of 1.1 to 1.6. However, the lower values were measured in tests 
+where the flow depths were lower than the body of the vehicle, so impact is predominantly with 
+the wheels alone. Flows which impacted the body of the vehicle typically ranged from CD of 1.4 
+to 1.6. 
+Table 6-1: Summary of Horizontal Force Testing (prototype)
+Test
+Force
+Rear 
+(kN)
+Force
+All
+(kN)
+Depth
+(m)
+Velocity
+(m/s) CD Fr
+Subcritical 1 0.315 0.589 0.378 1.01 1.08 0.53
+2 0.251 0.461 0.468 0.82 0.98 0.38
+3 0.490 0.927 0.630 0.90 1.14 0.36
+4 0.437 0.781 0.711 0.80 1.06 0.30
+5 0.805 1.639 0.828 0.97 1.26 0.34
+6 0.787 1.685 0.783 1.03 1.24 0.37
+7 1.312 2.869 0.585 1.37 1.65 0.57
+8 1.283 2.770 0.585 1.37 1.60 0.57
+9 1.872 3.983 0.666 1.44 1.80 0.56
+
+WRL Technical Report 2017/07 FINAL May 2017 37
+Test
+Force
+Rear 
+(kN)
+Force
+All
+(kN)
+Depth
+(m)
+Velocity
+(m/s) CD Fr
+10 1.481 3.068 0.738 1.30 1.50 0.48
+11 1.359 2.747 0.801 1.20 1.44 0.43
+12 1.551 3.278 0.522 1.53 1.74 0.68
+13 0.601 1.155 0.342 1.39 1.30 0.76
+14 0.752 1.452 0.396 1.41 1.29 0.72
+15 0.869 1.703 0.414 1.44 1.37 0.72
+16 0.986 1.930 0.432 1.45 1.45 0.71
+17 1.073 2.129 0.441 1.46 1.54 0.70
+18 0.618 1.283 0.432 1.28 1.25 0.62
+19 0.717 1.475 0.459 1.27 1.35 0.60
+20 0.805 1.645 0.477 1.28 1.39 0.59
+21 0.601 1.248 0.585 1.05 1.24 0.44
+22 0.595 1.225 0.558 1.01 1.37 0.43
+23 0.443 0.921 0.531 0.98 1.17 0.43
+Critical 1 1.166 2.414 0.360 1.91 1.33 1.02
+2 1.400 2.933 0.378 2.02 1.35 1.05
+3 1.849 3.972 0.450 1.97 1.53 0.94
+4 1.563 3.359 0.405 2.00 1.44 1.01
+Supercritical 1 17.642 35.704 0.513 6.56 1.06 2.93
+2 10.626 22.138 0.369 5.41 1.47 2.85
+3 15.373 32.420 0.369 6.82 1.36 3.59
+4 10.509 22.039 0.378 5.26 1.50 2.73
+5 12.580 26.384 0.378 5.89 1.43 3.06
+6 9.127 19.286 0.378 4.92 1.50 2.56
+7 6.678 14.201 0.306 4.88 1.51 2.82
+8 8.946 18.569 0.306 5.80 1.39 3.35
+9 12.160 25.066 0.306 6.63 1.44 3.83
+10 2.747 5.797 0.225 3.98 1.51 2.68
+11 4.170 8.561 0.225 4.69 1.60 3.16
+12 6.374 13.046 0.225 5.75 1.62 3.87
+13 0.980 2.030 0.225 2.72 1.13 1.83
+14 1.849 3.785 0.225 3.30 1.43 2.22
+15 3.202 6.713 0.225 4.29 1.50 2.89
+16 1.930 3.750 0.225 3.16 1.54 2.13
+17 2.741 5.768 0.225 3.95 1.52 2.66
+18 0.496 0.974 0.144 2.82 1.16 2.37
+19 0.723 1.452 0.144 3.45 1.15 2.91
+20 1.067 2.123 0.144 4.20 1.14 3.53
+21 1.697 3.307 0.144 4.94 1.28 4.16
+
+WRL Technical Report 2017/07 FINAL May 2017 38
+Figure 6-5 Coefficient of Drag for a Toyota Yaris based on the horizontal hydrodynamic force tests
+
+WRL Technical Report 2017/07 FINAL May 2017 39
+7. Discussion of Results
+7.1 Observations
+This research investigation has produced two sets of results that can be consider both separately 
+and in combination.
+Prototype scale vehicle instability force measurement
+Firstly, the full scale vehicle testing produced a range of test results that measured the force 
+required for a vehicle to lose traction and become unstable for a range of water depths. Figure 
+7-1 plots these force thresholds for the case of rear wheel instability for the Toyota Yaris, 
+representative of small vehicles, and the Nissan Patrol representative of larger 4WD vehicles. 
+Figure 7-1: Vehicle stability deducted from prototype scale measurements – rear wheel horizontal 
+force thresholds versus water depth
+A salient observation from these test results is the clear distinction between the stability of the 
+vehicles when the water level is below the vehicle’s floor pan and once it reaches a point just 
+above the floor pan. The buoyancy force of the air trapped in the vehicle cabin is analogous to a 
+bubble floating on the water surface. The results in Figure 7-1 show that as soon as floodwaters 
+are deeper than the floor of the vehicle and begin to engage with the air trapped in the vehicle 
+cabin, the force required to move the vehicle sideways rapidly decreases. For the Toyota Yaris, 
+this threshold depth for force reduction is approximately 0.2 m. As the flood water depth 
+increases above 0.2 m, the force required to move the Toyota Yaris sideways rapidly decreases 
+until the rear wheels are floating off the ground and effectively zero force is required to move 
+the car sideways at a depth of 0.6m.
+
+WRL Technical Report 2017/07 FINAL May 2017 40
+Similarly for the Nissan Patrol 4WD, at a depth of approximately 0.45 m, just above the floor 
+pan, the force to move the vehicle sideways is markedly reduced. This force required to move 
+the car sideways reduces rapidly until the rear wheels of the vehicle are completely off the 
+ground, and zero force is effectively required to move the car sideways, at a water depth of 
+approximately 0.95 m.
+Model scale hydrodynamic testing
+The second set of tests conducted for this research considered the hydrodynamics of flood flows 
+impacting on a vehicle exposed to floodwaters at model scale. While numerous previous studies 
+have considered vehicle stability at model scale, the present scale model testing had the benefit 
+of the knowledge of the prototype flow force thresholds required for initiation of movement of 
+the vehicles at prototype scale. Scaling of these forces to model scale enabled informed model 
+design and testing. Model testing focussed on a range of combinations of flow depth and 
+velocity to reproduce the scaled prototype forces. By way of further explanation, the analysis 
+used the equations documented in Section 4.2 to guide the analysis. 
+Recall that a vehicle becomes unstable when the hydrodynamic force (FH) of the incident 
+floodwaters overcomes the friction force (FF) (reduced by vehicle buoyancy) i.e.:
+FH > FF (Eqn (1) Section 4.2)
+Since FF has been measured in the prototype vehicle testing and the flow depth and velocity 
+have been measured in the hydrodynamic scale model testing, the unknown parameter in the 
+hydrodynamic force equation the coefficient of drag (CD) can be estimated. Recalling that, the 
+hydrodynamics force can be expressed as:
+FH =0.5.ρ.A.CD.v
+2
+ (Eqn (3) Section 4.2)
+A comparison of the hydrodynamic model results and the prototype test results in Figure 7-2
+shows that the hydrodynamic testing reproduced a range of scaled force results that 
+encompassed the prototype stability force testing.
+
+WRL Technical Report 2017/07 FINAL May 2017 41
+Figure 7-2: Comparison of the Force vs Depth relationship for the Hydrodynamic Tests and the 
+Winch Tests; Toyota Yaris
+The hydrodynamic testing also provided interesting results and observations on flow dynamics as 
+the flood depth rises relative to the vehicle. It was observed that the hydrodynamic force on a 
+vehicle rapidly rises when the flow depth meets the vehicle floor as drag is felt not only at the 
+four wheels but across the whole side and undercarriage of the vehicle. At the same time as the 
+flow depth interacts with the floor of the car, the stabilising weight of the vehicle begins to 
+reduce the downward force on the tyres, and subsequently the traction available at the wheels, 
+as the vehicle becomes buoyant. Additionally, it is likely that some hydrodynamic uplift may be 
+felt on the upstream side of the vehicle due to the impact of water against the lower parts of the 
+car body. All these hydrodynamic phenomena confirm the significant reduction in vehicle 
+stability as flow depths meet the vehicle floor pan.
+7.2 Comparison of tested vehicles to other vehicles
+This study was conducted on two vehicles, representing a smaller, lightweight vehicle and a 
+heavier 4WD. To gain some further insight on what might be the limiting flow conditions for 
+lightweight vehicles, the characteristics of a range of smaller, lighter vehicles available in 
+Australia was compiled and compared. The weight and dimensions of a number of lightweight 
+vehicles is provided in Table 7-1.
+The information compiled in Table 7-1 demonstrates that there are a number of vehicles that are 
+lower, lighter and/or longer than the Toyota Yaris test vehicle, and so will be more vulnerable in 
+floods. As noted earlier, a significant factor for vehicle stability is the buoyant volume of air in 
+the vehicle cabin compared with the weight of the vehicle. Along with a trend towards lighter 
+bodies, contemporary passenger vehicles tend to have more spacious cabins, integration of 
+chassis and body components, and smaller engine bays. This is most notable in hatch body 
+vehicles, where the cabin extends to the car boot, and the engine bay is minimised. Similarly, 
+
+WRL Technical Report 2017/07 FINAL May 2017 42
+vehicles with long sections of body and boot rearward of the rear wheels, such as wagons, will 
+have a very buoyant rear and large aft area for flood water to impact, increasing the 
+hydrodynamic force at the rear axle. Lower vehicles will clearly be susceptible at shallower 
+water depths.
+Vehicle body dimension limits in Australia are set by the Roads and Maritime Services (Vehicle 
+Standards Information No. 5, 2012). This limits vehicle body clearance to 100 mm minimum. 
+This is significantly lower than the vehicles tested in this study. After market modifications to 
+small vehicles often include lowering the vehicle and this is likely to further reduce the stability 
+of these vehicles compared to the Toyota Yaris as tested.
+Table 7-1 Comparison of smaller sized vehicle weights and dimensions
+Vehicle Type Year
+Weight - Kerb
+(T)
+Length
+(m)
+Clearance
+(mm)
+Toyota Yaris Sedan 2006 1.045 4.3 155
+Fiat 500 Hatch 2013 1.072 3.545 104
+Ford Fiesta Hatch 2016 1.014 4.056 155
+Holden Barina Hatch 2016 1.235 4.399 149
+Hyundai i30 Hatch 2016 1.260 4.3 140
+Kia Picanto Hatch 2016 0.994 3.595 142
+Lotus Elise Convertible 2016 0.870 3.785 130
+Mazda 2 Sedan 2016 1.035 4.32 150
+Mazda 3 Sedan 2016 1.258 4.58 155
+Mazda MX-5 Miata Club Hatch 2016 1.124 3.995 117
+Mini cooper Hatch 2015 1.182 3.838 125
+Mitsubishi mirage Hatch 2016 0.890 3.795 160
+Nissan Leaf Hatch 2016 1.477 4.445 160
+Nissan Versa Sedan 2016 1.084 4.455 155
+Peugeot 208 Hatch 2016 1.070 3.973 119
+Scion IQ Hatch 2016 1.005 2.985 135
+Subaru Impreza Sedan 2016 1.340 4.585 145
+Suzuki swift Hatch 2016 1.050 3.85 140
+Toyota Yaris Sedan 2010 1.030 4.3 117
+Vehicles with rear mounted engines will have a similar response to forward mounted engine 
+vehicles, except that the front wheels will lose traction first. Travelling into deepening waters in 
+a rear engine mounted vehicle with the vulnerable front wheels first, means that the vehicle may 
+well be destabilised earlier and therefore be more vulnerable than a vehicle with a front mounted 
+engine.
+The Nissan Patrol 4WD as tested can be considered representative of larger 4WD vehicles. 
+There is a trend to ‘soft’ 4WD vehicles and sport utility vehicles (SUV’s) that may be capable of 
+light off-road activities, but will be substantially more vulnerable in floodwaters than the results 
+for the testing the Nissan Patrol would indicate since these vehicles have less mass and are 
+comparatively lower to the ground.
+
+WRL Technical Report 2017/07 FINAL May 2017 43
+7.3 Testing uncertainties
+The following uncertainties in the model testing are noted:
+• Measurement uncertainty at both prototype and model scale. This is a minor and 
+quantifiable uncertainty, but nevertheless present.
+• Scaling effects. While the scale adopted for the modelling (1:18) was suitable for the 
+major forces of gravity and inertia, minor forces acting on the vehicle may not be well 
+represented at this scale;
+o The impact of very turbulent, pulsating or varying flows has not been considered 
+but is important in initially destabilising a vehicle;
+o The changes to vehicle height and roll angle (loading and/or unloading of the 
+suspension) due to buoyancy and side impact forces were not considered in the 
+hydrodynamic tests;
+o The testing was conducted in ideal conditions, with regular channel dimensions 
+and steady flows. This is rarely the case in real world conditions;
+o Uplift forces on the vehicle were poorly determined in the testing, this is largely 
+due to the magnitude of surface tension forces compared to the weight of the 
+vehicle. In other words, when considering the vertical forces, the weight of the 
+water raised by surface tension was significant compared with the uplift forces. A 
+larger scale and careful handling of this is required.
+• The Coefficient of Friction between tyre and road surface in actual flood conditions, as 
+opposed to wet road testing, is not well understood.
+• Only two vehicles were tested and they do not represent the limiting case for vehicle 
+stability.
+These uncertainties are largely unquantifiable and so a level of conservatism is required when 
+interpreting and applying the test data in this report.
+7.4 Interpretation of test information for floodplain management and 
+emergency management
+7.4.1 Preamble
+The prototype scale testing of vehicles conducted for this investigation has provided some stark 
+information on the vulnerability of vehicles as they interact with floodwaters.
+Testing showed that the stabilising force due to the weight of a vehicle begins to rapidly reduce 
+once floodwaters rise above the floor of the vehicle and the ‘bubble’ of air contained in the 
+vehicle’s cabin imparts an uplifting buoyancy force on the vehicle. Test results showed that 
+when flow depths increase to moderate levels, even large, heavy vehicles will reach a limiting 
+depth where they completely float. In the testing conducted for this investigation, a large 
+Nissan Patrol 4WD with a kerb weight of greater than 2.4 tonne was shown to completely 
+float in a water depth of 0.95 m. Smaller vehicles like the Toyota Yaris with weight of about 
+1.0 tonne are far more vulnerable due to their lower kerb weight. The Toyota Yaris tested in 
+this investigation completely floated in water 0.6 m deep.
+Results from this investigation have demonstrated that moving flood waters have significant 
+momentum and can impart large hydrodynamic forces to vehicles exposed to the flow. This is 
+not a surprising outcome. To provide some context, each one (1) metre cube of water (1 m 
+by 1 m by 1 m box) of water weighs one (1) tonne. If a small car like a Toyota Yaris, which is 
+
+WRL Technical Report 2017/07 FINAL May 2017 44
+4.3 m long, is exposed to floodwaters 0.4 m deep travelling at 1 m/s (3.6 km/h), which is 
+less than walking pace, then the car is being impacted by one tonne of water every second. So 
+the force of the water impacting the vehicle, even at walking pace, is similar to being in a 
+collision with another small car every second. If the water is moving at walking pace of 
+2m/s (7.2 km/h) the force of the water is similar to a collision with a 4WD every 
+second.
+In fast moving flows, which can be upwards of three (3) to four (4) metres per second when 
+flows pass over bridges and causeways, this means that the smallest vehicles (see Table 7-1) on 
+Australian roads can become vulnerable when the flow is above the vehicle floor level in flood
+depths as shallow as 0.15 m (15 cm).
+Many 4WD manufacturers highlight the ability of 4WD vehicles to operate in water. For 
+example, the Ford Ranger is advertised as being able to negotiate water up to depths of 0.8 m 
+(http://www.motoring.com.au/new-ranger-in-deep-water-24397/ accessed 21 March 2017). 
+The alarming aspect of this claim is that the testing conducted for this investigation showed that 
+in water 0.8m deep, a 4WD vehicle would become unstable and vulnerable to being washed off a 
+bridge or causeway in flow travelling at about walking pace (i.e. 2 m/s or 7.2 km/h).
+Since the force of flowing water is proportional to the velocity squared (see equation 3), small 
+increases in flow speed result in significant increases in the force the flow can impart. 
+Observations of flood flows in the field note that they rarely pass over a roadway steadily.
+Rather, observations of real floods show that flows can change rapidly increasing and decreasing 
+in both depth and speed in a ‘surging’ or random ‘pulsing’ manner. In an operational context, 
+these often rapidly changing flow conditions make it very difficult to determine whether a 
+floodplain crossing is safe or not.
+For flow depths that impact the body of the vehicle, there is no simple, safe guidance for vehicle 
+stability. Flows impacting the vehicle body may be safe for low depths and low velocities, but it 
+is highly variable from vehicle to vehicle, and as noted above, judgement of flow velocity (and 
+often depth) is difficult in real world situations.
+In a flood emergency, the best advice remains to simply avoid driving in floodwaters.
+7.4.2 Comparison with existing flood hazard curves
+The testing conducted for this investigation provides the opportunity to review the flood hazard 
+curves for vehicles derived for floodplain planning and emergency management, such as the 
+hazard curves published in ARR P10 (Shand et al., 2011) and AEMI Handbook 7 (2014). These 
+hazard curves provide a means for floodplain and emergency managers to classify flood 
+behaviour, as described by measured or predicted flood depths and flood flow velocities, with a 
+‘danger’ rating. The hazard rating for vehicles has been in the past, been quantified by the best 
+estimate of flow conditions that would cause a vehicle to become unstable in floodwaters and 
+wash away downstream. An example of a set of hazard curves from AEMI Handbook 7 (2014) is 
+provided in this report as Figure 2-1.
+Consideration of the prototype instability force testing and model scale hydrodynamic testing in 
+combination enables flow instability threshold conditions for vehicles to be developed and 
+compared to existing flood hazard curves. This assessment requires estimation of suitable values 
+for coefficients in the governing equations described in Section 4.2. In particular, the analysis 
+
+WRL Technical Report 2017/07 FINAL May 2017 45
+requires the adoption of values for the coefficient of drag (CD) for the partially submerged 
+vehicle and the coefficient of friction (µ) for the vehicles tyres.
+A conservative effective coefficient of friction of 0.3 was adopted on the basis of the discussion in 
+Section 4.2.1 and the ratios summarised in Table 5-2. This value was adopted using similar 
+reasoning to the findings of Bonham and Hattersly (1967) who considered a braking force 
+coefficient of 0.5 on a worst case scenario of “a smooth causeway surface on a wet country 
+road” with adjustments made for a reduced sideways force compared with breaking force (10%), 
+the reduced slipping force compared with peak breaking force (20%), and a further reduction 
+due to debris that may become caught under the wheels (20%). This results in an adopted
+coefficient of friction of 0.3.
+An adopted coefficient of drag of 2.0 provides a conservative value based on the range of 
+measured values provided in Section 6 as summarised in Table 6-1. Uplift is assumed to be 
+zero, but can be considered to be accounted for in the conservative value of coefficient of drag.
+A comparison of data derived from the testing on the basis of these adopted coefficients with the 
+currently adopted curves from ARR P10 is provided in Figure 7-3 for the Toyota Yaris 
+(representative of small cars) and in Figure 7-4 for the Nissan Patrol (representative of large 
+4WD vehicles.
+Figure 7-3: Stability Curve for a Toyota Yaris based on full scale traction tests, upper limits for 
+the Coefficient of Drag CD = 2.0 based on scale testing, and points scaled to a flood condition 
+Coefficient of Friction of 0.3
+At face value, the test results presented in Figure 7-3 indicate that the Toyota Yaris is more 
+stable than the interim vulnerability threshold condition for a ‘small passenger vehicle’ from ARR 
+P10 expressed in terms of a flow velocity times depth product (v.D). The interim adopted 
+
+WRL Technical Report 2017/07 FINAL May 2017 46
+hazard threshold for a small passenger vehicle from ARR p10 is v.D = 0.3 whereas the data from 
+the testing of the Toyota Yaris results in a v.D threshold of approximately 0.5.
+Similarly, the test results presented in Figure 7-4 indicate that the Nissan Patrol 4WD is 
+significantly more stable than the interim vulnerability threshold for a ‘large 4WD vehicle’ from 
+ARR P10 of 0.5. The hazard threshold estimated from the test results for the Nissan Patrol has a 
+factor of safety of more than two (2) times the ARR P10 interim hazard guidelines.
+Figure 7-4: Stability Curve for a Nissan Patrol based on full scale traction tests, upper limits for 
+the Coefficient of Drag CD = 2.0 based on scale testing, and points scaled to a flood condition 
+Coefficient of Friction of 0.3
+There are, however, a range of limitations and in the testing regime which need to be carefully 
+considered when interpreting the test results from this investigation into a form suitable for 
+classifying flood hazard behaviour for floodplain planning or emergency planning and operations.
+Firstly, when considering the vulnerability classification for small passenger vehicles, the Toyota 
+Yaris, while small, is far from the smallest, most vulnerable vehicle on Australian roads. Table 
+7-1 lists a number of vehicles that have lower road clearance and lighter kerb weight than the 
+Toyota Yaris.
+Similarly, while the Nissan Patrol might be considered representative of ‘large 4WD vehicles’
+there are numerous smaller 4WD vehicles that are lighter and have less ground clearance in this 
+class of vehicles. 4WD vehicles are also more likely to have larger tyres for off-road driving that 
+provided added buoyancy to the vehicles.
+Secondly, there are a number of mitigating factors within the testing program that make it 
+sensible to apply a conservative interpretation of the results for a real-world application. These 
+
+WRL Technical Report 2017/07 FINAL May 2017 47
+relate predominantly to the interpretation of the hydrodynamic flow conditions from the 1:18 
+scale modelling to real world conditions and include:
+• The laboratory testing was conducted in ideal conditions, with regular channel 
+dimensions and steady flow. These conditions would rarely be encountered in real world 
+conditions. In the real world, flows are often sediment laden and sometimes contain 
+large debris both of which would increase the flow force on an exposed vehicle. Road 
+surfaces in flood affected areas are also often uneven with potholes and loose gravel 
+making full contact of all wheels on the submerged road surface problematic;
+• Laboratory testing was completed with stationary vehicles. In real flood conditions, most 
+cars will be driven into floodwaters and the act of rolling into the floodwaters may 
+contribute additional uplift forces and an associated reduction in friction not accounted 
+for in the testing; 
+• The impact of turbulent, pulsating or varying flows has not been considered in the 
+testing but might often be prevalent in real world conditions, especially in flash flood 
+conditions, and is likely important in initially destabilising a vehicle;
+• The present test considered a simplified area for the drag force calculations. While the 
+flow would increase in the close proximity of the vehicle, in the present test the crosssectional area of the vehicle impacted by drag force was calculated based upon the flow 
+depth measured upstream of the vehicle. This would have resulted in a proportionally 
+larger flow velocity in the model and a reduced flow depth close to the vehicle;.
+• The changes to vehicle height and roll angle (loading and/or unloading of the 
+suspension) due to buoyancy and side impact forces were not considered in the scale 
+hydrodynamic tests;
+• Uplift forces on the model scale stationary vehicle were not well represented in the 
+testing, largely due to the magnitude of surface tension forces compared to the weight of 
+the vehicle. In other words, when considering the vertical forces, the weight of the 
+water raised by surface tension was significant compared with the uplift forces in the 
+model.
+In due consideration of these aspects of the testing program i.e. i) that the test vehicles are not 
+representative of the most vulnerable vehicles in their class on Australian roads; and ii) that 
+there are limitations with the absolute accuracy of the results in the testing program, it is 
+appropriate that flood hazard thresholds for planning purposes remain conservative compared to 
+the test data presented here.
+On this basis, the authors recommend that the interim flood hazard threshold curves from ARR 
+P10 summarised here as Table 7-2 for the two vehicle classes tested in this investigation be 
+adopted for use in future floodplain management and emergency management.
+
+WRL Technical Report 2017/07 FINAL May 2017 48
+Table 7-2: Proposed flood hazard thresholds for vehicle stability
+Class of 
+Vehicle
+Length 
+(m)
+Kerb 
+Weight 
+(kg)
+Ground 
+Clearance 
+(m)
+Limiting 
+Still Water 
+Depth1
+Limiting 
+High 
+Velocity 
+Flow 
+Depth2
+Limiting 
+Velocity3
+Equation of 
+Stability
+Small 
+passenger
+< 4.3 < 1250 < 0.12 0.3 0.15 3.0 D.V ≤ 0.3
+Large 4WD > 4.5 > 2000 > 0.22 0.5 0.3 3.0 D.V ≤ 0.6
+1 At velocity = 0 m/s; 2 At velocity = 3 m/s; 3 At low depth
+
+WRL Technical Report 2017/07 FINAL May 2017 49
+8. Conclusions
+A study of vehicle stability in floodwater flows was conducted at UNSW Sydney WRL’s 
+laboratory’s facilities incorporating full prototype scale testing of traction and buoyancy forces on 
+a vehicle in static water, and hydrodynamic force measurement on 1:18 scale model vehicles. 
+The traction force tests conducted are novel in research on stability of vehicles, and show that 
+traction decreases rapidly with depths above the vehicle’s floor pan level. The testing confirmed 
+that the rear wheels (wheels not weighted by the engine) lose traction far earlier than the front 
+wheels.
+Hydrodynamic testing showed that coefficients of drag for the vehicle in free surface water flows, 
+perpendicular to the vehicle, are far higher than typical wind tunnel based aerodynamic drag 
+coefficients. These are consistent with drag coefficients predicted by Hoerner (1965) for water 
+surface piercing drag and complicated by the vehicle geometry and low depth to vehicle length 
+ratios. The coefficient of drag varies non-linearly with the flow condition, but is generally within 
+the range 1.2 and 2.0 for typical, dangerous conditions.
+The test program and analysis presents a novel approach to the derivation of stability curves for 
+vehicles in flood flows, by dissecting the forces that impact the vehicle, applying appropriate 
+factors of safety, and evaluating vehicle stability directly from the stability balance equation. 
+Observations from the testing indicate that where floodwaters impact the body of the vehicle, 
+the vehicle is at serious risk of losing traction and being washed downstream. Flows that do not 
+impact the body of the vehicle (hitting the wheels only) are generally safe for that vehicle.
+Analysis of results from this investigation showed that the subject test vehicles were more stable 
+in flood flows than the flood hazard vulnerability thresholds typically applied for floodplain 
+management and emergency management as documented by guidelines such as Australian 
+Rainfall and Runoff Review Project 10 (ARR P10) (Shand et al., 2011) and AEMI Handbook 7 
+(2014). 
+However, mitigating factors described in this report, notably i) that the tested vehicles, while 
+representative, were not the smallest in their vehicle class and ii) that controlled laboratory 
+conditions need to be interpreted to uncontrolled real life flood conditions means that application 
+of a level of conservatism on this study’s results is warranted.
+8.1 Recommendations
+In the course of this investigation, numerous issues were encountered, which with the fullness of 
+time and available funding, warrant further analysis.
+These issues include:
+1. Vehicles should primarily be tested with the vehicle oriented at or near perpendicular to 
+the flow. Consideration for vehicles at other angles may be beneficial, but it is expected 
+that the limiting case for vehicle vulnerability in floods is perpendicular to the flow;
+2. Further research is required on the range of coefficients of drag for a range of vehicles in 
+free surface water flow, preferably at prototype scale;
+
+WRL Technical Report 2017/07 FINAL May 2017 50
+3. Effect of pulsating or turbulent flows. Eddies, turbulence and other variations in flow are 
+likely to rock the vehicle from side to side on its suspension in floods, affecting the 
+hydrodynamic drag and uplift, and traction forces. Further study on this effect is 
+warranted.
+4. One of the significant unknowns in vehicle stability is the coefficient of friction between 
+tyres and the submerged road in flood conditions. While the coefficient of friction 
+adopted in this study and others (µ = 0.3) is conservative, a better understanding of the 
+effect of various surface types and the effect of debris on the road on tyre friction would 
+improve the accuracy of this study’s outcomes.
+5. Lifting of the vehicle (unloading the suspension) due to buoyancy was not considered in 
+the scaled hydrodynamic tests. Similarly, the rolling of the vehicle on the suspension 
+due to the side impact of the water was not considered in the scaled hydrodynamic tests. 
+Both of these would have further impacts on both horizontal and vertical hydrodynamic 
+forces on the vehicle. It is expected that a significantly larger scale would be required to 
+correctly model these forces.
+6. Testing of the model vehicle was conducted on a broad crested weir, resembling a typical 
+road embankment, but only in a single location. It is recommended that testing be 
+conducted across a range of distances downstream of the weirs upstream edge.
+
+WRL Technical Report 2017/07 FINAL May 2017 51
+9. Acknowledgements
+The authors of this report acknowledge the contribution of the NSW State Emergency Service 
+and NSW Office of Environment and Heritage for their substantial funding of this investigation.
+This research could not have progressed without the generosity of NRMA Insurance who 
+provided the test vehicles at no cost to the investigation.
+
+WRL Technical Report 2017/07 FINAL May 2017 52
+10. References
+AEMI. (2014) Australian Emergency Management Handbook: Managing the floodplain: best 
+practice in flood risk management in Australia, (AEMI Handbook 7, 2014)
+Bird, G. and Scott W.J.O. (1936) Studies in Road Friction, I. Road Surface Resistance to Skidding 
+D.S.I.R., Road Research Tech. Pap. No.1 H.M.S.O., 1936
+Bird, G. and Scott W.J.O. (1936) Studies in Road Friction, II. An Analysis of the Factors Affecting 
+Measurement D.S.I.R., Road Research Tech. Pap. No.2 H.M.S.O., 1936
+Bonham, A.J. and Hattersley, R.T. (1967) Low Level Causeways, University of New South Wales, 
+Water Research Laboratory, Technical Report No. 100, August 1967
+Bowen, W and Alexander, K. (2011) Surface Piercing Drag in CFD. In: Proceedings of the ASME 
+30th International Conference on Ocean, Offshore and Arctic Engineering. OMAE2011-49651
+Cox, R.J., Shand, T.D. and Blacka, M.J. (2010) Appropriate Safety Criteria for People in Floods. 
+WRL Research Report 240. ARR Project No. 10, prepared for Institution of Engineers Australia. 
+22p
+DIPNR (New South Wales Government Department of Infrastructure, Planning and Natural 
+Resources) 2005, Floodplain development manual: the management of flood liable land, 
+Department of Infrastructure, Planning and Natural Resources, Sydney
+Gallaway, B M, Ivey, D L, Hayes, G, Ledbetter, W B, Olson, R M, Woods, D L and Schiller, R F Jr. 
+(1979) Pavement and Geometric Design Criteria for Minimising Hydroplaning. Federal Highway 
+Administration Report RHWA-RD-79-31. 296 p
+Gerard, M. (2006). Tyre-road friction estimation using slip-based observers. Master’s thesis. 
+Dept. Automatic Control, Lund University, Lund Sweden
+Gordon, A.D. and Stone, P.B. (1973) Car Stability on Road Causeways. WRL Technical Report 
+No. 73/12. 5p + Appendices
+Haynes, K., Coates, L., Dimer de Oliveira, F., Gissing, A., Bird, D., van den Honert, R., Radford, 
+D., D’Arcy, R, Smith, C. (2016) An analysis of human fatalities from floods in Australia 1900-
+2015. Report for the Bushfire and Natural Hazards CRC
+Haynes, K. and Gissing, A. (2016) Flood deaths are avoidable: don’t go in the water. Macquarie 
+University. https://theconversation.com/flood-deaths-are-avoidable-dont-go-in-the-water-60615
+published June 7, 2016 accessed 27 September 2016
+Hoerner, S.F., (1965) Fluid-dynamic drag: practical information on aerodynamic drag and 
+hydrodynamic resistance. Midland Park, N.J.: Dr.-Ing. S.F. Hoerner
+International Federation of Red Cross and Red Crescent Societies (2015) World disasters report. 
+Geneva, Switzerland
+Jonkman, S.N. (2005) Global perspectives on loss of human life caused by floods. Natural Hazards,
+34 (2), pp.151-175
+
+WRL Technical Report 2017/07 FINAL May 2017 53
+Kramer M., Terheiden K., and Wieprecht S. (2016) Safety criteria for the trafficability of 
+inundated roads in urban floodings. In: International Journal of Disaster Risk Reduction, 17 pp. 
+77–84 http://dx.doi.org/10.1016/j.ijdrr.2016.04.003
+Keller, R.J., and Mitsch, B. F., (1992) Stability of Cars and Children in Flooded Streets In: 
+International Symposium on Urban Stormwater Management (1992 : Sydney, N.S.W.). 
+International Symposium on Urban Stormwater Management: Preprints of Papers. Barton, ACT: 
+Institution of Engineers, Australia, 1992: 264-268. National conference publication (Institution of 
+Engineers, Australia) ; no. 92/1. ISBN: 0858255472
+Martínez-Gomariz, E., Gómez, M., Russo, B. and Djordjević, S. (2016) Stability criteria for 
+flooded vehicles: a state-of-the-art review. J Flood Risk Management. doi:10.1111/jfr3.12262
+Munson, B. R., Okiishi, T. H., Huebsch W. W. and Rothmayer A. P. (2013) Fundamentals of Fluid 
+Mechanics. 7th edition
+NSW SES (2016) Flood safety warning following 300 flood rescues. Web article:
+http://www.ses.nsw.gov.au/news/76365/77179 accessed 27 September 2016
+Oshikawa H., Oshima T. and Komatsu T. “Study on the Risk for Vehicular Traffic in a Flood 
+Situation” (in Japanese). Adv River Eng 2011, 17, 461–466
+Roads and Maritime Services (2012) Vehicle Standards Information No. 5 Rev6 VSI No.5
+Shand, T.D., Cox, R.J., Blacka, M.J. and Smith, G.P. (2011) Australian Rainfall and Runoff 
+Revision Project 10: Appropriate Safety Criteria for Vehicles - Literature Review. Australian 
+Rainfall and Runoff Revision Project 10. Stage 2 Report. Prepared by the Water Research 
+Laboratory. P10/S2/020. February 2011
+Smith, G.P., Davey, E.K., and Cox, R.J. (2014) Flood Hazard. UNSW Australia Water Research 
+Laboratory Technical Report 2014/07
+Shu, C., Xia, J., Falconer, R.A. and Lin, B. (2011) "Incipient Velocity for Partially Submerged 
+Vehicles in Floodwaters". Journal of Hydraulic Research, 49 (6), pp.709-717
+Taborek, J.J. (1957) "Mechanics of Vehicles," Machine Design, May 30-Dec. 26
+Toda K., Ishigaki T. and Ozaki T. (2012) “Experiment study on floating car in flooding.”
+International Conference on Flood Resilience: Experiences in Asia and Europe, Exeter, UK, 2013, 
+6.
+Xia, J., Teo, F.Y., Lin, B. and Falconer, R.A. (2011) "Formula of Incipient Velocity for Flooded 
+Vehicles". Natural Hazards, 58 (1), pp.1-14
+Xia J., Falconer R.A., Wang Y. and Xiao X. (2011) “New criterion for the stability of a human 
+body in floodwaters.” J Hydraul Res 2014, 52, 93–104. doi: 10.1080/00221686.2013.875073
+Xia J., Falconer R.A., Xiao X. and Wang Y. (2013) “Criterion of vehicle stability in floodwaters 
+based on theoretical and experimental studies.” Nat Hazards 2013, 70, 1619–1630. doi: 
+10.1007/ s11069-013-0889-2.
+Wong J.Y, (1993) Theory of ground vehicles, 2nd ed.

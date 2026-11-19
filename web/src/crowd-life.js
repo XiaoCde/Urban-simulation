@@ -237,46 +237,6 @@ export function createCrowdLife({
     }
   })();
 
-  // 【2026-11-19 补一层「远距离同伴」】
-  // 只有同户同伴时，peersStay 会被压成两个极值：户内成员住在同一处、看到同一片水、
-  // 决策时间也接近，所以比例只在 0 与 1 之间跳。实测（240 人 5 小时）：
-  // 0 档 33.2%、≥0.9 档 66.8%，中间八档全空。
-  // 但 Borowski 2023 的系数是按**连续比例**估的（同伴中留下 0/25/50/75/100%），
-  // 把一个二值变量喂进去等于误用，而且 2/3 的判断都顶到设计上限 0.8。
-  //
-  // 依据：Sadri, Ukkusuri & Gladwin (2017, J Choice Modelling 25:50-60, Table 1)
-  // 桑迪样本 412 个 ego / 1109 条 ego-alter 关系 → 平均网络 2.69 人；其中
-  // 34.3% 的同伴在 5 英里（约 8 km）以外，这些人不会和本人同步行动。
-  // 所以给每人再补 1 个「住得远」的同伴，让网络规模接近 2.7，比例能出现中间值。
-  // 限制（如实标）：配对仍是合成的，ACS 没有户号也没有社会网络题项；
-  // 远距离阈值取 600 m 是工程折中（DC 城区尺度），不是桑迪的 5 英里原始阈。
-  (function buildFarPeers() {
-    const N = persons.length;
-    if (N < 4) return;
-    const FAR_M = 600;
-    for (let i = 0; i < N; i++) {
-      const p = persons[i];
-      const hd = p.homeDoor;
-      if (!hd || !Number.isFinite(hd.x) || !Number.isFinite(hd.z)) continue;
-      const own = p.peers || [];
-      let chosen = -1;
-      for (let step = 0; step < Math.min(N, 240); step++) {
-        const j = (i + 1 + step * 37) % N;          // 确定性探测，保证同种子可复现
-        if (j === i || own.includes(j)) continue;
-        const q = persons[j];
-        if (!q.homeDoor) continue;
-        const dx = q.homeDoor.x - hd.x, dz = q.homeDoor.z - hd.z;
-        if (Math.hypot(dx, dz) < FAR_M) continue;
-        chosen = j;
-        break;
-      }
-      if (chosen < 0) continue;
-      p.peers = own.concat([chosen]);
-      const back = persons[chosen].peers || [];
-      if (!back.includes(i)) persons[chosen].peers = back.concat([i]);
-    }
-  })();
-
   // 前 7 个行人与具名角色一一对应，共享同一目标、位置与判断，不再另跑剧本。
   // 【2026-11-15】具名演示角色是**手写的展示人物，不属于 ACS 抽样人群**。
   // 旧名册会覆盖年龄和职业，若不标明，决策内核会拿真实记录的年龄去判断一个

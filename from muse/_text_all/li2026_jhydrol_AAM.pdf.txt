@@ -1,0 +1,1382 @@
+Pedestrian dynamics in flooding disasters: an experimental study of
+unidirectional pedestrian flow under multiple water depths
+Author(s):
+Li, Xintong; Guo, Chenglin; Chen, Jie; Qin, Yufei; Zhang, Jun; Bode, Nikolai W F; Song,
+Weiguo
+Published in:
+Journal of Hydrology
+DOI:
+10.1016/j.jhydrol.2026.135395
+Link to publication record on the Bristol Research Portal:
+Access record including PDF (if available)
+Document version
+Peer reviewed version
+Licence (if available)
+CC BY
+This is the accepted author manuscript (AAM) of the article which has been made Open Access under the
+University of Bristol's Scholarly Works Policy. The final published version (Version of Record) can be found on
+the publisher's website. The copyright of any third-party content, such as images, remains with the copyright
+holder.
+Citation for published version (Version of Record):
+Li, X., Guo, C., Chen, J., Qin, Y., Zhang, J., Bode, N. W. F., & Song, W. (2026). Pedestrian dynamics in
+flooding disasters: an experimental study of unidirectional pedestrian flow under multiple water depths. Journal
+of Hydrology, 672, Article 135395. https://doi.org/10.1016/j.jhydrol.2026.135395
+University of Bristol – Bristol Research Portal
+Citing this paper
+Guidance on citing material from the Bristol Research Portal is available under ‘Manuscripts and Citations’ in
+the Terms of Use (linked below).
+Terms of Use
+Full Terms of Use for the Bristol Research Portal are available online: https://www.bristol.ac.uk/researchenterprise-innovation/research-policy/pure/brp-terms/
+Has this research benefited you?
+Let us know how being able to access and read this research through the Bristol Research Portal has been
+meaningful to you by sharing your story at https://forms.office.com/e/ffL5CZ0fGT
+ Bristol Research Portal Coversheet last updated 16-Oct-2026
+Download date: 16-Nov-2026
+
+1
+Pedestrian Dynamics in Flooding Disasters: An Experimental Study of 
+Unidirectional Pedestrian Flow under Multiple Water Depths
+Xintong Li1,2
+, Chenglin Guo1
+, Jie Chen1
+, Yufei Qin1
+, Jun Zhang1
+, Nikolai W.F. Bode2
+, Weiguo 
+Song1,*
+1 State Key Laboratory of Fire Science, University of Science and Technology of China, Hefei,
+230027, People's Republic of China
+2 Department of Engineering Mathematics, University of Bristol, BS81YB, Bristol, UK
+*Corresponding author: Weiguo Song Email address: wgsong@ustc.edu.cn
+Abstract
+Floods are among the most destructive natural disasters, yet understanding of pedestrian 
+movement during floods remains limited. This study presents the first experimental investigation of 
+unidirectional pedestrian flow under no-water and three water depth conditions, revealing how water 
+depth influences movement dynamics. Findings indicate that the impact of water depth on 
+pedestrian speed and density is density-dependent. At low densities, water resistance limits 
+pedestrian movement speed, whereas at high densities, pedestrian interactions become the primary 
+constraint. Flow capacity decreases progressively with increasing water depth, by 9.3%, 14.6%, and 
+26.8%, respectively. The nearest neighbor space is jointly influenced by both density and water 
+depth. Increasing density compresses longitudinal spacing more than lateral spacing, while water 
+condition further reduces forward personal space. This spatial transition is associated with gait 
+adaptation: when step length exceeds shoulder width, the nearest neighbors concentrate on both 
+
+2
+sides of the movement axis. The pedestrian speed–headway relationship exhibits a consistent tworegime pattern—constrained and free—across all water depths. However, the step frequency–
+headway relationship shows two regimes only when water depth is below the knee (<0.60 m). Below 
+knee level, pedestrian speed regulation involves coordinated adjustments of both step length and 
+frequency. Above knee level, speed changes are primarily achieved through step length adjustments.
+Free step length decreases abruptly under water conditions (~37.7%), while free step frequency 
+declines monotonically with water depth (1.03–0.84 Hz). These results provide essential empirical 
+data for flood evacuation modeling and support the development of effective flood risk mitigation 
+strategies.
+Keywords：Pedestrian dynamics; evacuation; flooding evacuation; water depth; unidirectional 
+pedestrian flow.
+Nomenclature x'' Second-order time derivatives the 
+t
+Time y'' trajectory
+xt i( )
+Spatial coordinates of pedestrian i in 
+the defined coordinate system at time 
+t
+Ci Instantaneous curvature
+yt i( )
+v₀ Free-flow speed of pedestrian
+vt i( )
+The instantaneous speed of 
+pedestrian i
+ρₘₐx
+Maximum density at which 
+pedestrian speed approaches zero
+t
+Time interval g Fitting parameter
+Ai
+Area of the Voronoi cell of 
+pedestrian i
+a Semi-major axis of the ellipse
+ i
+Local density of the Voronoi cell of 
+pedestrian i
+b Semi-minor axis of the ellipse
+i
+v
+Instantaneous speed of pedestrian i e Eccentricity of the ellipse
+J
+Pedestrian flow rate S Area of the ellipse
+bw
+Pedestrian shoulder widths r Aspect ratio of the ellipse (a/b)
+
+3
+bt
+Pedestrian chest thickness
+a
+Variation of the semi-major axis and 
+semi-minor axis of the ellipse relative 
+h Headway
+b
+to the low-density state
+x' First-order time derivatives of the 
+trajectory
+sl Pedestrian step length
+y' sf Pedestrian step frequency
+1. Introduction
+1.1 Background
+In the face of ongoing global warming, the frequency and intensity of extreme weather events 
+have been steadily increasing, resulting in greater damage. Of these events, floods pose a widespread 
+and serious risk to urban environments and societies across the globe. Data from the Global Disaster 
+Data Platform [1] reveals that from 2003 to 2022, floods constituted 49.08% of all recorded natural 
+disasters, impacted 44.69% of the total population affected by natural disasters, and were 
+responsible for 21.54% of overall direct economic losses. With the rapid pace of urban development, 
+the impact of flooding on cities has become increasingly pronounced [2]. Particularly during the 
+rainy season, intense precipitation and the resulting floods can severely disrupt the operations of 
+densely populated urban areas, often causing substantial economic damage and loss of life.
+During flood evacuations and rescue operations, both affected individuals and emergency 
+responders often encounter situations requiring movement through floodwaters [3]. The interaction 
+between pedestrians and flowing water introduces considerable uncertainty and risk into the 
+evacuation process, potentially resulting in severe injuries or fatalities. Therefore, a thorough 
+understanding of pedestrian movement characteristics in flood conditions is essential, highlighting 
+the urgent need for research on pedestrian dynamics during flood evacuations.
+1.2 Literature Review
+
+4
+Assessing flood risk is a crucial component of monitoring and anticipating hazardous events, 
+typically based on three core elements: flood hazard, the vulnerability of the built environment, and 
+the potential consequences for affected populations [4]. Common approaches to flood risk 
+assessment during disaster scenarios involve utilizing urban geographic information [5] to develop 
+predictive flood models [6] and applying flood stability models to evaluate pedestrian risk levels 
+and generate hazard maps for human exposure [7]. In addition to water depth, hydrodynamic factors 
+such as flow variability, local perturbations, and the spatial configuration of buildings and districts 
+significantly influence flood propagation and hazard intensity. Recent numerical and laboratory 
+investigations have highlighted the role of urban morphology in shaping surface flooding patterns 
+and flow exchanges between streets and residential blocks [8-13]. These findings underscore the 
+importance of considering pure hydrodynamic behavior when assessing flood impacts on evacuation 
+processes. Despite these advances, existing risk models often rely primarily on water depth as the 
+dominant hazard indicator and typically consider only pedestrian location and density in risk 
+estimation. Research focusing specifically on individual-level impacts remains limited. Bernardini 
+et al. conducted a foundational study examining how pedestrian evacuation behavior influences 
+flood risk assessment and emergency response planning [4], proposing risk indicators at both urbanregional and outdoor spatial scales. Further, Bernardini et al. [14] explored the effects of unsteady 
+water flow on pedestrian behavior, introducing a microscale, behavior-based approach to assessing 
+flood risk in outdoor urban environments. Although these studies have significantly advanced flood 
+risk assessment methodologies, they are largely constrained by their reliance on static evaluation 
+criteria, which fail to capture the dynamic nature of pedestrian evacuation during flood events. 
+Bridging this gap is essential for developing more comprehensive and effective strategies for flood 
+
+5
+risk management.
+Ensuring the safety of individuals remains the primary objective of emergency evacuation 
+procedures. In the field of urban flood research, real-time assessment of pedestrian evacuation 
+capacity and flood hazard levels has become a key priority [13]. Recent studies have investigated 
+the mechanisms of human instability during flooding, establishing discriminative criteria through 
+water tank experiments conducted at multiple scales [15, 16], mechanical modeling [17, 18], or 
+integrated approaches combining both methods [19], involving individuals with varying physical 
+characteristics [20] and postures [16], along with different hydrodynamic conditions [21]. These 
+studies have identified two primary physical mechanisms underlying human instability: moment 
+instability (commonly referred to as toppling) and friction instability (commonly referred to as 
+sliding) [22]. Subsequent research has derived threshold values for the onset of instability using 
+mechanical models [19], complemented by experimental data to define critical combinations of 
+water depth and flow velocity associated with human instability [16, 18, 23], or has proposed 
+discriminant equations incorporating individual characteristics [20]. More recently, probabilistic 
+approaches based on laboratory experiments have been developed to account for uncertainty in 
+pedestrian stability, including scenarios in which individuals move either with or against the flow 
+[24].
+Pedestrian evacuation models designed for flood scenarios integrate flood characteristics with 
+evacuation dynamics to assess how flood hazards influence pedestrian movement processes. These 
+models are generally classified into macroscopic and microscopic categories. Macroscopic models, 
+typically developed for urban-scale flooding and often based on Geographic Information Systems 
+(GIS), account for the dynamic effects of flood propagation on accessible pedestrian and vehicular 
+
+6
+routes, as well as shelter availability [25], to estimate evacuation times [26, 27]. They have also 
+been used to explore optimal evacuation strategies [28] evacuation pathways [29-32], among other 
+applications. However, by their nature, macroscopic models overlook detailed pedestrian movement 
+behaviors, focusing instead on large-scale evacuation patterns. In contrast, microscopic models 
+emphasize the fine-grained simulation of pedestrian movement and their interactions with 
+floodwaters. By integrating hydrodynamic models with behavioral models of pedestrians, 
+researchers have examined various aspects of flood evacuation, such as pedestrian decision-making
+[33], evacuation processes [34-37], and evacuation efficiency [38-40]. These studies have also 
+contributed to the development of new flood hazard assessment methodologies [41]. Despite these 
+advancements, a critical limitation persists: the lack of empirical data on pedestrian movement 
+characteristics during flood events. Consequently, many current evacuation models are overly 
+simplified and idealized, which limits their ability to accurately represent the complex interactions 
+between pedestrians and flood dynamics. Overcoming this limitation is crucial for enhancing the 
+realism and practical applicability of flood evacuation modeling.
+Understanding the movement dynamics of pedestrians in water is essential for developing 
+effective flood evacuation models and forms a critical basis for formulating accurate evacuation 
+strategies and rescue protocols. Researchers have conducted experiments measuring individual 
+pedestrian speeds in controlled environments, such as water tanks [42, 43] and swimming pools 
+[44], under varying water depths. These studies consistently demonstrate that pedestrian movement 
+speed in water is significantly slower than on land. An exponential relationship has been established 
+between pedestrian speed and the specific flood force per unit width (a function of water depth and 
+flow velocity), indicating a pronounced reduction in speed as water depth increases [42-44]. 
+
+7
+Moreover, pedestrians exhibit distinct biomechanical characteristics when moving through water
+[45]. Treadmill-based experiments have investigated the biomechanical responses of individuals 
+across different age groups performing various locomotion modes at different water depths. 
+Biomechanical investigations have further explored human motion in aquatic environments using 
+wearable inertial measurement units (IMUs) and pressure sensors [46, 47]. Findings show that 
+during the stance phase in water, EMG signals from the ankle, knee, and hip joints are markedly 
+lower compared to those on land [48]. In contrast, walking in water leads to increased EMG activity
+[49] and elevated cardiorespiratory responses [50] with increasing walking speed. Furthermore, key 
+gait parameters such as knee joint range of motion, ground reaction force magnitude, momentum, 
+and impulse differ significantly from those observed during land-based walking [49, 51, 52] The 
+interaction between water and pedestrians reduces joint moments during locomotion and alters joint 
+coordination patterns [53]. However, most of these studies have focused on individual movement 
+dynamics, with limited attention given to crowd-level motion characteristics in flood evacuation 
+scenarios. Recently, Li et al. conducted experimental studies on crowd movement in a swimming 
+pool with a water depth of 0.60 m [54] and examined pedestrian flow through bottlenecks [55]. 
+These studies revealed significant differences in both macroscopic features (such as the relationships 
+between pedestrian density, speed, and flow rate) and microscopic features (including pedestrian 
+behavior and stepping patterns) of crowd movement in water compared to on-land conditions [54]. 
+Additionally, evacuation efficiency at various exit widths was found to be considerably lower in 
+water than on land [55]. Despite these advancements, the exact mechanisms by which water depth 
+affects pedestrian dynamics remain poorly understood. In particular, quantitative investigations of 
+the fundamental speed–density–flow relationships under flooded conditions remain scarce. 
+
+8
+Although previous experiments at a water depth of 0.60 m provided initial insights into the speed–
+density characteristics [54], the available dataset was limited to densities below 2.2 ped/m², leaving 
+the high-density regime unexplored. As a result, a comprehensive fundamental diagram for 
+unidirectional pedestrian flow in inundated environments has not yet been systematically 
+established. A deeper understanding of the interaction between flood conditions and pedestrian 
+behavior—particularly the influence of water on evacuation processes—is vital for enhancing public 
+safety and maintaining social stability during flood events.
+1.3 Research objectives
+This study aims to address this gap by conducting controlled experimental trials to establish a 
+comprehensive pedestrian motion database across multiple water depths and to elucidate the 
+underlying mechanisms by which flooding influences crowd dynamics. The specific objectives are 
+as follows:
+(1) to collect systematic pedestrian trajectory data under no-water conditions and three 
+representative inundation depths, thereby establishing a foundational database for different flood 
+scenarios;
+(2) to investigate the impact of water depth on the pedestrian speed–density–flow relationship 
+and to quantify how hydrodynamic resistance interacts with pedestrian density to influence 
+pedestrian speed dynamics;
+(3) to analyze changes in nearest-neighbor spatial distributions and to identify how water depth 
+and density jointly regulate pedestrian spatial dependencies;
+(4) to examine the coupling patterns of step length and step frequency across water depths and 
+
+9
+to uncover how hydrodynamic resistance alters the mechanisms of speed adjustment.
+The remainder of this paper is organized as follows: Section 2 describes the experimental setup, 
+data extraction procedures, and analytical methods. Section 3 presents the experimental results, 
+including pedestrian trajectories and behaviors, fundamental diagrams, nearest-neighbor spatial 
+distributions, and headway and pedestrian speed. Section 4 discusses the findings and concludes 
+this study.
+2. Materials and methods
+2.1 Experimental setup
+In July 2024, controlled unidirectional pedestrian flow experiments were conducted in the 
+University of Science and Technology of China. Four water depth conditions were systematically 
+tested:0.90 m (waist level), 0.60 m (above the knee), 0.35 m (below the knee), and 0 m (no water). 
+Participants were recruited through online posters, and all volunteers were briefed in advance about 
+the experimental procedures and potential risks involved. A total of 188 undergraduate student 
+volunteers (101 males, 87 females) participated in the experiment, with an average age of 22.3 ± 
+3.5 years, an average height of 1.70 ± 0.10 m (range: 1.51~1.90 m), and an average body mass of 
+62.6 ± 12.0 kg. Each water depth condition was tested in a separate session: 114 participants in the 
+0.90 m condition (first afternoon), 95 in the 0.60 m condition (second morning), 134 in the 0.35 m 
+condition (second afternoon), and 89 in the 0 m condition (second evening). To ensure participant 
+safety, six certified lifeguards were present throughout all experimental sessions, and on-site 
+medical support was available. 
+The water-based experiments were conducted in a controlled environment with still water (zero 
+
+10
+flow velocity) in a swimming pool, while the no-water condition experiments were carried out in 
+an open area in front of a teaching building. Metal guardrails were installed to define the boundaries 
+of the experimental setup. As shown in Fig. 1(c), a coordinate system was defined with its origin at 
+the lower-left corner of the 8 m corridor. The left side of the experimental layout is the 3.5 m wide 
+Holding Area, where participants waited before the experiment commenced. The global density in 
+the Holding Area was maintained at 5 pedestrians/m² prior to the start of each trial. Adjacent to the 
+Holding Area is the Buffer Area, a 4 m long and 1.8 m wide zone designed to regulate pedestrian 
+flow before entering the main corridor. The experimental area comprises an 8 m long and 1.8 m 
+wide straight corridor, within which a central 6.2 m long section (
+xm [0,6.2]
+) was designated as 
+the Measurement Area for data collection during the experiments. Prior to the experiments, 
+participants were asked to be evenly distributed in Holding Area wearing colored hats for 
+identification. To ensure consistent initial conditions, the global density in the Holding Area was 
+maintained at 5 ped/m² across all experimental trials. Participants were informed about the simulated 
+flood evacuation scenario before the experiments began and instructed to move as fast as safely 
+possible. Upon receiving the start signal from the researchers, participants moved through the Buffer 
+Area into the experimental region. The Buffer Area was designed to regulate pedestrian flow, 
+allowing individuals to accelerate and reach a relatively stable movement state before entering the 
+straight corridor. To minimize the influence of exiting pedestrians on those still within the corridor, 
+participants were instructed to continue walking 2 m beyond the corridor exit before returning to 
+the Holding Area via the side paths to await the next trial. Following the experimental design 
+principles proposed by Zhang et al. [56], this study controlled the entrance width bin and exit width 
+bout to adjust pedestrian density within the straight corridor. The detailed experimental conditions 
+
+11
+are summarized in Table 1.
+The entire experimental process was captured using a high-definition camera with a resolution 
+of 1920 × 1080 pixels and a frame rate of 25 frames per second. To enhance data reliability, 
+additional trials were conducted with the same participants on the same days. Following the 
+completion of each experiment, participants were given a 20-minute rest period before participating 
+in subsequent trials.
+Table 1. Controlled conditions and number of participants in every experimental run. The index 
+describes the experimental conditions, specifically indicating: depth - unidirectional pedestrian flow 
+- entrance width - corridor width - exit width.
+Index
+Condition Number of pedestrians
+bin [m] bout [m] 0.90 m 0.60 m 0.35 m 0 m
+90/60/35/0-U-050-180-180 0.50 1.80 114 92 134 89
+90/60/35/0-U-060-180-180 0.60 1.80 111 91 134 89
+90/60/35/0-U-070-180-180 0.70 1.80 112 92 130 87
+90/60/35/0-U-110-180-180 1.10 1.80 111 92 132 87
+90/60/35/0-U-145-180-180 1.45 1.80 110 94 133 87
+90/60/35/0-U-180-180-180 1.80 1.80 112 94 132 87
+90/60/35/0-U-180-180-120 1.80 1.20 112 94 126 88
+90/60/35/0-U-180-180-095 1.80 0.95 112 94 133 89
+90/60/35/0-U-180-180-070 1.80 0.70 114 95 128 89
+
+12
+Fig. 1. (a) Screenshot from the experiment without water; (b) Screenshot from the experiment with 
+a water depth of 0.60 m; (c) Schematic diagram of the experimental setup.
+2.2 Data collection
+The Petrack software, developed by Boltes et al. [57], was employed to automatically extract 
+pedestrian trajectories from the video recordings, as well as to perform video calibration and scaling. 
+Following calibration, the software converts two-dimensional pixel coordinates into threedimensional real-world coordinates. The resulting pedestrian position data were then used for the 
+subsequent analyses presented in this study. The pedestrian speed displayed in the pedestrian 
+trajectory diagrams corresponds to the instantaneous speed
+vt i( )
+of pedestrians, as defined in Eq. 
+(1):
+( )
+( ) ( ) ( ) ( )
+22 / 2 / 2 / 2 / 2 i i i i
+i
+x t t x t t y t t y t t
+vt
+t
+    +  − −  + +  − −     
+=
+
+(1)
+
+13
+where, 
+xt i( )
+and 
+yt i( )
+denote the spatial coordinates of pedestrian i in the defined coordinate 
+system at time t. t
+represents the time interval, which is set to be 0.4 s in this study.
+2.3 Data analysis
+(1) Pedestrian density and speed
+The estimation of pedestrian density and speed was based on the Voronoi method [58], which 
+has been widely utilized for quantitative measurements in pedestrian experiments and for extending 
+physical models. At each time step, a Voronoi diagram was generated from the instantaneous 
+positions of all pedestrians, thereby defining the personal space associated with each individual. The 
+local density and instantaneous speed of pedestrian i were then calculated as Eq. (2): 
+( )
+1
+,
+i i i
+i
+v v t
+A
+ ==
+(2)
+where, 
+i A
+is the area of the Voronoi cell of pedestrian i; and 
+vt i( )
+is the instantaneous speed 
+of pedestrian i at time t, as shown in Eq. (1).
+The calculation of pedestrian flow is defined in Eq. (3):
+ii Jv = 
+(3)
+(2) Headway
+The calculation method for the two-dimensional headway in unidirectional pedestrian 
+movement, as defined by Cao et al. [59], was employed. Pedestrian ped i was selected as the 
+detection target, and the nearest pedestrian ped j located ahead of and within a lateral range of two 
+body widths (
+bw
+) on either side of ped i 's movement direction was identified. The projection of 
+the distance between ped i and ped j along the direction of movement was defined as the headway 
+h. Fig. 2 presents a schematic illustration of the headway calculation. During pedestrian tracking 
+
+14
+using the Petrack software, head position data was extracted. Therefore, when identifying pedestrian 
+ped j, only those located within a distance of half the chest thickness (
+bt
+) in the x-direction ahead 
+of ped i were considered as potential interacting pedestrians that could directly influence the forward 
+movement of ped i. According to the national anthropometric standard Human Dimensions of 
+Chinese Adults (GB/T 10000-2023) [60], the body parameters 
+bw
+and 
+bt
+used in the figure were 
+set to 0.42 m and 0.10 m, respectively.
+Fig. 2. Schematic illustration of pedestrian headway. The arrows indicate the direction of movement, 
+the blue shaded area represents the detection range, h denotes the headway, 
+bw
+represents the body
+width, and 
+bt
+refers to the chest thickness.
+(3) Step length and step frequency
+During the walking process of a pedestrian, the body's center of gravity periodically shifts 
+between the two feet, resulting in regular oscillations in the position of the head. These oscillations 
+exhibit periodic fluctuation characteristics in the trajectory data, making it possible to extract 
+relevant gait parameters through trajectory analysis. To achieve this, the present study adopts the 
+trajectory analysis method proposed by Cao et al. [61], which uses the variation trend of 
+instantaneous curvature Ci to represent the pedestrian's walking behavior. The real-time head 
+Move direction
+ped i
+ped j
+h
+bw
+bt
+bw bw
+
+15
+position data of the pedestrian is processed to extract walking parameter information. This method 
+identifies the gait cycle using local extreme points in the trajectory data and calculates key 
+parameters such as step frequency and step length. By applying smoothing techniques to the 
+trajectory and analyzing the extreme points, the gait characteristics during walking can be 
+effectively identified. The instantaneous curvature Ci is calculated based on the trajectory data using 
+the following formula:
+( )
+3
+'2 '2 2
+i
+x y y x C
+xy
+− 
+=
++
+   
+(4)
+where, x and y denote the pedestrian's position coordinates. x' and y' are the first-order time 
+derivatives of the trajectory, while x'' and y'' denote the second-order time derivatives. 
+Subsequently, the Savitzky-Golay filter is applied to smooth the instantaneous curvature in the 
+time domain. Peaks and valleys are extracted from the smoothed curve, and their corresponding 
+time points are recorded to identify key step events in the trajectory, thereby enabling the calculation 
+of the pedestrian's step frequency and step length.
+3. Results
+3.1 Trajectories
+Fig. 3 illustrates pedestrian trajectories of three scenarios under different experiment conditions, 
+where trajectory color represents instantaneous walking speed. The first column corresponds to 
+scenario U-070-180-180 (low density), the second to U-180-180-180 (medium density), and the 
+third to U-180-180-095 (high density). From top to bottom, each column represents no-water 
+conditions, 0.35 m, 0.60 m, and 0.90 m water depth. Under low-density conditions, pedestrians in 
+dry land environments exhibit significantly higher walking speeds compared to those in flooded 
+
+16
+conditions, whereas at high density, the differences across water depths are less noticeable. 
+Furthermore, in no-water environments, pedestrians tend to maintain a buffer zone from the channel 
+boundaries, while in flooded conditions, trajectories often extend to or beyond the boundaries and 
+display greater variability, indicating disorganized movement patterns.
+Fig. 3. Pedestrian trajectories of three scenarios under different experiment conditions, where 
+trajectory color represents instantaneous walking speed. Trajectory diagrams for all experimental 
+conditions are provided in Appendix A. 
+Fig. 4 displays the corresponding lateral position distributions, where the number of peaks 
+corresponds to the number of pedestrian lanes. Under no-water conditions, two lanes are observed 
+at low density, and three lanes emerge at medium and high densities. At a water depth of 0.35 m, 
+the lane structure becomes less distinct, and at 0.90 m, the peaks are almost absent, suggesting the 
+breakdown of lane formation. These observations indicate that hydrodynamic resistance impairs 
+pedestrians’ ability to control body positioning and perceive spatial boundaries.
+
+17
+Fig. 4. Lateral position distributions of pedestrians under different experimental conditions. 
+
+18
+3.2 Fundamental diagram
+This section presents the experimentally measured pedestrian speed–density and pedestrian 
+flow–density relationships under different water depths, with a broader density range (up to 4.5 
+ped/m²).
+For data processing, the exit area—where movement direction changes and deviates from the 
+assumptions of unidirectional pedestrian flow—was excluded from analysis. Only trajectory data 
+within the interval 
+xm [0,6.2]
+ were considered. To ensure a consistent sample size across 
+different water depths, the trajectory data of the first 90 pedestrians were selected, and the Voronoi 
+method [56] was employed to calculate the instantaneous velocity and local density. One data point 
+was extracted every 10 frames to reduce temporal correlation and enhance data independence. Fig. 
+5 illustrates the resulting scatter distributions of pedestrian speed–density (Fig. 5 (a)) and pedestrian
+flow–density (Fig. 5 (b)) across four water depths, with densities reaching up to 4.5 ped/m². The 
+results show that the three flooded conditions exhibit largely overlapping distributions across the 
+entire density range, whereas no-water condition demonstrates significantly higher pedestrian
+speeds and flows at densities below approximately 2.5 ped/m².
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00
+2.25
+0 m
+0.35 m
+0.60 m
+0.90 m speed [m/s]
+density [ped/m2
+] 0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+3.5
+4.0
+0 m
+0.35 m
+0.60 m
+0.90 m flow [ped/(m·s)]
+density [ped/m2
+]
+a. b. 
+
+19
+Fig. 5. Fundamental diagrams under varying water depths. (a) Scatter plot of the pedestrian speed–
+density relationship across different water depths; (b) Scatter plot of the pedestrian flow–density 
+relationship across different water depths.
+To provide a clearer representation of the interdependence among pedestrian density, speed, 
+and pedestrian flow, we applied the binning method [62] for data processing. Fig. 6 presents the 
+error-bar plots of the pedestrian speed–density (Fig. 6 (a)) and pedestrian flow–density (Fig. 6 (b)) 
+relationships across different water depths. Overall, within the observed density range, both water 
+and no-water conditions exhibit the characteristic decrease in pedestrian speed with increasing 
+density. In the low-density regime (< 2.4 ped/m²), pedestrian speeds under water conditions are 
+significantly lower than those under no-water conditions, although this difference gradually 
+diminishes as density increases. When density exceeds 2.4 ped/m², the pedestrian speeds across all 
+four experimental conditions converge. This trend indicates that at low densities, hydrodynamic 
+resistance is the primary factor limiting pedestrian movement, whereas at higher densities, interpedestrian interactions become the dominant influence, thereby reducing the relative impact of water.
+Under the three experimental water depths, the trend of decreasing pedestrian speed with 
+increasing density was highly consistent. The pedestrian speed differences between adjacent water 
+depths remained stable at 0.05 ± 0.024 m/s and 0.06 ± 0.027 m/s, respectively. This nearly parallel 
+downward shift relationship indicates that water depth primarily results in a uniform reduction in 
+overall walking speed, without significantly altering the shape of the pedestrian speed–density curve. 
+In other words, under equivalent density conditions, the extent of pedestrian speed reduction 
+remains largely the same, indicating that the influence of water depth on pedestrian speed in 
+
+20
+unidirectional pedestrian flow is relatively limited.
+The differences in the pedestrian speed–density relationship are also reflected in the pedestrian
+flow–density relationship. Generally, under all experimental conditions, the pedestrian flow 
+increases with rising density to a peak (commonly referred to as capacity), after which it declines. 
+Under no-water conditions, the pedestrian flow remains at 2.05 ± 0.038 ped/(m·s) within the density 
+range of 1.5–2.25 ped/m², demonstrating a strong passage capacity. In contrast, under the three 
+experimental water depth conditions, the pedestrian flow stabilizes once the density reaches 
+approximately 2.4 ped/m², and the maximum capacity decreases progressively with increasing water 
+depth, measured at 1.86 ± 0.065 ped/(m·s), 1.75 ± 0.071 ped/(m·s), and 1.50 ± 0.153 ped/(m·s), 
+respectively. These findings clearly indicate that increased water depth systematically reduces the 
+overall passage efficiency of unidirectional pedestrian flow.
+Fig. 6. Comparison of fundamental diagrams at different water depths after binning processing. (a) 
+Pedestrian speed–density relationships at different water depths; (b) Pedestrian flow–density 
+relationships at different water depths.
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0 flow [ped/(m·s)]
+density [ped/m2
+]
+0 m
+0.35 m
+0.60 m
+0.90 m
+0.0 0.5 1.0 1.5 2.0 2.5 3.0 3.5 4.0 4.5
+0.00
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+2.00 speed [m/s]
+density [ped/m2
+]
+0 m
+0.35 m
+0.60 m
+0.90 m
+a. b. 
+
+21
+To further characterize the fundamental relationships at different water depths, this study 
+employed the Weidmann equation [63] to quantitatively fit the pedestrian speed–density relationship:
+11
+0
+( ) 1 max
+g
+v v e
+
+
+
+−−  
+
+=−   
+(5)
+where v₀ denotes the free-flow speed of pedestrian, ρₘₐx represents the maximum density at which 
+pedestrian speed approaches zero, and g is the fitting parameter. Multiplying this expression by 
+density yields the corresponding pedestrian flow equation [64]:
+11
+0
+( ) 1 max
+g
+J v e 
+
+
+−−  
+
+=  −   
+(6)
+The fitting results are presented in Fig. 7 and Table 2.
+Fig. 7. Quantitative representation of fundamental diagrams at different water depths. (a) Pedestrian
+speed–density relationships at different water depths; (b) Pedestrian flow–density relationships at 
+different water depths.
+Table 2. Fitting parameters from fitting the Weidmann equation to the results under different water 
+depths. Pedestrian speed and flow rate are fitted separately, resulting in different fitting parameters. 
+a.
+b. 
+
+22
+Data in this table refer to the graph in Fig. 7.
+Function Water depth (D) 𝑣0 𝑔 𝜌𝑚𝑎𝑥 𝑅
+2
+Speed
+0 m 1.68 2.97 5.32 0.79
+0.35 m 0.96 6.06 6.56 0.48
+0.60 m 0.91 5.35 7.64 0.40
+0.90 m 0.88 5.06 6.69 0.37
+Flow
+0 m 1.87 2.15 6.28 0.47
+0.35 m 0.94 6.61 6.31 0.61
+0.60 m 0.91 5.43 7.60 0.59
+0.90 m 0.85 5.88 6.12 0.430
+3.3 Spatial distribution of the nearest neighbors
+The analysis of the fundamental diagram reveals the overall pedestrian speed–density 
+relationship and capacity differences in pedestrian flow under varying water depth conditions, 
+providing a crucial basis for understanding the overall impact of water depth on pedestrian dynamics. 
+However, the pedestrian speed–density relationship primarily reflects the average characteristics of 
+collective movement and does not precisely quantify the specific influence of relative positions on 
+pedestrian motion. Therefore, beyond the analysis of the fundamental diagram, further investigation 
+into individual-level spatial characteristics is necessary. The spatial distribution of pedestrians’ 
+nearest neighbors represents a core manifestation of spatial dependence in collective movement [65]
+characterizing the spatial features of the interaction range where direct interpersonal interactions 
+occur.
+
+23
+This study selected three scenarios representing low-density (U-070-180-180), mediumdensity (U-180-180-180), and high-density (U-180-180-095) conditions, and extracted the relative 
+positions of the nearest neighbors of the first 90 pedestrians within the measurement area to 
+construct the spatial distribution map of nearest neighbors (see Fig. 8). In the figure, the x-direction 
+corresponds to the direction of pedestrian movement, while y-direction is the direction perpendicular 
+to it. The nearest neighbors are predominantly distributed along an ellipse centered at the target 
+pedestrian located at the origin, although the distribution exhibits clear anisotropic characteristics. 
+Notably, under low-density conditions, the spatial distribution of nearest neighbors forms an ellipse 
+elongated along the movement direction, reflecting a self-organizing behavior: pedestrians tend to 
+maintain greater space ahead when movement space is available. Under high-density conditions, a 
+central void emerges in the distribution of nearest neighbors, representing the inviolable personal 
+space maintained by individuals. To quantify the spatial distribution of these scattered points, this 
+study applied the weighted least squares method to fit ellipses to the data-dense regions. The fitted 
+ellipses satisfy geometric constraints, including being centered at the origin and having major and 
+minor axes aligned with the coordinate axes (
+2 2 2 2 x a y b +=1
+; 
+S ab =
+; eccentricity
+2
+e b a =−1 ( / )
+ ; for comparative purposes, the aspect ratio 
+r a b a b = max( , ) / min( , )
+ is also 
+reported as a measure of anisotropy). The fitting results are summarized in Table 3, and the 
+corresponding elliptical shapes are indicated by red solid lines in Fig. 8.
+
+24
+Fig. 8. Comparison of the spatial distributions of nearest neighbors. The scattered points represent 
+the locations of nearest neighbors, with color intensity reflecting point density. The red ellipses 
+denote the fitted distribution curves.
+Table 3. Elliptical parameters of spatial distribution of the nearest neighbors.
+Water depth (D) Condition a [m] 𝛿𝑎 b [m] 𝛿𝑏 r e S [m2
+]
+0 m
+U-070-180-180 1.22 - 0.78 - 1.56 0.77 3.00
+U-180-180-180 0.56 -54.1% 0.56 -28.2% 1.00 0.00 0.99
+
+25
+U-180-180-095 0.51 -58.2% 0.51 -34.6% 1.00 0.00 0.82
+0.35 m
+U-070-180-180 0.81 - 0.54 - 1.50 0.75 1.37
+U-180-180-180 0.50 -38.3% 0.42 -22.2% 1.19 0.57 0.66
+U-180-180-095 0.40 -50.6% 0.39 -27.8% 1.03 0.27 0.49
+0.60 m
+U-070-180-180 0.73 - 0.55 - 1.33 0.67 1.26
+U-180-180-180 0.51 -30.1% 0.46 -16.4% 1.11 0.40 0.73
+U-180-180-095 0.44 -39.7% 0.37 -32.7% 1.19 0.54 0.51
+0.90 m
+U-070-180-180 0.70 - 0.58 - 1.21 0.56 1.26
+U-180-180-180 0.56 -20.0% 0.49 -15.5% 1.14 0.48 0.86
+U-180-180-095 0.46 -34.3% 0.40 -31.0% 1.15 0.49 0.58
+Each column in Fig. 8 represents a distinct experimental water depth condition. From top to 
+bottom, they correspond to low-density, medium-density, and high-density scenarios, respectively. 
+It is evident that as density increases, the distribution of nearest neighbors exhibits a contraction 
+trend, with a more pronounced reduction along the movement direction. Meanwhile, the central 
+blank area—representing the inviolable personal space—also shrinks with increasing density. Under 
+the no-water condition, the spatial distribution of nearest neighbors in the low-density scenario 
+forms an ellipse elongated along the movement axis (a = 1.22 m, b = 0.78 m, S = 3.00 m², e = 0.77, 
+r = 1.56). Nearest neighbors are primarily located on either side of the movement axis, with 
+relatively fewer occurrences directly ahead. In the medium-density scenario, the spatial distribution 
+takes on a symmetric arc shape around the movement axis. The fitted ellipse area decreases to 0.99 
+m². The fitted parameters a and b decrease by 54.1% and 28.2%, respectively, compared to the low-
+
+26
+density scenario. In the high-density scenario, the distribution becomes nearly circular, with the 
+ellipse area further reduced to 0.73 m². Parameters a and b decrease by 58.2% and 34.6%, 
+respectively, relative to the low-density scenario. As density increases, the overall distribution of 
+nearest neighbors contracts more rapidly along the movement direction and more slowly in the 
+perpendicular direction, a pattern consistently observed across all three representative water depth 
+conditions. This suggests that longitudinal spacing is more sensitive to density changes, indicating 
+that forward personal space is a critical factor influencing pedestrian movement.
+In addition, water depth also influences the spatial distribution of nearest neighbors. Under the 
+low-density condition (U-070-180-180), an increase in water depth leads to a significant contraction 
+of the nearest neighbor space (area S decreases from 3.00 m² to 1.26–1.37 m², a reduction of 
+approximately 55–60%). The eccentricity e decreases from 0.77 to 0.56, and the aspect ratio r drops 
+to 1.21, indicating that water depth reduces pedestrians’ ability to maintain forward personal space. 
+Under the medium-density condition (U-180-180-180), the nearest neighbor distribution becomes 
+more concentrated along the movement direction in water, although the effect of water depth on the 
+overall distribution pattern remains relatively minor. Under the high-density condition (U-180-180-
+095), the nearest neighbor distributions across all four water depth conditions are nearly circular. In 
+this case, congestion effects dominate the spatial behavior, and the influence of water depth on the 
+nearest neighbor distribution becomes limited.
+The differences in the nearest neighbor spatial distribution described above are not solely due 
+to physical space compression but may also reflect pedestrians’ inherent spatial preferences and 
+self-organizing regulatory mechanisms. A plausible explanation is that this spatial pattern is closely 
+associated with pedestrians’ step length. During walking, individuals typically maintain sufficient 
+
+27
+space ahead to preserve a normal gait, while laterally, only a space slightly larger than their body 
+width is required. According to statistical data, the average body width of Chinese adults ranges 
+from 0.36 to 0.51 m [60]. To examine the relationship between space-keeping behavior and 
+individual gait characteristics, this study conducted a statistical analysis of stride lengths under the 
+same experimental conditions across different scenarios. Three representative conditions illustrated 
+in Fig. 9 were selected, and grouped box plots were generated (see Fig. 9), with both the mean and 
+median values indicated for each condition. The results show that when stride length exceeds body
+width (maximum value 0.51 m), for example, in the no-water condition, the mean step lengths at 
+low density (U-070-180-180) and medium density (U-180-180-180) are 0.82 m and 0.67 m, 
+respectively. In this case, the nearest neighbors are primarily located on either side of the movement 
+axis, with relatively fewer occurrences directly ahead (see Fig. 8); however, when stride length 
+approaches body width in other conditions, the distribution becomes more circular, with a less 
+pronounced directional bias (see Fig. 8).
+Fig. 9. Boxplots of step lengths for different water depths for the three runs (U-070-180-180, U180-180-180 and U-180-180-095). Boxes show the median and interquartile range, whiskers show 
+the most extreme data points within 1.5 times the IQR from the quartiles. Outliers are represented 
+
+28
+as individual scatter points. The table provides the mean and median values for each dataset.
+3.4 Headway and pedestrian speed
+Previous analyses of pedestrian speed characteristics based on individual local density and the 
+spatial distribution of nearest neighbors have demonstrated that the presence of water causes a 
+contraction of the space surrounding pedestrians, with the longitudinal space exhibiting greater
+sensitivity to density changes. It is important to note that although such analyses capture local 
+congestion states and interpersonal proximity, they remain insufficient for fully characterizing how 
+pedestrians dynamically respond to available space ahead in unidirectional pedestrian flows. 
+Numerous studies have revealed a stronger, more direct, and stable correlation between pedestrian 
+speed and headway—defined as the distance to the nearest pedestrian ahead—compared to the 
+correlation with local density [59, 66]. In other words, during unidirectional movement, pedestrians 
+primarily rely on their perception and assessment of the space ahead, rather than on lateral or 
+rearward spatial conditions. Therefore, to better understand the mechanisms underlying pedestrian
+speed adjustment in water conditions, it is essential to further examine the relationship between
+headway and pedestrian speed. This will help elucidate how the leading pedestrian influences the 
+behavior of the follower and provide empirical support for developing pedestrian flow models that 
+accurately reflect movement characteristics in flooded environments.
+When collecting headway data, the first 90 pedestrians within the measurement area were 
+selected as analysis subjects. Fig. 10 illustrates the relationship between pedestrian speed and 
+headway under different water depth conditions. A binning method [62] was applied along both axes, 
+using intervals of 0.1 m (headway) and 0.025 m/s (speed), respectively. The analysis reveals a clear 
+
+29
+two-regime pattern in the relationship between pedestrian speed and headway:
+(1) Constrained regime: When the headway is small, pedestrian movement is restricted by the 
+space ahead. A significant linear positive correlation between pedestrian speed and headway is 
+observed during this phase. Pedestrians exhibit high sensitivity to changes in the space in front and 
+actively adjust their walking speed to avoid potential collisions.
+(2) Free regime: When the headway exceeds a certain critical threshold, pedestrians are no 
+longer directly influenced by the individual ahead. The pedestrian speed stabilizes and remains 
+largely unaffected by further increases in headway, indicating that pedestrians have entered a freepedestrian flow state.
+a. b. 
+c. d. 
+
+30
+Fig. 10. Headway (h) - pedestrian speed (v) relationship under no-water (a), 0.35 m water (b), 0.60 
+m water (c) and 0.90 m water (d) conditions.
+To quantify the aforementioned relationship, a piecewise linear function of pedestrian speed 
+(v) and headway (h) relationship was employed to model the two-regime pattern. The fitting results 
+for each experimental water depth are presented as follows:
+2
+1.54 0.37 0.24 1.32
+0 : 0.944
+1.67 1.32 5
+hh
+m v R
+h
+ −  
+== 
+ 
+(7)
+2
+1.21 0.29 0.24 0.94
+0.35 : 0.927
+0. 68 0.94 5
+hh
+m v R
+h
+ −  
+== 
+ 
+(8)
+2
+1.16 0.28 0.24 0.96
+0.60 : 0.889
+0. 48 0.96 5
+hh
+m v R
+h
+ −  
+== 
+ 
+(9)
+2
+1.06 0.28 0.26 1.03
+0.90 : 0.880
+0. 08 1.03 5
+hh
+m v R
+h
+ −  
+== 
+ 
+(10)
+Fig. 11 illustrates the two-regime relationship between pedestrian speed and headway across 
+varying water depths. The critical headways marking the transition from the constrained regime to 
+the free regime at each water depth are as follows: 1.32 m (0 m), 0.94 m (0.35 m), 0.96 m (0.60 m), 
+and 1.03 m (0.90 m). The minimum headway required to prevent collisions remains approximately 
+0.24-0.26 m across all water depths when pedestrian speed is zero, exhibiting no statistically 
+significant variation. During the constrained regime, the slope of the pedestrian speed–headway 
+curve represents pedestrians’ responsiveness to spatial variations, and its reciprocal can be formally 
+defined as the adaptation time [62]. Experimental results indicate that adaptation times under 
+different water depths are 0.65 s, 0.82 s, 0.86 s, and 0.94 s, respectively. These findings suggest that 
+
+31
+flooded conditions delay pedestrians’ reactions to spatial changes and reduce their locomotion 
+flexibility. In the free regime, the observed free speeds of pedestrian under each water depth 
+condition are 1.67 m/s (0 m), 0.86 m/s (0.35 m), 0.84 m/s (0.60 m), and 0.81 m/s (0.90 m), 
+demonstrating that the presence of water significantly constrains the maximum walking speed. 
+However, the relatively small differences in free speeds across water depths imply a limited 
+influence of water depth on the maximum speed of collective movement, a result that aligns with 
+the findings from local density analysis.
+Fig.11. The two-regime relationship between pedestrian speed (v) and headway (h) across varying 
+water depths.
+From the perspective of pedestrian stepping behavior, movement speed is jointly determined 
+by step length and step frequency. To further investigate the relationship between headway and 
+pedestrian speed, this study analyzed their gait parameters-headway relationship. 
+Fig. 12 illustrates the relationship between step length (sl) and headway (h) under different 
+water depths. Data were processed using a binning method [62], with mean values and standard 
+
+32
+deviations calculated along both axes, using intervals of 0.1 m (h) and 0.025 m/s (sl), respectively.
+The results reveal that the step length–headway relationship exhibits a clear two-regime pattern 
+across all water depth conditions: when headway is small and movement is constrained by the 
+individual ahead, step length increases linearly with headway, indicating that pedestrians actively 
+adjust their step length to accommodate limited space and avoid potential collisions; once headway 
+exceeds a certain threshold, step length stabilizes and no longer varies significantly, suggesting that 
+pedestrians have entered a free-flow state.
+Fig. 12. The relationship between pedestrian step length (sl) and headway (h) under no-water (a), 
+a. b. 
+c. d. 
+
+33
+0.35 m water (b), 0.60 m water (c) and 0.90 m water (d) conditions.
+The same piecewise linear function was applied to quantitatively characterize the relationships 
+between step length (sl) and headway (h). The corresponding fitting equations are as follows:
+2
+0.62 0.05 0.24 1.32
+0 : 0.941
+0.77 1.32 5
+hh
+m sl R
+h
+ +  
+== 
+ 
+(11)
+2
+0.52 0.05 0.24 0.94
+0.35 : 0.875
+0.48 0. 495
+hh
+m sl R
+h
+ −  
+== 
+ 
+(12)
+2
+0.55 0.06 0.24 0.96
+0.60 : 0.857
+0.48 0. 695
+hh
+m sl R
+h
+ −  
+== 
+ 
+(13)
+2
+0.49 0.02 0.26 1.03
+0.90 : 0.814
+0.48 1. 305
+hh
+m sl R
+h
+ −  
+== 
+ 
+(14)
+Under no-water conditions, step length exhibits the highest sensitivity to headway, with a slope 
+of k = 0.62. Under water conditions, this sensitivity declines significantly, with the slope reduced to 
+0.49–0.55, indicating that hydrodynamic resistance substantially impairs pedestrians’ ability to 
+modulate step length. The free step length is 0.77 m in no-water conditions but drops sharply to 
+approximately 0.48 m upon in water condition; beyond this point, further increases in water depth 
+induce no statistically significant change in free step length. These findings suggest that water 
+imposes an abrupt, depth-independent upper bound on attainable step length. Once hydrodynamic 
+resistance becomes active, the maximum stride length is physically compressed by ~37.7% relative 
+to the no-water condition baseline.
+Fig. 13 presents the relationship between step frequency (sf) and headway (h). The overall trend 
+further confirms the two-regime (constrained–free) behavior of gait adaptation. Under no-water
+conditions, step frequency increases with headway before asymptotically stabilizing. In contrast, 
+
+34
+under water conditions, this monotonic increase is markedly attenuated. Notably, within the 
+constrained regime—defined by small headways—step frequency in water exceeds that under nowater conditions by a statistically significant margin. This reflects a compensatory “high-frequency, 
+short-step” gait strategy: to offset the hydrodynamically induced reduction in step length and 
+degradation of postural stability, pedestrians elevate stepping frequency to preserve locomotor 
+efficacy and dynamic balance.
+Fig. 13. The relationship between pedestrian step frequency (sf) and headway (h) under no-water 
+(a), 0.35 m water (b), 0.60 m water (c) and 0.90 m water (d) conditions.
+a. b. 
+c. d. 
+
+35
+Although the constrained phase in step frequency does not exhibit a clear trend with increasing 
+headway under water conditions, considering the intrinsic kinematic coupling between speed, step
+length, and step frequency during pedestrian movement, their microscopic control logic should be 
+highly consistent. To quantitatively characterize the dynamic boundary of the transition from the 
+constrained to the free phase and maintain consistency with the previous speed and step length 
+analysis framework, a piecewise linear model was also applied to quantify the relationship between 
+step frequency (sf) and headway (h), incorporating both X-error and Y-error. The corresponding 
+expressions are given in Eqs. (15)–(16).
+2
+0
+1
+0
+.09
+0.83 0.24 1.32
+: 0.44
+1.32 5
+hh
+m sf R
+h
+ 
+== 
+ 
+(15)
+2
+1.05 0.24 0.94
+0.35 : 0.259
+0.99 0.945
+hh
+m sf R
+h
+ 
+== 
+ 
+(16)
+2
+0.95 0.24 0.96
+0.60 : 0.629
+0.91 0.965
+hh
+m sf R
+h
+ 
+== 
+ 
+(17)
+2
+0.85 0.26 1.03
+0.90 : 0.157
+0.88 1.035
+hh
+m sf R
+h
+ 
+== 
+ 
+(18)
+However, the relatively low goodness of fit also indicates a weakening of the two-phase 
+characteristic in the step frequency–headway relationship, especially under water conditions. A 
+comparison of the fitted saturation values under different conditions reveals a clear monotonic 
+decrease in free step frequency with increasing water depth, with fitted values of 1.09 Hz (0 m), 
+0.99 Hz (0.35 m), 0.91 Hz (0.60 m), and 0.88 Hz (0.90 m), respectively. This trend quantitatively 
+confirms the physical inhibitory effect of hydrodynamic resistance on lower-limb swing motion. As
+water depth increases, resistance to leg movement becomes progressively stronger and ultimately 
+governs the upper limit of step frequency.
+Fig. 14 compares the fitting results of the step length–headway relationship and the step 
+frequency–headway relationship under different water depths. A comprehensive analysis indicates 
+
+36
+that the mechanism of pedestrian speed reduction induced by water depth can be divided into two 
+stages. From no-water to water conditions, the sharp decline in walking speed is primarily
+attributable to the abrupt reduction in step length (approximately 37.7%), while step frequency 
+decreases only moderately and remains above 1.0 Hz. With further increases in water depth, step 
+length remains at its physically constrained limit and shows little variation; consequently, the 
+continued decrease in free walking speed is entirely driven by the monotonic decline in step 
+frequency. These findings elucidate the mechanism by which pedestrian locomotion capacity 
+deteriorates in water crowd environments. In shallow water, pedestrians primarily sacrifice step 
+length to maintain balance. In deeper water, the persistent suppression of limb swing frequency by 
+hydrodynamic resistance becomes the dominant bottleneck limiting walking efficiency.
+Fig. 14. (a) Comparison of step length and headway relationship; (b) Comparison of step frequency 
+and headway relationship.
+4. Discussion
+a. b. 
+
+37
+Global warming has increased the frequency and severity of extreme weather events, posing 
+growing risks to human life from floods. Floods damage infrastructure and often force pedestrians 
+to walk through water during evacuations, increasing safety risks. Although current flood 
+evacuation models have improved in hydrodynamic simulation and path planning, most still rely on 
+simple water depth thresholds for risk assessment, with limited consideration of the interaction 
+between flood conditions and pedestrian movement. Systematic investigations of pedestrian 
+dynamics under varying water depths remain scarce.
+This study conducted controlled pedestrian flow experiments under no-water conditions and 
+three water depths (0.35 m: below knee; 0.60 m: above knee; 0.90 m: waist level), collecting 
+dynamic crowd data. It represents the first empirical analysis comparing crowd movement 
+characteristics across multiple water depth conditions. This section discusses the key findings, 
+critically examines the study’s limitations, and suggests directions for future research.
+4.1 Density-dependent hydrodynamic effects on speed
+This study observed that water has a significant density-dependent effect on the pedestrian 
+speed–density relationship of unidirectional pedestrian flow. At low densities, water resistance is 
+the primary factor limiting pedestrian speed, causing reductions of up to 45%. However, its 
+influence decreases as density increases. When density reaches or exceeds 2.4 ped/m², pedestrian 
+speeds converge across experimental conditions, and interactions between pedestrians become the 
+main cause of deceleration. This density-dependent transition reflects a shift in the dominant control 
+mechanism of movement. At low densities, pedestrians have sufficient headway and move close to 
+their preferred walking speed. Under such conditions, hydrodynamic drag—proportional to relative 
+
+38
+velocity and wetted body area [12]—directly increases biomechanical workload and reduces 
+pedestrian attainable speed. In contrast, at high densities, extremely limited headway forces 
+pedestrians into short-step, low-speed movement constrained by collision avoidance. Because 
+hydrodynamic drag decreases rapidly with speed, its relative contribution becomes secondary 
+compared to spatial blockage imposed by preceding pedestrians. 
+However, the impact of water depth on the pedestrian speed–density curve is relatively minor, 
+with stable speed differences of 0.05 ± 0.024 m/s and 0.06 ± 0.027 m/s between adjacent depths 
+across the observed range. The nearly parallel downward shift of the speed–density curves suggests 
+that increasing water depth acts primarily as an approximately uniform resistive load rather than 
+altering the intrinsic density–interaction mechanism. This limited impact can be largely attributed 
+to the collective hydrodynamic shielding effect (or wake effect) within the group. In a continuous 
+unidirectional flow, pedestrians closely follow one another; the leading individuals effectively 
+displace the static water, creating a localized wake zone [20]. Consequently, the trailing pedestrians 
+experience significantly diminished hydrodynamic resistance compared to walking in isolation. 
+Furthermore, in unidirectional flow, pedestrians move in an ordered manner. The collective pacing 
+behavior and spatial alignment help maintain group momentum, thereby limiting the marginal speed 
+penalty (0.05–0.06 m/s) imposed by each incremental increase in water depth.
+4.2. Practical Implications for Evacuation Modeling and Management
+These findings are of both theoretical importance and practical relevance. In micro-evacuation 
+model development, the results demonstrate that water resistance significantly influences pedestrian 
+speed in a density-dependent manner. Therefore, integrating a density-adjusted water resistance 
+
+39
+term into model parameterization can enhance the realism of simulations across different crowd 
+densities. Furthermore, the observed variations in step length and step frequency across water depths 
+provide a quantitative foundation for modeling pedestrian speed regulation, thereby improving 
+model adaptability to multi-water-depth scenarios.
+From the perspective of evacuation strategy formulation, the consistent relationship between 
+nearest neighbor spatial distribution and step length reveals systematic differences in longitudinal 
+and lateral space usage under varying water depths. This provides a scientific basis for designing 
+crowd control strategies, determining passage widths, and setting safety distances in flood-prone
+areas such as subways, tunnels, and underground commercial zones. The differences in pedestrian 
+speed regulation mechanisms suggest that, under deep water conditions, reliance on step frequency 
+adjustments should be minimized, with greater emphasis placed on managing step length or 
+regulating crowd density to maintain evacuation efficiency. At the engineering and emergency 
+management level, these findings can guide the design of wading evacuation routes, passage 
+capacity evaluations, and predictions of rescue team movement speeds.
+4.3. Limitations and Future Work
+However, the limitations of this study need to be acknowledged. First, the experiments were 
+conducted under controlled still water conditions (zero background flow velocity) to isolate the 
+effect of water depth and did not consider variables such as water flow speed or pedestrian 
+psychological states. The experimental setting was idealized; in real-world flood scenarios, flowing 
+water exerts additional hydrodynamic forces that can significantly compromise pedestrian stability, 
+especially at greater depths. Second, due to logistical constraints, the participant groups across the 
+
+40
+four experimental conditions were not consistent, and all were university students, which limits the 
+generalizability of the findings.
+Future research should incorporate a wider range of environmental conditions, including 
+different water flow velocities and spatial layouts, to identify more universal patterns of pedestrian 
+movement. Enhancing the representativeness and diversity of participant samples will further 
+improve the understanding of behavioral complexity. Crucially, while this study focused on 
+movement dynamics in static water, investigating stability thresholds and hydrodynamic-induced 
+imbalance under varying flow velocities represents an essential direction for future research to fully 
+assess flood evacuation risks.
+5. Conclusion
+This study established pedestrian speed–density–flow relationships under different water 
+depths, demonstrating how water depth influences crowd spatial distribution. It also identified a 
+two-regime pattern in the headway–pedestrian speed relationship and analyzed how water resistance 
+modifies the pedestrian speed regulation mechanism through changes in step length and step 
+frequency. The main conclusions are as follows:
+(1). Water has a significant density-dependent effect on the pedestrian speed–density 
+relationship of unidirectional pedestrian flow. At low densities, water resistance is the primary factor 
+limiting pedestrian speed, causing reductions of up to 45%. However, its influence decreases as 
+density increases. When density reaches or exceeds 2.4 ped/m², pedestrian speeds converge across 
+experimental conditions, and interactions between pedestrians become the main cause of 
+deceleration. The impact of water depth on the pedestrian speed–density curve is relatively minor, 
+
+41
+with stable speed differences of 0.05 ± 0.024 m/s and 0.06 ± 0.027 m/s between adjacent depths 
+across the observed range. However, pedestrian flow capacity declines progressively with 
+increasing water depth, decreasing by 9.3%, 14.6%, and 26.8%, respectively, compared to the nowater condition (2.05 ± 0.038 ped/(m·s)).
+(2). Both water depth and density influence the spatial distribution of nearest neighbors. At low 
+densities, the distribution is elliptical along the movement direction, indicating a preference for 
+forward personal space. As density increases, the distribution contracts, inviolable personal space 
+shrinks, especially in the longitudinal direction. Greater water depths further compress forward 
+spacing, resulting in more circular distributions and reducing the occupied area by 55–60%. Under 
+high-density conditions, congestion becomes the dominant factor, and the influence of water depth 
+weakens. This transition correlates with step length: when step length exceeds shoulder width, 
+neighbors concentrate on both sides of the movement axis; as step length approaches shoulder width, 
+the distribution becomes nearly circular.
+(3). The pedestrian speed–headway relationships exhibited a two-regime pattern—constrained 
+and free—across all water depths, reflecting the stable speed adjustment mechanism in 
+unidirectional pedestrian flow. Gait analysis reveals that water depth significantly alters the speed 
+regulation pathway: under shallow water conditions, pedestrians can still adjust both step length and 
+step frequency in response to changes in headway. However, when the water depth exceeds knee 
+height (≥0.60 m), the sensitivity of step frequency to headway diminishes, and speed regulation 
+gradually shifts to rely primarily on changes in stride length. Further comparison shows that the 
+water environment significantly impacts pedestrian gait, leading to a sharp reduction in free step 
+length (approximately a 37.7% decrease), while free step frequency monotonically decreases with 
+
+42
+increasing water depth.
+Acknowledgements
+This study was supported by the National Natural Science Foundation of China (52574284), and 
+China Scholarship Council (No. 202306340073).
+
+43
+Appendix A．
+Trajectories: 
+
+44
+Reference
+[1] Global disaster data platform [Online]. Available at: https://www.gddat.cn. (Accessed:8 
+February 2024). 
+[2] S. Zhang, Z. Jing, W. Li, Y. Yi, Y. Zhao, Study of the flood control scheduling scheme for the 
+Three Gorges Reservoir in a catastrophic flood, Hydrological Processes, 32 (2018) 1625-1634. 
+https://doi.org/10.1002/hyp.11515
+[3] C. Li, C. Jiang, J. Chen, M.Y. Lam, J. Xia, R. Ahmadian, An overview of flood evacuation 
+planning: Models, methods, and future directions, Journal of Hydrology, 656 (2025). 
+https://doi.org/10.1016/j.jhydrol.2025.133026
+[4] G. Bernardini, G. Romano, L. Soldini, E. Quagliarini, How urban layout and pedestrian 
+evacuation behaviours can influence flood risk assessment in riverine historic built environments, 
+Sustainable Cities and Society, 70 (2021) 102876. https://doi.org/10.1016/j.scs.2021.102876
+[5] W. Zhang, J. Zhou, Y. Liu, X. Chen, C. Wang, Emergency evacuation planning against dikebreak flood: a GIS-based DSS for flood detention basin of Jingjiang in central China, Natural 
+Hazards, 81 (2016) 1283-1301. https://doi.org/10.1007/s11069-015-2134-7
+[6] H. Takagi, S. Li, M. de Leon, M. Esteban, T. Mikami, R. Matsumaru, T. Shibayama, R. 
+Nakamura, Storm surge and evacuation in urban areas during the peak of a storm, Coastal 
+Engineering, 108 (2016) 1-9. https://doi.org/10.1016/j.coastaleng.2015.11.002
+[7] Y. Li, W.-H. Zhou, P. Shen, Pedestrian danger assessment under rainstorm-induced flood disaster 
+for an artificial island, International Journal of Disaster Risk Reduction, 78 (2022) 103133. 
+https://doi.org/10.1016/j.ijdrr.2022.103133
+[8] X. Li, G. Dellinger, S. Erpicum, L. Chen, S. Yu, L. Guiot, P. Archambeau, M. Pirotton, B. Dewals, 
+2D and 3D Computational Modeling of Surface Flooding in Urbanized Floodplains: Modeling 
+Performance for Various Building Layouts, Water Resources Research, 60 (2024). 
+https://doi.org/10.1029/2023wr035149
+[9] X. Li, S. Yu, V. Kitsikoudis, G. Dellinger, L. Chen, S. Erpicum, L. Guiot, C. Lai, B. Dewals, 3D 
+numerical modelling of flow exchanges between flooded streets and residential blocks during urban 
+flooding in an idealized district, Journal of Hydrology, 658 (2025). 
+https://doi.org/10.1016/j.jhydrol.2025.133150
+[10] M.A. Mejía‐Morales, E. Mignot, A. Paquier, S. Proust, Laboratory Investigation Into the Effect 
+of the Storage Capacity of a City Block on Unsteady Urban Flood Flows, Water Resources Research, 
+59 (2023). https://doi.org/10.1029/2022wr032984
+[11] J. León, M. Vicuña, A. Ogueda, S. Guzmán, A. Gubler, C. Mokrani, From urban form analysis
+to metrics for enhancing tsunami evacuation: Lessons from twelve Chilean cities, International 
+Journal of Disaster Risk Reduction, 58 (2021) 102215. https://doi.org/10.1016/j.ijdrr.2021.102215
+[12] W. Wu, Z. Zhu, X. Zheng, S. Liu, D. Zhang, Pedestrian vulnerability assessment of 
+underground staircases in urban flooding, Sustainable Cities and Society, 131 (2025). 
+https://doi.org/10.1016/j.scs.2025.106700
+[13] Z. Zhu, L. Gou, S. Liu, D. Peng, Effect of urban neighbourhood layout on the flood intrusion 
+rate of residential buildings and associated risk for pedestrians, Sustainable Cities and Society, 92 
+(2023) 104485. https://doi.org/10.1016/j.scs.2023.104485
+[14] G. Bernardini, F. Finizio, M. Postacchini, E. Quagliarini, Assessing the flood risk to evacuees 
+in outdoor built environments and relative risk reduction strategies, International Journal of Disaster 
+
+45
+Risk Reduction, 64 (2021) 102493. https://doi.org/10.1016/j.ijdrr.2021.102493
+[15] Z. Zhu, Y. Zhang, L. Gou, D. Peng, B. Pang, On the physical vulnerability of pedestrians in 
+urban flooding: Experimental study of the hydrodynamic instability of a human body model in 
+floodwater, Urban Climate, 48 (2023) 101420. https://doi.org/10.1016/j.uclim.2023.101420
+[16] E. Martínez-Gomariz, M. Gómez, B. Russo, Experimental study of the stability of pedestrians 
+exposed to urban pluvial flooding, Natural Hazards, 82 (2016) 1259-1278. 
+https://doi.org/10.1007/s11069-016-2242-z
+[17] R.M. Yifan Wang Physical Instability of Individuals Exposed to StormInduced Coastal 
+Flooding: Vulnerability of New Yorkers During Hurricane Sandy, Water Resources Research , 57, 
+e2020WR028616., Volume57, Issue1 (2020). https://doi.org/10.1029/2020WR028616
+[18] J. Xia, R.A. Falconer, Y. Wang, X. Xiao, New criterion for the stability of a human body in 
+floodwaters, Journal of Hydraulic Research, 52 (2014) 93-104. 
+https://doi.org/10.1080/00221686.2013.875073
+[19] M. Postacchini, G. Bernardini, M. D’Orazio, E. Quagliarini, Human stability during floods: 
+Experimental tests on a physical model simulating human body, Safety Science, 137 (2021) 105153. 
+https://doi.org/10.1016/j.ssci.2020.105153
+[20] C. Arrighi, H. Oumeraci, F. Castelli, Hydrodynamics of pedestrians' instability in floodwaters, 
+Hydrology and Earth System Sciences, 21 (2017) 515-531. https://doi.org/10.5194/hess-21-515-
+2017
+[21] Q. Li, J. Xia, B. Dong, Y. Liu, X. Wang, Risk assessment of individuals exposed to urban floods, 
+International Journal of Disaster Risk Reduction, 88 (2023) 103599. 
+https://doi.org/10.1016/j.ijdrr.2023.103599
+[22] S.N. Jonkman, E. Penning‐Rowsell, Human Instability in Flood Flows1, JAWRA Journal of 
+the American Water Resources Association, 44 (2008) 1208-1218. https://doi.org/10.1111/j.1752-
+1688.2008.00217.x
+[23] J. Xia, Q. Chen, R.A. Falconer, S. Deng, P. Guo, Stability criterion for people in floods for 
+various slopes, Proceedings of the Institution of Civil Engineers - Water Management, 169 (2016) 
+180-189. https://doi.org/10.1680/wama.14.00110
+[24] G. Bernardini, F. Lagona, M. Mingione, M. Postacchini, Probabilistic assessment of human 
+instability in urban areas exposed to flood events, Scientific Reports, 15 (2025). 
+https://doi.org/10.1038/s41598-025-25267-y
+[25] Y.-H. Lee, H.-J. Keum, K.-Y. Han, W.-H. Hong, A hierarchical flood shelter location model for 
+walking evacuation planning, Environmental Hazards, 20 (2020) 432-455. 
+https://doi.org/10.1080/17477891.2020.1840327
+[26] X. Liu, S. Lim, An agent-based evacuation model for the 2011 Brisbane City-scale riverine 
+flood, Natural Hazards, 94 (2018) 53-70. https://doi.org/10.1007/s11069-018-3373-1
+[27] C. Ye, W. Liao, Z. Xu, X. Shu, An innovative framework to assess the human-water relationship 
+in complex pluvial flooding system at urban meso-scales, Journal of Hydrology, 655 (2025). 
+https://doi.org/10.1016/j.jhydrol.2025.132876
+[28] M. Borowska-Stefańska, M. Kowalski, F. Turoboś, S. Wiśniewski, Optimisation patterns for 
+the process of a planned evacuation in the event of a flood, Environmental Hazards, 18 (2019) 335-
+360. https://doi.org/10.1080/17477891.2019.1593816
+[29] Y.H. Lee, H.I. Kim, K.Y. Han, W.H. Hong, Flood Evacuation Routes Based on Spatiotemporal 
+Inundation Risk Assessment, Water, 12 (2020) 2271. https://doi.org/10.3390/w12082271
+
+46
+[30] S. Park, G. Lee, J.O. Kim, Flood Evacuation Mapping Using a Time–Distance cartogram, 
+ISPRS International Journal of Geo-Information, 9 (2020) 207. https://doi.org/10.3390/ijgi9040207
+[31] W. Ge, Y. Jiao, M. Wu, Z. Li, T. Wang, W. Li, Y. Zhang, W. Gao, P. van Gelder, Estimating loss 
+of life caused by dam breaches based on the simulation of floods routing and evacuation potential 
+of population at risk, Journal of Hydrology, 612 (2022). 
+https://doi.org/10.1016/j.jhydrol.2022.128059
+[32] R. Zhang, D. Liu, E. Du, L. Xiong, J. Chen, H. Chen, An agent-based model to simulate human 
+responses to flash flood warnings for improving evacuation performance, Journal of Hydrology, 628 
+(2024). https://doi.org/10.1016/j.jhydrol.2023.130452
+[33] S. Maity, S. Sundar, A coupled model for macroscopic behavior of crowd in flood induced 
+evacuation, Physica A: Statistical Mechanics and its Applications, 607 (2022) 128161. 
+https://doi.org/10.1016/j.physa.2022.128161
+[34] G. Bernardini, M. Postacchini, E. Quagliarini, M. Brocchini, C. Cianca, M. D'Orazio, A 
+preliminary combined simulation tool for the risk assessment of pedestrians’ flood-induced 
+evacuation, Environmental Modelling & Software, 96 (2017) 14-29. 
+https://doi.org/10.1016/j.envsoft.2017.06.007
+[35] Y. Li, B. Hu, D. Zhang, J. Gong, Y. Song, J. Sun, Flood evacuation simulations using cellular 
+automata and multiagent systems -a human-environment relationship perspective, International 
+Journal of Geographical Information Science, 33 (2019) 2241-2258. 
+https://doi.org/10.1080/13658816.2019.1622015
+[36] M. Shirvani, G. Kesserwani, P. Richmond, Agent‐based simulator of dynamic flood‐people 
+interactions, Journal of Flood Risk Management, 14 (2021). https://doi.org/10.1111/jfr3.12695
+[37] M. Shirvani, G. Kesserwani, Flood–pedestrian simulator for modelling human response 
+dynamics during flood-induced evacuation: Hillsborough stadium case study, Natural Hazards and 
+Earth System Sciences, 21 (2021) 3175-3198. https://doi.org/10.5194/nhess-21-3175-2021
+[38] W.M. Cao Shuchao, Ni Jie, Wu Xiaohui1, Zhang Jun, Research on crowd movement 
+characteristics and evacuation modeling in subway stations under flood disaster, Journal of Railway 
+Science and Engineering, (2023) 1-11. https://doi.org/10.19713/j.cnki.43-1423/u.T20230119
+[39] D. Shi, J. Li, Q. Wang, J. Chen, R. Lovreglio, J.T.Y. Lo, J. Ma, Modeling and simulation of 
+crowd dynamics at evacuation bottlenecks during flood disasters, Transportation Research Part E: 
+Logistics and Transportation Review, 198 (2025). https://doi.org/10.1016/j.tre.2025.104064
+[40] S. Cao, M. Wang, G. Zeng, X. Li, Simulation of Crowd Evacuation in Subway Stations Under 
+Flood Disasters, IEEE Transactions on Intelligent Transportation Systems, (2024) 1-10. 
+https://doi.org/10.1109/tits.2024.3372994
+[41] B. Li, J. Hou, Y. Ma, G. Bai, T. Wang, G. Xu, B. Wu, Y. Jiao, A coupled high-resolution 
+hydrodynamic and cellular automata-based evacuation route planning model for pedestrians in 
+flooding scenarios, Natural Hazards, 110 (2021) 607-628. https://doi.org/10.1007/s11069-021-
+04960-x
+[42] C. Dias, N.A. Rahman, A. Zaiter, Evacuation under flooded conditions: Experimental 
+investigation of the influence of water depth on walking behaviors, International Journal of Disaster 
+Risk Reduction, 58 (2021) 102192. https://doi.org/10.1016/j.ijdrr.2021.102192
+[43] G. Bernardini, E. Quagliarini, M. D'Orazio, M. Brocchini, Towards the simulation of flood 
+evacuation in urban scenarios: Experiments to estimate human motion speed in floodwaters, Safety 
+Science, 123 (2020) 104563. https://doi.org/10.1016/j.ssci.2019.104563
+
+47
+[44] H.-K. Lee, W.-H. Hong, Y.-H. Lee, Experimental study on the influence of water depth on the 
+evacuation speed of elderly people in flood conditions, International Journal of Disaster Risk 
+Reduction, 39 (2019) 101198. https://doi.org/10.1016/j.ijdrr.2019.101198
+[45] G. Gleim, J. Nicholas, Metabolic costs and heart rate responses to treadmill walking in water 
+at different depths and temperatures, The American Journal of Sports Medicine, 17 (1989). 
+https://doi.org/10.1177/036354658901700216
+[46] C. Monoli, J.F. Fuentez-Perez, N. Cau, P. Capodaglio, M. Galli, J.A. Tuhtan, Land and 
+Underwater Gait Analysis Using Wearable IMU, IEEE Sensors Journal, 21 (2021) 11192-11202. 
+https://doi.org/10.1109/jsen.2021.3061623
+[47] A. Tigrini, C. Monoli, M. Galli, J.A. Tuhtan, Improving the reliability of underwater gait 
+analysis using wearable pressure and inertial sensors, Plos One, 19 (2024). 
+https://doi.org/10.1371/journal.pone.0300100
+[48] C.L.S. Billy, M.Y.K. Manny, C.Y.F. Veron, H.Y.K. Ally, W.C.L. Crystal, L.Y.T. Alison, S.Y.W. 
+Mini, A.M. John, A Study Comparing Gait and Lower Limb Muscle Activity During Aquatic 
+Treadmill Running with Different Water Depth and Land Treadmill Running, J Hum Kinet, 82 (2022) 
+39-50. https://doi.org/10.2478/hukin-2022-0030
+[49] T. Miyoshi, T. Shirota, S. Yamamoto, K. Nakazawa, M. Akai, Effect of the walking speed to 
+the lower limb joint angular displacements, joint moments and ground reaction forces during 
+walking in water, Disabil Rehabil, 26 (2004) 724-732. 
+https://doi.org/10.1080/09638280410001704313
+[50] K. Masumoto, T. Shono, N. Hotta, K. Fujishima, Muscle activation, cardiorespiratory response, 
+and rating of perceived exertion in older subjects while walking in water and on dry land, J 
+Electromyogr Kinesiol, 18 (2008) 581-590. https://doi.org/10.1016/j.jelekin.2006.12.009
+[51] A.M. Barela, S.F. Stolf, M. Duarte, Biomechanical characteristics of adults walking in shallow 
+water and on land, J Electromyogr Kinesiol, 16 (2006) 250-256. 
+https://doi.org/10.1016/j.jelekin.2005.06.013
+[52] M.I. Orselli, M. Duarte, Joint forces and torques when walking in shallow water, J Biomech, 
+44 (2011) 1170-1175. https://doi.org/10.1016/j.jbiomech.2011.01.017
+[53] T. Miyoshi, T. Shirota, S. Yamamoto, K. Nakazawa, M. Akai, Functional roles of lower-limb 
+joint moments while walking in water, Clin Biomech (Bristol, Avon), 20 (2005) 194-201. 
+https://doi.org/10.1016/j.clinbiomech.2004.10.006
+[54] X. Li, H. Yu, W. Song, J. Zhang, Z. Zhan, X. Ren, H. Xu, Fundamental diagrams for straight 
+movement of pedestrians in water, Safety Science, 159 (2023) 106018. 
+https://doi.org/10.1016/j.ssci.2022.106018
+[55] X. Li, H. Yu, H. Xu, X. Ren, W. Song, J. Zhang, A comparative study on pedestrian flow through 
+bottlenecks between flood evacuation and land evacuation, International Journal of Disaster Risk 
+Reduction, 95 (2023) 103822. https://doi.org/10.1016/j.ijdrr.2023.103822
+[56] J. Zhang, W. Klingsch, A. Schadschneider, A. Seyfried, Transitions in pedestrian fundamental 
+diagrams of straight corridors and T-junctions, Journal of Statistical Mechanics: Theory and 
+Experiment, 2011 (2011) P06004. https://doi.org/10.1088/1742-5468/2011/06/p06004
+[57] M. Boltes, A. Seyfried, B. Steffen, A. Schadschneider, Automatic Extraction of Pedestrian 
+Trajectories from Video Recordings, (2010) 43-54. https://doi.org/10.1007/978-3-642-04504-2_3
+[58] B. Steffen, A. Seyfried, Methods for measuring pedestrian density, flow, speed and direction 
+with minimal scatter, Physica A: Statistical Mechanics and its Applications, 389 (2010) 1902-1910. 
+
+48
+https://doi.org/10.1016/j.physa.2009.12.015
+[59] S. Cao, M. Chen, L. Xu, J. Liang, M. Yao, P. Wang, Analysis of headway-velocity relation in 
+one and two-dimensional pedestrian flows, Safety Science, 129 (2020) 104804. 
+https://doi.org/10.1016/j.ssci.2020.104804
+[60] Human dimensions of Chinese adults, GB/T 10000-2023, in, State Administration for Market 
+Supervision and Administration; State Administration for Standardisation, Beijing, 2024.
+[61] S. Cao, J. Zhang, W. Song, C.a. Shi, R. Zhang, The stepping behavior analysis of pedestrians 
+from different age groups via a single-file experiment, Journal of Statistical Mechanics: Theory and 
+Experiment, 2018 (2018) 033402. https://doi.org/10.1088/1742-5468/aab04f
+[62] A. Jelić, C. Appert-Rolland, S. Lemercier, J. Pettré, Properties of pedestrians walking in line 
+Fundamental diagrams, Phys. Rev. E, 85 (2012). https://doi.org/10.1103/PhysRevE.85.036111
+[63] E. Bosina, A New Generic Approach to the Pedestrian Fundamental Diagram (ETH Zurich, 
+2018), vol. 183., 2018.
+[64] C. Feliciani, K. Nishinari, Measurement of congestion and intrinsic risk in pedestrian crowds, 
+Transportation Research Part C: Emerging Technologies, 91 (2018) 124-155. 
+https://doi.org/10.1016/j.trc.2018.03.027
+[65] J. Porzycki, J. Wąs, L. Hedayatifar, F. Hassanibesheli, K. Kułakowski, Velocity correlations 
+and spatial dependencies between neighbors in a unidirectional flow of pedestrians, Physical 
+Review E, 96 (2017). https://doi.org/10.1103/PhysRevE.96.022307
+[66] J. Wang, W. Lv, H. Jiang, Z. Fang, J. Ma, Exploring crowd persistent dynamism from pedestrian 
+crossing perspective: An empirical study, Transportation Research Part C: Emerging Technologies, 
+157 (2023). https://doi.org/10.1016/j.trc.2023.104400

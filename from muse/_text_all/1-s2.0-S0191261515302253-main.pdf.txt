@@ -1,0 +1,985 @@
+Transportation Research Part B 106 (2017) 447–463
+Contents lists available at ScienceDirect
+Transportation Research Part B
+journal homepage: www.elsevier.com/locate/trb
+The optimal time to evacuate: A behavioral dynamic model
+on Louisiana resident data
+Nayel Urena Serulle∗
+, Cinzia Cirillo
+Department of Civil and Environmental Engineering, University of Maryland, College Park, MD 20742 United States
+a r t i c l e i n f o
+Article history:
+Received 7 December 2015
+Revised 4 June 2017
+Accepted 5 June 2017
+Available online 29 June 2017
+Keywords:
+Emergency
+Evacuation
+Dynamic model
+Optimal time
+Expected utility
+a b s t r a c t
+Understanding what affects the decision process leading to evacuation of a population
+at risk from the threat of a disaster is of upmost importance to successfully implement
+emergency planning policies. Literature on this is broad; however, the vast majority of behavioral models is limited to conventional structures, such as aggregate participation rate
+models or disaggregate multinomial logit models. This research introduces a dynamic discrete choice model that takes into account the threat’s characteristics and the population’s
+expectation of them. The proposed framework is estimated using Stated Preference (SP)
+evacuation data collected from Louisiana residents. The results indicate that the proposed
+dynamic discrete choice model outperforms sequential logit, excels in incorporating demographic information of respondents, a key input in policy evaluation, and yields significantly more accurate predictions of the decision and timing to evacuate.
+© 2017 Elsevier Ltd. All rights reserved.
+1. Introduction
+In the event of a threat, the potentially affected population goes through a cognitive process by which they estimate
+probabilities and consequences of the threat and their potential actions. In this sense, such population goes through four
+stages of reaction: collection, evaluation, decision, and implementation (Williams, 1964). In the first stage, the population
+collects information on the threat, mainly through disaster warning messages. Then, the information is evaluated, generally
+based on the perceived personal relevance (Perry et al., 1981). Finally, a decision is made and implemented within a selected
+timeframe. These stages also serve as the basis for more current behavioral theories and models, such as the Protective Action Decision Model, which divides the rational thinking into pre-decisional processes and core perceptions—threat, protective action, and stakeholder perceptions (Lindell & Perry, 2004; 2012). The transition through this complex cognitive process
+makes travel demand for evacuation different from ordinary travel behavior. In order to understand travel needs in threatening situations, it is necessary to gather knowledge on evacuation behavior. For this, research to comprehend evacuation
+must move beyond understanding the characteristics of those who evacuate and those who do not, towards an understanding of what factors are crucial in determining the forces behind evacuation travel demand (Dash & Gladwin, 2007; Lindell
+et al., 2005, Xu et al., 2016, Yamada et al., 2016).
+Recent literature has also pointed out that the evacuation process is a dynamic process and that a temporal dimension
+should be accounted for when modeling evacuation during a disastrous event (Pel et al., 2011a). This will help identify when
+people evacuate, what type of information and which channel is the most appropriate to evacuate the population in a timely
+manner, and would eventually help decision makers to better organize resources and personnel over time.
+∗ Corresponding author.
+E-mail addresses: ing.urenaserulle@gmail.com (N. Urena Serulle), ccirillo@umd.edu (C. Cirillo).
+http://dx.doi.org/10.1016/j.trb.2017.06.004
+0191-2615/© 2017 Elsevier Ltd. All rights reserved.
+
+448 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+This research proposes behavioral methods based on discrete choice models to estimate the decision to evacuate over
+time. It adds to existing approaches by explicitly modeling the optimal time to evacuate as the results of a succession of
+decisions, where the respondents evaluate both present and expected future conditions.
+The remaining of this paper is organized as follows. Section 2 provides a review of the literature surrounding behavior
+during evacuation, and dynamic modeling both in transportation and in related fields. Section 3 describes the methodological framework. Section 4 offers a simulated case study, where static and dynamic estimation of individual choices are
+compared. The dataset used for model estimation and related descriptive statistics are in Section 5. Model estimation results
+and model validation are presented in Section 6. Conclusions and future development from the analysis proposed are given
+in Section 7.
+2. Literature review
+2.1. Modeling behavior during evacuation
+The literature related to disaster events and to model for emergency situations has grown substantially in recent years.
+In this Section we concentrate on papers that are mainly concerned with behavioral models during emergency situations.
+Published research (Dash & Gladwin, 2007), has found that factors such as age of the decision maker (Mileti et al., 1975;
+Gruntfest et al., 1978; Perry R. W., 1979), presence of kids or seniors in the household (Carter et al., 1983; Gladwin &
+Peacock, 1997), gender (Bolin et al., 1996; Fothergill, 1996; Bateman & Edwards, 2002), disability (Van Willigen, Edwards,
+Edwards, & Hessee, 2002), ethnicity (Drabek & Boggs, 1968; Perry & Greene, 1982; Perry & Mushkatel, 1986), and income
+(Schaffer & Cook, 1972; Sorensen et al., 1987; Bolin, 1986) all have an influence on evacuation outcomes. Additionally, previous experience (Hutton, 1976; Baker, 1979; Perry et al., 1982; Sorensen et al., 1987) and geographic location (Simpson &
+Riehl, 1981; Gladwin & Peacock, 1997) affect the evacuation decision-making process. Similarly, Charnkol and Tanaboriboon
+(2006) found that, as expected, permanent residents, larger families, people living further away from the seashore, people
+that haven’t directly or indirectly experienced a disaster event, and people without disaster knowledge are less likely to
+have a faster response time (i.e., time required to physically travel to safer area) than their counterparts; the same results
+are found when other types of threats and disasters are evaluated.
+However, the correlation between the cited factors and the decision to evacuate should not be completely generalized
+as they may change from study to study (and/or location by location). Baker (1991) highlighted the previous specifically
+for demographic variables. A recent statistical meta-analysis by Huang et al. (2015) shows the significance and consistency
+of these (and other) variables over 49 evacuation studies. Their findings are summarized in Table 1, where the correlation
+indicates the likelihood effect of the variable and the consistency indicates how often it is found to be significant or not
+throughout the sampled studies. The reader is referred to Carnegie and Deka (2010), Lindell and Prater (2007) and MurrayTuite and Wolshon (2013) for a more comprehensive review of the array of factors that have been reported to influence
+evacuation decision.
+The suggestion of incorporating time into evacuation modeling is found throughout the literature (Pel et al., 2011a).
+Identifying what will get people to evacuate in a timely manner would enable more robust traffic-clearing models during
+threats and disasters. A common practice in hurricane evacuation travel demand estimation is to estimate the total evacuation demand and departure time through simple relationships such as means, rates, and distributions rather than the more
+sophisticated mathematical relationships observed in urban transportation planning (Mei, 2002). These estimates are generally determined by applying an exogenous response curve stating the percentage of departures in each time interval (Pel et
+al., 2011b). Response curves have been extensively studied; however there is still a debate about the distribution it should
+follow: instantaneous departure (Chen & Zhang, 2004; Chiu et al., 2006), a uniform distribution (Liu et al., 2006; Yuan et al.,
+2006), a Poisson distribution (Cova & Johnson, 2002), a Weibull distribution (Lindell et al., 2002) or sigmoid curve (Kalafatas
+& Peeta, 2009; Xie et al., 2010), to mention a few. The drawback of the response curve approach is that there is no clear
+behavioral basis to justify the method (Pel et al., 2011a).
+An area that requires much additional effort is the translation of the considerable amount of knowledge on evacuees’
+behavior during the time of crisis into reliable quantitative measures of the timing of evacuee mobilization (Southworth,
+1991). Behavioral models based on discrete choice analysis have been suggested to study different types of choices during
+an emergency or evacuation: time to evacuate, path to safe zones, or mode choice (Sadri et al., 2014).
+2.2. Dynamic discrete choice models
+Dynamic models estimate decisions as a sequence of discrete choices where at each time period the decision maker
+chooses the utility-maximizing alternative. In his seminal work, Rust (1987) developed a regenerative optimal stopping
+model of bus engine replacement based on accumulated mileage, in which at each time period the decision-maker is faced
+with the decision of whether to replace the engine of a public transportation bus or to wait one more period, risking unexpected engine failure. The model allows for recurrent participation of the buses by resetting their mileage to zero after
+their engine is replaced––hence the term regenerative. Rust estimates the utility based on the expected cost of operation of
+each alternative, where expected accumulated mileage is given by a draw from an exponential distribution. Other influential
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 449
+Table 1
+Correlation with evacuation decision, consistency and significance of variables.
+Variable Correlation Consistency Significant Non-significant
+Positive Negative
+Risk area + High X
+Mobile home + High X
+Official warning + High X
+Environmental cues + High X
+Peers evacuating + High X
+Business closing + High X
+Expected storm intensity + High X
+Expected nearby landfall + High X
+Expected rapid onset – Low X
+Expected surge damage + High X
+Expected flood damage + Moderate X
+Expected wind damage + Moderate X
+Expected personal casualties + Moderate X
+Expected job disruption – Moderate X
+Expected service disruption + High X
+Female gender + Moderate X
+Age – Moderate X
+White ethnicity + High X
+Black ethnicity – High X
+Hispanic ethnicity + High X
+Marital status – High X
+Household zize – High X
+Children at home + Moderate X
+Education + High X
+Income + High X
+Household ownership – Moderate X
+Previous experience + Moderate X
+Coastal tenure – Moderate X
+"Unnecessary" evacuation + Moderate X
+Reliance on authorities + Low X
+Reliance on news media + Low X
+Reliance on peers + Low X
+Concern about looting – High X
+Concern about property protection from storm – High X
+Concern about evac. expenses + High X
+Concern about traffic jams + High X
+papers from this line of research include Wolpin (1984) on fertility and child mortality, Miller (1984) on job matching and
+occupational choice, and Pakes (1986) on patent renewal.
+Since these early papers, dynamic discrete choice models (DDCM) has been applied in many different scenarios, including labor economics, industrial organization, economic demography, health economics, development economics, political
+economy, and marketing. Keane & Wolpin (1997) studied the career choices of young men based on the reward of each occupation alternative (i.e., to study or to work) over the life cycle. Their model optimize such reward by taking into account
+the individual’s evolution of education (and its related cost), income and skill-sets through a given age range. Similarly, Ge
+(2013) focused on the decision of whether to attend college, work or a combination of both of women with a high school
+degree. Furthermore, Heckman & Navarro (2007) evaluated associated earnings outcomes for different levels of education
+while considering anticipations about potential future outcomes associated with the various choices. For this, they provide a
+semiparametric non-regenerative formulation of dynamic discrete choice models of treatment times and the consequences
+of choice.
+From an employment perspective, Rust & Phelan (1997) and Karlstrom et al. (2004) used dynamic discrete choice models to estimate retirement from the labor force based on time-dependent retirement benefits (e.g., pension and healthcare).
+On the other hand, Gurmu et al. (2008) estimate the participation on full-time employment of families that receive welfare
+through a dynamic probit model which incorporates residential location and time-varying variable, such as employment status. More broadly, Keane & Wolpin (2002a, 2002b) evaluated the impact of welfare benefits on economic and demographic
+behavior—employment status, household size and education to mention a few.
+In market share analysis, Gönül (1998) assessed the effect of time-varying cost and preferences (purchase history) on the
+sales of different over-the-counter medicine brands. Whereas Hetrakul (2012) evaluated ticket cancellations and exchanges
+within railway service in response to varying trip schedule, cost, and refund/exchange policy.
+Many other examples of the application of dynamic models exist in the literature. The reader is referred to Keane et al.
+(2011), Aguirregabiria & Mira (2010) and Keane & Wolpin (2009) for a comprehensive survey of the literature surrounding
+the different structures and applications of DDCM.
+
+450 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+2.3. Dynamic discrete choice models in transportation
+Despite the vast application of DDCM, its use within the field of transportation has been limited when compared to
+other fields. Gao et al. (2010) proposed a policy routing choice model with a cumulative prospect theory utility function
+(a non-expected utility framework) to measure choice under risk. Their model is adaptive since information is updated
+as the traveler traverses through a stochastic network (en route). Alternatively, Fosgerau et al. (2013) developed a dynamic
+route choice model where the path choice problem is formulated as a sequence of link choices. At each stage (i.e., node), the
+traveler chooses the link that maximizes the sum of instantaneous utility and the expected downstream utility. On the other
+hand, dynamic models have also been used to estimate car ownership and its related decisions (e.g., type of vehicle, tenure
+and usage), where variables such as income, fuel prices and cumulated mileage are treated as stochastic state variables—see
+de Lapparent & Cernicchiaro (2012), Cirillo et al. (2014), and Glerum et al. (2015).
+In evacuation analysis, dynamic travel demand is usually modeled through repeated binary logit models where the share
+of people who decide to evacuate and depart presently, or postpone the decision to evacuate, are estimated at each time
+period. Fu & Wilmot (2004) developed a sequential binary logit model to estimate the decision to evacuate when threaten
+by a hurricane at several time intervals before landfall. For this, information from 320 households in Southwest Louisiana
+was collected following hurricane Andrew. In their model, travelling speed of the hurricane, time of day, and distance from
+the hurricane were treated as dynamic variables. They concluded that sequential binary logit is capable of estimating the
+decision of whether to evacuate or not. Later, Fu et al. (2006) improved the model by including hurricane wind speed and
+time-to-landfall data from hurricane Floyd in South Carolina and tested the calibrated model on the hurricane Andrew data.
+The predicted dynamic travel demand yielded similar results to the observed travel demand, indicating that there is potential in transferring weights to different location and hurricane scenarios. Similarly, Wilmot & Gudishala (2013) developed a
+sequential logit model based on newly collected hurricane data from a State Preference (SP) survey in Louisiana. Czajkowski
+(2011) presents an economic model where a cutoff point is sought between the decisions to evacuate or not based on the
+cost of each alternative. Czajkowski’s uses cost and potential risk values estimated from previous research, collected data
+and probabilistic assumptions to determine the time period (and associated costs and risk) after which a household may
+decide to evacuate.
+The current state-of-practice is to estimate the dynamic utility of evacuating (or not evacuating) using prevailing conditions. However, it is logical to assume that people not only consider current conditions, but are also capable of predicting
+future conditions and base their decision on this information as well (Pel et al. 2011a). For example, Wilmot & Gudishala
+(2013) developed a sequential nested logit that combines the decision of whether to evacuate or stay into time period nests.
+The nested model linked the utility of a lower nest to an upper nest, that is linking time period i + 1 to i, by using the
+logsum of the utilities.
+The purpose of this research is to contribute to the literature of DDCM by applying demand estimation during hurricane
+evacuation through a new approach, founded on Cirillo, Xu & Bastin’s (2016) work on dynamic modeling of car ownership
+and Hetrakul’s (2012) work on dynamic modeling of train user’s ticket cancellation/exchange behavior. Here, the previous
+models will be adapted to develop a hurricane evacuation model using a dynamic discrete choice regression model capable
+of combining prevailing and expected hurricane conditions, resulting in a more robust estimation of the evacuation response
+and factors affecting it. The model is then applied using SP data collected from Louisiana residents.
+3. Evacuation modeling framework
+This section provides the theoretical background on the optimal stopping problem developed to study the behavior of
+evacuees in the midst of a threat, which for this study is a hurricane.
+3.1. General evacuation decision problem
+Consider a population set S = {1, . . .,M} and time periods t = 0, 1, . . .T. At each time period t, consumer i has two
+options:
+1) to evacuate and obtain a terminal period payoff uit;
+2) to postpone and obtain a one-period payoff cit, which is a function of individual i’s attributes and the current characteristics of the threat, i.e. c(xit, qit; θiαi). xit is a vector of attributes for individual i at time t (e.g., gender, education,
+income, age) and qit is the vector of characteristics of the threat (e.g., category, expected time to landfall, time of day).
+θi and αi are parameters vectors for xit and qit respectively.
+Using a bold font for random variables and normal font for their realizations, the payoff bit (i.e., to evacuate at time t) is
+expressed as a random utility function:
+bit = u(xit, yt, θit, λi, it ) (1)
+where
+• xit, θi ∈ Q are defined a above;
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 451
+• yt ∈ H is a random vector of dynamic attributes at time t, which represents the evolution of a threat over time. λi is a
+vector of parameters related to yt.
+• εit is an individual-specific random term, whose components are independently and identically GEV distributed amongst
+individuals and periods. It is assumed that εit is independent from yt.
+A one-step decision process is assumed, in which, at each time period t, the individual decides whether to evacuate
+or to postpone the evacuation until the optimal time period τ, time when the consumer decides to evacuate instead of
+postponing. The individual deciding to evacuate or postpone is the optimal stopping problem at time t:
+Dt(bit, cit) = maxτ
+
+τ−1
+k=t
+βk−t
+cit + βτ−t
+Eyτ [biτ |yt]
+
+(2)
+where
+• β is a discount factor in [0,1);
+• cit is the payoff function of individual i’s attributes and the characteristics of the threat when choosing to postpone the
+evacuation, as defined before.
+It is important to note that the expectation in (2) is taken with respect to the threat evolution yt. Dt remains a random
+function due to the terms εit present in the random utility functions. According to the previously described assumption
+about εit, bit is Gumbel distributed with a scale factor equals to 1 and γ it is the mode of the distribution of bt. It is also
+stressed that if τ = t, the right-hand term in (2) reduces to bit. It is then easy to see the individual’s decision can be
+transformed from (2) into:
+Dt(bit, cit) = max 
+bit, cit + βEyt+1
+
+Dt+1
+
+bi,t+1, ci,t+1
+
+|yt
+	
+ (3)
+Eq. 3 indicates that the decision process consists of evacuating at time t or delaying it over one period, taking the payoff
+cit plus the discounted future return. This is a standard optimal stopping problem, with a stopping set given by
+
+(yt) = {bit|bit ≥ Wit} (4)
+where Wit is the reservation utility level for individual i and its defined as:
+Wit = cit + βEyt+1
+
+Dt+1
+
+bi,t+1, ci,t+1
+
+|yt
+	 (5)
+Using (5), (3) can be simplified to:
+Dt (bt ) = max{bit,Wit} (6)
+It is assumed that the random terms εit take specific realizations when selecting an individual i, meaning that the individual i has access to all values of his/her utility function—the vectors εit are simply the unobserved factors. Simply put,
+individual i will choose to evacuate at time t only when bit > Wit. If i is randomly drawn from the population, the analyst
+can compute the probability of postponing the evacuation until the next period as:
+πit(yt)
+def
+= Pit[Dt(bit) = Wit|yt]
+= Pit[bit ≤ Wit]
+= Fv(Wit, yt) = e−e−(Wit −γit)
+(7)
+Note the probability is taken with the set of random variables εil, for l = t, t + 1, …, i.e. the variables unobserved by the
+analyst but with known values for individual i.
+3.2. Dynamic estimation process
+The parameter estimation process is done by applying the maximum likelihood estimation method to:
+L(θ, λ, β) = M
+i=1
+H
+t=1
+Pit[Dt(bit)|θ, λ, β] (8)
+where:
+– θ is a vector of stationary preference parameters related to individual attributes xit.
+– λ is a vector of parameters related to the dynamic attributes of the threat, yt.
+– β is the discount factor, set to 1 for simplicity.
+The probabilities of (8) are taken with respect to the distribution of the variable εit, as in (7), given the values of the
+parameters. H represents the number of time periods where observations were collected, which in this case is limited by
+the number of forecasts – therefore H is equal to four.
+As explained before, the probability of πit depends on Wit, which can be calculated as in (5). Wit is composed of two parts: the utility of the current threat attributes cit and the expected utility in the next time period
+
+452 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+Fig. 1. Scenario tree.
+βEyt+1 [Dt+1(bi,t+1, ci,t+1|yt]. The key step during the estimation process is to identify how to calculate the expected utility.
+At each time period, the individual is assumed to be forward-looking (i.e., they have a perception about the future scenarios), which are characterized by the threat’s attributes changing over time. This research uses a finite horizon scenario tree
+providing a reasonable behavioral rooting since individuals can only perceive future attributes for a limited number of time
+periods (see Shapiro et al., (2009), Hetrakul (2012) and Cirillo et al., (2014) for examples). Therefore, at time period t, the
+individual faces two alternatives, to evacuate or to postpone evacuation. The individual will continue the decision process
+into the period t + 1 only if he/she had decided to postpone evacuation in time period t. Therefore, the decision process can
+be characterized by a scenario tree (see Fig. 1), which is the base for the expected utility calculation. The following steps
+describe the procedure to calculate πi1 based on the expectation Ey1 [D(bi1, ci1)|i], which will be indicated by E[D1] because
+all the expectations in the example are for individual i:
+• Assumption: It is assumed that the individual has the expectation over a limited number of future periods. Given that we
+are dealing with threats with usually limited forecasts, here it is assumed that individuals can only predict one period
+ahead. Therefore, at time period t = 1, the individual can anticipate the future characteristics of a threat (e.g., category
+and evacuation order) at time period t = 2. Whereas E[D3] = 0 since the individual knows nothing of time period 3 when
+faced with the decision at time period 1, same for any time period beyond t + 1.
+• Evaluation of E[D2]: To obtain the probability of πi1 it is necessary to estimate Wi1 (using Eq. 5), which in hand depends
+on E[D2]. At time 1, the individual has two alternatives for successive time 2, to evacuate or not to evacuate (see Fig.
+1). The right side of the utility function E[D1] = E[max {b1, c1 + βE[D2]}] represents the utility of the "do not evacuate"
+alternative. Based on the above assumption, E[D3] is zero when calculating E[D2] at time t= 1.
+• These steps are then repeated to calculate πi2 with the assumption that respondent can anticipate the characteristics of
+the threat at time period 3 and E[D4] is zero, and so on for the rest of the estimations.
+It should be clarified that while this research follows a concept similar to Czajkowski (2011), it does so in a different
+manner. As explained, Czajkowski’s uses cost and potential risk values estimated from previous research, collected data and
+probabilistic assumptions to determine the time period (and associated costs and risk) after which a household may decide
+to evacuate. The present study does so through applied econometrics in which a dynamic discrete choice model is used to
+estimate the utility associated with the decision of whether to evacuate or not considering current and expected hurricane
+conditions and household-specific demographic information. Furthermore, our approach attempts to include predicted values
+from a household perspective.
+3.3. Mixed dynamic model
+In order to accommodate taste heterogeneity, or the variations in the coefficients that are related to observed attributes of
+the decision maker (Train, 2009), we integrate the choice probabilities in Eq. 8 over the density of the parameters assumed
+to be randomly distributed. The deriving likelihood function is:
+L(θ, λ, β) =
+ M
+i=1
+H
+t=1
+Pit[Dt(bit)|θ, λ, β]f(θ )dθ (9)
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 453
+The probabilities are then approximated through simulations:
+SL (θ, λ, β) = 1
+R
+R
+r=1
+M
+i=1
+H
+t=1
+Pitr[Dtr(bitr)|θ, λ, β] (10)
+where R is the number of random draws used for the Monte Carlo simulation. For this study 1000 random draws have been
+used for model estimation.
+4. Experiments based on simulated data
+The methodological approach proposed is validated with a series of Monte Carlo experiments; the objective being to
+evaluate the errors resulting from specifying a model as static when in fact the decision process is dynamic and vice versa.
+A synthetic sample of 1000 households’ choices over four potential time periods has been simulated to validate the proposed dynamic discrete choice formulation. The hypothetical scenario is a hurricane in route to make landfall for which five
+forecasts are provided, t  {1,…, 5}. In order to comply with the one period look ahead assumption, choices are estimated
+for the first four periods. At each observation period, there are two alternatives in the choice set that mimic respectively
+the decision to evacuate or do not evacuate. It should be noted that this model is not regenerative, as any household that
+decides to evacuate is out of the sample.
+Two types of variables were generated in the simulated dataset, static and dynamic. Static variables relate to household
+characteristics, specifically household’s income, size, presence of kids, and previous experience with evacuation; whereas
+dynamic variables provide time-varying information of the threat, namely hurricane category, time to expected landfall, and
+whether they are at the last forecast. These variables were selected based on the information found in the literature review
+regarding the factors that influence evacuation decisions. With reference to the socio-demographic variables it should be
+said that these variables have been found to be significant predictors in some studies but the best scientific estimate is
+that they have negligible effects (Huang et al., 2015). The variables in the simulated dataset have been generated using the
+following criteria:
+• Household income varies on 7 levels of variation: (1) Less than $15,000; (2)=$15,000 to $24,999; (3) $25,000 to $39,999;
+(4) $40,000 to $79,999; (5) $80,000 to $119,000; (6) $120,000 to $149,000; and (7) Over $150,000. It was assumed that
+10% of the population had income level 1, 20% had level 2, 50% were uniformly distributed between levels 3 and 4, and
+the remaining 20% were uniformly distributed between levels 5 through 7.
+• It was assumed that 70% of households have between 1 and 3 family members and that the remaining 30% have between
+4 and 6.
+• Assumption of presence of kids (i.e., under 17 years of age) were made based on the size of the household. Singlemember households were assumed to have no kids. If the household were composed of 2 members, there was a 5%
+chance of one of them being a kid. Households with 3 or 4 members were given a 50% probability of having a kid,
+whereas families with 5 or more members were given an 80% probability of having at least one kid.
+• It was assumed that 50% of households have had previous experience with evacuation (either directly or indirectly).
+• For the first forecast, hurricane category was uniformly distributed in the range of 1–5 following the Saffir-Simpson scale.
+After this initial forecast, it was assumed that hurricanes could only increase or decrease (within the 1 to 5 scale limit)
+at most two categories between forecasts. For example, if in Forecast 2 the category is 2, then in Forecast 3 the category
+was uniformly distributed between 1 and 4.
+• Time to expected landfall was uniformly distributed within each forecast following these ranges: (1) 67–77 hrs, (2) 44–
+52 hrs, (3) 21–27 hrs, (4) 10–14 hrs, and (5) 4–8 hrs away.
+• The communication of the last forecast is a dummy variable with 0–1 values that takes the value of 1 if the period of
+observation is forecast 4 and 0 otherwise.
+Respondents are supposed to choose between two alternatives: evacuate and not evacuate. Utility of evacuation of household i on time t can then be specified as:
+Uevac,it = βincomeHHinc + βsizeHHsize + βkidsHHkids + βexpHHexp + βcategoryHC + βtimeTTEL + βLast FCFC4 + εi (9a)
+where HHinc is household income, HHsize is household size, HHkids is the presence of at least one kid in the family, HHexp
+is the experience of the household with evacuation, HC is the hurricane category, TTEL is the time to expected landfall and
+FC4 is the last forecast. The random term εi is iid extreme-value distributed at a given time period.
+Three models were estimated using the simulated data and the specification defined above: (i) a model where decisions
+are generated following a logit distribution and estimated with a dynamic model, LogDyn; (ii) a model where decisions are
+generated following a dynamic distribution and estimated with a logit model, DynLog; and (iii) a model where both generation and estimation are done dynamically, DynDyn. In the logit model (DynLog), respondents are not considering the future
+threat evolution when making decisions at each time period. The model is simply formulated as a traditional MNL with
+two alternatives; utilities include both static and dynamic variables, for consistency with the dynamic model formulation.
+All models are coded in R language. Model coefficients in Table 2 are averaged over the one hundred models’ estimates; we
+also report confidence interval (CI) and minimum and maximum values obtained across the simulated datasets generated.
+
+454 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+Table 2
+Estimation with simulated data.
+Variable True value Model Average SD CI 95% Min Max
+Hurricane category 0.2 LogDyn 0.1465 0.0258 0.0051 0.0932 0.2119
+DynLog 0.2635 0.0287 0.0057 0.2004 0.3365
+DynDyn 0.1971 0.0275 0.0055 0.1305 0.2752
+Time to expected landfall −0.03 LogDyn −0.0280 0.0021 0.0004 −0.0341 −0.0235
+DynLog −0.0337 0.0022 0.0004 −0.0402 −0.0289
+DynDyn −0.0302 0.0019 0.0004 −0.0352 −0.0264
+Last forecast (FC4) −3.3 LogDyn −3.1601 0.3534 0.0701 −4.3564 −2.4143
+DynLog −3.5930 0.1910 0.0379 −4.2687 −3.2495
+DynDyn −3.2767 0.3395 0.0674 −4.1807 −2.5989
+Previous experience 0.9 LogDyn 0.7650 0.1009 0.0200 0.5055 1.0276
+DynLog 1.0805 0.0971 0.0193 0.8290 1.3691
+DynDyn 0.9001 0.0959 0.0190 0.6623 1.1650
+Household size −0.3 LogDyn −0.2829 0.0460 0.0091 −0.3959 −0.1744
+DynLog −0.3139 0.0436 0.0086 −0.4223 −0.2226
+DynDyn −0.2981 0.0388 0.0077 −0.3852 −0.1719
+Presence of kids 0.3 LogDyn 0.2592 0.1456 0.0289 −0.0632 0.5928
+DynLog 0.3024 0.1385 0.0275 0.0272 0.6166
+DynDyn 0.2943 0.1247 0.0248 0.0124 0.5575
+Household income −0.15 LogDyn −0.1550 0.0260 0.0052 −0.2291 −0.0887
+DynLog −0.1402 0.0257 0.0051 −0.2039 −0.0841
+DynDyn −0.1474 0.0242 0.0048 −0.2195 −0.0874
+RMSD LogDyn 0.0780
+DynLog 0.1324
+DynDyn 0.0092
+Root Mean Square Deviation (RMSD) is adopted to validate which model better recovers the true values. RMSD aggregates
+individual differences between the true and predicted values into a single measure of predictive power. The bigger the
+RMSD, the poorer the model’s ability to reproduce the true phenomenon. The RMSD is defined as
+RMSD
+θˆ
+
+=
+
+E((θˆ − θ )
+2
+) =
+n
+i=1 (θ
+i − θi)
+2
+n (10a)
+where θˆ is the observed (true) value, θ is the modeled value at time i, and n is the number of parameters. Results of the
+estimations are presented in Table 2. The last part of the table reports the RMSD. Overall, models with dynamic estimation
+obtained lower RMSD, indicating lower bias in its coefficients, with DynDyn model yielding the lowest value of all (as
+expected).
+5. Dataset description
+Hurricane Katrina came in contact with the city of New Orleans in 2005. Later on September 1, 2008, Hurricane Gustav
+made landfall near Cocodrie, Louisiana as a Category 2 hurricane. Gustav originated as a tropical storm southeast of Port-auPrince, Haiti, on August 25, 2008 and developed into a hurricane on August 26. These two experiences combined with the
+closeness between events, highlighted the need of a practical and more reliable framework for evacuation behavior analysis.
+On 2010, the Public Policy Research at Louisiana State University conducted a survey that collected information on the
+evacuation behavior of resident of New Orleans. The survey had two main parts: 1) a Revealed Preference (RP) section that
+gathered information of the respondent’s evacuation decision during the threat of hurricane Gustav (not discussed in this
+study), and 2) a Stated Preference (SP) section that registered the respondent’s evacuation behavior based on hypothetical
+hurricane scenarios. The survey used the RP data and adapted it to collect dynamic information and enhance the realism of
+each scenario by presenting it in audio-visual form on a DVD. A total of nine hypothetical storms were developed based on
+past hurricanes characteristics; retrieved history contained information on the path of a hurricane and other characteristics,
+such as storm category, storm location, and time of landfall (Gudishala, 2011). In the stated preference survey, each generated
+storm was described in terms of the following time-dependent variables: hurricane category (HC), evacuation order (EO),
+time of day, in a 24 h clock (TOD), time to expected landfall (TTEL), and day of the week (DOW) (Monday is one), see Table
+3. The population was divided into 3 sample groups and each household was presented with 3 hypothetical storms randomly
+chosen from the nine developed by the analysts. Each storm contained 4 forecasts; at each forecast the respondent made
+the decision of whether to evacuate or not. The response sheet asked for input on day and time of evacuation, mode of
+evacuation, type of destination (e.g., house, motel, shelter, etc.), location of destination, and route. The reader is referenced
+to Wilmot & Gudishala (2013) for a more detailed explanation of the survey design and data collection process.
+A total of 310 households responded to the survey, including 22 households that were part of the pilot survey. This
+study only considered information gathered from the main survey––288 households, which translate into 864 potential
+observations. However, not all data points could be used. A data cleaning process was undertaken to eliminate incoherent
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 455
+Table 3
+Hypothetical storms presented to interviewed households.
+Storm Characteristics Forecast1 Forecast2 Forecast3 Forecast4
+1 HC1 4 4 4 3
+EO1 None Voluntary Mandatory Mandatory
+TOD1 10.25 6.25 0.25 14.25
+TTEL1 70 50 32 18
+DOW1 3 4 5 5
+2 HC2 5 4 3 2
+EO2 Voluntary Mandatory Mandatory Voluntary
+TOD2 12.50 14.50 16.00 1.00
+TTEL2 72 45 19 8
+DOW2 1 2 3 4
+3 HC3 3 4 3 3
+EO3 None Voluntary Mandatory Mandatory
+TOD3 6.50 6.50 8.50 15.50
+TTEL3 68 44 18 11
+DOW3 6 7 1 1
+4 HC4 5 3 2 2
+EO4 None Voluntary Voluntary Voluntary
+TOD4 12.50 13.50 12.50 1.50
+TTEL4 69 44 21 8
+DOW4 3 4 5 6
+5 HC5 3 5 2 1
+EO5 None Voluntary None None
+TOD5 9.50 12.50 11.50 23.50
+TTEL5 76 49 26 14
+DOW5 2 3 4 4
+6 HC6 5 3 2 1
+EO6 None Voluntary Voluntary Voluntary
+TOD6 9.50 15.50 16.50 3.50
+TTEL6 75 45 20 9
+DOW6 3 4 5 6
+7 HC7 1 3 2 2
+EO7 None Voluntary Mandatory Mandatory
+TOD7 11.50 9.50 9.50 0.50
+TTEL7 74 52 28 13
+DOW7 5 6 7 1
+8 HC8 4 3 3 3
+EO8 None Voluntary Mandatory Mandatory
+TOD8 12.50 9.50 8.50 20.50
+TTEL8 67 46 23 11
+DOW8 7 1 2 2
+9 HC9 5 3 2 1
+EO9 None Voluntary Voluntary Voluntary
+TOD9 6.50 10.50 6.50 22.50
+TTEL9 75 47 27 11
+DOW9 6 7 1 1
+answers, such as evacuating before the first forecast. After cleaning the data, 281 households remained––yielding to 250
+observations for sample group 1, 253 for sample group 2, and 260 on sample group 3, and a total of 763 observations.
+5.1. Socio-demographic characteristics
+This subsection describes the sampled population based on the gathered information; all descriptive statistics presented
+here are based on weighted data. The surveyed households are distributed across 10 neighborhoods, all of them highly vulnerable to extreme weather events given their low altitude and proximity to the coast. The sampled households present
+demographic distributions parallel to Louisiana’s 2010 National Census data in many of the different characteristics, indicating that a random sample was successfully collected. For instance, 64.5% of the sample was white, 20% African-American,
+and 6% other – 9.5% did not respond – whereas the census data yields 63.9%, 32.8%, and 3.3% for the same races live in
+other type of housing.
+An analysis of the household size shows that the majority of households (61%) have at most 2 members, while 16% have
+3 members, 14% have 4, and the remaining 9% have 5 or more members. This distribution results in a sample’s average
+household size is 2.44 members.
+The majority of households (75%) have 1 or 2 vehicles, whereas 14% has 3 or more vehicles. The remainder of the households does not own any vehicle. The average number of vehicles owned per household is 1.65. Over 40% of households with
+an income below $15,000 do not own a vehicle. Surprisingly, around 10% of high income households do not own a vehicle.
+
+456 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+Table 4
+Household location and income distribution within each location.
+Parish household income distribution
+Parish name % of HH Less than $15k $15k-$24.9k $25k-$39.9k $40k-$79.9k $80k-$119.9k $120k-150k More than $150k
+Jefferson 33.1% 5.5% 23.2% 17.8% 26.6% 16.3% 4.7% 5.9%
+St. Tammany 18.5% 20.7% 7.4% 6.2% 39.1% 13.6% 3.3% 9.7%
+Orleans 15.0% 16.8% 13.9% 8.7% 43.1% 8.4% 4.0% 5.1%
+Terrebonne 13.4% 36.6% 10.6% 13.7% 10.5% 14.9% 8.6% 5.2%
+Tangipahoa 6.9% 8.0% 10.7% 19.9% 28.7% 14.3% 11.0% 7.4%
+Lafourche 5.0% 0.0% 24.4% 15.0% 21.1% 31.2% 4.1% 4.1%
+St. John the Baptist 3.9% 12.5% 55.3% 11.9% 20.2% 0.0% 0.0% 0.0%
+St. Charles 2.6% 0.0% 7.9% 7.9% 45.9% 15.3% 15.3% 7.8%
+St. Bernard 0.8% 0.0% 23.8% 0.0% 0.0% 76.2% 0.0% 0.0%
+Plaquemines 0.7% 0.0% 0.0% 0.0% 27.4% 46.0% 26.6% 0.0%
+Overall 14.10% 17.10% 13.00% 29.10% 15.10% 5.50% 6.10%
+Table 5
+Evacuation decision distribution.
+Evacuation decision % of observations % of evacuees
+After forecast 1 18.3% 32.2%
+After forecast 2 26.3% 46.2%
+After forecast 3 11.5% 20.2%
+After forecast 4 0.8% 1.4%
+Do not evacuate 43.1% –
+Total 100% 100%
+One could speculate that this might be because those households are well located and therefore do not need a vehicle.
+As for education, approximately 37% of households achieved at most a high school degree. In contrast, 38% of households
+have at least one member with a bachelor degree or higher. The rest of the household attend some college or obtained an
+associate degree. Table 4 shows the income characteristics of the households across the parishes. As can be seen, a third of
+them are located in the Jefferson parish, followed by St. Tammany, Orleans and Terrebonne. Saint Bernard and Plaquemines
+are the parishes with the fewest households, accounting for only 1.5% of the sample combined. Furthermore, around 31%
+of the households earn less than US$25,000, meaning that a significant percentage could be considered as low income. Approximately 68% of households in St. John the Baptist and 47% in Terrebone are low income. In contrast, 12% of households
+could be considered as high income (HIHH) as they earn US$120,000 or more, with Plaquemines and St. Charles having the
+highest percentage of high income households, 27% and 23% respectively. Furthermore, the data shows that income has little
+effect on the type of house residents live in. The majority (85%) of the sampled population live in a permanent house, with
+8% living in an apartment/condo and only 5% live in a mobile home, the rest live in other type of housing.
+5.2. Stated preference socio-economic demographic
+This subsection provides information regarding the evacuation behavior of the respondents, based on the 763 observations (each storm is considered an independent observation).
+Table 5 shows the distribution of the households’ evacuation decision, that is whether they evacuated or not, and if so,
+at what point in time. Households decided not to evacuate in 43% of the hypothetical scenarios, a low percentage given
+that 84% of the households are located in a flood zone. Also, there is a clear unwillingness to wait until the last moment
+to evacuate, as indicated by the low percentage of households (0.8%) that would evacuate after Forecast 4, and as is usually
+the case in coastal cities.
+The evacuation behavior is related to the hurricane scenario presented to the household. For example, Storms 7 and 9
+have the lowest percentage of evacuees, which might be explained by the low hurricane category in the case of Storm 7 and
+by the lack of a mandatory evacuation order in Storm 9. It should be noted that Storm 7 follows the actual characteristics
+of Hurricane Gustav. Furthermore, approximately 66% of the households that were presented with Storm 7 evacuated –
+resembling the 74% evacuation rate of the total sampled population during Gustav. Interestingly, 74% of those who did not
+evacuated during Gustav would not evacuate under the presented scenarios, whereas 32% of those who did evacuate would
+not evacuate now.
+Generally, and when possible, sampled households prefer to evacuate sooner rather than later. Now, the decision of how
+much time to wait after a forecast depends, amongst many factors, on the time of that forecast. For instance, over 60% of
+households that would evacuate after the first forecast do so 16 hours or more after the forecast, see Fig. 2. However, this
+percentage halves on Forecast 2 and drops to almost zero on Forecast 3, indicating that the longer a household waits for
+future forecasts the faster they tend to evacuate after it – which is an expected behavior. Overall, 23.2% of households that
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 457
+Fig. 2. Distribution of time between forecast and evacuation.
+decided to evacuate do so within the first two hours, 10.1% between two and four hours, 14.6% between four and eight
+hours, 17.9% between 8 and 16 hours, and 34.2% would wait at least 16 hours to evacuate.
+Data also show that there is a positive relationship between income level and the decision to wait longer to evacuate;
+the same results are obtained if education level is analyzed. It is also evident that regardless of income the majority of
+households that evacuate do so after the first two forecasts (comprising approximately 79% of the evacuees). No reliable
+information can be inferred from households that would evacuate after Forecast 4 because of its low percentage.
+Around 94% of those who evacuate would do it by private vehicle, 5% would get a ride with someone else and 1%
+would use the bus. Those who evacuate with the assistance of another (i.e., take a ride) tend to wait more frequently until
+Forecasts 3 to do so. One reason for this might be that they would like to avoid the distress of moving from their location
+to the departure point so they wait to confirm whether it is necessary or not to evacuate.
+6. Threat evolution and model estimation with real data
+In this Section, we describe how dynamic variables were selected and modeled. An important aspect to take into account
+is that the dynamic nature of a variable does not guarantee that the variable is independently dynamic (i.e., their change is
+not correlated with other variables). Of the information available in the SP datasets, time of day and day of the week are
+continuous variables that progress linearly as time passes by; and evacuation order is a subjective decision made by officials
+based on the storm’s forecasted intensity at landfall, forward movement speed and distance (Yi et al., 2017). This research
+takes into account that the time to expected landfall does not necessarily progresses linearly with time; however, to ensure
+compatibility across datasets, it is assumed that it changes linearly over time. In this manner, hurricane category can be
+viewed as the only one that truly behaves independently (and unsystematically).
+From a modeling perspective, yt represents the evolution of the threat’s attribute over time (see Eq. 1), a key element in
+the estimation of expected utility. Since the future appears uncertain to the individual affected, this (expectation of) evolution needs to be represented in some sort. Here, it is proposed to estimate expectation from the respondent’s perspective
+instead of using market (equilibrium) values, as it is commonly used in the literature (Keane & Wolpin, 1997; Rust, 1987).
+In this sense, this research experiments with two different threat evolution assessment methodologies:
+1. Perfect Knowledge (PK): Respondents have perfect knowledge of the future value of the dynamic variable. For example,
+if we consider hurricane category as the dynamic variable, at time t respondent i knows the category of the hurricane at
+time t + 1.
+2. Stochastic Growth (SG): The hurricane category follows a stochastic growth model where dynamic variable changes according to a random walk with a drift. The respondents’ expectation of the evolution of the hurricane is then simulated
+from that distribution.
+6.1. Perfect knowledge
+This approach is a theoretically ideal situation where knowledge is readily accessible, allowing households (and individuals) to make more educated decision. With approximately 75% of households in the US having access to internet (United
+States Census Bureau, 2014), accessibility to historic and real-time information is higher than ever. Therefore, it is sound to
+assume that, within reason, they can successfully estimate future trends and/or behaviors of threats. With this in mind, the
+
+458 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+Table 6
+Hurricanes that traversed through Louisiana between 1950 and 2010.
+Name Date Name Date
+IDA Nov. 10, 2009 JUAN Oct. 27–31, 1985
+IKE Sept. 13, 2008 ELENA Sept. 2, 1985
+GUSTAV Aug. 31, 2008 DANNY Aug. 16, 1985
+HUMBERTO Sept. 13, 2007 BOB July 11, 1979
+RITA Sept. 24, 2005 CARMEN Sept. 7–8, 1974
+KATRINA Aug. 29, 2005 EDITH Sept. 16, 1971
+LILI Oct. 3, 2002 CAMILLE Aug. 17–18, 1969
+GEORGES Sept. 27–28, 1998 BETSY Sept. 9–10, 1965
+DANNY July 18, 1997 HILDA Oct. 2–3, 1964
+OPAL Oct. 4, 1995 CARLA Sept. 10–12, 1961
+ANDREW Aug. 26, 1992 ETHEL Sept. 15, 1960
+GILBERT Sept. 15–19, 1988 AUDREY June 27, 1957
+FLORENCE Sept. 9, 1988 FLOSSY Sept. 24, 1956
+BONNIE June 26, 1986
+-4
+-3
+-2
+-1
+0
+1
+2
+3
+0 10 20 30 40 50 60 70
+Difference
+Time Period
+First Difference of Hurricane Category
+Fig. 3. First difference of hurricane category data.
+dynamic model was estimated assuming a “perfect knowledge” approach for estimating the expected utility of respondents
+(i.e., expectations and future scenarios are an exact match).
+Recall that at any forecast i our proposed model uses the household’s expectation of how a threat may change over one
+period of time (i + 1). So, in order to estimate the evacuation share for Forecast 4, we needed to have information for one
+more period. Therefore, a new forecast scenario (Forecast 5) was developed using a static approach for the estimation of the
+final expected utility with a 6 hours difference from FC4. In here, it is assumed that respondent believed that the hurricane
+category and evacuation order would not change between Forecasts 4 and 5.
+6.2. Stochastic growth
+As a way to mathematically model threat evolution, this study proposes an assessment methodology where past observations can be used to predict future conditions. The first step to do so is obtaining data of past hurricanes. This study
+uses the dataset “Best Track Data” known as Atlantic HURDAT2 collected by the National Hurricane Center (NHC). The NHC
+conducts an analysis of all storms in its area of responsibility to determine the official assessment of the cyclone’s history.
+Additionally, they perform ongoing retrospective investigation of any tropical cyclone brought to their attention, and update
+the historical record to reflect any changes found through their analysis. The end product is a rich dataset that provides
+detailed information for every six hours interval on location, speed and landfall, to mention a few, of all storms that traversed the Atlantic region between the years 1851 and 2014 (Landsea et al., 2015). For this study, all events prior to 1950
+and those which did not reach a hurricane level within the area of study (i.e., Louisiana), following the Saffir–Simpson scale,
+were filtered out. At the end, 27 storms remained (see Table 6) yielding a total of 1065 data points.
+With the objective to understand the random evolution of a hurricane, the first difference is taken in relation to each
+hurricane’s category. The result resembles a pure noise (i.i.d. variations), demonstrating a stochastic behavior which could
+be characterized as a random walk (a sequence of random steps), see Fig. 3.
+Autoregressive models are a suitable approach to describe time-varying processes based on a linear relation to past values
+and an error term. This method has been used in the past for different purposes. For instance, Melnikov (2013) evaluated
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 459
+the impact of technological change on the dynamics of consumer demand based on the consumer’s expectations of future
+product quality and consumers, while illustrating various ways of implementing random walks.
+Several autoregressive models are available, however this study proposes the use of an Auto Regressive model of type 1,
+AR(1) model, which depends only on one previous value, with a drift:
+rt = αrt−1 + γ + εt (11)
+where
+• α is the dependence factor.
+• γ is the drift.
+• εt is a normally distributed error term with mean zero and variance σ 2.
+Using Louisiana’s historical hurricane data to estimate the coefficients in Eq. 11, it is found that the dependence factor
+(α) is equal to 0.931926, the drift (γ ) is equal to 0.072533, and the standard deviation (σ) of the error term is 0.533634.
+The dynamic logit model can now be estimated using these values as input.
+To compute the choice probability P, the dynamic model compares the reservation utility W and the mode of μ, the
+maximum of the alternative’s utility (in this case only one, to evacuate). These two quantities depend on the predictors used
+in the model, which this study assumes to follow an AR(1) model. Therefore different realizations for these predictors will
+produce different values of W and μ. The procedure implemented here calculates the expected value of W and μ through
+simulation. The simulation generates B realizations of the AR(1) series of the predictors and compute the corresponding W
+and μ values. Then, the mean is taken of these simulated W and μ to compute the variable that will enter the utility of
+postponing the evacuation decision.
+6.3. Results using real data
+In this Section we present the estimation results for the optimal time to evacuate problem obtained by applying the
+dynamic model to the Louisiana resident data. In Table 6 we compare four model formulations: 1) a dynamic discrete choice
+model that assumes perfect knowledge; 2) a dynamic discrete choice model with dynamic variable on a random drift; 3) a
+sequential logit model; 4) a sequential logit model with the same independent variables used in the dynamic specification.
+The sequential logit model is specified as in Fu and Wilmot (2004), who collected the Louisiana data and first modeled
+the time to evacuate using discrete choice models. The suggested method allows the use of all observations (i.e., binary
+choices) simultaneously, therefore reducing computational efforts and avoiding small data sample size for later time intervals. Their proposed model is as follows:
+L = N
+n−1
+Pn(i) = N
+n−1
+Pn(i)s/c
+
+i−1
+j=1
+
+1 − Pn(j)s/c
+	 (12)
+where Pn(i) denotes the probability that household n evacuates in time interval i, N is the total number of households and
+Pn(•)s/c is the probability that the utility of a household to evacuate is greater than the utility of the household to not
+evacuate in time interval i, provided that the household has not already evacuated. The reader is referred to the source
+paper for in depth explanation of the methodology.
+Results from models’ estimation are reported in Table 7. The coefficient estimates indicate that as hurricane category and
+evacuation order increase, so does the willingness to evacuate and that if the household waits until the last forecast, they are
+less likely to evacuate—matching previous evacuation behavior in the region. It is worth to note that the data showed that
+around 98% of Gustav’s evacuees did so by at least 24 hrs before landfall, highlighting household’s willingness to evacuate
+early. One can assume that the latter is due to the fact that households may prefer to avoid congestion and the risk of
+experiencing the hurricane out in the open. However, if the hurricane is too far away, this would lower the probability of
+evacuating. Additionally, having past experience with evacuation (i.e., if the household evacuated during Hurricane Gustav)
+has a significant positive effect on the decision to evacuate. In general, all model estimates have significant coefficients
+with expected signs. Finally, based on the results from the dynamic model, it is clear that households are less willing to
+evacuate during the evening and that household size and income have negative effect on evacuation, whereas the presence
+of kids has a positive influence on the decision to evacuate. None of the socio-demographic characteristics was found to be
+significant in the static approach as it can be seen from the fifth column in Table 7.
+In order to compare the Dynamic Logit with PK and the Sequential logit we apply the non-nested hypothesis test proposed by Horowitz (1982) that calculates the Significance Level (SL) as follows.
+SL = 
+
+−
+
+−2
+
+ρ2
+H · LL(0)H − ρ2
+L · LL(0)L
+
++ (KH − KL )
+ 1
+2
+
+where:
+ρ2
+H is the adjusted likelihood ratio index for the model with the lower value,
+ρ2
+L is the adjusted likelihood ratio index for the model with the higher value,
+KH and KL are the numbers of parameters in models H and L, respectively, and
+
+460 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+Table 7
+Model estimation results.
+Variable name Mixed
+dynamic logit
+with PK
+Dynamic logit
+with PK
+Dynamic logit
+with AR(1)
+Sequential logit Seq. logit
+(Dyn.
+adaptation)
+Hurricane category (mean) 0.2817 0.2256∗∗∗ 0.2020∗∗∗ 0.4776∗∗∗ 0.5790∗∗∗
+(6.80) (< 0.01) (< 0.01) (< 0.01) (< 0.01)
+Hurricane category (s.d.) 0.2957
+(2.76)
+Evacuation order 0.4730∗∗∗
+(< 0.01)
+TOD4 (6PM-12AM) (mean) -4.1620 -1.0564 (0.105) -1.2288∗
+(0.082)
+-0.969
+(1.10) (0.205)
+TOD4 (6PM-12AM) (s.d.) 4.5148
+(1.18)
+Time to expected landfall -0.0315 −0.0294∗∗∗ −0.0277∗∗∗ −0.0150∗∗ -0.0330∗∗∗
+(27.48) (< 0.01) (< 0.01) (0.02) (< 0.01)
+Last forecast (FC4) (mean) -6.7015 −3.3004∗∗∗ −3.1979∗∗∗ −2.8623∗∗∗ -2.9444∗∗∗
+(0.89) (< 0.01) (< 0.01) (< 0.01) (< 0.01)
+Last forecast (FC4) (s.d.) 5.0349
+(0.89)
+Evacuation experience Gustav (mean) 2.9815 0.8890∗∗∗ 0.8751∗∗∗ 1.5740∗∗∗ 1.5520∗∗∗
+(6.14) (< 0.01) (< 0.01) (< 0.01) (< 0.01)
+Evacuation experience Gustav (s.d.) 3.816
+(8.37)
+Household size -0.5533 −0.2733∗∗∗ −0.2813∗∗∗ 0.0006
+(4.19) (< 0.01) (< 0.01) (0.96)
+Number of kids (Less than 17yrs old) 0.6788 0.2907∗∗∗ 0.3020∗∗∗ 0.0071
+(3.76) (< 0.01) (< 0.01) (0.91)
+Household income -0.1719 −0.1561∗∗∗ −0.1505∗∗∗ -0.0286
+(2.58) (< 0.01) (< 0.01) (0.44)
+Constant -3.6673∗∗∗ (< 0.01) -2.5797∗∗∗
+(< 0.01)
+Number of observations: 763 763 2155 2155
+L(0): -1918.44 -1086.63 -1086.63
+LL: -958.80 -968.51 −970.20 -909.04 -913.83
+Adjusted R2: 0.494 0.491 0.158 0.149
+∗∗∗Significant at the 1% level ∗∗Significant at the 5% level ∗Significant at the 10% level
+ is the standard normal cumulative distribution function.
+The two models have the same number of coefficients estimated therefore the SL reduces to:
+SL = 
+
+−(−2(0.491 ·−1918.44 − 0.158 ·−1086.63))
+1
+2
+
+= [−39.20]  0.001
+which implies that the dynamic model is superior to the static model. However, the two dynamic model approaches (Perfect
+Knowledge and Stochastic Growth) yield strikingly similar results.
+The dynamic model proposed has also been extended to accommodate taste heterogeneity; results are reported in the
+first column of Table 7. The mixed type dynamic model is specified with four random parameters, which are hurricane
+category, time of day, last forecast, and evacuation experience. They are all assumed to be normally distributed; as from a
+behavioral stand point there is no reason to constrain these coefficients to a random variable that can assume just one sign.
+The resulting model has a slightly better fit than the dynamic model with fixed coefficients. It can be noted that the all the
+coefficients keep the same sign obtained with fixed coefficient models. We calculate that although the Hurricane Category
+mean is positive, the coefficient is negative for 17% of the population. This might be due to the fact that under extreme
+weather conditions and due to the worsening of the hurricane, the respondents felt that evacuate was not a safe option.
+TOD4 that has negative mean is positive for 18% of the population; this confirms that people prefer to evacuate during the
+day; but a small percentage of them still prefer to evacuate later due probably to other constraints not registered in the
+present survey. Gustav Evacuation Experience, again positive for the majority of the individuals is negative for 22% of the
+population. Having experienced a hurricane in the past is a good motivation to evacuate; those with negative coefficients
+probably feel that their place is safe given the past experience. The variable Last Forecast becomes not significant.
+In order to further validate the proposed approach, we re-estimated the model on eighty percent of the sample available and we applied the model on the remaining observations. Fig. 4 compares the observed evacuation decisions versus
+the estimated ones on the out-of sample. All the dynamic models reproduce well the observed choices. In particular, the
+dynamic PK mode and the dynamic AR(1) model have the same prediction results; the mixed dynamic model is in general
+worse than the former two except for evacuation on Time Period 3. The sequential logit models have low prediction power;
+they underestimate the number of people who are not evacuating and overestimate the number of evacuees, especially on
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 461
+Fig. 4. Out of sample model validation.
+Time Period 4. From both estimation and validation results, we can conclude that for this dataset the dynamic models have
+a better fit, and produce more realistic predictions over time.
+7. Conclusion and future steps
+Modeling approaches within evacuation behavior analysis generally do not account for the dynamic of decisions over
+time and do not incorporate dynamic variables. This paper has successfully estimated a dynamic behavioral model based
+on the optimal stopping time to evacuate that accounts for both stochastic variables and respondent’s expectations during
+a hurricane emergency. Dynamic Discrete Choice Models (DDCM) have been (scarcely) used in the past within the field of
+transportation, and to the best of the author’s knowledge, this is the first time such model is presented from an evacuation perspective. The proposed modeling framework has also been compared to existing discrete choice methods, namely
+Sequential Logit. We have demonstrated that simpler approaches yield to significant lower fit, significantly underestimate
+the probability of not evacuating and fail in incorporating demographic information. In this sense, it is evident that DDCM
+are more beneficial and insightful, and can serve as a tool for evaluating measures that could improve the efficiency of
+evacuations and emergency planning.
+In general, the results found in this research follow tendencies in sign, but not in significance when compared to Baker’s
+and Huang et al.’s findings. Hurricane category is the only variable that concurs in both sign and significance; whereas
+income differs in both. However, it should be noted that “despite the large hurricane evacuation database, each new study
+adds understanding” (Baker, 1991, pg. 309), and therefore results should be evaluated on a study by study basis.
+This is just the first step in the development of a robust model that allows the consideration of stochastic variables into
+behavioral choices. In this specific case, further research is needed to better represent the evolution of the threat’s attributes
+over time, a key element in the estimation of expected utility. Also, more attention should be devoted to the role of information during evacuation and on the decision to evacuate; models with more realistic assumptions about decision makers’
+information access and processing would yield to more robust representation of the evacuation process. This research experiments with two representations of hurricane evolution, however more and alternative approaches should be tested to
+improve estimation accuracy and to give general recommendations. Additionally, future research could include other formulations of random walks and consequently for the calculation of the future expected utilities. It would also be interesting to
+extend the dynamic model to include departure time, mode of evacuation and destination to further improve the analysis
+of policies regarding shelters location, demand management and distribution of resources. Future research could also look
+at developing comprehensive and robust learning mechanisms, such as a Bayesian approach, to determine expectations and
+evolution of believes over time. Comprehensive datasets are also needed to analyze socioeconomic factors that affect evacuation behavior, and most importantly that provide detailed and more variable observations over several time periods for the
+dynamic analysis. This will allow better understanding of the many different (dynamic) factors that influence the evacuation
+decisions.
+Finally, our current dataset contains only four forecasts with significant time gaps between the first ones, and they do
+not fully align with official timing of watches/advisories and warning. For instance, the National Hurricane Center provides:
+1) watches issued 48 hours in advance of the anticipated onset of tropical-storm-force winds and 2) warnings issued 36
+hours in advance of the anticipated onset of tropical-storm-force winds. This is a potential limitation that should be further
+explored in future research.
+
+462 N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463
+Acknowledgments
+We would like to thank Professor Chester G. Wilmot and Dr. Ravindra Gudishala from Louisiana State University for
+sharing the data with us and for providing results from previous studies as well as the documentation on the survey
+methodology.
+References
+Aguirregabiria, V., Mira, P., 2010. Dynamic discrete choice structural models: A survey. J. Econom. 156 (1), 38–67. doi:10.1016/j.jeconom.2009.09.007.
+Baker, E.J., 1979. Predicting response to hurricane warnings: A reanalysis of data from four studies. Mass Emerg. Disasters 9–24.
+Baker, E.J., 1991. Hurricane evacuation behavior. Int. J. Mass Emerg. Disasters 9 (2), 287–310.
+Bateman, J.M., Edwards, B., 2002. Gender and evacuation: A closer look at why women are more likely to evacuate for hurricanes. Nat. Hazard. Rev. 107–117.
+Bolin, R., 1986. The 1986 California Floods: Quick Response Research Rep. No. 02. University of Colorado, Boulder, Colorado.
+Bolin, R., Jackson, M., Crist, A., 1996. Gender inequality, vulnerability, and disasters: theoretical and empirical considerations. In: Enarson, E., Morrow, B.
+(Eds.), The Gendered Terrain of Disasters. Westport, Connecticut.
+Carnegie, J.A., Deka, D., 2010. Using hypothetical disaster scenarios to predict evacuation behavioral response. 89th Annual Meeting of the Transportation
+Research Board. TRB, Washington, DC.
+Carter, M.T., Kendall, S., Clark, J.P., 1983. Household response to warnings. Mass Emerg. Disasters 95–104.
+Charnkol, T., Tanaboriboon, Y., 2006. Tsunami evacuation behavior analysis: one step of transportation disaster response. IATSS Res. 30 (2), 83–96.
+Chen, X., Zhang, F.B., 2004. Agent-based modeling and simulation of urban evacuation: relative effectiveness of simultaneous and staged evacuation strategies. 83rd Transportation Research Board Annual Meeting. TRB, Washington DC, United States.
+Chiu, Y., Villalobos, J., Gautam, B., Zheng, H., 2006. Modeling and Solving the Optimal Evacuation-Route-Flow-Staging Problem for No-Notice Extreme Events.
+85th Transportation Research Board Annual Meeting. TRB, Washington DC, United States.
+Cirillo, C., Xu, R., Bastin, F., 2014. A dynamic formulation for car ownership modeling. Transp. Sci., 2016 50 (1), 322–335.
+Cova, T., Johnson, J., 2002. Microsimulation of neighborhood evacuations in the urban-wildlife interface. Env. Plan. 2211–2229.
+Czajkowski, J., 2011. Is it time to go yet? Understanding household hurricane evacuation decisions from a dynamic perspective. Nat. Hazard. Rev. 12 (2),
+72–84.
+Dash, N., Gladwin, H., 2007. Evacuation decision making and behavioral responses: Individual and household. Nat. Hazard. Rev. 3, 69–77 (August)Retrieved
+from http://ascelibrary.org/doi/abs/10.1061/(ASCE)1527-6988(2007)8:3(69).
+de Lapparent, M., Cernicchiaro, G., 2012. How long to own and how much to use a car? A dynamic discrete choice model to explain holding duration and
+driven mileage. Econ. Modell. 29 (5), 1737–1744. doi:10.1016/j.econmod.2012.05.018.
+Drabek, T.E., Boggs, K., 1968. Families in disaster: Reactions and relatives. Marriage Family 443–451.
+Fosgerau, M., Frejinger, E., Karlstrom, A., 2013. A link based network route choice model with unrestricted choice set. Transp. Res. Part B: Methodol. 56,
+70–80. doi:10.1016/j.trb.2013.07.012.
+Fothergill, A., 1996. Gender, risk and disaster. Mass Emerg. Disasters 33–56.
+Fu, H., Wilmot, C.G., 2004. A sequential logit dynamic travel demand model for hurricane evacuation. Transp. Res. Rec. 1882, 19–26.
+Fu, H., Wilmot, C., Zhang, H., 2006. Modeling the hurricane evacuation response curve. Transp. Res. Rec. 2022, 94–102.
+Gao, S., Frejinger, E., Ben-Akiva, M., 2010. Adaptive route choices in risky traffic networks: a prospect theory approach. Transp. Res. Part C 18 (5), 727–740.
+doi:10.1016/j.trc.2009.08.001.
+Ge, S., 2013. Estimating the returns to schooling: Implications from a dynamic discrete choice model. Labour Econ. 20, 92–105. doi:10.1016/j.labeco.2012.11.
+004.
+Gladwin, H., Peacock, W.G., 1997. Warning and evacuation: A night for hard houses. In: Peacock, W., Morrow, B., Gladwin, H. (Eds.), Hurricane Andrew:
+Gender, Ethnicity and the Sociology of Disasters. Routledge, New York, pp. 52–74.
+Glerum, A., Vastberg, O.B., Frejinger, E., Karlström, A., Hugosson, M.B., & Bierlaire, M. (2015). A dynamic discrete-continuous choice model of car ownership,
+usage and fuel type. Interuniversity Research Centre on Enterprise Networks, Logistics and Transportation (CIRRELT).
+Gönül, F.F., 1998. Estimating price expectations in the OTC medicine market: An application of dynamic stochastic discrete choice models to scanner panel
+data. J. Econom. 89 (1-2), 41–56. doi:10.1016/S0304-4076(98)00054-2.
+Gruntfest, E., Downing, T., White, G.F., 1978. Big Thompson Flood. Institute of Behavioral Science, Univ. of Colorado, Boulder, Colorado.
+Gudishala, R., 2011. Development of a time-dependent, audio visual stated choice method of data collection for hurricane evacuation behavior. Louisiana
+State University.
+Gurmu, S., Ihlanfeldt, K.R., Smith, W.J., 2008. Does residential location matter to the employment of TANF recipients? Evidence from a dynamic discrete
+choice model with unobserved effects. J. Urban Econ. 63 (1), 325–351. doi:10.1016/j.jue.2007.02.002.
+Heckman, J.J., Navarro, S., 2007. Dynamic discrete choice and dynamic treatment effects. J. Econom. 136 (2), 341–396. doi:10.1016/j.jeconom.2005.11.002.
+Hetrakul, P., 2012. Discrete Choice Models For Revenue Management. University of Maryland Retrieved from http://drum.lib.umd.edu/handle/1903/13498.
+Horowitz, J., 1982. Evaluation of usefulness of two standard goodness-of-fit indicators for comparing non-nested random utility models. Transp. Res. Rec.
+874, 19–25.
+Huang, S., Lindell, M., Prater, C., 2015. Who Leaves and Who Stays? A Review and Statistical Meta-Analysis of Hurricane Evacuation Studies. Environ. Behav.
+1–39. doi:10.1177/0013916515578485.
+Hutton, J., 1976. The differential distribution of death in disaster: a test of theoretical propositions. Mass Emerg. Disasters 261–266.
+Kalafatas, G., Peeta, S., 2009. Planning for Evacuation: Insights from an Efficient Network Design Model. J. Infrastruct. Syst. 21–30.
+Karlstrom, A., Palme, M., Svensson, I., 2004. A dynamic programming approach to model the retirement behaviour of blue-collar workers in Sweden. J.
+Appl. Econom. 19 (6), 795–807. doi:10.1002/jae.798.
+Keane, M.P., Todd, P.E., Wolpin, K.I., 2011. The Structural Estimation of Behavioral Models: Discrete Choice Dynamic Programming Methods and Applications.
+Handbook of Labor Economics, Vol. 4. Elsevier Inc. doi:10.1016/S0169-7218(11)00410-2.
+Keane, M.P., Wolpin, K.I., 1997. The Career Decisions of Young Men. J. Polit. Econ. 105 (3), 473–522. doi:10.1086/262080.
+Keane, M.P., Wolpin, K.I., 2002a. Estimating Welfare Effects Consistent with Forward-Looking Behavior. Part I: Lessons from a Simulation Exercise. J. Hum.
+Resour. 37 (3), 570–599.
+Keane, M.P., Wolpin, K.I., 2002b. Estimating Welfare Effects Consistent with Forward-Looking Behavior. Part II: Empirical Results. J. Hum. Resour. 37 (3),
+570–599. doi:10.2307/3069682.
+Keane, M.P., Wolpin, K.I., 2009. Empirical applications of discrete choice dynamic programming models. Rev. Econ. Dyn. 12 (1), 1–22. doi:10.1016/j.red.2008.
+07.001.
+Landsea, C., Franklin, J., Beven, J.. The Revised Atlantic Hurricane Database (HURDAT2) Retrieved from http://www.nhc.noaa.gov/data/?text#annual.
+Lindell, M., Lu, J., Prater, C., 2005. Household decision making and evacuation in response to Hurricane Lili. Nat. Hazard. Rev. 171–179 (November)Retrieved
+from http://ascelibrary.org/doi/abs/10.1061/(ASCE)1527-6988(2005)6:4(171).
+Lindell, M., Perry, R., 2004. Communicating Environmental Risk in Multiethnic Communities. Sage, Thousand Oaks, CA.
+Lindell, M., Perry, R., 2012. The protective action decision model: theoretical modifications and additional evidence. Risk Anal. 32 (4), 616–632.
+Lindell, M., Prater, C., 2007. Critical behavioral assumptions in evacuation analysis for private vehicles: Examples from hurricane research and planning. J.
+Urban Plann. Dev. 133, 18–29.
+
+N. Urena Serulle, C. Cirillo / Transportation Research Part B 106 (2017) 447–463 463
+Lindell, M., Prater, C., Perry, R., Wu, J., 2002. EMBLEM: an Empirically based Large-scale Evacuation Time Estimate Model. Hazard Reduction and Recovery
+Center (Texas A&M), College Station, TX.
+Liu, Y., Lai, X., Chang, G., 2006. Two-level Integrated Optimization System for Planning of Emergency Evacuation. J. Transp. Eng. 800–807.
+Mei, B., 2002. Development of Trip Generation Models of Hurricane Evacuation. Louisiana State University, Baton Rouge, Louisiana.
+Melnikov, O., 2013. Demand for differentiated durable products: The case of the u.s. computer printer market. Econ. Inq. 51 (2), 1277–1298. doi:10.1111/j.
+1465-7295.2012.00501.x.
+Mileti, D., Drabek, T., Haas, E., 1975. Human Systems in Extreme environments: A sociological Perspective. Institute of Behavioral Science, Univ. of Colorado,
+Boulder, Colorado.
+Miller, R.a., 1984. Job Matching and Occupational Choice. J. Polit. Econ. 92 (6), 1086. doi:10.1086/261276.
+Murray-Tuite, P., Wolshon, B., 2013. Evacuation transportation modeling: An overview of research, development, and practice. Transp. Res. Part C: Emerg.
+Technol. 27, 25–45.
+Pakes, A., 1986. Patents as options: some estimates of the value of holding european patent stocks. Econometrica 54 (4), 755–784. doi:10.2307/1912835.
+Pel, A.J., Bliemer, M.C.J., Hoogendoorn, S.P., 2011a. A review on travel behaviour modelling in dynamic traffic simulation models for evacuations. Transportation 39 (1), 97–123. doi:10.1007/s11116-011-9320-6.
+Pel, A.J., Bliemer, M.C.J., Hoogendoorn, S.P., 2011b. Modelling traveller behaviour under emergency evacuation conditions. EJTIR 11 (11), 166–193. http:
+//www.ejtir.tbm.tudelft.nl/issues/2011_02/pdf/2011_02_03.pdf.
+Perry, R.W., 1979. Evacuation decision making in natural disasters. Mass Emerg. Disasters 25–38.
+Perry, R.W., Greene, M.R., 1982. The Role of Ethnicity in the Emergency Decision-Making Process. National Emergency Training Center.
+Perry, R.W., Lindell, M.K., Greene, M.R., 1981. Evacuation Planning in Emergency Management. Heath Lexington Books, Lexington, MA.
+Perry, R.W., Lindell, M.K., Greene, M., 1982. Threat perception and public response to volcano hazards. J. Soc. Psychol. 199–204.
+Perry, R., Mushkatel, A.H., 1986. Minority Citizens in Disasters. University of Georgia Press, Athens.
+Rust, J., 1987. Optimal replacement of GMC bus engines : an empirical model of Harold Zurcher. Econometrica 55 (5), 999–1033.
+Rust, J., Phelan, C., 1997. How social security and medicare affect retirement behavior in a world of incomplete markets. Econometrica 65 (4), 781–831.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2014. Analysis of hurricane evacuee mode choice behavior. Transp. Res. Part C: Emerg. Technol. 48,
+37–46.
+Schaffer, R., Cook, E., 1972. Human Response to Hurricane Celia. Texas A&M University, College Station, Texas.
+Shapiro, A., Dentcheva, D., Ruszczynski, A., 2009. Lectures On Stochastic Programming: Modeling and Theory. SIAM, Philadelphia, PA.
+Simpson, R.H., Riehl, H., 1981. The Hurricane and Its Impact. LSU Press, Baton Rouge, Louisiana.
+Sorensen, J.H., Vogt, B.M., Mileti, D.S., 1987. Evacuation: An assessment of Planning and Research. Oak Ridge National Laboratory, Oak Ridge, Tennessee.
+Southworth, F., 1991. Regional Evacuation Modeling: A State of the Art Review. Oak Ridge National Laboratory, Oak Ridge, U.S.A..
+Train, K.E., 2009. Discrete Choice Methods With Simulation, Second Edition Cambridge University Press, Cambridge.
+United States Census Bureau, 2014. Measuring America: Computer and Internet Trends in America. U.S. Department of Commerce, Washington, DC.
+Van Willigen, M., Edwards, T., Edwards, B., Hessee, S., 2002. Riding out the storm: Experiences of the physically disabled during Hurricanes Bonnie, Dennis,
+and Floyd. Nat. Hazard. Rev. 98–106.
+Williams, H., 1964. Human factors in warning and response systems. In: Grosser, G.H., Wechsler, H., Greenblatt, M. (Eds.), The Threat of Impending Disaster:
+Contributions to the Psychology of Stress. M.I.T. Press, Cambridge, MA, p. 335.
+Wilmot, C., Gudishala, R.. Development of a Time-Dependent Hurricane Evacuation Model for the New Orleans Area Retrieved from http://trid.trb.org/view.
+aspx?id=1246733.
+Wolpin, K.I., 1984. An estimable dynamic stochastic model of fertility and child mortality. J. Polit. Econ. 92 (5), 852. doi:10.1086/261262.
+Xie, C., Lin, D.-Y., Waller, S., 2010. A dynamic evacuation network optimization problem with lane reversal and crossing elimination strategies. Transp. Res.
+Part E: Logist. Transp. Rev. 295–316.
+Xu, K., Davidson, R.A., Nozik, L.K., Wachtendorf, T., DeYoung, S.E., 2016. Hurricane evacuation demand models with a focus on use for prediction in future
+events. Transp. Res. Part A 87 (c), 90–101.
+Yamada, T., Sasaki, M., Kishimoto, T., 2016. The sphere of evacuation facility based on the facility choice behavior model - Analysis in Sendai city, Natori
+city and Iwanuma city by the data of archives for reconstruction. AIJ J. Technol. Des. 22 (51). doi:10.3130/aijt.22.825.
+Yi, W., Nozick, L., Davidson, R., Blanton, B., Colle, B., 2017. Optimization of the issuance of evacuation orders under evolving hurricane conditions. Transp.
+Res. Part B: Methodol. 95, 285–304.
+Yuan, F., Han, L., Chin, S., Hwang, H., 2006. Proposed framework for simultaneous optimization of evacuation traffic destination and route assignment.
+Transp. Res. Rec. 50–58.

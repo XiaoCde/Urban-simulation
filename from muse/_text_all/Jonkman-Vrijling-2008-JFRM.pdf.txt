@@ -1,0 +1,2021 @@
+Loss of life due to £oods
+S.N. Jonkman1 and J.K. Vrijling2
+1 Section of Hydraulic Engineering and Royal Haskoning, Coastal and Rivers Division, Faculty of Civil Engineering and Geosciences, Delft University,
+Delft, The Netherlands
+2 Section of Hydraulic Engineering, Faculty of Civil Engineering and Geosciences, Delft University, Delft, The Netherlands
+Correspondence:
+S.N. Jonkman, Fac. CiTG, TU Delft, Stevinweg
+1, 2628 CN, Delft, The Netherlands
+Tel: 131152783345
+Email: s.n.jonkman@tudelft.nl
+DOI:10.1111/j.1753-318X.2008.00006.x
+Key words
+Loss of life; floods; mortality; natural disasters;
+flood risk; damage.
+Abstract
+This article gives an overview of the research on loss of life due to floods. The
+limited information regarding this topic is presented and evaluated. Analysis of
+global data for different flood types shows that the magnitude of mortality is
+related to the severity of the flood effects and the possibilities for warning and
+evacuation. Information from historical flood events gives a more detailed insight
+into the factors that determine mortality for an event, such as flood characteristics
+and the effectiveness of warning and evacuation. At the individual level, the
+occurrence of fatalities will be influenced by behaviour and individual vulnerability factors. Existing methods for the estimation of loss of life that have been
+developed for different types of floods in different regions are briefly discussed. A
+new method is presented for the estimation of loss of life due to floods of low-lying
+areas protected by flood defences. It can be used to analyse the consequences and
+risks of flooding and thereby provide a basis for risk evaluation and decisionmaking. The results of this research can contribute to the development of strategies
+to prevent and mitigate the loss of life due to floods.
+Introduction
+The impacts of floods on a global scale are enormous.
+Recent events confirm the catastrophic potential of floods.
+Hurricane Katrina caused catastrophic flooding in South
+East Louisiana and other states along the Gulfcoast of the
+United States in the year 2005. There were more than 1100
+fatalities in the state of Louisiana and hundreds of these
+fatalities occurred in the flooded parts of the city of New
+Orleans. In 2007, cyclone Sidr engulfed and devastated
+coastal regions of Bangladesh, leading to the loss of probably
+thousands of lives. In general, flooding is one of the most
+significant types of natural disasters in terms of human
+Q2 impacts and economic losses (Jonkman, 2005; MunichRe,
+2007). Owing to population growth and migration of
+population to coastal areas, a growth of the impacts of
+floods is expected. In addition, some publications expect an
+increase in the frequency of floods due to the effects of
+climate change (IPCC, 2007).
+The consequences of a flood encompass multiple types of
+damage, such as environmental losses, economic damage
+and loss of life. An overview of different types of consequences is given in Table 1. The damage is divided into
+tangible and intangible damage, depending on whether or
+not the losses can be assessed in monetary values. Another
+distinction is made between the direct damage, caused by
+physical contact with floodwaters, and the indirect damage
+that occurs outside the flooded area (see e.g. Merz et al.,
+2004).
+Loss of life is considered to be the most important loss
+type in the public perception of disasters. It is also expected
+that loss of life is related to other types of consequences, as
+accidents with a large number of fatalities will generally
+cause large damage for other consequence types. However,
+the available information in the academic literature on loss
+of life due to floods is relatively limited. Existing literature
+sources focus on different aspects of the topic. Some studies
+investigate loss of life patterns on a global scale (Berz et al.,
+2001; Jonkman, 2005) or discuss loss of life in the context of
+general public health impacts (Hajat et al., 2003; Ahern Q3
+et al., 2005). Other studies focus on the analysis of the causes
+and circumstances of individual flood disaster deaths for
+specific regions or events (Coates, 1999; Jonkman and
+Kelman, 2005) or present methods for the estimation of loss
+of life (see also ‘Existing methods for the estimation of loss
+of life due to floods’).
+This overview article gives an assessment of different
+types of information related to the loss of life due to floods.
+It includes analyses of the available information at different
+levels of aggregation (i.e. global, event and individual levels).
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+JFRM 6 B Dispatch: 4.4.08 Journal: JFRM CE: Pranjal
+Journal Name Manuscript No. Author Received: No. of pages: 14 Op: Thanuja/Vinod
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+In addition, existing approaches for the estimation of loss of
+life and their applications are summarised. The relationships
+between these different types of information are addressed.
+This overview article is based on a PhD research at Delft
+University (Jonkman, 2007). The objectives of this research
+were to provide more insight into the loss of life caused by
+floods and to investigate the possibilities to improve the
+methods for loss of life estimation. The research was carried
+out in the context of a research programme on flood risks in
+the Netherlands (Rijkswaterstaat, 2006). Given the intended
+applications of this study to the Netherlands, most attention
+has been given to the consequences of flooding of low-lying
+areas protected by flood defences. However, relevant information from other flood types has been evaluated as well.
+The focus in this article is on the mortality during and
+directly after the flood event. Information on longer term
+impacts and follow-up consequences is for example found in
+Bennet (1970) and recent analyses of the longer term impacts
+of the flooding of New Orleans (Stephens et al., 2007).
+Information available regarding loss of
+life due to floods
+In this section, available information is reviewed. Three
+aggregation levels are distinguished: global information,
+information from historical flood events and data regarding
+causes and circumstances of individuals.
+Global perspectives of loss of life due to
+different flood types
+Introduction
+As floods can occur in different forms, sizes and at various
+locations with different vulnerabilities, their impacts will
+differ strongly. Although every flood can be considered a
+unique event with unique characteristics, patterns may be
+observed when a large number of floods are studied on a
+global scale. This provides an insight into (1) the magnitude
+of loss of life in floods on a global scale and (2) the mortality
+caused by flood events with respect to their type and
+location. In the context of this study (event), mortality has
+been defined as the number of fatalities divided by the
+number of exposed people in one event. Mortality values
+can be presented as fractions and percentages, i.e. 1% and
+0.01%. In the following sections, information on loss of life
+due to inland floods and coastal floods is presented at a
+global level. Consequently, an overall comparison regarding
+mortality for different flood types is presented in the last
+subsection.
+Inland floods
+Information from the OFDA/CRED International Disaster
+Database1 (EM-DAT, 2004) has been used to analyse the
+human impacts of inland flood events at a global scale
+(Jonkman, 2005). The database is expected to be a relatively
+complete information source for global disaster data. However, as the information in the database is collected from
+reports of governments, international organisations and
+press agencies, the quality and accuracy of the data strongly
+rely on the underlying sources (see also Jonkman, 2005, for a
+more extensive discussion of the quality of the database). It
+is noted that in the database, coastal floods are generally
+categorised as windstorms (see also ‘Coastal floods’). Events
+categorised in EM-DAT as floods are generally inland floods
+and the statistical analysis presented in this section is limited
+to three types of inland (or freshwater) flood events:
+drainage floods, flash floods and river floods. Overall,
+information regarding 1883 flood events, which occurred
+between January 1975 and June 2002, has been considered.
+Over this period, the inland flood events in the database are
+reported to have killed 176 864 people and affected 2.27
+billion people. Firstly, the data have been evaluated with
+respect to regional differences. Although the impacts differ
+in terms of absolute numbers of people killed, the average
+mortality by event is relatively constant over the continents.
+Secondly, the data have been analysed with respect to flood
+type. The impact of a flood will be strongly influenced by the
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Table 1 General classification of flood damage
+Tangible Intangible
+Direct  Residences
+ Structure inventory
+ Vehicles
+ Agriculture
+ Infrastructure and other public
+facilities
+ Business interruption (inside
+flooded area)
+ Evacuation and rescue
+operations
+ Reconstruction of flood defences
+ Clean-up costs
+ Fatalities
+ Injuries
+ Animals
+ Utilities and
+communication
+ Historical and
+cultural losses
+ Environmental
+losses
+Indirect  Damage for companies outside
+flooded area
+ Substitution of production outside
+flooded area
+ Temporary housing of evacuees
+ Societal disruption
+ Damage to government
+1
+EM-DAT contains data on international disasters and is maintained by the Centre for Research on the Epidemiology of
+Disasters in Brussels (CRED) in co-operation with US Office for
+Foreign Disaster Assistance (OFDA). A disaster is included in the
+database when at least one of the following four criteria is
+fulfilled: 10 or more people are killed, 100 or more people are
+affected, there is a declaration of a state of emergency or there is a
+call for international assistance.
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+2 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+characteristics of the flood itself. On a general level, typical
+flood characteristics will differ between event types. For
+example, rapidly rising flash floods can cause more devastation than small-scale floods due to drainage floods. Figure 1
+indicates the impacts by flood type, for the events with one
+or more fatalities. The total number of people exposed is
+shown on the x-axis and the number of fatalities on the
+y-axis (and both axes have a logarithmic scale). The lines in
+Figure 1 indicate different mortality levels.
+Figure 1 shows that floods with large numbers of affected
+people are river floods, mainly occurring in Asia. Flash
+floods form a majority of the floods with lower numbers of
+exposed people. For the three flood types, the average event
+mortality is shown in Table 2. It shows that average
+mortality is highest for flash floods, as these are generally
+unexpected and rapidly evolving events, which severely
+affect smaller areas. River floods affect larger areas and more
+people, but result in relatively low values for numbers of
+fatalities and mortality per event. In general, they are more
+predictable and have less severe effects. Average mortality is
+low for drainage floods. More than half of the drainage
+events in the dataset causes one or zero fatalities. It is
+interesting to note that the average mortality approximately
+varies one order of magnitude (a factor 10) between event
+types.
+A cross analysis of the combination of region and flood
+type shows that event mortality is relatively constant by
+flood type considered over the different continents. For
+example, flash floods result in the following average mortality values for the different regions: Africa (0.042), Americas
+(0.027), Asia (0.032) and Europe (0.056). These results do
+not indicate a relationship between mortality and the
+underlying determinants, such as socio-economic development of the region. The impacts in terms of absolute
+numbers killed differ by continent due to differences in the
+extent of the populations affected. These differences depend
+on the number of people present in the exposed areas and
+the local protection levels. The cross analysis shows that
+river floods in Asia are the most significant in terms of
+absolute impact, as they caused 40% of the deaths in the
+dataset considered and 96% of the total people affected.
+Coastal floods
+Coastal floods are generally caused by windstorms, including hurricanes, cyclones and typhoons. Strong winds and
+low atmospheric pressure cause set-up of water at the coast.
+Most of the fatalities due to these storms are caused by the
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Figure 1 Number of fatalities and people exposed for floods with more than 0 fatalities by flood type.
+Table 2 Average event mortality by event type
+Event type
+Number of
+events
+Average event
+mortality
+Drainage floods
+70 5.3  104
+River floods
+392 4.9  103
+Flash floods
+234 3.6  102
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+Loss of life due to floods 3 Q1
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+flood effects (Rappaport, 2000). In the EM-DAT database,
+coastal floods are generally categorised as windstorms.
+Therefore, some available statistics regarding the impacts of
+some large coastal floods in the 20th century have been
+separately collected from EM-DAT and other sources and
+these are summarised in Table 3.
+Although this dataset only includes a small sample of
+coastal floods, the total number of fatalities far exceeds the
+accumulated number of fatalities for inland floods. Coastal
+floods are capable of causing large numbers of fatalities, as
+they are often characterised by severe flood effects (large
+depths and velocities) when low-lying coastal areas are
+flooded. In addition, they have often occurred unexpectedly
+without substantial warning. This allowed little or no time
+for warning and preventive evacuation and resulted in large
+exposed populations. Especially developing countries such
+as Bangladesh have been severely affected by coastal floods.
+It is noted that temporal trends might be reflected in the
+data, as improvements are made on a global scale in the
+prediction of storms and typhoons and warning and evacuation of the population (Schultz et al., 2005).
+Figure 2 shows the number of fatalities versus the number
+of exposed people for the events from Table 3. Results show
+that the average event mortality for the considered events is
+in the order of magnitude of about 1% (average mortality
+FD = 0.0097). For the events in the Netherlands, United
+Kingdom and Japan, the deviation from the observed
+mortality is o 40%. Also, the findings for the New Orleans
+flood event are consistent with the 1% average. Based on
+these results, the 1% mortality value can be used as a first
+rule of thumb to estimate the number of fatalities for largescale coastal flood events.
+Discussion
+Differences in average event mortality for different flood
+types can be related to (1) the severity of flood impacts and
+(2) the possibility of warning and evacuation. Table 4
+schematically shows typical event characteristics and average
+event mortalities for different event types. Comparison of
+the event types shows that those with the most severe
+physical effects, and limited possibilities for evacuation,
+result in the highest (average) mortality. Examples are
+tsunamis, dam breaks and flash floods. Recent investigations
+of the human impacts of the Indian Ocean tsunami of the
+year 2004 (Guha-Sapir et al., 2006; Nishikiori et al., 2006;
+Rofi et al., 2006; Doocy et al., 2007) showed that mortality at
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Table 3 Overview of coastal floods (sources: EM-DAT, 2004, and sources listed in Table 5)
+Date Location Cause Fatalities People exposed Event mortality
+1-2-1953 The Netherlands, southwest Storm surge 1836 250 000 0.0073
+1-2-1953 The United Kingdom, east coast Storm surge 315 32 000 0.0098
+26-9-1959 Japan, Ise Bay Typhoon 5101 430 000 0.012
+12-11-1970 Bangladesh Tropical cyclone 300 000
+18-9-1974 Honduras Tropical cyclone 8000
+12-11-1977 India, southern Tropical cyclone 14 000 9 000 000 0.0016
+25-5-1985 Bangladesh Tropical cyclone 10 000 1 800 000 0.0056
+30-4-1991 Bangladesh Tropical cyclone 139 000 4 500 000 0.031
+End of October 1998 Central America Tropical cyclone 19 000
+29-10-1999 India, Orissa Tropical cyclone 9800 12 600 000 0.008
+29-8-2005 The United States: Louisiana and Mississippi Hurricane (Katrina) 1118w 100 000z 0.012
+15-11-2007 Bangladesh Tropical cyclone (Sidr) More than 3000‰
+The reported numbers of fatalities may include considerable uncertainty, especially for the developing countries. For example, for the 1991 floods in
+Bangladesh the estimated death toll ranges between 67 000 and 139 000 (Chowdhury et al., 1993), resulting in a mortality between 1.5% and 3.1%. w
+Number of fatalities in Louisiana – most of these were due to flooding.
+z
+Number of people exposed to the flooding in New Orleans, assuming a population of approximately 500 000 in the flooded area and an 80%
+evacuation rate (see Jonkman, 2007 and Wolshon et al., 2006). ‰
+Estimate based on press sources, November 2007.
+1
+10
+100
+1,000
+10,000
+100,000
+1,000,000
+1,000 10,000 100,000 1,000,000 10,000,00
+0
+100,000,0
+00
+People exposed
+Fatalities
+UK, 1953
+NL, 1953
+Japan, 1959
+Bangladesh, 1985
+Bangladesh, 1991
+India, 1999
+India, 1977
+New Orleans, 2005
+Figure 2 Number of fatalities and people exposed for coastal floods
+from Table 3. Events are also indicated in the figure.
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+4 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+different locations was in the order of magnitude of 10%.
+These high mortality values could be related to the
+unexpected occurrence of the event and the deadly flood
+effects associated with the tsunami wave. The consequences of
+dam break can be catastrophic and depending on the level of
+warning and the severity of the flood wave, the event mortality
+can range between 1% (less severe dam breaks) and 30–100%
+(severe dam breaks without warning) (Graham, 1999). The
+average mortality for coastal floods is approximately 1% and
+lower mortality values are generally obtained for river floods
+and drainage floods (see the previous sections).
+The extent of consequences is also related to the type of
+area that is affected. The consequences of flooding can be
+particularly large when low-lying areas protected by flood
+defences are flooded. In these areas, land level is below
+(high) water levels. In case of a breach in the flood defences,
+extensive areas will be flooded up to large flood depths.
+These low-lying areas are mainly found in delta areas, such
+as the Netherlands. It is expected that the consequences of
+floods in such delta areas will be larger than those in
+nondelta areas (e.g. upper catchment of a river), both in
+absolute (fatalities, damage, exposed population) and relative (mortality, damage fraction) terms. The difference
+between the flooding potential of delta and nondelta areas
+is schematically illustrated in Figure 3.
+Overall, the averages presented in Table 4 provide very
+general indications of the order of magnitude of the overall
+event mortality. Such general indicators could provide a
+rough but useful first estimate for mortality for an event
+type. However, the variation in event mortality remains
+large due to variations in circumstances between events. To
+estimate mortality and loss of life more accurately for one
+event, case-specific circumstances (flood characteristics,
+possibility of warning and evacuation) have to be taken into
+account and this will be discussed in the next section.
+Historical flood events and the determinants of
+loss of life
+To analyse the determinants of loss of life, documentation of
+historical flood events has been collected and analysed. It
+was found that the availability of documentation of historical flood events is limited. One reason could be that other
+activities (e.g. rescue, reconstruction) have a higher priority
+than data collection shortly after a flood disaster.
+Available information for some historical flood events has
+been analysed; see Table 5 for an overview and Jonkman,
+2007, for further details.
+Despite differences with respect to their temporal and
+geographical situation, the major factors that have determined the loss of life in these historical flood events seem to
+be similar. Based on the available information and previous
+analyses (e.g. Tsuchiya and Yasuda, 1980; Bern et al., 1993;
+McClelland and Bowles, 2002; Ramsbottom et al., 2003), the
+main determinants of loss of life are summarised below:
+ The events with the largest loss of life occurred unexpectedly and without substantial warning. Many of the highfatality events also occurred at night (the Netherlands and
+United Kingdom 1953, Japan 1959), making notification
+and warning of the threatened population difficult.
+ Timely warning and evacuation prove to be important
+factors in reducing the loss of life. Even if the time
+available is insufficient for evacuation, warnings can
+reduce the loss of life. Warned people may have time to
+find some form of shelter shortly before or during the
+flood.
+ The possibilities for shelter are a very important determinant of mortality. Buildings can have an important
+function as a shelter, but possibilities to reach shelters will
+depend on the level of warning, water depth and rise rate
+of the water.
+ The collapse of buildings in which people are sheltering is
+an important determinant of the number of fatalities.
+Findings from different events (Bangladesh 1991, the
+Netherlands 1953) show that most fatalities occurred in
+areas with vulnerable and low-quality buildings.
+ Water depth is an important parameter, as possibilities for
+shelter decrease with increasing water depth. Low-lying
+and densely populated areas, such as reclaimed areas or
+polders, will be most at risk.
+ The combination of larger water depths and rapid rise of
+waters is especially hazardous. In these cases, people have
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Table 4 Order of magnitude of average event mortality for different flood types
+Flood type
+Severity of
+impacts Evacuation
+Mortality
+(order of
+magnitude)
+Tsunamis Severe Difficult
+Dam breaks 0.1
+Flash floods
+Coastal floods 0.01
+River floods 103
+Drainage floods Less severe Possible 104
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+Loss of life due to floods 5 Q1
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+little time to reach higher floors and shelters and they may
+be trapped inside buildings.
+ High flow velocities can lead to the collapse of buildings
+and instability of people. In different cases (the Netherlands and United Kingdom 1953, Japan 1959), many
+fatalities occurred behind dike breaches and collapsed sea
+walls, as flow velocities in these zones are high.
+ When exposed to a severe and unexpected flood, children
+and elderly were more vulnerable. This suggests that
+chances for survival are related to an individual’s stamina
+and his or her ability to find shelter.
+The above factors are important determinants of the loss
+of life. Local variations in the above factors may lead to
+differences between mortality fractions for different locations within one flood event. Especially unfavourable combinations of the above factors will contribute to high
+mortality. For example in the 1953 floods in the Netherlands, mortality was highest at locations where (a) no flood
+warnings were given, (b) the waters rose rapidly to larger
+water depths and (c) where the quality of buildings was
+poor.
+Causes and circumstances of individual flood
+disaster deaths
+This section discusses the loss of life at the individual level.
+Past work analysed the causes and circumstances of flood
+fatalities for specific regions (Coates, 1999, for Australia)
+and flood types (French et al., 1983; Mooney, 1983, for flash
+floods in the United States). A study (Jonkman and Kelman,
+2005) has been carried out to analyse the causes and
+circumstances of flood disaster deaths for relatively smallscale floods in Europe and the United States. Thirteen flood
+events from Europe and the United States were included,
+mainly considering inland (river) flood events. Each case
+study is relatively recent (within the past 20 years) and
+involved relatively few deaths (o 50). The events resulted in
+247 reported flood fatalities. The individual-by-individual
+data were aggregated for analysis. Results with respect to
+causes of death are presented in Figure 4. In the categorisation, a distinction is made between three main categories
+(drowning, physical trauma, other causes) and several subcategories that give further information on the detailed
+causes and circumstances.
+Approximately two-thirds of the fatalities occurred
+through drowning and within this category, vehicle-related
+drownings occurred most frequently. Thus, a substantial
+number of flood fatalities were not related to drowning, but
+to physical trauma (11.7% of the fatalities) and other causes,
+such as heart attacks during evacuation and return (5.7%),
+deaths during clean-up due to electrocution (2.8%) and
+deaths from fires following the floods (3.6%).
+The influence of individual vulnerability factors has been
+investigated. Approximately 70% of the reported fatalities
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Table 5 Overview of flood events and literature sources for which the determinants of loss of life have been analysed
+Date Affected area Loss of life Source Contains information on
+1-2-1953 Southwest of
+The Netherlands
+1835 Waarts (1992); Duiser (1989);
+Slager (1992)
+Loss of life by municipality and relationship with flood
+characteristics, such as depth, rise rate and velocity
+1-2-1953 The United Kingdom,
+east coast
+315 Kelman (2003); Pollard (1978) Effects of warning, building vulnerability, age of
+the population
+26-9-1959 Ise Bay, Japan 5101 Tsuchiya and Yasuda (1980);
+JWF (2005)
+Relationship between mortality and water depth and warning
+30-4-1991 Bangladesh 139 000 Chowdhury et al. (1993);
+Bern et al. (1993)
+Role of warning, shelter and collapse of buildings and
+individual vulnerabilities (age, gender)
+24-9-2002 Japan, Shiranui Town 12 Kato (2002) Role of water depth, warning and collapse of building
+Delta: e.g. the Netherlands Non-Delta
+River populated area river river
+Coast populated area populated
+area
+populated
+area
+Figure 3 Schematic difference between delta and nondelta areas with respect to topography and potentially flooded areas.
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+6 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+are male. Likely causes are the high involvement of males in
+driving, the high proportion of males in the emergency and
+supporting services and males’ risk-taking behaviour. A
+substantial proportion of the flood-related deaths is believed
+to be attributable to unnecessary risk-taking behaviour (see
+also Coates, 1999; WHO, 2002). Overall, the way people
+respond to floods is an important factor in the associated
+morbidity and mortality (French and Holt, 1989).
+The above findings are expected to be specific for the type
+of floods studied, i.e. smaller scale floods in Europe and the
+United States. High-fatality events with more severe flood
+impacts, such as storm surges, hurricanes and tsunamis,
+exhibit different patterns with respect to individual vulnerabilities. For example, the storm surge flooding in the
+Netherlands in 1953 and the flooding of New Orleans in
+2005 resulted in similar patterns with respect to overall flood
+mortality. In both cases, many of the fatalities were
+elderly2 and both events resulted in a nearly equal distribution of fatalities over the genders. Two epidemiological
+studies (Bern et al., 1993; Chowdhury et al., 1993) analysed
+flood mortality after the cyclone in Bangladesh in 1991.
+The analyses showed that death rates were substantially
+higher for females than for males and that children
+and older women were most vulnerable. Several analyses
+(Guha-Sapir et al., 2006; Rofi et al., 2006) of mortality
+due to the Indian Ocean tsunami in the year 2004 have
+been conducted. Results showed that the risk of death
+was greatest in the youngest and oldest age groups, and
+among females. Overall, patterns regarding individual
+vulnerabilities seem to be dependent on the type of flooding
+and the characteristics of the population and area that are
+affected.
+Discussion
+In the preceding sections, different aggregation levels of
+information regarding loss of life due to floods have been
+reviewed. Three types of information are available: (1) global
+data; (2) information for historical flood events; and (3)
+information on the causes and circumstances of individual
+flood disaster deaths. In the context of this research, it is an
+important question as to how these types of information can
+be used to develop a method to estimate loss of life. Indicators
+derived from global statistics provide a useful but rough
+estimate of the order of magnitude of mortality that could be
+expected for one event. However, these statistics do not
+provide a sufficient basis for a case-specific estimation of loss
+of life, as the reported variations in these statistics are
+considerable. At the other end of the spectrum, it is found
+that the occurrence of individual fatalities is mainly dependent
+on individual circumstances and behaviour. In order to give a
+reliable estimation of loss of life, event-specific conditions
+have to be taken into account, such as flood characteristics,
+warning and evacuation. It is therefore chosen to develop a
+method for the estimation of loss of life based on information
+from historical flood events and the main determinants that
+resulted from the evaluation of these events.
+Methods for the estimation of loss of life
+due to floods
+Existing methods for the estimation of loss of
+life due to floods
+In the literature, several methods have been developed to
+provide a quantitative estimate of the loss of life caused by
+flood events. An accurate estimate of loss of life is important
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Category % 
+As a pedestrian 25.1%
+In a vehicle 32.8%
+From a boat 2.8%
+During rescue 0.8%
+Drowning
+In a building 6.1%
+In water 0.0%
+As a pedestrian 1.6%
+In a vehicle 5.7%
+On a boat 0.8%
+During rescue 0.4%
+Physical
+Trauma
+In a building 3.2%
+Heart attack 5.7%
+Electrocution
+CO poisoning 0.8%
+Fire
+Other 1.2%
+Other
+unknown or not reported 6.5%
+2.8%
+3.6%
+Figure 4 Distribution of the causes and circumstances of death for the 13 considered events (247 fatalities), based on Jonkman and Kelman (2005).
+2
+Of the fatalities in New Orleans after hurricane Katrina, nearly
+85% was over 51 years old (while that age group formed 25% of
+the population). Of the fatalities due to the 1953 flood event in
+the Netherlands, 34% was over 51 years old (while that age group
+formed 22% of the population).
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+Loss of life due to floods 7 Q1
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+in order to be able to determine the consequence and risk
+levels and to analyse risk reduction strategies. A comprehensive literature study of existing methods for the estimation
+of loss of life has been performed. Here a brief summary is
+provided and a more complete overview can be found in
+Jonkman (2007) and Jonkman et al. (2008).
+Methods have been developed for different types of floods
+in different regions, for example for coastal floods due to
+storm surges and hurricanes/typhoons in Japan (Tsuchiya
+and Kawata, 1981) and the United States (Boyd et al., 2005).
+In the Netherlands, several methods have been proposed for
+the estimation of loss of life for both coastal and river floods
+that could flood large low-lying areas due to dike breaches.
+Most methods are directly or indirectly based on data on the
+fatalities caused by the 1953 flood disaster in the Netherlands (see e.g. Waarts, 1992). Based on Japanese data for
+river floods, Zhai et al. (2006) derived a relationship
+between the number of inundated houses and the loss of
+life. Penning-Rowsell et al. (2005) developed an approach
+for assessing the flood risks to people. It has been applied to
+various riverine areas in the United Kingdom. Following
+the catastrophic flooding of New Orleans after hurricane
+Katrina in the year 2005, a model for the estimation of loss
+of life for (future) floods of New Orleans has been derived
+(IPET, 2007).
+Also, methods have been developed for other flood types.
+Examples are the models proposed for dam break floods
+(DeKay and McClelland, 1993; Graham, 1999; Hartford and
+Baecher, 2004; Johnstone et al., 2005) and tsunamis (Sugimoto et al., 2003; Koshimura et al., 2006).
+Although flood fatalities can occur due to various other
+causes such as physical trauma, heart attack and drowning
+in cars (see ‘Causes and circumstances of individual flood
+disaster deaths’), loss of human stability and consequent
+drowning are a high personal hazard. Therefore, several
+authors have investigated the issue of human (in)stability in
+flowing water. The likeliness of instability is generally related
+to a critical depth–velocity product (with unit m2
+/s) that
+indicates the combination of depth and velocity that would
+lead to a person’s instability. Such criteria can be used for the
+creation of flood hazard or flood risk maps. Abt et al. (1989)
+and Karvonen et al. (2000) (the latter in the European
+research project Rescdam) conducted experimental tests to
+determine the conditions that lead to instability. Recently, a
+limited number of new experiments have been undertaken
+by the Flood Hazard Research Centre (Jonkman and
+Penning-Rowsell, 2008). Figure 5 shows the combinations
+of depth and velocity that resulted in instability in the
+experiments. Overall, instability occurs for depth–velocity
+products (hv) between 0.6 and 2 m2
+/s. The tests by Abt et al.
+resulted in an average critical depth–velocity product of
+hv = 1.35 m2
+/s. Differences in the reported test results can
+be related to test circumstances (configuration, bottom
+friction) and personal characteristics (weight, height,
+clothing).
+All the reviewed models include some kind of function that
+relates mortality to the flood characteristics. Depending on the
+flood type and the type of area, different variables will be most
+significant in predicting loss of life. For example, for large dam
+break floods warning time is very important, as people
+exposed to the flood wave will have limited survival chances.
+For floods of low-lying areas, factors such as the possibilities
+for evacuation, water depth and flow velocity will be most
+important (see ‘Historical flood events and the determinants
+of loss of life’). An evaluation showed that many of the existing
+methods do not take into account all the most relevant
+determinants of loss of life and that they are often, to a limited
+extent, based on empirical data of historical flood events
+(Jonkman, 2007). Given these limitations, a new method for
+the estimation of loss of life has been developed.
+A new method for the estimation of loss of life
+due to floods
+A new method has been proposed for the estimation of loss
+of life due to floods. It is applicable to low-lying areas
+protected by flood defences and specifically focuses on largescale flooding due to breaching of flood defences. Low-lying
+areas protected by flood defences can be found in river deltas
+in different parts of the world, for example in the United
+States (Mississippi River), China (Yangtze River) and the
+Netherlands (Rhine River). The proposed method takes into
+account most of the main determinants of loss of life (see
+‘Historical flood events and the determinants of loss of life’),
+such as the flood characteristics and the possibilities for
+evacuation. A summary of the main characteristics of the
+method is given here; further details can be found in
+Jonkman (2007) and Jonkman et al. (2008).
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+0
+0.5
+1
+1.5
+2
+01234
+water depth (m)
+data Abt et al.
+data Rescdam
+data FHRC
+hv=0.6m2/s
+hv=1.35m2/s
+hv=2m2/s
+flow velocity (m/s)
+Figure 5 Depth–velocity combinations that resulted in instability for the
+available experimental series (Abt et al., 1989; Karvonen et al., 2000;
+Jonkman and Penning-Rowsell, 2008).
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+8 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+To estimate the loss of life caused by a flood event three
+general steps have to be taken into account:
+(1) Analysis of flood characteristics, such as water depth,
+rise rate and flow velocity;
+(2) Estimation of the number of people exposed (including
+the effects of warning, evacuation and shelter); and
+(3) Assessment of the mortality among those exposed to the
+flood.
+Step 1: First a so-called flood scenario has to be defined.
+The term flood scenario refers to one breach or a set of
+multiple breaches in the dike ring and the resulting pattern
+of flooding, including the flood characteristics. The most
+relevant flood characteristics for loss of life estimation
+include water depth, rise rate, flow velocity and arrival time
+of the water (see also ‘Historical flood events and the
+determinants of loss of life’) and these can be simulated by
+means of a two-dimensional hydrodynamic simulation
+model. In the simulation it is important to account for the
+roughness and geometry of the flooded area. Certain line
+elements, such as local dikes, roads, railways and natural
+heights, might create barriers that can significantly influence
+the flood flow and the area affected, thereby dividing the
+area into smaller compartments. Analysis of the flood
+scenario requires an insight into the hydraulic boundary
+conditions that lead to flooding, the locations of the
+breaches and their timing and extent and the topography of
+the threatened area. The results of the flood simulation can
+be used as input for the estimation of the number of people
+exposed (step 2) and the flood mortality (step 3).
+Step 2: An estimate of the number of people exposed can
+be obtained by accounting for the number of inhabitants in
+the flooded area and the reduction of the population due to
+evacuation and shelter. The number of inhabitants can be
+obtained from census data, but for some applications
+population dynamics3 needs to be taken into account to
+estimate the number of people exposed. Evacuation is
+defined in this study as ‘the movement of people from a
+(potentially) exposed area to a safe location outside that area
+before they come into contact with physical effects’. In
+general, the possibilities for successful evacuation will
+depend on the time available until the breaching of flood
+defences and the arrival of the floodwater in an area and the
+time required for evacuation. In the Netherlands and elsewhere, several models have been developed to simulate the
+course of an evacuation (see e.g. van Zuilekom et al., 2005).
+These models simulate the traffic flow and also account for
+delays of the evacuation due to decision-making, warning
+and response. As input, such models need information on
+the available road and exit capacity, on the spatial distribution of the population and on the moment of departure of
+different groups in the population. By combining these
+different sources of information, an estimate can be made
+of the fraction of the population that is able to evacuate.
+Step 3: The mortality among the exposed population is
+defined as the number of fatalities divided by the number of
+exposed people. It can be estimated by means of so-called
+mortality functions that specify the relationship between the
+flood characteristics (such as water depth) and mortality.
+Based on an analysis of mortality patterns for historical
+floods, three typical hazard zones are proposed for flooding
+due to breaching of a flood defence (see Figure 6). The
+breach zone is characterised by high flow velocities, which
+can lead to the collapse of buildings and instability of people
+in the flood flow. In the zone with rapidly rising waters, it
+will be difficult to reach shelter on higher grounds or higher
+floors of buildings. A rapid rise rate of the water is
+particularly hazardous in combination with larger water
+depths. A location is assumed to be in the zone with rapidly
+rising water if the rise rate exceeds 0.5 m/h. The flood
+conditions in the remaining zone are a slower onset of
+flooding, which offers better possibilities to find shelter.
+Within the three zones, locations could be distinguished that
+have different values for the flood characteristics, such as the
+flood depth – see the numbers in Figure 6 for an example of
+the different locations.
+Based on historical information from several historical
+floods (such as the floods in the Netherlands in 1953 and in
+Japan in 1959), mortality functions have been developed for
+the hazard zones. Figures 7 and 8 show the mortality
+functions for the zone with rapidly rising water and the
+remaining zone. The two mortality functions explicitly
+include the effects of water depth. The numerical value of
+the rise determines which of the two functions has to be
+used. For the breach zone, insufficient data were available
+and a damage criterion has been proposed that estimates the
+level of mortality as a function of the combination of water
+depth and flow velocity. The function for the zone with
+rapidly rising water gives a good fit with the observed data
+and shows that mortality increases rapidly when the water
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Figure 6 Proposed hazard zones for loss of life estimation for flood due
+to breaching of flood defences (Jonkman, 2007).
+3
+An example of population dynamics that could affect the size of
+a population in an area is the fact that a part of the population
+could work outside of the flooded area. Also, the dependence of
+the population on the time of the day could be taken into
+account.
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+Loss of life due to floods 9 Q1
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+depth increases. One uncertainty is the course of the
+function for larger water depths, as no direct empirical data
+are available to calibrate the trendline for these conditions.
+The best-fit trendline for the remaining zone is less
+adequate. For these observations, the effects of warning and
+other factors could be relevant (see also Jonkman, 2007, for
+further discussion).
+As a first-order validation, the outcomes of the proposed
+method have been compared with information from some
+historical floods. This showed that it gives an accurate
+approximation of the number of fatalities observed during
+historical flood events. The outcomes of the proposed
+method are sensitive to the chosen flood scenario and the
+rise rate of the floodwater. As the number of fatalities is
+dependent on the flood scenarios [i.e. on the location of the
+breach(es) and the course of flooding], it is important to
+define a representative set of different flood scenarios, for
+example in the context of a risk assessment.
+The trends in the above mortality functions show some
+relationship with the findings regarding the average event
+mortality for different flood types (see ‘Information available
+regarding loss of life due to floods’). Average event mortality
+values for coastal floods (1%) and river floods (0.5%)
+correspond to the order of magnitude of mortality that
+follows from the mortality function for the remaining zone
+where mortality is generally between 0 and 0.01 for typical
+flood water depths (between 0 and 4 m). Global statistics
+show that mortality becomes larger if the water becomes
+deep and rises rapidly, e.g. for flash floods and dam breaks.
+An added value of the proposed method is that it provides an
+insight into the factors that influence mortality at a local
+level. Yet, more data analysis and further investigations of the
+influence of different factors are recommended to improve
+the empirical foundation of the mortality functions.
+Applications
+The proposed method can be applied to provide quantitative estimates of loss of life caused by floods in the context of
+safety evaluations, either in deterministic (scenario) or in
+probabilistic (risk) calculations. Both types of applications
+are demonstrated below based on recent risk assessment
+studies in the Netherlands (see e.g. Rijkswaterstaat, 2006).
+Results are presented for flood scenarios of South
+Holland. This is one of the largest flood-prone areas in the
+Netherlands. The area has 3.6 million inhabitants and it is
+also the most densely populated area in the country and
+includes major cities such as Amsterdam, Rotterdam and
+Den Haag. Flooding of this area can occur due to breaches at
+various locations both along the coast and along the river.
+The consequences for various flood scenarios have been
+assessed by means of the method described in ‘A new
+method for the estimation of loss of life due to floods’. As
+an example, the output for a more severe coastal flood
+scenario with breaches at two locations (Den Haag and Ter
+Heijde) is considered. In this case, an area of approximately
+230 km2 could be flooded with more than 700 000 inhabitants. It is expected that the possibilities for evacuation of
+this area are limited because the time available for evacuation (approximately 1 day) is insufficient for a large-scale
+evacuation of this densely populated area. Eventually, it is
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Figure 7 Mortality function for the zone with rapidly rising water (Jonkman, 2007).
+Figure 8 Mortality function for the remaining zone (Jonkman, 2007).
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+10 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+calculated that this flood scenario could lead to more than
+3000 fatalities. Figure 9 shows the flooded area and the
+spatial distribution of the number of fatalities estimated
+with the method described in ‘A new method for the
+estimation of loss of life due to floods’.
+The above method for loss of life estimation can also be
+used in the context of flood risk assessment. In that case, the
+probabilities and consequences for different flood scenarios
+that could affect the area have to be taken into account. In
+the Netherlands and other countries, methods have been
+developed for the estimation of the failure probabilities and
+risk levels of flood defence systems (see e.g. Hall et al., 2005;
+Apel et al., 2006). In Rijkswaterstaat (2006), an estimate of
+the flooding probability of South Holland of 3.94  104 per
+year or approximately once in 2500 years was given.
+The flood risks to people can be presented in different
+ways. The probabilities and consequences of different
+flood scenarios can be presented in a table or graphically
+in a so-called FN curve. It shows the probability of
+exceedance in 1 year of a certain number of fatalities due to
+a flood event and both axes are generally displayed in
+logarithmic scale. The FN curve is used to display and
+limit the risks in different sectors and countries (Jonkman
+et al., 2003). Figure 10 displays the FN curve for South
+Holland.
+Based on the probabilities and fatality numbers for the
+scenarios, the expected number of fatalities can be determined. This yields E(N) = 0.21 fat/year. The standard deviation equals s(N) = 16.1 fat/year. For this type of small
+probability–large consequence event, the expected number
+of fatalities per year is generally relatively small. However,
+the number of fatalities in one single event can be large,
+resulting in a large standard deviation of the number of
+fatalities. In addition, the individual risk can be assessed and
+this is the probability of being killed due to an accident at a
+certain location. For South Holland, the individual risk for
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+Figure 9 Fatalities by neighbourhood and flooded area for the scenario with breaches at Den Haag and Ter Heijde (Jonkman, 2007).
+1,00E-08
+1,00E-07
+1,00E-06
+1,00E-05
+1,00E-04
+1,00E-03
+1,00E-02 1 10 100 1,000 10,000 100,000
+Fatalities
+Prob. of exceedance (yr−1)
+Figure 10 FN curve for flooding of South Holland (Jonkman, 2007).
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+Loss of life due to floods 11 Q1
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+most locations is smaller than 106 per year, while a higher
+risk value in the order of magnitude 105 per year is found
+for two locations with a low elevation.
+These analyses have several applications. Information on
+single flood scenarios and their consequences can be used to
+improve the preparation of emergency operations and
+develop effective evacuation plans. As the model includes
+the most relevant factors that determine loss of life, it also
+offers the possibility to take into account other measures
+that reduce consequence and risk levels, such as land-use
+planning, the improvement of warning and evacuation
+plans and the use of shelters.
+The results from risk analyses can be used as input for risk
+evaluation and decision-making. The calculated risk level
+outcomes can be compared with existing risk limits that are
+proposed in the literature (see e.g. Vrijling et al., 1998). In
+the Netherlands, risk limits for the risks to people are used in
+several domains (e.g. for the chemical sector and airport
+safety). It is currently being investigated whether such limits
+are also applicable to flood safety. As input for decisionmaking, the risks of flooding can also be compared with
+other risk fields, e.g. with the chemical sector.
+If it is decided that the flood risks are unacceptable,
+various measures can be considered. The level of risk
+reduction due to different measures has to be evaluated.
+The cost efficiency of measures can be specifically related to
+the reduction of loss of life by means of the evaluation of the
+cost of saving and extra statistical life (CSX) or life year
+(CSXY) (Tengs et al., 1995).
+Concluding remarks
+The limited information regarding loss of life in historical
+floods has been evaluated. Analysis of global data on natural
+disasters shows that the impacts of floods on a global scale
+are enormous. Comparison of data for different types of
+floods showed that the average event mortality values are
+related to the severity of the effects and the possibilities for
+warning and evacuation. Large-scale coastal and river floods
+that affect low-lying areas protected by flood defences can
+cause many fatalities. Based on available event statistics, it
+has been shown that a first-order estimate of loss of life due
+to coastal flood events can be obtained by assuming that 1%
+of the exposed population will not survive. This rule of
+thumb gives a good approximation of the overall number of
+fatalities for some historical events, e.g. the floods in the
+Netherlands in 1953 and the flooding of New Orleans after
+hurricane Katrina in 2005.
+By analysing historical flood events, the insight into the
+factors that influence loss of life caused by floods has been
+improved. The number of fatalities caused by a flood event is
+determined by the characteristics of the flood (depth,
+velocity, rise rate), the possibilities for warning, evacuation
+and shelter and the loss of shelter due to the collapse of
+buildings. At the individual level, the occurrence of fatalities
+will be influenced by behaviour and individual vulnerability
+factors such as age and gender.
+The existing models for loss of life estimation used in
+different regions and for different types of floods (e.g. for
+dam breaks, coastal floods, tsunamis) have been reviewed. A
+new method has been proposed for the estimation of loss of
+life caused by the flooding of low-lying areas protected by
+flood defences. An estimate of loss of life due to a flood event
+can be given based on (1) information regarding the flood
+characteristics; (2) an analysis of the exposed population and
+evacuation; and (3) an estimate of the mortality among the
+exposed population. By analysing empirical information
+from historical floods, such as the floods in the Netherlands
+in 1953, mortality functions have been developed. These
+relate the mortality among the exposed population to the
+flood characteristics for different zones in the flooded area.
+This method can be used to evaluate the consequences of
+(hypothetical) flood scenarios. By combining with information on the probability of flood events, the risks to people can
+be quantified. These results provide a basis for the evaluation
+and decision-making regarding flood protection levels. It is
+noted that for a full evaluation, other consequence types (e.g.
+economic damage and social impacts) also need to be taken
+into account in the decision-making.
+Better data collection at various levels (global, event,
+individual) would be required to improve the insight into
+loss of life due to floods. Especially for developing countries
+for which the consequences of flooding are most severe, the
+amount of available data is limited. The studied data on the
+consequences of floods are the by-product of the enormous
+human suffering due to events that we strive to avoid.
+However, the data that are available could contribute to
+prevention and mitigation of such disasters in the future.
+Standardised collection and reporting of the available data
+for historical flood disasters is recommended (see also
+WHO, 2002; Hajat et al., 2003; Jonkman and Kelman, 2005). Q4
+One relatively well-documented event that could provide
+valuable additional insights concerns the flooding of New
+Orleans due to hurricane Katrina. Based on available
+information, several topics could be further investigated
+such as the relationship between flood characteristics and
+mortality, the characteristics of individual fatalities and
+underlying vulnerability factors and the longer term impacts
+of such a major disaster.
+The above recommendations outline the need for further
+improvement of the knowledge of loss of life due to floods.
+However, it is even more important to transfer the findings
+of the existing research into policy and practice to reduce the
+loss of life due to flood events. Global data provide an insight
+into the risk levels of various regions and this type of
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+12 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+information could be used for the prioritisation of risk
+reduction strategies. Based on quantitative methods,
+the consequence reduction of specific measures can be
+predicted. An insight into individual vulnerability factors
+provides a basis for the formulation of education strategies to
+prevent flood fatalities. At the individual level, education,
+awareness and warning appear to be key to preventing flood
+mortality.
+References
+Abt S.R., Wittler R.J., Taylor A. & Love D.J. Human stability in a
+high flood hazard zone. Water Resour Bull 1989, 25, (4),
+881–890.
+Ahern M., Kovats S.R., Wilkinson P., Few R. & Matthies F. Global
+health impacts of floods: epidemiologic evidence. Epidemiol
+Rev 2005, 27, 36–46.
+Apel H., Thieken A.H., Merz B. & Bloschl G. A probabilistic
+modelling system for assessing flood risk. Nat Hazard 2006,
+38, (1–2), 79–100.
+Bennet G. Bristol floods 1968 – controlled survey of effects on
+health of local community disaster. Br Med J 1970, 3, 454–458.
+Bern C., Sniezek J., Mathbor G.M., Siddiqi M.S., Ronsmans C.,
+Chowdhury A.M.R., Choudhury A.E., Islam K., Bennish M.,
+Noji E. & Glass R.I. Risk factors for mortality in the
+Bangladesh cyclone of 1991. Bull WHO 1993, 71, 73–78.
+Berz G., Kron W., Loster T., Rauch E., Schimetschek J., Schmieder
+J., Siebert A., Smolka A. & Wirtz A. World map of natural
+hazards – a global view of the distribution and intensity of
+significant exposures. Nat Hazard 2001, 23, (2–3), 443–465.
+Boyd E., Levitan M. & van Heerden I. Further specification of the
+dose–response relationship for flood fatality estimation. Paper
+presented at The US-Bangladesh Workshop on Innovation in
+Windstorm/Storm Surge Mitigation Construction. National
+Science Foundation and Ministry of Disaster & Relief,
+Government of Bangladesh, Dhaka, Bangladesh, 19–21
+December 2005.
+Chowdhury A., Mushtaque R., Bhuyia A.U., Choudhury A.Y. &
+Sen R. The Bangladesh cyclone of 1991: why so many people
+died. Disasters 1993, 17, (4), 291–304.
+Coates L. Flood fatalities in Australia, 1788–1996. Aust Geogr
+1999, 30, (3), 391–408.
+DeKay M.L. & McClelland G.H. Predicting loss of life in cases of
+dam failure and flash flood. Risk Anal 1993, 13, (2), 193–205.
+Doocy S., Rofi A., Moodie C., Spring E., Bradley S., Burnham G.
+& Robinson C. Tsunami mortality in Aceh Province,
+Indonesia. Bull WHO 2007, 85, 273–278.
+Duiser J.A. Een verkennend onderzoek naar methoden ter
+bepaling van inundatieschade bij doorbraak. TNO Report ref.
+82-0644, 1989.
+EM-DAT (Emergency Events Database). OFDA/CRED
+International Disaster Database, from http://www.cred.be/
+emdat, Universite Catholique de Louvain, Brussels, retrieved ´
+December 2004.
+French J., Ing R., Von Allmen S. & Wood R. Mortality from flash
+floods: a review of national weather service reports 1969–81.
+Public Health Rep 1983, 98, (6), 584–588.
+French J.G. & Holt K.W. Floods. In: M.B. Gregg, ed. The public
+health consequences of disasters. Atlanta, GA: US Department of
+Health and Human Services, Public Health Service, CDC,
+1989, 69–78.
+Graham W.J. A procedure for estimating loss of life caused by
+dam failure. Dam Safety Office Report DSO-99-6, 1999.
+Guha-Sapir D., Parry L.V., Degomme O., Joshi P.C. & Saulina
+Arnold P.A. Risk factors for mortality and injury: post tsunami
+epidemiological findings from Tamil Nadu. CRED
+Publication, April 2006.
+Hajat S., Ebi K.L., Kovats S., Menne B., Edwards S. & Haines A.
+The human health consequences of flooding in Europe and the
+implications for public health. J Appl Environ Sci Public Health
+2003, 1, (1), 13–21.
+Hall J.W., Sayers P.B. & Dawson R. National-scale assessment
+of current and future flood risk in England and Wales.
+Nat Hazard 2005, 36, (1,2), 147–164.
+Hartford D.N.D. & Baecher G.B. Risk and uncertainty in dam
+safety. London: Thomas Telford Publishing, 2004.
+Intergovernmental Panel on Climate Change (IPCC). Climate
+Change 2007: impacts, adaptation and vulnerability. In: M.L. Q5
+Parry, O.F. Canziani, J.P. Palutikof, P.J. van der Linden & C.E.
+Hanson, eds. Contribution Group II to the fourth assessment
+report of the intergovernmental panel on climate change.
+Cambridge, UK: Cambridge University Press, 2007.
+Interagency Performance Evaluation Task Force (IPET).
+Performance evaluation of the New Orleans and Southeast
+Louisiana hurricane protection system – volume VII:
+the consequences. Final Report, 26 March 2007.
+Johnstone W.M., Sakamoto D., Assaf H. & Bourban S. 2005.
+Architecture, Modelling framework and validation of BC
+Hydro’s Virtual Reality Life Safety Model. In: J.K. Vrijling et al. Q6
+eds. Proceedings of the International Symposium on Stochastic
+Hydraulics, May 23, 24 2005, Nijmegen, the Netherlands.
+Jonkman S.N., van Gelder P.H.A.J.M. & Vrijling J.K. An overview
+of quantitative risk measures for loss of life and economic
+damage. J Hazard Mater 2003, A99, 1–30.
+Jonkman S.N. & Penning-Rowsell E. Human instability in floods
+flows. J Am Water Resour Assoc 2008, in press. Q7
+Jonkman S.N. & Kelman I. An analysis of causes and
+circumstances of flood disaster deaths. Disasters 2005, 29, (1),
+75–97.
+Jonkman S.N., Vrijling J.K. & Vrouwenvelder A.C.W.M. Methods
+for the estimation of loss of life due to floods: a literature Q8
+review and a proposal for a new method. Nat Hazard 2008,
+in press.
+Jonkman S.N. Loss of life estimation in flood risk assessment –
+theory and applications. PhD Thesis, Delft University, 2007.
+Jonkman S.N. Global perspectives of loss of human life caused
+by floods. Nat Hazard 2005, 34, 151–175.
+Japan Water Forum (JWF). Typhoon Isewan (Vera) and its
+lessons. Japan Water Forum Report, 2005.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+J Flood Risk Management ]] (2008) 1–14 c The Authors
+Journal Compilation c 2008 The Authors
+Loss of life due to floods 13 Q1
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+Karvonen R.A., Hepojoki A., Huhta H.K. & Louhio A. The use
+of physical models in dam-break analysis. RESCDAM Final
+Report, Helsinki University of Technology, Helsinki, Finland,
+2000.
+Kato F. A review of flood damage estimation in Japan. Draft
+Working Document, 2002.
+Kelman I. CURBE Fact Sheet 3: U.K. Deaths from the 1953 Storm
+Surge. Version 3, 5 July 2003, http://www.arct.cam.ac.uk/
+curbe/CURBEFactSheet3UK1953Deaths.doc, accessed August
+2003.
+Koshimura S., Katada T., Mofjeld H.O. & Kawata Y. A method for
+estimating casualties due to the tsunami inundation flow.
+Nat Hazard 2006, 39, 265–274.
+McClelland D.M. & Bowles D.S. Estimating life loss for dam
+safety risk assessment – a review and new approach. IWR
+Report 02-R-3, 2002.
+Merz B., Kreibich H., Thieken A. & Schmidtke R. Estimation
+uncertainty of direct monetary flood damage to buildings.
+Nat Hazard Earth Syst Sci 2004, 4, 153–163.
+Mooney L.E. Applications and implications of fatality statistics to
+Q9 the flash flood problems. In:. Proceedings of the 5th Conference
+on Hydrometeorology, Tulsa, USA, 1983, 127–129.
+MunichRe Natural catastrophes 2006: analyses, assessments and
+Q10 positions. MunichRe Topics Geo series publication. MunichRe, 2007.
+Nishikiori N., Abe T., Costa D.G.M., Dharmaratne S.D., Kunii O.
+& Moji K. Who died as a result of the tsunami? Risk factors of
+mortality among internally displaced persons in Sri Lanka:
+a retrospective cohort analysis. BMC Public Health 2006, 6, 73.
+Penning-Rowsell E., Floyd P., Ramsbottom D. & Surendran S.
+Estimating injury and loss of life in floods: a deterministic
+framework. Nat Hazard 2005, 36, (1–2), 43–64.
+Pollard M. North Sea Surge: the story of the east coast floods of
+1953. Lavenham, Suffolk, UK: Terence Dalton Limited, 1978.
+Ramsbottom D., Floyd P. & Penning-Rowsell E. Flood risks to
+people – phase 1. R&D Technical Report FD2317TR, 2003.
+Rappaport E.N. Loss of life in the United States associated with
+recent tropical Atlantic cyclones. Bull Am Meteorol Soc 2000,
+81, (9), 2065–2073.
+Rijkswaterstaat. Flood risks and safety in the Netherlands – full
+report. Rijkswaterstaat Report, DWW 2006-014, ISBN
+90-369-5604-9, 2006.
+Rofi A., Doocy S. & Robinson C. Tsunami mortality and
+displacement in Aceh province, Indonesia. Disasters 2006, 30,
+(3), 340–350.
+Schultz J.M., Russell J. & Espinel Z. Epidemiology of tropical
+cyclones: the dynamics of disaster, disease, and development.
+Epidemiol Rev 2005, 27, 21–35.
+Slager K. De ramp – een reconstructie – 200 ooggetuigen over de
+watersnood van 1953, verhalen om nooit te vergeten. Goes:
+De koperen tuin, 1992.
+Stephens K.U., Grew D., Chin K., Kadetz P., Greenough G.,
+Burkle F.M., Robinson S.L. & Franklin E.R. Excess mortality in
+the aftermath of hurricane Katrina: a preliminary report.
+Disaster Med Public Health Preparedness 2007, 1, (1),
+15–20.
+Sugimoto T., Murakami H., Yozuki K., Nishikawa K. & Shimada
+T. A human damage prediction method for tsunami disasters
+incorporating evacuation activities. Nat Hazard 2003, 29, (3),
+585–600.
+Tengs T.O., Adams M.E., Pliskin J.S., Gelb Safran D., Siegel J.E.,
+Weinstein M.C. & Graham J.D. Five-hundred live saving
+interventions and their cost effectiveness. Risk Anal 1995,
+15, (3), 369–390.
+Tsuchiya Y. & Kawata Y. Risk to life, warning systems, and
+protective construction against past storm surges in Osaka
+Bay. J Nat Disaster Sci 1981, 3, (1), 33–56.
+Tsuchiya Y. & Yasuda T. High tide and life risk, refuge warning in
+relation to the Ise Bay Typhoon. J Nat Disaster Sci 1980, 2, (2),
+27–60.
+Van Zuilekom K.M., van Maarsseveen M.F.A.M. & van der Doef
+M.R. 2005. A decision support system for preventive
+evacuation of people. In:. Proceedings of the First International Q11
+Symposium on Geo-Information for Disaster Management, Delft,
+the Netherlands, 21–23 March 2005. Berlin: Springer Verlag.
+Vrijling J.K., Hengel W. & van Houben R.J. Acceptable risk as a
+basis for design. Reliab Eng Syst Saf 1998, 59, 141–150.
+Waarts P. Methode voor de bepaling van het aantal doden als
+gevolg van inundatie. Report TNO B-91-1099, 1992.
+WHO (World Health Organization – Regional office for Europe).
+Floods: climate change and adaptation strategies for human
+health. Copenhagen: WHO, 2002.
+Wolshon B., Catarella M.A. & Lambert L. Louisiana highway
+evacuation plan for hurricane Katrina: proactive management
+of a regional evacuation. ASCE J Transport Eng 2006, 132, (1),
+1–10.
+Zhai G., Fukuzono T. & Ikeda S. An empirical model of fatalities
+and injuries due to floods in Japan. J Am Water Resour Assoc Q12
+2006, 863–875.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+c The Authors J Flood Risk Management ]] (2008) 1–14
+Journal Compilation c 2008 The Authors
+14 Jonkman and Vrijling
+JFRM 6 (BWUK JFRM 6.PDF 04-Apr-08 21:32 1153579 Bytes 14 PAGES n operator=K.VinodKumar)
+
+Author Query Form
+_______________________________________________________
+_______________________________________________________
+Dear Author,
+During the copy-editing of your paper, the following queries arose. Please respond to these by marking up your proofs with the necessary 
+changes/additions. Please write your answers clearly on the query sheet if there is insufficient space on the page proofs. If returning the 
+proof by fax do not write too close to the paper's edge. Please remember that illegible mark-ups may delay publication.
+Journal JFRM
+Article 6 
+Query No. Description Author Response 
+Q1 AQ: Please check if the suggested running title is OK.
+Q2
+AQ: Please confirm the change of the year from 2006 to 2007 as per the reference list for reference 
+MunichRe (2007).
+Q3
+AQ: Please confirm the change of the year from 2004 to 2003 as per the reference list for reference Hajat 
+et al. (2003).
+Q4
+AQ: Please confirm the change of the year from 2006 to 2005 as per the reference list for reference 
+Jonkman and Kelman (2005).
+Q5 AQ: Please provide the page range for reference Intergovernmental Panel on Climate Change (2007).
+Q6
+AQ: Please provide the publisher, location of publisher, and page range for reference Johnstone et al. 
+(2005).
+Q7 AQ: Please provide the volume and page numbers for reference Jonkman and Penning-Rowsell (2008).
+Q8 AQ: Please provide the volume and page numbers for reference Jonkman et al. (2008).
+Q9 AQ: Please provide the editors, publisher and location of publisher for reference Mooney (1983).
+Q10 AQ: Please provide the location of publisher for reference MunichRe (2007).
+Q11 AQ: Please provide the editors and page range for reference Van Zuilekom et al. (2005).
+Q12 AQ: Please provide the volume number for reference Zhai et al. (2006).
+ 
+ 
+ 
+ 
+ 
+ 

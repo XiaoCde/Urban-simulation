@@ -1,0 +1,554 @@
+An agent-based model of a multimodal near-field tsunami
+evacuation: Decision-making and life safety
+Haizhong Wang a,⇑
+, Alireza Mostafizi a
+, Lori A. Cramer b
+, Dan Cox a
+, Hyoungsu Park a
+a School of Civil and Construction Engineering, Oregon State University, Corvallis, OR 97331, United States
+b School of Public Policy, Oregon State University, Corvallis, OR 97331, United States
+article info
+Article history:
+Received 31 May 2014
+Received in revised form 23 September 2015
+Accepted 20 November 2015
+Available online 7 December 2015
+Keywords:
+Agent-based modeling
+Tsunami evacuation
+Multimodal
+Decision-making
+Life safety
+abstract
+This paper presents a multimodal evacuation simulation for a near-field tsunami through
+an agent-based modeling framework in Netlogo. The goals of this paper are to investigate
+(1) how the varying decisn time impacts the mortality rate, (2) how the choice of different
+modes of transportation (i.e., walking and automobile), and (3) how existence of vertical
+evacuation gates impacts the estimation of casualties. Using the city of Seaside, Oregon
+as a case study site, different individual decision-making time scales are included in the
+model to assess the mortality rate due to immediate evacuation right after initial earthquake or after a specified milling time. The results show that (1) the decision-making time
+(s) and the variations in decision time (r) are strongly correlated with the mortality rate;
+(2) the provision of vertical evacuation structures is effective to reduce the mortality rate;
+(3) the mortality rate is sensitive to the variations in walking speed of the evacuee population; and (4) the higher percentage of automobile use in tsunami evacuation, the higher
+the mortality rate. Following the results, this paper concludes with a description of the
+challenges ahead in agent-based tsunami evacuation modeling and simulation, and the
+modeling of complex interactions between agents (i.e., pedestrian and car interactions)
+that would arise for a multi-hazard scenario for the Cascadia Subduction Zone.
+Published by Elsevier Ltd.
+1. Introduction
+1.1. Near-field tsunami hazard
+The Cascadia Subduction Zone (CSZ) is a major source for near-field tsunami through mega-thrust earthquake raptures
+threatening the costal community life safety in the Pacific Northwest region (Goldfinger et al., 2012). A near-field tsunami
+is likely to come onshore within 20–40 min after the initial earthquake, while a far-field tsunami (eq. distant-source) is typically 1000 km away from the area of interest which can take hours to reach seashores. Near-field tsunamis pose a greater
+risk for coastal communities because the first waves can move on shore in minutes (40 min or less).
+Essentially, tsunami warning times are much shorter than other natural disasters such as hurricanes and floods, and even
+a well established system such as the Pacific Tsunami Warning Centre (PTWC) may not provide sufficiently long lead time for
+evacuation before a disaster happens, especially for locally-generated tsunamis (Katada et al., 2006). The near-field tsunami
+http://dx.doi.org/10.1016/j.trc.2015.11.010
+0968-090X/Published by Elsevier Ltd.
+⇑ Corresponding author.
+E-mail addresses: haizhong.wang@oregonstate.edu (H. Wang), mostafia@onid.oregonstate.edu (A. Mostafizi), lcramer@oregonstate.edu (L.A. Cramer),
+dan.cox@oregonstate.edu (D. Cox), hyoungsu.park@gmail.com (H. Park).
+Transportation Research Part C 64 (2016) 86–100
+Contents lists available at ScienceDirect
+Transportation Research Part C
+journal homepage: www.elsevier.com/locate/trc
+
+event is particularly devastating because the tsunami arrives in a very short time after the earthquake. Under such circumstances, evacuation is the most important and effective method to save human lives because it is impractical to construct all
+building to resist tsunami forces. The large-scale evacuation represents a complex system for transport operation and planning to minimize casualties, including the potential for critical infrastructure and communication systems to be damaged
+from the earthquake (Lammel, 2011).
+1.2. Evacuation modeling from natural hazards
+Fig. 1 shows the length and time scales from the perspective of an evacuee for several types of natural hazards. Evacuation
+plans for earthquakes and building fires generally occur over short time scales, seconds to a few minutes, and evacuees are
+on foot to shelter in place or nearby. For example in the case of an earthquake, an evacuee might take refuge under a desk
+within a few seconds of feeling the strong shaking of the building. On the other hand, evacuations from hurricanes often have
+several hours to days of advanced warning, and evacuees rely on vehicles to seek shelter several miles away beyond the hazard zone. Nearfield tsunamis present a complex case of multi-modal evacuation because the tsunami arrives within several
+minutes of the earthquake and can travel several kilometers inland. Moreover, evacuees may be faced with choices of sheltering near place (vis-a-vis vertical evacuation) on foot or to travel outside of the inundation zone typically by car.
+There is extensive emergency evacuation modeling research due to its significance to human life safety, and advances in
+technology as is shown in Fig. 2. We are not planning to review each paper listed in Fig. 2 in this work, however interested
+readers are directed to the original papers/reports for more information. Fig. 2 presents five distinct hazard groups whose
+warning time increase from seconds level (i.e., earthquake) to hours range (i.e., hurricane) as is revealed in the hazard length
+and time scales in Fig. 1. For earthquake and building fire with very short warning times, the mode of evacuation is primarily
+on foot. However, for wildfire and hurricane with relatively longer warning time, people generally drive to evacuate the
+affected areas to safer places. Near-field tsunami represents the middle range of the five hazard groups in terms of warning
+time scales which is typically in the range from 20 min to 40 min. Therefore, transportation evacuation modes, may be multimodal rather than a single mode.
+1.3. Tsunami evacuation modeling
+Recent research efforts have begun using agent-based modeling frameworks for hurricanes and coastal community tsunami evacuation (Mas et al., 2011); however the existing tsunami evacuation research models typically assumes 100%
+pedestrian walking with little consideration of other modes of transportation such as auto-mobiles or bicycles. This is
+despite recent work where it was observed that a large number of evacuees left from low-topography areas by car (Mas
+et al., 2011).
+Fig. 1. Time and length scales from evacuees perspective for different hazards.
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 87
+
+In the past decades, approaches to model the evacuation scenarios such as static networks (shortest path, minimum cost
+network flow, or quickest path), dynamic networks, and traffic assignment have been widely employed to model the evacuation scenario (Hamacher and Tjandra, 2002). Wood and Schmidtlein (2012) used a least cost distance to assess pedestrianevacuation potential from CSZ-related tsunamis in the US Pacific Northwest. A typical example of evacuation simulation
+based on static concepts is MASSVAC (Hobeika et al., 1994). An integrated GIS-based simulator framework, which employed
+the shortest-path algorithm, was developed by Katada et al. to improve evacuation efficiency (Katada et al., 2006). Chalmet
+et al. (1982) suggested using the dynamic network to model the circumstance that many occupants evacuated in minimum
+time. Sheffi et al. (1982) proposed the NETVAC model for simulating the traffic pattern under an emergency evacuation scenario. Lovs (1998) presented the way-finding problem in emergency evacuation using various models in a mathematical setting, providing various models. However, these methods bear the flaws that it is hard to be implemented in the real world.
+For example, shortest path solution does not consider congestion effects, which tend to underestimate the travel times, and
+the shortcoming of static assignment is that it does not possess the consideration of the time-of-day dynamics (Lammel,
+2011). They neglect central behavioral aspects like panic or herding behavior as well (Lammel, 2011). Traditional methods
+lack the capacity to describe the individuals decision-making behavior in that circumstance, nor fully incorporate the potential interaction effects between evacuees. Human behavior is highly complex, and is the most difficult aspect of the evacuation process and hard to model in mathematical equations (Mas et al., 2011). The desired approach for the evacuation
+problem is an iterative learning method, which could be improved by agent-based modeling and simulation (ABMS)
+(Lammel, 2011). ABMS is situated to offer meaningful insights to the mechanisms and preconditions for decision making
+processes under pressure and panic.
+An agent-based modeling and simulation (ABMS) is an approach to simulate the interactions and actions of the autonomous decision-making entities, assessing the effect as a whole to capture the emergent phenomena. Hundreds of agents
+operate concurrently to investigate the connection between the macro and micro level individuals behavior (Mas et al.,
+2011). Each agent individually assesses its situation and makes an evacuation decision on the basis of a set of rules
+(Dawson et al., 2011). The ABM has demonstrated it can provide insights that are not available from other methods and captures both the natural and human system dynamics (Dawson et al., 2011). For example, Chen and Zhan (2006) introduced an
+agent-based technique to model the traffic flow and investigate collective behavior of evacuees. Liu et al. (2009) proposed a
+dynamic route decision model based on multi-agents by considering group evacuation. Mas et al. (2011, 2012) presented a
+new method for start time evacuation decision-making modeling under tsunami scenarios. An agent-based simulation
+model of multi-agents in a hypothetical community to study the influence of behavior on warning dissemination is suggested by Nagarajan et al. (2012). Similarly, Dawson et al. (2011) employed the dynamic agent-based model to manage flood
+incidents. Uno and Kashiyama (2008) proposed an emergency evacuation simulation system based on multi-agent models.
+Karon et al. (2011) presented a simulation of tsunami inundation in Oregon area as well. Efforts to model the tsunami evacuation process have also included the least-cost-distance (LCD) models. LCD model focuses on evacuation landscape features
+(Wood and Schmidtlein, 2013) and uses geographic information system (GIS) to find the shortest path to safe spots from
+hazard zones (Wood and Schmidtlein, 2012). Agent based modeling focuses on the evacuees behavior and incorporates
+the dynamic travel costs when deciding travel speed and the location of evacuees. Further, agent-based models may serve
+practitioners who are developing preparedness plans for a site-specific tsunami scenario.
+Fig. 2. A brief summary of evacuation models for varying hazards (the warning time increases from left to right).
+88 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100
+
+1.4. Agent-based modeling in transportation
+Agent-based modeling and simulation is widely used in transportation (Zheng et al., 2013). Multiple platforms have been
+introduced as applications of agent-based modeling in transportation. One example is the MATSim (Multi-Agent Transport
+Simulation project (Lammel et al., 2010)) which was initially developed for the simulation of vehicular traffic flow for large
+cities or even regions (Lammel et al., 2010). Agent-based models are also used in travel demand modeling (Zhang and
+Levinson, 2004) and freight transport analysis combining with macro-level traffic models Holmgren et al. (2014). TRANSIMS
+(TRansportation Analysis and SIMulation System) is an activity-based travel demand modeling and simulation tool which
+was initially developed to simulate individual travelers in a regional transportation network as well as transit system
+through activity-based travel demand modeling and it can also be used for planning the evacuation of metropolitan areas
+(Zheng et al., 2013). Zheng et al. (2013) also reviewed a few other multi-agent activity-based platforms including Sacramento
+Activity-Based Travel Demand Simulation Model (SACSIM) (Bradley et al., 2010), Simulator of Activities, Greenhouse Emissions, Networks, and Travel (SimAGENT) (Goulias et al., 2011), Open Activity–Mobility Simulator (OpenAMOS) (Pendyala
+et al., 2005), and Integrated Land Use, Transportation, Environment (ILUTE) (Salvini and Miller, 2005). In addition, Yin
+et al. (2014) presented an agent-based travel demand model system for hurricane evacuation to simulate six household
+activity-travel decision-making strategies and evaluated their effectiveness. Recently, Xiong et al. (2015) developed an
+agent-based en-route diversion model to evaluate the dynamic behavioral responses and network performance through
+macroscopic fundamental diagrams for real-time operational applications, while Ma et al. (2015) used an agent-based optimization model and a lagrangian relaxation-based heuristic within a mesoscopic dynamic traffic simulator to evaluate the
+personalized real-time traffic information provision strategies such as when and where to provide the information and what
+are the alternative routes.
+Interested readers are referred to (Bazzan and Klugl, 2013) and references therein for a detailed review of the agent-based
+modeling techniques for traffic and transportation applications. The authors of this research chose to use NetLogo (Wilensky,
+1999) mainly because under evacuation circumstances, drivers and pedestrians act in an unexpected panic situation and the
+traditional driver behavior models such as car-following and lane-changing behavior might fail to capture the conditions in
+emergency. NetLogo (Wilensky, 1999) offers flexibility to model the agent-to-agent interactions and the heterogeneous
+decision-making behavior and how that combination impacts life safety.
+1.5. Social vulnerability
+Compounding the challenges of simulating individual decision-making behavior is the extent of social vulnerability
+across a geographic region. Social vulnerability to natural hazards is not constant throughout a community and varies
+due to the unique conditions, needs, and constraints of the subcultures that exist within that community. Factors that
+may interfere with the evacuation capacity surrounding a disaster include: single female-headed households, being elderly,
+racial/ethnic minority, living in a rural region, living in institutions or congregate care, suffering from a physical or mental
+disability, requirement for ongoing medical assistance, and having limited transportation options (Beaulieu and Tootle,
+2010). Integrating the perspectives and contributions of these populations into evacuation simulations is especially important because the chances for greater victimization during a disaster are unevenly distributed in society, as are opportunities
+for enhanced safety (Tierney et al., 2001; Morrow, 2008). At the same time, the resilience of vulnerable populations and the
+perspective that they can bring to disaster risk reduction cannot be underestimated (Cramer, 2012; Schoch-Spana et al.,
+2008).
+It is not population and socio-economic characteristic per se that indicate vulnerability; rather it is the extent that such
+features limit access to resources necessary to prepare, respond and recover from a disaster (NRC, 2006; NRC, 2012). Social
+science research has demonstrated that gender (Fothergill, 1996; Enarson and Morrow, 1998; Fordham, 1999), race and class
+(Perry and Lindell, 1991; Peacock et al., 2000; Cutter et al., 2001), and age (Ngo, 2001) are among the most important indicators of vulnerable individuals and social groups (NRC, 2006). To the extent that evacuation modeling can begin to capture
+the diversity of evacuee socio-demographic characteristics, as well as decision-making modeling, the more precise will be
+the predictions.
+Unfortunately, due to social and technological complexities and the state of modeling technology, some important factors
+have been omitted by researchers when simulating the tsunami evacuation. Developing an effective evacuation strategy
+requires not only understanding spatial differences in geophysical risk, but also social vulnerability (Chakrabority and
+Montz, 2005). The connection to place, household evacuation logistics (Lindell et al., 2011), and personal familiarity with
+evacuation routes (Dow and Cutter, 2002) would significantly influence the decision making time. Furthermore, it was found
+that transient residents (i.e., tourists) were more likely to evacuate faster than the permanent residents (Charnkol and
+Tanaboriboon, 2006). Thus, differential reaction times would lead to different evacuation and transportation impacts. Also,
+research from a survey for the 1995 Kobe earthquake shows that residents with local knowledge may choose a different
+route and the mode of evacuation (walk, auto-mobile) (Liu et al., 2009). Rational choice approaches (Bogard, 1988) suggest
+that people behave in a rational manner based on their knowledge, efficiency and resources; therefore, every evacuee will
+choose the optimal evacuation strategy under their given circumstance, which would lead to a, so called, Nash equilibrium
+(Lammel, 2011). In addition, different from existing transportation simulations, since any location outside the inundation
+zone is regarded to be safe and could therefore be a possible destination, the destinations of evacuation are not known in
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 89
+
+advance (Lammel, 2011). The ability to choose a route to safety, directly instead of seeking a safe location aimlessly is crucial
+to evacuation efficiency. In the case of an anticipated detour, forecasting technologies should have the capacity to model the
+logistical impacts in order to aid disaster preparations.
+1.6. The motivation
+The goal of this research is to investigate the impacts of different evacuee decision-making times on the estimation of
+casualties in a multi-modal tsunami evacuation. The motivations are three folded: (1) a real evacuation is most likely to
+be multi-modal instead of a single mode; (2) the length of the decision-making process regarding when and how to evacuate; and (3) existence of vertical evacuation sites is crucial to life safety benefits (i.e., mortality rate). Another motivation is to
+develop a framework that can include a more comprehensive multi-hazard and multi-modal evacuation scenario for the CSZ
+event, however we are only focusing on tsunami in this research. In particular, this research will model the evacuees
+decision-making behavior during the near-field tsunami evacuation event which can lead to a better comprehension of
+transportation impacts under various evacuation scenarios (e.g., whether to evacuate or not? Which mode of transportation?
+Which route to take?). According to a survey in Mas et al. (2011), 57% of the interviewees evacuated immediately after the
+earthquake while 37% had delayed their evacuation. A general evacuation model may provide the regional perspective, but
+site-specific case studies are useful for emergency planning at those specific locations (Wood and Schmidtlein, 2013). Thus,
+this study plans to use the city of Seaside, Oregon as a case for the multi-modal agent-based evacuation model, where tourists and sizeable residential population are constantly threatened by near-field tsunamis (Wood and Schmidtlein, 2012).
+2. Tsunami evacuation model
+2.1. Agent-based modeling environment
+Our tsunami evacuation model was constructed using NetLogo modeling environment which is a high level integrated
+modeling platform through agent-based programming language (Wilensky, 1999). This modeling environment enables
+the exploration of emergent phenomenon in a multi-agent system, and it allows users to modify parameters through sliders
+and visualize the simulation environment. This feature has turned NetLogo into an increasingly popular tool for research due
+to its extensive documentation, the existence of good tutorials, and a large library of preexisting models (Klugl and Bazzan,
+2012). The main part of complexity in evacuation modeling is caused by interactions between agents. Since NetLogo is a
+high-level platform for simulating complex and stochastic systems, the model is developed in this platform. The model uses
+GIS data as input for transportation network. Fig. 3 shows a screen capture of the tsunami evacuation model as an example.
+We note that for this simulation we are modeling only the consequences of the tsunami hazard, and we do not include
+direct consequences of the earthquake on the population or the constructed environment. We assume that there are not
+casualties or injuries resulting from the earthquake or any damage to surface streets, bridges or buildings. For the agent
+behavior, we assume that all agents are autonomous, that their choices are not influenced by the behavior of others, and that
+their behavior does not change with time. In other words, an agent that initially chooses ‘‘no action” cannot change this
+behavior even if neighboring agents are evacuating.
+2.2. Model components
+The model requires a number of precomputed data files containing the population distribution, street grid, evacuation
+destinations, and the inundation hazard. Each of these data files are discussed briefly.
+2.2.1. Population density model
+There can be a high spatio-temporal variability of community population density based on factors such as the weather,
+time of day, week, or season. Moreover, a given population will contain a number of different segments such as residents or
+transients (i.e., tourists) who will respond differently for a given hazard. There are also wide distributions in age as well as
+other factors affecting social vulnerability as discussed earlier. For this simulation, we represent two population classes (residents, tourists) and place the population across several zones, with the population density increasing at the waterfront and
+beach area. For the simulations presented here, this would represent a crowded peak summer weekend which is considered
+the worst case scenario with approximately the same number of tourists and residents which adds up to 2500 evacuees.
+2.2.2. Road network
+The evacuation road network was constructed using the open street map by cutting out the area of interest (i.e., Seaside,
+OR in this case) and saving as an OSM file. The road network is extracted from the OSM file with their coordinates. In the
+simulation, it is assumed that all the agents (i.e., residents and tourists) have to follow the road network to the tsunami shelters. The use of other alternatives such as swimming across the river or cutting through fields or parking lots are prohibited.
+In addition, a conservative assumption has been made. All of the roads are considered as a one-way one-lane street with
+30 mph speed limit towards outside of the inundation zone.
+90 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100
+
+2.2.3. Tsunami shelters
+For this simulation, we identified eight evacuation areas located outside of the tsunami inundation zone based on the horizontal evacuation maps provided by the Oregon Department of Geology and Mineral Industries (Priest et al., 2013). For these
+simulation, we assume that there is unlimited capacity for people and cars at the shelter areas. In addition to these eight
+locations, we include three fictitious vertical evacuation structures within the inundation zone for some simulations. Vertical
+evacuation shelters have been placed in the areas where population of evacuees were concentrated the most. Here, we
+assume an unlimited capacity for sheltering and that the shelter is of sufficient height and strength to withstand the tsunami
+forces (FEMA, 2008).
+2.2.4. Tsunami inundation
+For the tsunami inundation, we simulate the Cascadia Subduction Zone event using the ComMIT/MOST model developed
+by NOAA and used for tsunami evacuation mapping in the US (Titov and Gonzalez, 1997). For this simulation, the maximum
+extent of inundation is consistent with estimates of the inundation for a probable event with approximately a 500 year
+return interval (Venturato et al., 2007). The model provides time variation of the flow depth and speed throughout the model
+domain. We note that these simulations use a ‘bare earth model, meaning that the influence of large roughness features such
+as buildings and groups of buildings are not included in the flow. It is likely that the constructed environment would increase
+flow speeds along evacuation routes running parallel to the main flow direction (Park et al., 2013).
+2.3. Agent decisions
+For a given population, road network, tsunami shelter, and inundation scenario, the model can be run with several
+options related to the human decisions and are described below.
+2.3.1. Agent choices: Options 0, 1, 2, and 3
+Each agent can make one the following choices. Option 0 is no action where the agent chooses not to evacuate. We
+assume that the agent is located at ground level and outside. In other words, we assume they are not in their car, nor are
+they in a building that would provide them shelter if no actions were taken. Option 1 is horizontal evacuation on foot.
+For this option, we assume that the agent is knowledgeable of the most efficient route to the nearest tsunami shelter outside
+the inundation zone. Option 2 is horizontal evacuation by car. Similar to Option 1, we assume that the agent knows the most
+efficient route. We also assume that the car is located nearby and the time that it takes to go to the car is modeled in the
+differences in milling time as discussed in the next section. Option 3 is vertical evacuation. For this option, an agent may
+Fig. 3. The NetLogo tsunami model of Seaside, Oregon.
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 91
+
+choose to seek refuge in a vertical evacuation structure if that is a closer alternative. For the case of Seaside, OR, an agent
+assigned Option 3 will not cross the river toward the hazard area and instead will seek refuge via horizontal evacuation.
+The probability for choosing an option can be specified for each simulation for the two population classes. For example,
+for a given simulation, the resident population may have 5% who choose no action (Opt 0), 50% who choose horizontal evacuation on foot (Opt 1), 25% who choose horizontal evacuation by car (Opt 2), and 20% who choose vertical evacuation on foot
+(Opt 3). The tourist population can have a different distribution to account for differences in tsunami awareness, access to
+vehicles, local route knowledge or other factors. It is possible to assign a 100% probability to both classes to limit only one
+option. This could be used to force, all agents to choose horizontal evacuation to test the current evacuation plan for a community (Opt 1 = 100%). As mentioned earlier, we assume that agents act independent of others (there are no social groups).
+2.3.2. Decision time with variations
+One of most important decisions that evacuees should make is the departure time. We continue to confront important
+challenges regarding evacuation lead times, the accuracy and reliability of the information that is being communicated,
+and in our ability to elicit the appropriate response from decision makers and the general public (NRC, 2006). While much
+research has been done related to hurricane and flood preparation time (Lindell et al., 2002; Kang, 2004), research is needed
+to assess the extent to which evacuation preparation time has occurred for rapid-onset hazards, such as tsunamis (NRC,
+2006). The timing of evacuee responses can have a significant effect on traffic congestion and bottlenecks during an evacuation (Naser and Birst, 2010). The model simulates the evacuation time in two different ways:
+ Immediate evacuation: in which evacuees start the evacuation immediately after the Tsunami alarm.
+ Delayed evacuation: in which evacuees postpone their departure time. In this work, as suggested by Mas et al. (2011),
+agents follow a Rayleigh distribution for deciding their evacuation departure time.
+The total decision time for an evacuee is a complex process involving psychological preparation for the emergency evacuation involving a series of stages to confirm whether there is an immediate threat and what action should be taken
+(Sorensen, 2000). For this model, we simplify and combine these processes by specifying a delay time (s) and a probability
+of action using a Rayleigh distribution (Tweedie et al., 1986; Lindell and Prater, 2007) with a scale parameter r given as
+PðtÞ¼ 0 if 0 < t < s
+1  eðtsÞ
+2=ð2r2Þ if t > s
+
+where t is the time in minutes after the earthquake. Both s and r can vary for each option and can vary between population
+class, allowing the model to evaluate mortality as a function of the decision time for a fairly wide range of conditions. Fig. 4
+shows an example with s ¼ 5 min (that is, the decision making process takes at least 5 min for all agents) and a range of
+values for r. As the value of r increases, the distribution times of agents taking action increases. For example, when
+r ¼ 1:0, it takes s þ 3:0 min for 99% of the agents to have taken action. When r increases to 4.0 to initiate an action, only
+50% of the agents will have taken action after s þ 4:7 min and 99% will have taken action after s þ 12:1 min. Table 1 summarizes the variation in time required as a function of r.
+Fig. 4. Use of s and r to represent milling time and variation in milling time. For this example, s = 5 min.
+92 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100
+
+2.3.3. Evacuation speed
+Evacuation speed is a critical parameter to estimate mortality rates for near-field tsunamis (Wood and Schmidtlein,
+2012). For agents traveling on foot, we assign a mean speed u, of u ¼ 1:5 m/s for a fast walk (Knoblauch et al., 1995). We
+include a normal distribution to represent a range of walking speeds for a given population in Fig. 5. When sig = 0.2 m/s, this
+would cover a range from slow walk (1 m/s) to slow run (2 m/s). Typical jogging paces range from 15 min/mile (1.8 m/s) for a
+slow run to 10 min/mile (2.7 m/s) for a moderate run (TRB, 2010). An extremely fast running pace would be equivalent to a
+7 min/mile (3.8 m/s). The agent is assigned a constant walking speed, and there is no effect from topography or influence
+from the speed of other agents.
+In modeling the evacuation by car, we assume that the time required to get to their car is a function of the s and r. One
+exception would be for agents not on a grid such as agents on the beach at the start of the simulation. In this case, agents are
+assigned the walking speed and take a direct path to the road network after which time their classification changes and the
+agents speed is governed by the car model. In this model, we set the maximum speed limit, and acceleration and deceleration
+limits. We assume that there is no damage from the local earthquake (the roads are clear), no accidents, and unlimited capacity in the evacuation areas.
+In this work, we considered a variable maximum speed for cars. To incorporate car–car interaction, cars speeds are calculated regarding how dense the cars are surrounding you. Cars speed up with the variable acceleration, which can be
+adjusted in the model, if there is no car ahead. Otherwise, they slow down to the speed of their adjacent car. According
+to previous efforts regarding traffic flow simulation in NetLogo (Wilensky, 1999), the state of panic in evacuation simulation
+correlates with acceleration and deceleration of cars. In case of evacuation, acceleration and deceleration are much higher
+than the average, which typically results in much greater average evacuation time and traffic congestions.
+2.3.4. Casualty model
+The casualty model is based on a critical water depth, hc , defined as the water depth above the local grade. If the water
+depth exceeds hc at an agents location, then the agent is counted as a fatality. Although studies have shown that many factors
+Table 1
+Time in minutes required for agents to initiate an action after the initial delay time as a function of sigma assuming a Rayleigh
+distribution.
+r Percent of agents initiating actions
+50% 95% 99%
+1.0 1.2 2.4 3.0
+2.0 2.4 4.9 6.1
+4.0 4.7 9.8 12.1
+8.0 9.4 19.6 24.3
+Fig. 5. Normal distribution of pedestrian walking speed.
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 93
+
+determine the probability of drowning, including age, water temperature, mental well-being (Yeh, 2010), the critical depth is
+a reasonable first approximation for the purposes of this model. Future iterations may contain a more complex casualty
+model involving a persons shape and the flow speed conditions (Yeh, 2010).
+3. Study area
+3.1. CSZ scenario
+For this project, we model the nearfield tsunami arising from the Cascadia Subduction Zone (CSZ) shown in Fig. 6(a). The
+Cascadia Subduction Zone (CSZ) measures 1000 km in length and extends from the Mendocino Ridge off the coast of northern California to northern Vancouver Island, British Columbia (Fig. 6). A near-field event generated from the CSZ is expected
+to cause widespread damage to the northwest Pacific coast of North America with the first waves arriving in the tens of minutes. The last great CSZ event occurred more than three centuries ago on 26 January 1700 and was a full length rupture. The
+event is estimated to have had a moment magnitude (MW ) between 8.7 and 9.2, and a slip of 19 m (Satake et al., 2003). The
+average recurrence interval between full length CSZ events is 530 years, and the next event is estimated to have a 7–12%
+probability of occurrence by 2060 (Goldfinger et al., 2012).
+3.2. Seaside, OR
+The city of Seaside (Fig. 6(b)) was chosen for this study because it has been identified as having a high risk to the CSZ
+tsunami (Wood, 2007). This is due, in part, to the proximity to the CSZ (Fig. 6(a)), fairly flat topography, and the location
+of the tsunami shelter areas at more than 1.5 km from the shoreline. The Necanicum River which flows from south to north,
+bisecting the city, is spanned by 5 bridges and creates additional complexity for the multi-modal evacuation. The current
+tsunami evacuation plan for the area calls for horizontal evacuation on foot, and the option of vertical evacuation has only
+be discussed in recent years as a possible option. No comprehensive studies exist which explore the feasibility of vertical
+evacuation. In addition to Seaside, there are several other towns along the coast with a high risk to nearfield tsunamis,
+including Ocean Shores, WA, and Long Beach, WA (Wood and Schmidtlein, 2013).
+4. Model results
+4.1. General behavior of model
+Fig. 7 shows an example of the model simulation starting with time t = 0 representing the end of the initial shaking due to
+the earthquake. For this simulation, we assume that no evacuation takes place during the earthquake itself. Fig. 7(a) shows
+the initial population divided between residents (yellow) and tourists (brown). The agents have the 4 options as described
+earlier, and they evacuate to either vertical evacuation structures within the inundation zone or to designated shelter outside
+the zone. Agents change color depending on their option and mode of transportation (Fig. 7(b) and (c)). After approximately
+Fig. 6. (a) Location of Cascadia Subduction Zone in North Amerak and Seaside study area; (b) overivew of Seaside study area with designated horizontal
+evacuation shelters.
+94 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100
+
+30 min, the tsunami reaches the shore and fatalities occur when the inundation level exceed 0.5 m (Fig. 7(d)). The tsunami
+has inundated the first part of Seaside after 38 min, crossing the Necanicum River (Fig. 7(e)), and finally the tsunami reaches
+the runup limit approximately 1 km inland, 12 min after reaching the shoreline.
+4.2. Model sensitivity
+4.2.1. Model sensitivity to critical depth
+Fig. 8 shows the mortality rate as a function of critical depth, hc, used as the criteria to determine the casualty of an agent.
+For this simulation, all agents were prescribed Option 1 (horizontal evacuation on foot), with a walking speed of 1:1 m/s and
+immediate evacuation ðs ¼ 0;r ¼ 0Þ. Under this scenario, the models predicted similar results for a range of depths from
+0:5 < hc < 3 m. Although our model results were not sensitive to the choice of hc , we can seek improvements to the model
+by considering alternative casualties models that consider age and gender (Yeh, 2010), hydrodynamic forces (Koshimura
+et al., 2006), and other factors (Jonkman et al., 2008).
+Fig. 7. Example of model simulation.
+Fig. 8. Mortality rate as a function of critical depth hc (m).
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 95
+
+4.2.2. Model sensitivity to s and r
+As discussed in Section 2.3.3, we model the decision time with two parameters s and r, where s represents the delay time
+(no agents evacuate for t < s) and r is a scale parameter representing the variability in the cumulative probability distribution based on a Rayleigh distribution.
+Fig. 9 shows the model sensitivity to s. For this scenario, r is kept constant (r ¼ 2:0) and s varies from 0 (immediate evacuation) to 20 min. As expected, the mortality rate increases significantly as the delay time increases. Fig. 10 shows the model
+sensitivity to r. Here, s is set to zero, and r varies from 0 (immediate evacuation) to r ¼ 16. As expected, Fig. 10 shows a
+large increase in mortality rate as the variability in departure times increases. In reality, both tau and sigma can be varied
+based on an agents classification (e.g., resident or transient) and evacuation choice.
+4.3. Evacuation options
+4.3.1. Option 1: Horizontal evacuation on foot
+Fig. 11 shows the effect of the walking speed on mortality rate where the walking speed is modeled as a normal distribution with mean speed u and standard deviation sigma (sig). For these simulations, we use s ¼ 5 min delay from the time of
+the earthquake to the start of evacuation with a r ¼ 2 (e.g., 95% of the population would have taken action approximately
+10 min after the earthquake). There were N ¼ 2405 agents and we assumed no difference between tourists and residents. In
+this figure, the mean walking speed varies from 1:0 to 2:25 m/s and three values of sig were used: sig = 0.1 (circles) representing a low variance (that is, most evacuees will move near the mean speed), sig = 0.2 (square), sig = 0.4 (diamond).
+Fig. 9. Influence of delay time (s) on mortality rate with fixed scale parameter (r ¼ 2:0).
+Fig. 10. Influence of scale parameter (r) on mortality rate with fixed delay time (s ¼ 0).
+96 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100
+
+As expected, Fig. 11 shows that the walking speed has a strong influence on the mortality rate. For walking speeds in
+excess of 2.5 m/s (running), the mortality rate was near 0%, and then the mortality rate increases sharply to above 25% when
+the speed drops to 1:0 m/s (slow walk). Moreover, the variability in walking speed has a strong effect. For example, at u ¼ 1:5
+m/s in the top figure, there is about a 5-fold increase in mortality if there is a wide range of walking speeds (i.e., sig is increasing from 0:1 to 0:4). This highlights the need to look at mobility issues for effective tsunami evacuation planning.
+4.3.2. Option 2: Horizontal evacuation by car
+Traffic congestion conditions will likely increase as the number of vehicles on the road at any one time increases (Spiess,
+1990). To test the capability of the model to simulate traffic congestion using NetLogo model library: Traffic Basic, we considered agents choosing horizontal evacuation by either foot (Option 1) or by car (Option 2), varying the percentage from 0
+(on foot) to 100% (by car). Fig. 12 shows the mortality rate of agents who evacuated by car as a function of the percent of
+agents choosing that option. The figure shows that the mortality rate of drivers increases significantly as more and more
+agents choose to evacuate by car because congestion increased on several of the roads leading to the evacuation shelters.
+Fig. 11. Influence of mean and variance of walking speeds on mortality rates considering horizontal evacuation on foot. Circles (sig = 0.1), squares
+(sig = 0.2), diamonds (sig = 0.4).
+Fig. 12. Mortality rate of drivers as a function of percent of agents choosing to evacuate by car.
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 97
+
+For example, the mortality rate of drivers increases by a factor 3:5 as the percent of agents evacuating by car increases from
+10% to 70%.
+We note that in this scenario, we made several assumptions that minimized congestion and increased survivability of
+agents traveling by car, including unlimited car capacity at each tsunami shelter and basic interaction of cars and pedestrians. Furthermore, we did not include a probability of accidents or breakdowns that would increase delays, nor did we
+attempt to model agents who would abandon their cars and continue on foot. Factors such as bridge failure and landslides
+due to the earthquake or other technological failures such as signal timing that would affect surface transportation were not
+included. Future efforts will have to consider these factors to develop realistic scenarios for multi-modal tsunami evacuation.
+4.3.3. Option 3: Horizontal and vertical evacuation
+For the case of u ¼ 1:5 m/s, there is a 7-fold decrease in the mortality rate with the inclusion of vertical evacuation structure. Fig. 13 shows the influence that three vertical evacuation structures would have on the mortality rate for walking
+speeds in the range 1 < u < 2:25 m/s for the case of s ¼ 5 and r ¼ 2 as seen previously in Fig. 11. This dramatic decrease
+in the mortality rate with the inclusion of vertical evacuation structures highlights the need to further investigate the role
+that the vertical evacuation option may play in Seaside and other coastal communities threatened by near-field tsunami hazard. Vertical evacuation, where evacuees seek refuge in a structure within the inundation zone, has been shown to be effective during the 2011 Tohoku tsunami for cases where the evacuation structure was of sufficient height to avoid overtopping
+and sufficient strength to withstand the hydrodynamic forces (Chock et al., 2013).
+5. Summary, conclusions and future work
+This paper presented a near-field multimodal tsunami evacuation study through an agent-based modeling environment.
+The research questions were how variations in decision-making time (i.e., s and r) and the choices of transportation modes
+impact the coastal community life safety (i.e., mortality rate) using Seaside, Oregon as a case study. We used an agent-based
+modeling environment NetLogo to model and simulate the (1) the sensitivity of mortality rate to the tsunami wave critical
+depth (hc); (2) the mortality rate to variations in decision-making time (s and r); and (3) the mortality rate to the choice of
+evacuation options (i.e., horizonal evacuation on foot, horizontal evacuation by car, and both horizontal and vertical
+evacuation).
+The results show that (1) the mortality rate is sensitive to the decision-making time s which is a ‘‘delay time” or ‘‘milling
+time” and the scale parameter r; (2) the variations in walking speed has significant impacts on the number of casualties in
+the horizontal evacuation on foot; (3) the provision of vertical evacuation structures is very effective to reduce the mortality
+rate; and (4) the mortality rate increases as the number of evacuee who used automobile to evacuate increases as a result of
+congestion and bottleneck effects.
+Future research will be based on current work and extended to include (1) partial damage to the transportation network
+(i.e., single bridge failure or combination of bridge failures after an earthquake) considering bridge vulnerability; (2) transportation behavioral models such as a modified Greenshields model to better capture the bottleneck effects; (3) realistic interaction rules among agents (i.e., pedestrian and car interaction) to provide more accurate representation of the multimodal
+Fig. 13. Influence of vertical evacuation options on mortality rates as a function of walking speed. Open symbols for horizontal evacuation (Opt 1), solid
+symbols for vertical and horizontal evacuation (Opt 2).
+98 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100
+
+evacuation; (4) how mortality rate varies when the population (residents and tourists) distribution is different (i.e., an earthquake happens over the day or during night); (5) incident scenario analysis such as people who used their cars to evacuate at
+the beginning but abandon the car in the middle of congestion and changed to horizontal evacuation on foot; (6) different
+information provision and propagation strategies (i.e., communication tower or mouth to mouth) to increase the evacuation
+efficiency and congestion mitigation strategies (i.e., contra-flow lanes); and (7) validation of the agent-based model using
+empirical data from 2011 Tohoku event for multiple cities in Japan.
+Acknowledgement
+The authors would like to acknowledge the funding support from the Oregon Sea Grant program through the project
+‘‘Building resilient coastal communities: A social assessment of mobile technology for tsunami evacuation planning”. The
+authors would like to thank Prof. Harry Yeh within School of Civil and Construction Engineering at Oregon State University
+for providing valuable discussions regarding tsunami evacuation and modeling approaches.
+References
+Bazzan, A.C., Klugl, F., 2013. A review on agent-based technology for traffic and transportation. Knowl. Eng. Rev., 1–29
+Beaulieu, L.J.B., Tootle, D., 2010. Helping Disadvantaged Populations Prepare for Disasters: Assessing the Efficacy of the Emergency Preparedness
+Demonstration Framework. Tech. rep., Southern Rural Development Center, Mississippi State University.
+Bogard, W.C., 1988. Bringing social theory to hazards research: conditions and consequences of the mitigation of environmental hazards. Sociol. Perspect. 31
+(2), 147–168.
+Bradley, M., Bowman, J.L., Griesenbeck, B., 2010. SACSIM: an applied activity-based model system with fine-level spatial and temporal resolution. J. Choice
+Modell. 3 (1), 5–31.
+Chakrabority, J.G.A.T., Montz, B.E., 2005. Population evacuation: assessing spatial variability in geophysical risk and social vulnerability to natural hazards.
+Nat. Hazards Rev. 6 (1), 23–33.
+Chalmet, L.G., Francis, R.L., Saunders, P.B., 1982. Network models for building evacuation. Manage. Sci. 28 (1), 86–105.
+Charnkol, T., Tanaboriboon, Y., 2006. Tsunami evacuation behavior analysis: one step of transportation disaster response. IATSS Res. 30 (2), 83.
+Chen, X., Zhan, F.B., 2006. Agent-based modelling and simulation of urban evacuation: relative effectiveness of simultaneous and staged evacuation
+strategies. J. Oper. Res. Soc. 59 (1), 25–33.
+Chock, G., Robertson, I., Kriebel, D., Francis, M., Nistor, I., 2013. Tohoku, Japan, Earthquake and Tsunami of 2011 Performance of Structures under Tsunami
+Loads. ASCE Structural Engineering Institute.
+Cramer, L.A., July 2012. Social vulnerability and disaster resilience in coastal oregon. In: The Annual Meeting of the Rural Sociology Society, Chicago, IL.
+Cutter, S.L., Hodgson, M.E., Dow, K., 2001. Subsidized inequities: the spatial patterning of environmental risks and federally assisted housing. Urban Geogr.
+22 (1), 29–53.
+Dawson, R.J., Peppe, R., Wang, M., 2011. An agent-based model for risk-based flood incident management. Nat. Hazards 59 (1), 167–189.
+Dow, K., Cutter, S.L., 2002. Emerging hurricane evacuation issues: hurricane Floyd and South Carolina. Nat. Hazards Rev. 3, 12–18.
+Enarson, E., Morrow, B.H., 1998. The Gendered Terrain of Disaster: Through Women’s Eyes. Praeger, Westport, CT.
+FEMA, June 2008. Guidelines for Design of Structures for Vertical Evacuation from Tsunamis. Technical report, Applied Technology Council, 201 Redwood
+Shores Pkwy, Suite 240 Redwood City, California 94065.
+Fordham, M., 1999. The intersection of gender and social class in disasters: Balancing resilience and vulnerability. Int. J. Mass Emergenc. Disasters 17, 15–36.
+Fothergill, A., 1996. Gender, risk and disaster. Int. J. Mass Emergenc. Disasters 14, 33–56.
+Goldfinger, C., Nelson, C.H., Morey, A.E., Johnson, J.E., Patton, J.R., Karabanov, E., et al., 2012. Turbidite Event History Methods and Implications for Holocene
+Paleoseismicity of the Cascadia Subduction Zone. U.S. Geological Survey Professional Paper 1661-F, 170.
+Goulias, K.G., Bhat, C.R., Pendyala, R.M., Chen, Y., Paleti, R., Londuri, K.C., et al., 2011. Simulator of activities, greenhouse emissions, networks, and travel
+(simagent) in southern california. In: Paper Presented at the Transportation Research Board 91st Annual Meeting, Washington, DC.
+Hamacher, H.W., Tjandra, S.A., 2002. Mathematical modelling of evacuation problems – a state of the art. Pedestrian Evacuat. Dyn. 24, 227–266.
+Hobeika, A.G., Kim, S., Beckwith, R.E., 1994. A decision support system for developing evacuation plans around nuclear power stations. Interfaces 24 (5), 22–
+35.
+Holmgren, J., Ramstedt, L., Davidsson, P., Edwards, H., Persson, J.A., 2014. Combining macro-level and agent-based modeling for improved freight transport
+analysis. Proc. Comput. Sci. 32, 380–387 (The 5th International Conference on Ambient Systems, Networks and Technologies (ANT-2014), the 4th
+International Conference on Sustainable Energy Information Technology (SEIT-2014).) <http://www.sciencedirect.com/science/article/pii/
+S1877050914006383>.
+Jonkman, S.N., Vrijling, J., Vrouwenvelder, A.C.W.M., 2008. Methods for the estimation of loss of life due to floods: a literature review and a proposal for a
+new method. Nat. Hazards 46, 353–389.
+Kang, J.E., M.L., Prater., C., 2004. Hurricane Evacuation Expectations and Actual Behavior in Hurrican Lili. Tech. rep., Texas A & M University Hazard
+Reduction and Recovery Center, College Station, TX.
+Karon, J., Yeh, H., May 2011. Comprehensive Tsunami Simulator for Cannon Beach, Oregon. Tech. rep., Final Report submitted to the City of Cannon Beach.
+Katada, T., Kuwasawa, N., Yeh, H., Pancake, C., 2006. Integrated simulation of tsunami hazards. In: 100th Anniversary Earthquake Conference including the
+8th U.S. National Conference on Earthquake Engineering (8NCEE), the SSA Centennial Meeting, and the OES Disaster Resistant California Conference,. No.
+1727. San Francisco, California.
+Klugl, F., Bazzan, A.L.C., 2012. Agent-based modeling and simulation. AI Mag., 29–40
+Knoblauch, R., Pietrucha, M., Nitzburg, M., 1995. Field studies of pedestrian walking speed and start-up time. Transp. Res. Rec.: J. Transp. Res. Board 1538,
+27–38 (National Research Council, Washington, DC).
+Koshimura, S., Katada, T., Mofjeld, H.O., Kawata, Y., 2006. A method for estimating casualties due to the tsunami inundation flow. Nat. Hazards 39 (2), 265–
+274.
+Lammel, G., 2011. Escaping the Tsunami: Evacuation Strategies for Large Urban Areas Concepts and Implementation of a Multi-agent Based Approach. Ph.D.
+Thesis, Universitatsbibliothek.
+Lindell, M.K., Kang, J.E., Prater, C.S., 2011. The logistics of household hurricane evacuation. Nat. Hazards 58, 1093–1109.
+Lindell, M.K., Prater, C.S., 2007. Critical behavioral assumptions in evacuation time estimate analysis for private vehicles: examples from hurricane research
+and planning. J. Urban Plann. Develop. 133 (1), 18–29.
+Lindell, M.K., Prater, C.S., Perry, R.W., Wu, J.Y., 2002. Emblem: An Emperically-Based Large Scale Evacuation Time Estimate Model. Tech. rep., Texas A&M
+University Hazard Reduction and Recovery Center, College Station, TX.
+Liu, Y., Okada, N., Takeuchi, Y., 2009. Dynamic route decision model-based multi-agent evacuation simulation – case study of nagata ward, kobe. J. Nat.
+Disaster Sci. 28 (2), 91–98.
+H. Wang et al. / Transportation Research Part C 64 (2016) 86–100 99
+
+Lammel, G., Grether, D., Nagel, K., 2010. The representation and implementation of time-dependent inundation in large-scale microscopic evacuation
+simulations. Transp. Res. Part C 18, 84–98.
+Lovs, G.G., 1998. Models of wayfinding in emergency evacuations. Eur. J. Oper. Res. 105 (3), 371–389.
+Ma, J., Smith, B.L., Zhou, X., 2016. Personalized real-time traffic information provision: agent-based optimization model and solution framework. Transp.
+Res. C: Emerg. Technol. 64, 164–182.
+Mas, E., Imamura, F., Koshimura, S., 2011. Modeling the decision of evacuation from tsunami, based on human risk perception. In: Annual Meeting of the
+Tohoku Branch Technology Research Conference. Japan Society of Civil Engineers.
+Mas, E., Suppasri, A., Imamura, F., Koshimura, S., 2012. Agent-based simulation of the 2011 great east japan earthquake/tsunami evacuation: an integrated
+model of tsunami inundation and evacuation. J. Nat. Disaster Sci. 34 (1), 41–57.
+Morrow, B.H., 2008. Community Resilience: A Social Justice Perspective. Tech. rep., CARRI Research Report No. 4. <http://www.nanoos.org/mobile_apps/>.
+Nagarajan, M., Shaw, D., Albores, P., 2012. Disseminating a warning message to evacuate: a simulation study of the behaviour of neighbours. Eur. J. Oper.
+Res. 220 (1), 810–819.
+Naser, M., Birst, S.C., 2010. Mesoscopic Evacuation Modeling for Small- to Medium-Sized Metropolitan Areas. Tech. rep., Advanced Traffic Analysis Center,
+Upper Great Plains Transportation Institute, North Dakota State University, Fargo, ND 58108.
+Ngo, E.B., 2001. When disasters and age collide: reviewing vulnerability of the elderly. Nat. Hazards Rev. 2 (2), 80–89.
+NRC, 2006. Facing Hazards and Disasters: Understanding Human Dimensions. Tech. rep., National Research Council, The National Academies Press,
+Washington, DC.
+NRC, 2012. Disaster Resilience: A National Imperative. Tech. rep., National Research Council, Washington, DC: The National Academies Press.
+Park, H., Cox, D., Lynett, P.J., Wiebe, D.M., Shin, S., 2013. Tsunami inundation modeling in constructed environments: a physical and numerical comparison
+of free-surface elevation, velocity, and momentum flux. Coast. Eng. 79, 9–21.
+Peacock, W.G., Morrow, B.H., Gladwin, H., 2000. Hurricane Andrew and the Reshaping of Miami: Ethnicity, Gender, and the Socio-Political Ecology of
+Disasters. Tech. rep., Florida International University, International Hurricane Center, Miami, FL.
+Pendyala, R.M., Kitamura, R., Kikuchi, A., Yomamoto, T., Fujii, S., 2005. Florida activity mobility simulator. Transp. Res. Rec. 1921, 123–130.
+Perry, R.W., Lindell, M., 1991. The effects of ethnicity on evacuation decision making. Int. J. Mass Emergenc. Disasters 9, 47–68.
+Priest, G.R., Witter, R.C., Zhang, Y.J., 2013. Tsunami Animations, Time Histories, and Digital Point Data for Flow Depth, Elevation, and Velocity for the South
+Coast Project Area, Curry County, Oregon. Tech. Rep. Open-File Report O-13-13, Department of Geology and Mineral Industries.
+Salvini, P.A., Miller, E., 2005. Ilute: an operational prototype of a comprehensive microsimulation model of urban systems. Networks Spatial Econom. 5 (2),
+217–234.
+Satake, K., Wang, K., Atwater, B.F., 2003. Fault slip and seismic moment of the 1700 cascadia earthquake inferred from japanese tsunami descriptions. J.
+Geophys. Res. 108 (B11), 1978–2012.
+Schoch-Spana, M.B., Franco, C.C., Norwood, A., Nuzzo, J.B., 2008. Community resilience roundtable on the implementation of homeland security presidential
+directive 21 (hspd-21). Biosecurity Bioterrorism 6 (3), 269–278.
+Sheffi, Y., Mahmassani, H., Powell, W.B., 1982. A transportation network evacuation model. Transp. Res. A: General 16 (3), 209–218.
+Sorensen, J.H., 2000. Hazard warning systems: review of 20 years of progress. Nat. Hazards Rev. 1, 119–125.
+Spiess, H., 1990. Conical volume-delay functions. Transp. Sci. 24 (2).
+Tierney, K., Lindell, M.K., Perry, R.W., 2001. Facing the unexpected.
+Titov, V.V., Gonzalez, F.I., 1997. Implementation and Testing of the Method of Splitting Tsunami (Most) Model. Tech. rep., US Department of Commerce,
+National Oceanic and Atmospheric Administration, Environmental Research Laboratories, Pacific Marine Environmental Laboratory.
+TRB, 2010. Highway Capacity Manual 2010. Transportation Research Board, National Research Council, Washington, DC.
+Tweedie, S.W., Rowland, J.R., Walsh, S.J., Rhoten, R.P., 1986. A methodology for estimating emergency evacuation times. Soc. Sci. J. 23 (2), 189–204.
+Uno, K., Kashiyama, K., 2008. Development of simulation system for the disaster evacuation based on multi-agent model using gis. Tsinghua Sci. Technol. 13,
+348–353.
+Venturato, A.J., Arcas, D., Kanoglu, U., July 2007. Modeling Tsunami Inundation from a Cascadia Subduction Zone Earthquake for Long Beach and Ocean
+Shores, Washington. Tech. rep., National Oceanic and Atmospheric Administration, Seattle, WA. Pacific Marine Environmental Lab.
+Wilensky, U., 1999. NetLogo Itself: Center for Connected Learning and Computer-Based Modeling. Northwestern University, Evanston, IL, <http://ccl.
+northwestern.edu/netlogo/>.
+Wood, N., 2007. Variations in City Exposure and Sensitivity to Tsunami Hazards in Oregon. Tech. Rep. 5283, U.S. Geological Survey Scientific Investigations
+Report.
+Wood, N.J., Schmidtlein, M.C., 2012. Anisotropic path modeling to assess pedestrian-evacuation potential from cascadia-related tsunamis in the us pacific
+northwest. Nat. Hazards 62 (2), 275–300.
+Wood, N.J., Schmidtlein, M.C., 2013. Community variations in population exposure to near-field tsunami hazards as a function of pedestrian travel time to
+safety. Nat. Hazards 65 (3), 1603–1628.
+Xiong, C., Chen, X., He, X., Lin, X., Zhang, L., 2016. Agent-based en-route diversion: dynamic behavioral responses and network performance represented by
+macroscopic fundamental diagrams. Transp. Res. C: Emerg. Technol. 64, 148–163.
+Yeh, H., 2010. Gender and age factors in tsunami casualties. Nat. Hazards Rev. 11 (1), 29–34.
+Yin, W., Murray-Tuite, P., Ukkusuri, S.V., Gladwin, H., 2014. An agent-based modeling system for travel demand simulation for hurricane evacuation. Transp.
+Res. C: Emerg. Technol. 42, 44–59.
+Zhang, L., Levinson, D., 2004. Agent-based approach to travel demand modeling. J. Transp. Res. Board 1898, 28–36.
+Zheng, H., Son, Y., Chiu, Y., Head, L., Feng, Y., Xi, H., Kim, S., Hickman, M., 2013. A Primer for Agent-Based Simulation and Modeling in Transportation
+Applications, fhwa-hrt-13-054. Tech. rep., FHWA.
+100 H. Wang et al. / Transportation Research Part C 64 (2016) 86–100

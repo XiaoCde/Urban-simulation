@@ -1,0 +1,226 @@
+{
+ "ok": [
+  "./csv_hdc/ACS2020_2024_PUMS_README.pdf",
+  "./文献1/A-疏散决策与预警/Kreibich2017_重复副本.pdf",
+  "./文献1/A-疏散决策与预警/LindellPerry2012_RiskAnalysis_保护性行动决策模型.pdf",
+  "./文献1/A-疏散决策与预警/Sadri2017_JCM_社会网络中的联合疏散决策.pdf",
+  "./文献1/A-疏散决策与预警/Thieken2022_NHESS_复合内陆洪水的四条路径.pdf",
+  "./文献1/B-车辆与涉水驾驶/Benjamin2022_FrontPsych_涉水驾驶的心理社会因素.pdf",
+  "./文献1/B-车辆与涉水驾驶/Hamilton2016_SafetyScience_涉水驾驶的信念.pdf",
+  "./文献1/B-车辆与涉水驾驶/Watkins2026_TRF_驾驶人对道路积水的认知与标牌遵从.pdf",
+  "./文献1/C-疏散建模与时间尺度/Mostafizi2017_NatHazards_路网中断下的海啸疏散建模.pdf",
+  "./文献1/C-疏散建模与时间尺度/Mostafizi2019_IJDRR_垂直疏散与避难所选址.pdf",
+  "./文献1/C-疏散建模与时间尺度/Wang2016_TRC_多方式近场海啸疏散智能体模型.pdf",
+  "./文献1/D-方法对比与验证/Zhang2026_TRD_洪灾人群移动的LLM智能体重建.pdf",
+  "./文献1/E-伤亡与楼层位置/Thieken2026_EarthFuture_洪灾死亡情形与楼层位置.pdf",
+  "./文献4/1-s2.0-S0022169426006980-main.pdf",
+  "./文献4/1-s2.0-S0048969717320624-main.pdf",
+  "./文献4/1-s2.0-S0191261511001081-main (1).pdf",
+  "./文献4/1-s2.0-S0191261511001081-main.pdf",
+  "./文献4/1-s2.0-S0191261515302253-main.pdf",
+  "./文献4/1-s2.0-S0191261517303788-main.pdf",
+  "./文献4/1-s2.0-S0191261526002225-main.pdf",
+  "./文献4/1-s2.0-S0198971518302497-main.pdf",
+  "./文献4/1-s2.0-S0960077925018193-main.pdf",
+  "./文献4/1-s2.0-S0968090X11000957-main.pdf",
+  "./文献4/1-s2.0-S1353829222000181-main.pdf",
+  "./文献4/1-s2.0-S1369847826001348-main.pdf",
+  "./文献4/1-s2.0-S1462901117301818-main.pdf",
+  "./文献4/1-s2.0-S1462901124002594-main.pdf",
+  "./文献4/1-s2.0-S1755534517300313-main.pdf",
+  "./文献4/1-s2.0-S2212096326001142-main.pdf",
+  "./文献4/1-s2.0-S2212420924004631-main.pdf",
+  "./文献4/1-s2.0-S2212420925007939-main.pdf",
+  "./文献4/1-s2.0-S2212420926004413-main.pdf",
+  "./文献4/1-s2.0-S2590198221000324-main.pdf",
+  "./文献4/1-s2.0-S261665182600165X-main.pdf",
+  "./文献4/Analysis of evacuation destination and departure time choices for no-notice emergency events.pdf",
+  "./文献三/ARR_Project_10_Stage1_report_Final.pdf",
+  "./文献三/IJDRR_119-105315.pdf",
+  "./文献三/J Flood Risk Management - 2026 - Xu - Micro‐Behavioral Responses for Enhancing Urban Flood Resilience  Stated Preference.pdf",
+  "./文献三/NCHRP-562-Improving-Pedestrian-Safety-at-Unsignalized-Crossings.pdf",
+  "./文献三/WRL-TR2017-07-Vehicle-Stability-Testing-for-Flood-Flows.pdf",
+  "./文献二/1-s2.0-S0925753523000255-main.pdf",
+  "./文献二/Explanatory_note_for_FD2320_and_FD2321_project_record.pdf",
+  "./文献二/Flood-related+fatalities+during+the+flood+of+July+2021+in+North+Rhine-Westphalia,+Germany+what+can+be+learnt+for+future+flood+risk+management.pdf",
+  "./文献二/Flood_risks_to_people_-_Phase_2_Guidance_Document_Technical_report.pdf",
+  "./文献二/Flood_risks_to_people_-_Phase_2_Project_Record.pdf",
+  "./文献二/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+  "./文献二/Floor_risks_to_people_-_Phase_2_Summary_.pdf",
+  "./文献二/Investigating+flood+behaviours+con+Romano_safety+science_compressed.pdf",
+  "./文献二/Normal_walking_speed_a_descriptive_meta.pdf",
+  "./文献二/The_risk_perception_paradox_implications.pdf",
+  "./文献二/document.pdf",
+  "./文献二/p654.pdf",
+  "./第七轮自行检索/Borowski2023_arXiv预印本.pdf",
+  "./第八轮回件/dillenardt_thieken2025.pdf",
+  "./第八轮回件/jonkman_kelman_2005.pdf",
+  "./第八轮回件/paranjothy2011_uk2007.pdf",
+  "./第八轮回件/rozer2016.pdf",
+  "./第八轮回件/spekkers2017_pluvial_survey.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/A/thieken2023-reviewer-responses.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/A/wong-irma-survey-questions.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/Chen_etal_2023_NHESS_tsunami_ABM.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/JCU_Townsville_2025_flood_survey.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/Ohtomo_etal_2020_JDR_Okayama_evacuation.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/Silva_etal_2025_NHESS_Ahr_ABM.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/AHS_1998_Washington_Metro_H170-98-18.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/CBECS2018_Table_B1.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/Choi2002_Tall_Building_Design_Guideline.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/DC_DOEE_Flood_Hazard_Rules_20DCMR31_Final_2025-06-20.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/GSA_OAS_7005.1B_Internal_Space_Allocation_Policy.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/JUE_WebAppendix_Building_Heights_Data.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/DBQ-Spain-2026-validation.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Jonkman-Vrijling-2008-JFRM.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/SHRP2-BPSA-Data-Dictionary.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Wang-2009-headway-FHWA-RIDOT.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/baba2017_jsce_underground_evacuation.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/ishigaki_jsce2005_cs7-010.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/li2026_jhydrol_AAM.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/mlit_chika_kiken_g-11_g-14.pdf",
+  "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/palmer2014_neurological_activity_patterns_orendurff.pdf",
+  "./第十一轮自行检索/Jedwab_Barr_Brueckner_2022_CitiesWithoutSkylines_fulltext.pdf",
+  "./第十轮自行检索/Thieken_2023_NHESS_23_973_正文.pdf"
+ ],
+ "skip": [
+  "./Ahsanuzzaman_Messer_2021_JFRM_14_e12753_fulltext.pdf",
+  "./Arshaghi_2026_NHESS_26_981_fulltext.xml",
+  "./Borowski_Stathopoulos_2023_NatHazRev_24_04022045_fulltext.pdf",
+  "./Li_2026_JHydrol_672_135395_accepted_manuscript.pdf",
+  "./Roy_Hasan_2021_TRC_123_102976_fulltext.pdf",
+  "./Silva_2025_NHESS_25_1501_supplement.pdf",
+  "./Tang_2026_NatSustain_9_1569_supplementary.pdf",
+  "./Thieken_2023_NHESS_23_973_supplement.pdf",
+  "./codebook.pdf"
+ ],
+ "fail": [
+  [
+   "./csv/Citation.pdf",
+   "文本过短 694 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Beijing.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Changsha.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Chengdu.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Chongqing.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Dalian.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Dongguan.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Foshan.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Guangzhou.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Hangzhou.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Harbin.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Jinan.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Kunming.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Nanjing.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Qingdao.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shanghai.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shenyang.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shenzhen.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Tianjin.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Wuhan.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Xi'an.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Zhengzhou.shp.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献三/PNNL-26949.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献二/s11116-026-10780-4.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./文献二/sr90_2auflage.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./第八轮回件/naccs_9Loss-of-Life_26Jan2015.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./第八轮回件/thieken2026_flood_fatalities.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./第八轮回件/thieken2026_try.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./第六轮完整回件-修复版/dc-round6-20261116/原件/A/thieken2023-nhess.xml",
+   "文本过短 0 B"
+  ],
+  [
+   "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Jonkman-2007-thesis.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./第十一轮自行检索/Smith_Davey_Cox_2014_WRL_TR2014-07_FloodHazard.pdf",
+   "文本过短 0 B"
+  ],
+  [
+   "./第十轮自行检索/UNSW_WRL_TR2015-09_洪水致死估算方法综述.pdf",
+   "文本过短 0 B"
+  ]
+ ]
+}

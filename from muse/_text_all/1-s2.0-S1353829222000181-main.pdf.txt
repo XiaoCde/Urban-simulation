@@ -1,0 +1,933 @@
+Health & Place 74 (2022) 102757
+Available online 4 February 2022
+1353-8292/© 2022 Elsevier Ltd. All rights reserved.
+Estimating changes in emergency department visits associated with floods 
+caused by Tropical Storm Imelda using satellite observations and 
+syndromic surveillance 
+Balaji Ramesh a
+, Meredith A. Jagger b
+, Benjamin F. Zaitchik c
+, Korine N. Kolivras a
+, 
+Samarth Swarup d
+, Biru Yang e
+, Bianca G. Corpuz c
+, Julia M. Gohlke f,* 
+a Department of Geography, Virginia Polytechnic Institute and State University, 238 Wallace Hall, Blacksburg, VA, 24061, USA b Independent Consultant, 2901 Barton Skyway, Apt 1203 Austin, TX, 7874, USA c Morton K. Blaustein Department of Earth and Planetary Sciences, Johns Hopkins University, 3400 N. Charles Street, Baltimore, MD, 21218, USA d Biocomplexity Institute and Initiative, University of Virginia, P.O. Box 400298, Charlottesville, VA, 22904, USA e Houston Health Department, 8000 North Stadium Drive, Houston, TX, 77054, USA f Department of Population Health Sciences, Virginia Polytechnic Institute and State University, 205 Duckpond Drive, Blacksburg, VA, 24061, USA 
+ARTICLE INFO 
+Keywords: 
+Tropical storm imelda 
+Flood exposure 
+Health outcomes 
+Remote sensing 
+Syndromic surveillance 
+Emergency department visits 
+ABSTRACT 
+Background: Satellite observations following flooding coupled with electronic health data collected through 
+syndromic surveillance systems (SyS) may be useful in efficiently characterizing and responding to health risks 
+associated with flooding. 
+Results: There was a 10% (95% Confidence Interval (CI): 1%–19%) increase in asthma related ED visits and 22% 
+(95% CI: 5%–41%) increase in insect bite related ED visits in the flooded ZCTAs compared to non-flooded ZCTAs 
+during the flood period. One month following the floods, diarrhea related ED visits were increased by 15% (95% 
+CI: 4%–27%) for flooded ZCTAs and children and adolescents from flooded ZCTAs had elevated risk for dehydration related ED visits. During the protracted period (2–3 months after the flood period), the risk for asthma, 
+insect bite, and diarrhea related ED visits were elevated among the flooded ZCTAs. Effect modification by reported age, ethnicity and race was observed. 
+Conclusion: Combining satellite observations with SyS data can be helpful in characterizing the location and 
+timing of environmentally mediated adverse health outcomes, which may be useful for refining disaster resilience measures to mitigate health outcomes following flooding. 
+1. Introduction 
+Extreme precipitation caused by rain, snow, or hail often leads to 
+localized flash flooding and riverine flooding (Du et al., 2010; National 
+Weather Service, 2005). A range of health outcomes have been found to 
+increase during and following such flooding events (Ahern et al., 2005; 
+Du et al., 2010; Paterson et al., 2018; D. D. Saulnier et al., 2017). The 
+direct or immediate health related impacts of flooding include 
+drowning, injuries, and hypothermia (Ahern et al., 2005; Du et al., 2010; 
+Paterson et al., 2018; D. D. Saulnier et al., 2017). In the United States, 
+the majority of flood-related drowning incidents occur in motor vehicles 
+(Ashley and Ashley, 2008). Water contamination, crowding of people in 
+shelters, and poor sanitation following flooding events increase the 
+chances for fecal-oral transmission and may lead to an increase in 
+gastroenteritis and other diarrheal diseases (Ahern et al., 2005; Paterson 
+et al., 2018; D. D. Saulnier et al., 2017). The presence of stagnant flood 
+waters may also contribute to increased transmission of vector-borne 
+diseases such as dengue, malaria, and chikungunya in countries where 
+such diseases are endemic (Ahern et al., 2005; Du et al., 2010; Paterson 
+et al., 2018). The lack of access to medical resources contributes to 
+exacerbation of chronic health conditions such as asthma, cardiovascular disease, and diabetes (Paterson et al., 2018; D. D. Saulnier et al., 
+2017). Mental stress due to loss of life and property can lead to anxiety, 
+depression, and Post-Traumatic Stress Disorder (PTSD) among the 
+affected population (Ahern et al., 2005; D. D. Saulnier et al., 2017; 
+Walker-Springett et al., 2017). Flooding has also been shown to be 
+* Corresponding author. Department of Population Health Sciences, Virginia-Maryland College of Veterinary Medicine, Virginia Tech, 205 Duck Pond Drive MC 
+0395, Blacksburg, VA, 24061-0395, USA. 
+E-mail address: jgohlke@vt.edu (J.M. Gohlke). 
+Contents lists available at ScienceDirect 
+Health and Place 
+journal homepage: www.elsevier.com/locate/healthplace 
+https://doi.org/10.1016/j.healthplace.2022.102757 
+Received 17 July 2021; Received in revised form 10 January 2022; Accepted 24 January 2022 
+
+Health and Place 74 (2022) 102757
+2
+associated with increases in respiratory illnesses and pregnancy complications (Baxter, 2005; Du et al., 2010; Ramesh et al., 2021; Saulnier 
+et al., 2018a; Xiao et al., 2019). 
+The number of global flood events occurring each year has increased 
+between 1985 and 2019 (Jonkman, 2005; Kettner and Brakenridge, 
+2021). Within the United States, the number of billion-dollar weather 
+and climate disasters related to flooding has increased between 1985 
+and 2020 (Smith, 2020). Also, the frequency and intensity of heavy 
+precipitation events have increased in most parts of the United States 
+since 1901 (Easterling et al., 2017). The percentage of land area that 
+experiences extreme one-day rainfall has increased from 10% to 18% 
+between 1985 and 2015 (NOAA, 2020). Tropical cyclone precipitation is 
+projected to increase by 14% with a 2 ◦C increase in global mean temperature (Knutson et al., 2020), and the frequency and intensity of heavy 
+precipitation events are expected to increase over the 21st century 
+(Easterling et al., 2017). These projected increases in heavy rainfall may 
+lead to increases in local flooding over the 21st century (Seneviratne 
+et al., 2012). 
+Given the health consequences of previous flooding events and 
+anticipated increases in heavy precipitation contributing to more 
+frequent floods, it is essential to advance methods for monitoring 
+flooding-related health outcomes. With advances in remote sensing and 
+satellite image processing, inundation products are readily available 
+within days of flooding (Galantowicz John et al., 2017; Kettner and 
+Brakenridge, 2021; Shen et al., 2019) to help delineate neighborhoods 
+that were exposed to floodwaters. Such products coupled with near-real 
+time electronic health data collected through syndromic surveillance 
+systems (SyS) can be used to efficiently characterize health risks associated with flooding. SyS has been shown to be useful in detecting the 
+surge in emergency department (ED) visits and pressure on healthcare 
+services in areas outside or surrounding the disaster areas following 
+Hurricane Harvey and Irma (Wiedeman, 2020; William, 2020). It has 
+been used in monitoring flood-related health impacts such as carbon 
+monoxide (CO) exposure, injury, and gastrointestinal complaints 
+following Hurricanes Florence, Harvey, and Sandy (Chen et al., 2013; 
+Tanz et al., 2019; William, 2020). SyS was also useful in studying 
+medication needs following Hurricanes Florence and Katrina (Jhung 
+et al., 2007; Tanz et al., 2019); however, in each of these previous 
+studies, only temporal variation in ED visits within an area broadly 
+defined as affected (or evacuation-specific medication demand) was 
+used to identify flood-related health impacts. In this study, we aim to 
+improve estimations of flood-related health risks by refining estimates of 
+exposure to floodwaters following Tropical Storm Imelda using satellite 
+observations to quantify inundation in each ZIP Code and study the 
+Fig. 1. Percentage of land flooded in each ZIP Code Tabulation Area (ZCTA). Map created using the inundation data from the Dartmouth Flood Observatory (Kettner 
+and Brakenridge, 2021). Counties are marked on the map with dark red font. 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+3
+variation of cause-specific ED visits between flood-exposed and 
+non-exposed ZIP Codes. 
+Imelda was a short-lived storm that made landfall on September 17, 
+2019 where southeastern Texas experienced rainfall totals greater than 
+30 inches between September 16–22, with the highest recorded rainfall 
+of 44.29 inches over Fannett in Jefferson County, Texas (Latto and Berg, 
+2019). Fannett also received 31 inches in a 12-h period. This heavy 
+precipitation makes Tropical Storm Imelda the fifth-wettest tropical 
+cyclone in the contiguous United States (Latto and Berg, 2019). The 
+heavy rainfall precipitated flooding over Jefferson, Orange, Hardin, 
+Jasper, Newton, Galveston, Harris, Liberty, and Montgomery counties 
+(Fig. 1). Five people died due to the flooding, and 10,878 homes were 
+estimated to be flooded as of September 30, 2019 (Latto and Berg, 
+2019). The event was recognized as a major disaster by the Federal 
+Emergency Management Agency (FEMA) with estimated damages 
+totaling USD 70 million (FEMA, 2019). 
+2. Materials and methods 
+2.1. Remotely-observed flooding and flood period 
+The inundation that occurred following the landfall of Tropical 
+Storm Imelda has been mapped using earth observations captured by 
+two active remote sensing satellites, the Moderate Resolution Imaging 
+Spectroradiometer (MODIS) and Sentinel 1-A between September 18 
+and 21, 2019 (Chini et al., 2017; Shen et al., 2019), and the final 
+maximum observed flood raster with ground resolution of 125 m has 
+been provided by the Dartmouth Flood Observatory (Kettner and 
+Brakenridge, 2021). The extent of the inundation data covers 328 Zip 
+Code Tabulation Areas (ZCTA) in Texas. The percentage of land area 
+inundated for each ZCTA was calculated using the inundation data. The 
+mean of the percentage of land area inundated was 1.9% (SD = 4.8%). 
+Based on the fraction of land area flooded, ZCTAs were split into three 
+categories: non-flooded, moderately flooded (>0%–2%), and highly 
+flooded (>2%–36%) (Fig. 1). The threshold separating the two flooded 
+categories was selected by using the median value of the fraction of land 
+area flooded for all the ZCTAs that were flooded as per the inundation 
+data. 
+Near-real time coarse resolution flood maps provided by AER 
+FloodScan (Galantowicz et al., 2018) along with stream gauge flood 
+maps (United States Geological Survey(USGS), 2020) were used to find 
+the number of days ZCTAs within the study region were inundated. 
+Flooding at multiple locations was reported as per stream gauge measurements on September 19. From the AER flood maps, which provides 
+gridded estimates of daily flood fraction at 22 km resolution, it was 
+observed that parts of the region were inundated on September 20, 
+2019, with major inundation observed on September 22, and by October 
+2, none of the regions in the study area were inundated; therefore, the 
+flood period was defined as September 19 - October 1, 2019. 
+2.2. Syndromic surveillance data 
+ED visits that occurred between June 1 and December 30, 2019 
+collected through the SyS of the Houston Health Department (HHD) and 
+partners have been used in this study (Fig. 2). The data was gathered by 
+the HHD from 85 facilities, and included a total of 3,251,700 ED visits of 
+patients whose address ZIP Codes fall within our study area. Each ED 
+visit record contained patient’s self-reported home address ZIP Code, 
+age, race (White, Black/African American, Asian, American Indian, 
+Hawaiian or other Pacific Islander, Arab, Middle Eastern or North African, and unknown), sex (male or female), ethnicity (Hispanic, NonHispanic, and unknown), discharge diagnosis, chief complaint, and 
+provider diagnosis. While SyS data include demographic information, 
+they contain no unique person-identifier. The patient’s ZIP Codes in the 
+ED visit records were mapped to ZCTAs using the UDS Mapper cross 
+walk (Uniform Data System, 2019), and the mapped ZCTAs were then 
+used to assign an inundation category to each ED visit record. The demographic distribution of the ED visits is provided in Supplementary 
+Table 1. Records with one or more of eight health outcomes: CO 
+poisoning, diarrhea, dehydration, other heat-related illness, insect bite, 
+cardiovascular diseases, pregnancy/delivery/pregnancy loss, and 
+asthma, shown to be directly or indirectly associated with flooding 
+(Ramesh et al., 2021; Dellinger et al., 1996; Greenough et al., 2008; 
+Paterson et al., 2018; Weinberger et al., 2021; Xiao et al., 2019) were 
+considered for further analysis. Utilizing the chief complaint and 
+discharge diagnosis field, the records were assigned to the cause-specific 
+health outcomes by applying Electronic Surveillance System for the 
+Early Notification of Community-Based Epidemics (ESSENCE) definitions (CDC, 2020) (R code provided in Supplementary Materials). The 
+ESSENCE definitions were used for assigning the cause-specific health 
+outcomes, and the numbers of records that overlap between ED visits 
+belonging to each outcome are provided in Supplementary Tables 2 and 
+3. As there were only eight records matching CO poisoning-related visits 
+during the flood period, we did not consider this health outcome for 
+further analysis. For pregnancy-related visits, 186 out of 146,248 were 
+not assigned due to sex reported as male. To study the effects of flooding 
+alone, the week before the beginning of the floods (September 12–18) (n 
+= 111,246) was considered a washout period and ED visits occurring on 
+this week were removed from the analysis, to remove potential effects of 
+the preparation phase (Florida Department of Health, 2015). Further 
+Fig. 2. Percentage of daily Emergency Department 
+(ED) visits related to diarrhea from ZCTAs in each 
+flood category (non-flooded, moderately flooded, 
+highly flooded) smoothed over one-week moving 
+window. Control period: June 1 - September 12, 
+2019; flood period: September 19 - October 1, 2019; 
+acute post-flood phase: October 2 - November 1, 
+2019; protracted post-flood phase: November 2 - 
+December 30, 2019. The average rates of ED visits 
+related to diarrhea were increased in the moderately 
+and highly flooded ZCTAs during both the post-flood 
+phases with respect to the non-flooded ZCTAs after 
+controlling for the control period. 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+4
+removing records with one or more blank fields (0.15%), there were 3, 
+135,773 ED visits in the final dataset. This study was approved by the 
+Virginia Polytechnic Institute and State University’s Institutional Review Board (IRB Protocol # 18–914) and de-identified data was provided by the Southeast Texas Syndromic Surveillance Consortium 
+through a data use agreement established between Houston Health 
+Department and Virginia Tech. 
+2.3. Study design 
+By using a control period in addition to a control series, the study 
+follows a controlled before after study design (Lopez, ´ 2018) where the 
+change in ED visits between the control period and the flood or 
+post-flood periods among the flooded ZCTAs is compared to the change 
+in ED visits among the non-flooded ZCTAs. The ED visits from the 
+non-flooded ZCTAs were assigned to a control group, and the ED visits 
+from flooded ZCTAs (the moderately and highly flooded together) were 
+considered cases (Fig. 2). The period before the start of the flooding was 
+treated as the control period (June 1 - September 12) to analyze the 
+average rate of change in ED visits during the flood period, acute 
+post-flood phase i.e., a month after the flood period (October 2 - 
+November 1) and protracted post-flood phase i.e., two to three months 
+after the flood (November 2 - December 30). The number of ED visits 
+related to heat-related illness from the flooded ZCTAs during the protracted post-flood phase was less than 15, therefore were not analyzed 
+for the protracted period (Supplementary Table 4). The AER FloodScan 
+maps also indicated minor flooding in some regions of the study area 
+during June 7–9, therefore a sensitivity analysis was completed by 
+removing this period and one month following this period (June 10 - 
+July 9) from the control period. 
+2.4. Statistical analysis 
+Modified Poisson regression with robust standard error estimations 
+has been used previously to assess health outcomes associated with 
+environmental events (Bhaskaran et al., 2013; Florida Department of 
+Health, 2015; D. Saulnier et al., 2018b) was used to estimate the rate 
+ratios (RR) for each of the seven cause-specific ED visits among the 
+flooded ZCTAs with respect to the non-flooded ZCTAs after adjusting for 
+available individual-level characteristics (age, race, ethnicity, sex), day 
+of the week, and difference from control period. The equation for estimating rate ratios for any one of the seven cause-specific ED visits (e.g., 
+diarrhea) can be represented as: 
+Where pi is the probability of an ED visit being related to diarrhea, 
+“ZCTA_flood” represents the flood category of patient’s ZCTA (reference 
+non-flooded), and “period” indicates control (reference), flood, or either 
+of the two post-flood periods. The exponent of the estimate β1 is the rate 
+ratio comparing ED visits from flooded ZCTA to non-flooded ZCTA 
+during control period and the exponent of β2 is the ratio of rates of ED 
+visits during flood/post-flood periods and control period among the nonflooded ZCTAs. So, the exponent of the interaction term β3 provides the 
+rate ratio for flooded ZCTAs compared to non-flooded ZCTAs during 
+flood/post-flood period in comparison to corresponding difference between the flooded and non-flooded ZCTAs during the control period. 
+Total records per day from corresponding patient’s ZCTA were used as 
+an offset in the model to account for the changes in total ED visits each 
+day. To understand the change in the effect of flooding over these causespecific ED visits with respect to the patient’s sex, ethnicity, race, and 
+age group, stratified rate ratios were also estimated with adjustment for 
+the other factors mentioned above. Due to low numbers in some reported categories, reported race was further collapsed into White, 
+Black/African-American, and other for this stratified analysis. Additionally, effect modification was evaluated by including an interaction 
+term in the main model for each of the demographic factors. For this, 
+male, non-Hispanic, and White was used as the referent category for sex, 
+ethnicity, and race, respectively. For the age stratified models, different 
+age categories were used for each cause-specific ED visit as the age 
+distribution of ED visits among each cause-specific ED visit is different 
+(Fig. 3, Supplementary Table 4). The rate ratio corresponding to change 
+in ED visits with respect to one percentage increase in ZCTA flooded was 
+also estimated in a separate model by substituting the proportion of 
+ZCTA flood (continuous variable) in place of the categorical “ZCTA_flood” variable in the above equation. 
+Fig. 3. Overall and demographic (sex, ethnicity, race, and age) stratified rate 
+ratios (RR) for association between cause-specific ED visits and flooding during 
+the flood period (September 19 - October 1, 2019). The overall RR denotes 
+unstratified changes in ED visits between all flooded ZCTAs (moderate and high 
+combined) to the non-flooded ZCTAs after adjusting for their difference during 
+control period and additional covariates (Equation (1), β3). RRs of causespecific ED visits for subcategories of flooded ZCTAs (moderate and high) 
+with respect to non-flooded ZCTAs are denoted as Moderate and High on the Yaxis. The age groups for each outcome are different and are displayed on the top 
+of the error bars. Different age groups were used in the stratified analysis as the 
+age distribution of ED visits among each cause-specific ED visit is different. 95% 
+confidence intervals for the RRs are shown. 
+loge[pi] ∼ β0 + β1ZCTA floodi + β2Period + β3ZCTA floodi × Period + β4sexi + β5agei + β6racei + β7ethnicityi + β8Day of the week + loge(Total ED visits)
+-Equation 1 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+5
+3. Results 
+The demographic distribution of ED visits across each period and 
+each category of flooding is presented in Supplementary Table 4. With 
+respect to the baseline (control period), the average rate of six cause 
+specific ED visits (i.e., asthma, insect bite, cardiovascular diseases, 
+dehydration, diarrhea, heat related illness) among the flooded ZCTAs 
+was greater than the average rate of corresponding visits among the nonflooded ZCTAs (Supplementary Table 5). The below results focus on the 
+additional change in rate ratios during the flood period and post-flood 
+periods (Equation (1), β3), accounting for these differences in the control period (Equation (1), β1). 
+3.1. Cause-specific ED visits during flooding 
+During the flood period, ED visits related to insect bites and asthma 
+increased by 22% (95% CI: 5%–41%) and 10% (95% CI: 1%–19%), 
+respectively, in the flooded ZCTAs compared to the non-flooded ZCTAs 
+(Fig. 3; Supplementary Table 6). The increase in ED visits related to 
+insect bites occurred in the highly flooded ZCTAs (36% [95% CI: 14%– 
+61%]), but not the moderately flooded ZCTAs (6% [95% CI: -12%– 
+27%]) (Fig. 3; Supplementary Table 7). From the stratum specific estimates, it was found that the association between flooding and ED visits 
+related to insect bites was strongest among the patients older than 17 
+years of age (RR = 1.64; 95% CI: 1.19–2.25) (Fig. 3) and effect modification was significant when compared to patients aged 6–17 (p-value 
+= 0.007) (Fig. 3; Supplementary Table 8). The stratum specific rate ratio 
+for ED visits related to insect bites showed elevated risk among age 
+group 0–5 years of age (RR = 1.28; 95% CI: 1.05–1.54), female (RR =
+1.31; 95% CI: 1.10–1.56), and White (RR = 1.23; 95% CI: 1.03–1.46) 
+patients (Fig. 3); however, effect modification by age, race, sex, or 
+ethnicity was not significant (Supplementary Table 8). The increased 
+risk for asthma was more pronounced among female patients (RR =
+1.15; 95% CI: 1.03–1.28) and non-Hispanic patients (RR = 1.15; 95% CI: 
+1.04–1.26) (Fig. 3) but effect modification was not statistically significant (Supplementary Table 8). Cardiovascular related ED visits were 
+decreased by 10% (1%–19%) among Hispanic patients and effect 
+modification was significant (p-value = 0.009) (Fig. 3; Supplementary 
+Table 8). Other cause-specific ED visits (diarrhea, dehydration, heatrelated illness, and pregnancy related ED visits) did not show overall 
+or stratum specific increases or decreases during the flood period among 
+the flooded ZCTAs compared to the non-flooded ZCTAs (Fig. 3, Supplementary Table 6); however, significant effect modification by age 
+was detected for dehydration, with the rate ratio higher among patients 
+of age 18–50 compared to patients older than 64 (p-value = 0.04) 
+(Supplementary Table 8). 
+Using percentage of ZCTA flooded as a continuous variable, it was 
+observed that on average, for one percentage increase in ZCTA flooded, 
+ED visits related to asthma and insect bite were increased by 2.2% 
+(0.5%–3.9%) and 4.1% (0.9%–7.4%) during this period (Supplementary 
+Table 9). 
+3.2. Cause-specific ED visits one month following flooding 
+Comparing the difference in the average rate of ED visits between the 
+control period and the acute post-flood phase (the month after flooding), 
+ED visits related to diarrhea were increased by 15% (95% CI: 4%–27%) 
+among the flooded ZCTAs with respect to non-flooded ZCTAs (Fig. 4). 
+This increase was observed among both moderately flooded as well as 
+highly flooded ZCTAs (Fig. 4). ED visits related to diarrheal symptoms 
+were increased among children (0–5 years) (RR = 1.16; 95% CI: 
+1.02–1.32), females (RR = 1.25; 95% CI: 1.10–1.42) and the risk was 
+also elevated among White (RR = 1.16; 95% CI: 1.03–1.31), and nonHispanic patients (RR = 1.19; 95% CI: 1.04–1.37) (Fig. 4). No effect 
+modification was observed by age, race, or sex for the above ED visits 
+(Supplementary Table 8). Comparing the moderate and highly flooded 
+ZCTAs separately to the non-flooded ZCTAs showed that pregnancyrelated ED visits were increased by 10% (95% CI: 4%–17%) in the 
+highly flooded ZCTAs while asthma was increased by 9% (95% CI: 
+0.2%–18%) among the moderately flooded ZCTAs (Fig. 4). ED visits 
+related to asthma among men showed a slight increase of 9% (95% CI: 
+1%–17%) in flooded ZCTAs compared to the non-flooded ZCTAs (Fig. 4). 
+Cardiovascular disease-related ED visits were heightened (RR = 1.11; 
+95% CI: 1.03–1.20) among patients of age group 18–50 years (Fig. 4). 
+Risk for insect bite related ED visits was elevated only among residents 
+from the highly flooded ZCTAs (RR = 1.12; 95% CI: 1.00–1.24). The 
+association between flooding and insect bite-related ED visits was 
+strongest among adults older than 17 years of age (RR = 1.42; 95% CI: 
+1.15–1.74) (Fig. 4). The elevated risk was also statistically significant 
+among persons identifying as non-Hispanic (RR = 1.17; 95% CI: 
+1.03–1.34) but not for those identifying as Hispanic (RR = 0.94; 95% CI: 
+0.79–1.13)(Fig. 4). Dehydration-related ED visits during the acute postflood phase among patients of age 0–5 and 6–17 from the flooded ZCTAs 
+were increased by 37% (95% CI: 8%–73%) and 45% (95% CI: 9%–92%), 
+respectively. Dehydration related ED visits was also increased by 31% 
+(95% CI: 1%–69%) among non-White and non-Black/African-American 
+patients from the flooded ZCTAs compared to the non-flooded ZCTAs; 
+but this was not statistically different from that of White patients (pvalue = 0.17) (Fig. 4).Effect modification by age was observed for ED 
+visits related to insect bite, cardiovascular diseases, and dehydration. 
+The risk for dehydration was heightened among patients of age 0–5 and 
+6–17 compared to patients of age 18–50 (p-values ≤ 0.023), while risk 
+Fig. 4. Overall and demographic (sex, ethnicity, race, and age) stratified rate 
+ratios (RR) for association between cause-specific ED visits and flooding during 
+the acute post-flood period (October 2 - November 1, 2019). The overall RR 
+denotes unstratified changes in ED visits between all flooded ZCTAs (moderate 
+and high combined) to the non-flooded ZCTAs after adjusting for their difference during control period and additional covariates (Equation (1), β3). RRs of 
+cause-specific ED visits for subcategories of flooded ZCTAs (moderate and high) 
+with respect to non-flooded ZCTAs are denoted as Moderate and High on the Yaxis. The age groups for each outcome are different and are displayed on the top 
+of the error bars. Different age groups were used in the stratified analysis as the 
+age distribution of ED visits among each cause-specific ED visit is different. 95% 
+confidence intervals for the RRs are shown. 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+6
+for insect bites was lesser among patients of age 0–5 and 6–17 compared 
+to patients older than 17 (p-values ≤ 0.007) (Supplementary Table 8). 
+The increase in cardiovascular related ED visits was higher among patients of age 18–50 compared to patients older than 64 (p-values ≤
+0.003) (Supplementary Table 8). 
+Using the percentage of ZCTA flooded as a continuous variable in the 
+analysis, a 3.3% (1.2%–5.3%) increase in ED visits related to diarrhea 
+and 1.4% (0.1%–1.6%) increase in pregnancy-related ED visits was 
+estimated for a one percentage increase in land area flooded (Supplementary Table 9). 
+3.3. Cause-specific ED visits two months following acute post-flood phase 
+During the protracted post-flood phase (2 months following the acute 
+post-flood phase: November 2 - December 30), overall ED visits related 
+to insect bite, diarrhea, and asthma were increased in the flooded ZCTAs 
+compared to the non-flooded ZCTAs (Fig. 5). The increase in insect bite 
+related ED visits was 38% (95% CI: 13%–69%) among age group 6–17 
+years of age, 30% (95% CI: 9%–54%) among non-Hispanic, 27% (95% 
+CI: 7%–52%) among male patients, 19% (95% CI: 4%–37%) among 
+White patients and 30% (2%–67%) among patients recorded as 
+belonging to non-White and non-Black/African-American race groups 
+(Fig. 5). No significant effect modification was observed (Supplementary 
+Table 8). The overall increase in ED visits related to insect bite was more 
+pronounced among the moderately flooded ZCTAs 29% (95% CI: 12%– 
+49%) compared to the highly flooded ZCTAs (Fig. 5). The risk for 
+diarrhea related ED visits were elevated for patients identifying as nonHispanic (RR = 1.24; 95% CI: 1.08–1.43), White (RR = 1.13; 95% CI: 
+1.01–1.27), female (RR = 1.18; 95% CI: 1.04–1.33), and of age group 
+18–64 years of age (RR = 1.23; 95% CI: 1.03–1.47); risk for asthma was 
+elevated among both patients Hispanic (1.09; 95% CI: 1.01–1.17) and 
+non-Hispanic (RR = 1.13; 95% CI: 1.06–1.20), patients identifying as 
+White (RR = 1.13; 95% CI: 1.07–1.21), males (RR = 1.15; 95% CI: 
+1.07–1.23), and patients age groups 6–17 (RR = 1.14; 95% CI: 
+1.07–1.21) and 0–5 (RR = 1.09; 95% CI: 1.00–1.20)(Fig. 5).Effect 
+modification by age was observed for asthma (p-value = 0.02) while 
+effect modification by race, sex and ethnicity were non-significant for 
+both asthma and diarrhea related ED visits. The overall as well as 
+stratified RRs for dehydration, cardiovascular, and pregnancy related 
+ED visits did not show any increase or decrease during this protracted 
+phase except for a 15% (95% CI: 2%–26%) decline in ED visits related to 
+dehydration among patients older than 64 years of age (Fig. 5). Effect 
+modification by age was significant for dehydration (p-value = 0.04), 
+with increased risk among patients of age 6–17 compared to patients of 
+age 18 - 15 (Fig. 5; Supplementary Table 8). The risk for ED visits related 
+to cardiovascular disease was heightened among patients recorded as 
+Non-Hispanic compared to Hispanic (p-value = 0.041), and the risk for 
+ED visits related to dehydration was heightened among patients reported as non-White and non-Black/African-American compared to 
+White (p-value = 0.032). On average, one percentage increase in ZCTA 
+flooded was associated with 3% (1%–5.1%) increase in ED visits related 
+to insect bite during the protracted phase (Supplementary Table 9). 
+The results of the sensitivity analysis performed by removing control 
+ED visits that occurred during flooding in June 2019 and one month 
+after are presented in Supplementary Figure 1. The rate ratios for causespecific ED visits between flooded and non-flooded ZCTAs were similar 
+to that of the main analysis and did not show any significant changes in 
+ED visits other than those presented in the main analysis. 
+4. Discussion 
+In this study we have shown the usefulness of combining SyS with 
+earth observations for detection of health risks that might escalate after 
+flooding. The near-real time availability of both SyS data and earth 
+observations can aid in recovery measures, targeting populations who 
+would likely experience elevated health risks during and following 
+flooding. The analysis of demographic-stratified risks associated with 
+flooding measured at ZCTA level and the investigation of effect modification of this risk by the patient’s demographics is a unique addition of 
+this study to the literature. 
+We found that ED visits related to pregnancy, insect bites, diarrhea, 
+dehydration, cardiovascular diseases, and asthma were elevated during 
+or following the landfall of Tropical Storm Imelda. Other studies that 
+used health records to understand flooding related health outcomes 
+reported similar increases in diarrhea, insect bite, and pregnancy complications. (Ramesh et al., 2021; Hetherington et al., 2021; Liu et al., 
+2016; D. Saulnier et al., 2018a; Xiao et al., 2019). ED visits for these 
+causes were elevated among at least one of the strata during the month 
+following the floods while only asthma and insect bite were elevated 
+during the floods, and the protracted phase was marked with increased 
+visits for asthma, insect bites, and diarrhea. No differences in 
+heat-related illness was found during and following flooding in the 
+present study (Supplementary Table 6). Few studies that have analyzed 
+the association between flooding and heat-related illness; however, one 
+study pointed out reports on heat-related illness among relief workers 
+involved in sandbagging activities after the 1993 Midwest floods (Dellinger et al., 1996). 
+The strongest association between flooding and the different causespecific ED visits was reflected among ED visits related to insect bites 
+during the flood period (Fig. 3). We observed an overall increase in insect bite-related ED visits during the protracted phase which coincides 
+with the findings of another study that showed an 120% increase in 
+Fig. 5. Overall and demographic (sex, ethnicity, race, and age) stratified rate 
+ratios (RR) for association between cause-specific ED visits and flooding during 
+the protracted post-flood period (November 2 - December 30, 2019). The 
+overall RR denotes unstratified changes in ED visits between all flooded ZCTAs 
+(moderate and high combined) to the non-flooded ZCTAs after adjusting for 
+their difference during control period and additional covariates (Equation (1), 
+β3). RRs of cause-specific ED visits for subcategories of flooded ZCTAs (moderate and high) with respect to non-flooded ZCTAs are denoted as Moderate and 
+High on the Y-axis. The age groups for each outcome are different and are 
+displayed on the top of the error bars. Different age groups were used in the 
+stratified analysis as the age distribution of ED visits among each cause-specific 
+ED visit is different. 95% confidence intervals for the RRs are shown. 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+7
+arthropod bites one month after the impact of Hurricane Floyd in North 
+Carolina (Centers for Disease Control and Prevention (CDC and others), 
+2000). Increases in ED visits related to insect bites have also been reported after the flooding caused by Hurricane Hugo in North Carolina 
+and Hurricane Harvey in Texas (Ramesh et al., 2021; Bandino et al., 
+2015). The potential reason for the increased cases of insect bite after 
+flooding could be due to movement of insects away from damaged 
+habitat and/or fleeing their natural hosts such as birds and rodents 
+(Bandino et al., 2015; Dayrit et al., 2018; Tempark et al., 2013). In case 
+of Imelda the floods inundated 961 sq km of land area and damaged 10, 
+878 homes in Texas which could have caused significant changes in 
+insect habitats (Latto and Berg, 2019). In addition, cleanup activities 
+bring humans closer to affected insect habitats such as downed trees, 
+which may also increase the probability of getting bitten by insects after 
+flooding. This follows our finding where during the acute phase, the 
+increase in ED visits related to insect bite was greater among adults older 
+than 17 years (compared to age groups 6–17 and 0–5 years of age), who 
+are more likely to be involved in cleanup activities. 
+We found an overall increase in ED visits for diarrheal disease during 
+the month following flooding as well as during the protracted phase. The 
+risk was elevated particularly among females and people aged 18–64 
+during the protracted period. In coherence with this result, a study done 
+in Huaihua, China analyzing dysentery cases over a six-year period 
+showed that dysentery was elevated for three weeks following flooding 
+and was higher in females and people aged 15–64 (Liu et al., 2016). In 
+contrast, the risk for diarrhea was found to be similar among males and 
+females following the floods caused by heavy rains of 2016 in Anhui, 
+China (N. Zhang et al., 2019). In a review of studies published to date, 
+76% of studies found a positive association between flooding and diarrheal disease, and none reported a negative association (Levy et al., 
+2016). However, there is heterogeneity across studies. For example, a 
+pooled estimate calculated from 14 articles estimated a central RR for 
+diarrheal diseases during and following flooding as 1.64 (95% CI: 
+0.928–2.88) (Kraay et al., 2020). Some of the common reasons for association pointed out in the literature are contamination of drinking 
+water, failure of treatment plants and supply lines, transport of pathogens from excreta in soil to surface waters, consumption of contaminated food, direct contact with polluted flood waters, lack of resources 
+for hygienic sanitation practices in shelters or evacuated places, inundated latrines, inundated wells, and crowding at shelters (Kraay et al., 
+2020; Phung et al., 2017; D. Saulnier et al., 2018a; N. Zhang et al., 
+2019). Following Imelda, wastewater treatment plants and other critical 
+sanitary sewer infrastructure were damaged in the New Port district in 
+Harris county, which could have contributed to risk for diarrheal outcomes (Newport Municipal Utility District, 2021). Also, Imelda caused 
+large scale power outages, which could have affected the operation of 
+water treatment plants in the study area (Entergy Newsroom, 2019). 
+Evidence of drinking water contamination by Shigella, salmonella, 
+cholera, Escherichia coli, and rotavirus following flooding has been 
+presented in various studies (CDC, 2012; Levy et al., 2016; F. Zhang 
+et al., 2016). Dose response relationships between flooding and diarrheal outcomes has also been found to be positive with respect to increase in depth of flood water, direct contact with flood water, and levels 
+of water insecurity (Kraay et al., 2020; Rosinger, 2018). The biological 
+pathway between flooding and diarrheal diseases is discussed elaborately by Levy et al. (2016). 
+Disruption of access to clean drinking water following flooding may 
+also lead to increased dehydration outcomes among the flooded population. A study done after the historic 2014 Bolivia floods showed 21 
+times higher odds for dehydration among children (aged 2–12) with 
+medium to high household water insecurity compared to low water 
+insecurity (Rosinger, 2018). In the current study, though we did not 
+detect increased overall risk for dehydration related ED visits, we 
+observed an elevated risk among children (ages 0–5) and adolescents 
+(ages 6–17) which was also significantly greater than the risk among 
+adults (ages 18–50). Increased inpatient hospitalization for dehydration 
+was also reported two weeks following Hurricane Sandy in comparison 
+to the same period in the four previous years, but in this case, the majority of the increase was reflected among patients older than 65 years of 
+age (Swerdel et al., 2016). 
+Pregnancy-related ED visits were increased by 10% during the month 
+following flooding and the increase was reflected only among the highly 
+flooded ZCTAs. As the ESSENCE definitions used for filtering these records cannot distinguish between pregnancy, pregnancy loss, and delivery but filters all records of patients who were pregnant during the 
+emergency visit, the increase in this group of ED visits may portray 
+increased health-seeking behavior for pregnant people from the highly 
+flooded ZCTAs. One of the potential mediators for increased pregnancyrelated ED visits is inadequate prenatal care during and following such 
+flood-related events due to disruption in health services. For example, a 
+medical center in Chambers County was evacuated due to flooding of the 
+facility following Imelda (Latto and Berg, 2019). The floods also inundated many roads in the study region interrupting ground transportation 
+(Latto and Berg, 2019). Studies have shown increased inadequacy in 
+prenatal care following Hurricanes Katrina and Michael (Harville et al., 
+2010; Pan et al., 2021), with delay in prenatal care initiation as a partial 
+mediator for the association between hurricane and small for gestational 
+age (Pan et al., 2021). Increases in ED visits related to pregnancy complications following Hurricanes Harvey, Katrina, and Sandy have also 
+been noted in previous studies (Ramesh et al., 2021; Oni et al., 2015; 
+Xiao et al., 2019). Studies have showed increases in low birth weight 
+following flooding of the Red River, North Dakota in 1997 and 2009 
+(Hilmert et al., 2016; Tong et al., 2011) with the study on 2009 floods 
+showing significant decreases in birth weight with increasing proximity 
+of the maternal residence to the floods. Though there is not a clear 
+explanation about the pathway of association between flooding and 
+pregnancy complications, accidental injury has been pointed out as a 
+potential reason for threatened abortion while mental stress and 
+depression may exacerbate gestational diabetes and pregnancy-induced 
+hypertension (PIH), or induce preterm labor (Oni et al., 2015; Tong 
+et al., 2011; Xiao et al., 2019). Changes in mental health status following 
+tropical storm Imelda was reported in the Texas Flood Registry, where 
+30% of survey respondents reported mental or emotional changes due to 
+the impact of the storm (CEHI, 2020). 
+Increases in ED visits for cardiovascular disease (CVD) related outcomes or symptoms also are related to mental and psychosocial stress 
+induced by flooding (Becquart et al., 2019; Vanasse et al., 2016). 
+Decreased access to medication and support systems during as well as 
+following flooding may also contribute to increases in CVD-related 
+outcomes (Becquart et al., 2019). We observed an 11% increase in 
+cardiovascular disease related ED visits after the flood period among 
+adults (ages 18–50) and, similar to our findings, Weinberger et al. 
+(2021) have reported an overall 10% (2–19%) increase in cardiovascular disease-related ED visits following landfall of Hurricane Sandy in 
+the state of New York. Studies that analyzed changes in CVD-related 
+health visits between flooded and non-flooded or, pre-flood and 
+post-flood populations have also shown increased CVD visits (Li et al., 
+2015; Vanasse et al., 2016). While we did not see an increase in ED visits 
+related to CVD in patients older than 65 years, CVD hospitalizations 
+were increased in Orleans Parish, Louisiana on the sixth day after the 
+landfall of Hurricane Katrina in patients 65 years of age and older 
+(Becquart et al., 2019). 
+Asthma-related ED visits were elevated in the moderately flooded 
+ZCTAs compared to the non-flooded ZCTAs during both the acute and 
+protracted post-flood phase. During the protracted post-flood period the 
+risks among adolescents (ages 6–17) were significantly greater than 
+adults. Association between flooding and respiratory syndrome as well 
+as mold growth and respiratory symptoms among children and adolescents after Hurricane Katrina has been reported (Rath et al., 2007). One 
+of the potential pathways explaining the association between flooding 
+and asthma is growth of flood-related molds or home dampness (Azuma 
+et al., 2014; D’Amato et al., 2020; Quinn et al., 1994). Increased mold 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+8
+growth in flooded houses compared to non-flooded houses has been 
+documented in several studies (Azuma et al., 2014; Rose and 
+Akpinar-Elci, 2013; Zock et al., 2002); and the Institute of Medicine 
+(IOM) report on health impacts of indoor dampness affirms suggestive 
+evidence for association between dampness and asthma symptoms in 
+sensitized persons (Institute of Medicine (IOM), 2004). As Imelda led to 
+flooding of over 10,000 houses, several of the flooded houses may have 
+experienced mold growth. Adding evidence to this, outreach teams have 
+reported helping in mold removal in flooded houses in Jefferson, 
+Chambers and Orange counties following Imelda (All Hands and Hearts, 
+2019). Atmospheric molds and pollens outdoors are other potential 
+pathways for exacerbation of asthma following flooding (D’Amato et al., 
+2020). 
+Risk ratios for asthma and insect bites were higher in moderately 
+versus highly flooded areas in post flood periods (Supplementary Table 
+7). Different re-habitation patterns based on flooding severity, the more 
+immediate need for remediation and repair in highly flooded areas, or 
+differences in flooding leading to intermediate causes that take longer to 
+manifest in moderately flooded versus highly flooded areas are possible 
+reasons for these results; however the data available did not allow for 
+exploration of these potential explanations. In stratified results 
+(Figs. 3–5), some of the risk ratio point estimates for patients identifying 
+as White or patients identifying as non-Hispanic were higher than for 
+patients identifying as Hispanic, Black or African American, or the 
+combined group including patients identifying as Asian, American Indian, Hawaiian or other Pacific Islander, Arab, Middle Eastern or North 
+African. However, statistical tests for effect modification by race or 
+ethnicity were largely non-significant. As the majority of the ED visits 
+(62%) were of patients identifying as White, we had greater power to 
+detect an effect of flooding for patients identifying as White, as indicated 
+by the differences in confidence intervals in Figs. 3–5. These results 
+suggest additional studies to determine whether there are meaningful 
+differences and if so, whether they could reflect differences in evacuation and healthcare seeking behaviors, among other potential 
+explanations. 
+Though this study was able to delineate health risks following the 
+flooding caused by the Tropical Storm Imelda with the help of remotely 
+observed flooding and ED visits from the SyS, the study has some limitations. First, the method for filtering cause-specific ED visits using 
+definitions does not exactly match the process in the ESSENCE system, 
+which relies on proprietary compilers to process the raw text before 
+categorizing records into syndromes and subsyndromes. In addition, 
+inaccuracies in definitions for capturing cause-specific ED visits exist 
+(Kumar and White, 2018). Also, our exposure estimation method does 
+not allow for daily resolved estimates of flooding within affected ZCTAs, 
+as ZCTAs are classified as flooded using the maximum observed inundation product, whereas flood waters would have likely risen and 
+receded at different timepoints across the affected ZCTAs. Using daily 
+flood maps instead of the maximum observed flood map would be 
+helpful to overcome this limitation (Galantowicz John et al., 2017). Due 
+to constraints in data availability, the control period used in this study 
+did not incorporate the months of flood and post-flood period (September–December) in the previous years. As a result, this analysis was 
+controlled for weekly trends, not for monthly or seasonal trends. 
+5. Conclusion 
+This study shows that flooding after heavy rains precipitated by 
+Tropical Storm Imelda was associated with increased ED visits related to 
+asthma and insect bites during the flood period and increased ED visits 
+related to pregnancy, dehydration, asthma, insect bites, cardiovascular 
+diseases, and diarrheal outcomes during post-flood periods. Remotelysensed inundation products merged with SyS data were helpful in 
+defining flood exposure within residential ZCTAs and evaluation of 
+health risks during and following the floods. Further analysis by demographic characteristics of patients allowed for estimation of 
+differential risks experienced across age, race, and ethnicity categories. 
+Current remotely-sensed inundation products are available within days 
+following flooding (Galantowicz et al., 2018; Shen et al., 2019) and may 
+be helpful in identification of the affected communities quickly, and 
+merging this data within SyS will help to identify anomalies in ED visits 
+in near real-time, which may aid disaster management authorities in 
+mitigating health outcomes associated with flooding by data-driven 
+deployment of medical resources and services. 
+Funding 
+This study was supported by the National Aeronautics and Space 
+Administration (NASA) Applied Sciences Program Grant 
+#80NSSC18K1594. The funding agency had no involvement in the 
+design, collection, analysis and interpretation of data, writing of the 
+report, or in the decision to submit the article for publication. Data was 
+obtained or accessed through the Syndromic Surveillance Consortium of 
+Southeast Texas (SSCSeT); however, any conclusions drawn from use of 
+this data do not represent the official views of any consortium member 
+jurisdiction or the system host site, Houston Health Department. 
+Declaration of competing interest 
+The authors declare no conflicts of interest. 
+Acknowledgements 
+We thank Dr. Thomas Pingel, Department of Geography, Virginia 
+Polytechnic Institute and State University for his support with computational resources for running our models. We also appreciate the support of Ms. Alicia Lozano, Center for Biostatistics and Health Data 
+Science for help with identifying the appropriate statistical methods for 
+the study. We thank the public health professionals who conduct syndromic surveillance and who developed and shared the definitions used 
+in this analysis including health departments in the Southeast Texas 
+Syndromic Surveillance Consortium, the Illinois Department of Public 
+Health, Johns Hopkins University Applied Physics Laboratory, National 
+Syndromic Surveillance Program Community of Practice, and Oregon 
+Health Authority. We also thank AER for providing access to images 
+from the FloodScan Historical Flooded Fraction dataset. 
+Appendix A. Supplementary data 
+Supplementary data to this article can be found online at https://doi. 
+org/10.1016/j.healthplace.2022.102757. 
+References 
+Ahern, M., Kovats, R.S., Wilkinson, P., Few, R., Matthies, F., 2005. Global health impacts 
+of floods: epidemiologic evidence. Epidemiol. Rev. 27 (1), 36–46. https://doi.org/ 
+10.1093/epirev/mxi004. 
+Ashley, S.T., Ashley, W.S., 2008. Flood fatalities in the United States. J. Appl. Meteorol. 
+Climatol. 47 (3), 805–818. https://doi.org/10.1175/2007JAMC1611.1. 
+Azuma, K., Ikeda, K., Kagi, N., Yanagi, U., Hasegawa, K., Osawa, H., 2014. Effects of 
+water-damaged homes after flooding: health status of the residents and the 
+environmental risk factors. Int. J. Environ. Health Res. 24 (2), 158–175. https://doi. 
+org/10.1080/09603123.2013.800964. 
+Bandino, J.P., Hang, A., Norton, S.A., 2015. The infectious and noninfectious 
+dermatological consequences of flooding: a field manual for the responding 
+provider. Am. J. Clin. Dermatol. 16 (5), 399–424. https://doi.org/10.1007/s40257- 
+015-0138-4. Springer International Publishing. 
+Baxter, P.J., 2005. The east coast Big Flood, 31 January–1 February 1953: a summary of 
+the human disaster. Phil. Trans. Math. Phys. Eng. Sci. 363 (1831), 1293–1312. 
+https://doi.org/10.1098/rsta.2005.1569. 
+Becquart, N.A., Naumova, E.N., Singh, G., Chui, K.K.H., 2019. Cardiovascular disease 
+hospitalizations in Louisiana parishes’ elderly before, during and after hurricane 
+Katrina. Int. J. Environ. Res. Publ. Health 16 (1), 74. https://doi.org/10.3390/ 
+ijerph16010074. 
+Bhaskaran, K., Gasparrini, A., Hajat, S., Smeeth, L., Armstrong, B., 2013. Time series 
+regression studies in environmental epidemiology. Int. J. Epidemiol. 42 (4), 
+1187–1195. https://doi.org/10.1093/ije/dyt092. 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+9
+CDC, 2020. Free-text Coding in NSSP–ESSENCE: Part 1 | CDC. Division of Health 
+Informatics and Surveillance. https://www.cdc.gov/nssp/tech-tips/free-text 
+-coding/part1.html. 
+CDC, 2012. Early warning disease surveillance after a flood emergency–Pakistan, 2010. 
+MMWR. Morb. Mortal. Weekly Rep. 61 (49), 1002–1007. 
+CEHI, 2020. Texas Flood Registry 2020 Report. Children’s Environmental Health 
+Initiative (CEHI). 
+Centers for Disease Control and Prevention (CDC and others), 2000. Morbidity and 
+mortality associated with hurricane Floyd — North Carolina, September–October 
+1999. MMWR. Morb. Mortal. Weekly Rep. 49 (17), 369–372. https://www.cdc. 
+gov/mmwr/preview/mmwrhtml/mm4917a3.htm. 
+Chen, B.C., Shawn, L.K., Connors, N.J., Wheeler, K., Williams, N., Hoffman, R.S., 
+Matte, T.D., Smith, S.W., 2013. Carbon monoxide exposures in New York City 
+following hurricane Sandy in 2012. Clin. Toxicol. 51 (9), 879–885. https://doi.org/ 
+10.3109/15563650.2013.839030. 
+Chini, M., Hostache, R., Giustarini, L., Matgen, P., 2017. A hierarchical split-based 
+approach for parametric thresholding of SAR images: flood inundation as a test case. 
+IEEE Trans. Geosci. Rem. Sens. 55 (12), 6975–6988. https://doi.org/10.1109/ 
+TGRS.2017.2737664. 
+Dayrit, J.F., Bintanjoyo, L., Andersen, L.K., Davis, M.D.P., 2018. Impact of climate 
+change on dermatological conditions related to flooding: update from the 
+International Society of Dermatology Climate Change Committee, 8. In: 
+International Journal of Dermatology, 57. Blackwell Publishing Ltd, pp. 901–910. 
+https://doi.org/10.1111/ijd.13901. 
+Dellinger, A.M., Kachur, P.S., Sternberg, E., Russell, J., 1996. Risk of heat-related injury 
+to disaster relief workers in a slow-onset flood disaster. J. Occup. Environ. Med. 38 
+(7). https://journals.lww.com/joem/Fulltext/1996/07000/Risk_of_Heat_Related_ 
+Injury_to_Disaster_Relief.11.aspx. 
+Du, W., Fitzgerald, G.J., Clark, M., Hou, X.Y., 2010. Health impacts of floods, 3. In: 
+Prehospital and Disaster Medicine, 25. Cambridge University Press, pp. 265–272. 
+https://doi.org/10.1017/S1049023X00008141. 
+D’Amato, G., Chong-Neto, H.J., Monge Ortega, O.P., Vitale, C., Ansotegui, I., Rosario, N., 
+Haahtela, T., Galan, C., Pawankar, R., Murrieta-Aguttes, M., Cecchi, L., 
+Bergmann, C., Ridolo, E., Ramon, G., Gonzalez Diaz, S., D’Amato, M., AnnesiMaesano, I., 2020. The effects of climate change on respiratory allergy and asthma 
+induced by pollen and mold allergens, 9. In: Allergy: European Journal of Allergy 
+and Clinical Immunology, 75. Blackwell Publishing Ltd, pp. 2219–2228. https://doi. 
+org/10.1111/all.14476. 
+Easterling, D.R., Arnold, J.R., Knutson, T., Kunkel, K.E., LeGrande, A.N., Leung, L.R., 
+Vose, R.S., Waliser, D.E., Wehner, M.F., 2017. Ch. 7: Precipitation Change in the 
+United States. Climate Science Special Report: Fourth National Climate Assessment, 
+I. https://doi.org/10.7930/J0H993CC. 
+Energy Newsroom, 2019. Update: tropical storm Imelda. https://www.entergynewsroo 
+m.com/article/9-20-19-update-tropical-storm-imelda/. 
+FEMA, 2019. Texas tropical storm Imeda (DR-4466-TX). Fed. Emerg. Manag. Agency. 
+https://www.fema.gov/disaster/4466. 
+Florida Department of Health, 2015. Health effects of tropical storms and hurricanes in 
+Florida. Bureau Epidemiol. https://flbrace.org/images/docs/tc-profile.pdf. 
+Galantowicz, John, Picton, Jeff, Ben, Root, 2017. Mapping daily and maximum flood 
+extents at 90-m resolution during hurricanes Harvey and Irma using passive 
+microwave remote sensing. Atmos. Environ. Res. (AER). https://ui.adsabs.harvard. 
+edu/abs/2017AGUFMNH23E2833G/abstract. 
+Galantowicz, J., Picton, J., Root, B., 2018. ARC Flood Extent Depiction Algorithm 
+Description Document AFED Version V05R00 Document Revision R00. 
+Greenough, P.G., Lappi, M.D., Hsu, E.B., Fink, S., Hsieh, Y.-H., Vu, A., Heaton, C., 
+Kirsch, T.D., 2008. Burden of disease and health status among Hurricane 
+Katrina–displaced persons in shelters: a population-based cluster sample. Ann. 
+Emerg. Med. 51 (4), 426–432. https://doi.org/10.1016/j. 
+annemergmed.2007.04.004. 
+Hands, All, Hearts, 2019. Texas Tropical Storm Imelda Relief - All Hands and Hearts. All 
+Hands and Hearts. https://www.allhandsandhearts.org/programs/texas-tropical-s 
+torm-imelda-relief/. 
+Harville, E.W., Tran, T., Xiong, X., Buekens, P., 2010. Population changes, racial/ethnic 
+disparities, and birth outcomes in Louisiana after Hurricane Katrina. Disaster Med. 
+Public Health Prep. 4 (1) https://doi.org/10.1001/dmp.2010.15. 
+Hetherington, E., Adhikari, K., Tomfohr-Madsen, L., Patten, S., Metcalfe, A., 2021. Birth 
+outcomes, pregnancy complications, and postpartum mental health after the 2013 
+Calgary flood: a difference in difference analysis. PLoS One 16 (2), e0246670. 
+https://doi.org/10.1371/journal.pone.0246670. 
+Hilmert, C.J., Kvasnicka-Gates, L., Teoh, A.N., Bresin, K., Fiebiger, S., 2016. Major flood 
+related strains and pregnancy outcomes. Health Psychol. 35 (11), 1189–1196. 
+https://doi.org/10.1037/hea0000386. 
+Institute of Medicine (IOM), 2004. Damp Indoor Spaces and Health. The National 
+Academies Press. http://jare.org.gy/wp-content/uploads/2015/12/Rose-S-An-ev 
+aluation-of-the-prevalence-of-respiratory-FNS.pdf. 
+Jhung, M.A., Shehab, N., Rohr-Allegrini, C., Pollock, D.A., Sanchez, R., Guerra, F., 
+Jernigan, D.B., 2007. Chronic disease and disasters. Medication demands of 
+Hurricane Katrina evacuees. Am. J. Prev. Med. 33 (3), 207–210. https://doi.org/ 
+10.1016/j.amepre.2007.04.030. 
+Jonkman, S.N., 2005. Global perspectives on loss of human life caused by floods. Nat. 
+Hazards 34 (2), 151–175. https://doi.org/10.1007/s11069-004-8891-3. 
+Kettner, A., Brakenridge, R., 2021. Space-based measurement, mapping, and modeling of 
+surface water. Dartm. Flood Observ. https://floodobservatory.colorado.edu/. 
+Knutson, T., Camargo, S.J., Chan, J.C.L., Emanuel, K., Ho, C.H., Kossin, J., 
+Mohapatra, M., Satoh, M., Sugi, M., Walsh, K., Wu, L., 2020. Tropical cyclones and 
+climate change assessment part II: projected response to anthropogenic warming. 
+Bull. Am. Meteorol. Soc. 101 (3), E303–E322. https://doi.org/10.1175/BAMS-D-18- 
+0194.1. 
+Kraay, A.N.M., Man, O., Levy, M.C., Levy, K., Ionides, E., Eisenberg, J.N.S., 2020. 
+Understanding the impact of rainfall on diarrhea: testing the concentration-dilution 
+hypothesis using a systematic review and meta-analysis, 12. In: Environmental 
+Health Perspectives, 128. Public Health Services, US Dept of Health and Human 
+Services. https://doi.org/10.1289/EHP6181, 126001-1-126001–126016. 
+Kumar, R.S., White, J.R., 2018. Impact of the NSSP’s transition to ESSENCE on chief 
+complaint field-based syndromes. Online J. Publ. Health Inform. 10 (1) https://doi. 
+org/10.5210/ojphi.v10i1.8365. 
+Latto, A., Berg, R., 2019. Tropical storm Imelda. National hurricane center tropical 
+cyclone report. https://www.nhc.noaa.gov/data/tcr/AL112019_Imelda.pdf. 
+Levy, K., Woster, A.P., Goldstein, R.S., Carlton, E.J., 2016. Untangling the impacts of 
+climate change on waterborne diseases: a systematic review of relationships between 
+diarrheal diseases and temperature, rainfall, flooding, and drought, 10. In: 
+Environmental Science and Technology, 50. American Chemical Society, 
+pp. 4905–4922. https://doi.org/10.1021/acs.est.5b06186. 
+Li, Y., Wang, H., Ni, W., Ding, G., Gao, L., Jiang, B., 2015. Impact of floods on 
+cardiovascular disease mortality in Hunan province. J. Environ. Health 32 (4), 
+287–290. 
+Liu, Z.-D., Li, J., Zhang, Y., Ding, G.-Y., Xu, X., Gao, L., Liu, X.-N., Liu, Q.-Y., Jiang, B.-F., 
+2016. Distributed lag effects and vulnerable groups of floods on bacillary dysentery 
+in Huaihua, China. Sci. Rep. 6 (1), 29456. https://doi.org/10.1038/srep29456. 
+Lopez, ´ B., 2018. reportThe Use of Interrupted Time Series for the Evaluation of Public 
+Health Interventions. PhD (Research Paper Style) Thesis. London School of Hygiene 
+& Tropical Medicine. https://doi.org/10.17037/PUBS.04648680. 
+National Weather Service, 2005. Tropical Cyclone Flooding A Deadly Inland Danger. 
+NOAA. https://www.weather.gov/media/srh/tropical/TropicalCycloneInlandFlood 
+ing.pdf. 
+Newport Municipal Utility District, 2021. Tropical storm Imelda impact – newport 
+municipal utility district. http://www.newportmudtx.org/2020/05/tropical-stor 
+m-imelda-impact/. 
+NOAA, 2020. U.S. Climate extremes index. Climate services and monitoring division. 
+http://www.ncdc.noaa.gov/extremes/cei/. 
+Oni, O., Harville, E., Xiong, X., Buekens, P., 2015. Relationships among stress coping 
+styles and pregnancy complications among women exposed to hurricane katrina. 
+JOGNN - J. Obstetr. Gynecol. Neonatal Nursing 44 (2), 256–267. https://doi.org/ 
+10.1111/1552-6909.12560. 
+Pan, K., Beitsch, L., Gonsoroski, E., Sherchan, S.P., Uejio, C.K., Lichtveld, M.Y., 
+Harville, E.W., 2021. Effects of hurricane michael on access to care for pregnant 
+women and associated pregnancy outcomes. Int. J. Environ. Res. Publ. Health 18 (2), 
+1–17. https://doi.org/10.3390/ijerph18020390. 
+Paterson, D.L., Wright, H., Harris, P.N.A., 2018. Health risks of flood disasters. Clin. 
+Infect. Dis. 67 (9), 1450–1454. https://doi.org/10.1093/cid/ciy227. 
+Phung, D., Chu, C., Rutherford, S., Nguyen, H.L.T., Luong, M.A., Do, C.M., Huang, C., 
+2017. Heavy rainfall and risk of infectious intestinal diseases in the most populous 
+city in Vietnam. Sci. Total Environ. 580, 805–812. https://doi.org/10.1016/j. 
+scitotenv.2016.12.027. 
+Quinn, B., Baker, R., Pratt, J., 1994. Hurricane andrew and a pediatric emergency 
+department. Ann. Emerg. Med. 23 (4), 737–741. https://doi.org/10.1016/S0196- 
+0644(94)70308-6. 
+Ramesh, B., Jagger, M.A., Zaitchik, B., Kolivras, K.N., Swarup, S., Deanes, L., Gohlke, J. 
+M., 2021. Emergency department visits associated with satellite observed flooding 
+during and following Hurricane Harvey. J. Expo. Sci. Environ. Epidemiol. 31 (5), 
+832–841. 
+Rath, B., Donato, J., Duggan, A., Perrin, K., Bronfin, D.R., Ratard, R., VanDyke, R., 
+Magnus, M., 2007. Adverse health outcomes after Hurricane Katrina among children 
+and adolescents with chronic conditions. J. Health Care Poor Underserved 18 (2), 
+405–417. https://doi.org/10.1353/hpu.2007.0043. 
+Rose, S., Akpinar-Elci, M., 2013. An evaluation of the prevalence of respiratory and 
+general symptoms among occupants of households affected by flooding in Guyana: 
+the case of Cove & John. In: Proceedings of the University of Guyana Faculty of 
+Natural Sciences First International Conference on Sustainable Development. 
+Rosinger, A.Y., 2018. Household water insecurity after a historic flood: diarrhea and 
+dehydration in the Bolivian Amazon. Soc. Sci. Med. 197, 192–202. https://doi.org/ 
+10.1016/j.socscimed.2017.12.016. 
+Saulnier, D.D., Brolin Ribacke, K., Von Schreeb, J., 2017. No calm after the storm: a 
+systematic review of human health following flood and storm disasters, 5. In: 
+Prehospital and Disaster Medicine, 32. Cambridge University Press, pp. 568–579. 
+https://doi.org/10.1017/S1049023X17006574. 
+Saulnier, D., Hanson, C., Ir, P., Molsted ¨ Alvesson, H., von Schreeb, J., 2018a. The effect 
+of seasonal floods on health: analysis of six years of national health data and flood 
+maps. Int. J. Environ. Res. Publ. Health 15 (4), 665. https://doi.org/10.3390/ 
+ijerph15040665. 
+Saulnier, D., Hanson, C., Ir, P., Molsted ¨ Alvesson, H., von Schreeb, J., 2018b. The effect 
+of seasonal floods on health: analysis of six years of national health data and flood 
+maps. Int. J. Environ. Res. Publ. Health 15 (4), 665. https://doi.org/10.3390/ 
+ijerph15040665. 
+Seneviratne, S., Nicholls, N., Easterling, D., Goodess, C., Kanae, S., Kossin, J., Luo, Y., 
+Marengo, J., McInnes, K., Rahimi, M., 2012. Changes in Climate Extremes and Their 
+Impacts on the Natural Physical Environment. 
+Shen, X., Anagnostou, E.N., Allen, G.H., Robert Brakenridge, G., Kettner, A.J., 2019. 
+Near-real-time non-obstructed flood inundation mapping using synthetic aperture 
+radar. Rem. Sens. Environ. 221, 302–315. https://doi.org/10.1016/j. 
+rse.2018.11.008. 
+B. Ramesh et al. 
+
+Health and Place 74 (2022) 102757
+10
+Smith, A.B., 2020. U.S. Billion-dollar weather and climate disasters, 1980 - present. In: 
+National Centers for Environmental Information. https://doi.org/10.25921/STKW7W73. 
+Swerdel, J.N., Rhoads, G.G., Cosgrove, N.M., Kostis, J.B., 2016. Rates of hospitalization 
+for dehydration following hurricane Sandy in New Jersey. Disaster Med. Public 
+Health Prep. 10 (2), 188–192. https://doi.org/10.1017/dmp.2015.169. 
+Tanz, L.J., Hoffman, M.N., Dandeneau, D., Faigen, Z., Moore, Z., Proescholdbell, S., 
+Kansagra, S.M., 2019. Notes from the Field: Hurricane Florence–related emergency 
+department visits — North Carolina, 2018. MMWR. Morb. Mortal. Weekly Rep. 68 
+(28), 631–632. https://doi.org/10.15585/mmwr.mm6828a3. 
+Tempark, T., Lueangarun, S., Chatproedprai, S., Wananukul, S., 2013. Flood-related skin 
+diseases: a literature review, 10. In: International Journal of Dermatology, 52. John 
+Wiley & Sons, Ltd, pp. 1168–1176. https://doi.org/10.1111/ijd.12064. 
+Tong, V.T., Zotti, M.E., Hsia, J., 2011. Impact of the red river catastrophic flood on 
+women giving birth in North Dakota, 1994-2000. Matern. Child Health J. 15 (3), 
+281–288. https://doi.org/10.1007/s10995-010-0576-9. 
+Uniform Data System, 2019. ZIP Code to ZCTA Crosswalk – UDS Mapper. John Snow, 
+Inc. https://udsmapper.org/zip-code-to-zcta-crosswalk/. 
+United States Geological Survey(USGS), 2020. WaterWatch. United States Geological 
+survey(USGS). https://waterwatch.usgs.gov/webservices/floodstage?format=csv. 
+Vanasse, A., Cohen, A., Courteau, J., Bergeron, P., Dault, R., Gosselin, P., Blais, C., 
+B´elanger, D., Rochette, L., Chebana, F., 2016. Association between floods and acute 
+cardiovascular diseases: a population-based cohort study using a geographic 
+information system approach. Int. J. Environ. Res. Publ. Health 13 (2), 168. https:// 
+doi.org/10.3390/ijerph13020168. 
+Walker-Springett, K., Butler, C., Adger, W.N., 2017. Wellbeing in the aftermath of floods. 
+Health Place 43, 66–74. https://doi.org/10.1016/j.healthplace.2016.11.005. 
+Weinberger, K.R., Kulick, E.R., Boehme, A.K., Sun, S., Dominici, F., Wellenius, G.A., 
+2021. Association between hurricane Sandy and emergency department visits in 
+New York City by age and cause. Am. J. Epidemiol. https://doi.org/10.1093/aje/ 
+kwab127. 
+Wiedeman, C., 2020. Monitoring Pop. Changes for Emergency Mgmt. Support in TN | 
+CDC. National Syndromic Surveillance Program (NSSP). https://www.cdc.gov/nssp/ 
+success-stories/TN-Population-Changes.html. 
+William, S., 2020. SyS Shows Medical Surge in DFW during Hurricane Harvey | CDC. 
+National Syndromic Surveillance Program (NSSP). https://www.cdc.gov/nssp/su 
+ccess-stories/TX-Hurricane-Harvey.html. 
+Xiao, J., Huang, M., Zhang, W., Rosenblum, A., Ma, W., Meng, X., Lin, S., 2019. The 
+immediate and lasting impact of Hurricane Sandy on pregnancy complications in 
+eight affected counties of New York State. Sci. Total Environ. 678, 755–760. https:// 
+doi.org/10.1016/j.scitotenv.2019.04.436. 
+Zhang, F., Ding, G., Liu, Z., Zhang, C., Jiang, B., 2016. Association between flood and the 
+morbidity of bacillary dysentery in Zibo City, China: a symmetric bidirectional casecrossover study. Int. J. Biometeorol. 60 (12), 1919–1924. https://doi.org/10.1007/ 
+s00484-016-1178-z. 
+Zhang, N., Song, D., Zhang, J., Liao, W., Miao, K., Zhong, S., Lin, S., Hajat, S., Yang, L., 
+Huang, C., 2019. The impact of the 2016 flood event in Anhui Province, China on 
+infectious diarrhea disease: an interrupted time-series study. Environ. Int. 127, 
+801–809. https://doi.org/10.1016/j.envint.2019.03.063. 
+Zock, J.-P., Jarvis, D., Luczynska, C., Sunyer, J., Burney, P., 2002. Housing 
+characteristics, reported mold exposure, and asthma in the European Community 
+Respiratory Health Survey. J. Allergy Clin. Immunol. 110 (2), 285–292. https://doi. 
+org/10.1067/mai.2002.126383. 
+B. Ramesh et al. 

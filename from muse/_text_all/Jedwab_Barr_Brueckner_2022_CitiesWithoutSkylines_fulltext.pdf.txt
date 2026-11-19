@@ -1,0 +1,2265 @@
+Institute for International Economic Policy Working Paper Series
+Elliott School of International Affairs
+The George Washington University
+Cities Without Skylines: Worldwide Building-Height Gaps and 
+their Possible Determinants and Implications
+IIEP-WP-2021-15
+Remi Jedwab
+George Washington University 
+Jason Barr
+Rutgers University
+Jan Brueckner
+University of California
+August 2021
+Institute for International Economic Policy
+1957 E St. NW, Suite 502
+Voice: (202) 994-5320
+Fax: (202) 994-5477
+Email: iiep@gwu.edu
+Web: iiep.gwu.edu
+
+Cities Without Skylines: Worldwide Building-Height Gaps
+and their Possible Determinants and Implications
+Remi Jedwab, Jason Barr and Jan Brueckner*
+August 16, 2021
+Abstract
+There is a large literature on U.S. cities measuring the extent and stringency of
+land-use regulations and how regulatory and geographical constraints affect important
+outcomes such as housing prices and economic growth. This paper is the first to study
+the global extent and impact of regulatory and other constraints by estimating what we
+call building-height gaps. Using a novel data set on the year of construction and heights
+of tall buildings around the world, we compare the total height of a country’s stock
+of tall buildings to what the total height would have been if supply was more elastic,
+based on parameters from a benchmark set of countries. These gaps are larger for richer
+countries and for residential buildings than for commercial buildings in such countries.
+The gaps are driven by under-building in central areas of larger cities. These gaps are not
+compensated by tall building construction in peripheral areas of cities or less stringent
+limits on outward expansion beyond the existing boundaries of the cities. Countries with
+older, historic structures have larger gaps, likely due to more stringent height regulations
+and dispersed ownership that inhibits land assembly. Lastly, the gaps correlate strongly
+with international measures of housing prices, sprawl, congestion, and pollution.
+JEL Codes: R3, R5, O18, O50
+Keywords: International Buildings Heights; Land Use Regulations; Geographical
+Constraints; Housing Supply; Housing Prices; Sprawl; Congestion; Pollution
+*Corresponding Author: Remi Jedwab: Department of Economics, George Washington University.
+Email: jedwab@gwu.edu. Jason Barr: Department of Economics, Rutgers University-Newark. Email:
+jmbarr@newark.rutgers.edu. Jan Brueckner: Department of Economics, University of California, Irvine.
+Email: jkbrueck@uci.edu. We thank Juan Pablo Chauvin, Gilles Duranton, Fernando Ferreira, Edward
+Glaeser, Matthew Kahn, Luis Quintero, Giovanni Peri, Paul Romer, Stuart Rosenthal, William Strange
+and seminar audiences at George Washington, the NBER Real Estate SI, the NBER Urban SI and the UEA
+meetings for helpful comments. We thank Solly Angel for sharing his building regulations data sets. Remi
+Jedwab gratefully acknowledges financial support from the International Growth Center.
+
+1
+Today, the majority of the world’s population lives in cities, and this global urbanized
+population will continue to grow over the rest of the century (World Bank, 2009; UNHabitat, 2020). Cities throughout the world must expand their stock of real estate in
+order to accommodate urban growth (Glaeser, 2011; Romer, 2020). But in many countries,
+housing prices are growing more rapidly than incomes (Knoll, Schularick and Steger,
+2017), which may be partly caused by physical and regulatory barriers reducing housing
+supply (Glaeser and Gyourko, 2003; Glaeser, Gyourko and Saks, 2005, 2006; Saiz, 2010;
+Gyourko and Molloy, 2015; Harari, 2020). In particular, cities impose various land-use
+regulations (Helsley and Strange, 1995; Quigley and Raphael, 2005; Glaeser and Ward,
+2009; Gyourko et al., 2008; Rosenthal and Ross, 2015; Gyourko et al., 2019).
+Regulatory and other constraints on development not only have impacts today but
+may generate significant effects well into the future given the durable nature of real estate
+(Glaeser and Gyourko, 2005, 2018; Hsieh and Moretti, 2019). Higher housing prices can
+also lead to more exclusionary cities (Gyourko et al., 2013; Rosenthal and Ross, 2015).
+While the extent and impact of regulatory or geographical constraints has been studied
+for the U.S. (Ihlanfeldt, 2007; Saks, 2008; Saiz, 2010; Brueckner and Singh, 2020), there are
+no such studies for the whole world. Offering such a study is the aim of this paper.
+More generally, across countries, some cities appear more willing than others to
+construct tall buildings in their central areas as a way to accommodate economic and
+population growth. Cities in China embrace tall buildings (Barr and Luo, 2021), whereas
+cities in India have draconian height restrictions (Brueckner and Sridhar, 2012a). Some
+cities in Europe seem to represent an intermediate case, with tall buildings emerging in
+London (Cheshire and Dericks, 2020) and Frankfurt, although other cities, especially in
+southern Europe, have few tall buildings. These patterns raise three questions. First, how
+many tall buildings are “missing” in each country and the world overall? Second, what
+could be the economic and socio-cultural determinants of these building-height gaps?
+Third, what could be the economic and environmental consequences of these gaps?
+Our approach makes use of a remarkable data set that inventories all the world’s tall
+buildings (buildings above 80 meters), with information on their year of construction and
+height. Using a set of more supply-elastic countries as a benchmark, we ask whether
+the stock of tall buildings in a country outside this set is smaller than expected given
+
+2
+the country’s characteristics. More specifically, we start by running a panel regression
+(1950-2020) relating a measure of the tall building stock per capita in the set of identified
+benchmark countries to two variables suggested by the standard urban model (the main
+model used to study urban land use): income and agricultural land rent. Then, for
+countries outside the benchmark group, we plug values for these variables into the
+estimated equation, yielding a predicted size for the tall building stock per capita if
+the country’s supply elasticity matched those in the benchmark group. The difference
+between the prediction and the country’s actual stock is the building-height gap.
+We find that the world might need to have twice as many tall buildings (6,000 Empire
+State Buildings) as it does currently. The gaps are larger for richer countries, especially
+European countries. Globally, the gaps are larger for office towers, due to various world
+regions having disproportionately large residential tall-building stocks (e.g., the MENA).
+However, in developed countries, the gaps are larger for residential buildings, suggesting
+that these countries are more open to creating jobs than to receiving residents.
+Conditional on income, the gaps are strongly and positively correlated with housing
+prices, sprawl, road congestion, and pollution, implying that they might have important
+global economic and environmental consequences. In particular, such gaps might explain
+one fifth of the global house price boom observed since 1950 (Knoll, Schularick and Steger,
+2017). The gaps then appear to constrain the growth of large cities and their central areas.
+However, we do not find that countries with larger building-height gaps “compensate”
+their urban residents (i) by having more lenient height restrictions outside their cities’
+central areas; (ii) by having more lenient sprawl policies; (iii) by subsidizing transport;
+or (iv) by providing public housing. Given the lack of global historical data on non-tall
+buildings, we are unable to assess whether higher-gap countries have smaller gaps in this
+other dimension. However, the fact that housing prices are higher in higher-gap countries
+suggests that any compensation via the non-tall sector may not be sufficient.1
+Regarding the nature of these gaps, we find no evidence that they are caused by
+geological, topographical, or seismic conditions, or differences in construction costs.
+However, we do find that countries with more “historical” cities (cities with long
+1The global gaps being driven by richer countries, we ignore how the gaps might be compensated
+by a higher formalization rate and redevelopment of slum areas in poorer countries. See, for example,
+Henderson et al. (2020) for a recent study on the construction sector in low-income countries.
+
+3
+histories) have higher gaps. Evidently, the gaps in these countries arise from regulations
+designed to protect valuable historical urban areas, motivated by cultural considerations
+or a desire to foster tourism. However, countries may also adopt stringent regulations for
+reasons unrelated to historical preservation.2
+While we believe our results are novel, one limitation is that the gaps are directly
+estimated at the country level. Ideally, we would have liked to use city-level data to
+estimate city-level gaps and then obtain country-level gaps from them. To do so would
+require a panel data set for as many cities across the world as possible, and which
+would include city population, GDP, and land rent over several decades – giving us a
+long enough time period to run panel regressions with city fixed effects for the proper
+estimation of the gaps (preferably 1950-2020). Unfortunately, historical panel data on city
+incomes and land rent does not exist except in a few countries. As well, usable night
+lights data as a proxy for income are relatively limited, and non-existent for the years
+before 1992. Converting night lights to useful data has measurement problems and night
+lights capture other urban phenomena not related to income.3
+In addition, consistent
+historical agricultural land rent data do not exist for the “edge” of each city of the world.
+Nevertheless, we will show that our country-level gaps are correlated with citylevel gaps estimated using city-level panel regressions involving city-level data where
+possible. More generally, we will discuss how ignoring the city size distribution of each
+country should not affect our results. Finally, within-country analyses also misses the
+fact that constraints on supply in specific cities may be circumvented by migration to less
+constrained cities in the same country, hence the need for a country-level analysis.4
+2
+In contrast to the U.S. literature (see Rosenthal and Ross (2015) for a discussion), we do not find that
+the gaps are driven by the homevoter hypothesis. The hypothesis says that homeowners, worried that
+increases in supply reduce property values, lobby cities to impose regulations (Fischel, 2001).
+3The radiance calibrated version of these data, which avoids issues related to top-coding in more
+developed cities for which neighborhood levels of luminosity very often exceed the normal digital number
+upper bound of 63, is only available for a few years between 1996 and 2011. Additionally, night lights also
+capture infrastructure supply (e.g., electricity networks and roads), hence not just economic development.
+Furthermore, for a given population, tall buildings may emit night lights in other ways than non-tall
+buildings, thus complicating the analysis of the effects of income on tall building stocks.
+4A referee has usefully suggested that we use data on the maximum building height allowed in various
+cities and show in our tall building data set “bunching” just below the threshold. However, most cities’
+height restrictions are based on floor area ratios (FARs). As we do not have data on lot size, we cannot
+compute FARs. In addition, data on height restrictions does not exist beyond a few well-known cities. We
+use data on height restrictions but only for the peripheral areas of cities (see Section 5). Finally, many cities’
+implicit thresholds are below 80 m (e.g., Paris), making this method inapplicable in many countries.
+
+4
+Our paper makes several contributions to the literature. To our knowledge, the above
+stylized facts and results do not appear in any other study, as the profession was hitherto
+limited by the lack of historical international data on tall building construction. The
+paper also constitutes one of the first global studies on the economics of skyscrapers (see
+Ahlfeldt and Barr (2020) for a recent survey). Other existing studies typically focus on
+the U.S. only (e.g., Liu, Rosenthal and Strange, 2017, 2020, 2018; Ahlfeldt and McMillen,
+2018; Rosenthal and Strange, 2008).5 Next, there are almost no studies on how buildingheight regulation varies across countries, and little is known about the determinants and
+effects of building-height variation globally. Finally, our method has the advantage of
+being replicable for any context. So far, only a few other studies have implemented this
+type of indirect method to measure the stringency of regulation, defined as the degree to
+which regulations cause development decisions to differ from free-market outcomes.6
+The extent of land-use regulation in U.S. cities has been captured through a number of
+regulatory surveys, which present local government officials with a long list of different
+types of potential regulations, asking which ones are used in their community. While
+some surveys focus on specific localities or specific states (e.g., Glickfeld and Levine, 1992;
+Ihlanfeldt, 2007; Jackson, 2018), Gyourko et al. (2008) and Gyourko et al. (2019) carry out
+more ambitious national surveys. These excellent studies then use the responses from
+local communities to compute a regulatory index for individual cities or states.
+Despite their impressive scope, these surveys lack coverage of certain important
+regulations. For example, Gyourko et al. (2008) – on which the Wharton Residential
+Land Use Regulation Index is based – and Gyourko et al. (2019) do not measure height
+restrictions in the central areas of cities. Rather, they focus on frictions due to the
+permitting process and on other regulations that are more likely to impact low-rise
+dwellings in suburban parts of the city. Another issue is how to aggregate this
+community-level information into reliable measures for cities, states or even the country.
+The survey method is also expensive and thus cannot be used to compare regulations
+across countries. That is why no global measures of land-use regulations exist. Finally,
+such measures cannot tell us if the regulations are binding given economic conditions.
+5For other research on building heights, see, for example, Barr (2016), Barr and Cohen (2014), Barr (2012),
+Brueckner and Sridhar (2012b), Barr (2010) and Bertaud and Brueckner (2005a).
+6See Bertaud and Malpezzi (2001), Glaeser et al. (2005), Turner et al. (2014), Brueckner et al. (2017a),
+Brueckner and Singh (2018) and Albouy and Ehrlich (2018) for important works on land-use regulation.
+
+5
+In contrast, our method of analysis is similar to that followed in the health sciences
+literature. Currently, two methods exist to measure and compare domestic and
+international mortality rates due to an environmental phenomenon (e.g., a pandemic).
+National agencies can compile phenomenon-related mortality information obtained from
+each jurisdiction, an imperfect process if jurisdictions and countries have different
+measurement abilities. An alternative indirect method is to perform simple regression
+analyses to estimate “excess mortality rates” for all jurisdictions and countries.7 Our
+method is analogous to the latter approach, except that we are measuring a shortage
+of tall buildings. While our approach might appear simple, it has the benefit of being
+feasible and, as our evidence suggests, possibly reliable. However, given the lack of data,
+one limitation is that we cannot attribute the gaps to land-use regulations only.
+Lastly, our analysis is mostly a predictive exercise, which makes causality less of an
+issue. It is not possible to find an instrument, or more generally an identification strategy,
+that would explain income and land rent (our right-hand side variables) without also
+directly impacting the stock of tall buildings (at the country or city level). Yet, we discuss
+a series of robustness checks that aim to give us greater confidence in the results.
+The plan of the paper is as follows. Section 2 provides the conceptual foundations for
+the panel regressions that we run. Section 3 discusses the data and background. Section
+4 discusses the international regression results and the associated building-height gaps.
+Sections 5 and 6 examine the possible determinants and effects of the gaps, respectively.
+Section 7 reports a series of robustness checks. Section 8 concludes.
+1. Conceptual Framework
+1.1. The Standard Urban Model (SUM)
+The SUM, as exposited by Brueckner (1987), Rosenthal and Ross (2015) and Duranton
+and Puga (2015), depicts the determination of building heights, measured by output of
+floor space per acre of land. In the model, consumers value access to jobs in the city
+center, which leads to both higher housing prices and higher land rents near the center.
+Faced with expensive land, developers construct taller buildings near the center to limit
+use of the expensive land input. In the equilibrium of a closed city (where population is
+7See, for example, Dushoff et al. (2005); WHO (2018); Kiang and Buckee (2020); Beaney et al. (2020).
+
+6
+fixed), building heights depend on the city’s characteristics, which include population P,
+per capita income y, commuting cost t per mile, and the agricultural rent ra for the land
+surrounding the city. A higher population P or agricultural rent ra raises building heights
+throughout the city. To accommodate the greater demand from a larger P, the city must
+be denser, with taller buildings. By increasing the cost of rural-to-urban land conversion
+and thus making the city more compact, a higher ra also generates taller buildings.
+A higher income y causes urban decentralization as residents find the cheap suburbs
+more attractive for the bigger dwellings they now prefer.8 This demand shift tends to
+raise building heights in the suburbs while decreasing them near the city center, yielding a
+spatially complex income effect (a higher commuting cost t leads to the opposite impacts).
+To make use of these predictions in a cross-country study, the fact that countries
+become more urbanized as they get richer can be exploited. This tendency implies that
+city populations in a country tend to rise with the general income level, implying that y
+and P tend to increase in step with one another moving across countries. Allowing these
+variables to change together, the result is a tendency for building heights to rise uniformly
+across space within cities as country income increases, simplifying the complex height
+effect from above. In particular, with cities tending to be bigger in high-income countries,
+the positive population-induced effect on building heights offsets the negative height
+effect in the central city due to income-induced decentralization. As a result, buildings in
+the high-income country’s cities will tend to be taller in the center as well as the suburbs.
+Therefore, in a regression like ours that relates building heights to a country’s income and
+agricultural rent, the income and agricultural rent coefficients should be positive.
+1.2. Additional Elements
+We can assume that as cities achieve higher incomes, they add more amenities, which tend
+to be downtown. By making city centers more desirable as income rises, amenities can
+reverse the income-driven tendency toward decentralization, strengthening the tendency
+of building heights to rise at all locations when income increases.
+If wealthier, larger cities have greater commuting costs due to traffic congestion or
+because the opportunity cost of commuting time increases with wages, the price premium
+8The locational equilibrium balances the gains from cheaper housing against the losses from higher
+commuting cost. If everyone now wants a bigger dwelling because of higher income, the gains from
+cheaper housing are now more important, creating an incentive to move farther from the CBD.
+
+7
+for central locations will be higher, generating even taller buildings in the center.
+Finally, if we add business land-use to the residential use discussed above, the
+association between country income and building heights is likely to be magnified.
+High country incomes tend to be associated with the presence of service sector firms,
+which may value being located in city centers in order to reduce the costs of accessing
+inputs (including information) and consumers. Thus, higher incomes should increase the
+demand for office space in city centers and cause tall building construction there.
+In summary, the theories of urban spatial structure suggest an empirical specification
+in which a measure of the stock of tall buildings is regressed on income and agricultural
+rent, with the expected coefficient signs both being positive. The analysis, however,
+applies to a city with perfectly malleable capital, where building heights adjust
+immediately to reflect current conditions. In reality, tall buildings are long-lived, having
+been built in response to current conditions at the time of construction and lasting
+decades. In a model recognizing this longevity, income and agricultural rent would only
+determine the increment to the tall-building stock through an effect on new construction.
+The existing tall-building stock would also be a determinant of this increment.
+These considerations suggest a regression with the existing tall-building stock as
+dependent variable and the lagged stock, income, and agricultural rent as covariates.9
+Finally, the exact definition of the tall-building stock measure requires discussion. As
+mentioned above, the stock measure is a weighted one, with each tall building weighted
+by its height. Since the stock is measured for the entire country, not for individual cities,
+it is appropriate to divide the weighted stock variable by the size of the country’s urban
+population. The dependent variable is thus the country’s height-weighted stock of tall
+buildings per urban capita, which we call “urban height density.”
+2. Data and Background
+To estimate our baseline model, we collected data on building heights, urban populations,
+urban per capita incomes, and agricultural land rents for as many countries and years as
+possible. Our main sample comprises 158 countries decadally from 1950 to 2017.
+9Unfortunately, global historical data on commuting costs do not exist. In our baseline analysis, we will
+ignore the role of commuting costs. However, income may capture the effect of commuting costs if richer
+countries have better infrastructure and/or a higher opportunity cost of commuting time. In the robustness
+section, we will show that results hold when attempting to control for roads and subways.
+
+8
+Building Heights. The Council on Tall Buildings and Urban Habitat (CTBUH) maintains
+a publicly available online database of all tall buildings in the world.10 For each building,
+we extracted information on the building’s height, year of construction, usage, and other
+characteristics. As described in Appx. Section 1, the database mostly captures buildings
+above 80 meters. Since some countries have no such buildings, in order to avoid having
+their stock of heights equal to 0 when using logs, we consider for all the countries in our
+sample buildings above 80 meters as well as their 10 tallest buildings even if some of them
+are below 80 meters. In the end, we use 16,369 tall buildings. Below, we will discuss how
+measurement error in building height stocks could impact our results.11
+Urban Population. United Nations (2018) gives the urban population of each country
+every 5 years from 1950 to 2020. We interpolate the data for intermediate years.
+National Income. Our main source is Maddison (2008), where we obtain per capita GDP
+for each country annually from 1950 to 2008 (in 1990 Geary-Khamis dollars, which is
+equivalent to PPP and constant international 1990 $). We use per capita GDP growth
+rates from World Bank (2018) to reconstruct per capita GDP from 2008 to 2017.
+Agricultural Land Rent. We estimate a country’s agricultural land rent by dividing
+agricultural GDP by the total land area. We use as our main source FAO (2018), which
+shows the agricultural GDP shares for many countries annually from 1960 to 2017.
+For country-years that are still missing, we use additional sources and interpolations
+as needed (again Appx. Section 1). We use total land area as the divisor instead of
+agricultural land area because the latter area is missing for almost all countries before
+1960.12 In addition, a significant share of non-agricultural and non-urban land can
+potentially be used for agricultural purposes or be converted into urban land. Below, we
+will discuss how measurement error in agricultural land rent could impact our results.
+Urban Per Capita Income. Knowing for each country-year total GDP (PPP and constant
+international $) and the agricultural GDP share, we can reconstruct urban GDP, which we
+proxy by non-agricultural GDP.13 Knowing urban GDP, we can then reconstruct urban
+10The full online database can be found here: http://www.skyscrapercenter.com/. As one example, the
+webpage for the Burj Khalifa is found here: http://www.skyscrapercenter.com/building/burj-khalifa
+11According their website, the data have been “collected by the Council for more than 40 years [...]
+The Council relies on its extensive member network [of academics, land developers, architectural firms,
+builders, city administrations, and banks] to maintain” the database with the help of “an Editorial Board.”
+12From FAO (2018), we know total land area.
+13The implicit assumption here is that most valuable industrial and service activities take place in urban
+
+9
+per capita income as urban GDP divided by urban population.14
+Urban Height Density. When logged, this is our dependent variable, equal to the sum of
+the heights of the country’s tall buildings in a given year divided by the urban population
+for that year. We are also able to distinguish residential and office buildings.
+Other Variables. We know from the World Bank the income group of each country in
+2017 (“low,” “lower-middle,” “upper-middle” or “high income”). High income countries
+are viewed as developed. From The Economist (2018), we know whether each country
+was democratic at any point in the 2006-2017 period (data not available before).15
+Descriptive Patterns. Figure 1(a) shows the evolution across time of the urban heightdensity measure for the U.S. along with the evolution of the same measure summed
+across all the world’s cities. As can be seen, the U.S. contained virtually all of world’s tall
+buildings up to 1950, with the two curves diverging thereafter. In recent years, the tallbuilding stock outside the U.S. has grown rapidly. Figure 1(b) shows the world evolution
+of the total stock of heights separately for residential buildings and office buildings from
+1920 to 2017. As seen, it is only after 2000 that tall residential buildings were built at a
+faster pace than office buildings. Circa 2017, residential buildings and office buildings
+each contribute about half of the total stock of heights in the world.
+Figure 2 shows the relationship between the country-level log of urban height density
+in 2017 and the log of national GDP per capita for that year. As expected, the relationship
+is positive, with a strongly significant slope coefficient of 1.35*** and an R2 of 0.52 (1.41***
+and 0.67 if using urban population weights). Countries above (below) the dashed line
+have more (fewer) tall buildings than expected based on their income.
+3. The Gaps
+Table 1 shows panel regressions for the years 1950, 1960, 1970, 1980, 1990, 2000, 2010,
+and 2017 (henceforth, “2020”). The explanatory variables are: log per capita urban GDP
+areas, a stylized fact confirmed for a large sample of countries by Gollin et al. (2015).
+14Note that urban population is not consistently defined. Indeed, countries use different urban
+definitions. However, country fixed effects should capture any time-invariant factor. In addition, among
+the 158 countries ca. 2010, 50 countries use an explicit threshold to define a locality as a city, whereas 108
+countries use an administrative definition (Jedwab and Vollrath, 2015). The likelihood of using a thresholdbased definition does not depend on log per capita GDP (coef. = 0.03; p-value = 0.32; R2 =0.01; N = 158). The
+threshold also does not depend on it (coef. = 460; p-value = 0.34; R2 =0.02; N= 50). If there is measurement
+error, it should be classical, and lead to downward-biased, not upward-biased, effects of urban incomes.
+15Countries are considered democratic if they are “full” or “flawed” democracies.
+
+10
+(LUPCGDP), the log of agricultural land rent (LAGRENT), and the lag of the dependent
+variable, log urban height density (LUHTDENS). We include country and year fixed
+effects (standard errors clustered at the country level). More precisely, for countries c
+and years t, the model is:
+LUHTDENSc,t = α + βLUPCGDPc,t + γLAGRENTc,t + δLUHTDENSc,t−10 + θc + κt + µc,t.
+Column (1) includes 158 countries. The GDP coefficient is positive and significant,
+as is the lagged height-density coefficient. The coefficient on this variable is less than
+one, indicating that an increase in the lagged tall-building stock is associated with a less
+than one-for-one increase in the current stock, given that the increase in the prior stock
+depresses new construction. The land-rent coefficient while positive, is not significant.
+Column (2) restricts the sample to 73 countries with a positive residual in a 2017
+regression that relates LUHTDENS to LUPCGDP and LAGRENT. These are countries
+where the tall-building stock is higher than could be expected today given the magnitudes
+of the covariates, a simple way to select the benchmark countries. Naturally, the GDP
+coefficient is larger than in col. (1). The coefficient of agricultural rent becomes positive
+and significant. Logically, for 85 countries with a negative residual (col. (3)), the coefficient
+of GDP is almost twice smaller, and the coefficient of agricultural land rent is nil.
+Column (3) restricts the sample to 14 democratic upper-middle (henceforth, “UM”)
+or high (“H”) income countries whose residual is above the 75th percentile value.
+We restrict this benchmark sample to more-democratic and more-developed countries
+because market forces are less free to operate in other countries. Column (4) focuses
+on 8 H countries: Australia, Canada, Hong Kong, Israel, the Netherlands, Singapore,
+South Korea, and Uruguay. The 6 UM countries excluded are Brazil, the Dominican
+Republic, Macedonia, Malaysia, Panama and Thailand.16 While the selection of these
+countries might seem arbitrary, we believe that this selection process is less arbitrary than
+us “cherry-picking” what we believe are more supply elastic countries. Importantly, we
+will show later that other approaches lead to similar selections of countries and results.
+Also, based on qualitative evidence, these choices might make sense. Among highincome countries, Toronto now has “the third highest number of skyscrapers in North
+16Also considering low and lower-middle income countries adds four countries (e.g., the Philippines).
+As these countries were not democratic for most of the post-1950 period, it is appropriate to exclude them.
+
+11
+America” (CBC News, 2020). All Australian cities, not just Melbourne and Sydney
+but also Adelaide, Brisbane, Gold Coast and Perth, have a significant number of tall
+buildings (The Conversation, 2019). Seoul and other Korean cities such as Busan and
+Incheon have been at the forefront of skyscraper construction and innovation for some
+time now (NY Times, 2011; CNN, 2017). And Tel-Aviv’s skyline is “undergoing dramatic
+transformation” (Globes, 2017). In middle-income countries, cities such as Panama City,
+Sao Paulo, Bangkok, and Kuala Lumpur, have undoubtedly some of the most impressive
+skylines in the world, especially given their country’s middle-income status.
+Lastly, while the U.S. and Japan are traditionally associated with skyscrapers, they
+have very high incomes and agricultural rents and large urban populations. They are
+above, but still close to, the regression line in Figure 2, thus suggesting that they do
+not have disproportionate stocks of tall buildings given their economic conditions. If
+anything, given their residual, they are only five and six countries away from being
+included in the benchmark set, respectively. The U.S. belonged to the benchmark set until
+2010 and was among the top 10 countries in the world until 1980. As we will show later,
+one reason for the U.S. is that California has experienced dramatic growth but still has
+relatively few tall buildings, thus offsetting the historical contributions of New York City
+and Chicago. Japan then also belonged to the benchmark set in 2010 (but not in 2020).
+We then do not include China because it is not democratic and some of its tall
+buildings might be considered as white elephants. While it is undeniably experiencing a
+construction boom (its residual improved dramatically since 1980), it has also experienced
+significant economic, agricultural and urban population growth. In 2020, it is only one
+country away from not being above the 75th percentile value in the residual.17 We will
+show later that results hold if we include the U.S., Japan, and China in the benchmark set.
+With the UMH sample (column (4)), the GDP coefficient is three times larger than
+in column (1), while the agricultural rent coefficient is four times larger. With the H
+sample (column (5)), the GDP coefficient doubles relative to column (4). The agricultural
+17While some cities overbuild relative to current populations (Wu et al., 2016; Glaeser et al., 2017), other
+cities like Beijing and Shanghai have limited their construction. On average, China is building at the rate
+required to absorb its growing urban population (Barr and Luo, 2021). Planning officials are relatively
+conservative in the allowable floor area ratios (FARs). Brueckner et al. (2017b) find that the average land
+lease sales allow for residential and commercial FARs of about 2.4 on average. By way of comparison,
+Manhattan has a built FAR of 4.8, while New York City’s built FAR is 1 (NYC Dept. of City Planning).
+
+12
+rent coefficient is non-significant due to its strong correlation with income at the country
+level. The coefficient of lagged urban height density is much lower than 1, indicating little
+persistence in tall building heights per urban capita in that sample.18 Lastly, the adjusted
+R2 values increase from 0.79 in col. (1) when we consider all countries to 0.91 in col. (5)
+when we consider H countries only. This pattern shows the increasing explanatory power
+of the variables of interest when focusing on higher income countries.
+To generate the gaps, we iterate each benchmark regression, respectively, to get
+predicted heights for 2020, and then compare those heights to the actual 2020 data. The
+iteration proceeds as follows. Predicted log heights for 1960 are found by evaluating
+LUHTDENS \ 1960 = α + βLUPCGDP1960 + γLAGRENT1960 + δLUHTDENS1950. (1)
+with LUHTDENS being log urban height density, LUPCGDP log per capita urban GDP
+and LAGRENT log agricultural land rent. (α, β, γ, δ) are obtained from Table 1.
+The year fixed effects are always included. However, for simplicity, they are omitted
+in writing (1). By construction, we ignore the country effects to compute the gaps. Other
+than that, (1) is exactly the same specification as we use for Table 1. To get predicted log
+building heights for 1970, we rewrite (1) with 1970 values for the first two covariates and
+with the 1960 predicted value playing the role of LUHTDENS1960:
+LUHTDENS \ 1970 = α + βLUPCGDP1970 + γLAGRENT1970 + δLUHTDENS \ 1960. (2)
+The procedure continues until a LUHTDENS predicted value emerges for 2020. The
+building-height gap measure in 2020 is then equal to
+GAP2020 = LUHTDENS \ 2020 − LUHTDENS2020, (3)
+or the difference in predicted and actual log height densities.
+It is helpful to derive the connection between a gap and the change in the underlying
+building stock required to eliminate it. Letting ∆ denote change, the answer is immediate
+from differentiating (3):
+∆GAP2020 ≈ −
+∆UHTDENS2020
+UHTDENS2020
+, (4)
+18While tall buildings are durable, urban population is not. The ratio thus only remains stable if tall
+building construction matches urban population growth. The low persistence suggests that, in that sample,
+tall building construction per capita was disproportionately driven by episodes of fast income growth.
+
+13
+which is denoted the percentage-change gap. If GAP = 2, then the change in the log of
+the existing urban height density required to eliminate the gap also equals 2. With (3)
+then equal to 2, it follows that unlogged urban height density must increase by 200%
+to close the gap, with 200 then denoted the percentage-change gap. The per capita gap
+(measured in km per urban inhabitant) is then found by using the corrected antilog of
+LUHTDENS \ 2020 to obtain UHTDENS \ 2020.
+19
+4. Rankings
+Table 2 ranks the top 20 countries in terms of the two gap measures just discussed and
+using the H set or the UMH set as our benchmark set. Columns (1) and (3) show the
+ranking based on the percentage change gap (the percentage change in height density
+required to close any gap). However, percentage changes are mechanically larger when
+the denominator is small. Thus, the percentage gap is mechanically larger in fast-growing
+countries with still relatively small height stocks today (e.g., Uzbekistan). If, instead, we
+focus on the ranking based on the absolute per urban capita gap (columns (2) and (4)),
+the list is now dominated by developed countries.
+Various European countries are found in the list, which concords with common beliefs
+that they are more stringent in regulating heights than other nations (however and as we
+will examine later, other factors than land-use regulations could account for the gaps).
+Ireland, for example, has no buildings taller than 100 meters and only five buildings
+taller than 50 meters (Barr and Lyons, 2018), and this despite Dublin being one of the
+10 wealthiest cities in the world and a financial hub (OECD, 2020). Paris has reluctantly
+embraced skyscrapers but has placed them outside of the city center in La Defense, in ´
+an attempt to keep them isolated from the old city, where skyscrapers like the Tour
+Montparnasse have proved controversial (Scicolone, 2012). Regulations in Switzerland,
+for example, give strong veto power to those opposed to skyscrapers, and, as a result,
+there are few in that country (Vogel-Misicka, 2011). For example, there are only five tall
+buildings in Zurich, again one of the wealthiest cities in the world and a financial hub
+(OECD, 2020).20 Many cities like London and Rome have implemented height caps so
+19More precisely, we take the antilog of the predicted values and adjust them by a correction factor to get
+unbiased predicted heights. Indeed, when generating exp(ln(yb)) we need to correct this value because of
+the fact that E(exp(lnyb)) does not equal E(yb). We follow the method suggested by Wooldridge (2016).
+20In our data, the other important cities of these countries also have very few, or no, tall buildings,
+whether Cork (3 tall buildings), Lyon (4), Marseille (4), Geneva (1), or Basel (2).
+
+14
+as not to block views of major monuments (Stewart, 2016). While these rules are being
+peeled back in some places, Europe remains slow to embrace tall buildings.
+Indeed, as can be seen in Web Appx. Fig. A2, a few countries have seen their
+(logged) urban height density plateau out since the 1970s, for example France, Germany,
+Ireland, Italy, Switzerland and, to a lesser extent, the United Kingdom, despite impressive
+economic growth (as shown by logged urban per capita GDP). Comparing it to Web
+Appx. Fig. A1 that shows the same patterns for the 14 UMH countries, one can see that
+their growth has not been less impressive than in the UMH set but that their urban height
+density has not increased relatively fast enough to match their income growth. We believe
+that the timing of these results also make sense. For example, in Paris the controversial
+Tour Montparnasse was completed in 1973. It became one of the most hated landmarks
+in the world and led two years later to the ban of new buildings over seven stories
+high in central Paris (NY Times, 2015), which can explain the plateau effect from 1980.
+Likewise, Dublin’s Liberty Hall built in 1965 was immediately seen as one of Ireland’s
+ugliest buildings (The Irish Times, 2019), which can explain the plateau effect from 1970.
+In 2020, the data show 2,198 km of total height worldwide. Summing predicted values
+across countries, we get total predicted heights of 4,828 km, which generates a gap of
+2,630 km – 6,000 Empire State Buildings (ESBs) – and a world gap factor of 2.2. However,
+negative gaps – i.e., an “excess” of heights given economic conditions between 1950 and
+2020 – are observed in 45 countries where skyscrapers might be “white elephants” (e.g.,
+the Gulf states, Mongolia, and North Korea, as can be seen circa 2017 in Figure 2). For
+44 countries with a positive gap, the total gap is 3,143 km (7,250 ESBs). Next, if we use
+the UMH regression, we get a mechanically smaller predicted world total of 2,046 km.
+However, 31 countries still have a positive gap and their total gap is 919 km (2,100 ESBs).
+While the percentage change is useful, we verify that the resulting ranking of countries
+is correlated with the ranking based on the absolute measure, i.e., the per capita gap in
+column (2) of Table 2. For the UMH and H benchmark sets, we obtain correlations of 0.65
+and 0.66, respectively. However, if we weight the country gaps by the urban population
+of each country circa 2020, we obtain correlations of 0.77 between percentage and absolute
+rankings for both sets. Indeed, the urban population weights minimize the issue coming
+from low-stock countries having mechanically larger percentage gaps.
+
+15
+Next, in the rest of the analysis, we use the percentage gap as our main measure.
+An issue with the absolute per urban capita gap is that it is generated by taking the
+antilog of the predicted values and then adjusting them by a correction factor. We
+follow the method of Wooldridge (2016, pp. 212–215). However, Wooldrige explains that
+this method is imperfect and rests on many assumptions. Notwithstanding, the high
+correlation between the percentage and absolute gaps suggests that the results that we
+establish below should not depend much on whether we use one or the other. In addition,
+in the rest of the analysis, we will also often use urban population weights.
+Finally, and importantly, the ranking of countries does not depend much on whether
+we use UMH or H. Indeed, for a same measure, the ranking between the UMH-based
+ranking and the H-based ranking is 0.85-0.89.
+Office vs. Residential Towers. Columns (6)-(7) of Table 1 replicate columns (4)-(5)
+of Table 1, but with the height variable computed using residential buildings, while
+columns (8)-(9) use office buildings (the benchmark countries are selected using residuals
+that are specific to each building type).21 For the UMH set (cols. (6) and (8)), point
+estimates are similar for the two types of buildings. For the H set (cols. (7) and
+(9)), the coefficient of income is higher for residential buildings. When using these
+estimates to compute the percentage-change gaps, we find that the H-based gaps are
+overall higher for office buildings than for residential buildings (Figure 3(a) shows their
+kernel distribution in 2020).22 However, only considering positive gaps, no significant
+difference is obtained. The lower residential gaps observed globally are thus explained
+by negative gaps (i.e., excesses) in various countries. For example, Middle-Eastern and
+Latin American countries have disproportionately large residential tall-building stocks,
+possibly as a result of “white elephant” projects and/or preferences for high floor luxury
+condos. Finally, countries with higher, or lower, residential gaps tend to have higher, or
+lower, office gaps (correlation of 0.70-0.80 depending on the benchmark set used).
+Richer vs. Poorer Countries. Cols. (1) and (4) of Table 3 show higher gaps in richer
+countries today (2020), i.e., countries with a higher log total per capita GDP (PPP, constant
+1990 international $). Cols. (2)-(3) and (5)-(6) show that the residential gaps are more
+21Note that the benchmark countries are the same as before with a few exceptions.
+22We verify that the office gaps are significantly higher using a Kolmogorov–Smirnov test (not shown).
+Note that we find no significant difference for the UMH-based gaps (not shown).
+
+16
+correlated than the office gaps with economic development.23 Alternatively, restricting
+the sample to developed countries, we find that residential gaps tend to dominate office
+gaps (see Figure 3(b)). Thus, developed country cities might be more open to creating jobs
+than receiving new residents (with the caveat that this assumes that the gaps also capture
+regulatory constraints). One possibility is that in more developed countries, while both
+businesses and residents pay local taxes, local governments view residents as “costlier,”
+since many services (e.g., schooling, sanitation, water, etc.) are publicly provided.
+U.S. Case. These patterns could explain the U.S. gap. Many tall buildings were built
+before 1950 and subsequent U.S. construction may have failed to match income growth
+to the same extent as in the “best” developed countries.24 As a result, with the gaps that
+we compute influenced by the experiences of such countries, it may not be surprising
+that the U.S. gaps are large. Lastly, to assess the validity of the methodology, we perform
+our panel analysis for 50 U.S. states (1930-2020; decadally) and show that the U.S. gap
+is driven by California. If California were like the “best” U.S. states, the U.S. would be
+ranked around 20th in per urban capita H-based gap instead of 8th.25
+We now turn to generating results on the determinants and effects of the gaps. Finally,
+we assess how sensitive our results are by implementing various robustness checks.
+5. What Constraints May the Gaps Capture?
+The gaps could be due to differences in construction costs, geographical constraints,
+dispersed ownership, land-use regulations, and institutional and cultural factors more
+broadly. We now examine how the gaps correlate with variables proxying for these
+dimensions. More precisely, we regress the gaps in 2020 on each variable. We first
+consider each variable one at a time as there is often limited data for each dimension.
+For a limited sample of countries and selected variables, we then consider some of the
+23For countries c, the model is: GAPc,2020 = α + β LPCGDP2020 + µc. Urban population weights minimizes
+the low-stock issue and makes the analysis representative of the global distribution of urban populations.
+24In our data, the Great Depression halted the very fast tall building construction observed in the 1920s.
+In particular, urban height density (km per million urban inhabitants) increased by about 1 between 1930
+and 2020, roughly matching the increase between just 1900 and 1930.
+25For more details on the U.S. analysis, see Web Appx. Section C. If we use the same specification as in
+Table 1 but for the U.S. only (N = 8), the coefficient of urban income is 50% smaller than for UMH (0.99***
+vs. 1.54**) whereas the coefficient of land rent is similar (0.68* vs. 0.55**). If we study the U.S. between
+1870 and 1940 (N = 7; excl. the World War II decade), we obtain higher coefficients, at 2.74** and 2.22**.
+Skyscrapers in the U.S. were much more responsive to economic conditions before 1950. In fact, many land
+use regulations were adopted in the 1960s (e.g., New York City reformed its zoning ordinance in 1961).
+
+17
+variables simultaneously. Note that we always control for log total per capita GDP in 2020
+(PPP, constant international 1990 $), as the goal is to understand why some countries have
+higher gaps for a given level of economic development.26 We then use urban population
+weights (2020) because it is important to study what drives the world gap, hence making
+the analysis representative of the global distribution of urban populations.
+The results are reported in Table 4 with each panel corresponding to a separate factor.
+For each panel, the first column reports the coefficient when using the H-based gaps while
+the second column reports the coefficient when using the UMH-based gaps.
+Possible Factors. First, conditional on income, we do not find that the gaps are explained
+by differences in construction costs. World Bank (2019a), which is responsible for
+producing PPPs globally, reports the price level of broad consumption categories in 2011
+(relative to the world = 100). In Panel A we consider the price level of construction,
+which includes information on materials, labor, and equipment.27 As seen, the coefficients
+are negative, not positive, and close to nil.28 Another important aspect of construction
+costs is financing. In Panel B, we consider the countries’ average lending rate in 1990-
+2020 (International Monetary Fund (2021); data often unavailable before).29 In Panel
+C, we alternatively consider the 1980-2018 average of the financial institutions index of
+International Monetary Fund (2021).30 As seen, no significant difference is observed.
+Next, we examine if, conditional on income, geographical constraints could explain
+the gaps. Pagani et al. (2018) provides at a fine spatial resolution global maps of
+earthquake risk.31 Using the Global Human Settlement (GHS) database of European
+Commission (2018), we obtain the GIS boundaries and 2015 population of all (11,719)
+50K+ agglomerations today. Finally, we use these data to estimate population-weighted
+averages of earthquake risk for each country. Such measures do not correlate with the
+gaps (Panel D). Likewise, Shangguan et al. (2017) provides at a fine spatial resolution
+26For countries c and factor X, the exact model is: GAPc,2020 = c + ϕX Xc + κ LPCGDPc,2020 + µc.
+27One study on total factor productivity for the building industry in Hong Kong, arguably the world’s
+most important skyscraper city, estimated labor costs at about 41%, materials at about 44%, plant and
+equipment at 7%, and about 8% for other costs, on average (Chau and Walker, 1988).
+28Construction costs are much higher in developed economies (not shown) but we control for income.
+29It “is the rate charged by banks on loans to the private sector.” Due to high inflation in some countries,
+we remove outlying observations with a lending rate above the 90th percentile value in the sample.
+30The index summarizes how developed banks are, especially related to lending to the private sector.
+31“Global Earthquake Model Global Seismic Hazard Map (version 2018.1) depicts the geographic
+distribution of the Peak Ground Acceleration with a 10% probability of being exceeded in 50 years.”
+
+18
+global maps of bedrock depth. Using the GHS data, we construct population-weighted
+averages of bedrock depth for each country. No significant difference is observed (Panel
+E). Lastly, GRID-Arendal (2016) reports the population-weighted percentage of mountain
+area per country. Ruggedness could negatively affect buildability or increase the need to
+build taller due to the lack of flat areas. We find no correlation (Panel F).
+Indeed, historically important geographical constraints were, thanks to technological
+progress, largely overcome by 1960. During earthquakes, structural techniques allow
+buildings to sway without damaging the structure (Wang, 2016). While bedrock depth
+may influence skyscraper locations locally (Rosenthal and Strange, 2008; Barr et al., 2011),
+it is unlikely to systematically impact building construction at the country level. Indeed,
+more than half of the variation in bedrock depth at the GHS agglomeration level comes
+from within countries. Thus, while some locations might have overly deep bedrocks, that
+should not be the case of all locations in a same country. Furthermore, piles have been
+used to anchor skyscrapers for over a century (Bradford and Landau, 1996). While being
+below sea level makes foundation work costlier if soils are porous (Ibid.), this condition
+only concerns 0.2% of global urban land. Finally, foundation costs are low compared to
+construction costs and land is the most expensive factor in central city areas.
+Panel G considers the log of the number of years since the country’s largest city was
+founded.32 As seen, the gaps are strongly correlated with historical settlement. In Panel
+H (I), and focusing again on each country’s largest city, we use the ratio of their 1800
+(1950) population and their 2020 population (x 100). A higher ratio indicates that more
+of the city already existed by 1800 (1950) (obtained using the historical population data
+from Jedwab et al. (2021)).33 As seen, we find some effects for 1800 and no effects for 1950,
+suggesting that countries with older (mostly pre-industrial) cities have larger gaps.34
+Why do countries with more historical cities have higher gaps? It could be due to
+historically dispersed ownership constraining land assembly and redevelopment or landuse regulations aimed at protecting historical areas. To our knowledge, there are no
+globally available measures of dispersed ownership. However, we can test if countries
+32We obtain this information by consulting the Wikipedia webpage of each city.
+33Jedwab et al. (2021) rely on data from Chandler (1987) and Wikipedia (2020d).
+34We find similar results if we use the year the city appears in the historical population database of
+Chandler (1987) or historical urbanization rates (Jedwab and Vollrath, 2015) (not shown). The coefficients
+for the years 1850 and 1900 are in-between the coefficients for 1800 and 1950 (Ibid.).
+
+19
+that experienced relatively higher destruction rates during World War II (WW2) have
+lower gaps today. Since no such measures exist, we obtain from Wikipedia a list of
+bombings that took place during WW2 and their death toll, and then compute bombingrelated mortality rates at the country level (as % of 1939 population). As seen in Panel
+J, we do not find that the gaps are negatively correlated with WW2 bombings. Since the
+Wikipedia list may be incomplete, in Panel K we try the overall mortality rate (Ibid.),
+finding no correlation. However, the lack of data on dispersed ownership in “normal”
+(non-WW2) times implies that we cannot discard that specific mechanism.
+We then test if the gaps are higher in countries with valuable historical areas in
+their cities. In Panels L, M and N, we consider the log number of cultural, mixed and
+natural World Heritage Sites (WHS) ca. 2020 (UNESCO, 2020), while controlling for log
+total population in 2020 (mixed WHS “contain elements of both natural and cultural
+significance”). As seen, the gaps are positively correlated with the number of cultural
+WHS, which include the “historic centres” of Paris, Rome, and Vienna. The gaps are then
+strongly negatively correlated with natural WHS. This might be because countries with
+natural WHS implement policies that enforce the protection of natural areas and prevent
+sprawl, which should in turn lead to taller buildings, hence lower gaps.
+Historical areas’ value may be due to the tourism revenues they generate. However,
+in Panel O we do not find that the gaps correlate the log of the average number of tourist
+arrivals during the period 1990-2020 (World Bank (2019b); data unavailable before), while
+controlling for log total population in 2020. We obtain similar non-results if we use
+tourism GDP data for the same period (World Bank, 2019b) (not shown), which is not
+surprising given that the log of tourist arrivals and the log of tourism receipts is 0.9.
+Indeed, while cultural WHS may be associated with higher gaps, non-cultural WHS
+associated with lower gaps also bring in tourists. Tall buildings, hence lower gaps, may
+also generate tourism, as exemplified by New York City or Hong Kong.
+Thus, it is likely that historically more urbanized countries adopt land-use regulations
+to protect their valuable historical areas. Countries could also constrain tall building
+construction for other reasons, for example to create more open cities in which people can
+better see the sky. To our knowledge, there are almost no direct international measures of
+land use regulations. Nonetheless, in Panels P-S we present regression results where we
+
+20
+regress the gaps on several indirect land-use regulation variables.
+We first use a regulatory database recently established by Shlomo Angel.35 Angel’s
+data set contains 195 global cities with at least 100,000 population in 2015. The database
+includes maximum Floor Area Ratio (FAR) (N = 95), maximum building height (N = 114),
+and the maximum number of dwellings per acre (N = 35).36 However, one limitation
+of this data set is that information is available only for the peripheral areas of cities.
+Therefore, to be able to use these variables, we must assume that they can serve as good
+proxies for the same variables in the central areas of the cities (e.g., cities with relatively
+low FARs in their peripheral areas have relatively low FARs in their central areas). It is
+not ideal but there is to our knowledge no other global database of land-use policies.
+Combining the information from these variables gives information on building-height
+regulations for 138 cities in 51 countries, using the maximum FAR as the main measure.
+For cities for which we know maximum building height but not the maximum FAR, we
+predict the maximum FAR from a simple regression. We also use such a prediction based
+on maximum number of dwellings to gain more cities for the sample. For countries with
+multiple cities in the data, we average the maximum FAR values using the population of
+each city ca. 2015, which yields country values for 49 out of our 158 countries.
+As can be seen in Panel P, our gaps show the expected negative relationship to
+this regulation measure, with a higher maximum FAR (indicating weaker regulation)
+associated with a lower building-height gap. Next, we consider a measure taken from the
+Doing Business website that capture the “procedures, time and cost to build a warehouse,”
+which constitute the only measures of land-use regulations that could be obtained from
+World Bank data. Panel Q shows that the H-based gaps are higher if building regulations
+are of higher “quality,” hence more stringent. Lastly, from Caldera and Johansson
+(2013) and for 21 OECD countries only, we obtain measures of the elasticity of the
+price responsiveness of housing supply (Panel R) and of the speed of housing supply
+adjustment (Panel S). We find negative correlations, suggesting lower gaps when housing
+markets are more responsive. The correlations are mostly insignificant given N = 21.
+35Note that the results of Angel’s survey have not been published yet. We obtained the data by contacting
+Shlomo Angel (https://marroninstitute.nyu.edu/people/shlomo-solly-angel) directly.
+36Shlomo Angel and their co-authors obtained this data by sending various questionnaires to highlyranked officials in the 195 cities. Their data is obviously subject to measurement error.
+
+21
+As discussed in Section 4., some countries may have negative gaps due to “white
+elephants”. However, conditional on income, we do not find that the gaps correlate
+with: (i) a dummy if the country was democratic at any point in 2006-17 (The Economist,
+2018) (Panel T); (ii) the average polity score of the country in 1950-2018 (Center for
+Systemic Peace, 2021) (Panel U); and (iii) the average rule of law index (Panel V) or
+control of corruption index (Panel W) of the country in 1996-2019 (World Bank, 2021).
+Thus, institutions specific to land use may matter, not institutions in general.37
+Simultaneous Inclusion. In Table 5, we examine how the estimated coefficients of
+selected factors vary as we include them simultaneously. We consider the log number
+of years since a country’s largest city was founded, the log number of cultural WHS, and
+the maximum FAR, while controlling for log per capita GDP and log total population. As
+can be seen in cols. (1)-(3) and (6)-(8), they all significantly correlate with the gaps when
+included one by one. When simultaneously included, sample size obviously decreases.
+As can be seen in cols. (4) and (9), the correlation with cultural WHS turns negative
+due to possible collinearity when also including the years since foundation variable.
+We thus omit the cultural WHS variable in cols. (5) and (10). The coefficient of the
+FAR variable then remains unchanged throughout. Overall, the results suggest that
+countries with older cities have higher gaps, either due to land-use regulations aimed
+at protecting historical areas and/or dispersed ownership. Land-use regulations are also
+independently correlated with the gaps, indicating that high-gap countries might also
+have more stringent land-use regulations unrelated to protecting historical areas.
+Land-Use Regulations. We now use our data to generate additional results related to
+land-use regulations. First, could historical reliance on urban planning be a possible
+explanation for the apparently important role of land-use regulations? Urban planning
+became popular in the 19th century as a response to uncontrolled urbanization. While
+some urban planners follow Le Corbusier in thinking that tall buildings are needed in
+order to make cities more compact, many “low-rise” urban planners follow Jane Jacobs
+(Jacobs, 1961) in seeing tall buildings as a threat to neighborhood quality (Glaeser, 2011).
+In Panel X of Table 4, we thus consider the logged number of renowned urban planners
+(Wikipedia, 2020e) while controlling for log urban population. While we find a positive
+correlation for the H-based gaps, it is not significant. The correlations then only slightly
+37We find similar non-results with other World Governance Indicators of the World Bank.
+
+22
+increase, and remain not significant, if we assign to formerly colonized developing
+countries the logged number of planners of their colonizer (not shown), to account for
+the fact that their land-use regulations may date from the colonial period.
+Second, the so-called homevoter hypothesis says that homeowners, worried that
+increases in supply reduce property values, lobby local governments to impose
+regulations (Fischel, 2001). To explore this idea as a source of the gaps, in Panel Y
+we consider the home ownership share today (sources: Wikipedia (2020a,c); HOFINET
+(2020); available for 105 countries). As seen, no correlation is found, consistent with
+Fischel’s conjecture that his hypothesis mostly concerns local communities and likely
+does not apply to larger cities and urban systems as a whole.38
+Third, Angel’s database provides information on other land use regulations than the
+maximum FAR. More precisely, we know for the cities of 49 countries if: (i) there is a
+greenbelt (GB) or an urban growth boundary (UGB); (ii) there are strong zoning laws; (iii)
+if the government acquires land to plan for urban land expansion; and (iv) if there is a
+minimum allowable plot size for construction. As before, we obtain country values by
+averaging the values of these variables using the population of each city circa 2015.
+Using these data, we answer two questions. First, which land-use regulations do the
+gaps capture? Second, do countries with stringent height restrictions “compensate” their
+urban residents by having lenient regulations in other dimensions?
+First, Table 6 show how the gaps correlate with the max FAR variable and the other
+land-use policy variables. If we include all variables (cols. (2) and (4)), the correlation
+between our gap measures and the maximum FAR values increases. In addition, the
+coefficients of the other variables are, for the most part, not significant. The only other
+land use policies for which we find a significant effect are urban growth boundaries and
+minimum plot size. Measures aimed at controlling sprawl (GB, UGB) have negative
+coefficients, implying that the gaps are lower when cities cannot build “out” and have
+to build “up.” Zoning and government planning are then associated with higher gaps.
+Lastly, the existence of a minimum plot size implies lower gaps since it facilitates the
+construction of taller structures. More generally, while the gaps are strongly correlated
+with building-height restrictions, they seem to capture a broader set of land-use policies.
+38Note that these non-results hold when excluding ex-communist countries given their high ownership
+share following the decollectivization of properties in the 1990s (not shown, but available upon request).
+
+23
+Second, countries that stringently restrict the height of their buildings could
+compensate their residents by having more lenient regulations in other dimensions, for
+example control sprawl less. If such compensation mechanisms indeed exist, we should
+observe that low-FAR countries have less stringent policies in other dimensions, hence
+find a strong positive correlation between the maximum FAR variable and the other
+measures of land use regulations. However, the correlation is weakly negative in the
+majority of cases (col. (5)). Thus, low-FAR countries are not less likely to restrict sprawl
+through urban containment policies (-0.15 for GB and -0.12 for UGB).
+6. The Gaps and other Urban Outcomes
+Tables 7-8 present correlations between the gaps and measures of housing prices, sprawl,
+congestion, and pollution. Note that we always control for national per capita income.
+For a given income level, we thus examine how the gaps might have economic and
+environmental consequences. Controlling for income also ensures that we do not simply
+compare rich and poor countries. One important caveat is that the results are not causal.
+Housing Prices. World Bank (2019a) reports the price level of broad consumption
+categories in 2011 (relative to the world = 100). In col. (1) of Table 7, we regress the
+price level of housing on the gaps while controlling for log nominal (national) per capita
+GDP (2010) (World Bank, 2019b) and using as weights urban population (2010) (N = 147).
+We control for nominal GDP because higher housing prices would be captured by PPP
+adjustments given how typically high housing expenditure shares are.39 A unitary
+decrease in the H-based gap is associated with 4% lower housing prices. The magnitude
+of the effect is large: A one standard deviation increase in the gap (a value of 2) is
+associated with a 0.15 standard deviation increase in the price level. Recall from above
+that such a unitary decrease corresponds to a 100% increase in actual height density.40
+Countries with larger gaps could compensate their urban residents by subsidizing
+commuting, for example via public investments in urban transportation infrastructure.
+39As discussed in Section 4., the urban population weights are important to give less weight to smaller
+countries as such countries might be more likely to mechanically have larger percentage gaps. We also need
+to make the analysis representative of the global distribution of urban populations.
+40The price level is for the whole housing sector. However, differences likely come from urban areas
+only. With rural land prices being low, rural buildings rarely exceed one story. Since we control for log per
+capita income, whose correlation with urbanization tends to be very high (Jedwab and Vollrath, 2015), we
+compare countries with similar urbanization levels. The price level effect is thus estimated controlling for
+the composition of the housing sector and should be interpreted as an urban price level effect.
+
+24
+In column (2), we use the same specification but regress the price level of transportation
+on the gaps while also controlling for the price level of housing (N = 147). While negative
+coefficients are observed, the point estimates are not significant. Thus, the higher housing
+prices do not appear to be compensated by cheaper transportation.
+Another data set on global property prices is the World’s most expensive cities list
+provided by GPG (2019). For the largest city in 75 countries, the list shows selling prices
+per square meter as well as the price-to-rent ratio (PRR). Typically, a high PRR suggests
+that the costs of housing will increase in the future. The two measures are available for
+72 and 70 countries in our sample, respectively. The selling price ranges from 700 USD
+per square meter in Dar-es-Salaam to 30,000 USD per sq m in Hong Kong, while the PRR
+ranges from about 10 in Kingston to 50 in Vienna. In columns (3)-(4), we regress these
+measures on the gaps while controlling for log nominal (national) per capita GDP (2017),
+log city population size (2015), and using as weights urban population (2017). The gaps
+strongly correlate with current and future housing prices (captured by PRR). A unitary
+decrease in the H-based gap is associated with 24% lower housing prices (col. (3)). A one
+standard deviation increase in the gap is then associated with a 0.56 standard deviation
+increase in prices. We also find large coefficients for future housing prices (col. (4)).
+Knoll et al. (2017) show that housing prices have increased faster than overall prices
+for 14 countries post-1950. Fig. 4 shows that the evolution of the total km gap of the
+14 countries follows the evolution of mean real house prices in their sample. Cols. (5)-
+(6) show using panel regressions for the 14 countries (1960-2010) the strong correlation
+between the gaps and real house prices (country and year fixed effects included; standard
+errors clustered at the country level). In col. (5), we keep 1960 and 2010 to study longdifference correlations. A unitary decrease in the H-based gap is associated with 29%
+lower prices. Alternatively, a one standard deviation increase in the gap is associated with
+a 0.60 standard deviation increase in prices. The short-difference correlation (col. (6)),
+estimated using all available years, is halved, implying that gaps might have effects in
+the following decades. Lastly, proportionate reduction of error analysis suggests the Hbased gaps might have explained 22% of the global house price boom.
+Next, although expensive high-gap countries might exclude the urban poor unless
+housing is subsidized, the share of housing that is publicly provided (HOFINET, 2020) is
+
+25
+not correlated with the gaps (col. (7); using the specification of cols. (1)-(2); N = 47).
+Finally, given the lack of global historical data on non-tall buildings, we are unable
+to assess whether higher-gap countries have smaller gaps in this other dimension.
+However, the fact that housing prices are higher in higher-gap countries suggests that any
+compensation via the non-tall sector may not be sufficient. Below in Section 7, we also
+discuss why tall building construction might be a good proxy for overall construction.
+To summarize, high-gap countries do not appear to “compensate” their urban
+residents by subsidizing transportation or directly providing housing to the urban poor.
+In the largest cities where constraints on vertical development are more likely to be
+binding, we found that housing prices are about 20% higher. With a 30% housing
+expenditure share, this would correspond to a 6 percentage decrease in purchasing power.
+Could tourism receipts justify such effects? First recall that we did not find any correlation
+between the gaps and tourism receipts. Second, in the most tourism-oriented high-gap
+nations, for example France and Italy, the GDP contribution of tourism is about 2.5%
+(which also includes tourism outside the largest cities). Thus, tourism might not be the
+only factor why tall building construction is constrained in high-gap countries.
+Urban Land Expansion: Country-Level Results. If cities cannot expand vertically, they
+may need to expand horizontally. Therefore, for a given urban population and a given
+per capita income level, we expect countries with larger gaps to use more urban land.
+However, since housing prices are overall higher, it may be that horizontal expansion is
+not enough to “compensate” for the lack of vertical expansion.
+In col. (8), we regress total urban land area (2011) (World Bank, 2019b) on the gaps
+(N = 125). We control for log urban population (2010), log nominal (national) per capita
+GDP (2010) (since higher incomes increase housing/land consumption and imply better
+commuting technologies), and log nominal agricultural land rent (2010) (since a higher
+land rent constrains land expansion). We use urban population weights (2010). Land
+expansion is positively correlated with the gaps. A unitary increase in the H-based gap
+is associated with cities consuming 19% more land. A one standard deviation increase in
+the gap is then associated with a 0.23 standard deviation increase in urban land area.
+Moreover, we use the Global Human Settlement (GHS) database of European
+Commission (2018) to obtain for 131 countries in 1975, in 1990, in 2000 and in 2015 the
+
+26
+total population, total land area, and total built-up area (thus excluding open spaces) of
+all (11,719) 50K+ urban agglomerations today. In cols. (9)-(10), we use as the dependent
+variable the log of total city land area in t while adding country and year fixed effects
+and controlling for log total city population, log nominal (national) per capita GDP, and
+log nominal agricultural land rent in t, with the variable of interest being the gap in
+t (standard errors clustered at the country level). By restricting our panel analysis to
+the years 1975 and 2015 (N = 262), we capture how the gaps correlates with the longdifference change in urban land per capita. A unitary decrease in the H-based gap is
+associated with urban areas consuming 5% less land. A one standard deviation in the Hbased gap is then associated with a 0.07 standard deviation increase in urban total land
+area. With the full panel (N = 524), elasticities are halved (col. (10)).
+Simultaneously controlling for log total built-up area (t), col. (11)-(12) further show that
+the gaps correlate with sprawl. Indeed, since the outcome is total land area, these results
+suggest that cities in high-gap countries use more land per built-up area, i.e., have more
+open areas and are less compact generally (col. 13-14 are discussed later).
+Theoretically, by restricting housing supply, constraints on vertical development raise
+the price per unit of housing throughout the city while causing the urban footprint
+to expand. Residents experience a combination of higher housing prices and longer
+commutes. For the resident at the edge of the city, the welfare loss comes entirely from a
+longer commute. With utilities equalized within the city, the welfare loss for each resident
+equals the increase in commuting cost for the edge resident (Bertaud and Brueckner,
+2005b). In Web Appx. Section B, we describe how we can use our results on urban
+land expansion and various assumptions to estimate this increase in commuting cost.
+In particular, we show that the implied costs from a one-standard-deviation increase in
+the gaps (≈ 2) – which corresponds to the world gap – is possibly 0.7-1.0 percent of total
+urban income. Crudely adding the cost of particulate matter pollution (0.4-0.8% of world
+GDP, see details below), we obtain 1.1-1.8% of world GDP. Our back-of-the-envelope
+calculations thus suggest that the gaps might have major economic costs globally.41
+41Our crude calculations likely provide a lower bound of the real costs. Indeed, we ignore the negative
+environmental effects from other urban pollutants as well as sprawl (including loss of open space). In
+addition, Hsieh and Moretti (2019) investigate losses from land-use regulation that come from a distortion
+in the allocation of the workforce across cities. They show that reducing land-use regulation so as to
+increase housing supply elasticities in the highly productive but land-use-constrained cities of New York,
+
+27
+Urban Land Expansion: City-Level Results. While the previous conclusions are all
+derived at the country level, we can combine the country-level gaps with city-level
+information to generate some additional insights, as follows. We take advantage of the
+fact that the GHS database reports estimates of population and total land area for all
+11,719 agglomerations circa 1975, 1990, 2000 and 2015. Similarly, we use our building
+database to obtain the total building height of each city in the same years.
+Focusing on the year 2015, we regress the log of city building heights (km) on six
+dummies showing if the city has 55-100K, 100-500K, 500-1,000K, 1,000-5,000K, 5,000-
+10,000K or 10,000K+ inhabitants (50-55K is the omitted category), while including country
+fixed effects, with the results illustrated diagrammatically.42 As seen in Fig. 5, the
+relationship is non-linear, with heights significantly increasing after 100K. The figure also
+shows the same relationship for total heights in the central city (e.g., New York City for the
+New York-Newark-Jersey City metro area) vs. peripheral areas (e.g., Newark and Jersey
+City). The overall relationship is, as expected, driven by central areas.
+Next, we ask whether the height difference between larger and smaller cities is
+reduced in countries where gaps are high. Instead of six population categories and for the
+sake of simplicity, we use three dummies for whether the city has 100-500K, 500-1,000K
+and 1,000K+ inhabitants in 1975, respectively. We use 1975 because post-1975 changes in
+city populations are endogenous to post-1975 changes in the country gaps. For the years
+1975 and 2015, we then run city-level panel regressions where the dependent variable is
+the log sum of heights (t) and the variables of interest are the country gaps (t) interacted
+with the population category dummies (1975). We include city fixed effects, countryyear fixed effects, and cluster standard errors at the country level. Moreover, we control
+for log urban per capita GDP (PPP, 1990 constant international $) interacted with the
+population dummies to capture how changes in the gaps occur in larger cities rather than
+the fact that gaps are becoming larger in countries with richer urban areas.43 Lastly, we
+use urban population weights (t) to minimize the low-stock issue and make the analysis
+representative of the global distribution of urban populations.
+San Francisco and San Jose would increase the rate of growth of output and welfare in the U.S.
+42As we will show later, our tall building database is highly reliable. City-years with no tall buildings
+thus have no, or few, tall buildings. Since we use logs, we assign city-years with no tall buildings the
+minimal positive value in the data. Results hold if we use alternative methods to deal with 0s (not shown).
+43For cities a belonging to population categories p, countries c and years t, the model is: LHEIGHTa,c,t =
+α + Σp βp 1(POPa,c,1975 = p) × GAPc,t + Σp γp 1(POPa,c,1975 = p) × LUPCGDPc,t + θa + κc,t + µa,c,t.
+
+28
+Table 8 reports the results. The effects of the country gaps are particularly visible
+for larger cities (col. (1)), thus suggesting that they are associated with abnormally
+constrained big cities. If we use the full panel (1975, 1990, 2000, 2015) to focus on shortterm correlations, the point estimates are reduced, but significant above 1,000K (col. (2)).
+As such, we do not use our city-level data to estimate the country gaps themselves
+but, instead, to show that the country gaps are driven by the largest cities in each country
+(conditional on city fixed effects that absorb city-level time-invariant factors).
+Next, using the full panel specification, we confirm that the gaps are more constraining
+in the central areas of urban agglomerations (col. (3)). We then test if such gaps
+are compensated by vertical development in peripheral areas. For example, most tall
+buildings in the Paris and Washington DC agglomerations are located in the peripheral
+La Defense and Arlington areas, respectively. We re-run the same regression using the ´
+log sum of heights in peripheral areas and find, however, that the coefficients of the gaps
+interacted with the city dummies are nil or negative, and not positive (col. (4)). Thus, it
+appears that high-gap countries abnormally constrain all areas of big agglomerations.
+If central area gaps are not compensated by vertical development in peripheral areas,
+larger cities may expand beyond their initial boundaries. We test for such an effect using
+the city-level panel specifications except that the dependent variable is now log city total
+area (cols. (5)-(6)). No correlation is found for the H-based gaps. These regressions
+compare relative land expansion patterns for different class sizes of cities (50-55K is the
+omitted category) whereas cols. (9)-(10) of Table 8 examined the total expansion of all
+urban areas. Since urban land expansion is correlated with the gaps at the country level,
+all class sizes of cities may be expanding spatially due to binding gaps in the largest cities.
+Finally, as cities sprawl they may become more congested, especially if workers have
+to rely on motorized vehicles for their commute. We test that notion next.
+Congestion: City-Level Results. Traffic congestion is available for 391 50K+ cities today
+(TomTom, 2019). The measure indicates by how many percentage points commuting
+times increase during rush hours relative to non-rush hours.44 Congestion strongly
+increases with log population size (N = 391; with country FE; coef. = 3.7***; adj. R2
+44TomTom constructs the measure using its own data on the travel patterns of 600 million drivers
+(accessed 02-28-2020: https://www.tomtom.com/engb/traffic-index/).
+
+29
+= 0.75). We then examine how this relationship is affected by the country gaps. We
+regress congestion on the gaps again interacted with the three city-size dummies. We
+include country fixed effects and log (national) per capita income interacted with the
+population category dummies, and use urban populations (2020) as weights (standard
+errors clustered at the country level). Larger cities are disproportionately more congested
+than 50-100K cities in higher-gap countries (see col. (7) of Table 7).45 Finally, knowing
+the population share of each group of cities, we compute the average effect across the
+three groups, equal to 1.55 (significant at 10%) for the H-based gaps. Thus, a unit increase
+in the H-based gap is associated with 1.5% more congestion. The magnitude is large: a
+one standard deviation in the H-based gap possibly raises congestion by 3%. Finally, the
+correlation is halved and insignificant when controlling for sprawl 1975-2015 (not shown).
+Pollution: Country-Level Results. With sprawl and road congestion, pollution may also
+increase, implying that gaps might have environmental consequences. Air pollution in
+cities consists of gases – mostly carbon dioxide (CO2) and nitrogen oxides (NOx) – and
+particulate matter (PM) measured by their size, such as 10 and 2.5 micrometers. CO2,
+NOx and PM have health effects. CO2 and NOx also contribute to global warming.
+Unfortunately, ground-based measures of CO2 and NOx are not available for enough
+urban areas across the world. However, there is data on PM10 and PM2.5. In columns
+(13)-(14) of Table 7, the dependent variables are the log levels of PM 10 (2010) and PM
+2.5 (2017) in more populated areas, respectively (World Bank, 2019b).46 We control for
+log (national) per capita GDP and log urban population (2010 or 2020), and use urban
+populations (2010 or 2020) as weights. A one point increase in the gap is associated
+with 0.05-0.08% more pollution. A one standard deviation increase in the gaps is then
+associated with a 0.05-0.08 standard deviation increase in PM.
+Pollution: City-Level Results. For 1,473 GHS agglomerations, we obtain from WHO
+(2019) the average levels of PM10 and PM2.5 in 2008-2017. Given the same specification
+as for congestion, gaps are associated with increased pollution in the largest cities (see
+col. (8)-(9) of Table 7). Knowing the population share of each group of cities, we obtain
+the average coefficient across the three groups, 0.04*-0.07** for PM10 and 0.05***-0.08***
+45Point estimates are lower in the largest cities possibly due to public transportation infrastructure.
+46PM 10 is measured for urban areas above 100,000 inhabitants only. The mean level exposure of a
+nation’s population to PM 2.5 air pollution is then computed by using the PM 2.5 level and population
+of different areas in each country. As such, the measure overly represents populated urban areas.
+
+30
+for PM2.5 when considering H-based gaps. Thus, a one point increase in the H-based gap
+possibly raises pollution by 4-8%. Alternatively, a one standard deviation in the H-based
+gaps (= 2) may raise pollution by 8-16%. Now, the cost of pollution is 4.8% of world GDP
+(World Bank, 2016). Thus, a world gap increase of 2 might reduce world GDP by 0.4-0.8%.
+Finally, whether for the country-level or city-level regressions, if we control for log
+land area and log city population in 2015, and their squares in case congestion varies
+non-linearly with sprawl, the correlations of the gaps with pollution are strongly reduced
+(Web Appx. Table A1). Most of the pollution results thus seem explained by sprawl.
+7. Robustness Checks
+We now address various concerns related to: (i) the fact that our analysis is at the country,
+not city, level; (ii) the selection of the benchmark countries; (iii) causality; (iv) the baseline
+specification; and (v) non-classical measurement error in building heights.
+City-Level Analysis. As explained in the introduction, global historical data on city
+incomes and agricultural land rents at the edge of cities do not exist, ruling out a
+worldwide, within-country study. However, our benchmark set of countries may not
+be sufficiently representative of the rest of the world in terms of city size distribution,
+which matters because income and land rent should affect tall building construction more
+in larger cities. However, if we use the GHS data set of 11,719 urban agglomerations
+for the year 2015, Kolmogorov-Smirnov tests suggest that the Kernel distribution of city
+population sizes is not significantly different between the benchmark and non-benchmark
+countries for both sets (not shown). Next, we can directly use the GHS data set of 11,719
+cities x 4 years (1975, 1990, 2000, 2015) to perform a global analysis at the city level.
+Figure 5 shows for the 11,719 cities in 2015 that building heights increase non-linearly
+with population size. To define the set of “benchmark” cities, we thus identify cities that
+have disproportionately more heights for a given population size and level of national
+urban income and land rent. For the year 2015, we regress the log sum of heights on
+six dummies showing if the city has 55-100K, 100-500K, 500-1,000K, 1,000-5,000K, 5,000-
+10,000K or 10,000K+ inhabitants (50-55K is the omitted category) as well as log urban per
+capita GDP (PPP, constant international $) and log agricultural land rent (both defined at
+the country level), which we also interact with the six dummies.47
+47For agglomerations a belonging to population categories p and for the year 2015, the model is:
+
+31
+Doing so, we obtain 302 cities belonging to a high-income democratic country and
+whose residual is above the 75th percentile value. Including upper-middle income
+countries, we get 384 cities. We find a strong correlation between the country- and
+city-level residual values (0.68). However, the correlation is below 1 because cities have
+different values within a same country. For example and as expected, New York City
+and Milan are included in the benchmark sets whereas Los Angeles and Rome are not.
+One advantage of this analysis is that it includes in the benchmark set cities that were
+not included at the country level. One disadvantage is that it ignores the possibly low
+substitutability in building space demand across cities within countries, which countrylevel regressions do. For example, even if it is easier to build up in Milan, it may not
+have a large impact on Italy’s total gap. Most Italian cities have disproportionately few
+tall buildings for their economic conditions and whether Italy’s gap is reduced by Milan’s
+higher supply elasticity ultimately depends on demand substitutability across cities.
+For the H and UMH sets, we then use panel regressions 1975-2015 where the
+dependent variable is the log sum of heights in year t and the variables of interest are the
+urban income and land rent variables in year t which we interact with three dummies for
+whether the city has 100-500K, 500-1,000K and 1,000K+ inhabitants in 1975, respectively.
+We use three dummies to reduce the number of coefficients we have to track. We use 1975
+because post-1975 changes in city populations are endogenous to post-1975 changes in
+the country gaps. We then include a lag of the log sum of heights as well as city and year
+fixed effects and cluster standard errors at the country level.48
+As expected, the coefficient of income is higher for larger cities. For the H set, we find
+0.16 for the omitted category (50-55K) and 1.28*, 2.26*** and 2.63*** for the 55-500K, 500-
+1,000K and 1,000K+ categories, respectively. We find a similar gradient for the UMH
+set (-0.39, 0.85, 1.81** and 2.06***). Given the total population shares of the different
+categories of cities, the average coefficient is 2.32*** and 1.81***, respectively. While it
+is lower than in Table 1, it remains high. Indeed, 1,000K+ cities account for almost three
+fourths of urban populations. We then do not observe any gradient for land rent and
+the average coefficient is -0.60 and -0.12, respectively. The land rent coefficient is now
+LHEIGHTa = α + Σp βp 1(POPa = p) × LUPCGDPc + Σp γp 1(POPa = p) × LAGRENTc + µa.
+48For agglomerations a, population categories p and years t, the model is: LHEIGHTa,t = α + Σp βp
+1(POPa,1975 = p) × LUPCGDPc,t + Σp γp 1(POPa,1975 = p) × LAGRENTc,t + L1.LHEIGHTa,t + θa + κt + µa,t.
+
+32
+negative, suggesting that the national land rent control may be really imperfect for citylevel analyses. Lastly, the coefficient of past heights is about 0.20 (**) in both cases.
+Using the data and the estimated coefficients, we can proceed as we did in Section 3.
+to obtain the percentage-change gap of each of the 11,719 world cities in each year. Using
+their population size as weights, we can then obtain the average gaps for each country
+in each year and compare them to the ones we obtained with the country-level analysis.
+We find a correlation of 0.60 and 0.40 for the H- and UMH-based gaps. For the H-based
+gaps, the correlation is relatively high. Yet, it is lower than one. However, the discrepancy
+could be due to: (i) the different period (1975, 1990, 2000 and 2015 vs. every ten years in
+1950-2020); (ii) the benchmark sets being different; and/or (iii) the fact that the city-level
+analysis ignores the possibility of low within-country demand substitutability.
+Nonetheless, the high correlation for the H-based gaps gives us confidence in the gaps
+used so far. The city-level analysis also highlights how larger cities drive the gaps. For
+example, Ireland has the highest gap for both the country- and city-level analyses. The
+gap is then five times higher for Dublin than for Cork. In Italy, among million-plus cities,
+Rome has a higher gap than Turin and Milan has the lowest gap but its gap is still high.
+Finally, the country-level analysis may over-estimate the gaps in large countries because
+their cities have more area to grow (hence not necessitating tall buildings as much) and
+because land rent at the edge of cities is mismeasured for them. We thus study whether
+the absolute difference between the country- and city-based country gaps increases with
+log land area or the log number of cities (N = 158), actually finding negative and almost
+nil coefficients in both cases (-0.31/-0.26, not significant; R2 = 0.02/0.01).
+Sampling Checks. The results depend on the selected benchmark countries. While our
+selection method has clear limitations, there is unfortunately no objective process that
+might help us distinguish more vs. less supply elastic countries, hence the need to assess
+how robust our results are to the choice of the benchmark set.
+First, a Google search possibly supports the validity of the process by which we select
+supply elastic countries, as follows. For 61 UM-H countries, the correlation between
+the selection residuals and the number of Google search results for the country name
+& “cities” & “skyscrapers” is 0.61 (conditioning on the respective numbers of search
+results for the country name & “cities” and the country name). The correlation is 0.72
+
+33
+if we also control for whether English is an official language and the numbers of famous
+20th and 21st century architects from the country (Wikipedia, 2020b), as some countries
+have renowned architects but few skyscrapers (e.g., Italy with Renzo Piano). With search
+results in the country’s language, the correlation becomes 0.90.
+Next, our benchmark set does not include the U.S., Japan, and China, three countries
+considered as having many tall buildings. However and as discussed in Section 3., that
+is not necessarily the case once one accounts for the size of their urban population and
+their economic conditions. While some of their cities have impressive skylines, these
+countries also have many large cities with restricted FARs. Yet, since the three countries
+are close to being included in the benchmark set based on the selection residuals, we
+verify results hold if we include them in the benchmark set, whether the U.S. only, the
+U.S. and Japan or China, or the three countries altogether (see Web Appx. Table A3).
+When doing so, the country rankings are mostly unchanged (the correlation between the
+various gap measures is always above 0.90).
+A related question is whether the benchmark set is sufficiently representative of the
+rest of the world in terms of total land area. Classical measurement error in land rent
+should lead us to under-estimate its coefficient and the gaps. But land rent at the edge
+of cities may be mismeasured for larger countries. Our benchmark sets include three
+large countries (Australia, Brazil, Canada) and two small countries (Hong Kong and
+Singapore). If the benchmark set has too many large (or small) countries relative to the
+rest of the world, the estimated coefficient may affect our results.
+However, land rent is likely under-estimated in larger countries (since average land
+rent captures more rural areas away from cities) whereas the gaps may appear larger
+there since development should take place more horizontally due to land availability. If
+anything, this should also lead to a downward bias of the coefficient/gaps. Second, we
+use the OECD Regional Database of OECD (2021) to examine for 505 regions in 36 countries
+(incl. 6 non-OECD countries) how much of a good proxy is national agricultural land rent
+for agricultural land rent in more urban regions. More precisely, the database reports
+agricultural GDP and total land area for each region c. 2010 (data unavailable before 2004).
+For 264 regions with a metro area (a large metro area), the correlation between regional
+and national rent is 0.87 (0.89) in countries below the median land area in the sample
+
+34
+and 0.80 (0.82) in countries above. While the correlation is lower in larger countries, it
+is still very high. Global differences in land rent mostly come from between countries,
+not regions within countries. Third, Kolmogorov-Smirnov tests suggest that the Kernel
+distribution of total land areas is not significantly different between the benchmark and
+non-benchmark countries for both sets (not shown).49 Fourth, the land rent coefficient
+barely changes if we exclude the three large countries or the two small countries (Web
+Appx. Table A3). Lastly, the coefficient of income is mostly unchanged if we omit land
+rent (Ibid.). In all cases, the country rankings remain similar (not shown).
+Finally, results hold if we drop each country one by one, so the coefficients and country
+rankings are not affected by any particular country in the benchmark set (not shown).
+Causality. The gaps are over-estimated if the coefficients of income and land rent in Table
+1 are upward biased. A downward bias would make us under-estimate the gaps, which
+is less consequential. However, the bias would most likely affect the levels of the gaps,
+not country rankings. Despite different coefficients of income and land rent, we found
+that the correlation between the H- and UMH-based rankings was above 0.85.
+Next, such bias would be a consequence of the correlation between the explanatory
+variables and the regression error term. This correlation could arise either from omitted
+variables or from reverse causality. In the omitted variable case, a country’s commitment
+to free-market principles may raise both its urban income level and the height of its
+buildings, leading to an upward bias. Alternatively, effective transit systems may
+influence both incomes and building heights. While use of country fixed effects mitigates
+the effect of such unobservables to some extent, bias is still a concern. Examples of
+reverse causality include a positive feedback effect from commercial buildings to incomes
+operating through agglomeration economies.50 Alternatively, the supply-increasing
+effects of taller buildings may reduce housing prices enough to attract low-income
+consumers to cities, generating a negative feedback effect on income. Another example
+might be negative feedback (via reduced sprawl) from heights to agricultural land values,
+in which a more compact city relieves price pressure on surrounding farmland.
+49We also verify that land rent strongly decreases with land area (elasticity: 0.33), and that land rent is
+the highest in countries where we might expect it to be the case (e.g., Hong Kong, Singapore and Taiwan).
+50However, if human capital spillovers are as likely on campuses as in office towers, large firms that
+are the main contributors to economic activity may be indifferent between both (e.g., Apple, Google and
+Microsoft use campuses as their headquarters). In that case, this positive feedback effect might be limited.
+
+35
+We do not believe that there exists an identification strategy that would fully allay
+these concerns; an instrument that would explain incomes without impacting building
+heights is hard to find. We thus discuss another series of results that gives us greater
+confidence in the coefficients. To this end, Web Appx. Table A2 shows results hold if:
+(i) We include continent- or World Bank region-year fixed effects, in order to capture
+regional economic, institutional and cultural drivers of tall building construction that may
+affect building heights, urban incomes and agricultural land rent;
+(ii) We include country-specific linear trends or even country-specific non-linear trends,
+i.e., country dummies interacted with the year and the square of the year. In that case,
+identification comes from swift or very swift (and possibly more exogenous) growth (or
+deceleration) within countries, i.e., deviations from country trends.
+(iii) We capture commuting costs by controlling for whether there is a subway and the logs
+of the number of subway lines and stations in the country in year t (source: GonzalezNavarro and Turner (2018); Gendron-Carrier et al. (2018)) as well as the percentage of
+country roads (including non-urban roads) that is paved during the period 1990-2017
+interacted with a linear year trend (source: World Bank (2019b)).51 The coefficient of
+income increases. This change makes sense if richer countries have better transportation
+infrastructure, and if lower commuting costs reduce the need to build up. Then, a
+negative correlation between the error term and income arises, creating downward bias
+in the income coefficient, which is reduced by controlling for commuting infrastructure.
+Thus, had we better controls for commuting, the income coefficient would likely increase.
+(iv) We add leads of the main explanatory variables to address possible reverse causality,
+with the variables defined as t+10. The leads have no effects. Tall buildings are not built
+in anticipation of future income growth (at least not ten years in advance).
+(v) We control for time-invariant geographical and other factors interacted with year fixed
+effects (thus allowing their effects to vary over time) in case they constrain tall building
+construction and affect income/land rent. These factors are the logged (populationweighted) average earthquake risk and bedrock depth in urban areas, the share of the
+population living in mountainous areas, and the price level of construction in 2011 (see
+Section 5. for details on the sources). Note that results also hold if we control for the other
+51Unfortunately, no panel data exists on urban road stocks across countries over time.
+
+36
+possible determinants of the gaps considered in Table 4 (not shown).
+Finally, using the 11 different regressions in Web Appx. Table A2, we can generate 11
+different gap rankings for the sample countries. For 11 × 10 ÷ 2 = 55 pairs of rankings,
+the mean and 5th percentile correlations are 0.96, and 0.90, respectively. Rankings are
+thus largely insensitive to the exact magnitudes of coefficients used.
+Measurement Error in Building Heights. The dependent variable is log urban height
+density, which is the sum of heights (for buildings above 80 or the top 10 buildings)
+divided by urban population. Classical measurement error in dependent variables only
+affects precision. However, measurement error could be non-classical.
+To compare results, we collected data from a second source, Emporis (2019), another
+global provider of building information.52 Note that Emporis (2019) claims to capture
+all high-rise buildings, which they define as buildings above 35 meters (about 9 floors).
+They then classify as skyscrapers buildings above 100 meters. Finally, they use the number
+of floors of each 35m+ building to compute for each city a Skyline Index. We do not
+have access to their raw data but their website reports useful information for the 100 top
+cities in the world.53 For 90 of these cities also in our data, and using as weights the
+sum of heights in our data in order to focus on the cities with the most tall buildings,
+the correlation between the log of their number of skyscrapers and the log of our own
+number of buildings above 100 meters is 0.90. Next, the correlation between the log of
+their Skyline index and the log of their number of skyscrapers is 0.83. The correlation of
+their Skyline Index with our own reconstructed index (using our data and their formula)
+is 0.79. Thus, our measure of urban height density is a good proxy for 35m+ buildings.
+Now, is our measure also a good proxy for structures below 35m, whether low-rise
+(four plus one) buildings or houses? Based on Emporis, which also reports the number
+of low-rise buildings for seven North American cities, the (mostly 80m+) buildings in
+our data account for between half and two thirds of total heights including low-rises. In
+addition, for each building, we know the main material used. While it was steel around
+1950, the use of concrete has dramatically increased over time, reaching 90% in the 2000s
+(see Figure 6). The mean share over the period 1950-2017 is then 73%. Next, we obtained
+from the Minerals Yearbooks of USGS and for 144 countries and each decade from 1950
+52Their website says they rely on their extensive member network to gather information on buildings.
+53Accessed on 12-11-2019: https://www.emporis.com/statistics/skyline-ranking.
+
+37
+the total production of cement – the main ingredient of concrete – which we use as a
+good proxy for cement consumption.54 As expected, the correlation between decadal
+tall building construction and decadal cement use is high, at 0.77 (N = 870). Adding
+country and year fixed effects, we obtain a correlation of 0.80 (0.99 with urban population
+as weights). Therefore, tall building construction is a good proxy for overall construction.
+Next, one could argue that taller skyscrapers are better measured than shorter highrise buildings, because they stand out more. Among the buildings in our data, the height
+of the 25th percentile, median, and mean is 100, 125 and 135 meters, respectively. The
+results hold if we restrict our analysis to buildings above such thresholds, or even 150
+meters, which is about the size of the tallest buildings in sub-Saharan Africa outside
+South Africa (Web Appx. Tables A3). While there might be concerns that tall buildings
+are undercounted in poorer countries, we personally doubt that the CTBUH would not
+systemically report buildings of such sizes in such countries, since there are so few of
+them. Thus, restricting the sample to higher thresholds should take care of non-classical
+measurement error in building heights. We then verify that the country rankings are
+mostly unchanged when doing so (not shown).55 Finally, our results hold if we drop
+heights that are imputed based on the number of floors (Ibid.).56
+Lag of the Dependent Variable. With panel regressions, including a lagged dependent
+variable might introduce dynamic panel bias (Nickell, 1981). However, Web Appx. Table
+A3 shows that the coefficient of GDP significantly increases when omitting the lagged
+dependent variable, which would lead to even higher gaps (country rankings are also
+little affected; not shown). Note that we keep the lagged dependent variable in the
+baseline model because of the need to control for the durability of tall buildings. Both
+issues are obviously important. However, given the trade-off between the two, we
+54Because cement is a low-value bulky item, the world trade of cement only accounts for 3% of world
+cement production (see, for example, https://www.worldcement.com/africa-middle-east/29042013/
+cement global trading patterns 961/). Thus, even if we have limited data on cement imports and exports,
+cement production is a very good proxy for cement consumption. The Minerals Yearbooks can be found here:
+https://www.usgs.gov/centers/nmic/cement-statistics-and-information.
+55Until a few years ago, the tallest buildings of Angola (IMOB Business Tower), Kenya (UAP Tower),
+Nigeria (NECOM House) and Tanzania (PSPF Towers) were all close to 150 meters in height (information
+obtained from independent sources). We verify that they are all available in the CTBUH database.
+56We know the gross floor area (GFA) for one third of buildings. The correlation between log height and
+log GFA is 0.6, so lower than 1, due to buildings having different shapes. If we regress for the year 2017 log
+GFA on log height, log urban income and log agricultural rent and their interactions with log height, we
+find no interacted effects, thus suggesting that the GFA-height relationship does not vary with our variables
+of interest (not shown). Thus, not fully capturing GFAs should not dramatically affect our results.
+
+38
+privilege the issue that we deem more significant.
+Lastly, countries that may have developed their downtown cores to their optimal level
+should not build more tall buildings. Therefore, Web Appx. Table A3 shows results
+hold if we include the square of the lagged log urban height density in case the ability
+of a country’s cities to redevelop “higher” is decreasing with the existing urban height
+density. We also try including the cube and fourth power of the variable. Country
+rankings are little affected (not shown). Indeed, while a few cities have “crowded” central
+areas, many of their buildings could still be redeveloped higher, and other cities in the
+same countries do not necessarily have that many tall buildings.
+U.S. State Analysis. In Web Appx. Section C, we perform a similar gap analysis using
+decadal U.S. state-level data from 1929 to 2017, which offers another opportunity to
+validate our methodology. Using the same process as at the country level, we first identify
+states with higher residuals today, i.e., states that may be more supply elastic for various
+reasons. We then run panel regressions that relate building heights to a state’s income,
+agricultural rent, and past building stock. As expected, we find higher coefficients of
+income and land rent when restricting the sample to the benchmark states (e.g., Illinois
+and New York). We then use the data and these coefficients to obtain the gaps for each
+state, finding that California might account for 48-61% of the U.S. gap. We then show
+that the gaps strongly correlate with the supply elasticities of Saiz (2010) (which also
+include geographical constraints) and well-known measures of land-use regulations from
+Gyourko et al. (2008) and Saks (2008). Finally, if we use the U.S. state coefficient estimates
+to obtain predicted heights and the gaps for all countries in the world, the coefficient
+of correlation between the H-based gap measure and the U.S. state-based gap measures
+is 0.74-0.76 (using urban population as weights). If we use the UMH set instead, the
+correlation is also high, at 0.72-0.89. This increases our confidence in the country-level
+benchmark regression as a tool for computing building-height gaps across the world.
+8. Conclusion
+Using a new data set on nearly all tall buildings on the planet, this paper has constructed
+a measure of building-height gaps around the world. In particular, we first obtain
+parameters from a regression of building heights on income and agricultural rents for
+a benchmark set of countries that appear to have higher supply elasticities. Using
+
+39
+regression results for these benchmark countries, we create building-height gaps for
+countries around the world. We find that the world might need to have twice as many
+tall buildings (about 6,000 Empire State Buildings) as it does currently.
+We show that the gaps are relatively larger for richer countries, especially European
+countries. Globally, the gaps are larger for office towers, due to various world
+regions having disproportionately large residential tall-building stocks (e.g., the MENA).
+However, in developed countries, the gaps are relatively larger for residential buildings.
+Conditional on income, the gaps are strongly and positively correlated with housing
+prices, sprawl, road congestion, and pollution, implying that they might have important
+global economic and environmental consequences. In particular, such gaps might explain
+one fifth of the global house price boom observed since 1950. The gaps then appear to
+constrain the growth of large cities and their central areas. We do not find that countries
+with larger building-height gaps “compensate” their urban residents: (i) by having more
+lenient height restrictions outside their cities’ central areas; (ii) by having more lenient
+sprawl policies; (iii) by subsidizing transport; or (iv) by providing public housing.
+Regarding the nature of these gaps, we find no evidence that they are caused by
+geological, topographical, or seismic conditions, or differences in construction costs.
+However, we do find that countries with more “historical” cities (cities with long
+histories) have higher gaps. Evidently, the gaps in these countries arise from regulations
+designed to protect valuable historical urban areas, motivated by cultural considerations
+or a desire to foster tourism. However, countries may also adopt stringent regulations for
+reasons unrelated to historical preservation.
+Additionally, we have worked through a series of robustness checks, estimating the
+gaps with different specifications, and estimating gaps at the city level and U.S. state level.
+Across all these tests, we find strong correlations of our country-level gap with other gap
+measures. The results suggest that our gap measure is an useful index of tall building
+supply across the world, and which emerge from various local and national frictions.
+Though we do not attempt to quantify the global welfare effects of the building-height
+gaps, our work suggests that large building-height gaps can have significant economic
+and environmental costs. However they may have health, cultural, and economic benefits
+that have not yet been quantified. We leave this issue for future research.
+
+40
+REFERENCES
+Ahlfeldt, Gabriel and Jason Barr, “The Economics of Skyscrapers: A Synthesis,” Technical Report
+2020.
+Ahlfeldt, Gabriel M and Daniel P McMillen, “Tall buildings and land values: Height and
+construction cost elasticities in Chicago, 1870–2010,” Review of Economics and Statistics, 2018,
+100 (5), 861–875.
+Albouy, David and Gabriel Ehrlich, “Housing productivity and the social cost of land-use
+restrictions,” Journal of Urban Economics, 2018, 107, 101–120.
+Barr, Jason, “Skyscrapers and the skyline: Manhattan, 1895–2004,” Real Estate Economics, 2010, 38
+(3), 567–597.
+, “Skyscraper height,” The Journal of Real Estate Finance and Economics, 2012, 45 (3), 723–753.
+, Building the skyline: The birth and growth of Manhattan’s skyscrapers, Oxford University Press,
+2016.
+and Jeffrey P Cohen, “The floor area ratio gradient: New York City, 1890–2009,” Regional Science
+and Urban Economics, 2014, 48, 110–119.
+and Jingshu Luo, “Growing Skylines: The Economic Determinants of Skyscrapers in China,”
+Forthcoming in The Journal of Real Estate Finance and Economics, 2021.
+and Ronan Lyons, “Stop the sprawl! If we are serious about our future, we must look up,”
+Independent, IE, June 2018.
+, Troy Tassier, and Rossen Trendafilov, “Depth to Bedrock and the Formation of the Manhattan
+Skyline, 1890-1915,” The Journal of Economic History, 2011, pp. 1060–1077.
+Beaney, T, JM Clarke, V Jain, AK Golestaneh, G Lyons, D Salman, and A Majeed, “Excess mortality:
+the gold standard in measuring the impact of COVID-19 worldwide?,” J R Soc Med., 2020, 113
+(9), 329–334.
+Bertaud, Alain and Jan K Brueckner, “Analyzing building-height restrictions: predicted impacts
+and welfare costs,” Regional Science and Urban Economics, 2005, 35 (2), 109–125.
+and Jan K. Brueckner, “Analyzing building-height restrictions: predicted impacts and welfare
+costs,” Regional Science and Urban Economics, 2005, 35 (2), 109 – 125.
+and Stephen Malpezzi, “Measuring the costs and benefits of urban land use regulation: a simple
+model with an application to Malaysia,” Journal of Housing Economics, 2001, 10 (3), 393–418.
+Bradford, Sarah and Carl W. Condit Landau, Rise of the New York Skyscraper, 1865-1913 1996.
+Brueckner, Jan K., “Chapter 20 The structure of urban equilibria: A unified treatment of the
+muth-mills model,” in “Urban Economics,” Vol. 2 of Handbook of Regional and Urban Economics,
+Elsevier, 1987, pp. 821 – 845.
+and Kala Seetharam Sridhar, “Measuring welfare gains from relaxation of land-use restrictions:
+The case of India’s building-height limits,” Regional Science and Urban Economics, 2012, 42 (6),
+1061–1067.
+Brueckner, Jan K and Kala Seetharam Sridhar, “Measuring welfare gains from relaxation of
+land-use restrictions: The case of India’s building-height limits,” Regional Science and Urban
+Economics, 2012, 42 (6), 1061–1067.
+Brueckner, Jan K. and Ruchi Singh, “Stringency of Land-Use Regulation: Building Heights in US
+Cities,” Technical Report 2018.
+Brueckner, Jan K and Ruchi Singh, “Stringency of land-use regulation: Building heights in us
+cities,” Journal of Urban Economics, 2020, p. 103239.
+Brueckner, Jan K., Shihe Fu, Yizhen Gu, and Junfu Zhang, “Measuring the Stringency of Land Use
+Regulation: The Case of China’s Building Height Limits,” The Review of Economics and Statistics,
+2017, 99 (4), 663–677.
+, , , and , “Measuring the Stringency of Land Use Regulation: The Case of China’s
+Building Height Limits,” The Review of Economics and Statistics, July 2017, 99 (4), 663–677.
+Caldera, Aida and Asa Johansson, “The price responsiveness of housing supply in OECD
+countries,” Journal of Housing Economics, 2013, 22 (3), 231–249.
+CBC News, Toronto on track to have more skyscrapers than Chicago, but will quality match quantity?
+2020.
+
+41
+Center for Systemic Peace, Polity IV Project 2021.
+Chandler, Tertius, Four Thousand Years of Urban Growth: An Historical Census 1987.
+Chau, K. W. and A. Walker, “The measurement of total factor productivity of the Hong Kong
+construction industry,” Construction Management and Economics, 1988, 6 (3), 209–224.
+Cheshire, Paul C. and Gerard H. Dericks, “Trophy Architects and Design as Rent-seeking:
+Quantifying Deadweight Losses in a Tightly Regulated Office Market,” Economica, 2020, 87
+(348), 1078–1104.
+CNN, Lotte World Tower opens in Seoul setting world records 2017.
+Duranton, Gilles and Diego Puga, Urban Land Use, Vol. 5 of Handbook of Regional and Urban
+Economics, Elsevier, December
+Dushoff, Jonathan, Joshua B. Plotkin, Cecile Viboud, David J. D. Earn, and Lone Simonsen,
+“Mortality due to Influenza in the United StatesAn Annualized Regression Approach Using
+Multiple-Cause Mortality Data,” American Journal of Epidemiology, 2005, 163 (2), 181–187.
+Emporis, 2019.
+European Commission, Global Human Settlement 2018.
+FAO, FAOSTAT 2018.
+Fischel, William A., The Homevoter Hypothesis: How Home Values Influence Local Government Taxation,
+School Finance, and Land-Use Policies 2001.
+Gendron-Carrier, Nicolas, Marco Gonzalez-Navarro, Stefano Polloni, and Matthew A. Turner,
+“Subways and Urban Air Pollution,” NBER Working Papers 24183, National Bureau of
+Economic Research, Inc January 2018.
+Glaeser, Edward, How Skyscrapers Can Save the City 2011.
+and Joseph Gyourko, “The impact of building restrictions on housing affordability,” Economic
+Policy Review, 2003, (Jun), 21–39.
+and , “The Economic Implications of Housing Supply,” Journal of Economic Perspectives,
+Winter 2018, 32 (1), 3–30.
+Glaeser, Edward L. and Bryce A. Ward, “The causes and consequences of land use regulation:
+Evidence from Greater Boston,” Journal of Urban Economics, May 2009, 65 (3), 265–278.
+and Joseph Gyourko, “Urban Decline and Durable Housing,” Journal of Political Economy, April
+2005, 113 (2), 345–375.
+Glaeser, Edward L, Joseph Gyourko, and Raven E Saks, “Why have housing prices gone up?,”
+American Economic Review, 2005, 95 (2), 329–333.
+Glaeser, Edward L., Joseph Gyourko, and Raven E. Saks, “Urban growth and housing supply,”
+Journal of Economic Geography, January 2006, 6 (1), 71–89.
+Glaeser, Edward, Wei Huang, Yueran Ma, and Andrei Shleifer, “A Real Estate Boom with Chinese
+Characteristics,” The Journal of Economic Perspectives, 2017, 31 (1), 93–116.
+Glickfeld, Madelyn and Ned Levine, Regional growth–local reaction: The enactment and effects of local
+growth control and management measures in California, Lincoln Inst of Land Policy, 1992.
+Globes, Tel Aviv skyline undergoing dramatic transformation 2017.
+Gollin, Douglas, Remi Jedwab, and Dietrich Vollrath, “Urbanization with and without
+industrialization,” Journal of Economic Growth, 2015, 21 (1), 35–70.
+Gonzalez-Navarro, Marco and Matthew A. Turner, “Subways and urban growth: Evidence from
+earth,” Journal of Urban Economics, 2018, 108 (C), 85–106.
+GPG, The World’s Most Expensive Cities 2019.
+GRID-Arendal, Percentage of Mountain Area per Country 2016.
+Gyourko, Joseph, Albert Saiz, and Anita Summers, “A new measure of the local regulatory
+environment for housing markets: The Wharton Residential Land Use Regulatory Index,”
+Urban Studies, 2008, 45 (3), 693–729.
+and Raven Molloy, “Regulation and Housing Supply,” in Gilles Duranton, J. V. Henderson,
+and William C. Strange, eds., Handbook of Regional and Urban Economics, Vol. 5 of Handbook of
+Regional and Urban Economics, Elsevier, 2015, chapter 0, pp. 1289–1337.
+, Christopher Mayer, and Todd Sinai, “Superstar Cities,” American Economic Journal: Economic
+Policy, November 2013, 5 (4), 167–199.
+, Jonathan Hartley, and Jacob Krimmel, “The Local Residential Land Use Regulatory
+
+42
+Environment Across U.S. Housing Markets: Evidence from a New Wharton Index,” Working
+Paper 26573, National Bureau of Economic Research December 2019.
+Harari, Mariaflavia, “Cities in Bad Shape: Urban Geometry in India,” American Economic Review,
+August 2020, 110 (8), 2377–2421.
+Helsley, Robert W. and William C. Strange, “Strategic growth controls,” Regional Science and Urban
+Economics, 1995, 25 (4), 435 – 460. Recent Advances in Urban Economics and Land Use: A
+Special Issue in Honour of Hiroyuki Yamada.
+Henderson, J Vernon, Tanner Regan, and Anthony J Venables, “Building the City: From Slums to
+a Modern Metropolis,” The Review of Economic Studies, 08 2020, 88 (3), 1157–1192.
+HOFINET, Housing Market Data 2020.
+Hsieh, Chang-Tai and Enrico Moretti, “Housing constraints and spatial misallocation,” American
+Economic Journal: Macroeconomics, 2019, 11 (2), 1–39.
+Ihlanfeldt, Keith R, “The effect of land use regulation on housing and land prices,” Journal of Urban
+Economics, 2007, 61 (3), 420–435.
+International Monetary Fund, International Financial Statistics Database 2021.
+Jackson, Kristoffer Kip, “Regulation, land constraints, and California′
+s boom and bust,” Regional
+Science and Urban Economics, 2018, 68, 130–147.
+Jacobs, Jane, The Death and Life of Great American Cities 1961.
+Jedwab, Remi and Dietrich Vollrath, “Urbanization without growth in historical perspective,”
+Explorations in Economic History, 2015, 58 (C), 1–21.
+, Daniel Pereira, and Mark Roberts, “Cities of workers, children or seniors? Stylized facts
+and possible implications for growth in a global sample of cities,” Regional Science and Urban
+Economics, 2021, 87, 103610.
+Knoll, Katharina, Moritz Schularick, and Thomas Steger, “No Price Like Home: Global House
+Prices, 1870-2012,” American Economic Review, February 2017, 107 (2), 331–53.
+Liu, Crocker H., Stuart S. Rosenthal, and William C. Strange, “Building Specialization, Anchor
+Tenants and Agglomeration Economies,” 2017.
+Liu, Crocker H, Stuart S Rosenthal, and William C Strange, “The vertical city: Rent gradients,
+spatial structure, and agglomeration economies,” Journal of Urban Economics, 2018, 106, 101–122.
+Liu, Crocker H., Stuart S. Rosenthal, and William C. Strange, “Employment density and
+agglomeration economies in tall buildings,” Regional Science and Urban Economics, 2020, 84,
+103555.
+Maddison, Angus, Statistics on World Population, GDP and Per Capita GDP, 1-2008 AD 2008.
+Nickell, Stephen J, “Biases in Dynamic Models with Fixed Effects,” Econometrica, November 1981,
+49 (6), 1417–1426.
+NY Times, South Korea Joins Rush to Build Ever Taller Buildings 2011.
+, Seven Leading Architects Defend the World’s Most Hated Buildings 2015.
+OECD, OECD.Stat 2020.
+, OECD.Stat 2021.
+Pagani, M., J. Garcia-Pelaez, R. Gee, K. Johnson, V. Poggi, R. Styron, G. Weatherill, M. Simionato,
+D. Vigano, L. Danciu, and D. Monelli, Global Earthquake Model (GEM) Seismic Hazard Map (version
+2018.1 - December 2018) 2018.
+Quigley, John M. and Steven Raphael, “Regulation and the High Cost of Housing in California,”
+American Economic Review, May 2005, 95 (2), 323–328.
+Romer, Paul, Cities Need to Make Room 2020.
+Rosenthal, Stuart and William Strange, “The attenuation of human capital spillovers,” Journal of
+Urban Economics, 2008, 64 (2), 373–389.
+Rosenthal, Stuart S. and Stephen L. Ross, “Change and Persistence in the Economic Status of
+Neighborhoods and Cities,” in Gilles Duranton, J. V. Henderson, and William C. Strange, eds.,
+Handbook of Regional and Urban Economics, Vol. 5 of Handbook of Regional and Urban Economics,
+Elsevier, 2015, chapter 0, pp. 1047–1120.
+Saiz, Albert, “The geographic determinants of housing supply,” The Quarterly Journal of Economics,
+2010, 125 (3), 1253–1296.
+Saks, Raven E, “Job creation and housing construction: Constraints on metropolitan area
+
+43
+employment growth,” Journal of Urban Economics, 2008, 64 (1), 178–195.
+Scicolone, Maria, Developing Skyscraper Districts: La Defense 2012.
+Shangguan, Wei, Tomislav Hengl, Jorge Mendes de Jesus, Hua Yuan, and Yongjiu Dai, “Mapping
+the global depth to bedrock for land surface modeling,” Journal of Advances in Modeling Earth
+Systems, 2017, 9 (1), 65–88.
+Stewart, Peter, Height vs. history Tall buildings in the heart of London 2016.
+The Conversation, Taming wild cities: the tall buildings of Australia show why we need strong design
+guidelines 2019.
+The Economist, Democracy Index 2018: Me too? Political participation, protest and democracy 2018.
+The Irish Times, Ugly, dated Dublin: Learning to love our concrete jungle 2019.
+TomTom, TomTom Traffic Index 2019.
+Turner, Matthew A, Andrew Haughwout, and Wilbert Van Der Klaauw, “Land use regulation and
+welfare,” Econometrica, 2014, 82 (4), 1341–1403.
+UN-Habitat, World Cities Report: The Value of Sustainable Urbanization 2020.
+UNESCO, World Heritage List 2020.
+United Nations, World Urbanization Prospects: The 2018 Revision 2018.
+V., Rafael A. Irizarry Kiang Mathew and Caroline O. Buckee, “Every Body Counts: Measuring
+Mortality From the COVID-19 Pandemic,” Annals of Internal Medicine, 2020, 173 (12), 1004–1007.
+Vogel-Misicka, Susan, Towering over Switzerland: The high-rise trend 2011.
+Wang, Aaron J, “The Evolution of Seismic Engineering and Design of Ultra Tall Buildings in China
+Innovations and Sustainability,” International Journal of High-Rise Buildings, 2016, 5 (3), 221–232.
+WHO, Estimation of population mortality in crisis-affected populations: Guidance for humanitarian
+coordination mechanisms 2018.
+, Global Ambient Air Quality Database 2019.
+Wikipedia, List of countries by home ownership rate 2020.
+, List of Notable Architects 2020.
+, Owner Occupancy 2020.
+, Timeline of City X 2020.
+, Urban planners by nationality 2020.
+Wooldridge, Jeffrey M, Introductory econometrics: A modern approach, Nelson Education, 2016.
+World Bank, World Development Report: Reshaping Economic Geography 2009.
+, The Cost of Air Pollution : Strengthening the Economic Case for Action 2016.
+, World Development Indicators 2018.
+, International Comparison Program 2019.
+, World Development Indicators 2019.
+, World Governance Indicators 2021.
+Wu, Jing, Joseph Gyourko, and Yongheng Deng, “Evaluating the risk of Chinese housing markets:
+What we know and what we need to know,” China Economic Review, 2016, 39, 91–114.
+
+44
+Figure 1: TALL BUILDING HEIGHTS FOR THE WORLD, 1869-2017
+(a) Tall Building Heights, World vs. the U.S. (b) Residential vs. Office Heights, World
+Notes: Subfigure 1(a) shows the evolution of the stock of tall building heights (m) for both the world and
+the United States from 1869 to 2017. Subfigure 1(b) shows the world evolution of the stock of tall building
+heights (m) separately for residential and office buildings from 1920 to 2017. The dashed vertical line shows
+the year 1950, the start year of our main period of study (1950-2020). See text for details.
+Figure 2: URBAN HEIGHT DENSITY AND NATIONAL INCOME IN 2017
+Notes: This figure shows the relationship between the log sum of tall building heights per urban capita (m
+per inh.) and log per capita GDP (PPP, constant 1990 international $) for 170 countries circa 2017.
+
+45
+Figure 3: GLOBAL DISTRIBUTION OF THE RESIDENTIAL AND OFFICE GAPS, 2020
+(a) All Countries (b) Developed Countries Only
+Notes: Subfigure 3(a) shows for the 158 countries of our sample circa 2020 the Kernel distributions of the
+H-based percentage-change gaps separately for residential buildings and office buildings. Subfigure 3(b)
+shows the same Kernel distributions for 47 developed (i.e., high-income) countries as of 2020.
+Figure 4: HOUSE PRICES & BUILDING-HEIGHT GAPS, 14 COUNTRIES, 1870-2020
+Notes: This figure shows that real house prices have dramatically increased in developed countries since
+the 1950s (we use the data from Knoll et al. (2017)). It also shows that the estimated total km (H-based) gap
+of the 14 countries has increased since 1960. More precisely, Knoll et al. (2017) reports a real house price
+index (base 100 in 1990) for 14 OECD countries annually from 1870 to 2012. We then obtain the average real
+house price index for the 14 countries in each year using the population of each country as weights.
+
+46
+Figure 5: CITY BUILDING HEIGHTS-POPULATION RELATIONSHIP, 2015
+Notes: This figure shows for 11,719 agglomerations of at least 50,000 inhabitants in 2015 the relationship
+between the log sum of tall building heights (km) and the population size category (the omitted category is
+50,000-55,000) ca. 2015. The 11,719 agglomerations in 2015 belong to 158 countries.
+Figure 6: STEEL VS. CONCRETE IN NEW CONSTRUCTION, 1950-2017
+Notes: This figure shows for each year the share of new construction (weighted by building heights) that
+comes from buildings whose main material is steel vs. concrete. These shares are obtained using available
+information for 10,809 out of the 16,369 buildings in our data. We report two-year moving averages.
+
+47
+Table 1: INCOME AND LAND RENT AND BUILDING HEIGHTS, 1950-2020
+Dep. Var.: Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt)
+(1) (2) (3) (4) (5) (6) (7) (8) (9)
+Countries All ≥ 0 < 0 ≥ p75 & ≥ p75 & Residential ≥ p75 Office ≥ p75
+DemUMH DemH DemUMH DemH DemUMH DemH
+LUPCGDPt 0.49*** 0.68*** 0.37*** 1.54** 3.23*** 1.54*** 2.66*** 1.79** 1.61
+[0.10] [0.10] [0.16] [0.67] [0.61] [0.34] [0.47] [0.55] [1.32]
+LAGRENTt 0.13 0.30** -0.06 0.55** 0.19 0.58** 0.40 0.47 0.28
+[0.09] [0.13] [0.10] [0.26] [0.40] [0.22] [0.42] [0.31] [0.61]
+LUHTDENSt−10 0.48*** 0.46*** 0.39*** 0.46*** 0.18 0.47*** 0.45*** 0.34* 0.40*
+[0.03] [0.04] [0.03] [0.11] [0.12] [0.09] [0.11] [0.16] [0.20]
+Cntry FE, Yr FE Y Y Y Y Y Y Y Y Y
+Observations 1,106 511 595 98 56 119 56 70 49
+Countries 158 73 85 14 8 17 8 10 7
+Adjusted R2 0.79 0.80 0.76 0.87 0.91 0.80 0.86 0.84 0.83
+Notes: Sample of 158 countries x 8 years (1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020) = 1,264 obs. Since we control for the dependent
+variable in t-10, we lose one round of data, hence N = 1,106 (col. (1)). “Dem” countries are “full democracies” or “flawed democracies” at
+any point in 2006-2017. “UM” and “H” countries are upper-middle income countries and high-income countries circa 2017, respectively.
+“0” and “p75”correspond to the following values of the selection residual: 0 and the 75th percentile. Col. (6)-(7) & (8)-(9): We study
+residential buildings and office buildings, respectively. Robust SEs clustered at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+Table 2: COUNTRIES WITH THE LARGEST UMH- AND H-BASED GAPS 2020
+(1) Percentage Change (2) Per Capita GapH (3) Percentage Change (4) Per Capita GapUMH
+GapH (Km per Mil. Urb. Inh.) GapUMH (Km per Mil. Urb. Inh.)
+Rank Country Gap Country Gap Country Gap Country Gap
+1 Ireland 4.88 Ireland 21 Mauritius 6.06 Mauritius 16.1
+2 Mauritius 4.51 Mauritius 20 Uzbekistan 5.14 Taiwan 12.4
+3 Slovenia 3.69 Austria 12 Taiwan 4.57 Netherlands 4.9
+4 Switzerland 3.61 Taiwan 12 Switzerland 4.15 Sri Lanka 3.4
+5 Uzbekistan 3.37 Sri Lanka 8 Ireland 4.13 S. Korea 3.4
+6 Norway 3.21 Trinidad 6 Slovenia 4.06 Ireland 1.6
+7 Austria 2.9 Switzerland 6 Italy 3.93 Switzerland 1.5
+8 Taiwan 2.78 United States 6 Netherlands 3.72 Austria 1.4
+9 Sweden 2.77 Slovenia 5 Sri Lanka 3.58 Italy 1.3
+10 Sri Lanka 2.61 Norway 4 P. Rico 3.58 Slovenia 1.2
+11 Italy 2.53 South Korea 4 Syria 3.5 Japan 1.1
+12 Denmark 2.52 United Kingdom 3 Guatemala 3.47 France 0.8
+13 Trinidad 2.5 Netherlands 3 Armenia 3.37 Belgium 0.6
+14 France 2.49 Estonia 3 France 3.26 United Kingdom 0.6
+15 Germany 2.47 Germany 3 Denmark 3.21 Denmark 0.6
+16 Eq. Guinea 2.43 Sweden 3 Lesotho 3.18 Germany 0.6
+17 Finland 2.23 France 2 Portugal 3.06 Armenia 0.5
+18 United Kingdom 2.15 Denmark 2 India 3.05 Trinidad 0.4
+19 Lesotho 2.12 Italy 2 Germany 2.98 Portugal 0.3
+20 Portugal 2.02 Slovakia 2 S. Korea 2.96 India 0.2
+Notes: Col. (1) & (3): The gap is the percentage change in urban height density required to make the height stock similar to the selected
+benchmark set of countries (e.g., 4.88 means 488%). Col. (2) & (4): The gap is expressed in km of heights per million urban capita.
+
+48
+Table 3: THE GAPS AND ECONOMIC DEVELOPMENT, 2020
+Dependent Variable: H-Based Pct-Change Gap 2020 UMH-Based Pct-Change Gap 2020
+Considered Gap: (1) All (2) Resid. (3) Office (4) All (5) Resid. (6) Office
+LPCGDP 2020 1.88*** 2.48*** 0.62** 0.97*** 0.92*** 0.69**
+[0.20] [0.27] [0.26] [0.32] [0.33] [0.32]
+Observations 158 158 158 158 158 158
+R-squared 0.58 0.55 0.10 0.16 0.12 0.09
+Notes: LPCGDP 2020 is log national per capita GDP (PPP, cst 1990 intl $) in 2020. Columns (2)-(3) and (5)-(6): We consider the gaps
+based on residential buildings (Resid.) or office buildings (Office) only. We use urban population weights (2020). Robust SEs.
+Table 4: POSSIBLE DETERMINANTS OF THE GAPS, 2020
+Dependent Variable: Pct Change-Change Gap 2020 (1st Column = H-Based; 2nd Column = UMH-Based)
+RHS: A Log Const Cost B Log Lend Rate C Fin Inst Dvt D Log Earthquake E Log Bedrock
+β -0.11 -0.37 -0.09 -0.52 -0.98 -1.58 0.38 0.77 -0.63 -0.77
+[0.41] [0.50] [0.40] [0.55] [1.40] [2.27] [0.49] [0.64] [0.46] [0.64]
+Obs. 144 144 114 114 147 147 156 156 158 158
+RHS: F Share Mountain G Log Foundation H Pop Sh. 1800 I Pop Sh. 2000 J WW2 Sh. Bomb
+β 0.00 -0.00 0.92*** 1.42*** 0.11* 0.15* -0.01 -0.00 0.32 1.41**
+[0.02] [0.02] [0.25] [0.29] [0.06] [0.08] [0.00] [0.01] [0.49] [0.68]
+Obs. 158 158 158 158 158 158 158 158 158 158
+RHS: K WW2 Mort Rate L Log Cult WHS M Log Mix WHS N Log Nat WHS O Log Tourists
+β -0.01 -0.02 0.51** 0.64* -0.69* -1.01* -1.08*** -1.84*** -0.37 -0.28
+[0.06] [0.10] [0.25] [0.38] [0.39] [0.54] [0.28] [0.38] [0.33] [0.24]
+Obs. 158 158 157 157 157 157 157 157 152 152
+RHS: P Max FAR Q Quality Ctrl R Hous P. Ela. S Speed Hous S. T Democracy
+β -0.13*** -0.20** 0.04** 0.04 -1.00 -0.60 -2.54* -1.05 0.12 0.20
+[0.01] [0.02] [0.02] [0.02] [0.67] [0.39] [1.28] [0.99] [0.62] [0.88]
+Obs. 49 49 155 155 21 21 21 21 158 158
+RHS: U Polity Score V Rule of Law W Ctrl Corrupt. X Log Urb Plan. Y Home Own.
+β 0.03 0.02 0.29 0.19 -0.07 -0.34 0.22 0.02 0.02 0.01
+[0.05] [0.07] [0.36] [0.56] [0.24] [0.42] [0.22] [0.32] [0.02] [0.01]
+Obs. 156 156 157 157 157 157 158 158 105 105
+Notes: This table shows the correlations between the H-based gaps (1st column of each panel) or the UMH-based gaps (2nd column)
+and various potential determinants of the gaps. We always control for log national per capita GDP (PPP, cst 1990 intl $) ca. 2020 and use
+urban population weights. Each coefficient corresponds to a separate regression. Robust SEs: * p<0.10, ** p<0.05, *** p<0.01.
+
+49
+Table 5: DETERMINANTS OF THE GAPS, SIMULTANEOUS INCLUSION, 2020
+Dep. Var.: H-Based Pct Change-Change Gap 2020 UMH-Based Pct Change-Change Gap 2020
+(1) (2) (3) (4) (5) (6) (7) (8) (9) (10)
+Log Yrs Founded 0.84*** 1.23** 0.90*** 1.29*** 2.05*** 1.46***
+[0.23] [0.53] [0.31] [0.26] [0.59] [0.37]
+Log Cultural WHS 0.51** -0.59 0.64* -1.05
+[0.25] [0.55] [0.38] [0.68]
+Max FAR -0.12*** -0.11*** -0.14*** -0.19*** -0.17** -0.21***
+[0.04] [0.04] [0.04] [0.06] [0.07] [0.06]
+Obs. 157 157 49 49 49 157 157 49 49 49
+R-squared 0.69 0.63 0.58 0.68 0.68 0.46 0.29 0.29 0.56 0.53
+Notes: This table shows the correlations between the H- or UMH-based gaps and various potential determinants of the gaps. We always
+control for log national per capita GDP (PPP, cst 1990 intl $) and log total pop. ca. 2020 and use urban pop. weights. Robust SEs.
+Table 6: GAPS AND LAND USE REGULATIONS, 2020
+Dependent Variable: H-Based Gaps UMH-Based Gaps Corr w / Max FAR
+(1) (2) (3) (4) (5)
+Maximum Floor Area Ratio (FAR) -0.13*** -0.19*** -0.20** -0.27**
+[0.006] [0.003] [0.016] [0.014]
+Dummy Green Belt (GB) -0.67 -0.83 -0.15 n.s.
+[0.448] [0.527]
+Dummy Urban Growth Boundary (UGB) -1.46* -1.38 -0.12 n.s.
+[0.053] [0.208]
+Dummy Full or Partial Zoning 0.63 1.04 -0.03 n.s.
+[0.376] [0.405]
+Dummy Gvt Land Acquisition 0.68 0.83 -0.09 n.s.
+[0.272] [0.421]
+Dummy Min Plot Size Regulation -2.02** -2.43* -0.20 n.s.
+[0.027] [0.085]
+Observations 49 49 49 49 49
+R-squared 0.51 0.66 0.12 0.28
+Notes: Columns (1)-(2) and columns (3)-(4) show the conditional correlation between the H-based gaps and the UMH-based gaps
+and the maximum FAR values and the values of the other land-use policy variables. Column (5) shows the individual conditional
+correlations between the maximum FAR values and the values of the other land-use policy variables. We control for log national per
+capita GDP in 2020 and use urban pop. weights (2020). Robust SEs: n.s. (not significant) p>0.10, * p<0.10, ** p<0.05, *** p<0.01.
+
+50
+Table 7: GAPS AND ECONOMIC OUTCOMES, COUNTRY-LEVEL ANALYSIS
+Dep. Var.: World Bank ’11 Global Prop. Guide’19 Knoll et al 2017 Share
+Price Level (100) Log Hous Price- Real Hous. Price t Public
+Housing Transp. Price ($) to-Rent Long-Diff Short-Diff Housing
+(1) (2) (3) (4) (5) (6) (7)
+GapsH 3.99*** -1.50 0.24*** 3.51*** 28.78* 14.78** -0.08
+[1.33] [1.34] [0.04] [0.84] [14.38] [6.48] [0.87]
+GapsUMH 3.32*** -0.67 0.18*** 2.78*** 13.27 8.33 0.29
+[1.19] [1.30] [0.04] [0.60] [16.62] [6.01] [0.61]
+Country, Year FE N N N N Y Y N
+Controls, Weights Y Y Y Y N N Y
+Observations 147 147 72 70 28 83 48
+Dep. Var.: Col. (8)-(12): Log Total Urban Land Area (Km) in ... Log Particulate
+World Col. (9)-(10): GHS t Ctrl: Built-Up Area t Matter Level (PM)
+Bank ’11 Long-Diff Short-Diff Long-Diff Short-Diff 10 (’10) 2.5 (’17)
+(8) (9) (10) (11) (12) (13) (14)
+GapsH 0.19*** 0.05** 0.03** 0.04* 0.02* 0.05** 0.07**
+[0.03] [0.02] [0.01] [0.02] [0.01] [0.02] [0.03]
+GapsUMH 0.22*** 0.06*** 0.03** 0.05* 0.02* 0.05** 0.08***
+[0.04] [0.02] [0.01] [0.03] [0.01] [0.02] [0.02]
+Country, Year FE N Y Y Y Y N N
+Controls, Weights Y Y Y Y Y Y Y
+Observations 125 262 524 262 524 146 156
+Notes: Columns (1)-(4), (7)-(8), and (13)-(14): See text for details on the specifications. Columns (5)-(6): Panel regressions for 14
+countries in 1960-2010 (1960, 1970, 1980, 1990, 2000, 2010). Long-diff: We consider the first and last years only. Columns (9)-(12):
+Panel regressions for 131 countries in 1975-2015 (1975, 1990, 2000, 2015). Long-diff: We consider the first and last years only. Robust
+SEs (clustered at the country level when using panel regressions in columns (5)-(6) and (9)-(12)): * p<0.10, ** p<0.05, *** p<0.01.
+
+51
+Table 8: GAPS AND ECONOMIC OUTCOMES, CITY-LEVEL ANALYSIS
+Dep. Var.: Log Sum of Heights in Year t Log Area Congestion Log PM’17
+Central Periph. in Year t Level 10 2.5
+Areas Areas 2017
+(1) (2) (3) (4) (5) (6) (7) (8) (9)
+Panel A: H Gaps:
+1(100-500K)*Gap -0.04 -0.03 -0.03 0.00 0.01 0.01 1.79** 0.04 0.04
+[0.03] [0.02] [0.02] [0.00] [0.01] [0.02] [0.73] [0.03] [0.03]
+1(500-1000K)*Gap -0.25* -0.11 -0.08 -0.02 0.00 0.00 2.71* 0.09** 0.08*
+[0.14] [0.17] [0.15] [0.03] [0.03] [0.02] [1.49] [0.04] [0.04]
+1(1000K+)*Gap -0.73** -0.56** -0.54** -0.15* -0.02 0.00 1.48 0.13** 0.14***
+[0.31] [0.25] [0.24] [0.09] [0.02] [0.01] [1.13] [0.05] [0.05]
+Panel B: UMH Gaps:
+1(100-500K)*Gap -0.02 -0.02 -0.02 0.00 0.05 0.04** 1.14*** 0.02 0.03*
+[0.04] [0.01] [0.01] [0.00] [0.03] [0.02] [0.37] [0.02] [0.02]
+1(500-1000K)*Gap -0.17 -0.13 -0.10 0.01 0.09 0.05 1.43* 0.06** 0.06***
+[0.32] [0.12] [0.12] [0.04] [0.06] [0.03] [0.77] [0.02] [0.02]
+1(1000K+)*Gap -0.85 -0.68*** -0.68*** -0.01 -0.02 0.01** 1.04 0.07** 0.08***
+[0.56] [0.17] [0.16] [0.13] [0.05] [0.01] [0.64] [0.03] [0.03]
+City, Year FE Y Y Y Y Y Y N N N
+Country-Year FE Y Y Y Y Y Y Y Y Y
+Controls Y Y Y Y Y Y Y Y Y
+Observations 23,438 46,876 46,876 46,876 17,040 34,181 391 1,473 1,473
+Number of Cities 11,719 11,719 11,719 11,719 11,719 11,719 391 1,473 1,473
+Number of Years 2 4 4 4 2 4 1 1 1
+Notes: Columns (7)-(9): See text for details on the specifications. Columns (1)-(6): Panel regressions for 11,719 50K+ GHS urban
+agglomerations in 1975-2015 (1975, 1990, 2000, 2015). We interact the country-level gaps with three city population category dummies
+defined in 1975 (50-100K is the omitted category). Robust SEs clustered at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+
+1
+WEB APPENDIX: NOT FOR PUBLICATION
+A Details on the Building Heights Data
+The original data set of CTBUH (2018) (accessed between January 2017 and January
+2018) has 27,652 tall buildings. Once we keep “buildings” and “tower-buildings” that are
+completed or about to be completed, we are left with 19,132 tall buildings.
+Heights. According to the website of CTBUH (2018), they do not use a consistent
+definition of tall buildings across all cities. We thus study how heights vary across the
+data set. To do so, we need to obtain height for as many buildings as possible.
+For most buildings, we know height to tip of the building (no matter the function
+of the highest element) and/or height to the architectural top of the building (which
+may include spires but excludes antennaes) and/or height to the highest occupied floor
+and/or height of the observatory of the building if there is one and/or the number of
+floors above ground. Height to the highest occupied floor may be the best measure but it
+is only available for 11.6% of buildings whereas architectural height is available for 84.7%
+of them, height to the tip 60.6% of them, height to the observatory 1.1% of them, and the
+number of floors 98.2% of them. We thus use architectural height as our main measure.
+Since it is missing for 15.3% of buildings, we impute it when possible with data on
+height to the tip (correlation between architectural height and this height = 0.99), then
+data on height to the highest occupied floor (correlation = 0.98), then data on height to the
+observatory (correlation = 0.96). We then regress our measure of height on the number
+of floors and find a coefficient of 3.8***, which indicates that a floor corresponds to 4
+meters for most buildings in the world (95% conf. interval = [3.77; 3.87]). We can then
+impute heights for the remaining buildings. In the end, we obtain a consistent measure
+of heights (m) for 99.6% of buildings (N = 19,132). We nonetheless verify results hold if
+we use architectural height or height not using information on number of floors.
+As can be seen in Web Appendix Figure A4 (on the next page) which plots the Kernel
+distribution of building heights in the data set, the mode of the distribution is 80 m.
+Since cities are likely to have more buildings below 80 m than above 80 m, and since
+the distribution of buildings is relatively smooth after 80 m, this suggests that the data set
+mostly captures buildings above 80 m. Thus, the data set is likely unreliable for buildings
+below 80 m. However, since some countries may have few tall buildings above 80 m, and
+since some height data may be available for some relatively important local buildings
+below 80 m, we keep the 16,369 buildings above 80 m and/or buildings in the top 10 in
+
+2
+the country today. This guarantees that few countries have no building data at all.
+Year of Construction. For most buildings, we know the year of completion and/or the
+year construction started and/or the year construction was proposed. We use the year
+of completion as our main measure (available for 96.6% of buildings). For the remaining
+buildings, we impute the year of completion using information on the year construction
+started (corr. with the year of completion = 0.99), then the year construction was proposed
+(0.97). On average, a building is completed 5.5 years after construction is proposed and
+3.3 years after it starts. We obtain the year of completion for 96.8% of buildings.
+Function. The function(s) of the buildings is available for 98.9% of buildings. Many
+buildings have multiple functions. Among buildings for which we know the function,
+49.9% of them are used for residential purposes and 41.8% of them include offices. Other
+important functions include hotels (11.8%) and retail (3.9%). In our analysis, we define as
+commercial buildings with the function “office”, “hotel” and/or “retail”.
+B Details on the Cost of the Building-Height Gaps
+Theoretically, by restricting housing supply, constraints on vertical development raise the
+price per unit of housing throughout the city while causing the urban footprint to expand.
+Residents experience a combination of higher housing prices and longer commutes. For
+the resident at the edge of the city, the welfare loss comes entirely from a longer commute.
+With utilities equalized within the city, the welfare loss for each resident equals the
+increase in commuting cost for the edge resident (Bertaud and Brueckner, 2005).
+Suppose a country has n identical cities and let urban area denote the size of each city.
+Then our dependent variable in the urban area regression is n ∗ urban area, so that the
+regressions relate log(n∗urban area) to GAP and other variables, with the GAP coefficient
+denoted β. Letting ∆GAP denote the change in GAP, differentiation of this relationship
+shows that
+n ∗ △urban area
+n ∗ urban area
+=
+△urban area
+urban area
+= β △ GAP (1)
+With urban area equal to πx
+2
+for a circular city, where x is the distance to the edge,
+△urban area
+urban area
+=
+2πx △ x
+πx
+2 = 2
+△x
+x
+(2)
+Combining 1 and 2 yields △x/x = β∆GAP/2. If GAP increases by one standard
+deviation (≈ 2), then the percentage increase in x is equal to β. Finally, since commuting
+cost is proportional to distance traveled, β equals the percentage increase in the edge
+resident’s commuting cost. The final step is to assume that the edge resident’s commuting
+
+3
+cost is a fixed proportion λ of individual gross income y. Then, the absolute increase in
+the edge resident’s commuting cost from the greater GAP equals βλy. Thus, βλy equals
+the individual welfare cost of a one standard deviation increase in GAP.
+In Brueckner (2007), the edge resident spends 14-19% of income on commuting. Given
+β = 0.05 (col. (11) of Table 8), βλ = 0.007-0.01. Thus, the welfare loss from a one-standarddeviation increase in GAP is close to one percent of urban income.
+C U.S. State Analysis and U.S. State and World Gaps
+In this section we perform a similar gap analysis using U.S. state-level data, which offers
+another opportunity to validate our methodology. The specification that we use for this
+analysis differs from the one used for the international analysis. Indeed, due to interurban
+mobility within a country as well as agglomeration effects, population and income per
+capita are very strongly correlated across cities and urban areas. Therefore, on the left
+hand side, we do not divide the sum of heights by total urban population, and on the
+right hand side, we use total urban income instead of urban income per capita. However,
+we show below that world rankings are little affected if we use the U.S.-based coefficients.
+Data. Our sample comprises 50 states almost annually from 1929 to 2017.1 For building
+heights, we use CTBUH. From Bureau of Economic Analysis (2019), we then obtain
+for the 1929-2017 period total income, farm income, and non-farm income, a proxy for
+urban income. Next, from United States Census Bureau (1975), we know state farmland
+area from 1929 to 1940. From United States Department of Agriculture (2017) and
+Wikipedia, we know agricultural land area and total land area.2 Knowing farm income
+and agricultural land area, we reconstruct agricultural land rent. We use agricultural land
+area for the U.S. analysis – we used total land area for the international analysis – because
+it is well measured for the whole period.3 From Wikipedia, we obtain the population and
+urbanization rate – and thus the total urban population – of each state in each year.4
+Results. Web Appx. Table A4 shows the baseline regression in column (1), where all three
+coefficients are significant. Columns (2), (3) and (4) then eliminate states with residuals
+below 0, the 75th percentile, and the 90th percentile in a 2017 regression using GDP
+and agricultural rent as covariates. The GDP and agricultural-rent coefficients increase
+1We drop the District of Columbia because agricultural rent is unavailable for most of the period.
+2To obtain a consistent series of state agricultural land area from 1929 to 2017, we use cropland/pasture
+area from 1945 to 2017 as our benchmark. We then use the growth rate of farmland expansion in each state
+before 1940 to extend that variable to 1929. Total land area is obtained from Wikipedia (2020c).
+3We use the consumer price index of the United States to express the income variables and the
+agricultural land rent variables in constant 2017 dollars (Minneapolis Federal Reserve, 2020).
+4Sources are Wikipedia (2020a) and Wikipedia (2020b).
+
+4
+as we do. Restricting the sample to the states with residuals above the 75th or 90th
+percentile (columns (3)-(4)) has little effect on the GDP coefficient compared to restricting
+the sample to states with residuals above 0 (column (2) vs. column(1)). In order to keep
+more observations, we thus privilege the sample of states with residuals above 0.5
+The other columns present robustness checks similar to those in the country-level
+analysis. In column (5), we include nine census region dummies × year fixed effects;
+adding them has little effect on the GDP coefficient. Use of state time trends yields
+positive, yet insignificant, coefficients (column (6)). Indeed, unlike in the international
+sample, no state has experienced a period of growth fast enough that the coefficients
+survive the inclusion of state time trends. Column (7) shows the effect of adding ten-year
+leads of the GDP and agricultural-rent variables, whose coefficients are insignificant.
+In column (8) we capture commuting costs by controlling for whether there is a
+subway and the logs of the number subway lines and subway stations (source: GonzalezNavarro and Turner (2018) and Gendron-Carrier et al. (2018)) and the log of the total
+mileages of paved roads corresponding to “municipal / urban extensions of highway
+systems” or “other municipal / urban streets” in the state in year t.
+6 One advantage of
+the U.S. regression over the international regression is that consistent panel data on urban
+road stocks is now available. As can be seen, the effects are mostly unchanged.
+In columns (9)-(12), we control for time-invariant geographical factors interacted with
+year fixed effects: logged (population-weighted) average earthquake risk (col. (9)), the
+logged (population-weighted) average bedrock depth ((10)) and ruggedness in the state’s
+urban areas ((11)), and the (population-weighted) share of urban land below sea level
+((12)). Results appear to hold across all specifications. See table notes for details on the
+variables and the underlying sources.
+In column (13) we add geographical controls, each interacted with a year trend. These
+controls are total land area and the shares of land unavailable for development due to
+excessive slope, the presence of wetlands, or the presence of bodies of water (source:
+Lutz and Sand (2017)). In column (14), the geographical controls are replaced by timeinteracted variables measuring the amounts of land under various types of government
+ownership (source: NRCM (2017)).7 Again, the results are similar to those in column (2).
+5Using the 75th percentile (p75) cutoff gives the following 13 states: Delaware, Georgia, Hawaii, Illinois,
+Kansas, Louisiana, Minnesota, Nevada, New York, Oklahoma, Rhode Island, Utah, Washington. Using the
+90th percentile (p90) cutoff gives the following 5 states: Hawaii, Illinois, Nevada, New York, Rhode Island.
+6The sources are A Quarter Century of Financing Municipal Highways, 1937-61 (Bureau of Public Roads)
+and the annual Highway Statistics reports of the U.S. Department of Transportation.
+7Federal Government, State Government, Bureau of Land Management, U.S. Forest Service, National
+
+5
+Finally, in column (15), we control for the RSMeans construction cost in the state in the
+same year. Indeed, as income increases, construction costs could increase, thus depressing
+construction. Controlling for construction costs then allows us to capture the direct effect
+of income. As can be seen, the estimated effects are mostly unchanged.
+State Gaps. For the sample of observations used in col. (2)-(4), we take the antilog of the
+predicted heights and adjust it by a correction factor (Wooldridge, 2016)). We then obtain
+for each state the predicted sum of heights based on the regressions and compare these
+values with the actual stocks. In the U.S., the total stock in 2020 was 508 km of height.
+Using the estimates based on states above 0, the 75th percentile and the 90th percentile,
+we get 1,137, 1,474 and 2,317 km, respectively, hence gaps of 629-1,809 km, or a mid-value
+of 1,219 km. We found 1,468 km based on the H-set regressions in col. (3) of Table 2.
+Across the three benchmark sets, California accounts for 48-61% of the U.S. gap. If we
+use the “above 0” benchmark set, other states that contribute to the gap are New York,
+Pennsylvania, Texas and Florida. Altogether, they account for 24-32% of the U.S. gap.8
+Other Measures of Land-Use Regulations. Web Appx. Table A5 gives the results of
+regressions of measures of building regulations on the gaps. For the dependent variables,
+row 1 uses a measure of housing supply elasticity from Saiz (2010), but at the state level.9
+Row 2 uses an unweighted average of the Wharton Residential Land Use Regulation
+Index (Gyourko et al. (2008)), which measures the extent of building regulations for towns
+and cities across the U.S. The data set in Saiz (2010) also includes MSA-level values for
+the Wharton Index. We generate state-level weighted averages for this index, which are
+used as right-hand side variables in row 3. Finally, row 4 uses an index created by Saks
+(2008), which is the average of several building regulation indexes.
+For the right-hand side variable, col. (1)-(3) use the estimated gaps. Results are based
+on states with a laissez-faire value above 0 in col. (1), the 75th percentile in col. (2), and the
+90th percentile in col. (3). Across all gap measures, and all measures of building and landuse regulations across states, we find statistically significant relationships. These results
+suggest that the gaps might be useful indicators of supply responsiveness. However, the
+U.S. state gaps likely do not capture just land-use stringency.
+World Gaps. Overall, the qualitative similarity of the state-level regressions reported in
+this section to the above country-level regressions increases our confidence in the countryPark Service, National Wildlife Refuge, Army Corps of Engineers, Military Bases, Tribal lands.
+8
+If we use the p75 benchmark set, we get California, New York, Florida, Pennsylvania and New Jersey.
+If we use the p90 benchmark set, we get California, New York, New Jersey, Massachusetts and Connecticut.
+9We create our state-level elasticities by taking a MSA-population weighted value for cities in each state.
+
+6
+level benchmark regression as a tool for computing building-height across the world. In
+particular, if we use the U.S. state estimates to obtain predicted heights and the gaps for
+all countries in the world, the coefficient of correlation between the H-based gap measure
+and the U.S. state-based gap measures is 0.74-0.76 (using urban population as weights).
+If we use the UMH set instead, the correlation is also high, from 0.72 when using states
+with a laissez-faire value above 0 to 0.89 when using states above the 90th percentile.
+REFERENCES
+Bertaud, Alain and Jan K. Brueckner, “Analyzing building-height restrictions: predicted impacts
+and welfare costs,” Regional Science and Urban Economics, 2005, 35 (2), 109 – 125.
+Brueckner, Jan K., “Urban growth boundaries: An effective second-best remedy for unpriced
+traffic congestion?,” Journal of Housing Economics, November 2007, 16 (3-4), 263–273.
+Bureau of Economic Analysis, Regional Economic Accounts: Annual Personal Income by State 2019.
+CIESIN, Global Rural-Urban Mapping Project. Verion 1 (GRUMPv1): Urban Extent Polygons, Revision
+01. Center for International Earth Science Information Network 2017.
+CTBUH, The Skyscraper Database 2018.
+European Commission, Global Human Settlement 2018.
+Gendron-Carrier, Nicolas, Marco Gonzalez-Navarro, Stefano Polloni, and Matthew A. Turner,
+“Subways and Urban Air Pollution,” NBER Working Papers 24183, National Bureau of
+Economic Research, Inc January 2018.
+Gonzalez-Navarro, Marco and Matthew A. Turner, “Subways and urban growth: Evidence from
+earth,” Journal of Urban Economics, 2018, 108 (C), 85–106.
+Gyourko, Joseph, Albert Saiz, and Anita Summers, “A new measure of the local regulatory
+environment for housing markets: The Wharton Residential Land Use Regulatory Index,”
+Urban Studies, 2008, 45 (3), 693–729.
+Lutz, Chandler and ben Sand, “Highly Disaggregated Topological Land Unavailability,” Technical
+Report 2017.
+Minneapolis Federal Reserve, Consumer Price Index from 1800 2020.
+NRCM, Public Land Ownership by State. 2017.
+Saiz, Albert, “The geographic determinants of housing supply,” The Quarterly Journal of Economics,
+2010, 125 (3), 1253–1296.
+Saks, Raven E, “Job creation and housing construction: Constraints on metropolitan area
+employment growth,” Journal of Urban Economics, 2008, 64 (1), 178–195.
+Shangguan, Wei, Tomislav Hengl, Jorge Mendes de Jesus, Hua Yuan, and Yongjiu Dai, “Mapping
+the global depth to bedrock for land surface modeling,” Journal of Advances in Modeling Earth
+Systems, 2017, 9 (1), 65–88.
+United States Census Bureau, Historical Statistics of the United States, Colonial Times to 1957. Chaper
+K: Agriculture. 1975.
+United States Department of Agriculture, Total land, 1945-2012, by State: The sum of cropland,
+pasture/range, forest-use land, special uses, urban area, and other land 2017.
+USGS, Global Multi-resolution Terrain Elevation Data 2010.
+Wikipedia, List of States and Territories of the United States by Population 2020.
+, List of States and Territories of the United States by Urbanization Rate 2020.
+, List of U.S. States and Territories by Area 2020.
+Wooldridge, Jeffrey M, Introductory econometrics: A modern approach, Nelson Education, 2016.
+
+7
+Figure A1: HEIGHTS & INCOME FOR THE 14 UMH COUNTRIES & THE U.S. 1950-2020
+This figure shows for the period 1950-2020 the respective evolutions of (logged) urban height density and
+(logged) urban per capita GDP for the 14 UMH countries as well as the U.S.
+Figure A2: HEIGHTS & INCOME FOR 20 COUNTRIES OF TABLE 2 COL.(1) 1950-2020
+This figure shows for the period 1950-2020 the respective evolutions of (logged) urban height density and
+(logged) urban per capita GDP for the 20 countries with the highest H-based gaps.
+
+8 Figure A3: PER CAPITA H-BASED GAPS FOR ALL COUNTRIES, 2020
+This figure shows the H-based gaps per urban capita (km per million urban inhabitants) for 158 countries circa 2020. Positive gaps are shown in
+dark brown, dark red, orange or yellow. Negative gaps (= excess of tall building heights) are shown in blue (dotted patterns).
+
+9
+Figure A4: KERNEL DISTRIBUTION OF TALL BUILDING HEIGHTS
+The mode of the Kernel distribution of all building heights in the CTBUH data set is 80 m.
+Table A1: BUILDING-HEIGHT GAPS AND ECONOMIC OUTCOMES, WORLD
+Dep. Var.: Log PM10 Log PM2.5 Dep. Var.: Log PM10 ’17 Log PM2.5 ’17
+(1) (2) (3) (4) (5) (6) (7) (8)
+GapH 0.05** 0.03 0.07** 0.04 1(100-500K)*GapH 0.04 0.02 0.04 0.03
+[0.02] [0.03] [0.03] [0.03] [0.03] [0.03] [0.03] [0.03]
+1(500-1000K)*GapH 0.09** 0.06* 0.08* 0.05
+[0.04] [0.04] [0.04] [0.04]
+1(1000K+)*GapH 0.13** 0.09 0.14*** 0.09
+[0.05] [0.06] [0.05] [0.06]
+GapUMH 0.05** 0.03 0.08*** 0.04 1(100-500K)*GapUMH 0.02 0.01 0.03* 0.01
+[0.02] [0.02] [0.02] [0.03] [0.02] [0.02] [0.02] [0.02]
+1(500-1000K)*GapUMH 0.06** 0.04 0.06*** 0.04**
+[0.02] [0.02] [0.02] [0.02]
+1(1000K+)*GapUMH 0.07** 0.03 0.08*** 0.04
+[0.03] [0.04] [0.03] [0.04]
+Ctrls Sprawl N Y N Y Ctrls Sprawl N Y N Y
+Ctrls, Wgts Y Y Y Y Ctrls, Wgts Y Y Y Y
+Obs. 146 146 156 156 Obs. 1,473 1,473 1,473 1,473
+This table shows that the effects of the gaps on pollution are strongly reduced when controlling for sprawl. The sprawl controls
+include log land area and log city population in 2015 (source: Global Human Settlements database), and their squares. See text for
+details. Robust SEs (clustered at the country level in columns (5)-(8)): * p<0.10, ** p<0.05, *** p<0.01.
+
+10
+Table A2: COEFFICIENTS FOR THE SELECTED COUNTRIES, CAUSALITY
+Dep. Var.: Gap (Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt))
+Check: Baseline Continent Region Country Country Ctrls for
+-Year FE -Year FE Trend Trend Sq. Commuting
+(1) (2) (3) (4) (5) (6)
+Panel A: H Set (56 Observations; 8 Countries)
+LUPCGDPt 3.23*** 3.00*** 3.28*** 6.06** 6.91* 4.07***
+[0.61] [0.47] [0.49] [2.13] [2.99] [0.40]
+LAGRENTt 0.19 -0.07 -0.25 -0.45 -0.41 0.18
+[0.40] [0.48] [0.85] [0.59] [0.80] [0.31]
+Panel B: UMH Set (98 Observations; 14 Countries)
+LUPCGDPt 1.54** 1.97** 1.95** 3.32** 3.91* 1.83*
+[0.67] [0.82] [0.75] [1.32] [2.06] [0.88]
+LAGRENTt 0.55** 0.63** 0.59* -0.05 -0.05 0.55**
+[0.26] [0.29] [0.31] [0.61] [0.76] [0.22]
+Check: Effects of Price Level Log. Quake Log Bedrock Share
+the Variables Constr. Risk Depth (m) Mountainous
+t t+10 (Leads) x Year FE x Year FE x Year FE x Year FE
+(7) (8) (9) (10) (11)
+Panel A: H Set (56 Observations; 8 Countries)
+LUPCGDPt 4.96** -1.43 3.53*** 3.41*** 3.20*** 3.88***
+[1.99] [0.68] [0.80] [0.58] [0.65] [0.68]
+LAGRENTt 0.08 0.28 0.05 0.02 0.01 0.051
+[0.68] [0.71] [0.51] [0.36] [0.45] [0.44]
+Panel B: UMH Set (98 Observations; 14 Countries)
+LUPCGDPt 2.35*** -0.59 1.58** 1.92*** 1.77* 2.03*
+[0.65] [0.83] [0.55] [0.54] [0.82] [0.68]
+LAGRENTt 0.44 0.31 0.41*** 0.37*** 0.44*** 0.38***
+[0.78] [0.74] [0.11] [0.09] [0.10] [0.12]
+Col. (1) replicate the baseline results. Additional columns show that the results tend to hold for additional ten specifications. Col. (2)-(3)
+include continent (5)-year FE and World Bank region (7)-year FE, respectively. Col. (4)-(5) include country-specific linear trends and
+non-linear trends, respectively. Col. (6): We control for whether there is a subway and the log numbers of subway lines and subway
+stations in the country in t as well as the mean percentage share of country roads (incl. non-urban roads) that is paved during the
+period 1990-2017 interacted with a linear year trend. Col. (7) include the variables of interest defined in t+10. Col. (8): We control for
+the log of average (pop.-weighted) earthquake risk in the country’s urban areas interacted with year FE. Col. (9): We control for the log
+of average (pop.-weighted) bedrock depth in the country’s urban areas interacted with year FE. Col. (10): We control for the share of
+the country’s population living in mountainous areas interacted with year FE. Col. (11): We control for the price level of construction
+in 2011 interacted with year FE. Robust SEs clust. at the country level: * p<0.10, ** p<0.05, *** p<0.01.
+
+11
+Table A3: COEFFICIENTS FOR THE SELECTED COUNTRIES, ROBUSTNESS CHECKS
+Dep. Var.: Log Urban Height Density (m per 000s Urban Inh.) in Year t (LUHTDENSt)
+(1) (2) (3) (4) (5) (6) (7) (8)
+Baseline Incl. U.S. Incl. U.S.
+& JPN
+Incl. U.S.
+& CHN
+Incl. U.S.,
+JPN
+& CHN
+Excl. 3
+Largest
+Countries
+Excl. 2
+Smallest
+Countries
+No
+Land
+Rent
+Panel A: H Set
+LUPCGDP 3.23*** 3.23*** 2.64*** 3.14*** 2.64*** 3.21*** 2.59*** 3.24***
+[0.61] [0.63] [0.70] [0.51] [0.59] [0.64] [0.41] [0.56]
+LAGRENT 0.19 0.24 0.12 0.03 -0.01 0.21 -0.34
+[0.40] [0.39] [0.37] [0.23] [0.20] [0.42] [0.25]
+Panel B: UMH
+Set:
+LUPCGDP 1.54** 1.53** 1.47** 1.40** 1.37** 1.48* 1.21** 1.36***
+[0.67] [0.68] [0.60] [0.58] [0.52] [0.68] [0.53] [0.57]
+LAGRENT 0.55** 0.59** 0.54** 0.41 0.38 0.61* 0.37
+[0.26] [0.25] [0.24] [0.24] [0.22] [0.29] [0.29]
+(9) (10) (11) (12) (13) (14) (15) (16)
+Buildings
+≥ 25p
+(100m)
+Buildings
+≥ Med.
+(125m)
+Buildings
+≥ Mean
+(135m)
+Buildings
+≥ 150m
+No
+Imput.
+Floors
+No Lag
+UHT
+Lag
+UHT
+squared
+Lag
+UHT
+fourth
+Panel A: H Set
+LUPCGDP 2.53*** 2.32* 2.39** 2.32** 3.07*** 3.73*** 3.25*** 3.36***
+[0.66] [1.05] [1.00] [0.75] [0.67] [0.32] [0.70] [0.72]
+LAGRENT 0.31 0.78 0.67 1.04 0.55 -0.10 0.21 0.21
+[0.56] [0.69] [0.69] [0.63] [0.41] [0.45] [0.44] [0.43]
+Panel B: UMH
+Set
+LUPCGDP 1.92* 2.02* 2.09** 2.06** 1.75** 2.51*** 1.64** 1.56**
+[0.94] [0.96] [0.96] [0.79] [0.72] [0.70] [0.62] [0.60]
+LAGRENT 0.53 0.71* 0.81** 0.77* 0.63** 0.53 0.12 0.18
+[0.32] [0.35] [0.34] [0.37] [0.27] [0.33] [0.40] [0.41]
+Cntry FE, Yr FE Y Y Y Y Y Y Y Y
+Lag LHUT Y Y Y Y Y Y Y Y
+This table shows that the baseline results based on the H- and UMH-based sets tend to hold if we implement various robustness
+checks related to specification or choice of variables. The main H sample has 56 observations (8 countries) from 1950-2020. The main
+UMH sample has 98 observations (14 countries) from 1950-2020. Col. (2): Adding the U.S. to the set. Col. (3): Adding the U.S. and
+Japan to the set. Col. (4): Adding the U.S. and China to the set. Col. (5): Adding the U.S., Japan and China to the set. Col. (6): Excluding
+the 3 largest countries in terms of land area (Australia, Brazil, Canada). Col. (7): Excluding the 2 smallest countries in terms of land area
+(Hong Kong, Singapore). Col. (8): Omitting the land rent control. Col. (9)-(11): Keeping buildings above the 25th percentile (100m),
+median (125m) or mean (135m) height in the data. Col. (12): Ditto for buildings above 150m. Col. (13): Not using heights imputed
+based on the number of floors. Col. (14): Not adding a lag of log urban height density. Col. (15): Adding the square of log urban height
+density. Col. (16): Adding the square, the cube and fourth power of log urban height density. Robust SEs clust. at the country level.
+
+12
+Table A4: INCOME, LAND RENT & BUILDING HEIGHTS, U.S. STATES, 1930-2020
+Dep. Var.: Log Sum of Urban Heights (m) in Year t (LUHTt)
+(1) (2) (3) (4) (5) (6) (7)
+States: All Resid.’17 Resid.’17 Resid.’17 ≥ 0 ≥ 0 ≥ 0 ≥ 0
+Test: ≥ 0 ≥ p75 ≥ p90 Region State Effects of Vars
+Year FE Trend t t+10 (Leads)
+LUGDPt 0.39*** 0.57*** 0.58*** 0.57** 0.48** 0.29 0.56* 0.11
+[0.09] [0.10] [0.11] [0.13] [0.23] [0.26] [0.29] [0.33]
+LAGRENTt 0.08** 0.1 0.16 0.48 0.11* 0.12 0.13 -0.04
+[0.04] [0.06] [0.11] [0.31] [0.06] [0.09] [0.08] [0.07]
+LUHTt−10 0.83*** 0.76*** 0.71*** 0.76*** 0.80*** 0.38*** 0.75***
+[0.03] [0.04] [0.06] [0.08] [0.05] [0.07] [0.05]
+Observations 447 222 116 44 222 222 222 222
+State FE, Yr FE Y Y Y Y Y Y Y Y
+(8) (9) (10) (11) (12) (13) (14) (15)
+States: ≥ 0 ≥ 0 ≥ 0 ≥ 0 ≥ 0 ≥ 0 ≥ 0 ≥ 0
+Test: Ctrls L.Quake L.Bedrock Share Elev. Rugged. Geography Land Construct.
+Commut. Risk Depth (m) <SeaLevel SD Elev. U.S. Spec. Protect. Costs
+Costs x Yr FE x Yr FE x Yr FE x Yr FE x Yr FE x Yr FE Year t
+LUGDPt 0.56*** 0.61*** 0.72*** 0.59*** 0.57*** 0.60*** 0.62*** 0.59***
+[0.12] [0.11] [0.12] [0.10] [0.10] [0.13] [0.21] [0.09]
+LAGRENTt 0.08 0.12* 0.07 0.10* 0.10 0.05 0.09 0.1
+[0.05] [0.06] [0.06] [0.06] [0.07] [0.04] [0.07] [0.06]
+LUHTt−10 0.72*** 0.76*** 0.75*** 0.77*** 0.76*** 0.73*** 0.74*** 0.75***
+[0.04] [0.05] [0.06] [0.04] [0.04] [0.06] [0.06] [0.04]
+Observations 222 222 222 222 222 222 222 222
+State FE, Yr FE Y Y Y Y Y Y Y Y
+This table shows for 50 U.S. states x 10 years (1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020) = 500 observations the effects
+of log total urban income (LUGDPt), log agricultural rent (LAGRENTt) and the log of the past urban height stock (LUHTt−10).
+Col. (2),(3) and (4) eliminate states with residuals below 0, the 75th percentile, and the 90th percentile in a 2017 regression using
+log total urban income and log agricultural rent as covariates. Col. (5)-(15): We keep states with residuals above 0. The columns
+show that results hold when we include additional controls (see table notes just below for details on each specification). Since
+we control for the dependent variable in t-10, we lose one round of data. In addition, a few states have missing income data before
+1950, hence N = 447 (col. (1)). Col. (5)-(6): We include 9 census region-year FE and state-specific linear trends, respectively. Col. (7)
+shows the effect of adding ten-year leads of the GDP and agricultural-rent variables, whose coefficients are insignificant. Col. (8): We
+capture commuting costs by controlling for whether there is a subway and the logs of the number subway lines and subway stations in
+the state in year t (source: Gonzalez-Navarro and Turner (2018) and Gendron-Carrier et al. (2018)) and the log of the total mileages of
+paved roads corresponding to “municipal / urban extensions of highway systems” or “other municipal / urban streets”. The sources
+are A Quarter Century of Financing Municipal Highways, 1937-61 (Bureau of Public Roads) and the annual Highway Statistics reports of
+the U.S. Department of Transportation. Col. (9): We control for the log of the average (pop.-weighted) earthquake risk in the state’s
+urban agglomerations (UAs) interacted with year FE. More precisely, we use the GIS data from Pagani et al. (2018). We then use city
+boundaries from European Commission (2018) (incl. all UAs ≥ 50,000) to obtain the mean pop.(2015)-weighted average of earthquake
+risk. Col. (10): We control for the log of average (pop.-weighted) bedrock depth in the state’s urban agglomerations (UAs) interacted
+with year FE. More precisely, we use the 30 seconds version of the bedrock depth data of Shangguan et al. (2017). We then use city
+boundaries from European Commission (2018) (incl. all UAs ≥ 50,000) to obtain the mean pop.(2015)-weighted average of bedrock
+depth (m). Col. (11)-(12): In col. (11), we control for the average (pop.-weighted) share of urban land that is located below sea level
+interacted with year FE. In col. (12), we control for the average (pop.-weighted) standard deviation of elevation in the state’s urban
+areas interacted with year FE. We use the 15 arc-seconds version (breakline emphasis) of the elevation data from USGS (2010) and
+construct pop.-weighted averages for all cities in CIESIN (2017). Col. (13): We add U.S.-specific geographical controls, each interacted
+with a year trend: total land area and the shares of land unavailable for development due to excessive slope, the presence of wetlands,
+or the presence of bodies of water (source: Lutz and Sand (2017)). Col. (14): The geographical controls are replaced by time-interacted
+variables measuring the amounts of land under various types of government ownership (source: NRCM (2017)): federal government,
+state government, Bureau of Land Management, U.S. Forest Service, National Park Service, National Wildlife Refuge, Army Corps of
+Engineers, Military Bases, Tribal lands. Col. (15): We control for the RSMeans construction cost in the state in the same year. Indeed, as
+income increases, construction costs could increase, thus depressing construction. Controlling for construction costs then allows us to
+capture the direct effect of income. Robust SEs clustered at the state level: * p<0.10, ** p<0.05, *** p<0.01.
+
+13
+Table A5: GAPS & SUPPLY ELASTICITIES/LAND USE REGULATIONS, U.S., C. 2010
+Effect of the Estimated State Gap (circa 2010) Based on ...
+Residual Value: (1) States ≥ 0 (2) States ≥ p75 (3) States ≥ 90
+Dep. Var.: Coef. Obs. R2 Coef. Obs. R2 Coef. Obs. R2
+1. Saiz Elasticity -0.54* 47 0.13 -0.61** 47 0.13 -1.30*** 47 0.19
+[0.29] [0.30] [0.46]
+2. Wharton Index 0.81** 48 0.14 1.08** 48 0.2 2.12*** 48 0.24
+[0.40] [0.41] [0.64]
+3. Wharton (Saiz) 0.69* 47 0.11 0.91** 47 0.14 1.89*** 47 0.19
+[0.37] [0.39] [0.65]
+4. Saks: Combined 0.63** 33 0.27 0.74** 33 0.29 1.45*** 33 0.36
+[0.30] [0.32] [0.45]
+This table shows the correlation between the estimated U.S. state gaps based on states with a residual value above 0 (col. (1)) or the
+75th (col. (2)) or 90th (col. (3)) percentile of the residual value in the data (see Table A4) and existing measures of supply elasticities
+and land use regulations c. 2010 (see text for details on each measure). Robust SE: * p<0.10, ** p<0.05, *** p<0.01.

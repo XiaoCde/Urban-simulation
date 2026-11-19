@@ -1,0 +1,1087 @@
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 1 of 19
+JOURNAL OF COASTAL AND RIVERINE FLOOD RISK
+Vol. 2, 2023, 5
+Flood-related fatalities during the flood of July 2021 in 
+North Rhine-Westphalia, Germany: what can be learnt 
+for future flood risk management? 
+Annegret H. Thieken1
+, Marie-Luise Zenker2
+, Philip Bubeck3
+Abstract
+During the severe flooding in July 2021 190 people lost their 
+lives in Germany, which is the highest number of flood-related 
+fatalities since 1962. 49 people died in the densely populated state 
+of North Rhine-Westphalia (NRW), whose flood risk management 
+has, however, often been regarded as pioneering in Germany. To 
+further improve flood risk management in NRW, the causes and 
+circumstances of all 49 flood-related deaths were analyzed. Based 
+on official files a structured document analysis was performed and
+a new coding scheme was developed that relates accident locations 
+and victims’ activities to accident dynamics and causes of death. 
+Circumstances and causes of death differed significantly between 
+in-/outdoor accidents, age groups, and areas with different event 
+magnitudes. Elderly people (>60 years) were particularly at risk; 
+they account for two thirds of the dead. Eight of the 25 people who 
+died in a building were surprised by water entry into their 
+apartments. In addition, there are indications that nine of 24 people 
+who died outdoors were surprised and caught by water on their way 
+home or when trying to leave the flooded zone. Hence, it is assumed 
+that a lack of warning played a role in around one third of the cases. 
+In most of the remaining cases, hazards were underestimated 
+pinpointing to insufficient awareness and weaknesses of crisis and 
+risk communication. 14 people died in their basements while 
+attempting to inspect equipment (e.g., pumps) or to inspect, 
+minimize, or repair damage. Since property-level adaptation has 
+been emphasized in flood risk communication, life-threatening 
+situations during fast onset-flooding and the priority to be safe have 
+to be emphasized in future communications. It has to be 
+acknowledged that the official hazard maps indicated no risk from 
+flooding at around half of the 49 accident locations illustrating the 
+exceptional event magnitude and shortcomings of existing hazard 
+maps. Still, warning levels and flood hazard maps should be better 
+linked to identify hazard zones and to enable appropriate behavior
+including (self-)evacuation.
+Keywords
+flood fatalities, warning, risk communication, NRW
+1
+annegret.thieken@uni-potsdam.de, Institute of 
+Environmental Science and Geography, University of 
+Potsdam, Potsdam, Germany 
+2 marie-luise.zenker@uni-potsdam.de, Institute of 
+Environmental Science and Geography, University of 
+Potsdam, Potsdam, Germany 
+3 philip.bubeck@uni-potsdam.de, Institute of 
+Environmental Science and Geography, University of 
+Potsdam, Potsdam, Germany 
+Submitted: 22 March 2023, Revised: 24 August 
+2023, Accepted: 25 August 2023, Published: 22 
+December 2023
+DOI: https://doi.org/10.59490/jcrfr.2023.0005
+Cite as: ” Thieken, A., Zenker, M.-L. & Bubeck, P. 
+(2023). Flood-related fatalities during the flood of July 
+2021 in North Rhine-Westphalia, Germany: what can 
+be learnt for future flood risk management? Journal of 
+Coastal and Riverine Flood Risk., 2, p. 5.
+https://doi.org/10.59490/jcrfr.2023.0005”
+The Journal of Coastal and Riverine Flood Risk is a 
+community-based, free, and open access journal for 
+the dissemination of high-quality knowledge on the 
+engineering science of coastal and hydraulic 
+structures. This paper has been written and reviewed 
+with care. However, the authors and the journal do not 
+accept any liability which might arise from use of its 
+contents. Copyright ©2022 by the authors. This 
+journal paper is published under a CC-BY-4.0 license, 
+which allows anyone to redistribute, mix and adapt, as 
+long as credit is given to the authors.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 2 of 19
+1 Introduction
+On 14 July 2021, the depression "Bernd" brought very intense rainfall to Western Europe, which was found to be 
+extreme across multiple spatial and temporal scales (Lengfeld et al. 2023) and led to severe flooding, even on smaller 
+watercourses and streams. In Germany, the federal states of North Rhine-Westphalia (NRW) with the catchment areas of 
+the rivers Erft, Rur, Ruhr and Wupper and Rhineland-Palatinate (RP) with the catchment area of the river Ahr were 
+particularly affected (Kron et al. 2022; see also Fig. 5). The rivers Ahr, Erft and Rur originate in the Eifel and showed the 
+highest discharges. For example, return periods of the discharge of river Ahr in RP were estimated to exceed 1000 years 
+at the gauge Altenahr by far (Vorogushyn et al. 2022). However, flood peaks were not just caused by the amount of water, 
+but were due to backwater effects at clogged bridges. In fact, Dietze et al. (2022) illustrate how the floodwaters eroded 
+and altered the landscape and carried wood, sediment, and debris which aggravated loss and damage in many places. 
+Altogether, the floods destroyed and damaged several thousands of buildings and important infrastructure such as 
+transportation, power, telecommunication, water supply and sewage systems (e.g., Koks et al. 2022). Disaster funds of 
+€30 billion have jointly been provided by the federal and state governments of Germany to help the affected areas rebuild. 
+Not only is this high amount of financial damage unprecedented in the recent past, unfortunately the humanitarian impact 
+of the flood was extraordinary as well: 190 fatalities were reported from all over Germany, thereof 49 people from NRW 
+and 136 from RP, with, however, some uncertainties in the data (Table 1); one person is still missing even two years after 
+the event. According to the HANZE database (Paprotny et al. 2018) and own searches, only the storm surge of 1962 with 
+at least 347 deaths along the German North Sea coast, thereof 318 in the city of Hamburg, has claimed more deaths due 
+to flooding since 1870 in Germany. By comparison: in the floods of August 2002, which had in the Saxon Ore Mountains 
+(Erzgebirge) similar hydrological and hydraulic characteristics to the event of July 2021, 21 people lost their lives. 
+Table 1: Fatalities caused by the flood event in July 2021 in Germany per federal state (as of June 2023; data basis: 
+media reports and own research).
+Location of the Federal 
+State Name of Federal State
+Number of people 
+killed by flooding 
+in July 2021
+Remarks
+Rhineland-Palatinate 
+(RP) 136
+thereof nine people residing in NRW and 
+one person from Lower Saxony (NI); 135
+people died in the Ahr river catchment, 
+one person in the region of Trier
+North RhineWestphalia (NRW) 49
+thereof one person residing in RP; note 
+that (at least two) deaths after evacuations 
+were declared natural and hence not 
+counted*
+Bavaria (BY) 2 among them probably one natural death*
+Saxony (SN) 2
+among them one person that died a week 
+after “Bernd” due to local flooding
+Baden-Wurttemberg 
+(BW) 1
+on 12 July 2021 due to high water levels in 
+the river Jagst
+Total 190
+Missing people 1
+one resident from Berlin (B) is still 
+missing in RP
+*: In Germany, the medical certificate of cause of death (MCCD) distinguishes among other things between a natural, 
+unnatural and unclear manner of death. This does not necessarily describe the medical cause of death, but reflects the 
+circumstances of the death. It is primarily a legally relevant term, as unnatural or unclear deaths initiate an investigation 
+by a coroner and/or public prosecution. Rothschild (2005) recommends certifying an unnatural death whenever there is 
+an indication for it; this includes all kinds of accidents, suicide or indication for homicide. A natural death can be certified 
+if a doctor knows that the patient died from an internal medical reason, without a directly or indirectly preceding legally 
+relevant event (Rothschild 2005).
+In contrast to Rhineland-Palatinate, where the highest flood magnitude and all fatalities except for one person occurred 
+in the valley of the river Ahr, there was more widespread flooding in NRW impacting several districts in July 2021 
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 3 of 19
+implying that fatal incidents might be more diverse. Therefore, this paper aims at analyzing causes and circumstances of 
+all 49 fatalities in NRW in order to derive recommendations for future flood risk management.
+NRW is regularly hit by river floods, particularly along the river Rhine with severe floods e.g., in 1983, 1988, 1993 
+and 1995 causing financial damage, particularly in the city of Cologne, but only few fatalities. Although consistent and 
+regional data on flood fatalities are missing in Germany, the so-called “Heinrichsflut” on 15/16 July 1965 was probably 
+the most fatal event in NRW until July 2021 with 16 fatalities in total, thereof nine in NRW. These events triggered 
+improvements and changes in flood risk management, e.g., with regard to water retention, governance and warning. 
+Further, the floods of 1993 and 1995 led to a German-wide shift toward more risk-based and integrated flood risk 
+management approaches (LAWA 1995; Bubeck et al. 2017). In fact, the first publicly accessible flood hazard maps and 
+quantitative risk assessments were published for the river Rhine in NRW (MURL 2000; ICPR 2001). 
+In recent years, pluvial floods hit several cities across NRW, e.g., Dortmund in 2008 or Cologne in 2017. In July 2014, 
+the city of Münster was severely hit resulting (back then) in the highest amount of insured flood losses caused by pluvial 
+flooding in Germany (e.g., Spekkers et al. 2017); two people died (pers. comm. with the former head of the fire brigade 
+of the city of Münster on 28 June 2022). Initiated by such events, guidelines for assessing risks from pluvial floods were 
+released in NRW (MULNV 2018) and the development of local pluvial flood hazard maps and respective risk 
+management strategies has been funded by the state of NRW, which is also regarded as a pioneer in respect to climate 
+change adaptation (King 2022). 
+The high number of fatalities in July 2021 fundamentally questions flood risk management in Germany, particularly 
+in the most affected federal states, and calls for a detailed investigation. Risk and crisis communication including the 
+warning system are of main interest (Cornwell 2021). Generally, in natural hazard processes such as flooding, it is the 
+primary goal of warning systems to avoid fatalities by enabling people in flood-prone areas to get to safety in due time or 
+by officially evacuating areas at risk through disaster management. However, warnings are only successful if they reach 
+the people at risk, who interpret the warning correctly and act adequately (Penning-Rowsell and Green 2000). During the 
+flood of July 2021, warning processes were insufficient: in NRW, 35 % of people in affected areas reported that they had 
+not been warned (Thieken et al. 2023). Furthermore, of those who had been warned, around 50 % did not know how to 
+behave adequately. A majority of 87 % was surprised by the actual flood magnitude since based on the warnings only 
+15 % had anticipated a severe flood with high impacts (Thieken et al. 2023). Therefore, the question arises whether 
+shortcomings in the warning processes contributed to the high number of flood fatalities and what this implies for an 
+improvement of the warning system and crisis communication, i.e., the dissemination of warning messages with 
+corresponding recommendations for action. For example, analyses of flash floods in the US from the 1970s revealed that 
+people who are in danger of flooding in V-shaped valleys should directly walk or climb to safe places uphill instead of 
+leaving the valley by car on the roads (Gruntfest et al. 1978). Analysis from France (Vinet et al. 2012), England (Lumbroso 
+and Vinet 2011) and Greece (Diakakis and Papagiannaki 2021) revealed that many people drowned in one-story buildings 
+since there was no way to evacuate vertically, e.g., by escaping on the roofs. Hence, ensuring that there is an accessible 
+vertical evacuation route, also termed “shelter-in-place”, is a life-saving building code in areas prone to flash floods where 
+timely evacuation is often constrained due to short lead times (Haynes et al. 2009). In addition, better forecasting and 
+warning in flash flood areas is requested (Vinet et al. 2016).
+Generating flood hazard and risk awareness and informing people about suitable protection and precautionary 
+strategies is the task of risk communication, which is supplemented in case of an upcoming event by crisis communication. 
+In fact, next to the examples mentioned above, analyses of flood fatalities in industrialized countries (Europe, USA, 
+Australia) have already revealed important insights into risk-taking behaviors and entry points for improved
+communication (e.g., Jonkman and Kelman, 2005). For example, since vehicle-related fatalities are an important fatal 
+pathway, e.g., in the US (Kellar and Schmidlin 2012; Han and Sharif 2020), blocking roads and preventing people from
+driving into flooded areas is an important issue in many countries and should already be addressed at driving schools 
+(e.g., Han and Sharif 2020; Petrucci 2022). These examples demonstrate how an analysis of the circumstances that led to 
+fatalities can help improve flood risk management. However, cases analyzing flood-related fatalities for particularly fatal 
+events are still scarce (Jonkman et al. 2018), although their insights could contribute to achieving the first target of the 
+Sendai Framework for Disaster Risk Reduction 2015–2030, i.e., the substantial reduction in global disaster-related 
+fatalities per 100 000 people by 2030.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 4 of 19
+Analyses of flood fatalities with the goal to improve flood risk management are often hampered by a lack of data or a 
+lack of detail, e.g., when data are available on an aggregated level only. This usually does not allow us to investigate the 
+specific circumstances, which are needed to understand why an accident led to a fatal outcome and to recommend
+interventions. For this study, official documents from a parliamentary investigation, including death investigation files, 
+were provided and enabled an in-depth analysis. Structured text analyses were combined with a new coding scheme that 
+better relates accident locations and victims’ activities to accident dynamics and causes of death than existing approaches.
+This paper will introduce the approach and learnings from the event of July 2021 in North Rhine-Westphalia based on 
+Thieken et al. (2022). 
+2 Data and methods
+2.1 Data sets
+In the framework of an authorized parliamentary investigation on the flood in 2021, two encrypted hard drives with 
+numerous documents from the North Rhine-Westphalian Ministry of the Interior (IM) and the North Rhine-Westphalian 
+Ministry of Justice (JM) were provided, respectively. In particular, the IM data challenged the analysis, since data totaled 
+112 gigabytes (GB) with more than 2700 numbered PDF, audio and video files. However, it also included a first overview 
+table on the official 49 flood fatalities in NRW with basic socio-demographic information, which served as orientation in 
+the subsequent research. The JM data contained 3.53 GB and approx. 380 files, among which were the public prosecutor's 
+investigation files (death investigation files) on 46 of the 49 deaths under study including police communications and 
+documentations of the accident locations, reports from eye-witnesses and in most of the cases an autopsy report. 
+As additional information, hydrological data, cross-sections, reports, presentations and media information on the flood 
+in July 2021 were provided by the North Rhine-Westphalia State Office for Nature, Environment and Consumer 
+Protection (LANUV) and by water associations (Erftverband, Ruhrverband and Wasserverband Eifel-Rur – WVER). As 
+complementary source of information a media search in the online press archive of GBI-Genios Deutsche Wirtschaftsdatenbank GmbH on fatalities during the 2021 flood (search period: 14th July 2021 to 31st December 2021) was performed. 
+Furthermore, official population statistics from the GENESIS online database of the German Federal Statistical Office 
+(Destatis 2021) were used to compare socio-demographic information of the fatalities with the general population of 
+NRW. Moreover, accident locations were searched in the flood hazard maps of NRW’s water information system 
+ELWAS. The maps were produced in 2019 as part of the second implementation cycle of the European Floods Directive
+(2007/60/EC). In addition, geographic information, i.e., the water network as well as pedological and geological data 
+from the NRW Geoportal, as well as shape files with administrative boundaries (VG250) and a digital elevation model 
+(DGM200) from the Federal Agency for Cartography and Geodesy (BKG) were used. Finally, warnings provided in July 
+2021 via the modular warning system MOWAS by the Federal Office of Civil Protection and Disaster Assistance (BBK)
+and data from an online survey on the warning situation in July 2021 in the affected areas (Thieken et al. 2023) were 
+considered to better understand the warning situation.
+2.2 Workflow
+The main methodological challenge was to search the large volume of IM data for relevant information on the floodrelated fatalities and to retrieve it in a structured way. Therefore, the workflow depicted in Figure 1 was developed. 
+First, the IM data were analyzed by means of the software AntConc (version 4.0.4), a freely available software for 
+linguistic research. All PDF files were loaded into the software, which extracts text passages automatically and stores 
+them in a locally saved database. Then the tool Key-Word-In-Context (KWIC) was used to search all documents in the 
+database for a number of keywords defined for the study at hand (*: wildcard): disaster*, *died*, drowned*, exitus, 
+corpse*, victim*, electrocution*, death*, lethal*, fatal*, dead*, accident*, injured*, and missing* (in German: *glück*, 
+*starb*, *storben*, ertrunken*, exitus, leiche*, leichnam, opfer*, stromschlag*, tod*, tödlich*, tot*, unfall*, verletz*, 
+vermisst*). The KWIC-tool displays a list of results and shows for each hit 10 to a maximum of 25 words that precede or
+follow the keyword. Identical or very similar text passages are listed directly one below the other, i.e., the hits are ordered 
+according to their frequency. The PDF file in which the hit was found is also reported. By this approach, the multiple 
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 5 of 19
+redundancies in the IM data could be easily recognized and relevant text passages were systematically identified. These 
+were copied word-by-word to a list of results in an Excel file, next to its source. If the 25 context words were not sufficient 
+to understand the context of a relevant fact, the corresponding text passage was searched in the original PDF file and a 
+longer text passage was added to the list of results. In addition to the IM data, newspaper articles from a keyword search 
+in the database GENIOS were analyzed in the same manner, whereas video and audio files of the IM data were neglected. 
+Since some PDF files caused an error when imported to AntConc, these files were searched individually with a reduced 
+keyword list (i.e., exitus, corpse, death*, fatal*, dead*) using the search function in Adobe Acrobat Reader. The files of 
+the JM data were evaluated individually, as these prosecution investigation files presented all information on the 
+individual deaths. Data files that were not relevant to the investigation of the flood fatalities were not considered further.
+Figure 1: Workflow of data processing. 
+Each text passage in the list of results was assigned to the individual flood victims by means of a unique identifier 
+(ID) on the basis of the information contained therein (e.g., locality, socio-demographic information). In a next step, a 
+spreadsheet was created for each deceased person and all associated text passages were compiled per case.
+Since personal details of the victims were not blacked out in the JM records, it was ultimately possible to determine 
+the exact age and place of residence for (almost) all of the deceased, which facilitated the assignment of contextual 
+information to each case. In order to determine whether an accident site was located within a flood hazard zone, each 
+address of an accident site was searched in NRW’s flood hazard maps (ELWAS, see above). For this, the maps for an 
+extreme flood scenario were chosen; the maps contain, among other things, information on possibly inundated areas and 
+water depths expected during an extreme flood event. The definition of the extreme flood scenario has not been 
+harmonized in Germany by now (DKKV 2015). In NRW, this extreme scenario reflects a flood that occurs on average 
+significantly less frequent than every 100 years (i.e., every 1000 years, so-called "millennium floods") (Ministry for 
+Climate Protection, Environment, Agriculture, Nature and Consumer Protection of the State of NRW, n.d.). For each 
+case, a screenshot of the map was copied to the Excel file. 
+The collected information on each case was finally analyzed in a structured way with the help of a coding scheme. 
+For this study, a new coding scheme was developed to account for the high level of detail of the data and to better link 
+the circumstances of flood-related deaths to recommendations for flood risk management. The scheme was inspired 
+(deductively) by the international literature (e.g., Jonkman and Kelman 2005; FitzGerald et al. 2010; Badoux et al. 2016) 
+and European databases (Petrucci, Aceto et al. 2019; Petrucci, Papagiannaki et al. 2019), but was adapted (inductively) 
+to the data at hand. The whole coding scheme is provided in the Appendix as Excel file that can be used as a template for 
+future studies. The main variables are an individual identifier of each fatality (ID), gender and age (in years) of the fatality, 
+previous illnesses or mobility impairments, place of residence of the victim, general description of the accident location 
+(bridge, cellar, street, etc.), address of the place where the body was found, municipality of the place where the accident 
+occurred (or – if unknown – place where the body was found according to official police reports), official municipality 
+ID, county of the place where the accident occurred (or – if unknown – where the body was found), official county ID, 
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 6 of 19
+geographic sub-area (if applicable, see results section), time of the accident (assuming light from 5 a.m. to 10 p.m. and
+darkness between 10 p.m. and 5 a.m. in July), chronological classification of the accident with regard to the event (preimpact; impact; post-impact), indication whether the accident site is in- or outside the flood hazard zone according to the 
+extreme flood hazard map of 2019, water level class at accident site according to the extreme flood hazard map of 2019, 
+classification as to whether the person was a resident at the site of the accident, a non-resident or a (resident) rescue 
+worker, locality of the accident as indoors or outdoors, detailed location of the accident (e.g., basement, ground floor, in 
+or near a vehicle), victim's activity in the context of the accident (e.g., asleep or indoors surprised by the event), accident 
+dynamics describing the fatal pathway (e.g., trapped/entrapped in a flooded room; bridge collapse and then swept away 
+by water and trapped or injured by objects/floating debris in the flooded area), and medical cause of death (e.g., drowning, 
+injury (polytrauma); internal cause such as heart attack, stroke or similar). Recommendations for flood risk management 
+were added as open text since it was difficult to provide predefined categories for this. With a broader data base categories 
+could be added in future.
+The coded variables were finally used for statistical analyses performed with the help of the software SPSS and Excel 
+as well as for spatial analyses in the geographic information system QGIS. Since the variables are predominantly 
+categorial, i.e., represent different, mutually exclusive categories, simple descriptive statistics, especially frequency 
+analyses, were used. In order to assess whether one frequency distribution deviates statistically significantly from another, 
+the chi-square test can be used at this data level, but has only limited significance given small sample sizes. In particular, 
+it was tested whether the medical causes of death, timing, detailed locations and flood hazard zones of the accidents, the 
+victims’ activities and the accident dynamics differed between in- and outdoor cases (see section 3.1), gender and age 
+groups (see section 3.2) as well as different geographic sub-areas that reflect differences in event magnitude and 
+landscapes (see section 3.3).
+3 Results and Discussion
+For potential improvements to risk management, the locations and contexts in which the fatal accidents occurred are 
+of particular relevance next to event characteristics and socio-demographic information. Before (significant) differences 
+in these regards will be studied for different subsets, accident locations, victims’ activities, accident dynamics and medical 
+causes of death will be presented for the whole data set.
+3.1 Overview of accident locations, dynamics and consequences
+The accident locations revealed that 25 people died indoors and 24 outdoors. In the buildings (Figure 2), about half of 
+the people died in their basements (13 people). In addition, two people drowned in basement apartments. Furthermore, 
+seven people died in their apartments on the ground floor, two more on an upper floor and one person in a non-residential 
+building. The outdoor cases are characterized by the mode of transportation in Figure 2: eleven people were driving or 
+were near their vehicle when they were caught by the floodwater; the other 13 people walked outdoors on a road or in 
+open terrain. 
+Figure 2 reveals that death by drowning was responsible for the majority of cases (i.e., 33 cases or 67.3 %). In three 
+other cases, death was due to a combination of suffocation and drowning (as a result of being trapped under a car in a 
+flooded area or by a lack of oxygen in a basement, which led to unconsciousness and drowning). In two other cases, death 
+by suffocation as a result of inhaling mud or due to the weight of a heavy object on the chest was certified. The cases 
+mentioned so far and a further one, in which vertebral fractures with spinal cord injuries (polytrauma) were identified as 
+cause of death, can be attributed to the direct physical impact of the floodwater on the victims. In contrast, the following 
+deaths were caused by the flood, even if there was no or only little contact with water: One case with polytrauma can be 
+attributed to a traffic accident, which is to be considered an indirect but immediate consequence of the flood event. In 
+seven cases, internal medical causes of death were found, usually heart attacks or similar, which can be traced back to 
+overexertion, excessive demands or shock. In addition, two people died from massive burns since a flood-damaged oil 
+heating caught fire, which was considerably aggravated by an oxygen cylinder (for a respirator) located in the hallway of 
+the building. 
+The differences in the medical causes of death are weakly significant (p ≤ 0.1) between indoor and outdoor accidents 
+and are mainly due to the fact that drowning occurred more frequently in outdoor accidents than in indoor accidents (see 
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 7 of 19
+Figure 2). In contrast, more internal medical causes (heart conditions) were found responsible for deaths indoors. Death 
+due to polytrauma (in two cases) occurred exclusively outdoors, while two deaths as a result of burns occurred only 
+indoors.
+Figure 2 further links the locations of the accidents with the medical causes of death via the activity of the deceased 
+and the accident dynamics. Each line in Figure 2 represents one person, but similar cases were clustered as indicated by 
+the numbers. This grouping results in various fatal pathways that might serve as starting points for better risk management. 
+Since the activities of the fatalities and the unfolding accident dynamics naturally differ between indoor and outdoor cases,
+Figure 2 presents indoor cases in the upper part and outdoor cases below. Moreover, the chi-square tests are highly 
+significant (p ≤ 0.001) with regard to the activities and accident dynamics in buildings and outdoors. 
+Indoors, most fatalities (14 people) were checking their property-level flood adaptation measures (e.g., pumps) or 
+were checking, removing or trying to reduce flood damage. This mainly took place in basements or in basement flats. 
+However, Figure 2 illustrates that these people were not necessarily trapped in the basement due to a water ingress, even 
+though these tragic cases (five in total) occurred, some with very dramatic, but futile rescue attempts. Four deaths were 
+due to domestic accidents, mainly falls in slightly to moderately flooded basements, after which the victim was unable to 
+get up again. In three other cases, death was due to internal medical causes and thus rather triggered by being overburdened 
+by the situation or by carrying out emergency measures. In two cases, high levels of carbon dioxide and a correspondingly
+low level of oxygen, probably caused unconsciousness, which led to drowning in a moderately flooded basement. 
+Furthermore, ten people were surprised in their flats (in one basement apartment, several apartments on the ground 
+floor and one flat on an upper floor) by the water ingress or the triggered flat fire (see above), whereby the documentation 
+for two people suggests that they had been warned in advance, but underestimated the magnitude of the unfolding event
+and were then surprised by the water ingress. Seven people were trapped in a flooded room after the water ingress or were 
+entrapped without escape by falling objects. In one (preconditioned) case, the water ingress led to heart failure. Two 
+people were incapacitated as a result of a fire (see above). In this case, escaping to higher floors did not help either. In 
+contrast, vertical evacuation was documented as a successful strategy in severely flooded homes also in vicinity to 
+locations of fatal incidents.
+Of the eleven people who were travelling in a vehicle (nine cars and two fire brigade vehicles), one person was found 
+drowned while still wearing a seat belt in the vehicle. Another person suffered a traffic accident in a road closed due to 
+the flood and succumbed to the injuries a few weeks later. A third person suffered a fainting spell while driving (as a 
+passenger) and died despite resuscitation. A fourth person got stuck while boarding a vehicle, was swept away by a flood 
+wave, pushed under water and subsequently drowned. In case of seven people, it was (partly) observed or must be assumed 
+that they lost control of their vehicle in the flooded area or that the engine failed. They were still able to leave the vehicle, 
+but lost their stability in the water current and were swept away. The locations where the bodies were found and their 
+injuries suggest that some of them were transported several hundred meters through the water away from the accident 
+site. Many bodies which were found in the open, were only scantily clothed or completely unclothed, which underlines 
+the very strong currents and danger of the flood.
+Finally, 13 people died while being outdoors on foot. Two of them were involved in private rescue operations; in the 
+case of another two people, it must be assumed that they ignored warnings or safety instructions and underestimated the 
+hazard. In the end, both failed in their attempt to leave the hazard zone and were swept away by the water – as was another 
+person who was swept away by the water when leaving their house and was later found dead in the garden. In the case of 
+three other pedestrians, the reason why they were outdoors is unclear, while in six other cases it is documented that the 
+now deceased were on their way home after work or after visiting family members, or were seeking a safe place at a 
+family member because their own home was already flooded. Three of these (very young) people were swept away by a 
+wave when crossing a river on a bridge; in two cases this was associated with a bridge collapse (Figure 2).
+It should be noted that most of the fatalities (40 people and four rescue workers) were local residents, i.e., died at their 
+place of residence. Four people were traveling by car in places where they did not reside; one person died at his place of 
+work. However, of the non-residents just one person was registered outside the affected areas in NRW, namely in 
+Rhineland-Palatinate. The question arises to what extent these deaths could have been (partially) prevented by appropriate 
+risk communication using the official flood hazard and risk maps. Such knowledge could have influenced decisions to 
+evacuate, i.e., to leave the flooded area in advance and based on corresponding warning information.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 8 of 19
+Figure 2: Locations of the fatal incidents, victim’s activities, accident dynamics and medical causes of death of 49 
+flood-related fatalities in North Rhine-Westphalia (NRW) in July 2021. Note that each line initially represents one 
+person, but similar cases were merged as indicated by the numbers following the item descriptions.
+The hazard maps for NRW are publicly accessible and allow an address-specific search for the locations where the 
+accidents occurred. As mentioned in section 2, the representation of the accident sites in the hazard maps was searched 
+for all cases – with the exception of three official rescue operations and one missing address. Since the location of the 
+accident is often not known exactly in the cases where people died outdoors, the search results are presented differentiated 
+between in- and outdoors: for ten buildings in which people lost their lives, the flood hazard maps of 2019 show no 
+inundations for an extreme flood scenario (return period of around 1000 years). In nine cases, a low flood hazard (with 
+water depth up to 0.50 m) and just in four cases a higher flood hazard with inundation depth of up to one meter above the 
+ground surface are depicted in the maps. The outdoor accident sites show a similar pattern: at 14 sites no flood hazard 
+zone is indicated; at six sites water depths up to 0.50 m and at two sites up to 1 m are shown. These findings clearly 
+indicate that the flood hazard maps (with artificial, but extreme scenarios) did not adequately depict the extreme event of 
+July 2021. This is partly due to the high event magnitude, e.g., small streams were occasionally reported to swell from 
+<1 m in width to several meters. Location Victim's activity Dynamic of accident Medical cause of death
+Suffocation/asphyxiation: 1
+Overburdening: 1
+Trapped: 1
+Overburdening: 1 Internal cause: 1
+Non-residential building: 1
+Swept away by water: 1
+Trapped in flooded car: 1
+Accident in closed area: 1
+Swept away by water: 1 Suffocation/asphyxiation: 1
+Suffocation & drowning: 1
+Basement: 13
+Damage/equipment (e.g. 
+heating, pumps) checked 
+during/after the event or 
+otherwise attempting to 
+reduce property damage: 
+14
+Trapped/entrapped in a 
+flooded room: 5
+Drowning: 6
+Domestic accident (fall): 4
+Internal cause: 4
+Overburdening or shock: 2
+Incapacitated by CO2
+(lack of oxygen): 2
+Suffocation & drowning: 2
+Basement apartment: 2 Drowning: 2
+(asleep or indoors) 
+surprised by the event: 6
+Ground floor: 7 Trapped/entrapped in a 
+flooded room: 6 Drowning: 6
+Surprised 
+despite warning: 2
+Upper floor: 2 Surprised by the event: 2 Incapacitated by 
+fire/smoke: 2
+Burns (and consequences): 2
+Outdoors on/in/near a 
+vehicle: 11
+Drowning: 8 Driving (also: on the way 
+to/from work or home or 
+in order to get to a safe 
+place): 9
+Lost control of vehicle in 
+flooded area, trapped in 
+car or carried away after 
+leaving it and getting 
+injured: 7
+Injury (polytrauma): 2
+Drowning: 2
+Drowning: 9
+Crossing river on a bridge 
+(also: on the way home or 
+to get to a safe place): 3
+Collapse of bridge: 2
+During/after official rescue 
+operation: 3
+Overburdening: 2 Internal cause: 2
+Outdoors on foot (on the 
+road or on open terrain): 
+13
+After leaving the house, 
+swept away by water: 2
+Surprised 
+despite warning: 2
+Trying to save or help 
+others (private): 2
+Walking (also: on the way 
+to/from work or home or 
+to get to a safe place): 6 Swept away by flood 
+waves, masses of water or 
+mud: 8
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 9 of 19
+In summary, Figure 2 reveals that eight of the 25 people who died in a building were surprised by water entry into 
+their apartments. In addition, there are indications that nine of 24 people who died outdoors were surprised and caught by 
+water on their way home or when trying to leave the flooded zone. It is assumed that a lack of warning played a role in 
+these 17 cases, i.e., the eight people caught by surprise indoors and the nine people who died outdoors on their way home 
+or while trying to leave the flood zone (too late), who make up a third of the fatalities. As shown by Thieken et al. (2023),
+the dissemination of warnings and behavioral recommendations revealed many deficits in July 2021. The proportion of 
+people from NRW who reported that they had not been warned (i.e., 35 %), is similar to these fatal accidents. 
+In most of the remaining cases, hazards were underestimated pinpointing to insufficient awareness and weaknesses of 
+crisis and risk communication. Figure 2 highlights that one important dangerous location are basements, followed by 
+being outdoors on foot or driving. This is basically in line with similar studies (e.g., FitzGerald et al 2010; Badoux et al. 
+2016; Vinet et al. 2016). However, the diversity of accident dynamics is presented clearer in this study and provides 
+crucial insights for risk communication, e.g., the importance of domestic accidents or the mechanisms of vehicle-related 
+accidents to be addressed at driving schools.
+Even if the international literature had not been studied, official flood risk managers could have known some essentials 
+from other flood events in NRW. A closer look at the two men who were killed by the pluvial flood event in Münster in 
+July 2014 (Spekkers et al. 2017) reveals that important learnings could already have been made. According to the (former) 
+head of the fire brigade of the city of Münster (pers. communication on 28 June 2022), an elderly gentleman with mobility 
+impairments checked the basement for damage. While he was downstairs, a window broke and the inflowing water 
+flooded the basement very fast. The man was trapped and drowned. In the second case, an elderly gentleman drove in a 
+borrowed car to get some equipment for damage mitigation. Most probably he lost control of his vehicle and was later 
+found drowned. Both incidents reflect very dominant fatal pathways and accident dynamics of July 2021 (see Figure 2). 
+Hence, a better and continuous documentation of flood fatalities and structured lessons learned evaluations of severe 
+events would reveal vulnerabilities earlier and could initiate interventions, e.g., tailored crisis and risk communication.
+In August 2002, it was reported that several people died during or after evacuations (Reimer 2002; Jonkman and 
+Kelman 2005). In 2021, the document analyses revealed that at least two elderly people died after being evacuated from
+their retirement homes in NRW. Since their death was considered “natural” (see Table 1 for an explanation), they were, 
+however, not officially counted as flood-related fatalities. Since the number of similar cases could not be retrieved from 
+the files reliably, they were neglected in this analysis, too, although it is acknowledged that the role of evacuations needs
+further investigation. 
+3.2 Influence of socio-demographic factors
+IRDR (2015) recommends distinguishing reports on flood fatalities by their gender, age, and geographical sub-areas 
+(such as municipalities) as a tertiary data level in loss databases. These three characteristics are assumed to reflect specific 
+vulnerabilities or event characteristics. In fact, gender, age and health status are commonly considered important 
+indicators of a person's vulnerability to flooding (e.g., Jonkman and Kelman 2005; Green et al. 2019; Petrucci 2022), with 
+children and the elderly being considered particularly vulnerable to flooding, e.g., because their stability in flooded areas 
+is worse than that of (healthy) adults (Jonkman and Penning-Rowsell 2008). Therefore, socio-demographic data of the 49 
+flood fatalities in NRW were analyzed in detail and it was tested whether there are significant differences between gender 
+and age groups with regard to the circumstances and dynamics of the accidents. Figure 3 summarizes significant findings. 
+The three geographic sub-areas will be introduced in section 3.3; the results for gender and age groups will be discussed 
+in what follows. Further socio-demographic factors like the level of education, income or household size might also play 
+a role for a person’s vulnerability, but could not be retrieved for all cases. However, the coding scheme could be expanded 
+by these variables. Anecdotal evidence suggests that the social network and advise given by family members, neighbors 
+or friends could play an important role for (not) performing certain behaviors. Still, this topic needs further research.
+Of the total of 49 people investigated, 31 were male (63.3 %) and 18 female (36.7 %). The deviation from the total 
+population of NRW (49.1 % male, 50.9 % female, as of 31 December 2020) is confirmed by a chi-square goodness-of-fit 
+test (p-value: 0.0467). Hence, men died significantly more often in the flood of July 2021 than their share in the total 
+population would suggest. This pattern is not unusual: in Europe, the USA and Australia, about 65 % of flood victims are 
+male (Petrucci 2022). This is generally attributed to three factors: first, men more often have outdoor occupations; this 
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 10 of 19
+fact applies to one man from NRW in July 2021. Secondly, men are significantly overrepresented in search and rescue 
+operations. In July 2021, this applies to three firefighters who died during or after official rescue operations in NRW (see 
+Figure 2), as well as another firefighter and a fifth man, who died during private rescue operations, while there’s no such 
+case among the females (note that a female firefighter died in Rhineland-Palatinate). These five men correspond to 16% 
+of the 31 male victims. Third, it was found that men tend to behave riskier in flood situations (Badoux et al. 2016; Petrucci 
+2022). In fact, the chi-square tests only revealed significant differences between males and females with regard to their 
+activities, i.e., their behavior during the flood (p < 0.01; see Figure 3). The analyzed documents further suggest that 4 out 
+of 31 men (13 %) ignored warnings and safety instructions. Such evidence was not found for deceased women. Men also 
+took more often care of checking equipment such as pumps in the basement or were checking, repairing or reducing 
+damage (11 out of 31 men, i.e., 35 %, versus 3 out of 18 women, i.e., 18 %), which can be interpreted as risky behavior 
+in case of a flash flood, but also as precautionary behavior with the aim to reduce damage. Women, on the other hand, 
+were slightly more often caught by surprise by flood waves at home (4 out of 18 women, i.e., 22 %, versus 4 out of 31 
+men, i.e., 13 %) and outdoors, where they were more often on foot in flooded areas (7 out of 18 women, i.e., 39 %, versus 
+2 out of 31 men, i.e., 6 %). Accidents in or near a vehicle show almost an equal distribution between the genders (4 out 
+of 18 women, i.e., 22 %, versus 5 out of 31 men, i.e., 16 %). Hence, the findings for NRW in general match the findings 
+for gender difference in the literature (e.g., Petrucci 2022). However, the data reveal that risky and precautionary behavior
+cannot always be clearly distinguished. In case of fast onset floods, precautionary behavior to mitigate damage can be too 
+risky.
+Figure 3: Summary of significant differences across gender, age groups and geographic subareas with regard to other 
+variables of the fatal accidents in July 2021 in NRW (see legend for the level of significance p of the chi-square test).
+With regard to age, the two youngest fatalities in NRW were 18 years old, the oldest 86. The median age of the 49 
+flood victims was 65 years (mean: 62.65 years). A comparison with the age distribution in the general public reveals that 
+people over 60 years are clearly overrepresented among the fatalities, while the age groups of children and adults between 
+21 and 50 years are underrepresented (Table 2). Therefore, it was further explored what might explain the higher mortality 
+among the elderly in July 2021. For this purpose, the data set was split into 17 people aged 60 years or younger and 32 
+people who were older than 60 years and tested for differences. Times and locations of the accidents, as well as the 
+activities and accident dynamics between the ≤ 60-year-olds and over-60-year-olds revealed significant differences, but 
+there were no significant differences in the medical causes of death (Figure 3).
+With regard to activities, over-60s checked systems in the basements significantly more often or they tried to check, 
+remove or reduce damage (Figure 4a). In total, this activity was fatal for 13 elderly people. The proportion of those who 
+were flooded in their home by surprise is also slightly higher among the elderly (six people aged >60). For the younger 
+people, on the other hand, rescue operations (private or fire brigade) played a more important role, and they were more 
+often on foot in the affected area. The accident locations differed accordingly: only 24 % of the ≤ 60-year-olds died in a 
+building, while this applies to 66 % of the over-60s. Similar patterns were reported in Petrucci’s review (2022). 
+The analysis further reveals that accident dynamics are much more diverse among the elderly. Most frequently, they 
+were trapped or entrapped in a flooded basement or ground floor flat. However, in basements other processes were also 
+observed, especially falls and overstraining or overexertion (cf. Figure 4b and Figure 2).
+Significance of Chi-Squared 
+tests (Likelihood-Quotient) Gender Age Sub-Area
+Medical cause of death ** *** p ≤ 0.001
+Time of accident (day/night) * *** ** p ≤ 0.01
+Victim's activity ** ** ** * p ≤ 0.05
+Accident location in flood 
+hazard zone (HQ-extrem) (*) (*) p ≤ 0.1
+Dynamic of the accident ** * p > 0.1
+Location (detail) ** *
+Legend
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 11 of 19
+Table 2: Distribution of flood fatalities in July 2021 by age group in comparison to the total population of North RhineWestphalia (NRW; as of 31 Dec. 2020).
+Age group # Fatalities in 
+July 2021 Share
+# General population 
+of NRW as of 31 
+December 2020
+Share
+0 to 14 years (children) 0 0.0 % 2 510 010 14.0 %
+15 to 20 years 3 6.1 % 1 062 157 5.9 %
+21 to 30 years 2 4.1 % 2 196 917 12.3 %
+31 to 40 years 1 2.0 % 2 246 813 12.5 %
+41 to 50 years 4 8.2 % 2 176 060 12.1 %
+51 to 60 years 7 14.3 % 2 917 472 16.3 %
+61 to 70 years 10 20.4 % 2 198 654 12.3 %
+71 to 80 years 15 30.6 % 1 522 843 8.5 %
+>80 years 7 14.3 % 1 094 644 6.1 %
+Total 49 17 925 570
+Figure 4: Activities of flood victims (A), and accident dynamics (B) among the 49 flood fatalities in NRW in July 2021
+per age group (chi-square p-value ≤ 0.01: **; see also Figure 3).
+It should be noted that for 25 people some pre-existing health conditions were mentioned in the documents analyzed, 
+but only five of them were ≤ 60 years of age. Since there is hence a clear correlation between age and pre-existing 
+conditions in the data, the influence of pre-existing conditions on the circumstances of death is not presented. In addition, 
+it is worth noticing that the pre-existing conditions were not detected the main cause of death except for cases with an 
+0%
+20%
+40%
+60%
+80%
+100%
+≤ 60 years
+(n = 17)
+> 60 years
+(n = 32)
+Total
+(n = 49)
+A) Victim's activity **
+Trying to save or help others (private)
+During/after official rescue operation
+(of the fire brigade)
+Crossing river on a bridge (also: on the
+way home or to get to a safe place)
+Surprised by the event despite warning
+Walking (also: on the way to/from work
+or home or to get to a safe place)
+(asleep or indoors) surprised by the
+event
+Driving (also: on the way to/from work
+or home or to get to a safe place)
+Damage/equipment checked or other
+attempts to reduce damage
+0%
+20%
+40%
+60%
+80%
+100%
+≤ 60 years
+(n = 17)
+> 60 years
+(n = 32)
+Total
+(n = 49)
+B) Accident dynamic **
+Accident in closed road
+After leaving the house, swept away by
+water & entrapped
+Collapse of bridge; then carried away
+or entrapped/injured
+Domestic accident (e.g. fall)
+Incapacitated by fire/smoke/gases and
+incapable of action
+Overburdening or shock
+Lost control of vehicle, trapped in car
+or carried away after leaving car
+Swept away by flood waves, masses of
+water or mud outdoors
+Trapped/entrapped in a flooded room
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 12 of 19
+internal medical cause of death: heart conditions, high blood pressure or overweight were assumed to contribute to the 
+death. However, among of the seven people who died due to internal medical causes, three were under 60 years of age, 
+two of whom were rescue workers who collapsed during or after an official fire brigade operation. In the documents 
+analyzed, other fire brigades also reported serious illnesses such as heart attacks or strokes among rescue workers after 
+the end of their mission in July 2021. On the one hand, this illustrates the enormous strain on rescue workers during such 
+an operation. On the other hand, this finding suggests that previously ill or older members of the fire brigades should take 
+on less stressful tasks and take more breaks.
+3.3 Spatial distribution of fatalities and influence of geographic factors
+For an assessment which role the flood magnitude played, the geographical distribution of the accident locations was 
+mapped on the municipal level. Figure 5 reveals a concentration of fatalities in the upper catchments of the rivers Rur and
+Erft. In the town of Schleiden (including the community of Gemünd), nine people died due to extreme flooding of the 
+Olef, Urft and smaller water bodies in the upper catchment area of the river Rur. Three more people in Nettersheim, two 
+in Kall and one in Hellersthal can also be attributed to this catchment area. The daily precipitation for 14/15 July 2021 
+proves that high precipitation amounts between 125 and 150 mm in 24 hours occurred in this area (Kron et al 2022). 
+According to WVER (2021), a return period of 1000 years was exceeded in this area at three precipitation stations 
+(Blankenheim, Dahlem-Schmidtheim and Kall-Sistig) for the rainfall totals from 13 to 15 July 2021. These villages and 
+towns are all located upstream of the big Rur reservoir (retention capacity of >200 million m³), which was completely 
+filled in July 2021 – even the spillway was activated – but still prevented severe flooding further downstream. Together 
+with the catchment of the upper Ahr river, where one person died in the municipality of Blankenheim (NRW), these cases 
+are grouped into the subsample G1 (n = 16).
+Figure 5 reveals that most fatalities occurred in the overall catchment area of the river Erft with its tributary Swistbach 
+– in the following referred to as subsample G2 (n = 20). In detail, five people died in Rheinbach, four in Swisttal, five in 
+Bad Münstereifel, three in Euskirchen, two in Zülpich and one person near Erftstadt in a flood-related traffic accident.
+High precipitation was also recorded in the headwater catchments of the rivers Erft and Swistbach (Kron et al. 2022). 
+At the rainfall gauge Euskirchen-Steinbach, a rainfall total of 179 mm was measured on 14 July 2021; in the southern and 
+south-eastern catchment area, more than 130 mm of precipitation was recorded over the entire area, so that a 100-year 
+precipitation event was clearly exceeded across the region (Erftverband 2021). The water level of an extreme flood, on 
+which the hazard maps are based, was exceeded at almost all gauging stations (Erftverband 2021). 
+For statistical reasons all other fatalities were summarized in the sub-sample G3 (n = 13). It thus includes two cases 
+each from Geilenkirchen, Cologne and Leichlingen and one person each from Altena, Düsseldorf, Inden near Jülich, 
+Kamen, Rösrath-Hoffnungsthal, Solingen and Werdohl (Figure 5). The sub-sample thus extends over a very large and 
+naturally very heterogeneous area; precipitation amounts were also very different, as was the timing of the flood. While 
+the flood peaked in the late evening or at night in the areas G1 and G2, the timing was more diverse in area G3.
+Figure 5 also depicts flood warning gauges available in July 2021. Their availability varies greatly: in the 
+comparatively small catchment area of the river Urft (G1) there are three flood gauges on the Urft and Olef, whereas the 
+upper Erft river and the river Swistbach (G2) are each equipped with only one gauge (at Arloff and Morenhoven, 
+respectively). Furthermore, there was no flood warning gauge upstream of the cities of Bad Muenstereifel or Rheinbach, 
+which the inhabitants could refer to in a flood event, which considerably hampers their ability to be alerted and prepared 
+for a flood. Sub-area G3 is too heterogeneous to allow a statement on this.
+In the following, we examine whether and how accident locations, dynamics, etc. differ in the three sub-samples. In 
+fact, the chi-square test (likelihood quotient) indicates significant differences in the sub-areas for all six variables 
+investigated (Figure 3). However, due to the very small number of cases per sub-area, these values should not be overinterpreted. Figure 6 nevertheless illustrates that there seem to be area-specific phenomena.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 13 of 19
+Figure 5: Geographical distribution of flood fatalities of July 2021 in North Rhine-Westphalia at the level of 
+municipalities; note that only water bodies with flood warning gauges are shown in the map.
+With regard to the medical causes of death, it is striking that the proportion of people who suffered death by drowning 
+is significantly higher in areas G1 and G2 than in G3. In both areas (G1 and G2) there was only one person each with an 
+internal medical cause of death. In addition to the 15 drownings in G2, one death was caused by suffocation and one by 
+a combination of suffocation and drowning. Two people succumbed to their injuries (polytrauma). The picture is clearly 
+different in area G3: Here, internal medical causes of death are the most frequent cause with five cases, followed by 
+drowning in three cases and two cases each of suffocation and drowning as well as burns (and resulting injuries). In one 
+case, death from suffocation was certified (Figure 6A). This means that in areas G1 and G2, physical/direct exposure to 
+the floodwater played a significantly greater role than in area G3. For rescue operations and emergency response, darkness 
+probably was an additional complicating factor (Figure 6B). Particularly, in area G1 and G2 the flood peaked at night, 
+when other social interactions are limited, too, as is the recognition of flooded areas due to short visibility ranges outdoors. 
+The accident locations (Figure 6F) and activities (Figure 6C) also differ significantly across the regions: in sample 
+G3, there are considerably more cases in which people checked a system in their basement or wanted to check, repair or 
+reduce damage there. In addition, some people were surprised by the event (one despite warning), and two people died 
+during rescue operations. Only three accidents happened outdoors, all others indoors (Figure 6F). This differs in the areas 
+G1 and G2, where several people died outdoors while traveling by car or on foot. In area G1, the proportion of those who 
+were surprised by the flood event indoors is also higher. In contrast to the other areas, this mostly happened in ground 
+floor apartments (Figure 6F). In areas G1 and G2, the three accidents already mentioned also occurred when crossing 
+bridges (one in G1, two in G2). These hazards were not specially highlighted in flood hazard maps, in some cases they 
+do not even show flooding there. Overall, the hazard maps in area G1 perform worse than in G2 and G3, although the 
+differences here are only slightly significant (Figure 6D). However, the poorer performance of the hazard maps in area 
+G1 fits with the event magnitude and the fact that more people were flooded by surprise, while in area G3 more people 
+controlled their property-level flood adaptation measures, namely pumps, or reduced damage (Figure 6C).
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 14 of 19
+Though not clearly captured by the coding scheme, individual reports from sub-area G1 suggest that five people tried 
+to leave their flooded properties horizontally, i.e., by driving (two people) or walking away (three people), and then were 
+caught by the water outside. In contrast, just one case of a failed vertical self-evacuation attempt (coupled with an 
+underestimation of the hazard in area G3) was described. In this case, a ladder or scaffolding was climbed, which was 
+swept away by the water; later rescue attempts also failed. In contrast, there were at least six successful vertical selfevacuations in the vicinity of documented fatalities in areas G1 and G2, e.g., by holding out in the attic, in a tree (for 
+several hours) or escaping the flooded zone via the roofs. Although some of these people also had to be rescued by the 
+fire brigade or were treated in hospital, these attempts did not end fatally. In fact, a more systematic study of successful 
+(self-)evacuations and rescues is proposed in the literature (e.g., by Petrucci 2022), but not implemented. A structured 
+analysis of such success-stories is difficult to perform and tends to be anecdotal. In fact, one impressive incident was 
+reported several times (including reports in newspapers) in July 2021: since water was entering a retirement home, 
+employees tried to protect the building from the water masses with sandbags. During this work a tree fell and entrapped 
+one of the employees. Since the water continued to rise, the situation became life-threatening, but a first responder held 
+the employee's head above water, preventing her from drowning until the fire brigade arrived who freed the injured 
+woman alive. This example illustrates a successful life-saving response in a dangerous situation and suggests that a
+systematic analysis of successful strategies could start with a closer look at flood-related injuries and rescue operations.
+In consistency with Gruntfest et al. (1978), all the above-mentioned findings suggest that in case of doubt, a vertical 
+escape is more promising than a horizontal one if the water has already flooded a residential area. This is especially 
+relevant for steep catchments, where fast flowing water very quickly poses a serious risk to life. However, the sequence 
+of events in July 2021 in the Ahr valley in Rhineland-Palatinate also shows the limits of this strategy: when buildings are 
+heavily damaged by the water, collapse or are completely washed away, vertical escape routes inside buildings and on 
+roofs no longer exist. In addition, a certain level of physical fitness is necessary, which cannot be assumed for older people 
+or people with mobility impairments. This makes them particularly vulnerable (see section 3.2). Therefore, they should 
+be particularly considered in risk communication and evacuation plans. In fact, in severely affected headwater catchment 
+like the sub-areas G1 and G2 in NRW timely evacuation could have been a crucial safety measure. The concentration of 
+flood fatalities in these headwater catchments calls for better plans for evacuation and traffic control with more systematic
+closures of (potentially) flooded roads. These measures, however, need proper forecasts and timely warning. This supports 
+the request by Vinet et al. (2016) to improve the flood forecasting, warning and response system (FFWRS) in flash flood 
+areas. Due to short reaction times of the catchments, the FFWRS relies more on precipitation forecasts and hydrological 
+modelling than on water level monitoring at gauges. Therefore, ways how to deal with uncertain forecasts have to be 
+developed and trained, too. Analyses by Brown and Graham (1988), who examined dam breaches, warning lead times 
+and the number of fatalities in relation to exposed people, illustrate that around 90 minutes lead time are enough to prevent
+a substantial number of fatalities assuming that the warning triggers (self-)evacuation. A similar study was aimed at for 
+the flood of 2021 in NRW, but did not deliver meaningful results. Still, in the survey on the warning situation in July 
+2021 provided by Thieken et al. (2023), responses from the subarea G2 (n = 576) resulted in a higher percentage of people 
+who had not been warned, i.e., 42 % in comparison to 35 % in all of NRW (n = 892) and 20 % in area G3 (n = 259).
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 15 of 19
+Figure 6: Medical causes of death (A), time of day of the accident (B), activities (C), accident dynamics (E) and 
+localities (F), and representation of the accident location in the flood hazard maps (D) for an extreme flood (HQextreme, as of 2019) for the 49 flood fatalities in NRW in July 2021, differentiated by subarea (significance level of the 
+chi-square test likelihood ratio: (*) ≤ 0.1; * ≤ 0.5; ** ≤ 0.01; *** ≤ 0.001; see also Figure 3).
+4 Conclusions and recommendations
+In this paper, the circumstancesin which 49 people lost their lives in the floods of July 2021 in North Rhine-Westphalia 
+(NRW) were examined in order to derive recommendations for an improved flood risk management. The study revealed 
+significant differences between indoor and outdoor incidents, but also differences across gender and age groups, as well 
+as sub-areas with different event magnitudes. 
+0%
+20%
+40%
+60%
+80%
+100%
+G1: Urft, Olef
+& Ahr
+(n = 16)
+G2: Erft &
+Swist
+(n = 20)
+G3: others
+(n = 13)
+A) Medical cause of death **
+Injury (Polytrauma)
+Burns (and consequences)
+Suffocation/asphyxiation
+Suffocation & drowning
+Internal cause
+Drowning 0%
+20%
+40%
+60%
+80%
+100%
+G1: Urft, Olef
+& Ahr
+(n = 16)
+G2: Erft &
+Swist
+(n = 20)
+G3: others
+(n = 13)
+B) Time of accident (day/night)
+unclear
+darkness (10
+p.m. to 5 a.m.)
+daylight (5
+a.m. -10 p.m.)
+0%
+20%
+40%
+60%
+80%
+100%
+G1: Urft, Olef
+& Ahr
+(n = 16)
+G2: Erft &
+Swist
+(n = 20)
+G3: others
+(n = 13)
+C) Victim's activity ** Trying to save or help others (private)
+During/after official rescue operation
+(of the fire brigade)
+Crossing river on a bridge (also: on the
+way home or to get to a safe place)
+Surprised by the event despite warning
+Walking (also: on the way to/from work
+or home or to get to a safe place)
+(asleep or indoors) surprised by the
+event
+Driving (also: on way to/from work or
+home or to get to a safe place)
+Damage/equipment checked or other
+attempts to reduce damage
+0%
+20%
+40%
+60%
+80%
+100%
+G1: Urft, Olef
+& Ahr
+(n = 16)
+G2: Erft &
+Swist
+(n = 20)
+G3: others
+(n = 13)
+D) Flood hazard map (HQ-extreme 2019) (*)
+no data
+0.5 m to 1 m
+0 m to 0.5 m
+no inundation
+0%
+20%
+40%
+60%
+80%
+100%
+G1: Urft, Olef
+& Ahr
+(n = 16)
+G2: Erft &
+Swist
+(n = 20)
+G3: others
+(n = 13)
+F) Location (detail) *
+Outdoors on foot
+(on road or open
+terrain)
+at/in/near a
+vehicle
+non-residential
+building
+residential
+building - upper
+floor
+residential
+building - ground
+floor
+residential
+building -
+basement flat
+residential
+building -
+basement
+0%
+20%
+40%
+60%
+80%
+100%
+G1: Urft, Olef
+& Ahr
+(n = 16)
+G2: Erft &
+Swist
+(n = 20)
+G3: others
+(n = 13)
+E) Accident dynamic *
+Accident in closed road
+After leaving the house, swept away by
+water & entrapped
+Collapse of bridge; then carried away or
+entrapped/injured
+Domestic accident (e.g. fall)
+Incapacitated by fire/smoke/gases and
+incapable of action
+Overburdening or shock
+Lost control of vehicle, trapped in car
+or carried away after leaving car
+Swept away by flood waves, masses of
+water or mud outdoors
+Trapped/entrapped in a flooded room
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 16 of 19
+In fact, elderly people (>60 years) were particularly at risk; they account for two thirds of the dead. This calls 
+particularly for a continuous and age-specific risk communication.
+In recent years, risk communication in Germany focused very much on property-level adaptation to mitigate damage, 
+which was introduced in the Federal Water Act in 2005. Our analyses reveal that many people died in their basements 
+while attempting to inspect property-level adaptation measures or to inspect, reduce, or repair damage. To substantially 
+decrease such cases in future, the Federal Water Act and/or the North Rhine-Westphalian State Water Act should be 
+amended to clarify that the duty to take precautions and mitigate damage ends when there is a health risk – safety first! 
+Furthermore, risk communication in flash flood areas should generally focus more on adequate behavior that reduces 
+direct exposure to the floodwater and the risk of drowning. Potential life-threatening situations during fast onset-flooding 
+and the priority to be safe have to be emphasized. In flood-prone areas with typical slowly-rising water levels and 
+respective longer warning times, property-level adaptation to reduce damage can remain an important topic of risk 
+communication, but should be accompanied by a greater focus on reducing risky behavior during damage mitigation.
+Particularly, risk awareness for domestic accidents and overexertion should be created among elderly people, while 
+dangerous situations outdoors and in a (flooded) vehicle should be discussed with younger people at public schools and 
+driving schools. 
+Flood hazard maps, which have been available nationwide since 2013 and are updated every six years, are an important 
+element of risk communication. In July 2021, they indicated no risk from flooding at around half of the 49 accident 
+locations illustrating the exceptional event magnitude and suggesting shortcoming of the maps. Hence, the underlying 
+flood frequency statistics must certainly be updated. In addition, potential hazards at bridges due to clogging, backwater 
+effects or collapses need to be re-evaluated and depicted in the maps. Concepts on how risks from surface runoff in hilly 
+regions outside the water courses could be combined with flood hazard maps need to be developed. Here, event 
+characteristics (especially flood magnitudes and times of occurrence), but also warnings and evacuations may play a role.
+Since several people were surprised by water entry into their buildings or outdoors on their way home or when trying 
+to leave the flooded zone, it is assumed that a lack of warning played a role in around one third of the cases. . While 
+warnings remain challenging and uncertain in fast-responding catchments, improvements of the whole flood forecasting, 
+warning and response system are certainly needed. Warnings remain ineffective if they are not translated into adequate 
+action. In heavily affected areas, timely evacuation can be a life-saving measure. How to take such decisions under 
+uncertain forecasts deserves particular attention in headwater catchments. Respective trainings and support of local civil 
+protection should be developed. For the general public, warning levels and flood hazard maps should be better linked to 
+identify hazard zones and to enable appropriate behavior including (self-)evacuation. This should be harmonized across 
+Germany including a common definition of the scenario that determines the extreme flood hazard map.
+Some fatal pathways could have been already detected in earlier events and lessons could have been learned if 
+structured event documentations and impact data recordings were in place. In fact, this is requested by the Sendai 
+Framework for Disaster Risk Reduction 2015-2030, whose implementation is challenged in Germany since civil 
+protection as well as water management are responsibilities of the states (Länder). Hence, joint efforts are needed to 
+establish documentation procedures and achieve consistent data. Among other things, this includes a reassessment and 
+harmonization of definitions of flood fatalities, especially with respect to indirect immediate cases, such as deaths after 
+evacuations. The coding scheme presented in this paper could serve as a template for future events. In fact, the findings 
+of this study could have been achieved with considerably less effort if a more structured documentation had been prepared 
+beforehand and carried out during the event
+Acknowledgements
+This study was undertaken as an expert review requested by the parliamentary investigation on the flood of July 2021 
+in North Rhine-Westphalia. We are grateful for this opportunity and trust. We thank Berenike Herrmann for her advice 
+on different software packages for text analyses.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 17 of 19
+Author contributions (CRediT)
+AT: Conceptualization, Data curation, Methodology Formal Analysis, Supervision, Visualization, Writing – original 
+draft, Writing – review & editing. MLZ: Formal Analysis, Visualization, Writing – review & editing. PB: Methodology, 
+Formal Analysis, Writing – review & editing.
+References
+Badoux, A., Andres, N., Techel, F., and Hegg, C. (2016): Natural hazard fatalities in Switzerland from 1946 to 2015. 
+Nat. Hazards Earth Syst. Sci., 16, 2747–2768, https://doi.org/10.5194/nhess-16-2747-2016.
+Brown, C.A., and Graham, W.J. (1988): Assessing the Threat to Life from Dam Failure. Water Resources Bulletin,
+24(6), 1303–1309, https://doi.org/10.1111/j.1752-1688.1988.tb03051.x.
+Bubeck, P., Kreibich, H., Penning-Rowsell, E.C., Botzen, W.J.W., de Moel, H., and Klijn, F. (2017): Explaining 
+differences in flood management approaches in Europe and in the USA – a comparative analysis. Journal of Flood 
+Risk Management, 10, 436-445, https://doi.org/10.1111/jfr3.12151.
+Cornwell, W. (2021): Europe's deadly floods leave scientists stunned. Science, 373(6553), 372–373, 
+https://doi.org/10.1126/science.373.6553.372.
+Destatis (2021): GENESIS Datenbank 12411-0013: Bevölkerung: Bundesländer, Stichtag, Geschlecht, Altersjahre 
+(31.12.1967 - 31.12.2020), https://www-genesis.destatis.de/genesis//online?operation=table&code=12411-
+0013&bypass=true&levelindex=0&levelid=1642928753644#abreadcrumb (last access: March 2022).
+Diakakis, M., and Papagiannaki, K. (2021): Characteristics of Indoor Flood Fatalities: Evidence from Greece. 
+Sustainability, 13, 8612. https://doi.org/10.3390/su13158612.
+Dietze, M., Bell, R., Ozturk, U., Cook, K,. Andermann, C., Beer, A., Damm, B., Lauer, F., Lucia, A., Fauer, F., Nissen, 
+K.M., Sieg, T. and Thieken, A.H. (2022): More than heavy rain turning into fast-flowing water – a landscape 
+perspective on the 2021 Eifel floods. Nat. Hazards Earth Syst. Sci. 22: 1845–1856, https://doi.org/10.5194/nhess-22-
+1845-2022.
+DKKV (Ed., 2015): Das Hochwasser im Juni 2013: Bewährungsprobe für das Hochwasserrisikomanagement in 
+Deutschland. DKKV-Schriftenreihe Nr. 53, Bonn, ISBN 978-3-933181-62-6, 207 pp. (in German).
+Erftverband (2021): Hochwasser an der Erft und ihren Nebengewässern 14. bis 16.07.2021. Erste Auswertung des 
+Niederschlags- und Abflussgeschehens. Erftverband, 23 pp. (unpublished report).
+FitzGerald, G., Du, W., Jamal, A. Clark, M., and Hou, X.-Y. (2010): Flood fatalities in contemporary Australia (1997–
+2008). Emergency Medicine Australasia, 22, 180–186, https://doi.org/10.1111/j.1742-6723.2010.01284.x.
+Green, H.K., Lysaght, O., Saulnier, D.D., Blanchard, K., Humphrey, A., Fakhruddin, B., and Murray, V. (2019): 
+Challenges with Disaster Mortality Data and Measuring Progress: Towards the Implementation of the Sendai 
+Framework. Int J Disaster Risk Sci, 10, 449–461, https://doi.org/10.1007/s13753-019-00237-x.
+Gruntfest, E. C., Downing, T.E., and White, G.F. (1978): Big Thompson flood exposes need for better flood reaction 
+system to save lives. Civil Engineering-ASCE, February 1978, 72-73.
+Han, Z., and Sharif, H.O. (2020): Vehicle-Related Flood Fatalities in Texas, 1959–2019. Water, 12, 2884; 
+https://doi.org/10.3390/w12102884.
+Haynes, K., Coates, L. Leigh, R, Handmer, J., Whittaker, J., Gissing, A., Mcaneney, J., and Opper, S. (2009): Shelterin-place' vs. evacuation in flash floods. Environmental Hazards 8, 291–303, 
+https://doi.org/10.3763/ehaz.2009.0022.
+ICPR (2001): Atlas of flood danger and potential damage due to extreme floods of the Rhine. International Commission 
+for the Protection of the Rhine (ICPR), ISBN 9-935324-43-x.
+RDR – Integrated Research on Disaster Risk (2015): Guidelines on Measuring Losses from Disasters: Human and 
+Economic Impact Indicators (IRDR DATA Publication No. 2). Beijing: Integrated Research on Disaster Risk. 
+https://www.irdrinternational.org/knowledge_pool/publications/413 (last access on 20.02.2022).
+Jonkman, S.N., and Kelman, I. (2005): An analysis of the causes and circumstances of flood disaster deaths. Disasters,
+29, 75–97, https://doi.org/10.1111/j.0361-3666.2005.00275.x.
+Jonkman, S.N., and Penning-Rowsell, E. (2008): Human Instability in Flood Flows. Journal of the American Water
+Resources Association, 44(5), 1208–1218, https://doi.org/10.1111/j.1752-1688.2008.00217.x.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 18 of 19
+Jonkman, S. N., Godfroy, M., Sebastian, A., and Kolen, B. (2018): Brief communication: Loss of life due to Hurricane 
+Harvey. Nat. Hazards Earth Syst. Sci., 18, 1073–1078, https://doi.org/10.5194/nhess-18-1073-2018.
+Kellar, D.M.M., and Schmidlin, T.W. (2012): Vehicle-related flood deaths in the United States, 1995–2005. Journal of 
+Flood Risk Management, 5, 153–163, https://doi.org/10.1111/j.1753-318X.2012.01136.x.
+King, J.P. (2022): Sixteen ways to adapt: a comparison of state‑level climate change adaptation strategies in the federal 
+states of Germany. Regional Environmental Change, 22, 40, https://doi.org/10.1007/s10113-021-01870-3.
+Koks, E.E., van Ginkel, K.C.H., van Marle, M.J.E., and Lemnitzer, A. (2022): Brief Communication: Critical 
+Infrastructure impacts of the 2021 mid-July western European flood event. Nat. Hazards Earth Syst. Sci., 22, 3831–
+3838, https://doi.org/10.5194/nhess-22-3831-2022.
+Kron, W., Bell, R., Thiebes, B., and Thieken, A.H. (2022): The July 2021 flood disaster in Germany, chapter 2 in: 2022 
+HELP Global Report on Water and Disasters, p. 12-44.
+Lumbroso, D.M., Vinet, F. (2011): A comparison of the causes, effects and aftermaths of the coastal flooding of 
+England in 1953 and France in 2010. Nat. Hazards Earth Syst. Sci., 11, 2321–2333, https://doi.org/10.5194/nhess11-2321-2011.
+LAWA (Bund/Länder-Arbeitsgemeinschaft Wasser) (1995): Guidelines for forward-looking flood protection. Floods –
+Causes and Consequences. LAWA, Stuttgart, Germany.
+https://www.lawa.de/documents/leitlinien_2902_1552299735.pdf (last access 19 March 2023).
+Lengfeld, K., Voit, P., Kaspar, F., and Heistermann, M. (2023): Brief Communication: On the extremeness of the July 
+2021 precipitation event in western Germany. Nat. Hazards Earth Syst. Sci., 23, 1227–1232, 
+https://doi.org/10.5194/nhess-23-1227-2023.
+Ministry for Climate Protection, Environment, Agriculture, Nature and Consumer Protection of the State of NRW
+(n.d.): Hochwassergefahrenkarten / Hochwasserrisikokarten – Erläuterungen und Lesehilfe. 
+https://www.flussgebiete.nrw.de/system/files/atoms/files/lesehilfe_hwrmrl_hwgk.pdf (last access on 17.02.2022).
+MULNV (2018): Arbeitshilfe kommunales Starkregenrisikomanagement: Hochwasserrisikomanagementplanung in 
+NRW. Ministerium für Umwelt, Landwirtschaft, Natur- und Verbraucherschutz des Landes Nordrhein-Westfalen 
+https://www.flussgebiete.nrw.de/system/files/atoms/files/arbeitshilfe_kommunales_starkregenrisikomanagement_20
+18.pdf (last access on 19 March 2023; in German).
+MURL (2000): Potentielle Hochwasserschäden am Rhein in NRW, Final Report of the Ministry of Environment, 
+Regional Planning and Agriculture in North Rhine-Westphalia.
+Paprotny, D., Morales-Nápoles, O., and Jonkman, S.N. (2018): HANZE: a pan-European database of exposure to 
+natural hazards and damaging historical floods since 1870. Earth Syst. Sci. Data, 10, 565–581, Data download: 
+https://doi.org/10.4121/uuid:5b75be6a-4dd4-472e-9424-f7ac4f7367f6 (last access in September 2021).
+Penning-Rowsell, E. C. and Green, C (2000): Insights into the appraisal of flood alleviation benefits: (1) Flood damage 
+and flood loss information. J. Chart. Inst. Water E., 14, 347–353, https://doi.org/10.1111/j.1747-
+6593.2000.tb00272.x.
+Petrucci, O. (2022): Review article: Factors leading to the occurrence of flood fatalities: a systematic review of research 
+papers published between 2010 and 2020. Nat. Hazards Earth Syst. Sci., 22, 71–83, https://doi.org/10.5194/nhess22-71-2022.
+Petrucci, O., K. Papagiannaki, L. Aceto, L. Boissier, V. Kotroni, M. Grimalt, M.C. Llasat, M. Llasat-Botija, J. Rosselló, 
+A.A. Pasqua & F. Vinet (2019): MEFF: The database of MEditerranean Flood Fatalities (1980 to 2015). Journal of 
+Flood Risk Management, 12, e12461, https://doi.org/10.1111/jfr3.12461.
+Petrucci, O., L. Aceto, C. Bianchi, V. Bigot, R. Brázdil, S. Pereira, A. Kahraman, Ö. Kılıç, V. Kotroni, M.C. Llasat, M. 
+Llasat-Botija, K. Papagiannaki, A. Aurora Pasqua, J. Rehor, J.R. Geli, P. Salvati, F. Vinet & J.L. Zêzere (2019): 
+Flood Fatalities in Europe, 1980–2018: Variability, Features, and Lessons to Learn. Water, 11, 1682, 
+https://doi.org/10.3390/w11081682.
+Reimer, N. (2002): Als der Regen kam: Ein Fotolesebuch zur Flut in Sachsen. Michael Sandstein Verlag.
+Rothschild, M.A. (2005): Das Kreuz mit der Todesbescheinigung: Welche Todesart ist richtig? Bayerisches Ärzteblatt 
+11/2005: 754-756 (in German).
+Spekkers, M., Rözer, V., Thieken, A., Ten Veldhuis, M.-C., and Kreibich, H. (2017): A comparative survey of the 
+impacts of extreme rainfall in two international case studies. Nat. Hazards Earth Syst. Sci., 17, 1337-1355, 
+https://doi.org/10.5194/nhess-17-1337-2017.
+
+Thieken et al.
+Journal of Coastal and Riverine Flood Risk Vol. 2, 2023, paper 5 19 of 19
+Thieken, A.H., Bubeck, P., Zenker, M.-L., and. Wutzler, B. (2022): Strukturierte Auswertung der Dokumentationen zu 
+allen Hochwassertodesopfern in Nordrhein-Westfalen im Juli 2021 und Herausarbeitung von 
+Verbesserungspotenzialen in der Risikokommunikation und in den Warnprozessen anhand der Todesumstände und -
+ursachen sowie Ereignischarakteristika. Gutachten für den Parlamentarischen Untersuchungsausschuss V 
+(Hochwasserkatastrophe) des Landtags Nordrhein‐Westfalen. 56 pp. (in German, download at: 
+https://www.landtag.nrw.de/home/der-landtag/ausschusse-und-gremien1/untersuchungsausschusse/untersuchungsausschuss-ii-hochwa.html, last access 15 August 2023.
+Thieken, A.H., Bubeck, P., Heidenreich, A., von Keyserlingk, J., Dillenardt, L., and Otto, A. (2023): Performance of the 
+flood warning system in Germany in July 2021 – insights from affected residents. Nat. Hazards Earth Syst. Sci., 23,
+973–990, https://doi.org/10.5194/nhess-23-973-2023.
+Vinet, F., Lumbroso, D., Defossez, S., and Boissier, L. (2012): A comparative analysis of the loss of life during two 
+recent floods in France: the sea surge caused by the storm Xynthia and the flash flood in Var. Natural Hazards, 61, 
+1179–1201, https://doi.org/10.1007/s11069-011-9975-5.
+Vinet, F., Boissier, L., and Saint-Martin, C. (2016): Flashflood-related mortality in southern France: first results from a 
+new database. E3S Web of Conferences, 06001, 1–10, https://doi.org/10.1051/e3sconf/20160706001.
+Vorogushyn, S., Apel, H., Kemter, M. and Thieken, A.H. (2022): Analyse der Hochwassergefährdung im Ahrtal unter 
+Berücksichtigung historischer Hochwasser. Hydrologie und Wasserbewirtschaftung 66(5): 244-254, 
+https://doi.org/10.5675/HyWa_2022.5_2 (in German).
+WVER – Wasserverband Eifel-Rur (2021): Sachstandsbericht: Hochwasserereignis Juli 2021. Extremereignis vom 
+14./15.07.2021. 8 pp. and annexes (unpublished report).

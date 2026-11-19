@@ -1,0 +1,1262 @@
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+https://doi.org/10.5194/nhess-17-2075-2017
+© Author(s) 2017. This work is distributed under
+the Creative Commons Attribution 3.0 License.
+New insights into flood warning reception and
+emergency response by affected parties
+Heidi Kreibich1
+, Meike Müller2
+, Kai Schröter1
+, and Annegret H. Thieken3
+1Section 5.4 Hydrology, GFZ German Research Centre for Geosciences, Potsdam, 14473, Germany
+2NatCat-Center, Deutsche Rückversicherung AG, Düsseldorf, 40549, Germany
+3
+Institute of Earth and Environmental Science, University of Potsdam, Potsdam, 14476, Germany
+Correspondence to: Annegret H. Thieken (thieken@uni-potsdam.de)
+Received: 15 April 2016 – Discussion started: 22 April 2016
+Revised: 26 September 2017 – Accepted: 20 October 2017 – Published: 29 November 2017
+Abstract. Flood damage can be mitigated if the parties at
+risk are reached by flood warnings and if they know how
+to react appropriately. To gain more knowledge about warning reception and emergency response of private households
+and companies, surveys were undertaken after the August
+2002 and the June 2013 floods in Germany. Despite pronounced regional differences, the results show a clear overall picture: in 2002, early warnings did not work well; e.g.
+many households (27 %) and companies (45 %) stated that
+they had not received any flood warnings. Additionally, the
+preparedness of private households and companies was low
+in 2002, mainly due to a lack of flood experience. After
+the 2002 flood, many initiatives were launched and investments undertaken to improve flood risk management, including early warnings and an emergency response in Germany.
+In 2013, only a small share of the affected households (5 %)
+and companies (3 %) were not reached by any warnings. Additionally, private households and companies were better prepared. For instance, the share of companies which have an
+emergency plan in place has increased from 10 % in 2002
+to 34 % in 2013. However, there is still room for improvement, which needs to be triggered mainly by effective risk
+and emergency communication. The challenge is to continuously maintain and advance an integrated early warning and
+emergency response system even without the occurrence of
+extreme floods.
+1 Introduction
+In recent years, floods have caused high economic damage
+in European countries. In Germany, for instance, the extreme
+flood event of August 2002 caused 21 fatalities and financial losses of EUR 11 600 million (Thieken et al., 2006). In
+June 2013, large-scale flooding caused 14 fatalities and financial losses of around EUR 8000 million in Germany alone
+(Thieken et al., 2016a). The economic damage from floods
+has been increasing over the last decades, mostly due to increasing exposure driven by societal factors like augmented
+standard of living, wealth and population density (Barredo,
+2009). This trend is likely to continue (IPCC, 2012; Jongman et al., 2014). For example, a 20-fold increase is expected
+for the economic flood risk by the year 2080 in England and
+Wales if flood risk management is not improved significantly
+(Hall et al., 2005). In continental Europe, flood losses could
+more than double by 2050 due to climate change and socioeconomic development (Jongman et al., 2014).
+The recent damaging events and anticipated developments
+have triggered calls for better risk reduction strategies. In
+fact, flood risk management has become an important policy field in Europe. To ensure a consistent approach for better assessment and management of flood risks in the whole
+of the European Union, the European Floods Directive (EC,
+2007; 2007/60/EC) came into effect in 2007. It requires that
+member states conduct quantitative hazard and risk analyses and develop risk management plans that are expected to
+address a wide range of measures beyond structural flood defences. Hegger et al. (2014) distinguish five flood risk reduction strategies: (1) loss prevention by an adapted use of
+flood-prone areas; (2) risk mitigation by flood-adapted dePublished by Copernicus Publications on behalf of the European Geosciences Union.
+
+2076 H. Kreibich et al.: New insights into flood warning reception and emergency response
+sign and use of buildings; (3) flood defence through structural protection measures; (4) preparedness for response, e.g.
+using flood warnings and adequate responsive behaviour; and
+(5) risk transfer mechanisms such as flood insurance to compensate for flood losses. The Floods Directive reflects that
+flood risk management has shifted from flood protection to
+the more comprehensive approach of integrated flood risk
+management (Merz et al., 2010; Bubeck et al., 2017).
+While integrated flood risk management seems to be a
+recent development, it has to be emphasized that – besides
+structural measures – flood warning and emergency response
+have a long history. For example, a first transboundary system for the dissemination of alerts along the rivers was established in central Germany in 1889 (Deutsch and Pörtge,
+2001). Nevertheless, recent events such as the flood of 2002
+revealed deficiencies in early warning as well as a huge lack
+of general risk awareness, communication and preparedness
+of at-risk households and companies (DKKV, 2003). Therefore, amendments of the warning and response system as
+well as campaigns to improve risk communication and preparedness were requested and have been implemented since
+then (Thieken et al., 2016b).
+Although early warning and emergency response typically
+aim to protect human life as a first priority, their potential to
+significantly reduce economic damage has been recognized
+for a long time (e.g. Handmer et al., 1988; Thieken et al.,
+2005a; Meyer et al., 2012; Molinari et al., 2013). However,
+empirical studies on the effectiveness of early warning and
+emergency response are rare. One early exception is provided for the flood in Lismore (Australia) in 1974: with a
+lead time of about 12 h, damage in the residential sector was
+only 50 %, and in the commercial sector it was only 24 %
+of the economic damage expected without emergency measures (Smith, 1981). Another example is early warning and
+response to flash floods in the city of Sondrio, Italy: there it
+is estimated that responsive action led to a damage reduction
+of about 10–25 % (Molinari et al., 2013).
+Important factors influencing the effectiveness of emergency response in reducing damage are the lead time, the
+flood intensity and the ability of civil protection and affected parties to undertake emergency measures effectively
+(Handmer et al., 1988; Penning-Rowsell and Green, 2000;
+Kreibich et al., 2007a; Molinari and Handmer, 2011; Molinari et al., 2013; Mross et al., 2016). The longer the lead time,
+the longer the time for undertaking emergency measures. For
+shallow water levels, damage can be reduced easily by sealing the affected building or by moving contents higher, e.g.
+onto shelves or higher storeys (Rözer et al., 2016). If water
+levels are higher than expected, water barriers will be overtopped and the ingress of water can often not be prevented.
+This is of course a question of how the flood hazard was assessed for the property at risk and how the property-level protection was designed.
+The ability to undertake effective emergency measures on
+the property level is again dependent on different factors,
+e.g. on recent flood experience, preparedness and availability of emergency plans (Thieken et al., 2007; Kreibich et al.,
+2007b; Chinh et al., 2016; Morss et al., 2016). People who
+have witnessed a flood recently tend to be better prepared
+and tend to have a better idea of what to do when a warning reaches them (Wind et al., 1999; Yeo, 2002; Kienzler et
+al., 2015). However, it should be noted that first response behaviour is not directed towards loss reduction but towards
+cross-checking the warning by searching for further confirmative information (Creutin et al., 2009 cited by Parker and
+Priest, 2012). After that, protective action is organized before
+it is undertaken. To keep these first two steps as brief as possible, trust in the responsible early-warning institution, the
+existence of an emergency plan as well as the understandability and the information content of the warning are essential
+(Kreibich et al., 2007b; Parker and Priest, 2012; Morss et al.,
+2016). First loss-reducing measures include evacuation, safeguarding documents and valuables and moving vehicles to
+higher ground. Subsequently, moveable household items are
+put upstairs (Parker and Priest, 2012). Although some measures sound rather simple, Morss et al. (2016) highlight that
+the decision process on what to do in the real flood situation
+is rather complex. To support decisions, it is increasingly discussed to supplement warning information with information
+about potential flood impacts (e.g. Coughlan de Perez et al.,
+2015; Dottori et al., 2017).
+Despite its importance, not much is known about flood
+warning reception and emergency response from the perspective of affected parties. Thus, the objective of this comparative study is to gain more knowledge on how and when
+households and companies received flood warnings and how
+they responded in 2002 and 2013. Although the flood of
+2013 differed from the 2002 event in its flood characteristics (Schröter et al., 2015; Thieken et al., 2016b), the affected
+area was comparable (see Sect. 2). Hence, it provides the opportunity to evaluate the improvements in flood warning reception and emergency response by affected parties. To better understand the flood impacts, the next section briefly describes the two events. As background information, Sect. 3
+summarizes the development of flood warning and response
+in Germany, in general, and in the most affected federal
+states (Bundesländer), i.e. in Bavaria, Saxony and SaxonyAnhalt, in particular. In Sect. 4 the empirical data acquisition
+is described. Results are presented and discussed in Sect. 5,
+in general, and separated for Bavaria, Saxony and SaxonyAnhalt. Conclusions are drawn in the last section.
+2 Event description and study area
+In August 2002, flooding occurred in the Elbe and Danube
+catchments, mainly in the federal states of Saxony, SaxonyAnhalt and Bavaria. The city of Dresden on the Elbe River,
+the Elbe tributaries in the Ore Mountains (Erzgebirge) and
+the Regen River, a left-bank tributary of the Danube were
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2077
+Figure 1. Overview of municipalities where surveys were undertaken after the 2002 (a) and 2013 (b) flood events. Additionally visualized
+are return periods of peak discharges (adapted from Schröter et al., 2015).
+particularly strongly affected (Ulbrich et al., 2003; IKSE,
+2004). Along some Elbe tributaries flood peak discharges
+exceeded the 500-year return period (IKSE, 2004; Engel,
+2004); see Fig. 1. Along the Elbe River return periods varied between 150 years at Dresden (Upper Elbe) and 25 years
+at the Lower Elbe upstream of Hamburg. At the Regen River
+return periods of 100 to 300 years occurred (Ulbrich et al.,
+2003).
+The occurrence of severe floods in summer in central Europe is often coupled with large-scale weather patterns producing widespread rainfall (Bárdossy and Filiz, 2005; Petrow
+et al., 2009). The flood in August 2002 was caused by a
+Genoa Cyclone Type Vb weather system which moved warm
+and moist air masses of Mediterranean origin in an arc towards northern/eastern Europe resulting in heavy precipitation. In this process the largest rain amounts, which often
+exceeded 100 mm within 72 h, were observed in eastern Germany. Similar amounts were also recorded in the Bavarian
+and Bohemian forests as well as along the Alpine foothills. A
+record-breaking amount of daily precipitation was measured
+in Germany; i.e. 312 mm within 24 h was reported for 12–
+13 August 2002 at Zinnwald-Georgenfeld in the Ore Mountains (Ulbrich et al., 2003). This extremely intense precipitation in the Ore Mountains resulted in an immediate runoff response producing flash floods, for instance at the rivers
+Mulde, Weißeritz and Schwarze Elster with peak discharges
+observed on 13 August 2002, that formed within only a few
+hours. These flash floods led to a critical isolation of valleys
+and municipalities in the Ore Mountains and caught those
+affected in the middle of the night (DKKV, 2015).
+During the August 2002 flood numerous dyke failures
+occurred, affecting areas where people believed to be safe
+due to technical flood protection measures in place (Kuhlicke, 2015). In Saxony, 131 dyke breaches or overtoppings
+occurred, 16 along the Elbe River and 115 in the Mulde
+catchment. The flood caused 21 fatalities and 108 people were injured; in total, 330 000 people in eight federal
+states in Germany were affected (EM-Dat, 2015). Emergency response evacuated 35 000 people in the city of Dresden and 60 000 people in the federal state of SaxonyAnhalt (DKKV, 2015). The overall financial loss amounted
+to EUR 11 600 million (Thieken et al., 2006). Before August 2002, the last severe flood in the Elbe river occurred
+almost 50 years ago in 1954 (Fügner, 2003; Pohl, 2004).
+Hence, flood awareness was comparatively low in Saxony and Saxony-Anhalt. This situation was different in the
+Danube catchment, where flooding had occurred only a few
+years before in December 1993 and was particularly severe
+in May 1999, which was reflected in people’s awareness and
+preparedness (Thieken et al., 2007).
+In June 2013, large-scale flooding affected almost all main
+river basins in Germany (Merz et al., 2014; Schröter et al.,
+2015). Particularly severe flooding occurred along the Elbe
+River and its tributaries Saale and Mulde in the federal
+states of Saxony, Thuringia and Saxony-Anhalt and along
+the Danube River in the federal state of Bavaria. Return pewww.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2078 H. Kreibich et al.: New insights into flood warning reception and emergency response
+riods of peak discharge exceeded 100 years at many gauges
+along the Elbe River from Dresden to Lenzen as well as in
+the Mulde and Saale catchments; see Fig. 1. Along a reach of
+350 km along the Elbe River between Coswig and the weir at
+Geesthacht, as well as along the Saale river, record-breaking
+water levels were registered (Merz et al., 2014; BfG, 2014).
+In Passau, the highest water level since 1501 was observed
+due to the superposition of the flood waves from the Inn and
+Danube rivers (Blöschl et al., 2013).
+In May 2013, a quasi-stationary upper-level trough over
+central Europe triggered several surface lows which on the
+eastern side advected warm and humid air masses from
+south-eastern Europe (Grams et al., 2014) northwards and
+curved into Germany and Austria (Schröter et al., 2015).
+The intense and widespread precipitation that triggered the
+June 2013 flood occurred at the end of May and beginning
+of June. This heavy rainfall was produced by a cut-off low
+that moved slowly with its centre from France (29 May) over
+northern Italy (30 May) to eastern Europe (1 June). The most
+intense precipitation occurred in the Danube catchment in
+the alpine areas of southern Bavaria and northern Austria.
+For example, at the gauging station Aschau-Stein of the German Weather Service in the Chiemgau Alps a rainfall total
+of 346 mm within 72 h was registered (Schröter et al., 2015).
+This spatially extended, but not extraordinarily high, precipitation in combination with high antecedent catchment wetness was the main driver of the June 2013 flood (Merz et al.,
+2014; Schröter et al., 2015). Accordingly, the development of
+the June 2013 flood was less dynamic than the August 2002
+flood but more widespread. The 2013 flood developed over
+several days. The extreme water level in Passau occurred on
+3 June (Blöschl et al., 2013; BfG, 2014). In the Elbe River an
+elongated flood wave developed with peak discharges occurring on 6 June in Dresden and 11 June in Geesthacht (BfG,
+2014), carrying huge volumes of water with unusual simultaneous discharge contributions from the Elbe, Mulde and
+Saale catchments (Conradt et al., 2013).
+In June 2013 fewer dyke failures occurred than in August
+2002, namely five breaches in the Saxon part of the river
+Elbe and 24 failures along the river Mulde (DKKV, 2015).
+Still, three breaches of dramatic dimensions occurred: near
+Deggendorf at the Danube River, near Groß Rosenburg at
+the confluence of Saale and Elbe rivers and near Fischbeck
+at the Elbe River (Merz et al., 2014). The flood caused 14 fatalities, 128 people were injured, and in total 600 000 people were affected in 12 federal states in Germany (EM-Dat,
+2015; Thieken et al., 2016a). Emergency response services
+had to provide for more than 80 000 evacuations. Major activities were required on 10 June 2013 mostly in SaxonyAnhalt with 40 000 evacuations as entire villages and urban
+districts were affected (DKKV, 2015). However, in 2013, disaster response organizations had fewer life-threatening situations to cope with and affected people had more time for
+emergency measures. The overall financial loss estimates
+sum up to EUR 8000 million (Thieken et al., 2016a).
+After 2002, floods occurred in 2005, 2006, 2010 and 2011
+in the Danube and Elbe catchments (Kienzler et al., 2015).
+Thus, due to this increased flood experience and intensive
+risk communication campaigns after 2002, residents and
+companies were highly aware of the flood risk and better
+prepared, as already demonstrated for the smaller flood of
+2006 (Kreibich et al., 2011). We therefore hypothesize that
+the warning reception and emergency response were more
+efficient in 2013.
+3 Background: flood warning in Germany
+A successful flood warning system consists of several interacting components: (1) continuous monitoring and forecasting of weather patterns, particularly precipitation, and water levels; (2) detection of potentially hazardous situations;
+(3) definition and implementation of rules on when, how
+and whom to warn in case of rising flood water levels and
+what to communicate in order to activate organizations in
+charge of civil protection as well as potentially affected people; and (4) an adequate and effective response to the unfolding flood situation (e.g. Parker et al., 1994; Parker and Priest,
+2012). Hence, a flood warning system is more adequately
+addressed as a flood-forecasting, warning and response system (FFWRS; Parker and Priest, 2012). In a FFWRS, several
+organizations have to collaborate and information has to be
+communicated, disseminated and interpreted correctly along
+a chain of different stakeholders, including the general public, which opens the door for many pitfalls that reduce the
+system’s overall efficiency. Consequently, redundancies are
+seen as an important principle at all levels (Parker and Priest,
+2012). The FFWRS’s different components have to be developed, maintained, institutionalized and aligned to ensure a
+proper functioning of the whole system. If one element fails,
+the whole system is very likely to fail. So, the interaction between the single components needs special attention.
+In the 1990s, many European FFWRS often underperformed because warning dissemination and response were
+unsatisfactory (Parker and Fordham, 1996). Since then, research on and implementation of FFWRS have been considerably augmented. A survey conducted by the European Environment Agency revealed that 70 % of European countries
+have planned or implemented improved flood information
+and forecasting systems (EEA, 2007). However, investments
+in the development of meteorological and flood-forecasting
+systems were often undertaken without adequately accounting for the communication and dissemination of warnings
+(Grünewald et al., 2001). Considering the human factors and
+social issues of communication and behaviour involved in a
+FFWRS, improvements of data and forecasting models do
+not necessarily lead to reduced losses (Parker and Priest,
+2012). Another recent review confirms these evaluations and
+concludes that “despite substantial technical progress, major
+challenges remain to achieve the potential benefits of flood
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2079
+early-warning systems, in particular in communicating risk
+information and early warnings to emergency services and
+the population at risk and consequently trigger response actions” (Cools et al., 2016: p. 117). It is therefore recommended to tailor FFWRS to the available resources in order
+to run and maintain models and to integrate (local) knowledge of the potentially affected parties, which increases the
+adequacy and understanding of issued warning levels (Cools
+et al., 2016). Trust is seen as an important asset for partnerships along the warning chain as well as for the acceptance
+of warnings and the response by the general public (Parker
+and Priest, 2012; Cools et al., 2016; Morss et al., 2016). As
+background information, this section summarizes how the
+FFWRS is organized in Germany, how it performed in 2002
+and 2013 and what changes were implemented between these
+two events.
+In Germany, the meteorological service (Deutscher Wetterdienst – DWD) is a federal authority under the Federal
+Ministry of Transport and Digital Infrastructure. By law,
+DWD is responsible for weather monitoring and forecasting
+as well as for detecting extreme weather situations across the
+whole country and issuing appropriate warnings when necessary. Extreme weather situations are, however, restricted
+to meteorological phenomena such as heavy rainfall. Consequently, additional services are needed for flood forecasting
+and warning. All water issues, as well as civil protection and
+emergency management, are the responsibility of the federal states (Bundesländer). Consequently, the organization of
+flood forecasting and warning, as well as the organization of
+the civil protection, differs throughout Germany and further
+challenges the functioning of a FFWRS.
+In August 2002, a preliminary warning of a rainstorm was
+issued on 11 August 2002 in the early afternoon by DWD.
+This was updated to a rainstorm warning by midnight. Further updated warnings were issued from 12 to 14 August
+2002. However, a substantial increase in run-off already occurred on 12 August 2002. Particularly in small catchments
+of less than 300 km2 where flood forecasting heavily depends
+on prompt and precise precipitation forecasts and a reliable
+rainfall run-off model, a lot of warnings were assessed as
+having arrived too late. In addition, warnings were too imprecise, since the expected rainfall amount was underestimated
+(see von Kirchbach et al., 2002 and DKKV, 2003 for further
+details).
+With regard to hydrology, it has to be acknowledged that
+there were more than 200 flood alert and forecasting gauges
+in the catchment of the river Elbe in 2002 (IKSE, 2001).
+However, during the flood many gauges, particularly on the
+Elbe tributaries, failed due to severe inundation or power
+black-outs. At some places forecasts were issued when the
+actual run-off had already exceeded the forecast levels. At
+others, e.g. along the river Mulde, forecasts from different
+centres were not consistent (von Kirchbach et al., 2002). In
+2002, the flood-forecasting model for the Elbe River was
+based on a regression analysis of discharges and used discharges at upstream gauges as input data. Since water levels
+in 2002 reached heights for which neither the rating curves
+nor the regression models were defined, the forecasts were
+erroneous, leading to overestimations of the maximum flood
+heights of up to 50 cm, which lead to unnecessary stress and
+emergency measures in some places downstream.
+As far as alerts were concerned, some flood reports were
+delayed at intermediate stations and reached the civil protection agencies too late. An analysis of deployment reports
+showed that different authorities responsible for civil protection, relief organizations and support units did not cooperate
+but primarily acted in an organization-oriented and resourcedriven way. Altogether, the analysis revealed four structural
+failings (DKKV, 2003; Thieken et al., 2005b):
+– poor relations between different responding organizations,
+– dominance of self-orientation and a lack of orientation
+towards the situation as a whole and to superior protection objectives (manifested by a lack of knowledge
+about the qualification and equipment of other organizations, missing consideration of complementary equipment or activities),
+– weaknesses of the authorities in civil protection to assess knowledge, motivation, capabilities and capacities
+of the individual organizations, and
+– isolation and centralization of the operative–tactical
+subsystem, making innovations difficult.
+In conclusion, integrated early-warning systems from monitoring to the reaction of the affected parties were insufficiently developed in 2002. Maintenance and upgrading of
+models and systems to the latest technologies, as well as
+more efforts to provide up-to-date and reliable input data
+for the forecast models, were hence recommended (DKKV,
+2003). Further, communication of warning messages and coordination of response capacities needed to be revised.
+By June 2013, progress in the technical systems including
+the dissemination of warnings was discernible at all levels
+(DKKV, 2015). The DWD has improved all numerical forecast models; e.g. the European forecast model that can be
+used 3 days before the actual event has been implemented on
+a 7 km grid; forecasts are updated every 6 h. The Germanywide forecast model COSMO-DE has been implemented on
+a 2.8 km grid and is updated every 3 h, providing a 27 h forecast. Further, uncertainty assessments by ensemble simulations as well as updated and more differentiated warning
+thresholds were introduced. Warnings are currently disseminated by various media including web-based services. The
+DWD has teamed up with emergency response units in the
+districts and (regional) flood-forecasting centres that use precipitation forecasts as one main input for their rainfall run-off
+models (DKKV, 2015).
+www.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2080 H. Kreibich et al.: New insights into flood warning reception and emergency response
+With regard to flood warnings, far-reaching crossdepartmental and transnational collaboration across the federal states have been achieved. In some federal states, including Saxony and Saxony-Anhalt, flood forecasting and warning were reorganized after 2002 into one forecasting centre
+following the single-voice principle. In Saxony, the reorganization also included a redefinition of dissemination and communication pathways. Further, feedback loops were established to avoid interruptions of the alerting process (DKKV,
+2015). Similarly, Saxony-Anhalt established a flood forecasting centre in 2008. Bavaria holds a central flood monitoring and warning centre that also collects the forecasts from
+decentralized forecasting units in different catchments. All
+federal states have established a state-specific web portal
+on which the general public can access information about
+the flood situation. In addition, a joint internet portal (http:
+//www.hochwasserzentralen.de) was established by all federal states to allow a country- and basin-wide assessment of
+the flood situation, which had been impossible back in 2002
+(DKKV, 2015). In general, a survey among the upper water authorities revealed that flood forecasting and warning is
+seen as an essential part of flood risk reduction by 10 out of
+12 participating states (DKKV, 2015) and consequently receives considerable attention and resources.
+In 2013, precipitation and run-off forecasts were in general precise and were issued well in advance of actual inundations (e.g. DWD, 2013; DKKV, 2015). In some places
+there were, however, inaccuracies in the rainfall forecasts
+that propagated to the run-off forecasts. Occasionally, the
+all-clear signal was given too soon or an overload of the IT
+systems occurred, so that the exchange of data and its onward transmission were compromised. For instance, SaxonyAnhalt reported difficulties like system breakdowns (DKKV,
+2015), which were mainly due to the more severe flood situation in 2013. The middle reaches of the river Elbe were more
+heavily affected in 2013 than in 2002 and the river Saale was
+additionally impacted, which was not the case in 2002. The
+timely and reliable identification of levee breaches and their
+effects on the flood situation downstream as well as on the inundation of the hinterland was difficult, especially in Bavaria
+and Saxony-Anhalt (DKKV, 2015; Thieken et al., 2016b).
+Based on these findings, it has been recommended that rainfall forecasts should be further improved and that rainfall
+run-off models should be expanded, especially with regard to
+a common appraisal of uncertainties and inclusion of failures
+of protective structures. Altogether, a comprehensive communication along the warning chain was largely achieved in
+2013, but continuity, redundancy and capacity of the technical systems and staff must be guaranteed to keep this level of
+performance (Thieken et al., 2016b).
+Despite some very challenging situations, the overall
+emergency management was significantly more effective in
+2013 than in 2002. Collaboration within and among different disaster response organizations has clearly benefited from
+the coordination of the Joint Reporting and Situation Centre (GMLZ) that was established after the 2002 flood. Additionally and from transnational exercises, e.g. the biennial
+transnational crisis management exercise LÜKEX, which
+strongly contributed to a high-performance capacity of the
+emergency response (DKKV, 2015).
+4 Surveys and data
+Computer-aided telephone interviews (CATI) were conducted with private households and companies which had
+been affected by the 2002 or 2013 floods in Germany (Table 1). The household survey on the 2002 flood was restricted
+to the federal states of Saxony, Saxony-Anhalt and Bavaria,
+and the company survey was restricted to Saxony. The surveys on the 2013 flood were not restricted with respect to
+federal states. Interviews were undertaken in the whole of the
+flood-affected area. For all surveys, lists of affected streets
+were compiled on the basis of information from affected districts or municipalities, flood reports and press releases, as
+well as with the help of flood masks derived from satellite data (DLR, Center for Satellite Based Crisis information, https://www.zki.dlr.de/). These provided the basis for
+generating property-specific random samples of households
+and companies. Property-specific means that only one household or company was interviewed per address. The telephone numbers were generally retrieved from the public telephone directory or the commercial telephone directory (yellow pages). For the survey on the 2002 flood, households and
+companies from the list of telephone numbers were sampled
+randomly. For the survey on the 2013 event, a comprehensive survey was conducted, i.e. all the researched telephone
+numbers were contacted. An impact on the results due to this
+difference is not expected.
+For the surveys of companies, additional effort was undertaken to identify and interview large companies. Flood
+reports and press releases were analysed and experts were
+interviewed to find additional large affected companies. After the 2002 flood, large companies were interviewed separately in May 2004 (Table 1). After the 2013 flood all companies irrespective of their size were interviewed in one campaign between May and July 2014. Due to this sampling
+procedure, the selection of companies was not representative, since it seemed more important to cover a broad range
+of companies in terms of size and sector. The person in the
+household or in the company with the best knowledge of the
+flood damage was always interviewed. To ensure a consistent comparison, only data from private households in Saxony (2002: n = 977; 2013: n = 523), Saxony-Anhalt (2002:
+n = 271; 2013: n = 593) and Bavaria (2002: n = 449; 2013:
+n = 239) and data from companies in Saxony (2002: n = 415;
+2013: n = 197) were analysed in this study (Table 1).
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2081 Table 1. Survey using computer-aided telephone interviews with private households and companies affected by flooding in 2002 and 2013. Flood event August 2002 flood June 2013 flood Target group households companies households companies Survey method Computer-aided telephone interviews using the VOXCO software package Survey period April to June 2003 October 2003 and May 2004 February to March 2014 May to July 2014 Survey area, i.e. catchments Elbe and Danube Elbe (Saxony) Elbe, Danube, Rhine, Elbe, Danube, Rhine, and federal states (Bavaria, Saxony, Weser (Bavaria, Saxony, Weser (Bavaria, Saxony, Saxony-Anhalt) Saxony-Anhalt, Thuringia, Saxony-Anhalt, Thuringia, Lower Saxony, Baden-Württemberg, Lower Saxony, Baden-Württemberg, Schleswig-Holstein, Brandenburg, Schleswig-Holstein, Brandenburg, Mecklenburg-West Pomerania) Rhineland-Palatinate) Number of entire survey area 1697 415 1652 557 completed Bavaria 449 0 239 88 interviews Saxony 977 415 523 197 Saxony-Anhalt 271 0 593 133 Length of interviews About 180 questions – About 90 questions – About 180 questions – About 90 questions – average duration 30 min average duration 15–20 min average duration 30 min average duration 34 min Surveying institute SOKO institute for social research and communication Explorare institute for marketing SOKO institute
+(http://www.soko-institut.de) research (http://www.explorare.de) (http://www.soko-institut.de)
+Project partners German Research Centre for Geosciences (GFZ), University of Potsdam, German Research Centre for
+Deutsche Rückversicherung Geosciences (GFZ), Deutsche Rückversicherung
+References Thieken et al. (2007) Kreibich et al. (2007b) Thieken et al. (2016a) Thieken et al. (2016a)
+www.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2082 H. Kreibich et al.: New insights into flood warning reception and emergency response
+All questionnaires addressed a broad range of topics: flood
+impact (e.g. water depth, contamination), flood warning,
+emergency measures, evacuation, cleaning up, characteristics
+of and damage to household contents and buildings, characteristics of and damage to company assets (buildings, equipment, goods, products or stock, etc.), recovery, precautionary
+measures, flood experience and awareness as well as socioeconomic variables/characteristics of the company (sector,
+number of employees, etc.). Each topic was addressed with
+a number of questions. Most questions were closed, i.e. a list
+of possible answers was given (with either a single answer
+or multiple answers possible). For instance, for the question “How did you become aware of the imminent flood
+hazard for your company?” a list of possible answers was
+provided with multiple answers possible: public authority
+warnings; warnings by neighbours, friends, relatives, staff or
+other; general transregional media coverage; own observations. Thus, flood warning is treated in a broad sense, including official and unofficial warnings and even own observations.
+In some questions people were asked to assess qualitative
+or descriptive variables on a scale from 1 to 6, where 1 described the best case and 6 described the worst case. The
+meanings of the end points of the scales were given to the
+interviewee. For instance, in response to the question “Did
+you know how to protect yourself and your household from
+the flood, before the flood became imminent for you?” people should state a number between 1 for “it was completely
+clear to me” and 6 for “it was completely unclear to me”. The
+intermediate ranks could be used to graduate the evaluation.
+For a few questions, open-ended answers were requested.
+To avoid errors as much as possible, only meaningful answers were accepted by the system. Wherever possible, answers were cross-checked; e.g. if the reported outside storage
+area was larger than the reported area of a premise, the interviewer was informed about this contradiction and prompted
+to clarify the situation. Per analysis, cases with missing values were excluded. Further details on the surveys and the
+data processing are published by Thieken et al. (2007, 2016a,
+2017), Kreibich et al. (2007b) and Sieg et al. (2017). Answers
+provided to questions mainly related to flood warning and
+emergency measures are analysed for this study. Indicators
+of the warning source, warning content and effectively performed emergency measures were calculated as described in
+Thieken et al. (2005a, 2007).
+5 Results and discussion
+5.1 Warning reception by private households and
+companies
+To respond to an upcoming flood, people need to be alerted
+through warnings or their own observations. To gain knowledge of the warning situation in Germany in 2002 and 2013,
+private households and companies were asked “How did you
+become aware of the imminent flood danger?” The responses
+show that in 2002 a total of 27 % of households and even
+45 % of companies stated that they had not been warned at
+all and had not been aware of the flood danger before the
+flood reached them. In 2013, this fraction dropped to 5 % of
+private households and 3 % of companies (Table 2). However, regional differences, which could only be investigated
+for private households, were large: the overall picture is dominated by the results from Bavaria and Saxony where 29 and
+32 % of households respectively, had not been aware of the
+imminent flood danger in 2002. In 2013, this fraction was
+significantly smaller with 4 and 3 % respectively. In contrast, in Saxony-Anhalt, located on the middle reaches of the
+Elbe river, only 6–7 % of households had not been warned
+or not been aware of the flood danger, with no significant
+difference between the two floods (Fig. 2). Warnings by public authorities were most important for becoming aware of
+the flood danger (Fig. 2). In 2002, 32 % of respondents in
+Bavaria, 36 % in Saxony and 81 % in Saxony-Anhalt indicated that they had received a warning by public authorities. In 2013, this fraction was significantly higher in Bavaria
+(66 %) and Saxony (55 %) but significantly lower in SaxonyAnhalt (61 %) (Fig. 2). It is interesting that the fraction of
+private households who became aware of the flood via their
+own observations increased significantly from 2002 to 2013
+in all three investigated federal states (Fig. 2). This might be
+due to an increase in awareness and preparedness after 2002
+(Kreibich and Thieken, 2009; Kreibich et al., 2011; Kienzler
+et al., 2015). With rather minor differences between the two
+flood events, warnings by neighbours, friends and relatives as
+well as the general transregional media coverage also played
+a role in warning private households (Fig. 2).
+Also, for companies, flood warnings by public authorities played a considerable role during the floods of 2002
+and 2013 (Fig. 3). However, in 2002, only 7 % of the surveyed companies received warnings from public authorities
+that had been directed specifically at the company and 16 %
+received general public authority warnings. In 2013, these
+fractions were considerably higher at 37 and 49 % respectively. However, during both floods (even strongly increasing
+from 2002 to 2013) most companies also became aware of
+the flood through their own observations. Additionally, it is
+important to warn companies through warnings by staff, relatives and others as well as through the general transregional
+media coverage (Fig. 3).
+The private households that had received a warning by
+public authorities were additionally asked what information the warning contained (Fig. 4). It is interesting that
+only about a third of the warnings contained information
+about emergency measures, with no significant difference
+between the flood events. Thus, there is quite some potential for improving emergency communication to better support and trigger private damage reduction efforts. Most often
+the warnings contained information about peak water levels
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2083
+Table 2. Information of all interviewed private households from Bavaria, Saxony and Saxony-Anhalt together (federal state specific information is provided in Figs. 2, 5 and 7) as well as from interviewed companies in Saxony.
+Sector Private households in Bavaria, Companies in Saxony
+Saxony and Saxony-Anhalt
+2002 2013 2002 2013
+(n = 1697) (n = 1355) (n = 415) (n = 197)
+Fraction of interviewed households/companies
+– that had not received any flood warning and were not aware
+of the imminent hazard before the flood reached them
+27 % 5 % 45 % 3 %
+– for whom it was completely clear what to do when the warning reached them
+14 % 44 % na∗ na
+– for whom it was completely unclear what to do when the
+warning reached them
+29 % 14 % na na
+– that had never experienced a flood before the respective event 78 % 39 % 75 % 6 %
+– that had not implemented any emergency measure 17 % 6 % 33 % 1 %
+– that could have implemented (more) emergency measures if
+they had been warned earlier
+51 % 24 % 74 % 25 %
+Average (median) time spent on emergency measures (h) 13 (5) 31 (20) 13 (5) 22 (16)
+Average (median) number of people involved in emergency
+measures
+4 (3) 6 (4) 16 (6) 16 (10)
+∗ na = question was not asked.
+0 10 20 30 40 50 60 70 80 90
+Share of surveyed households [%]
+Public authority warning and/or calls for evacuation
+Warning by neighbours, friends, relatives
+General-trans-regional media coverage
+Own observation (weather, river, etc.)
+No warning
+Not specied
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+* Bavaria 2002 (n = 449)
+Bavaria 2013 (n = 239)
+Saxony 2002 (n = 977)
+Saxony 2013 (n = 523)
+Saxony-Anhalt 2002 (n = 271)
+Saxony-Anhalt 2013 (n = 593)
+Figure 2. Answers of the interviewed private households in Bavaria, Saxony and Saxony-Anhalt in response to the question of how they
+became aware of the imminent flood danger (∗
+indicates significant differences (p < 0.05) between 2002 and 2013).
+(with a significantly higher frequency in 2013 in comparison with 2002 in Saxony and Saxony-Anhalt) and about areas at risk (with a significantly lower frequency in 2013 in
+comparison with 2002 in Bavaria and Saxony-Anhalt). Many
+warnings also contained information about evacuations, with
+a significantly higher frequency in 2013 in comparison with
+2002 in all three federal states investigated (Fig. 4).
+Since the response to warnings is believed to be strongly
+dependent on the warning lead time, private households and
+companies were also asked how many hours before the flood
+reached their house had they become aware of the flood danger. For both flood events there are large differences between
+regions; i.e. warning times were between 1 h and 14 days
+(data not shown). The average warning time in August 2002
+was shortest in Bavaria at 17 h, and longest at the middle
+reaches of the Elbe River in Saxony-Anhalt at an average of
+90 h (Table 3). In 2002 in Saxony, private households indicated an average lead time of 23 h and companies indicated
+www.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2084 H. Kreibich et al.: New insights into flood warning reception and emergency response
+Targeted public authority warning to company
+General public authority warning
+Warning by sta, relatives, other
+General-trans-regional media 
+coverage
+Own observation
+No warning
+Not specied
+0 10 20 30 40 50 60
+Share of surveyed companies [%]
+Saxony 2002 (n = 415) Saxony 2013 (n = 188)
+Figure 3. Answers of the interviewed companies in Saxony in response to the question of how they became aware of the imminent
+flood danger.
+0 10 20 30 40 50 60 70 80
+Share of surveyed households [%]
+Peak water level
+Areas at risk
+Evacuation
+Undertaking emergency measures
+Other
+Don't know/not specied 
+*
+*
+*
+*
+*
+*
+*
+Warning contained 
+information about...
+Bavaria 2002 (n = 144)
+Bavaria 2013 (n = 157)
+Saxony 2002 (n = 348)
+Saxony 2013 (n = 290)
+Saxony-Anhalt 2002 (n = 220)
+Saxony-Anhalt 2013 (n = 359)
+Figure 4. Information content of official flood warnings received by
+private households in Bavaria, Saxony and Saxony-Anhalt (∗
+indicates significant differences (p < 0.05) between 2002 and 2013).
+an average lead time of 20 h. In June 2013, lead times were
+significantly longer in Bavaria (average of 22 h) and Saxony
+(averages of 42 and 40 h for households and companies respectively). This increase in lead times might be explained by
+the improvement in the early-warning systems (see Sect. 3)
+as well as by less severe flash floods in 2013 in comparison
+with 2002 in Saxony and Bavaria (see Sect. 2). In SaxonyAnhalt lead times were significantly shorter in 2013 at an
+average of 42 h in comparison with 2002 (Table 3), reflecting
+the more severe situation at the Saale River and the middle
+reaches of the Elbe in 2013 in comparison with 2002 (Merz
+et al., 2014; BfG, 2014).
+The significant improvement in the warning situation, with
+significantly more affected parties reached and longer lead
+times, in Bavaria and Saxony probably has three causes:
+firstly, the flood warning systems in Germany have been
+Table 3. Mean (median) lead times indicated by private households
+and companies.
+2002 (h) 2013 (h)
+Private households in Bavaria∗ 17 (8) 22 (16)
+Private households in Saxony-Anhalt∗ 90 (96) 42 (24)
+Private households in Saxony∗ 23 (10) 42 (24)
+Companies in Saxony∗ 20 (8) 40 (36)
+∗ Significant difference between years.
+significantly improved after 2002 (Thieken et al., 2016b;
+DKKV, 2015), secondly, people and companies had more
+flood experience and were more aware of the flood risk
+(Kreibich and Thieken, 2009; Kienzler et al., 2015), so that
+they became aware of the imminent flood danger via their
+own observations more often and earlier and thirdly, the flood
+characteristics differed. In August 2002, severe flash floods
+occurred in the Ore Mountains, whereas the flood event in
+June 2013 developed slowly over several days (Conradt et al.,
+2013; Schröter et al., 2015). In contrast, in Saxony-Anhalt
+problems with warning system breakdowns occurred and the
+flood situation was aggravated in 2013 in comparison with
+2002 (DKKV, 2015). As a result, slightly fewer people were
+warned and lead times were shorter in 2013 in comparison
+with 2002 in Saxony-Anhalt.
+5.2 Emergency response by private households and
+companies
+Early warning can only be effective if the people at risk
+trust the warning and know what to do when they receive
+a warning. Preparedness and recent flood experience seem
+to support the implementation of effective emergency measures (Kreibich et al., 2007b; Thieken et al., 2007). The flood
+experience differed strongly between the two flood events:
+in 2002, 78 % of interviewed private households and 75 %
+of companies stated that they had never experienced a flood
+before. In 2013, these fractions were only 39 and 6 % respectively (Table 2). Additionally, check lists are helpful
+for the implementation of emergency measures for private
+households, indicating what should be done and which things
+should be available in case of an emergency, and emergency
+plans and regularly undertaken emergency exercises are useful for companies (Kreibich et al., 2007a, b). The share of
+companies which had an emergency plan in place before the
+flood increased from 10 % in 2002 to 34 % in 2013 (Table 4).
+The share of those who had undertaken emergency exercises
+before the flood had increased from 4 to 14 % (Table 4).
+However, in this respect there is still room for improvement.
+Households who had received a warning through public
+authorities were asked whether they knew how they could
+protect their household from the flood. In 2002 only 14 %
+of the interviewed households stated that it was completely
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2085
+Table 4. Information by the company respondents from Saxony on their preparedness for and the effectiveness of emergency measures
+implemented.
+Fraction of interviewed companies that 2002 2013
+(n = 415) (n = 197)
+– already had an emergency plan before the flood 10 % 34 %
+– already conducted flood emergency exercises before the flood 4 % 14 %
+– were able to protect their equipment in its entirety or the most
+important part thereof
+19 % 65 %
+– were able to protect their goods, products and stock in their
+entirety or the most important part thereof
+17 % 62 %
+– were able to protect their vehicles in their entirety or the most
+important part thereof∗
+– 84 %
+∗ Question asked only for 2013 flood.
+clear to them what to do when the waning reached them; in
+2013 this fraction was 44 % (Table 2). In contrast, in 2002,
+29 % of the interviewed households stated that it was completely unclear to them what to do when the waning reached
+them; in 2013 this fraction dropped to 14 % (Table 2). Increased flood experience and improved risk communication, e.g. via information campaigns, presumably contributed
+to this development (Kienzler et al., 2015; Thieken et al.,
+2016b). However, there are some regional differences: there
+is no significant difference between the knowledge about
+emergency measures of private households in 2002 and 2013
+in Bavaria (Fig. 5). This is in accordance with previous findings that revealed that households in Bavaria already knew
+what to do when warnings reached them in 2002, primarily due to their recent experience with the flood in 1999, in
+contrast to households in the Elbe catchment (Thieken et al.,
+2007).
+Households and companies who had not undertaken any
+emergency measures were asked for their reasons (Fig. 6).
+The most often stated reason (irrespective of event and region) was that it had been too late to do anything, which
+stresses the importance of flood warnings and sufficiently
+long lead times. In 2002 it was additionally problematic that
+nobody was at home and that company properties could not
+be reached due to disrupted roads, which hardly played a role
+in 2013. It was already discussed in earlier studies that this
+lack of availability in 2002 was influenced by the fact that the
+flood happened during the summer holiday season in August
+(Thieken et al., 2007) and that severe damage to infrastructure had occurred (Kreibich et al., 2007b). More than 750 km
+of rural, county and state roads as well as 585 bridges were
+damaged in Saxony in 2002 (IKSE, 2004). Additionally, the
+flood hazard was underestimated. Many stated that they did
+not think the flood would become so severe, which was particularly the case in 2013 in comparison with 2002.
+In 2013 considerably more private households and companies implemented emergency measures and put more effort
+into emergency measures in comparison with 2002 (Table 2).
+Share of answers [%]
+It was completely
+clear to me It was completely Don't know/
+unclear to me not specied
+1
+0
+10
+20
+30
+40
+50
+60
+2 3 4 5 6
+Bavaria 2002 (n = 120)
+Bavaria 2013 (n = 239)
+Saxony 2002 (n = 315)
+Saxony 2013 (n = 523)
+Saxony-Anhalt 2002 (n = 212)
+Saxony-Anhalt 2013 (n = 593)
+Figure 5. Answers of the households that had received a public authority warning, in response to the question whether they knew how
+to protect themselves and their household from the flood. Knowledge was significantly different (p < 0.05) between 2002 and 2013
+in Saxony and Saxony-Anhalt (not in Bavaria).
+In 2002, 17 % of private households and 33 % of companies had not implemented any measures, in comparison with
+2013, when only 6 % of households and 1 % of companies
+had not implemented any emergency measures (Table 2). In
+2002 private households and companies had on average 4 and
+16 people involved in emergency measures respectively and
+spent on average 13 h on emergency measures. In 2013, on
+average 6 and 16 people were involved and spent on average 31 and 22 h on emergency measures by households and
+companies respectively (Table 2). However, regional differences exist, which were only investigated for private households: the overall picture is dominated by the results from
+Bavaria and Saxony where 21 and 17 % of households respectively had not implemented any emergency measures in
+2002 (Fig. 7). In 2013 these fractions were only 8 and 3 %
+respectively. In contrast, in Saxony-Anhalt, i.e. in the middle reaches of the Elbe catchment, only 8 % of households
+had not implemented any emergency measures in 2002 and
+www.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2086 H. Kreibich et al.: New insights into flood warning reception and emergency response
+0 10 20 30 40 50 60 70 80 90
+Share of surveyed households/companies [%]
+Households
+Companies
+Bavaria 2002 (n = 94)
+Bavaria 2013 (n = 20)
+Saxony 2002 (n = 167)
+Saxony 2013 (n = 15)
+Saxony-Anhalt 2002 (n = 23)
+Saxony-Anhalt 2013 (n = 49)
+Saxony 2002 (n = 167)
+Saxony 2013 (n = 2)
+It was too late to do anything
+It was too late to do anything
+Employees did not come to work / no personnel available
+I thought emergency measures wouldn't be necessary
+I did not know what to do
+Emergency measures are too expensive
+I thought emergency measures would be useless
+Other
+Property could not be reached due to disrupted roads
+Nobody was at home
+I did not think the ood would become so severe
+I did not know what to do
+I was not capable of doing anything
+I thought emergency measures would be useless
+Other
+Don't know/not specied
+(a)
+(b)
+Figure 6. Reasons stated by households (a) and companies (b) in response to the question of why they had not performed any emergency
+measures (multiple answers possible).
+2013 (with no significant difference between the two floods;
+Fig. 7).
+Private households most commonly implemented the following emergency measures, irrespective of the flood event:
+“safeguard documents and valuables”, “drive vehicles to
+flood-safe place” and “put movable contents upstairs/to safer
+place” (Fig. 7). Less common are the measures “protect
+building against inflowing water”, “switch off gas/electricity,
+or was centrally switched off” and “secure oil tanks etc.”. Besides emergency measures like protecting equipment, goods,
+etc., as well as protecting vehicles (Table 4), companies
+also undertook other measures like setting up water barriers,
+mainly using sandbags and the deployment of pumps as well
+as securing any other movable items (data not shown).
+In the case of the 2002 flood, 51 % of households and
+74 % of companies stated that they would have been able
+to implement (more) emergency measures if they had been
+warned earlier; in 2013 these fractions were only 24 and 25 %
+respectively (Table 2). This means that in 2002, most surveyed households and companies had too little time to implement emergency measures, while in 2013 most of them
+had sufficient time. This probably also influenced the fact
+that in 2013 the perceived effectiveness of the implemented
+emergency measures of private households and companies
+was generally rated higher in comparison with 2002. Figure 8 presents the self-perceived effectiveness reported by
+the surveyed households on a scale after the flood event; i.e.
+it shows an evaluation by flood-affected people concerning
+how much damage was prevented through a specific measure. The effectiveness of most emergency measures implemented in 2013 in Saxony and Saxony-Anhalt received significantly higher ratings than the ones implemented in 2002
+(Fig. 8). In 2013, far more companies were also able to protect the most important parts of their equipment as well as
+of goods, products, etc. (Table 4). In contrast, in Bavaria
+the perceived effectiveness of the emergency measures was
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2087
+0 10 20 30 40 50 60 70 80 90
+Share of surveyed households [%]
+Safeguard documents and valuables
+Drive vehicles to ood-safe place
+Put movable contents upstairs/to safer place
+Protect building against inowing water
+Switch o gas/electricity
+Gas/electricity was centrally switched o by public service
+Secure oil tanks or containers with other hazardous materials
+Don't know/Not specied 
+No emergency measures undertaken
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+*
+* Bavaria 2002 (n = 449)
+Bavaria 2013 (n = 239)
+Saxony 2002 (n = 977)
+Saxony 2013 (n = 523)
+Saxony-Anhalt 2002 (n = 271)
+Saxony-Anhalt 2013 (n = 593)
+Figure 7. Overview of the emergency measures undertaken by the interviewed households in Bavaria, Saxony and Saxony-Anhalt (semi-open
+question, multiple answers possible, ∗
+indicates significant differences (p < 0.05) between 2002 and 2013).
+similar for both flood events (Fig. 8). Generally, “safeguard
+documents and valuables” and “drive vehicles to flood-safe
+place” were perceived as the most effective measures. Other
+measures were perceived to be slightly less effective; with
+respect to their effectiveness ratings these are in decreasing order: “switch off gas/electricity”, “secure oil tanks etc.”,
+“put movable contents upstairs/to safer place” and “protect
+building against inflowing water”. The measures “safeguard
+documents and valuables” and “drive vehicles to flood-safe
+place” were implemented very often by households and their
+effectiveness was rated very high (Figs. 7 and 8). Unfortunately, a previous study revealed no damage-reducing effect of these emergency measures even when implemented
+very effectively (Thieken et al., 2005a). The highest damagereducing effect of very effectively implemented emergency
+measures was shown for “protect building against inflowing
+water” and “install water pumps” (Thieken et al., 2005a).
+Generally it is assumed that more emergency measures
+can be implemented in an effective way when lead times are
+long, flood intensity is low and when the affected parties are
+well experienced and prepared (Penning-Rowsell and Green,
+2000; Molinari and Handmer, 2011; Mross et al., 2016). To
+investigate such possible links, the Spearman rank correlations between the indicator of effectively performed emergency measures and other parameters are calculated (Table 5). Generally, correlations are relatively weak, all below
+0.45. For companies in 2013 no significant correlations exist
+probably due to the small sample size and high heterogeneity
+of the data. Still, the warning parameters quite clearly show
+the highest correlations with effective emergency measures,
+with the most important parameter being the lead time, followed by the source of the warning and the information contents of the warning. Additionally, the efforts undertaken for
+emergency measures, i.e. time spent and number of people
+involved, are also relatively strongly correlated with effectively performed emergency measures. Surprisingly, flood intensity and preparedness parameters are less correlated with
+effectively performed emergency measures (Table 5).
+6 Conclusions
+The comparison of warnings received and emergency measures undertaken by private households and companies before and during the 2002 and 2013 flood events generally
+show a clear improvement. Thus, the various initiatives and
+high investments undertaken to improve flood risk management after 2002 in Germany were successful. The warning
+reached significantly more affected parties and reached them
+with longer lead times in 2013 in comparison with 2002. In
+addition, the share of official warnings by public authorities
+which reached the affected parties increased from 2002 to
+2013. The marked decline of affected parties who had not rewww.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2088 H. Kreibich et al.: New insights into flood warning reception and emergency response
+Safeguard documents and valuables
+Drive vehicles to ood-safe place
+Put movable contents upstairs/to safer place
+Protect building against inowing water
+Secure oil tanks or containers 
+with other hazardous materials
+Switch o gas/electricity
+Bavaria 2002
+Bavaria 2013
+1
+2
+3
+4
+5
+6
+Only safeguard documents and 
+drive vehicles to ood-safe place 
+are signicantly dierent between years (p < 0.05)
+Bavaria
+Safeguard documents and valuables
+Drive vehicles to ood-safe place
+Put movable contents upstairs/to safer place
+Protect building against inowing water
+Secure oil tanks or containers 
+with other hazardous materials
+Switch o gas/electricity
+Saxony 2002
+Saxony 2013
+1
+2
+3
+4
+5
+6
+All measures are signicantly dierent 
+between years (p < 0.05)
+Saxony
+Safeguard documents and valuables
+Drive vehicles to ood-safe place
+Put movable contents upstairs/to safer place
+Protect building against inowing water
+Secure oil tanks or containers 
+with other hazardous materials
+Switch o gas/electricity
+Saxony-Anhalt2002
+Saxony-Anhalt 2013
+1
+2
+3
+4
+5
+6
+All measures, except switch o gas/electricity, 
+are signicantly dierent between years (p<0.05)
+Saxony-Anhalt
+Figure 8. Self-perceived effectiveness of undertaken emergency measures by interviewed households in Bavaria, Saxony and Saxony-Anhalt
+(1 means very effective and 6 means not effective at all).
+ceived any warning and the increases in lead times are probably due to the improvements in the warning systems, increased risk awareness and preparedness and the fact that
+in 2013 the evolution of the flood event was clearly less
+dynamic than in 2002. In 2013 most surveyed households
+and companies had sufficient time to implement emergency
+measures, illustrating that increasing the lead times is no
+longer a pressing issue, except for flash floods. Only about a
+third of the warnings contained information about emergency
+measures, with no significant difference between the flood
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2089
+Table 5. Rank correlation (Spearman’s rho) between the indicator of effectively performed emergency measures and other parameters (only
+coefficients significant at the 0.05 level and > 0.1 are shown).
+Private households Companies
+Parameters 2002 2013 2002 2013
+(n = 1697) (n = 1355) (n = 415) (n = 197)
+Flood intensity Water depth (cm) – – −0.18 –
+Perceived flow velocity (0 = still to −0.13 – na∗ –
+6 = very high velocity)
+Flood duration (h) 0.14 – – –
+Warning Warning source (indicator) 0.28 0.11 0.24 –
+Warning information (indicator) 0.26 0.12 na na
+Lead time (h) 0.40 0.15 0.42 –
+Effort for emergency Time spent on emergency measures (h) 0.37 0.28 0.31 –
+measures Number of people involved in emergency measures 0.18 0.20 0.15 –
+Preparedness Emergency plan available (yes/no) na na – –
+Frequency of undertaking emergency exercises na na 0.12 –
+Perceived knowledge about self-protection – -0.21 na na
+(1 = “completely clear what to do” to 6 = “completely
+unclear what to do”)
+Number of floods experienced before event – 0.14 0.11 –
+∗ na means that the question was not asked.
+events. Thus, emergency communication should be improved
+and the link between early warning and emergency response
+should be strengthened. The general boost in information and
+awareness campaigns after the flood in 2002 has probably
+supported an improved knowledge of households and companies about how they can protect themselves against flooding. Furthermore, increased flood experience played a significant role. This became apparent in the amount of emergency
+measures implemented as well as in the self-evaluation of
+their effectiveness by private households and companies. In
+the case of companies the increase in available emergency
+plans and regularly conducted emergency exercises points
+to an increased preparedness. However, particularly with respect to emergency plans and exercises there is still room
+for improvement. Probably, integrating companies and private households into transnational exercises, like the biennial
+transnational crisis management exercise LÜKEX in Germany, could significantly improve preparedness and support
+an effective realization of an emergency response by affected
+parties.
+Some regional differences are apparent: in Saxony, significantly more affected parties were alerted, and lead times
+were significantly longer in 2013 in comparison with 2002.
+Additionally, significantly more households and companies
+had implemented emergency measures and evaluated these
+to be significantly more effective in 2013 in comparison with
+2002. In Saxony-Anhalt, the warning situation was already
+relatively good in 2002, so that no significant improvements
+were apparent with respect to the fraction of households
+reached by warnings as well as to the lead time. The more
+severe flood situation in 2013 in comparison to 2002, however, challenged the system, which should be accounted for
+in future efforts to advance underlying models and the IT
+system, as well as to employ enough and well-trained personnel that are capable to cope even with long-lasting events.
+In Bavaria, in 2002 households had recent flood experience
+due to a severe flood event in May 1999 and were relatively
+well prepared. Thus, hardly no significant difference in the
+perceived effectiveness of undertaken emergency measures
+were apparent between 2002 and 2013 in Bavaria.
+Floods may become more frequent and more extreme in
+several regions due to the effects of climate change, which
+implies that floods may increasingly affect areas with no or
+little prior flood experience. Thus, the challenge is to continuously maintain and advance integrated early-warning systems. This includes keeping preparedness high and supporting effective emergency response by affected parties even
+without prior flood experience and the push of extreme
+events (Kreibich et al., 2017). To further increase lead times
+and support an effective response, rainfall and flood forecasts, particularly in flash flood areas, should be further improved and complemented with uncertainty and impact assessments (Thieken et al., 2016b; Dottori et al., 2017). Effective and harmonized risk and emergency communication,
+e.g. via combining hazard and risk information with information on adequate risk-reducing behaviour, can help to motivate behavioural precaution, to keep preparedness of residents and company owners high and to support effective
+www.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2090 H. Kreibich et al.: New insights into flood warning reception and emergency response
+emergency response. Risk information campaigns should include the set-up of flood marks, compilation and dissemination of hazard and risk maps, creative educating ideas,
+as well as the communication of precautionary and coping
+strategies (Thieken et al., 2016b). Since information requirements and response capacities vary, certain subgroups (e.g.
+homeowners, tenants, companies of different size and economic sectors) should be identified and addressed by tailored information and media. However, suitable incentives
+would additionally be helpful for triggering preparations like
+the development of emergency plans or undertaking regular emergency exercises. Generally, the implementation of
+an integrated early warning and emergency response concept
+has advanced after recent flood events and now more efforts
+should be undertaken to continuously improve and maintain
+it.
+Data availability. Parts of the data are available via the German
+flood damage database HOWAS21 (GFZ, 2017).
+Competing interests. The authors declare that they have no conflict
+of interest.
+Special issue statement. This article is part of the special issue
+“Natural hazard event analyses for risk reduction and adaptation”.
+It is a result of the EGU General Assembly 2015, Vienna, Austria,
+12–17 April 2015.
+Acknowledgements. The research presented in this paper as well
+as the telephone interviews after the flood in 2013 were conducted
+in the framework of the project “Hochwasser 2013”. We thank the
+German Ministry of Education and Research (BMBF; 13N13017),
+the German Research Centre for Geosciences GFZ, and the
+Deutsche Rückversicherung AG for the financial support. The
+telephone interviews after the flood in 2002 were undertaken within
+the German Research Network Natural Disasters (DFNK). We
+thank the German Ministry for Education and Research (BMBF;
+no. 01SFR9969/5) and the Deutsche Rückversicherung AG for
+the financial support. We further thank Ina Pech (University of
+Potsdam) for her help with data preparation and analyses and
+Ute Dolezal (University of Potsdam) for the graphic design of most
+figures.
+Edited by: Michael Kunz
+Reviewed by: Michael Szoenyi, Christiane Stephan, and two
+anonymous referees
+References
+Bárdossy, A. and Filiz, F.: Identification of flood producing atmospheric circulation patterns, J. Hydrol., 313, 48–57,
+https://doi.org/10.1016/j.jhydrol.2005.02.006, 2005.
+Barredo, J. I.: Normalised flood losses in Europe: 1970–
+2006, Nat. Hazards Earth Syst. Sci., 9, 97–104,
+https://doi.org/10.5194/nhess-9-97-2009, 2009.
+BfG: Das Hochwasserextrem des Jahres 2013 in Deutschland:
+Dokumentation und Analyse, Bundsanstalt für Gewässerkunde,
+Koblenz, Germany, 2014.
+Blöschl, G., Nester, T., Komma, J., Parajka, J., and Perdigão, R. A.
+P.: The June 2013 flood in the Upper Danube Basin, and comparisons with the 2002, 1954 and 1899 floods, Hydrol. Earth Syst.
+Sci., 17, 5197–5212, https://doi.org/10.5194/hess-17-5197-2013,
+2013.
+Bubeck, P., Kreibich, H., Penning-Rowsell, E., Botzen, W.
+W., de Moel, H., and Klijn, F.: Explaining differences in
+flood management approaches in Europe and the USA – A
+comparative analysis, J. Flood Risk Manag., 10, 436–445,
+https://doi.org/10.1111/jfr3.12151, 2017.
+Chinh, D. T., Bubeck, P., Nguyen, D., and Kreibich, H.: The 2011
+flood event in the Mekong Delta: preparedness, response, damage and recovery of private households and small businesses,
+Disasters, 40, 753–788, 2016.
+Conradt, T., Roers, M., Schröter, K., Elmer, F., Hoffmann, P., Koch,
+H., Hattermann, F. F., and Wechsung, F.: Vergleich der Extremhochwässer 2002 und 2013 im deutschen Teil des Elbegebiets und deren Abflusssimulation durch SWIM-live, Hydrologie
+und Wasserbewirtschaftung, 57, 241–245, 2013.
+Cools, J., Innocenti, D., and O’Briena, S.: Lessons from flood early
+warning systems, Environ. Sci. Policy, 58, 117–122, 2016.
+Coughlan de Perez, E., van den Hurk, B., van Aalst, M. K., Jongman, B., Klose, T., and Suarez, P.: Forecast-based financing: an
+approach for catalyzing humanitarian action based on extreme
+weather and climate forecasts, Nat. Hazards Earth Syst. Sci., 15,
+895–904, https://doi.org/10.5194/nhess-15-895-2015, 2015.
+Deutsch, M. and Pörtge, K.-H.: Die Hochwassermeldeordnung von
+1889 – ein Beitrag zur Geschichte des Hochwasserwarn und
+Meldedienstes in Mitteldeutschland, in: Forum Katastrophenvorsorge 2001, DKKV, Bonn, Germany, 396–405, 2001.
+DKKV (Deutsches Komitee Katastrophenvorsorge e.V.):
+Hochwasservorsorge in Deutschland – Lernen aus der Katastrophe 2002 im Elbegebiet, Schriftenreihe des DKKV, 29, DKKV,
+Bonn, Germany, 2003.
+DKKV (Deutsches Komitee Katastrophenvorsorge e.V.):
+Das Hochwasser im Juni 2013: Bewährungsprobe für das
+Hochwasserrisikomanagement in Deutschland, Schriftenreihe
+des DKKV, 53, DKKV, Bonn, Germany, 2015.
+Dottori, F., Kalas, M., Salamon, P., Bianchi, A., Alfieri, L., and
+Feyen, L.: An operational procedure for rapid flood risk assessment in Europe, Nat. Hazards Earth Syst. Sci., 17, 1111–1126,
+https://doi.org/10.5194/nhess-17-1111-2017, 2017.
+DWD (Deutscher Wetterdienst): Das Hochwasser an Elbe und
+Donau im Juni 2013, Berichte des Deutschen Wetterdienstes 242,
+Offenbach, Germany, 2013.
+EC (European Commission): Directive 2007/60/EC of the European
+Parliament and of the Council of 23 October 2007 on the assessment and management of flood risks (Floods Directive), EC,
+Brussels, Belgium, 2007.
+EEA: Climate Change and Water Adaptation Issues, EEA Technical Report No. 2, European Environment Agency, Copenhagen,
+Denmark, 110 pp., 2007.
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/
+
+H. Kreibich et al.: New insights into flood warning reception and emergency response 2091
+EM-Dat: International Disaster Database, available at: http://www.
+emdat.be/, last access: October 2015.
+Engel, H.: The flood event 2002 in the Elbe River
+basin: causes of the flood, its course, statistical assessment and flood damages, Houille Blanche, 6, 33–36,
+https://doi.org/10.1051/lhb:200406003, 2004.
+Fügner, D.: Hochwasserkatastrophen in Sachsen, Tauchaer Verlag,
+Taucha, Germany, 2003.
+GFZ (German Research Centre for Geosciences): HOWAS 21,
+https://doi.org/10.1594/GFZ.SDDB.HOWAS21, 2017.
+Grams, C. M., Binder, H., Pfahl, S., Piaget, N., and Wernli, H.:
+Atmospheric processes triggering the central European floods
+in June 2013, Nat. Hazards Earth Syst. Sci., 14, 1691–1702,
+https://doi.org/10.5194/nhess-14-1691-2014, 2014.
+Grünewald, U., Brodersen, C., Schümberg, S., and Schmitt, A.:
+Zum Entwicklungsstand und zu den Anforderungen an ein grenzüberschreitendes operationelles Hochwasservorhersagesystem
+im Einzugsgebiet der Oder, DKKV-Schriftenreihe 23, DKKV,
+Bonn, Germany, 104 pp., 2001.
+Hall, J. W., Sayers, P. B., and Dawson, R. J.: National-scale Assessment of Current and Future Flood Risk in England and Wales,
+Nat. Hazards, 36, 147–164, 2005.
+Handmer, J. W., Smith, D. I., and Lustig, T. L.: The Sydney Floods
+of 1986: Warnings, Damages, Policy and the Future, Hydrology
+and Water Resources Symposium, 1–3 February 1988, Canberra,
+Australia, 206–210, 1988.
+Hegger, D. L. T., Driessen, P. P. J., Dieperink C, Wiering, M.,
+Raadgever, G. T. T., and van Rijswick, H. F. M. W.: Assessing
+Stability and Dynamics in Flood Risk Governance – An Empirically Illustrated Research Approach, Water Resour. Manage., 28,
+4127–4142, https://doi.org/10.1007/s11269-014-0732-x, 2014.
+IKSE (Internationale Kommission zum Schutz der Elbe): Bestandsaufnahme des vorhandenen Hochwasserschutzniveaus im
+Einzugsgebiet der Elbe, Magdeburg, Germany, 2001.
+IKSE (Internationale Kommission zum Schutz der Elbe): Dokumentation des Hochwassers vom August 2002 im Einzugsgebiet
+der Elbe, report, Magdeburg, Germany, 2004.
+IPCC (Intergovernmental Panel on Climate Change): Managing
+the Risks of Extreme Events and Disasters to Advance Climate
+Change Adaptation, Cambridge University Press, New York,
+USA, 2012.
+Jongman, B., Hochrainer-Stigler, S., Feyen, L., Aerts, J. C. J. H.,
+Mechler, R., Botzen, W. J. W., Bouwer, L. M., Pflug, G., Rojas,
+R., and Ward, P. J.: Increasing stress on disaster-risk finance due
+to large floods, Nat. Clim. Change, 4, 264–268, 2014.
+Kienzler, S., Pech, I., Kreibich, H., Müller, M., and Thieken, A.
+H.: After the extreme flood in 2002: changes in preparedness, response and recovery of flood-affected residents in Germany between 2005 and 2011, Nat. Hazards Earth Syst. Sci., 15, 505–
+526, https://doi.org/10.5194/nhess-15-505-2015, 2015.
+Kreibich, H. and Thieken, A. H.: Coping with floods in the city of
+Dresden, Germany, Nat. Hazards, 51, 423–436, 2009.
+Kreibich, H., Merz, B., and Grünewald, U.: Lessons learned from
+the Elbe river floods in August 2002 – With a special focus on
+flood warning, in: Extreme Hydrological Events: New Concepts
+for Security, edited by: Vasiliev, O. F., Gelder, P. H. A. J. M.
+v., Plate, E. J., and Bolgov, M. V., NATO Science Series; 78,
+Springer, Heidelberg, Germany, 69–80, 2007a.
+Kreibich, H., Müller, M., Thieken, A. H., and Merz, B.: Flood precaution of companies and their ability to cope with the flood
+in August 2002 in Saxony, Germany, Water Resour. Res., 43,
+W03408, https://doi.org/10.1029/2005WR004691, 2007b.
+Kreibich, H., Seifert, I., Thieken, A. H., Lindquist, E., Wagner, K.,
+and Merz, B.: Recent changes in flood preparedness of private
+households and businesses in Germany, Reg. Environ. Change,
+11, 59–71, 2011.
+Kreibich, H., Di Baldassarre, G., Vorogushyn, S., Aerts, J. C. J.
+H., Apel, H., Aronica, G. T., Arnbjerg-Nielsen, K., Bouwer, L.
+M., Bubeck, P., Caloiero, T., Chinh, D. T., Cortès, M., Gain, A.
+K., Giampá, V., Kuhlicke, C., Kundzewicz, Z. W., Llasat, M. C.,
+Mård, J., Matczak, P., Mazzoleni, M., Molinari, D., Dung, N.
+V., Petrucci, O., Schröter, K., Slager, K., Thieken, A. H., Ward,
+P. J., and Merz, B.: Adaptation to flood risk: Results of international paired flood event studies, Earth’s Future, 5, 953–965,
+https://doi.org/10.1002/2017EF000606, 2017.
+Kuhlicke, C.: Vulnerability, ignorance and the experience of radical surprises, in: Routledge international handbook of ignorance
+studies, edited by: Groß, M. and McGoey, L., Routledge International Handbooks, Routledge, Abingdon, UK, 239–246, 2015.
+Merz, B., Kreibich, H., Schwarze, R., and Thieken, A.: Review
+article “Assessment of economic flood damage”, Nat. Hazards
+Earth Syst. Sci., 10, 1697–1724, https://doi.org/10.5194/nhess10-1697-2010, 2010.
+Merz, B., Elmer, F., Kunz, M., Mühr, B., Schröter, K., and
+Uhlemann-Elmer, S.: The extreme flood in June 2013 in Germany, Houille Blanche – Revue internationale de l’eau, 1, 5–10,
+2014.
+Meyer, V., Priest, S., and Kuhlicke, C.: Economic evaluation of
+structural and non-structural flood risk management measures:
+examples from the Mulde River, Nat. Hazards, 62, 301–324,
+2012.
+Molinari, D. and Handmer, J.: A behavioural model for quantifying flood warning effectiveness, J. Flood Risk Manag., 4, 23–32,
+https://doi.org/10.1111/j.1753-318X.2010.01086.x, 2011.
+Molinari, D., Ballio, F., and Menoni, S.: Modelling the benefits of
+flood emergency management measures in reducing damages: a
+case study on Sondrio, Italy, Nat. Hazards Earth Syst. Sci., 13,
+1913–1927, https://doi.org/10.5194/nhess-13-1913-2013, 2013.
+Morss, R., Mulder, K. J., Lazo, J. K., and Demuth, J. L.: How do
+people perceive, understand, and anticipate responding to flash
+flood risks and warnings? Results from a public survey in Boulder, Colorado, USA, J. Hydrol., 541, 649–664, 2016.
+Parker, D. J. and Fordham, M.: An evaluation of flood forecasting,
+warning and response systems in the European Union, Water Resour. Manag., 10, 279–302, 1996.
+Parker, D. J. and Priest, S. J.: The Fallibility of Flood Warning
+Chains: Can Europe’s Flood Warning be Effective?, Water Resour. Manag., 26, 2917–2950, 2012.
+Parker, D. J., Fordham, M., and Torterotot, J. P.: Real-time hazard
+management: flood forecasting, warning and response, in: Floods
+across Europe. Hazard assessment, modelling and management,
+edited by: Penning-Rowsell, E. C. and Fordham, M., Middlesex
+University Press, London, UK, 135–166, 1994.
+Penning-Rowsell, E. C. and Green, C.: insights into the appraisal of
+flood alleviation benefits: (1) Flood damage and flood loss information, J. Chart. Inst. Water E., 14, 347–353, 2000.
+www.nat-hazards-earth-syst-sci.net/17/2075/2017/ Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017
+
+2092 H. Kreibich et al.: New insights into flood warning reception and emergency response
+Petrow, T., Zimmer, J., and Merz, B.: Changes in the flood hazard
+in Germany through changing frequency and persistence of circulation patterns, Nat. Hazards Earth Syst. Sci., 9, 1409–1423,
+https://doi.org/10.5194/nhess-9-1409-2009, 2009.
+Pohl, R.: Historische Hochwasser aus dem Erzgebirge, Wasserbauliche Mitteilungen Vol. 28, Institut für Wasserbau, Dresden,
+Germany, 2004.
+Rözer, V., Müller, M., Bubeck, P., Kienzler, S., Thieken, A.,
+Pech, I., Schröter, K., Buchholz, O., and Kreibich, H.: Coping with Pluvial Floods by Private Households, Water, 8, 304,
+doi.org/10.3390/w8070304, 2016.
+Schröter, K., Kunz, M., Elmer, F., Mühr, B., and Merz, B.: What
+made the June 2013 flood in Germany an exceptional event? A
+hydro-meteorological evaluation, Hydrol. Earth Syst. Sci., 19,
+309–327, https://doi.org/10.5194/hess-19-309-2015, 2015.
+Sieg, T., Vogel, K., Merz, B., and Kreibich, H.: Tree-based
+flood damage modeling of companies: Damage processes
+and model performance, Water Resour. Res., 53, 6050–6068,
+https://doi.org/10.1002/2017WR020784, 2017.
+Smith, D. I.: Actual and potential flood damage: a case study for
+urban Lismore, NSW, Australia, Appl Geogr., 1, 31–39, 1981.
+Thieken, A. H., Müller, M., Kreibich, H., and Merz, B.: Flood
+damage and influencing factors: New insights from the August 2002 flood in Germany, Water Resour. Res., 41, W12430,
+https://doi.org/101029/2005WR004177, 2005a.
+Thieken, A. H., Grünewald, U., Merz, B., Petrow, T., Schümberg,
+S., Kreibich, H., Streitz, W., and Kaltofen, M.: Flood risk reduction in Germany after the Elbe 2002 flood: aspects of hazard
+mapping and early warning systems, in: Proceedings of the International Symposium on Cartographic Cutting-Edge Technology
+for Natural Hazard Management, edited by: Buchroithner, M. F.,
+Kartographische Bausteine, Band 30, TU Dresden, Institut für
+Kartographie, Dresden, Germany, 145–156, 2005b.
+Thieken, A. H., Petrow, T., Kreibich, H., and Merz, B.: Insurability
+and Mitigation of Flood Losses in Private Households in Germany, Risk Analysis, 26, 383–395, 2006.
+Thieken, A. H., Kreibich, H., Müller, M., and Merz, B.: Coping with
+floods: preparedness, response and recovery of flood-affected
+residents in Germany in 2002, Hydrolog. Sci. J., 52, 1016–1037,
+2007.
+Thieken, A. H., Bessel, T., Kienzler, S., Kreibich, H., Müller,
+M., Pisi, S., and Schröter, K.: The flood of June 2013 in Germany: how much do we know about its impacts?, Nat. Hazards
+Earth Syst. Sci., 16, 1519–1540, https://doi.org/10.5194/nhess16-1519-2016, 2016a.
+Thieken, A. H., Kienzler, S., Kreibich, H., Kuhlicke, C., Kunz,
+M., Mühr, B., Müller, M., Otto, A., Petrow, T., Pisi, S., and
+Schröter, K.: Review of the flood risk management system in
+Germany, Ecol. Soc., 21, 51, https://doi.org/10.5751/ES-08547-
+210251, 2016b.
+Thieken, A. H., Kreibich, H., Müller, M., and Lamond, J.: Data collection for a better understanding of what causes flood damage
+– experiences with telephone surveys, in: Flood damage survey
+and assessment: new insights from research and practice, chap. 7,
+edited by: Molinari, D., Menoni, S., and Ballio, F., AGU, Wiley,
+95–106; https://doi.org/10.1002/9781119217930.ch7, 2017.
+Ulbrich, U., Brücher, T., Fink, A. H., Leckebusch, G. C., Krüger, A.,
+and Pinto, J. G.: The central European floods of August 2002:
+part 1 – Rainfall periods and flood development, Weather, 58,
+371–377, 2003.
+von Kirchbach, H.-P., Franke, S., Biele, H., Minnich, L., Epple,
+M., Schäfer, F., Unnasch, F., and Schuster, M.: Bericht der Unabhängigen Kommission der Sächsischen Staatsregierung zur
+Flutkatastrophe 2002, Sächsische Staatskanzlei, Dresden, Germany, 250 pp., 2002.
+Wind, H. G., Nierop, T. M., de Blois, C. J., and de Kok, J. L.: Analysis of flood damages from the 1993 and 1995 Meuse floods,
+Water Resour. Res., 35, 3459–3465, 1999.
+Yeo, S. W.: Flooding in Australia: a review of events in 1998, Nat.
+Hazards, 25, 177–191, 2002.
+Nat. Hazards Earth Syst. Sci., 17, 2075–2092, 2017 www.nat-hazards-earth-syst-sci.net/17/2075/2017/

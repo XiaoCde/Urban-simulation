@@ -1,0 +1,348 @@
+Behavior-based Predictive Safety Analytics – Driver Behaviors and Outcomes
+Data Dictionary of Variables
+Variable Name Variable Label Brief Notation Data Type Minimum Maximum
+driverID Driver ID Driver ID Discrete 3 5081966
+DBQ1 Driver Behavior Questionnaire 
+(DBQ) Factor 1: Errors
+Questionnaire 
+data
+Continuous 1 3.1
+DBQ2 DBQ Factor 2: Violations Questionnaire 
+data
+Continuous 1 5.25
+DBQ3 DBQ Factor 3: Slips/Lapses Questionnaire 
+data
+Continuous 1 5.33
+RP1_Minor Risk Perception Factor 1: Minor 
+Offenses
+Questionnaire 
+data
+Continuous 1 7
+RP2_Major Risk Perception Factor 2: Major 
+Offenses
+Questionnaire 
+data
+Continuous 1 7
+RP3_Dist Risk Perception Factor 3: 
+Distraction-related Behaviors
+Questionnaire 
+data
+Continuous 1 7
+studyLength Length of study in months Whole 
+participation
+Continuous 210 1055
+percRemovedTrips Percent of removed trips (due to 
+various reasons)
+Whole 
+participation
+Continuous 0.0291 0.9892
+DistanceInMile Distance driven in miles for 
+duration of study
+Whole 
+participation
+Continuous 7.923 59274.452
+DurationInHour Duration driven in hours for 
+duration of study
+Whole 
+participation
+Continuous 0.357 1317.747
+numTrips Number of trips for duration of 
+study
+Whole
+participation
+Continuous 7 7156
+DistanceInMile_six Distance driven in miles for six 
+month study period
+Six months 
+participation
+Continuous 0 17905.208
+DurationInHour_six Duration driven in hours for six 
+month study period
+Six months 
+participation
+Continuous 0 537.811
+numTrips_six Number of trips driven for six 
+month study period
+Six months 
+participation
+Continuous 0 3220
+Crash_six Number of crashes for six month 
+study period
+Six months 
+participation
+Continuous 0 10
+NearCrash_six Number of nearcrashes for six 
+month study period
+Six months 
+participation
+Continuous 0 19
+atFaultCrash_six Number of at fault crashes for six 
+month study period
+Six months 
+participation
+Continuous 0 10
+atFaultNearCrash_six Number of at fault near crashes
+for six month study period
+Six months 
+participation
+Continuous 0 15
+Severity1Crash_six Number of severity 1 crashes for 
+six month study period
+Six months 
+participation
+Continuous 0 1
+Severity2Crash_six Number of severity 2 crashes for 
+six month study period
+Six months 
+participation
+Continuous 0 2
+RearEndStriking_six Number of rear end strikings for 
+six month study period
+Six months 
+participation
+Continuous 0 14
+atFaultCNC_six Number of at fault crash and 
+near crashes for six month study 
+period
+Six months 
+participation
+Continuous 0 16
+
+CNC_six Number of crash and near 
+crashes for six month study 
+period
+Six months 
+participation
+Continuous 0 20
+atFaultCNC_six_Bin Presence or absence of an at 
+fault crash / near crash during 
+the six month study period
+Six months 
+participation; 
+Binary DV
+Continuous 0 1
+CNC_six_Bin Presence or absence of a crash / 
+near crash during the six month 
+study period
+Six months 
+participation; 
+Binary DV
+Continuous 0 1
+atFaultCrash_six_Bin Presence or absence of an at 
+fault crash during the six month 
+study period
+Six months 
+participation; 
+Binary DV
+Continuous 0 1
+Crash_six_Bin Presence or absence of a crash 
+during the six month study 
+period
+Six months 
+participation; 
+Binary DV
+Continuous 0 1
+MRate_atFaultCNC_six Rate of at fault crash / near 
+crashes by mileage for six month 
+study period
+Six months 
+participation; # 
+events per mile
+Continuous 0 0.017
+MRate_CNC_six Rate of crash / near crashes by 
+mileage for six month study 
+period
+Six months 
+participation; # 
+events per mile
+Continuous 0 0.017
+MRate_atFaultCrash_six Rate of at fault crashes by 
+mileage for six month study 
+period
+Six months 
+participation; # 
+events per mile
+Continuous 0 0.004
+MRate_Crash_six Rate of crashes by mileage for six 
+month study period
+Six months 
+participation; # 
+events per mile
+Continuous 0 0.004
+MRate_hardstart_six_24 Rate of hard starts by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX > 0.24g
+Continuous 0 3.166
+MRate_hardstart_six_25 Rate of hard starts by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX > 0.25g
+Continuous 0 2.870
+MRate_hardstart_six_30 Rate of hard starts by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX > 0.30g
+Continuous 0 1.979
+MRate_hardstart_six_33 Rate of hard starts by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX > 0.33g
+Continuous 0 1.435
+MRate_hardstop_six_24 Rate of hard stops by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX < -0.24g
+Continuous 0 3.247
+MRate_hardstop_six_29 Rate of hard stops by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX < -0.29g
+Continuous 0 2.099
+MRate_hardstop_six_30 Rate of hard stops by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+accelX < -0.30g
+Continuous 0 2.301
+MRate_hardleftTurn_six_29 Rate of hard left turns by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+accelY < -0.29g
+Continuous 0 1.855
+MRate_hardleftTurn_six_30 Rate of hard left turns by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+accelY < -0.30g
+Continuous 0 1.637
+
+MRate_hardleftTurn_six_33 Rate of hard left turns by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+accelY < -0.33g
+Continuous 0 0.995
+MRate_hardleftTurn_six_38 Rate of hard left turns by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+accelY < -0.38g
+Continuous 0 0.580
+MRate_hardleftTurn_six_42 Rate of hard left turns by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+accelY < -0.42g
+Continuous 0 0.364
+MRate_hardrightTurn_six_27 Rate of hard right turns by 
+mileage for six month study 
+period given the threshold
+Six months 
+participation; 
+accelY > 0.27g
+Continuous 0 2.896
+MRate_hardrightTurn_six_29 Rate of hard right turns by 
+mileage for six month study 
+period given the threshold
+Six months 
+participation; 
+accelY > 0.29g
+Continuous 0 2.413
+MRate_hardrightTurn_six_30 Rate of hard right turns by 
+mileage for six month study 
+period given the threshold
+Six months 
+participation; 
+accelY > 0.30g
+Continuous 0 2.413
+MRate_hardrightTurn_six_35 Rate of hard right turns by 
+mileage for six month study 
+period given the threshold
+Six months 
+participation; 
+accelY > 0.35g
+Continuous 0 0.873
+MRate_hardrightTurn_six_44 Rate of hard right turns by 
+mileage for six month study 
+period given the threshold
+Six months 
+participation; 
+accelY > 0.44g
+Continuous 0 0.280
+MRate_hardleftYaw_six_24 Rate of hard ups by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+gyroZ < -
+24deg/sec
+Continuous 0 3.233
+MRate_hardleftYaw_six_46 Rate of hard ups by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+gyroZ < -
+46deg/sec
+Continuous 0 0.527
+MRate_hardleftYaw_six_41 Rate of hard ups by mileage for 
+six month study period given the 
+threshold
+Six months 
+participation; 
+gyroZ < -
+41deg/sec
+Continuous 0 0.760
+MRate_hardrightYaw_six_19 Rate of hard downs by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+gyroZ > 
+19deg/sec
+Continuous 0 3.861
+MRate_hardrightYaw_six_22 Rate of hard downs by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+gyroZ > 
+22deg/sec
+Continuous 0 2.413
+MRate_hardrightYaw_six_37 Rate of hard downs by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+gyroZ > 
+37deg/sec
+Continuous 0 0.372
+MRate_hardrightYaw_six_38 Rate of hard downs by mileage 
+for six month study period given 
+the threshold
+Six months 
+participation; 
+gyroZ > 
+38deg/sec
+Continuous 0 0.351
+*Note. A value of “NA” is used for missing data.

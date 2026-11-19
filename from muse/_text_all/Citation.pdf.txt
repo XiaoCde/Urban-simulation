@@ -1,0 +1,10 @@
+Citation 
+To recognize the valuable role of the NextGen National Household Travel Survey (NHTS) data 
+in the transportation research process and to facilitate repeatability of the research, users of 
+NHTS data are asked to formally acknowledge the data source. Where possible, this 
+acknowledgement should take place in the form of a formal citation, such as when writing a 
+research report, planning document, on-line article, and other publications. The citation can be 
+formatted as follows: 
+Federal Highway Administration. (2022). 2022 NextGen National Household Travel Survey Core 
+Data, U.S. Department of Transportation, Washington, DC. Available online: 
+http://nhts.ornl.gov.

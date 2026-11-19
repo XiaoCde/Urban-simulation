@@ -1,0 +1,1014 @@
+Gender, age and circumstances analysis of flood and landslide fatalities
+in Italy
+Paola Salvati a,
+⁎, Olga Petrucci b
+, Mauro Rossi a
+, Cinzia Bianchi a
+, Aurora A. Pasqua b
+, Fausto Guzzetti a
+a Consiglio Nazionale delle Ricerche, Istituto di Ricerca per la Protezione Idrogeologica, via Madonna Alta 126, I-06128 Perugia, Italy
+b Consiglio Nazionale delle Ricerche, Istituto di Ricerca per la Protezione Idrogeologica, via Cavour 4/6, I-87036 Rende, CS, Italy
+HIGHLIGHTS
+• Determine the dependence of the geohydrological fatalities on gender and
+age.
+• Results can be helpful to improve
+human health risk assessment and
+management.
+• We applied a multinomial probability
+mass function of the expected fatalities.
+• Gender and age strongly influenced
+mortality both for landslide and flood
+events.
+• Detailed data on fatalities are essential
+to inspect the vulnerability by gender
+and age.
+GRAPHICAL ABSTRACT
+article info abstract
+Article history:
+Received 18 May 2017
+Received in revised form 31 July 2017
+Accepted 7 August 2017
+Available online 18 August 2017
+Editor: D. Barcelo
+Floods and landslides are frequent and destructive geo-hydrological hazards that cause harm to people every
+year. We analysed data on 1292 landslide and 771 flood fatalities that occurred in Italy in the 50-year period
+1965–2014, to determine the dependence of the fatalities on gender and age and the circumstances of death
+by type of hazard. The multinomial probability mass function of the expected fatalities by gender and age, as reported by national census data, were estimated and compared with the observed landslide and flood fatalities.
+We identified the age categories over or under represented when the observed fatalities were respectively higher
+or lower than the modelled expected deaths. We found that in Italy males are more vulnerable to floods and landslides for most of the age categories. Apart from children, males are over-represented up to the age of 89 for
+floods and up to 79 for landslides, whereas females are under-represented up to the age of 59 for floods and landslides, and over-represented above 70 for floods and between 60 and 79 for landslides. To consider the demographic and socio-cultural changes over time, we performed a temporal analysis splitting the record into two
+non-overlapping subsets of 25 year each. The analysis demonstrated that the over-representation of males compared to the females, both for landslide and flood is statistically significant and does not vary in time, indicating a
+different propensity towards the risk taking and a different degree of exposure between males and females. Analysis of the data allowed to identify the common circumstances of death. Landslides fatalities occurred frequently
+indoor, whereas the majority of the flood fatalities occurred outdoor, outlining the different dynamics of the hazards. Floods killed numerous people along roads and drivers or passengers travelling in vehicles. We expect that
+the results of this work will be helpful to design recommendations for self-protecting actions, and proactive policies that can contribute to reduce the human toll of floods and landslides in Italy, and elsewhere.
+© 2017 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license
+(http://creativecommons.org/licenses/by/4.0/).
+Keywords:
+Deaths
+Loss of life
+Flood and landslide fatalities
+Flood and landslide mortality
+Statistical approach
+Gender and age analysis
+Geo-hydrological disasters
+Science of the Total Environment 610–611 (2018) 867–879
+⁎ Corresponding author.
+E-mail address: Paola.Salvati@irpi.cnr.it (P. Salvati).
+http://dx.doi.org/10.1016/j.scitotenv.2017.08.064
+0048-9697/© 2017 The Authors. Published by Elsevier B.V. This is an open access article under the CC BY license (http://creativecommons.org/licenses/by/4.0/).
+Contents lists available at ScienceDirect
+Science of the Total Environment
+journal homepage: www.elsevier.com/locate/scitotenv
+
+1. Introduction
+Geo-hydrological hazards (i.e., landslides and floods) cause significant societal and economic damage and large number of fatalities
+worldwide. The reduction of losses in lives and in the number of affected
+people during natural disasters, including geo-hydrological ones, is an
+expected outcome of the Sendai Framework for Disaster Risk Reduction
+2015–2030 (UNSIDR, 2015). The identification of possible vulnerable
+groups in terms of gender and age, and the recognition of the circumstances in which people lost their life are useful to improve the safety
+of people, and to increase community resilience to geo-hydrological
+hazards (Davies et al., 2015; Neumayer and Plümper, 2007;
+UNESCO-UNICEF, 2012; Weichselgartner and Pigeon, 2015). Analysis
+of the human consequences of geo-hydrological hazards is also important to understand the impact of disastrous events on the population. For the purpose, catalogues of flood and landslide events and of
+their human consequences were compiled and used to quantify the
+number of fatalities and to estimate the geo-hydrological societal
+and individual risk levels (Cruden, 1997; Guzzetti, 2000; Guzzetti
+et al., 2005; Salvati et al., 2010; Wong et al., 1997), and to identify
+the most hazardous circumstances in which people lost their life.
+Despite a number of studies that have attempted to analyse fatalities
+caused by floods and landslides by gender and age, statistical
+approaches to compare the expected number of fatalities with the
+demographic data distribution are still missing.
+In the attempt to fill the gap, here we first update the catalogue of
+landslide and flood fatalities in Italy (Salvati et al., 2013) with gender
+and age information for the 50-year period 1966–2015, and next we
+propose a statistical approach to quantify the expected number of landslide and flood fatalities, stratified by gender and age, exploiting census
+data.
+The paper is organized as follow. Section 2 establishes the nomenclature used in the paper. Section 3 gives an overview of previous published catalogues of information on landslide and flood fatalities,
+including data and methods used to identify vulnerable groups of people. In Section 4 we describe the revised catalogue of flood and landslide
+fatalities in Italy in the 50-year period 1966–2015, for which the gender,
+age and circumstances of deaths were known. Section 5 presents the
+findings of the different analyses executed by gender and age, including
+the new statistical approach that exploits statistics on the number of fatalities and census data. In Section 6, we discuss our findings with the
+available literature, and in Section 7 we conclude summarizing the
+main results obtained.
+2. Nomenclature
+In this work, we use the terms “flood” and “inundation” as synonyms
+to describe events where water covers rapidly land normally not covered by water (Directive 2007/60/EC). We use “bank full flood” to describe events constrained within natural or artificial banks, and “urban
+flood” to describe events where water covers urban areas lacking sufficient drainage, and not directly related to river discharge. We use “landslide” to describe all types of mass movements, including slides, debris
+flows, soil slips, and rock falls (Cruden and Varnes, 1996; Hung et al.,
+2013). We refer to floods (including urban floods) and landslides collectively as “geo-hydrological hazards”. “Flood fatalities” are individuals
+who lost their lives prematurely due to, or as a consequence of a
+flood, and who would be alive in absence of the flood. Similarly,
+“landslide fatalities” are individuals who lost their lives prematurely
+due to, or as a consequence of a landslide, and who would be alive
+without the landslide. The “cause” of a flood or a landslide fatality
+is the (physical) process that lead to (i.e., caused) the death of an individual. The “circumstance” is the condition, context, or location
+that lead to the damage (the fatality). Gender refers to the biological
+gender.
+3. Background
+A relatively limited number of authors have determined the number
+of flood (Ashley and Ashley, 2008; Brazdova and Riha, 2014; Coates,
+1999; Diakakis and Deligiannakis, 2013, 2015; Diakakis et al., 2012;
+Doocy et al., 2013; FitzGerald et al., 2010; Guzzetti et al., 2005;
+Jonkman, 2005; Jonkman and Kelman 2005; Maples and Tiefenbacher,
+2009; Paulikas and Rajman, 2015; Pereira et al., 2015; Petrucci and
+Versace, 2004; Pradhan et al., 2007; Ruin et al., 2008; Salvati et al.,
+2010, 2012; Sharif et al., 2015; Singh and Kumar, 2013; Spitalar et al.,
+2014; Vinet et al., 2012) and landslide (Dowling and Santi, 2014;
+Evans, 1997; Guzzetti, 2000; Guzzetti et al., 2005; Pereira et al., 2015;
+Petley, 2012; Petrucci and Versace, 2004; Salvati et al., 2010; Sanchez
+et al., 2009; Sepulveda and Petley, 2015) fatalities, and of fatalities
+caused by other meteorological hazards (e.g., sever weather, tornadoes,
+tropical cyclones, heat/drought) (Badoux et al., 2016; Borden and
+Cutter, 2008; Myung and Jang, 2011; Rappaport, 2000). The existing catalogues were constructed for different purposes, including the examination of the long-term consequences of floods on human health (Ahern
+et al., 2005; Alderman et al., 2012; Hajat et al., 2005), the identification
+of the gender and age of the fatalities (Ashley and Ashley, 2008; Badoux
+et al., 2016; Coates, 1999; Diakakis and Deligiannakis, 2015; Doocy et al.,
+2013; FitzGerald et al., 2010; Jonkman and Kelman 2005; Maples and
+Tiefenbacher, 2009; Myung and Jang, 2011; Pereira et al., 2015;
+Petrucci and Pasqua, 2012; Pradhan et al., 2007; Rappaport, 2000;
+Sharif et al., 2015; Vinet et al., 2012), and the recognition of the causes
+and circumstances of the fatal events (Ashley and Ashley, 2008;
+Coates, 1999; Diakakis and Deligiannakis, 2013, 2015; FitzGerald et al.,
+2010; Jonkman and Kelman 2005; Maples and Tiefenbacher, 2009;
+Myung and Jang, 2011; Pereira et al., 2015; Petrucci and Pasqua, 2012;
+Rappaport, 2000; Ruin et al., 2008; Sharif et al., 2015; Spitalar et al.,
+2014; Vinet et al., 2012).
+Fig. 1 portrays summary information obtained from 35 catalogues
+listing fatalities caused by geo-hydrological events, including 20 catalogues listing information on flood (blue) and flash flood (light blue) fatalities, 6 catalogues listing landslide (green) and debris flow (light
+green) fatalities, 5 catalogues that considered both flood and landslide
+fatalities (dark red), and 4 catalogues with information on fatalities
+caused by meteorological hazards (yellow). Inspection of the
+Figure reveals an increasing interest towards fatal geo-hydrological
+events and their human consequences, with 16 catalogues in earlier,
+14-year period 1997–2010 (1.1 catalogue per year), and 19 catalogues
+published in the later, 7-year period 2011–2016 (2.7 catalogues per
+year).
+3.1. Flood fatalities studies
+Floods are probably the most frequent natural hazard worldwide
+(Berz et al., 2001). In 2015, Lehmann (2015) estimated that river
+flooding affects annually 21-million people globally, and that the number is expected to rise to 54-million by 2030. Jonkman (2005) estimated
+that in the 27-year period 1975–2001 floods killed 175,000 and affected
+2.2 billion people worldwide. Jonkman and Kelman (2005) studied 13
+catastrophic floods in Europe and the USA, and found that approximately 2/3 of the deaths were caused by drowning, and that the majority of
+the fatalities were males.
+Using the EM-DAT database and other sources, including the Dartmouth Flood Observatory Global Archive of Large Flood Events (http://
+www.dartmouth.edu/~floods/Archives/), Doocy et al. (2013) estimated
+that in the 30-year period 1980–2009 floods have killed more than
+539,811 and have injured more than 361,974 people, globally. Through
+their systematic review of the literature on the human impact of floods,
+Doocy et al. (2013) found that the primary cause of flood-related fatalities was drowning, and that significant differences in mortality exist
+between countries. In developed countries, flood mortality is larger for
+males, and particularly drivers of motor-vehicles, whereas in low868 P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879
+
+income countries flood mortality is higher for females. Beside the common notion that in disasters females and children are considered more
+vulnerable than men and adults (Guha-Sapir, 1993), the review did not
+provide clear justifications for the observed differences in flood mortality between the genders, but noted the paucity of results for less developed countries where the majority of the flood deaths occur.
+Destructive floods are particularly common in Asia, and especially in
+Bangladesh, China and India, and in South America (Chavoshian and
+Takeuchi, 2011; Kundzewicz et al., 2014). Sharma (2012) found that
+the number of flood events in Asia increased three-folds between
+1980 and 1989 and 2000–2009, and six-folds between 1970 and 1979
+and 2000–2009, and that about 2/3 of the 201,804 Asian flood related
+deaths were reported in south Asia. Working in Australia, Coates
+(1999) obtained information on 2213 flood fatalities between 1788
+and 1996, and FitzGerald et al. (2010) updated this information for
+the period 1997–2008. These authors found a gender bias in flood fatalities in Australia, with more than 80% of the fatalities males and less
+than 20% females. They also observed that children and young adults
+(21-year-old or younger) and the elderlies (70-year-old or older) suffered more deaths than the other age categories, proportionally.
+Ashley and Ashley (2008) assembled a national database of flood fatalities for the USA that lists information on 4586 fatalities in the 47-
+year period 1959–2005, and found that young adults (10–19), old adults
+and the elderlies (60-year-old or older), were most vulnerable to floods.
+The authors found that 63% of the flood fatalities in the USA were
+vehicle-related, and that the remaining fatalities were equally distributed between people caught by a flood inside permanent structures
+(e.g., private homes) and outdoor, in open areas. Guzzetti et al. (2005)
+counted 38,380 fatalities caused by floods in Italy in the 686-year period
+1317–2002, including 2750 fatalities in the 103-year period 1900–2002.
+Salvati et al. (2010, 2012) updated the Italian catalogue of floods with
+human consequences to cover the 1422-year period 589–2010, with a
+total of 40,572 fatalities, including 2871 fatalities between 1900 and
+2010. The temporal analysis of the Italian catalogue revealed that in
+this country the largest number of flood fatalities were caused by catastrophic events occurred before the 19th century. Diakakis et al.
+Fig. 1. Catalogues listing fatalities caused by floods, landslides, and meteorological hazards. Y, year of publication. E, number of fatal events. F, total number of fatalities. G, gender. A, age. C,
+circumstances. V, vehicle related fatality. Country identified using ISO 3166–1 alfa-2 code, except for Latin America and the Caribbean (LAC), and the world (W). Source, name or acronym
+of each catalogue. Ref, (1) Evans (1997), (2) Coates (1999), (3) Rappaport (2000), (4) Guzzetti (2000), (5) Petrucci and Versace (2004), (6) Jonkman (2005), (7) Jonkman and Kelman
+(2005), (8) Guzzetti et al. (2005), (9) Pradhan et al. (2007), (10) Ashley and Ashley (2008), (11) Borden and Cutter (2008), (12) Ruin et al. (2008), (13) Maples and Tiefenbacher
+(2009), (14) Sanchez et al. (2009), (15) FitzGerald et al. (2010), (16) Salvati et al. (2010), (17) Vinet et al. (2012), (18) Myung and Jang (2011), (19) Petrucci and Pasqua (2012), (20)
+Petley (2012), (21) Salvati et al. (2012), (22) Diakakis et al. (2012), (23) Sharma (2012), (24) Dowling and Santi (2014), (25) Doocy et al. (2013), (26) Diakakis and Deligiannakis
+(2013), (27) Singh and Kumar (2013), (28) Brazdova and Riha (2014), (29) Spitalar et al. (2014), (30) (Paulikas and Rajman (2015), (31) Sharif et al. (2015), (32) Sepulveda and Petley
+(2015), (33) Pereira et al. (2015), (34) Diakakis and Deligiannakis (2015), (35) Badoux et al. (2016).
+P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879 869
+
+(2012) counted 545 flood fatalities in Greece that have caused 686 casualties in the 130-year period 1881–2010 showing that urban environments tend to present a higher flood recurrence than mountainous
+and rural areas.
+A few national catalogues provide information on the circumstances
+in which people lost their life. Myung and Jang (2011) collected information on 966 flood fatalities in South Korea in the 19-year period
+1990–2008, where drowning caused the greater number of deaths,
+with females losing their life more frequently indoor and males outdoor.
+Pereira et al. (2015), working in Portugal, analysed a database of 1621
+fatal floods between 1865 and 2010 that have caused 1012 fatalities.
+They found that flash floods were responsible for the majority of the
+flood fatalities, and that deaths were most common outdoors, and inside
+buildings in rural areas. Vehicle-related fatalities account for a significant part of the flood fatalities in Greece (Diakakis and Deligiannakis,
+2013), and were also studied in Sweden (Stjernbrandt et al., 2015),
+and Texas (Maples and Tiefenbacher 2009). Sharif et al. (2015) found
+that 95% of the flood fatalities in Texas in the 50-year period
+1959–2008 were driving or walking into floodwaters. Yale et al.
+(2003), Drobot et al. (2007) and Ruin et al. (2008) analysed flood fatal
+events along roads in North Carolina, in Colorado and Texas, and in
+Southern France to conclude that the road conditions, the behaviour of
+the driver, including the familiarity with the road system, and the
+driver’s age and gender, condition the vulnerability of the individuals
+to a flood event. Petrucci and Pasqua (2012), working in Southern
+Italy, found that during bad weather conditions drivers and passengers
+of motor vehicles were more frequently involved in fatal occurrences
+than pedestrians.
+A few authors have investigated the human vulnerability to flash
+floods, which are particularly destructive flood events (Jonkman,
+2005). Spitalar et al. (2014) used a catalogue of flash floods in the USA
+in the 7-year period 2006–2012 to determine a dependency of fatalities
+on the physical parameters of the flash floods, and concluded that the
+most important factors are the short duration of the event, the small
+catchment size, and the low visibility at night. Ruin et al. (2008) investigated the human consequences of flash floods in France, and found
+that small catchments with a response time shorter than 1 h are the
+most dangerous, producing large numbers of fatalities.
+Epidemiological studies have investigated the relationships between
+floods and human health, and have found that vulnerability to flood depends on multiple factors. The elderly, disabled, children, women, ethnic minorities and low-income people are particularly vulnerable to
+the direct and the indirect health consequences of floods (Hajat et al.,
+2005). In low income communities and countries, following a flood
+event, females experience a higher mortality than men as a result of
+malnutrition, diseases, and a higher risk of mental disorders
+(Alderman et al., 2012). Studying a destructive flood event in Nepal in
+1993, Pradhan et al. (2007) observed that women of all ages were
+twice as at risk than men, and stated that it was not known if the disparity was related to gender discriminatory practices known to exist in
+rural South Asian cultures, and suspected to exist in their study area at
+the time of writing. Conversely, in developed communities and countries males experience a higher flood mortality than females.
+3.2. Landslide fatalities studies
+A small number of authors have investigated landslide fatalities, and
+have examined the circumstances and the causes of landslide fatalities,
+and the medical consequences of landslides. Petley (2012) compiled a
+global catalogue of 2620 fatal landslides that killed 32,322 people in
+the 7-year period 2004–2010, with the majority of the losses in Asia, especially in the Himalayas and in China, and most of the fatalities in
+countries with inefficient disaster management systems. Dowling and
+Santi (2014) compiled a global catalogue of 213 debris flow events in
+the period 1950–2011 that have resulted in 77,779 fatalities. Analysing
+different socio-economic indicators, the authors showed that landslide
+mortality is higher in developing countries characterized by significant
+poverty, more corrupt governments, and weaker healthcare systems.
+Detailed catalogues of fatal landslides are available for a few countries or regions. Evans (1997) complied a catalogue of 84 fatal landslides
+in Canada between 1840 and 1996 that have resulted in 545 fatalities.
+Wong et al. (1997) used historical fatality data in Hong Kong in the period 1948–1996 to perform a preliminary assessment of the circumstances of landslide fatalities in an urban setting, including e.g., private
+buildings, roads, illegal settlements, and squatters. Wen et al. (2005) examined the characteristics of fatal landslides in China, and found that
+more than 400 fatal landslides have resulted in a least 3000 deaths
+and missing persons between 2001 and 2004. Sepulveda and Petley
+(2015) compiled a catalogue of 611 fatal landslides in Latin America
+and the Caribbean for the 10-year period 2004–2013 that have killed a
+total of 11,631 persons. The presence of informal settlements in the
+densely populated urban areas of these countries had a significant impact on the number of the fatalities, confirming the effect of poverty
+and marginalization on landslide mortality. Pereira et al. (2015) compiled a catalogue of 281 fatal landslides in Portugal between 1865 and
+2010 that have caused 236 fatalities, and found that landslide fatalities
+were mostly males (more than twice the number of females), and occurred primarily inside buildings, especially in rural areas. Badoux
+et al. (2016), working in Switzerland, found that (i) landslides and
+snow avalanches were more dangerous to people than floods, (ii)
+about 75% of the deaths were males, and (iii) the largest number of fatalities were in the 20–29 and 30–39 age categories.
+In Italy, Guzzetti (2000) compiled information on landslides that
+caused deaths, missing persons, injuries and homelessness between
+1279 and 1999 finding that fast-moving failures such as rock falls,
+rockslides, soil slips, debris flows and rock avalanches, were responsible
+for more than 80% of deaths and injuries. Guzzetti et al. (2005) and
+Salvati et al. (2010) extended the catalogue to cover the 1166-year period 843–2008, listing 13,311 landslide fatalities, including 4103 fatalities between 1950 and 2008. In the later period, fatalities caused by
+landslides were three times more numerous than those caused by
+floods. Working in Campania, Southern Italy, Cascini et al. (2008) counted 311 fatal landslide events that have caused 2360 fatalities between
+1640 and 2006.
+Only a few authors have investigated the impact of landslides on the
+genders. Sanchez et al. (2009) analysed the human consequences of
+landslides caused by Tropical Storm Chata’an in July 2002 in
+Micronesia that killed 43 people, and revealed that landslide mortality
+was higher among females than males, and that children and teenagers
+experienced a 10-fold increase in mortality when compared to the average annual mortality from all causes. Catapano et al. (2001) studied the
+consequences on landslide survivors. They found that 91% of 300 survivors of the destructive 1998 debris flows in Campania, Southern Italy,
+experienced post-traumatic stress disorder.
+4. New data on gender and age fatalities in Italy
+For Italy, comprehensive information on the human consequences of
+floods and landslides, including the dead, injured people, missing persons, evacuated and homeless people, is available from 68 CE to 2014.
+During this 1947-year period, 1269 floods and 1620 landslides have
+caused at least 53,606 fatalities and 4782 injured people (Salvati et al.,
+2016, 2013, 2010). For this work, we search new data and we looked
+to the age and gender of the fatalities, and to the causes and the circumstances of the fatal events occurred in the 50-year period 1965–2014,
+including information on 771 persons killed by 441 flood events at
+420 sites, and 1292 persons killed by 405 landslides at 390 sites
+(Fig. 2) (data set is available at http://osf.io/Kamgc, doi: 10.17605/OSF.
+IO/KAMGC|ARK c7605/osf.io/kamgc). We consider this the most complete and representative portion of the catalogue that includes almost
+all the fatal events, from very low intensity (causing one fatality) to
+the most destructive (causing more than 30 fatalities).
+870 P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879
+
+We searched additional information in written reports and interviews to eyewitnesses, in newspaper articles and historical accounts,
+in survivors’ inquiries and petitions, in reimbursement requests filed
+by those who suffered damage, and in official government reports and
+documents. We examined web sites, social networks and blogs, and
+we collected and analysed photographs and videos. Care was taken to
+ensure that the sources, and particularly the non-official sources
+(e.g., newspaper articles, blogs, and social networks), were accurate
+and truthful.
+We determined the gender from the name of the dead person. We
+assigned to each identified fatality the cause and the circumstance of
+the death, and we confirmed the information by crosschecking all the
+available sources. The most common problems encountered to identify
+the causes and circumstances of death of the fatalities were related to
+(i) the geographical and temporal extent of the events, (ii) the intensity
+of the events, measured by the number of the fatalities, and (iii) the time
+of occurrence of the events. In general, the larger the area affected, and
+the longer the duration of the event, the larger was the number of documents available for the analysis. As a result, it was more difficult to organize a single and coherent “storyboard” for the large events than for
+the small ones.
+For the events that have caused large or very large numbers of fatalities it was more difficult to determine the names and to assign the
+circumstances of death of the single fatalities. This was the case for
+the two most catastrophic landslide events in the period i.e., the
+Stava mudflow of 19 July 1985 that killed 268 persons (Tosatti,
+1985), and the Sarno debris flows of 5 May 1998 that collectively
+killed 160 persons (De Vita et al., 2013). Searching official documents, we identified the names and gender of all the fatalities caused
+by these two catastrophic events, but we were not able to determine
+the circumstances of death of each fatality. For the Stava mudflow,
+the complexity of the rescue and recovery operations, and the difficulties in the legal identification of the deaths, made the identification not possible.
+Fig. 2. Map showing the location of 1292 landslide fatalities in 390 sites (yellow to red dots), and of 771 flood fatalities in 420 sites (sky blue to dark blue dots) in Italy in the 50-year period
+1965–2014.
+P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879 871
+
+5. Data analysis
+5.1. Gender and age
+We determined the age of 1611 fatalities (78.1%), including 559
+flood fatalities and 1052 landslide fatalities (Table 1). We established
+the gender (from the name) of 1636 fatalities (79.3%), including 571
+flood fatalities and 1065 landslide fatalities. Overall, males account for
+57.6% and females for 42.4% of the flood and the landslide fatalities for
+which the gender is known. In the studied period landslides killed
+more males (592, 55.6%) than females (473, 44.4%), and floods killed
+considerably more males (350, 61.3%) than females (221, 38.7%)
+(Fig. 3). The latter is in agreement with findings in Switzerland
+(Badoux et al., 2016), in Europe and the USA (Jonkman and Kelman,
+2005), and in Australia (Coates, 1999; FitzGerald et al., 2010), that
+showed that males are more exposed to flooding than females.
+Age and gender are known to influence human vulnerability to natural hazards (Ashley and Ashley, 2008; Coates, 1999; FitzGerald et al.,
+2010; Sharif et al., 2015; Vinet et al., 2012).
+In our catalogue, differences exist in the age of the flood and the
+landslide fatalities, and between females and males (Fig. 4a,b,c,d). The
+average age of the fatalities was 43.3, with the average age of the female
+fatalities (45.3) higher than the average age of the male fatalities (41.9).
+The average age of the landslide fatalities was 42.2, with an average age
+of the female fatalities of 43.6 and an average age of the male fatalities of
+41.0. Similarly, the average age of the flood fatalities was 45.4, with the
+difference between the male and the female fatalities larger than for the
+landslide fatalities. For the females, the average age of the fatalities was
+48.5, and for males was 43.5. Except for children (9-year-old and younger) and the elderly (70-year-old and older), landslides killed more
+males than females, with maxima in the age category 30–39 for males
+and 60–69 for females. Older females (80-year-old and older) were considerably more vulnerable to landslides than older males. Floods killed
+more males than females in all age categories from 0 to 69. For older
+persons, female fatalities were more numerous than male fatalities.
+Overall, we observe a large number of male landslide fatalities between
+10 and 59, and a similar large number of male flood fatalities between
+20 and 69.
+Identifying the groups of people most vulnerable to landslides and
+floods is important to improve the resilience to geo-hydrological hazards. In the literature, several studies have reported the number of fatalities per gender and age (Ashley and Ashley, 2008; Badoux et al., 2016;
+Diakakis and Deligiannakis, 2015; Dowling and Santi, 2014; Drobot
+et al., 2007; Jonkman and Kelman 2005; Maples and Tiefenbacher,
+2009; Pereira et al., 2015; Petrucci and Pasqua, 2012; Vinet et al.,
+2012), but rarely as a function of the mortality rate, or the size of the affected population (Coates, 1999; Diakakis and Deligiannakis, 2013;
+Myung and Jang, 2011; Sanchez et al., 2009; Sharif et al., 2015).
+It is legitimate to ask if the observed differences in the number of female and male fatalities in the different gender and age categories are
+significant and representative, considering the small number of fatalities (a few tens to a few hundred) compared to the size of the
+population (tens to hundreds of thousands) (Fig. 4e). To respond to
+the question, using census data obtained from the Italian National Institute of Statistics in 1961, 1971, 1981, 1991, 2001 and 2011 (http://
+www.istat.it), for each gender and age category, we generated a large
+set of 10,000 samples drawing randomly from a multinomial distribution, with each sample of the same size (number) of fatalities as in the
+specific gender and age category. In mathematical terms, and using
+the Gamma function notation (Evans et al., 2000), the probability
+mass function (equivalent to the probability density function for discrete data) of the multinomial distribution is given by,
+fx1; …; xk; p1;…; pk ð Þ¼ ΓðÞ ∑ixi þ 1
+Q
+i
+ΓðÞ xi þ 1
+Yk
+i¼1
+pi
+xi
+; ð1Þ
+where x1 , … ,xk is the number of males (females) in each of the k age
+categories, and p1, … ,pk is the corresponding probability.
+We then prepared box and whisker plots to show the expected distribution of the fatalities in each gender and age category, and we overlaid the observed number of the flood and landslide fatalities (Fig. 5).
+Comparison of the expected fatalities based on the census data (the
+box and whisker plots) with the observed landslide and flood fatalities
+(shown by blue dots for males and pink dots for females), allowed us
+to identify the gender and age categories over (under) represented
+i.e., that have more (less) fatalities than expected given the size of the
+population. We further consider statistically significant a difference between the observed and the expected fatalities when the dots (the
+number of observed fatalities) are outside the whiskers embracing the
+5th–95th percentile range, or the boxes showing the 25th–75th interquartile range in Figs. 5 and 6.
+We note important differences between the observed (points) and
+the expected (box plots) fatalities (Fig. 5). For both genders, children
+(0–9) are under-represented for both floods and landslides, and female
+teen-agers (10–19) are under-represented for floods. We interpret this
+result as an evidence of the low vulnerability of children and teen-agers,
+probably as a result of the care taken to protect them during hazardous
+events. Male fatalities are over-represented in the range of age 20–79
+for floods and 30–79 for landslides. Male flood fatalities in the range
+20–29 and 60–79 are largely over-represented, indicating a much
+higher vulnerability.
+5.2. Temporal analysis
+When analysing natural hazards, it is important to consider that the
+number of the deaths is a function of multiple factors that include the
+intensity and magnitude of the hazards (e.g., volume of the landslides,
+the velocity and depth for floods), and the type and distribution of the
+Table 1
+Number (#) and percentage (%) of flood and landslide fatalities in Italy in the 50-year period 1965–2014. See Fig. 2 for the geographical location of the fatal events.
+Floods Landslides Floods and
+landslides
+#% # % # %
+Fatalities in the catalogue 771 100.0 1292 100.0 2063 100.0
+Fatalities with known gender 571 74.1 1065 82.4 1636 79.3
+Males 350 61.3 592 55.6 942 57.6
+Females 221 38.7 473 44.4 694 42.4
+Fatalities with known age 559 72.5 1052 81.4 1611 78.1
+Males 344 61.5 585 55.6 929 57.7
+Females 215 38.5 467 44.4 682 42.3
+Fig. 3. Number of female (pink) and male (blue) fatalities due to (a) floods or
+(b) landslides in the 50-year period 1965–2014 in Italy. See Fig. 2 for the geographical location of the fatal events.
+872 P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879
+
+population at risk (e.g., population density, vulnerability of building and
+people). The latter can vary geographically (Cutter et al., 2003; Strader
+and Ashley, 2015) as a consequence of demographic changes
+(Castagnaro and Cagiano de Azevedo, 2013; Frigerio and De Amicis,
+2016). In the 50-year period 1965–2014, changes in the Italian culture
+and society have transformed the family and social roles of males and
+females. It is then appropriate to ask if these changes have affected the
+impact of geo-hydrological hazards on the two genders.
+To answer this question, we have analysed the changes of the distribution of the fatalities in time, and to investigate possible variations
+with gender and age, we split the available data in two, nonoverlapping 25-year data-subsets i.e., between 1965 and 1989, and between 1990 and 2014. We then applied the statistical approach described before (Eq. (1)), and we compared the results with those
+found for the entire 50-year period (Fig. 5). The size of the Italian population for the two periods was calculated using the ISTAT national census data available for the two periods. For the first 25-year period
+1965–1989 we used information from the three censuses executed in
+1961, 1971 and 1981, and for the second 25-year period 1990–2014
+we used information from the 1991, 2001 and 2011 censuses.
+Results are summarized in Fig. 6 where the expected (box plots) and
+the observed (dots) number of flood (Fig. 6 a,b), landslide (Fig. 6 c,d)
+and both hazards (Fig. 6 e,f) fatalities, are shown for females (pink)
+and males (blue), for the two different periods. The largest difference
+between the two population data subsets consists in the large decrease
+in the number of children (0–9) in the period 1981–2011, with 2-
+million less children in 1991 compared to 1981. In the period
+1990–2014 (Fig. 6 b,d) the population is most numerous in the age category 30–39, for both genders.
+Although the fatality distributions for the two periods do not differ
+greatly from those calculated for the 50-year period (Fig. 5), differences
+exist. The differences concern primarily the adult female and the young
+male fatalities. In the period 1965–1989 (left side of Fig. 6) the female
+fatalities were under-represented up to the age of 39 for landslides,
+and up to 59 for floods. In the recent period 1990–2014 (right side of
+Fig. 6) the female fatalities were under-represented up to the age of
+69, with the exception of the age category 20–29. Other differences concern the young males (10–19). For both landslides and floods, a decrease in the observed number of fatalities in the period 1990–2014
+was registered, indicating a general increase in the safety of young
+males, or a different risk exposure of young males to geo-hydrological
+hazards.We further observe that in the category 60–79 male flood fatalities are well over-represented in the period 1990–2014 compared to
+the previous period 1965–1989, and in the age category 50–79 male
+landslide fatalities are over-represented in the period 1990–2014 compared to the earlier period. We note that the over-representation of the
+males (but not the females) is independent from the increased size of
+the population in the same age categories (Fig. 6), a result of the augmented life expectancy. The increased over-representation of male
+flood and landslide fatalities reveals a higher vulnerability of adult and
+old males to floods and landslides. This may be related to the fact that
+males are more active, or active longer than in the past in outdoor activities, or it may measure a higher risk-taking attitude of males, compared
+to females (Coates, 1999; Ruin et al., 2007).
+5.3. Places, conditions and dynamics of the fatal events in Italy
+Determining the place of death was difficult, and we were successful
+for only 1182 fatalities (57.3%), including 514 flood fatalities and 668
+landslide fatalities (Table 2). Fatalities occurred more frequently outdoor (706, 59.7%) than indoor (476, 40.3%), with differences between
+floods and landslides. Flood fatalities were notably more frequent outdoor (392, 76.3%) than indoor (122, 23.7%), and landslide fatalities
+were more numerous indoor (706, 59.7%) than outdoor (476, 40.3%).
+For a number of the fatalities for which the place of death was known,
+we were able to determine the type of place (e.g., inside a public or private building, along a road or a railway, on a bridge, in an underpass)
+(1135, 96.0%), the local circumstances (e.g., travelling on foot, by car,
+by other vehicle, by boat) (697, 59.0%), and the dynamic of the fatal
+event (e.g., dragged by water or mud, involved in the collapse of a building, hit by a landslide, blocked in a flooded room, involved in train derailment or in the collapse of a bridge) (1139, 37.9%) (Table 2).
+Landslides killed people mainly at home or in buildings (354, 29.9%)
+due to the partial or total collapse of the buildings (304, 25.7% of which
+180, 51.7% females, and 168, 48.3% males) or dragged by earth, debris or
+mud (159, 24.8%) (Table 2).
+Landslides killed people also along roads (137, 21.3%), were debris
+flows and mudflows caught people in vehicles (e.g., cars, vans, buses,
+tracks, excavators) (115, 37.3%) or hit pedestrians along the road (32,
+10.3%). Landslide fatalities along roads were predominantly males
+(76%) and subordinately females (34%). Landslide-induced train derailments produced 66 fatalities in seven cases. Other landslide fatalities
+(neither indoor nor along roads or rails) were people at work (89), including hikers (42), lumberjacks (2), or shepherds (5), mostly males
+(63, 70.8%), killed in mountains (47), along beaches (16), in the countryside (13), or near their homes (10). The most common dynamics
+for landslide fatalities were persons involved in the partial or total collapse of a building (304), dragged by rapid debris flows or mudflows
+Fig. 4. Statistics for flood (a, c) and landslide (b, d) fatalities by gender and age in the 50-year period 1965–2014 in Italy. Number (a, b) and percentage (c, d) of fatalities are grouped in ten
+10-year age categories. Size of population in Italy by gender and age classes (e) computed averaging demographic data from six consecutive censuses executed by the Italian National
+Institute of Statistics in 1961, 1971, 1981, 1991, 2001 and 2011.
+P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879 873
+
+(159), or hit by rocks (83). A small number of the fatalities (13) were
+buried by a landslide deposit (Table 2).
+The majority of the flood fatalities were killed outdoor (392, 76.3%),
+primarily along roads (188, 38.1%), bridges (64, 13.0%), river banks (38,
+7.7%), or when crossing a ford (20, 4.1%). The majority of these victims
+lost their life in vehicles (217, 59.9%), or they were on foot (137,
+37.8%). Indoor flood fatalities occurred in private or public buildings
+(122, 24.7%), where people were blocked in a flooded room (81,
+16.2%), were involved in the collapse of a building (19, 3.8%), or were
+dragged away from a building by water (15, 3.1%). Of all the people
+that lost their life inside a building (122), 30 were killed in a garage or
+a basement, and 13 in the ground floor. We counted 64 deaths along
+bridges (41 males, 64.1%, and 23 females, 35.9%), who were caught in
+the collapse of the bridge or were carried away by water, including 58
+people in cars. A number of people (38, 35 males and 3 females) lost
+their life walking, driving or working along river banks, either carried
+away by water or fallen into the river. Some of these fatalities were
+workers verifying the stability of the riverbanks, and others were onlookers gathered along the river. A total of 20 people, 19 males and
+one female, died attempting to ford a river.
+6. Discussion
+Analysis of our updated catalogue of fatal flood and landslide events
+in Italy revealed that, in the 50-year period 1965–2014, geohydrological events have killed 2063 persons in a total of 846 fatal
+events at 810 different sites (Fig. 2). This is an average of 41.3 fatalities
+per year, with a minimum of one fatality in 1997 and a maximum of
+285 fatalities in 1985. The figures correspond to an average mortality
+to geo-hydrological hazards of 0.07 (Salvati et al., 2010, 2012, 2016),
+equivalent to seven lives lost every 10 million people, per year.
+Our gender analysis revealed that, in the 50-year observation period,
+floods have killed many more males (350, 61.3%) than females (221,
+38.7%) in Italy, resulting in a gender ratio males/females, M/F = 1.58
+(Table 1). Excluding children and young adults (20-year-old and younger), male flood fatalities are over-represented up to the age of 89, and
+the over-representation is statistically significant i.e., the observed
+number of fatalities (the dots in Figs. 5, 6) are outside the 5th–95th percentile range (shown by the whiskers) or the 25th–75th interquartile
+range (shown by the boxes), of the expected number of fatalities,
+given the size of the population in the genders and the age categories.
+The result is similar to what was found in Europe (Badoux et al., 2016;
+Diakakis and Deligiannakis, 2015; Pereira et al., 2015), the USA
+(Jonkman and Kelman, 2005), and Australia (Coates, 1999; FitzGerald
+et al., 2010) i.e., in high income countries in which the family, societal
+and economic role of females is comparable to that of males. In some
+low-income countries, and in communities and countries where the
+standing of females is lower than the males, natural hazards are
+known to kill (directly and indirectly) more females than males, and
+to kill females at a younger age than males (Alderman et al., 2012;
+Doocy et al., 2013; Fothergill, 1996; Nelson et al., 2002; Neumayer and
+Plümper, 2007; Pradhan et al., 2007; Sanchez et al., 2009). The higher
+vulnerability of females in some lower income communities and countries is attributed to gender inequalities, different care-giving roles and
+responsibilities, and to the limited access to adequate resources
+(Fothergill, 1996).
+Our temporal analysis, performed splitting the catalogue in two nonoverlapping temporal subsets (Fig. 6), indicated that, despite the demographic variations and the cultural and economic changes occurred in
+Fig. 5. Coloured dots connected by coloured lined show the observed number of fatalities
+due to (a) floods, (b) landsides and (c) floods and landslides, for different genders
+(females in pink, males in blue) and age categories in Italy in the 50-year period
+1965–2014. Box plots show the expected distribution of the fatalities in each gender and
+age category in the same period. See text for explanation.
+874 P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879
+
+Fig. 6. Coloured dots connected by coloured lines show the observed number of fatalities due to (a) floods, (b) landsides and (c) floods and landslides, for different genders (females in
+pink, males in blue) and age categories in Italy in the two 25-year periods 1965–1989 and 1990–2014. Box plots show the expected distribution of the fatalities in each gender and age
+category for the same two periods. See text for explanation.
+P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879 875
+
+Italy in the observation period, the differences between the genders
+have remained about the same. We consider this an evidence of a different propensity towards risk taking between males and females (Coates,
+1999), but also a different exposure of the genders to geo-hydrological
+hazards in Italy. We note that in the studied period (1965–2014)
+males were certainly more numerous than females in outdoor works
+and activities, and that until recently rescue services (e.g., fire fighters,
+police and defence forces) consisted entirely of males. Therefore, people
+involved in rescue operations were only males. Consequently, males
+were at a higher risk than females. We further note that females are
+more vulnerable to flood than males from their 70’s(Fig. 5), and we attribute this evidence to their comparatively higher physical weakness
+related to their old age.
+We found that flood fatalities in Italy occurred primarily outdoor
+(76%), a result similar to what was found by Pereira et al. (2015) in
+Portugal and by Diakakis and Deligiannakis (2015) in Greece. Flood fatalities were particularly numerous along roads, bridges and river
+banks (Table 2). This allowed us to identify three main hazardous
+behaviours, including (i) fording a river with a vehicle, (ii) moving towards or standing on the banks or levees of a river, and (iii) standing
+on a bridge, during a flood. We maintain that these evidently risky behaviours indicate that people were generally unaware of, or
+underestimated the dangerousness of their potentially fatal actions
+and conducts, probably linked to a low risk perception of motorists
+(Ruin et al., 2007). People recognizing the severity of the potential consequences of driving through flooded waterways in situations of greater
+risk, however, do not consider these consequences to be applicable to
+themselves (Pearson and Hamilton, 2014). Drivers expect themselves
+to have adequate driving skills in uncommon and unfavourable conditions, and misjudge the ability of their vehicles to remain or travel on
+roads partly or totally covered by water, debris, or mud. This finding
+echoes the result of Drobot et al. (2007) who found that people in
+USA who do not take flood warnings seriously are more likely to drive
+through flooded roads.
+Many of the flood fatalities in our catalogue were motor-vehicle related, with males (65%) largely more numerous than females (35%).
+Similar findings were obtained in Greece (Diakakis and Deligiannakis,
+2013) and in the USA (Ashley and Ashley, 2008; Drobot et al., 2007;
+Sharif et al., 2015), and may confirm a different propensity towards
+risk taking between the genders (Coates, 1999; Ruin et al., 2007), with
+males more likely than females to take chances and hence to be victims
+of motor-related accidents during floods (Petrucci and Pasqua 2012;
+Sharif et al., 2015). With this respect, it is worth noticing that the gender
+ratio for the motor-vehicle related flood fatalities, M/F = 1.9 is significantly lower than the same ratio for all car accidents in Italy, for fatalities
+M/F = 3.50 and for injured people M/F = 2.00 (Taggi, 2005). We consider this further evidence that females are less likely to take chances
+during a flood event.
+To determine who between males and females is most affected by
+fatal car accidents, the number of fatalities should be normalized by
+the annual kilometres travelled or by the time spent driving, by males
+and females. Unfortunately, this information is not available to us. However, we know the number of active driving licenses in Italy, by gender
+and age. Using this information, we compared the number of active
+driving licenses in 2013 assigned to females and males, for different
+age categories, and we found that the proportion of males (females)
+with an active driving license is larger (smaller) for all the age categories, and that the difference enlarges when the age increases (Fig. 7).
+Thus, although in the period 1965–2014 the number of females with a
+driving license has increased in Italy, the majority of the drivers were
+(and are) males. We argue that the larger number of motor-related
+male flood fatalities is due primarily to a higher exposure of males,
+who are more numerous and drive longer than females, and subordinately to a higher propensity towards risk taking of males than females
+(SIRC, 2004).
+A comparatively smaller number of flood fatalities (23.7%) have occurred indoor (Table 2). For these fatalities, our sources reveal that the
+main hazardous behaviours consisted in (i) remaining inside the
+house in the attempt of taking care and securing goods and personal
+properties, and in (ii) moving down to a lower floor (e.g., in a basement
+or cellar) to rescue personal goods, including cars. The later behaviour
+proved particularly dangerous. The evidence reveals a general lack of
+understanding of the direct and indirect physical consequences of a
+flood in a build-up environment.
+Our gender analysis revealed that, in the 50-year observation period
+1965–2014, in Italy landslides have killed more males (592, 55.6%) than
+females (473, 44.4%) (Table 1). Similar to flood fatalities, males 20-yearold or older are over-represented up to the age of 79. The overrepresentation is statistically significant (Figs. 5, 6), and extends to landslides the difference in gender propensity towards risk taking, and the
+different exposure to landslides of the two genders. The gender ratio
+for landslide fatalities M/F = 1.25, is smaller than the corresponding
+ratio for flood fatalities, M/F = 1.58, indicating a less defined bias towards females of landslides than floods. Contrasting figures emerged
+Table 2
+Place, condition and dynamics of the fatalities caused by floods and landslides in Italy in
+the 50-year period 1965–2014.
+Flood
+fatalities
+Landslide
+fatalities
+Flood and
+landslide
+fatalities
+#% #% # %
+Where
+Outdoor 392 76.3 314 47.0 706 59.7
+Indoor 122 23.7 354 53.0 476 40.3
+Total 514 668 1182
+Place
+Public/private building 122 24.7 354 55.0 476 41.9
+Proximity of house 13 2.6 10 1.6 23 2.0
+Road/highway 188 38.1 137 21.3 325 28.6
+Railway 65 10.1 65 5.7
+Campsite 21 4.3 21 1.9
+Countryside 20 4.1 13 2.0 33 2.9
+Mountains 47 7.3 47 4.1
+Beach 16 2.5 16 1.4
+Bridge 64 13.0 2 0.3 64 5.6
+Riverbed 5 1.0 5 0.4
+River bank 38 7.7 38 3.3
+Underpass 2 0.4 2 0.2
+Ford 20 4.1 20 1.8
+Total 493 644 1135
+Condition
+On foot 137 37.8 121 39.3 258 38.5
+By car 203 56.1 95 30.8 298 44.5
+By road bike 2 0.5 2 0.6 4 0.6
+By van 4 1.1 2 0.6 6 0.9
+By tractor 2 0.5 2 0.3
+By truck 4 1.1 3 1.0 7 1.0
+By excavator 2 0.5 11 3.6 13 1.9
+By bus 1 0.3 2 0.6 3 0.4
+By train 65 21.1 65 9.7
+By boat 7 1.9 7 1.0
+Climbing 7 2.3 7 1.0
+Total 362 308 670
+Dynamics
+Blocked in flooded room 81 16.2 81 7.1
+Surrounded by flood water 26 5.2 26 2.3
+Fallen into the river 18 3.6 18 1.6
+Involved in a bridge collapse 61 12.2 2 0.3 63 5.5
+Involved in building collapse 19 3.8 304 47.5 323 28.4
+Involved in derailment 66 10.3 66 5.8
+Fallen down in a slope 13 2.0 13 1.1
+Boat sinking 5 1.0 5 0.4
+Hit 83 13.0 83 7.3
+Buried 13 2.0 13 1.1
+Dragged 289 57.9 159 24.8 448 39.3
+Total 499 640 1139
+876 P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879
+
+for the most catastrophic events, with M/F = 0.84 for the Stava mudflow and M/F = 1.25 for the Sarno debris flows. Overall, the difference
+between male and female landslide fatalities is limited, and we attribute
+this evidence to the physical characteristics of the fatal landslides in
+Italy, which are mainly rapid to very rapid slope failures, including
+rock falls, debris flows, rapid mudflows, and soil slips (Guzzetti et al.,
+2005). These failures can travel long distances rapidly, killing people
+at large distances from their source areas. The Stava mudflow (Tosatti,
+1985) and the Sarno debris flows (De Vita et al., 2013) were very
+rapid failures that killed people several hundred meters to a few
+kilometres from their source areas. Our results are in agreement with
+Hungr (2007), who argued that landslide velocity is the most important
+factor to determine the destructive potential of a landslide, and that
+rapid and very rapid landslides stand out in terms of human vulnerability. We conclude that, independently of age and gender, it is difficult to
+escape rapid to very rapid landslides.
+Recently, Sepulveda and Petley (2015) have argued that in Central
+Colombia, SE Brazil and in some Caribbean islands, strong correlations
+exist between the number of fatal landslides and the size and density
+of the population. We did not find similar correlations for Italy.
+Contrary to floods, the majority of the landslide fatalities occurred
+indoor (53.0%) (Table 2). The sources indicate that, most frequently,
+people were caught by surprise by the landslide event, and were apparently unaware of the imminent risk. This is somewhat confirmed by the
+limited number of cases for which we know that people attempted to
+escape a landslide (23 persons, 14 males, 9 females). In January 2017,
+in the village of Ortolano, central Italy, a person escaping from his
+home following an earthquake was killed by a snow avalanche initiated
+by a large rock fall triggered by the earthquake. We argue that many of
+the landslide fatalities were unaware of the risk. Landslides are point
+events in space and time, and are difficult to predict, and particularly
+the rapid to very rapid failures that can travel long distances. This may
+explain the lack of understanding of their dangerousness. The lack of
+awareness and the underestimation of the landslide risk is in agreement
+with the results of nationwide surveys on the perception of landslide
+and flood risk in Italy (Salvati et al., 2014).
+Outdoor, rapid and very rapid landslides were a major cause of fatalities primarily along roads (21.3%). We do not have sufficient information to separate fatal events occurred along urban, main or rural roads.
+Of the 97 landslide fatalities who lost their lives driving or travelling
+in vehicles along roads, the majority (76, 78%) were males. This may extend to landslides the result of Sharif et al. (2015) who found that males
+are much more likely than females to be victims of motor-related accidents during flood events.
+Landslides have killed more people (1292, 62.6%) than floods (771,
+37.4%) and we consider this a direct consequence of (i) the higher destructiveness of landslides compared to floods, (ii) the related larger
+vulnerability of the population to landslides than floods, and of (iii)
+the generalized lack of effective landslide early warning systems. Our
+finding for Italy is in agreement with results obtained by Badoux et al.
+(2016) in Switzerland, where landslides and snow avalanches are
+more dangerous to people than floods, but is in contrast with what
+was found for other countries or geographical areas where floods
+proved more dangerous and produced more fatalities than landslides
+(Ashley and Ashley, 2008; Berz et al., 2001; Borden and Cutter 2008;
+Drobot et al., 2007; Pereira et al., 2015; Sharif et al., 2015; Witz et al.,
+2014). The difference may depend on multiple factors, including: (i) a
+larger abundance of landslides (Trigila et al., 2010), of landslide events
+(Guzzetti and Tonelli, 2004), and of landslide prone areas (Marchesini
+et al., 2014) in Italy than in other countries or geographical regions, a result of the local geological and meteorological settings; (ii) an underestimation of the landslide information in other catalogues and regions
+(Guzzetti et al., 2012), a result of the difficulty to detect landslides in remote areas (Guzzetti, 2000); (iii) the time span and completeness of
+some of the catalogues; and (iv) differences in the classification of the
+events e.g., the classification of fatalities caused by debris flows and
+other similar rapid-moving, channeled landslides as flood fatalities in
+some of the catalogues. For the later, we acknowledge that the distinction is locally difficult and introduces uncertainty (Guzzetti et al., 1994).
+7. Conclusions
+We used information on floods and landslides with human fatalities
+in Italy in the 50-year period between 1965 and 2014 to determine the
+dependence of the fatalities on gender and age, and found that landslides in Italy have killed many more persons (1292) than floods
+(771) in the investigated period. We conclude that in Italy landslides
+are deadlier than floods, and that the Italian population is more vulnerable to landslides than floods. This is different from other countries or
+geographical areas where floods are more dangerous and have produced more fatalities than landslides (Ashley and Ashley, 2008; Berz
+et al., 2001; Borden and Cutter, 2008; Drobot et al., 2007; Pereira et al.,
+2015; Sharif et al., 2015; Witz et al., 2014). We hypothesize that the
+same occurs in similar climatic and physiographical settings. Differently
+from floods, rapid and very rapid landslides, including rock falls, debris
+flows, rapid mudflows and soil slips, are very difficult to predict, and are
+particularly destructive (Hungr, 2007). We attribute their dangerousness to the fact that they can travel long distances rapidly, and that it
+is difficult to escape rapid to very rapid slope failures, independently
+of the age and gender, and of the dynamics of the event.
+Fig. 7. Percentage of driving licenses in Italy, compared to the corresponding population,
+grouped by gender. Females shown in pink and males in blue. Driving licenses data from
+Ministry of Infrastructure and Transport (2013) (http://www.mit.gov.it/). Population
+data from the Italian Istituto Nazionale di Statistica (http://www.istat.it).
+P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879 877
+
+Floods and landslides have killed more males than females in most
+of the age categories (Fig. 4), and our statistical analysis revealed a systematic over-representation (under-representation) of male (female)
+fatalities in the range of age from 20 to 79-year for landslides and
+from 20 to 89-year for floods (Fig. 5). Splitting the catalogue of fatalities
+in two non-overlapping periods revealed that the trend was independent of the demographic variations and cultural and economic changes
+occurred in Italy in the observation period (Fig. 6). Our results confirm a
+different propensity towards risk taking of females and males, and a different degree of exposure to geo-hydrological hazards of the two genders. For floods, the result is in agreement with similar findings in
+Europe (Diakakis and Deligiannakis, 2013; Pereira et al., 2015), USA
+(Ashley and Ashley, 2008; Jonkman and Kelman, 2005), and Australia
+(Coates, 1999; FitzGerald et al., 2010). For landslides, the result is in
+agreement with recent findings obtained for Switzerland (Badoux
+et al., 2016). Fatal landslides have killed more indoor, with many of
+the fatalities in their homes, whereas floods have caused more fatalities
+outdoor, mainly along roads, bridges and river banks and levees. The difference outlines different dynamics and conditions that lead to the flood
+and the landslide fatal events.
+We expect that the results of our analysis of the causes and circumstances of the flood and landslide human losses in Italy will be helpful to
+design recommendations for self-protecting actions, and proactive policies that can contribute to reduce the severe human toll of floods and
+landslides in Italy (Guzzetti et al., 2005; Salvati et al., 2012, 2010), and
+elsewhere. This can be achieved e.g., by (i) providing information in
+civil protection plans on what to do, and not to do when facing a flood
+or landslide event indoor or outdoor (http://polaris.irpi.cnr.it/seipreparato/), (ii) posting specific road signs along levees, bridges and
+fords, (iii) considering geo-hydrological hazards in driving schools,
+(iv) increasing the awareness of geo-hydrological hazard and related
+risks in students of all ages. We recommend that the policies are
+based on dedicated participatory communication and educational
+efforts.
+Fundings
+This work was partially supported by the Italian National Department of Civil Protection (DPC). CB was supported by a grant of the DPC.
+Acknowledgments
+We are grateful to Annette Witt for suggesting the method for the
+statistical analysis and comparison of the fatalities and population census data.
+References
+Ahern, M., Kovats, R.S., Wilkinson, P., Few, R., Franziska, M., 2005. Global health impacts of
+floods: epidemiologic evidence. Epidemiol. Rev. 27 (1):36–46. http://dx.doi.org/
+10.1093/epirev/mxi004.
+Alderman, K., Turner, L.R., Tong, S., 2012. Floods and human health: a systematic review.
+Environ. Int. 47:37–47. http://dx.doi.org/10.1016/j.envint.2012.06.003.
+Ashley, S.T., Ashley, W.S., 2008. Flood fatalities in the United States. J. Appl. Meteorol.
+Climatol. 47:805–818. http://dx.doi.org/10.1175/2007JAMC1611.1.
+Badoux, A., Andres, N., Techel, F., Hegg, C., 2016. Natural hazard fatalities in Switzerland
+from 1946 to 2015. Nat. Hazards Earth Syst. Sci. 16:2747–2768. http://dx.doi.org/
+10.5194/nhess-16-2747-2016.
+Berz, G., Kron, W., Loster, T., Rauch, E., Schimetschek, J., Schmieder, J., et al., 2001. World
+map of natural hazards – a global view of the distribution and intensity of significant
+exposures. Nat. Hazards 23:443–465. http://dx.doi.org/10.1023/A:1011193724026.
+Borden, K.A., Cutter, S.L., 2008. Spatial patterns of natural hazards mortality in the United
+States. J Health Geogr.]–>Int. J. Health Geogr. 7:64. http://dx.doi.org/10.1186/1476-
+072X-7-64.
+Brazdova, M., Riha, J., 2014. A simple model for the estimation of the number of fatalities
+due to floods in central Europe. Nat. Hazards Earth Syst. Sci. 14:1663–1676. http://
+dx.doi.org/10.5194/nhess-14-1663-2014.
+Cascini, L., Ferlisi, S., Vitolo, E., 2008. Individual and societal risk owing to landslides in the
+Campania region (southern Italy). Georisk 2 (3):125–140. http://dx.doi.org/10.1080/
+17499510802291310.
+Castagnaro, C., Cagiano de Azevedo, R., 2013. Ageing and Counter Ageing in the Italian
+Censuses. RIEDS-Rivista italiana di economia, demografia e statistica - Italian review
+of Economics Demography and Statistics. 67(2) pp. 21–30.
+Catapano, F., Malafronte, R., Lepre, F., Cozzolino, P., Arnone, R., Lorenzo, E., et al., 2001. Psychological consequences of the 1998 landslide in Sarno, Italy: a community study.
+Acta Psychiatr. Scand. 104 (6):438–442. http://dx.doi.org/10.1034/j.1600-
+0447.2001.00512.x.
+Chavoshian, A., Takeuchi, K. (Eds.), 2011. Large-scale Floods Report. ICHARM Book Series
+No. 1.
+Coates, L., 1999. Flood fatalities in Australia, 1788–1996. Aust. Geogr. 30, 391–408 (doi:
+1080/00049189993657).
+Cruden, D.M., 1997. Estimating the risk from landslide using historical data. In: Cruden,
+D.M., Fell, R. (Eds.), Landslide Risk Assessment. Balkema, Rottherdam, pp. 177–184.
+Cruden, D.M., Varnes, D.J., 1996. Landslide types and processes. In: Turner, A.K., Schuster,
+R.L. (Eds.), Landslides: Investigation and mitigation. vol. 247. Transportation Research Board, pp. 36–75.
+Cutter, S., Boruff, B., Shirley, W., 2003. Social vulnerability to environmental hazards. Soc.
+Sci. Q. 84 (2):242–261. http://dx.doi.org/10.1111/1540-6237.8402002.
+Davies, T., Beaven, S., Conradson, D., Densmore, A., Gaillard, J.C., Johnston, D., et al., 2015.
+Towards disaster resilience: a scenario-based approach to co-producing and integrating hazard and risk knowledge. Int. J. Disaster 13:242–247. http://dx.doi.org/10.1016/
+j.ijdrr.2015.05.009.
+De Vita, P., Napolitano, E., Godt, J., Baum, R., 2013. Deterministic estimation of hydrological thresholds for shallow landslide initiation and slope stability models: case
+study from the Somma-Vesuvius area of southern Italy. Landslides 10:713–728.
+http://dx.doi.org/10.1007/s10346-012-0348-2.
+Diakakis, M., Deligiannakis, G., 2013. Vehicle-related flood fatalities in Greece. Environ.
+Hazards 12 (3–4):278–290. http://dx.doi.org/10.1080/17477891.2013.832651.
+Diakakis, M., Deligiannakis, G., 2015. Flood fatalities in Greece: 1970–2010. J. Flood Risk
+Manage. 10 (1):115–123. http://dx.doi.org/10.1111/jfr3.12166.
+Diakakis, M., Mavroulis, S., Deligiannakis, G., 2012. Flood in Greece, a statistical and spatial
+approach. Nat. Hazards 62:485–500. http://dx.doi.org/10.1007/s11069-012-0090-z.
+Directive 2007/60/EC, 2007. The European Parliament and of the Council of 23 October
+2007 on the assessment and management of flood risks. Available from:. http://
+ec.europa.eu/environment/water/flood_risk/.
+Doocy, S., Daniels, A., Murray, S., Kirsch, T.D., 2013. The human impact of floods: a historical review of events 1980–2009 and systematic literature review. PLoS Curr. 5.
+http://dx.doi.org/10.1371/currents.dis.f4deb457904936b07c09daa98ee8171a.
+Dowling, C.A., Santi, P.M., 2014. Debris flows and their toll on human life: a global analysis
+of debris-flow fatalities from 1950 to 2011. Nat. Hazards 71 (1):203–227. http://
+dx.doi.org/10.1007/s11069-013-0907-4.
+Drobot, S.D., Benight, C., Gruntfest, E., 2007. Risk factors for driving into flooded roads. Environ. Hazard 7:227–234. http://dx.doi.org/10.1016/j.enhaz.2007.07.003.
+Evans, S.G., 1997. Fatal landslides and landslide risk in Canada. In: Cruden, D.M., Fell, R.
+(Eds.), Landslide Risk Assessment. Balkema, Rottherdam, pp. 185–196.
+Evans, M., Hastings, N., Peacock, B., 2000. Statistical Distributions. Wiley, New York,
+pp. 134–136.
+FitzGerald, G., Du, W., Jamal, A., Clark, M., Hou, X.Y., 2010. Flood fatalities in contemporary
+Australia (1997–2008). Emerg. Med. Australas. 22:180–186. http://dx.doi.org/
+10.1111/j.1742-6723.2010.01284.x.
+Fothergill, A., 1996. Gender, risk and disaster. Int. J. Mass Emerg. Disasters 14 (1), 33–56.
+Frigerio, I., De Amicis, M., 2016. Mapping social vulnerability to natural hazards in Italy: a
+suitable tool for risk mitigation strategies. Environ. Sci. Pol. 63:187–196. http://
+dx.doi.org/10.1016/j.envsci.2016.06.001.
+Guha-Sapir, D., 1993. Natural and man-made disasters: the vulnerability of womenheaded households and children without families. World Health Stat. Q. 46, 227–233.
+Guzzetti, F., 2000. Landslide fatalities and the evaluation of landslide risk in Italy. Eng.
+Geol. 58:89–107. http://dx.doi.org/10.1016/S0013-7952(00)00047-8.
+Guzzetti, F., Tonelli, G., 2004. Information system on hydrological and geomorphological
+catastrophes in Italy (SICI): a tool for managing landslide and flood hazards. Nat. Hazards Earth Syst. Sci. 4:213–232. http://dx.doi.org/10.5194/nhess-4-213-2004.
+Guzzetti, F., Cardinali, M., Reichenbach, P., 1994. The AVI Project: a bibliographical and archive inventory of landslides and floods in Italy. Environ. Manag. 18:623–633. http://
+dx.doi.org/10.1007/bf02400865.
+Guzzetti, F., Stark, C.P., Salvati, P., 2005. Evaluation of flood and landslide risk to the population of Italy. Environ. Manag. 36 (1):15–36. http://dx.doi.org/10.1007/s00267-
+003-0257-1.
+Guzzetti, F., Mondini, A.C., Cardinali, M., Fiorucci, F., Santangelo, M., Chang, K.T., 2012.
+Landslide inventory maps: new tools for and old problem. Earth-Sci. Rev. 112:
+42–66. http://dx.doi.org/10.1016/j.earscirev.2012.02.001.
+Hajat, S., Ebi, K.L., Kovats, R.S., Menne, B., Edwards, S., Haines, A., 2005. The human health
+consequences of flooding in Europe: a review. In: Kirch, W., Menne, B., Bertollini, R.
+(Eds.), Extreme Weather Events and Public Health Responses. Springer, Berlin
+http://dx.doi.org/10.1007/3-540-28862-7_18.
+Hung, O., Leroueil, S., Picarelli, L., 2013. The Varnes classification of landslide types, an update. Landslides 11 (2):167–194. http://dx.doi.org/10.1007/s10346-013-0436-y.
+Hungr, O., 2007. Dynamics of rapid landslides. In: Sassa, K., Fukuoka, H., Wang, F., Wang,
+G. (Eds.), Progress in Landslide Science. Springer, Berlin:pp. 47–57 http://dx.doi.org/
+10.1007/978-3-540-70965-7_4.
+Jonkman, S.N., 2005. Global perspectives on loss of human life caused by floods. Nat. Hazards 34:151–175. http://dx.doi.org/10.1007/s11069-004-8891-3.
+Jonkman, S.N., Kelman, I., 2005. An analysis of the causes and circumstances of flood disaster
+deaths. Disasters 29 (1):75–97. http://dx.doi.org/10.1111/j.0361-3666.2005.00275.x.
+Kundzewicz, Z.W., Kanae, S., Seneviratne, S.I., Handmer, J., Nicholls, N., Peduzzi, P., et al.,
+2014. Flood risk and climate change: global and regional perspectives. Hydrol. Sci. J.
+59 (1):1–28. http://dx.doi.org/10.1080/02626667.2013.857411.
+878 P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879
+
+Lehmann, E., 2015. Extreme rain may flood 54 million people by 2030. Sci. Am. Available
+from:. https://www.scientificamerican.com/article/extreme-rain-may-flood-54-million-people-by-2030/, Accessed date: 22 July 2017.
+Maples, L.Z., Tiefenbacher, J.P., 2009. Landscape, development, technology and drivers:
+the geography of drownings associated with automobiles in Texas floods,
+1950–2004. Appl. Geogr. 29 (2):224–234. http://dx.doi.org/10.1016/
+j.apgeog.2008.09.004.
+Marchesini, I., Ardizzone, F., Alvioli, M., Rossi, M., Guzzetti, F., 2014. Non-susceptible landslide areas in Italy and in the Mediterranean region. Nat. Hazards Earth Syst. Sci. 14
+(8):2215–2231. http://dx.doi.org/10.5194/nhess-14-2215-2014.
+Myung, H.N., Jang, J.Y., 2011. Causes of death and demographic characteristics of victims
+of meteorological disasters in Korea from 1990 to 2008. Environ. Health 10:82. http://
+dx.doi.org/10.1186/1476-069X-10-82 (Sep 27).
+Nelson, V., Meadows, K., Cannon, T., Morton, J., Martin, A., 2002. Uncertain predictions, invisible impacts, and the need to mainstream gender in climate change adaptations.
+Gend. Dev. 10 (2):51–59. http://dx.doi.org/10.1080/13552070215911.
+Neumayer, E., Plümper, T., 2007. The gendered nature of natural disasters: the impact of
+catastrophic events on the gender gap in life expectancy, 1981–2002. Ann. Assoc. Am.
+Geogr. 97 (3):551–566. http://dx.doi.org/10.1111/j.1467-8306.2007.00563.x.
+Paulikas, M.J., Rajman, M.K., 2015. A temporal assessment of flooding fatalities in Pakistan
+(1950–2012). J. Flood Risk Manage. 8:62–70. http://dx.doi.org/10.1111/jfr3.12084.
+Pearson, M., Hamilton, K., 2014. Investigating driver willingness to drive through flooded
+waterways. Accid. Anal. Prev. 72, 382–390 (November, ISSN 0001-4575, doi:
+j.aap.2014.07.018).
+Pereira, S., Zêzere, J.L., Quaresma, I., Santos, P.P., Santos, M., 2015. Mortality patterns of
+hydro-geomorphologic disasters. Risk Anal. 36 (6):1188–1210. http://dx.doi.org/
+10.1111/risa.12516.
+Petley, D., 2012. Global patterns of loss of life from landslides. Geology 40 (10):927–930.
+http://dx.doi.org/10.1130/G33217.1.
+Petrucci, O., Pasqua, A.A., 2012. Damaging events along roads during bad weather periods:
+a case study in Calabria (Italy). Nat. Hazards Earth Syst. Sci. 12:365–378. http://
+dx.doi.org/10.5194/nhess-12365-2012.
+Petrucci, O., Versace, P., 2004. ASICal: a database of floods and landslides occurred in Calabria (Italy). In: Gaudio, R. (Ed.), Proceedings of the 1st Italian–Russian Workshop on
+New Trends in Hydrology, 2004 Sep 24–26; Rende (CS), Italy. Bios, Cosenza,
+pp. 49–55.
+Pradhan, E.K., West, K.P., Katz, J., LeClerq, S.C., Khatry, S.K., Shrestha, S.R., 2007. Risk of
+flood-related mortality in Nepal. Disasters 31:57–70. http://dx.doi.org/10.1111/
+j.1467-7717.2007.00340.x.
+Rappaport, E.N., 2000. Loss of Life in the United States associated with recent Atlantic
+tropical cyclones. Bull. Am. Meteorol. Soc. 81:2065–2073. http://dx.doi.org/10.1175/
+1520-0477(2000)081b2065:lolituN2.3.co;2.
+Ruin, I., Gaillard, J.C., Lutoff, C., 2007. How to get there? Assessing motorists’ flash flood
+risk perception on daily itineraries. Environ. Hazard 7 (3):235–244. http://
+dx.doi.org/10.1016/j.envhaz.2007.07.005 ISSN 1747-7891.
+Ruin, I., Creutin, J.D., Anquetin, S., Lutoff, C., 2008. Human exposure to flash flood – relation between flood parameters and human vulnerability during a storm of September
+2002 in Southern France. J. Hydrol. 361:199–213. http://dx.doi.org/10.1016/
+jhydrol.2008.07.044.
+Salvati, P., Bianchi, C., Rossi, M., Guzzetti, F., 2010. Societal landslide and flood risk in Italy.
+Nat. Hazards Earth Syst. Sci. 10:465–483. http://dx.doi.org/10.5194/nhess-10-465-
+2010.
+Salvati, P., Bianchi, C., Rossi, M., Guzzetti, F., 2012. Flood risk in Italy. In: Kundzewicz, Z.
+(Ed.), Changes of Flood Risk in Europe. IAHS Special Publication 10. IAHS Press, Wallingford:pp. 277–292 http://dx.doi.org/10.1201/b12348-17.
+Salvati, P., Marchesini, I., Balducci, V., Bianchi, C., Guzzetti, F., 2013. A new digital catalogue
+of harmful floods and landslides in Italy. In: Margottini, C., Canuti, P., Sassa, K. (Eds.),
+Landslide Science and Practice. Proceedings of the 2th World Landslide Forum, 2011
+Sep 19–25; Rome, Italy. Vol. 3: Spatial Analysis and Modelling. vol. 2013. Springer,
+Berlin:pp. 409–414. http://dx.doi.org/10.1002/9781119157052.ch14.
+Salvati, P., Bianchi, C., Fiorucci, F., Giostrella, P., Marchesini, I., Guzzetti, F., 2014. Perception
+of flood and landslide risk in Italy: a preliminary analysis. Nat. Hazards Earth Syst. Sci.
+14:2589–2603. http://dx.doi.org/10.5194/nhess-14-2589-2014.
+Salvati, P., Bianchi, C., Rossi, M., Guzzetti, F., 2016. Landslide risk to the population of Italy
+and its geographical and temporal variation. In: Chavez, M., Ghil, M., Urrutia, J. (Eds.),
+Extreme Events: Observations, Modeling and Economics. Wiley-Blackwell, Hoboken,
+pp. 177–194.
+Sanchez, C., Lee, T.S., Young, S., Batts, D., Benjamin, J., Malilay, J., 2009. Risk factors for mortality during the 2002 landslides in Chuuk, Federated States of Micronesia. Disasters
+33 (4):705–720. http://dx.doi.org/10.1111/j.1467-7717.2009.01105.x.
+Sepulveda, S.A., Petley, D.N., 2015. Regional trends and controlling factors of fatal landslides in Latin America and the Caribbean. Nat. Hazards Earth Syst. Sci. 15:
+1821–1833. http://dx.doi.org/10.5194/nhess-15-1821-2015.
+Sharif, H., Jackson, T., Hossain, M., Zane, D., 2015. Analysis of flood fatalities in Texas. nat.
+Hazard. Rev. 16 (1). http://dx.doi.org/10.1061/(ASCE)NH.1527-6996.0000145.
+Sharma, D., 2012. Situation analysis of flood disasters in South and Southeast Asia – a
+need of integrated approach. Int. J. Softw. Eng. 1 (3), 167–173.
+Singh, O., Kumar, M., 2013. Flood events, fatalities and damages in India from 1978 to
+2006. Nat. Hazards 69:1815–1834. http://dx.doi.org/10.1007/s11069-013-0781-0.
+SIRC, 2004. Sex Differences in Driving and Insurance Risk. 2004. The Social Issues Research Centre, Oxford.
+Spitalar, M., Gourley, J., Lutoff, C., Kirstetter, P., Brilly, M., Carr, N., 2014. Analysis of flash
+flood parameters and human impacts in the US from 2006 to 2012. J. Hydrol. 519
+(A):863–870. http://dx.doi.org/10.1016/j.jhydrol.2014.07.004.
+Stjernbrandt, A., Ostrom, M., Riksson, A., Bjornstig, U., 2015. Land motor vehicle-related
+drowning in Sweden. Traffic Inj. Prev. 9 (6):539–543. http://dx.doi.org/10.1080/
+15389580802339150.
+Strader, S.M., Ashley, W.S., 2015. The expanding bull’s-eye effect. Weatherwise 68, 23–29.
+Taggi, F., 2005. Alcuni indici statistici derivabili dai dati della patente a punti e dalle
+statistiche degli incidenti stradali verbalizzati. In: Taggi, F. (Ed.), curatore. Sicurezza
+stradale: verso il 2010. Istituto Superiore di Sanità, Ministero delle Infrastrutture e
+dei Trasporti, Roma, pp. 121–128 (Italian).
+Tosatti, G. (Ed.), 1985. A Review of Scientific Contributions on the Stava Valley Disaster
+(Eastern Italian Alps) (19th July, Bologna: Pitagora; 2003).
+Trigila, A., Iadanza, C., Spizzichino, D., 2010. Quality assessment of the Italian landslide inventory using GIS processing. Landslides 7 (4):455–470. http://dx.doi.org/10.1007/
+s10346-010-0213-0.
+United Nations Educational, Scientific and Cultural Organization, United Nations
+Children’s Fund, 2012. A learning culture of safety and resilience: technical guidance
+for integrating disaster risk reduction in the school curriculum. Available from. http://
+unesdoc.unesco.org/images/0021/002194/219412e.pdf, Accessed date: 22 July 2017.
+United Nations Office for Disaster Risk Reduction, 2015. Strategic framework
+2016–2021. Available from. http://www.unisdr.org/files/51557_
+unisdrstrategicframework20162021pri.pdf, Accessed date: 22 July 2017.
+Vinet, F., Lumbroso, D., Defossez, S., Boissier, L., 2012. A comparative analysis of the loss of
+life during two recent floods in France: the sea surge caused by the storm Xynthia
+and the flash flood in Var. Nat. Hazards 61:1179–1201. http://dx.doi.org/10.1007/
+s11069-011-9975-5.
+Weichselgartner, J., Pigeon, P., 2015. The role of knowledge in disaster risk reduction. Int.
+J. Disaster Risk Sci. 6:107–116. http://dx.doi.org/10.1007/s13753-015-0052-7.
+Wen, B.P., Han, Z.Y., Wang, S.J., Wang, E.Z., Zhang, J.M., 2005. Recent landslide disasters in
+China and lessons learned from landslide risk management. In: Hungr, O., Fell, R.,
+Couture, R., Eberhardt, E. (Eds.), Landslide Risk Management. vol. 2005. Taylor &
+Francis Group, London, pp. 427–434.
+Witz, A., Kron, W., Löw, P., Steuer, M., 2014. The need for data: natural disasters and the
+challenges of database management. Nat. Hazards 70:135–157. http://dx.doi.org/
+10.1007/s11069-012-0312-4.
+Wong, H.N., Ho, K.K., Chan, Y.C., 1997. Assessment of consequences of landslides. In:
+Cruden, D.M., Fell, R. (Eds.), Landslide Risk Assessment. Balkema, Rotterdam,
+pp. 111–149.
+Yale, J.D., Cole, T.B., Garrison, H.G., Runyan, C.W., Riad Ruback, J.K., 2003. Motor vehiclerelated drowning deaths associated with inland flooding after Hurricane Floyd: a
+field investigation. Traffic Inj. Prev. 4:279–284. http://dx.doi.org/10.1080/714040485.
+P. Salvati et al. / Science of the Total Environment 610–611 (2018) 867–879 879

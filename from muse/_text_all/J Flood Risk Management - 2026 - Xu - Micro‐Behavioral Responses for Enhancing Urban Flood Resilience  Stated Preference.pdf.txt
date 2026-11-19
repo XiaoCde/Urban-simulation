@@ -1,0 +1,706 @@
+Journal of Flood Risk Management, 2026; 19:e70272 1 of 11
+https://doi.org/10.1111/jfr3.70272
+Journal of Flood Risk Management
+ SPECIAL ISSUE Climate Change–Driven Debris Flow and 
+Cascades
+SPECIAL ISSUE PAPER OPEN ACCESS
+Micro-Behavioral Responses for Enhancing Urban Flood 
+Resilience: Stated Preference Analysis of Residents' 
+Evacuation Choices in High-Density Urban Areas
+Jia Xu1 | Yongzhen Wang1 | Can Wang2,3 | Qiang Lin4
+1School of Public Administration and Policy, Dalian University of Technology, Dalian, China | 2Department of Urban and Rural Planning, 
+School of Architecture, Soochow University, Suzhou, China | 3China-Portugal Belt and Road Joint Laboratory on Cultural Heritage Conservation Science, 
+Soochow University, Suzhou, China | 4Party School of the CPC Dalian Municipal Committee, Dalian, China
+Correspondence: Qiang Lin (lqchina@126.com)
+Received: 24 June 2026 | Revised: 28 September 2026 | Accepted: 8 October 2026
+Keywords: conditional logit model | flood evacuation | heterogeneous decision-making | stated preference method | urban resilience
+ABSTRACT
+The increasing frequency of extreme flood events in recent years has posed substantial challenges to the emergency evacuation 
+capacity of urban areas. Existing evacuation plans are largely based on rational assumptions, overlooking the complex decisionmaking mechanisms through which residents simultaneously weigh multiple attributes in real-world scenarios. This study focuses on residents of Beijing and employs a stated preference experiment together with a conditional logit model to examine 
+their preferences regarding evacuation distance, bottleneck risk, traffic control, and organizational mode. It further explores 
+the heterogeneous effects of gender, age, education level, and length of residence. The results reveal that, in the face of flooding, residents' evacuation decisions are driven by survival probability rather than by minimizing travel time. The combination 
+of intelligent signals and government-planned routes is the only attribute consistently preferred across all groups. However, 
+significant divergences exist among different population segments in terms of bottleneck aversion, organizational mode preference, and sensitivity to distance. Scenario analyses based on the model results indicate that the deployment of intelligent 
+signals and government-provided guidance yield the highest universal benefits. Dynamic management of high-risk bottlenecks 
+and community-based adaptations tailored to elderly groups can effectively enhance evacuation performance. These findings 
+challenge the conventional view of homogeneous evacuation decision-making among residents and highlight marked differences in risk avoidance choices across population groups, providing empirical support for shifting emergency management from 
+persuasion-based strategies to differentiated resilience approaches.
+1 | Introduction
+In recent years, climate change has led to more frequent and 
+intense flood disasters worldwide, posing severe threats to 
+lives and property (Merz et al. 2021; Kundzewicz et al. 2019; 
+Tellman et  al.  2021). Floods are typically abrupt, highly destructive, and wide-ranging, making effective evacuation 
+critical for reducing casualties (Cea and Costabile  2022). 
+Structural flood defenses have inherent limitations, which is 
+why nonstructural measures, particularly orderly emergency 
+evacuation, have become the last line of defense against loss of 
+life and property (Abioye et al. 2020). However, current evacuation plans often assume perfect rationality and treat residents 
+as homogeneous utility maximizers, overlooking the bounded 
+rationality, context dependence, and socio-demographic heterogeneity that shape real world decisions. Post-disaster studies have shown that evacuation behavior is influenced by a 
+combination of past experience, social networks, trust in 
+This is an open access article under the terms of the Creative Commons Attribution-NonCommercial-NoDerivs License, which permits use and distribution in any 
+medium, provided the original work is properly cited, the use is non-commercial and no modifications or adaptations are made.
+© 2026 The Author(s). Journal of Flood Risk Management published by Chartered Institution of Water and Environmental Management and John Wiley & Sons Ltd.
+
+2 of 11 Journal of Flood Risk Management, 2026
+information, and traffic conditions, resulting in systematic 
+deviations from planned expectations (Brachman et al. 2020; 
+Kako et  al.  2022). Such deviations can cause evacuation delays, inefficient route choices, traffic congestion, and even secondary hazards.
+Evacuation preferences reflect the tendencies residents display when facing a threat, based on their perceptions, experiences, and environmental conditions (Misal et  al.  2023). 
+These include decisions about timing, destination, and transport mode (Wu et al. 2024; Minami et al. 2024). Such decisions 
+are shaped by a complex interplay of factors. At the individual level, demographic characteristics, including age, gender, 
+education, health status, household composition and urgency 
+level (Haghani et al. 2020), affect both the decision to evacuate and the choice of transport mode (David and Ramos 2022). 
+Risk perception serves as a key mediator between warning receipt and action; even when official warnings are issued, low 
+perceived risk may lead people to stay (Buylova et al. 2020). 
+Environmental factors, such as the physical attributes of the 
+flood and the built environment, define the feasible routes and 
+modes available (de Albuquerque et al. 2024; Yu et al. 2020). 
+Social and informational influences, such as neighborhood 
+support, peer effects, and the credibility of warnings, also 
+moderate individual responses (Du et al. 2017). Finally, institutional aspects, including shelter capacity, route planning, 
+and drill frequency, shape overall preparedness and public 
+confidence in the evacuation system (Zhai et al. 2014). Early 
+studies relied heavily on retrospective analyses of historical 
+disaster data (Huang et al. 2022), but they typically examined 
+only one or a few factors, such as warning time or water depth 
+(Dias et al. 2021; Dong et al. 2022), thus failing to capture the 
+joint trade-offs that residents make among multiple attributes, 
+such as distance, transport mode, and organizational arrangements. Consequently, systematic quantification of marginal 
+trade-offs and structural preference heterogeneity across social groups remains scarce. Notably, media coverage of vehicle entrapment incidents in low-lying underpasses during the 
+2012 “7·21” torrential rain in Beijing has shaped a collective 
+risk memory among residents regarding the fatal hazards of 
+such bottlenecks.
+Stated preference (SP) methods, widely used in transportation 
+(Yagi and Shiraishi 2017; Luo et al. 2016; Capodici et al. 2025), environmental valuation (Fang et al. 2016; Liu et al. 2015), and more 
+recently in disaster research (Dias et  al.  2021), are well suited 
+for eliciting preferences for low-probability hazards. Existing 
+SP studies have explored policy interventions, warning responses, peer effects, and destination/mode choices (Mozumder 
+and Vásquez  2018; Borowski and Stathopoulos  2023; Zhang 
+et al. 2025). However, most of these studies focus on the binary 
+decision of whether to evacuate, while optimization models often 
+overlook behavioral factors and simply prioritize the shortest 
+path (Shekhar et al. 2012; Aldahlawi et al. 2024). Four attributes 
+(evacuation distance, bottleneck type, traffic control, and organization mode) were selected based on a literature review and pilot 
+interviews. Evacuation distance and route safety are critical factors in flood evacuation (Mizumura and Nakamura 2025). Traffic 
+control and organization mode were included because they are 
+policy-relevant and have been identified as key institutional factors in recent evacuation planning reviews (Li et al. 2025).
+To address these gaps, we employ an SP experiment and a conditional logit model to examine how residents trade off multiple evacuation attributes, specifically evacuation distance, 
+bottleneck type, signal control strategy, and organizational 
+mode. We shift the core question from whether to evacuate 
+to how to evacuate, thereby enabling policies that offer differentiated options aligned with residents' preferences. We 
+estimate marginal utilities for each attribute level and test for 
+preference heterogeneity by gender, age, education, and length 
+of residence using interaction terms. The main contributions 
+are threefold. Theoretically, it shifts the focus from whether 
+to evacuate to route choice behavior and quantifies marginal 
+trade-offs among multiple attributes; methodologically, it 
+enables ex-ante evaluation of intervention strategies not yet 
+implemented; practically, it reveals systematic preference heterogeneity across groups, supporting a shift from uniform to 
+differentiated evacuation strategies.
+The rest of this paper is organized as follows. Section  2 describes the study area. Section  3 presents the questionnaire 
+design, data collection, and model specification. Section 4 reports the empirical results and discussion. Section 5 concludes 
+the study, outlines its limitations, and suggests directions for 
+future research.
+2 | Study Area
+As a megacity with over 21 million permanent residents, Beijing 
+has a vast built-up area and a highly interdependent urban 
+system reliant on complex underground corridors and rivercrossing bridges, making it particularly vulnerable to extreme 
+weather induced evacuation pressures (Li et al. 2023).
+Historically, Beijing has suffered severe impacts from extreme 
+rainstorms and floods. In the July 21, 2012, torrential rain, 79 
+people lost their lives (Beijing Flood Control and Drought Relief 
+Headquarters 2012), and numerous waterlogging points formed 
+across the city. In July 2023, another extreme rainfall event 
+caused 33 deaths and affected nearly 1.29 million residents 
+(Beijing Municipal People's Government 2023). In July 2024, 
+continuous heavy rainfall again caused significant casualties 
+and property damage, exposing major risks from bottlenecks 
+such as flooded underpasses and interrupted river-crossing 
+bridges.
+The study focuses on the Tonghui River corridor (Figure  1) in 
+Chaoyang District, Beijing. The Tonghui River is a primary drainage artery for central Beijing, serving as a major conduit for stormwater runoff from the city's core functional areas. This corridor 
+has been repeatedly hit by severe flood events, including the July 
+2016 extreme rainfall that caused the river to overflow onto pedestrian walkways in the CBD section, and more recent extreme flood 
+events in July 2023 and July 2024 that exposed major risks from 
+bottlenecks such as submerged underpasses and disrupted rivercrossing bridges. These recurring flood disasters establish the 
+Tonghui River corridor as a high-risk zone with persistent exposure to flood hazards. Given the likelihood of future extreme flood 
+events under climate change, understanding residents' evacuation 
+preferences and route choice mechanisms in this area is essential 
+for proactive, prevention-oriented emergency planning.
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Journal of Flood Risk Management, 2026 3 of 11
+The area is a high-density mixed-use zone integrating cultural 
+and creative industry parks, commercial office buildings, historical villages, and residential neighborhoods. It has a large 
+floating population, predominantly young working-age residents with limited familiarity with the local road network, 
+making it an ideal setting for examining preference heterogeneity in evacuation behavior. The coexistence of diverse 
+land uses means that evacuation scenarios involve multiple 
+population groups, including commuters, tourists, cultural 
+workers, migrant laborers, and local residents. According to 
+the Beijing Flood Control Emergency Response Plan, districtlevel authorities have the authority to issue evacuation orders when facing severe waterlogging risks, which provides 
+the institutional context for the scenario design in this study. 
+These characteristics establish the Tonghui River corridor as a 
+representative case for studying evacuation behavior in highdensity mixed-use urban areas.
+3 | Methodology
+Using an SP survey and discrete choice models, this study 
+quantifies the factors driving evacuation decisions. Attributes 
+were derived from literature and pilot surveys, chosen for 
+measurability and feasibility. They capture residents' core 
+concerns and inform strategies to enhance flood evacuation 
+in high-density cities.
+3.1 | SP Questionnaire Design
+Because major flood events are low frequency, actual evacuation 
+behavior data are difficult to obtain. This study therefore adopts a 
+stated preference method, presenting hypothetical flood scenarios 
+to residents to elicit their evacuation route preferences. Compared 
+with revealed preference (RP) data, the SP method allows systematic control of route attributes and enables the evaluation of facility improvements that have not yet been implemented in the study 
+area (Xu and Nair 2026; Lovreglio et al. 2016). The questionnaire 
+consists of two parts. The first part collects respondents' socioeconomic background information. The second part presents hypothetical evacuation choice sets generated by an orthogonal design.
+In the socioeconomic background section, the questionnaire 
+systematically collects key variables such as gender, age, education level, occupation, and length of residence in the current 
+city. These variables are used not only for descriptive sample statistics but also as control variables in subsequent heterogeneity 
+analyses, helping to reveal behavioral differences in evacuation 
+decisions across social groups.
+For the hypothetical evacuation scenarios, based on a literature review and preliminary investigation, we identified four 
+key attributes and their levels: type of traffic bottleneck point, 
+evacuation distance, traffic control method, and evacuation 
+organization mode. The attribute selection was informed by a 
+FIGURE 1 | The geographical location and features of the study area.
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+4 of 11 Journal of Flood Risk Management, 2026
+two-stage pilot process, including semi-structured interviews 
+with 10 residents and consultations with three emergency management officials. The identified attributes reflect residents' 
+primary concerns, including route safety, distance, organization, and guidance, which are consistent with the literature 
+(Mizumura and Nakamura 2025; Li et al. 2025). The attribute 
+levels were designed to reflect realistic Beijing conditions. 
+Distance levels are based on actual route distance. The three 
+bottleneck types capture critical risks documented in historical flood events and pilot interviews (Dias et  al.  2021; Dong 
+et al. 2022).
+If a full factorial design were used for all attributes and their 
+levels, it would produce an excessively large number of hypothetical situations, placing a heavy cognitive burden on respondents and generating many redundant or invalid scenario 
+comparisons. To overcome this limitation, improve survey efficiency, and ensure data quality, we adopted a fractional factorial design (Table 1). Under the condition that each attribute 
+level appears in a balanced manner, we ultimately selected eight 
+representative choice situations (Table 2). Each respondent completed eight choice tasks within 10min. A pre-test with 5 respondents confirmed that this length allowed consistent response 
+quality. Each situation consists of two evacuation alternatives 
+(Alternative A and Alternative B) with differentiated attribute 
+levels, plus a Neither option (Alternative C). All situations are 
+embedded in a consistent flood disaster scenario description, 
+which mentions potential risks such as water and power outages 
+and road disruptions, and assumes that the government has already issued an evacuation order. This enhances respondents' 
+sense of immersion and the authenticity of their answers.
+The survey presented a unified disaster scenario description before all choice situations: flooding is very likely to cause water 
+and power outages, road disruptions, and inundation of low 
+floor and old houses; emergency rescue may not arrive in time; 
+and the government has clearly issued an evacuation order. 
+Respondents were asked to choose their preferred option from 
+the alternatives in each situation against this background.
+3.2 | Data Collection
+The survey was conducted from June to September 2025 
+in the Beijing area, which faces relatively high flood risk. 
+Questionnaires were distributed both online and offline. A total 
+of 335 questionnaires were collected. After checking for completeness, logical consistency, and invalid responses, 307 valid 
+questionnaires were retained, giving an effective response rate 
+of 91.64%. Each respondent completed eight choice situations, 
+each with two evacuation alternatives (A and B) plus a “neither” 
+option. In all 2456 choice tasks, no respondent selected the “neither” option. This option was therefore excluded from the model 
+estimation, yielding 4912 valid choice observations, which meets 
+the large sample requirement for discrete choice models.
+The sample had a relatively balanced gender distribution 
+(54.7% female, 45.3% male). Age groups were distributed as 
+follows: 58.3% aged 18–30, 28.7% aged 31–50, 10.1% aged 51–
+65, and 2.9% aged over 65. Regarding educational background, 
+respondents with a high school education or below constituted 
+14.66% of the sample, those with an associate or bachelor's 
+degree represented the majority at 63.19%, and those with a 
+TABLE 1 | Attributes and levels used in the stated preference experiment.
+Attribute Level 1 Level 2 Level 3
+Traffic bottleneck Underground passage 
+(prone to waterlogging 
+and limited capacity)
+River crossing bridge 
+congestion (few lanes, high 
+risk of minor collisions)
+Arterial road (inefficient 
+signal timing)
+Evacuation distance Within 3km 3–5km More than 5km
+Traffic control Intelligent 
+signals+governmentplanned routes
+Fixed time signals +selfchosen routes
+No signal control + 
+self-navigation
+Evacuation organization 
+mode
+Community organized 
+evacuation
+Walking evacuation Private car evacuation
+TABLE 2 | Example choice set for hypothetical evacuation scenarios.
+Scenario 1 Alternative A Alternative B Alternative C
+Traffic bottleneck Underground passage River crossing bridge Neither
+Evacuation distance Within 3km 3–5km
+Traffic control Intelligent signals+governmentplanned routes
+Fixed time signals+selfchosen routes
+Evacuation organization 
+mode
+Community organized evacuation Walking evacuation
+Note: Each respondent made choices for 8 Scenarios.
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Journal of Flood Risk Management, 2026 5 of 11
+master's degree or above accounted for 22.15%. Nearly half 
+of respondents (46.9%) had lived in the city for more than 
+10 years, while 25.1% had lived there for 1–5 years, 21.2% for 
+6–10 years, and 6.8% for less than 1 year.
+Notably, no respondent chose the “neither” option. This suggests 
+that the alternatives, covering a wide range of attribute levels 
+(including short and long distances, self-evacuation, and organized evacuation), offered at least one acceptable option to the 
+vast majority. The questionnaire assumed that the government 
+had issued a mandatory evacuation order and that houses were 
+at risk of collapse. The results indicate that, facing a clear threat 
+to life, residents showed high compliance, with nearly everyone 
+prioritizing evacuation over staying put.
+3.3 | Model Specification
+This study employs the conditional logit model (McFadden 1974), 
+a discrete choice model, to analyse the hierarchical data obtained 
+from the SP experiment and to examine residents' evacuation alternative choices under flood scenarios. This model removes the 
+influence of individual-specific fixed characteristics through 
+the conditional likelihood function, effectively controlling for 
+unobserved heterogeneity and ensuring that the estimated parameters accurately capture the effect of the alternatives' attributes on choice behavior.
+In each choice situation t, the probability that individual i chooses 
+alternative j from a set of J alternatives can be expressed as:
+where Vijt is the observable utility of alternative j for individual i
+in situation t. This study assumes that the attribute coefficients 
+are consistent across different alternatives. Therefore, the utility 
+function is specified as follows:
+All attribute coefficients are treated as fixed parameters, and 
+unobserved heterogeneity at the individual level is eliminated 
+through the conditional likelihood function.
+4 | Results and Discussion
+4.1 | Residents Preferences for Evacuation Route 
+Attributes and Risk Aversion Effects
+Based on the survey data on residents' evacuation behavior 
+preferences, a conditional logit model was used to estimate the 
+weight and statistical significance of each attribute. The estimated effects of each factor on utility are presented in Table 3. 
+From these results, a dominant pattern of risk aversion in residents' evacuation choices can be identified.
+Before model estimation, we performed a Pearson correlation 
+test on candidate attributes. The likelihood ratio test for the 
+conditional logit model yielded a p-value of 0.0134, indicating statistical significance and joint explanatory power of 
+the included attributes. The pseudo R-squared is 0.0052. Our 
+discrete choice experiment prioritizes identifying the direction and relative importance of key attributes over predictive 
+Pijt = exp �
+Vijt �
+∑J
+k=1 exp �
+Vikt�
+Vijt = 훽1 ⋅Distanceij+훽2 ⋅Bottleneck1ij+훽3 ⋅Bottleneck2ij
++훽4 ⋅Signalcontrolij+훽5 ⋅Signalcontrol2ij
++훽6 ⋅Organization1ij+훽7 ⋅Organization2ij
+TABLE 3 | Model estimation results for evacuation decision behavior.
+Attribute Attribute description Coefficient p
+Traffic bottleneck Underground passage −1.482 0.009***
+River crossing bridge −0.762 0.017**
+Arterial road (reference category) — —
+Evacuation distance The path length from the origin to the shelter 0.055 0.026**
+Traffic control No signal control+self-navigation −0.471 0.053*
+Intelligent signals+government-planned routes 0.632 0.011**
+Fixed time signals+self-chosen routes (reference category) — —
+Evacuation organization mode Private car evacuation −0.1468 0.138
+Community organized evacuation 0.168 0.247
+Walking evacuation (reference category) — —
+Number of objects 4912
+Log Likelihood −1693.5151
+Prob > chi2 0.0134
+Pseudo R2 0.0052
+*p<0.1. 
+**p<0.05. 
+***p<0.01.
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+6 of 11 Journal of Flood Risk Management, 2026
+accuracy. Given the statistical significance and sign consistency of the coefficients, the model supports the validity of our 
+main conclusions.
+Table 3 shows that the coefficient for underpass congestion is 
+−1.48, the largest negative impact among the three bottleneck 
+types, followed by river bridges. Residents thus show the strongest aversion to underpasses, which are prone to both congestion and flooding. Bridge aversion stems from structural 
+vulnerability and unreliable passage. Arterial road intersection congestion, the reference category, also reduces utility but 
+is perceived as more visible and controllable, hence less dangerous. This ranking confirms that residents prioritize safety 
+over efficiency.
+The evacuation distance coefficient is significantly positive 
+(β=0.055, p=0.026). This result is counterintuitive but reflects 
+the joint influence of distance and route safety attributes embedded in the experimental design. In the choice scenarios, 
+shorter routes were predominantly configured with high-risk 
+bottlenecks such as underground passages, while longer routes 
+were typically associated with arterial roads, which offer better visibility, drainage capacity, and more stable traffic flow 
+during flood events. Consequently, the positive coefficient captures residents' willingness to accept additional travel distance 
+in exchange for improved route safety and predictability. This 
+interpretation is consistent with existing evidence showing that 
+evacuees in flood and hurricane contexts frequently opt for familiar or safer routes, even when these routes are longer than 
+officially recommended alternatives (Sadri et  al.  2014). More 
+broadly, risk-averse evacuees have been shown to exhibit systematically higher sensitivity to route reliability and certainty. 
+In flood evacuation settings, residents prioritize low-risk scenarios and are willing to trade time or distance for safety gains (Jin 
+et al. 2025). A more nuanced reading, therefore, is that residents 
+are not preferring longer distances per se, but are accepting longer distances as a necessary cost to avoid unsafe routes and to 
+secure reliable guidance. This interpretation aligns with the 
+broader behavioral pattern identified in this study, that survival 
+probability, rather than distance minimization, drives evacuation decisions under flood stress.
+For traffic control, the combination of intelligent signals and 
+government planned routes has the most positive coefficient 
+(0.632), reflecting a strong preference for orderly, guided evacuation. The “No signal control + self-navigation” scenario has a 
+negative coefficient (−0.471), indicating that reliance on decentralized personal technology under extreme stress raises uncertainty (Xu and Nair 2026). Fixed signals with self-chosen routes 
+(the reference) lie in between.
+The coefficients for evacuation organization modes are not statistically significant, suggesting that residents care more about 
+safe evacuation than about how it is organized. The three modes 
+(private car, community organised, walking) are perceived as 
+largely equivalent. Overall, residents follow a safety first logic. 
+Traffic bottlenecks are the primary driver, with underpass congestion (β=−1.48) sharply reducing route attractiveness. They 
+are willing to accept longer distances to avoid risks and obtain 
+reliable guidance, as shown by the positive preference for intelligent signals (β=0.63). Traditional shortest path evacuation 
+models may therefore be inappropriate for real world disasters 
+(Aldahlawi et al. 2024).
+4.2 | Heterogeneity Analysis of Evacuation 
+Preferences Across Population Groups
+According to Table 4, which presents utility coefficients across 
+genders, lengths of residence, ages, and education levels, several 
+patterns emerge. First, the combination of intelligent signals 
+and government-planned routes is the only attribute consistently preferred by almost all groups, with positive and mostly 
+significant coefficients across subgroups, most of which are 
+statistically significant (Jin et  al.  2025). Second, underpasses 
+and river crossing bridges are generally disliked, with aversion 
+concentrated among males, residents who have lived in the city 
+for more than 10 years, the elderly aged over 65, and those with 
+a bachelor's degree. Among these, older adults show the largest negative coefficient for underpasses. Third, a preference for 
+longer evacuation distances appears only among males, young 
+adults (18–30), and those with a master's degree or higher; other 
+groups do not exhibit this tendency. Fourth, preferences for organization modes are divergent. The elderly aged over 65 significantly prefer community organized evacuation, whereas males, 
+young people, and those with associate or bachelor's degrees 
+dislike private car evacuation with family, meaning they would 
+rather walk than drive. Finally, females, those with lower education levels, people aged 51–65, and residents who have lived 
+locally for less than 10 years show coefficients that are mostly 
+nonsignificant, indicating no statistically significant difference 
+in preferences from the reference group. Based on these findings, three phenomena warrant further discussion.
+The divergence in preferences for organization modes reflects 
+differing attitudes toward autonomy versus reliance (Haghani 
+et al. 2020). The elderly aged over 65 significantly prefer community organized evacuation. In contrast, males, young people 
+aged 18–30, and those with associate or bachelor's degrees show 
+clear aversion to private car evacuation with family, preferring 
+walking over driving. Older adults, possibly due to reduced 
+physical capacity or lack of confidence in navigating complex 
+road conditions, are more willing to delegate decision-making 
+to community arrangements, thereby reducing psychological 
+burden. Younger, more educated, and male groups, in contrast, 
+dislike private-car evacuation with family, preferring walking 
+over driving. This may stem from their daily commuting experience with congestion, leading them to perceive walking as more 
+flexible and reliable in emergencies. These opposing preferences 
+imply that evacuation planning should offer menu-like options 
+rather than a one-size-fits-all prescription.
+The preference for longer distances among males, young adults, 
+and those with a master's degree or higher shows a significant 
+preference for longer distances themselves, but rather an interpretation of longer distances as a proxy for better material supplies and higher shelter quality. Attribute correlation analysis 
+indicates that longer routes tend to involve arterial roads and 
+overpasses, whereas shorter distances often come with underpasses or river crossing bridges bottlenecks that most groups 
+dislike. The observed preference for longer distances thus likely 
+incorporates both a pursuit of better shelter resources and an 
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Journal of Flood Risk Management, 2026 7 of 11 TABLE 4 | Utility coefficients of evacuation alternative attributes across different population groups. Attribute Level Utility coefficient Gender Length of residence (year) Age Education level Male Female <1 1–5 6–10 ≥10 18–30 31–50 51–65 Over 65 ≤High school Assoc./ Bachelor ≥Master Bottleneck 1 −1.818** −1.192 −2.855 −1.174 −0.352 −2.032** −1.354 −1.369* −1.104 −5.744** 0.615 −2.606*** 0.303 2 −0.911** −0.633 −1.403 −0.710 0.125 −1.119** −0.760 −0.605 −0.751 −2.943* 0.300 −1.368*** 0.250 3 — — — — — — — — — — — — — Distance — 0.103*** 0.012 0.117 0.048 0.086 0.035 0.108*** 0.039 −0.040 0.069 −0.012 0.053* 0.106** Traffic control 1 −0.530 −0.422 −1.43* −0.478 0.103 −0.549 −0.394 −0.398 −0.583 −2.018* 0.378 −0.994*** 0.448 2 0.704* 0.571* 1.568* 0.532 −0.151 0.915** 0.997** 0.439 −0.364 2.580** −0.237 0.988*** 0.204 3 — — — — — — — — — — — — — Organization 1 −0.298** −0.012 −0.445 0.484 0.034 −0.193 −0.323* −0.127 0.400 −0.506 0.246 −0.301** 0.029 2 0.288 0.062 −0.074 0.669 0.199 0.257 −0.224 0.272 0.672 1.194* 0.226 0.258 −0.124 3 — — — — — — — — — — — — — Note: Assoc. = associate degree, ≥ Master includes master's and doctoral degrees. Bottleneck_1,2,3 represent Underground passage, River crossing bridge, Arterial road; Distance represent Within 3km, 3–5km, More than 5km; Traffic control_1,2,3 represent No signal control + self-navigation, Intelligent signals+ government-planned routes, Fixed time signals +self-chosen routes; Organization_1,2,3 represent Private car evacuation, Community organized evacuation, Walking evacuation. *p<0.1. **p<0.05. ***p<0.01.
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+8 of 11 Journal of Flood Risk Management, 2026
+avoidance of specific physical bottlenecks. Evacuation planning 
+should therefore focus on improving material supply capacity at 
+nearby shelters and eliminating safety hazards on short-distance 
+routes, rather than simply directing people to distant locations.
+The effect of length of residence on evacuation preferences 
+exhibits a nonlinear U shaped pattern. Both new residents 
+who have lived in the city for less than 1 year and long-term 
+residents who have lived there for more than 10 years show 
+multiple significant preferences or aversions, whereas the intermediate group (residence of 1–10 years) has mostly nonsignificant coefficients, indicating no substantial difference from 
+the reference group. New residents are highly sensitive to 
+signal control because they are unfamiliar with the road network and rely on external guidance (Brachman et al. 2020). 
+Long-term residents, based on long-standing experience, have 
+formed strong negative memories of bottlenecks such as underpasses. The intermediate group is in a transitional phase 
+where the sense of unfamiliarity has faded but extreme negative experiences have not yet accumulated. This U-shaped 
+pattern suggests that information dissemination should be 
+stratified, with detailed signal guidance for new residents and 
+specific detour information for long-term residents around 
+bottleneck sections.
+4.3 | Scenario-Based Evaluation of Evacuation 
+Route Improvements
+To translate the estimated preference parameters into a concrete decision support tool and to assess the potential effects 
+of different improvement strategies, this study used GISbased mapping tools to construct three representative evacuation routes based on the actual geographic setting of the 
+study area, near the Tonghui River in Beijing. Residents must 
+traverse waterlogging prone areas and pass through various 
+traffic bottlenecks to reach safe shelters, thereby capturing the 
+core constraints faced by evacuation routes in reality. Based 
+on the road network structure and waterlogging risk distribution in this area, three representative evacuation routes were 
+defined. These routes correspond to different combinations of 
+bottleneck type, traffic control method, and evacuation distance, reflecting the key trade-offs residents make regarding 
+the physical attributes of routes in the model. It should be 
+noted that, between baseline and improvement scenarios, the 
+transport mode chosen by residents is assumed to remain unchanged, so that the direct effect of improvements in the physical attributes of the route on utility can be isolated. Model 
+parameters are all taken from the logit regression results in 
+Table 3. By comparing the utility changes of the three routes 
+under different intervention scenarios, the potential impact of 
+each improvement strategy on residents' route preferences can 
+be quantitatively assessed (Figure 2).
+In the baseline scenario, three evacuation routes were evaluated. Route 1 is the shortest (2.8 km) but crosses a high 
+risk underpass with fixed time signals; its estimated utility 
+is −1.328 (0.055×2.8–1.482). Route 2 is a medium distance 
+option (5 km) crossing a river bridge with limited capacity and no signals, yielding an estimated utility of −0.958 
+(0.055×5 – 0.762 – 0.471). Route 3 is the longest (10 km) on arterial roads with fixed time signals, with an estimated utility of 0.55 (0.055×10). In relative terms, the utilities rank as 
+Route 3 > Route 2 > Route 1. Despite being about 72% shorter 
+than Route 3, Route 1's strong negative utility (−1.328) shows 
+that the underpass risk outweighs any distance benefit in 
+residents' stated preferences. Route 2 also remains negative, 
+indicating that bridge capacity limitations and accident risks 
+deter residents. Route 3, though longest, yields positive utility, 
+meaning the perceived safety of arterial roads is valued more 
+highly than extra travel time in the choice context. These baseline differences quantify the implicit costs of route attributes, 
+confirming that risk avoidance can override conventional distance minimisation logic.
+FIGURE 2 | Evacuation routes under the baseline scenario (left panel) and under the improved scenario (right panel).
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Journal of Flood Risk Management, 2026 9 of 11
+Three representative improvement scenarios were then designed, focusing on the highest risk bottlenecks and exploring enhanced safety through dynamic control and temporary 
+protective measures under disaster conditions. For Route 1, 
+instead of permanent reconstruction, the underpass is temporarily closed after a warning, with a parallel ground detour 
+activated and water level monitoring and gates installed. 
+Removing the underpass risk makes it comparable to an arterial road; the estimated utility improves to 0.165 (0.055×3), 
+representing a utility gain of 1.493. This shows that warning 
+responsive dynamic control can turn a previously unacceptable route into an attractive one with modest investment in 
+terms of relative preference.
+For Routes 2 and 3, improvements focus on soft operational 
+measures, as physical capacity changes are costly. Signal control 
+is upgraded from “No signal control + self-navigation” to “intelligent signals plus government planned routes”. Route 2's utility 
+improves to 0.145 (0.055×5 –0.76+0.63), turning from negative 
+to positive; Route 3 improves to 1.18 (0.055×10+0.63). The intelligent signal system delivers such gains because it reduces 
+uncertainty and provides clear guidance. In normal conditions, 
+navigation apps assist individual decisions; but during flood 
+emergencies, the absence of signal lights means the traffic system lacks a unified rule framework, leading to chaotic intersections and heightened anxiety, even with navigation. Residents' 
+dislike of the “no signals plus navigation” mode thus reflects fear 
+of traffic order collapse. Intelligent signals, by contrast, provide 
+a dynamically adjusted rule framework that not only compensates for physical deficiencies but also enhances psychological 
+trust and route acceptance in the stated preference context.
+Comparing baseline and improvements reveals two key policy 
+insights about relative preferences. The underpass risk reduces 
+utility by 1.48 relative to an arterial overpass, equivalent to a 
+distance penalty of about 27km (1.48/0.055) in terms of the 
+estimated trade-off between bottleneck risk and distance. Yet 
+underpasses are indispensable in daily life, so permanent reconstruction is impractical. Instead, the strategy should shift 
+from permanent engineering to temporary closure and dynamic 
+control during disasters, supplemented by low cost protective 
+measures (e.g., water level monitoring, automatic gates) at critical nodes, preserving normal function while avoiding extreme 
+risks. Second, soft measures like intelligent signal upgrades 
+yield a utility gain of 0.63, equivalent to creating an 11.5km distance advantage (0.63/0.055) within the estimated preference 
+structure. This makes them a highly cost effective strategy that 
+can substantially boost evacuation route attractiveness without 
+large scale civil engineering.
+5 | Conclusion
+This study used a stated preference experiment and a conditional logit model to examine flood evacuation choices in a 
+high-density urban area, providing micro-level evidence for improving urban flood resilience. The results show that residents 
+are primarily driven by risk aversion: they actively avoid highrisk bottlenecks such as underpasses, and the disutility of these 
+features far outweighs any benefit from shorter routes. This 
+implies that resilience enhancement should focus on identifying and managing critical vulnerable nodes, rather than merely 
+minimizing evacuation distances.
+Residents generally prefer intelligent dynamic signals combined with government-planned routes, as this combination 
+provides clear guidance and reduces uncertainty. Preferences 
+vary significantly across groups. Older adults strongly favor 
+community-organized evacuation and avoid underpasses, 
+underscoring the need for community-level organizational resilience. Males, younger respondents, and more educated individuals tend to prefer longer distances and dislike private car 
+use, indicating a demand for flexible travel modes. New and 
+long-term residents are more sensitive to signals and bottlenecks than those with intermediate tenure, highlighting the 
+importance of informational resilience. In contrast, women, 
+less educated respondents, and people aged 51–65 show no 
+significant preference for the attributes examined, suggesting 
+that their core concerns are not captured by our design and 
+require further inquiry.
+These findings have direct implications for both preparedness 
+and response. In the prevention phase, census data can help 
+locate vulnerable groups such as the elderly, highly educated, 
+and newcomers. Intelligent signal systems should be deployed 
+at critical points, while dynamic control plans rather than 
+permanent reconstruction should be developed for high-risk 
+bottlenecks. For communities with many elderly residents, 
+pre-arranged pick-up points and vehicles for community-led 
+evacuation can strengthen social network resilience. In areas 
+with many newcomers, regular information campaigns on 
+evacuation routes and signal guidance can compensate for 
+unfamiliarity with the local road network. During response, 
+real-time location data can enable tailored messaging: older 
+adults receive pick-up point locations and access instructions, 
+while younger groups get congestion updates and estimated 
+walking times. A feedback loop to adjust signal timing and 
+route recommendations in real time can further improve 
+adaptability. This layered, information-driven approach may 
+enhance system resilience without requiring massive infrastructure investment.
+The choice scenarios were set in a high-risk context with a 
+mandatory evacuation order, and the preferences were elicited 
+through hypothetical scenarios rather than observed behavior. 
+The findings therefore primarily reflect residents' route preferences after the decision to evacuate has been made, rather 
+than the initial decision of whether to evacuate. Caution is also 
+needed when generalizing the conclusions to voluntary evacuation contexts or other geographical areas. Future work could 
+further examine the external validity of these findings through 
+post-disaster behavioral data or comparative studies in other 
+settings.
+Acknowledgments
+Supported by the National Natural Science Foundation of China (Grant 
+No. 52208078); National Social Science Foundation of China (Grant No. 
+25SGB007); Hunan Provincial Social Science Foundation (Grant No. 
+24YBQ154).
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+10 of 11 Journal of Flood Risk Management, 2026
+Funding
+This work was supported by the National Natural Science Foundation 
+of China (52208078), National Social Science Foundation of China 
+(25SGB007), and Hunan Provincial Social Science Foundation 
+(24YBQ154).
+Conflicts of Interest
+The authors declare no conflicts of interest.
+Data Availability Statement
+Data will be made available on request.
+References
+Abioye, F. O., A. M. Dulebenets, E. E. Ozguven, R. Moses, R. W. Boot, 
+and T. Sando. 2020. “Assessing Perceived Driving Difficulties Under 
+Emergency Evacuation for Vulnerable Population Groups.” SocioEconomic Planning Sciences 72: 100878.
+Aldahlawi, A. A., T. Akter, and A. Goodchild. 2024. “A Systematic 
+Review of Evacuation Planning From the Perspective of Human 
+Factors and Behavioural Optimization.” Transportation Research Part 
+D: Transport and Environment 127: 104045.
+Beijing Flood Control and Drought Relief Headquarters. 2012. Death 
+Toll From Beijing's Devastating Rainstorm Rises to 79. Beijing Review. 
+http://www.bjrev iew.com.cn/headline/txt/2012- 08/06/content_
+473402.htm.
+Beijing Municipal People's Government. 2023. Briefing on the “23·7” 
+Catastrophic Flood in Beijing [Press Release]. 21st Century Business 
+Herald. https://m.21jingji.com/article/20230822/herald/6b3e944343
+c7a601f6e5edb5c9503f3e.html.
+Borowski, E., and A. Stathopoulos. 2023. “Protection or Peril of 
+Following the Crowd in a Pandemic-Concurrent Flood Evacuation.” 
+Natural Hazards Review 24, no. 1: e04022045.
+Brachman, M. L., R. Church, B. Adams, and D. Bassett. 2020. 
+“Wayfinding During a Wildfire Evacuation.” Disaster Prevention and 
+Management: An International Journal 29, no. 3: 249–265.
+Buylova, A., C. Chen, L. A. Cramer, H. Wang, and D. T. Cox. 2020. 
+“Household Risk Perceptions and Evacuation Intentions in Earthquake 
+and Tsunami in a Cascadia Subduction Zone.” International Journal of 
+Disaster Risk Reduction 44: 101442.
+Capodici, A. E., G. D'Orso, M. Migliore, and M. Vittorietti. 2025. “A 
+Stated Preference Survey to Forecast Microtransit Choicein Suburban 
+Areas With Low Public Transport Ridership.” Journal of Urban Planning 
+and Development 15, no. 1: 05024049.
+Cea, L., and P. Costabile. 2022. “Flood Risk in Urban Areas: Modelling, 
+Management and Adaptation to Climate Change. A Review.” Hydrology
+9, no. 3: 50.
+David, W. C., and J. A. A. Ramos. 2022. “Typhoon-Induced Flood 
+Evacuation Mode Choice Modeling for Households in High-Risk Areas 
+in Candaba, Pampanga, Philippines.” Undergraduate thesis. University 
+of the Philippines Los Baños.
+de Albuquerque, N. L. B., L. B. L. da Silva, M. H. Alencar, and A. T. de 
+Almeida. 2024. “A Multicriteria Decision Model to Improve Emergency 
+Preparedness: Locating-Allocating Urban Shelters Against Floods.” 
+International Journal of Disaster Risk Reduction 111: 104695.
+Dias, C., N. A. Rahman, and A. Zaiter. 2021. “Evacuation Under Flooded 
+Conditions: Experimental Investigation of the Influence of Water Depth 
+on Walking Behaviors.” International Journal of Disaster Risk Reduction
+58: 102192.
+Dong, B., J. Xia, Q. Li, and M. Zhou. 2022. “Risk Assessment for People 
+and Vehicles in an Extreme Urban Flood: Case Study of the “7.20” Flood 
+Event in Zhengzhou, China.” International Journal of Disaster Risk 
+Reduction 80: 103205.
+Du, E., X. Cai, Z. Sun, and B. Minsker. 2017. “Exploring the Role of 
+Social Media and Individual Behaviors in Flood Evacuation Processes: 
+An Agent-Based Modeling Approach.” Water Resources Research 53, no. 
+11: 9164–9180.
+Fang, J., D. Wang, W. Zhu, and S. Song. 2016. “Residents' Recreation 
+Preference of the Country Park in Shanghai: A Stated-Preference 
+Analysis.” LA Planning and Design 1: 50–55.
+Haghani, M., M. Sarvi, and Z. Shahhoseini. 2020. “Evacuation Behaviour 
+of Crowds Under High and Low Levels of Urgency: Experiments of 
+Reaction Time, Exit Choice and Exit-Choice Adaptation.” Safety Science
+126: 104679.
+Huang, H., X. Zhang, and Y. Liu. 2022. “Evacuation Planning for 
+Vulnerable Populations in Urban Areas: A Case Study of Shanghai.” 
+Sustainability 14, no. 3: 1234.
+Jin, Z., Y. Wang, C. Li, C. Yu, X. Ye, and J. Mu. 2025. “Exploring 
+Heterogeneity in Evacuation Decision of Urban Residents Between 
+Utility and Regret Decision Rules Under a Flood Hazard.” Sustainable 
+Cities and Society 130: 106562.
+Kako, M., P. Arbon, B. Ryan, and N. Harada. 2022. “Establishing Best 
+Practice for the Implementation of Evacuation Centres for Vulnerable 
+Populations: A Comparative Analysis of the Australian and Japanese 
+Experience.” International Journal of Disaster Risk Reduction 79: 103165.
+Kundzewicz, Z. W., B. Su, Y. Wang, et al. 2019. “Flood Risk in a Range 
+of Spatial Perspectives-From Global to Local Scales.” Natural Hazards 
+and Earth System Sciences 19, no. 7: 1319–1328.
+Li, C., C. Jiang, J. Chen, M. Y. Lam, J. Xia, and R. Ahmadian. 2025. “An 
+Overview of Flood Evacuation Planning: Models, Methods, and Future 
+Directions.” Journal of Hydrology 656: 133026.
+Li, G. Z., H. L. Zheng, and Y. Z. Zhang. 2023. “Can Digital Economy 
+Enhance the Carrying Capacity of Super-Large and Mega Cities? A Case 
+Study of Beijing.” China Population, Resources and Environment 33, no. 
+6: 116–127.
+Liu, J., D. Wang, W. Zhu, H. Y. Wang, and C. S. Zhu. 2015. “A Comparison 
+of the Recreational Walking Environment Quality Between Old and 
+New Towns: A Case Study in Shanghai.” Geographical Research 34, no. 
+11: 2195–2204.
+Lovreglio, R., A. Fonzone, L. dell‘Olio, and D. Borri. 2016. “A Mixed 
+Logit Model for Predicting Exit Choice During Building Evacuations.” 
+Transportation Research Part A: Policy and Practice 92: 59–75.
+Luo, X., Z. Liu, and H. Zhu. 2016. “Analysis of the Competition Between 
+CRH Sleeper and Aviation in Beijing-Guangzhou Corridor Based on 
+SP Survey.” In International Conference on Logistics, Informatics and 
+Service Sciences, 6, 24–27. IEEE.
+McFadden, D. 1974. “Conditional Logit Analysis of Qualitative Choice 
+Behavior.” In Frontiers in Econometrics, edited by P. Zarembka, 105–
+142. Academic Press.
+Merz, B., G. Blöschl, and E. Macdonald. 2021. “Causes, Impacts 
+and Patterns of Disastrous River Floods.” Nature Reviews Earth & 
+Environment 2, no. 9: 592–609.
+Minami, T., T. Kato, and T. Sugiyama. 2024. “Characteristics of 
+Evacuation Surveys and Structure of Bias: A Comparison of “Stated and 
+Revealed Preference Surveys” in Evacuation Studies and Other Fields.” 
+Journal of the Institute of Social Safety Science 44: 187–195.
+Misal, H., E. Varela, A. Voulgarakis, A. Rovithakis, M. Grillakis, and 
+Y. Kountouris. 2023. “Assessing Public Preferences for a Wildfire 
+Mitigation Policy in Crete, Greece.” Forest Policy and Economics 153: 
+102976.
+Mizumura, T., and H. Nakamura. 2025. “Feasibility of Horizontal 
+Evacuation After Flooding Onset and Its Relationship With 
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License
+
+Journal of Flood Risk Management, 2026 11 of 11
+Geographical Characteristics.” International Journal of Disaster Risk 
+Reduction 124: 105506.
+Mozumder, P., and W. F. Vásquez. 2018. “Understanding Hurricane 
+Evacuation Decisions Under Contingent Scenarios: A Stated Preference 
+Approach.” Environmental and Resource Economics 71, no. 2: 407–425.
+Sadri, A. M., S. V. Ukkusuri, P. Murray-Tuite, and H. Gladwin. 2014. 
+“Analysis of Hurricane Evacuee Mode Choice Behavior.” Transportation 
+Research Part C: Emerging Technologies 48: 37–46.
+Shekhar, S., K. S. Yang, V. M. V. Gunturi, et  al. 2012. “Experiences 
+With Evacuation Route Planning Algorithms.” International Journal of 
+Geographical Information Science 26, no. 12: 2253–2265.
+Tellman, B., J. A. Sullivan, C. Kuhn, et  al. 2021. “Satellite Imaging 
+Reveals Increased Proportion of Population Exposed to Floods.” Nature
+596, no. 7870: 80–86.
+Wu, H. C., H. Murphy, A. Greer, and L. Clay. 2024. “Evacuate or Social 
+Distance? Modeling the Influence of Threat Perceptions on Hurricane 
+Evacuation in a Dual-Threat Environment.” Risk Analysis 44: 724–737.
+Xu, J., and D. J. Nair. 2026. “If Given Chances to Choose Again: A Stated 
+Preference Survey for Flood Evacuation Behaviour.” Transportation: 
+1–39.
+Yagi, S., and H. Shiraishi. 2017. “Policy Analysis for New Commuter 
+Rail and Road Pricing Alternatives Using an SP Survey in Abidjan.” 
+Transportation Research Procedia 25: 2520–2535.
+Yu, D., J. C. J. H. Aerts, N. Lin, and S. Xu. 2020. “Disruption of 
+Emergency Response to Vulnerable Populations During Floods.” 
+Nature Sustainability 3, no. 9: 728–736.
+Zhai, G. F., S. S. Li, and J. Chen. 2014. “Reducing Urban Disaster Risk by 
+Improving Resilience in China From a Planning Perspective.” Human 
+and Ecological Risk Assessment: An International Journal 21: 1206–1217.
+Zhang, R. K., D. D. Liu, Y. X. Xu, C. J. Xu, and X. Chen. 2025. “Personal 
+Factors Influencing Emergency Evacuation Decisions Under Different 
+Flash Flood Characteristics.” Natural Hazards 121: 4731–4757.
+ 1753318x, 2026, 4, Downloaded from https://onlinelibrary.wiley.com/doi/10.1111/jfr3.70272, Wiley Online Library on [17/11/2026]. See the Terms and Conditions (https://onlinelibrary.wiley.com/terms-and-conditions) on Wiley Online Library for rules of use; OA articles are governed by the applicable Creative Commons License

@@ -1,0 +1,1120 @@
+Increasing Evacuation During Disaster Events
+Chris J. Kuhlman
+University of Virginia
+Charlottesville, Virginia
+cjk8gx@virginia.edu
+Achla Marathe
+University of Virginia
+Charlottesville, Virginia
+achla@virginia.edu
+Anil Vullikanti
+University of Virginia
+Charlottesville, Virginia
+vsakumar@virginia.edu
+Nafisa Halim
+Boston University
+Boston, Massachusetts
+nhalim@bu.edu
+Pallab Mozumder
+Florida International University
+Miami, Florida
+mozumder@fiu.edu
+ABSTRACT
+Timely evacuation is a standard recommendation by local agencies before disaster events such as hurricanes, which have enough
+advance notice. However, it has been observed in many recent
+disasters (e.g., Sandy), that only a small fraction of the population
+evacuates in time. Recent work by social scientists has examined the
+factors that influence household evacuation decisions; in addition
+to individual factors it has been found that peer effect plays a role
+in this decision but in two opposing ways. Specifically, households
+are motivated to evacuate if their neighbors evacuate. However, if
+too many neighbors leave then some households have concerns of
+looting and crime, and they choose not to evacuate. This makes the
+dynamics of evacuation very complex.
+In this paper, we use a detailed agent based model to study
+the dynamics of evacuation in Virginia’s coastal region. We use
+data from a large survey and social contagion and collective action
+theories to develop the model. We evaluate different strategies to
+increase evacuation.
+KEYWORDS
+Agent based models; social networks; contagion processes; disaster
+informatics; evacuation
+ACM Reference Format:
+Chris J. Kuhlman, Achla Marathe, Anil Vullikanti, Nafisa Halim, and Pallab
+Mozumder. 2020. Increasing Evacuation During Disaster Events. In Proc.
+of the 19th International Conference on Autonomous Agents and Multiagent
+Systems (AAMAS 2020), Auckland, New Zealand, May 9–13, 2020, IFAAMAS,
+9 pages.
+1 INTRODUCTION
+1.1 Background and Motivation
+Households in coastal areas face the dilemma of evacuating during
+a hurricane event to avoid life threatening risk posed by intense
+wind and flood inundation versus staying put to safeguard their
+assets and belongings and avoid looting. The longer one waits,
+the more precise the information (about intensity and location of
+landfall) that may be available to provide guidance for the need and
+direction of evacuation. However, arranging related logistics with
+more waiting may become challenging. As time passes, finding a
+Proc. of the 19th International Conference on Autonomous Agents and Multiagent Systems
+(AAMAS 2020), B. An, N. Yorke-Smith, A. El Fallah Seghrouchni, G. Sukthankar (eds.), May
+9–13, 2020, Auckland, New Zealand. © 2020 International Foundation for Autonomous
+Agents and Multiagent Systems (www.ifaamas.org). All rights reserved.
+place to stay may be more difficult, roads may be more congested,
+and risk of getting stranded may be higher. In reality, the decision
+to evacuate depends on a complex mix of sociodemographic factors,
+risk perceptions, access to transportation, prior experiences, storm
+intensity and peer behavior [21, 31, 35].
+Many of these interacting factors coevolve as a hurricane approaches, and empirical agent-based models (ABM) powered with
+real observations can offer novel insights to represent and simulate
+human behavior in these contexts. There has been a large number
+of works on developing ABMs [12, 27, 29, 37]. Some of the prior
+ABM approaches use very limited to almost no observational data
+from natural hazards [12, 16, 27, 29, 34, 36]. Some of these ABMs
+[14, 16, 34, 36] use threshold functions to model peer effects, in
+which a household is more likely to evacuate when its neighbors
+evacuate. However, most prior studies miss an important component in evacuation behavior, namely concerns about looting and
+criminal activity, which social scientists have shown contribute to
+reduced evacuation [10, 20, 30]. Specifically, these concerns work in
+opposition to the above peer effects, and a household with such concerns might not evacuate if its neighbors leave [14]. These factors
+have not been taken into account in ABMs for evacuation behavior
+in a data-driven manner. Our paper is the first to do so.
+There have been many studies in the literature on the topic of
+evacuation, some of which use statistical models [7, 23, 24], while
+others use parameterized methods [4, 9, 17] and ABMs [12, 16, 27,
+29, 34, 36]. Some researchers have even identified criminal activity
+as a major issue in the evacuation decision [10, 20, 30, 32].
+1.2 Contributions
+1. Survey data and statistical analyses of evacuation. Survey
+results from 1,212 Hurricane Sandy respondents were analyzed to
+understand evacuation behavior of households. A detailed regressionbased analysis identifies the intrinsic (household-specific) as well
+as exogenous factors (peer behavior) that significantly influence
+households’ evacuation decision-making (see Section 2.3). Among
+the significant observations from hurricane surveys is that neighbors’ evacuation (peer influence) can have two competing effects
+on a family: it can motivate a family to evacuate, and it can inhibit
+a family from evacuating because of fear of crime and looting. Ours
+is the first work to quantify these effects from surveys and then
+incorporate them in an agent-based model to study interactions
+between these effects with respect to evacuation behavior.
+2. Evacuation Model. An ABM for evacuation decision (ABMed )
+is constructed from the statistical model and the social network. It
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 654
+
+is a data- and theory-driven model: the data-driven model accounts
+for within-family factors and the theory-driven model accounts for
+exogenous factors that contribute to evacuation decisions. Specifically, the data-driven (survey-based) model accounts for a family’s
+decision to evacuate, but does not account for the temporal effects
+during the lead-up to a hurricane’s arrival. Also, the survey data
+shows that a family factors neighbors’ evacuation decisions in its
+own decision to evacuate, but does not provide requisite detail on
+how neighborhood effects are incorporated. Thus, we use contagion and collective action theories [2, 6, 13, 25, 26] to introduce
+two parameters, ci,lev and ci,r em, that characterize the minimum
+fraction (or number) of neighbors that have chosen to evacuate, in
+order for that family to consider neighborhood effects relevant. The
+first (respectively, second) parameter controls the neighborhood
+states that a family deems important when considering evacuation
+(respectively, remaining in place). The general modeling framework in Section 2.1 is customized for these hurricane evacuation
+phenomena in Section 2.4.
+3. Dynamics of evacuation decisions, and interventions. We
+use ABMed on a realistic synthetic population of VA Beach, VA,
+constructed using the methods of [3, 5, 11]; see Section 2.2. We
+study the effects of two types of interventions: (a) seeding, which
+involves convincing a subset S of nodes to evacuate, and (b) providing security to a subset S
+′ of nodes, which corresponds to setting
+ci,r em = 1. Our main results on the dynamics of ABMed are: (i) We
+show that planning these interventions within a given budget, so
+that the expected number of evacuations is maximized within T
+steps, has a large inapproximability factor. For T = 1, we design
+an algorithm with a rigorous worst case guarantee, relative to the
+optimal. Due to its computational hardness for higher T , we instead
+design an algorithm to maximize the number of nodes which are
+provided security (so ci,r em becomes 1 for them), by a tour of cost
+bounded by a given budget. These results are in Section 3. (ii) In
+practice, we find through simulation that seeding does not make a
+big difference in the overall evacuation rate, and households can
+decide to evacuate based on intrinsic factors alone—this is in contrast with the classic studies of contagion, where seeding must be done
+to achieve diffusion [13]. (iii) Network effects and incentives can
+be effective in increasing evacuation rates, based on our simulation results (Section 4.2). We model police going door-to-door to
+reduce families’ concerns of crime and looting, which corresponds
+to increasing ci,r em in our model. We find that this has a significant effect on simulation results—the removal of fear of looting
+can increase the fraction of families evacuating by up to 50%. The
+effect of ci,lev (for controlling the neighborhood effect to encourage evacuation) is dwarfed by that of ci,r em (for controlling the
+influence of crime to remain in place).
+Novelty of our work. Our paper is the first ABM for evacuation
+decisions that combines a detailed survey with a realistic population.
+Our model is the first to account for the evacuation-inhibiting effect
+of concerns over looting and other crime, with increasing numbers
+of evacuating neighbors.
+Organization. Our model is presented in Section 2. Results on the
+complexity of intervention design problems are in Section 3, and
+simulation results are in Section 4. We conclude in Section 5.
+2 MODELS
+The graph dynamical systems (GDS) model [1, 22] provides a formal
+framework for specifying and reasoning about models of human
+behavior and the resulting dynamics of a system. GDS is presented
+in Section 2.1. This general model is applied to our particular case
+of hurricane evacuations, and the details of these modeling efforts
+are presented in the sections specified in Figure 1.
+GDS Network 
+model
+Statistical 
+model
+ABM for 
+simulation
+= + +
+Figure 1: The GDS model of Section 2.1 is composed of the
+three elements on the RHS, which are represented below:
+Section 2.2 contains the network model, Section 2.3 contains
+the statistical model, and Section 2.4 contains the ABM.
+2.1 A Graph Dynamical Systems Framework
+Graph dynamical system description. We use the framework of
+graph dynamical systems (GDS) to abstract our agent based model,
+which is used to study evacuation behavior. Let V denote the set
+of agents. Each node vi ∈ V can be associated with a state xi(t) ∈
+{0, 1} at time t, with xi(t) = 1 (resp., 0) indicating that agent vi has
+evacuated (resp., not evacuated). Let x(t) ∈ {0, 1}
+n denote the vector
+of agent states at time t. A GDS S consists of two components: (1) an
+interaction networkG = (V, E), whereV represents the set of agents
+(in our case, the households which are deciding whether or not to
+evacuate), and E represents a set of edges, with e = {vi
+,vj } ∈ E if
+agents vi and vj can influence each other; and (2) a set F = { fi
+:
+vi ∈ V } of local functions fi
+: {0, 1}
+deд(vi ) → {0, 1} for each node
+vi ∈ V , which determines the next state of node vi
+in terms of
+the states of N(i), the set of neighbors of vi
+; deд(vi) = |N(i)|. The
+model is a progressive model [18] in that the only state transition is
+0 → 1; once a node is in state 1, it remains in state 1. (Once a family
+decides to evacuate, it does not then change its mind to remain
+in place.) Given a vector x(t) describing the states of all agents at
+time t, the vector x(t + 1) at the next time is obtained by updating
+xi(t + 1) using its local function fi(·) for all vi ∈ V .
+The EvacThresh local functions: modeling evacuation behavior. The EvacThresh function fi(·) is probabilistic, and depends on the probability of evacuation (the y-axis variable in Figure 2), in order to capture the qualitative aspects of the results of
+[15]. For each nodevi
+, we have parameters ai
+,bi
+,ci,lev ,ci,r em,p
+init
+i
+,
+and p
+f inal
+i
+. Let ni(t) =
+Í
+j ∈N (i) xj(t) denote the number of neighbors of node vi
+in state 1. At each time step t, we have
+Pr[xi(t) = 1|xi(t−1) = 0] =
+(
+p
+init
+i
+=
+1
+1+exp(−ai )
+, if ni(t) < ci
+p
+f inal
+i
+=
+1
+1+exp(−ai−bi )
+, if ni(t) ≥ ci
+(1)
+where ci may represent ci,lev (Figure 2 (Left)) or ci,r em (Figure 2
+(Middle)) or both (Figure 2 (Right)), and where we also denote the
+LHS above as pi,evac for node vi
+. Definitions for ci,r em and ci,lev
+are given in Section 1.2, Contribution 2. The parameter bi combines
+both peer effects, as well as concerns of looting. If node vi has no
+looting concern, we have bi ≤ 0, and p
+f inal
+i
+≥ p
+init
+i
+; otherwise,
+we have bi ≥ 0, and p
+f inal
+i
+< p
+init
+i
+. This is illustrated in Figure 2.
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 655
+
+Frac. of Nbrs in State 1
+0 0.5 1.0
+Probability of Evacuation 0.4
+0.3
+0.2
+0.1
+0.0
+!", $%&
+'"
+"(")
+'"
+*"(+$= '"
+$%&
+Frac. of Nbrs in State 1
+Probability of Evacuation
+'"
+"(")
+'"
+*"(+$= '"
+,%-
+Frac. of Nbrs in State 1
+Probability of Evacuation
+'"
+"(")
+'"
+*"(+$ = '"
+,%-
+!", ,%-
+!", $%&
+'"
+$%&
+!", ,%-
+0.4
+0.3
+0.2
+0.1
+0.0
+0.4
+0.3
+0.2
+0.1
+0.0
+0 0.5 1.0 0 0.5 1.0
+Figure 2: The EvacThresh model, for an arbitrary vi
+, illustrating the probability of evacuation pi,evac (y-axis) vs the fraction
+ni (t) of neighbors who have already evacuated (x-axis), in three
+different cases. (Left) There is concern only for evacuating, and
+p
+f inal
+i
+> p
+ini t
+i
+. (Middle) There is concern for only looting, and
+p
+f inal
+i
+< p
+ini t
+i
+. (Right) There is concern for both evacuating and
+looting, and p
+f inal
+i
+< p
+ini t
+i
+.
+Interventions. We consider two kinds of interventions, both of
+which involve selecting a subset S ⊂ V of nodes: (1) Seeding, in
+which the nodes in S are convinced to evacuate, i.e., xi(0) = 1 for
+all vi ∈ S. (2) Providing security, in which the neighborhoods where
+nodes in S live are provided security, so that the local function fi(·)
+for each vi ∈ S is as in Figure 2(Left). We use c1(S) and c2(S) to
+denote the costs of set S in these two cases. In general, the costs
+are sub-additive, since they typically involve logistical costs. For
+instance, in case (2), a law enforcement official has to come to
+the location where v stays, so we model c1(S) as the cost of the
+minimum tour connecting the nodes in S.
+Problems of interest. For a GDS abstraction Sevac , and interventions S1, S2, we define evac(Sevac , S1, S2,T ) as the expected
+number of nodes who choose to evacuate, for interventions S1, S2,
+during T time steps. We study the following questions:
+(1) What are the dynamics of evacuation? How many and what
+kind of people end up evacuating?
+(2) MaxEvac problem: given a budget B, design interventions S1, S2,
+such thatc(S1)+c(S2) ≤ B, and evac(Sevac , S1, S2,T ) is maximized.
+(3) MinCostEvac problem (complement of MaxEvac): given a target evacuation factor s, choose an intervention S1, S2, such that
+evac(Sevac , S1, S2,T ) ≥ s|V |, and c(S1) + c(S2) is minimized.
+Example. Figure 3 shows an example of a GDS Sevac with local functions as in Figure 2. For node 3, we have p
+f inal
+3
+< p
+init
+3
+because of looting concern, but for all the remaining nodes, we
+have p
+f inal
+i
+> p
+init
+i
+. As shown in the figure, the probability of the
+transition x(1) → x(2) is 0.189. There are 8 possible configurations
+to which the system can transition in one step from x(1), each
+corresponding to a subset of the three nodes 2, 3, 4 switching to
+state 1 (including the configuration in which none of them switches
+to 1). Starting from the configuration x(1), and with S1 = {1, 5}
+as the seed set, it is easy to verify that the expected number of
+nodes which evacuate, i.e, switch to state 1, is 2.7 (this includes the
+nodes 1 and 5, which are already in state 1), i.e., evac(Sevac , S1 =
+{1, 5}, S2 = ∅) = 2.7.
+2.2 Synthetic Population and Social Networks
+Synthetic population. We develop a synthetic population for the
+Virginia Beach region of Virginia that was impacted by Hurricane
+1
+2 3
+!(#)
+4
+5
+1
+2 3
+4
+!(%) 5
+Figure 3: An example showing the transitions in a Sevac
+model on a graph with five nodes, and EvacThresh local
+functions, with parameters θi = 0.5 and p
+init
+i
+= 0.2 for all
+vi
+, p
+f inal
+2
+= p
+f inal
+4
+= p
+f inal
+5
+= 0.3, and p
+f inal
+3
+= 0.1. The
+system starts in configuration x(1) with x1(1) = x5(1) = 1
+(they are colored blue), and xi(1) = 0 for all vi = 2, 3, 4 (they
+are colored white). The probability of transition x(1) → x(2)
+(i.e., the probability that the system state at left at time
+t = 1 will transition to the state shown at right at t = 2)
+is p
+f inal
+2
+(1 −p
+f inal
+3
+)(1 −p
+f inal
+4
+) = 0.3 · (1 − 0.1) · (1 − 0.3) = 0.189.
+In this calculation, a node vi that does not change state remains in its current state with probability (1 − p
+f inal
+i
+). See
+Section 2.1 for definitions of x(t) [vector of agent states] and
+xi(t) [an agent vi
+’s state].
+Sandy. This region has a population of over 450,000 that is distributed over 167,722 households. Households (i.e., families) are
+nodes in our social networks and agents in our ABM. Our synthetic
+representation of this population is statistically indistinguishable
+from the Census data for this region, at a block group level. Additionally, it is geographically situated based on land-use data, with a
+real geo-location which invokes the concept of neighbors and long
+range connections [3]. For each family, we generate attributes such
+as its geographic (longitude, latitude) house structure coordinates,
+household income, household size, and whether a family has internet access. We also use individual characteristics (most often, those
+of head of household) such as race, gender, and age. (The statistical
+analysis, Section 2.3, has more detail.) Hence, the households are
+heterogeneous.
+Social networks and their structures. We add edges between
+households based on the Kleinberg small world (KSW) model [19].
+In particular, we specify the short-range distance dsr over which local interactions take place among neighbors (resulting in bi-directed
+edges), and the number q of long-range directed edges incoming
+to each vi
+, that represent work-related interactions of adults. See
+Table 1. Hence, we generate and study a family of networks.
+In the absence of long-range edges (i.e., q = 0), there are thousands of strongly and weakly connected components in the networks: as dsr increases, the number of connected components decreases from 19487 to 1235, while the size of the largest weakly
+connected component (WCC) increases from 381 families to 51006.
+When q increases to 2, there is a one WCC in every graph. Average
+degrees for all dsr and q can be computed from the degrees for
+q = 0 in Table 1, based on the graph construction process.
+Here, our work is confined to face-to-face interactions, although
+interactions of other types are candidates for future work. This
+might include other network models. For example, communication
+networks for social media are often scale free networks.
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 656
+
+Table 1: Kleinberg small world (KSW) networks [19] used in
+our experiments. The exponent α = 2.5 in the KSW model is
+for computing the probabilities of selecting particular longrange nodes with which to form long-range edges with each
+node vi ∈ V . The value of q can be added to the average indegree in the table to get average in-degree for different q.
+There are five graph instances for each (dsr,q) combination.
+No.
+Nodes
+Short-Range
+Distances (km)
+No. Long-Range
+Edges
+Avg. In- & Out-Deg
+Per dsr , for q = 0
+167722 0.04, 0.07, 0.10 0, 2, 4, 8, 16, 32 9.58, 22.68, 40.96
+2.3 Statistical Model of Evacuation Behavior
+2.3.1 Survey. An internet-based survey was conducted by GfK
+(formerly known as Knowledge Networks) using its unique panel
+of respondents (KnowledgePanel®), to assess factors driving evacuation decisions [24]. It was implemented in counties affected by
+Hurricane Sandy which hit northeastern U.S. in October 2012.
+With the statistical control applied to the sample selection, GfK
+ensures the representativeness of KnowledgePanel survey samples
+as measured by their proximity to population benchmarks. The
+survey was posted online on July 7, 2013 and was closed two weeks
+later on July 22. A total of 1,212 individuals completed the survey
+with a response rate of 61.93%. Altogether the survey had 48 questions on issues related to hurricane risk, coastal vulnerability and
+demographics, and on average, took about 15 minutes to complete.
+2.3.2 Analysis and correlations of neighbors’ evacuation. Using
+a Binomial Logit model, we tested for the factors associated with
+households’ evacuation behavior, i.e., we tested in order to identify
+which variables in the survey are important in predicting evacuation
+behavior. We estimated the following equation:
+Y
+∗
+i = β
+′
+Zi + µi
+, (2)
+where Y
+∗
+i
+is the log odds of evacuation, all β values in the equations
+of this section are binomial logit regression model parameters, Zi
+are the explanatory variables, and µ is the error term. Yi
+is 1 if the
+log-odds of evacuation Y
+∗
+i
+> 0, and 0 elsewhere. And
+β
+′
+Zi = β0 + Σ
+K
+k=1
+βH kHk i , (3)
+where H denotes a vector of explanatory factors. We considered a
+variety of explanatory variables including respondent’s age, gender,
+race, highest level of education completed; employment status; the
+importance of neighbors’ evacuation decisions in respondent’s own
+decision to evacuate; the importance of concerns of crime or looting in the neighborhood in respondent’s own decision to evacuate;
+household size; number of elderly members in the households; number of disabled members in the household; household ownership;
+living in a mobile home; household has access to the internet; income; number of vehicles owned; the age of the housing structure;
+and whether household has a home insurance. We estimated the
+equation using a Binomial Logit model, as appropriate for the level
+of measurement for the dependent variable, with robust standard
+errors.
+Our results indicated that respondent’s employment status; consideration of neighbors’ evacuation behavior; concerns about neighborhood criminal activities or looting; having access to the internet
+in the house; age of the house; and having home insurance, each
+played a significant role in a respondent’s decision to evacuate
+during hurricane Sandy. The effect sizes were modest, nonetheless.
+The estimated model is shown in Table 2.
+Table 2: Logistic Regression results: dependent variable is
+if the respondent evacuated or not during Hurricane Sandy.
+(*) symbol next to p-value shows the variable is significant.
+Independent Variable Odds Ratio p-Value
+Age (in years), ahoh 1.000 0.991
+Female (Ref: Male), khh 0.848 0.451
+Race (Ref: Black)
+White, irw 0.740 0.540
+Other, ir o 0.655 0.620
+Hispanic, ir h 1.548 0.657
+Mixed, imr 0.312 0.000*
+Education (Ref: High school or less)
+Some college, esc 1.423 0.146
+Bachelor or higher, ealb 1.488 0.264
+Employment status, hmw 1.076 0.004*
+Evacuation decision made by neighbors etc. (Ref: not important)
+Somewhat important, ηs i 1.134 0.550
+Important, ηi 1.688 0.027*
+Very important, ηvi 1.614 0.423
+Concerns about crime such as looting (Ref: not important at all)
+Somewhat important, ℓs i 0.527 0.042*
+Important, ℓi 0.277 0.085*
+Very important, ℓvi 0.283 0.051*
+Interaction (neighbor and looting), βe l 1.055 0.500
+Household size, ihs 0.794 0.354
+No. of HH members who are disabled, imd 1.068 0.671
+No. of HH members who are elderly, ime 1.322 0.225
+Household is owned, iio 0.680 0.428
+Living in a mobile home, imh 0.931 0.709
+HH has access to the internet, iia 0.235 0.028*
+HH Income, ihi 1.015 0.770
+No. of vehicles owned by HH, rc 1.057 0.810
+Age of house, ahhs 0.997 0.074*
+HH has home insurance, if i 6.379 0.000*
+constant 0.434 0.479
+Respondent’s age, gender or race did not influence her decision
+to evacuate. The same pattern was evident for household size, the
+number of elderly, and disabled members living in the household.
+None of the economic status indicators such as income, household
+ownership, living in a mobile home, or number of vehicles was
+associated with evacuation decisions. Education was marginally
+associated. No meaningful difference existed in evacuation behavior
+between respondents who completed high school or attended high
+school or a lower schooling level, and those with a bachelor’s degree.
+Further, respondents living in an older housing structure had a
+higher likelihood of evacuation during Hurricane Sandy.
+2.3.3 Estimating importance of neighbors’ evacuation and concerns about crime and looting. To estimate the probability of evacuation for each household in the synthetic population, we need
+data on each of the explanatory variables used in the binary logit
+equation. Since the synthetic population’s attributes are derived
+from the census data, the demographic features for each household
+are readily available. However the behavioral features, such as the
+importance of neighbors evacuation decisions (which motivates a
+family to evacuate) and concerns about crime (which motivates a
+family to stay) must be estimated from the survey data separately.
+For each of these two features, an ordered logistic regression
+model was separately built based on the survey data. The ordered
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 657
+
+logistic was used to handle the 4-level response in the survey data,
+i.e., not important (index = 0), somewhat important (index = 1),
+important (index = 2), and very important (index = 3). These models were then applied to the synthetic population to estimate their
+corresponding features, which in turn were used to estimate the
+probability of evacuation. In both “neighbor” and “looting” models, we found age, gender, race, education level, family size and
+household income to be significant in estimating the importance.
+2.3.4 Estimating the probability of evacuation. With important
+variables identified in Section 2.3.2, and the additional analysis
+results in Section 2.3.3, a logistic regression was performed with the
+explanatory variables of Table 2 to calculate the probability pi,evac
+of a family vi evacuating, given by:
+pi,evac = 1/(1 + [1/exp(−0.835045 + дhh + дnet )]) (4)
+where дhh represents the intrinsic (i.e., household-related) terms
+дhh = − 0.00017 ahoh − 0.165 khh − 0.301 irw
++ 0.436 ir h − 0.423 iro − 1.163 imr
+0.353 esc + 0.397 ealb + 0.073 hmw
+− 1.446 iia − 0.0025 ahhs + 1.853 i
+f i
+− 0.231 ihs + 0.015 ihi + 0.066 imd + 0.279 ime
+− 0.386 iio − 0.0718 imh + 0.056 rc
+(5)
+and дnet represents the network (i.e., exogeneous) terms
+дnet =0.125 ηs i + 0.523 ηi + 0.478 ηvi + 0.053 βel
+− 0.640 ℓs i − 1.284 ℓi − 1.263 ℓvi
+.
+(6)
+Variables in Equations (5) and (6) are provided in Table 2 and the
+coefficients are determined from the logistic regression. In Equation (6), we note that an increase in probability from evacuating
+being operative (ηi coefficient) is lesser in magnitude than each of
+the three remaining terms for remaining in place (not evacuating).
+Thus, we see that when both effects are operative, the remaining
+behind (i.e., looting) term dominates (only one of the three terms is
+operative for a vi
+), so the behavior is as shown in Figure 2(Right).
+Figure 2(Left) applies when only the evacuating influence is operative. Figure 2(Middle) applies when only the looting influence is
+operative.
+The term дhh is a data-driven model, while дnet is a data-plustheory-driven model. Both are time-independent models, but дnet
+is augmented in the agent model (Section 2.4) to become timedependent, accounting for the changing states of a node’s neighbors.
+Theory enters through contagion theory [2, 6] and peer influence
+collective action theory [13, 25, 26]. Thus, дhh in Equation (4) provides heterogeneity across families and дnet (when augmented)
+provides heterogeneity and time dependence in the dynamics of
+hurricane evacuation decision making.
+Equations (4) through (6) represent the particular local function
+fi(·) for family vi that was presented in general terms by Equation (1) of the GDS description in Section 2.1.
+2.3.5 Model based estimates of missing data on home insurance.
+In VA Beach 55,014 households out of a total of 167,722 households, had missing information about home insurance. To estimate
+this missing information we trained a regression model on all the
+112,708 households for which home insurance data was available.
+The response variable in the regression was whether the household
+had home insurance or not and the independent variables were
+demographic variables: household size, household income, age of
+the house, age of the head of the household, employment status,
+and marital status. Once this model was learned, it was applied
+to the households for which home insurance data was missing, to
+obtain an estimated probability of having home insurance.
+2.4 Agent Model of Behavior
+2.4.1 Overview of model development. The survey data are a
+collection of individual responses to questions that focus on respondents’ and their families’ demographics, and the end result
+of whether the family evacuated prior to the arrival of Hurricane
+Sandy. In this sense, the survey data are static, end-of-event information: for example, a respondent states that she and her family
+either evacuated or did not (not the day that they decided to evacuate nor the evacuation decisions of their neighbors). Consistent
+with the GDS framework in Section 2.1 and consistent with the
+neighborhood effects found in the survey data and analyses of Section 2.3, our goal is to develop a model that accounts for (i) time
+evolution of evacuation decisions, and for (ii) neighborhood effects.
+That is, the survey data did not have a temporal aspect: respondents
+state whether they evacuated or did not, and not when, if they did
+evacuate. Since our model considers temporal evacuation decisions,
+which enables interventions that would not otherwise be possible
+to explore, we convert the probability from the logistic model to
+a daily probability. We address these in the next two subsections
+and then in the third subsection, we put these results together to
+produce an algorithm for the probability of a family deciding to
+evacuate at each time step.
+2.4.2 Predicting neighbor influence on evacuation and sheltering
+in-place. Section 2.3.3 describes the procedure for estimating the
+influence of neighbors for evacuating and for crime (i.e., remaining)
+on a family’s evacuation decision. The covariates in these binary
+logit models are time-independent quantities and hence are computed once for each family. For each household vi
+, for each of the
+two effects (evacuating and remaining), we compute probabilities
+for each of the four levels. To calculate the probability of evacuation
+as shown in Equation (6), the following parameters are required:
+ℓs i , the indicator variable for the remaining (i.e., not evacuating)
+category of somewhat important; ℓi
+, the indicator variable for the
+remaining category of important; ℓvi
+, the indicator variable for
+the remaining category of very important; and the analogous three
+variables from Table 2 for the categories of evacuating. With these
+variables, we form two vectors for eachvi
+: ηi,evac = (0, ηs i, ηi
+, ηvi)
+for evacuating and ℓi,loot = (0, ℓs i, ℓi
+, ℓvi) for remaining. In each
+of these two vectors, at most one element will be 1: that is the element corresponding to the category with the greatest probability
+from the analyses of Section 2.3.3.
+2.4.3 Network peer effects. Peer (i.e., distance-1 neighbor) effects
+fromvi
+’s social network are incorporated into the evacuation model
+for family vi
+, using the following motivating scenario. Through
+the regressions of Section 2.3.3, it is determined that a family vi
+considers the influence of its distance-1 neighbors to be important
+in motivating them to evacuate, and very important in motivating
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 658
+
+them to remain in place (due to looting concerns). Suppose at some
+time t, vi has no neighbors that are evacuating, and the family is
+deciding to evacuate. Even though peer effects are important, there
+are no neighbors that are evacuating to provide these evacuating
+and remaining influences. So the contribution of peer influence to
+vi
+in this situation is ambiguous.
+We resolved this ambiguity in the following way. We specify
+critical fractions (or counts) of neighbors in state 1 for motivating evacuation ci,lev and for motivating remaining in place ci,r em.
+That is, if at least a fraction (or count) ci,lev (respectively, ci,r em)
+of vi
+’s neighbors is in state 1, then vi considers these neighbors to
+be compelling in motivating vi to leave (respectively, remain); otherwise, vi
+ignores this neighborhood condition as not persuasive.
+In this way, the driving force for changing vi
+’s probability of
+evacuation is dynamic: it changes in time according to the fraction (or count) of neighbors in state 1, and ci,lev and ci,r em. The
+remaining terms in the probability of evacuation (Equation (4))
+are assumed static for a simulation; these include age, gender, and
+education attainment.
+2.4.4 Probability of evacuation. Algorithm 1 describes the process of determining whether a family vi evacuates at time (t + 1),
+based on the system at time t. Inputs to the algorithm include the
+modeling results of this Section 2.4, and the rest of Section 2. The
+duration of the simulation is t
+∗
+. Algorithm 1 is the local function
+for each vi
+. If a family is in state 1 at time tˆ, then it is evacuating
+at all time t ≥ tˆ (step 1). If not (i.e., vi
+is in state 0), then the state
+of vi
+is determined. First, the fraction (or count) of vi
+’s neighbors
+that are in state 1 is determined (step 3). Then, steps 4 and 5 determine whether peer influence for evacuating should be incorporated,
+and if so, the value. Next, steps 6 and 7 determine whether peer
+influence for remaining in place should be incorporated, and if so,
+the value. Steps 8 through 11 compute the probability of evacuation, convert it to a daily value, and perform a Bernoulli trial to
+determine whether vi transitions to the evacuating state 1.
+3 COMPLEXITY OF MAXEVAC AND
+MINCOSTEVAC
+These problems turn out to be very hard even for the simplest case of
+T = 1, even if there is no concern of looting, so that p
+f inal
+v > p
+init
+v
+for all nodes v ∈ V .
+Theorem 3.1. Even if p
+init
+v = 0 and p
+f inal
+v = 1 for all v, T = 1,
+and no nodes have looting concerns, the MaxEvac and MinCostEvac
+problems are NP-complete; further, in this setting, the MinCostEvac
+problem cannot be approximated within a factor of O(n
+1
+2(log logn)
+c
+) for
+some c.
+We show an approximation algorithm for MinCostEvac when
+T = 1, building on the result of [28].
+Theorem 3.2. Suppose there is a solution S
+∗
+to MinCostEvac for
+instances withT = 1 and no looting concern, such that evac(Sevac , S
+∗
+, ∅,T =
+1) ≥ q
+∗n. Let rmax = maxv θvdeд(v). Then, it is possible to get a
+solution S with |S | = O(|S
+∗
+|rmax log2 n(1 + ln 1
+ϵ
++
+1
+ϵq
+∗ )), such that
+evac(Sevac , S, ∅, 1) ≥ (1 − ϵ)q
+∗n.
+Proof. (Sketch) We reduce the MinCostEvac problem to the
+partial set multi-cover problem. If no node i has looting concern,
+Algorithm 1: Local Function Computation for vertex
+vi at time t in a simulation.
+1 Input: t, vi
+, x(t), ni(t), t
+∗ = 10 days, ci,lev , ci,r em, βel ,
+ahoh, ηi,evac = (0, ηs i, ηi
+, ηvi), ℓi,loot = (0, ℓs i, ℓi
+, ℓvi),
+khh, irw , ir h, iro , imr , hmw , iia, ahhs , i
+f i , esc , ealb , ihs , ihi
+imd , ime , iio , imh, rc . See Table 2 for symbol meanings.
+2 Output: For family vi at time t + 1, the next state xi(t + 1).
+3 Steps:
+(1) if xi(t) == 1 do
+i. Return xi(t + 1) = 1. // Family is already evacuating.
+(2) Set xi(t + 1) = 0. // Family vi
+’s next state is initialized to 0.
+(3) Determine the fraction (or count) ni of vi
+’s neighbors that
+are evacuating (i.e., in state 1).
+(4) Set vector η = (0, 0, 0, 0). // vi does not consider its
+neighbors leaving to be important in motivating vi to leave;
+the effect is inoperative.
+(5) if ni ≥ ci,lev do
+i. Make vector assignment η = ηi,evac // Makes
+neighborhood influence to evacuate operative.
+(6) Set vector ℓ = (0, 0, 0, 0). // vi does not consider its
+neighbors leaving to be important in motivating vi to leave;
+the effect is inoperative.
+(7) if ni ≥ ci,r em do
+i. Make vector assignment ℓ = ℓi,loot // Makes
+neighborhood influence to remain operative.
+(8) Compute Equation (4) and convert to daily probability
+pi,evac,daily = 1 − (1 − pi,evac )
+(1/t
+∗
+)
+.
+(9) Generate a number nr andom ∈ [0, 1] uniformly.
+(10) if (nr andom ≤ pi,evac,daily ) do
+i. Set xi(t + 1) = 1. // Family vi has transitioned to the
+evacuating state.
+(11) Return xi(t + 1).
+it evacuates with probability p
+f inal
+i
+, if ri = θideд(i) neighbors
+have evacuated. Since T = 1, this corresponds to having at least
+ri neighbors of i in the seed set S. We use the algorithm of [28] to
+find a subset S that maximizes the number of such nodes. □
+Maximizing the evac(·) objective for larger T is a much harder
+problem. Further, our experiments suggest that in practice, seeding
+has limited impact on evacuation. Therefore, we consider the problem of finding a subset S of homes to visit, so thatc2(S) ≤ B, where
+B is a given budget, and Í
+v p
+f inal
+v is maximized. Here, we consider
+the sum of p
+f inal
+v ’s, instead of |S |, since this corresponds to the
+maximum expected number of nodes that might directly evacuate
+within the set. We reduce this problem to the orienteering problem
+studied in [8] in the following manner. We consider a root node
+s from where the tours start, a cost wij of going from node i to
+node j, and a reward p
+f inal
+i
+for each node i. Next, for each possible
+t ∈ V , we use the algorithm of [8] to find a tour on a subset St with
+c2(St ) ≤ B, and return the one with the maximum reward.
+Theorem 3.3. For a given budget B, the above algorithm returns
+a set S with c2(S) ≤ B, and Í
+i ∈S p
+f inal
+i
+within an O(1) factor of the
+optimum.
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 659
+
+The detailed proofs of the theorems are omitted here due to lack of
+space but will be available in the journal version of the paper.
+4 SIMULATIONS AND RESULTS
+4.1 Simulation Process and Parameters
+Simulation process. Simulation instances are performed by incrementing time at 1-day intervals, for t
+∗ = 10 days (the tenth day is
+hurricane arrival). At each day (time t), 0 ≤ t ≤ t
+∗ − 1, all agents
+vi ∈ V , 1 ≤ i ≤ n, of the social network G(V, E) are iterated over
+and Algorithm 1 is executed to determine each agent vi
+’s next state
+xi(t +1). A simulation is composed of 100 simulation instances, and
+results are averaged across the instances, and presented below. In all
+simulations, the set V of families is the same, and n = |V | = 167722.
+It is the connectivity (in terms of numbers of short- and long-range
+edges) that changes across networks.
+Parameters studied. Input variables and their values used in simulations are provided in Table 3.
+Table 3: Summary of parameters and values in simulations.
+Parameter Description
+Networks. Vary dsr and q in the networks of Table 1.
+Num. random
+seeds, ns .
+Number of seed nodes (nodes evacuating at t = 0)
+specified per run (chosen uniformly at random).
+Values are 0, 50, 500, 5000, and 50000.
+Neighborhood
+effect critical
+values, clev ,
+cr em.
+Values of clev and cr em are 0 to 1, in increments
+of 0.2 or finer, when these values are fractions of
+neighbors of a node vi
+. Values of 0, 1, and 2 are
+used when these values are counts.
+Geographic
+subregions of
+the population, kblk .
+The bounding box (rectangle) that circumscribes
+the VA Beach, VA population (roughly 46 km × 29
+km) is partitioned into 25 equi-sized blocks. The
+kth block is kblk . 1 ≤ kblk ≤ 25.
+4.2 Simulation Results
+Effect of network structure (dsr and q). Figure 4 provides the
+average cumulative fraction s of nodes evacuating from the population at each day leading up to hurricane arrival. Figure 4a shows
+the effect of distances dsr for introducing short-range edges in the
+social networks, and Figure 4b shows the effect of number q of long
+range incoming edges per node. First, the plots show that there are
+very small effects of numbers of short-range edges and long-range
+edges on the fraction of the population evacuating. These results
+are for the particular case where clev = cr em = 0.2. Later, we
+will demonstrate that varying clev and cr em, along with network
+structure, reveals significant interaction effects. Second, variances
+among the data in each curve are very small (there are vertical
+variance bars for each curve at each day on the x-axis, and they
+are non-visible, indicating that variances are very small among
+the 100 simulation instances). We therefore ignore variances in the
+following results.
+Basic character of dynamics and effects of seeding. Continuing with Figure 4, the curves in the plots are concave downward.
+In epidemics, for example, the initial stages of an outbreak are concave upward as a virus takes hold in a population, and the latter
+stages are concave downward as the number of available agents
+(a) (b)
+Figure 4: Effect of network structure on the dynamics of
+evacuation decision making. Dynamics are shown as the
+time history of the cumulative average fraction of the population that has decided to evacuate (Frac. DE). Other fixed
+conditions: clev = cr em = 0.2, and ns = 50 random seeds. (a)
+Curves for three short-range radii dsr for short-range edges
+and fixedq = 4 random, long-range incoming edges per node.
+(b) Curves for four values of number q of long-range incoming edges for fixed dsr = 0.07 km.
+(a)
+Figure 5: Effect of number
+ns of seeded families
+on the dynamics of
+evacuation decision making. Fixed conditions:
+dsr = 0.10 km, q = 32,
+and clev = cr em = 0.0.
+It is not until ns is large
+(500 ≤ ns ≤ 5000) that it
+makes a noticeable difference in the dynamics.
+for infection decreases, resulting in a sigmoidal curve. Here, because of the influence of family’s intrinsic factors in Equation (4)
+on the probability of evacuation, a family may decide to evacuate
+without any external (network) influence. As a result, seeding the
+population with families that are evacuating is not required, as is
+the case with a Granovetter type [6, 13, 33] of contagion, where
+the driving force to change state to 1 (i.e., to become active, in a
+general sense), is provided solely by exogenous (peer) influence.
+This is also illustrated in Figure 5, where the effect of seeding is
+explicitly shown. The results indicate that the dynamics are not
+influenced appreciably until the number ns of seed nodes is about
+5000. It is also interesting that this set of input parameters yields approximately linear behavior in time, because a hallmark of complex
+systems is nonlinear behavior. This effect of seeding is pervasive
+across conditions.
+Effects ofclev and cr em, coupled with network structure. Recall that Figure 4 illustrates that for fixed clev = cr em = 0.2, the
+fraction of the population deciding to evacuate (Frac. DE) was not
+dependent on network structure. Figure 6 depicts how Frac. DE
+changes with cr em and network structure (dsr , and q). Here now,
+cr em is the minimum count of vi
+’s neighbors in state 1 that makes
+neighbors compelling such that the dampening effect of looting on
+the probability of evacuation becomes operative.
+In Figure 6a, the largest variation in the final (i.e., t = 10) fraction
+s of families evacuating occurs for dsr = 0.04 km, and this variation
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 660
+
+decreases with increasing dsr . This is because for dsr = 0.04 km
+(0.10 km), the average in-degree of a node is 10 (40), so the in-degree
+of a node is changed more appreciably for lesser dsr values when
+32 long-range edges are added per node.
+At dsr = 0.04 km, cr em = 0 means that the inhibiting effect of
+concerns about looting are always operative, even if no neighbors
+of family vi are evacuating (blue and orange curves lay on top
+of each other). Incorporating looting decreases the probability of
+evacuation, and this results in the least values of s, regardless of q.
+As cr em increases from 0, the final fraction of evacuating families
+increases, because increasing cr em inhibits the activation of the
+looting effect. For a given cr em > 0, the curve for q = 0 is greater
+than that for q = 32 because as the number q of long range edges
+increases, there are more paths over which the evacuation decision
+can propagate. Figure 6b illustrates how increasing cr em (plotted
+on x-axis) from 0 to 1, which dampens looting concerns and thus
+makes evacuation more likely, indeed increases s by 50%.
+(a) (b)
+Figure 6: (a) Plot of the final fraction of the population that
+decides to evacuate (Final Frac. DE, s) as a function of dsr , q,
+andcr em. Fixed values are clev = 0, ns = 0.cr em is a count (not
+a fraction) of the minimum number of neighbors that must
+be in state 1 for a family to be concerned with looting. These
+results demonstrate that for some regions of the input space,
+network structure can have a significant effect of evacuation
+dynamics. (b) Plot of the final fraction of nodes in state 1
+as a function of cr em (the fraction of neighbors in state 1,
+for making operative concerns over looting), which varies
+from 0 to 1. Fixed conditions are clev = cr em, ns = 0. As cr em
+increases from 0 to 1, s increases by 50%.
+Interventions in the form of police reassuring citizens that
+their property will be protected against looting. Previous researchers have shown that targeting monitoring of homes and
+property by law enforcement agencies in hurricane affected areas
+can be effective in controlling criminal activities and hence in motivating people to leave [20, 30, 32]. Based on our results above, we
+conclude that (i) seeding families as evacuating has little impact
+on the overall evacuation fraction, for reasonable levels of seeding,
+and (ii) increasing cr em can be effective in increasing the amount
+of evacuation. The latter result was obtained by methodically increasing cr em globally (i.e., for the entire population) in Figure 6b.
+Here, we take a local approach and study a systematic targeting of
+successively larger geospatial zones by police in reassuring people
+in those zones of police property protection. Our base case in this
+study is the spread fraction s of evacuation when clev = cr em = 0.
+VA Beach, VA is circumscribed by a roughly 46 km × 29 km
+geographic region (a “bounding box”). We partition this region into
+25 equi-sized rectangular blocks, and run a set of 25 simulations.
+The baseline condition is that cr em = 0, i.e., that the families are
+always concerned about looting, no matter how many neighbors
+have evacuated. In a first simulation, the police visit households in
+block 1 to reassure them, resulting in an increase in cr em to 0.2 for
+all families whose homes reside in block 1. In the kth simulation,
+police reassure all homes residing in blocks 1 through k, inclusive.
+Note that because of varying population density, there is not an
+equal number of households in each block; see Figure 7a.
+Figure 7b shows the results. First, the stair-stepped nature of the
+results is caused by differences in population density, underscoring
+the need for realistic populations. Second, the effect of changing
+dsr is small, but increases with increasing cr em. The effect of cr em
+is greater. Third, these effects are solely due to network and peer
+effects. That is, household-related variables are all held constant in
+this intervention study.
+(a) (b)
+Figure 7: (a) Fraction of households in each of 25 equi-sized
+zones within the bounding box of VA Beach, Va. The shape
+of the curve is the consequence of the greater population
+density in the northern part of the city. (b) Final fraction
+s of population evacuating as a function of the cumulative
+number of blocks visited by police to reassure families that
+they will monitor property to dissuade looting. Police visit
+the blocks in the order given in (a). Households that have
+been reassured have cr em increased to 0.2 (or 0.4), from the
+baseline condition of 0. The steps in the plot correspond to
+police entering blocks (zones) with greater population density. Increasing cr em dampens a family’s concern over looting. Note that these results are solely a network effect. This
+intervention generates up to a 50% increase in the fraction
+of the population evacuating.
+5 SUMMARY AND FUTURE WORK
+We use a combination of hurricane survey data, synthetic populations, statistical models and ABM to understand the effects of
+network structure, seeding, human behavior, and interventions
+on the evacuation response to a hurricane. Our results show that
+network effects and incentives can help in increasing the evacuation rates. In future work, we plan to include the impact of utility
+disruptions and risk perceptions on evacuation behavior.
+Acknowledgment. We thank the anonymous reviewers for their
+comments. This work has been partially supported by the following
+grants: NSF CRISP 2.0 Grant 1832587, DTRA HDTRA1-11-D-0016-
+0001, NSF DIBBS ACI-1443054, NSF EAGER CMMI-1745207, NSF
+BIG DATA IIS-1633028, and NIH 1R01GM109718.
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 661
+
+REFERENCES
+[1] Abhijin Adiga, Chris J. Kuhlman, Madhav V. Marathe, Henning S. Mortveit, S. S.
+Ravi, and Anil Vullikanti. 2019. Graphical Dynamical Systems and Their Applications to Bio-Social Systems. International Journal of Advances in Engineering
+Sciences and Applied Mathematics 11 (2019), 153–171.
+[2] Sinan Aral and Dylan Walker. 2011. Creating social contagion through viral
+product design: A randomized trial of peer influence in networks. Management
+science 57, 9 (2011), 1623–1639.
+[3] Christopher L Barrett, Richard J Beckman, et al. 2009. Generation and analysis of
+large synthetic social contact networks. In Winter Simulation Conference. 1003–
+1014.
+[4] Thomas Berger and Pepijn Schreinemachers. 2006. Creating agents and landscapes for multiagent systems from random samples. Ecology and Society 11, 2
+(2006).
+[5] Keith Bisset and Madhav Marathe. 2009. A cyber-environment to support pandemic planning and response. DOE SciDAC Magazine 13 (2009), 36–47.
+[6] D. Centola and M. Macy. 2007. Complex Contagions and the Weakness of Long
+Ties. Amer. J. Sociology 113, 3 (2007), 702–734.
+[7] Chiradip Chatterjee and Pallab Mozumder. 2014. Understanding household
+preferences for hurricane risk mitigation information: Evidence from survey
+responses. Risk analysis 34, 6 (2014), 984–996.
+[8] Chandra Chekuri, Nitish Korula, and Martin Pál. 2012. Improved Algorithms for
+Orienteering and Related Problems. ACM Trans. Algorithms 8, 3, Article 23 (July
+2012), 27 pages. https://doi.org/10.1145/2229163.2229167
+[9] Rosaria Conte and Mario Paolucci. 2014. On agent-based modeling and computational social science. Frontiers in Psychology 5 (2014), 668.
+[10] Keith Elder, Sudha Xirasagar, Nancy Miller, Shelly Ann Bowen, Saundra Glover,
+and Crystal Piper. 2007. African Americans’ decisions not to evacuate New
+Orleans before Hurricane Katrina: A qualitative study. American Journal of Public
+Health 97, Supplement_1 (2007), S124–S129.
+[11] Stephen Eubank, Hasan Guclu, VS Anil Kumar, Madhav V Marathe, Aravind
+Srinivasan, Zoltan Toroczkai, and Nan Wang. 2004. Modelling disease outbreaks
+in realistic urban social networks. Nature 429, 6988 (2004), 180.
+[12] Tatiana Filatova. 2015. Empirical agent-based land market: Integrating adaptive
+economic behavior in urban land-use models. Computers, environment and urban
+systems 54 (2015), 397–413.
+[13] M. Granovetter. 1978. Threshold Models of Collective Behavior. The American
+Journal of Sociology 83, 6 (1978), 1420–1443.
+[14] Nafisa Halim, Chris Kuhlman, Achla Marathe, Pallab Mozumder, and Anil Vullikanti. 2019. Two-Mode Threshold Graph Dynamical Systems for Modeling
+Evacuation Decision-Making During Disaster Events. In Complex Networks and
+Their Applications, VIII. COMPLEX NETWORKS. Studies in Computational Intelligence. Springer, Cham., 519–531.
+[15] N. Halim and P. Mozumder. “To be submitted". Factors Influencing Evacuation
+Behavior During Hurricane Sandy. Risk Analysis (“To be submitted").
+[16] Samiul Hasan and Satish V. Ukkusuri. 2011. A threshold model of social contagion
+process for evacuation decision making. Transportation Research Part B 45 (2011),
+1590–1605.
+[17] Marco Janssen and Elinor Ostrom. 2006. Empirically based, agent-based models.
+Ecology and society 11, 2 (2006).
+[18] David Kempe, Jon Kleinberg, and Eva Tardos. 2003. Maximizing the Spread of
+Influence Through a Social Network. In Proc. ACM KDD. 137–146.
+[19] Jon Kleinberg. 1999. The Small-World Phenomenon: An Algorithmic Perspective.
+Technical Report Tech Report 99-1776.
+[20] Michael Leitner and Marco Helbich. 2011. The impact of hurricanes on crime:
+a spatio-temporal analysis in the city of Houston, Texas. Cartography and Geographic Information Science 38, 2 (2011), 213–221.
+[21] Todd Litman. 2006. Lessons from Katrina and Rita: What major disasters can
+teach transportation planners. Journal of transportation engineering 132, 1 (2006),
+11–18.
+[22] Henning Mortveit and Christian Reidys. 2007. An Introduction to Sequential
+Dynamical Systems. Springer.
+[23] Pallab Mozumder, Ryan Helton, and Robert P Berrens. 2009. Provision of a
+wildfire risk map: informing residents in the wildland urban interface. Risk
+Analysis: An International Journal 29, 11 (2009), 1588–1600.
+[24] Pallab Mozumder and William F Vásquez. 2018. Understanding Hurricane Evacuation Decisions Under Contingent Scenarios: A Stated Preference Approach.
+Environmental and resource economics 71, 2 (2018), 407–425.
+[25] Mancur Olson. 1965. The Logic of Collective Action: Public Goods and the Theory
+of Groups. Harvard Univ. Press, Cambridge, Mass. 176 pages.
+[26] Thomas C. Schelling. 2006. Micromotives and Macrobehavio (revised ed.). W. W.
+Norton & Company.
+[27] Nina Schwarz and Andreas Ernst. 2009. Agent-based modeling of the diffusion
+of environmental innovations–An empirical approach. Technological forecasting
+and social change 76, 4 (2009), 497–511.
+[28] Yishuo Shi, Yingli Ran, Zhao Zhang, James Willson, Guangmo Tong, and DingZhu Du. 2019. Approximation algorithm for the partial set multi-cover problem. Journal of Global Optimization (03 Jul 2019). https://doi.org/10.1007/
+s10898-019-00804-y
+[29] Alexander Smajgl and Olivier Barreteau. 2014. Empirical agent-based modellingchallenges and solutions. Vol. 1. Springer.
+[30] Nekeisha O Spencer. 2017. Look what the hurricanes just blew in: analyzing
+the impact of the storm on criminal activities. Journal of Crime and Justice 40, 4
+(2017), 417–429.
+[31] Joseph E Trainor, Pamela Murray-Tuite, Praveen Edara, Saeideh Fallah-Fini, and
+Konstantinos Triantis. 2012. Interdisciplinary approach to evacuation modeling.
+Natural Hazards Review 14, 3 (2012), 151–162.
+[32] William C Walker, Sunhui Sim, and Lisa Keys-Mathews. 2014. Use of geographically weighted regression on ecology of crime, response to hurricane in Miami,
+Florida. In Forensic GIS. Springer, 245–262.
+[33] D. Watts. 2002. A Simple Model of Global Cascades on Random Networks.
+Proceedings of the National Academy of Sciences (PNAS) 99 (2002), 5766–5771.
+[34] Michael J. Widener, Mark W. Horner, et al. 2013. Simulating the effects of social
+networks on a population’s hurricane evacuation participation. J Geogr Syst 15
+(2013), 193–209.
+[35] Brian Wolshon, Vinayak Dixit, and John Renne. 2013. Special issue on interdisciplinary and multimodal nature of evacuations: Nexus of research and practice.
+(2013).
+[36] Yan Yang, Liang Mao, and Sara S. Metcalf. 2019. Diffusion of hurricane evacuation
+behavior through a home-workplace social network: A spatially explicit agentbased simulation model. Computers, Environment and Urban Systems 74 (2019),
+13–22.
+[37] Yuan Zhu, Kun Xie, Kaan Ozbay, and Hong Yang. 2018. Hurricane evacuation
+modeling using behavior models and scenario-driven agent-based simulations.
+Procedia computer science 130 (2018), 836–843.
+Research Paper AAMAS 2020, May 9–13, Auckland, New Zealand 662

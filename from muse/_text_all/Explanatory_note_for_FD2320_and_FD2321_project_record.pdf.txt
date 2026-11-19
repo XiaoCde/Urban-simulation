@@ -1,0 +1,205 @@
+1
+SUPPLEMENTARY NOTE ON FLOOD HAZARD RATINGS AND THRESHOLDS
+FOR DEVELOPMENT PLANNING AND CONTROL PURPOSE
+– Clarification of the Table 13.1 of FD2320/TR2 and Figure 3.2 of FD2321/TR1.
+Suresh Surendran and Geoff Gibbs (Environment Agency), 
+Steven Wade and Helen Udale-Clarke (HR Wallingford) 
+May 2008 
+Introduction 
+This document is a supplementary note to reconcile information provided in the ‘Flood Risks 
+to People Methodology’ (FD2321/TR11
+) and the ‘Framework and Guidance for Assessing 
+and Managing Flood Risk for New Development’ (FD2320/TR22
+) reports about the Flood 
+Hazard Rating. It has been produced because both PPS25 in England and TAN15 in Wales 
+require that people should be appropriately safe around new development. The document 
+emphasises that for FRAs and FCAs at all levels to inform development allocations and 
+proposals the simplified approach of FD2320 with regard to flood hazard rating should be 
+used rather than the approach in FD2321. Although the final version of FD2321/TR1 postdates FD2320/TR2, the work presented actually pre-dates the guidance in FD2320/TR2. This 
+supplementary guidance is issued for those involved in development planning and control and 
+to clarify the detail or difference of the Table 13.1 of FD2320/TR2 and Figure 3.2 of 
+FD2321/TR1. 
+FD2321/TR1 was a research project based on the detailed literature review and analysis of 
+empirical evidence related to flood hazard, derived mainly from theoretical assumptions and 
+some basic laboratory experiments. Factors that affected flood hazard and vulnerability were 
+combined in a form of multi-criteria analysis that was be used to identify the hot-spots and 
+broadly estimate the probability of people seriously harmed and fatalities during the event of a 
+flood. The multi-criteria method was calibrated to actual events, validated using data from 
+seven flood events and shown to work well. The FD2321 (Risk to people) methodology 
+illustrates the fundamental concepts and demonstrate how the approach could be used for 
+different applications - it did not set a policy for flood hazard thresholds. 
+(Nevertheless there are a number of assumptions used in the FD2321 methodology, 
+particularly with respect to the impact of debris and people’s behaviour during flood events. 
+There is a requirement for further research to collate more evidence on flood hazard, 
+particularly the impacts of debris, and vulnerability in order to refine assumptions made in 
+the flood hazard calculations, flood hazard thresholds and risks to people guidance. The 
+study recommend more laboratory and field based tests on the impact of physical water 
+quality aspect such as debris, mudflow; chemical and biological water quality that cause 
+seriously harm or fatalities to people.) 
+ 
+1
+ Defra and Agency (2006) The Flood Risks to People Methodology, Flood Risks to People Phase 2, FD2321 
+Technical Report 1, HR Wallingford et al. did the report for Defra/EA Flood and Coastal Defence R&D 
+Programme, March 2006. 
+(http://sciencesearch.defra.gov.uk/Document.aspx?Document=FD2321_3436_TRP.pdf) 2
+ Defra and Agency (2005) Framework and Guidance for Assessing and Managing Flood Risk for New 
+Development, Flood Risk Assessment Guidance for New Development, FD2320 Technical Report 2, HR 
+Wallingford et al. did the report for Defra/EA Flood and Coastal Defence R&D Programme, October 2005. 
+(http://sciencesearch.defra.gov.uk/Document.aspx?Document=FD2320_3364_TRP.pdf) 
+
+2
+FD2320/TR2 (FRA guidance for new development) provides guidance that is a specific 
+interpretation of the methodology developed under FD2321, within the context of 
+development planning and control. Based on FD2320 consultation workshops, the project 
+board (key users and experts) advised the project team to provide a simple methodology. Due 
+uncertainties and limitations related to estimating risks to people, FD2320 adopted a 
+precautionary approach, particularly with respect to the selection of debris factors and flood 
+hazard thresholds 
+Risk to People (Ninj)
+Ninj = Nz x Flood Hazard Rating x Area Vulnerability x People Vulnerability
+where, 
+Ninj (Risk to People) = number of injuries within a particular hazard ‘zone’; 
+Nz = number of people within the hazard zone (at ground/basement level); 
+Flood Hazard Rating = HR = function of flood depth/velocity (within the hazard zone being 
+considered) and debris factor; 
+Area Vulnerability = function of effectiveness of flood warning, speed of onset of flooding 
+and nature of area (including types of buildings); and 
+People Vulnerability = function of presence of people who are very old and/or 
+infirm/disabled/long-term sick
+Flood Hazard Rating (HR) and thresholds 
+The revised ‘hazard rating’ expression based primarily, on consideration to the direct 
+risks of people exposed to floodwaters. 
+HR = d x (v + n) + DF
+where, HR = (flood) hazard rating; 
+d = depth of flooding (m); 
+v = velocity of floodwaters (m/sec); and 
+DF = debris factor ( 0, 0.5, 1 depending on probability that debris will lead to a 
+hazard) 
+n = a constant of 0.5 
+This final revised Flood Hazard Rating formula from the Flood Risks to People project is 
+presented on page 10 (section 3.5) of FD2321/TR1. The formula is identical in both FD2320 
+and FD2321 reports. 
+Based on Table 3.2 of FD2321, the Figure 3.2 of FD2321 illustrates the “Hazard to People 
+Classifications” as a function of depth, velocity and debris factor. Such categorisation and the 
+look-up table with flood hazard threshold could be useful for a range of application as an 
+initial indication of Risks to People. 
+In this case (Figure 3.2 of FD2321) the calculation takes a debris factor as zero 
+(HR = d x (v + 0.5) + 0). 
+
+3
+However FD2321 strongly recommends the use of the debris factor and the formulas 
+described in the Guidance Document for further calculation. The Table 3.1 of FD2321/TR1 
+(Table 1 of this note) suggests appropriate debris factors for different depths, velocities and 
+the dominant land use. 
+Table 1: Guidance on debris factors for different flood depths, velocities and dominant land 
+uses. (Source FD2321 Table 3.1): 
+Depths (d) Pasture/Arable Woodland Urban 
+0 to 0.25 m 0 0 0 
+0.25 to 0.75 m 0 0.5 1 
+d>0.75 m and\or v>2 0.5 1 1 
+The way that Flood Hazard Rating and thresholds have been presented in Table 13.1 in 
+FD2320/TR2 compared to Figure 3.2 of FD2321/TR1
+A concern was raised in the FD2320 consultation workshops and by the FD2320 Project 
+Board during discussions on FD2321, that the methodology was complex and the results 
+presented in the Figure 3.2 of FD2321 were not reflecting the potential risk to people (as this 
+table was of hazard rating for different depths and velocity without debris). There was a need 
+for further work to include debris, area vulnerability and people vulnerability aspects. They 
+requested a simpler single table to represent the risk to people. 
+For example Figure 3.2 of FD2321 did not reflect the fact that there is a risk from drowning 
+even at low depths and velocities. In reality FD2321/TR1 recognises this but only in the 
+subsequent “people vulnerability” calculation (risk to children, old, sick and disable). For still 
+water up to 1.25m depth, the Figure 3.2 of FD2321/TR1 assumes that there is low hazard, if 
+there are no debris or vulnerable group. However to avoid further calculation, but include the 
+vulnerability aspect the Table 13.1 of FD2320 for still water with the depths between 0.25–
+1.25m were reclassified as “danger to some”, which was felt to be more appropriate for 
+development planning and control, where users may make use of flood hazard without completing 
+he more complex full calculations including people and area vulnerability. 
+Similarly Figure 3.2 of FD2321/TR1 shows that at the depth of 0.25m, if there is no debris 
+then up to the flow velocity of 2.0 m/sec there would be low hazard. However FD2321/TR1 
+suggests the usage of an appropriate debris factor dependent on depth, velocity and the 
+dominant land use. To make the process simpler (whatever the land use), FD2320/TR2 
+includes a default debris factor. In the Table 13.1 of FD2320/TR2 a debris factor of 0.5 has 
+been applied for depths less than and equal to 0.25m and a debris factor of 1.0 has been used 
+for depths greater than 0.25m. Therefore, in the Table 13.1 of FD2320/TR2 at the depth of 
+0.25m, up to the flow velocity of 0.30 m/sec is treated as low hazard. 
+Table 3.2 of FD2321/TR1 (Table 2 of this note) provides thresholds for classifying the hazard 
+to people. In the FD2321/TR1 report the threshold between “danger for most” and “danger for 
+all” is 2.5 and it was used as an initial indication of Risk to People (further calculation is 
+recommended using the formulas). However as there is no further analysis in FD2320 but the 
+Project Board decided that the threshold between “danger for most” and “danger for all” 
+should be more precautionary and a Flood Hazard Rating of 2.0 is selected as a key threshold. 
+i.e. In FD2321 the threshold for “danger for all” is 2.5 and it lowered to 2.0 in FD2320. 
+Therefore, the Flood Hazard Rating between 2.0 to 2.5 in FD2320 is not classified as it is in 
+FD2321. 
+
+4
+Table 2: Hazard to People (Source Table 3.2 in FD2321/TR1) 
+Thresholds for Flood 
+Hazard Rating 
+H = d x (v + 0.5) + DF 
+Degree of 
+Flood 
+Hazard 
+Description 
+FD2321 FD2320 
+<0.75 <0.75 Low Caution - “Flood zone with shallow flowing water or deep 
+standing water” 
+0.75 - 1.25 0.75 - 
+1.25 
+Moderate Dangerous for some (i.e. children) - “Danger: Flood zone 
+with deep or fast flowing water” 
+1.25 - 2.5 1.25 - 2.0 Significant Dangerous for most people - “Danger: flood zone with deep 
+fast flowing water” 
+>2.5 >2.0 Extreme Dangerous for all - “Extreme danger: flood zone with deep 
+fast flowing water” 
+The final difference between Table 13.1 in FD2320/TR2 and Figure 3.2 of FD2321/TR1 is the 
+use of smaller increments of depth, so that lower depths are presented more fully in 
+FD2320/TR2. This was felt to be more helpful for identifying what might be judged as 
+acceptable depending on site specific circumstances. 
+Conclusions
+Table 13.1 of FD2320 and Figure 3.2 of FD2321 look very similar but there are significant 
+differences (see Table 3 of this paper). Either Table/Figure can be used as the basis for 
+assessing the risks to people associated with different flood depths velocities and debris 
+factors. 
+Table 3: comparison of Table 13.1 of FD2320/TR2 and Figure 3.2 of FD2321/TR1 
+In Table 13.1 of FD2320/TR2 In Figure 3.2 of FD2321/TR1 
+The depths above 
+0.25m 
+Danger for some, most or all For still water, up to 1.25m the hazard is 
+low (In addition to hazard rating further 
+calculation to include vulnerability aspect 
+is recommended)
+Debris factor Debris factor of 0.5 has been 
+applied for depths <0.25m and a 
+debris factor of 1.0 has been used 
+for depths > 0.25m. 
+In this case a Debris factor of zero applied
+(in addition to this further calculation is 
+recommended using debris factor and the 
+formulas) 
+HR Thresholds for 
+“Dangerous for all” 
+hazard classification 
+>2.0 (precautionary due to 
+uncertainties and to avoid further 
+calculation as FD2321) 
+>2.5 
+Increments of depth Small increments at lower depths Every 0.25 m 
+Table 13.1 of FD2320/TR2 is a simple method applies the precautionary principle and uses 
+suitable assumptions (so that there is no need for further calculations) for application in the 
+development planning and control context (see Table 4 of this paper - an extended version of 
+table 13.1). 
+
+5
+This table is recommended for development planning and control use. 
+Table 4 – Hazard to People Classification using Hazard Rating (HR= d x (v + 0.5) + DF) for 
+(Source Table 13.1 of FD2320/TR2 - Extended version) 
+Flood Hazard 
+Rating (HR) 
+Colour 
+Code 
+Hazard to People Classification 
+Less than 0.75 Very low hazard - Caution
+0.75 to 1.25 Danger for some – includes children, the elderly and the infirm 
+1.25 to 2.0 Danger for most – includes the general public 
+More than 2.0 Danger for all – includes the emergency services 

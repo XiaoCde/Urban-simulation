@@ -1,0 +1,790 @@
+A threshold model of social contagion process for evacuation
+decision making
+Samiul Hasan, Satish V. Ukkusuri ⇑
+School of Civil Engineering, Purdue University, West Lafayette, IN 47907, USA
+article info
+Article history:
+Received 18 February 2011
+Received in revised form 13 July 2011
+Accepted 14 July 2011
+Keywords:
+Network science
+Evacuation decision making
+Warning propagation
+Complex networks
+Contagion model
+abstract
+Individual evacuation decisions are often characterized by the influence of one’s social network. In this paper a threshold model of social contagion, originally proposed in the network science literature, is presented to characterize this social influence in the
+evacuation decision making process. Initiated by a single agent, the condition of a cascade
+when a portion of the population decides to evacuate has been derived from the model.
+Simulation models are also developed to investigate the effects of community mixing patterns and the initial seed on cascade propagation and the effect of previous time-steps considered by the agents and the strength of ties on average cascade size. Insights related to
+social influence include the significant role of mixing patterns among communities in
+the network and the role of the initial seed on cascade propagation. Specifically, faster
+propagation of warning is observed in community networks with greater inter-community
+connections.
+ 2011 Elsevier Ltd. All rights reserved.
+1. Introduction
+Over the last decade, the study of large-scale network systems spanning from the Internet to social networks has grown
+enormously (Newman, 2003a; Boccaletti et al., 2006). Understanding the coupled dynamics between the structural properties and the functions of networks has been the principal focus of a wide area of research. Due to the ubiquitous presence of
+networks, understanding complex network dynamics can have applications in many fields, such as the Internet and communication systems, infrastructure systems, logistics and supply chains, trade markets and financial systems, biological systems, and social organizations.
+‘‘Network science,’’ an emerging research field, brings an interdisciplinary view to the study of complex networks (i.e., networks having an irregular, complex and dynamic structure). This new research field shifts the focus of the studies of networks from the analysis of single small graphs to the consideration of statistical properties of large-scale real network
+systems (Newman, 2003a; Albert and Barabási, 2002). Studies on these large-scale real networks have produced many
+new concepts and measures attempting to characterize the structure of networks. A series of unifying principles and statistical distributions related to different properties of real networks have been identified from theses studies. One of the foremost discoveries in this regard is the existence of small-world property in many real networks (Milgram, 1967; Travers and
+Milgram, 1969; Watts and Strogatz, 1998). Small-world property refers to the fact that despite their large size most networks
+have relatively short paths between any of their two nodes. Another relevant property relates to the degree of a node (k), i.e.,
+the number of its direct connections to other nodes. In real networks, the degree distribution P(k), defined as the probability
+that a randomly chosen node has degree k, is significantly different from the Poisson distribution that has been traditionally
+0191-2615/$ - see front matter  2011 Elsevier Ltd. All rights reserved.
+doi:10.1016/j.trb.2011.07.008
+⇑ Corresponding author.
+E-mail addresses: samiul.hasan@gmail.com (S. Hasan), sukkusur@ecn.purdue.edu (S.V. Ukkusuri).
+Transportation Research Part B 45 (2011) 1590–1605
+Contents lists available at SciVerse ScienceDirect
+Transportation Research Part B
+journal homepage: www.elsevier.com/locate/trb
+
+assumed for modeling a random graph. Instead, studies have found that, in many cases, real networks exhibit a power law
+(or scale-free) degree distribution (Barabási and Albert, 1999). Moreover, most real networks are characterized with higher
+densities of triangles (e.g., cliques in social network where every member knows every other member) than a comparable
+random network. Real networks also exhibit significant correlations in terms of node degrees or attributes.
+These discoveries initiated a substantial amount of research efforts to develop new network modeling tools for understanding the structural network properties, subsequently reproducing the structural properties observed from empirical network data and for designing such networks efficiently. It is naturally expected that the structure of a real network will
+impact its functional behavior. Therefore network models were motivated to a better knowledge of the evolutionary mechanisms responsible for the growth of the network, and thus a better understanding of its dynamical and functional behavior.
+It has indeed been found that real networks have interesting coupling between their architecture and functional behavior.
+This coupling has consequences on the robustness of a real network and its responses to external perturbations characterized by random failures or targeted attacks (Albert et al., 2000).
+This coupling architecture of complex networks also has the potential to study the emerging dynamical behavior of a
+large number of entities interacting through complex topologies. For example, fundamental questions relevant to complex
+network systems include: how do the interactions between the nodes or vertices cause new ideas, information or fads to
+propagate throughout the entire network? When does the propagation of such information become a global cascade?
+How quickly does it spread? To what extent? Such phenomenon are called as cascades or contagion and are common phenomenon in many real world systems, for example, in the transmission of infectious diseases through communities in biological systems (Murray, 2002; Anderson and May, 1991); the global spread of computer viruses on the Internet network
+(Newman et al., 2002; Balthrop et al., 2004); diffusion of activities, beliefs, ideas, and emotions in social networks (Coleman
+et al., 1966); power grid failures in electricity markets (Kinney et al., 2005; Sachtjen et al., 2000); and the collapse of financial
+systems (Sornette, 2003).
+The characterization of contagious behavior is pertinent and plays a vital component to investigate transportation demand analysis under specific situations. Since transportation systems have a significant coupling between the dynamic demand manifested by the complexity of human behavior and the dynamic supply manifested by the significant variations in
+network characteristics, small changes in the behavior can significantly impact the transportation network. The goal of this
+research is to develop a novel model to understand the cascade of the warning information flow in social networks during
+the hurricane evacuations. The model is developed using emerging notions from the complex network science. In addition to
+model development, several numerical simulations are conducted to demonstrate the spread of warning information during
+hurricane evacuation.
+Hurricane evacuations are often characterized as complex processes involving decision making at different levels of influence: individual, household, and community. Some important dimensions of the decisions involved in the evacuation process include: whether to evacuate or not; when to evacuate; where to evacuate to; and which route to take. Individual’s
+evacuation behavior primarily depends on three basic social psychological processes: risk perception, social influence,
+and access to resources (Riad et al., 1999). Studies on hurricane evacuation (Baker, 1991, 1995; Dash and Gladwin, 2007)
+found that in addition to factors such as individual and household characteristics, risk level, evacuation orders, and storm
+threat, the personal risk perception was the most important factor in determining the evacuation decision. Although the role
+of social influence on risk perception behavior is not directly addressed in the literature, one can suspect that an individual’s
+risk perception can be socially influenced as evacuation decisions spread through social networks.
+During evacuations, in addition to personal risk perception, social influences play an important role on individual’s decision making process though individuals are finally responsible for their own decisions (Riad et al., 1999). Evidence of the
+influences of individual social network on evacuation decisions were found in studies (Clifford, 1956; Drabek and Boggs,
+1968; Mileti and Beck, 1975; Perry, 1979; Quarantelli, 1985; Lindell and Perry, 2005; Riad et al., 1999). Individual social relationship can be thought of the combination of kin relationships (i.e., relatives) and community contacts (i.e., friends and
+neighbors). Both kind of relationships have influences on warning propagation and evacuation decisions. Previous research
+suggests that individual’s social ties have an impact on the disaster warning dissemination (i.e., content, source, and number
+of warnings received) and adaptation process (Clifford, 1956). It is found that the greater the number of contacts and ties one
+has to the community, the more likely one is to receive information on evacuation recommendation (Perry, 1979). Official
+warning messages sometimes provide vague information that are usually confirmed through other sources (i.e., through
+individual’s social network) (Mileti and Beck, 1975). It is generally agreed that kin relationships play more important role
+compared to community relationships in evacuation decision making. Perry (1979) however reasoned that when kin relationships are weak or absent, community contacts can serve similar function with respect to a model of evacuation behavior.
+Gladwin et al. (2007) conclude that, informal networks based on neighbors, co-workers, family members, and friends can
+influence the initiation of decision-making processes and the role of warning dissemination.
+Characteristics of individual social network can be the predictors of evacuation patterns. For example, it is found that
+individuals who do not typically evacuate have a small social network and vice versa (Drabek and Boggs, 1968). Previous
+social science studies on hurricane evacuation also suggest that African American households typically possess more cohesive kinship and larger community networks compared to Caucasian communities and hence have a greater propagation of
+disaster warning information (Perry, 1979). Previous research also found that ethnic groups such as African American households actively involve their elders within the kin network; which eventually contributes to a higher percentage of decisions
+to evacuate (Quarantelli, 1985).
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1591
+
+However, in spite of the qualitative insights from many social science studies about the impact of social network on hurricane evacuation, a model which can characterize the complexity of the social influences is currently lacking. Within this
+context, in this paper, we propose to develop a novel network science model to specifically investigate the social influence
+process within a community network. In order to model this social influence process we adopt the threshold model of social
+contagion process proposed by Watts (2002). Watt’s original model is motivated by a context where individuals in a population must decide between two alternative actions, and whose choice of actions depend explicitly on the actions of other
+members within the population. In other words, individuals in a population adopt alternate behaviors by following their
+peers (e.g., relatives, friends, and neighbors). Such kind of decision making may occur in social and economic systems when
+decision makers have to pay attention to others either because of limited available information about the problem or because of individual’s limited ability to process the available information. In such cases one seeks additional information of
+the problem or seeks advice to friends, relatives or colleagues or simply makes the decision which most people make.
+Although the process of risk perception and access to resources are well studied within the evacuation behavior literature,
+the process of social influence is not well addressed. One of the major deterrent factors to empirically observe the social
+influence process is the requirement of having information on individual’s social network. Such kind of information are
+not readily available in evacuation surveys which are the basis of most evacuation studies. Therefore an analytical model
+is essential to translate qualitative insights into quantitative measures of the social influence process on evacuation behavior.
+As such the model developed in this paper makes a significant methodological contribution and provides several important
+insights on the role of social relationships on evacuation behavior. Specifically it intends to determine the relationship between community or social network characteristics and the aggregate evacuation behavior.
+2. Model description
+The proposed threshold model of social contagion process mimics a binary decision making context where an agent (i.e.,
+an individual or a household) has to decide between two choices of whether to evacuate or not due to a hurricane threat. The
+agent follows a simple binary decision rule observing the current states (either 0 or 1 i.e., either not-evacuated or evacuated,
+respectively) of k other agents which we call its neighbors, and adopts state 1 if at least a threshold fraction of its k neighbors
+are in state 1, else it adopts state 0. The neighbors represent the members of the agent’s social network (the network of
+friends, relatives, colleagues, etc.). To account for variations in risk perception and access to resources required to evacuate,
+the threshold value of an agent is treated as heterogeneous. That is the threshold value of an agent is randomly drawn from
+an arbitrary distribution of threshold values.
+Each agent belongs to a particular community having a specific degree (i.e., number of neighbors) distribution. That is the
+number of neighbors of an agent is drawn from the degree distribution of the corresponding community of the agent. We
+assume multiple communities in the population and different level of connections within the community and between communities. For example, if individuals prefer to form friendship based on race then the network can be separated into different
+communities by race. Thus the connection within the community represents the number of neighbors of an agent of same
+race and the connection between communities represent the number of neighbors of an agent with different races. This mixing pattern in a population can be characterized by a quantity eij which is defined as the fraction of neighbors in a network
+that connect an agent of type i to the agent of type j. We assume an undirected social network (i.e., eij = eji.).
+In order to investigate the effects of the relationship strength on the social contagion process we introduce the weight wij
+of the edge. In this case an agent does not only consider the fraction of its neighbors, instead each neighbor’s weight is used
+to calculate the fraction. A weighted fraction is calculated by dividing the weights of the affected neighbors by the total
+weight of the edges of the agent.
+In hurricane evacuation one important event to observe is when a significant fraction of the population decides to evacuate. We refer to this event as a global cascade, where the term cascade refers to an event when any fraction of the population
+decides to evacuate. Thus the term global cascade refers to a cascade of significantly large size (in practice this represents
+more than a fixed fraction of the size of the network). In this work, we seek to investigate the following research questions
+within the threshold modeling framework of social contagion over a multiple community network:
+(a) What is the condition for a cascade to occur? In other words, under what condition does a fraction of the agents decide
+to evacuate?
+(b) Social networks with multiple communities can have different kinds of mixing patten in terms of social connections;
+what is the role of this mixing pattern on the propagation of evacuation decisions?
+(c) The social contagion process is initiated by switching the state of a single agent from 0 to 1. This single agent (i.e., the
+initial seed) therefore plays an important role over the contagion process. What is the role of the characteristics of the
+initial seed on the propagation of evacuation decisions?
+(d) In addition to the state of the neighbors, the time when they make their decisions may also influence an agent’s decision. The influence of an agent that decides to evacuate in the beginning may diminish over time as the situation is
+changing dynamically. Therefore, instead of observing all of its neighbors’ states, an agent may only consider those
+who have evacuated within a certain number of previous time steps. What is the role of this phenomenon on the propagation of evacuation decision and on the size of the cascade?
+1592 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+(e) An agent can have different relationship levels with its neighbors. For instance, a relative might have higher influence
+on agent’s decision than a friend might have. What is the role of this strength of ties on social contagion process? Specifically, do higher proportions of strong ties result into larger cascade size?
+3. Analytical formulation of the social contagion model
+In this section, we determine the condition when a cascade or contagion will occur within a population of agents having a
+hypothetical social network. The social network has a particular mixing pattern based on community characteristics such as
+race, ethnicity, and income. The analytical derivation of the cascade condition uses the key results of Newman’s study (Newman, 2003b) that determines different characteristics of a network with multiple communities. We also use the threshold
+model proposed by Watts (Watts, 2002). However, Watts’ model does not consider any community structures with the network. The model developed here is a physics-based model and abstracts the key variables which influence the propagation of
+evacuation decisions in a social network. The purpose of this section to introduce some key results reported in the network
+science literature. Table 1 provides a list of the notations used.
+Consider a mixing matrix eij, degree distribution of agents pðiÞ
+k of type i = 1,2,...,n and a distribution of threshold values of
+f(/). Assume that an agent of type i has degree k (i.e., it has k neighbors) and the relations between this agent and its other
+neighbors are referred as edges. These k edges of the agent are divided into n types (where each type corresponds to the
+community they belong) with some partition {r1,r2,...,rn} where Pn
+j¼1rj ¼ k.
+Now, the probability that a partition {rj} takes a particular value is given by the following equation of multinomial probability (Newman, 2003b)
+Pi
+ðk; frjgÞ ¼ k!
+Y
+j
+1
+rj! P
+eij
+j
+eij "#rj
+ð1Þ
+Generating function (Wilf, 1994) is frequently utilized in network science to derive different properties of distributions.
+For instance, to derive the probability distribution of node degrees k of a graph, the corresponding generating function G0(x)
+can be stated by the following equation:
+G0ðxÞ¼ X1
+k¼0
+pkxk ð2Þ
+where pk is the probability that a randomly chosen vertex on the graph has degree k. The distribution pk has to be correctly
+normalized so that
+G0ð1Þ¼ 1 ð3Þ
+The probability generating function, for example G0(x), has a number of properties that are useful in deriving important
+relations in network science. For a detailed review of the properties readers are referred to the reference Newman et al.
+(2001).
+The generating function for the distribution of the number of edges for each type can be written as (Newman, 2003b):
+GðiÞ
+0 ðx1; x2; ... ; xnÞ¼ X1
+k¼0
+pðiÞ
+k
+X
+frjg
+d k;
+X
+j
+rj
+ !  Pi
+ðk; frjgÞx
+r1
+1 x
+r2
+2  xrn
+n ¼ X1
+k¼0
+pðiÞ
+k
+P
+j
+eijxj
+P
+j
+eij "#k
+¼ GðiÞ
+0
+P
+j
+eijxj
+P
+j
+eij ! ð4Þ
+where d is the Kronecker delta function and GðiÞ
+0 ðxÞ¼ P
+kpðiÞ
+k xk is the generating function for the degree distribution pðiÞ
+k .
+Table 1
+List of notations.
+Notation Description
+k Degree of a vertex
+z Average degree
+z(i) Average degree of agents of type i
+pðiÞ
+k Probability that a randomly chosen vertex of type i has degree k
+eij The fraction of edges in a network that connect a vertex of type i to a vertex of type j
+/ Threshold value of an agent
+G0(x) Generating function for the degree distribution pk
+GðiÞ
+0 ðxÞ Generating function for the degree distribution pðiÞ
+k for agent of type i
+qk Given that an agent has degree k, the probability that it has a threshold / such that / 6 1
+k
+FðiÞ
+0 ðxÞ Generating function for the degree distribution of the evacuated agent of type i following a randomly chosen agent
+FðiÞ
+1 ðxÞ Generating function for the degree distribution of the evacuated agent of type i following a randomly chosen edge
+HðiÞ
+0 ðxÞ Generating function for the number of evacuated agents that can be reached from a randomly chosen agent of type i
+HðiÞ
+1 ðxÞ Generating function for the number of evacuated agents that can be reached from a randomly chosen edge that is connected to an agent of
+type i
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1593
+
+Now, one important feature to find is the distribution of the degree of agent of type i following a randomly chosen edge,
+GðiÞ
+1 ðxÞ¼
+P
+kkpðiÞ
+k xk1
+P
+kkpðiÞ
+k
+¼ 1
+zi
+GðiÞ
+0
+0 ðxÞ ð5Þ
+where zi  GðiÞ
+0
+0 ð1Þ is the mean degree of type i agents.
+For the distribution of the edges of different types (Newman, 2003b),
+GðiÞ
+1 ðx1; x2; ... ; xnÞ¼ GðiÞ
+1
+P
+j
+eijxj
+P
+j
+eij ! ð6Þ
+Now consider a threshold model where a randomly chosen single agent decides to evacuate first; this agent is referred as
+a seed agent. The evacuation pattern from this seed agent will propagate if at least one of its neighbors has degree k and
+threshold / such that / 6 1
+k and the corresponding probability is qk ¼ P / 6 1
+k
+ (Watts, 2002). We call this agent as evacuated
+agent. Thus the probability of any agent u having degree k and having evacuated is qkpk and the corresponding generating
+function for evacuated agent degree will be F0ðxÞ¼ P
+kqkpkxk (Watts, 2002). Similarly, for our case, the generating function
+for evacuated agent degree of type i following a randomly chosen agent will be
+FðiÞ
+0 ðxÞ¼ X
+k
+qðiÞ
+k pðiÞ
+k xk ð7Þ
+Two important quantities can be found from Eq. (7). They are: (a) the fraction of evacuated agents of type
+i; PðiÞ
+v ¼ FðiÞ
+0 ð1Þ¼ P
+kqðiÞ
+k pðiÞ
+k , and (b) the average degree of an evacuated agent of type i; z
+ðiÞ
+v ¼ FðiÞ
+0
+0 ð1Þ¼ P
+kqðiÞ
+k kpðiÞ
+k .
+Similar to Eq. (4), the generating function for the distribution of the number of evacuated edges connecting to each type of
+agent is: FðiÞ
+0 ðx1; x2; ... ; xnÞ¼ FðiÞ
+0
+P
+j Peijxj
+j
+eij  and similar to Eq. (5) the generating function for the distributions of the evacuated
+agent degree of type i following a randomly chosen edge, FðiÞ
+1 ðxÞ¼ 1
+zðiÞ FðiÞ
+0
+0 ðxÞ. For the distribution of the edges of different
+types, FðiÞ
+1 ðx1; x2; ... ; xnÞ¼ FðiÞ
+1
+P
+j Peijxj
+j
+eij 
+An important distribution to observe is the distribution of the number of evacuated agents that can be reached from a
+randomly chosen agent of type i. The generating function HðiÞ
+0 for such distribution satisfies the following self-consistency
+condition (Newman, 2003b)
+HðiÞ
+0 ðxÞ¼ 1  FðiÞ
+0 ð1Þþ xFðiÞ
+0 Hð1Þ
+1 ðxÞ; ... ; HðnÞ
+1 ðxÞ
+hi ð8Þ
+And similarly the distribution of the number of evacuated agents that can be reached by following a random edge connected to an agent of type i can also be found (Newman, 2003b):
+HðiÞ
+1 ðxÞ¼ 1  FðiÞ
+1 ð1Þþ xFðiÞ
+1 Hð1Þ
+1 ðxÞ; ... ; HðnÞ
+1 ðxÞ
+hi ð9Þ
+The average number of evacuated agents s
+ðiÞ
+v reachable from an agent of type i is
+s
+ðiÞ
+v ¼ dHðiÞ
+0
+dx
+
+
+
+
+x¼1
+¼ FðiÞ
+0 Hð1Þ
+1 ð1Þ; ... ; HðnÞ
+1 ð1Þ
+hi þ FðiÞ
+0
+0 ð1Þ
+P
+j
+eijHðjÞ0
+1 ð1Þ
+P
+j
+eij
+¼ PðiÞ
+v þ FðiÞ
+0
+0 ð1Þ
+P
+j
+eijHðjÞ0
+1 ð1Þ
+P
+j
+eij
+¼ PðiÞ
+v þ z
+ðiÞ
+v
+P
+j
+eijHðjÞ0
+1 ð1Þ
+P
+j
+eij
+This can be written in matrix format,
+sv ¼ Pv þ m0H0
+1ð1Þ ð10Þ
+where m0 is a matrix ½m0
+ij ¼ z
+ðiÞ
+v e P ij
+j
+eij
+.
+Now to find sv, we will need to know H0
+1ð1Þ
+HðiÞ
+0
+1 ð1Þ¼ FðiÞ
+1 Hð1Þ
+1 ð1Þ; ... ; HðnÞ
+1 ð1Þ
+hi þ FðiÞ
+0
+1 Hð1Þ
+1 ð1Þ; ... ; HðnÞ
+1 ð1Þ
+hi ¼ FðiÞ
+1 ð1Þþ FðiÞ
+0
+1 ð1Þ
+P
+j
+eijHðjÞ
+0
+1 ð1Þ
+P
+j
+eij
+In matrix format,
+H0
+1ð1Þ¼ F1ð1Þþ m1H0
+1ð1Þ¼ F1ð1Þ½I  m1
+1 ð11Þ
+1594 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+where m1 is a matrix ½m1
+ij ¼ FðiÞ0
+1 ð1Þe P ij
+j
+eij
+and
+FðiÞ
+0
+1 ð1Þ¼ 1
+zðiÞ FðiÞ
+00
+0 ð1Þ¼ 1
+zðiÞ
+X
+k
+qðiÞ
+k pðiÞ
+k kðk  1Þ¼ 1
+zðiÞ ðhk
+2
+ihkiÞ ¼ z
+ðiÞ
+v2
+z
+ðiÞ
+1
+where z
+ðiÞ
+1  zðiÞ (i.e. average degree of agents of type i) and z
+ðiÞ
+v2 is the average second evacuated neighbors of an agent of type i.
+So matrix m1 becomes, ½m1
+ij ¼ z
+ðiÞ
+v2eij
+z
+ðiÞ
+1
+P
+j
+eij
+So finally, Eq. (10) for average size of the cluster of evacuated agents becomes,
+sv ¼ Pv þ m0½I  m1
+1
+F1ð1Þ ð12Þ
+A cascade will happen when sv diverges and sv will diverge when det[I  m1] will reach its first zero. It is also important to
+characterize when the cascade occurs in a social network with multiple communities.
+z
+ðiÞ
+v2
+P
+j
+eij
+z
+ðiÞ
+1
+P
+j
+eij
+¼ 1
+) z
+ðiÞ
+v2 ¼ z
+ðiÞ
+1 ð13Þ
+This means that a cascade will happen when the average first neighbors of type i are equal to the average second evacuated
+neighbors of that same type. This cascading condition can be interpreted as, when z
+ðiÞ
+v2 < z
+ðiÞ
+1 the initial evacuated cluster of type i
+is too small to generate a cascade within its own community and hence the whole network. However when z
+ðiÞ
+v2 > z
+ðiÞ
+1 the typical
+size of the evacuated clusters of type i is large enough for the cascade to percolate through their own community. However, for
+the cascade to propagate across all the communities, each of the communities will have to satisfy the above condition.
+4. Simulation model
+In this section, we develop a simulation model to investigate the performance of the analytical findings as compared to
+simulations on many random social networks. Briefly, the simulation model consists of two stages: first stage builds a social
+network with multiple communities with a specific mixing pattern. This stage follows the algorithm proposed by Newman
+(2003b) for creating networks with multiple communities. The second stage applies the threshold model of social contagion
+on the generated network. The essential steps to setup the simulation model are as following:
+Stage I – Building the mixed social network
+1. Choose the size of the network in terms of the number of edges Mand then draw M edges from the distribution eij. This
+step generates M edges that are identified by the types of the vertices they connect. These M edges are created in such a
+way that the proportion of the edges between vertices of type i and j will be eij as M becomes large.
+2. Count the number of ends of edges of each type i, to obtain the sum of mi; calculate ni ¼ mi
+zi
+, where zi is the desired mean
+degree of agents of type i.
+3. Draw ni agents from degree distribution pðiÞ
+k of agent type i making the sum of degrees of the agents to be mi. Notice that in
+general the sum of the vertex degrees will not be equal to mi. Newman (2003b) suggests to select and discard one vertex
+randomly, and draw another vertex from pðiÞ
+k until the sum of the degrees becomes equal to mi. Multiple draws are
+required for the vertices to match mi and different combinations should be tried until all nodes have the required degree
+which is a cumbersome process.
+4. Randomly pair up the mi ends of edges of type i with the generated agents so that each agent has the number of attached
+edges according to its chosen degree.
+5. Repeat steps 3 and 4 for each agent type.
+Stage II – Applying the threshold model
+1. Each agent is given a fixed threshold value, / that is sampled from f(/).
+2. There are two possible states r0 (not evacuated) and r1 (decided to evacuate) for each agent. Neighbors of the agents who
+have evacuated update their states at times t = 0,1,2,...
+3. At a given time step each neighbor of the evacuated agents observes the fraction of its neighbors in state r1 and switches
+to r1 if the fraction exceeds its threshold /.
+The simulation model is coded in C using the iGraph library (Csárdi and Nepusz, 2006).
+5. Results and discussion
+Our model is applicable to any population of agents forming a network with arbitrary degree distributions pðiÞ
+k for each
+agent type i and threshold distributions f(/). However, here we demonstrate the features of our model assuming a uniform
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1595
+
+degree distribution (i.e., the number of neighbors of each vertex is uniformly distributed between k1 and k2) with a particular
+average degree (z) for each type of agent. Here we consider the communities as neighborhoods located in a region and the
+degree of an agent as the size of the core network (i.e., people with whom one discusses important matters) of the agent. This
+type of degree distribution is a reasonable assumption as Hampton et al. (2011) observed such distribution of the core network size for individuals. We also assume a uniform threshold distribution between /1 and /2. To make the network and the
+corresponding analysis simple we here assume a network with two communities with the following edge distribution
+matrix:
+0:40:1
+0:10:4
+
+The communities are also assumed to have same degree distribution, however in a later experiment we relax this
+assumption. To investigate the effect of the assumed degree distribution on our results we also consider Poisson degree distribution; the relevant results related to the Poisson degree distribution are given in Appendix A. However no significant
+changes are found in terms of the insights obtained from the simulations with Poisson degree distribution. For each of
+the setup we run the simulation for 100 realizations. Whenever appropriate, simulation results are averaged over these
+100 realizations. Each realization builds a random network of 2000 edges in which a single agent makes the decision to evacuate at time t = 0.
+In this section we present the following computational results:
+(a) Comparison between the cascading condition obtained from the analytical model and that obtained from the simulation model.
+(b) Effect of the mixing patterns on cascade propagation.
+(c) Effect of the initial seed on cascade propagation for uniform degree distribution.
+(d) Effect of the previous time-steps considered by the agents on average cascade size.
+(e) Effect of the strength of ties on average cascade size.
+5.1. When does a cascade occur?
+Fig. 1 expresses the cascade condition (Eq. (13)) graphically as a boundary of average degree and average threshold value
+(z,/). The solid line corresponds to the analytical solution and the dotted line represents the results obtained from the simulation model. The cascade condition obtained from the analytical model matches closely with the simulation model. The
+area where no global cascade occurs represents the situation when zv2 < z1, i.e., the cluster of evacuated agents generated
+from the initial seed agent is too small to generate a cascade within its own community. On the other hand, the area where
+global cascade occurs represents the situation when zv2 > z1 i.e., the size of the cluster of evacuated agents generated from
+the seed agent is large enough for the cascade to propagate through their own community.
+Fig. 1. The condition for a cascade to occur.
+1596 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+An important quantity to observe is the change of average cascade size (i.e. average fraction of the evacuated agents to the
+total number of agents) with average threshold values and average degree of the communities. Fig. 2a and b illustrates how
+average cascade size is influenced by the average threshold values for different average degree of communities. Fig. 2a
+suggests that when average degree of a particular community is very low the average cascade size may not attain the full
+network even for very low threshold values.
+These findings have important implications in terms of evacuation planning and management. For example, for successful
+evacuation, additional interventions may be needed to influence individuals in communities with low average degrees (i.e.,
+community of individuals having few peers). On the other hand, mass evacuations are expected to occur in communities
+with high average degrees (i.e., community of individuals having many peers).
+5.2. Role of mixing patterns on cascade propagation
+In the previous section we investigated the cascading condition in a network with a particular edge distribution matrix.
+Here we investigate the effects of the mixing patterns on cascade propagation by changing the mixing patterns. We change
+the fraction of the intra-community and inter-community edges as specified by the matrix mentioned in Section 5.1. Our
+goal here is to identify how the interactions among the communities influence the cascade propagation in the population
+as a whole. Does the cascade of evacuation decisions propagate faster if people have more inter-community connections?
+(a)
+(b)
+Fig. 2. Average cascade size vs. average threshold values for different average degree of communities.
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1597
+
+Two approaches for changing the fraction of edges are followed: (a) keep the edge matrix symmetric (i.e., both communities have the same level of intra-community edges) and (b) keep the edge matrix asymmetric (i.e., both communities have
+a different level of intra-community edges). The quantity that we observe is the average fraction of the evacuated agents
+along the simulation time line.
+Fig. 3a and b illustrates the role of mixing patterns on cascade propagation for symmetric and asymmetric edge distributions, respectively. Fig. 3a suggests that as we decrease the intra-community edges, which is equivalent to increasing
+inter-community edges, cascade propagates faster. As a result, the more the inter-community edges the faster the propagation of the cascade. These inter-community edges can serve the purpose of bridges and let the information or the influence
+Fig. 3. Role of mixing patterns on cascade propagation. (Note: For (a) and (b) due to the randomness of the simulation, different simulations may end at
+different time steps. Thus it is not possible to take the average of the 100 realizations. We first find the frequency distribution of simulation end times for
+those realizations in which at least 80% of the vertices decide to evacuate. We then report the average of the results for those realizations that have the
+highest frequency of simulation end time where f = frequency of the simulation end time.)
+1598 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+propagate faster. The propagation curve has different stages; the initial stage consists of the propagation of cascade within
+the community of the initial seed; and in the subsequent phases the cascade starts to propagate to the other community.
+When the proportion of intra-community and inter-community edges are equal the whole network acts like a single
+community and in this case the rate of propagation is the highest. Given that communities are common in our societies, this
+analysis shows the benefits of having more connections among communities in the social network regarding the contagion
+process.
+Fig. 3b presents the propagation of cascade when the communities are not equally dense (i.e., they have different proportion of edges among themselves). Similar to the previous finding, it demonstrates that the cascade propagates faster in
+populations with less difference in the intra-community edges. That is, it indicates that as the communities become more
+similar to one another the cascade propagates more quickly among the populations.
+To investigate the effects of the initial seed’s community we analyze the cascade propagation in the communities separately. Fig. 4 presents the cascade propagation for asymmetric edge distribution setup. In this case, instead of calculating the
+averages over simulation runs, individual simulation results are presented. Fig. 4 indicates that the cascade propagation
+depends on how quickly the cascade moves from the initial seed’s community to the other community. In both the cases
+the initial seed belongs to community 1. For the case when community 1 has more intra-community edges (60%) the cascade
+from the intital seed propagtes within community 1 longer before reaching community 2. In this case the overall cascade
+propagtes slowly. On the other hand, when community 1 has less intra-community edges (50%) the cascade goes to the other
+community quickly; as a result, the overall cascade propagates fast.
+These findings can be translated into important implications for managing hurricane evacuations. For example, populations with greater levels of inter-community edges are expected to respond faster to evacuation notices or warning
+compared to populations with lower levels of inter-community edges. This suggests that intervention strategies should
+be implemented for the latter communities.
+5.3. Role of the initial seed
+It is important to note that we initialize our simulation by switching the state of a single agent. That is at time t = 0 a single agent decides to evacuate. This agent acts as an initial seed for our contagion simulation process. A natural question
+therefore would be to understand the role of this initial seed on cascade propagation. In this section, we investigate the role
+of this initial seed on cascade propagation by experimenting with two types of initial seed. One obvious candidate for such a
+seed might be the agent with the highest degree. We compare the rate of propagation of cascade initiated from a random
+seed with that initiated from a seed which has the highest degree. Fig. 5 presents the cascade propagations for random seed
+and highest degree seed for uniform degree distribution. Interestingly we find that the cascade initiated from a random seed
+propagates faster than that initiated from the highest degree seed. One plausible explanation for this might be the cascading
+condition described in Eq. (13). When we select the highest degree seed the local neighborhood of that initial seed is relatively larger than the affected cluster size (i.e., z1 > zv2); this makes the affected cluster to propagate slowly. On the other
+hand, if we select a random seed, then the expected degree of the seed will be the average degree of the degree distribution.
+Therefore the local neighborhood will be relatively smaller than the affected cluster size (i.e. z1 < zv2) which makes the
+cascade propagate fast.
+Fig. 4. Role of the initial seed’s community on cascade propagation for asymmetric edge distribution (average degree = 6 and average threshold = 0.1).
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1599
+
+5.4. Role of previous time steps considered by the agents
+In our simulation model (see stage II of the model described in Section 4), each neighbor of the evacuated agents observes
+the fraction of its neighbors in state r1 (i.e., evacuated) and switches to r1 (i.e., decides to evacuate) if the fraction exceeds its
+threshold value. Here we run experiments on previous time steps based on which agents will make their decisions. That is,
+an agent will count only those who have evacuated in previous n time steps. Those who have evacuated before n time steps
+do not have any influence on the agent’s evacuation decision. Analyzing the results of the experiments for n = 1,2,3 and 4, we
+observe no specific trend in the difference of the cascade propagation rate. However, we observe difference in the size of the
+cascade and simulation end times (the time to reach a stable situation) but only between the cases for n = 1 and n = 2. Beyond
+n = 2 there are no differences in the average size of the cascades and the time required to stabilize.
+Fig. 6a and b presents the role of the previous time-steps considered on average cascade size and the time required to
+stabilize, respectively. This analysis demonstrates the sensitivity of time-steps on the findings of our model. It shows that
+cascade size is not significantly different for different time horizons. However, cascade size is relatively higher if agents count
+the number of neighbors who evacuated in the last two time steps than it is when they only count the number of neighbors
+who evacuated only in the previous time steps. This is plausible as the fraction of neighbors who evacuated is greater if
+agents consider more previous time steps. In other words, if people consider only those who evacuated recently then it is
+less likely to have a global cascade of significant size than if people consider all the previous times.
+5.5. Role of the strength of ties
+In previous analyses agents considered only the number of neighbors for making the evacuation decision. However, it is
+likely that different relationships will have different level of influence on individual’s decisions. For instance, a member of
+the agent’s kin network will have higher level of influence than that of a member of its nonkin network. While analyzing
+the effects of the strength of relationships we assign each tie a weight using two categories of ties (i.e., strong tie and weak
+tie). A strong tie (weight = 3) represents the relationship with a kin (e.g., spouse, parent, sibling, child, or other family member) and a weak tie (weight = 1) represents the relationship with nonkin (e.g., co-worker, friend, advisor, neighbor, or group
+member). Simulations are run by changing the overall proportions of the strong and weak ties. Instead of calculating the fraction of the affected neighbors, agents now calculate the weighted fraction of the affected neighbors (i.e., total weights of the
+ties connected to the affected neighbors/total weights of the ties connected to all neighbors) to compare against its threshold
+value.
+Fig. 7 presents the role of the tie strength upon average cascade size. In general, we observe that until a threshold value
+0.15, there is a direct relationship between the strength of ties and the average cascade size. That is, the stronger the ties the
+greater the average cascade size. This result is contrary to the finding of ‘‘the strength of weak ties’’ by Granovetter (1973).
+However, weak ties may provide greater cascade size for simple contagion but when weights are introduced in the network
+the strength of weak ties is no longer found. Since agents assign higher values to the strong ties, the likelihood of cascade
+propagation increases with an increase in the proportion of strong ties. This indicates that when the network has higher
+proportion of strong ties (e.g., discussion with kin about evacuation decisions) the size of the evacuated agents will be larger
+compared to the network with smaller proportion of strong ties.
+Fig. 5. Role of initial seed on cascade propagation (average threshold = 0.1 and f = frequency of the simulation end time).
+1600 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+This finding has important implications about the role of social media. For instance, with the advent of so called online
+social media sites (e.g. Facebook, Twitter, etc.), one can imagine sending hurricane warning messages through these media
+and expecting greater cascade size. However, our analysis reveals that this is very unlikely. We observe that the decision to
+evacuate is not only strongly influenced by whom an agent is ‘‘linked’’ to but also the trust (weight) that the agent places on
+the connected nodes.
+6. Summary and conclusions
+In this paper we investigate the effect of social connections on the contagion process of decision making. It is found that
+the growing literature on network science can provide an appropriate tool for investigating this phenomenon. The
+methodology for introducing social influence is demonstrated here. We model the social contagion process in a population
+Fig. 6. Role of previous time-steps considered by the agents. Agents count only those who evacuated in previous n steps.
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1601
+
+with multiple communities and investigate the effect of community characteristics on the contagion process. A simple
+threshold model of decision making is applied to a hypothetical social network. Specific questions related to the social contagion process are answered: (a) When does a cascade occur? (b) What is the role of mixing patterns on cascade propagation? (c) How to control the propagation of cascade? (d) What is role of previous time steps on threshold model? (e) What is
+the role of the strength of ties on the contagion process?
+We derive an analytical condition for any cascade to happen in the network with a particular mixing distribution among
+communities. Our simulation model gives values of the cascading condition close to the ones obtained from the analytical
+model. We also identify the role of mixing patterns on cascade propagation. It is found that as inter-community edges increase in the network the cascade propagates faster. On the issue of how to control the propagation of the cascade we found
+that a high degree seed does not necessarily propagate the cascade faster than a cascade initiated by a randomly selected
+seed.
+In this paper, we also demonstrate how to relate the results from our model to hurricane evacuation. Previous literature
+indicated the existence of social influence on household hurricane evacuation decision making. We present a methodology to
+characterize such social influence. The important insights on social influences have implications to evacuation management
+as well as policy making. We highlight several specific implications.
+First, as suggested from our results that mixing patterns influence the cascade propagation, an evacuation manager can
+take into account the existing social network structure to anticipate the propagation of a cascade. For example, if there exists
+a community with very few average inter-community edges, extra actions might be taken to influence the propagation of
+information (i.e. evacuation warning). The communities in our analysis can be interpreted as neighborhoods present in geographic sense. In this case, our findings also suggest land use designs favoring such cascading condition.
+Second, using this type of analysis we can compare different strategies to expedite the propagation of information (i.e.,
+hurricane warning) in a network. For example, in our analysis we found that faster propagation of warning can be achieved
+if agents who receive the first warning are selected randomly rather than selecting individuals with greater number of neighbors. Although this type of strategy may not be practical in actual hurricane evacuation context, the model presented here is
+general enough to develop and evaluate other types of strategies favoring faster propagation of hurricane warning.
+Third, results indicate that the proportions of strong ties in the network influence the average size of the evacuated
+agents. When agents make decisions based on the level of weights of the relationship with the evacuated neighbors, a higher
+proportion of strong ties result in greater cascade size. Evacuation managers can expect a higher level of compliance or noncompliance behavior if the underlying social network has a higher proportion of strong ties.
+This analysis can also contribute to the transportation research area in terms of building a modeling framework which
+incorporates social influence on decision making relevant for transportation modeling. Future research can address several
+aspects of the evacuation choice problem considering the social influence. For instance, dynamic evacuation choice models,
+specifying a functional form of the threshold values of the agents, can be estimated. Thus in addition to the social influence,
+such models will be able to estimate the influence of the individual socio-economic variables. Another avenue of research
+might be to find appropriate community structure or warning strategies favoring faster propagation of evacuation decisions.
+Although the social contagion models have been studied more commonly in the network science literature, they have not
+been used in any previous transportation literature to the best of our knowledge. We believe that such introduction of social
+influences in evacuation behavior analysis can improve the modeling capabilities and can become an essential component
+for future integrated transportation models.
+Fig. 7. Average cascade size vs. different distributions of the strength of ties (average degree = 6).
+1602 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+Acknowledgments
+The research presented in this paper was supported by National Science Foundation Award SES-0826874 ‘‘Incorporating
+Household Decision Making and Dynamic Transportation Modeling in Hurricane Evacuation: An Integrated Social ScienceEngineering Approach’’ for which the authors are grateful. However, the authors are solely responsible for the findings of
+the research work.
+Appendix A. Experiments with Poisson degree distributions
+See Figs. A.8, A.9, A.10
+Fig. A.9. The role of initial seed on cascade propagation for Poisosn degree distribution (f = frequency of the simulation end time).
+Fig. A.8. Role of mixing patterns on cascade propagation for Poisson degree distribution. (Note: Due to the randomness in the simulation, different
+simulation may end at different time steps. Thus it is not possible to take the average of the 100 realizations. We first find the frequency distribution of
+simulation end times for those realizations in which at least 80% of the vertices decide to evacaute. We then report the average of the results for those
+realizations that have the highest frequency of simulation end time where f = frequency of the simulation end time.)
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1603
+
+References
+Albert, R., Jeong, H., Barabási, A.-L., 2000. Error and attack tolerance of complex networks. Nature 406 (6794), 378–382.
+Albert, R., Barabási, A.-L., 2002. Statistical mechanics of complex networks. Review of Modern Physics 74 (1), 4797.
+Anderson, R.M., May, R.M., 1991. Infectious Diseases of Humans: Dynamics and Control. Oxford University Press, Oxford, UK.
+Baker, E.J., 1991. Evacuation behavior in hurricanes. International Journal of Mass Emergencies and Disasters 9 (2), 287–310.
+Baker, E.J., 1995. Public responses to hurricane probability forecasts. The Professional Geographer 47 (2), 137–147.
+Balthrop, J., Forrest, S., Newman, M.E.J., Williamson, M.M., 2004. Technological networks and the spread of computer viruses. Science 304 (5670), 527–529.
+Barabási, A.-L., Albert, R., 1999. Emergence of scaling in random networks. Science 286 (5439), 509–512.
+Boccaletti, S., Latora, V., Moreno, Y., Chavez, M., Hwanga, D.-U., 2006. Complex networks: structure and dynamics. Physics Reports 424 (4–5), 175–308.
+Coleman, J., Menzel, H., Katz, E., 1966. Medical Innovations: A Diffusion Study. Bobbs Merrill, New York.
+Clifford, R.A., 1956. The Rio Grande Flood: A Comparative Study of Border Communities in Disaster. National Academy of Sciences, National Research
+Council Publication, Washington, DC, vol. 517.
+Csárdi, G., Nepusz, T., 2006. The iGraph software package for complex network research. InterJournal Complex Systems, 1695.
+Fig. A.10. Role of previous time-steps considered by the agents for Poisson degree distribution. Agents count only those who evacuated in previous n steps.
+1604 S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605
+
+Dash, N., Gladwin, H., 2007. Evacuation decision making and behavioral responses: individual and household. Natural Hazards Review 8 (3), 69–77.
+Drabek, T.E., Boggs, K.S., 1968. Families in disaster: reactions and relatives. Journal of Marriage and the Family 30 (3), 443–451.
+Gladwin, H., Lazo, J.K., Morrow, B.H., Peacock, W.G., Willoughby, H.E., 2007. Social science research needs for the hurricane forecast and warning system.
+Natural Hazards Review 8 (3), 87–95.
+Granovetter, M., 1973. The strength of weak ties. American Journal of Sociology 78 (6), 1360–1380.
+Hampton, K.N., Sessions, L., Ja Her, E., 2011. Core networks, social isolation, and new media: internet and mobile phone use, network size, and diversity.
+Information, Communication & Society 14 (1), 130–155.
+Kinney, R., Crucitti, P., Albert, R., Latora, V., 2005. Modeling cascading failures in the North American power grid. The European Physics Journal B 46 (1), 101–
+107.
+Lindell, M.K., Perry, R.W., 2005. Warning mechanisms in emergency response systems. International Journal of Mass Emergencies and Disasters 5 (2),
+137153.
+Mileti, D.S., Beck, E.M., 1975. Communication in crisis: explaining evacuation symbolically. Communication Research 2 (1), 24–49.
+Milgram, S., 1967. The small world problem. Psychology Today 1 (1), 60–67.
+Murray, J.D., 2002. Mathematical Biology, third ed. Springer, New York.
+Newman, M.E.J., Strogatz, S.H., Watts, D.J., 2001. Random graphs with arbitrary degree distributions and their applications. Physical Review E 64 (2),
+026118.
+Newman, M.E.J., Forrest, S., Balthrop, J., 2002. Email networks and the spread of computer viruses. Physical Review E 66 (3), 035101.
+Newman, M.E.J., 2003a. The structure and function of complex networks. SIAM Review 45 (2), 167–256.
+Newman, M.E.J., 2003b. Mixing patterns in networks. Physical Review E 67 (2), 026126.
+Perry, R.W., 1979. Evacuation decision-making in natural disasters. Mass Emergencies 4 (1979), 25–38.
+Quarantelli, E.L., 1985. Social support systems: some behavioral patterns in the context of mass evacuation activities. In: Sowder, B.J. (Ed.), Disasters and
+Mental Health: Selected Contemporary Perspectives. National Institute of Mental Health, Rockville, MD, pp. 122–136.
+Riad, J.K., Norris, F.H., Ruback, R.B., 1999. Predicting evacuation in two major disasters: risk perception, social influence, and access to resources. Journal of
+Applied Social Psychology 29 (5), 918–934.
+Sachtjen, M.L., Carreras, B.A., Lynch, V.E., 2000. Disturbances in a power transmission system. Physical Review E 61 (5), 4877–4882.
+Sornette, D., 2003. Why Stock Markets Crash: Critical Events in Complex Financial Systems. Princeton University Press, Princeton, NJ.
+Travers, J., Milgram, S., 1969. An experimental study of the small world problem. Sociometry 32 (4), 425–443.
+Watts, D.J., Strogatz, S.H., 1998. Collective dynamics of small-world networks. Nature 393 (6684), 440–442.
+Watts, D.J., 2002. A simple model of global cascades on random networks. Proceedings of the National Academy of Sciences 99 (9), 5766–5771.
+Wilf, H.S., 1994. Generatingfunctionology, second ed. Academic Press, London.
+S. Hasan, S.V. Ukkusuri / Transportation Research Part B 45 (2011) 1590–1605 1605

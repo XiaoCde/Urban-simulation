@@ -1,0 +1,1361 @@
+Risk Analysis, Vol. 33, No. 6, 2013 DOI: 10.1111/j.1539-6924.2012.01942.x
+The Risk Perception Paradox—Implications for Governance
+and Communication of Natural Hazards
+Gisela Wachinger,1 Ortwin Renn,1,∗ Chloe Begg,2 and Christian Kuhlicke2
+This article reviews the main insights from selected literature on risk perception, particularly
+in connection with natural hazards. It includes numerous case studies on perception and social behavior dealing with floods, droughts, earthquakes, volcano eruptions, wild fires, and
+landslides. The review reveals that personal experience of a natural hazard and trust—or
+lack of trust—in authorities and experts have the most substantial impact on risk perception.
+Cultural and individual factors such as media coverage, age, gender, education, income, social status, and others do not play such an important role but act as mediators or amplifiers
+of the main causal connections between experience, trust, perception, and preparedness to
+take protective actions. When analyzing the factors of experience and trust on risk perception and on the likeliness of individuals to take preparedness action, the review found that
+a risk perception paradox exists in that it is assumed that high risk perception will lead to
+personal preparedness and, in the next step, to risk mitigation behavior. However, this is not
+necessarily true. In fact, the opposite can occur if individuals with high risk perception still
+choose not to personally prepare themselves in the face of a natural hazard. Therefore, based
+on the results of the review, this article offers three explanations suggesting why this paradox
+might occur. These findings have implications for future risk governance and communication
+as well as for the willingness of individuals to invest in risk preparedness or risk mitigation
+actions.
+KEY WORDS: Literature review; natural hazards; risk perception
+1. INTRODUCTION
+Within the social sciences the term risk perception has a long tradition.(1) The term denotes the process of collecting, selecting, and interpreting signals
+about uncertain impacts of events, activities, or technologies.(1–3) These signals can refer to direct experience (e.g., witnessing a flood) or indirect experience
+(e.g., information from others, such as reading about
+1Department of Social Sciences V: Environmental Sociology
+and Technology Assessment, University of Stuttgart, Stuttgart,
+Germany.
+2Department Urban and Environmental Sociology, Helmholtz
+Centre for Environmental Research – UFZ, Leipzig, Germany.
+∗Address correspondence to Ortwin Renn; ortwin.renn@sowi.
+uni-stuttgart.de.
+a natural disaster in the newspaper). Yet risks cannot be “perceived” in the sense of being taken up by
+the human senses, as are images of real phenomena.
+Mental models and other psychological mechanisms
+that individuals use to judge risks (such as cognitive
+heuristics and risk images) are internalized through
+social and cultural learning and constantly moderated (reinforced, modified, amplified, or attenuated)
+by media reports, peer influences, and other communication processes.(4) Perceptions may differ depending on the type of risk, the risk context, the personality of the individual, and the social context. Various
+factors such as knowledge, experience, values, attitudes, and emotions influence the thinking and judgment of individuals about the seriousness and acceptability of risks. Perceptions also play a major role for
+1049 0272-4332/13/0100-1049$22.00/1 C 2012 Society for Risk Analysis
+
+1050 Wachinger et al.
+motivating individuals to take action to avoid, mitigate, adapt to, or even ignore risks. However, the
+connection between risk perception, willingness to
+act, and risk preparedness is still not clear.
+The main focus of this article lies on the discussion of results from an interdisciplinary review
+of previous studies about risk perception and behavioral response regarding natural hazards. It has
+been argued that individuals with low risk perception
+are less likely to respond to warnings and undertake
+preparedness measures than individuals with a high
+risk perception.(5,6) But is this really the case? Although much previous research has been conducted
+in the field of risk perception, our review suggests
+some intervening factors that influence the relationship between risk perceptions and preparedness actions. Therefore, our task is to summarize the findings on the base of the available data and highlight
+the implications of risk perception for risk governance and communication.
+2. METHOD
+This review includes papers from a broad range
+of disciplines focusing on a range of natural hazards.
+Parts of this meta-study have already been published
+in the report “Risk Perception and Natural Hazards” for the European Framework 7 CapHaz-Net
+project.(3) The purpose of the CapHaz-Net project
+(Social capacity building of natural hazards: Toward
+more resilient societies) was to highlight opportunities to enhance the capacities of European societies
+to prepare for, cope with, and recover from the negative impacts of a “natural” hazard. The work package
+3 report (risk perception) reviewed approximately
+30 European studies on floods, heat-related hazards,
+and alpine hazards (flash floods, avalanches, and debris floods). The purpose of the review was to define those social factors that are most relevant for
+risk perception of natural hazards. For the purpose
+of this study we expanded our review to a broader
+range of natural hazards: earthquakes, storms, fires,
+volcanic eruptions, and tsunamis. In this new study,
+we went beyond the findings of the CapHaz-Net report to gain an understanding of how the two factors of experience and trust affect risk perception and
+preparedness actions as well as how this affects risk
+governance.
+The selection criteria of the CapHaz-Net project
+included articles and European case studies that were
+produced after 2000 (to limit the number of results
+received) and focused on natural hazards and risk
+perception. The methods used for obtaining papers
+for the review conducted within the CapHaz-Net
+project was iterative and pragmatic (i.e., reading the
+most important journals from different disciplines,
+checking the reference list of the interesting articles,
+asking colleagues for their studies and pending publications, and inviting 30 experts in the field of natural
+hazards to a workshop on risk perception in 2010 to
+discuss the database). For this study, however, an additional literature review was conducted to find more
+information about the connection between risk perception and willingness/preparedness to take action
+in the face of future potential natural hazards (see
+Table I).
+The following databases were compared: www.
+scholar.google.com,http://www.sciencedirect.com/science, http://worldwidescience.org/, http://www.mendeley.com/research-papers/, and Thomson Reuters
+(formerly ISI) Web of Knowledge. We looked for
+the following combination of keywords: different
+natural hazards (“natural hazard,” “natural risk,”
+“flood,” ”avalanche,” “earthquake,” “storm,” “fire,”
+“volcanic,” “volcano,” “tsunami”) were combined
+with “risk perception” (1st search), “risk management” (2nd search), “risk governance” (3rd search),
+“participation“(4th search), “responsibility” (5th
+search), “behavior” (6th search), “preparedness”
+(7th search), and “willingness to act (8th search).
+We received thousands of hits from each database
+in regards to all searches (an exception was “risk
+governance” because it is a fairly new concept),
+even though we limited the search by only taking
+into account literature published after 2000. We
+assumed that most of the relevant literature on risk
+perception of natural hazards before 2000 (e.g.,
+Slovic(1) or Quarantelli(7)) was already covered in
+several papers (e.g., Plapp and Werner,(8) Renn,(9)
+Sjoberg, ¨
+(10) Siegrist and Cvetkowitch,(11) Terpstra
+et al.,
+(12) Lindell and Perry(13)). We screened the
+reference lists of these papers, however, in order not
+to exclude important findings from previous work.
+Many of the entries that we were able to retrieve
+were identical with the list of references that we had
+found in the previous searches undertaken during the
+CapHaz-Net project. However, there were several
+newer publications that we added as well as publications about natural hazards beyond floods. At the
+same time, the search did not reveal several studies that we had previously found in the risk perception study of the CapHaz-Net project. This indicated
+that the initial iterative and pragmatic method of obtaining relevant literature used in the CapHaz-Net
+
+The Risk Perception Paradox 1051
+project produced a more extensive list about flood
+risks. So we combined the two lists for the review in
+this article.
+Because the combined list accounted for more
+than 350 entries, we applied selection criteria for reducing the number of studies for the review. First,
+we placed most emphasis on the Web of Knowledge
+database for two reasons: this database is based on
+the impact factor and therefore includes mainly peerreviewed articles (in contrast to Google Scholar),
+and it is not limited to journals and books of certain
+publishing houses (as Science Direct or Mendeley)
+or of certain disciplines. The next selection criterion
+was content: we selected all articles that linked risk
+perception to individual willingness/preparedness actions. As the reviewed publications show a large difference in their methods (quantitative or qualitative
+approaches), in numbers of participants, and in the
+choice of the research questions, only publications
+that provided empirical evidence for relationships
+between perception and behavior were taken into
+account for the review. The third and last criterion
+was geographic focus. Because the preconditions for
+case studies in Europe and in countries outside Europe are highly affected by the large differences in
+severity and scope of natural hazards, we decided to
+place our main focus on Europe. We added some
+literature on international studies beyond Europe if
+basic concepts or theories were addressed or if the
+literature included comparisons with European experiences. The non-European studies were not part
+of the direct review summarized in Table I.
+The studies that remained after the selection
+(listed in the bibliography here) include authors from
+different research disciplines (psychology, social science, natural science, or philosophy). They also include many different perspectives and apply a variety
+of frequently used but not well-defined terms such
+as preparedness. Often, they do not refer to “risk
+perception” but to related mental constructs such
+as “risk awareness,” “willingness to act,” “preparedness,” “social action,” or “behavior.” Several papers
+reviewed do not explicitly distinguish between willingness to act and preparedness but instead tend to
+focus on one or the other. However, from the case
+studies reviewed, it can be inferred that willingness
+to act is seen as an intention, whereas preparedness
+is considered partly as a physical action and partly
+as an individual’s perception of preparedness (e.g.,
+Njome et al.
+(14)). We tried to distinguish between the
+two different meanings of preparedness by differentiating between behavioral intention and protective action. When we use the term risk preparedness
+in this article, we refer to the behavior of individuals, who, based on their risk perceptions and other
+motivations, undertake special measures to mitigate
+or avoid the respective risk.
+3. RESULTS
+3.1. Overview of Results
+This section presents the results of the literature
+review with a special focus on risk perception and
+natural hazards (Table I). The selected studies were
+screened for the main factors responsible for determining risk perception and ordered into four categories (risk factors, informational factors, personal
+factors, and context factors).
+Risk factors (factors associated to the scientific
+characteristics of the risk): perceived likelihood of
+an event and perceived or experienced frequency
+of hazardous events. These factors do not play a
+very important role in the risk perception of natural hazards.(15) The likelihood of a disaster is barely
+taken into account when making judgments about
+perceived risk levels.(16) The perceived magnitude of
+a disaster is also of little importance for people’s risk
+perception.(17) This is surprising because catastrophic
+potential is a rather strong predictor for risk perception in the field of technological risks.(1,9)
+Informational factors: source and level of information, media coverage, involvement of experts in
+risk management. These factors are linked to indirect
+experience because individuals without direct experience of a hazard event need to base their risk understanding on external information. The information provided by mass media, for example, does have
+an effect on risk perception but only if the respondents lack direct experience.(18) Trust is also important here in terms of the trustworthiness of individuals providing the information.(15)
+Personal factors, such as age, gender, educational
+level, profession, personal knowledge, personal disaster experience, trust in authorities, trust in experts,
+confidence in different risk reduction measures, involvement in cleaning up after a disaster, feelings associated with previously experienced floods, world
+views, degree of control, and religiousness. Some
+studies have found that age and gender have an
+influence on risk perception,(19,20,21,22) others saw
+no or little influence.(8,18,23,24) There is no consistent understanding of the importance of these factors and they seem to be mediated by other intervening factors (e.g., education: Karanci et al.
+(19)).
+Among the few external factors that seem to have
+
+1052 Wachinger et al.
+impact on risk perception of natural hazards was direct experience, which has been proven to exert a
+strong effect on risk perception.(8,15,16,18,25,26,27,28,29)
+Furthermore, trust in authorities and confidence in
+protective measures were also found to influence risk
+perceptions.(14,15,27,30)
+Contextual factors: economic factors, vulnerability indices, home ownership, family status, country,
+area of living, closeness to the waterfront, size of
+community, age of the youngest child. These factors are usually investigated in conjunction with personal factors. The strength of the effects of contextual factors related to risk perception seems to
+depend on the nature of the combination of contextual variables with specific personal factors. For example, Kellens et al.
+(20) found that home ownership is
+not a strong predictor for risk perception, but Burningham et al.,
+(23) who focused on risk awareness, did
+find home ownership to be important. The mediating
+effect here seemed to be prior experience with damage. This proposition is also suggested by Grothmann
+and Reusswig,(26) who investigated private efforts for
+taking precautionary measures for damage prevention regarding flood risks. They also found home
+ownership to be an important factor when people felt
+vulnerable to risks. This is confirmed by Harries and
+Penning- Rowsell,(31) who demonstrated that individuals with flood experience took more preparedness
+actions than other without such experiences. Finally,
+communities with prior flood experience were “more
+likely to regard themselves as better prepared for another such event than communities that have not had
+experience of any major flood.”(29)
+On the basis of the reviewed studies, direct experience of a natural hazard even appears to be one of
+the most important factors. Of minor but still significant importance are media coverage (which we see
+as a form of indirect experience) and home ownership, which acts as a promoter for concern when either personal experience or perceived vulnerability is
+given. The following section discusses first the influence of experience and then turns to a second important variable: trust.
+3.2. Risk Perception and Experience
+For clarity we have divided experience into two
+components: direct experience and indirect experience. Direct experience is internal (e.g., experiencing a hazard event with one’s own eyes), whereas
+indirect experience is external (e.g., media and education). The following sections provide a summary
+of two types of experience and their effects on risk
+perception.
+3.2.1. Direct Experience
+Direct experience can have a positive effect on
+risk perception.(8,15,16,18,25–27) This could reinforce
+precautionary behavior. But it also might have a
+negative affect (low severity and seldom experienced events can produce a false sense of security/misjudgment of ability to cope). Some examples
+show this influence of direct experience in more detail: personal exposure to the natural event (e.g.,
+a flood) can offer an illustration of the threat and
+demonstrates the potential for future risk. Hence, experience of a natural hazard leads to a higher risk
+perception in most cases. For example, risk perception was positively correlated with personal memories of having experienced damage in an earlier flood
+in Italy.(16) Ruin et al.
+(5) confirm this finding: individuals without direct flood experience tend to underestimate danger, whereas individuals with direct
+flood experience tend to overestimate danger. This
+has also been documented in studies about landslides: victims who experienced large personal damages from landslides perceived a higher occurrence
+rate of these hazards, saw them as being more life
+threatening, and had a greater sense of dread than
+those with less experience.(32) Hazard experience
+also heightened risk perception of volcanic eruptions.(33)
+However, there are also examples of the opposite effect: individuals who had previous experience
+with a hazard event and who did not experience
+personal damages are more likely to believe that
+a future event will unlikely affect them and, therefore, their risk perception decreases.(34–39) Mileti and
+O’Brien(37) describe the residents’ reasoning in the
+following way: “If in the past the event did not hit me
+negatively, I will escape also negative consequences
+of future events.”(37) This shows that it is less the experience “in itself,” but rather the severity of the personal consequences experienced in past events that
+shapes the respondents’ perceptions.
+3.2.2. Spatial Differences
+Spatial associations are also important for risk
+perception. It could be demonstrated that perception of a flood threat depends on the place of residence,(40) even within the flood prone area;(41) for
+comparison in Asia, see Hung et al.
+(6) People seem
+
+The Risk Perception Paradox 1053
+to have a stronger perception of risk through the
+geographical distribution of flood risks than time
+distribution (probability).(41) Two studies in France
+showed that flood experience of the individuals
+turned out to be the strongest factor for risk perception, which was directly related to the location of
+residents in areas prone to muddy floods.(15) Ruin
+et al.
+(5) classified maps of road sections prone to
+floods by classifying the participants’ observations as
+“over-” or “underestimation” with respect to the calculated danger: risk perception was high when impacts were observed close to the place of residence.
+3.2.3. Indirect Experience
+Indirect experience includes education, media,
+and hazard witnesses.(39,42,43) Several authors have
+collected factors correlated with hearing risk warnings, understanding warnings, and believing warnings. Exposure to a variety of different media
+(printed, broadcast, digital, etc.) correlates with subjective recollection of hearing warnings. The quality of the media also played a role in understanding and believing warnings. Information provided through mass media shapes risk perception
+to some degree: “The media proved to be an important and popular channel of information about
+the development and aftermath of local extreme phenomena. This source came well ahead of other formal sources of information, including schools and
+information campaigns.”(29) If persons report that
+they have had personal experience with hazards
+media coverage does not play a major role.(18)
+However, media reports about an expected flood
+can stimulate individuals to recall the previous experience of a flood event.(25) Moreover, indirect
+experience can play an important role for recalling
+previous personal experience or previously stored indirect experience.(44) Risk perception and risk awareness reach high levels directly after a flood event,
+but soon fade away over time. It seems to be essential to help people recall the experience of the
+flood if one wants to motivate them to take protective actions against a new flood.(25) This “window of
+opportunity” can be used in risk education and risk
+communication.
+3.3. Risk Perception and Trust
+In addition to personal experience, the second
+most important factors for risk perception of natural
+hazards according to our review are trust in scientific experts and authorities and confidence in protective measures.(14,15,27,30) Trust is employed by individuals to manage personal risk through externalized
+faith: as a result of an increasingly complex world,
+individuals are not able to inform themselves about
+all threats that they face. Therefore, they are forced
+to trust in authorities and experts. Trust is used as
+a shortcut to reduce the necessity of making rational judgments based on knowledge by selecting trustworthy experts whose opinion can be considered as
+accurate.(11) This can result in a reduction of the uncertainty, but, due to the fundamental affective dimension of trust (which involves items like honesty,
+integrity, goodwill, or lack of particular interests), individuals may feel more at risk if their trust in experts
+is lacking or damaged.(45) Therefore, we see that trust
+has an important effect on an individual’s risk perception.
+However, trust seems to have two contrasting
+side effects. People in areas unprotected by dikes
+tend to underestimate risks under most circumstances.(46) This is even more so when people have
+high trust in management performance, for example, in the case of flood protection, in structural protection such as dikes and dams. Trust here lessens
+the perception of flood likelihood and magnitude
+and, therefore, reduces willingness and preparedness
+actions.(27) Whitmarsh(47) found similar results on
+climate change versus flood perception and behavioral response. Furthermore, Bichard and Kazmierczak(48) found that most people believe that authorities are mainly responsible for flood protection and
+thus obliged to alleviate residents from the burden
+of taking protection for themselves. In addition, experience has an impact on trust. The experience of
+trust forming relationships is an important step toward willingness to act and preparedness for natural
+hazards. An individual’s decision to act is determined
+by how he or she interprets the given information
+based on previous experiences.(33)
+Therefore, we can see that both direct and indirect experience, as well as trust, can affect an
+individual’s expectations about potential outcomes
+(Table I). In addition, positive or negative feelings associated with personal flood experience were
+found to have different effects on trust, risk perception, and preparedness intention: negative feelings
+associated with previous experience decrease trust in
+official flood protection measures and increase risk
+perceptions; positive feelings increase trust in authorities and decrease risk perception.(27)
+
+1054 Wachinger et al.
+Fig. 1. Visualization of the “hazard to
+action-chain.”
+3.4. The Risk Perception Paradox
+The reviewed studies show the complex relationship between risk perception and social responses:
+some studies assume that individuals with low risk
+perception are less likely to respond to warnings and
+undertake preparedness measures than individuals
+with a high risk perception.(5,6) However, this is not
+always the case. Many studies provide evidence that
+even though individuals have experience and high
+risk perception, they seldom take appropriate preparedness actions.(18,19,34,49) Haynes et al.
+(50) argue
+in the same direction: “it is now understood that
+there is not necessarily a direct link between awareness, perceived risk and desired (by risk managers)
+preparations or behavioral responses.”(50) Miceli
+et al.
+(16) noted that “most empirical evidence suggests that the link between these two variables [risk
+perception and preparedness actions] is quite weak
+or even null.”(16) Different authors have recently revised models of the link between risk perception and
+its input factors on the one hand and preparedness
+actions on the other hand.(13,51) On the basis of these
+findings we have developed the following more simple heuristic as one way of allowing for a discussion
+of implications. There are three possible reasons that
+might be responsible for the weak relationship between risk perception and personal actions (Fig. 1).
+These three reasons are related to the intervening
+variables: (1) experience and motivation, (2) trust
+and responsibility, and (3) personal ability (economic
+and personal conditions).
+• Reason 1: Individuals understand the risk but
+choose to accept it due to the fact that the
+perceived benefits of living close to the river
+appear to outweigh the potential negative impacts.(6,52)
+• Reason 2: Individuals understand the risk but
+do not realize any agency for their own actions;
+the responsibility for action is transferred to
+someone else.(27)
+• Reason 3: Individuals understand the risk but
+have little resources to affect the situation.(14)
+The first possible reason for the risk paradox is
+linked to the expectations of people living or staying
+in hazardous areas despite the risk. There are three
+possibilities why individuals might perceive that benefits outweigh the potential negative impacts. The
+following three examples expand on these notions:
+individuals are aware that a specific natural hazard is
+likely to occur and will have serious personal consequences, but they have other risks (which may be perceived as more serious) to worry about (e.g., social,
+economic, and security-associated issues were mentioned).(53) Moreover, the need to secure daily livelihoods is mentally more salient than risk perception
+of natural hazards.(54) Individuals with and without
+hazard experience can judge the threat of a future
+natural hazard to their livelihood as low and that,
+therefore, the benefits (e.g., fertile land for agriculture or the beauty of the landscape) outweigh the disadvantages.(6,52) A study about floods and volcanic
+hazards found that if individuals expect worse living
+conditions after evacuation, or if they are afraid that
+they cannot protect their property when evacuating
+their homes, they will stay in a risky area as long
+as possible.(55) Moreover, the conditions of evacuation prevent individuals from evacuating even when
+faced with a major natural catastrophe: during volcanic eruptions individuals did not want to evacuate
+
+The Risk Perception Paradox 1055
+Table I. Systematic Review of European Studies (Post-2000) on Risk Perception of Natural Hazards and Disaster Preparedness
+Reference Natural Hazard Country Concrete Example Factors Explored Outcome Investigated
+Armas and Avram(21) Flooding Romania Danube delta floods Age, gender, religiousness,
+years of formal education,
+income, type of support
+expected, professional
+activism, ownership status,
+also the different items of
+flood perception are tested
+as factors
+Perception of flood risks
+measured on a scale of 30
+different items (connected
+with personal feelings,
+fear, trust, perceived own
+vulnerability): these
+variables are also tested
+against each other
+Armas(22) Seismic risks Romania Bucharest
+earthquakes: 1944,
+1977, 1986, 1990
+(Danube delta),
+landslides
+Social vulnerability
+(normalized composed
+index of two samples:
+poverty ratio and
+demographic vulnerability
+ratio, depending on age,
+gender, and education
+level)
+Perception of a seismic risk
+Baan and Klijn(58) Flooding Netherlands Perceived fairness in
+risk-benefit distribution,
+familiarity with the risk,
+reason for exposure to
+risk, seriousness of the
+effect, degree of control
+and preparedness
+Perception of flood risks
+compared to others
+(smoking, nuclear plant,
+bee sting, road traffic)
+Barberi et al.
+(53) Volcanic hazards Italy Age, gender, educational
+level, amount of
+information given,
+confidence in evacuation
+plan and in the
+government
+Risk perception, perception
+of their own vulnerability,
+preparedness, trust in
+authorities
+Bichard and
+Kazmiercza(48)
+Climate change
+risks, especially
+floods
+England and
+Wales
+Awareness of flood climate
+change, awareness of flood
+risk, attribution of
+responsibility for action,
+age, social grade
+Preparedness of home
+owners to make changes to
+their homes (flood
+protection measures and
+energy saving measures)
+Biernacki et al.
+(29) Flooding,
+landslides,
+storms
+Poland Place of residence,
+previous experience,
+source of information, size
+of the community
+(settlement hierarchy and
+socioeconomic structure),
+degree of establishment of
+the community
+Risk perception, degree of
+preparedness of the local
+community
+Bird et al.
+(60) Volcanic risks Iceland Early warning system
+around Katla
+volcano
+Hazard knowledge, risk
+perception, adoption of
+personal preparedness
+measures
+Differences between tourists
+and tourism employees
+Botzen et al.
+(46) Floods Netherlands Socioeconomic factors,
+geographical
+characteristics, personal
+experience with flooding,
+knowledge of flood threat,
+individual risk attitude
+Flood risk perception (risk
+beliefs)
+Brilly and Polic(41) Flooding Slovenia Floods in Celje: 1990
+and 1998
+Experience with floods,
+geographical areas,
+perceived probability of
+floods occurring
+Flood risk perception:
+perceived threat
+(visualized on self-drawn
+maps), and concerns
+related to floods
+(Continued)
+
+1056 Wachinger et al.
+Table I. (Continued)
+Reference Natural Hazard Country Concrete Example Factors Explored Outcome Investigated
+Burningham et al.
+(23) Floods United Kingdom Flood events of 1998
+and 2000
+People’s recognition that
+their property is in an area
+that is potentially at risk of
+flooding, flood experience,
+length of time in residence,
+age, gender
+Flood risk awareness
+De Groot(76) River floods France, Germany,
+Netherlands
+Human/nature relationship
+(mastery over nature,
+stewardship of nature,
+partnership of nature,
+participation in nature),
+respondent’s sense of
+place, safety perception,
+background variables (age,
+educational level,
+experience of flooding,
+possibility of flooding)
+Adherence to two different
+flood risk management
+styles: “room for river”
+and “dike reinforcement”
+Felgentreff(25) Flooding Germany 1998 Odra flood Experience of a flood event,
+media reports of a second
+flood event
+Perception of flood risk after
+a flood event
+Grothmann and
+Reusswig(26)
+Flooding Germany 2002 Elbe flood Perception of flood risk
+experience, perceived risk
+of future floods, perceived
+reliability of public flood
+protection, perceived
+efficacy and costs of
+protective behavior,
+perceived ability to
+perform these actions,
+nonprotective responses
+(like fatalism, denial,
+wishful thinking)
+Private efforts for taking
+precautionary measures
+for damage prevention
+Heijmans(55) Floods, volcanic
+hazards
+Experience with natural
+hazards, credibility of the
+warning source, kind of
+preparedness, coping
+measures
+Risk perception (floods,
+volcanic), vulnerability
+Heitz et al.
+(15) Mud flood France Alsace Knowledge factors: location
+within the catchment, trust
+in information
+Risk perception of individual
+stakeholders
+Johannesd ´ ottir and ´
+G´ısladottir ´
+(49)
+Volcanic hazard Iceland Southern Iceland Age, experience of an
+eruption, region,
+vulnerability
+Risk perception
+Kaiser and Witzki(40) Storm floods Germany Country (north sea region):
+Belgium, United Kingdom,
+Denmark, the
+Netherlands, Germany
+Risk perception, risk
+awareness, willingness to
+act
+Karanci et al.
+(19) Earthquakes,
+floods,
+landslides
+Turkey Sociodemographic factors
+(gender, education,), locus
+of control, previous
+disaster experience,
+anxiety, being a participant
+in a training program
+Disaster-related cognitions
+(disaster expectation,
+worry about future
+disasters, loss estimations,
+beliefs in the possibility of
+mitigation and
+preparedness), actual
+preparedness behaviors
+(Continued)
+
+The Risk Perception Paradox 1057
+Table I. (Continued)
+Reference Natural Hazard Country Concrete Example Factors Explored Outcome Investigated
+Kellens et al.
+(20) Floods, storm
+surge
+Belgium Actual flood estimates,
+location, age, gender,
+home ownership,
+permanent residence,
+education, children living
+at home, storm surge
+experience, experience
+with previous flood
+hazards, different locations
+within the house (sea view,
+ground floor, cellar)
+Risk perception
+Krasovskaia(79) Flooding Norway 1995 flood Public versus expert panel
+(decisionmakers), “river
+affinity,” nationality
+(a) Perception of risk for life
+and health (b) of economic
+and environmental loss
+Miceli et al.
+(16) Landslides,
+flooding
+Italy 1998: 150 landslides in
+Avellino and
+Salerno, Campania
+Age, gender, level of
+education, experience of
+damage, level of feeling
+informed, participation
+level, closeness to the
+waterfront, adoption of
+protective behavior
+(1) Perception of flood risks:
+(a) based on likelihood
+estimates and (b) based on
+feelings of worry; (2)
+Adoption of protective
+behavior
+Pagneux(80) Ice-jam floods Iceland Experience of the past
+flooding events in town
+Knowledge, awareness, risk
+estimation, worries
+Plapp and Werner(8) Flooding,
+windstorm,
+earthquake
+Germany Inn, Rhine, Donau Perceived personal risk, fear
+evoked by the risk,
+familiarity of hazard,
+likelihood of fatal
+consequences, frequency
+of hazardous events, age,
+educational level, gender,
+world views
+General flood risk
+perception, general
+windstorm perception,
+general earthquake
+perception, personal risk
+perception
+Plattner et al.
+(81) Different natural
+hazards
+Perception affecting factors:
+effective individual risk,
+voluntariness of risk
+taking, individual options
+to reduce risk, knowledge
+and experience with risk
+source, endangerment
+(likelihood to die, fear
+evoked), subjective
+damage rating, subjective
+flood recurrence frequency
+Personal risk perception
+Raajmakers et al.
+(82) Sea level rise Spain Ebro Delta Stakeholder groups of the
+Ebro-Delta: the rice
+farmers association, the
+water distribution
+cooperative, the salt
+manufacturer, the tourism
+industry, local and regional
+authorities, and park
+managers
+Flood risk perception,
+characterized by the
+notions of awareness,
+worry, and preparedness
+Ruin et al.
+(5) Flash floods,
+storms
+France Southern France Danger in road sections (GIS
+variables and cognitive
+maps), age, profession,
+family status, area of
+living, flood experience
+Risk perception of individual
+drivers
+(Continued)
+
+1058 Wachinger et al.
+Table I. (Continued)
+Reference Natural Hazard Country Concrete Example Factors Explored Outcome Investigated
+Siegrist and
+Gutscher(18)
+Flooding Sweden Area (German or
+French-speaking area,
+mountain, urban, hazard
+area), age, gender, home
+ownership, past
+experience, involved in
+cleaning up after a disaster
+Perceived risk, prevention
+behavior
+Siegrist and
+Gutscher(61)
+Flooding Switzerland Flooding experience: people
+who were affected by a
+severe recent flood disaster
+versus people not affected
+but living in flood-prone
+areas
+Perception of the effects of a
+flood, precautionary
+measures
+Sjoberg ¨
+(10) All natural
+hazards
+Sweden Different Swedish
+cities and regions
+Tampering with nature, sex,
+age, age of youngest child,
+income, educational level,
+size of community,
+Perception of a disaster risk
+(nuclear disasters), new
+and unknown risk,
+perceived dread by
+politicians and the public
+Slinger et al.
+(76) Flooding Netherlands Scheldt Estuary Shifts in opinions of citizens,
+scientists, and
+policymakers
+(a) Flood risk perception of
+citizens and scientists; (b)
+Responsiveness of
+scientists and policymakers
+to the perception of local
+inhabitants
+Stanghellini and
+Collentine(75)
+Water
+management
+Italy Alta Valsugana,
+Trento
+Socioeconomic as well as
+environmental variables:
+use of water (domestic,
+agricultural, touristic),
+biodiversity, vulnerability
+of fresh water supply by
+wells, availability of water
+(identified by the
+participants of a public
+workshop)
+Awareness of citizens
+(results collected from
+focus groups)
+Tekeli-Yesil et al.
+(24) Earthquake Turkey 1999 earthquakes in
+Turkey
+Gender, age, family status,
+home ownership,
+educational level, area
+location, earthquake
+experience (having
+participated in rescue and
+solidarity activities in
+previous earthquakes),
+knowledge about
+earthquakes and
+mitigation measures
+Taking action to prepare for
+an earthquake
+Terpstra et al.
+(12) Floods Netherlands Different small scale flood
+risk communication
+program (workshops and
+focus groups), direct
+personal experience, and
+attitude polarization
+Risk perception
+Terpstra(28) Flooding Netherlands Dutch coast (Rhine,
+Meuse, Lake
+Marken)
+Feelings associated with
+previous experience of
+floods, trust in flood
+protection agencies
+Perception of flood
+likelihood, flood
+preparedness intentions
+Whitmarsh(47) Flooding United Kingdom Floods in south
+England
+Relevant experiences of
+flooding and air pollution
+Knowledge, attitudes, risk
+perception, behavioral
+responses to climate
+change
+
+The Risk Perception Paradox 1059
+because of the perceived high risk of dying in the
+evacuation camps.(50) The allegedly “irrational” behavior is due to a rational comparison of the risks
+of staying versus leaving. Renn(9) suggests that most
+individuals perceive natural hazards as cyclical phenomena. So if you endure or survive a catastrophic
+event you believe you will not experience another
+event of this kind during your lifetime (e.g., in the
+case of a 100-year flood).
+The second possible reason for the risk paradox is linked to trust: the influence of trust has been
+extensively studied in the context of risk preparedness. As explained earlier, trust in flood protection,
+for example, lessens perceptions of flood likelihood
+and magnitude and, therefore, reduces intentions to
+prepare for floods.(27) These results from the Netherlands can be compared to the results from a floodstudy in Romania, where the lack of resources and
+mistrust in authorities reinforces nonadaptive behavior.(14) In general, trust seems to be directly related to
+preparedness actions.(56,57,33) When individuals trust
+in structural and/or governance measures to keep
+them safe they are less likely to act than when they
+believe they have no choice but to act (e.g., no physical or governance structures for protection or little
+trust in the effectiveness of these structures).(6,58) It
+has been noted that changes in Western governance
+see the “rolling back” of the state, which means
+that individuals and communities increasingly have
+to take responsibility for their own preparedness,(59)
+but their perception of the authorities as being responsible for the well-being of the citizens has not
+changed accordingly.
+The third possible reason for the risk paradox
+is linked to confusion or ignorance about the appropriate action to take as well as a lack of capacity/resources to help oneself. Therefore, it is not just
+a matter of raising risk perception but also of providing individuals with the physical and mental capacity to affect their own situation. Experience and
+trust are important in transferring/sharing knowledge
+between “experts” and “lay people.” Siegrist and
+Gutscher(18) argue that the gap between risk perception and action could be due to the fact that
+residents “did not know what they should do.”
+(18)
+Njome(14) found that even though residents around
+the Mt. Cameroon Volcano had quite high risk perception and an accurate understanding of the potential risk of eruption, they lacked the knowledge and
+economic resources to take action. Bird et al.
+(60) have
+reported similar results from volcanic hazards in Iceland: tourists had very low hazard knowledge and did
+not adopt preparedness measures. In contrast, foreigners working in Iceland showed a high level of risk
+perception yet lacked knowledge about the warning system and emergency respond procedures. This
+finding is also supported by Grothmann and Reusswig,(26) who reported that even if individuals show
+preferences toward preparedness actions they can be
+stopped short by their physical capacity to take action: “If the person chooses a protective response, he
+or she first forms a decision or intention to take action,
+labeled protection motivation. Protection motivation
+does not necessarily lead to actual behaviour due to
+actual barriers, such as a lack of resources like time,
+money, knowledge or social support, not expected at
+the time of intention forming.”(26)
+4. DISCUSSION
+4.1. The Role of Experience
+At first sight the connection between personal
+experience of a natural hazard event and the perception of the risk might appear trivial (surely you are
+afraid of a flood when your house has been flooded
+before), but the results of this review show that the
+causal pathways are more complex than the proposition of the direct link between experience and preparedness implies. There are may intervening variables such as personal agency to act, perception of
+hazard cycles, time distance to previous events, and
+others. These complex relationships have many implications for practical risk management.
+Managers will face a large variety of hazard perception patterns within a single location due to past
+exposure to damages (different experiences). The
+strength and salience of personal experience determine the time frames in which people are able to
+recall past experiences and motivate appropriate actions. Furthermore, the credibility and motivational
+power of risk communication depend largely on personal experience and trust in previous management
+attempts by public authorities, as well as their personal capacity to adopt preparedness actions. In addition, it is of great importance whether individuals
+perceive the responsibility of preparedness actions
+to be in their hands or the hands of the risk managers/government.
+The fact that personal experience of a hazard
+event is a strong factor in risk perception can be applied in concrete risk communication programs. Risk
+communication can help people to envisage the negative emotional consequences of natural disasters.(61)
+
+1060 Wachinger et al.
+The mental images of a risk may refer to former
+experiences of a risk event in a direct way: “visual
+imagery is equivalent to stimulating an actual visual
+experience and motor imagery is equivalent to stimulating an actual motor experience.”(62) Feelings associated with hazard experience are important and
+can also be recalled via communication. But even
+if people have no direct experience with damages
+caused by natural hazards, they can still empathize
+with such experiences if stories of other people suffering through such damages are reported to them.
+Press coverage also contributes to a person’s perception of risk, particularly if individuals lack personal experience with the risk and are unable to
+verify claims of risks or benefits from their own experience. In contrast to popular belief, however, there
+is no evidence that the media create opinions about
+risks or even determine risk perceptions. Studies on
+media effects suggest that individuals select elements
+from media reports and use their own frame of reference to create understanding and meaning. Most
+people reconfirm existing attitudes when reading or
+viewing media reports.(63,64,65)
+Another issue to consider is the fading character of disaster experience. The Fukushima catastrophe highlights this phenomenon. Eighty years ago a
+tsunami occurred in the vicinity of Fukushima, which
+killed 3,000 people, 50 years ago a major tsunami
+killed 142 people, but one year ago a major tsunami
+warning was issued, but the actual tsunami turned
+out to be weak and left no serious damage.(66) People started to associate tsunamis with minor impacts
+and did not take the warnings about major damages
+caused by tsunamis seriously any more. So it was not
+surprising that the actual disaster in 2011 was first ignored even after dramatic warnings were issued.(66)
+Tsunamis are rare events; therefore, the percentage
+of individuals who have experienced a tsunami is low.
+The experience of the disaster potential of tsunamis
+needs to be embedded within the narratives about
+everyday lives of people exposed to this risk. In regard to the tsunami in Thailand in 2004, only people who had experience with tsunamis were able to
+recognize the warning signals. People need to understand the warnings/cognitive signals of a tsunami
+and know how to act effectively once a warning is issued.(67) But even if they understand the warning and
+its implication they still may decide to do nothing because they don’t know what to do or they feel that
+the warning agencies have exaggerated the threat.
+An old fairy tale describes: if someone cries “Wolf”
+two times and nothing happens, nobody believes him
+or her the third time, even if the wolf is actually approaching. The mechanism of fading representations
+of threat depends on the severity of the danger and
+the success of authorities and other institutional actors to keep memories alive: Dow and Cutter(68) observed household strategies for hurricane risk assessment and found that individual assessment practices
+took the past hurricane and evacuation experiences
+into account. A successful evacuation plan with reports about previous hazard experiences helped inform future evacuation decisions.
+Another effect related to the first reason for the
+risk perception paradox is the personal judgment of
+the risk compared to specific advantages. Gough(52)
+explained that inhabitants of a community in
+New Zealand in close proximity to active volcanoes
+(with low eruption rates) choose to live there because of the beauty of the area, even though they
+have a realistic perception of the risk. Therefore,
+providing these individuals with information and encouraging discussions of the risk that is relevant to
+them and their area might encourage a higher level
+of preparedness. Although a volcano is an example of a rare event, its consequences are potentially
+devastating and, therefore, it might be very important to ensure that individuals know what to do in
+the face of such an event; that they are equipped
+with the cognitive understanding to be able to recognize warning signals and act accordingly. From the
+high importance of direct experience one can follow
+that communication methods close to personal experience would work best. Examples could be: to experience the power of water by walking through a
+river, listening to lively narratives from hazard witnesses, studying historical accounts of past disasters
+(e.g., flood marks in medieval European cities or
+shrines in Japan). Media reports might not raise any
+propensity to take actions unless the readers can recall some kind of direct experience of a painful damage to themselves or others they know. Such an indirect experience provides a reference to one’s own
+memories or imagination of a potential natural hazard event.
+Risk perception can be amplified or attenuated
+by indirect experience. Two communication networks play the primary role in risk amplification: the
+media and personal interaction with other people.(69)
+Frewer et al.
+(69) found that “the media, in isolation,
+is unlikely to account for amplification processes described within the social amplification of risk framework.” What remains is the communication via “the
+informal personal network.” Frewer(70) argues that
+
+The Risk Perception Paradox 1061
+amplification via the informal personal network plays
+a major role in the perception of genetically modified
+organisms (GMOs). The data “demonstrated that
+people’s risk perception does increase and decrease
+in line with what might be expected upon examination of the amplification and attenuation mechanisms
+integral to the framework.”(69) One can assume that
+this is also true for natural hazards: information by
+media is an indirect experience. It gives authorities
+the opportunity to use and widen the window of opportunity for risk education: risk perception and risk
+awareness reach higher levels after a flood event, but
+soon drop back to average levels. It is essential to use
+this “window of opportunity” after a flood event to
+plan and market new mitigation strategies.
+Finally, risk education can be seen as an indirect experience of a hazardous event in learning environments. It has been reported that children are
+able to educate their parents, as shown by the example of the British girl who had learned the tsunamiwarning signs in school and saved local people from
+the tsunami when she was in Thailand for holidays.(71) This event is one example as to how efforts
+spent on children’s hazard preparedness education
+are an important way of influencing the population
+as a whole.(72)
+4.2. The Role of Trust
+Trust is an important factor of risk perception and becomes even more important if individual knowledge about the hazard is low. Siegrist and
+Cvetkovich,(11) working with different, mainly technological risks, were able to prove that the more individuals believed they knew enough about a risk
+the more they trusted in their own personal judgment and not in the advice of the authorities. This
+has to be kept in mind when looking for competent
+and transparent risk communication by authorities
+and experts. There seems to be a strong relationship between the uncertainty of the risk and the role
+of trust.(73) Paton(74) argues that trust only becomes
+necessary when the decisionmaker faces a situation
+of uncertainty. When dealing with natural hazards,
+decisionmakers are normally confronted with uncertainty. In this situation “trust functions to reduce the uncertainty and complexity that people encounter when faced with novel events ... .”(74) Trust
+then becomes “a construct of considerable importance when dealing with unfamiliar, infrequent and
+complex environmental hazards.”(74) Paton’s studies of bushfires, earthquakes, volcanic eruptions, and
+floods show that “when dealing with infrequently
+occurring natural hazards, information will be evaluated in terms of peoples’ generalized beliefs regarding trust in the social institutions providing
+information.” High levels of trust can be counterproductive in regards to encouraging individual to take
+preparedness actions. In other words, if people trust
+in the protection provided by public authorities, they
+may not see the point in taking personal protective
+measures. At the same time, trust in authorities is
+necessary to build up a social climate in which advice
+from authorities will be taken into account in a crisis
+situation.
+4.3. Implications for Risk Governance
+This section discusses actions that can be taken
+to address the risk perception paradox from an institutional perspective. The perception of flood events
+has been found to change as a result of participation
+processes.(75,76) Research indicates that people become more aware of floods and are more motivated
+to initiate protective action if they are involved in a
+participatory exercise. This seems mainly due to both
+a shift toward more trust in the authorities and the
+experts and a shift toward realizing personal agency
+to protect oneself. If people are involved in designing
+and testing emergency plans, they have a better idea
+what the authorities are able to perform and what
+each resident can do to improve protection and crisis
+management. Working together with the authorities
+increases trust and, at the same time, avoids the risk
+of creating a sense of false security that one might get
+by delegating all responsibility to public authorities.
+An interactive and iterative process of risk management where all stakeholders are involved can considerably improve risk governance and emergency
+preparedness. As a result of successful participation
+exercises, the public, public authorities, and disaster
+experts expressed their willingness to learn from each
+other. Citizens were ready to adjust their perceptions
+and behavior once they were confronted with reliable
+information on exposure, consequences, and options
+for protective measures.
+De Groot(77) explored the relationship between
+public environmental ethics and river flood policies.
+He distinguished between two different flood risk
+management styles: “room for river” and “dike reinforcement.” Adherence to the “room for river style”
+correlates with the “stewardship,” whereas adherence to “dike reinforcement” is predicted by “mastery over nature.” It can be assumed from these
+
+1062 Wachinger et al.
+results that the perception of nature is connected
+with the willingness to take certain actions. But can
+these views be altered by risk governance measures?
+One effect of participatory workshops is that citizens are less focused on technical measures but prefer policymakers to consider the full range of flood
+risk management measures, including stricter zoning
+and building flood reservoirs and polders.(76)
+Participatory engagement is also an important
+tool for gaining or promoting trust.(33,52,56) Kates
+et al.
+(78) propose: “Many of the approaches that support such a broadening of risk management practices
+are relatively unthreatening to implement. Communities can undertake a continuing process of participatory vulnerability assessments, including consideration of possible future threats... .”
+Participation processes in the context of natural
+hazard risk governance can meet several purposes:
+• The public will gain knowledge and personal
+agency with respect to risks and protective
+measures.
+• Authorities will gain knowledge from the “lay
+experts”/the public and can collect ideas for
+measures that are effective for the given population.
+• Trust can be created so that warnings and other
+types of vital information will be taken seriously if issued in an emergency.
+4.4. Distinction Between Natural and
+Technological Hazards
+The reviewed results of the natural hazard literature revealed another interesting insight: the neat
+distinction between natural and human-induced hazards is slowly vanishing. We face a new, even more
+complex situation: because of climate change and
+new strategies to influence natural hazards, these
+risks are no longer seen as “natural.” Rather than an
+act of God or Nature, floods and similar events are increasingly perceived as “human-induced.” More and
+more people tend to believe that the extent of damage as well as the frequency of disasters are caused
+or at least amplified by human actions such as interventions into the climate or redirecting rivers.(13)
+As a result, natural hazards could face the same kind
+of patterns that characterize the perception of technological hazards.(38) The study by Baan et al.
+(58)
+documents such changes in the perception of floods,
+which occurred as a result of a discussion on intentionally inundating calamity polders to protect more
+downstream areas. If floods are associated with human actions it has major repercussions for risk governance because social institutions will be blamed not
+only for inadequate response and emergency measures (as in the past) but also for the severity or frequency of the disasters themselves.
+The new situation of a mix of natural and
+human-induced hazards was highly prevalent in the
+Fukushima case, where an earthquake, a tsunami,
+and a nuclear accident occurred in a close causal
+sequence. It seems to be almost impossible to
+be prepared for such kind of multirisk exposure;
+therefore, it becomes even more important to gain
+experience (or at least knowledge) of the single
+risk components (earthquake, tsunamis, nuclear
+risks) to be able to understand the complex situation
+and have the knowledge to recognize what kind of
+action is needed. In these situations, the experience
+of high uncertainty is likely to cause helplessness.
+This feeling in turn reduces the willingness to act.
+In the future it will hence be necessary to pay more
+attention to the connection between natural and
+human-induced hazards and the perception of these
+hazards in the affected populations. Personal experience will not be readily available for constructing
+adequate mental models of such combined disasters
+because they are still emerging. They will also place
+additional stress on trust in public authorities because different institutions with separate mandates
+are normally dealing with these risks.
+5. CONCLUSIONS
+This review has shown the complexity of the relationship between risk perception and preparedness
+for actions. We found that experience of a natural
+hazard and trust or lack of trust in authorities and
+experts are the primary factors that shape individual
+risk perception of natural hazards in often complex
+causal arrangements with many intervening factors.
+Cultural and individual factors such as media coverage, age, gender, education, income, social status,
+and others do not play such an important role as primary predictors for preparedness but they can act
+as modifiers or amplifiers. In spite of the fact that
+there is a large number of empirical studies about
+risk perception and personal action, the relationship
+between perception and behavioral response relative
+to preparedness is still unclear and controversial. It
+is generally assumed that high risk perception will
+lead to personal protective actions. However, this depends on many contextual factors, in particular the
+
+The Risk Perception Paradox 1063
+ability of the individual to recall past damages or, at
+least, to imagine the effects of a disaster. In addition,
+if people trust public authorities, they are more likely
+to take warnings seriously and act accordingly. However, such responsiveness depends on the perception
+of one’s own agency to engage in effective protective
+actions and on the strength of belief that personal
+responsibility can be delegated to public emergency
+management. These issues need to be taken into account when developing communication and participative activities.
+The findings of the review suggests that public
+participation measures are probably the most effective means to create awareness of potential disasters,
+to enhance trust in public authorities, and to encourage citizens to take more personal responsibility for
+protection and disaster preparedness. It will be a major challenge for risk management and also an important research topic for future research to understand people’s responses to natural hazards as well
+as a combination of natural and technological hazards and to design the most appropriate measures for
+effective risk communication, stakeholder involvement, and emergency preparedness.
+ACKNOWLEDGMENTS
+The work described in this publication was supported by the European Union (European Commission, FP7 Contract No. 227073). We are grateful to
+Jacub Rehacek for his assistance in finalizing and
+editing the article.
+REFERENCES
+1. Slovic P. Perception of risk. Science, 1987; 236:280–285.
+2. Renn O. Risk perception and risk management. Part 1: The
+intuitive mechanisms of risk perceptions. Risk Abstracts,
+1990; 7(1):1–9.
+3. Wachinger G, Renn O. Risk perception and natural hazards. WP-3-Review of the EU-Project CAPHAZ-NET,
+Contract No. 227073,2010. Available at: http://caphaznet.org/outcomes-results/CapHaz-Net WP3 RiskPerception2.pdf,Accessed November 26, 2010.
+4. Morgan MG, Fischhoff B, Bostrom A, Atman CJ. Risk Communication: A Mental Models Approach. Cambridge, MA:
+Cambridge University Press, 2001.
+5. Ruin I, Gaillard JC, Lutoff C. How to get there? Assessing
+motorists’ flash flood risk perception on daily itineraries. Environmental Hazards, 2007; 7:235–244.
+6. Hung HV, Shaw H, Kobayashi M. Flood risk management
+for the RUA of Hanoi: Importance of community perception
+of catastrophic flood risk in disaster risk planning. Disaster
+Prevention and Management, 2007; 16(2):245–258.
+7. Quarantelli EL. Disaster crisis management: A summary
+of research findings. Journal of Management Studies, 1988;
+25(4):373–385.
+8. Plapp T, Werner U. Understanding risk perception from natural hazards: Examples from Germany. Risk, 2006; 21:101–
+108.
+9. Renn O. Risk Governance. Coping with Uncertainty in a
+Complex World. London: Earthscan, 2008.
+10. Sjoberg L. Perceived risk and tampering with nature. Journal ¨
+of Risk Research, 2000; 3(4):53–367.
+11. Siegrist M, Cvetkovich G. Perception of hazards: The role of
+social trust and knowledge. Risk Analysis, 2000; 20(5):713–
+719.
+12. Terpstra T, Lindell K, Gutteling JM. Does communicating
+(flood) risk affect (flood) risk perceptions? Results of a quasiexperimental study. Risk Analysis, 2009; 9(8):1141–1155.
+13. Lindell MK, Perry RW. The protective action decision
+model: Theoretical modifications and additional evidence.
+Risk Analysis, 2012; 32(4):616–632.
+14. Njome MS, Suh CE, Chuyong G, deWit MJ. Volcanic risk
+perception in rural communities along the slopes of Mount
+Cameroon, West-Central Africa. Journal of African Earth
+Sciences, 2010; 58:608–622.
+15. Heitz C, Spaeter S, Auzet AV, Glatron S. Local stakeholders’
+perception of muddy flood risk and implications for management approaches: A case study in Alsace (France). Land Use
+Policy, 2009; 26:443–451.
+16. Miceli R, Sotgiu I, Settanni M. Disaster preparedness and perception of flood risk: A study in an Alpine Valley in Italy.
+Journal of Environmental Psychology, 2008; 28:164–173.
+17. Haimes YY. Risk of extreme events and the fallacy of the expected value. Pp. 299–321 in Sage AP (ed). Risk Modeling,
+Assessment and Management. Hoboken: John Wiley & Sons,
+2004.
+18. Siegrist M, Gutscher H. Flooding risks: A comparison of lay
+people’s perceptions and expert’s assessments in Switzerland.
+Risk Analysis, 2006; 26(4):971–979.
+19. Karanci N, Bahattin A, Gulay D. Impact of a community disaster awareness training program in Turkey: Does it influence
+hazard-related cognitions and preparedness behaviors? Social
+Behavior and Personality, 2005; 33(3):243–258.
+20. Kellens W, Zaalberg R, Neutens T, Vanneuville W, De
+Maeyer P. An analysis of the public perception of flood risk
+on the Belgian coast. Risk Analysis, 2011; 31(7):1055–1067.
+21. Armas I, Avram E. Perception of flood risk in Danube Delta,
+Romania. Natural Hazards, 2009; 50:269–287.
+22. Armas I. Social vulnerability and seismic risk perception.
+Case study: The historic center of the Bucharest municipality/Romania. Natural Hazards, 2007; 47:397–410.
+23. Burningham K, Fielding J, Thrush D. “It’ll never happen to
+me”: Understanding public awareness of local flood risk. Disasters, 2008; 32(2):216–238.
+24. Tekeli-Yesil S, Dedeoglu N, Braun-Fahrlaender C, Tanner
+M. Factors motivating individuals to take precautionary action for an expected earthquake in Istanbul. Risk Analysis,
+2010; 30(8):1181–1195.
+25. Felgentreff C. Post-disaster situations as “window of opportunity”? Post-flood perceptions and changes in the
+German Odra river region after the 1997 flood. Die Erde,
+2003; 134:163–180.
+26. Grothmann T, Reusswig F. People at risk of flooding: Why
+some residents take precautionary action while others do not.
+Natural Hazard, 2006; 38:101–120.
+27. Terpstra T. Flood Preparedness: Thoughts, Feelings and Intentions of the Dutch Public. Thesis, Twente: University of
+Twente, 2009.
+28. Terpstra T. Emotions, trust, and perceived risk: Affective and
+cognitive routes to flood preparedness. Risk Analysis, 2011;
+31(10):1658–1675.
+29. Biernacki W, Działek J, Janas K, Padło T. Community attitudes towards extreme phenomena relative to place of residence and previous experience. Pp. 207–237 in Liszewski S
+
+1064 Wachinger et al.
+(ed). The Influence of Extreme Phenomena on the Natural
+Environment and Human Living Conditions. Łodz: Ł ´ odzkie ´
+Towarzystwo Naukowe, 2008.
+30. Barnes P. Approaches to community safety: Risk perception
+and social meaning. Australian Journal of Emergency Management, 2002; 17:15–21.
+31. Harries T, Penning-Rowsell E. Victim pressure, institutional
+inertia and climate change adaptation: The case of flood
+risk. Global Environmental Change, 2011; 21 doi: 10.1016/
+j.gloenvcha.2010.09.002. 2011.
+32. Ming-Chou H, Shaw D, Shuyeu L, Yau-Chu C. How do disaster characteristics influence risk perception? Risk Analysis,
+2008; 28(3):635–645.
+33. Paton D, Smith L, Daly M, Johnston D. Risk perception
+and volcanic hazard mitigation: Individual and social perspectives. Journal of Volcanology and Geothermal Research,
+2008; 172(4):179–188.
+34. Hall TE, Slothower M. Cognitive factors affecting homeowners’ reactions to defensible space in the Oregon coast range.
+Society and Natural Resources, 2009; 22:95–110.
+35. Scolobig A, De Marchi B, Borga M. The missing link between flood risk awareness and preparedness: Findings from
+case studies in an Alpine Region. Natural Hazards, 2012;
+63(2):499–520.
+36. Green CH, Tunstall SM, Fordham MH. The risks from
+flooding: Which risks and whose perception? Disasters—The
+Journal of Disaster Studies and Management, 1991; 15:227–
+236.
+37. Mileti DS, O’Brien P. Public response to aftershock warnings.
+US Geological Survey Professional Paper, 1993; 1553-B:31–
+42.
+38. Deeming H. Increasing resilience to storm surge flooding:
+risks, social networks and local champions. Pp. 945–955 in
+Samuels P, Huntington S, Allsop W, Harrop (eds). Flood Risk
+Management: Research and Practice. London: CRC Press,
+Taylor and Francis Group. 2008.
+39. Halpern-Felsher BL, Millstein SG, Ellen JM, Adler NE,
+Tschann JM, Biehl M. The role of behavioural experience in
+judging risks. Health Psychology, 2001; 20(2):120–126.
+40. Kaiser G, Witzki D. Public perception of coastal flood defence
+and participation in coastal flood defence planning. Pp. 101–
+108, vol. 1, in: Schernewski G, Dolch H (eds). Geographie der
+Meere und Kusten. Coastline Report, 2004. ¨
+41. Brilly M, Polic M. Public perception of flood risks, flood forecasting and mitigation. Natural Hazards and Earth System
+Sciences, 2005; 5:345–355.
+42. Kasperson RF, Renn O, Slovic P, Brown HS, Emel J, Goble
+R, Kasperson JX, Ratick S. The social amplification of risk: A
+conceptual framework. Risk Analysis, 1988; 8(2):177–187.
+43. Mileti DS, Sorensen JH. Communication of Emergency Public Warnings—A Social Perspective and State-of-the-Art Assessment. Oak Ridge National Laboratory, Oak Ridge, TN,
+1990.
+44. Shaw R, Kobayashi KSH, Kobayashi M. Linking experience,
+education, perception and earthquake preparedness. Disaster
+Prevention and Management, 2004; 13(1):39–49.
+45. Espluga J, Gamero N, Prades A, Sola R. El papel de la con- `
+fianza en los conflictos socio ambientales. Pol´ıtica y sociedad,
+2009; 46/1(2):225–273.
+46. Botzen WJW, Aerts JCHJ, van den Bergh JCJM. Dependence of flood risk perceptions on socioeconomic and objective risk factors. Water Resources Research, 2009; 45:1–15.
+47. Whitmarsh L. Are flood victims more concerned about climate change than other people? The role of direct experience
+in risk perception and behavioural response. Journal of Risk
+Research, 2008; 11(3):351–374.
+48. Bichard E, Kazmierczak A. Are homeowners willing to
+adapt to and mitigate the effects of climate change? Climate
+Change, 2012; 112:633–654.
+49. Johannesd ´ ottir G, G ´ ´ısladottir G. People living under threat ´
+of volcanic hazard in southern Iceland: Vulnerability and
+risk perception. Natural Hazards and Earth System Sciences,
+2010; 10:407–420.
+50. Haynes K, Barclay J, Pidgeon N. Whose reality counts? Factors effecting the perception of volcanic risk. Journal of Volcanology and Geothermal Research, 2008; 172:259–272.
+51. Wood MM, Mileti DS, Kano M, Kelley MM, Regan R,
+Bourque LB. Communicating actionable risk for terrorism
+and other hazards. Risk Analysis, 2012; 32(4):601–612.
+52. Gough J. Perceptions of risk from natural hazards in two
+remote New Zealand communities. Australiasian Journal of
+Disaster and Trauma Studies, 2000–2002.
+53. Barberi F, Davis MS, Isaia R, Nave R, Ricci T. Volcanic risk
+perception in the Vesuvius population. Journal of Vulcanology and Geothermal Research, 2008; 172(3–4):244–258.
+54. Lavign F, DeCoster B, Juvin N, Flohic F, Gaillard JC, Texier P, Morin J, Sartohadi J. People’s behaviour in the face of
+volcanic hazards: Perspective from Javanese communities, Indonesia. Journal of Volcanology and Geothermal Research,
+2008; 172:273–287.
+55. Heijmans A. Vulnerability: A matter of perception. Benfield
+Grelg Hazard Research Centre. London. Disaster Management Working Paper, 2001; 4:1–17.
+56. McIvor D, Paton D, Johnston D. Modelling community
+preparation for natural hazards: Understanding hazard cognitions. Journal of Pacific Rim Psychology, 2009; 3(2):39–46.
+57. Lin S, Shaw D, Ho M. Why are flood and landslide victims less
+willing to take mitigation measures than the public? Natural
+Hazards, 2008; 44:305–314.
+58. Baan PJA, Kljin WL. Flood risk perception and implications
+for flood risk management in the Netherlands. International
+Journal of River Basin Management, 2004; 2(2):113–122.
+59. Walker GN. Risk governance and natural hazards. WP1-Review of the EU-Project CAPHAZ-NET, Contract
+No. 227073. Available at: http://caphaz-net.org/outcomesresults/CapHaz-Net WP1 Social-Capacity-Building2.pdf,
+Accessed November 26, 2012.
+60. Bird DK, Gisladottir G, Dominey-Howes D. Volcanic risk
+and tourism in southern Iceland: Implications for hazard, risk
+and emergency response, education and training. Journal of
+Volcanology and Geothermal Research, 2010; 189:33–48.
+61. Siegrist M., Gutscher H. Natural hazards and motivation for
+mitigation behaviour: People cannot predict the affect evoked
+by a severe flood. Risk Analysis, 2008; 28(3):771–778.
+62. Gallese V. The manifold nature of interpersonal relations:
+The quest of a common mechanism. Philosophical Transactions of the Royal Society of London: Series B, 2003; 358:517–
+528.
+63. Peters HP. Durch Risikokommunikation zur Technikakzeptanz? Die Konstruktion von Risiko-’Wirklichkeiten’ durch
+Experten, Gegenexperten und Offentlichkeit. Pp. 11–67 ¨
+in Kruger J, Ruß-Mohl S (eds). Risikokommunikationen. ¨
+Berlin: Edition Sigma, 1991.
+64. Dunwoody S, Peters HP. Mass media coverage of technological and environmental risks: A survey of research in the
+United States and Germany. Public Understanding of Science, 1992; 1(2):199–230.
+65. Breakwell GM. The Psychology of Risk. Cambridge: Cambridge University Press, 2007.
+66. Kajihara H, Kishimoto A. Risk tradeoff analysis of substance substitution: Scope, framework and metrics. Paper presented at 3rd Integ-Risk Conference on New Technologies
+and Emerging Risks, June 7–8, 2011, Stuttgart, Germany.
+67. Gregg CE, Houghton BF, Paton D, Lachman R, Lachman
+J, Johnston DM, Wongbusarakum S. Natural warning signs
+of tsunamis: Human sensory experience and response to the
+2004 Great Sumatra earthquake and tsunami in Thailand.
+Earthquake Spectra, 2006; 22:671–691.
+
+The Risk Perception Paradox 1065
+68. Dow K, Cutter S. Public orders and personal opinions: Household strategies for hurricane risk assessment. Environmental
+Hazards, 2006; 2:143–155.
+69. Frewer LJ, Miles S, Marsh R. The media and genetically modified foods: Evidence in support of social amplification of risk.
+Risk Analysis, 2002; 22(4):701–711.
+70. Frewer L. The public and effective risk communication. Toxicology Letters, 2004; 149:291–397.
+71. Abrams C. Gong for tsunami girl. Sun, 2005; Sept. 9.
+72. Komaz B, Ciglic R, Ga ˇ speri ˇ c P, Adami ˇ c MO, Pav ˇ sek M, ˇ
+Pipan P, Zorn M. Risk education and natural hazards.
+WP-6-Review of the EU-Project CAPHAZ-NET, Contract
+No. 227073. Available at: http://caphaz-net.org/outcomesresults/CapHaz-Net WP6 Risk-Education2.pdf, Accessed
+November 26, 2012.
+73. Frewer LJ, Salter B. Societal trust in risk analysis: Implications for the interface of risk assessment and risk management. Pp. 143–158 in Siegrist M, Earle TC, Gutscher H
+(eds). Trust in Cooperative Risk Management. Uncertainty
+and Scepticism in the Public Mind. London: Earthscan, 2007.
+74. Paton D. Risk communication and natural hazard mitigation:
+How trust influences its effectiveness. International Journal
+of Global Environmental Issues, 2008; 8(1/2):2–15.
+75. Stanghellini LPS, Collentine D. Stakeholder discourse and
+water management—Implementation of the participatory
+model CATCH in a Northern Italian Alpine sub-catchment.
+Hydrology and Earth System Sciences, 2008; 12:317–331.
+76. Slinger J, Cuppen M, Muller M, Hendriks M. (Delft University of Technology, Faculty of Technology, Policy and Management). How Responsive Are Scientists and Policy Makers to the Perceptions of Dutch and Flemish Citizens Living
+Alongside the Scheldt Estuary? Insights on Flood Risk Management from the Netherlands. Netherlands, 2007. Contract:
+GOCE-CT-2004-505420.
+77. De Groot M. Exploring the relationship between public environmental ethics and river flood policies in western Europe.
+Journal of Environmental Management, 2012; 93:1–9.
+78. Kates RW, Travis WR, Wilbanks TJ. Transformational adaptation when incremental adaptations to climate change are insufficient. PNAS, 2012; 109/19:7157–7161.
+79. Krasovskaia, I. Perception of the risk of flooding: The case
+of the 1995 flood in Norway. Hydrological Sciences-Journal,
+2001; 46(6):855–868.
+80. Pagneux E, Gisladottir G, Jonsdottir S. Public perception of
+flood hazard and flood risk in Iceland: A case study in a
+watershed prone to ice-jam floods. Natural Hazards, 2011;
+58(1):269–287.
+81. Plattner TH, Plapp T, Hebel B. Integrating public risk perception into formal natural hazard risk assessment. Natural
+Hazards Earth System Sciences, 2006; 6:471–483.
+82. Raajmakers R, Krywkow J, van der Veen A. Flood risk perceptions and spatial multi-criteria analysis: An exploratory research for hazard mitigation. Natural Hazards, 2008; 46:307-
+322.

@@ -1,0 +1,612 @@
+[
+ {
+  "sha": "01f56fda9b635d7368e2f17046f2c57869611a30b041773e6fe489e29da833e6",
+  "path": "./Ahsanuzzaman_Messer_2021_JFRM_14_e12753_fulltext.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "bd44f1b590bba701538b6ef24f39f03c854abb32631cb0d0e79d12510332c1d1",
+  "path": "./Arshaghi_2026_NHESS_26_981_fulltext.xml",
+  "copies": 1
+ },
+ {
+  "sha": "aab4a597a8e1b9628b738e77c3d1103cea870a863da55794cacb24517592b68e",
+  "path": "./Borowski_Stathopoulos_2023_NatHazRev_24_04022045_fulltext.pdf",
+  "copies": 3
+ },
+ {
+  "sha": "eed073c401dad0eef071b59295e99d65d1927b65ca22853b88e3645d76ae880e",
+  "path": "./Li_2026_JHydrol_672_135395_accepted_manuscript.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c7010e856c6e3ffcfe37371db0c2fdcb0adb5dd437114a5ebbb1a44430f9832b",
+  "path": "./Roy_Hasan_2021_TRC_123_102976_fulltext.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "748403b0b2daca8c90216a3b62e97a926feb8a0cf6d866b24c3230c545c950e6",
+  "path": "./Silva_2025_NHESS_25_1501_supplement.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "f8ca90a6cd9b10ae2e2a4b01f1685d06bf9d7b669f117e0da315d424a80516fd",
+  "path": "./Tang_2026_NatSustain_9_1569_supplementary.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "847c83dae7abb0d91d2aa4596deab5db0c56d288389a12e7d63ff27ace765ea7",
+  "path": "./Thieken_2023_NHESS_23_973_supplement.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "6ddd68673a115c2ad7da58990c532e0d80752a9141f3372db663637003bcfc62",
+  "path": "./codebook.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "a419325e1632fbf9d36ead1c6bf2b50841e00bbc43599012cea06dd364fdb956",
+  "path": "./csv/Citation.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3ef59cf7b5eab13a49b9c9518a850eb06637ef103c463b4ea592484fdda1842b",
+  "path": "./csv_hdc/ACS2020_2024_PUMS_README.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "bf4b9c38434b77977f64a94252bed877f591ac54af5f58ef44d8a9a4aa8fa1a8",
+  "path": "./文献1/A-疏散决策与预警/Kreibich2017_重复副本.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "2bc469dcf5d30a82aba942ba6c31a0967fc7a7ca8a34bc632188ee186522404f",
+  "path": "./文献1/A-疏散决策与预警/LindellPerry2012_RiskAnalysis_保护性行动决策模型.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "53fb1c685e0e8420af52594de7a6357f964e6619c0859152935fd5b0972fa505",
+  "path": "./文献1/A-疏散决策与预警/Sadri2017_JCM_社会网络中的联合疏散决策.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "680c7d2df23bf555d19ad1a9efd6edae93db9ddc5f7de3599ac7608eb2f7be97",
+  "path": "./文献1/A-疏散决策与预警/Thieken2022_NHESS_复合内陆洪水的四条路径.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3dfad71cf1dd17f1f122a8b76d5150771a47eeeebdfaeb5430697ca85e3547f7",
+  "path": "./文献1/B-车辆与涉水驾驶/Benjamin2022_FrontPsych_涉水驾驶的心理社会因素.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "63d42179d2720179eee7d813f35f338d72db19e73223b2c332129dd29b269935",
+  "path": "./文献1/B-车辆与涉水驾驶/Hamilton2016_SafetyScience_涉水驾驶的信念.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "b384c7e0ed66f517ae20c132ef9caf3b6af461ff47a7e4dc87af22e69a3caeb5",
+  "path": "./文献1/B-车辆与涉水驾驶/Watkins2026_TRF_驾驶人对道路积水的认知与标牌遵从.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "892a29cff2dcecf8c1344fe77a3cab1326d60a8e1af91817761050e3015908d8",
+  "path": "./文献1/C-疏散建模与时间尺度/Mostafizi2017_NatHazards_路网中断下的海啸疏散建模.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "34459f313e2cd65e22141463ea2df8f43ecd08e194af29653e2cded632605cc1",
+  "path": "./文献1/C-疏散建模与时间尺度/Mostafizi2019_IJDRR_垂直疏散与避难所选址.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "81199f79d05e8a5d489039dcf1b548a51f9876c2975f7b4a83133a8089e32f41",
+  "path": "./文献1/C-疏散建模与时间尺度/Wang2016_TRC_多方式近场海啸疏散智能体模型.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "b33e103dc4e4f1f34b8166dfdd07a1117519e0f41a2e94f5cd313ba2fb1c10c6",
+  "path": "./文献1/D-方法对比与验证/Zhang2026_TRD_洪灾人群移动的LLM智能体重建.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "1b5fe80fd737d8cc57af30af3efeb96da56b5b2e784e731c11045e891b6993bf",
+  "path": "./文献1/E-伤亡与楼层位置/Thieken2026_EarthFuture_洪灾死亡情形与楼层位置.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "68eeb3cdb700698aac11f03e2704a17af77af90ed1b2227bce30cbd4cf09a0ec",
+  "path": "./文献4/1-s2.0-S0022169426006980-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3b67bcda84feb3432fd06c9bece8a9fd13aff99d8b4898610a5bee8b4065e167",
+  "path": "./文献4/1-s2.0-S0048969717320624-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "97109ad18fc5c8f7f032fc54710523e5e2eb0ade3023232ac67d5d296189c3a7",
+  "path": "./文献4/1-s2.0-S0191261511001081-main (1).pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3b7841d36593174ed1ecea982fa767f6e1151c5dbc000d873fc424a18e078970",
+  "path": "./文献4/1-s2.0-S0191261511001081-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "0736cd4abc2bc32e7b672fd089385062bfa34400fe9db390414a82809a423e44",
+  "path": "./文献4/1-s2.0-S0191261515302253-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "cd2e933b27adb5b1358e168984bc59985c6a58a670357ab74a4913dce2e4b11b",
+  "path": "./文献4/1-s2.0-S0191261517303788-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "f3a5d6a7fcaeb64a8c61e3a25e854b3cf4d335aea45b77829c8a2a38f8495daa",
+  "path": "./文献4/1-s2.0-S0191261526002225-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "62b5e5a8c8dafa40c489fde4928d4c5dae991dff402f2a12e310c9d2df9205f3",
+  "path": "./文献4/1-s2.0-S0198971518302497-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c11c974755bb6e58c2128b916de992a1d279819071424ea70d60cf68777ffa8e",
+  "path": "./文献4/1-s2.0-S0960077925018193-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "148e8b82f741a176b7412d07caf0162367431c6ae6160359de94833deaee9ad3",
+  "path": "./文献4/1-s2.0-S0968090X11000957-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "aec30fb4a42936fa3627c34efd0b165ed55d0e78314d807ef021132d6676c195",
+  "path": "./文献4/1-s2.0-S1353829222000181-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "a88e393fb688ecf65fe43d20a4cabf908a4a348cc75ecb09d4cd10f12d3a330b",
+  "path": "./文献4/1-s2.0-S1369847826001348-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "243b99091e8b924619cc4617ea340191119e41b90b2e9774cde14a7240f49dd4",
+  "path": "./文献4/1-s2.0-S1462901117301818-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "95400da0c3ffd53d477a5c81a39b0a0cdfdec4a193c257144b6a14542e02be72",
+  "path": "./文献4/1-s2.0-S1462901124002594-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "8a2d485b4f2da82f8ce115c5834549aa4a0030c7f92a40a193bbe86333de7d9d",
+  "path": "./文献4/1-s2.0-S1755534517300313-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "ab5693461b01950253c5947ed5d3bbeccfd2c3839acb993d0091375b5ea3e1f0",
+  "path": "./文献4/1-s2.0-S2212096326001142-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3b389df748f0e351a5810b31a94d741de3a74188225ab41d63023b93c1b6c65c",
+  "path": "./文献4/1-s2.0-S2212420924004631-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "df8971e39d32732cbc1b48e1a16e28d6add7a91e7bdc5dfc449400365562ba7f",
+  "path": "./文献4/1-s2.0-S2212420925007939-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "053c710d4b089447e6b992754cd4cf7aeb444336cb61e3acdbe1eb2da86e3d32",
+  "path": "./文献4/1-s2.0-S2212420926004413-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "f12e2188a9bd92e452ee2b9c7964f491ef073d6aef522bb93a8c092a35acb546",
+  "path": "./文献4/1-s2.0-S2590198221000324-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "0cb73da1a7a38c49b2b1986134a5e07a743ddb5b0ba3ba75afaa552484ab4d2a",
+  "path": "./文献4/1-s2.0-S261665182600165X-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "aae32f3add19b174af841aefaeb7d47683c56d111e703295d1ade5468ebe1bf7",
+  "path": "./文献4/Analysis of evacuation destination and departure time choices for no-notice emergency events.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "8854e3e4d0650bae071394feb8d4e586b608d2c5695faf41e4b668942250bac2",
+  "path": "./文献三/ARR_Project_10_Stage1_report_Final.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "4db999142a91772932d21cde64b16e8d491eaddd1e79c98cf18fcf4076d721ba",
+  "path": "./文献三/IJDRR_119-105315.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "8b8ecd7f1bddd086ed95857d5fe009a1e5cce168c6c1acdf1aa51de4e6775e32",
+  "path": "./文献三/J Flood Risk Management - 2026 - Xu - Micro‐Behavioral Responses for Enhancing Urban Flood Resilience  Stated Preference.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "65b69e1158835a0dbf6ab152e4ba91cc419ebd7ef76c36628834728d4b520699",
+  "path": "./文献三/NCHRP-562-Improving-Pedestrian-Safety-at-Unsignalized-Crossings.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "d661c2384c404d5b525a0badb9e8d611881b372ccb48c29675ea1c831f565fc9",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Beijing.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "28c8034d00dcd4b331f815da4e9c39191cf4e134bec2aceb573617b7522883f0",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Changsha.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "77e4075f7adb9dd0189117f019af32b2c4e9ab04edafb382d272cb587d56124a",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Chengdu.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "91e33a600a1885da71bc859c4aca0159d37de5809de7256db71852d30e170eb8",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Chongqing.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "c7c70e6a00d2465d2ba889ae2d169b9598e32ff83629cc555d60a21181456266",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Dalian.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "caf6b37b3d78158e2edfa163ee9b3a287aa3aa949bf998ceb71d165b6233bc0b",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Dongguan.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "702fc72df5d9e449a878d7f6b0043fe818c95a31101dcd8249a67f735e13152a",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Foshan.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "4078afa77581d575f57ca121a1f88e353e089600301bd57e5c6157a34a65c1d1",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Guangzhou.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "5c09a9a0c97392e46dd21e163d4f4d4655c6024a539c58defa0065c6bfe072cb",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Hangzhou.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "467facf1c779a84ea9a0df896b7bbbf624b3907c2b62a9eb40bffea510623187",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Harbin.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "4da2cae190406a585b3dfddebd3f2ab2897f4c5bd41fca209b59a215e40cda5a",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Jinan.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "5cb60e1ccec978ca6fbfba20c62bd8b433fbf920c59e68774d8e34d112e6e10d",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Kunming.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "1804c9af6a535cdcb5cb51347f02cd0f687249a678faf0e6ae15a644ad9a95dd",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Nanjing.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "3202d3b81562120d66a7aefd18c635384c869728e7679e9341f03776a3bdc54b",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Qingdao.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "60d38238ee17cd8e3e401f29058559fb9d2cdb0c8c10f4978a59f042f4171831",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shanghai.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "6d4a007a40773c6fe155fc86736c6f2562a827004855e908cbad0c6559a92214",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shenyang.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "fd412d8cc575446acc9b358d216bd9ebb8cd63ae1d4d3c8fb13104917df0eb1c",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shenzhen.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "3e2aa62da07f636504e865ecadd1471d339db4208b7b05143845f38d8234b947",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Tianjin.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "2265e15e2dc180ab40f64577df9ecaa276b0a01bf539a1de09772a1f7abfe795",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Wuhan.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "a671e5185e3b54501f3f3ee82dd93c9ef9b7b18f5f44b847df3b9ddf506cff47",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Xi'an.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "6cdf7acb55172a07677d73b9e94a88ce80b8e103d9c258e9507134e22d733492",
+  "path": "./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Zhengzhou.shp.xml",
+  "copies": 1
+ },
+ {
+  "sha": "90439da6074a80148beaa4298a1144053b0e08dabb8fe88bedd98353af80b53f",
+  "path": "./文献三/PNNL-26949.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "bbaeba12b07f597e123a6310fb7e8e7c3dab85794469db6e12b8341e465239af",
+  "path": "./文献三/WRL-TR2017-07-Vehicle-Stability-Testing-for-Flood-Flows.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "9f680e68a9bada510727fbd2fc3332c8e59946f16e858cd82762509dc355b06e",
+  "path": "./文献二/1-s2.0-S0925753523000255-main.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c605e3ee5ac0a41ea3b3e5f1a5b305f95a4acb16c2de028c80a188bdf03eeaf3",
+  "path": "./文献二/Explanatory_note_for_FD2320_and_FD2321_project_record.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "e4cb332fed8b8eaa41097c97925ce5fdbcdbde61ac240ae2cc5b907752429d48",
+  "path": "./文献二/Flood-related+fatalities+during+the+flood+of+July+2021+in+North+Rhine-Westphalia,+Germany+what+can+be+learnt+for+future+flood+risk+management.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c02941f851393472aaccd7cb30b95674944a2c73d9223efd52b388e28035bf51",
+  "path": "./文献二/Flood_risks_to_people_-_Phase_2_Guidance_Document_Technical_report.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "d4e60963bb78c820704124de4508c2e82c370928d9cc54a4c56edd5383e16a74",
+  "path": "./文献二/Flood_risks_to_people_-_Phase_2_Project_Record.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "dc02e9c05cbe29bfb24d734763d8f7be88659e2b659db81e7dcf9ac81c226477",
+  "path": "./文献二/Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "45fb56d29e4f10e83a874cec9374e3e210201c4a52fa85e67c4e715fdc0fbdf8",
+  "path": "./文献二/Floor_risks_to_people_-_Phase_2_Summary_.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "a6dc83a79b3c20e1b7a41a10ff2e1f2ef3655317db5df741ba3c06259cc7dbbe",
+  "path": "./文献二/Investigating+flood+behaviours+con+Romano_safety+science_compressed.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "25d29ade80d6dd0b74fa473a2004e4a426740fd8d9eff32d67c53974566b3cb3",
+  "path": "./文献二/Normal_walking_speed_a_descriptive_meta.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "90b7dbb42e76473171ff055d4fb249c94d5f73aacec68e6910696a2808721a66",
+  "path": "./文献二/The_risk_perception_paradox_implications.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c0a5dd05168d10caa8bee591d0cef8d4c7d98a6d87a8e443c022df10a5c30ea8",
+  "path": "./文献二/document.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "4ce56ad6dfee6b2d37a4e0f2ec7525ca64139f12469c3b028cf8bf94efcb292c",
+  "path": "./文献二/p654.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "a6e42f00119cc09f644b3835a1d703aeb28230d698df8ea8aeb84bea4fb45136",
+  "path": "./文献二/s11116-026-10780-4.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "cea5e91d7f3538b867795704a2abcf0d58c39615f294f5eb7a0bd68f185a1757",
+  "path": "./文献二/sr90_2auflage.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "6a94a83e3704bf5838a88abdc3f89ca57ea83b4f6deab7f62d9a06d3761332d9",
+  "path": "./第七轮自行检索/Borowski2023_arXiv预印本.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c3ae76b9d8f75a0c03cb6352dd7fb7d00bc5d5a9b10830b6bb01d20aee7cbe5a",
+  "path": "./第八轮回件/dillenardt_thieken2025.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "f3ab82f795721ee0c887a6b22976a77ceb90b44516002b79367760695678f7d4",
+  "path": "./第八轮回件/jonkman_kelman_2005.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "014e616605371ec80bb7c559082bb0f2416cd9da2f7d5d6ec814fb297248942b",
+  "path": "./第八轮回件/naccs_9Loss-of-Life_26Jan2015.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "c44cdb3f8685e0a775a51b2ae17e02f8511cbd71de6de537684c8622f91c7f6e",
+  "path": "./第八轮回件/paranjothy2011_uk2007.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "ddeeda1dc7dc4ff36edc2fbda13a9872e679c4f0d69b09434cc275f6ff6d8422",
+  "path": "./第八轮回件/rozer2016.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "a8f92a92a6b9ca7f1ef2fdf07495cbf89a942152acf30c967ad0f60c2b64b7d2",
+  "path": "./第八轮回件/spekkers2017_pluvial_survey.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3be4b29d3f434fbab2bee33e0b1a648024a3291eace73fe54831d110cb709767",
+  "path": "./第八轮回件/thieken2026_flood_fatalities.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "d067d60f2d53e02ad7a19ef2dd03ba96782fc9dbd9bb64e7f910e7fd22d767a8",
+  "path": "./第八轮回件/thieken2026_try.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "677e08cdf31557f7db7e21f81a9901027234458837be0cff902fa2eee0bf357d",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/A/thieken2023-nhess.xml",
+  "copies": 1
+ },
+ {
+  "sha": "d1f3bd3b4065bb7c021c5b74f5b4a214ce55c150e82263f5660151dd3235424a",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/A/thieken2023-reviewer-responses.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "15a5077ec76272b032be5a0eba4003bf82e645eb7fd6eef8f3b6182f8898af15",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/A/wong-irma-survey-questions.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "4aa71a3c69482c1626eac8d9c1726fcbbd696c6abf4c09beb85a3317455b6f54",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/Chen_etal_2023_NHESS_tsunami_ABM.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "b6a32e3994a0b2c9d1140a1ad984c34ae5dbf4660dbba2cd7af7643378e0767e",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/JCU_Townsville_2025_flood_survey.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "a671ba164805b921086f833a042e77b5d38f18454be121253af1ace9720cde16",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/Ohtomo_etal_2020_JDR_Okayama_evacuation.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "f723c2fb9a0a2da56498e2d7bf3352d064126aa20ef02141a6121d38c1a47a0b",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/B/Silva_etal_2025_NHESS_Ahr_ABM.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "32af1d53b91792e7460aed53cf98bfab4cd9a7623036e858996986b3a04bed5c",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/AHS_1998_Washington_Metro_H170-98-18.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "0633f7377bff3a4973afdd1444906e47cb2803d4862330637f5e6c01746ac912",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/CBECS2018_Table_B1.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "facd11d29191a298ef762fa205fe08b0e5d3fc8b36f1d50cbfb36c4922643741",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/Choi2002_Tall_Building_Design_Guideline.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "dac8790c39625f16a48f839e957eb9a75904efc192e6d263ff152362835b1647",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/DC_DOEE_Flood_Hazard_Rules_20DCMR31_Final_2025-06-20.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "8f9da9663b968a31e231622ed66985f444b0b19539eaf0b5aee5864623790e01",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/GSA_OAS_7005.1B_Internal_Space_Allocation_Policy.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "39e31e64c8194814490dd1825144b10d5be5b067a558fdfaea942e64f1f98876",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/C/JUE_WebAppendix_Building_Heights_Data.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "6f95072cd945fc9a95784da14870310640aa621880c6006936e572d52b1eccb8",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/DBQ-Spain-2026-validation.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "69d3a3b2d8efc4eb5a3fbafab2daaeee3c9ce3369017c7cf02ba4b3201e76f00",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Jonkman-2007-thesis.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "f64847459d910b07d7e17a886a5784b27945ab5306a51545d53bc450eb984725",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Jonkman-Vrijling-2008-JFRM.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "63d55e20adeb2bd4e1d8ae1d3bed7385002947b75f784ecb2645d02b961ef268",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/SHRP2-BPSA-Data-Dictionary.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "32b5785691af144500918d8b0534d362465d8eb401025d9e386d331e634a7e02",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Wang-2009-headway-FHWA-RIDOT.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "46a73cbb0fdf0e575ce946734bc2508958642069f15a79df6d06fd6c96f672a9",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/baba2017_jsce_underground_evacuation.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "2a43bdbbbd9498011782e8f6314ce9ea9581961fda6c8957b75c30e36a9b3524",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/ishigaki_jsce2005_cs7-010.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "157b97992c888fab4d9df5ea36fe32106f5d84e2bec00208aa6ef3bf6d5a6ee9",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/li2026_jhydrol_AAM.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3f12bb60e7e5531f8247b159a48b279910931372930e2a093c24587065a5ba0a",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/mlit_chika_kiken_g-11_g-14.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "3e80db2b19e804b0c9bdeeeede7f39498d468b5301516214ff0c3972bf25c204",
+  "path": "./第六轮完整回件-修复版/dc-round6-20261116/原件/E/palmer2014_neurological_activity_patterns_orendurff.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "59a5eb2735af171e273ceb2d81ad504b8c3f228f50e262501f102921c39068e8",
+  "path": "./第十一轮自行检索/Jedwab_Barr_Brueckner_2022_CitiesWithoutSkylines_fulltext.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "0fbc060c63e82b3308ad7199b643747b9505f2f062b95487f5273e580cce3db7",
+  "path": "./第十一轮自行检索/Smith_Davey_Cox_2014_WRL_TR2014-07_FloodHazard.pdf",
+  "copies": 1
+ },
+ {
+  "sha": "e5a431845655d21ea746b4f8a75cfce05288c661617cd78dadf175ba4f11db26",
+  "path": "./第十轮自行检索/Thieken_2023_NHESS_23_973_正文.pdf",
+  "copies": 2
+ },
+ {
+  "sha": "55ffd9cde46967e19a2cc188e78f4da6c9821dd69118b62356e0926a695838a7",
+  "path": "./第十轮自行检索/UNSW_WRL_TR2015-09_洪水致死估算方法综述.pdf",
+  "copies": 1
+ }
+]

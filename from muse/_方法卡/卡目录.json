@@ -1,0 +1,596 @@
+[
+ [
+  "文献1.md",
+  "1. Kreibich2017_重复副本.pdf",
+  "New insights into flood warning reception and emergency response by affected parties / Kreibich, Müller, Schröter, Thieken / 2017 / NHESS 17: 2075–2092",
+  "决策层（预警接收→行动）、时间层（lead time 与措施耗时）。"
+ ],
+ [
+  "文献1.md",
+  "2. LindellPerry2012_RiskAnalysis_保护性行动决策模型.pdf",
+  "The Protective Action Decision Model: Theoretical Modifications and Additional Evidence / Lindell, Perry / 2012 / Risk Analysis（DOI 10.1111/j.1539-6924.2011.01647.x，文中页 1–16）",
+  "决策层（主框架）、时间层（准备时间二分）。"
+ ],
+ [
+  "文献1.md",
+  "3. Sadri2017_JCM_社会网络中的联合疏散决策.pdf",
+  "Modeling joint evacuation decisions in social networks: The case of Hurricane Sandy / Sadri, Ukkusuri, Gladwin / 2017 / Journal of Choice Modelling（in press 版）",
+  "决策层（家庭协商/社会影响）。"
+ ],
+ [
+  "文献1.md",
+  "4. Thieken2022_NHESS_复合内陆洪水的四条路径.pdf",
+  "Compound inland flood events: different pathways, different impacts and different coping options / Thieken, Mohor, Kreibich, Müller / 2022 / NHESS 22: 165–185",
+  "水动力（路径分类）、伤亡层（水深×流速×历时组合）、验证口径（分层对照）、数据来源。"
+ ],
+ [
+  "文献1.md",
+  "5. Benjamin2022_FrontPsych_涉水驾驶的心理社会因素.pdf",
+  "Why take the risk? Exploring the psychosocial determinants of floodwater driving / Benjamin, Parsons, Apthorp, Lykins / 2022 / Frontiers in Psychology 13: 913790",
+  "决策层（仅作\"存在个体差异\"的证据，不作参数）；方法层面对本项目贡献有限，**弱相关**。"
+ ],
+ [
+  "文献1.md",
+  "6. Hamilton2016_SafetyScience_涉水驾驶的信念.pdf",
+  "Stop there's water on the road! Identifying key beliefs guiding people's willingness to drive through flooded waterways / Hamilton, Peden, Pearson, Hagger / 2016 / Safety Science 89: 308–314",
+  "决策层（涉水决策的信念结构）、数据来源（问卷设计流程）。"
+ ],
+ [
+  "文献1.md",
+  "7. Watkins2026_TRF_驾驶人对道路积水的认知与标牌遵从.pdf",
+  "An investigation into driver's perceptions of road flooding and adherence to signage / Watkins, Bathaei Javareshk, Goodge, Blundell, Crundall / 2026 / TRF 120: 103639",
+  "决策层（标志/信息干预）、水动力（涉水深度阈值的文献锚点，不可直接用）。"
+ ],
+ [
+  "文献1.md",
+  "8. Mostafizi2017_NatHazards_路网中断下的海啸疏散建模.pdf",
+  "Agent-based tsunami evacuation modeling of unplanned network disruptions for evidence-driven resource allocation and retrofitting strategies / Mostafizi, Wang, Cox, Cramer, Dong / 2017 / Natural Hazards 88: 1347–1372",
+  "伤亡层（阈值判据）、水动力（淹没-伤亡耦合）、验证口径（情景对照）、决策层（资源分配）。"
+ ],
+ [
+  "文献1.md",
+  "9. Mostafizi2019_IJDRR_垂直疏散与避难所选址.pdf",
+  "An agent-based vertical evacuation model for a near-field tsunami: Choice behavior, logical shelter locations, and life safety / Mostafizi, Wang, Cox, Dong / 2019 / IJDRR（DOI 10.1016/j.ijdrr.2018.12.018）",
+  "决策层（避险点选址）、伤亡层、验证口径。"
+ ],
+ [
+  "文献1.md",
+  "10. Wang2016_TRC_多方式近场海啸疏散智能体模型.pdf",
+  "An agent-based model of a multimodal near-field tsunami evacuation: Decision-making and life safety / Wang, Mostafizi, Cramer, Cox, Park / 2016 / TRC 64: 86–100",
+  "时间层（milling 参数化）、决策层（方式分担）、伤亡层。"
+ ],
+ [
+  "文献1.md",
+  "11. Zhang2026_TRD_洪灾人群移动的LLM智能体重建.pdf",
+  "Reconstructing flood-induced human mobility using LLM agent with disaster context adaptation / Zhang, Huang, Tang, Zhao / 2026（在线 2026-10）/ TRD 162: 105685（2027）",
+  "决策层（LLM 智能体框架，主参考）、时间层（hop 级时变）、水动力（淹没面逐时求交）、验证口径（diff-ACC/ERL）、数据来源（WorldPop/POI/信令）。"
+ ],
+ [
+  "文献1.md",
+  "12. Thieken2026_EarthFuture_洪灾死亡情形与楼层位置.pdf",
+  "Understanding Flood Fatalities: Reevaluating Flood Risk Management / Thieken, Rhein, Hosten, Zenker, Merz, Bubeck, Kreibich, Guha-Sapir / 2026 / Earth's Future 14: e2026EF008695",
+  "伤亡层（主参考）、验证口径（图内外/超额比）、决策层（疏散时机与垂直疏散）。"
+ ],
+ [
+  "文献二.md",
+  "1. 1-s2.0-S0925753523000255-main.pdf",
+  "Investigating pedestrian behavioral patterns under different floodwater conditions: A video analysis on real flood evacuations / Quagliarini E., Romano G., Bernardini G. / 2023 / Safety Science 161: 106083，DOI 10.1016/j.ssci.2023.106083",
+  "决策层（行为字典与启用条件）、水动力（水深分档口径）、验证口径（行为构成对比）。"
+ ],
+ [
+  "文献二.md",
+  "2. Explanatory_note_for_FD2320_and_FD2321_project_record.pdf",
+  "Supplementary note on flood hazard ratings and thresholds for development planning and control purpose — clarification of Table 13.1 of FD2320/TR2 and Figure 3.2 of FD2321/TR1 / Surendran S., Gibbs G.（Environment Agency）；Wade S., Udale-Clarke H.（HR Wallingford）/ 2008-05 / 项目补充说明，非期刊，共 5 页",
+  "伤亡层（危险度指标）、水动力（深度×流速耦合）、验证口径（阈值口径与留痕）。"
+ ],
+ [
+  "文献二.md",
+  "3. Flood-related+fatalities+during+the+flood+of+July+2021+in+North+Rhine-Westphalia,+Germany+what+can+be+learnt+for+future+flood+risk+management.pdf",
+  "Flood-related fatalities during the flood of July 2021 in North Rhine-Westphalia, Germany: what can be learnt for future flood risk management? / Thieken A.H., Zenker M.-L., Bubeck P. / 2023 / Journal of Coastal and Riverine Flood Risk 2: paper 5，DOI 10.59490/jcrfr.2023.0005",
+  "伤亡层（死因链与情境枚举）、决策层（活动目的）、验证口径（灾点回落淹没图）、数据来源（官方卷宗＋图层的叠合方式）。"
+ ],
+ [
+  "文献二.md",
+  "4. Flood_risks_to_people_-_Phase_2_Guidance_Document_Technical_report.pdf",
+  "Flood Risks to People: Phase 2 — FD2321/TR2 Guidance Document / HR Wallingford、Flood Hazard Research Centre (Middlesex)、Risk & Policy Analysts Ltd / 2006-03 / Defra/EA R&D 报告 FD2321/TR2，PB 11545（无 DOI）",
+  "伤亡层（主公式与截断）、数据来源（变量—来源表）、验证口径（多场次加权与不确定性表述）。"
+ ],
+ [
+  "文献二.md",
+  "5. Flood_risks_to_people_-_Phase_2_Project_Record.pdf",
+  "Flood Risks to People: Phase 2 — FD2321/PR Project Record / HR Wallingford、FHRC (Middlesex)、RPA Ltd / 2006-03 / Defra/EA R&D 报告 FD2321/PR（无 DOI）",
+  "决策层（自致风险类型学）、数据来源（暴露人口口径）、验证口径（参数准入与假设台账）。"
+ ],
+ [
+  "文献二.md",
+  "6. Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf",
+  "Flood Risks to People: Phase 2 — The Flood Risks to People Methodology, FD2321/TR1 / HR Wallingford、FHRC (Middlesex)、RPA Ltd / 2006-03 / Defra/EA R&D 报告 FD2321/TR1（无 DOI）",
+  "伤亡层（危险度与合成式）、验证口径（历史事件回算与两倍容差）、水动力（降级分区法）。"
+ ],
+ [
+  "文献二.md",
+  "7. Floor_risks_to_people_-_Phase_2_Summary_.pdf",
+  "Flood Risks to People — Phase 2, Technical Summary: FD2321 / Defra/EA 联合 R&D 计划（HR Wallingford 承包）/ 2006 / 技术摘要 PB 11545 TS，2 页（无 DOI）",
+  "验证口径（不确定性表述）、数据来源（分层文档结构）。"
+ ],
+ [
+  "文献二.md",
+  "8. Investigating+flood+behaviours+con+Romano_safety+science+compressed.pdf",
+  "Investigating pedestrian behavioral patterns under different floodwater conditions: A video analysis on real flood evacuations / Quagliarini E., Romano G., Bernardini G. / 2023 / Safety Science 161: 106083，DOI 10.1016/j.ssci.2023.106083",
+  "数据来源（文献去重口径）。"
+ ],
+ [
+  "文献二.md",
+  "9. Normal_walking_speed_a_descriptive_meta.pdf",
+  "Normal walking speed: a descriptive meta-analysis / Bohannon R.W., Andrews A.W. / 2011 / Physiotherapy 97(2): 182–189，DOI 10.1016/j.physio.2010.12.004",
+  "时间层（步速与到达时间）、数据来源（参数准入标准）。"
+ ],
+ [
+  "文献二.md",
+  "10. The_risk_perception_paradox_implications.pdf",
+  "The Risk Perception Paradox—Implications for Governance and Communication of Natural Hazards / Wachinger G., Renn O., Begg C., Kuhlicke C. / 2013 / Risk Analysis 33(6): 1049–1064，DOI 10.1111/j.1539-6924.2012.01942.x",
+  "决策层（感知—意愿—行动三段与三缺口）、验证口径（反事实比较机制而非数值）。"
+ ],
+ [
+  "文献二.md",
+  "11. document.pdf",
+  "Loss of Life Caused by the Flooding of New Orleans After Hurricane Katrina: Analysis of the Relationship Between Flood Characteristics and Mortality / Jonkman S.N., Maaskant B., Boyd E., Levitan M.L. / 2009 / Risk Analysis 29(5): 676–698，DOI 10.1111/j.1539-6924.2008.01190.x",
+  "伤亡层（剂量函数形式、分区、分母口径）、验证口径（回算双指标）。"
+ ],
+ [
+  "文献二.md",
+  "12. p654.pdf",
+  "Increasing Evacuation During Disaster Events / Kuhlman C.J., Marathe A., Vullikanti A., Halim N., Mozumder P. / 2020 / Proc. 19th Int. Conf. on Autonomous Agents and Multiagent Systems (AAMAS 2020), pp. 654–662（文中未给 DOI）",
+  "决策层（阈值＋符号偏置、吸收态）、时间层（步长必须改为分钟级）、验证口径（干预反事实设计）。"
+ ],
+ [
+  "文献二.md",
+  "13. s11116-026-10780-4.pdf",
+  "**文本不可用**",
+  "无（文本不可用）。"
+ ],
+ [
+  "文献二.md",
+  "14. sr90_2auflage.pdf",
+  "**文本不可用**",
+  "无（文本不可用）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "1. ARR_Project_10_Stage1_report_Final.pdf",
+  "Australian Rainfall and Runoff Revision Project 10: Appropriate Safety Criteria for People — Stage 1 Report, P10/S1/006 / Cox R.J., Shand T.D., Blacka M.J.（Water Research Laboratory, UNSW）/ 2010-04 / 工程指南报告（Engineers Australia），无 DOI，ISBN 978-085825-9454",
+  "伤亡层（阈值结构）、水动力（读深/流速的口径）、验证口径（适用域声明）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "2. IJDRR_119-105315.pdf",
+  "Staying or leaving: Unraveling the dynamics of evacuation decisions among floodplain residents in central Vietnam / Vo Hoang Ha, Nguyen Cong Dinh, Takeshi Mizunoya / 2025 / International Journal of Disaster Risk Reduction 119: 105315，DOI 10.1016/j.ijdrr.2025.105315",
+  "决策层（四态与替代动作）、数据来源（本地化替换）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "3. J Flood Risk Management - 2026 - Xu - Micro‐Behavioral Responses for Enhancing Urban Flood Resilience  Stated Preference.pdf",
+  "Micro-Behavioral Responses for Enhancing Urban Flood Resilience: Stated Preference Analysis of Residents' Evacuation Choices in High-Density Urban Areas / Jia Xu, Yongzhen Wang, Can Wang, Qiang Lin / 2026 / Journal of Flood Risk Management 19: e70272，DOI 10.1111/jfr3.70272",
+  "决策层（路径效用）、验证口径（配对情景）、数据来源（瓶颈节点清单）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "4. NCHRP-562-Improving-Pedestrian-Safety-at-Unsignalized-Crossings.pdf",
+  "Improving Pedestrian Safety at Unsignalized Crossings（TCRP Report 112 / NCHRP Report 562）/ Fitzpatrick K., Turner S., Brewer M. 等（Texas Transportation Institute）/ 2006 / Transportation Research Board，ISBN 0-309-09859-9，Project D-8/3-71",
+  "决策层（分段判定）、时间层（等待/犹豫计时）、验证口径（替代指标）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "5. WRL-TR2017-07-Vehicle-Stability-Testing-for-Flood-Flows.pdf",
+  "Vehicle stability testing for flood flows, WRL Technical Report 2017/07 / Smith G.P., Modra B.D., Tucker T.A., Cox R.J.（UNSW Water Research Laboratory）/ 2017-05 / 技术报告（委托方 NSW SES + NSW OEH），无 DOI",
+  "伤亡层（车辆失稳）、水动力（Fr 与 C_D）、验证口径（适用上限与折扣）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "6. PNNL-26949.pdf",
+  "**文本不可用**。PDF 无文本层（提取 0 字符），题名、作者、年份、编号含义均无法从正文确认；仅从文件名知为 PNNL 报告编号 26949。按清单第三列为空处理，未阅读、不作任何内容推断。",
+  "待定（暂不落点）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "7. Ahsanuzzaman_Messer_2021_JFRM_14_e12753_fulltext.pdf",
+  "Motorists' willingness to drive through flooded roads: Evidence from a stated preference experiment / Ahsanuzzaman, Kent D. Messer / 2021 / Journal of Flood Risk Management 14(4): e12753，DOI 10.1111/jfr3.12753",
+  "决策层（信息干预与锚定）、时间层（绕行容忍）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "8. Arshaghi_2026_NHESS_26_981_fulltext.xml",
+  "Human decision-making in crowds in a virtual flood scenario / Booloot Arshaghi, Glyn Lawson, Riccardo Briganti, Peer-Olaf Siebers / 2026 / Natural Hazards and Earth System Sciences 26: 981–1000，DOI 10.5194/nhess-26-981-2026",
+  "决策层（社会影响）、时间层（pre-movement time）、验证口径（双指标）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "9. Borowski_Stathopoulos_2023_NatHazRev_24_04022045_fulltext.pdf",
+  "Protection or Peril of Following the Crowd in a Pandemic-Concurrent Flood Evacuation / Elisa Borowski, Amanda Stathopoulos / 2023 / Natural Hazards Review 24(1): 04022045，DOI 10.1061/(ASCE)NH.1527-6996.0000577",
+  "决策层（同伴效应双通道）、时间层（等待与威胁等级）、数据来源（参照群构造）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "10. Li_2026_JHydrol_672_135395_accepted_manuscript.pdf",
+  "Pedestrian dynamics in flooding disasters: an experimental study of unidirectional pedestrian flow under multiple water depths / Xintong Li, Chenglin Guo, Jie Chen, Yufei Qin, Jun Zhang, Nikolai W.F. Bode, Weiguo Song / 2026 / Journal of Hydrology 672: 135395，DOI 10.1016/j.jhydrol.2026.135395",
+  "水动力（速度折减函数）、决策层（能否加速）、验证口径（速度-密度曲线）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "11. Roy_Hasan_2021_TRC_123_102976_fulltext.pdf",
+  "Modeling the Dynamics of Hurricane Evacuation Decisions from Twitter Data: An Input Output Hidden Markov Modeling Approach / Kamol Chandra Roy, Samiul Hasan / 2021 / Transportation Research Part C: Emerging Technologies 123: 102976，DOI 10.1016/j.trc.2021.102976（本文件为预印本版）",
+  "时间层（转移概率）、决策层（隐状态设计）、数据来源（活动链替代推文）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "12. Silva_2025_NHESS_25_1501_supplement.pdf",
+  "Supplement of \"Assessing the impact of early warning and evacuation on human losses during the 2021 Ahr Valley flood in Germany using agent-based modelling\" / André Felipe Rocha Silva 等（通讯 Heidi Kreibich）/ 2025 / NHESS 25: 1501–1520 的补充材料，DOI 10.5194/nhess-25-1501-2025-supplement",
+  "时间层（预警扩散 + 动员）、验证口径（结构比例校准）、数据来源（LifeSim 手册）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "13. Tang_2026_NatSustain_9_1569_supplementary.pdf",
+  "Supplementary information for \"Human mobility dynamics for cost-effective flood emergency resource allocation\" / Tang 等 / 2026 / Nature Sustainability 9: 1569 的补充材料，DOI 10.1038/s41893-026-01886-9",
+  "验证口径（趋势+数量+尺度）、数据来源（信令→本地活动链替代）、决策层（三力结构）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "14. Thieken_2023_NHESS_23_973_supplement.pdf",
+  "Supplement of \"Performance of the flood warning system in Germany in July 2021 – insights from affected residents\" / Annegret H. Thieken 等 / 2023 / NHESS 23: 973–990 的补充材料，DOI 10.5194/nhess-23-973-2023-supplement",
+  "数据来源（问卷工具与编码表）、时间层（响应延迟）、决策层（信息质量）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "15. codebook.pdf",
+  "2022 NextGen NHTS Household File – Public Use Codebook, Version 2.1 / 美国 FHWA 全国家庭出行调查（NHTS）项目组 / 2025-04 / 数据码本（非论文），无 DOI",
+  "数据来源（agent 生成）、决策层（出行方式先验）、时间层（出行日/时段分层）。"
+ ],
+ [
+  "文献三与根目录.md",
+  "T1. 文献三/PKU-FIM-master/（开源仓库，非论文）",
+  "（未给）",
+  "决策层（三力结构）、验证口径（两维指标）、数据来源（不可用，仅模板）。"
+ ],
+ [
+  "文献4.md",
+  "A-1 1-s2.0-S0191261511001081-main.pdf（重复件 `…-main (1).pdf` 内容相同，读一份）",
+  "A threshold model of social contagion process for evacuation decision making / Samiul Hasan, Satish V. Ukkusuri / 2011 / Transportation Research Part B 45(10): 1590–1605，DOI 10.1016/j.trb.2011.07.008",
+  "决策层（从众门控）、时间层（回溯窗）、验证口径（级联判据）。"
+ ],
+ [
+  "文献4.md",
+  "A-2 1-s2.0-S0198971518302497-main.pdf",
+  "Diffusion of hurricane evacuation behavior through a home-workplace social network: A spatially explicit agent-based simulation model / Yan Yang, Liang Mao, Sara S. Metcalf / 2019 / Computers, Environment and Urban Systems 74: 13–22，DOI 10.1016/j.compenvurbsys.2018.11.010",
+  "决策层（阈值来源）、时间层（传播与讨论衰减）、数据来源（合成人口/通勤 OD）、验证口径（独立数据验证）。"
+ ],
+ [
+  "文献4.md",
+  "A-3 1-s2.0-S1755534517300313-main.pdf",
+  "Modeling joint evacuation decisions in social networks: The case of Hurricane Sandy / Arif Mohaimin Sadri, Satish V. Ukkusuri, Hugh Gladwin / 2017 / Journal of Choice Modelling 25: 50–60，DOI 10.1016/j.jocm.2017.02.002",
+  "决策层（同伴结构）、验证口径（多层/聚类）。"
+ ],
+ [
+  "文献4.md",
+  "A-4 1-s2.0-S2212096326001142-main.pdf",
+  "Crossing the behavioral threshold: social amplification and climate risk management in urban flood evacuation / Katsuya Tanaka, Kazuhide Akaishi, Takashi Yokota, Fujio Kusano / 2026 / Climate Risk Management 54: 100901，DOI 10.1016/j.crm.2026.100901",
+  "决策层（意图—行动门）、时间层（时刻因子）、验证口径（阈值反解与敏感性）。"
+ ],
+ [
+  "文献4.md",
+  "A-5 1-s2.0-S2212420924004631-main.pdf",
+  "Influences of social networks, demographics, and evacuation duration on evacuation decisions: Insights from Ohio and Pennsylvania / Haoming Qin, Wei Zhai, Junqing Tang / 2024 / International Journal of Disaster Risk Reduction 111: 104701，DOI 10.1016/j.ijdrr.2024.104701",
+  "决策层（目的地）、时间层（时长情景）、数据来源（量表）。"
+ ],
+ [
+  "文献4.md",
+  "A-6 1-s2.0-S2590198221000324-main.pdf",
+  "Review of social influence in crisis communications and evacuation decision-making / Arif Mohaimin Sadri, Satish V. Ukkusuri, Md Ashraf Ahmed / 2021 / Transportation Research Interdisciplinary Perspectives 9: 100325，DOI 10.1016/j.trip.2021.100325",
+  "验证口径（证据映射）、写作骨架。"
+ ],
+ [
+  "文献4.md",
+  "B-1 1-s2.0-S0968090X11000957-main.pdf",
+  "A random-parameter hazard-based model to understand household evacuation timing behavior / Samiul Hasan, Rodrigo Mesa-Arango, Satish Ukkusuri / 2013（2011 年在线）/ Transportation Research Part C 27: 108–116，DOI 10.1016/j.trc.2011.06.005",
+  "时间层、验证口径（分半稳健性）。"
+ ],
+ [
+  "文献4.md",
+  "B-2 1-s2.0-S0191261515302253-main.pdf",
+  "The optimal time to evacuate: A behavioral dynamic model on Louisiana resident data / Nayel Urena Serulle, Cinzia Cirillo / 2017 / Transportation Research Part B 106: 447–463，DOI 10.1016/j.trb.2017.06.004",
+  "时间层。"
+ ],
+ [
+  "文献4.md",
+  "B-3 Analysis of evacuation destination and departure time choices for no-notice emergency events.pdf",
+  "Analysis of evacuation destination and departure time choices for no-notice emergency events / Nima Golshani, Ramin Shabanpour, Abolfazl (Kouros) Mohammadian, Joshua Auld, Hubert Ley / 2019 / Transportmetrica A: Transport Science 15(2): 896–914，DOI 10.1080/23249935.2018.1546778",
+  "决策层（目的地）、时间层、验证口径（MAPE/τ）。"
+ ],
+ [
+  "文献4.md",
+  "C-1 1-s2.0-S0048969717320624-main.pdf",
+  "Gender, age and circumstances analysis of flood and landslide fatalities in Italy / Paola Salvati, Olga Petrucci, Mauro Rossi, Cinzia Bianchi, Aurora A. Pasqua, Fausto Guzzetti / 2018（2017 在线）/ Science of the Total Environment 610–611: 867–879，DOI 10.1016/j.scitotenv.2017.08.064",
+  "伤亡层、验证口径（分母与分位）、数据来源（个案库字段设计）。"
+ ],
+ [
+  "文献4.md",
+  "C-2 1-s2.0-S2212420926004413-main.pdf",
+  "Gender differences in disaster mortality and risk perception: evidence from floods and landslides in Italy / Paola Salvati, Melissa Sessa, Maria Teresa Carone, Stefano Luigi Gariano, Mauro Rossi, Roberto Coscarelli, Cinzia Bianchi, Loredana Antronico / 2026 / International Journal of Disaster Risk Reduction 145: 106429，DOI 10.1016/j.ijdrr.2026.106429",
+  "验证口径、数据来源、决策层（感知作为意图输入）。"
+ ],
+ [
+  "文献4.md",
+  "C-3 1-s2.0-S1462901117301818-main.pdf",
+  "Exploring the circumstances surrounding flood fatalities in Australia—1900–2015 and the implications for policy and practice / Katharine Haynes, Lucinda Coates, Rob van den Honert, Andrew Gissing, Deanne Bird, Felipe Dimer de Oliveira, Rebecca D'Arcy, Chloe Smith, Deirdre Radford / 2017 / Environmental Science and Policy 76: 165–176，DOI 10.1016/j.envsci.2017.07.003",
+  "伤亡层、验证口径、数据来源。"
+ ],
+ [
+  "文献4.md",
+  "C-4 1-s2.0-S1353829222000181-main.pdf",
+  "Estimating changes in emergency department visits associated with floods caused by Tropical Storm Imelda using satellite observations and syndromic surveillance / Balaji Ramesh, Meredith A. Jagger, Benjamin F. Zaitchik, Korine N. Kolivras, Samarth Swarup, Biru Yang, Bianca G. Corpuz, Julia M. Gohlke / 2022 / Health & Place 74: 102757，DOI 10.1016/j.healthplace.2022.102757",
+  "伤亡层（伤害口径的替代指标与边界）、验证口径（DiD）、水动力（暴露分级方式）。"
+ ],
+ [
+  "文献4.md",
+  "C-5 1-s2.0-S261665182600165X-main.pdf",
+  "Human impacts of flood disasters: A global systematic review (1980–2025) / Isaac Kwesi Nooni, Linda Sarpong, Naomi Kumi, Nana Agyemang Prempeh, Samuel Koranteng Fianko, Zhongfang Jin / 2026 / H2Open Journal 9: 100019，DOI 10.1016/j.htopen.2026.100019",
+  "验证口径（证据分级）、写作骨架。"
+ ],
+ [
+  "文献4.md",
+  "D-1 1-s2.0-S0960077925018193-main.pdf",
+  "Complex dynamics of single-file pedestrian flow under varying flood water depths / Xintong Li, Jie Chen, Hang Yu, Chenglin Guo, Jun Zhang, Nikolai W.F. Bode, Weiguo Song / 2026（2025-12 在线）/ Chaos, Solitons and Fractals 205: 117805，DOI 10.1016/j.chaos.2025.117805",
+  "决策层（步速/跟随）、水动力（水深→速度接口）、验证口径（基本图形状）。"
+ ],
+ [
+  "文献4.md",
+  "D-2 1-s2.0-S1369847826001348-main.pdf",
+  "An investigation into driver's perceptions of road flooding and adherence to signage / Matthew Watkins, Maryam Bathaei Javareshk, Thomas Goodge, James Blundell, David Crundall / 2026 / Transportation Research Part F: Psychology and Behaviour 120: 103639，DOI 10.1016/j.trf.2026.103639",
+  "决策层（车辆涉水/弃车）、验证口径（标志 A/B）。"
+ ],
+ [
+  "文献4.md",
+  "E-1 1-s2.0-S1462901124002594-main.pdf",
+  "Context matters when evacuating large cities: Shifting the focus from individual characteristics to location and social vulnerability / Samuel Rufat, Emeline Comby, Serge Lhomme, Victor Santoni / 2024 / Environmental Science and Policy 162: 103925，DOI 10.1016/j.envsci.2024.103925",
+  "决策层（阈值分布标定）、验证口径（重要性排序）、数据来源（阶梯题）。"
+ ],
+ [
+  "文献4.md",
+  "E-2 1-s2.0-S2212420925007939-main.pdf",
+  "Nuisance flood risk: Defining a new horizon in urban flood risk management through hydrodynamic flood hazard modelling and indicator-based vulnerability assessment / Dev Anand Thakur, Vishveshwari Tukaram Shirsath, Mohit Prakash Mohanty / 2026（2025-12 在线）/ International Journal of Disaster Risk Reduction 132: 105969，DOI 10.1016/j.ijdrr.2025.105969",
+  "情境界定（决策层/验证口径）、水动力（1D–2D 可出流速）、数据来源（脆弱性指标）。"
+ ],
+ [
+  "文献4.md",
+  "F-1 1-s2.0-S0022169426006980-main.pdf",
+  "Convolutional neural network model for rapid prediction of urban flash flood water depth and velocity maps / Muhammad Asif, Roberto Bentivoglio, Raffaele Albano / 2026 / Journal of Hydrology 675: 135601，DOI 10.1016/j.jhydrol.2026.135601",
+  "水动力（流速来源）、验证口径（CSI）。"
+ ],
+ [
+  "文献4.md",
+  "G-1 1-s2.0-S0191261517303788-main.pdf",
+  "Crowd behaviour and motion: Empirical methods / Milad Haghani, Majid Sarvi / 2018 / Transportation Research Part B 107: 253–294，DOI 10.1016/j.trb.2017.06.017",
+  "验证口径（证据分级）、决策层（三层架构）、数据来源。"
+ ],
+ [
+  "文献4.md",
+  "G-2 1-s2.0-S0191261526002225-main.pdf",
+  "Modeling and simulating human behavior in large-scale emergency evacuations: A comprehensive review / Shiva Moslemi, Ada Arıkanoğlu, Vedat Bayram, Barış Yıldız / 2026（2026-10 在线；期刊标注 2027 年卷）/ Transportation Research Part B 215: 103611，DOI 10.1016/j.trb.2026.103611",
+  "验证口径（Y/P/N 编码、缺口矩阵）、写作骨架。"
+ ],
+ [
+  "第六轮回件.md",
+  "[1] thieken2023-nhess.xml",
+  "**文本不可用**（清单第三列为空，`_text_all` 无对应 .txt）。按文件名推断为 Thieken et al. 2023 NHESS 正文，但**未读到一字，不作任何转述**。",
+  "数据来源（待补原文）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[2] thieken2023-reviewer-responses.pdf",
+  "Responses to comments on egusphere-2022-244「Performance of the flood warning system in Germany in July 2021」/ A. H. Thieken et al. / 2022（EGUsphere 讨论稿的author response，非期刊论文）/ DOI 10.5194/egusphere-2022-244-RC1",
+  "验证口径／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[3] wong-irma-survey-questions.pdf",
+  "Understanding the Decision Making of Evacuees from Hurricane Irma — Survey Flow（问卷全文，75 页）/ Stephen Wong（with S. Shaheen, J. Walker），UC Berkeley / 年份文中未给（问卷针对 2017 年 Irma）/ 未发表调查工具，无 DOI",
+  "决策层／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[4] Chen_etal_2023_NHESS_tsunami_ABM.pdf",
+  "An interdisciplinary agent-based evacuation model: integrating the natural environment, built environment, and social system / Chen Chen, Charles Koll, Haizhong Wang, Michael K. Lindell / 2023 / NHESS 23: 733–749，DOI 10.5194/nhess-23-733-2023",
+  "决策层／时间层／验证口径／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[5] JCU_Townsville_2025_flood_survey.pdf",
+  "Post Disaster Survey of Residents in North Queensland Following Monsoonal Floods in January and February 2025 / Yetta Gurtner, David King（Centre for Disaster Studies, JCU）/ 2025 / 机构调查报告（非期刊，无 DOI，作者自述为 \"basic research report detailing basic raw data\"）",
+  "数据来源（仅问卷骨架）／验证口径（分母规范）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[6] Ohtomo_etal_2020_JDR_Okayama_evacuation.pdf",
+  "The Determinants of Residents' Evacuation Behavior in the Torrential Rain in Western Japan in 2018: Examination of Survey Data of Victims in Okayama Prefecture / Shoji Ohtomo, Reo Kimura, Yoshiaki Kawata, Keiko Tamura / 2020 / Journal of Disaster Research 15(7): 1011–1024",
+  "决策层／时间层／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[7] Silva_etal_2025_NHESS_Ahr_ABM.pdf",
+  "Assessing the impact of early warning and evacuation on human losses during the 2021 Ahr Valley flood in Germany using agent-based modelling / André Felipe Rocha Silva, Julian Cardoso Eleutério, Heiko Apel, Heidi Kreibich / 2025 / NHESS 25: 1501–1520，DOI 10.5194/nhess-25-1501-2025",
+  "时间层／伤亡层／验证口径／水动力（接口）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[8] AHS_1998_Washington_Metro_H170-98-18.pdf",
+  "American Housing Survey for the Washington Metropolitan Area, H170/98-18, Fiscal Year 1998 / U.S. Census Bureau & HUD / 2000 年 11 月发布 / 政府统计报告",
+  "数据来源／伤亡层（楼层人数基线）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[9] CBECS2018_Table_B1.pdf",
+  "Table B1. Summary table: total and means of floorspace, number of workers, and hours of operation, 2018 / U.S. EIA（Commercial Buildings Energy Consumption Survey）/ 2021 年 9 月发布、2022 年 12 月修订 / 统计表（无 DOI）",
+  "数据来源／伤亡层。"
+ ],
+ [
+  "第六轮回件.md",
+  "[10] Choi2002_Tall_Building_Design_Guideline.pdf",
+  "The Preliminary Design Guideline for Tall Building: Exploration of Planning Factors & Building Factors / Yong Sun Choi / 2002 / Architectural Research 4(1): 1–6",
+  "水动力（几何）／伤亡层（楼层高程）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[11] DC_DOEE_Flood_Hazard_Rules_20DCMR31_Final_2025-06-20.pdf",
+  "20 DCMR Chapter 31, Flood Hazard Rules — Final Rulemaking / DC Department of Energy & Environment / 2025-06-20 / 行政法规（非论文）",
+  "水动力（边界）／伤亡层（首层高程）／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[12] GSA_OAS_7005.1B_Internal_Space_Allocation_Policy.pdf",
+  "GSA Order OAS 7005.1B — Internal Space Allocation, Design, and Management Policy / U.S. General Services Administration / 2025（取代 OAS P 7005.1A）/ 机构政策",
+  "数据来源／伤亡层。"
+ ],
+ [
+  "第六轮回件.md",
+  "[13] JUE_WebAppendix_Building_Heights_Data.pdf",
+  "Web Appendix: Details on the Building Heights Data（\"Cities Without Skylines\" 的在线附录，标注 \"NOT FOR PUBLICATION\"）/ 作者与年份文中未给（附录本身无署名页）/ 期刊附录，无 DOI",
+  "伤亡层（楼层高程）／水动力（几何）／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[14] DBQ-Spain-2026-validation.pdf",
+  "Updating the Driver Behaviour Questionnaire (DBQ): A new Spanish adaptation and validation / María T. Sánchez-López, Pablo Fernández-Berrocal, Mariaelena Tagliabue, Alberto Megías-Robles / 2026 / Journal of Transport & Health 48: 102272，DOI 10.1016/j.jth.2026.102272",
+  "数据来源（量表构建与验证规范）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[15] Jonkman-2007-thesis.pdf",
+  "**文本不可用**（清单第三列为空，`_text_all` 无对应 .txt）。按文件名推断为 Jonkman 2007 TU Delft 博士论文，但**未读到一字**。",
+  "伤亡层（待补原文）。"
+ ],
+ [
+  "第六轮回件.md",
+  "[16] Jonkman-Vrijling-2008-JFRM.pdf",
+  "Loss of life due to floods / S. N. Jonkman, J. K. Vrijling / 2008 / Journal of Flood Risk Management（排版稿，卷期未印，页 1–14），DOI 10.1111/j.1753-318X.2008.00006.x",
+  "伤亡层／水动力（分区输入）／验证口径。"
+ ],
+ [
+  "第六轮回件.md",
+  "[17] SHRP2-BPSA-Data-Dictionary.pdf",
+  "Behavior-based Predictive Safety Analytics – Driver Behaviors and Outcomes: Data Dictionary of Variables / SHRP2 BPSA 项目 / 年份文中未给 / 数据字典（无 DOI）",
+  "数据来源／验证口径。"
+ ],
+ [
+  "第六轮回件.md",
+  "[18] Wang-2009-headway-FHWA-RIDOT.pdf",
+  "Studying the Vehicle Headway Issue and Its Impact on the Slow-Down Effect / Jyh-Hone Wang, Miao Song（Univ. of Rhode Island）/ 2009 年 6 月 / URITC Project 0001852 最终报告（与 RIDOT、FHWA 合作），非期刊",
+  "时间层／数据来源／验证口径。"
+ ],
+ [
+  "第六轮回件.md",
+  "[19] baba2017_jsce_underground_evacuation.pdf",
+  "Experimental Studies on Safety Evacuation from Underground Spaces under Inundated Situations / Yasuyuki Baba, Taisuke Ishigaki, Keiichi Toda / 2017 / Journal of JSCE 5: 269–278",
+  "水动力（阈值）／伤亡层／数据来源。"
+ ],
+ [
+  "第六轮回件.md",
+  "[20] ishigaki_jsce2005_cs7-010.pdf",
+  "都市における地下浸水時の危険性に関する一考察 / 岩村真理・戸田圭一・間畠真嗣 / 2005 / 土木学会第 60 回年次学術講演会 CS7-010, pp.279–280（4 页会议概要）",
+  "水动力（入口失效）／时间层／验证口径。"
+ ],
+ [
+  "第六轮回件.md",
+  "[21] li2026_jhydrol_AAM.pdf",
+  "Pedestrian dynamics in flooding disasters: an experimental study of unidirectional pedestrian flow under multiple water depths / Xintong Li, Chenglin Guo, Jie Chen, Yufei Qin, Jun Zhang, Nikolai W.F. Bode, Weiguo Song / 2026 / Journal of Hydrology 672: 135395，DOI 10.1016/j.jhydrol.2026.135395（AAM 版）",
+  "水动力（水深→运动参数）／时间层／验证口径。"
+ ],
+ [
+  "第六轮回件.md",
+  "[22] mlit_chika_kiken_g-11_g-14.pdf",
+  "地下空間の浸水想定における避難行動限界（《地下空间浸水对策指南》G-11～G-14 节）/ 国土交通省（MLIT）相关指南 / 年份文中未给 / 政府技术指南（非论文，无 DOI）",
+  "水动力（阈值链）／时间层／验证口径。"
+ ],
+ [
+  "第六轮回件.md",
+  "[23] palmer2014_neurological_activity_patterns_orendurff.pdf",
+  "Activity patterns in people with neurological conditions / Katie Palmer, Jamie Thomas, Suzie Mudge / 2014 / New Zealand Journal of Physiotherapy 42(1): 9–15",
+  "时间层（步行段时长分布与切段规则）／验证口径。"
+ ],
+ [
+  "各轮回件.md",
+  "[1] 第八轮回件 / dillenardt_thieken2025.pdf",
+  "Individual flood risk adaptation in Germany: exploring the role of different types of flooding / Lisa Dillenardt、Annegret H. Thieken / 2025 / NHESS 25: 3257–3278，doi:10.5194/nhess-25-3257-2025",
+  "决策层（动机构念→agent 异质性参数）／验证口径（多源合并口径统一）。"
+ ],
+ [
+  "各轮回件.md",
+  "[2] 第八轮回件 / jonkman_kelman_2005.pdf",
+  "An analysis of the causes and circumstances of flood disaster deaths / Sebastiaan N. Jonkman、Ilan Kelman / 2005 / Disasters 29(1): 75–97（文中未给 DOI，页眉给卷期页码）",
+  "伤亡层（记录格式与活动维度）／数据来源（法医·消防·新闻个案）。"
+ ],
+ [
+  "各轮回件.md",
+  "[3] 第八轮回件 / naccs_9Loss-of-Life_26Jan2015.pdf（读同目录 naccs.txt）",
+  "Loss of Life Phase of the North Atlantic Coast Comprehensive Study — Measuring Human Response to Evacuation Orders / U.S. Army Corps of Engineers, North Atlantic Division / 2015-01 / 机构报告，**无报告号、无 DOI**（封面 p.i；执行摘要 p.v）",
+  "决策层（疏散/就地避险响应率）／数据来源（抽样框与邮寄设计）／验证口径（与官方疏散率对照）。"
+ ],
+ [
+  "各轮回件.md",
+  "[4] 第八轮回件 / paranjothy2011_uk2007.pdf",
+  "Psychosocial impact of the summer 2007 floods in England / S. Paranjothy、J. Gallacher、R. Amlôt、G. J. Rubin、L. Page、T. Baxter、J. Wight、D. Kirrage、R. McNaught、S. R. Palmer / 2011 / BMC Public Health 11: 145（文中未给 DOI）",
+  "伤亡层（暴露梯度与对照组的必要性）／验证口径（采集方式作为协变量）。"
+ ],
+ [
+  "各轮回件.md",
+  "[5] 第八轮回件 / rozer2016.pdf",
+  "Coping with Pluvial Floods by Private Households / V. Rözer、M. Müller、P. Bubeck、S. Kienzler、A. Thieken、I. Pech、K. Schröter、O. Buchholz、H. Kreibich / 2016 / Water 8(7): 304，doi:10.3390/w8070304",
+  "时间层（预警触达与提前量）／决策层（应急措施集）／数据来源（抽样框构造）。"
+ ],
+ [
+  "各轮回件.md",
+  "[6] 第八轮回件 / spekkers2017_pluvial_survey.pdf",
+  "A comparative survey of the impacts of extreme rainfall in two international case studies / M. Spekkers、V. Rözer、A. Thieken、M.-C. ten Veldhuis、H. Kreibich / 2017 / NHESS 17: 1337–1355，doi:10.5194/nhess-17-1337-2017",
+  "验证口径（偏态数据的检验方式、响应率定义）／数据来源（抽样框与模式分流）。"
+ ],
+ [
+  "各轮回件.md",
+  "[7] 第八轮回件 / thieken2026_flood_fatalities.pdf",
+  "**文本不可用**。清单第三列为空，`_text_all` 无对应 txt；PDF 文件 2,224,128 字节，但 PyMuPDF 解析结果为 **0 页 / 0 字符**，判为坏文件或未完成下载。按文件名只能推断与 Thieken 2026 年洪灾死亡研究有关，**未读到一字，不作任何转述**。",
+  "数据来源（待补原件）。"
+ ],
+ [
+  "各轮回件.md",
+  "[8] 第八轮回件 / thieken2026_try.pdf",
+  "**文本不可用**。文件仅 5,598 字节、1 页，全文只有一行「Enable JavaScript and cookies to continue」——是网站的 Cloudflare/JS 挑战页，不是文献。清单第三列为空与之一致。",
+  "无（登记为取件失败）。"
+ ],
+ [
+  "各轮回件.md",
+  "[9] 第七轮自行检索 / Borowski2023_arXiv预印本.pdf",
+  "Protection or Peril of Following the Crowd in a Pandemic-Concurrent Flood Evacuation / Elisa Borowski、Amanda Stathopoulos / 文中未给年份与编号（文件名标 2023；正文为预印本格式，**无 arXiv 编号、无 DOI**）",
+  "决策层（同伴效应的参数化与异质性）／数据来源（选择实验设计）。"
+ ],
+ [
+  "各轮回件.md",
+  "[10] 第十轮自行检索 / Thieken_2023_NHESS_23_973_正文.pdf",
+  "Performance of the flood warning system in Germany in July 2021 – insights from affected residents / A. H. Thieken、P. Bubeck、A. Heidenreich、J. von Keyserlingk、L. Dillenardt、A. Otto / 2023 / NHESS 23: 973–990，doi:10.5194/nhess-23-973-2023",
+  "时间层（预警链条分段测量）／决策层（「知道怎么做」作为独立状态）／验证口径（发布记录与问卷互证）。"
+ ],
+ [
+  "各轮回件.md",
+  "[11] 第十轮自行检索 / UNSW_WRL_TR2015-09_洪水致死估算方法综述.pdf",
+  "Approaches for Estimating Flood Fatalities Relevant to Floodplain Management / G. P. Smith、P. F. Rahman / 报告号 **WRL TR 2015/09**，封面标 September 2016、签发 06 September 2016 / UNSW Water Research Laboratory，委托方 NSW Office of Environment and Heritage；**无 DOI**",
+  "伤亡层（死亡率函数与分母）／验证口径（回测选法）／数据来源（PAR 的来源与调整）。"
+ ],
+ [
+  "各轮回件.md",
+  "[12] 第十一轮自行检索 / Jedwab_Barr_Brueckner_2022_CitiesWithoutSkylines_fulltext.pdf",
+  "Cities Without Skylines: Worldwide Building-Height Gaps and their Possible Determinants and Implications / Remi Jedwab、Jason Barr、Jan Brueckner / 文本标 2021-08-16（文件名标 2022）/ **IIEP Working Paper 2021-15**，George Washington University；无 DOI",
+  "数据来源（建筑高度/层数清单的构造与交叉校验）／决策层（垂直避险容量）／验证口径（反事实基准法）。"
+ ],
+ [
+  "各轮回件.md",
+  "[13] 第十一轮自行检索 / Smith_Davey_Cox_2014_WRL_TR2014-07_FloodHazard.pdf",
+  "Flood Hazard / G. P. Smith、E. K. Davey、R. J. Cox / 2014-09-30（FINAL Rev 0.3）/ **WRL Technical Report 2014/07**，UNSW Water Research Laboratory，委托方 National Flood Risk Advisory Group (NFRAG)；无 DOI",
+  "水动力（危险度分级）／验证口径（流速校核与网格敏感性）／伤亡层（把 hazard 等级接进伤亡函数的输入）。"
+ ]
+]

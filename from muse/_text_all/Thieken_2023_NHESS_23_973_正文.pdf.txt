@@ -1,0 +1,1128 @@
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+https://doi.org/10.5194/nhess-23-973-2023
+© Author(s) 2023. This work is distributed under
+the Creative Commons Attribution 4.0 License.
+Performance of the flood warning system in Germany in July 2021 –
+insights from affected residents
+Annegret H. Thieken, Philip Bubeck, Anna Heidenreich, Jennifer von Keyserlingk, Lisa Dillenardt, and Antje Otto
+Institute of Environmental Science and Geography, University of Potsdam,
+Karl-Liebknecht-Strasse 24-25, 14476 Potsdam, Germany
+Correspondence: Annegret H. Thieken (thieken@uni-potsdam.de)
+Received: 20 April 2022 – Discussion started: 29 April 2022
+Revised: 22 December 2022 – Accepted: 31 January 2023 – Published: 3 March 2023
+Abstract. In July 2021 intense rainfall caused devastating
+floods in western Europe and 184 fatalities in the German federal states of North Rhine-Westphalia (NW) and
+Rhineland-Palatinate (RP), calling into question their flood
+forecasting, warning and response system (FFWRS). Data
+from an online survey (n = 1315) reveal that 35 % of the respondents from NW and 29 % from RP did not receive any
+warning. Of those who were warned, 85 % did not expect
+very severe flooding and 46 % reported a lack of situational
+knowledge on protective behaviour. Regression analysis reveals that this knowledge is influenced not only by gender
+and flood experience but also by the content and the source of
+the warning message. The results are complemented by analyses of media reports and official warnings that show shortcomings in providing adequate recommendations to people
+at risk. Still, the share of people who did not report any
+emergency response is low and comparable to other flood
+events. However, the perceived effectiveness of the protective behaviour was low and mainly compromised by high water levels and the perceived level of surprise about the flood
+magnitude. Good situational knowledge and a higher number
+of previously experienced floods were linked to performing
+more effective loss-reducing action. Dissemination of warnings, clearer communication of the expected flood magnitude and recommendations on adequate responses to a severe
+flood, particularly with regard to flash and pluvial floods, are
+seen as major entry points for improving the FFWRS in Germany.
+1 Introduction
+From 12 to 19 July 2021, western and central Europe witnessed widespread and intense rainfall caused by the lowpressure system “Bernd” that led to severe flooding in Belgium, Germany, Luxembourg and the Netherlands as well as
+in further European countries at lower intensities (Schneider
+and Gebauer, 2021; Kron et al., 2022). In the western part of
+Germany, particularly in the federal states of North RhineWestphalia (NW) and Rhineland-Palatinate (RP), rainfall
+amounts totalled to more than 100 mm in 72 h over large parts
+of these two most affected states with local maxima of more
+than 150 mm in 24 h (Junghänel et al., 2021). This rainfall
+led to urban flooding in some bigger cities such as Cologne,
+Düsseldorf and Hagen as well as to quickly rising flash floods
+in small and steep catchments in the middle hills, particularly
+around the Eifel mountain range (Dietze et al., 2022; Kron et
+al., 2022).
+In all of Germany, 189 people lost their lives, thereof 135
+in RP, 49 in NW, 2 in Bavaria, 2 in Saxony and 1 in BadenWürttemberg. Even 1 year after the flood, two people were
+still reported missing. Severe damage of around EUR 33 billion occurred in the residential, commercial and industrial
+sectors as well as in the public sector and at infrastructures
+(Koks et al., 2022; Munich Re, 2022). Governmental disaster aid of an unprecedented amount of EUR 30 billion has
+been provided to support reconstruction and recovery in the
+affected areas. After floods in August 2002, June 2013 and
+May–June 2016, this is the fourth flood over the past 20 years
+that has caused damage of more than EUR 2 billion in Germany (Kron et al., 2022; see Table 1 for an overview of recent
+flood events in Germany). Even worse, the death toll in July
+2021 by far exceeds the number of fatalities caused by forPublished by Copernicus Publications on behalf of the European Geosciences Union.
+
+974 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+mer floods, which amounted to 21 in 2002, 14 in 2013 and 11
+in 2016. A higher death toll caused by a water-related hazard
+has only been recorded for a storm surge in February 1962
+along the North Sea coast, with 347 fatalities in Germany,
+thereof 318 in the city of Hamburg. Consequently, failures in
+warning, alerting and evacuation processes were already being discussed shortly after the event of July 2021 (Cornwall,
+2021).
+Internationally, a substantial reduction in global disasterrelated fatalities per 100 000 people by 2030 is the first target
+of the Sendai Framework for Disaster Risk Reduction 2015–
+2030 (SFDRR). Since it is the primary goal of early warning
+systems to prevent fatalities during a disaster, the SFDRR, in
+its seventh target, also aims at increasing the number of countries with multi-hazard early warning systems (UN, 2015).
+Worldwide, the effectiveness of early warning systems to
+save lives was impressively demonstrated in the flood-prone
+country of Bangladesh: while a cyclone in 1999 claimed
+around 10 000 deaths, warning and evacuation reduced the
+death toll to 38 lives in 2013 (Hallegatte et al., 2020). Recent
+cyclones have confirmed the success of the warning and response system (Ferdous et al., 2020). For Europe, Hallegatte
+(2012) estimated that weather information and warnings have
+annually saved hundreds of lives and EUR 460 million to
+EUR 2.7 billion of losses while creating even higher benefits by optimized production in weather-sensitive sectors.
+Flood warning systems are more adequately termed flood
+forecasting, warning and response systems (FFWRSs; Parker
+and Priest, 2012). As such, they include continuous monitoring and forecasting of precipitation and water levels, as
+well as the detection of potentially hazardous situations,
+which should be linked to defined thresholds and rules on
+when, how and whom to warn in the case of expected heavy
+precipitation or rising water levels and include (predefined)
+statements that alert and inform civil protection authorities
+and potentially affected people. For the overall success of a
+FFWRS, civil protection authorities and affected parties have
+to respond adequately and effectively to an unfolding flood
+situation (Parker et al., 1994; Parker and Priest, 2012), e.g.
+by erecting temporary water barriers, by evacuating people
+from heavily affected areas or by limiting access to inundated areas such as with road closures. Warning is successful
+if all components function across spatial and departmental
+borders. In this process, the creation and dissemination of
+warnings that trigger adequate and effective response is seen
+as a major challenge (e.g. Cools et al., 2016; Kuller et al.,
+2021), in which different content and formats of a warning
+message and different dissemination channels can be distinguished (Kuller et al., 2021). Furthermore, trust among partners and in institutions plays a crucial role (Parker and Priest,
+2012; Cools et al., 2016; Morss et al., 2016).
+In Germany, flood warning systems have been established
+since the 1880s (DKKV, 2015). Currently, capacities and responsibilities for forecasting, warning and response are divided between the federal, state and local levels. At the federal level, the meteorological service (Deutscher Wetterdienst – DWD) is in charge of weather forecasting and severe weather warnings, such as heavy precipitation. Flood
+forecasting and warning are, however, the task of the individual federal states and are organized differently as described by DKKV (2015) and Kreibich et al. (2017). After the severe flood of August 2002, the DWD introduced a
+fourth warning level to indicate very extreme weather events.
+Some federal states reorganized and centralized their forecasting and warning centres, e.g. Saxony, Lower Saxony and
+Thuringia (DKKV, 2015). In addition, data on flood water levels are displayed in a joint nationwide web portal
+(https://www.hochwasserzentralen.de/, last access: 23 February 2023). These changes led to an improved warning situation during the river flood of June 2013 (Thieken et al., 2016;
+Kreibich et al., 2017).
+To warn the general public is primarily the task of the local
+level, e.g. the district administrations. Since 2017, warnings
+have been able to be disseminated via the Modular Warning
+System (Modulares Warnsystem – MoWaS) hosted by the
+Federal Office of Civil Protection and Disaster Assistance
+(Bundesamt für Bevölkerungsschutz – BBK) to a wide range
+of warning multipliers and dissemination channels like media operators and warning apps (e.g. NINA, KATWARN).
+Some districts and municipalities also use sirens or loudspeaker announcements to warn their population directly. In
+September 2020, the first nationwide alert day since the German reunification in 1990 revealed how difficult it is to operate warning systems successfully. The Federal Ministry of
+Interior declared the test a failure as the MoWaS messages
+and consequently also messages of warning apps were delayed due to technical reasons (BBK, 2020; Deutscher Bundestag, 2020). Subsequently, the system was improved and
+was tested successfully in NW in March 2021 (BBK, 2021).
+However, user data and views were not analysed (BBK,
+2021).
+Even if alerts function technically, there are many “potential deficiencies at each stage of the FFWRS which transfer through their enchained processes” (Parker and Priest,
+2012). Eventually, warnings can only avoid flood impacts
+– primarily fatalities but also financial losses – if people in
+flood-prone areas as well as the local disaster management
+or civil protection authorities receive and notice the warning
+in time, trust the warning, understand its content, and know
+how to respond and behave adequately (Penning-Rowsell
+and Green, 2000; Párraga Niebla, 2015; Morss et al., 2016).
+Using German survey data from 2002 to 2013, Kreibich et
+al. (2021) showed the importance of residents’ situational
+knowledge on protective behaviour (“knowing what to do”)
+for flood damage reduction. Such situational knowledge is
+at least partly influenced by the warning message itself that
+should contain not only information on the hazard process,
+location and time but also some guidance on protective behaviour (Kuller et al., 2021). Therefore, an evaluation of a
+FFWRS should include how the population at risk perceived
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 975
+Table 1. Overview of recent damaging flood events in Germany and number of survey participants per federal state (compiled from Kienzler et
+al., 2015; Rözer et al., 2016; Spekkers et al., 2017; Thieken et al., 2016, 2017, 2022; Dillenardt et al., 2022; abbreviations of the federal states
+– BB: Brandenburg; BW: Baden-Württemberg; BY: Bavaria; NI: Lower Saxony; NW: North Rhine-Westphalia; RP: Rhineland-Palatinate;
+SN: Saxony; ST: Saxony-Anhalt; TH: Thuringia; see Fig. 1 for geographic locations).
+Fluvial floods Event description Surveyed cases per
+federal state
+(if n>24)
+Field time of the
+survey
+August 2002 Flash floods in Bavarian and Saxon middle hills (e.g. in the Erzgebirge – the
+Ore Mountains in English) were caused by a so-called Vb weather system with
+(very) extensive rainfall on saturated soils. In Germany, a record-breaking daily
+rainfall amount of 312 mm in 24 h was recorded. Flooding in the middle hills
+was followed by a slower-onset flood along the river Elbe.
+BY: 447
+SN: 967
+ST: 271
+8 April to
+10 June 2003
+August 2005 Flash floods at the alpine foothills were caused by a Vb weather system with
+extensive rainfall that coincided with high preceding soil moisture and little
+snow cover in the Alps.
+BY: 276 20 November to
+21 December 2006
+April 2006 Slowly rising river floods resulted from a high winterly snow cover that completely melted due to a rapid temperature increase and was accompanied by
+heavy rainfall from westerly cyclones.
+BY: 41
+NI: 28
+SN: 69
+20 November to
+21 December 2006
+August 2010 Several flash flood waves were triggered by three consecutive fronts with heavy
+rainfall (due to a locked strongly meandering jet stream) and were intensified by
+a dam breach. Since measurements began in 1881, August 2010 was the wettest
+August in all of Germany.
+SN: 305 16 February to
+20 March 2012
+January 2011 Slowly rising river floods in several catchments resulted from a high winterly
+snow cover, which melted due to a rapid temperature increase with heavy rainfall followed by more intense rainfall.
+BW: 43
+BY: 75
+RP: 57
+16 February to
+20 March 2012
+June 2013 Local flooding was caused by a thunderstorm in May 2013 in Lower Saxony
+(NI). Widespread river floods were caused 2 weeks later by intense rainfall
+on highly saturated soils across Germany. Record-breaking soil moisture was
+recorded in 40 % of Germany by the end of May 2013.
+BY: 239
+NI: 50
+SN: 523
+ST: 593
+TH: 216
+18 February to
+24 March 2014
+May–June 2016 A series of (local) flash floods occurred between 26 May and 9 June 2016,
+when due to atmospheric blocking an extraordinarily high number of severe
+convective storms with low wind speeds leading to almost stationary and slowmoving cells and extreme local rainfall. The villages of Braunsbach (BW) and
+Simbach am Inn (BY) were particularly damaged.
+BW: 195
+BY: 191
+NW: 85
+RP: 71
+28 March to
+28 April 2017
+Pluvial floods (urban flooding)
+29 June 2005 Thunderstorms with heavy rainfall, storm gusts, lightning and hail developed
+along a boundary zone of colliding warm humid subtropical air from the southwest of Europe with cold and dry air masses from the north.
+Hersbruck (BY): 111
+Lohmar (NW): 62
+21 November to
+19 December 2006
+26 August 2010 A weather system (due to a locked and strongly meandering jet stream; see
+above) brought 128 mm of rain (i.e. 47 % of the mean monthly precipitation
+of August) and overburdened drainage capacities in the city of Osnabrück (NI)
+leading to urban flooding.
+Osnabrück (NI): 91 16 February to
+20 March 2012
+28 July 2014 Extraordinary amounts of rain, i.e. 292 mm in 7 h with a peak of 220 mm in
+<2 h, were dumped on the cities of Münster and Greven (NW) due to an interaction of a stationary cold front with constantly incoming hot and humid air
+from the east, resulting in widespread urban flooding.
+Münster (NW): 510 20 October to
+26 November 2015
+June–July 2017 Local convective storms resulted in high rainfall amounts that overburdened Berlin: 28 July 2019 to
+drainage systems and caused inundations of urban areas. In the village of Leege- Leegebruch (BB): 91 May 2020 (see Dilbruch (BB), the water stayed for weeks due to its location in a low-lying area. lenardt et al., 2022)
+Summer 2018 Remscheid (NW): 33
+June 2019 Berlin: 64
+Potsdam (BB): 105
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+976 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+the warnings and whether they were able to respond adequately (Penning-Rowsell and Green, 2000). As part of a
+broader post-event investigation, this paper aims to analyse
+how the warning system in July 2021 performed – also in
+comparison to other flood events in Germany that are summarized in Table 1. The evaluation of the performance of
+the warning system is mainly based on an online survey in
+the affected regions and focusses on three research questions
+(RQs): (RQ1) how many people received a warning before
+they were in danger? (RQ2) How well did people trust and
+understand the warnings? (RQ3) How did people respond to
+the warnings and how did they perceive the effectiveness of
+their action?
+As indicated by Thieken et al. (2022) for the river flood
+of June 2013 in comparison to the pluvial and flash floods of
+May–June 2016, the performance of Germany’s FFWRS differs per flood type. For pluvial and flash floods in 2016, there
+was a higher share of affected people who were not warned,
+warning times were shorter and the situational knowledge
+was poorly developed among affected residents (Thieken et
+al., 2022). Given the severe impacts in 2021, we hypothesize
+that the performance of Germany’s FFWRS in July 2021 was
+even worse than during recent pluvial and flash floods (see
+Table 1 for brief event descriptions) with regard to the dissemination of the warning messages and people’s situational
+knowledge on protective behaviour.
+Since elderly people were considerably overrepresented
+among the flood fatalities of 2021 (Kron et al., 2022), we expect that the receipt of warnings, situational knowledge and
+the perceived effectiveness of protective behaviour are influenced by the age of respondents as well as by the event’s
+magnitude. The flood magnitude of July 2021 was exceptionally high as estimations of precipitation indices and of
+return periods of the discharge along the river Ahr revealed
+(Lengfeld et al., 2022; Vorogushyn et al., 2022). Therefore,
+we further hypothesize that damage-reducing behaviour was
+not perceived as effective by the respondents.
+Following an explorative approach, we finally discuss as
+a fourth research question (RQ4) how to further improve the
+FFWRS based on the outcomes of the analyses and the views
+and wishes of the population affected in July 2021.
+2 Data and methods
+Between 25 August and 17 October 2021, an online survey
+on the warning situation in July 2021 was conducted. The
+online survey was advertised via Facebook, primarily in the
+two most affected federal states of North Rhine-Westphalia
+(NW) and Rhineland-Palatinate (RP), but the questionnaire
+was provided in SoSci Survey and hence was accessible from
+outside of Facebook. In addition, a press release was sent to
+local newspapers in the area and all mayors were informed
+by e-mail about the survey with a plea to mention it in local
+newsletters. Overall, there was a response to all advertising
+activities. In total, 1348 people completely answered the survey, thereof 892 from NW and 423 from RP; Fig. 1 shows the
+districts with respondents from these two states. The remaining 33 cases could not be located due to missing geographic
+information or were located in other federal states and thus
+omitted from further analyses. In this paper, first analyses of
+the data set are presented.
+The socio-demographic characteristics of the subsamples
+are summarized in Table 2 and are compared to the general
+population per federal state as of 31 December 2020. With regard to gender, the subsample of NW is somewhat biased towards women (chi-square goodness-of-fit test, p = 0.0003),
+while the subsample of RP is slightly, but non-significantly,
+biased towards men. With regard to age, the age group of 41
+to 60 years is overrepresented in both subsamples and accounts for almost half of the respondents. Adolescents (15 to
+20 years), who were not explicitly addressed by the adverts,
+and very old people (>80 years), who might not be reached
+by the online format, are clearly underrepresented in both
+subsamples (Table 2). However, both samples include respondents from all age classes and hence cover a wide range
+(NW: 15 to 88 years; RP: 20 to 83 years). Therefore, the sample is believed to provide answers to the research questions.
+However, conclusions with regard to gender or age have to
+be drawn with special care.
+The questionnaire comprised 22 questions, of which several were taken from similar surveys that have been conducted after floods since 2002 (Thieken et al., 2017; Kreibich
+et al., 2017), allowing us to compare the data from 2021 to
+the recent past and to explore whether warning in July 2021
+was comparable to or worse than during other flood events.
+The events used for comparison and the available survey data
+are listed in Table 1.
+In line with the research questions (RQs), the questionnaire used in 2021 addressed the following topics: for RQ1,
+warning source (dissemination channel), information content
+and point in time when the first warning was received; for
+RQ2, assessment of the credibility of the warning on a sixpoint rating scale, the anticipated magnitude of the flood and
+perceived knowledge on how to react adequately (situational
+knowledge on protective behaviour), as well as the perceived
+level of surprise by the magnitude of the event; and on RQ3,
+types of immediate response actions and a perception of their
+loss-reducing effect on a six-point rating scale, since shortly
+after the event, data on financial losses were not available.
+As potentially independent variables that might influence the
+performance of the warning process, it was asked how the
+water entered the building (flood pathway), the maximum
+water level at the building, and the perceived impacts of the
+event on the neighbourhood and on the respondent’s own
+household. In addition, two questions on previously experienced floods were posed. Furthermore, the postal code, place
+of residence, age and gender of the respondent as well as the
+size of their household were elicited as socio-demographic
+information. With regard to RQ4, people were asked to inNat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 977
+Figure 1. Overview map of Germany (left) highlighting the districts with respondents of the online survey in North Rhine-Westphalia (upper
+right) and Rhineland-Palatinate (lower right).
+dicate on a six-point rating scale how much they appreciate
+currently discussed channels of warning dissemination and
+how important they regard different pieces of information
+contained in a warning message to be. At the very end, respondents could provide further information considered important as an open answer. The full questionnaire is provided
+as Supplement. As data post-processing, the corresponding
+federal state, as well as the official codes and names of the
+district and the municipality, was added to each case based on
+the reported postal code and place of residence. In addition,
+indicators on the warning source and the information content were calculated in accordance with Thieken et al. (2005).
+The warning source indicator captures through which channel/by whom respondents received a warning, ranging from
+“no warning” and “own search” to “official warnings” from
+authorities or local disaster management. The warning information indicator reflects the reported pieces of information
+of the warning message. It ranges from “no relevant information/no warning” to “information on how to act and protect oneself”. All variable definitions, coding and summary
+statistics are provided in the Supplement (Table S1).
+Results on the warning process were verified by local media reports that were searched for in a newspaper database
+and official warnings released by MoWaS in July 2021 as
+well as via the warning app KATWARN.
+To identify entry points for improvements of the FFWRS,
+we examined whether we can identify factors predicting
+(1) the receipt of an official warning issued by authorities (or
+not), (2) the perceived situational knowledge on protective
+behaviour and (3) the perceived effectiveness of performed
+emergency response using regression analyses.
+In a first logistic regression analysis, we examined factors
+that potentially relate to the receipt of an official warning
+(yes/no). Official warnings include warnings from authorities
+or civil protection agencies, calls to evacuate, and messages
+from weather apps as well as sirens or sound trucks. As potentially explanatory factors, we included socio-demographic
+information (age, gender, household size and the federal state
+of the respondents), the number of previously experienced
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+978 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+Table 2. Socio-demographic characteristics of the sample in comparison with the general population per state as of 31 December 2020
+according to Destatis (2021).
+North Rhine-Westphalia (NW) Rhineland-Palatinate (RP)
+Gender Number of % % population as of Number of % % population as of
+respondents 31 December 2020 respondents 31 December 2020
+Male 354 42.8 % 49.1 % 207 52.5 % 49.4 %
+Female 474 57.2 % 50.9 % 187 47.5 % 50.6 %
+Subtotal 828 100 % 100 % 394 100 % 100 %
+Diverse 1 1
+Missing 63 28
+Total 892 423
+Age n % % population n % % population
+excluding children excluding children
+15–20 years 10 1.1 % 6.9 % 1 0.3 % 6.6 %
+21–40 years 298 33.7 % 28.8 % 101 24.3 % 27.7 %
+41–60 years 435 49.2 % 33.0 % 235 56.6 % 33.1 %
+61–80 years 136 15.4 % 24.1 % 76 18.3 % 25.4 %
+>80 years 5 0.6 % 7.1 % 2 0.5 % 7.2 %
+Subtotal 884 100 % 100 % 415 100 % 100 %
+Missing 8 8
+Total 892 423
+flood events (prior flood experience) and the perceived impact of the 2021 event on the respondent’s household, as well
+as different flood pathways, as reported by the respondents.
+As an intuitive interpretation of regression coefficients is
+difficult for logistic regressions, we provide odds ratios as a
+measure of the effect size, which are easier to interpret. An
+odds ratio above 1 indicates that as the explanatory variable
+increases, the odds (or likelihood) of the dependent variable
+occurring also increase. Conversely, an odds ratio below 1
+indicates that as the explanatory variable increases, the likelihood of the dependent variable occurring decreases.
+A second linear regression model analysed factors that potentially relate to people’s situational knowledge on protective behaviour. As explanatory factors, we entered information on the warning source (also referred to as “channel”, e.g.
+by Kuller et al., 2021) and the content of the warning messages, the perceived flood impact in the respondent’s household (as a proxy for the flood magnitude), the number of previously experienced floods, and the perceived degree of being surprised by the flood magnitude, as well as age, gender
+and the federal state as socio-demographic control variables.
+Although the quality of the warning source is considered to
+increase with every category of the warning source indicator (see Table S1), the different categories are still entered
+as dummy variables in this regression model. We report a
+linear model in Sect. 3.2 because regression coefficients can
+be interpreted more intuitively and since results are largely
+similar in terms of significant predictors compared with the
+corresponding ordered logistic model that can be found in the
+Supplement (Table S2).
+A third model tested how to predict the perceived effectiveness of the loss-reducing action performed. The perceived damage-reducing effect was elicited by the following
+question: “In your opinion, how much could your response
+before/during the event and/or private precautionary measures reduce the damage?” Following that question, explanatory examples of risk-reducing behaviour were provided, like
+the use of flood-adapted material and the purchase of water
+pumps, to facilitate a consistent interpretation by the respondents. The question was again elicited on a six-point rating
+scale (1 – “not at all” to 6 – “almost completely”; see also
+Table S1). In addition to the warning source and the warning
+information indicators, we added the perceived situational
+knowledge on protective behaviour and examined whether
+water depth experienced at the building, previous flood experience and perceived surprise of the flood magnitude were
+related to the perceived effectiveness of risk-reducing behaviour. Additionally, age, gender and the two federal states
+were added as socio-economic controls. As a proxy for the
+flood magnitude, we tested the perceived impact on the respondent’s household and the water level at the building.
+Since the water level explained more variance, that model
+is presented in Sect. 3.3. We again report a linear model in
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 979
+the text and provide the corresponding ordered logistic regression in the Supplement (Table S3).
+In general, data from rating scales that are end-labelled
+are usually assumed to be equidistant, i.e. interval-scaled, according to Porst (2014), which was recently confirmed by
+Höhne et al. (2021) for questions on income (in)equalities.
+Therefore, the survey data were mainly treated as numeric
+data although in principle the equidistance of each rating
+scale needs validation.
+3 Results and discussion
+3.1 Receiving warnings
+As outlined in the introduction, a prerequisite of an effective
+FFWRS is that warnings officially issued by authorities reach
+the people at risk. In July 2021, 35 % of the surveyed residents from North Rhine-Westphalia (NW, n = 892) and 29 %
+of those from Rhineland-Palatinate (RP, n = 423) stated that
+they had not been warned. Figure 2 puts these high numbers
+into the context of former fluvial (left) and pluvial (right)
+floods in Germany. Since flood forecasting and warning is
+the responsibility of the federal states (see Introduction), data
+in Fig. 2 are distinguished per federal state and event year
+for fluvial floods, while for pluvial floods, for which severe
+weather warnings of the DWD are decisive, just the name of
+the most affected city and the year of the event are provided.
+Since August 2002, Germany has experienced several fluvial floods, particularly in the southern and eastern parts of
+the country (see Kienzler et al., 2015; Thieken et al., 2022;
+Table 1). Figure 2 reveals that in 2002, 2005, 2010 and
+2016 the share of the affected population that received no
+warning is in general comparable to the outcomes in 2021
+with only small differences across different federal states,
+except for Saxony-Anhalt in 2002. The flood processes of
+these events are also comparable to the situation in 2021; i.e.
+they occurred mainly in the middle hills and partly showed
+a flash-flood-like character (Kienzler et al., 2015; Thieken
+et al., 2022; Table 1). In 2002, the flood then travelled further downstream and caused inundations along the river Elbe,
+which had the character of a (huge) fluvial flood particularly in Saxony-Anhalt, where the warning situation hence
+improved (Fig. 2; Kreibich et al., 2017).
+In contrast to the events in 2002, 2005, 2010, 2016 and
+2021, the share of the population that was not warned in
+2006, 2011 and 2013 dropped to around 5 to 10 % in most
+of the affected federal states (Fig. 2), which can be regarded
+as a good performance of the FFWRS (Thieken et al., 2016).
+These latter floods can be primarily characterized as slowly
+rising fluvial floods (Kienzler et al., 2015; Thieken et al.,
+2016; Table 1). Figure 2 further reveals that during pluvial
+floods the warning situation is even worse: the share of the
+unwarned population amounts to more than 50 % but shows
+some improvements over time (see also Rözer et al., 2016).
+Altogether Fig. 2 suggests that the performance of the
+FFWRS in Germany greatly depends on the type of flooding and is particularly challenged by pluvial and flash floods.
+For most of the pluvial floods shown in Fig. 2 as well as
+for the rainfall and subsequent (flash) floods in May and
+June 2016, lead times of just 2 h were reported by Kind
+et al. (2019, p. 79) based on official warnings. Survey data
+from residents affected in 2016 resulted in a median lead
+time of just 1 h (Thieken et al., 2022). In addition, the forecasted rainfall amounts underestimated the observed values
+by far (Kind et al., 2019, p. 79). These analyses illustrate
+the limits of rainfall forecasts for convective storms. In 2021,
+however, the flood-triggering low-pressure system had been
+forecasted several days in advance, i.e. since Sunday 11 July
+2021, by the European Flood Awareness System (EFAS) as
+well as by the German weather forecasting system (DWD,
+2021). Hence, the share of residents who received no warning should have been considerably lower than surveyed, although Saadi et al. (2023) illustrate the tendency of radarbased rainfall data from July 2021 to underestimate rainfall
+amounts and hence flood peaks.
+Table 3 presents the results of the logistic regression explaining the receipt (yes or no) of an official warning as defined in Sect. 2. As regression coefficients are difficult to interpret in logistic regressions, we provide odds ratios as effect sizes (see Sect. 2 for an explanation). In terms of sociodemographic characteristics, we find that men report higher
+levels of being officially warned than women (increased odds
+ratio of nearly 67 %). No significant effect is shown for age,
+the household size and the federal state. Having experienced
+flooding prior to 2021 increases the odds of receiving a warning in 2021 by 23 %, while perceived strong impacts of the
+flood on the household decreases the odds by 18 %. In terms
+of flood pathways, we find that fluvial flooding (marginally
+significant) and wildly flowing surface runoff increase the
+receipt of a warning (odds ratio of 36 % and 43 %, respectively), while a dike or dam breach reduces the odds ratio
+of an official warning receipt by 36 % (marginally significant). Respondents who observed no flooding in their immediate surrounding reported significantly higher levels of
+being officially warned. While the latter finding might sound
+counterintuitive at first, it may be explained by the fact that
+respondents who were not flooded themselves were not surprised by water intrusion and thus had more time to receive
+an official warning. In addition, they might not have been
+affected by power outages or breakdowns of telecommunications, which were frequently reported in severely affected
+areas (e.g. by Koks et al., 2022). Overall, the explanatory
+power of the model is rather low with an explained variance
+in official warning receipt of 6.3 %. Maybe general habits of
+media usage or a person’s social network could further improve the model’s explanatory power. The timing of the flood
+event might also have an influence, since people are harder
+to reach at night.
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+980 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+Figure 2. Share of respondents who reported that they had not been warned before the flood danger became imminent. Data are shown
+per flood event (year), federal state and flood type; left: fluvial floods from 2002 to 2021; right: some pluvial floods between 2005 and
+2019 (abbreviations of the federal states – BB: Brandenburg; BW: Baden-Württemberg; BY: Bavaria; NI: Lower Saxony; NW: North RhineWestphalia; RP: Rhineland-Palatinate; SN: Saxony; ST: Saxony-Anhalt; TH: Thuringia; see Fig. 1 for geographic locations; see Table 1 for
+brief event descriptions).
+Table 3. Results of a logistic regression explaining the receipt of an official warning (n = 1115; SE: standard error; _cons: constant). All
+variable definitions, coding and summary statistics are provided in the Supplement, Table S1.
+Explanatory variable Odds ratio SE p 95 % conf. interval
+Age 1.004 0.005 0.387 [0.994, 1.014]
+Gender 1.668 0.216 0.000 [1.294, 2.151]
+Federal state 1.075 0.077 0.310 [0.934, 1.238]
+Perceived flood impact for household 0.818 0.031 0.000 [0.759, 0.882]
+Number of floods experienced prior to 2021 1.235 0.098 0.008 [1.056, 1.443]
+Household size 1.003 0.052 0.957 [0.906, 1.111]
+No flood in immediate surrounding 2.030 0.643 0.025 [1.091, 3.776]
+Overloaded sewage water system 0.816 0.122 0.175 [0.608, 1.095]
+Wildly flowing surface runoff 1.430 0.204 0.012 [1.081, 1.893]
+Water ingress from toilets, floor drains, etc. 0.945 0.168 0.750 [0.668, 1.338]
+Overflowing waterbody (e.g. river) 1.361 0.239 0.079 [0.965, 1.919]
+Dike or dam breach 0.639 0.155 0.065 [0.398, 1.027]
+Groundwater ingress 1.127 0.168 0.425 [0.840, 1.510]
+_cons 0.192 0.151 0.035 [0.042, 0.893]
+Pseudo R
+2 = 0.063.
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 981
+In many places affected in July 2021, flooding occurred in
+the evening of 14 July and during the night from Wednesday to Thursday (15 July). A total of 740 respondents (valid
+answers from NW: n = 474; RP: n = 266) provided the day
+on which they were warned for the first time (Fig. 3). In both
+federal states, most respondents who were warned received
+the first warning on Wednesday 14 July 2021 (NW = 40 % of
+valid answers; RP = 61 %). The second most frequent day for
+receiving a warning was Monday 12 July 2021 (NW = 23 %;
+RP = 16 %). Altogether, around 35 % of the warned residents
+from RP had received their first warning before 14 July, while
+this share amounts to 50 % in NW. By the end of 14 July
+2021, the cumulative sums rise to 95 % in RP and 90 % in
+NW (Fig. 3).
+In fact, the heavily affected district of Euskirchen (NW)
+issued a first warning with expected rainfall amounts of
+200 mm via MoWaS on 12 July 2021 (around 17:00 local
+time – all times throughout the paper are given in local time),
+which was updated twice on 14 July 2021. Most of the other
+districts issued a first warning via MoWaS in the course of
+14 July 2021; this was accompanied by statewide warnings
+for NW and RP. The severely affected district of Ahrweiler
+(RP) issued a flood warning in the early afternoon of 14 July
+2021 via the app KATWARN; at 19:35 a water level of more
+than 5 m was forecasted for the river Ahr.
+Due to missing independent data on the outreach of different dissemination channels, there is only anecdotal evidence to compare our survey data with. For example, in
+the most affected district of Ahrweiler (RP), around 18 %
+of the residents had subscribed to the warning app KATWARN. In the survey around 20 % of respondents from this
+district reported warnings from this app. In addition, their reports on the time slot of the first warning match well with
+the officially released warning message between 14:00 and
+15:00 (data not shown). So, the answers of the respondents
+in Fig. 3 are basically consistent with the release of official
+warnings and underline the need to improve timely warning
+dissemination. According to a media expert (Westdeutscher
+Rundfunk (WDR) Cologne, Programmdirektion NRW, Wissen und Kultur, personal communication, 4 April 2022), considerably more people would have been reached if the warnings and the upcoming event had been addressed in TV and
+radio programmes for several days by using easily interpretable stories and images. The fact that warnings of slowonset fluvial floods like the one in June 2013 were much
+more successful (as shown by Kreibich et al., 2017; Thieken
+et al., 2022; and Fig. 2) was explained by the longer coverage in the media starting with stories of affected places and
+people in the upstream areas. In comparison to TV and radio coverage, coverage with mobile phones is much higher.
+However, residents in Germany used to have to subscribe to
+warning apps such as KATWARN or NINA; a cell broadcast system was tested in December 2022 and introduced in
+February 2023.
+3.2 Trusting and understanding warnings
+An investigation of the performance of a FFWRS should involve an assessment of the credibility and comprehensibility
+of the warning message as these are crucial aspects for response (Morss et al., 2016; Párraga Niebla, 2015). In July
+2021, the credibility of the warning was in general high but
+also revealed some doubts: on a six-point rating scale (1 –
+“the warning was totally incredible” to 6 – “the warning
+was highly credible”) 48 % of the 841 respondents who had
+been warned and answered this question chose a 5 or 6 (NW:
+47 %, RP: 51 %). Around 9 % found the warnings incredible,
+i.e. chose a 1 or 2 (NW: 8 %, RP: 11 %). This distribution is
+very different when it comes to the anticipated magnitude of
+the forecasted event – and thus the understanding people got
+of the upcoming event after having received a warning: on a
+six-point rating scale (1 – “it will rain, but there’s no problem” to 6 – “torrential rain will cause widespread inundations, massive damage and life-threatening situations”) just
+around 15 % of the 856 respondents who had been warned
+and answered this question chose a 5 or 6 (NW: 15 %, RP:
+14 %) and 29 % (NW: 30 %, RP: 26 %) chose a 1 or 2. This
+underlines that the warnings failed to credibly communicate
+the magnitude of the upcoming event. This is reflected by the
+perceived level of surprise about the flood magnitude: on a
+six-point rating scale (1 – “the magnitude of the event didn’t
+surprise me at all” to 6 – “the magnitude of the event totally surprised me”) just around 5 % of the 877 respondents
+who had been warned and answered this question chose a 1
+or 2 (NW: 5 %, RP: 4 %), while 86 % (NW: 87 %, RP: 84 %)
+chose a 5 or 6. In many parts of the affected areas, the flood of
+July 2021 was larger than any flood that had been measured
+in the continuous discharge series (e.g. Apel et al., 2022;
+Saadi et al., 2023). Our data underline that the flood magnitude was largely underestimated by the affected residents. In
+addition, some respondents complained that too many warnings about Covid-19 were disseminated via the most popular
+warning app NINA, which was tiring and lowered their attention to warning messages. Above all, in the week prior to
+the severe flood event there were already warnings of heavy
+rain in parts of the affected region, but no serious flooding
+happened. False alarms are known to commonly lower trust
+in warnings.
+Warning can only avoid flood impacts – not only in terms
+of deaths but also in terms of financial damage – if people know how to respond and how to behave adequately
+(Kreibich et al., 2021; Kuller et al., 2021). Thus, situational
+knowledge about how to avoid dangerous situations or mitigate damage should be assessed to learn whether people
+achieved a deeper understanding of the warning and were
+able to translate the warning into action. In the survey, the
+perceived situational knowledge on protective behaviour was
+assessed on a six-point rating scale (1 – “Based on the warning, I didn’t know at all how to protect myself and my household from the flooding” to 6 – “Based on the warning, I
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+982 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+knew very well how to protect myself and my household
+from the flooding”). Figure 4 shows the lack of this situational knowledge as assessed by respondents who reported
+that they had been warned before the flood hazard became
+relevant for them and chose a 1 or 2 on the rating scale mentioned above. Similarly to Fig. 2, the answers of 2021 can be
+compared to former surveys and flood events. Again, severe
+and flash floods like those in 2002, 2010 and 2016 perform
+the worst and are comparable to the values reported for the
+flood of 2021.
+Some answers from the slow river floods of 2006 in Lower
+Saxony and 2013 in Bavaria or Thuringia (see Fig. 4) suggest
+that the flood magnitude and/or the lack of experience might
+play a role, too. To identify more specific entry points for
+improvements, we hence analysed the influence of various
+factors on people’s situational knowledge during a flood by
+means of a regression analysis as explained in Sect. 2. The
+results are displayed in Table 4. The corresponding ordered
+logistic regression model, which considers the ordered nature of the dependent variable, is provided in the Supplement
+(Table S2).
+In terms of the warning source, results show that warnings issued by authorities have a significant positive influence
+on people’s situational knowledge on protective behaviour,
+when compared with respondents that did not receive any
+warning (the base), which is in line with the literature review
+presented by Kuller et al. (2021). The other three warning
+source categories, i.e. own search, friends and neighbours, as
+well as nationwide or regional news, had no significant effect
+when compared to those without warning. A significant but
+rather weak positive effect is found for the warning information; i.e. if the warning message contains information about
+adequate behaviour, people tend to perceive themselves to
+be better informed and able to cope with the situation. A
+strong positive effect is observed for flood experience. As
+could be expected, people who had experienced one or more
+floods before the 2021 event report significantly higher levels
+of situational knowledge. Interestingly, this effect increases
+continuously with the reported number of previously experienced events (Table 4). In terms of the socio-demographic
+control variables, men tend to report higher levels of situational knowledge, while age had again no significant effect.
+We also find that respondents from RP report higher levels
+of situational knowledge than people from NW. Significant
+negative effects are found for the level of surprise and the
+perceived flood impact on the respondents’ household, with
+surprise having the larger effect (Table 4). Apel et al. (2022)
+argue that forecasting the impacts, i.e. the potentially inundated areas, would have been helpful to communicate the extent of inundation and the life-threatening potential of the
+upcoming flood event. Overall, the model explains 33 % of
+the variance in situational knowledge.
+The findings were verified by a first content analysis of
+media reports on warnings before the event hit and of the official warnings that were disseminated via MoWaS or KATWARN. Some examples from the local press illustrate that
+even though warnings from the DWD were usually reported
+correctly, the corresponding advice on behaviour was often
+too vague and seems – in hindsight – inappropriate given
+the high flood magnitude. Moreover, only around a third
+of media reports that mentioned warnings included recommendations on behaviour. For example, on 13 July 2021, the
+Trierischer Volksfreund (region Trier, RP; Seydewitz, 2021)
+reported an extreme weather warning from DWD with up to
+200 mm of rainfall that may also lead to rising water levels
+in small rivers. The associated advice was that people living along small rivers and streams should monitor the situation and potentially undertake precautionary measures. However, what such measures involve was not specified. Another
+article published on 14 July 2021 (Ruhr Nachrichten, NW)
+similarly reported severe weather warnings for the district of
+Unna (NW). The corresponding advice was to keep doors
+and windows closed and to store objects in cellars on higher
+shelves. Finally, for the area of Koblenz (RP) the RheinLahn-Zeitung (Lindner, 2021) reported on 14 July 2021 a
+warning of heavy rain and rising water levels that was associated with advice for campers to be careful alongside rivers.
+More comprehensive advice on appropriate property-level
+measures was only found in the Rhein-Zeitung (RP) of 14
+July 2021 and mentioned backflow preventers, waterproof
+doors and windows, and maintenance works.
+Official warnings are usually accompanied by action recommendations. However, some recommendations seem not
+to have fit the situation that unfolded in July 2021. One example illustrating that the recommended protective actions were
+not adapted to the real situation is taken from the severely affected district of Ahrweiler (RP). Here, the app KATWARN
+warned against water levels of more than 5 m on 14 July 2021
+at 19:35, which considerably exceeded the 100-year flood
+level of around 3.7 m at the gauge of Altenahr. However,
+the recommended protective actions for affected people were
+still to avoid cellars and underground car parks, not to drive
+on inundated streets, and to clear drains and wells. These actions were clearly insufficient, since already at 20:30 houses
+in the municipality of Altenahr were reported to be halfway
+under water and flowing away at 22:40 (Frankfurter Allgemeine Zeitung, 15 September 2021; Staib and Steppat, 2021).
+Only at 23:09 was a state of emergency declared and people with 50 m of the river Ahr on both sides were requested
+to leave their homes and evacuate by themselves – a piece
+of advice which, at that time, was clearly too late and also
+dangerous. As one consequence, more than 330 people were
+rescued by helicopters from the roofs of their houses or from
+trees (Kron et al., 2022). In summary, the official warning
+messages seem to have contained all necessary information
+but were not adapted to the flood magnitude that occurred in
+July 2021.
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 983
+Figure 3. Day on which 740 respondents from North Rhine-Westphalia (NW) and Rhineland-Palatinate (RP) received a first warning.
+Figure 4. Share of respondents who were warned but reported that they did not know (well) how to behave, i.e. how to protect themselves
+and their household against the flood. Data are shown per flood event (year), federal state and flood type; left: fluvial floods from 2002 to
+2021; right: some pluvial floods between 2005 (no data) and 2019 (abbreviations of the federal states – BB: Brandenburg; BW: BadenWürttemberg; BY: Bavaria; NI: Lower Saxony; NW: North Rhine-Westphalia; RP: Rhineland-Palatinate; SN: Saxony; ST: Saxony-Anhalt;
+TH: Thuringia; see Fig. 1 for geographic locations; see Table 1 for brief event descriptions; note that in former surveys the scale was used in
+a reversed order; for this figure all data were aligned).
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+984 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+Table 4. Results of the linear regression model predicting respondents’ situational knowledge on protective behaviour (knowing what to do;
+n = 1097). All variable definitions, coding and summary statistics are provided in the Supplement, Table S1.
+Explanatory variable Coefficient SE p 95 % conf. interval
+Age 0.003 0.003 0.285 [−0.003, 0.009]
+Gender 0.378 0.082 0.000 [0.216, 0.540]
+Federal state
+North Rhine-Westphalia 0.000 (base)
+Rhineland-Palatinate 0.336 0.087 0.000 [0.165, 0.507]
+Warning source indicator
+Not warned 0.000 (base)
+Own search 0.113 0.291 0.697 [−0.458, 0.684]
+Friends or neighbours 0.036 0.155 0.819 [−0.269, 0.341]
+National news 0.273 0.217 0.208 [−0.152, 0.699]
+Official warning 0.328 0.150 0.029 [0.034, 0.622]
+Warning information indicator 0.107 0.049 0.028 [0.012, 0.202]
+Number of floods experienced prior to 2021
+Never before 0.000 (base)
+Once 0.525 0.125 0.000 [0.279, 0.771]
+Twice 0.702 0.195 0.000 [0.320, 1.085]
+Three times 1.466 0.324 0.000 [0.830, 2.101]
+Four times or more 1.510 0.309 0.000 [0.903, 2.118]
+Perceived surprise −0.491 0.045 0.000 [−0.580, −0.402]
+Perceived flood impact for household −0.065 0.024 0.006 [−0.112, −0.019]
+_cons 4.307 0.345 0.000 [3.630, 4.984]
+R
+2 = 0.33.
+3.3 Responses and perception of loss reduction
+Whether a warning prevents or mitigates flood impacts ultimately depends on the damage-reducing actions performed.
+These are commonly divided into immediate emergency
+measures and (long-term) precautionary measures (e.g. Dillenardt et al., 2022). Since measures can be very diverse,
+we compared the percentage of people across different flood
+events who reported no (emergency) action or a continuation of their daily routines. Figure 5 illustrates that there is
+only a small percentage of less than 10 % of flood-affected
+residents who did not perform any emergency action during slow-onset fluvial floods that occurred in 2006, 2011 and
+2013 (Fig. 5). This share is a bit higher in areas that experienced flash floods, e.g. in 2002, 2005 and 2010 but not in July
+2021 (Fig. 5). Higher percentages of inaction were only reported for pluvial flooding and the event of 2016. This might
+be due to the short lead times of just 2 h (see Sect. 3.1; Kind
+et al., 2019, p. 79) and might also be a reasonable life-saving
+behaviour given the rapid rise of water levels.
+To gain insights into the perceived damage-reducing effect
+of risk-reducing behaviour, we ran a third regression model
+(Table 5). In line with Table 4, we again report a linear model
+for consistency and ease of interpretation and provide the ordered logistic model in the Supplement (Table S3). Results
+show that both the warning source and the warning information indicator did not relate significantly to the perceived
+damage reduction (Table 5). As it could be intuitively expected, higher situational knowledge on protective behaviour
+and floods experienced by the respondents prior to 2021 both
+relate to significantly higher levels of perceived damage reduction by the respondents. In contrast, respondents who experienced high water levels at their building and perceived
+the flood magnitude in 2021 as a surprise reported significantly lower levels of perceived damage reduction. In terms
+of the socio-economic control variables, respondents from
+RP reported significantly lower levels, which might be due
+to the very high flood magnitude. Overall, the model explains
+23 % of the variance. Altogether, the response of people affected in July 2021 is comparable to other (fluvial) floods but
+seems to be compromised by the high flood magnitude.
+3.4 Wishes for future warnings
+In the online survey, respondents were finally asked about
+their views on warning content and their wishes for (new)
+warning technologies (see Sect. 2). Figure 6 displays the
+mean assessments of the importance of different pieces of
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 985
+Figure 5. Share of respondents who reported no emergency action. Data are shown per flood event (year), federal state and flood type; left:
+fluvial floods from 2002 to 2021; right: some pluvial floods between 2005 and 2019 (abbreviations of the federal states – BB: Brandenburg;
+BW: Baden-Württemberg; BY: Bavaria; NI: Lower Saxony; NW: North Rhine-Westphalia; RP: Rhineland-Palatinate; SN: Saxony; ST:
+Saxony-Anhalt; TH: Thuringia; see Fig. 1 for geographic locations; see Table 1 for brief event descriptions; note that the question was
+phrased differently in surveys after the 2016 flood).
+Table 5. Results of the linear regression model predicting respondents’ perceived damage reduction due to risk-reducing behaviour (n =
+1003). All variable definitions, coding and summary statistics are provided in the Supplement, Table S1.
+Explanatory variable Coefficient SE p 95 % conf. interval
+Perceived situational knowledge (knowing what to do) 0.205 0.034 0.000 [0.139, 0.27]
+Warning source indicator 0.004 0.04 0.915 [−0.074, 0.082]
+Warning information indicator 0.055 0.051 0.287 [−0.046, 0.155]
+Age −0.006 0.003 0.061 [−0.013, 0.0]
+Gender 0.161 0.092 0.079 [−0.019, 0.342]
+Federal state
+North Rhine-Westphalia 0.000 (base)
+Rhineland-Palatinate −0.279 0.099 0.005 [−0.474, −0.084]
+Number of floods experienced prior to 2021 0.188 0.061 0.002 [0.07, 0.307]
+Perceived surprise −0.209 0.056 0.000 [−0.318, −0.1]
+Water depth −0.213 0.026 0.000 [−0.264, −0.162]
+_cons 3.626 0.434 0.000 [2.774, 4.478]
+R
+2 = 0.23.
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+986 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+information by the respondents on a rating scale from 1
+(not important at all) to 6 (very important) for both federal
+states. The data reveal that almost all information is regarded
+as (very) important with slight compromises with regard to
+the timing and the expected amount of rainfall; comparisons
+with past events; and potential impacts of and information
+about detours, road closures or train cancellations. It should
+be noted that the timing and height of water levels are considered more important than information on rainfall, which
+contrasts the media reports that focus more on severe weather
+warnings released by DWD than on hydrological forecasts.
+Moreover, Kuller et al. (2021) found in their literature review inconsistent results on the effectiveness of impact-based
+warnings (and the provision of uncertainties in warnings).
+Besides the content shown in Fig. 6, Kuller et al. (2021)
+further recommend providing contact information. These aspects were mentioned by respondents of our survey in the
+open answers.
+In the future, affected residents are in favour of a countrywide installation of sirens and cell broadcast accompanied
+by enhanced media coverage (Fig. 7). There are only small
+differences between respondents from the two federal states.
+The lower values in RP for cell broadcast might be due to
+the fact that many people experienced power outages and a
+breakdown of telecommunication in July 2021 (Koks et al.,
+2022).
+4 Conclusions and recommendations
+In Germany, the system of severe weather and flood warnings, better termed flood forecasting, warning and response
+system (FFWRS), has been improved over the past 20 years,
+particularly after the severe flood of August 2002. Although a
+good performance was achieved during fluvial floods in January 2011 and June 2013, our analyses show that the system is particularly challenged by pluvial and fast-onset flash
+floods: around one-third of residents at risk of pluvial or flash
+floods are not reached by severe weather or flood warnings.
+This was found across various federal states in Germany and
+across several fast-onset floods including the event of July
+2021. Hence, the FFWRS in Germany with responsibilities
+across multiple governance levels from the federal to the local level reacts in general too slowly to these events. To accelerate the dissemination of warning messages, widespread
+dissemination on mobile phones is an option; cell broadcast
+has meanwhile been introduced in Germany and was tested in
+December 2022. Our online survey of 2021 underlines, however, that residents from the regions affected in July 2021
+tend to be in favour of sirens, probably since they do not
+depend so much on power and telecommunication networks
+compared to other dissemination channels.
+The fact that the atmospheric system that triggered the
+floods of July 2021 was forecasted several days in advance
+pinpoints further weaknesses of the FFWRS. Warning messages with rainfall amounts are difficult to interpret. For a
+better understanding, rainfall needs to be translated into water levels and inundated areas. To make use of rainfall forecasts and to gain time for response, flood forecast models
+need to be improved and flood warnings need to be communicated. In Germany, flood forecasting is the responsibility
+of the federal states, which have different models in place,
+while media often just refer to weather warnings issued by
+the DWD. Hence, either a nationwide flood forecasting system should be set up or more investments in better regional or
+even local flood forecasting systems have to be made. With
+regard to pluvial and flash floods, the need for implementing
+local warning systems, e.g. at small creeks, which have not
+been included in the flood forecasting system so far, has to
+be checked by local authorities.
+To better highlight potentially affected areas, warning
+messages should link flood forecasts to hazard maps or
+should directly provide estimated inundated areas for the
+forecasted event, particularly for severe events. In many areas
+affected in Germany, the flood of July 2021 was larger than
+any flood that had been captured by the continuous discharge
+series. The survey data underline that its magnitude was
+greatly underestimated by the affected residents; warning
+messages obviously failed to clearly communicate the flood
+magnitude and potential impacts. This aspect needs more indepth investigations. For example, the reliable creation, dissemination and understandability of maps that show the expected inundated areas should be tested, including against
+other pieces of information that were considered more important by respondents of our survey, e.g. affected places, timing
+of the flood peak or information on evacuations.
+Our analyses show that it is important that official warnings, which usually include some action recommendation,
+reach the residents at risk, since this generally improves their
+situational knowledge on protective behaviour. Still, our survey data reveal that up to 50 % of the warned residents did
+not know what to do in July 2021. Again, similar percentages had been reported earlier for flash and pluvial floods.
+The results indicate that flood risk and crisis communication
+in Germany has focussed much on river, i.e. fluvial, flooding. Hence, efforts to communicate threats, mitigation options and adequate behaviour with regard to flash and pluvial
+floods have to be considerably enhanced. Examples from local newspapers and official warning messages underline that
+warning messages have to be linked more consistently and
+regularly with recommendations on adequate behaviour and
+should better account for the anticipated magnitude of the unfolding flood event. For extreme scenarios such as the recordbreaking flood of July 2021, more warning levels could be an
+option. Since each (official) warning level is associated with
+predefined recommendations on what affected parties should
+do to protect themselves (including translations to other languages), more warning levels could probably lead to better
+communication of protective behaviour that is appropriate
+for the unfolding event. In general, the understandability of
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 987
+Figure 6. Mean rating of surveyed respondents with regard to the importance of different pieces of warning information or content (NW:
+n = 837 to 882; RP: n = 404 to 418; rating scale from 1 “This piece of information is not important at all” to 6 “This piece of information is
+very important”).
+Figure 7. Mean rating of surveyed respondents with regard to future
+warning channels (NW: n = 837 to 882; RP: n = 404 to 418; rating
+scale from 1 “This measure is not helpful at all” to 6 “This measure
+is very helpful”).
+warning messages should be better tested and evaluated in
+future.
+Our analyses show that previously experienced flooding facilitates all aspects along the warning and response
+chain, i.e. the receipt of a warning, the situational knowledge
+on protective behaviour and the (perceived) effectiveness
+of loss-reducing responses. Therefore, risk communication
+needs to better mimic flood experience and train successful behaviour. Since some analyses revealed gender sensitivity, women should be addressed more specifically. Given
+the high death toll of 189 fatalities in Germany in July 2021,
+life-threatening situations and their avoidance should be particularly communicated, although it is still unclear how many
+fatalities can be directly attributed to shortcomings of the
+FFWRS in July 2021. This should be a topic of future research to further improve the FFWRS and risk communication. Special attention should be given to elderly people due
+to their high percentage among the fatalities. However, in our
+analyses age was not a factor that influenced the receipt of a
+warning, the situational knowledge on protective behaviour
+or the (perceived) effectiveness of responses. Due to the online format of the survey, this needs, however, further investigation.
+The magnitude of the upcoming flood was probably underestimated by the responsible authorities, too. In some places,
+e.g. in the district of Ahrweiler (RP), this resulted in the fact
+that a state of emergency was declared too late and that evacuations of heavily affected settlement areas were initiated too
+late. In most German states, the declaration of a state of emergency is the responsibility of the district administrator, since
+in most cases the district also has to bear the incurred costs.
+However, there is no mandatory training in disaster management for district administrators, who are elected politicians.
+Whether this is a primary weakness of the system needs some
+further research and thought. However, some federal states,
+e.g. Saxony, have introduced a risk-averse decision strategy,
+meaning that there is an automatic declaration of a state
+of emergency if flood forecasts exceed the highest warning
+level. In other regions, local warning chains have been established so that a telephone chain is initiated from upstream
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+988 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+to downstream along a river in the case of flooding or another incident, e.g. pollution. The success and transferability
+of such approaches need further investigation. In general, a
+more continuous evaluation of the whole FFWRS would be
+an asset. Our analyses suggest that some shortcomings of the
+current FFWRS that were painfully revealed by the severe
+event in July 2021 were not unique to this event but generally
+apply to pluvial and flash floods. They could have been detected earlier by a better evaluation of the system after recent
+flood events including the perspective of the affected population. Altogether, future research should focus on how to design a FFWRS that alerts communities and residents at risk
+on time and clearly communicates flood magnitudes, threats
+and response options.
+Data availability. The survey data are owned by the authors and
+can currently be provided upon reasonable request only.
+Supplement. The supplement related to this article is available online at: https://doi.org/10.5194/nhess-23-973-2023-supplement.
+Author contributions. AH, AHT, AO and PB developed the questionnaire and conducted the survey with the support of LD. AHT,
+PB, AH and LD processed and analysed the data. JvK searched for
+and analysed media reports and official warning messages with the
+support of AO. AHT prepared the manuscript with contributions
+from all co-authors.
+Competing interests. The contact author has declared that none of
+the authors has any competing interests.
+Disclaimer. Publisher’s note: Copernicus Publications remains
+neutral with regard to jurisdictional claims in published maps and
+institutional affiliations.
+Acknowledgements. We thank all respondents for participating in
+the survey despite the flood impacts they suffered from.
+Financial support. The presented work was initially developed
+within the framework of the research project “Urban resilience
+against extreme weather events – typologies and transfer of adaptation strategies in small metropolises and medium-sized cities” (ExTrass) funded by Germany’s Federal Ministry of Education and Research (BMBF, FKZ 01LR1709A1) in collaboration with the Research Training Group “Natural Hazards and Risks in a Changing
+World” (NatRiskChange) funded by the Deutsche Forschungsgemeinschaft (DFG; GRK 2043/2). Further analyses were performed
+in the framework of the project “Governance and communication
+during the crisis of the flood event in July 2021” (HoWas2021)
+funded by BMBF (FKZ 13N16230).
+Review statement. This paper was edited by Daniela Molinari and
+reviewed by Martijn Kuller and one anonymous referee.
+References
+Apel, H., Vorogushyn, S., and Merz, B.: Brief communication:
+Impact forecasting could substantially improve the emergency
+management of deadly floods: case study July 2021 floods
+in Germany, Nat. Hazards Earth Syst. Sci., 22, 3005–3014,
+https://doi.org/10.5194/nhess-22-3005-2022, 2022.
+BBK – Bundesamt für Bevölkerungsschutz und Katastrophenhilfe: MoWaS-Meldung konnte nur verspätet zugestellt werden, https://www.bbk.bund.de/SharedDocs/Kurzmeldungen/DE/
+2020/09/1-bundesweiter-warntag.html (last access: 22 December 2022), 2020 (in German).
+BBK – Bundesamt für Bevölkerungsschutz und Katastrophenhilfe: Warn-App NINA erreicht Meilenstein ohne Probleme,
+https://www.bbk.bund.de/SharedDocs/Kurzmeldungen/DE/
+2021/03/nina-erreicht-meilenstein.html (last access: 22 December 2022), 2021 (in German).
+Cools, J., Innocenti, D., and O’Briena, S.: Lessons from flood early
+warning systems, Environ. Sci. Policy, 58, 117–122, 2016.
+Cornwall, W.: Europe’s deadly floods leave
+scientists stunned, Science, 373, 372–373,
+https://doi.org/10.1126/science.373.6553.372, 2021.
+Destatis: GENESIS Datenbank 12411-0013: Bevölkerung:
+Bundesländer, Stichtag, Geschlecht, Altersjahre (31 December 1967–31 December 2020), https://www-genesis.destatis.de/
+genesis//online?operation=table&code=12411-0013&bypass=
+true&levelindex=0&levelid=1642928753644#abreadcrumb (last
+access: March 2022), 2021.
+Deutscher Bundestag: Bundesweiter Warntag 2020, Antwort der
+Bundesregierung auf die Kleine Anfrage der Abgeordneten
+Stephan Brandtner und der Fraktion der AfD, Drucksache
+19/23413, https://dserver.bundestag.de/btd/19/234/1923413.pdf
+(last access: 22 December 2022), 2020 (in German).
+Dietze, M., Bell, R., Ozturk, U., Cook, K. L., Andermann, C.,
+Beer, A. R., Damm, B., Lucia, A., Fauer, F. S., Nissen, K.
+M., Sieg, T., and Thieken, A. H.: More than heavy rain turning into fast-flowing water – a landscape perspective on the
+2021 Eifel floods, Nat. Hazards Earth Syst. Sci., 22, 1845–1856,
+https://doi.org/10.5194/nhess-22-1845-2022, 2022.
+Dillenardt, L., Hudson, P., and Thieken, A. H.: Urban pluvial
+flood adaptation: results of a household survey across four
+German municipalities, J. Flood Risk Manag., 15, e12748,
+https://doi.org/10.1111/jfr3.12748, 2022.
+DKKV – Deutsches Komitee Katastrophenvorsorge: Das
+Hochwasser im Juni 2013: Bewährungsprobe für das
+Hochwasserrisikomanagement in Deutschland. DKKVSchriftenreihe Nr. 53, Bonn, ISBN 978-3-933181-62-6,
+207 pp., 2015 (in German).
+DWD – Deutscher Wetterdienst: Bericht zum Ablauf und
+Umfang der operationellen Warn- und Beratungstätigkeit
+des Deutschen Wetterdienstes im Vorlauf und während des
+Unwetters 12–15 Juli 2021 in NRW und Rheinland-Pfalz,
+ausgelöst durch das Tief “Bernd”, DWD Offenbach, 10 pp.,
+https://www.dwd.de/DE/presse/hintergrundberichte/berichts_
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023
+
+A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021 989
+warnchronologie.pdf.pdf?__blob=publicationFile&amp;v=2
+(last access: 23 February 2023), 2021 (in German).
+Ferdous, M., Mondal, B.K., Rahman, M.A., Sarder, M.A., Erichsen,
+D.R., and Chatenier, C.: Effectiveness of Flood Early Warning
+System to Reduce Economic Loss at Four Communities, Integrated Flood Resilience Programme, Bangladesh Red Crescent
+Society, Government of the Republic of Korea, and International
+Federation of Red Cross and Red Crescent Societies, Dhaka,
+Bangladesh, ISBN 978-984-34-9168-8, 2020.
+Hallegatte, S.: A Cost Effective Solution to Reduce Disaster Losses in Developing Countries: Hydro-Meteorological
+Services, Early Warning, and Evacuation, Policy Research Working Paper 6058, World Bank, Washington,
+DC, 20 pp., https://documents1.worldbank.org/curated/en/
+190261468181486694/pdf/WPS6058.pdf, (last access: 19 December 2022), 2012.
+Hallegatte, S., Rentschler, J., and Rozenberg, J.: Adaptation Principles – A Guide for Designing Strategies for Climate Change
+Adaptation and Resilience, World Bank, Washington, DC, 2020.
+Höhne, J. K., Krebs, D., and Kühnel, S.-M.: Measurement Properties of Completely and End Labeled Unipolar and Bipolar Scales
+in Likert-type questions on Income (In)equality, Soc. Sci. Res.,
+97, 102544, https://doi.org/10.1016/j.ssresearch.2021.102544,
+2021.
+Junghänel, T., Bissolli, P., Daßler, J., Fleckenstein, R., Imbery, F.,
+Janssen, W., Kaspar, F., Lengfeld, K., Leppelt, T., Rauthe, M.,
+Rauthe-Schöch, A., Rocek, M., Walawender, E., and Weigl, E.:
+Hydro-klimatologische Einordnung der Stark- und Dauerniederschläge in Teilen Deutschlands im Zusammenhang mit dem
+Tiefdruckgebiet “Bernd” vom 12 bis 19 Juli 2021, DWD-Report,
+16 pp., https://www.dwd.de/DE/leistungen/besondereereignisse/
+niederschlag/20210721_bericht_starkniederschlaege_tief_
+bernd.pdf?__blob=publicationFile&v=10 (last access: 22 December 2022), 2021 (in German).
+Kienzler, S., Pech, I., Kreibich, H., Müller, M., and Thieken, A.
+H.: After the extreme flood in 2002: changes in preparedness, response and recovery of flood-affected residents in Germany between 2005 and 2011, Nat. Hazards Earth Syst. Sci., 15, 505–
+526, https://doi.org/10.5194/nhess-15-505-2015, 2015.
+Kind, C., Kaiser, T., Riese, M., Bubeck, P., Müggenburg, E.,
+Schüller, L., Fleischmann, R., and Thieken, A.: Vorsorge gegen
+Starkregenereignisse und Maßnahmen zur wassersensiblen Stadtentwicklung – Analyse des Standes der Starkregenvorsorge
+in Deutschland und Ableitung zukünftigen Handlungsbedarfs,
+UBA-Text 55/2019, Umweltbundesamt (Federal Environment
+Agency), Dessau, ISSN 1862-4804, 2019 (in German).
+Koks, E. E., van Ginkel, K. C. H., van Marle, M. J. E., and Lemnitzer, A.: Brief communication: Critical infrastructure impacts
+of the 2021 mid-July western European flood event, Nat. Hazards
+Earth Syst. Sci., 22, 3831–3838, https://doi.org/10.5194/nhess22-3831-2022, 2022.
+Kreibich H., Hudson P., and Merz, B.: Knowing What to Do Substantially Improves the Effectiveness of Flood Early Warning, B.
+Am. Meteorol. Soc., 102, E1450–E1463, 2021.
+Kreibich, H., Müller, M., Schröter, K., and Thieken, A. H.: New
+insights into flood warning reception and emergency response by
+affected parties, Nat. Hazards Earth Syst. Sci., 17, 2075–2092,
+https://doi.org/10.5194/nhess-17-2075-2017, 2017.
+Kron, W., Bell, R., Thiebes, B., and Thieken, A. H.: The July 2021
+flood disaster in Germany, chapter 2 in: HELP Global Report on
+Water and Disasters 2022, Secretariat of the High-level Experts
+and Leaders Panel on Water and Disasters (HELP), Tokyo, Japan,
+https://www.wateranddisaster.org/category/documents/ (last access: 23 February 2023), 12–44, 2022.
+Kuller, M., Schoenholzer, K., and Lienert, J.: Creating effective
+flood warnings: A framework from a critical review, J. Hydrol.,
+602, 126708, 2021.
+Lengfeld, K., Voit, P., Kaspar, F., and Heistermann, M.: Brief
+Communication: On the extremeness of the July 2021 precipitation event in western Germany, EGUsphere [preprint],
+https://doi.org/10.5194/egusphere-2022-979, 2022.
+Lindner, J.: Starkregen erwartet/Wetterexperte warnt vor hohen
+Niederschlagsmengen, Rhein-Lahn-Zeitung, 14 July 2021 (in
+German).
+Morss, R., Mulder, K. J., Lazo, J. K., and Demuth, J. L.: How do
+people perceive, understand, and anticipate responding to flash
+flood risks and warnings? Results from a public survey in Boulder, Colorado, USA, J. Hydrol., 541, 649–664, 2016.
+Munich Re: Hurricanes, cold waves, tornadoes: Weather disasters
+in USA dominate natural disaster losses in 2021, Munich
+Re, https://www.munichre.com/en/company/media-relations/
+media-information-and-corporate-news/media-information/
+2022/natural-disaster-losses-2021.html, last access: 22 December 2022.
+Parker, D. J. and Priest, S. J.: The Fallibility of Flood Warning
+Chains: Can Europe’s Flood Warning be Effective?, Water Resour. Manag., 26, 2917–2950, 2012.
+Parker, D. J., Fordham, M., and Torterotot, J. P.: Real-time hazard management: flood forecasting, warning and response, in:
+Floods across Europe. Hazard assessment, modelling and management, edited by: Penning-Rowsell, E. C. and Fordham, M.,
+Middlesex University Press, London, UK, 135–166, ISBN-13
+978-1898253013, 1994.
+Párraga Niebla, C.: 8 – Communication Technologies for Public
+Warning, Wireless Public Safety Networks, 1, 229–260, 2015.
+Penning-Rowsell, E. C. and Green, C.: Insights into the appraisal of
+flood alleviation benefits: (1) Flood damage and flood loss information, J. Chart. Inst. Water E., 14, 347–353, 2000.
+Porst, R.: Fragebogen – ein Arbeitsbuch, Springer VS, Wiesbaden,
+4th edition, https://doi.org/10.1007/978-3-658-02118-4, 2014 (in
+German).
+Rhein-Zeitung: Starke Niederschläge lassen Wasser steigen,
+14 July 2021 (in German).
+Ruhr Nachrichten: Feuerwehren sind gerüstet für den Starkregen
+am heutigen Mittwoch, 14 July 2021 (in German).
+Rözer, V., Müller, M., Bubeck, P., Kienzler, S., Thieken, A.,
+Pech, I., Schröter, K., Buchholz, O., and Kreibich, H.: Coping with pluvial floods by private households, Water, 8, 304,
+https://doi.org/10.3390/w8070304, 2016.
+Saadi, M., Furusho-Percot, C., Belleflamme, A., Chen, J.-Y.,
+Trömel, S., and Kollet, S.: How uncertain are precipitation and
+peak flow estimates for the July 2021 flooding event?, Nat. Hazards Earth Syst. Sci., 23, 159–177, https://doi.org/10.5194/nhess23-159-2023, 2023.
+Schneider, D. and Gebauer, P.: Die Flutkatastrophe im Juli 2021 in
+Mitteleuropa aus meteorologischer Sicht, Beiträge zur Berliner
+Wetterkarte, Verein BERLINER WETTERKARTE e.V. zur
+https://doi.org/10.5194/nhess-23-973-2023 Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023
+
+990 A. H. Thieken et al.: Performance of the flood warning system in Germany in July 2021
+Förderung der meteorologischen Wissenschaft, Berlin, Germany,
+ISSN 0177-3984, https://berliner-wetterkarte.de/Beilagen/2021/
+Die_Flutkatastrophe_2021.pdf (last access: 23 February 2023),
+2021 (in German).
+Seydewitz, R.: Meteorologe warnt Region vor Starkregen und
+steigenden Pegeln, Trierischer Volksfreund, 13 July 2021 (in
+German).
+Spekkers, M., Rözer, V., Thieken, A., ten Veldhuis, M.-C., and
+Kreibich, H.: A comparative survey of the impacts of extreme rainfall in two international case studies, Nat. Hazards
+Earth Syst. Sci., 17, 1337–1355, https://doi.org/10.5194/nhess17-1337-2017, 2017.
+Staib, J. and Steppat, T.: Flutnacht von Ahrweiler – Rekonstruktion
+eines politischen Versagens, Frankfurter Allgemeine Zeitung,
+15 September 2021 (in German).
+Thieken, A. H., Kienzler, S., Kreibich, H., Kuhlicke, C., Kunz,
+M., Mühr, B., Müller, M., Otto, A., Petrow, T., Pisi, S., and
+Schröter, K.: Review of the flood risk management system in
+Germany after the major flood in 2013, Ecol. Soc., 21, 51,
+https://doi.org/10.5751/ES-08547-210251, 2016.
+Thieken, A., Kreibich, H., Müller, M., and Lamond, J.: Data collection for a better understanding of what causes flood damage –
+experiences with telephone surveys, in: Flood damage survey and
+assessment: new insights from research and practice, edited by:
+Molinari, D., Menoni, S., and Ballio, F.„ AGU, Wiley, Chapter 7,
+95–106; https://doi.org/10.1002/9781119217930.ch7, 2017.
+Thieken, A. H., Müller, M., Kreibich, H., and Merz, B.: Flood
+damage and influencing factors: New insights from the August 2002 flood in Germany, Water Resour. Res., 41, W12430,
+https://doi.org/10.1029/2005WR004177, 2005.
+Thieken, A. H., Samprogna Mohor, G., Kreibich, H., and Müller,
+M.: Compound inland flood events: different pathways, different impacts and different coping options, Nat. Hazards Earth
+Syst. Sci., 22, 165–185, https://doi.org/10.5194/nhess-22-165-
+2022, 2022.
+UN – United Nations: Sendai Framework for Disaster Risk
+Reduction 2015–2030, https://www.unisdr.org/files/43291_
+sendaiframeworkfordrren.pdf (last access on 14 April 2022),
+2015.
+Vorogushyn, S., Apel, H, Kemter, M., and Thieken, A. H.: Analyse
+der Hochwassergefährdung im Ahrtal unter Berücksichtigung
+historischer Hochwasser, Hydrol. Wasserbewirts., 66, 244–254,
+https://doi.org/10.5675/HyWa_2022.5_2, 2022 (in German).
+Nat. Hazards Earth Syst. Sci., 23, 973–990, 2023 https://doi.org/10.5194/nhess-23-973-2023

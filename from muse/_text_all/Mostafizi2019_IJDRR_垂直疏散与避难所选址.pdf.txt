@@ -1,0 +1,921 @@
+Contents lists available at ScienceDirect
+International Journal of Disaster Risk Reduction
+journal homepage: www.elsevier.com/locate/ijdrr
+An agent-based vertical evacuation model for a near-field tsunami: Choice
+behavior, logical shelter locations, and life safety
+Alireza Mostafizi, Haizhong Wang⁎
+, Dan Cox, Shangjia Dong
+School of Civil and Construction Engineering, College of Engineering, Oregon State University, 101 Kearney Hall, Corvallis, OR 97331, USA
+ARTICLE INFO
+Keywords:
+Agent-based modeling
+Tsunami evacuation
+Vertical evacuation behavior
+Shelter locations
+Decision-making
+ABSTRACT
+In the event of near-field tsunamis, vertical evacuation can be an alternative protective action to horizontal
+evacuation. The objective of this paper is to present an agent-based modeling (ABM) framework to evaluate
+vertical evacuation behavior and shelter locations for a near-field tsunami hazard from a Magnitude 9.0 Cascadia
+Subduction Zone (CSZ) earthquake. The expected mortality rate depending on the location of the vertical
+evacuation shelter (VES) has been chosen as the primary criterion to assess the effectiveness of the vertical
+evacuation. In addition, maximum tsunami wave height and the vertical evacuation behavior changes with
+changes in the placement of the VES have been assessed from a constraint point of view. The results revealed that
+(1) the choice of VES locations will directly impact the proportion of the people who evacuate vertically; (2) The
+percentage of people who evacuate vertically exponentially drops as the shelter gets farther from the population
+centroid; (3) the location of shelter significantly impacts the total mortality rates; (4) improvements in evacuees’
+mobility, such as faster walking speed or shorter milling time, will significantly reduce mortality rate and expand
+the area of choices for VES locations; and (5) when more people choose to evacuate vertically, the total mortality
+rate reduces notably. However, wrong placement of VES, and at the same time promoting vertical evacuation
+behavior can result in catastrophic mortality rates. In addition, a study on the impact of the distance of the VES
+to the ocean, to the population centroid, and to the horizontal shelters outside of the inundation zone, on the
+total mortality rate and the evacuation efficiency has been performed. This work reveals the non-linear correlation between the aforementioned characteristics of the VES on the expected mortality rate. The results of this
+research provide an evidence-driven vertical evacuation modeling framework to guide decision makers at city,
+state, and federal level to understand the dynamics of vertical evacuation behavior and choice of vertical evacuation shelter locations for a community.
+1. Introduction
+Many communities around the world are vulnerable to either slow
+or rapid onset disasters with varying temporal and spatial footprints.
+Such disasters include natural hazards like earthquakes, tsunamis,
+landslides, tornadoes, flash floods, sea level rise and storm surges,
+wildfires, hurricanes, as well as man-made hazards, like chemical accidents and nuclear disasters. The ability to rapidly withdraw from
+areas affected by an impending disaster to safety is critical to the survival of at-risk populations. The response is often dependent on the
+nature of the hazard and an individual's risk perception and personalization [7,30,34,42,64].
+Near-field tsunamis, flash floods, and some wildfires are more
+challenging because they often provide only minutes of forewarning
+[52,70]. In the case of the Cascadia Subduction Zone (CSZ), the threat
+of near-field tsunamis has been recognized only relatively recently, so
+many community emergency response plans have been based on farfield tsunami scenarios [14,25,27]. The CSZ fault runs from Northern
+California to British Columbia and is less than 160 km offshore in most
+places. Moreover, CSZ tsunamis are a particularly vexing problem because the earthquakes that cause them can severely damage the roads
+and bridges people need to evacuate [44,52]. Such damage, combined
+with uncertainties about the time lost to milling behavior [33,34] while
+seeking to confirm the threat, reunify the family, and formulate an
+evacuation plan (e.g., an evacuation mode, route, and destination
+[71]), adds complexity to the problem of tsunami evacuation. The
+problem of tsunami evacuation model complexity is compounded by its
+urgency; the likelihood of an M9.0 CSZ earthquake occurring in the
+https://doi.org/10.1016/j.ijdrr.2018.12.018
+Received 7 August 2018; Received in revised form 7 December 2018; Accepted 18 December 2018
+⁎ Corresponding author.
+E-mail addresses: mostafia@oregonstate.edu (A. Mostafizi), Haizhong.Wang@oregonstate.edu (H. Wang), Dan.Cox@oregonstate.edu (D. Cox),
+dongs@oregonstate.edu (S. Dong).
+International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+2212-4209/ © 2018 Published by Elsevier Ltd.
+Please cite this article as: Mostafizi, A., International Journal of Disaster Risk Reduction, https://doi.org/10.1016/j.ijdrr.2018.12.018
+
+next 50 years is 7–12% [13], which poses one of the greatest natural
+threats to the United States [59,60]. This event will trigger intense
+ground motion for several minutes across the region, followed by a
+tsunami in excess of 10 m that will inundate coastal communities within
+20–40 min [14]. This event poses one of the largest natural hazards
+threatening the life safety and resilience of not only Oregon's coastal
+communities but also visitors [66] to the coast. We cannot prevent the
+CSZ earthquake and tsunami, but we can learn to live with them and be
+better prepared to survive them when the inevitable earthquake strikes.
+Evacuation is one of the most effective protective action strategies to
+prepare for the CSZ event [33]. Evacuations for the near-field tsunami is
+likely to be self-initiated, relying on an individual's perception of risk
+and knowledge of the correct course of actions. Unlike other common
+natural disasters such as hurricanes, the rarity of tsunami events in the
+U.S. makes the tsunami scenario difficult to imagine, particularly in
+relation to a person's sense of place and evacuation plans, including
+preparation time and route choice.
+The idea of Vertical Evacuation has emerged in the past decade in
+the pacific northwest region of US as more attentions were diverted
+towards the Cascadia Subduction Zone fault and the foreseeable
+earthquake. The short warning time of the near-filed tsunamis and
+limited access to high ground in these communities call for an urgent
+need in effective evacuation strategies and shelter location placement.
+Horizontal evacuation shelters (HES) are currently the main focus of the
+evacuation strategies, and are defined as permanent evacuation shelters
+located at naturally high ground and out of the inundation area [75].
+On the contrary to the HES, vertical evacuation is an alternative protective action for bringing people to safety by having them “go up” in
+multi-story buildings in flooding or tsunami hazards. Vertical evacuation shelters (VES) provide a mean to create areas of refuge for communities in which evacuation out of the inundation zone is not feasible
+[76]. Typical VES includes existing or engineered high ground, parking
+garages, community facilities, commercial buildings, school facilities,
+and designated buildings. VES can be identified as any shelter that
+could withstand the tsunami inundation forces, performing as temporary shelter within the inundation area. In general, it is challenging
+for all of the residents to evacuate to lateral-evacuation shelters because
+of the short forewarning times for near-field tsunamis. Thus, “sheltering-in-place” or “sheltering-near-place” using VES should be considered as an alternative protective action to lateral-evacuation from a
+tsunami inundation zone. In addition, growing coastal communities on
+the west coast of US is projected to increase by 3880 households and
+6940 residents in tsunami hazard zone [61], which seeks a long-term
+and lasting solution to this problem, such as designing and building
+vertical evacuation shelters where it is most beneficial. However, the
+effectiveness of vertical evacuation shelters to save lives depends critically on whether people know where they are, believe they will be
+effective in protecting themselves and their families, and therefore
+choose to evacuate to them. Despite all these uncertainties however,
+Haynes et al. [17] have shown emotional and practical reasons, based
+on past events, that warrants and promotes sheltering in place during
+floods. Thus, compared to the traditional vehicle-based horizontal
+evacuation, we know little about mobilizing for vertical evacuation,
+and this is the core motivation of this work to investigate the vertical
+sheltering behavior and its impacts on evacuation efficiency. As where
+to build the vertical evacuation is critical for the success of the evacuation, driven by the goal of minimizing the life loss during the evacuation, we conducted the simulation to locate the reasoned sites for
+the VES, that yield the lowest mortality rate, under different scenarios.
+Our work will inform the hazards mitigation planning and policy
+making to reduce the tsunami risk that the coastal community exposed
+to.
+1.1. Objective and motivation
+The goal of this research is to study the vertical evacuation
+behavior, specifically how people decide to evacuate vertically or not
+and which shelter they choose to evacuate to, as well as the impact of
+shelter locations on their behavior and on the effectiveness of the
+evacuation in the context of the near-field tsunami hazard. We use an
+agent-based evacuation model which considers the milling time and
+variation in travel speeds to estimate the loss of life due to the tsunami
+hazard. We compare different placements of shelters, and we outline a
+more comprehensive plan to locate logical spots for the VES, based on a
+systematic decision-making framework. Placement of a VES necessitates a comprehensive understanding of the people's behavior towards
+this type of evacuation, the structural need for this type of shelter, and
+the resultant expected mortality rate corresponding to the location of
+the shelter. It is of note that we define logical location or logical area the
+spot at which placing the VES yields the lowest mortality rate. We refer
+to the logical placement of the VES quite often throughout this manuscript which is drawn from the simulation results.
+1.2. Outline of paper
+The rest of the paper is organized as follows: Section 2 presents a
+brief review of the existing studies on tsunami evacuation modeling,
+and more specifically vertical evacuation. In Section 3, the methodology and the concept and design of our experiments are explained. In
+addition, the vertical evacuation behavior and the maximum tsunami
+wave height are discussed in this section as the factors that needs to be
+taken into consideration in the design of vertical evacuation strategy.
+Next, Section 4 describes the study site. Section 5 presents the results of
+our framework for VES reasoned location selection from different perspectives. Finally, section 6 summarizes the major research findings.
+2. Literature review
+2.1. Gaps in tsunami evacuation modeling
+With the exception of [62], the only comprehensive reviews of
+protective action in disasters have mostly focused on hurricane evacuation [1,5,19]. There have been a few studies of responses to tsunamis such as the 2009 South Pacific tsunami [34], the 2011 Tohoku
+earthquake and tsunami [40,65] and 2004 Sumatra tsunami [69], and
+earthquakes that could cause tsunamis [24,35,72]. There has been little
+research on evacuation logistics such as choice of evacuation routes,
+destinations, and accommodations [31,88,87] or evacuation time
+components [20,26,12,29,32,55,56], and even most of those studies
+were about hurricane evacuations. Moreover, compared to traditional
+vehicular evacuation [51], we know little about people's pedestrian
+evacuation or vertical evacuation/shelter in-place [63]. Traditional
+methods such as least cost distance in a Geographic Information System
+[79,80,85,75] lack the capacity to describe the individuals' decisionmaking behavior, and do not fully incorporate the potential interaction
+effects between evacuees and the complex physics of actual tsunami
+inundation.
+2.2. Vertical evacuation behavior
+During a tsunami event, vehicular-based evacuations could potentially result in gridlocks and traffic congestion due to the unplanned
+infrastructure disruptions to highway roads and bridges [3,44] or traffic
+signal failures [10] after the preceding earthquake. In the tsunami
+evacuation study in the Pacific Northwest, Wood et al. [82] found that
+23% of residents and 15% of employees in tsunami-hazard zones are in
+the areas where modeled pedestrian evacuation times are greater than
+wave-arrival times. This suggests the use of vertical evacuation shelters
+or other long-term mitigation strategies to minimize the number of
+causality [82,58]. In addition, vertical evacuation can be an alternative
+mean to reduce vehicle use in evacuation for the cases where majority
+of the population are located in the inundation zone [74].
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+2
+
+Tsunami vertical-evacuation shelters are proved to be an effective
+risk-reduction option for coastal communities where local tsunami
+threats are rising but there is no accessible high ground for evacuations
+[38,75], or where for a portion of a population the higher ground is not
+reachable in time before the tsunami arrival [4,10]. McCaughey et al.
+[41] extended the protection motivation theory to examine people's
+trust or distrust of tsunami vertical evacuation shelters/buildings using
+a survey data from the 2004 Indonesia Ocean event. Artificial berms,
+towers, buildings, and platforms have been built to provide verticalevacuation refuges in several Japanese coastal communities [28,9,11]
+and are being planned in United States [6,8]. During the 2011 Tohoku
+M9.0 earthquake and tsunami, VES buildings provided safe refuge to
+thousands of people in coastal communities in Japan [10]. Raskin and
+Wang [54] suggested creating a berm to serve as the tsunami vertical
+refuge to improve tsunami evacuation within the zone. This shelter can
+serve as a public park and be a tsunami refuge in time of need. However, there arises the issue of limited land availability. Private buildings
+can also be used as tsunami shelters [54]. The tsunami evacuation
+modeling has also demonstrated the necessity of vertical evacuations in
+low-lying areas [40]. Such identification of risk cannot be achieved
+using static approaches such as GIS least-cost distance analysis, shelter
+location-allocation solutions, or direct comparison of the available
+space to the number of residents without considering the spatio-temporal factors [40]. Fraser et al. [10] conducted a field survey during
+October 2011 to investigate tsunami vertical evacuation in six towns
+and cities in Iwate and Miyagi. According to Fraser et al. [10], although
+there has been a number of VES buildings distributed around the studied cities, there was little planning for vertical evacuation in the locations where minimal tsunami inundation was expected based on
+previous events and numerical modelings. However, informal vertical
+evacuation to non-designated buildings was significant in mitigating
+the loss of life. VES buildings save thousands of lives [10], and these
+observations suggest that vertical evacuation can be successful where
+the best possible distribution of VES buildings is not implemented.
+2.3. Tsunami vertical evacuation shelter location
+VES location is a difficult policy question and is largely undocumented in the United States [2]. One of the major issues is the lack
+of vertical evacuation modeling framework to effectively identify areas
+where shelters may be needed [2]. The fact that multiple sites within a
+community and across a region may be warranted made vertical evacuation shelter location selection even more complicated [75]. Park
+et al. [49] proposed to use genetic algorithms for VES location selection
+in coastal Oregon (USA). However, several critical factors are not sufficiently considered such as accessibility, location constraints, and open
+travel across a landscape to high ground. Mas et al. [38] suggested that
+if spatial distribution of the available VES capacity is not well displayed, over-demand and under-demand would occur. Mas et al. [38]
+conducted a numerical simulation integrated with a multi-agent model
+of human evacuation to approximate a possible earthquake in Peru.
+Employing the stochastic simulation of the initial spatial distribution of
+residents and evacuation milling time, Mas et al. [38] evaluated the
+capacity-demand relation at each official tsunami evacuation building
+in La Punta district of Callao in Peru. The Capacity-Demand Index (CDI)
+is introduced to map and identify the areas for mitigation. According to
+government guideline [23], vertical shelters are encouraged to be built
+in locations that can provide adequate refuge capacity and in areas
+where it is not possible to evacuate to high ground. Optimal distribution
+of buildings can be derived from local population estimates, evacuation
+routes and walking speeds [16,21,85]. However, the number and distribution of shelters may be constrained by the availability of suitable
+buildings or land.
+Further, there are very few models that suggest a framework to
+logically select VES location due to the large area in tsunami hazard
+zones and varying priorities, values, and economic capital to decide
+which at-risk populations to protect first [75]. Although Geospatial,
+multi-criteria decision analysis (MCDA) can be a useful tool [22,36,37],
+and has been implemented in regard to selecting the location of
+earthquake evacuation shelter [89] and general disaster service area
+[18], no study is found to explore the decision making for tsunami VES
+planning under varying evacuation scenario characteristics. Wood et al.
+[75] introduced MCDA concepts and potential use of geospatial modeling for selecting logical VES locations. A multi-attribute, group-decision process under conditions of relative certainty is proposed in their
+study. There are four steps included in the MCDA process: (1) defining
+the problem through geospatial evacuation modeling, (2) identifying
+the stakeholders, alternatives, and criteria through community workshops, (3) statistically evaluating the alternatives and the weights of
+criteria, and (4) decision and sensitivity analysis. A case study in Washington is further conducted to demonstrate the approach [75].
+With the goal of reducing evacuation time, and consequently,
+minimizing the probability of the causality, Park et al. [49] developed a
+method that applies genetic optimization to determine tsunami shelter
+locations. The results suggest that the logical location of VES relies on
+the number of the shelters considered. Priest et al. [52] evaluated the
+pedestrian evacuation of Seaside, Oregon for a local tsunami generated
+by a CSZ earthquake. The evacuation path is calculated by the least-cost
+distance (LCD) to safety using geospatial, anisotropic path distance
+algorithms. Tsunami vertical evacuation refuges or additional pedestrian bridges are found to be the effective ways to reduce the loss of life.
+Rojahn et al. [57] suggested that travel time to safety is the major factor
+in selection of the location of the vertical evacuation shelters. The study
+further proposed that vertical evacuation shelters should be located
+away from potential hazards that could result in additional damage to
+the shelter and reduced safety for the occupants.
+3. Methodology: agent-based tsunami evacuation model (ABTEM)
+3.1. Study site
+The city of Seaside, Oregon was chosen as a case study site because
+of its higher susceptibility to tsunami hazard from a M9.0 CSZ earthquake as the community has a large number of senior elderly and visitor
+population [81,79,78,77,15,80,86,84,75,83,71,43,52,44]. This is due,
+in part, to the geographic location, close proximity to the Cascadia
+Subduction Zone (Fig. 1(a)), and its rather flat landscape and topography [79]. The Necanicum River that flows from south to north, bisecting the city, is spanned by six bridges which creates additional
+complexity for the horizontal evacuation considering the potential
+bridge failures in the preceding earthquake [44,43]. The current tsunami evacuation plan for the area requires horizontal evacuation on
+foot (Fig. 1(b)), and the option of vertical evacuation has only been
+discussed in recent years as a possible alternative. 83% of its population, 89% of its employees and almost 100% of its critical facilities are
+located inside the tsunami inundation zone [46]. In the meantime, all
+primary horizontal evacuation shelters of the city are located more than
+1.5 mile away from the shoreline. Considering the milling time, potential damages to the transportation system (bridges, highway segments), and variation in travel speeds (i.e., walking, driving, or public
+transit), the current horizontal evacuation strategy of Seaside, OR may
+not be sufficient to address the evacuation needs associated with nearfield tsunami hazard.
+3.2. Tsunami inundation
+One critical issue that needs to be taken into consideration in tsunami evacuation is the expected inundation water depth that a shelter is
+exposed to. Fig. 2 shows the maximum wave height that each location
+in the city faces throughout a one-hour-long inundation period. As the
+return interval increases (from left to right), the intensity of the
+earthquake initiating the tsunami, and the resulting inundation water
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+3
+
+depths both increase [48,47].
+It can be seen that the maximum wave height increases from 8.4 to
+15.4 m with increase in return interval from 500 to 2500 years. In addition, in case of a 500-year event, the city will be partially inundated.
+The inundation zone enlarges as the intensity of the tsunami increases.
+Moreover, in a high intensity event, the entire city is inundated fairly
+uniformly, as opposed to low-intensity tsunami inundation that the east
+side of the inundation zone experiences significantly lower water
+depths. In any case, generally, the closer a shelter gets to the east side of
+the city, the lower the risk of structural damage or failure is.
+3.3. Development of ABTEM for vertical evacuation
+The methodology for this VES location modeling is through an
+agent-based tsunami evacuation model (ABTEM). Agent-based models,
+especially in modeling of the human behavior, have proven to be highly
+effective in the past decades. The evacuation modeling and simulation
+environment was coded in NetLogo, one of the primary agent-based
+modeling platforms which is widely used in a variety of subjects [73].
+Prior investigation and use of the agent-based evacuation model in the
+context of transportation network vulnerability analysis [43,44] and
+multimodal behavior of evacuation [71] has shown its potential in
+evacuation efficiency analysis. The model in this study has been customized to analyze the impact of VES on evacuation mortality rate.
+Fig. 3 shows a screen capture of the model interface.
+On the left panel, the user is able to adjust the model inputs. The
+inputs of the model include, to name a few, walking speed distribution
+of the evacuees, split of different evacuation options (i.e., horizontal or
+vertical evacuation), the inundation level, vulnerability of the community to the inundation, and milling time or preparation time distribution. The middle panel visualizes the time-dependent dynamics of
+the evacuees along with the inundation motion. As shown in the Fig. 3
+blue and orange dots represent the pedestrians with different evacuation decisions. Orange dots show the evacuees who do not consider
+vertical evacuation as an option and walk to a shelter outside the inundation zone, and the blue dots represent the evacuees who are open
+to both types of shelter. Yellow circles show the current tsunami evacuation shelters of Seaside, OR, as proposed by the Oregon Department
+of Geology and Mineral Industries [53]. In addition to the horizontal
+evacuation shelter, the vertical evacuation shelter(s) can be placed
+through the graphical user interface (GUI), and thus, different placements of the vertical evacuation shelters can be analyzed. In Fig. 3 the
+purple circle in the middle of the network shows the location of the
+simulated vertical shelter. The blue and black shade shows the inundation and the water depth at each point in space and time. The
+darker the shade, the higher the wave height, and accordingly, based on
+the wave height and the danger of the agents exposed to the tsunami
+force (once the wave reaches the evacuation crowd), evacuees will be
+considered as casualty and marked with red color. The outputs of the
+model include the number of evacuated, number of casualties, and
+number of people evacuated to the vertical evacuation (i.e., needed
+capacity), monitored on the right panel.
+Fig. 1. Seaside, OR [45,71].
+Fig. 2. Tsunami maximum wave height (m) for events with different return intervals. The darker the shade of blue is, the higher the maximum wave height is for a
+specific location in the study site. In addition, the final inundation zone can be draw from these plots.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+4
+
+The agent-based model consists of different components, namely
+Transportation Network, Population Distribution, Shelter Locations,
+Tsunami Inundation, and Casualty Model. For the details of each
+component, please refer to Mostafizi [43], Mostafizi et al. [44]. In this
+study, we have used 8 current shelters outside the inundation zone
+which were proposed by [53]. In addition, the simulated VES can be
+placed through the GUI of the model. For the purpose of this study, the
+major decisions that agents are facing are the evacuation shelter type
+and the departure time or milling time. Evacuees can either evacuate to
+a horizontal shelter outside the hazard zone, or they can evacuate
+vertically inside the inundation zone. This choice is enforced by the
+percentage of the evacuees who are open to vertical evacuation. Obviously, for an evacuee who considers vertical evacuation, if there is a
+closer shelter outside the hazard zone, they are not going to move towards the hazard to evacuate vertically. Therefore, there will be a
+difference between the percentage of the people who consider vertical
+evacuation as a possible method, and the percentage of the evacuees
+who actually evacuate vertically. Our assessments have showed that no
+more than 80% of the population evacuate vertically, even if the entire
+community consider vertical evacuation as an option. The objective of
+this study is to assess the impact of the proportion of the evacuees who
+consider vertical evacuation on the logical placement and the capacity
+needed for a shelter. Thus simulations have been conducted with this
+percentage being either 25% or 100%.
+Moreover, the milling time is modeled using Rayleigh Distribution
+[39], with varying Minimum Milling Time (τ) and scale parameter (σ)
+of 1.65. With this setting, it is ensured that 99% of the evacuees start
+their evacuation within 5 min after the minimum milling time. In this
+study, we assess the impact of milling time on the logical location of the
+VES, by comparing the cases with 0 and 10 min minimum milling times.
+This study also aims to assess the effect of the average walking speed of
+the community on the logical placement of the vertical shelter. The
+standard deviation of the walking speed's normal distribution is set to
+0.65 ft/s (0.20 m/s), and the mean is varied from 3 to 5 ft/s
+(0.91–1.52 m/s) [50]. Each agent's speed is constant throughout a simulation run and we have neglected the effect of tiredness and topography of the environment.
+3.4. Overview of simulation
+The overview of the simulation is presented in Fig. 4 as time-series
+snapshots of the model. At t = 0, right after the earthquake, the evacuation is called. Brown dots represent the initial placement of evacuees
+and distribution of the population. After t = 0, depending on each individual milling time, people start to evacuate on the shortest path to
+the shelter of interest, and at t = 15 min we observe that most of the
+evacuees are en-route, except the ones that are yet to move. Depending
+on the decision regarding the evacuation shelter destination, agents
+either turn orange, meaning that they do not consider vertical evacuation, or they turn blue, indicating that they do consider vertical
+evacuation if the VES is closer than the shelters outside the inundation
+zone. It has been assumed that the agents are autonomous, and their
+choices are not affected by each other, and therefore, their behaviors
+will not vary with time. At t = 35 min first wave hits the city, and interestingly after 5 min (t = 40 min), half of the city is inundated, and in
+about 10 min (t = 45 min), the entire city is inundated. Depending on
+the critical depth defined earlier, a portion of the evacuees are considered as casualties, marked with red color, and stopped moving. On
+the other hand, people who have reached the shelters are safe, marked
+with green color, and considered as evacuated. At t = 55 min, the
+second wave inundates the city. The simulation lasts for an hour and at
+the end of the simulation, the number of casualties and number of
+evacuees for each decision category as well as the number of people
+who are evacuated in the vertical shelter are recorded for further assessment of the evacuation efficiency, measured by the mortality rate of
+the scenario.
+3.5. Vertical evacuation shelters as alternative protection actions
+Fig. 5(a) reflects the proportion of the people who actually evacuate
+vertically to the people who consider vertical evacuation as an alternative. It shows that this percentage varies with the change in the location of vertical shelter. Intuitively, a person may not evacuate vertically if there exists a shelter that is closer and outside the inundation
+zone. Based on the placement of a shelter, the percentage of people who
+evacuate to it can be as low as 24% or as high as 79%. These results
+reflect the location of the VES in a way that it makes logical sense for a
+certain portion of the people to evacuate to it, considering the location
+of current shelters and the initial population distribution.
+Comparing the population distribution in Fig. 6(b) and 5(a), it
+suggests that the utilization of VES is at its maximum when the shelter
+is mapped to the centroid of population distribution, and not
+Fig. 3. Agent-based Tsunami Evacuation Model in Netlogo. The left panel shows the inputs of the model. The results of the simulation are presented in the right
+panel. The middle panel shows the simulation dynamics where moving agents are presented in orange, the red dots are the casualties.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+5
+
+necessarily the densely populated areas. Fig. 5(b) shows the non-linear
+relationship between the percentage of vertically evacuated people and
+the distance of the shelter from the population centroid. The farther the
+location gets from the population centroid, the lower the percentage of
+the people who evacuate to the vertical shelter. This non-linear behavior shows a lower margin of error for the placement of the VES, as long
+as it is fairly close to the center of the population. For distances beyond
+0.5 mile, the percentage of population who evacuate vertically drops
+significantly. It is also worthy mentioning that, Generally, vertical
+evacuation is associated with the inherent risk of structural failure [47],
+and maximizing or minimizing the use of VES depends on the local
+evacuation plans. Moreover, this type of measurement can inform the
+VES capacity design.
+In addition, vertical evacuation behavior as presented in this section, although an important evacuation characteristics that needs to be
+studied, is not justified to be used as the primary criterion for VES location selection. The resultant mortality rate, explained later in Section
+5 and Figs. 7 and 8 must be the only selection criterion.
+Fig. 4. Simulation overview. Brown dots represent the initial population distribution at t = 0. The agents start moving after their milling time, heading to an
+evacuation shelter. At t = 35 the first wave inundates the city, causing casualties. The second wave hits the city at t = 55.
+Fig. 5. Proportion of vertically evacuated (With respect to people who considered vertical evacuation).
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+6
+
+4. Experiment design
+To identify the logical location for the VES, the authors discretized
+the entire city into cells and selected 60 potential positions which are
+the centroids of the cells and marked as red dots in Fig. 6(a). The logical
+placement of VES is likely to be a function of numerous factors in
+combination. For instance, population distribution, walking speed, and
+milling time all could greatly impact the logical location of vertical
+evacuation shelters, that leads to the lowest mortality rate. However, in
+this study, the idea is to find the logical placement of a single evacuation shelter specifically under different evacuation settings such as
+minimum milling time, average walking speed, and opinion of the
+public towards the vertical evacuation shelters which is measured by
+the proportion of the people who consider vertical evacuation. To accomplish this objective, the simulations were conducted by iterating
+through the 60 possible VES locations, as well as varying the average
+walking speed from 3, 4, and 5 ft/s (0.91, 1.22, 1.52 m/s), changing the
+minimum milling time from 0, 5, to 10 min, and varying the percentage
+of people who consider vertical evacuation from 25% to 100%. These
+60 data points are used to estimate the mortality rate for any other
+arbitrary points, using Biharmonic spline interpolation.
+For automation purposes, authors have used R combined with
+RNetlogo package that bridges the gap between NetLogo and R.
+RNetLogo is an open-source package that enables the modeler to run,
+control, execute commands, push and get data from or to Netlogo in R
+environment, and store and analyze the simulated data using powerful
+statistical tools in R [68,67]. After each simulation the following data
+were calculated:
+• Percentage of the agents who actually evacuated vertically
+• Number of people evacuated safely in the vertical shelter
+• Total mortality rate
+It is worth noting that there is a primary difference between the number
+of evacuees who considered vertical evacuation and the number of
+people who actually evacuated vertically. As mentioned earlier, for the
+people who consider vertical evacuation as an alternative protective
+action, in case there is another shelter closer and outside the inundation
+zone, the agent does not move towards the hazard and to the vertical
+shelter. Therefore, the number of people who evacuate vertically is
+definitely less than the people who consider vertical evacuation.
+The results of this study will inform decision-makers, city planners,
+and officials on the logical location to place a vertical evacuation
+shelter and its needed capacity. In addition, this study quantifies the
+impacts of community physical (walking speed) and psychological
+(milling time and perception of vertical evacuation) characteristics on
+the placement and efficiency of the vertical evacuation shelter.
+5. Modeling results
+In order to outline a comprehensive plan to select a logical location
+for the VES, the resultant mortality rate associated with the location of
+VES were analyzed. It has to be noted that maximum wave height
+which is an indicator of the tsunami force on the vertical structure, and
+the vertical evacuation behavior which shows the level of response of
+the evacuees to the VES should be viewed more as a constraint, rather
+than selection criterion.
+5.1. Mortality rate
+In this work, we study the mortality rate of the evacuation scenario
+with changes in the location of VES. Total mortality rate is normally
+used to reason for the location of the shelter. However, additionally,
+this study intends to analyze the effect of minimum milling time
+(TMilling
+Min ), average walking speed (V¯
+Walk), and the percentage of people
+who consider vertical evacuation (EvacVer) as an alternative protective
+action, on the logical placement of the VES that leads to the lowest total
+mortality rate for a particular scenario.
+The results are presented in Fig. 7 and 8 show total mortality rate
+(MRTotal) of the scenario, for various milling times and walking speeds.
+The color at each point is associated with the resultant mortality rate of
+the evacuation scenario if the VES is located at that specific point. Fig. 7
+reflects the mortality rates for the case that 100% of the community
+consider vertical evacuation option, while Fig. 8 represents the case
+where only 25% of the evacuees consider vertical evacuation, if they
+have any shelter closer to them, compared to typical shelters outside
+the inundation zone. For comparison purposes, both of these scenarios
+have been implemented with average walking speed (V¯
+Walk) of 3 and
+5ft s/ (0.91 and 1.52 m/s), as well as minimum milling time (TMilling
+Min ) of 0
+and 10 min.
+Fig. 6. Seaside population distribution and vertical shelter candidates.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+7
+
+5.1.1. Total mortality rate analysis
+From Fig. 7 and the total mortality rate (MRTotal) for V¯
+walk = 3/ ft s
+(0.91 m/s), the dark blue color represents the area at which placement
+of the vertical shelter leads to the lowest mortality rate. Please note that
+this area is generally adjacent to the shoreline and locates in the middle
+of it as the population is distributed normally along the beach and
+around the center. It can be seen that the mortality rate increases nonlinearly as the vertical shelter moves away from the logical location that
+yields the lowest mortality rate. Results show that, even under the assumption of immediate evacuation (TMilling = 0 Min ) the mortality rate
+Fig. 7. Total mortality rate for different V¯
+walk and TMilling Min . Evac 100 Ver = %.
+Fig. 8. Total mortality rate for different V¯
+walk and TMilling
+Min . EvacVer = 25%.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+8
+
+increases from 5% to 54% when the shelter is placed around south-east
+of the city, which shows the importance of VES location in terms of total
+mortality rate. In addition, in the case where EvacVer = 100%, all the
+people in this scenario consider vertical evacuation. This can inform
+decision makers regarding the communication of the best policies and
+actions to the communities at risk.
+5.1.2. Milling time and walking speed
+Comparing TMilling
+Min of 0 and 10 min in Fig. 7 clarifies the impact of
+minimum milling time on location of the shelter. With increase in
+minimum milling time, evacuation gets more critical, and therefore, the
+logical area for the VES gets narrower towards its centroid. For instance, logical area shifts towards the shoreline. In addition, the range
+of mortality rate as well as its minimum increase dramatically. On the
+other hand, the exact opposite phenomenon happens as V¯
+Walk increases
+as the criticality of the event decreases. With the increase in average
+walking speed which in turn increases the evacuees’ mobility, the
+mortality rate drops significantly, and the logical area covers a larger
+portion of the city, compared to their equivalent scenario with lower
+average walking speed.
+5.1.3. Evacuation decision
+Fig. 8 shows the total mortality rate with respect to changes in the
+location of the shelter, and as a function of minimum milling time and
+walking speed, with only 25% of the people considering vertical evacuation. Comparing Figs. 7 and 8, it can be seen that in general, with
+the same setting but less people considering vertical evacuation, the
+lowest total mortality rate (i.e., the case that the shelter is placed in the
+logical area) increases significantly. In other words, the more the
+community considers vertical evacuation as an alternative, the lower
+the evacuation mortality rate will be. The same correlations with milling time and walking speed, as interpreted for the case where
+EvacVer = 100%, apply to this case as well. The logical area shrinks as
+the evacuation becomes more critical (e.g., increase in TMilling
+Min or decrease in V¯
+Walk). At the same time, and surprisingly, it can be seen that
+the upper bound of mortality when EvacVer = 100% is higher than that
+of when EvacVer = 25%. This means that if vertical shelter is placed in an
+irrational spot, and the evacuees are guided to consider vertical evacuation, this will result in extremely high mortality rates and catastrophic evacuation scenarios. Therefore, the logical placement of the
+shelter is extremely critical. The results provided in this work will
+benefit decision makers and officials to logically locate the VES, and
+devise policies accordingly, with consideration of available resources
+and the community socio-physical attributes and openness towards
+vertical tsunami evacuation.
+5.1.4. Shelter's distance to ocean, population centroid, and outside of the
+inundation zone
+To deepen the analysis on the logical placement of a VES, the impact
+of the distance of the shelter to the population centroid, to the ocean,
+and to the shelters outside of the inundation zone on the total mortality
+rate, and thus, the effectiveness of a VES has been studied. Fig. 9 shows
+these nonlinear relationships for an evacuation scenario, with 10, 5,
+and 0 min of minimum milling time with an average walking speed of 3,
+4, and 5 fts/ (0.91, 1.22, and 1.52 m/s), where the entire population
+consider vertical evacuation as an alternative protective action.
+The left panel in each plot in Fig. 9 represents the nonlinear relationship between the mortality rate and the distance to the population
+centroid. As the shelter location gets further away from the center of the
+initial evacuee population, the mortality rate increases. Blue curves in
+Fig. 9 reflect the 98% and 2% percentiles of the mortality rate. The
+correlation between these two variables is stronger and steeper if the
+average walking speed is low. Similar patterns are also observed for
+higher milling time scenarios in Fig. 9(b) and (a). In addition, the range
+of expected mortality rates increases as VES gets farther from the population centroid. This suggests that placing a VES far from the center
+necessitates further analysis as the confidence in mortality rate is low
+and the variance is high. Moreover, it can be seen that the positive
+pattern diverges for the shelters that are more than 0.5 mile further
+away from the population centroid, indicating that distance from this
+logical location can result in negative impacts with different magnitudes, depending on the direction (e.g. towards the shore or the outside
+of the hazard zone) of the distance from the logical location. This divergence is less obvious when the evacuation pressure is low (e.g., low
+milling time or fast walking speed).
+There are also correlations between mortality rate and the distance
+of the VES to the ocean and to the shelters outside of the inundation
+zone. The middle panel in Fig. 9 shows that the closer the shelter to the
+ocean, the lower the total mortality rate. However, VES being close to
+the ocean does not guarantee a successful evacuation as the variation of
+mortality rate is large when VES is closer to the ocean. This variation is
+higher when the average walking speed is 3 fts/ (0.91 m/s) or minimum
+milling time is 10 min. Moreover, the minimum mortality rate is highly
+associated with shelters that are close to the ocean as well as the population centroid (the darker colors). For evacuation scenarios with
+high average walking speeds (or similarly low milling times), the effect
+of distance to the ocean is minimal for distances lower than 1 mile,
+interpreted from the beginning and relatively flat part of the graph for
+walking speed of 5 fts/ (1.52 m/s) or minimum milling time of 0. After
+this threshold, the impact of distance to the ocean on the mortality rate
+is significant. This neutral correlation is significantly less for a low
+average walking speed of 3 fts/ (0.91 m/s) or a high minimum milling
+time of 10 min. However, it gives a higher margin for error as long as
+the VES is located close to the population center.
+The opposite and generally negative trend is visible when analyzing
+the mortality rate of the evacuation with respect to the distance of the
+VES to the horizontal shelters outside of the inundation zone. However,
+the results show that the logical location is placed roughly a mile from
+outside the inundation zone, and again as expected, close to the center
+of the population. Beyond this threshold, the mortality rate starts to
+increase.
+6. Conclusion
+In this paper, we addressed a vertical tsunami evacuation shelter
+(VES) location selection problem through an agent-based tsunami
+evacuation model (ABTEM). The city of Seaside, Oregon is selected as
+the study site since the community is highly prone to tsunami hazard
+from a M9.0 CSZ earthquake due to the large number of senior elderly
+and visitor population. This risk to tsunami is also compounded by the
+flat topography from the ocean to the city designated tsunami shelters.
+The resultant mortality rate in case of various vertical evacuation
+shelter locations was selected as the primary VES location selection
+criterion. Three different factors are considered and evaluated in this
+case including minimum milling time, average walking speed, and the
+percentage of people who consider vertical evacuation. It is observed
+that in most cases, there is a logical area that leads to the lowest
+mortality rate. Moreover, the mortality rate increases non-linearly as
+the vertical shelter moves away from the logical location. Further, by
+increasing the average walking speed or decreasing the minimum milling time, we found that the increase of evacuees’ mobility will reduce
+the mortality rate significantly, and accordingly, the logical shelter
+location area covers a larger portion of the city. In addition, when the
+proportion of people who consider vertical evacuation decreases with
+other settings remaining unchanged, the lowest mortality rate increases
+significantly. In other words, the more people consider vertical evacuation as an option, the lower the evacuation mortality rate will be.
+This study also uncovers the impacts of the distance of the vertical
+shelter to the key topographic features (e.g., ocean, population centroid, and the horizontal shelters outside of the inundation zone) on the
+evacuation efficiency and the total mortality rate. The outcomes of this
+research clarify a systematic decision-making problem that encircles the
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+9
+
+placement of the vertical evacuation shelters and the vertical evacuation behavior, which both play a significant role in life safety. This
+study also suggests that the proportion of the people who evacuate
+vertically is highly correlated with the location of VES. This percentage
+can be as high as 80% depending on the location of VES, and is nonlinearly and negatively correlated with the distance of the VES to the
+population centroid.
+The findings unveiled in this study will help inform the decisionmaking process to identify the logical locations to place the vertical
+evacuation shelters to improve life safety and community resilience to
+the combined earthquake and tsunami hazard. More importantly, the
+results show that if the shelter is placed at the wrong spot, and the
+population is advised to evacuate vertically if possible, the evacuation
+will be tragic. To avoid such consequences, although there are
+Fig. 9(a). Impact of the distance of the shelter to the population centroid, ocean, and the shelters outside of the inundation zone on the total mortality for evacuation
+cases with 3,4, and 5 fts/ (0.91, 1.22, and 1.52 m/s) walking speed and 0, 5, and 10 min of milling time. Curves represent 2 and 98 percentiles. The color on the
+middle and right panel correlates with the distance of the shelter to the population centroid. The darker the color, the closer to the center of the population.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+10
+
+generalized findings in this work, the results show that the placement of
+vertical evacuation shelters are highly case specific. In other words, the
+topography of the site, expected population distribution, the tsunami
+inundation, the location of current shelters, the physical and psychological capabilities of the at-risk community, and the attitude of the
+community towards vertical evacuating can drastically impact the
+evacuation efficiency. Therefore, pinpointing the logical location for
+the shelter necessitates such case-specific and high-fidelity modeling
+and simulations.
+Acknowledgement
+The authors would like to acknowledge the funding support from
+the National Science Foundation, through division of Civil, Mechanical,
+and Manufacturing, and Innovation (CMMI) and the Humans, Disasters,
+and the Built Environment (HDBE) program through grants: CMMIHDBE #1563618, #1826407, and #1902888. Any opinions, findings,
+and conclusion or recommendations expressed in this research are those
+of the authors and do not necessarily reflect the view of the funding
+agencies.
+References
+[1] E.J. Baker, Hurricane evacuation behavior, Int. J. Mass Emerg. Disasters 9 (1991)
+287.
+[2] O.S. Board, N.R. Council, et al., Tsunami Warning and Preparedness: An Assessment
+of the US Tsunami Program and The Nation's Preparedness Efforts, National
+Academies Press, 2011.
+[3] Cascadia Region Earthquake, W., 2013. Cascadia subduction zone earthquakes: A
+magnitude 9.0 earthquake scenario. Oregon Department of Geology and Mineral
+Industries.
+[4] G. Chock, G. Yu, H.K. Thio, P.J. Lynett, Target structural reliability analysis for
+tsunami hydrodynamic loads of the asce 7 standard, J. Struct. Eng. 142 (11) (2016)
+04016092.
+[5] N. Dash, H. Gladwin, Evacuation decision making and behavioral responses: individual and household, Nat. Hazards Rev. 8 (3) (2007) 69–77.
+[6] Doughton, S., 2013. Grays harbor county school to build rst us vertical-tsunami
+refuge. Seattle Times, October 15.
+[7] T.E. Drabek, Human System Responses to Disaster: an Inventory of Sociological
+Findings, (1986).
+[8] A. Engstfeld, K. Killebrew, C. Scott, J. Wiser, B. Freitag, O. El-Anwar, Tsunami safe
+haven project-report for long beach, washington. Department of urban design and
+planning, college of built environments, University of Washington, 2010.
+[9] S. Fraser, G. Leonard, I. Matsuo, H. Murakami, Tsunami evacuation: lessons from
+the Great East Japan earthquake and tsunami of March 11th, 2011, GNS Sci. (2012)
+2011.
+[10] S. Fraser, G.S. Leonard, H. Murakami, I. Matsuo, Tsunami vertical evacuation
+buildings-lessons for international preparedness following the 2011 great east japan
+tsunami, J. Disast. Res. 7 (2012) 7.
+[11] S.A. Fraser, Informing the development of tsunami vertical evacuation strategies in
+new zealand: a thesis presented in fulfilment of the requirements for the degree of
+doctor of philosophy in emergency management at Massey University, Wellington,
+New Zealand (Ph.D. Thesis), 2014.
+[12] H. Fu, C.G. Wilmot, 2007. Static versus dynamic and aggregate versus disaggregate:
+A comparisonbetween practice and research in hurricane evacuation travel demand
+modeling. in: Proceedings of Transportation Research Board Annual Meeting, 20p.
+[13] C. Goldfinger, C.H. Nelson, A.E. Morey, J.E. Johnson, J.R. Patton, E. Karabanov,
+J. Gutierrez-Pastor, A.T. Eriksson, E. Gracia, G. Dunhill, R.J. Enkin, A. Dallimore,
+T. Vallier, Turbidite event history: methods and implications for holocene paleoseismicity of the cascadia subduction zone, US Geol. Surv. Prof. Pap. (2012) 170
+(1661).
+[14] F.I. Gonzalez, E.L. Geist, B. Jaffe, U. Kanoglu, H.O. Mofjeld, C. Synolakis, V.V. Titov,
+D.R. Arcas, D. Bellomo, D. Carlton, T. Horning, J. Johnson, J. Newman, T. Parsons,
+R. Peters, C.D. Peterson, G. Priest, A. Venturato, J. Weber, F.L. Wong, A. Yalciner,
+Probabilistic tsunami hazard assessment at seaside, oregon, for near- and far-field
+seismic sources, J. Geophys. Res. 114 (C11023) (2009).
+[15] F.I. Gonzalez, E.L. Geist, B. Jaffe, U. Kanoglu, H.O. Mofjeld, C. Synolakis, V.V. Titov,
+D.R. Arcas, D. Bellomo, D. Carlton, T. Horning, J. Johnson, J. Newman, T. Parsons,
+R. Peters, C.D. Peterson, G. Priest, A. Venturato, J. Weber, F.L. Wong, A. Yalciner,
+Probabilistic tsunami hazard assessment at seaside, oregon, for near- and far-field
+seismic sources, J. Geophys. Res. 114 (C11023) (2009).
+[16] Y. Goto, M. Affan, Y. Nurdin, D.K. Yuliana, et al., Tsunami evacuation simulation
+for disaster education and city planning, J. Disaster Res. 7 (1) (2012) 92–101.
+[17] K. Haynes, M. Tofa, A. Avci, J. van Leeuwen, L. Coates, Motivations and experiences
+of sheltering in place during floods: implications for policy and practice, Int. J.
+Disaster Risk Reduct. (2018).
+[18] F. Hu, S. Yang, X. Hu, W. Wang, Integrated optimization for shelter service area
+demarcation and evacuation route planning by a ripple-spreading algorithm, Int. J.
+Disaster Risk Reduct. 24 (2017) 539–548.
+[19] S.-K. Huang, M.K. Lindell, C.S. Prater, Who leaves and who stays? A review and
+statistical meta-analysis of hurricane evacuation studies, Environ. Behav. 48 (8)
+(2016) 991–1029 (URL 〈http://dx.doi.org/10.1177/0013916515578485 〉).
+[20] S.-K. Huang, M.K. Lindell, C.S. Prater, H.-C. Wu, L. Siebeneck, Household evacuation decision making in response to hurricane ike, ASCE Nat. Hazards Rev. 13
+(2012) 283–296.
+[21] F. Imamura, A. Muhari, E. Mas, M.H. Pradono, J. Post, M. Sugimoto, Tsunami
+disaster mitigation by integrating comprehensive countermeasures in padang city,
+Fig. 9(b). Continued.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+11
+
+indonesia, J. Disaster Res. 7 (1) (2012) 48–64.
+[22] J. Ronald Eastman, P.A.K.K. Weigen Jin, J. Toledan, Raster procedures for m ulticriteria/multi-0biective decisions, Photogramm. Eng. Remote Sens. 61 (5) (1995)
+539–547.
+[23] Japan, C.O.G., Guideline for tsunami evacuation buildings. Tsunami Evacuation
+Building Guideline Committee, Government of Japan Cabinet Office. Tokyo, 2010.
+[24] I. Jon, S.-K. Huang, M.K. Lindell, Perceptions and expected immediate reactions to
+severe storm displays, 2018.
+[25] N. Koike, Y. Kawata, F. Imamura, Far-field tsunami potential and a real-time
+forecast system for the pacific using the inversion method, Nat. Hazards 29 (3)
+(2003) 425–436.
+[26] P. Koshute, Evaluation of existing models for prediction of hurricane evacuation
+response curves, Nat. Hazards Rev. 14 (3) (2013) 175–181.
+[27] R. Lachman, M. Tatsuoka, W.J. Bonk, Human behavior during the tsunami of may
+1960, Science 133 (3462) (1961) 1405–1409 (URL 〈http://science.sciencemag.org/
+content/133/3462/1405 〉).
+[28] G. Leonard, N. Evans, G. Prasetya, W. Saunders, L. Pearse, D. Monastra, S. Fraser,
+Scoping study for evaluating the tsunami vulnerability of New Zealand buildings for
+use as evacuation structures, GNS Sci. (2011).
+[29] J. Li, K. Ozbay, B. Bartin, S. Iyer, J. Carnegie, Empirical evacuation response curve
+during hurricane irene in cape may county, new jersey, Transp. Res. Rec. 2376
+(2013) 1–10.
+[30] M.K. Lindell, Evacuation PLANNING, Analysis, and Management, CRC Press, 2013,
+pp. 121–150 (2016/07/19, URL 〈http://dx.doi.org/10.1201/b15372-8 〉).
+[31] M.K. Lindell, J.E. Kang, C.S. Prater, The logistics of household hurricane evacuation, Nat. Hazards 58 (2011) 1093–1109.
+[32] M.K. Lindell, J.-C. Lu, C.S. Prater, Household decion in response to hurricane lili,
+Nat. Hazards Rev. 6 (4) (2005) 171–179 (URL 〈http://dx.doi.org/10.1061/(ASCE)
+1527-6988(2005)6:4(171) 〉.
+[33] M.K. Lindell, C.S. Prater, Tsunami preparedness on the oregon and washington
+coast: recommendations for research, Nat. Hazards Rev. 11 (2) (2010) 69–81 (URL
+〈http://dx.doi.org/10.1061/(ASCE)1527-6988(2010)11:2(69) 〉.
+[34] M.K. Lindell, C.S. Prater, C.E. Gregg, E.J. Apatu, S.-K. Huang, H.-C. Wu, Households'
+immediate responses to the 2009 American samoa earthquake and tsunami, Int. J.
+Disaster Risk Reduct. 12 (2015) 328–340 (URL 〈http://www.sciencedirect.com/
+science/article/pii/S2212420915000266 〉).
+[35] M.K. Lindell, C.S. Prater, H.C. Wu, S.-K. Huang, D.M. Johnston, J.S. Becker,
+H. Shiroshita, Immediate behavioural responses to earthquakes in christchurch,
+new zealand, and hitachi, japan, Disasters 40 (1) (2016) 85–111 (URL 〈http://dx.
+doi.org/10.1111/disa.12133 〉).
+[36] J. Malczewski, GIS and Multicriteria Decision Analysis, John Wiley & Sons, 1999.
+[37] J. Malczewski, Gis-based multicriteria decision analysis: a survey of the literature,
+Int. J. Geogr. Inform. Sci. 20 (7) (2006) 703–726.
+[38] E. Mas, B. Adriano, S. Koshimura, An integrated simulation of tsunami hazard and
+human evacuation in la punta, peru, J. Disaster Res. 8 (2) (2013) 285–295.
+[39] E. Mas, F. Imamura, S. Koshimura, Modeling the decision of evacuation from tsunami, based on human risk perception. in: In Annual Meeting of the Tohoku Branch
+Technology Research Conference. Japan Society of Civil Engineers, 2011.
+[40] E. Mas, S. Koshimura, F. Imamura, A. Suppasri, A. Muhari, B. Adriano, Recent
+advances in agent-based tsunami evacuation simulations: case studies in Indonesia,
+Thailand, Japan and peru, Pure Appl. Geophys. 172 (12) (2015) 3409–3424 (URL
+〈http://dx.doi.org/10.1007/s00024-015-1105-y 〉).
+[41] J.W. McCaughey, I. Mundir, P. Daly, S. Mahdi, A. Patt, Trust and distrust of tsunami
+vertical evacuation buildings: extending protection motivation theory to examine
+choices under social influence, Int. J. Disaster Risk Reduct. (2017) (URL 〈http://
+www.sciencedirect.com/science/article/pii/S2212420917302108 〉).
+[42] D.S. Mileti, T.E. Drabek, J.E. Haas, Human Systems in Extreme Environments: A
+Sociological Perspective. Program on Technology, Environment, and Man, Institute
+ofBehavioral Science, University of Colorado, Boulder, 1975.
+[43] A. Mostafizi, Agent-based tsunami evacuation model: Life safety and network resilience. Master’s thesis, Oregon State University, June 2016. URL 〈http://hdl.
+handle.net/1957/59176〉.
+[44] A. Mostafizi, H. Wang, D. Cox, L.A. Cramer, S. Dong, Agent-based tsunami evacuation modeling of unplanned network disruptions for evidence-driven resource
+allocation and retrofitting strategies, Nat. Hazards (2017) 1–26 (URL 〈http://dx.
+doi.org/10.1007/s11069-017-2927-y 〉).
+[45] of Geology, O.D., Industries, M., 2013. Tsunami evacuation map seaside & gearhart,
+oregon. URL 〈http://www.oregongeology.org/pubs/tsubrochures/
+SeasideGearhartEvacBrochure-6-3-13_onscreen.pdf〉.
+[46] OSSPAC, 2013. The Oregon resilience plan: reducing risk and improving recovery
+for thenext Cascadia earthquake and tsunami. The Commission.
+[47] H. Park, D.T. Cox, A.R. Barbosa, Comparison of inundation depth and momentum
+flux based fragilities for probabilistic tsunami damage assessment and uncertainty
+analysis, Coast. Eng. 122 (2017) 10–26.
+[48] H.S. Park, D.T. Cox, Probabilistic assessment of near-field tsunami hazards: inundation depth, velocity, momentum flux, arrival time, and duration applied to
+seaside, oregon, Coast. Eng. 117 (2016) 79–96.
+[49] S. Park, J.W. van de Lindt, R. Gupta, D. Cox, Method to determine the locations of
+tsunami vertical evacuation shelters, Nat. Hazards 63 (2) (2012) 891–908 (URL
+〈http://dx.doi.org/10.1007/s11069-012-0196-3 〉).
+[50] R. Potangaroa, 2008. Building resillience. in: Proceeding from International
+Conference on Building Education and Research (BEAR).
+[51] M.K.L.C.S. Prater, Critical behavioral assumptions in evacuation time estimate
+analysis for private vehicles: examples from hurricane research and planning, J.
+Urban Plan. Dev. 133 (1) (2007) 18–29.
+[52] G.R. Priest, L.L. Stimely, N.J. Wood, I.P. Madin, R.J. Watzig, Beat-the-wave
+evacuation mapping for tsunami hazards in seaside, Oregon, USA, Nat. Hazards 80
+(2) (2016) 1031–1056 (URL 〈http://dx.doi.org/10.1007/s11069-015-2011-4 〉).
+[53] G.R. Priest, R.C. Witter, Y.J. Zhang, Tsunami animations, time histories, and digital
+point data for flow depth, elevation, and velocity for the south coast project area,
+curry county, oregon. Tech. Rep. Open-File Report O-13-13, Department of Geology
+and Mineral Industries, 2013.
+[54] J. Raskin, Y. Wang, Fifty-year resilience strategies for coastal communities at risk
+for tsunamis, Nat. Hazards Rev. (2016) ASCE.
+[55] G.O. Rogers, J.H. Sorensen, Warning and response in two hazardous materials
+transportation accidents in the U.S. J. Hazard. Mater. 22 (1) (1989) 57–74 (URL
+〈http://www.sciencedirect.com/science/article/pii/0304389489850289 〉).
+[56] G.O. Rogers, J.H. Sorensen, Diffusion of Emergency Warning: Comparing Empirical
+and Simulation Results, Springer, US, Boston, MA, 1991, pp. 117–134 (URL
+〈https://doi.org/10.1007/978-1-4899-0730-1_14 〉).
+[57] C. Rojahn, J.A. Heintz, A. Hortacsu, J. Clark, L. Ewing, J.D. Goltz, W.T. Holmes, E.
+Petty, G. Priest, A. Turner, et al., 2004. Vertical evacuation from tsunamis: A guide
+for community officials. FEMA, (Ed).
+[58] S. Sarjamee, I. Nistor, A. Mohammadian, Large eddy simulation of extreme hydrodynamic forces on structures with mitigation walls using openfoam, Nat.
+Hazards 85 (3) (2017) 1689–1707.
+[59] K. Schulz, July 2015a. How to stay safe when the big one comes.
+[60] K. Schulz, The really big one, Anal. Seismol. (July) (2015) (URL 〈http://www.
+newyorker.com/magazine/2015/07/20/the-really-big-one 〉).
+[61] B.M. Sleeter, N.J. Wood, C.E. Soulard, T.S. Wilson, Projecting community changes
+in hazard exposure to support long-term risk reduction: a case study of tsunami
+hazards in the us pacific northwest, Int. J. Disaster risk Reduct. 22 (2017) 10–22.
+[62] J.H. Sorensen, Hazard warning systems: review of 20 years of progress, Nat.
+Hazards Rev. 1 (2) (2000) 119–125 (URL 〈http://dx.doi.org/10.1061/(ASCE)1527-
+6988(2000)1:2(119) 〉.
+[63] J.H. Sorensen, D.S. Mileti, Protective action initiation time estimation for dam
+breaches, controlled dam releases, and levee breaches or overtopping. Tech. rep., U.
+S. Army Corps of Engineers Institute for Water Resources Risk Management Center
+(CEIWR-RMC), Davis, CA, 2017.
+[64] J.H. Sorensen, B.L. Shumpert, B.M. Vogt, Planning for protective action decision
+making: evacuate or shelter-in-place, J. Hazard. Mater. 109 (1) (2004) 1–11.
+[65] Y. Sun, F. Nakai, K. Yamori, M. Hatayama, Tsunami evacuation behavior of coastal
+residents in kochi prefecture during the 2014 iyonada earthquake, Nat. Hazards 85
+(1) (2017) 283–299 (URL 〈http://dx.doi.org/10.1007/s11069-016-2562-z 〉).
+[66] T. Takabatake, T. Shibayama, M. Esteban, H. Ishii, G. Hamano, Simulated tsunami
+evacuation behavior of local residents and visitors in kamakura, japan, Int. J.
+Disaster Risk Reduct. 23 (2017) 1–14 (URL 〈http://www.sciencedirect.com/
+science/article/pii/S2212420917300158 〉).
+[67] J.C. Thiele, R marries netlogo: introduction to the rnetlogo package, J. Stat. Softw.
+58 (2014) 2 (URL 〈http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.
+2011.00180.x/abstract 〉).
+[68] J.C. Thiele, W. Kurth, V. Grimm, RNetLogo: an R package for running and exploring
+individual-based models implemented in NetLogo, Methods Ecol. Evol. 3 (3) (2012)
+480–483 (URL 〈http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2011.
+00180.x/abstract 〉).
+[69] V. Titov, A.B. Rabinovich, H.O. Mofjeld, R.E. Thomson, F.I. González, The global
+reach of the 26 december 2004 sumatra tsunami, Science 309 (5743) (2005)
+2045–2048 (URL 〈http://science.sciencemag.org/content/309/5743/2045 〉).
+[70] H. Tsushima, K. Hirata, Y. Hayashi, Y. Tanioka, K. Kimura, S. Sakai, M. Shinohara,
+T. Kanazawa, R. Hino, K. Maeda, Near-field tsunami forecasting using offshore
+tsunami data from the 2011 off the pacific coast of tohoku earthquake, Earth,
+Planets Space 63 (7) (2011) 821–826 (URL 〈http://dx.doi.org/10.5047/eps.2011.
+06.052 〉).
+[71] H. Wang, A. Mostafizi, L.A. Cramer, D. Cox, H. Park, An agent-based model of a
+multimodal near-field tsunami evacuation: decision-making and life safety, Transp.
+Res. Part C: Emerg. Technol. 64 (2016) 86–100 (URL 〈http://www.sciencedirect.
+com/science/article/pii/S0968090×15004106 〉).
+[72] H.-L. Wei, M.K. Lindell, Washington households' expected responses to tsunami
+threat from mt. rainier, Int. J. Disaster Risk Reduct. 22 (2017) 77–94.
+[73] U. Wilensky, Netlogo.(ccl. northwestern. edu/netlogo).Center for Connected
+Learning and Computer Based Modeling, Northwestern University, 1999.
+[74] N. Wood, J. Jones, J. Peters, K. Richards, Pedestrian evacuation modeling to reduce
+vehicle use for distant tsunami evacuations in hawaii, Int. J. Disaster Risk Reduct.
+28 (2018) 271–283.
+[75] N. Wood, J. Jones, J. Schelling, M. Schmidtlein, Tsunami vertical-evacuation
+planning in the u.s. pacific northwest as a geospatial, multi-criteria decision problem, Int. J. Disaster Risk Reduct. 9 (2014) 68–83 (URL 〈http://www.sciencedirect.
+com/science/article/pii/S2212420914000387 〉).
+[76] N. Wood, J. Jones, M. Schmidtlein, J. Schelling, T. Frazier, Pedestrian flow-path
+modeling to support tsunami evacuation and disaster relief planning in the us pacific northwest, Int. J. Disaster Risk Reduct. 18 (2016) 41–55.
+[77] N. Wood, C. Soulard, Variations in community exposure and sensitivity to tsunami
+hazards on the open-ocean and strait of juan de fuca coasts of washington. Tech.
+Rep., U.S. Geological Survey Scientific Investigations, 2008a.
+[78] N. Wood, C. Soulard, Variations in population exposure and sensitivity to lahar
+hazards from mount rainier, washington, J. Volcanol. Geotherm. Res. 188 (2008)
+367–378.
+[79] N.J. Wood, Variations in city exposure and sensitivity to tsunami hazards in oregon.
+Tech. Rep. 5283, U.S. Geological Survey Scientific Investigations Report, 2007.
+[80] N.J. Wood, C.G. Burton, S.L. Cutter, Community variations in social vulnerability to
+cascadia-related tsunamis in the us pacific northwest, Nat. Hazards 52 (2) (2010)
+369–389.
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+12
+
+[81] N.J. Wood, J.W. Good, Perceptions of earthquake and tsunami issues in u. s. pacific
+northwest port and harbor communities, Int. J. Mass Emerg. Disasters 23 (3) (2005)
+103–138.
+[82] N.J. Wood, J. Jones, S. Spielman, M.C. Schmidtlein, Community clusters of tsunami
+vulnerability in the US Pacific Northwest, Proc. Natl. Acad. Sci. USA 112 (17)
+(2015) 5354–5359 (URL 〈http://www.pnas.org/content/112/17/5354.abstract 〉).
+[83] N.J. Wood, J. Jones, S. Spielman, M.C. Schmidtlein, Community clusters of tsunami
+vulnerability in the US pacific northwest, Proc. Natl. Acad. Sci. USA 112 (17)
+(2016) 5354–5359.
+[84] N.J. Wood, J. Ratliff, J. Peters, Community exposure to tsunami hazards in california. Tech. rep., 2013.
+[85] N.J. Wood, M.C. Schmidtlein, Anisotropic path modeling to assess pedestrian-evacuation potential from cascadia-related tsunamis in the us pacific northwest, Nat.
+Hazards 62 (2) (2012) 275–300.
+[86] N.J. Wood, M.C. Schmidtlein, Community variations in population exposure to
+near-field tsunami hazards as a function of pedestrian travel time to safety, Nat.
+Hazards 65 (3) (2013) 1603–1628.
+[87] H.-C. Wu, L.M. K., P.C. S., S.-K. Huang, Logistics of Hurricane Evacuation in
+Hurricane IKE, Nova Science Publishers, Hauppauge NY, 2013, pp. 127–140.
+[88] H.-C. Wu, M.K. Lindell, C.S. Prater, Logistics of hurricane evacuation in hurricanes
+katrina and rita, Transp. Res. Part F: Traffic Psychol. Behav. 15 (4) (2012) 445–461.
+[89] K. Xu, R.A. Davidson, L.K. Nozick, T. Wachtendorf, S.E. DeYoung, Hurricane evacuation demand models with a focus on use for prediction in future events, Transp.
+Res. Part A: Policy Pract. 87 (2016) 90–101 (URL 〈http://www.sciencedirect.com/
+science/article/pii/S096585641600046X 〉).
+A. Mostafizi et al. International Journal of Disaster Risk Reduction xxx (xxxx) xxx–xxx
+13

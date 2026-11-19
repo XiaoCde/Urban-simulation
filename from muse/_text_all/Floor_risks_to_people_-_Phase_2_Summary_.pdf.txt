@@ -1,0 +1,78 @@
+Flood risks to people – Phase 2 
+Technical Summary: FD2321 
+Joint Defra / EA Flood and Coastal Erosion Risk Management R&D 
+programme 
+Background to R&D project 
+Results of R&D project 
+Flooding from rivers, estuaries and the sea poses a risk to people as well as causing significant economic 
+impacts. In 1953 the North Sea floods caused approximately 2500 deaths across the UK and northern Europe, 
+and concentrations of fatalities have been associated with flash floods such as Lynmouth in Devon (1952, over 
+30 deaths) and Vaison-la-Romaine in France (1992, 38 deaths). In the UK there were a number of fatalities 
+associated with the Easter 1998 and Autumn 2000 floods. In August 2004, a major airborne rescue operation 
+was required to rescue victims of the Boscastle flood and in January 2005 the media reported 3 fatalities in 
+flooding in Carlisle and surrounding areas. 
+Over the last 50 years a wide range of flood risk management measures have reduced the risks to people in the 
+UK. Flood risks cannot be completely eliminated, but by identifying hot spots where people are at greatest risk 
+and prioritising effort, Government aims for flood risk management can be supported. At present there is no 
+method in use to estimate and map the risks to people in the UK. The “Risks to People- Phase 2” (FD2321) has 
+developed and demonstrated a method for assessing and mapping serious injury or fatalities from flooding 
+during, or in the immediate aftermath, of a flood event. This Phase built on Phase 1 (FD2317) and links with 
+other existing Defra and Environment Agency R&D projects. The Risks to People (R2P) method is nested within 
+a ‘Source - Pathway - Receptor’ (S-P-R) model, predominately dealing with a key component of the receptors. 
+Flood Risk is combination of probabilities and consequences. Considering the R2P method, probability is 
+associated with flood event due to high water levels and the failure of a flood defence system. The 
+consequences included are serious harm or fatality during or within the week following a flood event. 
+The magnitudes of consequences are given as “number of serious injuries and fatalities”. Estimation of the 
+probability of the consequences has three components: 
+• the probability of the hazard occurrence and its characteristics 
+• the probability of the area and receptors being exposed to the hazard 
+• the probability of harm resulting from exposure and vulnerability to the hazard. 
+The R2P method is a form of multi-criteria assessment based on the concepts of flood hazard rating and scores 
+of both area vulnerability and people vulnerability. Scores are combined for several Flood Hazard Zones of the 
+floodplain in order to estimate the annual average individual or societal risk. Zones within the floodplain are 
+characterised by different degrees of flood hazard depending on parameters such as distance from the source. 
+
+PB 11545 TS 
+Further copies are available from: 
+Defra Flood Management, Ergon house, 
+Horseferry Road, London SW1P 2AL 
+Tel: 020 7238 6000 
+Info-fm:defra.gsi.gov.uk 
+www.defra.gov.uk/environ/fcd/research 
+R&D Outputs and their Use 
+The method was tested using seven case studies, including the flooding in Carlisle in 2005. These examples 
+demonstrated that the method works well, providing sensible estimates of the fatalities and injuries for a range of 
+different fluvial and tidal flood events. This study demonstrated that this can be mapped as a parameter in its 
+own right. The risks to people method produces average annual risk estimates in quantitative terms. The 
+research recommends that at least 5 events should be considered to estimate annual average risks. However, 
+these numbers may be associated with large uncertainties and it is necessary to express and communicate the 
+flood risk maps in qualitative terms. 
+The project carried out in-depth review and extensive consultation with many interested groups to explore how 
+the method can be used to support a range of decisions. Based on these stakeholders’ needs, a number of best 
+practice guidance were developed. This guidance explains how the method can be applied in different flood risk 
+assessment and management activities. 
+The outputs of Phase 2 are presented in three reports as well as several conference papers and refereed 
+journals (forthcoming). 
+• FD2321/TR1 describes the Risks to People Methodology, describes the key concepts, provides an overview 
+of how the method was developed and shows a number of example applications. 
+• FD2321/TR2 is a guidance document that explains how the overall method or its component parts can be 
+applied in flood risk management for land use planning, the management of flood defences, measures for
+responding to flooding and finally, in ongoing and new research projects. 
+• FD2321/PR – the Project Record includes the outputs of consultation, workshops and detailed background 
+research. 
+The research has a wide range of potential applications from raising awareness of the dangers of flood water, 
+targeting flood warning, emergency planning, development control and flood mapping. It will certainly be 
+extremely useful for identifying ‘hot spots’ and for steering the development of risk management measures. 
+The approaches developed can make use of information from other projects, such as the National Flood Risks 
+Assessment (NaFRA) and be incorporated into the overall RASP framework as well supporting Catchment Flood 
+Management Plans and more local initiatives to understand manage flood risks. 
+This R&D Technical Summary relates to R&D Project FD2321 and the following R&D outputs: 
+R&D Technical Report FD2321/TR1 –Risks to people – phase 2. Published March 2006. 
+R&D Technical Report FD2321/TR2 –Risks to people – phase 2. Published March 2006. 
+R&D Technical Report FD2321/PR1 –Risks to people – phase 2. Published March 2006. 
+Publication Internal Status: Released Internally External Status: Released to Public Domain 
+Project Manager: Suresh Surendran, Environment Agency 
+Research Contractor: David Ramsbottom, HR Wallingford, Howbery Park, Wallingford, OX14 8BA 
+The above outputs may be downloaded from the Defra/EA Joint R&D FCERM Programme website 
+(www.defra.gov.uk/environ/fcd/research). Copies are also available via the Environment Agency’s science publications 
+catalogue (http://publications.environment-agency.gov.uk/epages/eapublications.storefront) on a print-on-demand basis. 

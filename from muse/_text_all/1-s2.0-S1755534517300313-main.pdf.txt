@@ -1,0 +1,635 @@
+Modeling joint evacuation decisions in social networks: The case of
+Hurricane Sandy
+Arif Mohaimin Sadri a,*
+, Satish V. Ukkusuri a
+, Hugh Gladwin b
+a Lyles School of Civil Engineering, Purdue University, 550 Stadium Mall Drive, West Lafayette, IN 47907, USA
+bDepartment of Global and Sociocultural Studies, Florida International University, 3000 NE 151st St, North Miami, FL 33181, USA
+ARTICLE INFO
+Keywords:
+Hurricane Sandy
+Evacuation decision
+Social network
+Ego-centric
+Dyadic level
+ABSTRACT
+Coastal areas of the United States are vulnerable to substantial loss of lives and property damage
+from repeatedly occurring hurricanes and evacuation is the usual recourse to prevent loss of life
+when high storm surge threatens. The fundamental question in evacuation modeling is to explore
+the complex evacuation decision-making process leading to an individual’s decision to evacuate or
+not during a hurricane threat. Recent studies suggest that the social network characteristics of
+individuals could potentially determine overall evacuation patterns. This study explores the joint
+evacuation decisions of individuals in personal networks by using ego-centric social network data
+obtained from Hurricane Sandy and by considering the nested structure of the ego-centric network
+data, i.e. close contacts (alters) as nested within an individual (ego). In this regard, the study
+develops a multinomial multilevel model of joint evacuation decisions at the dyadic (ego-alter tie)
+level utilizing a Hierarchical Generalized Linear Modeling (HGLM) approach. Model estimation
+results suggest factors that define a social tie (contact frequency, discussion topic and geographic
+proximity) significantly influence the evacuation decisions between individuals and their social
+partners. In addition, individuals’ (both ego and alter) own socio-demographics such as age,
+marital status, previous evacuation experience, evacuation order, household’s type, size, location
+and proximity to a water body also affect the decision to evacuate. These findings are useful to
+help emergency managers implement efficient evacuation strategies and to facilitate planning by
+policymakers by determining fractions of people evacuating or not for a major hurricane within
+the context of their social networks.
+1. Introduction and motivation
+Hurricane Sandy (October 2012) caused about 254 deaths in the US, Caribbean, and Bahamas with an estimated economic loss of
+$65 billion (USD) (Ehrhart et al., 2012). Seventy-two fatalities, including 41 drownings from storm surge, resulted from Sandy’s wind
+and flood impact (Gladwin et al., 2013). Timely evacuation could have averted such storm surge deaths that were higher than all but two
+prior hurricanes (Katrina and Camille) in the past 60 years (National Hurricane Center, 2015). Most of Katrina’s direct storm surge
+drowning deaths occurred in Mississippi included 200 fatalities that is nearly 0.00054% of the population. While Sandy’s wind and
+waves heights were less than Katrina’s category 4 hurricane winds and 30 foot waves in Mississippi, the death toll did not remotely
+approach the same proportion of the population affected by Katrina in Mississippi. Nonetheless, this death toll and what it could have
+been in a category four or five hurricane mandates further study of public evacuation decision-making for Sandy. Most of the New Jersey
+* Corresponding author.
+E-mail addresses: sadri.buet@gmail.com (A.M. Sadri), sukkusur@purdue.edu (S.V. Ukkusuri), gladwin@fiu.edu (H. Gladwin).
+Contents lists available at ScienceDirect
+Journal of Choice Modelling
+journal homepage: www.elsevier.com/locate/jocm
+https://doi.org/10.1016/j.jocm.2017.02.002
+Received 18 February 2017; Accepted 19 February 2017
+Available online 29 March 2017
+1755-5345/© 2017 Elsevier Ltd. All rights reserved.
+Journal of Choice Modelling 25 (2017) 50–60
+
+and New York residents who were interviewed for this study lived at locations where they probably should have evacuated but 74% did
+not finally evacuate (Fig. 2). By the time of the evacuation order many people were aware of the storm but apparently decided they
+would be safe staying in their homes. However, research done in the framework of Lindell’s protective action decision model (Lindell
+et al., 2005; Lindell and Prater, 2007a, b) and household decision modeling (Gladwin et al., 2007) indicate that psychological and social
+factors are very important in translating hazard warning information into a collective decision. This research indicates that social
+networks within and outside of households are likely to play a major role in facilitating evacuation decision-making.
+A likely mechanism for the effect of social networks in evacuation decision-making is social capital operating in social networks and
+social ties both traditionally defined, and as augmented by social media. According to one definition of social capital, individuals
+exchange resources such as information, ideas, support and others through relationships with other people, thus considering social
+capital as the extent to which an individual involves himself in different informal networks as well as formal civic organizations
+(Putnam, 1995, 2001). This conceptualizes social capital as the many different ways members of a given community interact with each
+other as an indication of that community’s associational life and civic health, including participating in recreational activities, talking to
+neighbors, joining political parties or environmental organizations and so on. Similarly, Coleman defined social capital by its function
+that includes different entities with two common elements: an aspect of social structures and certain facilitating actions of actors within
+the structure (Coleman, 1988). The prospect of social capital in building more resilient communities has been explored recently
+(Aldrich, 2012) explaining how such communities may become proactive in absorbing sudden shocks specially during post-disasters.
+That study identified social capital as the single most contributing factor during post-disaster recovery and suggested individuals and
+neighborhoods with weaker ties faced more difficulties as a result of inaccurate interactions with organized and mobilized groups.
+A more network-oriented perspective relevant to social capital is to consider the personal networks of individuals’ i.e. ego-centric
+social networks (Borgatti and Halgin, 2011; Burt, 1984, 1985, 2000; Halgin and Borgatti, 2012). The General Social Survey (GSS),
+first conducted in 1972, measured core discussion networks among Americans (Burt, 1985; Marsden, 1987) and several studies have
+used these GSS discussion network measures (Brashears, 2011; Wellman, 1979). The particular questionnaire item involved from GSS
+has been widely used by researchers because of its parsimony, general nature, applicability to various contexts and ability to capture
+ego’s core discussion networks without focus on specific network content (Bailey and Marsden, 1999; Burt, 1984; Carrasco et al., 2013;
+Kowald et al., 2010; Sadri et al., 2015a; van den Berg et al., 2009). In contrast, Granovettor gave more stress to the cohesive power of
+weak ties and suggested that occasional and informal ties have the ability to link different groups of individuals that could provide access
+to newer resources or support (Granovetter, 1973). As a result, conceptual debates on social capital cannot be resolved in an empirical
+vacuum (Grootaert et al., 2003).
+Frequently occurring hurricanes in the coastal areas of United States require that different stakeholders, particularly emergency
+planners and officials, understand the overall evacuation process thoroughly and identify key determinants of evacuation behavior in
+reducing the amount of risk associated with vulnerable communities. The key requirement is to explore evacuation decision-making
+behavior (i.e. who evacuates and who does not) and the causal factors influencing this behavior. Within the overall amount of
+research conducted on the issue of evacuation, few studies do this. The central idea of this paper is to analyze joint evacuation decisionmaking behavior of individuals in a personal network setting using ego-centric social network data obtained from Hurricane Sandy and
+considering the nested structure of the data i.e. friends or close contacts (alters) being nested within an individual (ego). In this regard,
+this study develops a multinomial multilevel model of joint evacuation decision outcome at the dyadic (ego-alter tie) level using
+Hierarchical Generalized Linear Modeling (HGLM) approach to investigate the effects of relational or tie attributes in addition to
+individuals’ own socio-demographic characteristics.
+Social media served as an essential source of information sharing during Hurricane Sandy. Many residents lacking access to traditional sources of information (television for example), received information on smart-phones using social media (Kaufman et al., 2012).
+Social media communications in areas without power (Midtown Manhattan was the most common tweeting location) continued
+throughout and after the storm as the continuous distribution of tweets spread throughout the city (Floating Sheep, 2012). While social
+media pertains to virtual or online social connections, they can reflect real social ties that can influence individual evacuation decisions.
+Hasan and Ukkusuri found that warning information propagates faster within networks with greater inter-community connections using
+a simulation based approach (Hasan and Ukkusuri, 2011). Another earlier study presented a contagion model to explain how people first
+receive emergency warning information and then spread the information to others (Rogers and Sorensen, 1991). These network effects
+were stressed in the policy proposal of Gladwin et al. on necessary actions required by appropriate agencies and organizations to support
+social science research on the major issues in the hurricane forecast and warning system (Gladwin et al., 2007). Social network characteristics and warning information sources significantly influenced individual-level evacuation decision making during Hurricane
+Sandy (Sadri et al., 2016).
+This study is organized as follows: the next section summarizes existing literature on hurricane evacuation decision-making; Section
+3 describes the data and explains the personal network research design approach; Section 4 presents the methodology used to develop
+the model; Section 5 elaborates the model estimation results; and Section 6 concludes the study with a discussion of key findings.
+2. Background and related work
+Evacuation is a typical form of travel during extreme events and it is the usual recourse to prevent loss of life if high storm surge
+occurs. However, evacuees often show synchronized behavior in terms of when they depart and what route they take. (Wolshon, 2002).
+Several studies show important factors affecting evacuation decisions such as hurricane trajectory and warning system, characteristics of
+evacuees and their households, etc. to explain the overall evacuation process (Baker, 1991; Carnegie and Deka, 2010; Gladwin et al.,
+2001, 2007; Lindell and Prater, 2007b; Urbina and Wolshon, 2003). Dash and Gladwin reviewed research showing that households who
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+51
+
+are expected to evacuate do not evacuate and vice versa, as well as many contradictory effects on evacuation of socio-demographic
+characteristics such as age, gender, race, ethnicity, income, children or elderly persons in the household, disability, previous experience, and geographic-location (Dash and Gladwin, 2007). Studies of evacuation in one major hurricane (e.g Peacock et al. for Hurricane
+Andrew) typically find as significant variables such as being in an evacuation zone, household size, and presence of elderly people and
+children (Peacock et al., 1997). On the other hand, comparing storms, Whitehead et al. found storm intensity to be the principal
+determinant of the decision to evacuate (Whitehead et al., 2000). However, Lindell et al. showed stronger correlations between
+evacuation decisions and geographic characteristics, information utilization, evacuation order, official warning and so on (Lindell et al.,
+2005).
+Some studies developed statistical models presenting a diverse set of behavioral aspects related to evacuation decisions (Fu and
+Wilmot, 2004, 2006; Solis et al., 2009). Mileti and Sorenson introduced the notion of risk perception based on personal assessment of
+own risk in addition to that of family and household (Mileti and Sorensen, 1987). Hasan et al. developed a random parameters binary
+logit model of hurricane evacuation decision where the random parameters account for the heterogeneous responses of households
+towards a major hurricane (Hasan et al., 2010). That study found heterogeneities in terms of location, evacuation notice, work constraint, and the number of children. Apart from modeling the decision to evacuate, other studies have explored follow up questions such
+as (a) when to evacuate? (Fu and Wilmot, 2004, 2006; Hasan et al., 2013; Lindell and Prater, 2007a), (b) mobilization time, i.e., time
+elapsed from decision to evacuate to actual evacuation (Dixit et al., 2008, 2011; Sadri et al., 2013a), (c) where to evacuate? (Cheng et al.,
+2008; Mesa-Arango et al., 2012), (d) which mode of travel? (Deka and Carnegie, 2010; Sadri et al., 2014) (e) which route to take?
+(Murray-Tuite et al., 2012; Sadri et al., 2013b, 2015b) among others.
+Social networks characteristics of individuals, however, can also affect the underlying evacuation patterns. These social ties pertain
+to informal networks based on neighbors, co-workers, family members, and friends (Gladwin et al., 2007). Drabek and Boggs found that
+individuals with small social networks are less likely to evacuate (Drabek and Boggs, 1968). Clifford found that social ties affect the
+disaster warning dissemination and adaptation (Clifford, 1956). Studies also show that African American households with stronger
+kinship ties are more likely to spread out warning information and evacuate (Perry, 1979; Quarantelli, 1985). Riad et al. identified
+’social influence’ as a social psychological process influencing the complex phenomenon of why people sometimes chose not to evacuate
+during a threat (Riad et al., 1999). However, that study concluded individuals are finally responsible for their decisions despite social
+influences. Using a simulation based approach, Hasan and Ukkusuri suggested that an individual’s risk perception can be socially
+influenced as evacuation decisions spread from individual to individual through social ties (Hasan and Ukkusuri, 2011). That study
+considered different community mixing patterns in explaining information cascade and evacuation decision behavior.
+While previous studies examined why people decide to evacuate based on individual level characteristics, this study focuses on
+evacuation decision-making behavior of people based on their social network structure. To the best of the authors’ knowledge, this is the
+first study to collect ego-centric social network data of individuals based on their response to Hurricane Sandy and examine the level of
+influence of social ties on their joint evacuation decision-making process. Estimation findings suggest that the characteristics of social
+ties, such as frequency of contact and geographic proximity significantly affect how people evacuate during a disaster in addition to
+some individual level characteristics. This study’s findings will help emergency planners and policy-makers develop better evacuation
+plans and strategies by determining fractions of people evacuating or not during a major hurricane and thus predicting evacuation
+demand more accurately.
+3. Data collection
+In this study, data was collected by surveying residents from high storm surge risk areas of New York and New Jersey all of whom
+participated in the survey voluntarily (see Fig. 1). The survey was funded by the National Science Foundation. The sample frame for the
+survey was based on US census block group areas in coastal New Jersey and New York likely to be at risk of life-threatening storm surge
+in a major hurricane; the block groups within five km of the coastline or inland tidal water body and having a mean elevation of less than
+eight meters. In addition, the study includes block groups, not meeting this condition, located in New York City evacuation Zone A.
+Approximately 350 block groups were randomly selected from the list of qualifying block groups and a sample of telephone numbers
+randomly drawn from those block group areas. Forty-five percent of the numbers were listed land line numbers and could be matched to
+block groups through address geo-coding. Fifty-five percent were of cell phones requiring additional pre-interview screening and
+Fig. 1. Outcome of evacuation decision at the dyadic level.
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+52
+
+verification with interview questions on zip code and distance to water body. Interviews employed English and Spanish questionnaires
+programmed on a computer-assisted telephone interview system and administered by trained bilingual interviewers. Approximately
+13% of numbers dialed reached a household where an interviewer contacted an eligible person and 40% of those persons completed the
+survey. The average interview length was 15 min.
+The survey was designed to reveal how individuals from the sample area reacted to Hurricane Sandy. While Sandy approached,
+people had a short time to understand and decide what to do. Respondents provided relevant details about their social ties with people
+with whom they interacted closely during Sandy. This included people with whom they talked, gave or received help, or stayed close
+before and during the storm. Ego-centric social network data of individuals were obtained (Borgatti and Halgin, 2011; Burt, 1984;
+Halgin and Borgatti, 2012; Wellman, 1979) by following the personal network research design (PNRD) approach. According to this
+approach, name generator questions create an exhaustive list of alters with whom the respondent (ego) has some type of relationship.
+Name interpreter items are then asked to elicit the attributes for each alter identified, as well as the relational (dyadic) attributes
+Fig. 2. Goe-locations of the respondents from New York and New Jersey.
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+53
+
+between ego and alter. The geographic proximity between ego and alters was part of the name interpreter items where egos provided the
+distance in miles (or equivalent driving distance in minutes) as open-ended responses. These open-ended responses were grouped into
+three categories: one mile or less (47.52%), two to five miles (18.21%), and more than five miles (34.27%). Many classical studies of
+ego-centric networks used this approach previously (Burt, 1984; Fischer, 1982; Laumann, 1966, 1973; Wellman, 1979). The specific
+questionnaire items from General Social Survey (GSS) involved have been widely used by researchers due to their applicability to
+various contexts and ability to capture ego’s core social contacts (Bailey and Marsden, 1999; Burt, 1984; Carrasco et al., 2013; Kowald
+et al., 2010; Sadri et al., 2015a; van den Berg et al., 2009). However, this approach has some limitations such as biases that occur in
+recall and people’s propensity to forget their close contacts among others (Brewer, 2000; Carrasco et al., 2013; Marin, 2004; Marin and
+Hampton, 2007).
+4. Social networks, social influence, and evacuation decisions
+Social networks include individuals as nodes and their relationships as links or edges. Such relationships help to construct a network
+of individuals (Jackson, 2010) and guide how the process of social influence takes place between peers. Studies have suggested that
+sources of influence may include personal influence between the direct contacts, influence between social groups or social circles, and
+influence from information sources such as media (Kadushin, 2012). As such, there exists a unique interdependence between the
+network structure, the influence mechanism, and the source itself (Maness, 2015). In recent times, transportation researchers have been
+extensively looking at social networks and social influence mechanisms to study several behavioral dimensions specific to travel and trip
+making such as mode choice (Dugundji and Walker, 2005), joint trip frequency for regular activity travel (Sadri et al., 2015a), carpooling (Rezende et al., 2016), participation in social activities (Carrasco and Miller, 2007), cycling (Sherwin et al., 2014), drunk
+driving (Kim and Kim, 2012), among others.
+Different forms of travel may possess varying social influence processes and it requires great care in selecting an appropriate social
+influence mechanism given the social networks under consideration and the type of influence sources (Maness, 2015). Evacuation is a
+specific form of travel during extreme events that helps to prevent loss of life when high storm surge occurs. During an evacuation, the
+key behavioral concern for emergency managers is to understand whether people would prefer to evacuate or not. Studies that presented
+the need to integrate social networks, social influence mechanisms and other social factors into evacuation modeling is discussed in
+Section 2. In this regard, Sadri et al. (2016) explored how social networks and information sources served the purpose of disseminating
+warning information during Hurricane Sandy. The study looked at the effects of social network size, homophily (similarity), heterogeneity (diversity), evacuation timing of the peers, average length of relationship on evacuation decision-making by using a mixed-logit
+approach and ego-centric network data obtained from the high storm surge areas.
+However, whether individuals, during major hurricanes, make similar decisions or equally perceive the risk due to peer pressure, is
+yet to be uncovered. This study is intended to unfold such joint evacuation decision-making behavior given individuals are parts
+identical social networks. In particular, this study explores the similarities in evacuation decisions between social partners as a function
+of the nature of social relationship, geographic proximity, and socio-demographic factors such as age, gender, marital status among
+others. This has been done by looking at the personal network data obtained from New York and New Jersey residents and by considering the nested structure of the ego-centric network data i.e. friends or close contacts (alters) being nested within an individual
+(ego).
+In order to model joint evacuation decisions at the dyadic (ego-alter) level, this study develops a multinomial multilevel model of
+evacuation decision outcomes using Hierarchical Generalized Linear Modeling (HGLM) approach. The categorical dependent variable
+was based on respondents (ego) self-report of their own evacuation decision as well as the people (alters) they closely interacted during
+Hurricane Sandy. Data shows that the number of social ties varied from a minimum of 1 to a maximum of 6 and shows a nesting structure
+i.e. alter level information being nested within each ego. As a result, the evacuation decision outcome at the dyadic level has four
+categories: (a) both ego and alter evacuate (b) ego evacuates, alter does not evacuate (c) alter evacuates, ego does not and (d) both ego
+and alter do not evacuate. Fig. 2 shows the distribution of the discrete evacuation decision outcomes at the dyadic (ego-alter) level.
+Table 1 presents descriptive statistics of explanatory variables used in the final model specification with mean, standard deviation,
+minimum and maximum. After accounting for missing data for some explanatory variables in the final model specification, the ego-level
+and alter-level observations are 412 and 1109 respectively.
+5. Modeling framework
+In this study, a Hierarchical Generalized Linear Modeling (HGLM) approach for a multinomial model is used to assess the joint
+evacuation decision outcome during a major hurricane at the dyadic (ego-alter) level. The multinomial multilevel modeling approach is
+appropriate for clustering data with a multinomial outcome considering the following two specific reasons: (1) multinomial analysis is
+more efficient than a series of binary logit analyses since the former approach involves a large number of comparisons (Scott Long,
+1997). With four categories such as the type of evacuation outcome at the dyadic level in this study, six comparisons should be made
+whereas the multinomial model needs only three comparisons. (2) multilevel analysis is advantageous over traditional ordinary least
+squares (OLS) regression analysis since it accounts for the dependence among alters within egos network and provides efficient
+parameter estimates in unbalanced, nested structure of data (Raudenbush and Bryk, 2002).
+However, the problem of evacuation decision-making involves four possible outcomes at the dyadic (ego-alter) level: (1) both ego
+and alter evacuate, (2) ego evacuates, alter does not evacuate, (3) alter evacuates, ego does not and (4) both ego and alter do not
+evacuate. Here, the variance in outcome variable can be analyzed at two hierarchical levels (Raudenbush and Bryk, 2002; Snijders et al.,
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+54
+
+1995; Van Duijn et al., 1999). Since alters (Level 1) are nested within ego’s networks (Level 2), the variance can be decomposed in
+variance between and within ego networks of individuals. Based on a multinomial logit link function, the evacuation decision outcome
+at the dyadic level can be modeled using this multilevel modeling framework. Considering the work presented in Raudenbush and Bryk
+about hierarchical modeling for multinomial data (Raudenbush and Bryk, 2002), let the dependent categorical variable be defined as:
+Emij¼
+ 1; if Rij ¼ m
+0; Otherwise (1)
+where
+ Emij is the dependent variable for level ij (ego-alter)
+ Rij is the response variable for level ij (ego-alter)
+ m ¼ 1; 2; …:::; M
+ M is the number of discrete categories.
+Now, the probability that Rij takes the value of m is defined as:
+P
+
+Rij ¼ m
+¼ φmij; m ¼ 1; 2;…:; M (2)
+Since we have four discrete outcomes related to the evacuation decisions at the dyadic level, here M ¼4. Thus we get:
+P
+
+Rij¼ 1
+
+¼ φ1ij (3)
+P
+
+Rij¼ 2
+
+¼ φ2ij (4)
+P
+
+Rij¼ 3
+
+¼ φ3ij (5)
+P
+
+Rij ¼ 4
+
+¼ φ4ij ¼ 1  φ1ij  φ2ij  φ3ij (6)
+The probabilities in (2) can be defined as the following multinomial logit link function for each category m ¼1, 2, …., (M-1):
+ηmij ¼ logφmij
+φMij
+¼ logP
+
+Rij ¼ m
+
+P
+
+Rij ¼ M (7)
+where category M is the ’reference category’ and the outcomes at Level-1 are the log-odds of falling into category m relative to
+category M. Now, Level-1 (ego-alter level) structural model ðijÞ can be defined for m ¼1, 2, …., (M-1) as:
+Table 1
+Descriptive statistics of the explanatory variables.
+Explanatory Variables Mean Standard Deviation Minimum Maximum
+(a) Level 1 (Ego-Alter level variables)
+Alter gender (1 if male, 0 if female) 0.476 0.500 0 1
+Alter income (1 if alter belongs to high income group, 0 otherwise) 0.206 0.404 0 1
+Alter age in years 51.237 16.256 10 95
+Discussion topic (1 if topic of discussion is ’family’ in general, 0 otherwise) 0.537 0.499 0 1
+Frequency of contact (1 if contact frequency is ’almost every day’ in general, 0 otherwise) 0.546 0.498 0 1
+Geographic proximity (1 if geographic proximity more than five
+miles or fifteen minutes’ drive, 0 otherwise)
+0.343 0.475 0 1
+Number of observations 1109
+(b) Level 2 (Ego level variables)
+Marital Status (1 if married, 0 otherwise) 0.592 0.492 0 1
+Household size (1 if household includes only a single person, 0 otherwise) 0.172 0.378 0 1
+Age (1 if ego is 65 years or elder, 0 otherwise) 0.209 0.407 0 1
+Proximity to ocean or large water body (1 if ego lives within 25 miles of
+an ocean or large water body, 0 otherwise)
+0.959 0.199 0 1
+Number of years living in the present county/city 27.165 18.743 1 88
+Type of household (1 if ego lives in a single-family home, 0 otherwise) 0.704 0.457 0 1
+Evacuation experience (1 if evacuated in a previous storm, 0 otherwise) 0.262 0.440 0 1
+Evacuation order from emergency officials (1 if received an evacuation order, 0 otherwise) 0.398 0.490 0 1
+Location (1 if New York, 0 if New Jersey) 0.495 0.501 0 1
+Number of observations 412
+Evacuation decisions (ego):
+% Evacuees (39.6% alters evacuated) 25.5
+% Non-Evacuees (15.1% alters evacuated) 74.5
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+55
+
+ηmij ¼ β0jðmÞ þXAm
+a¼1
+βajðmÞXaij (8)
+Here, A are the attributes and Xaij is the ath attribute out of A attributes in total for m ¼1, 2, …., (M-1). In case of ego-centric
+networks, this level refers to a tie between ego and alter or ego-alter level represented by alter i and ego j or simply the tie ðijÞ. In
+this regard, the variables Xaij represent attributes specific to alters or the relationship between the ego and alter. For M ¼4 we have the
+following 3 equations:
+η1ij ¼ β0jð1Þ þXA1
+a¼1
+βajð1ÞXaij (9)
+Table 2
+Multinomial logit estimates for evacuation outcome at the dyadic level.
+Coefficient (β) Standard Deviation z-statistic p Odds-ratio (Exp (β))
+Category 1: both ego and alter evacuate (base)
+Category 2: ego evacuates, alter does not
+Constant 0.089 1.231 0.07 0.91
+Alter age in years 0.028 0.012 2.26 ** 1.03
+Alter income (1 if alter belongs to high income group, 0 otherwise) 0.750 0.290 2.59 ** 0.47
+Frequency of contact (1 if contact frequency is ’almost every day’ in
+general, 0 otherwise)
+0.695 0.198 3.52 *** 0.50
+Discussion topic (1 if topic of discussion is ’family’ in general, 0
+otherwise)
+0.616 0.243 2.53 ** 1.85
+Geographic proximity (1 if geographic proximity more than five miles or
+fifteen minutes’ drive, 0 otherwise)
+2.162 0.479 4.51 *** 8.68
+Household size (1 if household includes only a single person, 0 otherwise) 0.706 0.270 2.61 *** 2.03
+Proximity to ocean or large water body (1 if ego lives within 25 miles of an
+ocean or large water body, 0 otherwise)
+1.911 0.780 2.45 ** 6.76
+Evacuation experience (1 if evacuated in a previous storm, 0 otherwise) 1.041 0.566 1.84 * 0.35
+Evacuation order from emergency officials (1 if received an evacuation
+order, 0 otherwise)
+1.443 0.661 2.18 ** 0.24
+Category 3: alter evacuates, ego does not
+Constant 1.297 1.233 1.05 3.66
+Alter age in years 0.022 0.013 1.73 * 1.02
+Frequency of contact (1 if contact frequency is ’almost every day’ in
+general, 0 otherwise)
+0.456 0.205 2.22 ** 0.63
+Geographic proximity (1 if geographic proximity more than five miles or
+fifteen minutes’ drive, 0 otherwise)
+1.299 0.499 2.6 *** 3.67
+Age (1 if ego is 65 years or elder, 0 otherwise) 0.647 0.311 2.08 ** 0.52
+Marital Status (1 if married, 0 otherwise) 1.202 0.325 3.7 *** 3.33
+Household size (1 if household includes only a single person, 0 otherwise) 0.626 0.338 1.85 * 1.87
+Number of years living in the present county/city 0.017 0.007 2.36 ** 1.02
+Proximity to ocean or large water body (1 if ego lives within 25 miles of an
+ocean or large water body, 0 otherwise)
+1.306 0.740 1.76 * 3.69
+Type of household (1 if ego lives in a single-family home, 0 otherwise) 0.684 0.219 3.12 *** 0.50
+Evacuation experience (1 if evacuated in a previous storm, 0 otherwise) 1.201 0.586 2.05 ** 0.30
+Evacuation order from emergency officials (1 if received an evacuation
+order, 0 otherwise)
+3.239 0.665 4.87 *** 0.04
+Category 4: both ego and alter do not evacuate
+Constant 3.330 0.924 3.61 *** 27.94
+Alter age in years 0.026 0.012 2.23 ** 1.03
+Alter gender (1 if male, 0 if female) 0.388 0.151 2.57 ** 1.47
+Alter income (1 if alter belongs to high income group, 0 otherwise) 0.458 0.217 2.12 ** 0.63
+Discussion topic (1 if topic of discussion is ’family’ in general, 0 otherwise) 0.480 0.189 2.54 ** 1.62
+Geographic proximity (1 if geographic proximity more than five miles or fifteen minutes’ drive, 0 otherwise) 1.482 0.465 3.18 *** 4.40
+Marital Status (1 if married, 0 otherwise) 0.577 0.224 2.58 ** 1.78
+Number of years living in the present county/city 0.016 0.005 3.13 *** 1.02
+Evacuation experience (1 if evacuated in a previous storm, 0 otherwise) 1.329 0.550 2.41 ** 0.26
+Evacuation order from emergency officials (1 if received an evacuation order, 0 otherwise) 3.709 0.641 5.79 *** 0.02
+Location (1 if New York, 0 if New Jersey) 0.558 0.157 3.56 *** 1.75
+Number of observations 1109
+*** p<0.01. ** p<0.05. * p<0.10.
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+56
+
+η2ij ¼ β0jð2Þ þXA2
+a¼1
+βajð2ÞXaij (10)
+η3ij ¼ β0jð3Þ þXA3
+a¼1
+βajð3ÞXaij (11)
+Then, the Level-2 (ego level) structural model can be defined as:
+βajðmÞ ¼ γa0ðmÞ þXEq
+e¼1
+γaeðmÞWsj þ uajðmÞ ; a ¼ 0; … ; Am (12)
+where, E are the attributes, Wsj is the eth attribute out of E attributes in total, and γaeðmÞ are the corresponding coefficients. For ego-centric
+social networks, Level-2 is the ego-level, represented by the ego (j) i.e. characteristics related to ego.
+6. Model estimation results
+Following the modeling framework discussed above, a multi-level multinomial logit model is estimated in this study. As presented in
+Table 2, all of the variables included in the mixed logit model are statistically significant with plausible signs at the usual 5% or 10%
+levels of significance. Prior to estimating the full, two-level multinomial HGLM, to examine how much variation in evacuation decision
+exists between different egos, the empty model, which has no explanatory variable, was estimated using the following equations:
+ηmij ¼ β0jðmÞ ; m ¼ 1; 2; 3 ðEgo  Alter levelÞ (13)
+β0jðmÞ ¼ γ00ðmÞ þ u0jðmÞ; m ¼ 1; 2; 3 ðEgo  levelÞ (14)
+where ηmij is the log-odds of evacuation outcome relative to base category of both ego and alter evacuating, m ¼1 indicates the category
+ego evacuates but alter does not, m ¼2 refers to alter evacuates but ego does not, m ¼3 refers to both not evacuating, γ00ðmÞis the
+population average of the transformed probabilities and u0jðmÞ the random deviation from this average for group j. u0jðmÞ are assumed to
+be independent random variables with a normal distribution with mean zero and variance τ00. The estimated variances of the three
+intercept terms are significant (p<0.001), suggesting there is significant variation in the withdrawal rates among individuals (different
+egos). The final model contains the alter-level and ego-level variables listed in Table 2 which summarizes the HGLM estimates of
+coefficients in the final model for the outcome variables. The Intra-class Correlation Coefficient (ICC) (the proportion of variance in the
+outcome variable between egos) was 90%. For the final model specification, 67.91% of the variance has been reduced as compared to
+the fully unconditional model i.e. the proportion reduction in error.
+In this study, the case that both ego and alter evacuate (case 1) has been treated as the reference category. The constant terms
+suggest, all else being equal, it is more likely that both the ego and alter are more likely not to evacuate as compared to the other cases.
+This finding provides more evidence that people, in general, tend not to evacuate depending on several determining factors. This factor
+is similar to findings from Hurricane Ivan (Hasan et al., 2010) and depicts the overall unwillingness of people in the hurricane-prone
+regions to evacuate. This reality points to the importance of determining the causal factors that hinder the necessary evacuation.
+However, these factors and their effects can broadly be classified into three distinct groups:
+6.1. Effects of ego-alter relational (dyadic) attributes
+Relational attributes between ego and alter have differential effects on each type of evacuation outcome as shown in Table 2. These
+attributes include frequency of contact (indicating how often ego and alter contact each other), discussion topic (indicating the topic that
+occurs in their discussion in general) and geographic proximity (indicating how close or how far they live from each other). Frequency of
+contact was defined for cases where either ego or alter evacuates (case 2 and case 3) and found to be statistically significant. The results
+indicate that people contacting each other on a daily basis are more likely to evacuate compared to people with less frequent contact.
+Since contact frequency is defined for case 2 and case 3, there is no difference between case 1 and case 4 on account of frequency. More
+specifically, this implies that people tend to make similar evacuation decisions if they communicate more frequently. However, the
+likelihood that people make similar decisions (yes-yes, no-no decisions) declines as contact frequency decreases. This important finding
+indicates the evidence that frequently contacted persons are more concerned about the storm threat that allows them perceive and react
+to the situation in a similar manner. Discussion topic was defined for case 2 and case 4 suggesting that individuals discussing family
+matters (as compared to any other topic) had higher odds of not evacuating (85% and 62% respectively). This is relevant since most
+family discussion occurs among family members and there could be significant household matters constraining their evacuation
+(confirming findings of Gladwin et al. (2001)). However, the results indicate mixed effects since yes-yes (case 1) and no-yes (case 3)
+decisions are not different from each other. This is also indicative of family relations in social networks being responsible for withinhousehold negotiation and improvisation on the decision to evacuate. The variable geographic proximity was found to be statistically significant (p<0.01) and this was defined for all the three cases (cases 2, 3 and 4). Model estimation results show higher log-odds
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+57
+
+for each of these cases compared to the base case suggesting that alters living at a distance more than five miles (or fifteen minutes
+driving time) from their ego would be less likely to evacuate as opposed to those living in close proximity. In other words, these results
+indicate that the farther apart individuals live, the more likely it is that they make dissimilar decisions or similar negative decisions. This
+important finding suggests that a geographic proximity (closeness) of five miles allowed individuals to perceive the risk at a higher level
+to make similar positive decisions. and these individuals can be provided with special facilities (for example, evacuation buses) to reduce
+the level of congestion during evacuation.
+6.2. Effects of alter characteristics
+Apart from the significant dyadic attributes, individual attributes of ego and alter play significant roles in affecting the evacuation
+outcome at the dyadic level. For example, alter age shows higher mean odds (1.03 for case 2 and case 4; 1.02 for case 3) indicating the
+likelihood that both ego and alter evacuate reduces with the increased age of alters. On the other hand, alter income results in lower
+mean odds as defined for case 2 and case 4 (0.47 and 0.63 respectively) indicating that if alter belongs to the high income group they are
+less likely to evacuate. Alter gender was found to be highly significant for case 4 with higher mean odds (47%) which indicates that
+having male alters in the network makes it more likely that both ego and alter do not evacuate. These findings suggest how the
+characteristics of the people in social networks significantly impact evacuation decision-making.
+6.3. Effects of ego characteristics
+In the final model specification, characteristics related to ego include location, age, marital status, household size, proximity to large
+water body, evacuation experience and evacuation order from officials influence evacuation decision. For example, if ego is from New
+York it results in higher odds (75%) as defined for case 4 indicating that individuals and their social partners from this area are less likely
+to evacuate. This important finding captures the overall unwillingness of the people from New York to evacuate. If ego is an elderly
+person (65 years or over), ego is more likely to evacuate as suggested by lower odds (52%) defined for case 3. This important finding
+indicates the higher perception of risk by senior citizens. On the other hand, the odds for case 3 and case 4 were 3.33 and 1.78 times
+greater for egos who are married, respectively showing relative unwillingness of married individuals to evacuate. Similar effects were
+observed for the number of years ego lived in the present county or city. Ego being the only person in the household shows higher odds
+both for case 2 and case 3 suggesting the likelihood of either ego or alter to evacuate. Proximity to large water body or ocean (twentyfive miles or less) also suggests that either the ego or alter do not evacuate if ego living in close proximity (within 25 miles of an ocean or
+large water body). This should be given due consideration since individuals staying at close proximity needs to evacuate for safety.
+However, previous evacuation experience and receiving evacuation order from emergency officials result in lower mean odds for
+each of the cases compared to the base outcome (both ego and alter evacuate). This result provides a crucial insight on the fact that
+individuals having previous experience and receiving an evacuation order can persuade their social partners to evacuate and show
+synchronous evacuation behavior. These findings from Hurricane Sandy validates the findings from Hurricane Ivan (Hasan et al., 2010)
+and have important implications. The key take-away from this result is that the more people who receive mandatory evacuation orders
+from officials the more likely they will evacuate which can expedite the evacuation process. However, individuals having evacuation
+experience prior to Sandy were more likely to evacuate compared to those without prior experience. This result contrasts with Hurricane
+Ivan findings and depicts the importance of educating people in coastal regions who do not have previous experience about the necessity
+of evacuation. The odds of case 3 (alter evacuates, ego does not) relative to the base case were 0.50 times lower for ego living in a singlefamily home.
+7. Conclusions and key findings
+In this study, the role of social ties on evacuation behavior is explored by using ego-centric social network data obtained from
+Hurricane Sandy and by considering the hierarchical structure of the data i.e. friends or close contacts (alters) being nested within an
+individual (ego). With the help of Hierarchical Generalized Linear Modeling (HGLM) technique, this study develops a multinomial
+multilevel model of joint evacuation-decision outcome based at the dyadic (ego-alter tie) level. Estimation findings suggest that joint
+evacuation decisions of closely connected individuals are significantly influenced by several underlying factors. The main contribution
+of this study in the evacuation modeling literature is to report important dyadic or relational attributes being representative of the
+characteristics of social ties and dominating the joint evacuation decision outcome. Some of the key insights based on the final model
+specification are listed below:
+ All else being equal, it is more likely that both the ego and alter are less likely to evacuate.
+ Household size, location and proximity to large water body influence evacuation decision-making. People, staying in a single-person
+household, are less likely to evacuate. Individuals staying close to large water body are more likely to evacuate.
+ Previous evacuation experience and evacuation order from emergency officials significantly impact evacuation decision-making.
+Individuals who experienced a major hurricane previously and receive evacuation order have a heightened level of risk perception and thus evacuate.
+ Both ego and the alters (social partners) are more likely to evacuate if they contact each other daily and live in close geographic
+proximity (less than five miles or fifteen minutes’ drive).
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+58
+
+ If the topic of discussion between ego and alter is family matters in general, it has mixed effects on evacuation decisions at the dyadic
+level. This is indicative of family relations in social networks being responsible for within-household negotiation and improvisation
+on the decision to evacuate.
+ Age, gender, marital status and income of alters significantly impact evacuation outcome at the dyadic level. Age has heterogeneous
+effects on evacuation. For example, elderly egos are more likely to evacuate, whereas elderly alters are less likely to evacuate
+This study provides meaningful implications for a clear understanding of evacuation decision-making behavior that can help
+forecasters and emergency officials create targeted and efficient evacuation plans. Evacuation orders from officials make it more likely
+that individuals will evacuate as do frequently contacted social ties. Evacuation rates would be higher and faster for closely connected
+communities. Thus, strong social ties (more contact frequency) can serve the purpose of effective dissemination of warning information.
+On the other hand, if friends live far apart, chances of evacuation are significantly reduced. Based on this, group-level evacuation
+policies can be introduced for people residing in mandatory evacuation zones and increase the rate of overall evacuation. More consideration should be given to special population groups such as elderly people and senior citizens by providing them desired facilities
+required for evacuation. Increased public education is needed for people residing in the evacuation zones who never experienced a
+major hurricane.
+This study incorporates a disaggregate approach to model evacuation decision-making i.e. how an individual and close contact both
+behave during a major hurricane threat. However, a more aggregated approach would be to model evacuation decision-making at the
+individual level by including network measures like density, homophily, heterogeneity and so on to explore network effects. Also, the
+study is based on ego-centric social network data from the east coast i.e. New York and New Jersey during Hurricane Sandy. Future
+studies could collect data from similar types of disasters to validate the results obtained in this study and check if the model is applicable
+and transferable to other coastal areas in the United States. The survey did not obtain the actual content of the communication between
+ego and alter with respect to the hurricane or evacuation, however, such crisis communication patterns can also be important predictors
+of joint evacuation decisions.
+Acknowledgements
+The authors are grateful to National Science Foundation for the Grant CMMI-1131503 to support the research presented in this
+paper. Several questions used for the survey questionnaire were derived from earlier research on the Hurricane Sandy evacuation done
+by Hugh Gladwin and Betty Morrow supported by National Science Foundation grant CMMI-1322088. The survey was conducted by
+Hugh Gladwin of Florida International University. The writers also acknowledge Prof. Sharon Christ of Purdue University for her
+valuable feedbacks on estimating the multi-level model. The authors are grateful to the reviewers’ valuable comments that improved the
+manuscript. However, the authors are solely responsible for the findings presented in this study.
+References
+Aldrich, D.P., 2012. Building Resilience: Social Capital in Post-disaster Recovery. University of Chicago Press.
+Bailey, S., Marsden, P.V., 1999. Interpretation and interview context: examining the General Social Survey name generator using cognitive methods. Soc. Netw. 21,
+287–309.
+Baker, E.J., 1991. Hurricane evacuation behavior. Int. J. Mass Emerg. Disasters 9, 287–310.
+Borgatti, S.P., Halgin, D.S., 2011. On network theory. Organ. Sci. 22, 1168–1181.
+Brashears, M.E., 2011. Small networks and high isolation? A reexamination of American discussion networks. Soc. Netw. 33, 331–341.
+Brewer, D.D., 2000. Forgetting in the recall-based elicitation of personal and social networks. Soc. Netw. 22, 29–43.
+Burt, R.S., 1984. Network items and the general social survey. Soc. Netw. 6, 293–339.
+Burt, R.S., 1985. General social survey network items. Connections 8, 19–23.
+Burt, R.S., 2000. The network structure of social capital. Res. Organ. Behav. 22, 345–423.
+Carnegie, J., Deka, D., 2010. Using hypothetical disaster scenarios to predict evacuation behavioral response, Transportation Research Board In: Proceedings of the 89th
+Annual Meeting.
+Carrasco, J.A., Miller, E.J., 2007. The Social Dimension in Action: A Multilevel, Personal Network Model of Social Activity Frequency. In: Proceedings of the Transportation Research Board 86th Annual Meeting (No. 07-1026).
+Carrasco, J.A., Bustos, C., Cid Aguayo, B., 2013. Affective personal networks versus daily contacts: analyzing different name generators in an social activity-travel
+behaviour context. Transp. Surv. Method.: Best. Pract. Decis. Mak. 409.
+Cheng, G., Wilmot, C.G., Baker, E.J., 2008. A destination choice model for hurricane evacuation, In: Proceedings of the 87th Annual Meeting Transportation Research
+Board, Washington, DC, USA, pp. 13–17.
+Clifford, R.A., 1956. The Rio Grande flood: a comparative study of border communities in disaster. Natl. Acad. Sci. Natl. Res. Counc.
+Coleman, J.S., 1988. Social capital in the creation of human capital. Am. J. Sociol. S95–S120.
+Dash, N., Gladwin, H., 2007. Evacuation decision making and behavioral responses: Individual and household. Nat. Hazards Rev. 8, 69–77.
+Deka, D., Carnegie, J., 2010. Analyzing evacuation behavior of transportation-disadvantaged populations in northern New Jersey. In: Proceedings of the Transportation
+Research Board 89th Annual Meeting.
+Dixit, V., Pande, A., Radwan, E., Abdel-Aty, M., 2008. Understanding the impact of a recent hurricane on mobilization time during a subsequent hurricane. Transp. Res.
+Rec.: J. Transp. Res. Board 49–57.
+Dixit, V.V., Radwan, E.A., Board, T., 2011. Strategies to improve dissipation into destination networks using macroscopic network flow models. Fundam. Diagr. Traffic
+Flow. Theory 212.
+Drabek, T.E., Boggs, K.S., 1968. Families in disaster: reactions and relatives. J. Marriage Fam. 443–451.
+Dugundji, E.R., Walker, J.L., 2005. Discrete choice with social and spatial network interdependencies: an empirical example using mixed generalized extreme value
+models with field and panel effects. Transp. Res. Rec.: J. Transp. Res. Board 1921, 70–78.
+Ehrhart, B., Mildenhall, S., Jakubowski, S., Podlaha, A., Bowen, S., 2012. Annual Global Climate and Catastrophe Repor.
+Fischer, C.S., 1982. To Dwell Among Friends: Personal Networks in Town and City. University of Chicago Press.
+Sheep, Floating, 2012. Floating Sheep.
+Fu, H., Wilmot, C., 2004. Sequential logit dynamic travel demand model for hurricane evacuation. Transp. Res. Rec.: J. Transp. Res. Board 19–26.
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+59
+
+Fu, H., Wilmot, C., 2006. Survival analysis-based dynamic travel demand models for hurricane evacuation. Transp. Res. Rec.: J. Transp. Res. Board 211–218.
+Gladwin, C.H., Gladwin, H., Peacock, W.G., 2001. Modeling hurricane evacuation decisions with ethnographic methods. Int. J. Mass Emerg. Disasters 19, 117–143.
+Gladwin, H., Lazo, J.K., Morrow, B.H., Peacock, W.G., Willoughby, H.E., 2007. Social science research needs for the hurricane forecast and warning system. Nat.
+Hazards Rev. 8, 87–95.
+Gladwin, H., Morrow, B., Lazo, J., 2013. Communication and understanding of Hurricane Sandy storm surge forecast and warning information. Suppl. Slides.
+Granovetter, M.S., 1973. The strength of weak ties. Am. J. Sociol. 1360–1380.
+Grootaert, C., Narayan, D., Jones, V.N., Woolcock, M., 2003. Integrated Questionnaire for the Measurement of Social Capital. The World Bank Social Capital Thematic
+Group.
+Halgin, D.S., Borgatti, S.P., 2012. An introduction to personal network analysis and Tie Churn statistics using E-NETE. Connections 32, 37–48.
+Hasan, S., Mesa-Arango, R., Ukkusuri, S., 2013. A random-parameter hazard-based model to understand household evacuation timing behavior. Transp. Res. Part C:
+Emerg. Technol. 27, 108–116.
+Hasan, S., Ukkusuri, S., Gladwin, H., Murray-Tuite, P., 2010. Behavioral model to understand household-level hurricane evacuation decision making. J. Transp. Eng.
+137, 341–348.
+Hasan, S., Ukkusuri, S.V., 2011. A threshold model of social contagion process for evacuation decision making. Transp. Res. Part B: Methodol. 45, 1590–1605.
+Jackson, M.O., 2010. Social and economic networks. Princeton University Press.
+Kadushin, C., 2012. Understanding Social Networks: Theories, Concepts, and Findings. Oxford University Press, Oxford.
+Kaufman, S., Qing, C., Levenson, N., Hanson, M., 2012. Transportation during and after Hurricane Sandy.
+Kim, J.H., Kim, K.S., 2012. The role of sensation seeking, perceived peer pressure, and harmful alcohol use in riding with an alcohol-impaired driver. Accid. Anal. Prev.
+48, 326–334.
+Kowald, M., Frei, A., Hackney, J.K., Illenberger, J., Axhausen, K.W., 2010. Collecting data on leisure travel: the link between leisure contacts and social interactions.
+Procedia-Soc. Behav. Sci. 4, 38–48.
+Laumann, E.O., 1966. Prestige and Association in An Urban Community: An Analysis of an Urban Stratification System. Bobbs-Merrill, Indianapolis, New York.
+Laumann, E.O., 1973. Bonds of Pluralism: The Form and Substance of Urban Social Networks. Wiley-Interscience.
+Lindell, M.K., Lu, J.-C., Prater, C.S., 2005. Household decision making and evacuation in response to Hurricane Lili. Nat. Hazards Rev. 6, 171–179.
+Lindell, M.K., Prater, C.S., 2007. Critical behavioral assumptions in evacuation time estimate analysis for private vehicles: examples from hurricane research and
+planning. J. Urban Plan. Dev. 133, 18–29.
+Lindell, M.K., Prater, C.S., 2007. A hurricane evacuation management decision support system (EMDSS). Nat. Hazards 40, 627–634.
+Maness, M., 2015. Choice Modeling Perspectives on Social Networks, Social Influence, and Social Capital in Activity and Travel Behavior (Ph.D. Dissertation). University
+of Marylad.
+Marin, A., 2004. Are respondents more likely to list alters with certain characteristics?: Implications for name generator data. Soc. Netw. 26, 289–307.
+Marin, A., Hampton, K.N., 2007. Simplifying the personal network name generator alternatives to traditional multiple and single name generators. Field Methods 19,
+163–193.
+Marsden, P.V., 1987. Core discussion networks of Americans. Am. Sociol. Rev. 122–131.
+Mesa-Arango, R., Hasan, S., Ukkusuri, S.V., Murray-Tuite, P., 2012. Household-level model for hurricane evacuation destination type choice using hurricane Ivan data.
+Nat. Hazards Rev. 14, 11–20.
+Mileti, D.S., Sorensen J.H., 1987. Natural hazards and precautionary behavior. Taking care: Understanding and selfencouraging self-protective behavior, pp.189–207.
+Murray-Tuite, P., Yin, W., Ukkusuri, S., Gladwin, H., 2012. Changes in evacuation decisions between Hurricanes Ivan and Katrina. Transp. Res. Rec.: J. Transp. Res.
+Board 98–107.
+National Hurricane Center, 2015. Hurricanes in History.
+Peacock, W.G., Morrow, B.H., Gladwin, H., 1997. Hurricane Andrew: Ethnicity, Gender, and the Sociology of Disasters. Psychology Press.
+Perry, R.W., 1979. Evacuation decision-making in natural disasters. Mass Emerg. 4, 25–38.
+Putnam, R.D., 1995. Bowling alone: America’s declining social capital. J. Democr. 6, 65–78.
+Putnam, R.D., 2001. Bowling alone: the collapse and revival of American community. Simon Schuster.
+Quarantelli, E.L., 1985. Social support systems: Some behavioral patterns in the context of mass evacuation activities.
+Raudenbush, S.W., Bryk, A.S., 2002. Hierarchical Linear Models: Applications and Data Analysis Methods, 1. Sage.
+Rezende, P.H.D.R., Sadri, A.M., Ukkusuri, S.V., 2016. Social Network Influence on Mode Choice and Carpooling during Special Events: The Case of Purdue Game Day.
+In: Proceedings of the Transportation Research Board 95th Annual Meeting (No. 16-3466).
+Riad, J.K., Norris, F.H., Ruback, R.B., 1999. Predicting evacuation in two major disasters: risk perception, social influence, and access to Resources1. J. Appl. Soc.
+Psychol. 29, 918–934.
+Rogers, G.O., Sorensen, J.H., 1991. Diffusion of Emergency Warning: Comparing Empirical and Simulation Results, Risk Analysis. Springer, pp. 117–134.
+Sadri, A.M., Lee, S., Ukkusuri, S.V., 2015. Modeling social network influence on joint trip frequency for regular activity travel decisions. Transp. Res. Rec.: J. Transp.
+Res. Board 83–93.
+Sadri, A.M., Ukkusuri, S.V., Gladwin, H., 2017. The role of social networks and information sources on hurricane evacuation decision making. Nat. Hazards Rev.,
+04017005 https://doi.org/10.1061/(ASCE)NH.1527-6996.0000244.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., 2013. A random parameter ordered probit model to understand the mobilization time during hurricane evacuation.
+Transp. Res. Part C: Emerg. Technol. 32, 21–30.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2013. How to evacuate: model for understanding the routing strategies during hurricane evacuation. J.
+Transp. Eng. 140, 61–69.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2014. Analysis of hurricane evacuee mode choice behavior. Transp. Res. Part C: Emerg. Technol. 48, 37–46.
+Sadri, A.M., Ukkusuri, S.V., Murray-Tuite, P., Gladwin, H., 2015. Hurricane evacuation route choice of major bridges in Miami Beach, Florida. Transp. Res. Rec.: J.
+Transp. Res. Board 164–173.
+Scott Long, J., 1997. Regression models for categorical and limited dependent variables. Adv. Quant. Tech. Soc. Sci. 7.
+Sherwin, H., Chatterjee, K., Jain, J., 2014. An exploration of the importance of social influence in the decision to start bicycling in England. Transp. Res. Part A: Policy
+Pract. 68, 32–45.
+Snijders, T., Spreen, M., Zwaagstra, R., 1995. The use of multilevel modeling for analysing personal networks: networks of cocaine users in an urban area. J. Quant.
+Anthropol. 5, 85–105.
+Solis, D., Thomas, M., Letson, D., 2009. Hurricane evacuation household making-decision: Lessons from Florida, Selected Paper prepared for presentation at the
+Southern Agricultural Economics Association Annual Meeting, Atlanta, Georgia.
+Urbina, E., Wolshon, B., 2003. National review of hurricane evacuation plans and policies: a comparison and contrast of state practices. Transp. Res. Part A: Policy Pract.
+37, 257–275.
+van den Berg, P., Arentze, T., Timmermans, H., 2009. Size and composition of ego-centered social networks and their effect on geographic distance and contact frequency. Transp. Res. Rec.: J. Transp. Res. Board 1–9.
+Van Duijn, M.A., Van Busschbach, J.T., Snijders, T.A., 1999. Multilevel analysis of personal networks as dependent variables. Soc. Netw. 21, 187–210.
+Wellman, B., 1979. The community question: the intimate networks of East Yorkers. Am. J. Sociol. 1201–1231.
+Whitehead, J.C., Edwards, B., Van Willigen, M., Maiolo, J.R., Wilson, K., Smith, K.T., 2000. Heading for higher ground: factors affecting real and hypothetical hurricane
+evacuation behavior. Glob. Environ. Change Part B: Environ. Hazards 2, 133–142.
+Wolshon, B., 2002. Planning for the evacuation of new Orleans. Institute of transportation engineers. ITE J. 72, 44.
+A.M. Sadri et al. Journal of Choice Modelling 25 (2017) 50–60
+60

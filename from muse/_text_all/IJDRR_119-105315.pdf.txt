@@ -1,0 +1,1049 @@
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+Available online 15 February 2025
+2212-4209/© 2025 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license
+(http://creativecommons.org/licenses/by-nc-nd/4.0/).
+Staying or leaving: Unraveling the dynamics of evacuation 
+decisions among floodplain residents in central Vietnam
+Vo Hoang Ha a,b
+, Nguyen Cong Dinh b
+, Takeshi Mizunoya c,*
+a Graduate School of Science and Technology, University of Tsukuba, Tsukuba, 305-8572, Japan b Faculty of Economics and Development Studies, University of Economics, Hue University, 99 Ho Dac Di Street, Hue City, 49000, Viet Nam c Institute of Life and Environmental Sciences, University of Tsukuba, Tsukuba, 305-8572, Japan
+ARTICLE INFO
+Keywords:
+Natural disasters
+Flood risk
+Flood evacuation
+Evacuation decisions
+Evacuation behavior
+Central Vietnam
+ABSTRACT
+Households often refuse to evacuate until floodwaters surpass their coping thresholds. Grasping 
+the root causes of this behavior is crucial for implementing effective interventions amid escalating 
+flood risks. While existing literature offers insights into evacuation decisions for various hazards, 
+it overlooks key motivations and barriers specific to flood evacuation in rural Vietnam. This study 
+endeavors to bridge this gap by investigating the factors influencing rural households’ evacuation 
+decisions in response to the significant 2020 floods in Central Vietnam. Data for analysis were 
+gathered through in-person interviews with 407 households across Phong Dien, Quang Dien, and 
+Huong Tra districts of Thua Thien Hue Province. The logistic regression model results disproved 
+the influence of variables associated with sociodemographic characteristics, hazard proximity, 
+and flood risk experience. The findings, meanwhile, underscore the impact of those related to 
+threat appraisal, coping appraisal, trust in external support, and perceived evacuation barriers. 
+Proper assessment of flood threats has emerged as a critical factor in promoting evacuation, 
+whereas overconfidence in one’s coping capacity and the overestimation of external support 
+adversely affect evacuation decisions. Concerns about potential property loss further hinder 
+evacuation motivation. The proposed interventions encompass prioritizing educational campaigns to clarify flood risk dynamics, categorizing household structure resilience against floods, 
+highlighting challenges associated with self-evacuation, mitigating reliance on external support, 
+enhancing living conditions in evacuation sites, and implementing security measures during flood 
+seasons.
+1. Introduction
+Climate change has increased the frequency and severity of natural disasters globally [1]. Floods have emerged as a significant 
+concern, inflicting widespread devastation and posing a substantial risk to communities worldwide. According to the Intergovernmental Panel on Climate Change (IPCC), climate variability and extreme weather events contribute to the intensification of flooding 
+occurrences [2]. This trend underscores the importance of robust disaster preparedness and mitigation efforts, particularly in regions 
+vulnerable to flooding [3].
+* Corresponding author.
+E-mail addresses: vohoangha@hueuni.edu.vn (V.H. Ha), nguyencongdinh@hueuni.edu.vn (N.C. Dinh), mizunoya.takeshi.ff@u.tsukuba.ac.jp
+(T. Mizunoya). 
+Contents lists available at ScienceDirect
+International Journal of Disaster Risk Reduction
+journal homepage: www.elsevier.com/locate/ijdrr
+https://doi.org/10.1016/j.ijdrr.2025.105315
+Received 3 June 2024; Received in revised form 9 January 2025; Accepted 14 February 2025 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+2
+Nestled within a geographical zone susceptible to extreme climate and natural hazards, Vietnam faces significant challenges in 
+mitigating the pervasive threats posed by such disasters, particularly floods. The Global Climate Risk Index 2021 report has underscored Vietnam’s vulnerability, ranking it among the top 20 nations most affected by extreme climatic events over the past two decades 
+[4]. Vietnam ranks sixth worldwide in terms of population share, with 45.8%—approximately 45.5 million people—facing substantial 
+flood risks, according to the 2020 Report on Poverty and Shared Prosperity [5]. With its unique geographical and climatic characteristics, Central Vietnam exemplifies this vulnerability and often bears the brunt of recurrent flooding. The devastating flood of 
+November 1999, which claimed at least 547 lives and left dozens missing, remained a stark reminder of the susceptibility of the region. 
+Recent data on the 2020 floods in Vietnam’s central provinces further highlight the ongoing risks, resulting in the loss of 249 lives and 
+substantial economic damages exceeding 30,000 billion Vietnamese dong (approximately equivalent to $1.2 billion USD [6,7]. These 
+circumstances emphasize the urgent need for robust disaster preparedness and mitigation.
+Minimizing flood damage has emerged as a critical priority for the Vietnamese Government. Despite the diverse range of riskmitigation measures, these efforts generally fall into structural and non-structural categories [6,8]. Structural measures, such as the 
+construction of reservoirs, irrigation dams, and large hydropower plants, have been instrumental in reducing the frequency of floods. 
+However, their efficacy in decreasing the flood intensity remains limited [7]. During heavy rainfall, the authorities often face the 
+dilemma of rapidly releasing water from these structures to prevent dam failure. This unintended consequence can lead to sudden and 
+widespread downstream flooding, posing a significant threat to individuals and property. Recent flood events, notably those in 2017 
+and 2020 that rival the magnitude of the historic 1999 flood, illustrate the shortcomings of relying solely on structural measures. 
+Studies conducted in this region underscore the pivotal role of rural households in mitigating flood risk through proactive preparedness measures [7,8]. Although their efforts are commendable and effective in managing minor flood events, significant and 
+unpredictable floods necessitate evacuation to safeguard lives and essential assets. Our field observations indicate that despite the 
+imperative to evacuate, households exhibited varied responses to evacuation warnings. While some evacuate preemptively to mitigate 
+risks, others remain home despite rising floodwaters and official evacuation advisories despite residing in high-risk areas. This reality 
+underscores the intricate nature of evacuation decision-making, which can be influenced by various factors. Therefore, comprehending 
+the motivations and barriers that shape household evacuation decisions is crucial for designing targeted and effective interventions.
+Evacuation decisions in response to natural hazards have garnered global research attention. Human behavior has been explored 
+using various methodological approaches encompassing diverse geographical contexts and types of natural hazards, offering insights 
+into the factors influencing individuals’ and households’ evacuation decisions. Commonly studied natural hazards include hurricanes 
+[9–15], floods [16–19], cyclones [20,21], tsunamis [22], landslides [23], earthquakes [24], and wildfires [25]. In Vietnam, a country 
+with a substantial portion of its population vulnerable to flood risks, flood risk reduction has garnered significant research attention 
+among scholars across various disciplines [6–8,26–29]. Despite this focus, a notable gap remains in the literature concerning Central 
+Vietnam regarding examining floodplain residents’ evacuation behavior, which plays a crucial role in risk mitigation. Understanding 
+the drivers and barriers shaping individual and household decision-making processes is imperative. Such comprehension can show 
+why many people disregard evacuation recommendations and remain in their homes despite imminent danger. Addressing these 
+inquiries serves as pivotal groundwork for proposing effective intervention measures to enhance evacuation rates in response to flood 
+hazards.
+Acknowledging the importance of evacuation decision-making and the knowledge gaps in the literature, this study delves into the 
+determinants shaping rural households’ evacuation decisions during the 2020 flood in Thua Thien Hue Province, Central Vietnam. By 
+examining these determinants, our research contributes to the discourse on disaster preparedness and response, aiming to deepen our 
+understanding of the intricate dynamics shaping flood evacuation decisions among rural communities, thereby providing a foundation 
+for formulating informed policies and targeted interventions to bolster disaster preparedness and response mechanisms.
+2. Literature review and conceptual framework
+This section provides insights from previous studies on the factors influencing evacuation decisions and behaviors across different 
+types of natural disasters, including floods. While this research focuses specifically on floods in a developing country, examining 
+various disaster scenarios is essential. Such an approach allows us to identify overarching patterns and insights into evacuation behaviors, which can inform a more comprehensive understanding of flood-specific contexts and enhance the generalizability of the 
+findings.
+Owing to the interdisciplinary nature of the problem, scholars from various research backgrounds have identified the factors that 
+influence evacuation decisions and behaviors. Among the fundamental factors considered, sociodemographic and socioeconomic 
+characteristics have been the most explored.
+Sociodemographic characteristics such as gender, age, education, household size, presence of vulnerable people (children, elderly, 
+individuals with special needs), race and ethnicity, pets, and so on, often influence evacuation decisions [9–12,16,17,30–34]. Older 
+adults are generally more susceptible to health risks during disasters and are often more compliant with official evacuation orders, 
+which can increase their likelihood of evacuation. Their prior experiences with disasters may enhance their awareness of the dangers 
+associated with remaining in place [35–37]. Nonetheless, the decision to evacuate can be complicated by physical and cognitive 
+limitations, such as reduced mobility and confusion under stress. Furthermore, a strong attachment to a place or a desire to avoid the 
+discomfort of evacuation shelters may influence their choice to stay behind [38,39]. Previous studies have also emphasized the 
+increased likelihood of evacuation among households with young children, as well as those with members who have disabilities or 
+chronic illnesses [16,17,31]. The presence of vulnerable household members, such as children, the elderly, or individuals with disabilities, often heightens the motivation to evacuate due to concerns for their safety. Caregivers may feel an increased responsibility to 
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+3
+protect these individuals, yet limited resources can sometimes hinder their ability to take necessary protective actions. Conversely, the 
+presence of these vulnerable members can also reduce the likelihood of evacuation, particularly if the process is perceived as too 
+difficult or risky for them [40,41]. For instance, households with elderly or disabled members may be hesitant to evacuate due to the 
+logistical challenges involved or concerns about whether shelters can adequately meet their needs. A study by Lim et al. [16] in Quezon 
+City, Philippines, emphasized the adverse impact of educational attainment on evacuation decision-making. This study found that the 
+probability of evacuation decreased as the educational level increased. While this finding aligns with Mondal’s [17] research on 
+Riverine Floodplain Communities in Bangladesh, it contradicts the conclusions of several other studies, including those by Whitehead 
+et al. [9], Hasan et al. [42], Hasan et al. [43], and Medina and Moraca [31]. For example, the study by Medina and Moraca [31], 
+conducted in the flood-prone area of Bukidnon, Philippines, revealed that individuals with a university degree were twice as likely to 
+evacuate compared to those with lower levels of education. Additionally, educated respondents were more likely to seek refuge with 
+friends or family in non-flooded areas, thereby alleviating congestion in evacuation shelters. This shift allows disaster managers to 
+more effectively allocate resources to low-income groups who are dependent on these facilities. Education is often associated with 
+greater evacuation motivation, as it enhances risk perception, access to information, and trust in official warnings [44]. Educated 
+individuals generally better understand disaster risks and take proactive protective measures [45–47]. However, in certain contexts, 
+education may reduce evacuation motivation. Highly educated individuals might overestimate their ability to manage risks, fostering a 
+false sense of security and leading them to stay behind [40,48]. Furthermore, they may distrust authorities or question evacuation 
+orders, especially if they have previously experienced false alarms [49,50]. Conversely, those with lower educational levels may lack 
+access to accurate information or may distrust official warnings, leading to delayed or no evacuation.
+Gender has been consistently highlighted as a significant factor in evacuation behavior, with various studies elucidating the 
+complexities of this relationship. Bateman and Edwards [10] demonstrated that women, particularly those heading households, are 
+more inclined to evacuate during hurricanes due to heightened risk perception and a stronger emphasis on family safety. This elevated 
+propensity is attributed to socially constructed gender roles that assign caregiving responsibilities to women, thus increasing their 
+awareness of and responsiveness to evacuation warnings. Women’s heightened risk perception is often compounded by their residence 
+in areas of greater risk exposure compared to men. However, gender can also diminish evacuation motivation, especially in patriarchal 
+cultures where men may be reluctant to leave their homes. This reluctance stems from a perceived duty to protect property and societal 
+expectations of bravery, leading men to downplay risks or prioritize economic concerns, which can result in delayed or non-evacuation 
+[51,52]. From another perspective, Whitehead et al. [9] and DeYoung et al. [11] identified a significant association between racial 
+dynamics and evacuation decisions. Specifically, DeYoung et al. [11] exhibited that White individuals are more likely to comply with 
+both mandatory and voluntary evacuation orders. Meanwhile, Whitehead et al. [9] observed that non-White households were less 
+inclined to utilize motels, hotels, or shelters, opting instead to seek refuge with friends or family.
+Research by Lindell and Perry [53] and Lindell [54] offered a robust theoretical framework derived from five decades of evacuation 
+studies. Complementing this, a systematic review by Huang et al. [55] synthesized the existing literature on the factors influencing 
+hurricane evacuation decisions. The statistical meta-analysis (SMA) by Huang et al. [47] indicated that demographic variables are 
+generally weak and inconsistent predictors of evacuation behavior. Supporting this perspective, a recent study by Lindell et al. [56] 
+examining flash floods in Uttarakhand, North India, found only modest correlations between demographic characteristics and various 
+aspects of response, including behavioral actions, information sources, and psychological reactions. These conclusions align with 
+earlier research on hurricane evacuation (Baker [57] and Huang et al. [55]) and earthquake hazard adjustment (Lindell [58] and by 
+Lindell & Perry [59]), underscoring the limited predictive power of demographic factors across different hazard contexts.
+Socioeconomic characteristics serve as valuable predictors of evacuation behavior among individuals and households. Medina and 
+Moraca [31] illustrate that individuals with an average income of less than 5000 pesos exhibit a greater likelihood of evacuation. 
+Meanwhile, Maghelal et al.’s [12] research findings indicated that households with higher income levels frequently evacuated to 
+multiple groups at various times. These findings diverge from the conclusions of Whitehead et al. [9] and Adeola [60], who reported 
+that job status and total income were not significant determinants of evacuation behavior. Wealthier households typically have better 
+access to private vehicles, can afford to book hotels, or stay with friends and family in safer areas, facilitating a timely and comfortable 
+evacuation. In contrast, lower-income households face significant financial barriers that impede their ability to evacuate. These 
+barriers include a lack of private transportation, insufficient funds for gas, accommodation, or emergency supplies, and limited 
+financial flexibility for last-minute departures. As a result, lower-income individuals are more likely to remain in disaster-prone areas, 
+which heightens their vulnerability to the adverse effects of natural disasters [40,44,61]. Lim et al. [16] and Whitehead et al. [9] 
+investigated the influence of housing characteristics to investigate evacuation decision making. Lim et al. [16] revealed that households in multilevel homes displayed a heightened propensity to remain in place during evacuations, as evidenced by the negative 
+coefficients. They further noted that households dwelling in structures constructed of concrete demonstrated a heightened tendency to 
+stay at home during evacuation events compared to those inhabiting wooden structures. Household members often opt to stay at home 
+during evacuation events driven by a sense of security, safety, and comfort. This tendency is reinforced by the availability of ample 
+food and supplies prepared in advance. Additionally, homeowners exhibited an increased likelihood of evacuation compared with 
+renters. Renters are less inclined to evacuate due to concerns about property theft. Ng et al. [62] reported similar results, in contrast to 
+the findings of Hasan et al. [42] and Maghelal et al. [12]. Whitehead et al. [9] found that residents of mobile homes were nearly seven 
+times more inclined to evacuate than individuals residing in other types of residences. Overall, the research underscores the pivotal 
+role of socioeconomic characteristics in shaping evacuation behavior.
+Concerning psychological factors, risk perception or threat assessment is crucial for understanding evacuation behavior [9,20,22,
+23,25]. Kakimoto et al. [23] highlighted that precautionary evacuation is primarily motivated by factors associated with threat appraisals such as the anticipated severity and frequency of damage. The fear of natural disasters further encouraged households to take 
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+4
+precautionary evacuations. Whitehead et al. [9] revealed that households facing higher flood risk were nearly twice as likely to 
+evacuate compared to those with lower risk levels, with the evacuation likelihood increasing as the flood risk escalated. Individuals 
+with a deeper understanding of local disaster response plans are more likely to adhere to evacuation directives [13]. Similarly, Parvin 
+et al. [20] and Sugiura et al. [22] underscore the significant influence of risk and threat perceptions on evacuation decisions. McLennan 
+et al. [25] emphasized how a location’s threat history can shape individuals’ evacuation decisions and behaviors.
+The studies conducted by Lim et al. [16], Kakimoto et al. [23], Parvin et al. [20], McLennan et al. [25], Paul [63], and the SMA by 
+Huang et al. [55] provide further insights into the role of warning information. Paul [63] highlighted that trust in warning messages—often known as "warning belief" (e.g., Mileti & Beck [64])—emerged as the primary determinant influencing the decision to seek 
+refuge in safer shelters. Huang et al. [55] SMA determined that an official warning—such as a National Hurricane Center hurricane 
+watch or warning, a local official’s recommendation, or a voluntary or mandatory evacuation order—serves as a strong predictor of 
+household evacuation. This is likely because individuals perceive these authorities as possessing a high level of expertise regarding 
+hazards, transmitting information accurately, and bearing the responsibility to alert households at risk. Similarly, Lim et al. [16] 
+revealed that households exhibit a greater inclination to evacuate when they receive official evacuation warnings from authorities as 
+opposed to information from other sources such as friends, relatives, television, or radio, suggesting a preference to await official 
+guidance, thereby strengthening their resolution to evacuate. The decision to evacuate was significantly associated with warnings 
+issued by local authorities rather than those from local news media sources, as demonstrated in studies by Lindell et al. [65], Mileti 
+et al. [66], and Taylor et al. [67]. Insufficiently informative warnings can lead to self-delayed evacuation, wherein residents are more 
+likely to prioritize information searches over initiating evacuation actions [25,68,69]. Flood events occur more frequently than instances when evacuation alarms are activated, underscoring the necessity of enhancing trust between public authorities and citizens 
+and implementing self-reliant evacuation strategies in high-risk areas [23]. Individuals perceive information through their cultural 
+context, leading to varied interpretations of the same information and messages. Warnings alone do not prompt evacuation and individuals must perceive the level of risk involved [40].
+Other factors, though often overlooked, have been reported to affect household evacuation decisions. Alongside hazard-related 
+aspects, such as floodwater depth and proximity to water sources, which significantly influence evacuation choices [16,31], individuals often postpone evacuation until they discern unequivocal signs of risk, actively seek warning messages through various 
+channels, including monitoring river behavior, rainfall patterns, and cloud formations, or consult alternative sources for alerts [63]. 
+Furthermore, concerns related to looting risks, distance to flood shelter locations, space availability, facility inadequacies, and social 
+variables such as residence duration and experience play a substantial role in evacuation decisions [21,60,70]. The interplay of social 
+dynamics within communities further shapes evacuation intentions, with psychological factors such as perceived inconvenience 
+affecting precautionary evacuation behaviors [23]. Analyzing various demographic groups’ responses during evacuation scenarios 
+emphasizes the importance of factors such as cyclone warning content, timing of evacuation directives, and shelter accessibility [20]. 
+Additionally, the indispensable role of non-governmental organizations (NGOs) in emergency responses, encompassing relief distribution and evacuation efforts, cannot be overstated [17]. Individual differences in social capital and cohesion also contribute to 
+disparities in evacuation rates, highlighting the need for tailored evacuation messages directed at diverse demographic groups [71].
+While literature has provided valuable insights into the factors influencing evacuation decisions across various natural hazards, a 
+conspicuous gap exists concerning the motivations and barriers unique to flood evacuation in the Vietnamese context. Given a 
+country’s escalating vulnerability to floods, notably in the central region, a comprehensive understanding of flood evacuation decisionmaking in this setting is imperative. Despite the pressing need for research in this domain, there is a dearth of empirical studies on the 
+intricacies of flood evacuation decision-making processes in Vietnam. This study addresses this gap by comprehensively analyzing the 
+Fig. 1. The conceptual framework of factors influencing flood evacuation decisions.
+Source: Authors
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+5
+factors associated with flood evacuation decisions in this area. By elucidating this overlooked aspect of disaster management, our 
+research aims to significantly contribute to the scholarly discourse on disaster preparedness and response strategies, thereby enhancing 
+resilience and mitigating the adverse impacts of floods in the region.
+After conducting a comprehensive review of the existing research, our study further refined its focus through consultations with 
+flood preparedness experts and group discussions in the study areas. This iterative process aimed to formulate a conceptual framework 
+for this study, comprising the most relevant factors. By integrating expert knowledge with academic scholarship, we strive to enhance 
+the precision and relevance of understanding flood evacuation decision-making processes in rural Vietnam. Key categories encompassing sociodemographic characteristics, hazard proximity, risk experience, threat appraisal, coping appraisal, trust in external 
+support, and perceived evacuation barriers were identified. The terms "threat appraisal" and "coping appraisal" are derived from 
+Rogers’ [72] Protection Motivation Theory (PMT), which suggests that individuals’ protective behaviors are influenced by their 
+perception of a threat and their perceived ability to cope with it. These terms have been widely used in recent research, such as 
+Babcicky & Seebauer [73], Floyd et al. [74], Oakley et al. [75], Shillair [76], Faryabi et al. [77], to explore protective behaviors in the 
+context of natural hazards and risk management.
+A visual representation of this framework is shown in Fig. 1. In this study, we employed a straightforward regression model to 
+analyze the influence of the factors separately. The categorization of these factors, as illustrated in Fig. 1, aims to enhance our analysis’s clarity and systematic nature, thereby facilitating a more structured and coherent discussion of the results obtained.
+3. Study site and methods
+3.1. Study site
+This research was conducted in Thua Thien Hue Province (with a total population of about1.167 million people in 2023), a region 
+in Central Vietnam profoundly susceptible to natural disasters. Situated along a coastline of over 100 km and traversed by a complex 
+river network, the province is particularly vulnerable to various natural disasters, including tropical storms and flooding. Flood risks in 
+this location originate from multiple sources, including coastal surges, river inundation, and torrential rains, which often occur 
+concomitantly. The intricate interplay between these factors amplifies the complexity of flood risk assessment and management. 
+Approximately two-thirds of the province’s population is estimated to be exposed to flood hazards during intense rainfall.
+Floods significantly impede socioeconomic development in various localities, plunging numerous households into a relentless cycle 
+of poverty [6,8,78–80]. Thua Thien Hue Province, in particular, has endured numerous devastating flood events over recent decades. 
+On average, the province faces 3–4 floods at alarm level 2 and higher each year. Flood magnitudes also tend to be erratic and difficult 
+to predict, posing challenges for governmental and community response activities (Table 1). The 1999 flood deemed the most severe 
+flood in the province’s history, remained etched in collective memory as a harrowing episode. During this calamity, the recorded 
+precipitation within a single day amounted to a staggering 1422 mm, equivalent to nearly the annual rainfall. The ensuing deluge 
+surpassed all expectations, with floodwaters at Kim Long Station on the Huong River reaching a height of 5.81 m, equivalent to a 
+two-story house. This catastrophic event claimed hundreds of lives, left dozens missing, and caused extensive damage to approximately 
+650,000 homes. The tangible economic toll was estimated to be as high as 4536 billion VND [6,8,81].
+The efforts of the provincial government to construct massive structures such as the Ta Trach, Binh Dien, Huong Dien, and A Luoi 
+dams have contributed significantly to the reduction in flood frequency. However, despite these efforts, mitigating the flood intensity 
+remains challenging. The considerable flood event in 2017 served as a poignant example, arising in the aftermath of the formidable 
+storm No. 12, named Damrey. Damrey, with wind speeds of up to 150 km/h, has been one of Vietnam’s most powerful storms over the 
+past two decades. Constrained by its limited capacity, the government was compelled to release water to prevent dams from bursting. 
+However, this necessary action, coupled with prolonged heavy rains, resulted in flooding conditions comparable to those of the 1999 
+historic flood in rural areas.
+Most recently, in 2020, a series of consecutive and impactful floods occurred in the central region of Vietnam, encompassing Thua 
+Thien Hue Province. Beginning on October 6 and persisting until October 13, the initial flood severely affected infrastructure and 
+human life in the central provinces, causing widespread devastation. A subsequent flood occurred on October 16, coinciding with a 
+new tropical depression in the central region that evolved into a storm. Notably, the flood peaks at certain hydrological stations 
+surpassed the levels recorded during the 1979 and 1999 events, establishing a new and unprecedented record. The third flood occurred 
+Table 1 
+Average annual count and peak of floods (1977–2021).
+Period 1977–1998 1999–2009 2010–2021
+Kim Long station (Huong River) Flood count (alarm level 2 and 3) 70 50 23
+Average flood count/year 3.2 5.0 2.3
+Average flood peak (cm) 354 387 294
+Phu Oc station (Bo River) Flood count (alarm level 2 and 3) 51 27 29
+Average flood count/year 2.3 2.7 2.9
+Average flood peak (cm) 421 460 426
+Note: Alarm level 1: Indicates minor floods contained within riverbanks; Alarm level 2: Represents medium floods causing moderate inundation and 
+socio-economic impacts; Alarm level 3: Denotes severe floods with significant risks to life, property, and economic activities.
+Source: People’s Committee of Thua Thien Hue province
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+6
+on October 25, and its impact was exacerbated by the devastation caused by Hurricane Molave on October 28 and 29, resulting in 
+substantial damage. The fourth flood on November 6 further intensified the upheaval in the central region. The 2020 floods in the 
+central region marked a significant historical event, registering at Level 4 out of 5 on the natural disaster risk scale, indicative of an 
+extremely dangerous natural disaster. This has had far-reaching impacts, causing extensive damage to the entire region.
+Data for this study were collected in the Phong Dien, Quang Dien, and Huong Tra districts of Thua Thien Hue Province based on 
+household encounters during the 2020 historic floods (Fig. 2). This flood event led to the extensive inundation of more than 50,000 
+houses, with water depths ranging from 0.5 to 2 m. In some instances, households experienced even higher water levels. Notably, 
+Phong Dien, Quang Dien, and Huong Tra exhibited the highest proportions of flooded households, accounting for 17.38 % (8736 
+households), 32.28 % (16,228 households), and 22.44 % (11,279 households), respectively. The floods compelled almost 7000 
+households (approximately 20,000 individuals) to evacuate. It is crucial to note that these figures represent only those who evacuated 
+by instructions and received support from local authorities. The actual number of evacuees, which was not documented, was presumed 
+to have been substantially higher (Fig. 3).
+3.2. Methods
+3.2.1. Data collection
+The basic data for this study were obtained through household surveys, group discussions, and key informant interviews conducted 
+in the Phong Dien, Quang Dien, and Huong Tra districts of Thua Thien Hue province, Central Vietnam. Following the pilot survey 
+conducted in July 2022, the questionnaire was redesigned for the official survey conducted from January to April 2023.
+Six group discussions were held across the three districts to enhance rigor and contextual relevance, involving 11–16 participants 
+per session, including local authorities, village leaders, and flood-affected households. These discussions addressed flood risk perceptions, impact trends, coping strategies, and evacuation behaviors. Additionally, seven key informant interviews with provincial 
+disaster management experts, local officials, and village leaders provided insights into recent flood risk trends, government efforts, and 
+institutional responses to flood risk management. These qualitative methods informed the household survey design, grounding it in 
+local realities and adding critical contextual depth to interpreting the logistic regression results. They shed light on factors influencing 
+evacuation decisions that might not be evident from survey data alone, enabling a comprehensive understanding of household responses to flood risks.
+Focusing on households’ decisions regarding flood evacuation, the sample size was calculated based on the number of households 
+experiencing flooding exceeding 0.5 m, according to Thua Thien Hue province’s statistical data. Application of the TaroYamane 
+formula [82] for an estimate of the minimum sample size yielded N = 445 households. However, only information from 407 
+households with complete data was used in the analysis.
+To minimize bias, households were randomly chosen from a list provided by local authorities. However, to properly assess the 
+Fig. 2. The study site map.
+Source: Created by authors using ArcGIS software, version 10.6
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+7
+motivations for and barriers to evacuation decisions, we excluded households in houses with solid second floors, particularly those in 
+less hazardous areas. The interviewees in this study were heads of households, usually the husbands. These individuals understand 
+their family conditions comprehensively and often wield the highest decision-making power over household activities, including flood 
+Fig. 3. Number of flooded households and evacuated individuals.
+Source: People’s Committee of Thua Thien Hue province
+Table 2 
+Household demographic and socio-economic characteristics (N = 407).
+Characteristics Frequency Percentage
+Householder’s gender Male 328 80.59
+Female 79 19.41
+Householder’s age Under 40 years old 64 15.72
+40–65 years old 235 57.74
+Over 65 years old 108 26.54
+Householder’s highest educational attainment Elementary school 181 44.47
+Secondary school 209 51.35
+High school 17 4.18
+Number of people ≤4 people 128 31.45
+>4 people 279 68.55
+Having vulnerable member Yes 207 50.86
+No 200 49.14
+Household’s primary livelihood Agriculture 286 70.27
+Aquaculture and fishing 93 22.85
+Others 28 6.88
+Per capita income <1.5 million VND 8 1.97
+1.5–6.0 million VND 337 82.80
+>6 million VND 62 15.23
+Housing type Temporary 21 5.16
+Semi-permanent 304 74.69
+Permanent 82 20.15
+Upper-level floor No 89 21.87
+Temporary 130 31.94
+Semi-permanent 142 34.89
+Permanent 46 11.30
+Distance to nearest river or lake <50 m 163 40.05
+50–100 m 148 36.36
+>100 m 96 23.59
+Source: Household survey
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+8
+risk mitigation. Therefore, while the interviews were conducted with individual household heads, the data collected encompassed both 
+the interviewee’s personal characteristics and those of their household. This comprehensive approach allowed for examining the 
+association between these characteristics and evacuation behavior.
+Household interviews were conducted using a semi-structured questionnaire developed in consultation with local experts on flood 
+risk reduction and refined through group discussions and pilot household interviews. We incorporated different question types, 
+including closed, semi-closed, and open-ended questions, to capture quantitative and qualitative information. The questionnaire 
+consisted of six main sections in the following sequence: household sociodemographic and socioeconomic characteristics, experiences 
+related to the 2020 flood (preparation, damages, evacuation, etc.), flood threat appraisal, flood-coping appraisal, trust in external 
+support, and perceived evacuation barriers. Most of the questionnaire content was addressed sequentially during the interviews, 
+except for a few instances in which the interviewer exhibited flexibility in adapting to and following the informants’ narratives. In 
+addition to the semi-structured questionnaire, in-depth interviews were conducted with several households to gather qualitative insights. These interviews aimed to explore personal experiences during the 2020 flood, the underlying reasons behind evacuation 
+decisions, and perceived barriers to evacuation. The qualitative data obtained from these interviews complemented the survey results 
+by offering a deeper understanding of the factors influencing household preparedness and evacuation behaviors, which could not be 
+fully captured through the quantitative survey alone.
+The characteristics of the surveyed heads and households are listed in Table 2. The predominant demographic within the sample 
+comprised male heads of households, constituting 80.59 %. Most respondents fell within the middle-aged bracket (57.74 %), whereas 
+only 26.54 % were over 65. In terms of educational attainment among household heads, a prevailing trend of relatively low education 
+was observed, with the majority having attended either primary school (44.47 %) or secondary school (51.35 %), while a negligible 
+proportion had received education at the high school level (4.18 %). Approximately 68.55 % of the interviewed households had more 
+than four individuals. Nearly half included vulnerable groups, such as children under six years of age, older adults over 70 years of age, 
+and disabled individuals. Agriculture and fisheries emerged as the principal livelihoods of the surveyed households, with 70.27 % and 
+22.85 % engagement, respectively. Non-agricultural livelihoods supported only 6.88 % of the households. A large majority (82.80 %) 
+of surveyed households maintained an average monthly income of approximately 1.5–6.0 million VND per person. Conversely, only 
+15.23 % could be categorized as well off, with an average income per capita exceeding 6.0 million VND. Semi-permanent housing 
+structures predominated, comprising 74.69 % of the households; permanent housing constituted 20.15 %, and 5.16 % were still 
+temporary dwellings. Moreover, 46.19 % of the households possessed semi-permanent or higher attics, serving as potential temporary 
+shelters during high floodwaters. Over half of the remaining households either lacked an attic entirely or possessed only a temporary 
+attic.
+3.2.2. Data analysis
+This study employed a mixed-methods approach, combining both quantitative and qualitative methods. The quantitative approach 
+was used to examine trends and associations among variables, while the qualitative analysis provided further insights into the meaning 
+and context behind the numerical data. The integration of both methods allows for a more comprehensive understanding of the 
+phenomenon, as quantitative data offers statistical generalizability, whereas qualitative data enhances the interpretation by exploring 
+deeper motivations and experiences that might not be captured by numerical analysis alone [83,84]. This combination is well-suited 
+for understanding complex phenomena like flood evacuation decisions, where patterns and individual experiences must be considered 
+to grasp the decision-making process fully.
+The key focus of this study is to utilize a binary logistic regression model to investigate the factors influencing household evacuation 
+decisions in response to the 2020 historic floods. Our pilot survey revealed diverse evacuation practices, encompassing scenarios such 
+as early evacuation (initiated during low floodwater levels) and delayed evacuation (implemented as floodwater rises). Evacuation 
+types also varied between voluntary, mandatory, and partial evacuation (involving only specific family members) and complete 
+evacuation (involving all family members). Experience has shown that delayed evacuation, which occurs when floodwaters rise, poses 
+considerable challenges and risks. Under such circumstances, many households cannot influence self-evacuation and often require 
+external assistance. Similarly, the decision to forego a complete evacuation strategy poses manifold risks to individuals who choose to 
+remain in their residences. Hence, complete evacuation while floodwaters remain low is a crucial prerequisite for reducing the flood 
+risk.
+In this study, households that evacuated completely when the floodwater was still low (without substantial external assistance) 
+were categorized as “early complete evacuation” and assigned a value of “1” in the model. Conversely, all other cases, including those 
+who did not evacuate, only partially evacuated, waited until floodwaters had risen significantly, or required considerable external 
+assistance, were categorized as “other” and assigned a value of “0.”
+This study investigated 15 predictor variables, including household sociodemographic characteristics (gender, age, education, 
+presence of vulnerable members), hazard proximity, risk experience, threat appraisal, coping appraisal, trust in external support, and 
+perceived evacuation barriers. In this study, "vulnerable members" are defined as children, the elderly, and individuals with physical or 
+mental disabilities. "Hazard proximity" refers to the geographic placement of households in high-risk flood areas, including those 
+situated near rivers or lakes, in low-lying regions, or in locations susceptible to isolation during flooding events. "Risk experience" 
+encompasses both direct (personal) and indirect experiences of risk. Indirect experiences of risk refer to vicarious experiences, such as 
+observing others facing emergencies due to not evacuating in time or being aware of such situations through media or social connections. In this study, variable X7 (Have seen others fall into emergencies due to not evacuating) explicitly captures this dimension. 
+"Threat appraisal" and "coping appraisal" pertain to individuals’ evaluations of the severity of a threat and their perceived capacity to 
+manage it, respectively. "Trust in external support" denotes the degree of confidence individuals have in their neighbors and local 
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+9
+government to facilitate emergency evacuation. "Perceived evacuation barriers" refer to concerns regarding the adequacy of accommodation arrangements at evacuation sites and the potential loss of property during the evacuation process.
+Table 3 presents a concise overview of the variables used in the regression model. The correlation matrix for the variables included 
+in the regression model is presented in Table 1 (Appendix). Certain variables with weak correlations to the outcome variable have been 
+retained to investigate potential interaction effects with other predictors. This methodological approach facilitates exploring more 
+nuanced relationships that may not be evident from bivariate correlations alone. Drawing from the literature review in Section 2 and 
+considering the social context of the study area, we hypothesize that specific characteristics, including being a female, older, or more 
+educated household head, having vulnerable members in the household, residing in high-risk areas, experiencing emergencies due to 
+non-evacuation, and possessing a high awareness of flood threats increase the likelihood of household evacuation. Conversely, 
+overestimating one’s coping capacity and the support capacity of external forces, along with perceiving more inconveniences and 
+barriers to evacuation, are hypothesized to reduce the probability of evacuation (see Table 3).
+4. Results and discussion
+4.1. Households’ experience of the 2020 floods
+The 2020 flood caused widespread deep inundation, particularly in rural areas. As part of the assessment, households were asked to 
+estimate indoor and outdoor floodwater levels in their surroundings, given their direct impact on their daily activities, property 
+damage, evacuation efforts, and other potential threats (Fig. 4). On average, households experienced indoor flood levels of approximately 1.29 m, with flood levels ranging from 0.5 to more than 2.5 m. The interquartile range further indicates that 75 % of 
+households were flooded to at least 1.1 m, with 25 % experiencing flood depths exceeding 1.55 m. Regarding outdoor flood levels, 75 
+% of the households estimated the water level to be over 2 m, with 25 % estimating the flood level to exceed 2.5 m. Most households 
+concurred that the combination of high outdoor flood levels and swift currents posed a significant danger to those who intended to 
+evacuate. Consequently, when floodwaters have surged, households frequently cannot evacuate autonomously, necessitating assistance from external entities, such as neighbors, village committees, or local authorities.
+Fig. 5 illustrates the prevalence of flood-induced damage across households, focusing on the prominent categories and the 
+Table 3 
+Brief description of the key variables (N = 407).
+Variable Type Explanation Min Max Mean SD Expected 
+sign
+Household evacuation decision – Y (dependent variable) Binary 1 = Evacuated 
+0 = Did not evacuate
+0 1 0.42 0.49 N/A
+1. Householder’s gender – X1 Binary 1 = Male 
+0 = Female
+0 1 0.81 0.40 –
+2. Householder’s age – X2 Ordinal 1 = Under 40 years old 
+2 = 40–65 years old 
+3 = Over 65 years old
+1 3 2.11 0.64 +
+3. Householder’s highest educational attainment – X3 Ordinal 1 = Elementary school 
+2 = Secondary school 
+3 = High school
+1 3 1.60 0.57 +
+4. Presence of vulnerable members – X4 Binary 1 = Yes 
+0 = No
+0 1 0.51 0.50 +
+5. Housing located in high-risk areas – X5 Binary 1 = Yes 
+0 = No
+0 1 0.11 0.32 +
+6. Have fallen into emergencies due to not evacuating – 
+X6
+Binary 1 = Yes 
+0 = No
+0 1 0.50 0.50 +
+7. Have seen others fall into emergencies due to not 
+evacuating – X7
+Binary 1 = Yes 
+0 = No
+0 1 0.45 0.50 +
+8. Flood intensity tends to increase – X8 5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.52 1.33 +
+9. Floods tend to be unpredictable – X9 5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.46 0.88 +
+10. I trust in my housing solidity to withstand flood risks 
+– X10
+5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.33 1.13 –
+11. I trust in my preparedness for emergency evacuation 
+– X11
+5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.35 1.01 –
+12. I trust in the local government for emergency 
+evacuation – X12
+5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 2.94 0.93 –
+13. I trust in my neighbors for emergency evacuation – 
+X13
+5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.74 0.86 –
+14. I am concerned about the living arrangements at 
+evacuation places – X14
+5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.89 0.82 –
+15. I am concerned about losing property while 
+evacuating – X15
+5-level Likert 
+Scale
+1 = Strongly disagree – 5 =
+Strongly agree
+1 5 3.56 0.99 –
+Source: Household survey
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+10
+corresponding financial losses. It is important to note that the average damage for each category is calculated based on the number of 
+affected households within that category rather than the entire sample. Among the identified categories, namely, in-house furniture, 
+animal husbandry, and farming, the highest incidence of damage was observed, affecting 94.59 %, 47.67 %, and 33.91 % of households, respectively. Although in-house furniture emerged as the most affected category, the monetary losses incurred (5.39 million 
+Fig. 4. Indoor and outdoor water levels during the 2020 floods.
+Source: Household survey
+Fig. 5. Households’ tangible damages in the 2020 floods.
+Source: Household survey
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+11
+VND) remained moderate. This observation suggests that households proactively safeguarded their most valuable assets by relocating 
+to secure locations or implementing protective measures within their homes. Approximately 15 % of the houses incurred varying 
+degrees of damage, including roof detachment, partial collapse, and structural impairment, necessitating an average expenditure of 
+nearly 7 million VND per household for repair. Transitioning to livelihood impacts, aquaculture emerged as the sector experiencing the 
+most substantial financial losses (16.25 million VND), despite a relatively lower incidence of household damage (24.09 %). Notably, 
+aquaculture represents a crucial livelihood for approximately 22.85 % of households within the study area and is characterized by 
+significant capital investment. Despite proactive measures such as reinforcing or securing fish cages before the flood, forceful inundation led to their displacement, exacerbated by post-flood water contamination, resulting in mass fish mortality. While farming and 
+animal husbandry also experienced damages, albeit to a lesser extent (ranging from 2.26 to 3.58 million VND), additional expenses 
+were incurred by households for medical treatment, repair of animal husbandry facilities, and replacement of aquaculture and fishing 
+equipment. However, these costs remained relatively minimal, amounting to less than 4 million VND.
+Additionally, the flood prompted the evacuation of 171 households, representing 42.01 % of the sample. Among these, 117 
+households (68.42 %) adhered to the recommendations of local authorities and evacuated at the onset of the flood, whereas the 
+remaining 54 households (31.58 %) evacuated only when the floodwaters surged unexpectedly beyond their anticipation. Field 
+surveys delineated four primary evacuation destinations: local government-designated emergency shelters (e.g., schools, clinics, and 
+local government headquarters), relatives’ residences, neighboring households, and religious or belief-based facilities. The utilization 
+of local government-designated emergency shelters was primarily reserved for emergencies involving numerous evacuees or when the 
+other three options were unfeasible. Among the 171 households that evacuated entirely, nearly half (49.12 %) sought refuge from 
+neighboring households. The proportions of households seeking shelter in relatives’ residences and religious or belief-based facilities 
+were comparable, with 35 households (20.46 %) and 33 households (19.30 %), respectively. Given their secondary precedence, only 
+19 households (11.11 %) selected government-designated emergency shelters.
+4.2. Factors associated with household evacuation decisions
+4.2.1. Model performance and fit
+Table 4 summarizes the model’s predictive accuracy. The model accurately classified 203 of 236 households in the “other” category, achieving a correct classification rate of 86.0 %. Similarly, it correctly predicted 131 of 171 households in the “early complete 
+evacuation” category, resulting in an accuracy rate of 76.6 %. Overall, the model achieved an average success rate of 82.1 %, 
+demonstrating its effectiveness in predicting outcomes (see Table 5).
+Given the binary nature of the outcome variable in this study, the model’s fit was evaluated using the Hosmer-Lemeshow goodness 
+of fit test [85]. While this test has its limitations, such as potential discrepancies in results when performed with a smaller number of 
+covariate samples compared to the number of objects, it remains widely recognized and utilized by previous researchers [6,85,86]. The 
+p-value obtained from the Hosmer-Lemeshow goodness of fit test (0.182) suggests that the model fits the data adequately. In other 
+words, there is a plausible overall relationship between the explanatory factors and households’ evacuation probability (χ2 = 11.36; df 
+= 16; p = 0.182). Furthermore, Nagelkerke’s R square value (0.60) suggests that the explanatory variables in the model explain 60 % of 
+the probability of household evacuation decisions.
+4.2.2. Household evacuation decisions and associated factors
+4.2.2.1. The influence of sociodemographic characteristics. The regression model findings refute the influence of all sociodemographic 
+characteristics integrated within the model. Specifically, householders’ gender, age, highest educational attainment, and the presence 
+of vulnerable household members demonstrated non-significant associations with households’ evacuation decisions (p = 0.12, p =
+0.59, p = 0.21, and p = 0.19, respectively). These findings differ from those of previous studies [11,12,16,17,31]. Prior research has 
+often suggested a higher likelihood of evacuation among female-headed households [10,16], households with young children [16,31], 
+and households that accommodate members with disabilities or chronic ailments [17]. Educational attainment has emerged as a 
+multifaceted determinant, as evidenced by previous studies. While some scholars [9,31,42,43] identified a positive correlation 
+Table 4 
+Percentage accuracy in classification (PAC).
+Observed Predicted
+Other Early complete evacuation Percentage Correct
+Other 203 33 86.0
+Early complete evacuation 40 131 76.6
+Overall percentage 82.1
+Model summary − 2 Log-likelihood 312.96
+Cox & Snell R Square 0.45
+Nagelkerke R Square 0.60
+Chi-square 11.36
+Sig. 0.18
+Source: Data calculated by authors
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+12
+between educational level and evacuation probability, contrasting findings by Lim et al. [16] and Mondal [17] suggest a negative 
+relationship. However, the findings of this study reinforce Baker’s [57], Huang et al. [55], and Adeola’s [60] conclusion that sociodemographic variables offer limited predictive value regarding evacuation behavior. While Adeola’s [60] study was based on a single 
+survey, Baker’s [57] conclusion was derived from a narrative analysis of multiple studies, and Huang et al. [55] reached their conclusions through an SMA. In contrast, this study’s results challenge the assertion made by Dash and Gladwin [40] that demographic 
+variables are significant predictors of evacuation outcomes.
+These findings could be attributed to the specific characteristics of the study sample, the inherent complex effects of sociodemographic variables, and the socio-cultural context of rural Vietnam. Vietnamese rural communities are frequently characterized by 
+robust social cohesion and well-established collective norms. While these features foster strong communal support, they can also 
+introduce certain subjectivities that impact protective behaviors [8]. In such environments, the influence of sociodemographic factors, 
+such as gender, age, education, and the presence of vulnerable household members, on protective behaviors may be diminished. For 
+instance, community leaders or collective agreements may influence evacuation decisions more than individual household characteristics. Similarly, well-established support networks within these communities, including assistance from neighbors and extended 
+families, might mitigate the practical challenges faced by households with vulnerable members, thereby reducing the observable 
+impact of these sociodemographic factors. These socio-cultural dynamics may dilute the individual-level variability typically associated with gender, age, or education in influencing protective behaviors.
+Moreover, the limited influence of sociodemographic characteristics may arise from their inherently intricate influence interactions. For instance, in this study, nearly 96 % of the study’s participants had only completed lower secondary education or less, 
+with just 4 % attending upper secondary school. This uniform and relatively low education may be insufficient to make any difference 
+in risk perception, access to information, or trust in official warnings, which often play an essential role in evacuation decisions, as 
+noted by Morss et al. [44]. Furthermore, the potential multidimensional effects of sociodemographic variables could further obscure 
+their overall impact. For example, better-educated individuals are generally better equipped to understand disaster risks and take 
+protective actions [45,87]. However, they may also overestimate their ability to manage these risks, leading to a false sense of security 
+and delayed evacuation [40,48]. Conversely, those with lower educational attainment may lack accurate information or distrust 
+official warnings, resulting in hesitation or refusal to evacuate.
+4.2.2.2. The influence of hazard proximity. Several studies have underscored the significance of location factors in shaping evacuation 
+behavior [16,31,88]. For instance, a study focusing on tsunamis found that proximity to the seashore correlated with a higher likelihood of evacuation [88]. In this study, households were categorized based on their hazard proximity (housing location) into high-risk 
+(11.30 %) and low-risk (88.70 %) areas to explore their association with evacuation behavior. However, contrary to expectations, the 
+regression model results indicated that the association between hazard proximity and evacuation decisions was not statistically significant (p = 0.16).
+Empirical evidence indicates that numerous households in high-risk areas, such as those adjacent to riverbanks, low-lying areas, or 
+zones susceptible to flood isolation, often disregard evacuation advice. Despite initial compliance with the local authorities’ recommendations to evacuate at the onset of rising floodwaters, some households return home once the inundation subsides, driven by 
+concerns about potential asset loss. Conversely, a subset of households cognizant of their dwelling’s susceptibility steadily remains in 
+place, bolstered by confidence in their preparedness measures. Many households mentioned concerns about property loss as a reason 
+for not evacuating. Many prioritized protecting their assets over evacuation in high-risk areas due to fears of property loss during 
+floods. Some chose to stay behind to safeguard valuable items like livestock and equipment, particularly those with limited financial 
+Table 5 
+Binary logistic regression results on factors affecting household evacuation decisions.
+Independent variables B S.E. Wald df Sig. Exp(B) 95 % C.I. for EXP(B)
+Lower Upper
+Householder’s gender 0.58 0.37 2.47 1 0.12 1.79 0.87 3.68
+Householder’s age 0.12 0.22 0.28 1 0.59 1.13 0.73 1.74
+Householder’s highest educational attainment − 0.33 0.26 1.58 1 0.21 0.72 0.43 1.20
+Presence of vulnerable members 0.39 0.29 1.73 1 0.19 1.47 0.83 2.62
+Housing located in high-risk areas 0.64 0.46 1.97 1 0.16 1.90 0.78 4.66
+Have fallen into emergencies due to not evacuating 0.19 0.29 0.40 1 0.53 1.20 0.68 2.14
+Have seen others fall into emergencies due to not evacuating 0.27 0.30 0.86 1 0.35 1.32 0.74 2.35
+Flood intensity tends to increase 0.18 0.11 2.54 1 0.11 1.19 0.96 1.49
+Floods tend to be unpredictable ** 1.14 0.19 34.67 1 0.00 3.13 2.14 4.58
+I trust in my housing solidity to withstand flood risks ** − 0.36 0.14 6.88 1 0.01 0.70 0.54 0.91
+I trust in my preparedness for emergency evacuation ** − 0.80 0.16 26.39 1 0.00 0.45 0.33 0.61
+I trust in the local government for emergency evacuation ** − 0.84 0.17 23.95 1 0.00 0.43 0.31 0.61
+I trust in my neighbors for emergency evacuation ** − 0.51 0.17 9.13 1 0.00 0.60 0.43 0.84
+I am concerned about the living arrangements at evacuation places − 0.19 0.19 1.06 1 0.30 0.82 0.57 1.19
+I am concerned about losing property while evacuating * − 0.38 0.15 6.15 1 0.01 0.68 0.51 0.92
+Constant 4.56 1.96 5.42 1 0.02 95.59
+*, ** denote significance at the 5 % and 1 % levels, respectively.
+Source: Household survey
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+13
+resources, who feared that their property could be damaged or looted. Reflecting on this stance, a resident from Quang Dien district 
+stated, “We formulated a contingency plan to seek refuge in neighboring residences or religious facilities nearby, contingent upon floodwaters 
+surpassing our coping thresholds. Notably, we have taken proactive measures by preparing a boat, and my family members possess proficient 
+swimming abilities. Hence, we anticipate minimal challenges in evacuating during the flood season.” Although numerous studies have 
+highlighted the significance of household-level precautionary measures in mitigating flood risk, it is essential to recognize the 
+considerable risk associated with self-evacuation when floodwater has already risen, particularly for households in hazardous areas 
+[7]. While evacuation information and recommendations from authorities are beneficial, individuals may interpret the same information and messages differently, shaped by their economic, cultural, and social contexts. Warnings alone are insufficient to prompt 
+evacuation; individuals must perceive the level of risk involved [40].
+4.2.2.3. The influence of flood risk experience. Floods have become common among residents of low-lying areas, resulting in annual 
+household damage of varying severity [6]. Numerous households have suffered substantial losses or have found themselves in 
+emergencies because of the delayed implementation of protective measures, including early evacuation [7,89]. Hence, it is reasonable 
+to assume that individuals who have witnessed or directly experienced significant flood risk are more likely to evacuate promptly. 
+Contrary to our expectations, the analysis revealed no statistically significant association between households’ flood risk experience 
+and evacuation decisions. In other words, the experiences of households that had either directly encountered or observed others facing 
+emergencies due to delayed evacuation did not influence their decisions to evacuate (p = 0.53 and p = 0.35, respectively). In 1999 and 
+2017, two catastrophic floods of comparable magnitudes instilled profound fear among many households due to the loss of property 
+and even lives. During in-depth interviews, a village leader said, “Villagers tend to adopt a more cautious approach following such 
+catastrophic events. However, these memories gradually diminish as floodwaters recede and damage lessens in the subsequent years. Hence, 
+many households disregarded warnings and even mandatory evacuation orders from the village committee, believing it is premature to take such 
+measures.” “They are unaware of the difficulties and dangers associated with evacuating once floodwaters have risen,” he explained. These 
+findings align with Mondal’s [17] conclusion that individuals often refuse to evacuate until floodwaters inundate their homes. This is 
+further supported by Adeola’s [60] study, which found no significant association between previous experiences of hazards of similar 
+intensity and evacuation behavior. Our findings also align with the conclusions of Baker [57] and Huang et al. [55]. However, they 
+contrast with Medina and Moraca’s [31] findings, which highlight the significant impact of past flood experiences on families’ 
+evacuation decisions.
+4.2.2.4. The influence of threat appraisal. Threat appraisal, often synonymous with risk perception, is widely acknowledged as a 
+pivotal determinant of evacuation behavior. This study examines the appraisal of flood threats by floodplain residents by focusing on 
+two key dimensions: flood intensity and unpredictability. Descriptive statistical analyses employing a Likert scale revealed a nuanced 
+picture, with 57.25 % of respondents expressing moderate agreement that flood intensity is increasing, while the remaining 42.75 % 
+perceived either no notable change or even a decline. Discrepancies in flood intensity assessments could stem from the impact of flood 
+control measures, particularly the presence of large dams and reservoirs in Thua Thien Hue Province. While these infrastructural 
+developments have generally curtailed the frequency and severity of annual floods, they can paradoxically precipitate adverse consequences, such as widespread deep flooding downstream owing to massive water releases from irrigation and hydropower reservoirs 
+[8]. The inherent uncertainty surrounding flood intensity appraisals may engender a sense of complacency among households 
+regarding preventive measures, notably evacuation. This complacency finds empirical support in the regression model outcomes, 
+revealing a statistically insignificant correlation between flood intensity assessment and evacuation decisions (p = 0.11). Thus, 
+elucidating the nuances of flood risk perception is imperative to craft targeted interventions and enhance disaster preparedness 
+strategies. In addition to not evacuating when floodwaters were high, some households carried out other protective measures, such as 
+reinforcing houses and preparing food, fresh water, and fuel. “During floods, they (referring to boat-based retailers) navigate their boats 
+here to offer a diverse range of food items, including instant noodles, fresh vegetables, poultry, fish, and others. Food scarcity is not a concern 
+during these times.” Boat-based retailers may provide essential food items, albeit exclusively, during low flood conditions. In contrast, 
+this undertaking becomes nearly unfeasible as the water level increases. In such scenarios, households that fail to prepare adequately 
+are susceptible to perilous situations.
+In contrast, households that perceived floods as increasingly unpredictable tended to evacuate (p < 0.01). When controlling for 
+other variables, each higher rating of flood unpredictability tripled the odds of household evacuation (OR = 3.13). Climate change and 
+large-scale structural project implementation are the primary factors contributing to the unpredictable nature of floods in the area [6,
+8]. Although the construction of major dams and reservoirs has contributed substantially to flood-control efforts, their efficacy is 
+challenged during periods of intense rainfall and significant upstream water flow. Many households in high-risk areas evacuate 
+pre-emptively to safeguard their families against unpredictable flood patterns. “The reliance on traditional knowledge for anticipating 
+flood intensity has become increasingly ineffective since the appearance of hydroelectric and irrigation dams. The combination of heavy rainfall 
+and dam release invariably leads to severe flooding. Evacuating early upon observing signs of rising floodwaters is imperative to ensure safety,” a 
+resident from Phong Dien district shared. This finding, while also linked to risk perception, is particularly noteworthy as it sheds light 
+on households’ understanding of a key characteristic of floods that has been largely overlooked in previous studies. This finding is 
+consistent with the conclusions of several scholars [9,20,22,23,25]. Precautionary evacuation is primarily driven by factors related to 
+threat assessment, such as the predicted severity and frequency of damage. Additionally, fear of natural disasters further motivated 
+households to evacuate [23]. Perceptions of risk and threat significantly drive household decisions to evacuate early [20,22].
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+14
+4.2.2.5. The influence of coping appraisal. Household coping appraisals significantly influenced the evacuation decisions. Those with 
+high confidence in the structural integrity of their houses tended to disregard evacuations (p < 0.01). With each higher level of selfassessment of housing security, the odds of evacuation decreased by 29.9 % (OR = 0.70). Understandably, households may choose not 
+to evacuate if they own houses with permanent structures and robust attics. However, these households represented only 20.15 % and 
+11.30 % of the study population. Most remaining households owned semi-permanent structures characterized by temporary or semipermanent attics (refer to Table 2). Such housing structures typically have limited resilience and can withstand only minor floods. 
+However, during major floods, fast-flowing water, or severe storms, the risk to the occupants escalates significantly. Despite this 
+vulnerability, many expressed unwavering confidence in their houses’ ability to withstand floods and chose not to evacuate. For 
+instance, a woman in Huong Tra district explained, “I inherited this house from previous generations. It was further reinforced with bricks, 
+cement, and roofing tiles, and I believe it is strong enough to withstand floods. If floodwaters rise, all members will move to the attic.” However, 
+when asked about the capacity of the attic to accommodate all five family members, this woman exhibited uncertainty and hesitation 
+regarding security. Similarly, self-confidence in preparedness for emergency evacuation negatively affected evacuation decisions (p <
+0.01). Each higher level of preparedness reduced households’ odds of evacuation by 55.2 % (OR = 0.45). Household preparedness for 
+emergency evacuations primarily involves identifying evacuation routes, preparing means of transportation (such as small boats or 
+homemade rafts), and acquiring supporting equipment (such as life jackets, flashlights, mobile phones, and necessary medications). 
+The surveys revealed that only 23.59 % of households possessed small boats, and only 23.83 % had two or more lifejackets. Conversely, 
+the prevalence of the use of other essential equipment exceeds 90 %. However, the preparation rates were below expectations. A 
+member of the flood risk management board in Huong Tra district remarked, “Even with full equipment, self-evacuation in high water and 
+strong currents poses significant hazards. Risks are particularly pronounced for children, the elderly, and even individuals with good health and 
+swimming skills.” In other words, being prepared for emergencies does not necessarily guarantee the safety of households during 
+evacuation. The negative regression coefficient suggests that households view emergency preparedness as either an alternative to 
+evacuation or a means to delay evacuation until floodwaters become too deep.
+This study reinforces the conclusions of Li et al. [90] emphasizing the importance of coping appraisals. However, the regression 
+results indicate that the negative coefficients for coping appraisals offset the positive coefficients for threat appraisals in predicting 
+evacuation decisions. This suggests that while coping appraisals are significant, their effect is balanced by threat appraisals in shaping 
+households’ adjustment intentions under the pressure of natural hazards.
+4.2.2.6. The influence of trust in external support. The results highlight the significant influence of trust in local governments and 
+neighbors on households’ evacuation decisions during flood emergencies. Trust in local governments regarding flood evacuation, 
+specifically, their capacity to mobilize equipment, vehicles, and personnel for timely and safe evacuations, had a negative effect (p <
+0.01; OR = 0.43), indicating that higher levels of trust were associated with a decreased likelihood of evacuation. Similarly, trust in 
+neighbors for flood evacuation also exhibited a negative effect (p = 0.01; OR = 0.60), suggesting that greater trust in neighbors 
+correlated with a reduced probability of evacuation. This implies that households may opt to remain in their homes if they trust the 
+assistance or protection provided by local government agencies or neighbors during flood events. A middle-aged man confidently 
+shared, “Members of the flood and storm prevention committee used to regularly row boats to patrol this area, and I had their contact phone 
+numbers. I believed they would promptly assist us if we encountered an emergency. Additionally, we had supportive neighbors who I was certain 
+would not abandon us.” These findings underscore the ceaseless efforts of local governments and the key contribution of social connections to mitigating flood risks in rural Vietnam. However, excessive reliance on external support could potentially delay or 
+compromise household evacuation motivation, leading to heightened risk. Owing to constrained financial resources, local emergency 
+evacuation equipment remains relatively limited and largely dependent on human effort, basic tools, and apparatus. The effective 
+rescue of numerous households within a short time frame during sudden floods poses a significant challenge. A village head affirmed, 
+“Rescuing households during a major flood is exceedingly difficult. Our local force is relatively limited, and we must also prioritize the safety of 
+our families.”
+4.2.2.7. The influence of perceived evacuation barriers. Concerns about living arrangements at evacuation sites and the potential loss of 
+property during evacuation were frequently mentioned, revealing intriguing trends influencing households’ evacuation decisions. 
+Analysis of descriptive statistics using a 5-level Likert scale indicated that nearly three-quarters of the surveyed sample (74.5 %) 
+expressed apprehension about the living arrangements at evacuation sites. These concerns often center on perceived inadequacies in 
+living conditions, lack of privacy, and occasional discomfort from potentially inconveniencing homeowners, particularly when 
+evacuees are lodged with neighbors. However, statistical analysis revealed that these concerns did not significantly affect household 
+evacuation decisions (p = 0.30). This suggests that while concerns about evacuation site conditions are widespread, they do not 
+decisively influence evacuation behavior. Conversely, the fear of losing property during evacuation significantly affected evacuation 
+decisions (p = 0.01; OR = 0.68), suggesting that households more concerned about property loss during evacuation were less inclined 
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+15
+to evacuate. This concern may originate from the perceived risk of personal belongings being damaged by inadequate care or stolen by 
+opportunistic thieves. This finding resonates with the conclusion drawn by Kakimoto et al. [23], indicating that psychological factors, 
+notably the discomfort and inconvenience associated with travel to shelters or shared accommodations, serve as principal barriers to 
+precautionary evacuation behavior. These findings underscore the intricate interplay between the various factors influencing evacuation decisions during floods.
+5. Conclusion and implications
+Understanding the factors that hinder household evacuation decisions is crucial for developing effective interventions in the face of 
+escalating flood risks. This study investigates the determinants influencing evacuation decisions among rural households in Thua Thien 
+Hue Province, Central Vietnam, in response to the 2020 flood. The findings provide valuable insights into the complex interplay of 
+factors that shape evacuation behaviors in this vulnerable region, with important implications for developing countries facing similar 
+challenges in flood risk management.
+The findings derived from the logistic regression model provided intriguing insights. Contrary to our initial expectations, the 
+variables associated with sociodemographic characteristics, hazard proximity, and flood risk experience did not significantly influence 
+evacuation decisions. Consequently, intervention strategies should be designed to be inclusive and comprehensive without discrimination based on these characteristics. While our findings challenge the established understanding of the role of sociodemographic 
+characteristics in evacuation decisions, they also open avenues for future research. Understanding the root causes behind these nonsignificant associations will be critical in refining flood preparedness and response strategies, ensuring they are tailored to the actual 
+drivers of behavior in the communities they aim to protect.
+Our analysis, meanwhile, underscores the substantial impact of factors related to threat appraisal, coping appraisal, and trust in 
+external support. A thorough evaluation of flood threats emerged as a pivotal factor positively associated with evacuating, while traits 
+such as overconfidence in one’s ability to cope with floods and overestimating external forces’ support capacity negatively affected 
+evacuation decisions. This can be considered “unrealistic optimism” in psychology as mentioned by Shepperd et al. [91]. Moreover, 
+apprehensions regarding potential property loss further discouraged evacuation motivation.
+Considering these findings, tailored interventions hold promise for enhancing public awareness and facilitating effective flood 
+evacuation. First, local authorities must prioritize educational campaigns to enrich the public’s understanding of flood risk dynamics. 
+Emphasis should be placed on the unpredictable nature of floods attributed to the escalating impacts of climate change and the 
+contrasting effects of major dams and reservoirs in the region. Second, it is imperative to categorize and assess the resilience of 
+common household structures such as temporary, semi-permanent, and permanent houses and attics against varying flood levels and 
+patterns to enable individuals to gauge the associated risks accurately. Furthermore, highlighting the inherent challenges and perils of 
+self-evacuation, particularly under severe flood conditions and limited household preparation, is crucial for fostering proactive 
+responses.
+Moreover, efforts should address the overestimation of support from external sources, such as that provided by local authorities, 
+neighbors, or the community. Propaganda initiatives should emphasize the limited capacity of local authorities to facilitate large-scale 
+emergency evacuations, thereby encouraging individuals to take personal responsibility for safety. Additionally, it is essential to 
+elucidate the risks families face when they cannot access external support during emergencies, further reinforcing the urgency of early 
+evacuation. Finally, local authorities should focus on enhancing the diversity and organization of living conditions in evacuation areas 
+to ensure the convenience and comfort of evacuees. Implementing patrol plans during the flood season can also help to ensure security 
+and curb opportunistic criminal activities, thereby enhancing the overall efficacy of evacuation efforts.
+This study underscores the complexity of factors influencing evacuation decisions and calls for tailored interventions that take into 
+account not only the socio-demographic factors but also psychological and social aspects. By implementing these recommendations, 
+local authorities and stakeholders can enhance flood preparedness and response strategies, improving evacuation rates and safeguarding vulnerable communities in the face of escalating flood risks.
+6. Study limitations and future directions
+While this study sheds light on flood evacuation dynamics, acknowledging its principal limitations is crucial.
+Firstly, the study utilized a binary logistic regression approach to classify evacuation behaviors into two categories for analytical 
+clarity and simplicity. While this method allowed for focused exploration of early complete evacuation versus other behaviors, it did 
+not fully capture the nuanced spectrum of evacuation practices, such as early, delayed, or no evacuation, or the variation in evacuation 
+types (e.g., partial versus complete). Future research could explore the application of ordinal logistic regression to analyze these 
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+16
+gradations, offering a more detailed understanding of evacuation dynamics.
+Secondly, the criterion of surveying only households that experienced flooding of 0.5 m or more may have limited the variability in 
+evacuation behavior observed in the study. This narrowed range could potentially influence the strength of correlations between 
+evacuation behavior and predictor variables, which should be considered when interpreting the findings. Future research should aim 
+to include households with varying levels of flood exposure to capture a broader spectrum of evacuation behaviors and enhance the 
+robustness of the results.
+Thirdly, the study predominantly involved male household heads as respondents, reflecting the decision-making structure in rural 
+Vietnamese households. While this approach aligns with cultural norms, it may have limited the representation of diverse household 
+perspectives. Future studies should consider incorporating a more gender-balanced sample or investigating how gender roles influence 
+evacuation decision-making processes.
+Lastly, this study did not account for the interactions among household members in the decision-making process. Evacuation 
+decisions are often collective, involving input from all household members rather than solely the individual head. The absence of a 
+comprehensive exploration of these dynamics may have resulted in a limited perspective on the complexities of evacuation behavior.
+By addressing these limitations, future studies can contribute to a more comprehensive understanding of flood evacuation dynamics, inform more effective disaster risk management strategies, and significantly advance scholarly understanding in this field.
+CRediT authorship contribution statement
+Vo Hoang Ha: Writing – review & editing, Writing – original draft, Methodology, Funding acquisition, Formal analysis, Data 
+curation, Conceptualization. Nguyen Cong Dinh: Writing – review & editing, Validation, Methodology, Investigation, Formal analysis, Data curation, Conceptualization. Takeshi Mizunoya: Writing – review & editing, Validation, Supervision, Methodology, Formal 
+analysis, Data curation, Conceptualization.
+Ethical standards compliance
+The study was conducted according to the guidelines of the Declaration of Helsinki and approved by the Institutional Ethics 
+Committee of University of Tsukuba (protocol code 2022-14).
+Declaration of Generative AI and AI-assisted technologies in the writing process
+The authors declare that generative AI and AI-assisted technologies were not utilized in the writing process of this paper. The 
+content of this manuscript was solely generated and written by the authors without the assistance of any artificial intelligence systems.
+Funding
+This work was partially supported by the University of Economics, Hue University (Grant No. NNC.ĐHKT.2023.05).
+Declaration of competing interest
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to 
+influence the work reported in this paper.
+Acknowledgements
+The authors sincerely thank the authorities and households in Phong Dien, Quang Dien, and Huong Tra districts for their enthusiastic support during the survey.
+Appendix 
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+17
+Table 1 
+Pearson correlation matrix among the variables included in the regression model
+Variables Y X1 X2 X3 X4 X5 X6 X7 X8 X9 X10 X11 X12 X13 X14 X15
+Y 1
+X1 .128** 1
+X2 − .004 .025 1
+X3 .017 − .020 − .116* 1
+X4 .140** .040 − .118* .099* 1
+X5 .199** .038 − .048 .048 .056 1
+X6 .078 .047 − .032 − .047 .076 − .018 1
+X7 .043 − .064 .023 .057 − .040 − .108* − .022 1
+X8 .095 − .008 .040 .055 .010 − .012 − .031 .030 1
+X9 .527** .093 − .075 .108* .126* .274** .035 − .076 .029 1
+X10 − .177** − .045 − .056 − .105* − .108* − .014 − .031 − .055 .070 − .142** 1
+X11 − .403** − .056 .074 .034 − .050 − .133** .007 − .037 − .065 − .233** .022 1
+X12 − .365** − .004 − .018 .020 .017 − .036 − .042 − .086 .005 − .206** .000 .196** 1
+X13 − .336** − .013 − .038 − .031 − .049 − .153** − .161** − .031 − .118* − .241** .015 .147** .178** 1
+X14 − .112* − .034 − .034 .012 .002 .057 .007 − .006 − .009 − .154** .124* .034 − .060 .054 1
+X15 − .239** .007 − .025 − .024 − .077 .042 − .081 − .041 − .046 − .215** − .045 .093 .111* .150** .008 1
+Note: *, ** Correlation is significant at the 0.05 and 0.01 level, respectively (2-tailed).
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+18
+Data availability
+The data that has been used is confidential.
+References
+[1] CRED, Human cost of disasters: an overview of the last 20 years (2000-2019). https://doi.org/10.18356/79b92774-en, 2020.
+[2] IPCC, Climate change 2021: the physical science basis. Contribution of working group I to the sixth assessment report of the intergovernmental Panel on climate 
+change. https://www.ipcc.ch/report/ar6/wg1/, 2021.
+[3] WMO, State of the Global Climate 2021, World Meteorological Organization (WMO), Geneva, Switzerland, 2022, https://doi.org/10.18356/9789263113160.
+[4] D. Eckstein, V. Künzel, L. Schafer, ¨ Global climate risk index 2021: who suffers most from extreme weather events? Weather-Related loss events in 2019 and 2000 
+to 2019. https://germanwatch.org/sites/default/files/GlobalClimateRiskIndex2021_2.pdf, 2021.
+[5] J. Rentschler, M. Salhab, People in harm’s way. Flood exposure and poverty in 189 countries. http://documents1.worldbank.org/curated/en/ 
+669141603288540994/pdf/People-in-Harms-Way-Flood-Exposure-and-Poverty-in-189-Countries.pdf, 2020.
+[6] V.H. Ha, T. Mizunoya, N.D. Kien, T.Q. Dung, L.T. An, N.T. Phan, N.Q. Tan, P.T.T. Tien, N.C. Dinh, Post-Flood Recovery in the Central Coastal Plain of Vietnam: 
+Determinants and Policy Implications, Springer Nature Singapore, 2022, https://doi.org/10.1007/s41685-022-00244-9.
+[7] C.D. Nguyen, F. Ubukata, Q.T. Nguyen, H.H. Vo, Long-term improvement in precautions for flood risk mitigation: a case study in the low-lying area of central 
+Vietnam, Int. J. Disaster Risk Sci. (2021), https://doi.org/10.1007/s13753-020-00326-2.
+[8] N.C. Dinh, F. Ubukata, N.Q. Tan, V.H. Ha, How do social connections accelerate post-flood recovery? Insights from a survey of rural households in central 
+Vietnam, Int. J. Disaster Risk Reduct. 61 (2021) 102342, https://doi.org/10.1016/j.ijdrr.2021.102342.
+[9] J.C. Whitehead, B. Edwards, M. Van Willigen, J.R. Maiolo, K. Wilson, K.T. Smith, Heading for higher ground: factors affecting real and hypothetical hurricane 
+evacuation behavior, Environ. Hazards 2 (2000) 133–142, https://doi.org/10.3763/ehaz.2000.0219.
+[10] J.M. Bateman, B. Edwards, Gender and evacuation: a closer look at why women are more likely to evacuate for hurricanes, Nat. Hazards Rev. 3 (2002). https:// 
+ascelibrary.org/doi/10.1061/%28ASCE%291527-6988%282002%293%3A3%28107%29.
+[11] S.E. DeYoung, T. Wachtendorf, R.A. Davidson, K. Xu, L. Nozick, A.K. Farmer, L. Zelewicz, A mixed method study of hurricane evacuation: demographic 
+predictors for stated compliance to voluntary and mandatory orders, Environ. Hazards 15 (2016) 95–112, https://doi.org/10.1080/17477891.2016.1140630.
+[12] P. Maghelal, W.G. Peacock, X. Li, Evacuating together or separately: factors influencing split evacuations prior to hurricane rita, Nat. Hazards Rev. 18 (2017) 
+1–6, https://doi.org/10.1061/(asce)nh.1527-6996.0000226.
+[13] J. Kim, S.S. Oh, Confidence, knowledge, and compliance with emergency evacuation, J. Risk Res. 18 (2014) 111–126, https://doi.org/10.1080/ 
+13669877.2014.880728.
+[14] B. Acero, R. Díaz, J.G. Behr, Flooding perception and its impact on hurricane evacuation intentions, Int. J. Disaster Risk Reduct. 95 (2023) 1–34, https://doi. 
+org/10.1016/j.ijdrr.2023.103892.
+[15] R. Alawadi, P. Murray-Tuite, D. Marasco, S. Ukkusuri, Y. Ge, Determinants of full and partial household evacuation decision making in hurricane matthew, 
+Transport. Res. Transport Environ. 83 (2020), https://doi.org/10.1016/j.trd.2020.102313.
+[16] M.B.B. Lim, H.R. Lim Jr., M. Piantanakulchai, F.A. Uy, A household-level flood evacuation decision model in Quezon City, Philippines, Nat. Hazards 80 (2016) 
+1539–1561, https://doi.org/10.1007/s11069-015-2038-6.
+[17] M.S.H. Mondal, Factors of influence on evacuation behaviour: survey results from the riverine floodplain communities in Bangladesh, Quaest. Geogr. 40 (2021) 
+85–93, https://doi.org/10.2478/quageo-2021-0025.
+[18] N.T.L. Huong, S. Yao, S. Fahad, Assessing household livelihood vulnerability to climate change: the case of Northwest Vietnam, Hum. Ecol. Risk Assess. 25 
+(2019) 1157–1175, https://doi.org/10.1080/10807039.2018.1460801.
+[19] A.A. Shah, J. Ye, R. Shaw, R. Ullah, M. Ali, Factors affecting flood-induced household vulnerability and health risks in Pakistan: the case of Khyber Pakhtunkhwa 
+(KP) Province, Int. J. Disaster Risk Reduct. 42 (2020) 101341, https://doi.org/10.1016/j.ijdrr.2019.101341.
+[20] G.A. Parvin, M. Sakamoto, R. Shaw, H. Nakagawa, M.S. Sadik, Evacuation scenarios of cyclone Aila in Bangladesh: investigating the factors influencing 
+evacuation decision and destination, Prog. Disaster Sci. 2 (2019) 100032, https://doi.org/10.1016/j.pdisas.2019.100032.
+[21] S.K. Saha, H. James, Reasons for non-compliance with cyclone evacuation orders in Bangladesh, Int. J. Disaster Risk Reduct. 21 (2017) 196–204, https://doi. 
+org/10.1016/j.ijdrr.2016.12.009.
+[22] M. Sugiura, S. Sato, R. Nouchi, A. Honda, R. Ishibashi, T. Abe, T. Muramoto, F. Imamura, Psychological processes and personality factors for an appropriate 
+Tsunami evacuation, Geosci. 9 (2019) 1–19, https://doi.org/10.3390/geosciences9080326.
+[23] R. Kakimoto, T. Fujimi, M. Yoshida, H. Kim, Factors promoting and impeding precautionary evacuation behaviour, Int. J. Urban Sci. 20 (2016) 25–37, https:// 
+doi.org/10.1080/12265934.2016.1185958.
+[24] Y. Ao, K. Huang, Y. Wang, Q. Wang, I. Martek, Influence of built environment and risk perception on seismic evacuation behavior: evidence from rural areas 
+affected by Wenchuan earthquake, Int. J. Disaster Risk Reduct. 46 (2020), https://doi.org/10.1016/j.ijdrr.2020.101504.
+[25] J. McLennan, B. Ryan, C. Bearman, K. Toh, Should we leave now? Behavioral factors in evacuation under wildfire threat, Fire Technol. 55 (2019) 487–516, 
+https://doi.org/10.1007/S10694-018-0753-8.
+[26] T.T. Duc, U. Tanaka, H. Kobayashi, Living with typhoon and flood disasters : a case study in Huong Phong commune, Tam Giang lagoon area , central Vietnam, 
+SANSAI An Environ. J. Glob. Community 6 (2012) 85–96. https://repository.kulib.kyoto-u.ac.jp/dspace/bitstream/2433/170264/1/SANSAI6_85.pdf.
+[27] D.T. Chinh, P. Bubeck, N.V. Dung, H. Kreibich, The 2011 flood event in the Mekong Delta: preparedness, response, damage and recovery of private households 
+and small businesses, Disasters 40 (2016) 753–778, https://doi.org/10.1111/disa.12171.
+[28] A. Atreya, J. Czajkowski, W. Botzen, G. Bustamante, K. Campbell, B. Collier, F. Ianni, H. Kunreuther, E. Michel-Kerjan, M. Montgomery, Adoption of flood 
+preparedness actions: a household level study in rural communities in Tabasco, Mexico, Int. J. Disaster Risk Reduct. 24 (2017) 428–438, https://doi.org/ 
+10.1016/j.ijdrr.2017.05.025.
+[29] C. Luu, J. Von Meding, S. Kanjanabootra, Flood risk management activities in Vietnam: a study of local practice in Quang Nam province, Int. J. Disaster Risk 
+Reduct. (2018), https://doi.org/10.1016/j.ijdrr.2018.02.006.
+[30] L.K. Siebeneck, Z. Lei, P. Sharma, R. Verma, M. Osazuwa-Peters, S.V. Ukkusuri, Household evacuation decision making during simultaneous events: hurricane 
+Ida and the COVID-19 pandemic, Int. J. Disaster Risk Reduct. 114 (2024), https://doi.org/10.1016/j.ijdrr.2024.104914.
+[31] M.A.P. Medina, J.M. Moraca, Should I stay or should I go? Determinants of evacuation upon flood warning among households in a flood prone area in Bukidnon, 
+Philippines, Int. Lett. Nat. Sci. 50 (2016) 70–75. https://dx.doi.org/10.18052/www.scipress.com/ilns.50.70.
+[32] M.M. Rashid, S.D. Tirtha, N. Eluru, S. Hasan, Understanding hurricane evacuation behavior from Facebook data, Int. J. Disaster Risk Reduct. 116 (2024), 
+https://doi.org/10.1016/j.ijdrr.2024.105147.
+[33] S. Hoshino, H. Sekiguchi, R. Takeuchi, K. Miyagi, Y. Sato, J.J. Castro, K. Yamamoto, J. Kobayashi, Feasibility and effectiveness of vertical evacuation of patients 
+with chronic respiratory disease for tsunamis: a prospective study in a coastal area of Okinawa Prefecture, Japan, J. Lumin. (2024), https://doi.org/10.1016/j. 
+ijdrr.2024.105161.
+[34] N. Hasegawa, K. Asai, K. Yamaguchi, Y. Inada, R. Tokumaru, A. Yamazaki, T. Takabatake, Analysis of tsunami response and evacuation behaviors in northern 
+Hyogo: insights from the 2024 Noto Peninsula earthquake tsunami, Int. J. Disaster Risk Reduct. 115 (2024), https://doi.org/10.1016/j.ijdrr.2024.104993.
+[35] S.L. Cutter, C. Finch, Temporal and spatial changes in social vulnerability to natural hazards, Proc. Natl. Acad. Sci. U. S. A 105 (2008) 2301–2306, https://doi. 
+org/10.1073/pnas.0710375105.
+[36] S.-K. Huang, M.K. Lindell, C.S. Prater, H.-C. Wu, L.K. Siebeneck, Household evacuation decision making in response to hurricane ike, Nat. Hazards Rev. 13 
+(2012) 283–296, https://doi.org/10.1061/(asce)nh.1527-6996.0000074.
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+19
+[37] K. Elder, S. Xirasagar, N. Miller, S.A. Bowen, S. Glover, C. Piper, African Americans’ decisions not to evacuate New Orleans before Hurricane Katrina: a 
+qualitative study, Am. J. Publ. Health 97 (Suppl 1) (2007), https://doi.org/10.2105/AJPH.2006.100867.
+[38] H. Nakanishi, J. Black, Y. Suenaga, Investigating the flood evacuation behaviour of older people: a case study of a rural town in Japan, Res. Transp. Bus. Manag. 
+30 (2019) 100376, https://doi.org/10.1016/j.rtbm.2019.100376.
+[39] H.W. Asfaw, T. McGee, A.C. Christianson, The role of social support and place attachment during hazard evacuation: the case of Sandy Lake First Nation, 
+Canada, Environ. Hazards 18 (2019) 361–381, https://doi.org/10.1080/17477891.2019.1608147.
+[40] N. Dash, H. Gladwin, Evacuation decision making and behavioral responses: individual and household, Nat. Hazards Rev. 8 (2007) 69–77, https://doi.org/ 
+10.1061/(asce)1527-6988(2007)8:3(69.
+[41] D.P. Eisenman, K.M. Cordasco, S. Asch, J.F. Golden, D. Glik, Disaster planning and risk communication with vulnerable communities: lessons from Hurricane 
+Katrina, Am. J. Publ. Health 97 (Suppl 1) (2007) 109–115, https://doi.org/10.2105/AJPH.2005.084335.
+[42] S. Hasan, S. Ukkusuri, H. Gladwin, P. Murray-Tuite, Behavioral model to understand household-level hurricane evacuation decision making, J. Transport. Eng. 
+137 (2011), https://doi.org/10.1061/(ASCE)TE.1943-5436.0000223.
+[43] S. Hasan, R. Mesa-Arango, S. Ukkusuri, P. Murray-Tuite, Transferability of hurricane evacuation choice model: joint model estimation combining multiple data 
+sources, J. Transport. Eng. 138 (2012), https://doi.org/10.1061/(ASCE)TE.1943-5436.0000365.
+[44] R.E. Morss, J.L. Demuth, J.K. Lazo, K. Dickinson, H. Lazrus, B.H. Morrow, Understanding public hurricane evacuation decisions and responses to forecast and 
+warning messages, Weather Forecast. 31 (2016) 395–417, https://doi.org/10.1175/WAF-D-15-0066.1.
+[45] R. Muttarak, W. Lutz, Is education a key to reducing vulnerability to natural disasters and hence unavoidable climate change? Ecol. Soc. 19 (2014) https://doi. 
+org/10.5751/ES-06476-190142.
+[46] A. Sakurai, T. Sato, Promoting education for disaster resilience and the Sendai framework for disaster risk reduction, J. Disaster Res. 11 (2016) 402–412, 
+https://doi.org/10.20965/jdr.2016.p0402.
+[47] D. Cerulli, M. Scott, R. Aunap, A. Kull, J. P¨
+arn, J. Holbrook, Ü. Mander, The role of education in increasing awareness and reducing impact of natural hazards, 
+Sustain. Times 12 (2020), https://doi.org/10.3390/su12187623.
+[48] D.S. Mileti, P.W. O’Brien, Warnings during disaster: normalizing communicated risk, Soc. Probl. 39 (1992) 40–57, https://doi.org/10.2307/3096912.
+[49] M.T. Kinateder, E.D. Kuligowski, P.A. Reneke, R.D. Peacock, Risk perception in fire evacuation behavior revisited: definitions, related concepts, and empirical 
+evidence, Fire Sci. Rev. 4 (2015), https://doi.org/10.1186/s40038-014-0005-z.
+[50] C.M. Rando, D.G. Patel, L.E. Duvall, L. Martin, Use of cautions and warnings within International Space Station procedures: when too much information 
+becomes risky, Proc. Hum. Factors Ergon. Soc. 3 (2007) 1435–1438, https://doi.org/10.1177/154193120705102013.
+[51] E. Enarson, Gender and Natural Disaters, ILO, Geneva, 2000. https://www.ilo.org/wcmsp5/groups/public/—ed_emp/—emp_ent/—ifp_crisis/documents/ 
+publication/wcms_116391.pdf.
+[52] S. Hoffman, Eve and adam among the embers: gender patterns after the oakland berkeley firestorm, in: E. Elaine Enarson, Betty Hern Morrow (Eds.), Gendered 
+Terrain Disasters through Women’s Eyes, Praeger, 1998.
+[53] M.K. Lindell, R.W. Perry, The protective action decision model: theoretical modifications and additional evidence, Risk Anal. 32 (2012) 616–632, https://doi. 
+org/10.1111/j.1539-6924.2011.01647.x.
+[54] M.K. Lindell, Communicating imminent risk, in: H. Rodríguez, W. Donner, J. Handb Trainor (Eds.), Disaster Res. Handbooks Sociol. Soc. Res., Springer, 2018, 
+https://doi.org/10.1007/978-3-319-63254-4_22.
+[55] S.K. Huang, M.K. Lindell, C.S. Prater, Who leaves and who stays? A review and statistical meta-analysis of hurricane evacuation studies, Environ. Behav. 48 
+(2016) 991–1029, https://doi.org/10.1177/0013916515578485.
+[56] M.K. Lindell, S. Arlikatti, S.K. Huang, Immediate behavioral response to the June 17, 2013 flash floods in Uttarakhand, North India, Int. J. Disaster Risk Reduct. 
+34 (2019) 129–146, https://doi.org/10.1016/j.ijdrr.2018.11.011.
+[57] E.J. Baker, Hurricane evacuation behavior, Int. J. Mass Emergencies Disasters 9 (1991) 287–310, https://doi.org/10.1177/028072709100900210.
+[58] M.K. Lindell, Recovery and reconstruction after disaster, Encycl. Earth Sci. Ser. (2013) 812–824, https://doi.org/10.1007/978-1-4020-4399-4_285.
+[59] M.K. Lindell, R.W. Perry, Household adjustment to earthquake hazard: a review of research, Environ. Behav. 32 (2000) 461–501, https://doi.org/10.1177/ 
+00139160021972621.
+[60] F.O. Adeola, Katrina cataclysm: does duration of residency and prior experience affect impacts, evacuation, and adaptation behavior among survivors? Environ. 
+Behav. 41 (2009) 459–489.
+[61] M. Masozera, M. Bailey, C. Kerchner, Distribution of impacts of natural disasters across income groups: a case study of New Orleans, Ecol. Econ. 63 (2007) 
+299–306, https://doi.org/10.1016/j.ecolecon.2006.06.013.
+[62] M. Ng, J. Behr, R. Diaz, Unraveling the evacuation behavior of the medically fragile population: findings from hurricane Irene, Transp. Res. Part A Policy Pract. 
+64 (2014) 122–134, https://doi.org/10.1016/j.tra.2014.03.015.
+[63] B.K. Paul, Factors affecting evacuation behavior: the case of 2007 cyclone sidr, Bangladesh, prof, Geogr. 64 (2012) 401–414, https://doi.org/10.1080/ 
+00330124.2011.609780.
+[64] D.S. Mileti, E.M. Beck, Communication in crisis: explaining evacuation symbolically, Commun. Res. 2 (1975) 24–49.
+[65] M.K. Lindell, J.-C. Lu, C.S. Prater, Household decision making and evacuation in response to hurricane lili, Nat. Hazards Rev. 6 (2005), https://doi.org/ 
+10.1061/(ASCE)1527-6988(2005)6:4(171.
+[66] D.S. Mileti, R. Bandy, L.B. Bourque, A. Johnson, M.K. Lori, L. Peek, J. Sutton, M. Wood, Annotated bibliography for public risk communication on warnings for 
+public protective actions response and public education. https://www.academia.edu/11772052/Annotated_Bibliography_for_Public_Risk_Communication_on_ 
+Warnings_for_Public_Protective_Actions_Response_and_Public_Education, 2006.
+[67] J.G. Taylor, S.C. Gillette, R.W. Hodgson, J.L. Downing, M.R. Burns, D.J. Chavez, J.T. Hogan, Informing the network: improving communication with interface 
+communities during wildland fire, Hum. Ecol. Rev. 14 (2007). https://www.jstor.org/stable/24707706.
+[68] D.S. Mileti, J.H. Sorensen, Communication of Emergency Public Warnings: A Social Science Perspective and State-Of-The-Art Assessment, 1990, https://doi.org/ 
+10.2172/6137387. Oak Ridge.
+[69] M.M. Wood, D.S. Mileti, H. Bean, B.F. Liu, J. Sutton, S. Madden, Milling and public warnings, Environ. Behav. 50 (2018) 535–566, https://doi.org/10.1177/ 
+0013916517709561.
+[70] M.S.H. Mondal, M.S. Islam, Chronological trends in maximum and minimum water flows of the Teesta River, Bangladesh, and its implications, Jamba J. Disaster 
+Risk Stud. 9 (2017) 1–11, https://doi.org/10.4102/jamba.v9i1.373.
+[71] J.A. Horney, P.D.M. MacDonald, M. Van Willigen, P.R. Berke, J.S. Kaufman, Factors associated with evacuation from hurricane isabel in North Carolina, 2003, 
+Int. J. Mass Emergencies Disasters 28 (2010), https://doi.org/10.1177/028072701002800102.
+[72] R.W. Rogers, A protection motivation theory of fear appeals and attitude Change1, J. Psychol. 91 (1975) 93–114, https://doi.org/10.1080/ 
+00223980.1975.9915803.
+[73] P. Babcicky, S. Seebauer, Unpacking Protection Motivation Theory: evidence for a separate protective and non-protective route in private flood mitigation 
+behavior, J. Risk Res. 22 (2019) 1503–1521, https://doi.org/10.1080/13669877.2018.1485175.
+[74] D.L. Floyd, S. Prentice-Dunn, R.W. Rogers, A meta-analysis of research on protection motivation theory, J. Appl. Soc. Psychol. 30 (2000) 407–429.
+[75] M. Oakley, S.M. Himmelweit, P. Leinster, M.R. Casado, Protection motivation theory: a proposed theoretical extension and moving beyond rationality-the case 
+of flooding, Water (Switzerland) 12 (2020), https://doi.org/10.3390/W12071848.
+[76] R. Shillair, Protection motivation theory, Int. Encycl. Media Psychol (2020) 1–3, https://doi.org/10.1002/9781119011071.iemp0188.
+[77] R. Faryabi, F. Rezabeigi Davarani, S. Daneshi, D.P. Moran, Investigating the effectiveness of protection motivation theory in predicting behaviors relating to 
+natural disasters, in the households of southern Iran, Front. Public Health 11 (2023), https://doi.org/10.3389/fpubh.2023.1201195.
+[78] T. Thi Phuong, N. Quang Tan, N. Cong Dinh, N.H. Khanh Linh, P. Huu Ty, Flood vulnerability-rural poverty nexus: implications for disaster risk reduction and 
+sustainable rural development in Vietnam, Environ. Ecol. Res. 11 (2023) 362–377, https://doi.org/10.13189/eer.2023.110210.
+V.H. Ha et al. 
+
+International Journal of Disaster Risk Reduction 119 (2025) 105315
+20
+[79] Q.T. Nguyen, C.D. Nguyen, H.K.L. Nguyen, X.H. Pham, D.K. Nguyen, D.T. Bui, T.P. Tran, Climate change vulnerability and poverty nexus: evidence from coastal 
+communities in central Vietnam, J. Agric. Environ. Int. Dev. 117 (2023) 61–84, https://doi.org/10.36253/jaeid-13966.
+[80] T.T. Phuong, N.Q. Tan, N.C. Dinh, H. Van Chuong, H.D. Ha, H.T. Hung, Livelihood vulnerability to climate change : indexes and insights from two ethnic 
+minority communities in Central Vietnam, Environ. Challenges (2022) 100666, https://doi.org/10.1016/j.envc.2022.100666.
+[81] O.C.S. Valeriano, T. Koike, D. Yang, C.T. Nyunt, D. Van Khanh, N.L. Chau, Flood simulation using different sources of rainfall in the Huong River, Vietnam, 
+Hydrol. Sci. J. 54 (2009) 909–917, https://doi.org/10.1623/hysj.54.5.909.
+[82] T. Yamane, Statistics: an Introductory Analysis, second ed., Harper & Row, New York, 1967.
+[83] J.W. Creswell, V.L.P. Clark, Designing and Conducting Mixed Methods Research, third ed.), third ed., 2017.
+[84] A. Tashakkori, C. Teddlie, Epilogue: current developments and emerging trends in integrated research methodology, in: SAGE Handb. Mix. Methods Soc. & 
+Behav. Res., second ed., 2010, https://doi.org/10.4135/9781506335193.n31.
+[85] D.W. Hosmer, T. Hosmer, S. Le Cessie, S. Lemeshow, A comparison of goodness-of-fit tests for the logistic regression model, Stat. Med. 16 (1997) 965–980, 
+https://doi.org/10.1002/(SICI)1097-0258(19970515)16:9<965::AID-SIM509>3.0.CO;2-O.
+[86] G. Bertolini, R. D’Amico, D. Nardi, A. Tinazzi, G. Apolone, One model, several results: the paradox of the Hosmer-Lemeshow goodness-of-fit test for the logistic 
+regression model, J. Epidemiol. Biostat. 5 (2000) 251–253.
+[87] R. Muttarak, W. Pothisiri, The role of education on disaster preparedness: case study of 2012 Indian ocean earthquakes and tsunami warnings on Thailand’s 
+andaman coast, Ecol. Soc. 18 (2013) 51, https://doi.org/10.5751/ES-06101-180451.
+[88] T. Charnkol, Y. Tanaboriboon, Tsunami evacuation behavior analysis: one step of transportation disaster response, IATSS Res. 30 (2006) 83–96, https://doi.org/ 
+10.1016/s0386-1112(14)60173-4.
+[89] R.R. Thompson, D.R. Garfin, R.C. Silver, Evacuation from natural disasters: a systematic review of the literature, Risk Anal. 37 (2017) 812–839, https://doi.org/ 
+10.1111/risa.12654.
+[90] Y. Li, H.C. Wu, A. Greer, D.O. Huntsman, Drivers of household risk perceptions and adjustment intentions to tornado hazards in Oklahoma, Weather. Clim. Soc. 
+14 (2022) 1177–1199, https://doi.org/10.1175/WCAS-D-22-0018.1.
+[91] J.A. Shepperd, E. Waters, N.D. Weinstein, W.M.P. Klein, A primer on unrealistic optimism, Curr. Dir. Psychol. Sci. 24 (2015) 232–237, https://doi.org/10.1177/ 
+0963721414568341.
+V.H. Ha et al. 

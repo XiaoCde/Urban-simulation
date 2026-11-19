@@ -1,0 +1,1224 @@
+Risk Analysis DOI: 10.1111/j.1539-6924.2011.01647.x
+The Protective Action Decision Model: Theoretical
+Modifications and Additional Evidence
+Michael K. Lindell1,∗ and Ronald W. Perry2
+The Protective Action Decision Model (PADM) is a multistage model that is based on findings from research on people’s responses to environmental hazards and disasters. The PADM
+integrates the processing of information derived from social and environmental cues with
+messages that social sources transmit through communication channels to those at risk. The
+PADM identifies three critical predecision processes (reception, attention, and comprehension of warnings or exposure, attention, and interpretation of environmental/social cues)—
+that precede all further processing. The revised model identifies three core perceptions—
+threat perceptions, protective action perceptions, and stakeholder perceptions—that form the
+basis for decisions about how to respond to an imminent or long-term threat. The outcome
+of the protective action decision-making process, together with situational facilitators and
+impediments, produces a behavioral response. In addition to describing the revised model
+and the research on which it is based, this article describes three applications (development
+of risk communication programs, evacuation modeling, and adoption of long-term hazard
+adjustments) and identifies some of the research needed to address unresolved issues.
+KEY WORDS: Protective action decisions; protective action perception; risk perception
+1. INTRODUCTION
+Researchers have long been interested in explaining the process by which people respond to
+environmental cues or socially transmitted warnings about environmental hazards and disasters.(1−10)
+Findings from this research on environmental hazards and disasters are compatible with those from
+theories on social influence, persuasion, behavioral decision making, attitude-behavior relationships, protective action, and innovation processes in
+identifying useful guidance on ways in which risk
+1Texas A&M University, Hazard Reduction & Recovery Center,
+College Station, TX, USA.
+2Arizona State University, School of Public Affairs, Phoenix AZ,
+USA.
+∗Address correspondence to Michael K. Lindell, Texas A&M University, Hazard Reduction & Recovery Center, College Station,
+TX 77843-3137, USA; mlindell@tamu.edu.
+communication can influence immediate disaster response and long-term hazard adjustments. The latter
+are defined, following Burton, Kates, and White,(11)
+as “those actions that intentionally or unintentionally
+reduce risk from extreme events in the natural environment” (Ref. 12 p. 328). The relevant elements
+of these complementary approaches have been integrated to produce a Protective Action Decision
+Model (PADM) of the factors that influence individuals’ adoption of protective actions.(5,13) More recently, additional evidence has been collected that
+supports some of the PADM’s propositions and
+has required reconsideration of others. Thus, the
+purpose of this article is to describe an updated version of the PADM, describe three applications (development of risk communication programs, evacuation modeling, and adoption of long-term hazard
+adjustments), and identify some of the research
+needed to address unresolved issues. This section will
+1 0272-4332/11/0100-0001$22.00/1 C 2011 Society for Risk Analysis
+
+2 Lindell and Perry
+Fig. 1. Information flow in the PADM.
+Source: Adapted from Lindell & Perry (2004).
+provide a brief overview of the model, which will be
+followed by more detailed discussion of its components in Sections 2–5. Section 6 will provide a theoretical assessment of the PADM and Section 7 will
+describe its applications in three areas (development
+of risk communication programs, evacuation modeling, and adoption of long-term hazard adjustments).
+The findings of studies on individual response
+to environmental hazards and disasters can be diagrammed in a flow chart that provides a graphic representation of the model (see Fig. 1). The process of
+protective action decision making begins with environmental cues, social cues, and warnings. Environmental cues are sights, smells, or sounds that signal the onset of a threat whereas social cues arise
+from observations of others’ behavior. Warnings are
+messages that are transmitted from a source via a
+channel to a receiver, resulting in effects that depend on receivers’ characteristics. The relevant effects are changes in receivers’ beliefs and behaviors,
+whereas receivers’ characteristics include their physical (e.g., strength), psychomotor (e.g., vision and
+hearing), and cognitive (e.g., primary and secondary
+languages as well as their mental models/schemas)
+abilities as well as their economic (money and vehicles) and social (friends, relatives, neighbors, and
+co-workers) resources.
+Environmental cues, social cues, and socially
+transmitted warnings initiate a series of predecisional
+processes that, in turn, elicit core perceptions of the
+environmental threat, alternative protective actions,
+and relevant stakeholders. These perceptions provide the basis for protective action decision making,
+the outcome of which combines with situational facilitators and impediments to produce a behavioral response. In general, the response can be characterized
+as information search, protective response (problemfocused coping), or emotion focused coping. In many
+cases, there is a feedback loop as additional environmental or social cues are observed or warnings are
+received. The dominant tendency is for such information to prompt protective action decision making, but
+information seeking occurs when there is uncertainty
+at a given stage in the protective action decisionmaking process. Once the uncertainty is resolved,
+processing proceeds to the next stage in the process.
+The stages in the PADM characterize the way
+people “typically” make decisions about adopting
+actions to protect against environmental hazards.
+These stages are sequential, as are those within the
+information-seeking process. However, few people
+are likely to follow every step in the model in the
+exact sequence listed in Fig. 1. For example, an extremely credible (or powerful) source might obtain
+immediate and unquestioning compliance with a directive to evacuate an area at risk—even if there
+were no explanation why evacuation was necessary
+or what alternative protective actions were feasible.(14) The important lesson is that—unless warning sources have an extreme amount of credibility or
+they have substantial power to compel compliance—
+the more stages in the PADM they neglect, the more
+
+The Protective Action Decision Model 3
+ambiguity there is likely to be for message recipients.
+In turn, greater ambiguity is likely to cause warning
+recipients to spend more time in seeking and processing information rather than preparing for and implementing protective action.(9,15) Indeed, ambiguity
+can initiate a repetitive cycle of information processing and information seeking that persists until it is
+too late to complete a protective action before hazard onset.
+2. ENVIRONMENTAL AND
+SOCIAL CONTEXT
+The physical environmental component comprises the geophysical, meteorological, hydrological,
+or technological processes that generate a hazard and
+transport it to the locations where people are exposed (see Ref. 16, chapter 5, for further discussion).
+These processes generate hazards that vary in the
+speed of onset, and magnitude, scope, and duration
+of their impacts. One important hazard characteristic that is often quite relevant for people’s emergency response is the availability of environmental
+cues such as sights and sounds that indicate hazard
+onset. In tornadoes, for example, the sight of a funnel
+cloud and a roar “like a freight train” (a common description by tornado victims) provide unmistakable
+indications of imminent threat. In other cases, such
+as the recession of coastal waters before a tsunami,
+the cues are much more ambiguous and likely to be
+misinterpreted. Still other hazards, such as ionizing
+radiation and some toxic chemicals, provide no environmental cues whatsoever.
+The transmission of social information is based
+upon the classic six-component communication
+model of source-channel-message-receiver-effectfeedback.(17−21) Sources in the social context consist
+of other people who may transmit information about
+hazards and protective actions, as well as providing
+assistance to reduce the hazard or providing material
+resources that assist protective response. For example, authorities, news media, and peers (i.e., friends,
+relatives, neighbors, and co-workers) can provide information about environmental threats and alternative protective actions. Moreover, emergency managers can dispatch city and school buses to evacuate
+those who lack their own means of transportation.
+They can also provide public shelters to those who
+lack the money needed to stay in commercial facilities or lack nearby friends or relatives with whom to
+stay.
+One crucial aspect of the social context is the
+network of organizations and individuals that comprise the warning network.(6,22) An original source
+can transmit a message by means of a broadcast process directly to ultimate receivers (e.g., households)
+and also by means of a diffusion process through intermediate sources who, in turn, relay messages to
+ultimate receivers.(23) These ultimate receivers might
+also transmit messages to each other, thus resulting
+in some people receiving multiple warnings, others
+receiving only a single warning, and some people receiving no warnings. The nature of the warning network has a significant impact on protective action decision making because multiple sources often deliver
+conflicting messages that require searching for additional information to resolve the confusion.
+The warning network can communicate information through a variety of different types of channels.
+These include print (newspapers, magazines, and
+brochures), electronic (commercial radio and television, telephone, route alert (broadcast from a moving
+vehicle), tone alert radio, siren, and Internet), and
+face-to-face (dyadic conversation or group presentation). These channels differ in characteristics such as
+dissemination rate and precision, penetration of normal activities, message specificity/distortion, sender
+and receiver requirements for specialized equipment,
+and feedback/receipt verification (see Ref. 5, chapter
+4, for a detailed discussion). Each channel has advantages and disadvantages, with channels that provide
+the fastest dissemination often providing the least information (e.g., mechanical sirens). Moreover, people differ in their channel access and preferences.
+For example, tornado warnings broadcast over an
+English-language radio station missed the population
+of Saragosa, Texas that routinely listened to Spanishlanguage stations.(24) In addition to the official warning systems, however, peers typically relay information through informal warning systems. Even when
+peers do not explicitly transmit warning messages,
+their behavior—especially obvious preparations for
+evacuation—can serve as social cues for protective
+action.(25)
+3. PSYCHOLOGICAL PROCESSES
+Psychological processes are defined by three sets
+of activities—(i) predecisional processes; (ii) core
+perceptions of the environmental threat, alternative protective actions, and social stakeholders; and
+(iii) protective action decision making. The three
+predecisional processes of exposure (whether people
+
+4 Lindell and Perry
+receive information), attention (whether they heed
+it), and comprehension (whether they understand
+it) are largely automatic processes that take place
+outside of conscious processing.(26) The three core
+perceptual objects—environmental threats, alternative protective actions, and societal stakeholders—
+can elicit either automatic or reflective judgments,
+depending on the degree to which an individual
+has schemas that provide readily accessible and coherent beliefs about those objects. When someone has a schema—a generic knowledge structure defined by instances, attributes that differentiate these instances, and interrelationships among
+the attributes—beliefs about objects encompassed by
+that schema are rapidly accessed to produce an overall judgment that is congruent with the available information about the situation. Finally, contrary to
+widespread belief, panic rarely occurs.(27) Instead,
+protective action decision making is often a reflective
+process that assesses the available information about
+the threat, alternative protective actions, and social
+stakeholders to choose a behavioral response. The
+research literature suggests that inappropriate disaster responses are more frequently due to inadequate
+information than to defective cognitive processing.
+3.1. Predecisional Processes
+Regardless of whether information comes from
+environmental cues or social warnings, three predecisional processes are necessary to produce a
+protective response. Information from the physical
+environment will not lead to the initiation of appropriate protective actions unless people are exposed
+to, heed, and accurately interpret the environmental cues. Similarly, information from the social environment will not lead to the initiation of appropriate protective actions unless people receive, heed,
+and comprehend the socially transmitted information. Whether or not people heed the available information is determined by their expectations, competing attention demands, and the intrusiveness of the
+information.(26) These processes are known to be affected by the warning recipient’s age,(28) but the effects of other demographic characteristics have not
+been reported.
+In the case of warnings, people must first receive
+information from another person through a warning channel and attend to this information. Accordingly, the characteristics of the warning channel itself
+can have a significant impact on people’s reception
+and attention to warning message content. For example, in many places along the Oregon coast, mountains prevent people from receiving signals from
+National Oceanographic and Atmospheric Administration Weather Radio transmitters.(29) Even when a
+warning has been received and heeded, some people
+will fail to comprehend the available information—
+what others called “hearing and understanding.”(30)
+The comprehension of warning messages depends
+upon whether the message is conveyed in words
+they understand. As the Saragossa tornado indicated,
+warnings disseminated in English are unlikely to
+be understood by those who understand only Spanish.(24) In addition, however, comprehension also affected by more subtle factors. A warning message
+cannot be comprehended if it uses esoteric terms
+that have no meaning for those at risk. For example,
+phrases such as “hypocenter” (earthquake), “SaffirSimpson Category” (hurricane), “oxidizer” (chemical), and “millirem” (radiological) are specialized
+terms that will not be understood by all who hear
+them.
+3.2. Perceptions of Threats, Protective Actions,
+and Stakeholders
+Unlike comprehension, which provides the literal meaning of the words in a warning message, perceptions of the threat, alternative protective actions,
+and stakeholders involve broader associations that
+are integral parts of the schemas or mental models(31)
+within which the threat, protective actions, and stakeholders are embedded. It should be quite obvious
+that people will differ from each other in the comprehensiveness of their schemas about these objects.
+That is, some people will have highly differentiated
+schemas whereas others have poorly differentiated
+schemas about an object.
+3.2.1. Perceptions of Environmental Threats
+The essential attributes of people’s perceptions
+of environmental threats are generally considered
+to be probability and consequences, but some wellknown approaches to perceived risk include factors
+such as dread and unknown risks.(32) These additional dimensions of perceived risk appear to be
+useful in explaining people’s responses to a broad
+range of technologies and societal activities, but it
+is not completely obvious how they are related to
+the perception of, and response to, imminent threats
+from environmental hazards.(33) Research on hazards and disasters has emphasized a definition of
+
+The Protective Action Decision Model 5
+perceived risk in terms of people’s expectations of
+the personal impacts from an extreme environmental event.(7,8) These expected personal impacts include death, injury, property damage, and disruption
+to daily activities such as work, school, and shopping.(34) Moreover, most research on hazards and disasters has found that risk perception predicts warning
+responses such as evacuation(35) and long-term hazard adjustments.(36) These protective responses have
+been studied for hazards such as earthquakes,(37)
+hurricanes and other coastal storms,(38) floods,(39)
+and volcanic eruptions.(40) However, there have been
+some studies in which risk perception was unrelated
+to hazard adjustment.(34,40−42)
+In addition to the certainty and severity of the expected personal impacts, environmental threats can
+differ in their degree of intrusiveness, which is the
+frequency of “thoughts generated by the distinctive hazard-relevant associations that people have
+with everyday events, informal hazard-relevant discussions with peers, and hazard-relevant information
+received passively from the media” (Ref. 13, p. 125).
+Hazard intrusiveness is correlated with the adoption
+of earthquake hazard adjustments(34,41) and expectations of participating in hurricane mitigation incentive programs.(43)
+Expected personal impacts and hazard intrusiveness are related to the recency, frequency, and
+intensity of people’s personal experience with hazard events.(34,43−45) Such experience can involve casualties or damage experienced by the respondent
+him/herself, by members of the immediate or extended family, or by friends, neighbors, or coworkers.(34) In turn, hazard experience is often correlated with proximity to earthquake,(46) hurricane,(47)
+and flood(48) sources. In addition to the indirect effect
+of hazard proximity on risk perception (via hazard
+experience), there can also be a direct relation between hazard proximity and perceived personal risk
+that is determined by a perceived risk gradient relating increasing proximity to increased risk.(49) However, the resulting risk judgments can be quite inaccurate because there are cases in which people have
+limited ability to identify their location in risk areas.(50,51)
+Information from environmental cues and social
+warnings, together with prior beliefs about the hazard agent, produces a situational perception of personal risk that is characterized by beliefs about the
+ways in which environmental conditions will produce
+specific personal impacts. In hurricanes, for example,
+risk perceptions have been characterized by people’s
+beliefs about the degree to which storm surge, inland
+flooding, and storm wind will cause their death or
+injury, kill or injure their loved ones, destroy their
+property, or disrupt their jobs or basic services such
+as electric power and water.(25,38)
+3.2.2. Perceptions of Hazard Adjustments
+A substantial amount of research has focused on
+people’s perceptions of natural hazards but there is
+also a need for studying their perceptions of natural hazard adjustments.(52) Such studies are needed
+because the theory of reasoned action (TRA) posits
+that one’s attitude toward an object (e.g., seismic hazard) is less predictive of behavior than one’s attitude
+toward an act (seismic hazard adjustments) relevant
+to that object.(53) Thus, to understand the adoption of
+hazard adjustments, it is just as important to understand the perceived attributes of the hazard adjustments as the perceived attributes of the hazard itself.
+The identity of these perceived attributes can
+be surmised from studies on the adoption of hazard adjustments, which have found support for attributes such as effectiveness,(54) cost,(55) required
+knowledge,(56) and utility for other purposes.(57)
+Lindell and Perry(5,13,52) summarized this line of research by proposing that hazard adjustments can be
+defined by hazard-related and resource-related attributes, both of which differentiate among hazard
+adjustments.(58) Hazard-related attributes, such as efficacy in protecting people and property and usefulness for other purposes, have been found to be
+significantly correlated with adoption intention
+and actual adjustment.(41,59,60) Resource-related attributes (cost, knowledge and skill requirements,
+time requirements, effort requirements, and required
+cooperation with others) generally have the predicted negative correlations with both adoption intention and actual adjustment, but these have been
+small and nonsignificant in studies conducted to date.
+The hazard adjustments in these studies have generally had small resource requirements, so it is unclear
+if the lack of support for the significance of these attributes is due to this factor.(58)
+3.2.3. Perceptions of Social Stakeholders
+Previous research has characterized stakeholders as authorities (federal, state, and local government), evaluators (scientists, medical professionals, universities), watchdogs (news media, citizens’,
+and environmental groups), industry/employers, and
+households.(2,61,62) The interrelationships among
+stakeholders can be defined by their power over
+
+6 Lindell and Perry
+each other’s decisions to adopt hazard adjustments.
+French and Raven posited that power relationships
+can be defined in terms of six bases—reward, coercive, expert, information, referent, and legitimate
+power.(63,64) Reward and coercive power are the
+principal bases of regulatory approaches, but these
+require continuing surveillance to ensure rewards
+are received only for compliance and that punishment will inevitably follow noncompliance.(65) Such
+surveillance is rarely feasible, so authorities need to
+rely on bases of power other than reward and coercion. French and Raven’s conceptions of expert
+(i.e., understanding of cause and effect relationships
+in the environment) and information (i.e., knowledge about states of the environment) power suggest assessing perceptions of stakeholders’ hazard expertise. French and Raven’s conception of referent
+power is defined by a person’s sense of shared identity with another,(66) which is related to that person’s trustworthiness. Although trust has been defined many different ways,(67) fairness, unbiasedness,
+willingness to tell the whole story, and accuracy are
+central.(68)
+French and Raven defined legitimate power by
+the rights and responsibilities associated with each
+role in a social network, which raises questions about
+what households consider to be the responsibility
+of different stakeholders for protecting them from
+seismic hazard.(63) This is reinforced by research
+on stakeholders’ perceived protection responsibility,
+which dates from research that attributed low rates
+of seismic adjustment adoption to respondents’ beliefs that the federal government was the stakeholder
+most responsible for coping with earthquakes.(69)
+Much later, respondents had come to believe earthquake preparedness was an individual’s responsibility.(70) The conclusion that a perception of personal
+protection responsibility leads to a higher level of
+seismic adjustment adoption is supported by similar
+findings on tornado adjustment adoption.(71) Recent
+research has found that stakeholders differ significantly in these perceived characteristics (expertise,
+trustworthiness, and protection responsibility) and,
+moreover, these characteristics have significant positive correlations with hazard adjustment intentions
+and actual adjustment adoption.(41,67)
+3.3. Protective Action Decision Making
+Once the three predecisional processes have
+been completed and the three types of core perceptions have been activated, cognitive processing turns
+to the series of decision stages—risk identification,
+risk assessment, protective action search, protective
+action assessment, and protective action implementation. In addition, information-seeking activities include information needs assessment, communication
+action assessment, and communication action implementation. Each of the decision stages in the PADM
+is discussed in detail below.
+3.3.1. Risk Identification
+According to the PADM, people’s threat perceptions lead to risk identification, which is equivalent to
+what Lazarus and Folkman call primary appraisal.(72)
+In both emergency response and long-term hazard
+adjustment, those at risk must answer the basic question of risk identification: “Is there a real threat that I
+need to pay attention to?”(4,73,74) The importance of
+the resulting threat belief is supported by research
+showing individuals routinely try to maintain their
+definition of the environment as “normal” in the
+face of evidence that it is not.(2) Researchers have
+found a positive relationship between level of threat
+belief and disaster response across a wide range of
+disaster agents, including floods,(9,73) volcanic eruptions,(15,75) hazardous materials emergencies,(5) hurricanes,(25) earthquakes,(76) and nuclear power plant
+emergencies.(77,78)
+3.3.2. Risk Assessment
+The next step, risk assessment, refers to the process of determining expected personal impacts that
+a disaster could cause.(8,74) The process of assessing
+personal relevance has also been recognized as an
+important factor by persuasion theorists.(66) In the
+risk assessment stage, a positive response to the question “Do I need to take protective action?” elicits
+protection motivation whether the risk involves a disaster response or long-term hazard adjustment.(79,80)
+Some of the factors associated with people’s personalization of risk include “the probability of the impending event occurring [and] the severity, to the individual, of such a development” (Ref. 81, p. 104).
+As this quote indicates, the immediacy of a threat
+is important because warning recipients must understand that the message describes an event whose
+consequences are likely to occur in the very near
+future. Thus, immediacy is related to forewarning,
+which is the amount of time between the arrival of
+a warning (or personal detection of environmental
+cues) and disaster onset. People tend to engage in
+
+The Protective Action Decision Model 7
+activities such as information seeking and expedient property protection when they believe there is
+more time before impact than the minimum necessary to implement protective action.(9,82) Successful
+warning confirmation can ultimately increase compliance with recommended protective actions but does,
+inherently, delay them. Similarly, the amount of time
+that risk area residents devote to expedient property
+protection also delays their initiation of personal protective action. In both cases, the delay in protective
+action might be dangerous because the time of disaster impact cannot be predicted with perfect accuracy.(83)
+3.3.3. Protective Action Search
+If a threat is judged to be real and some unacceptable level of personal risk exists, people are
+motivated to engage in protective action search—
+which involves retrieving one or more feasible protective actions from memory or obtaining information about them from others. The relevant question
+in protective action search is “What can be done to
+achieve protection?” and its outcome is a decision
+set that identifies possible protective actions. In many
+instances, an individual’s own knowledge of the hazard will suggest what type of protection to seek (e.g.,
+evacuation from floods or sheltering in the basement
+from a tornado).
+In addition, those in the risk area might become
+aware of feasible protective actions by observing social cues such as the behavior of others. This occurs,
+for example, when neighbors are seen packing cars in
+preparation for hurricane evacuation.(84) People also
+are likely to consider actions with which they have
+had vicarious experience by reading or hearing about
+others’ protective actions. Such vicarious experience
+is frequently transmitted by the news media and relayed by peers. Finally, people also are made aware
+of appropriate protective actions by means of disaster warnings and hazard awareness programs that
+carry protective action recommendations from authorities. Specifically, a well-designed warning message will assist recipients by providing guidance in
+the form of one or more protective action recommendations.(8) However, such guidance is often inadequate. For example, water contamination advisories often suggest boiling drinking water, but fail
+to explain whether boiled water is also required for
+making ice, brushing teeth, rinsing vegetables, brewing coffee, cooking pasta, taking showers, or washing dishes, counters, hands, or clothes. They also frequently fail to mention other protective actions such
+as chlorinating the water or using bottled water.(85)
+3.3.4. Protective Action Assessment
+After people have established that at least one
+protective action is available, they pass from protective action search to the protective action assessment stage. This involves examining alternative
+actions, evaluating them in comparison to the consequences of continuing normal activities, and determining which of them is the most suitable response
+to the situation. At this point, the primary question
+is “What is the best method of protection?” and its
+outcome is an adaptive plan.
+Choice is an inherent aspect of emergencies
+because those at risk generally have at least two
+options—taking protective action or continuing normal activities. Comparing alternatives with respect to
+their attributes leads, in turn, to a balancing or tradeoff of these attributes with respect to their relative
+importance to the decisionmaker. Under some conditions, those at risk can only take one action and,
+therefore, must make a choice among the alternatives (e.g., either evacuate or shelter in-place; Ref. 5,
+p. 155). In other cases, people can take multiple actions and must choose which ones to implement first.
+For example, people in earthquake prone areas are
+advised to have a working transistor radio with spare
+batteries, at least 4 gallons of water in plastic containers, a complete first-aid kit, and a 4-day supply of
+dehydrated or canned food for themselves and their
+families. They are also advised to strap water heaters,
+tall furniture, and heavy objects to the building walls
+and to bolt the house to its foundation.(57)
+The end result of protective action assessment
+is an adaptive plan, but people’s adaptive plans vary
+widely in their specificity, with some being only vague
+goals and others begin extremely detailed. At minimum, a specific evacuation plan includes a destination, a route of travel, and a means of transportation.(9) More detailed plans include a procedure for
+reuniting families if members are separated, advance
+contact to confirm the destination is available, consideration of alternative routes if the primary route
+is unsafe or too crowded, and alternative methods of
+transportation if the primary one is not available.(86)
+3.3.5. Protective Action Implementation
+The fifth step, protective action implementation,
+occurs when all the previous questions about risk
+reduction have been answered satisfactorily. In
+
+8 Lindell and Perry
+general, the implementation of protective actions
+consumes resources people would prefer to allocate
+to other activities, so those at risk frequently delay
+implementation until they have determined that the
+immediacy of the threat justifies the disruption of
+normal activities. Thus, people often ask the question: “Does protective action need to be taken now?”
+The answer to this question, whose outcome is the
+threat response, is crucial because people sometimes
+postpone the implementation of protective action
+even when there is imminent danger. As noted earlier, recipients of hurricane warnings have often been
+found to endanger their safety because many wait until the last minute to begin their evacuations.(82,87)
+Unfortunately, they fail to recognize that adverse
+weather conditions and a high volume of traffic can
+significantly reduce the average speed of evacuating vehicles, thus running the risk that their evacuation will not be completed before the arrival of
+storm conditions.(25,88−90) The problem of procrastination is even more severe in connection with longterm hazard adjustment than it is in disasters with
+ample forewarning because hazard awareness programs cannot specify even an approximate deadline
+by which action must be taken. For example, an
+earthquake prediction might only be able to indicate
+a 67% chance of a damaging earthquake within the
+next 30 years.(91)
+3.3.6. Information Needs Assessment
+At any stage of the protective action decision
+process, some of the people who receive a warning
+might find that the available information is insufficient to justify a resource-intensive protective action.
+When they think time is available, people cope with
+the lack of information by searching for additional information.(9,15,92) The process of information search
+begins with an information needs assessment arising from an individual’s judgment that the available
+information is insufficient to justify proceeding further in the protective action decision process. Thus, if
+any of the questions cannot be answered with an unequivocal yes or no, people will ask “What information do I need to answer my question?” so they can
+generate an identified information need. People commonly need additional information about the certainty, severity, and immediacy of the threat, and logistical support for protective action such as suitable
+evacuation routes, destinations, modes of transportation, and arrangements for pets and family members
+with major medical needs.
+3.3.7. Communication Action Assessment
+Identification of an information need does not
+necessarily suggest where the needed information
+can be obtained. Thus, the next question in the information seeking process is: “Where and how can
+I obtain this information?” Addressing this question
+leads to information source selection and information channel selection, which constitute an information search plan. The sources sought are likely to be
+affected by the available channels, which in many disasters precludes the use of the telephone because circuits are so overloaded that it is impossible to obtain a dial tone for hours or even days.(93) Further,
+attempts to reach authorities sometimes prove futile
+because emergency response agencies are busy handling other calls. Thus, people are often forced to
+rely on the mass media and peers—especially for information about protective actions.(94) This distinction between risk area residents’ preferred channels
+of information receipt and their actual channels of
+information receipt also can be seen in connection
+with long-term hazard adjustment. For example, residents of communities downstream from the Mt. St.
+Helens volcano revealed some significant disparities
+between their preferred and actual channels of information receipt in the years after the 1980 eruptions.(5) Moreover, there also were significant differences between the two communities of Toutle and
+Lexington in both their preferred and actual channels of information receipt.
+3.3.8. Communication Action Implementation
+The final step in the information search process
+is communication action implementation, which provides decision information by answering the question: “Do I need the information now?” If the answer
+to this question is positive, that is, they are threatened by an imminent disaster, people will actively
+seek the needed information from the most appropriate source through the most appropriate channel.
+People will go to great lengths, contacting many people over a period of minutes to hours, if the prospect
+of an imminent disaster needs to be confirmed.(93,95)
+Indeed, half of the respondents in one study reported monitoring the news media hourly or more
+frequently.(96) However, information seeking will be
+less frequent and less active if the location is specific
+but the time of impact is ambiguous. Many residents
+of the area around Mt. St. Helens monitored the radio four or more times a day after the initial ash and
+
+The Protective Action Decision Model 9
+steam eruptions.(97) By contrast, the absence of locational specificity and time pressure inherent in a
+hazard awareness program provides little need for
+those at risk to obtain immediate answers, so they
+are likely to forego active information seeking in favor of passive monitoring of the situation. Unfortunately, the absence of a deadline for action means
+this passive monitoring is likely to continue until an
+imminent threat arises (as in the case of hurricanes
+and floods) or until a disaster strikes (as in the case
+of earthquakes).
+4. SITUATIONAL IMPEDIMENTS
+AND FACILITATORS
+The actual implementation of behavioral response depends not only on people’s intentions to
+take those actions but also on conditions in their
+physical and social environment that can impede actions that they intended to take or that can facilitate actions that they did not intend to take.(98) In
+most cases, the lack of correspondence between intentions and behavior seems to be caused by impediments rather than unexpected facilitators; there are
+many instances in which people have wanted to evacuate but lacked a safe place to go and a safe route to
+travel.(9) Other impediments include a lack of access
+to a personal vehicle (e.g., those who are routinely
+transit dependent or families in which one spouse has
+the only car during the workday) or a lack of personal
+mobility due to physical disabilities.(99,100) In cases involving rapid onset disasters, the separation of family members can also be an evacuation impediment.
+Until family members have been reunited or separated family members can establish communication
+contact and agree upon a place to meet, evacuation
+is unlikely to occur.(101,102)
+5. FEEDBACK
+The final stage in the PADM is a feedback loop
+directed by the communication action assessment
+that returns to the initial inputs—environmental and
+social cues, and information sources, channel access
+and preferences, and warning messages. This feedback loop is extremely common in sudden onset disasters because people seek to confirm or contradict
+any warnings they have received, typically by contacting a different source using a different channel.(9)
+Alternatively, some people might be looking to obtain additional information about the threat, about
+which protective action to select, or about how to implement a protective action that they have selected.
+Finally, people might relay warnings to others or discuss the implications of the information they have
+received.(2) As is the case with the adoption of longterm hazard adjustments, a perceived lack of urgency
+in obtaining information about a hazard or protective
+actions can lead to procrastination.
+6. THEORETICAL ASSESSMENT OF
+THE PADM
+As the previous sections indicate, there has been
+a substantial amount of research that has been conducted within the framework of the PADM or on
+variables that are part of the PADM (e.g., other research on the relationship of risk perception to evacuation). In addition, there has been some limited
+discussion of the relationship between the PADM
+and the findings from research in domains other
+than hazards and disasters—including persuasion, social conformity, behavioral decision theory, attitudebehavior theory, and information seeking. However,
+there has only been limited discussion of the PADM
+in relation to other theories of protective action.
+6.1. PADM Comparison to Other Theories of
+Protective Action
+The PADM identifies a series of informationprocessing stages relevant to household adoption
+of protective actions and—for each stage—the typical activity performed, question asked, and outcome. The characterization of the PADM as a stage
+model of protective action warrants a comment
+in light of Weinstein, Rothman, and Sutton’s critique of stage models of health behavior.(103) Like
+Janis and Mann’s(4) conflict model, the PADM differs from stage models such as the Transtheoretical Model (TTM)(104) and the Precaution Adoption
+Process Model (PAPM)(105) in three important ways.
+First, risk area residents implement emergency response actions such as evacuation and sheltering inplace temporarily rather than permanently. Thus, the
+PADM lacks an equivalent to the TTM’s maintenance stage and the idea of a “termination stage”
+has a qualitatively different meaning for the situations addressed by the PADM. In the TTM, termination is “the stage at which individuals have zero
+temptation”(104) to revert to their previous behavior.
+Thus, the TTM is clearly directed toward (health)
+behaviors that must be maintained indefinitely
+through continuing effort. In the PADM, by contrast,
+
+10 Lindell and Perry
+“termination” of an inherently temporary emergency
+response would be the stage at which it is safe for
+individuals to revert to their previous (“normal”)
+behavior.
+Second, emergency response actions have significantly different time scales for their decision-making
+processes than do health behavior changes. During
+emergencies, people might pass through all of the
+stages of the PADM in a matter of minutes, whereas
+the TTM and PAPM address stages of change that
+are more likely to unfold over months or years. Finally, the PADM is typically applied to situations
+in which emergency managers are transmitting information concurrently to large numbers of people
+who are responding to a single “focusing event”(106)
+rather than situations in which health professionals
+conduct personal interventions that are tailored to
+individuals in different stages of a behavioral change
+process. Nonetheless, the PADM can be applied to
+long-term hazard adjustment as well as emergency
+response actions. In such cases as deciding to insure
+houses, elevate them above flood level, or bolt them
+to their foundations, there are more notable overlaps
+between the situations addressed by the PADM, on
+the one hand, and the TTM and PAPM, on the other
+hand. However, the extent of the overlap needs to be
+examined in future research.
+In addition to examining the PADM’s compatibility with stage models of health behavior, future research also needs to systematically examine
+its theoretical similarities to and differences from
+other psychological models. For example, hazard
+adjustment attributes in the PADM are equivalent to TRA’s attitude toward the act. However,
+although disaster research has found that conformity with the behavior of others can be a significant influence on people’s evacuation decisions,
+there has been no PADM research that has explicitly addressed the subjective norm as it has
+been conceptualized in the TRA. Moreover, the
+PADM’s premise that people can vary in the extent to which they base their protective action decisions upon thoughtful consideration of information
+about environmental cues, social context, warning
+source characteristics, and warning message characteristics or, alternatively, upon unquestioning compliance with an authority’s recommendation is similar to ideas about central versus peripheral routes
+to persuasion in the Elaboration Likelihood Model
+(ELM).(107) The findings of PADM research that are
+compatible with the ELM need to be replicated and
+extended.(41,67)
+Finally, there are some similarities as well as
+distinct differences between PADM and protection
+motivation theory (PMT).(108−110) PADM’s conception of hazard-related attributes (protection of persons, protection of property, and utility for other
+purposes) is similar to, but broader than, PMT’s response efficacy. However, PADM’s conception of
+resource-related attributes (cost, time and effort
+requirements, knowledge and skill, and required cooperation) is distinctly different from PMT’s selfefficacy because the latter seems most closely related to the knowledge and skill component of the
+resource-related attributes. Moreover, the resourcerelated attributes are characteristics of a protective
+action whereas self-efficacy is a characteristic of the
+person. An advantage of the PADM formulation is
+that assessing the perceived characteristics of different protective actions makes it possible to determine
+if people have erroneous perceptions of the alternative actions and correct those misperceptions if they
+exist. In addition, identifying the characteristics of
+different protective actions makes it possible to identify which actions are most likely to be adopted and
+to initially focus a risk communication program on
+increasing their adoption. Once the most resourceeffective hazard adjustments have been adopted (the
+ones that provide the greatest efficacy in protecting persons and property for a given level of resources), the risk communication program can be
+redirected toward the more resource-intensive hazard adjustments. Nonetheless, a focus on (personal)
+self-efficacy might be more useful than a focus on
+(task) resource requirements in some situations. For
+example, an emphasis on self-efficacy might be useful
+when one must implement a single protective action
+(e.g., weight loss) whereas a focus on task demands
+(resource requirements) might be more useful when
+someone can choose among multiple protective actions.
+6.2. Identifying the Core Perceptions
+that Determine Protective Actions
+One major implication of the literature cited in
+the previous section is that, despite extensive theorizing and data collection, it still is not entirely clear
+what motivates people to take protective action.
+One of the major contributions of PADM research
+is the finding that, though risk perception is usually an important determinant of protective action,
+there are other perceptions that are also important—
+and sometimes even more important than risk
+
+The Protective Action Decision Model 11
+perception. There is a need to consider other aspects of threat perception, such as hazard intrusiveness, and also to consider perceptions of protective
+actions and stakeholders. Nonetheless, it is not entirely clear whether the PADM’s core perceptions of
+threat, protective actions, and stakeholders are themselves sufficient to account for an adequate percentage of the variance in people’s hazard adjustment
+adoption.
+This issue is particularly important when hazard
+experts, such as seismologists and earthquake engineers, try unsuccessfully to communicate event probabilities and consequences to risk area residents in
+an effort to increase the adoption of hazard adjustments. Lindell(111) addressed this problem by characterizing risk area residents’ perceptions of three
+hazards (a volcanic eruption of Mt. St. Helens, a
+toxic chemical release from a railroad tank car, and
+a radiological materials release from a nearby nuclear power plant) in terms of four categories of hazard characteristics that were consistent with previous
+theorizing about technological hazards(32) and disaster impacts.(1) Respondents rated the three hazards in terms of hazard agent characteristics (likelihood of a major release, ease of risk reduction,
+and likelihood of release prevention), impact characteristics (speed of onset, existence of environmental
+cues, scope of impact, and duration of impact), expected personal impacts (immediate death, delayed
+cancer, genetic effects, and total property loss), and
+affective/behavioral reactions (dread, frequency of
+thought about the hazard, and frequency of discussion about the hazard). The results suggested that
+perceived impact characteristics mediated the relationship between characteristics of the hazard agent
+characteristics and expected personal impacts. Similar results emerged from a study of household evacuation decision making in response to Hurricane
+Ike.(84) Perceived storm characteristics (local landfall, major intensity, and rapid onset) partially mediated the effects of coastal proximity and hurricane experience on expected personal impacts (surge
+damage, inland flood damage, storm wind damage,
+and casualties), which, in turn, had a direct effect on
+evacuation decisions.
+Another line of research that is likely to prove
+fruitful in understanding people’s conceptions of hazards is the mental models approach.(31) Such studies
+interview individuals to elicit the elements of their
+beliefs about a specific hazard domain and the interrelationships among the elements of that domain.
+After interviewing a number of participants, the individual mental models can be aggregated into a consensus model. In a somewhat similar manner, the
+hazard beliefs approach(30,112) presents some very
+broad questions about a hazard to a pretest group,
+identifies common themes in the responses, and develops an inventory of fixed-response items that assess both accurate and erroneous beliefs. Both of
+these inductive approaches are likely to prove most
+useful in characterizing people’s beliefs about new
+technologies such as nanotechnology.(113)
+One of the major impediments to assessing how
+people think about hazards is that they vary in the
+differentiation of their beliefs about a domain and,
+among those with differentiated beliefs, there is variation in the degree to which those beliefs are integrated.(114) At one extreme are those who have
+few or no beliefs about the domain whereas, at the
+other extreme, are those who have highly differentiated belief systems characterized by a large number
+of elements that vary in the strength of their linkages.(115,116) Consistent with these analyses in other
+domains, there is evidence that risk area residents
+vary in the degree to which they have differentiated
+schemas or mental models of environmental hazards. This variation in people’s hazard models has
+led some researchers to measure respondents’ reactions to hazards simply in terms of a single questionnaire item of concern about the problem.(117) If risk
+area residents have only very diffuse conceptions of
+seismic threat, then a global construct such as concern might be a more accurate characterization of
+their beliefs than the specific dimensions assumed
+by PADM. Further research is needed to determine
+what proportions of the population have specific beliefs, global beliefs, and no beliefs at all about the environmental hazards to which they are exposed and
+the actions they can take to protect themselves.
+7. PADM APPLICATIONS
+The PADM has mostly been applied in three
+areas—risk communication programs, evacuation
+modeling, and long-term hazard adjustment. Each of
+these is discussed below.
+7.1. PADM Application to Developing Community
+Risk Communication Programs
+Research on which the PADM is based has
+led to the development of an extensive set of
+recommendations for risk communication, particularly in communities with ethnic minorities. These
+
+12 Lindell and Perry
+recommendations for community risk communication programs are based upon the distinct differences
+between risk communication activities undertaken
+during the continuing hazard phase (the time between incidents) and those taken during an escalating
+crisis (when there is adequate forewarning of disaster impact) or emergency response (when forewarning is absent). Risk communication during the continuing hazard phase is directed toward encouraging
+long-term hazard adjustments such as hazard mitigation, emergency preparedness, and hazard insurance
+purchase. Risk communication during an escalating
+crisis or emergency response is directed toward encouraging appropriate disaster responses. However,
+risk communication during both phases requires the
+development of an effective risk communication program. Such programs need to be carefully developed
+during the continuing hazard phase because the human and financial resources available for environmental hazard management are usually limited until
+a crisis occurs. Although resources are more readily available during a crisis or emergency response,
+time is often severely limited so improvised efforts at risk communications can produce spectacular
+failures.(118)
+There are five basic functions that should be addressed in the continuing hazard phase. These are
+strategic analysis, operational analysis, resource mobilization, program development, and program implementation (see Table I). The purpose of strategic
+analysis is to identify community constraints and set
+appropriate goals for the overall risk communication
+program. The purpose of operational analysis is to
+use the elements of the classic communication model
+(source, channel, message, receiver, effect, and feedback) to identify the community resources that are
+available for the risk communication program. The
+purpose of resource mobilization is to enlist the support of stakeholders in the community who are likely
+to share an interest in using risk communication to
+reduce hazard vulnerability. Program development
+for all phases involves the use of available community resources to develop a workable system that can
+implement risk communication in both the continuing hazard phase and also in an escalating crisis or
+emergency response. As soon as the risk communication program has been developed, it is possible to
+immediately begin program implementation for the
+continuing hazard phase. This function involves conducting the activities that will encourage risk area
+residents to adopt long-term hazard adjustments. It
+also involves conducting the activities that will allow
+Table I. Tasks for the Continuing Hazard Phase
+Strategic analysis
+Conduct a community hazard/vulnerability analysis
+Analyze the community context
+Identify the community’s prevailing perceptions of the hazards
+and hazard adjustments
+Set appropriate goals for the risk communication program
+Operational analysis
+Identify and assess feasible hazard adjustments for the
+community and its households/businesses
+Identify ways to provide incentives, sanctions, and
+technological innovations
+Identify the available risk communication sources in the
+community
+Identify the available risk communication channels in the
+community
+Identify specific audience segments
+Resource mobilization
+Obtain the support of senior appointed and elected officials
+Enlist the participation of other government agencies
+Enlist the participation of nongovernmental (nonprofit) and
+private sector organizations
+Work with the mass media
+Work with neighborhood associations and service
+organizations
+Program development for all phases
+Staff, train, and exercise a crisis communications team
+Establish procedures for maintaining an effective
+communication flow in an escalating crisis and in emergency
+response
+Develop a comprehensive risk communication program
+Plan to make use of informal communication networks
+Establish procedures for obtaining feedback from the news
+media and the public
+Program implementation for the continuing hazard phase
+Build source credibility by increasing perceptions of expertise
+and trustworthiness
+Use a variety of channels to disseminate hazard information
+Describe community or facility hazard adjustments being
+planned or implemented
+Describe feasible household hazard adjustments
+Evaluate program effectiveness
+Source: Lindell & Perry (2004).
+authorities to determine if the risk communication
+program has been effective.
+The format of Table I might seem to imply that
+the five risk communication functions form a simple
+linear sequence, but some tasks will be performed
+concurrently and the entire process will frequently be
+iterative. For example, some resource mobilization
+tasks might take place concurrently with the operational analysis, or tasks conducted during the operational analysis phase might be suspended temporarily in order to return to the strategic analysis and
+refine it.
+
+The Protective Action Decision Model 13
+Once authorities have determined that they are
+in an escalating crisis or emergency response, they
+need to implement the predetermined risk communication actions that were developed during the continuing hazard phase. These include activating the crisis
+communication team promptly, determining the appropriate time to release sensitive information, and
+selecting the communication channels appropriate to
+the situation. An escalating crisis or emergency response also requires authorities to maintain source
+credibility with the news media and the public, provide timely and accurate information to the news
+media and the public, and evaluate performance
+through postincident critiques. For further details on
+the application of the PADM to the development
+of community risk communication programs, see
+Ref. 13, chapter 5.
+7.2. PADM Application to Evacuation Models
+Most of the research on the PADM and similar
+models has focused on the prediction of whether people will engage in a particular behavior. Although
+this is an important application, there are cases in
+which it is important to predict when people will engage in a particular behavior. For example, the timing of a household’s evacuation departure is a critical
+input to transportation analysts’ evacuation models
+because evacuation routes can become overloaded
+if too many vehicles enter the evacuation route system at the same time. Thus, local officials seeking to
+manage the evacuation need to understand the rate
+at which people receive an initial warning and the
+time it takes them to prepare to evacuate (see Refs.
+119 and 120 for further discussion of evacuation time
+components). Each warning mechanism (siren, tonealert radio, radio, television, and telephone) has a
+characteristic rate of exposure over time.(5,23,121) In
+addition, warning mechanisms vary in terms of their
+ability to attract attention and provide comprehensible messages that will change risk area residents’ core
+perceptions of threat, protective actions, and stakeholders in the desired directions.
+The time households spend in preparing to
+evacuate appears to involve two components, mental preparation and logistical preparation. Mental
+preparation is the time it takes to collect and process the information needed to decide an evacuation is necessary. The existence of a period of mental preparation has been documented in research
+indicating that people engage in milling, during
+which time they seek confirmation that a danger exists, obtain further information about the threat and
+alternative protective actions, and relay warnings to
+peers.(2) The broad outlines of this process are understood,(13,14,122) but there appears to be no research on
+the duration of psychological preparation for protective action.
+Logistical preparation is the time it takes for
+a household to assemble the people and resources
+needed to implement protective action. Thus, evacuees need to perform tasks such as assembling family members, packing bags for the trip, and securing
+the house before leaving.(82) The time required for
+mental preparation and logistical preparation both
+contribute to total preparation time, but these components do not seem to be additive because the two
+components cannot be presumed to be mutually exclusive. That is, some household members might be
+searching for information at the same time that others are packing bags and still others installing hurricane shutters. Available evidence has documented
+that households’ preparation times vary as a function
+of incident characteristics; for example, preparation
+times for evacuation from the Mt. St. Helens eruption
+were noticeably different from those for Hurricane
+Lili.(82) Because of these and other differences, predictions of evacuation departure times have been less
+successful than predictions of households’ evacuation
+decisions. Some researchers have tried to improve
+prediction by adopting estimation models such as
+neural networks, sequential logit, and survival analysis but these have had modest success.(87,123−125)
+Other research has extended the scope of the
+PADM to examine evacuation logistics—people’s
+actions between the time they decide to evacuate
+and the time they arrive at their evacuation destinations(86) as well as the return entry process.(126) The
+latter process is, in some respects, just the reverse of
+the evacuation problem. However, it is more complicated because of the logistical problems authorities experience in communicating reentry information to evacuees that might be scattered over dozens
+of towns in multiple states.
+7.3. PADM Application to Hazard
+Adjustment Adoption
+A recent review of research on household adoption of hazard adjustments concluded that risk perception is consistently related to the adoption of
+hazard adjustments, but perceptions of stakeholders and hazard adjustments are also relevant and
+deserve greater attention.(36) There is considerable
+
+14 Lindell and Perry
+evidence that hazard experience increases hazard adjustment adoption, but hazard proximity and hazard
+intrusiveness also appear to play significant roles and
+should be the focus of additional research. Finally,
+demographic variables continue to be unreliable predictors of hazard adjustment adoption but should receive continuing attention to assess their effects on
+risk perception, stakeholder perceptions, and hazard
+adjustment perceptions, as well as hazard experience,
+hazard proximity, and hazard intrusiveness.
+One of the major limitations of hazards and disasters studies to date is that the PADM predicts
+that some of the variables should form causal chains.
+For example, hazard proximity is predicted to cause
+hazard experience, hazard experience is predicted
+to cause risk perception, and risk perception is predicted to cause hazard adjustment adoption. Another
+example is that perceptions of information sources’
+expertise, trustworthiness, and protection responsibility should affect risk area residents’ risk perceptions, which, in turn, should affect their adoption
+of hazard adjustments. That is, each successive variable is hypothesized to completely mediate the relationship between the variable that precedes it and
+the variable that follows it so that, for example,
+the estimated effect of stakeholder perceptions on
+hazard adjustment adoption becomes nonsignificant
+when controlling for risk perception. Most hazards
+and disasters studies to date have used single equation models to predict a single dependent variable
+such as household hazard adjustment or evacuation
+so their results cannot shed any light on the mediation hypotheses. Moreover, the few studies that
+did report tests of the PADM’s mediation hypotheses have found only partial mediation where complete mediation was expected.(34,44) Nonetheless, the
+results did suggest that risk area residents’ awareness of the available hazard adjustments and accurate
+perceptions of their attributes do mediate the relationship between hazard experience and hazard adjustment.(59,127) In addition, Lindell and Prater found
+evidence that hazard intrusiveness had an effect on
+hazard adjustment adoption that was independent of
+perceived personal risk.(34)
+In some cases, the failure of a complete mediation hypothesis has a theoretically logical explanation. For example, the inability of risk perception or hazard intrusiveness to completely mediate
+the relationship between perceived stakeholder characteristics and hazard adjustment adoption is consistent with Petty and Cacioppo’s(128) distinction between central and peripheral routes to persuasion
+and Chaiken’s(129) distinction between systematic
+and heuristic processes. Both theories assert that incidental factors such as stakeholder perceptions affect attitudes and behavior without affecting salient
+beliefs or subjective norms (to use terms from TRA).
+Further research is needed to determine if the failures to find complete mediation are due to additional
+variables specified by the PADM, other variables not
+specified by the PADM, or are simply manifestations
+of the effects of peripheral/heuristic processing.
+8. CONCLUSION
+This article has described an updated version
+of the PADM and summarized the research that
+supports its principal components. This review includes articles that were cited in Lindell and Perry,(13)
+but also includes other research conducted prior to
+and subsequent to that book’s publication. There
+are varying degrees of support for different components of the PADM. Some components have extensive support, whereas others have conflicting or
+counter-intuitive findings, and still others are largely
+untested. Future research should seek to resolve the
+conflicting findings, explain the counterintuitive findings, and examine the untested propositions.
+In addition to its predictive validity, any theoretical model should be useful. Accordingly, this article has described the ways in which the PADM has
+been applied to three different areas—risk communication, evacuation modeling, and long-term hazard
+adjustment. Although these applications are in their
+early stages, the evidence to date suggests that the
+PADM is continuing to evolve into a useful framework for managing societal response to environmental hazards. Applications of the model would not
+need to produce large changes in behavior to be valuable. Updating an argument made in an earlier article,(41) major disasters are so costly—the economic
+impact of Hurricane Katrina was estimated to range
+from $81 billion(130) to $140 billion(131)—that even a
+1% decrease in losses would save hundreds of millions if not billions of dollars.
+ACKNOWLEDGMENTS
+This work was supported by the National Science Foundation under Grants SES 0527699, SES
+0838654, and CMM 0927739. None of the conclusions
+expressed here necessarily reflects views other than
+those of the authors.
+
+The Protective Action Decision Model 15
+REFERENCES
+1. Barton A. Communities in Disaster. New York: Doubleday,
+1969.
+2. Drabek TE. Human System Responses to Disaster: An
+Inventory of Sociological Findings. New York: SpringerVerlag, 1986.
+3. Fritz CE. Disaster. In Merton RK, Nisbet RA (eds). Contemporary Social Problems. New York: Harcourt, Brace &
+World, 1961.
+4. Janis I, Mann L. Decision Making: A Psychological Analysis
+of Conflict, Choice and Commitment. New York: Free Press,
+1977.
+5. Lindell MK, Perry RW. Behavioral Foundations of Community Emergency Planning. Washington, DC: Hemisphere
+Press, 1992.
+6. Mileti DS, Drabek T, Haas JE. Human Systems in Extreme
+Environments. Boulder, CO: University of Colorado Institute of Behavioral Science, 1975.
+7. Mileti DS, Peek L. The social psychology of public response
+to warnings of a nuclear power plant accident. Journal of
+Hazardous Materials, 2000; 75:181–194.
+8. Mileti, D S, Sorensen JH. Why people take precautions
+against natural disasters. Pp. 296–320 in Weinstein N (ed).
+Taking Care: Why People Take Precautions. New York:
+Cambridge University Press, 1987.
+9. Perry RW, Lindell MK, Greene MR. Evacuation Planning in
+Emergency Management. Lexington, MA: Heath Lexington
+Books, 1981.
+10. Tierney K, Lindell, MK, Perry RW. Facing the Unexpected: Disaster Preparedness and Response in the
+United States. Washington, DC: Joseph Henry Press,
+2001.
+11. Burton I, Kates, R, White GF. The Environment as Hazard,
+2nd edition. New York: Guildford Press, 1993.
+12. Lindell MK, Alesch D, Bolton PA, Greene MR, Larson
+LA, Lopes R, May PJ, Mulilis J-P, Nathe S, Nigg JM, Palm
+R, Pate P, Perry RW, Pine J, Tubbesing SK, Whitney DJ.
+Adoption and implementation of hazard adjustments. International Journal of Mass Emergencies and Disasters Special
+Issue, 1997; 15:327–453. Available at: www.ijmed.org, Accessed 1 May 2010.
+13. Lindell MK, Perry RW. Communicating Environmental
+Risk in Multiethnic Communities. Thousand Oaks, CA:
+Sage, 2004.
+14. Gladwin CH, Gladwin H, Peacock WG. Modeling hurricane evacuation decisions with ethnographic methods. International Journal of Mass Emergencies and Disasters, 2001;
+19:117–143. Available at: www.ijmed.org, Accessed 1 May
+2010.
+15. Perry RW, Greene, M. Citizen Response to Volcanic Eruptions. New York: Irvington, 1983.
+16. Lindell MK, Prater CS, Perry RW. Fundamentals of
+Emergency Management. Emmitsburg, MD: Federal
+Emergency Management Agency Emergency Management
+Institute, 2006. Available at: www.training.fema.gov/
+EMIWeb/edu/fem.asp, Accessed 1 May 2010.
+17. Lasswell H. The structure and function of communication
+in society. Pp. 43–71 in Bryson L (ed). Communication of
+Ideas. New York: Harper, 1948.
+18. McGuire WJ. The nature of attitudes and attitude change.
+Pp. 329–334 in Lindsey G, Aronson E (eds). Handbook
+of Social Psychology, 2nd edition. Reading, MA: AddisonWesley, 1969.
+19. McGuire WJ. The nature of attitudes and attitude change.
+Pp. 233–256 in Lindsey G, Aronson E (eds). Handbook of
+Social Psychology, 3rd edition. New York: Random House,
+1985.
+20. O’Keefe D. Persuasion: Theory and Research, 2nd edition.
+Thousand Oaks, CA: Sage, 2002.
+21. Petty RE, Wegener DT. Attitude change: Multiple roles for
+persuasion variables. Pp. 323–390 in Gilbert DT, Fiske ST,
+Lindzey G (eds). Handbook of Social Psychology, 4th edition. New York: McGraw-Hill, 1998.
+22. Lindell MK, Prater CS, Peacock WG. Organizational communication and decision making in hurricane emergencies.
+Natural Hazards Review, 2007; 8:50–60.
+23. Rogers GO, Sorensen JH. Diffusion of emergency warnings.
+Environmental Professional, 1988; 10:185–198.
+24. Aguirre BE. The lack of warnings before the Saragosa tornado. International Journal of Mass Emergencies and Disasters, 1988; 6:65–74. Available at: www.ijmed.org, Accessed 1
+May 2010.
+25. Baker EJ. Hurricane evacuation behavior. International
+Journal of Mass Emergencies and Disasters, 1991; 9:287–310.
+Available at: www.ijmed.org, Accessed 1 May 2010.
+26. Fiske ST, Taylor SE. Social Cognition: From Brains to Culture. Boston: McGraw-Hill, 2008.
+27. Committee on Disaster Research in the Social Sciences.
+Facing Hazards and Disasters: Understanding Human Dimensions. Washington, DC: National Academy of Sciences/National Research Council, 2006.
+28. Mayhorn CB. Cognitive aging and the processing of hazard
+information and disaster warnings. Natural Hazards Review,
+2005; 6:165–170.
+29. Lindell MK, Prater CS. Tsunami preparedness on the Oregon and Washington coast: Recommendations for research.
+Natural Hazards Review, 2010; 11:69–81.
+30. Turner R, Nigg J, Heller-Paz D. Waiting for Disaster. Los
+Angeles: University of California Press, 1986.
+31. Morgan MG, Fischhoff B, Bostrom A, Atman CJ. Risk Communication: A Mental Models Approach. Cambridge: Cambridge University Press, 2002.
+32. Slovic P, Fischhoff B, Lichtenstein S. How safe is safe
+enough: A psychometric study of attitudes toward technological risks and benefits. Pp. 80–103 in Slovic P (ed). The
+Perception of Risk. London: Earthscan, 1980.
+33. Terpstra T, Lindell MK, Gutteling JM. Does communicating (flood) risk affect (flood) risk perceptions? Results of
+a quasi-experimental study. Risk Analysis, 2009; 29:1141–
+1155.
+34. Lindell MK, Prater CS. Household adoption of seismic hazard adjustments: A comparison of residents in two states.
+International Journal of Mass Emergencies and Disasters,
+2000; 18:317–338. Available at: www.ijmed.org, Accessed 1
+May 2010.
+35. Sorensen JH. Hazard warning systems: Review of 20 years
+of progress. Natural Hazards Review, 2000; 1:119–125.
+36. Lindell MK. North American cities at risk: Household responses to environmental hazards. In. Rossetto T, Joffe H,
+Adams J (eds). Cities at Risk: Living with Perils in the 21st
+Century. Dordrecht: Springer, in press.
+37. Mileti DS, Fitzpatrick C. The causal sequence of risk communication in the Parkfield earthquake prediction experiment. Risk Analysis, 1992; 12:393–400.
+38. Dash N, Gladwin H. Evacuation decision making and behavioral responses: Individual and household. Natural Hazards
+Review, 2007; 8:69–77.
+39. Terpstra T, Gutteling JM. Households’ perceived responsibilities in flood risk management in the Netherlands. International Journal of Water Resources Development, 2008;
+24:555–565.
+40. Perry RW, Lindell MK. Volcanic risk perception and adjustment in a multi-hazard environment. Journal of Volcanology
+and Geothermal Research, 2008; 172:170–178.
+41. Lindell MK, Whitney DJ. Correlates of seismic hazard adjustment adoption. Risk Analysis, 2000; 20:13–25.
+42. Mileti DS, Darlington JD. The role of searching in shaping
+reactions to earthquake risk information. Social Problems,
+1997; 44:89–103.
+
+16 Lindell and Perry
+43. Ge Y, Peacock WG, Lindell MK. Florida households’ expected responses to hurricane hazard mitigation incentives.
+Risk Analysis, in press.
+44. Lindell MK, Hwang SN. Households’ perceived personal
+risk and responses in a multi-hazard environment. Risk
+Analysis, 2008; 28:539–556.
+45. Weinstein ND. Effects of personal experience on selfprotective behavior. Psychological Bulletin, 1989; 105:31–
+50.
+46. Palm R, Hodgson M, Blanchard, RD, Lyons D. Earthquake
+Insurance in California. Boulder, CO: Westview Press, 1990.
+47. Peacock WG, Brody SD, Highfield W. Hurricane risk perceptions among Florida’s single family homeowners. Landscape and Urban Planning, 2005; 73:120–135.
+48. Preston V, Taylor SM, Hedge DC. Adjustment to natural
+and technological hazards: A study of an urban residential
+community. Environment and Behavior, 1983; 15:143–164.
+49. Lindell MK, Earle TC. How close is close enough: Public
+perceptions of the risks of industrial facilities. Risk Analysis,
+1983; 3:245–253.
+50. Arlikatti S, Lindell MK, Prater CS, Zhang Y. Risk area accuracy and hurricane evacuation expectations of coastal residents. Environment and Behavior, 2006; 38:226–247.
+51. Zhang Y, Prater CS, Lindell MK. Risk area accuracy and
+evacuation from Hurricane Bret. Natural Hazards Review,
+2004; 5:115–120.
+52. Lindell MK, Perry RW. Household adjustment to earthquake hazard: A review of research. Environment and Behavior, 2000; 32:590–630.
+53. Fishbein MF, Ajzen I. Predicting and Changing Behavior:
+The Reasoned Action Approach. New York: Psychology
+Press, 2010.
+54. Mulilis J-P, Duval TS. Negative threat appeals and earthquake preparedness: A person-relative-to-event PrE model
+of coping with threat. Journal of Applied Social Psychology,
+1995; 25:1319–1339.
+55. Kunreuther H, Ginsberg R, Miller L, Sagi P, Slovic P,
+Borkan B, Katz N. Disaster Insurance Protection: Public
+Policy Lessons. New York: John Wiley, 1978.
+56. Davis MS. Living along the fault line: An update on earthquake awareness and preparedness in Southern California.
+Urban Resources, 1989; 5:8–14.
+57. Russell L, Goltz JD, Bourque LB. Preparedness and hazard
+mitigation actions before and after two earthquakes. Environment and Behavior, 1995; 27:744–770.
+58. Lindell MK, Arlikatti S, Prater CS. Why people do what they
+do to protect against earthquake risk: Perceptions of hazard
+adjustment attributes. Risk Analysis, 2009; 29:1072–1088.
+59. Lindell MK, Prater CS. Risk area residents’ perceptions and
+adoption of seismic hazard adjustments. Journal of Applied
+Social Psychology, 2002; 32:2377–2392.
+60. Terpstra T, Lindell MK. Citizens’ Perceptions of Flood Hazard Adjustments: An Application of the Protective Action
+Decision Model. College Station, TX: Texas A&M University Hazard Reduction & Recovery Center, 2009.
+61. Pijawka KD, Mushkatel AH. Public opposition to the siting
+of the high-level nuclear waste repository: The importance
+of trust. Policy Studies Review, 1991; 10:180–194.
+62. Lang JT, Hallman WK. Who does the public trust? The case
+of genetically modified food in the United States. Risk Analysis, 2005, 25:1241–1252.
+63. French JRP, Raven BH. The bases of social power. Pp. 150–
+167 in Cartwright D (ed). Studies in Social Power. Ann Arbor, MI: Institute for Social Research, 1959.
+64. Raven B. Social influence and power. Pp. 371–382 in Steiner
+I, Fishbein M (eds). Current Studies in Social Psychology.
+New York: Holt, Rinehart & Winston, 1965.
+65. Raven BH. The bases of power: Origins and recent developments. Journal of Social Issues, 1993; 49:227–251.
+66. Eagly AH, Chaiken S. The Psychology of Attitudes. Ft.
+Worth, TX: Harcourt, Brace College Publishers, 1993.
+67. Arlikatti S, Lindell MK, Prater CS. Perceived stakeholder
+role relationships and adoption of seismic hazard adjustments. International Journal of Mass Emergencies and Disasters, 2007; 25:218–256. Available at: www.ijmed.org, Accessed 1 May 2010.
+68. Meyer P. Defining and measuring credibility of newspapers:
+Developing an index. Journalism Quarterly, 1988; 65:567–
+574, 588.
+69. Jackson EL. Response to earthquake hazard: The West
+Coast of North America. Environment and Behavior, 1981;
+13:387–416.
+70. Garcia EM. Earthquake preparedness in California: A survey of Irvine residents. Urban Resources, 1989; 5:15–19.
+71. Mulilis JP, Duval TS. The PrE model of coping with threat
+and tornado preparedness behavior: The moderating effects
+of felt responsibility. Journal of Applied Social Psychology,
+1997; 27:1750–1766.
+72. Lazarus RS, Folkman S. Stress, Appraisal, and Coping. New
+York: Springer, 1984.
+73. Mileti DS. Natural hazards warning systems in the United
+States. Boulder, CO: University of Colorado Institute of Behavioral Science, 1975.
+74. Perry RW. Evacuation decision making in natural disaster.
+Mass Emergencies, 1979; 4:25–38.
+75. Perry RW, Hirose H. Volcano Management in the United
+States and Japan. Greenwich, CT: JAI Press, 1991.
+76. Blanchard-Boehm RD. Understanding public response to
+increased risk from natural hazards. International Journal of
+Mass Emergencies and Disasters, 1998; 16:247–278. Available at: www.ijmed.org, Accessed 1 May 2010.
+77. Houts PS, Cleary PD, Hu TW. The Three Mile Island Crisis: Psychological, Social and Economic Impacts on the Surrounding Population. University Park, PA: Pennsylvania
+State University Press, 1988.
+78. Perry RW. Comprehensive Emergency Management: Evacuating Threatened Populations. Greenwich, CT: JAI,
+1985.
+79. Fritz CE, Marks, E. The NORC studies of human behavior in disaster. Journal of Social Issues, 1954; 10:26–
+41.
+80. Perry RW. Environmental hazards and psychopathology.
+Environmental Management, 1983; 7:543–552.
+81. Withey S. Reaction to uncertain threat. Pp. 93–123 in Baker
+G, Chapman D (eds). Man and Society in Disaster. New
+York: Basic Books, 1962.
+82. Lindell MK, Lu JC, Prater CS. Household decision making
+and evacuation in response to Hurricane Lili. Natural Hazards Review, 2005; 6:171–179.
+83. Lindell MK, Prater CS. A hurricane evacuation management decision support system (EMDSS). Natural Hazards,
+2007; 40:627–634.
+84. Huang SK, Lindell MK, Prater CS, Wu HC, Siebeneck LK.
+Household Evacuation Decision Making in Response to
+Hurricane Ike. College Station, TX: Texas A&M University
+Hazard Reduction & Recovery Center, 2010.
+85. Lindell MK, Mumpower J, Huang S-K, Wu H-C. Perceptions and Expected Responses to a Water Contamination
+Emergency. College Station, TX: Texas A&M University
+Hazard Reduction & Recovery Center, 2010.
+86. Lindell MK, Kang JE, Prater CS. The logistics of household
+evacuation in Hurricane Lili. Natural Hazards, in press.
+87. Fu H, Wilmot CG, Zhang H, Baker EJ. Modeling the hurricane evacuation response curve. Transportation Research
+Record, 2007; 2022:94–102.
+88. Baker EJ. Hurricane evacuation in the United States. Pp.
+98–108 in Pielke R Jr, Pielke R Sr (eds). Storms, Vol .1. London: Routledge, 2000.
+
+The Protective Action Decision Model 17
+89. Dow K, Cutter SL. Crying wolf: Repeat responses to hurricane evacuation orders. Coastal Management, 1998; 26:237–
+252.
+90. Dow K, Cutter SL. Emerging hurricane evacuation issues:
+Hurricane Floyd and South Carolina. Natural Hazards Review, 2002; 3:12–18.
+91. Southern California Earthquake Center. Uniform California
+Earthquake Rupture Forecast (UCERF), 2011. Available at:
+www.scec.org/ucerf/, Accessed 27 January 2011.
+92. Hanson S, Vitek JD, Hanson PO. Natural disaster: Longrange impact on human response to future disaster threats.
+Environment and Behavior, 1979; 11:268–284.
+93. Drabek TE. Social processes in disaster: Family evacuation.
+Social Problems, 1969; 16:336–347.
+94. Lindell MK, Perry RW. Risk area residents’ changing perceptions of volcano hazard at Mt. St. Helens. Pp. 159–166 in
+Siccardi F, Nigg J, Nemec J (eds). Prediction and Perception
+of Natural Hazards. Amsterdam: Kluwer Academic Publishers, 1993.
+95. Drabek TE, Stephenson J. When disaster strikes. Journal of
+Applied Social Psychology, 1971; 1:187–203.
+96. Morss RE, Hayden MH. Storm surge and “certain death”:
+Interviews with Texas coastal residents following Hurricane
+Ike. Weather, Climate, and Society, 2010; 2:174–189.
+97. Perry RW, Lindell MK, Greene MR. Threat perception and
+public response to volcano hazard. Journal of Social Psychology, 1982; 116:199–204.
+98. Triandis HC. Values, attitudes, and interpersonal behavior.
+Pp. 195–259 in Howe H, Page M (eds). Nebraska Symposium
+on Motivation, Vol. 27. Lincoln, NE: University of Nebraska
+Press, 1980.
+99. Heath SE, Kass PH, Beck AM, Glickman LT. Human and
+pet-related risk factors for household evacuation failure during a natural disaster. American Journal of Epidemiology,
+2001; 153;659–667.
+100. Van Willigen M, Edwards T, Edwards B, Hessee S. Riding
+out the storm: Experiences of the physically disabled during
+Hurricanes Bonnie, Dennis, and Floyd. Natural Hazards Review, 2002; 3:98–106.
+101. Killian LM. The significance of multi-group membership in
+disaster. American Journal of Sociology, 1952; 57:309–314.
+102. Drabek TE, Boggs K. Families in disaster: Reactions and relatives. Journal of Marriage and the Family, 1968; 30:443–451.
+103. Weinstein ND, Rothman AJ, Sutton SR. Stage theories
+of health behavior: Conceptual and methodological issues.
+Health Psychology, 1998; 17:290–299.
+104. Prochaska JO, Johnson S, Lee P. The transtheoretical model
+of behavior change. Pp. 59–84 in Gochman DS (ed). Handbook of Health Behavior Research I: Personal and Social
+Determinants. New York: Plenum Press, 1997.
+105. Weinstein ND. The precaution adoption process. Health
+Psychology, 1988; 7:355–386.
+106. Birkland TA. After Disaster: Agenda Setting, Public Policy
+and Focusing Events. Washington, DC: Georgetown University Press, 1997.
+107. Petty RE, Wegener DT. The elaboration likelihood model:
+Current status and controversies. Pp. 37–72 in Chaiken,
+Trope Y (eds). Dual-Process Theories in Social Psychology.
+New York: Guilford Press, 1999.
+108. Floyd DL, Prentice-Dunn S, Rogers RW. A meta-analysis
+of research on protection motivation theory. Journal of Applied Social Psychology, 2000; 30:407–429.
+109. Neuwirth K, Dunwoody S, Griffin RJ. Protection motivation
+and risk communication. Risk Analysis, 2000; 20:721–734.
+110. Rogers RW. A protection motivation theory of fear appeals
+and attitude change. Journal of Psychology, 1975; 91:93–114.
+111. Lindell MK. Perceived characteristics of environmental hazards. International Journal of Mass Emergencies and Disasters, 1994; 12:303–326. Available at: www.ijmed.org, Accessed 1 May 2010.
+112. Whitney DJ, Lindell MK, Nguyen DH. Earthquake beliefs
+and adoption of seismic hazard adjustments. Risk Analysis,
+2004; 24:87–102.
+113. Bostrom A, Lofstedt RE. Nanotechnology risk communication past and prologue. Risk Analysis, 2010; 30:1645–1662.
+114. Scott WA, Osgood DW, Peterson C. Cognitive Structure:
+Theory and Measurement of Individual Differences. New
+York: Wiley, 1979.
+115. Converse PE. The nature of belief systems in mass publics.
+Pp. 206–261 in Apter DE (ed). Ideology and Discontent.
+New York: Free Press, 1964.
+116. Schuman H, Kalton G. Survey methods. Pp. 635–698 in
+Lindzey G, Aronson E (eds). The Handbook of Social Psychology, 3rd edition, Vol. 1. Reading, MA: Addison-Wesley,
+1985.
+117. Dooley D, Catalano R, Mishra S, Serxner S. Earthquake preparedness: Predictors in a community survey. Journal of Applied Social Psychology, 1992; 22:451–470.
+118. Seeger MW, Sellnow TL, Ulmer RR. Communication and
+Organizational Crisis. Westport, CT: Praeger, 2003.
+119. Lindell MK. EMBLEM2: An empirically based large-scale
+evacuation time estimate model. Transportation Research,
+2008; A 42:140–154.
+120. Lindell MK, Prater CS. Critical behavioral assumptions in
+evacuation analysis for private vehicles: Examples from hurricane research and planning. Journal of Urban Planning and
+Development, 2007; 133:18–29.
+121. Lindell MK, Perry RW. Warning mechanisms in emergency response systems. International Journal of Mass
+Emergencies and Disasters, 1987; 5:137–153. Available at:
+www.ijmed.org, Accessed 1 May 2010.
+122. Gladwin H, Peacock WG. Warning and evacuation: A night
+for hard houses. Pp. 52–74 in Peacock WG, Morrow BH,
+Gladwin H (eds). Hurricane Andrew: Gender, Ethnicity and
+the Sociology of Disasters. London: Routledge, 1997.
+123. Dixit VV, Pande A, Radwan E, Abdel-Aty M. Understanding the impact of a recent hurricane on mobilization time
+during a subsequent hurricane. Transportation Research
+Record, 2008; 2041:49–57.
+124. Fu H, Wilmot CG. Survival analysis–based dynamic travel
+demand models for hurricane evacuation. Transportation
+Research Record, 2006; 1964:211–218.
+125. Wilmot CG, Mei B. Comparison of alternative trip generation models for hurricane evacuation. Natural Hazards Review, 2004; 5:170–178.
+126. Siebeneck LK, Cova TJ. An assessment of the return-entry
+process for Hurricane Rita 2005. International Journal of
+Mass Emergencies and Disasters, 2008; 26:91–111. Available
+at: www.ijmed.org, Accessed 1 May 2010.
+127. Norris FH, Smith T, Kaniasty K. Revisiting the experiencebehavior hypothesis: The effects of Hurricane Hugo on hazard preparedness and other self-protective acts. Basic and
+Applied Social Psychology, 1999; 21:37–47.
+128. Petty RE, Cacioppo JT. Communication and Persuasion: Central and Peripheral Routes to Attitude Change.
+New York: Springer-Verlag, 1986.
+129. Chaiken S. The heuristic model of persuasion. Pp. 3–39 in
+Zanna MP, Olson JM, Herman CP (eds). Social Influence:
+The Ontario Symposium, Vol. 5. Hillsdale NJ: Erlbaum,
+1987.
+130. Knabb RD, Rhome JR, Brown DP. Tropical Cyclone
+Report: Hurricane Katrina 23–30 August 2005. Mimi, FL:
+National Hurricane Center, 2006. Available at: http://www.
+nhc.noaa.govpdf/TCR-AL122005 Katrina.pdf, Accessed 25
+January 2011.
+131. Burton L, Hicks MJ. Hurricane Katrina: Preliminary Estimates of Commercial and Public Sector Damages. Huntington, WV: Marshall University for Economic and Business
+Research, 2005. Available at: http://www.marshall.edu/cber/,
+Accessed 1 January 2011.

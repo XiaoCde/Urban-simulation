@@ -1,0 +1,3821 @@
+Defra /Environment Agency
+Flood and Coastal Defence R&D Programme
+Flood Risks to People
+Phase 2
+FD2321/TR1
+The Flood Risks to People Methodology
+
+Defra / Environment Agency 
+Flood and Coastal Defence R&D Programme 
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE 
+Phase 2 
+FD2321/TR1 The Flood Risks to People Methodology 
+March 2006 
+Authors: 
+HR Wallingford 
+Flood Hazard Research Centre, Middlesex University 
+Risk & Policy Analysts Ltd. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+ii 
+Statement of use 
+This is one of three final technical reports for Flood Risks to People Phase 2 project. It 
+describes the development of the final methodology including the methodology for 
+mapping risks to people. 
+Dissemination Status 
+Internal: Released internally 
+External: Released to public domain. 
+Keywords 
+Flood risk mapping; flood estimation, flood risks to people, flood risk modelling 
+Research Contractor 
+David Ramsbottom, Technical Director, HR Wallingford Ltd, Howbery Park, 
+Wallingford, Oxon, OX10 8BA. Email: dmr@hrwallingford.co.uk 
+ 
+Project Manager 
+Dr Suresh Surendran, Risk Analyst / Flood Risk Project Co-ordinator, Environmental 
+Policy – Risk and Forecasting, Environment Agency, Kings Meadow House, Reading, 
+RG1 8DQ 
+email: suresh.surendran@environment-agency.gov.uk
+This document is also available on the Defra website 
+www.defra.gov.uk/environ/fcd/research 
+Department for Environment, Food and Rural Affairs 
+Flood Management Division 
+Ergon House 
+Horseferry Road 
+London SW1P 2AL 
+Tel: 020 7238 3000 Fax: 020 7238 6187 
+www.defra.gov.uk/environ/fcd
+© Crown copyright (Defra); March 2006 
+Copyright in the typographical arrangement and design rests with the Crown. This 
+publication (excluding the logo) may be reproduced free of charge in any format or 
+medium provided that it is reproduced accurately and not used in a misleading context. 
+The material must be acknowledged as Crown copyright with the title and source of the 
+publication specified. The views expressed in this document are not necessarily those of 
+Defra or the Environment Agency. Its officers, servants or agents accept no liability 
+whatsoever for any loss or damage arising from the interpretation or use of the 
+information, or reliance on views contained herein.
+Published by the Department for Environment, Food and Rural Affairs. Printed in the 
+UK (March 2006) on recycled material containing 80% post-consumer waste and 20% 
+chlorine-free virgin pulp. 
+PB NO. 11545 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+iii 
+Acknowledgements 
+The authors are grateful for David Murphy (Environment Agency’s Flood Risk Policy 
+Manager - Strategy, Planning & Risk) for his chairmanship of Project Board and for his 
+commitment and ownership towards this project. This project benefited from the Project 
+Board and a large group of consultees, who participated in several consultation 
+activities. We acknowledge their valuable contributions to the project that went beyond 
+our expectations and, therefore, really made a difference to the success of the project. 
+Special thanks are extended to John Goudie (Defra) and Ian Meadowcroft (EA). Thanks 
+also to an extensive team of technical staff at HR Wallingford, Middlesex University’s 
+Flood Hazard Research Centre and Risk & Policy Analysts Ltd for whom supported this 
+project. 
+Core Project Team 
+David Ramsbottom HR Wallingford (Contractor Project Director) 
+Steven Wade HR Wallingford (Contractor Project Manager) 
+Valerie Bain HR Wallingford 
+Peter Floyd Risk & Policy Analysts Ltd 
+Edmund Penning-Rowsell Flood Hazard Research Centre, Middlesex University 
+Theresa Wilson Flood Hazard Research Centre, Middlesex University 
+Amalia Fernandez Flood Hazard Research Centre, Middlesex University 
+Margaret House Flood Hazard Research Centre, Middlesex University 
+Suresh Surendran Environment Agency (Client Project Manager) 
+Project Board 
+David Murphy EA (Flood Risk Policy - Strategy, Planning & Risk) 
+Suresh Surendran EA (Environmental Policy – Risk & Forecasting) 
+Mervyn Pettifor EA (Flood Risk Process – Regulation) 
+Tony Andryszewski EA (Flood Risk Process – Flood Event Management) 
+Roger Lewis / Ian Hope EA (Flood Risk Management Reservoir Safety) 
+Peter Borrows EA (Thames 2100) 
+Phil Irving EA (Environmental Policy – Risk & Forecasting) 
+John Goudie Defra (Flood Management) 
+David Moses Local Authority (Emergency Planning) 
+Other Key Consultees 
+Richard Horrocks EA (Regional Flood Risk Management / REUU TAG) 
+Paula Orr EA (Environmental Policy – Social Policy)
+Sarah Lavery EA (Flood Risk Management - Thames Estuary) 
+David Richardson Defra (Flood Management - Policy) 
+Andy Dickson Northamptonshire Police (Emergency services0 
+Peter Bye Local Authority (Planning) 
+David Creighton Insurance 
+Robin Spence CURBE 
+Peter Von Lany Halcrow (REUU TAG) 
+Jim Hall University of Newcastle-upon-Tyne (REUU TAG) 
+Colin Green Middlesex university (REUU TAG) 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+iv 
+EXECUTIVE SUMMARY 
+Flooding from rivers, estuaries and the sea poses a risk to people as well as causing 
+significant economic impacts. In the last decade of the 20th century floods accounted 
+for 12% of all deaths from natural disasters, claiming about 93000 lives across the 
+world (OECD International Disasters Database). In 1953 the North Sea floods caused 
+approximately 2500 deaths across the UK, Netherlands, Belgium and Germany and 
+concentrations of fatalities have been associated with flash floods such as Lynmouth in 
+Cornwall (1952, over 30 deaths) and Vaison-la-Romaine in France (1992, 38 deaths). 
+In the UK, there were a small number of fatalities associated with the Easter 1998 and 
+Autumn 2000 floods. In August 2004, a major airborne rescue operation was required to 
+rescue victims of the Boscastle flood and in January 2005, the media reported 3 
+fatalities in flooding in Carlisle. 
+A key Government objective for the Environment Agency is “to reduce the risks to 
+people and to the developed and natural environment from flooding.” 
+Environment Agency indicator: “No loss of life attributable to flooding in areas 
+receiving a full flood warning service.” 
+Environment Agency Corporate Strategy, 2002-07. 
+Flood forecasting and warning, emergency planning, land use planning and the 
+operation of flood defence systems have all contributed to reducing risks in the UK. 
+However, flood risks cannot be completely eliminated and to support Government 
+targets for flood risk management there is a requirement for methods to estimate the 
+risks to people, as well as risks of economic and environmental damage. As shown in 
+Figure ES1 the project is focused on people and provides measures of annual average 
+risk that can be used alongside annual average economic damage and other social and 
+environmental criteria to improve flood risk management. 
+Figure ES1. The Risks to People project in the context of the source-pathwayreceptor model of flood risk. 
+Drivers
+Processes that change the state of the flooding system
+(including climate change and socio-economic change)
+The flooding system
+Source Pathways Receptors
+Rainfall Channels People
+Fluvial flood Flood defences Houses
+Tidal flood Urban surfaces Infrastructure
+Floodplains Environment 
+Risk Estimate
+Annual average 
+individual and societal 
+risk (of harm or loss of life)
+Risk Model
+Based on:-
+Flood Hazard 
+Area Vulnerability 
+People Vulnerability
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+v 
+The “Risks to People Phase 2” method is a form of multi-criteria assessment based on 
+the concepts of flood hazard, area vulnerability and people vulnerability. The method 
+was tested using seven case studies including the flooding in Carlisle in 2005. These 
+examples demonstrated that the method works well, providing sensible estimates of the 
+fatalities and injuries for a range of different fluvial and tidal flood events. 
+Improving flood risk management 
+The research has a wide range of potential applications from raising awareness of the 
+dangers of flood water, targeting flood warning, emergency planning, development 
+control and flood mapping. The approaches developed can make use of information 
+from other projects, such as the National Flood Risks Assessment (NaFRA) and be 
+incorporated into the overall Risk Assessment for Strategic Planning (RASP) 
+framework as well supporting Catchment Flood Management Plans and more local 
+initiatives to understand manage flood risks. 
+This report (FD2321/TR1) describes the Risks to People Methodology that is based on a 
+multi-criteria assessment of factors that affect Flood Hazard, the chance of people in the 
+floodplain being exposed to the hazard (Area Vulnerability) and ability of those affected 
+to respond effectively to flooding (People Vulnerability). The report describes the key 
+concepts, provides an overview of how the method was developed and shows a number 
+of example applications. 
+A second Technical Report (FD2321/TR2) is a guidance document that explains how 
+the overall method or its component parts can be applied in flood risk management for 
+land use planning, the management of flood defences, measures for responding to 
+flooding and finally, in ongoing and new research projects. The outputs of consultation, 
+workshops and background research are included in the Project Record (FD2321/PR). 
+A comment on the concepts of 'tolerable' and 'acceptable' risks 
+In the UK there have been various Government reports that have developed the 
+concepts of 'tolerable' and 'acceptable' risks, most notably the Health and Safety 
+Executive reports 'Tolerability of Risk' (HSE, 1992) and 'Reducing risks, protecting 
+people' (HSE, 1999). These advance upper limits of tolerability for annual individual 
+risk for workers in 'risky' occupations and for the general public. If the annual risk of 
+fatality or serious harm is less than the 'tolerable' risk it is deemed 'acceptable.' 
+Suggested thresholds for 'tolerable' and 'acceptable' risk have been used in several case 
+study examples in this report and were discussed in Phase 1 of the research project (HR 
+Wallingford, 2003). While these concepts are valuable, current Government policy for 
+flood risk management does not consider a specific threshold for tolerable risk so the 
+values used in this report should be regarded as illustrative only. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+vi 
+CONTENTS 
+SUMMARY iii 
+1. Introduction 1
+2. Overview of Methodology Development 2
+2.1 Phase 1 Methodology 2 
+2.2 Consultation 2 
+2.3 Responsibilities for Flood Risk Management 5 
+2.4 Structure of the report 5 
+3. Flood hazard rating 6
+3.1 Introduction 6 
+3.2 The Phase 1 flood hazard formula 6 
+3.3 Depth and Velocity Functions 6 
+3.3.1 Overview 6 
+3.3.2 Choice of flood hazard classes. 7 
+3.3.3 Flood Damage to Buildings 9 
+3.3.4 Flood Damage to Vehicles 9 
+3.4 Debris Factor 10 
+3.5 Final flood risks to people method: Hazard rating formula 10 
+4. Area Vulnerability 11
+4.1 Introduction 11 
+4.2 Flood Warning 11 
+4.2.1 Final flood risks to people method: Flood warning. 13 
+4.3 Speed of Onset 13 
+4.3.1 Final flood risks to people method: Speed of onset. 14 
+4.4 Nature of Area 14 
+4.4.1 Final flood risks to people method: Nature of area. 15 
+4.5 Final flood risks to people method: Expression for Area Vulnerability 15
+5. People Vulnerability 16
+5.1 Introduction 16 
+5.2 Other Parameters 16 
+5.3 Parameters Taken Forward 18 
+5.4 Final flood risks to people method: People Vulnerability 18 
+6. Determining the Risks to People 19
+6.1 Introduction 19 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+vii 
+6.2 Step 1. Quantifying the relationships (exposure assessment) for a single event 19 
+6.2.1 Methodology 20 
+6.2.2 Flood hazard rating 20 
+6.2.3 Determining those exposed 20 
+6.2.4 Determining numbers of deaths/injuries 21 
+6.2.5 Step 2: Considering a range of events and estimating annual average 
+risks 22 
+6.2.6 Step 3: Estimating acceptable risk 23 
+6.3 Case studies 25 
+6.3.1 Introduction 25 
+6.3.2 Gowdall 25 
+6.3.3 Norwich 28 
+6.3.4 Lynmouth 30 
+6.3.5 Carlisle 32 
+6.3.6 Further case studies 35 
+7. Mapping Flood Risks to People 36
+7.1 Flood Hazard mapping 36 
+7.1.1 The Environment Agency Flood Maps 37 
+7.1.2 Catchment Flood Management Plans 38 
+7.1.3 Risk Assessment for Strategic Planning 39 
+7.1.4 Four steps for Flood Hazard mapping 39 
+7.1.5 Flood Hazard mapping for different applications 40 
+7.2 Flood vulnerability mapping 41 
+7.2.1 Four steps for flood vulnerability mapping 43 
+7.2.2 Access to census data 43 
+7.3 Risks to People maps 44 
+7.3.1 The development of specialist mapping products 44 
+7.3.2 Broad-scale mapping 44 
+7.4 Mapping examples 45 
+7.4.1 Thamesmead 45 
+7.4.2 Towyn 49 
+8. Conclusions 53
+9. References 54
+AQ.2 Case Study - Hull 73
+AQ.4. Summary of Results 90
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+viii 
+Tables 
+Table 2.1: Stakeholder ‘Wish List’ and Associated Commentary................................... 3 
+Table 3.2: Hazard to People as a Function of Velocity and Depth.................................. 8 
+Table 3.1: Guidance on debris factors for different flood depths, velocities and 
+dominant land uses....................................................................................... 10 
+Table 4.1: Area Vulnerability (Phase 1 Methodology).................................................. 11 
+Table 4.2: Progress towards Flood Warning Targets .................................................... 12 
+Table 4.3: Calculation of Flood Warning Score ............................................................. 13 
+Table 4.4: Area Vulnerability (Final Method)............................................................... 15 
+Table 5.1: Area Vulnerability (Phase 1 Methodology).................................................. 16 
+Table 5.2: Factors Considered for People Vulnerability ............................................... 16 
+Table 6.1: Flood hazard zones and those at risk in Riskville, N(Z) .............................. 20 
+Table 6.2: Area vulnerability scores .............................................................................. 21 
+Table 6.3: Generating X (% of people at risk)............................................................... 21 
+Table 6.4: Calculating People Vulnerability.................................................................. 21 
+Table 6.5: Generating numbers of injuries and deaths .................................................. 22 
+Table 6.6: The number of injuries and fatalities in Riskville for 5 flood events........... 23 
+Table 6.7: Annual average individual risk for serious harm due to flooding in 
+Riskville ....................................................................................................... 24 
+Table 6.8: Annual average individual risk of fatalities due to flooding is Riskville ..... 25 
+Table 6.9: Hazard Rating by Zone for Norwich 1912 ................................................... 28 
+Table 6.10: Numbers of Injuries and Fatalities for Norwich 1912................................ 29 
+Table 6.11: Hazard Rating by Zone for Lynmouth 1952 .............................................. 30 
+Table 6.12: Numbers of Injuries and Fatalities for Lynmouth 1952 ............................. 31 
+Table 6.13: Hazard Rating by Zone for Carlisle 2005................................................... 33 
+Table 6.14: People Vulnerability by Zone for Carlisle 2005......................................... 33 
+Table 6.15: Numbers at Risk (Nz) by Zone for Carlisle 2005....................................... 34 
+Table 6.16: Numbers of Injuries and Fatalities for Carlisle 2005 ................................. 34 
+Table 7.1: Variables required and sources of data for Flood Hazard mapping ............. 36 
+Table 7.2: Variables required and sources of data for Flood Vulnerability mapping ... 42 
+Figures 
+Figure 3.1: The interpretation of the data sets to derive flood hazard thresholds............ 7 
+Figure 3.2: Velocity, depth and flood hazard matrix....................................................... 9 
+Figure 7.1: Examples of potential approaches to flood hazard mapping....................... 41 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+ix 
+Appendices 
+Appendix 1 Development of the flood hazard formula.............................................. 57 
+Appendix 2 Case Studies............................................................................................ 63 
+Appendix 3 Example Calculation Sheets ................................................................... 91 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+1 
+1. INTRODUCTION 
+Flood Risks to People Phase 2 (FD2321) covers death or serious harm to people that 
+occurs as a direct result of the flood either during or up to one week after the event. 
+The research examines the causes of death or serious harm from flooding and develops 
+a methodology for assessing flood risks to people. The methodology is applicable to 
+the UK and can be used to assess flood risks to people at a range of scales and levels of 
+detail. The methodology includes a mapping element that uses Geographical 
+Information Systems (GIS) to analyse, manage and communicate flood risks to people. 
+This report presents the final methodology for the project. The method was developed 
+as a result of research carried out in two Phases. Phase 1 of the project developed a 
+method for combining information of flood hazard with criteria related to the 
+vulnerability of areas and people to flooding for estimating the likelihood of serious 
+injury or death from flooding. Phase 1 tested the methodology on three historical case 
+studies showing that it was both practical and effective at estimating numbers affected 
+by extreme flood events (HR Wallingford, 2003). Phase 2 of the research completed 
+more detailed investigations into flood hazard and flood vulnerability and reported 
+interim conclusions at various stages of the research (HR Wallingford, 2004a, 2004b 
+and 2004c). During this phase a number of changes were made to the Flood Hazard, 
+Area Vulnerability and People Vulnerability aspects of the Risks to People 
+methodology. This report presents the final methodology and should be considered the 
+best practice for assessing the risks to people from flooding. 
+In addition to this technical report on the Flood Risks to People Methodology, the other 
+Phase 2 final outputs are: 
+• Project Record (FD2321/PR, HR Wallingford, 2005a), which collates all of the 
+information presented in the inception report and interim reports. 
+• Guidance Document (FD2321/TR2, HR Wallingford, 2005b), which provides 
+guidance on development control and flood risk management and includes a
+summary for researchers which explains the links of this project with other 
+EA/DEFRA R&D and which identifies areas for further research. 
+Sections 2 to 5 of this report outline the final methodology and Sections 6 and 7 explain 
+how it can be applied, with some case studies and mapping examples. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+2 
+2. OVERVIEW OF METHODOLOGY DEVELOPMENT 
+2.1 Phase 1 Methodology 
+As reported in the Phase 1 Report (HR Wallingford, 2003), the proposed methodology 
+was based on the following equation (as applied to a particular flood): 
+Ninj = Nz x Hazard Rating x Area Vulnerability x People Vulnerability 
+where, Ninj = number of injuries within a particular hazard ‘zone’; 
+ Nz = number of people within the hazard zone (at 
+ground/basement level); 
+Flood Hazard Rating = function of flood depth/velocity (within the hazard zone 
+being considered) and debris factor; 
+Area Vulnerability = function of effectiveness of flood warning, speed of onset of 
+flooding and nature of area (including types of buildings); 
+and 
+People Vulnerability = function of presence of people who are very old and/or 
+infirm/disabled/long-term sick 
+Furthermore the number of fatalities (in a particular flood) was taken to be a function of 
+the number of injuries and the hazard rating. In other words, the more severe the flood 
+(in terms of flood depth and/or velocity), the greater the proportion of fatalities 
+amongst those injured. 
+The Risks to People methodology is based on applying the above calculations to a 
+number of hazard zones and flood events in order to build up an overall picture of the 
+associated level of risk in particular geographical areas. 
+2.2 Consultation 
+There is little doubt that this R&D Project is of great interest to a wide range of people 
+and organisations involved in flood and coastal risk management. To ensure that the 
+views of these stakeholders were identified, there has been extensive consultation 
+during both Phases 1 and 2 of the Project. One of the key objectives of the consultation 
+was to ensure that the outputs from the project met the wishes of stakeholders.
+Outputs from the Risks to People project meet the majority of wishes expressed by 
+those consulted. There are some areas that the project was unable to address within its 
+scope. These issues have either been taken forward in parallel Environment Agency 
+research projects, e.g. FD2308 on Flood Risk Guidance for New Developments, or 
+recommended as items for ongoing Environment Agency and Defra research (see 
+Guidance Document). Table 2.1 summarises the requirements of stakeholders based on 
+a consultation meeting held on 23 September 2004 together with a commentary on the 
+degree to which the particular items could be met by the outputs from this project. It 
+should be noted that many of these items had been raised in previous discussions with 
+stakeholders. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+3 
+Table 2.1: Stakeholder ‘Wish List’ and Associated Commentary 
+Function Stakeholder Wishes Comment 
+Project 
+appraisal 
+A method for estimating flood risks to 
+people for Multi-Criteria Analysis (MCA). 
+The MCA approach should link with the 
+Risks to People outputs. 
+The method developed for estimating risks 
+to people is, essentially, an MCA method 
+(as it is based on scoring and combining 
+attributes). It is suggested that the ‘risks to 
+people’ methodology should feed into an 
+overall MCA methodology for project 
+appraisal. 
+Flood 
+mapping 
+Methods that can be used to calculate the 
+following for national mapping purposes: 
+• Flood hazard 
+• Vulnerability 
+• Flood risks to people (if required) 
+This is the prime output from the project - a 
+methodology that can be incorporated into 
+‘high level’ mapping. Clearly it would be 
+possible to map the ‘risks’ or component 
+parts (such as ‘hazard’, ‘area vulnerability’ 
+or ‘people vulnerability’) each of which 
+may have specific applications outside the 
+overarching ‘risks to people’ methodology. 
+Flood 
+warning 
+a) Methods that can be used to calculate 
+flood hazard and vulnerability for local 
+application. 
+b) Guidance on identifying areas of high 
+flood risks to people is needed for Agency 
+flood warning plans. 
+c) Guidance arising from the project on 
+what to do and what not to do during a 
+flood. 
+a) The methodology is designed for ‘high 
+level’ mapping. As such, it is intended that 
+risks can be determined from consideration 
+of ‘area’ characteristics (for example, by 
+postcode or national census “Output Areas’ 
+~ ca. 120 houses). 
+b) It is intended that the ‘high level’ 
+mapping resulting from the application of 
+the methodology presented in this report 
+will identify areas of high flood risks to 
+people. 
+c) During the course of the project, a 
+number of relevant items have been 
+identified (for example, ‘safe’ flood depths 
+for vehicles) and these are reported on this 
+report and in the associated Guidance 
+Document. It is to be hoped that such 
+information will be taken forward by the 
+relevant authorities for guidance to staff 
+and members of the public as appropriate. 
+Emergency 
+planning and 
+response 
+a) Methods that can be used to calculate 
+flood hazard and vulnerability for local 
+application. 
+b) Guidance on identifying areas of high 
+flood risks to people is needed for Local 
+Authority emergency plans. Guidance 
+should be based on local data where 
+possible. 
+a) As for ‘flood warning - a)’ above. 
+b) As for ‘flood warning - a) and b)’ above 
+Flood 
+awareness 
+Guidance arising from the project on what 
+to do and what not to do during a flood. 
+As for ‘flood warning - c)’ above. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+4 
+Function Stakeholder Wishes Comment 
+Flood 
+defence 
+regulation 
+and 
+development 
+control 
+a) Method for calculating flood hazard 
+information for development control and 
+planning. 
+b) Method for assessing flood risks behind 
+defences, which could be used by the 
+Agency to develop guidance. 
+c) Guidance on flood risks to people to help 
+the Agency develop tools and other 
+information that can be used to influence 
+planners. 
+d) Guidance on the acceptability of risk is 
+desirable but the Agency excluded this item 
+from the original Terms of Reference. 
+e) A method that identifies the influence of 
+mitigation measures (flood warning, 
+development control) so that the benefits of 
+these measures can be identified.
+a) Since the level of flood risk to people 
+can be determined at an area level, these 
+outputs would be suitable for consideration 
+in developing strategic plans. However, 
+they may not be appropriate for 
+consideration in respect of planning 
+applications for small individual 
+developments - as the ‘true’ risk will be 
+dependent on a range of site-specific 
+factors. It would be hoped that such factors 
+would be considered in the site-specific 
+flood risk assessment prepared in 
+accordance with PPG25. The examples in 
+Appendix * show how the methodology 
+could be used to determine the number of 
+houses permitted within flood zones based 
+on the concept of “Acceptable Risk.” 
+b) The methodology has been developed to 
+consider those at risk with and without 
+defences. 
+c) As for a) above. 
+d) This was not considered in Phase 2 of 
+the project but parallel work completed by 
+the project team is included in the 
+appendices. 
+e) The methodology can be used to 
+demonstrate the risks ‘before’ and ‘after’ 
+particular improvements. As such, it is 
+possible to demonstrate the ‘benefits’ (in 
+terms of reduced risk) associated with 
+mitigation measures. 
+Land use 
+planning 
+Flood hazard information for development 
+control and planning. 
+As for ‘flood defence - a)’ above. 
+Flood Plans 
+for reservoirs
+Methods for calculating flood hazard, 
+vulnerability and flood risks to people for 
+inclusion in the specification for reservoir 
+Flood Plans. 
+It should be possible for those involved in 
+developing reservoir ‘flood plans’ to adopt/ 
+adapt the methodology presented in this 
+report. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+5 
+2.3 Responsibilities for Flood Risk Management 
+As illustrated in Table 2.1, flood risks to people are considered across a wide range of 
+functions. Furthermore, these functions are the responsibility of a range of authorities. 
+Clearly, planners have a responsibility for planning and the Environment Agency has a 
+key role in the provision of flood warning services and flood defences. HR 
+Wallingford (2004b), sections 4.2 and 4.3 provide an overview of the responsibilities of 
+the various authorities. 
+2.4 Structure of the report 
+The following sections describe the concepts of Flood Hazard, Area Vulnerability and 
+People Vulnerability individually, and then describe how these components are 
+combined to estimate the individual and societal risks of serious harm during a flood 
+event. 
+The Flood Hazard, Area Vulnerability and People Vulnerability sections are structured 
+as follows:- 
+• The starting point is the Phase 1 formulae as reported in HR Wallingford (2003). 
+• Changes made to each formula in Phase 2 are described. 
+• The final formula is presented at the end of each section. 
+A synopsis and example of the final methodology is described in Section 6. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+6 
+3. FLOOD HAZARD RATING 
+3.1 Introduction 
+There is a broad consensus that the degree of hazard that floodwaters present to people 
+(and to vehicles and property) is a function of both velocity and depth. There are a 
+number of other physical characteristics that may affect the stability of people during 
+flooding, such as water temperature, the presence of “slip” and “trip” hazards such as 
+“blown” man-hole covers and the presence of debris. The presence of debris was 
+included in Phase 1 as a “debris factor” in the flood hazard equation. This was retained 
+in the final flood hazard formula. 
+3.2 The Phase 1 flood hazard formula 
+The Phase 1 report outlined a simple model of flood hazard based on velocity, depth 
+and the presence of debris:- 
+HR = d x (v + 1.5) + DF 
+where, HR = (flood) hazard rating; 
+ d = depth of flooding (m); 
+v = velocity of floodwaters (m/sec); and 
+DF = debris factor (= 0, 1, 2 depending on probability that debris 
+will lead to a significantly greater hazard) 
+During the course of Phase 2 of this project, this equation has been subject to further 
+review to examine whether it provides a robust reflection of the degree of hazard posed 
+by floodwaters. 
+3.3 Depth and Velocity Functions 
+3.3.1 Overview 
+Leaving aside the issue the debris (which is considered further below), flood hazard is a 
+function of both depth and velocity. A number of alternative flood hazard formulae 
+were considered with reference to experimental data and in the context of the overall 
+Risks to People Methodology. (A discussion of the pros and cons of the alternative 
+equations and the experimental evidence is included in Appendix 1). 
+The limited amount of published research on the direct effects of floodwater on people 
+tends to focus on the velocity/depth required to knock people off their feet. Clearly, 
+this, in turn, depends on the characteristics of the subjects (particularly height and 
+mass). 
+Experimental work from Abt (1989) and RESCDAM (2000) was reviewed. Figure 3-1 
+plots the results from these two experiments with (a) and indication of the typical 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+7 
+height times mass for different ages based on UK Department of Health figures and (b) 
+some thresholds indicating the relative hazard associated with different depth-velocity 
+combinations. 
+0.0
+0.5
+1.0
+1.5
+2.0
+2.5
+3.0
+0 50 100 150 200 250
+hw m.kg
+d(v+0.5) m
+3/s
+Rescdam Abt (less two outliers) Linear (Rescdam ) Linear (Abt (less two outliers)) 10 yrs old 15 yrs old 5 yrs old Adult
+Average height x mass for different ages 
+Danger for 
+some
+Danger for 
+most
+Danger for 
+all
+   
+Figure 3.1: The interpretation of the data sets to derive flood hazard thresholds 
+The following expression was found to be reliable for determining the threshold for 
+losing stability: 
+d x (v + 0.5) = a x hw + b 
+where, d = depth of flooding (m); 
+v = velocity of floodwaters (m/sec); 
+hw = height (m) x weight (kg) of subject; and 
+a, b = constants. 
+Further details are provided in Appendix 1, HR Wallingford et at (2004b) section 3 and 
+HR Wallingford (2004c) section 2. 
+3.3.2 Choice of flood hazard classes. 
+In the risks to people calculation flood hazard is used as a variable that affects the 
+proportion of exposed people that are injured or killed. However, classification of flood 
+hazard is required for flood hazard mapping and the development of guidance. Given 
+the difference between the two main experiments and the fact that these cannot 
+reproduce real flood conditions, it is appropriate to be precautionary in setting and 
+describing hazard classes so that these are communicated effectively to those at risk. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+8 
+The characterisation shown in Table 3.2 is proposed. 
+Table 3.2: Hazard to People as a Function of Velocity and Depth 
+d x (v + 0.5) Degree of Flood Hazard Description 
+<0.75 Low Caution 
+“Flood zone with shallow flowing water 
+or deep standing water” 
+0.75 - 1.25 Moderate Dangerous for some (i.e. children) 
+“Danger: Flood zone with deep or fast 
+flowing water” 
+1.25 - 2.5 Significant Dangerous for most people 
+“Danger: flood zone with deep fast 
+flowing water” 
+>2.5 Extreme Dangerous for all 
+“Extreme danger: flood zone with deep 
+fast flowing water” 
+Such categorisation could be useful for a range of applications including:- 
+• Planning of safe access and exit for new developments 
+• Emergency planning advice for people at risk and the emergency services 
+• Development of household or community flood plans 
+Figure 3-2 provides a look-up table of flood hazard classes for different velocities and 
+depths. The use of flood hazard classes is described in the Guidance Document. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+9 
+Velocity Coefficient C 0.5
+(V+C) * D Depth 
+Velocity 0.25 0.50 0.75 1.00 1.25 1.50 1.75 2.00 2.25 2.50
+0.00 0.13 0.25 0.38 0.50 0.63 0.75 0.88 1.00 1.13 1.25
+0.50 0.25 0.50 0.75 1.00 1.25 1.50 1.75 2.00 2.25 2.50
+1.00 0.38 0.75 1.13 1.50 1.88 2.25 2.63 3.00 3.38 3.75
+1.50 0.50 1.00 1.50 2.00 2.50 3.00 3.50 4.00 4.50 5.00
+2.00 0.63 1.25 1.88 2.50 3.13 3.75 4.38 5.00 5.63 6.25
+2.50 0.75 1.50 2.25 3.00 3.75 4.50 5.25 6.00 6.75 7.50
+3.00 0.88 1.75 2.63 3.50 4.38 5.25 6.13 7.00 7.88 8.75
+3.50 1.00 2.00 3.00 4.00 5.00 6.00 7.00 8.00 9.00 10.00
+4.00 1.13 2.25 3.38 4.50 5.63 6.75 7.88 9.00 10.13 11.25
+4.50 1.25 2.50 3.75 5.00 6.25 7.50 8.75 10.00 11.25 12.50
+5.00 1.38 2.75 4.13 5.50 6.88 8.25 9.63 11.00 12.38 13.75
+From To
+Class 1 0.75 1.25 Danger for some 
+Class 2 1.25 2.50 Danger for most 
+Class 3 2.50 20.00 Danger for all 
+Figure 3.2: Velocity, depth and flood hazard matrix 
+3.3.3 Flood Damage to Buildings 
+In broad terms, buildings are more resilient to floodwaters than people. Extensive 
+research into this area has been undertaken by CURBE (see, for example, Kelman 
+2002). Further detail is provided in HR Wallingford et at (2004b) section 3 and HR 
+Wallingford et at (2004c) section 2, but, as for people, the severity of damage is a
+function of both depth and velocity. 
+The direct damage of floodwater to buildings and the potential risks to people related to 
+building collapse is not included in the risks to people methodology. With the one 
+recent exception of Boscastle, there is not substantial evidence of buildings collapsing 
+during floods in the UK. Nevertheless, understanding the potential impacts of flood 
+water on building structure is still an important area for research; further commentary is 
+provided in Appendix 1 and building resilience is included in the Guidance Document. 
+3.3.4 Flood Damage to Vehicles 
+There are, essentially, three reasons why vehicles cannot be used in floodwaters: 
+• the presence of water stops the engine functioning; 
+• the vehicle floats; and 
+• the vehicle becomes difficult to control. 
+Cars will stop and/or float in relatively shallow water (as low as 0.5m in depth) while 
+emergency vehicles may survive in slightly deeper waters (up to 1m in depth). 
+However, with suitable modifications (high level air intakes/exhausts), a fire engine 
+remains controllable in depths of 0.5m at up to 5 m/sec water flows. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+10 
+These findings are discussed in more detail in HR Wallingford et at (2004b) section 3 
+and HR Wallingford et at (2004c) section 2. As in the case of buildings, the Phase 1 
+methodology was not modified to specifically account for vehicles. Rather, these 
+aspects have been incorporated into the associated Guidance Document. 
+3.4 Debris Factor 
+In the original Phase 1 methodology, a debris factor (DF) was added to the 
+depth/velocity function. The value of DF was taken to be 0, 1, 2 depending on the 
+probability that debris would lead to a significantly greater hazard. Although there are 
+few reliable data on the importance of such a factor, the values will need to be reduced 
+(and values of 0, 0.5, 1 are suggested) to reflect the change in the depth/velocity 
+function. 
+Table 3.1: Guidance on debris factors for different flood depths, velocities and 
+dominant land uses 
+Depths Pasture/Arable Woodland Urban 
+0 to 0.25 m 0 0 0 
+0.25 to 0.75 m 0 0.5 1 
+d>0.75 m and\or v>2 0.5 1 1 
+3.5 Final flood risks to people method: Hazard rating formula 
+The revised ‘hazard rating’ expression based, primarily, on consideration to the direct 
+risks of people exposed to floodwaters is: 
+HR = d x (v + 0.5) + DF 
+where, HR = (flood) hazard rating; 
+ d = depth of flooding (m); 
+v = velocity of floodwaters (m/sec); and 
+DF = debris factor (= 0, 0.5, 1 depending on probability that 
+debris will lead to a significantly greater hazard) 
+ 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+11 
+4. AREA VULNERABILITY 
+4.1 Introduction 
+At any particular time, people may be present in various locations: 
+• outdoors on foot 
+• outdoors in a vehicle 
+• indoors in a basement or (confined to) the ground floor 
+• indoors within a two-storey building 
+• indoors within a multi-storey building. 
+There are clearly different levels of risk associated with different locations e.g. areas 
+with caravan parks and low rise property are more vulnerable than areas with 
+permanent two storey or office buildings that, in most cases, provide safe areas above 
+peak water levels during a flood. The Area Vulnerability concept classifies areas 
+according to:- 
+• flood warning; 
+• speed of onset; and 
+• nature of area. 
+Each of the factors was scored on a simple 1, 2, 3 scale as shown in Table 4.1 
+Table 4.1: Area Vulnerability (Phase 1 Methodology) 
+Parameter 1 - Low risk area 2 - Medium risk area 3 - High risk area 
+Flood warning 
+Effective tried and 
+tested flood 
+warning and 
+emergency plans 
+Flood warning system 
+present but limited 
+No flood warning 
+system 
+Speed of onset 
+Onset of flooding 
+is very gradual 
+(many hours) 
+Onset of flooding is 
+gradual (an hour or so) Rapid flooding 
+Nature of area Multi-storey 
+apartments 
+Typical residential area 
+(2-storey homes); 
+commercial and 
+industrial properties 
+Bungalows, mobile 
+homes, busy roads, 
+parks, single storey 
+schools, campsites, etc. 
+4.2 Flood Warning 
+Flood warning is an important part of the Environment Agency’s work on flood risk 
+management. The Agency’s policies and associated objectives are described in more 
+detail in HR Wallingford. (2004b) section 4.4. 
+Clearly, the effectiveness of flood warning not only relies on providing a timely 
+warning but also for recipients of the warning to take effective action. The Agency has 
+three key targets that are identified in relation to flood warning: 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+12 
+• to increase the coverage of flood warning services to 80% of properties in flood risk 
+areas by 2010 (Agency Corporate Plan (2002-06))1
+; 
+• prior warning will be provided (two hours in general) to people living in designated 
+flood risk areas where a flood forecasting facility exists and where lead times 
+enable the Agency to do so (Agency’s Customer Charter)2
+; and 
+• to ensure that 75% of residents in flood risk areas will take effective action by 2007 
+(Agency’s Corporate Strategy). 
+Progress towards these targets are reported on by (most) Agency regions. Table 4.2 
+below presents the relevant data, where available. 
+Table 4.2: Progress towards Flood Warning Targets 
+Agency Region 
+% of at risk 
+properties covered 
+by flood warning 
+system1
+% of warnings 
+meeting two hour 
+target2
+% of people 
+taking effective 
+action3
+Anglian 55 75 36 
+13 54 36 
+Midlands 
+- East 
+- West 27 54 36 
+75 88 36 
+North East 
+- Yorkshire & Humber
+- North East 53 88 36 
+North West 65 0 36 
+Southern 61 65 36 
+South West 61 61 36 
+Thames 61 65 36 
+England 61 63 36 
+Wales 45 63 55 
+NB Figures in italics are based on England figures where no other data are available 
+1 Based on information from State of the Environment Reports (where provided), 
+available on Regional websites, www.environment-agency.gov.uk, the Agency’s 
+Annual Report 2002/03 and Measure 218A. 
+2 Environment Agency (2004): High Level Target 2 – Provision of Flood 
+Warnings, Report to Defra, dated February 2004. 
+3 Baseline figures reported for Measures 217A and 217B. It is recognised that the 
+36% figure is somewhat unrealistic and variation between regions will become 
+apparent once data for the KPI are collected. 
+ 
+Table 4.3 shows how the progress against these targets can be used to derive a score for 
+flood warning. 
+ 
+ 
+1
+ It is noted that the 80% target is close to the limit of what is possible, due to flash flooding. 
+ 
+2
+ This relates to Defra’s High Level Target 2 on the provision of flood warnings 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+13 
+4.2.1 Final flood risks to people method: Flood warning. 
+Each figure is calculated as a percentage of its target, e.g. for Anglian region, the 
+percentage of at risk properties covered by a flood warning system is 55%, compared to 
+a target of 80%, thus the ‘score’ is 0.69 (= 55/80). The scores across all three targets 
+are then combined to give a flood warning score on a scale of 1 (good warning system) 
+to 3 (no warning system), using the following expression: 
+ FW Score = 3 - (P1 x (P2 + P3)) 
+ where, P1 = % of Warning Coverage Target Met; 
+ P2 = % of Warning Time Target Met; and 
+ P3 = % of Effective Action Target Met. 
+Table 4.3: Calculation of Flood Warning Score 
+Agency Region 
+% of Warning 
+Coverage 
+Target Met 
+(80%) = P1 
+% of Warning 
+Time Target 
+Met 
+(100%) = P2 
+% of Effective 
+Action Target 
+Met (75%) = 
+P3 
+FW Score = 
+3 - (P1 x (P2 
++P3)) 
+Anglian 0.69 0.75 0.48 2.15 
+0.16 0.54 0.48 2.83 
+Midlands 
+- East 
+- West 0.34 0.54 0.48 2.66 
+0.94 0.88 0.48 1.73 
+North East 
+- Yorkshire & Humber 
+- North East 0.66 0.88 0.48 2.10 
+North West 0.81 0.00 0.48 2.61 
+Southern 0.76 0.65 0.48 2.14 
+South West 0.76 0.61 0.48 2.17 
+Thames 0.76 0.65 0.48 2.14 
+England 0.76 0.63 0.48 2.15 
+Wales 0.56 0.63 0.73 2.23 
+4.3 Speed of Onset 
+The ‘speed of onset’ is clearly an important factor affecting flood vulnerability. If 
+floodwaters rise very slowly, people will be aware and be able to react, ensuring the 
+their own safety and the safety of others. If there is rapid flooding people have little 
+opportunity to seek safe refuge. In the Boscastle floods of August 2004 anecdotal 
+evidence suggested that the flood rose to its peak within 15 to 30 minutes, leaving no 
+time for people to escape the torrent of floodwater. 
+In the risks to people method it is regarded as an area characteristic as it is related to 
+flood defences and the propagation of flood water across an areas (a pathway variable) 
+as well as the physical characteristics, such as “Time to peak” for fluvial floods (a 
+source variable). The ‘speed of onset’ criteria and scores have remained the same as 
+those reported in Phase 1. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+14 
+4.3.1 Final flood risks to people method: Speed of onset. 
+There are three classes for the speed of onset criteria:- 
+• Low risk: Onset of flooding is very gradual (many hours) 
+• Medium risk: Onset of flooding is gradual (an hour or so) 
+• High risk: Rapid flooding 
+Examples of areas subject to very gradual flooding include groundwater flooding and 
+fluvial flooding from large groundwater dominated catchments. Areas vulnerable to 
+rapid flooding include small steep catchments, small clay catchments, areas behind 
+defences and urban areas subject to sewer flooding following intense rainstorms. 
+4.4 Nature of Area 
+The “nature of the area” criteria is an important variable that can change the risks from 
+one flood zone to another due to the presence or absence of buildings that could 
+provide safe refuge above the maximum water level during a flood. As such it is an 
+important variable for defining flood risk zones as described in the section on risks to 
+people mapping (Section 7). 
+During the course of Phase 2, consideration has been given to the potential for the 
+presence of sites containing hazardous materials within the floodplain to present a 
+significant risk to people in the event of a flood. 
+As described in HR Wallingford (2004b) section 4.5, there are numerous facilities 
+located within the floodplain which, in the event of a flood, could be involved in an 
+incident which presents a hazard to those nearby. Such incidents may involve: a direct 
+reaction between the floodwaters and the material being handled; damage to tanks (or 
+other items of plant) leading to a release; or the floodwaters can transport hazardous 
+materials outside their normal containment (for example, an overflowing lagoon). 
+An international review of past incidents indicates that the transport of hazardous 
+materials to and from such facilities by pipeline, road, rail and ship can also present a 
+hazard - generally, when the floodwater causes damage to the containment which, in 
+turn, leads to the release of a hazardous material. 
+Although ‘normal’ landfill facilities are not considered to present a risk to people 
+nearby in the event of flooding, it is possible that hazardous waste facilities (storage, 
+treatment and disposal) may present a risk. 
+However, it must be stressed that the significance of the associated risk (relative to the 
+direct risk associated with the floodwaters) is likely to be low. This is borne out by the, 
+generally, low numbers of injuries and fatalities associated with flooding incidents 
+which involve hazardous materials. Therefore the presence of hazardous sites was not 
+included in the risks to people method. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+15 
+However, there will always be a low residual risk of a major incident and with these 
+points in mind, it is recommended that consideration of the potential interaction 
+between floodwaters and sites and/or transport routes containing hazardous materials is 
+considered in drawing up local emergency plans and procedures. 
+ 
+4.4.1 Final flood risks to people method: Nature of area. 
+The ‘nature of area’ factors and scores proposed in Phase 1 were retained for the final 
+method:- 
+• Low risk: Multi-storey apartments 
+• Medium risk: Typical residential area (2-storey homes); 
+• High risk: Basement properties and car parks, low rise commercial and industrial 
+properties, bungalows, mobile homes, busy roads, parks, single storey schools, 
+campsites, etc…
+Notes: 
+1. In some areas there may be other specific buildings that are high risk so the above 
+list is not prescriptive. 
+2. Parks and other open areas where people congregate are considered to be vulnerable 
+areas even if their population density is low. (Note that if there a few people present 
+in such areas the final risks to people will be very low). 
+3. The presence of hazardous sites should still be considered in emergency plans and 
+procedures. 
+4.5 Final flood risks to people method: Expression for Area Vulnerability 
+The revised ‘area vulnerability’ score is similar to that used in the Phase 1 methodology 
+and is summarised in Table 4.4. 
+Table 4.4: Area Vulnerability (Final Method) 
+Parameter 1 - Low risk area 2 - Medium risk area 3 - High risk area 
+Speed of onset 
+Onset of flooding 
+is very gradual 
+(many hours) 
+Onset of flooding is 
+gradual (an hour or so) Rapid flooding 
+Nature of area Multi-storey 
+apartments 
+Typical residential area 
+(2-storey homes); 
+commercial and 
+industrial properties 
+Bungalows, mobile 
+homes, busy roads, 
+parks, single storey 
+schools, campsites, etc. 
+Flood warning 
+Score for flood warning = 3 - (P1 x (P2 + P3)) 
+where P1 = % of Warning Coverage Target Met 
+P2 = % of Warning Time Target Met 
+P3 = % of Effective Action Target Met 
+Area Vulnerability (AV) = sum of scores for ‘speed of onset’, ‘nature of area’ 
+and ‘flood warning’ 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+16 
+5. PEOPLE VULNERABILITY 
+5.1 Introduction 
+In the Phase 1 methodology, consideration was given to two factors which could be 
+used to characterise the ‘vulnerability’ of people within a particular area to flooding. 
+These two factors were: 
+• the presence of the very old; and 
+• the presence of inform/disabled/long term sick. 
+Each factor was scored on a simple scale as shown in Table 5.1 
+Table 5.1: Area Vulnerability (Phase 1 Methodology) 
+Parameter 10 - Low Risk 
+People 
+25 - Medium Risk 
+People 50 - High Risk People 
+The very old 
+(>75) 
+%well below 
+national average 
+%around national 
+average 
+%well above national 
+average (including areas 
+with sheltered housing) 
+Infirm/disabled/ 
+long-term sick 
+%well below 
+national average 
+%around national 
+average 
+%well above national 
+average (including 
+hospitals) 
+5.2 Other Parameters 
+During Phase 2, consideration has been given to a wide range of socio-economic 
+factors which could influence the vulnerability of particular groups to being injured by 
+floodwaters. The key parameters are summarised in Table 5.2 with further detail in HR 
+Wallingford (2004c) Appendix 2. 
+Table 5.2: Factors Considered for People Vulnerability 
+Factor Research Indications Commentary 
+The Elderly • Epidemiological research 
+indicates that over the age of 75 
+there is an increase in the incidence 
+and severity of pre-existing health 
+problems (Tapsell et al, 2002). 
+• Thrush (2002) reports that 
+confused elderly people may be 
+frightened and bewildered by 
+(informal) flood warnings. 
+• The non-institutionalised elderly 
+are more difficult to locate in 
+situations requiring evacuation 
+(Keys, 1991). 
+• The very old are more vulnerable 
+to the effects of immersion, such as 
+Factor already included in the Phase 1 
+methodology and should be retained 
+based on evidence that the elderly are 
+more vulnerable to health problems 
+related to flooding. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+17 
+Factor Research Indications Commentary 
+shock and hypothermia (NHS 
+Direct). In addition, the diseases 
+that predispose people to 
+hypothermia are more common in 
+those aged over 65 (eMedicine, 
+2001). 
+The Long 
+Term Sick 
+and Disabled 
+• This variable is strongly 
+correlated with old age. 
+• People with impaired hearing are 
+at particular risk of not receiving 
+telephone warnings. 
+• On exposure to floodwater, many 
+pre-existing medical conditions can 
+increase the probability of death 
+occurring, e.g. the mortality rate for 
+hypothermia for those with preexisting illness is higher than 50% 
+(compared to 5% in healthy 
+individuals). 
+Factor already included in Phase 1 
+methodology and should be retained 
+based on evidence that pre-existing 
+illness may predispose people to health 
+problems related to flooding. 
+However, a degree of double counting 
+may occur, depending on the strength 
+of correlation of this factor with age. 
+The 
+Financially 
+Deprived 
+• Poor households are less likely to 
+own a car so may require special 
+transport provision in the event of 
+evacuation (Keys, 1991). 
+Financially deprived households may 
+be less likely to receive a warning or to 
+respond effectively, however there is 
+no evidence to suggest that they are 
+more likely to experience health 
+problems. In addition, this factor is 
+associated with other ‘vulnerability’ 
+characteristics considered. 
+Single 
+Parents and 
+Children 
+• Evacuation or rapid response may 
+be more difficult (Keys, 1991). 
+• The very young are especially 
+susceptible to hypothermia and 
+shock (Grieve, 1959). 
+The evidence suggests that very young 
+children are more susceptible to health 
+problems, whether or not they are part 
+of a single parent household. 
+However, evacuation may be more 
+difficult in this situation. 
+Language 
+and 
+Ethnicity 
+• Warnings are less likely to be 
+received and acted upon (Drabek, 
+2000). 
+• People may have difficulty 
+understanding emergency service 
+workers (Keys, 1991). 
+Transient 
+and Recent 
+Immigrants 
+• Generally less likely to receive 
+warnings than residents (Drabek, 
+2000). 
+These factors are more related to the 
+effectiveness of flood warnings and 
+communication than the potential for 
+flooding to cause health impacts. 
+Leisurerelated 
+vulnerability 
+• Seasonal tourists may occupy 
+hazardous regions (Cutter, 2003). 
+Potentially significant in some areas - 
+see below.
+The Roofless 
+Homeless 
+• Many rough sleepers suffer from 
+acute health problems (Crisis, N.D.; 
+McMurray-Avila et al, 1998) 
+making them more vulnerable to the 
+effects of immersion. 
+There are no comprehensive national 
+figures on the extent of single 
+homelessness (Shelter, 2001) that 
+would enable this factor to be 
+accounted for. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+18 
+5.3 Parameters Taken Forward 
+Based on Table 5.2, the two key parameters are the presence of the very old and the 
+infirm/disabled/long-term sick. These two parameters account for two of the four 
+parameters used in the Social Flood Vulnerability Index (see HR Wallingford (2004c) 
+appendix 2). Although other components of the SFVI may be of interest when 
+considering other aspects of flooding and flood risk management, they are not of direct 
+relevance when considering the direct risks of injury associated with flooding. 
+The very old and the infirm/disable/long-term sick account for about 10% and 15% of 
+the adult population respectively (and it is acknowledged that some people will fall into 
+both categories). For simplicity (and to retain a degree of consistency with the Phase 1 
+approach), it is recommended that the ‘people vulnerability’ score is simply the sum of 
+the two relevant SVFI factors: 
+• the percentage of all residents suffering from long-term illness; and 
+• the percentage of all residents aged 75 or over. 
+This is a pragmatic conclusion that fits with overall aims of the methodology and 
+mapping process. For example, it is clear that children are particularly vulnerable in 
+any type of emergency because they are physically smaller and weaker than adults and 
+are especially susceptible to hypothermia and shock. At the scale of risks to people 
+mapping their presence or absence will not create differentiation from one place to 
+another. However the presence of lone parents may be a useful substitute and the use of 
+this variable warrants further research. The accompanying Guidance Document 
+provides further information on flood awareness and characteristic behaviour of 
+different groups (by gender, age and so on) of people during floods. 
+5.4 Final flood risks to people method: People Vulnerability 
+The revised ‘people vulnerability’ score (Y expressed as a percentage) is simply: 
+Y = %residents suffering from long-term illness + %residents aged 75 or over. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+19 
+6. DETERMINING THE RISKS TO PEOPLE 
+6.1 Introduction 
+In order to determine the annual average individual or societal risk, several flood events 
+must be considered. The choice of scenarios is important and will have an impact on 
+the final outputs particularly in the case of areas defended to a high standard, such as 
+the Thames Estuary. 
+In order to use the full risks to people method at least 5 events should be considered. 
+The greatest impact is likely to be for more extreme events and therefore the choice of 
+events must include or, in a special cases, exceed the 0.1% or 1 in 1000 year flood. The 
+area considered for typical risks to people assessment will be defined by the 
+Environment Agency’s 1000 year Extreme Flood Outline (EFO). The choice of events 
+should cover a similar range to those outlined below:- 
+(a) for an undefended area with regular flooding choose the 20, 50, 100, 250, 1000 
+year events; 
+(b) for a defended area (to, say, 1 in 75) choose 100, 200, 300, 500, 1000 
+year events; 
+(c) for a highly defended area (to, say, 1 in 800) choose 1000, 1500, 2000, 
+4000 year events. 
+For heavily populated floodplains that are defended to a high standard by complex 
+flood defence systems individual events may be caused by a combination of forcing 
+conditions and defence failure affecting any single or multiple components of the 
+defence system. In such cases, more events may need to be considered and this may be 
+best achieved by using an established risk assessment framework, such as RASP. 
+The following hypothetical example of “Riskville” considers the methodology in three 
+simple steps. In step 1, a single event occurring on an undefended floodplain is 
+considered with flood zones defined in terms of distance from the source of flooding. In 
+step 2 the results of a further four events are combined to illustrate the calculation of 
+the annual average individual and societal risk. In step 3 the concept of acceptable risk 
+is introduced. 
+In Section 7 and Appendix ** the methodology is applied the four examples from 
+Phase 1 of the research project and three new examples completed by Risk & Policy 
+Analysts as part of a research project completed for the Environment Agency. The new 
+examples are Lewes on the River Ouse, Tripcock Point in the Thames Estuary and Hull 
+in the Humber Estuary. 
+6.2 Step 1. Quantifying the relationships (exposure assessment) for a single 
+event 
+The event considered in this example is the 1% flood for the town of “Riskville” that 
+has a population of 3785 people located within the 0.1% flood outline. It currently has 
+no flood defences. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+20 
+6.2.1 Methodology 
+The number of deaths/injuries is calculated using the following equation: 
+N(I) = N x X x Y. 
+Where: 
+N(I) is the number of deaths/injuries 
+N is the population within the floodplain 
+X is the proportion of the population exposed to a risk of suffering 
+death/injury (for a given flood). The risks to people estimates X based 
+on Area Vulnerability. 
+Y is the proportion of those at risk who will suffer death/injury. The risks 
+to people method calculates Y based on People Vulnerability. 
+The risk of suffering N(I) deaths/injuries will simply be the likelihood of the given 
+flood. 
+6.2.2 Flood hazard rating 
+The flood hazard formula is calculated as a function of velocity, depth and the presence 
+of debris using the formula:- 
+Flood hazard = (v + 0.5) x d 
+Table 6.1: Flood hazard zones and those at risk in Riskville, N(Z) 
+Distance 
+from river/ 
+coast (m) 
+N(Z) Typical depth, 
+d (m) 
+Typical 
+velocity, v 
+(m/sec) 
+Debris 
+factor (DF) 
+Hazard rating 
+= d(v+0.5) + 
+DF 
+0-50 25 3 2 1 – possible 8.5 
+50-100 50 2 1.8 1 – possible 5.6 
+100-250 300 1 1.3 1 – possible 2.8 
+250-500 1000 0.5 1.2 1 – possible 1.85 
+500-1000 2500 0 0 0 - unlikely 0 
+6.2.3 Determining those exposed 
+As discussed above, the numbers of people exposed will essentially depend on four 
+factors: 
+• flood warning 
+• speed of onset 
+• nature of the area (type of housing, presence of parks, etc.) 
+The sum of the factors (typically in the range between 3 to 9) provides an indication of 
+the vulnerability of the area (as opposed to that of the people). This is shown in Table 
+6.2 for each of the hazard zones. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+21 
+Table 6.2: Area vulnerability scores 
+Distance from 
+river/coast (m) Flood warning Speed of onset Nature of 
+area 
+Sum = area 
+vulnerability 
+0-50 2.15 3 2 7.15 
+50-100 2.15 2 1 5.15 
+100-250 2.15 2 3 7.15 
+250-500 2.15 1 2 5.15 
+500-1000 2.15 1 2 5.15 
+This area vulnerability score is simply multiplied by the hazard rating derived above to 
+generate the value for X (the % of people exposed to risk) as shown in Table 6.3. 
+Should the score exceed 100, this is simply taken as 100. Whilst this is not a true 
+percentage, it provides a practical approach to the assessment of flood risk. 
+Table 6.3: Generating X (% of people at risk) 
+Distance from 
+river/coast (m) N(Z) Hazard 
+rating (HR) 
+Area 
+vulnerability 
+(AV) 
+X = HR x AV N(ZE) 
+0-50 25 8.5 7.15 61% 15 
+50-100 50 5.6 5.15 29% 14 
+100-250 300 2.8 7.15 20% 60 
+250-500 1000 1.85 5.15 10% 95 
+500-1000 2500 0 5.15 0% 0 
+Note: N(Z) is the population in each hazard zone 
+ N(ZE) is the number of people exposed to the risk in each hazard zone 
+6.2.4 Determining numbers of deaths/injuries 
+The penultimate stage is to compute the numbers of deaths/injuries for this event before 
+repeating the calculation for four more events. This step is achieved by multiplying the 
+number of people exposed to the risk (N(ZE) from Table 6.3) by a factor Y which is 
+based on the vulnerability of the people exposed. 
+As previously discussed Y is a function of two parameters: the presence of the very old; 
+and those who are at risk due to disabilities or sickness. The resultant number of 
+injuries is then simply the number of people at risk (from Table 6.3) multiplied by Y as 
+shown in Table 6.5. 
+Table 6.4: Calculating People Vulnerability 
+Distance from river/coast 
+(m) 
+N(Z) Factor 1 (% 
+very old) 
+Factor 2 (% 
+Disabled or 
+infirm) 
+Y 
+0-50 25 15% 10% 25% 
+50-100 50 10% 14% 24% 
+100-250 300 12% 10% 22% 
+250-500 1000 10% 15% 25% 
+500-1000 2500 15% 20% 35% 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+22 
+Table 6.5: Generating numbers of injuries and deaths 
+Distance from 
+river /coast (m) N(ZE) 
+Table 6.3 
+Y = 1 + 2 
+(as %) 
+No. of injuries 
+= 2 * Y * 
+N(ZE) 
+Fatality 
+rate = 2 x 
+HR 
+No. of 
+deaths 
+0-50 15 25% 8 17% 1 
+50-100 14 24% 7 11% 1 
+100-250 60 22% 26 6% 1 
+250-500 95 25% 48 4% 2 
+500-1000 0 35% 0 0% 0 
+All 185 89 5 
+It would be expected that in zones with a relatively high hazard rating (which is a 
+function of depth, velocity and debris), there would be an increased probability of 
+fatalities. It has been assumed that a factor of twice the hazard rating is appropriate, 
+expressed as a percentage. Applying this factor (as shown in Table 6.5) provides an 
+overall result of a predicted 44 injuries of which 3 are fatalities for the 1% probability 
+flood event. 
+6.2.5 Step 2: Considering a range of events and estimating annual average risks 
+The same calculation must repeated for other flood events. A summary of injuries and 
+deaths for all 5 events is shown in Table 6.6. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+23 
+Table 6.6: The number of injuries and fatalities in Riskville for 5 flood events 
+Numbers injured 
+Distance from river /coast (m) 1000yr 250yr 100yr 50yr 20yr 
+0-50 12 10 8 6 2 
+50-100 11 9 7 5 2 
+100-250 53 38 26 17 0 
+250-500 103 75 48 0 0 
+500-1000 243 158 0 0 0 
+All 421 289 89 28 4 
+Number of fatalities 
+Distance from river /coast (m) 1000yr 250yr 100yr 50yr 20yr
+0-50 3 2 1 1 0 
+50-100 2 1 1 0 0 
+100-250 6 3 1 1 0 
+250-500 8 4 2 0 0 
+500-1000 13 6 0 0 0 
+All 32 17 5 2 0 
+6.2.6 Step 3: Estimating acceptable risk 
+The concepts of 'tolerable' and 'acceptable' risks 
+In the UK there have been various Government reports that have developed the 
+concepts of 'tolerable' and 'acceptable' risks, most notably the Health and Safety 
+Executive reports 'Tolerability of Risk' (HSE, 1992) and 'Reducing risks, protecting 
+people' (HSE, 1999). These advance upper limits of tolerability for annual individual 
+risk for workers in 'risky' occupations and for the general public. If the annual risk of 
+fatality or serious harm is less than the 'tolerable' risk it is deemed 'acceptable.' 
+Thresholds for 'tolerable' and 'acceptable' risk have been used in this example and other 
+case studies in this report. These concepts, developed in Phase 1 of the research project 
+(HR Wallingford, 2003), are valuable. However, current Government policy for flood 
+risk management does not consider a specific threshold for tolerable risk so the values 
+used in this report should be regarded as illustrative only. 
+The average annual individual risk can be calculated by combining the outputs from all 
+5 events as shown in Tables 6-7 for serious harm and 6-8 for fatalities. 
+The number of fatalities per year can be estimated in a similar way to annual average 
+damage calculations as follows:- 
+Nf (/per year) = ∑ (df x Nf) 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+24 
+Where df is the frequency interval calculated as the difference in probability between 
+adjacent events. Considering Table 6-8, the average annual risk of a fatality in Riskville 
+is approximately 0.2 or 1 fatality on average every 5 years. 
+The acceptability of individual risk can be determined with reference to a specific 
+policy objective, e.g. “no development should increase the individual risk of flood 
+fatalities,” or a threshold, for example an arbitrary threshold of 1 x 10-4 injuries per 
+year is considered in Tables 6-7 and 6-8. Against this criteria flood risk in Riskville is 
+unacceptable. Similarly societal risk can be considered in terms of the average number 
+of injuries or fatalities for specific areas (e.g. in the UK, by region or catchments) or 
+divided by unit area for mapping purposes. 
+Within the overall risks to people methodology, societal risk is particularly sensitive to 
+the number of people located within the floodplain. Individual risk is more sensitive to 
+area and people vulnerability factors so it can be mitigated by flood risk management 
+activities including improved flood warning and development control that prevents low 
+rise and other inappropriate development. It is inevitable that societal risk will increase 
+if the population within the floodplain increases whereas individual risk. 
+This risks to people calculation was completed for four case studies including the 
+recent floods in Carlisle in 2005 (Section 6.3). In addition the analysis was taken 
+further to determine an acceptable population or number of houses of a specific type 
+permitted without exceeding the acceptable risk threshold for three further examples 
+that are included Appendix 2. 
+Table 6.7: Annual average individual risk for serious harm due to flooding in 
+Riskville 
+Annual average 
+individual risk 
+ 
+Distance from 
+river /coast (m) 
+1000yr 250yr 100yr 50yr 20yr All events Comments 
+Frequency per 
+year (f) 
+1.0E-03 4.0E-03 1.0E-02 2.0E-02 5.0E-02
+Frequency interval 
+(df) 
+3.0E-03 6.0E-03 1.0E-02 3.0E-02
+0-50 1.E-03 2.E-03 3.E-03 8.E-03 0.E+00 1.5E-02 Unacceptable 
+risk 
+50-100 6.E-04 1.E-03 1.E-03 3.E-03 0.E+00 6.1E-03 “ 
+100-250 5.E-04 8.E-04 9.E-04 2.E-03 0.E+00 3.8E-03 “ 
+250-500 3.E-04 4.E-04 5.E-04 0.E+00 0.E+00 1.2E-03 “ 
+500-1000 3.E-04 4.E-04 0.E+00 0.E+00 0.E+00 6.7E-04 Acceptable 
+risk 
+All 
+ 
+Tolerable risk 
+threshold (harm) 
+1.0E-04 (Arbitrary value chosen for illustrative purposes) 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+25 
+Table 6.8: Annual average individual risk of fatalities due to flooding is Riskville 
+Distance from 
+river /coast (m) 
+1000yr 250yr 100yr 50yr 20yr All events 
+Frequency per 
+year (f) 
+1.0E-03 4.0E-03 1.0E-02 2.0E-02 5.0E-02
+Frequency interval 
+(df) 
+3.0E-03 6.0E-03 1.0E-02 3.0E-02
+0-50 4.E-04 6.E-04 5.E-04 1.E-03 0.E+00 2.6E-03 Unacceptable 
+risk 
+50-100 1.E-04 2.E-04 2.E-04 2.E-04 0.E+00 6.6E-04 “ 
+100-250 6.E-05 6.E-05 5.E-05 6.E-05 0.E+00 2.3E-04 “ 
+250-500 2.E-05 3.E-05 2.E-05 0.E+00 0.E+00 6.8E-05 Acceptable 
+500-1000 2.E-05 1.E-05 0.E+00 0.E+00 0.E+00 2.9E-05 “ 
+Tolerable risk 
+threshold (fatality)
+1.0E-05 (Arbitrary value chosen for illustrative purposes) 
+6.3 Case studies 
+6.3.1 Introduction 
+In the Phase 1 Report, the ‘old’ methodology was applied to three past flood events to 
+examine whether the results were consistent with historical observations. The three 
+flood events considered were: 
+• Gowdall, a village in the East Riding of Yorkshire, which was extensively 
+flooded (from the River Aire) in autumn 2000 to a depth of about a metre; 
+• Norwich which suffered extreme flooding in 1912 with, perhaps, 2,500 
+people flooded; and 
+• Lynmouth which suffered a devastating flood in August 1952 due to very 
+rapid flow down the East and West Lyn rivers. 
+These three case studies have been re-assessed together with the recent flooding in 
+Carlisle using the revised methodology as outlined below. 
+6.3.2 Gowdall 
+Areas at Risk 
+Over one hundred properties were reported to have been flooded in Gowdall in the 
+autumn 2000 floods. Gowdall is located within the Snaith, Airmyn and Rawclife and 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+26 
+Marshland Ward (of the East Riding of Yorkshire) which has an average of 2.4 people 
+per household3
+. This gives the number of people to be at risk as around 250. 
+Flood Depth 
+For simplicity, the whole of the flooded area will be taken as a single hazard zone with 
+a flood depth, d, of 1.0m. 
+Flood Velocity 
+The build up of floodwaters was very gradual and, for the purposes of this analysis, a 
+general value for velocity, v, of 0.5 m/sec will be assumed. 
+Debris Factor 
+There were no reports of significant amounts of debris. On this basis, the debris factor 
+(DF) has been taken as zero. 
+Hazard Rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above gives: HR = 1 x (0.5 + 0.5) + 0 = 1 
+Flood Warning 
+The score for flood warning is on the scale 1 (good warning system) to 3 (no warning 
+system). Based on the results of 36 interviews amongst those that had been flooded in 
+Gowdall (which were undertaken as part of the ‘intangibles’ study (RPA, 2004)), 
+nearly 80% of respondents had received flood warnings many hours before the flooding 
+occurred. On this basis a score of 1 has been assigned to this factor. 
+ 
+Speed of Onset 
+As already indicated, the speed of onset of flooding in Gowdall was ‘very gradual’ 
+which attracts a score of 1. 
+Nature of Area 
+Gowdall is a typical ‘medium’ risk residential area which attracts a score of 2. 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give AV = 4 
+(which indicates a low risk area). 
+Long Term Illness & The Very Old 
+Based on statistics for the ward containing Gowdall, 18.1% of the population have a 
+limiting long-term illness (and/or disability) and 7.0% of the population are 75 or over. 
+People Vulnerability Score 
+The people vulnerability (PV) score is simply the sum of the above factors to give PV = 
+25.1%. For comparison, the national figures are 18.2% and 7.6% respectively to give a 
+combined score of 25.8%. As such, those at risk are no more vulnerable than the 
+general population. 
+ 
+3 This and subsequent statistics for Gowdall are based on data from the 2001 Census as obtained 
+from http://neighbourhood.statistics.gov.uk (by entering a local postcode). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+27 
+Numbers of Injuries and Fatalities 
+Estimates of the numbers of injuries (Ninj) and fatalities (Nf) can be made using the 
+formulae: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+Nf = 2 x Ninj x HR/100 
+As described above, the values derived for Gowdall are: 
+ Nz = number of people at risk = 250 
+ HR = hazard rating = 1 
+ AV = area vulnerability = 4 
+ PV = people vulnerability = 25.1% 
+Substituting these values gives: Ninj = 5 and Nf = 0.1. 
+These results are consistent with the findings from the ‘intangibles’ study (RPA, 2004) 
+in which about a third (36) of the flooded properties were subject to interviews. 
+Although no fatalities were reported in Gowdall, amongst the households interviewed, 
+three direct injuries (i.e. physical injuries due to action of floodwaters) and eight 
+indirect injuries (i.e. physical injuries due to overexertion, etc.) were reported. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+28 
+6.3.3 Norwich 
+Areas at Risk 
+Norwich suffered extreme flooding in 1912 with, perhaps, 2,500 people flooded. For 
+the purposes of this example, two hazard zones are taken. The first with 500 people is 
+close (within, say, 50m) to the main river channel and the second with 2,000 people is 
+for flooded areas slightly further away. These are based on a review of a detailed City 
+Engineer’s Report (Collins, 1920) as well as a contemporary illustrated account of the 
+flood (Roberts & Son, 1912). 
+Flood Depth 
+Flood depths, d, have been taken as 1.5m in the zone closest to the river and 1m for the 
+zone further away. 
+Flood Velocity 
+Flood velocities, v, have been taken as 1.0 and 0.2 m/sec for the two zones 
+respectively. 
+Debris Factor 
+There were no reports of significant amounts of debris. On this basis, the debris factor 
+(DF) has been taken as zero. 
+Hazard rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above is shown in Table 6.9 
+Table 6.9: Hazard Rating by Zone for Norwich 1912 
+Distance 
+from river 
+Typical depth, 
+d (m) 
+Typical velocity, 
+v (m/sec) 
+Debris factor 
+(DF) 
+Hazard rating= 
+d(v + 0.5) + DF 
+<50m 1.5 1 0 2.25 
+>50m 1 0.2 0 0.7 
+Flood Warning 
+The score for flood warning is on the scale 1 (good warning system) to 3 (no warning 
+system). In 1912, there was effectively no flood warning and a score of 3 has been 
+assigned to this factor. 
+ 
+Speed of Onset 
+Based on reports from the time, the speed of onset of flooding in Norwich was ‘very 
+gradual’ which attracts a score of 1. 
+Nature of Area 
+The flooded area was a typical ‘medium’ risk residential area which attracts a score of 
+2. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+29 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give AV = 6 
+(which indicates a medium risk area). 
+Long Term Illness & The Very Old 
+Detailed statistics for these factors for the flooded areas are not readily available. 
+However, the proportion of the population over 75 in 1912 would be several times 
+lower than today’s national average of 7.6%4
+. In terms of those with long-term illness 
+and/or disabilities, it would be expected that the proportion would be greater than 
+today’s national figure of 18.2% - particularly as the areas flooded in Norwich 
+comprised many poor areas of housing (i.e. slums) 
+People Vulnerability Score 
+The people vulnerability (PV) score has been taken as today’s national average of 
+25.8% (based on a lower percentage over 75 but a higher percentage for long term 
+illness and/or disability). 
+Numbers of Injuries and Fatalities 
+Estimates of the numbers of injuries (Ninj) and fatalities (Nf) can be made using the 
+formulae: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+Nf = 2 x Ninj x HR/100 
+The values derived for Norwich are shown in Table 6.10 
+Table 6.10: Numbers of Injuries and Fatalities for Norwich 1912 
+Zone Nz HR AV PV Ninj Nf 
+<50m 500 2.25 6 25.8% 35 1.6 
+>50m 2000 0.7 6 25.8% 43 0.6 
+All 2500 78 2.2 
+These results appear reasonable and are consistent with the four deaths reported. 
+ 
+4 The 1911 Census indicates that the proportion of Norwich’s population aged over 65 has 
+doubled from around 6.5% in 1911 to ?? in 2001. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+30 
+6.3.4 Lynmouth 
+Areas at Risk 
+Lynmouth suffered a devastating flood in August 1952 due to very rapid flow down the 
+East and West Lyn rivers. Various articles have been reviewed and for the purposes of 
+this analysis, three hazard zones (A, B and C) are taken where these have been based 
+on the numbers of houses destroyed (38), houses severely damaged (55) and houses 
+damaged (72). 
+Flood Depth 
+Flood depths, d, have been taken as 3, 2 and 1m in Zones A, B and C respectively. 
+Flood Velocity 
+Flood velocities, v, have been taken as 4, 3 and 2 m/sec in Zones A, B and C 
+respectively. 
+Debris Factor 
+Debris was significant and a value of 1 has been assumed for Zones A and B and 0.5 in 
+Zone C. 
+ 
+Hazard rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above is shown in Table 6.11 
+Table 6.11: Hazard Rating by Zone for Lynmouth 1952 
+Zone Distance 
+from river 
+Typical depth, 
+d (m) 
+Typical velocity, 
+v (m/sec) 
+Debris 
+factor (DF)
+Hazard rating= 
+d(v + 0.5) + DF 
+A Very close 3 4 1 14.5 
+B Close 2 3 1 8 
+C Nearby 1 2 0.5 3 
+Flood Warning 
+The score for flood warning is on the scale 1 (good warning system) to 3 (no warning 
+system). There was effectively no flood warning and a score of 3 has been assigned to 
+this factor. 
+Speed of Onset 
+The speed of onset of flooding in Lynmouth was rapid which attracts a score of 3. 
+Nature of Area 
+The flooded area was a typical ‘medium’ risk residential area which attracts a score of 
+2. 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give AV = 8 
+(which indicates a high risk area). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+31 
+Long Term Illness & The Very Old 
+Detailed statistics for these factors for the flooded areas are not readily available. For 
+the purposes of this analysis, the people vulnerability (PV) score has been taken as 
+today’s national average of 25.8%. 
+Numbers of Injuries and Fatalities 
+Estimates of the numbers of injuries (Ninj) and fatalities (Nf) can be made using the 
+formulae: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+Nf = 2 x Ninj x HR/100 
+The values derived for Lynmouth are shown in Table 6.12 
+Table 6.12: Numbers of Injuries and Fatalities for Lynmouth 1952 
+Zone Nz HR AV PV Ninj Nf 
+A 100 14.5 60 17 
+B 100 8 33 5 
+C 200 3 
+8 25.8% 
+25 3 
+All 400 118 24 
+These results presented above are consistent with the total of 34 deaths reported. 
+ 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+32 
+6.3.5 Carlisle 
+Areas at Risk 
+Carlisle suffered severe flooding on 8th January 2005 following a period of heavy 
+rainfall. Various notes by the Environment Agency and others have been reviewed 
+together with a very useful photographic record (Ramshaw, 2005). For the purposes of 
+this analysis, five hazard zones have been taken: 
+• Zone A: The Willow Holme industrial area contains some 160 
+commercial/industrial premises. This area is bounded by the River Eden to 
+the north and the River Caldew to the east and was flooded to a depth of
+around 1.5m; 
+• Zone B: This area immediately to the south of Bridge Street is on the west 
+bank of the River Caldew and contains around 200 residential properties 
+which were flooded to a typical depth of around 1.0m; 
+• Zone C: The City Centre area was flooded to a depth of around 1.5m with 
+around 33 residential properties (centred on Corporation Road) and 18 nonresidential premises affected; 
+• Zone D: Further east, the Warwick Road area (particularly around the 
+Botcherby Bridge) was flooded to a depth of 1.5m. For this analysis, 400 
+residential properties and 12 non-residential premises are assumed to have 
+been flooded; and 
+• Zone E: The residential areas around the Warwick Road area were also 
+flooded but to a lesser depth. For this analysis, flooding of a further 700 
+residential properties and 15 non-residential premises are assumed to have 
+been flooded to a depth of 0.5m. 
+Flood Depth 
+As indicated above, flood depths have been taken as 1.5m in Zones A, C and D; 1.0m 
+in Zone B; and 0.5m in Zone E. 
+Flood Velocity 
+Based on an inspection of photographs taken during the course of the flooding, it would 
+appear that the flood velocity, v, was not great and a value of 0.5 m/sec has been 
+assumed for all zones. 
+ 
+Debris Factor 
+Very little debris was observed during the flood and, consequently, a value of 0 has 
+been assumed for all zones. 
+ 
+Hazard rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above is shown in Table 6.13 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+33 
+Table 6.13: Hazard Rating by Zone for Carlisle 2005 
+Zone Location Typical depth, 
+d (m) 
+Typical velocity, 
+v (m/sec) 
+Debris 
+factor (DF)
+Hazard rating= 
+d(v + 0.5) + DF 
+A Willow Holme 1.5 1.5 
+B S. of Bridge St 1.0 1.0 
+C City Centre 1.5 1.5 
+D Warwick Rd. 1 1.5 1.5 
+E Warwick Rd. 2 0.5 
+0.5 0 
+0.5 
+Flood Warning 
+The score for flood warning is on the scale 1 (good warning system) to 3 (no warning 
+system). Based on accounts provided by the Environment Agency, it would appear that 
+there were good flood warnings for Zones A and C attracting a score of 1 but not so 
+good for the other zones attracting a score of 2. It should be noted that all zones were 
+provided with a general floodwatch alert prior to the flooding. 
+ 
+Speed of Onset 
+The speed of onset of flooding in Carlisle was very gradual (attracting a score of 1) 
+with initial flooding occurring in the early hours of the morning followed by a gradual 
+inundation which peaked around lunchtime. 
+Nature of Area 
+The flooded area was a typical ‘medium’ risk residential/commercial area which 
+attracts a score of 2. 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give AV = 4 
+in Zones A and C (which indicates a low risk area) and AV = 5 in Zones B, D and E 
+(which indicate a medium risk area). 
+People Vulnerability Score 
+Detailed statistics for those with a long term illness and/or disability and the very old 
+for the flooded areas were taken from the ward statistics (based on the 2001 Census) in 
+order to generate the People Vulnerability (PV) scores as summarised in Table 6.14 
+Table 6.14: People Vulnerability by Zone for Carlisle 2005 
+Zone Location Ward %Long Term 
+Illness/Disability %>75 PV Score 
+A Willow Holme n/a 5.0% 2.0% 7.0% 
+B S. of Bridge St Denton Holme 20.0% 8.3% 28.3% 
+C City Centre Castle 22.0% 6.5% 28.5% 
+D Warwick Rd. 1
+E Warwick Rd. 2
+St Aidans/ 
+Botcherby 19.7% 7.2% 26.9% 
+Zone A is an industrial area and the proportions of those with long term illness/disability 
+and those over 75 would be expected to be significantly lower than for the other zones. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+34 
+Numbers of Injuries and Fatalities 
+Estimates of the numbers of injuries (Ninj) and fatalities (Nf) can be made using the 
+formulae: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+Nf = 2 x Ninj x HR/100 
+The values for Nz (the number of people at risk) were derived= by zone as shown in 
+Table 6.15 using an assumed value of four persons per non-residential premises. 
+Table 6.15: Numbers at Risk (Nz) by Zone for Carlisle 2005 
+Zone Ward No. res. props People/property No. non-res 
+properties Nz 
+A n/a 0 n/a 160 640 
+B Denton Holme 200 2.1 0 420 
+C Castle 33 1.9 18 135 
+D 400 12 888 
+E 
+St Aidans/ 
+Botcherby 700 2.1 15 1530 
+Zone A is an industrial area and the proportions of those with long term illness/disability 
+and those over 75 would be expected to be significantly lower than for the other zones. 
+The predicted numbers of injuries and fatalities for Carlisle are shown in Table 6.16 
+Table 6.16: Numbers of Injuries and Fatalities for Carlisle 2005 
+Zone Nz HR AV PV Ninj Nf 
+A 640 1.5 4 7.0% 5 0.2 
+B 420 1.0 5 28.3% 12 0.2 
+C 135 1.5 4 28.5% 5 0.1 
+D 888 1.5 36 1.1 
+E 1530 0.5 5 26.9% 21 0.2 
+All 3613 78 2 
+These results are consistent with reports5
+ of “three dead and 100 people were treated for 
+injuries in the Carlisle area”- although one death was outside Carlisle. It is understood 
+that the two deaths in Carlisle involved elderly women in the deeply flooded Warwick 
+Road area (i.e. in Zone D). 
+ 
+ 
+5
+ See, for example, the report of 10 January 2005 from Willis (a major insurer) entitled: 
+Catastrophe Report - North West Europe Weather Alert January 8-10, 2005 (from www.willisre.com) 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+35 
+6.3.6 Further case studies 
+Other case studies were developed as part of a separate project – Appendix 2 includes 
+“Annex Q” of a the project report for research on acceptable risk completed by RPA for 
+the Environment Agency. This annex provides a link between the two projects. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+36 
+7. MAPPING FLOOD RISKS TO PEOPLE 
+This section describes a general approach for mapping flood risks to people. Sources of 
+information and mapping approaches are described for flood hazard, flood vulnerability 
+and Risks to People mapping. 
+• A Flood Hazard map provides information on the flood conditions that harm 
+people during a flood. The Risk to People Flood Hazard maps are based on flood 
+depths, velocities and the presence of debris (Section **) with the results classified 
+into Low, Medium and High Hazard classes. A Flood Hazard map can present the 
+hazards associated with a single event (e.g. a 1% fluvial flood in an undefended 
+floodplain) or a combination of events (e.g. coastal flood events that occur due to 
+the combined probability of high water levels and failure of flood defences). 
+• A Flood Vulnerability map provides information on vulnerability of people to 
+flooding. The Risk to People Flood Vulnerability maps are based on the concepts of 
+Area and People Vulnerability and the scoring system described in Sections 4 and 
+5. A flood vulnerability map classifies all areas within an extreme flood outline 
+according to area and population characteristics. Vulnerability can be classified 
+into Low, Medium and High classes. 
+• A Risks to People map combines Flood Hazard and Vulnerability maps using the 
+Risks to People methodology. It describes the individual or societal risk of serious 
+harm as an annual average risk based on the consideration of at least 5 event 
+probabilities. The maps can be classified into classes with references to the concept 
+of Acceptable Risk. 
+Mapping issues related to the level of detail of flood risk assessment, accuracy of 
+different sources of data, scale and presentation of outputs are discussed. However the 
+general approach will need to be adapted to fit specific applications of the Risks to 
+People methodology. 
+7.1 Flood Hazard mapping 
+Flood hazard mapping requires data on flood depth, flood velocity and a debris factor. 
+The main sources of data for flood hazard mapping are summarised in Table 7-1. 
+Table 7.1: Variables required and sources of data for Flood Hazard mapping 
+Variable Type Sources 
+Depth (m) Variable • Flood extents and topographic data (Digital Elevation 
+Models based on Ordnance Survey, NEXTMAP, filtered 
+LiDAR or local topographic survey) 
+• 1-D hydraulic models (e.g. ISIS, MIKE11) 
+• 2-D hydraulic models (e.g. TuFLOW) 
+• Floodplain Information Systems 
+Velocity 
+(ms-1) 
+Variable • Expert judgement (for broad-brush or “high-level” risk 
+assessment only ~ see guidance below) 
+• 1-D hydraulic models (e.g. ISIS, MIKE11) 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+37 
+• 2-D hydraulic models (e.g. TuFLOW). 
+Debris Score • Expert judgement (See guidance below) 
+Base 
+mapping 
+N/A • Ordnance Survey (OS) MasterMap 
+• OS Raster mapping 
+There are a range of hydraulic modelling methods that can be used to provide flood 
+depths and velocities. 
+Flood velocities produced by one and two-dimensional models will be average 
+velocities for a cross-section or grid cell. There will be considerable variation of flow 
+velocities within a river cross-section and for all modelling approaches peak flow 
+velocities may be much higher than the average velocities reported for a cross-section 
+or grid-cell. This is particularly the case in urban areas where flows may be 
+concentrated in narrow streets and between buildings. 
+Methods for estimating flood depths and velocities are summarised below (in the order 
+of least complex to most complex):- 
+• Existing flood maps and topographic data. Existing maps can be used to estimate 
+flood depth but do not provide any information on velocities. For some simple 
+applications of the method it may be appropriate to estimate peak velocities based 
+on normal depth calculations or even expert judgement. Any assumptions made 
+should be conservative (assuming high velocities). Further more detailed 
+assessments should be completed if the Risks to People mapping highlights areas 
+where the risks are unacceptable. 
+• Conveyance calculation. The new Conveyance Estimation System (CES) can be 
+used to estimate velocities across a floodplain for river valleys without defences 
+(see http://www.river-conveyance.net). 
+• One-dimensional hydraulic models with defined flood storage areas and active 
+floodplain channels e.g. ISIS Flow or MIKE11 software, can be used to estimate 
+average velocities. Maximum velocities will be significantly higher in some parts of 
+the floodplain, e.g. where water spills over a defence, in narrow streets and any 
+other “pinch points” in the floodplain. 
+• Flow routing using a “raster” GIS system e.g. the LISFLOOD-FP model used for 
+the fluvial component of the Extreme Flood Outline project (see below). 
+• Two-dimensional hydraulic modelling using a fixed grid, e.g. the TUFLOW 
+hydraulic model that has been used for modelling the tidal Thames (Tarrant et al.,
+2005) or HYDRO F (Atkins) that was used for the tidal component of the Extreme 
+Flood Outline project (see below). 
+• Two-dimensional hydraulic modelling using a triangular mesh, e.g. the Telemac 2D 
+model. This can provide good velocity estimates but model run times are 
+significantly longer than grid based models. 
+7.1.1 The Environment Agency Flood Maps 
+The Environment Agency’s current Flood Maps show the 1% fluvial, 0.5% tidal and 
+0.1% flood extents and additional information on the presence of flood defences. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+38 
+Different versions of national flood maps have been based on a combination of the 
+following:- 
+• One-dimensional river modelling completed as part of the Section 105 floodplain 
+mapping programme. The 1% fluvial flood and 0.5% tidal flood events are shown 
+on the Environment Agency’s web page. The S105 specification included 
+modelling a range of return periods and the requirement to include precautionary 
+allowances and sensitivity tests for climate change. In some Environment Agency 
+regions information on flood probability, depth and velocities were stored in a GIS 
+based Floodplain Information System (FPI). 
+• Two-dimensional modelling of an Extreme Flood Outline (0.1% probability) 
+assuming no defences completed with JFLOW (Fluvial) and HYDRO F (Tidal) and 
+historical flood outlines. 
+• In areas where modelling has not been completed flood maps are based on either 
+the Centre for Ecology and Hydrology (formerly Institute of Hydrology) Report 
+No. 130, Flood risk map of England and Wales or historical flood outlines of the 
+worst flood on record. 
+• Information on the presence of flood defences and defended areas from the National 
+Flood and Coastal Defences Database. 
+The national Environment Agency maps are updated annually/quarterly (?) and are 
+subject to an ongoing programme of development as part of the national Flood Risk 
+Mapping programme. 
+In the context of Risks to People the national maps and underlying hydraulic models 
+provide a readily available source of information that could be used for specific 
+applications. For example, for Catchment Floodplain Management Plans (CFMPs) or 
+for prioritising flood warning on a catchment by catchment basis. For emergency 
+planning more detailed 2-D modelling is required; flood hazard mapping needs to be 
+local and detailed, highlighting areas of high flood hazard and details such as “safe” 
+access and exit routes for the emergency services. 
+7.1.2 Catchment Flood Management Plans 
+Simplified hydraulic modelling and flood mapping also forms part of Catchment Flood 
+Management Plans (CFMPs) that are being implemented as part of a national 
+programme. The CFMP guidance provides a framework but is not prescriptive 
+regarding approaches to modelling and mapping. There is a requirement to consider 5 
+scenarios including flood events of different return periods and to take account of 
+climate change. Therefore, flood hazard zones could be defined based on 5 different 
+flood extents and reach lengths (dependent of spacing of simplified model nodes). 
+Depths would be easy to estimate but a simple method is required to estimate velocity. 
+Further guidance on risks to people for CFMPs is provided in FD2321/TR2. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+39 
+7.1.3 Risk Assessment for Strategic Planning 
+At a regional and national scale, a number of research projects have used the Risk 
+Assessment and Strategic Planning (RASP) tool to estimate the number of properties 
+and people affected by flooding. The RASP tool includes methods for estimating the 
+combined probability of extreme water levels and defence failures, flood extent and 
+depths (HR Wallingford, 2004). In the context of mapping Risks to People, the RASP 
+approach is particularly relevant for mapping:- 
+(a) individual and societal risk at the national and regional scales. The inclusion of 
+risks to people will provide additional risk metrics to consider alongside economic 
+assessments of flood damage. 
+(b) flood hazard and risks to people in areas with complex flood defence systems where 
+flood events are due to the combined probability of “forcing variables” and defence 
+failure and the failure of different individual defences will affect different areas of 
+the floodplain. 
+7.1.4 Four steps for Flood Hazard mapping 
+As part of the general approach for Flood Hazard mapping as an input to the Risks to 
+People methodology, there are four important steps that should be taken:- 
+1. Define the problem 
+• Establish clear aims & objectives 
+• Define the spatial extent of the study 
+• Define the level of risk assessment 
+• Consider components of the flood defence system 
+2. Develop an understanding of flood hazard. 
+• Review existing flood zones maps or more detailed local modelling studies 
+• Review output from existing hydraulic models, use the best available floodplain 
+topography, identify flow paths, identify the need and scope of any new survey 
+and hydraulic models. 
+3. Define “flood hazard zones” based on one of the following (and depending on the 
+scale and level of risk assessment):- 
+• Distance from the source of flooding and reach length 
+• Topographic contours and reach lengths 
+• Existing flood outlines for ca. 5 return periods 
+• Flood hazard classes from an extreme flood (e.g. the 0.1% flood outline) 
+• Flood defence system components 
+• Note that flood hazard zones should be overlaid with the “nature of area” zones 
+to define “risks to people” zones that are used in the calculations. 
+4. Produce flood hazard maps combining model information on max flood depth, 
+velocity and debris for “n” return periods. 
+• Estimate flood hazard for each return period on a grid cell basis. 
+• Generalise flood hazard values for each flood hazard zone 
+• Collate flood hazard values for each RP event (if an “annual average” type 
+product fits with aims and objectives). 
+• Flood hazard should only be presented as a flood hazard class. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+40 
+• For areas with complex flood defence systems and for some applications a map 
+of maximum flood hazard considering breaches and overtopping in a range of 
+events would be more informative than a map of single extreme event. 
+7.1.5 Flood Hazard mapping for different applications 
+The calculation of flood hazard scores by zones is required for the Risks to People 
+methodology. The approach to mapping will be different for specific applications, 
+different levels or risk assessment and spatial scales. 
+An example of how different approached could be taken for each step of the flood 
+hazard mapping process is shown in Figure 7-1. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+41 
+Define Problem
+Simple assessment
+e.g. pre-feasibility for
+housing development in 
+defended area
+Standard assessment
+e.g. Strategy Plan
+Detailed assessment
+e.g Emergency Plan of 
+urban centre
+Distance from 
+defences look up tables
+Zones based on distance
+& defence length
+Robust conceptual model
+1 D Hydraulic model
+Zones based on 
+flood extents for 
+5 RP events and model
+ reaches
+Flood hazard scores for each zone for 
+5 events
+2-D Hydraulic Model
+Zones based on flood hazard
+classes for 0.1% event
+INPUT TO RISKS TO PEOPLE CALCULATION
+Flood Hazard maps
+(By-product)
+Figure 7.1: Examples of potential approaches to flood hazard mapping 
+Examples of flood hazard maps based on 2-D modelling are shown in at the end of this 
+section. 
+7.2 Flood vulnerability mapping 
+Flood vulnerability maps are an interim stage of the risks to people method. Mapping 
+of the “nature of area” variable is particularly important for the risks to people 
+calculation but flood vulnerability maps are not a required output per se. Flood 
+vulnerability maps may be a useful by-product for other flood risk management 
+activities. 
+Flood vulnerability is related to characteristics of the floodplain area and people at risk. 
+Sections 4 and 5 sets out the factors considered as part of the Risks to People method 
+and Table 7-3 summarises the sources of data for flood vulnerability mapping. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+42 
+Table 7.2: Variables required and sources of data for Flood Vulnerability 
+mapping 
+Area Vulnerability 
+Variable Type Sources 
+Flood warning Score • Based on Environment Agency performance 
+indicators (See Section 4). 
+Speed of onset Score • Based on catchment characteristics and nature 
+of defences 
+Nature of area Score • Ordnance Survey (OS) mapping (Master Map 
+& OS Address-point) 
+• Proprietary address-point products 
+• Local knowledge 
+• The following should be highlighted on the 
+maps and influence the delineation of “nature 
+of area” zones: -areas of bungalows, mobile 
+homes, busy roads, parks, single storey schools, 
+campsites and other areas that do not provide 
+safe refuge above the maximum flood water 
+level. The use of OS Master Map and other 
+proprietary databases e.g. FOCUS and GIS 
+processing will enable these entities to be 
+identified without the need for additional 
+digitising. 
+People Vulnerability 
+Variable Type Sources 
+%residents 
+suffering from 
+long-term 
+illness 
+% • National Census (Output Areas) 
+%residents 
+aged 75 or 
+over. 
+% • National Census (Output Areas) 
+Population 
+Population 
+estimates 
+(residents, 
+workers and 
+visitors) 
+No. per 
+zone or 
+km2
+ 
+• National Census (Output Areas) 
+• The census and other data, such as Addresspoint can be used to develop population grids 
+or counts for individual "impact zones”:- 
+• OS Address-point. Property counts x 
+occupancy rates (residential) 
+• Proprietary address-point data. Property 
+counts x no. of employees x occupancy rate 
+(0.33 for an 8 hour day) (non-residential) 
+• Transport network. Major transport routes 
+(motorway, trunk road and rail) should be 
+mapped as part of Area Vulnerability. 
+Traffic density data can be used to estimate 
+average population in transit per km 
+(Highways Agency and Strategic Rail 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+43 
+Authority statistics) 
+• In addition it may be appropriate to make 
+further population estimates for specific 
+areas within the floodplain, e.g. public open 
+places, parks, coastal promenades and 
+beaches. (Estimate based on visitor 
+numbers); camp-sites, hospitals and prisons. 
+7.2.1 Four steps for flood vulnerability mapping 
+Similar to flood hazard mapping there are several steps required to develop flood 
+vulnerability maps:- 
+1. Define the problem 
+• Establish clear aims & objectives 
+• Define the spatial extent of the study 
+• Define the level of risk assessment 
+2. Develop an understanding of flood vulnerability 
+• Review Ordnance Survey maps 
+• Review census data 
+• For detailed projects, consult Area EA and local authority staff with local 
+knowledge 
+3. Define “nature of area” zones 
+• For national, regional or simple risks assessment it may be appropriate to use 
+existing boundaries such as Enumeration Districts. 
+• For more local or detailed applications areas should be delineated using the 
+available information. This may be a manual task or it could be automated using 
+“intelligent” mapping products (e.g. where building outlines and boundaries 
+include attributes describing land use). 
+• Note that “nature of area” zones should be overlaid with flood hazard zones to 
+define “risks to people” zones that are used in the calculations. 
+4. Collate or interpolate population and census data into the “risks to people” zones. 
+• Score flood warning and speed of onset. 
+• Collate or interpolate census attributes into risks to people zones. 
+• Use Address-point and other proprietary point data sets to estimate populations 
+using consistent assumptions. 
+7.2.2 Access to census data 
+Data for the 2001 Census for Output Areas can be downloaded from the following link: 
+http://neighbourhood.statistics.gov.uk/ (Then “find detailed data by subject” and select 
+the 2001 census). 
+It should be noted, however, that the ONS website makes this data available on a 
+regional, rather than a national basis. To obtain national coverage would therefore 
+involve downloading ten data sets. If national coverage is desired, it would be more 
+convenient to order the data from: 
+http://www.statistics.gov.uk/census2001/pdfs/order_form.pdf
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+44 
+The Output Area GIS maps (Shape or Mid/Mif formats) can also be ordered on the 
+same form. According to the ONS, there is no charge for the above information. 
+7.3 Risks to People maps 
+Once the risks to people zones are clearly defined it is a relatively simple process to 
+complete the risks to people calculation for each zone, either within a GIS or in a 
+spreadsheet. 
+Careful consideration is required in how risks to people maps are presented and used in 
+the public domain. The use of qualitative risk classes may be more appropriate than 
+quantitative presentation of individual or societal risk. 
+7.3.1 The development of specialist mapping products 
+There are a range of potential applications for flood hazard, flood vulnerability and 
+risks to people maps. For example:- 
+• In strategic planning the full risk to people method could be used with the concept 
+of acceptable risk to allocate a maximum number of people or house to each risks to 
+people zone. (See examples in Annex Q). 
+• For emergency response, flood hazard maps could be classified to ensure that 
+emergency personnel are aware of moderate and significant hazards for themselves 
+and their vehicles. Emergency response routes and “safe” zones could be 
+designated based on an extreme flood scenario. 
+• For flood warning, risks to people could be considered with flood warning areas or 
+on a catchment by catchment basis to target warning and possibly funding in 
+improved warning systems where these will reduce the risks to people. 
+It is not possible to describe “how to” develop specialists maps, however some further 
+guidance on mapping and how the approach could be applied in different areas of flood 
+risk management is provided in the accompanying guidance document. 
+7.3.2 Broad-scale mapping 
+For national and regional mapping the Risks to People methodology could be 
+integrated into the Risk Assessment for Strategic Planning (RASP) framework. This 
+would have a number of benefits:- 
+• RASP already provides an approach for considering the combined probability of 
+“forcing” variables (water level, waves) and defence failure. 
+• Average annual individual or societal risk will provide another metric that can be 
+considered alongside economic costs and benefits. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+45 
+7.4 Mapping examples 
+7.4.1 Thamesmead 
+Map 1 – An example of broad flood hazard zones. These were based of reviewing modelling output for the 0.1% flood event with addition of 
+water level to account for climate change to 2050. The zones can be digitised or derived using GIS processing of hydraulic model grids. 
+Map 3 – The number of injuries per unit area. If the results f
+Map 2 – A flood hazard map for the same event. 
+rom several larger events were combined then the map could show annual average 
+societal risk. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+46 
+Impact zones
+Flood Risk to People - Thamesmead
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+47 
+æ
+)
+æ
+æ
+æ
+æ
+æ
+æ
+)
+)
+æ
+æ
+)
+æ
+Flood Hazard
+Flood Risk to People - Thamesmead
+Vulnerable sites
+Legend
+æ Church
+) School
+Flood Hazard
+Extreme
+Significant
+Moderate
+Low
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+48 
+æ
+)
+æ
+æ
+æ
+æ
+æ
+æ
+)
+)
+æ
+æ
+)
+æ
+Number of Injuries per square kilometre
+Flood Risk to People - Thamesmead
+Vulnerable sites
+Legend
+æ Church
+) School
+Number of Injuries/km2 
+1000 - 3271
+101 - 1000
+26 - 100
+11 - 25
+0 - 10
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+49 
+7.4.2 Towyn 
+Map 1 – An example of broad flood hazard zones. These were based of reviewing modelling output for a specific overtopping scenario. The 
+zones can be digitised or derived using GIS processing of hydraulic model grids. 
+Map 3 – The number of injuries per unit area. If the results f
+Map 2 – A flood hazard map for the same event. 
+rom several larger events were combined then the map could show annual average 
+societal risk. Note that in this case a larger area would need to be considered in order to include those affected by different flooding scenarios. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+50 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+51 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+52 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+53 
+8. CONCLUSIONS 
+Flooding from rivers, estuaries and the sea poses a risk to people as well as causing 
+significant economic impacts. The Risks to People project developed a methodology 
+for assessing and mapping the risk of death or serious harm to people caused by 
+flooding. 
+Following the consideration of a large number of potential risks to people criteria and 
+different versions of the flood hazard and overall risks to people formula, the final set 
+of criteria required for the methodology are:- 
+Flood Hazard 
+• Depth of flood water (m) 
+• Velocity of flood water (m/s) 
+• Debris factor (score) 
+Area Vulnerability 
+• Flood warning: including % of at risk properties covered by flood warning system; 
+% of warnings meeting two hour target; % of people taking effective action (score). 
+• Speed of onset (score) 
+• Nature of area: multi-storey apartments; typical residential/commercial/industrial 
+properties; bungalows, mobile homes, campsites (score) 
+People Vulnerability 
+• % residents aged 75 years or over 
+• % residents suffering from long term illness 
+This report has provided an overview of the Risks to People method and several 
+examples of its application. The mapping approach requires velocity and depth data for 
+5 flood events of different probabilities to estimate the annual average individual or 
+societal risk. As such the methodology can be readily applied where these data are 
+available. 
+In order to implement the full risks to people method nationally, a programme of flood 
+hazard mapping is required that reviews and improves existing 1-D hydraulic models 
+and develops the application of 2-D models that include a description of the defence 
+system. 
+There are a number of areas of flood risk management where a simplified approach, 
+involving the consideration of risks to people for the most extreme events only or 
+developing component parts of the method would provide benefits, ensuring that these 
+risks are considered alongside economic and environmental considerations. The 
+accompanying guidance document (FD2321\TR2) provides information on how the
+method may be developed for different applications. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+54 
+9. REFERENCES 
+Abt, S.R., Whittler, R.J., Taylor, A. and Love, D.J. (1989). Human Stability in a High 
+Flood Hazard Zone. Water Resources Bulletin. 25(4), pp881-890. 
+Institute of Hydrology report No. 130. Flood risk map for England and Wales 
+D G Morris & R W Flavin ISBN 0948540 75 3 October 1996 (Original price £120.00 - 
+now free). 
+HR Wallingford (2003): Flood Risks to People: Phase 1, Final Report prepared for 
+Defra/Environment Agency, dated July 2003. 
+HR Wallingford (2004a): Flood Risks to People: Phase 2, Inception Report prepared 
+for Defra/Environment Agency, dated March 2004. 
+HR Wallingford (2004b): Flood Risks to People: Phase 2, Interim Report 1 prepared 
+for Defra/Environment Agency, dated May 2004. 
+HR Wallingford (2004c): Flood Risks to People: Phase 2, Interim Report 2 prepared 
+for Defra/Environment Agency, dated October 2004. 
+HR Wallingford (2005a): Flood Risks to People: Phase 2, Project Record prepared 
+for Defra/Environment Agency, dated February 2005. 
+HR Wallingford (2005b): Flood Risks to People: Phase 2, Guidance Document 
+prepared for Defra/Environment Agency, dated February 2005. 
+Kelman I (2003): UK Drownings. 
+Ramshaw D (2005): The Carlisle Floods - A Photographic Record, Carlisle, P3 
+Publications. 
+RESCDAM (2000): The Use of Physical Models in Dam-Break Flood Analysis, 
+Final Report of Helsinki University of Technology data December 2000 (as Appendix 
+2 to Final Report of RESCDAM dated June 2001) 
+Requires additional of references from Phase 1. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+55 
+Appendices 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+56 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+57 
+Appendix 1 Development of the flood hazard formula 
+This section describes background information of the development of the flood hazard 
+formula, from the original flume experiments to comparison of the formula’s and the 
+decision to choose the final formula of:- 
+Flood hazard = depth x (velocity +0.5) + debris factor. 
+Abt et al., Colorado State University, 1989 
+The work by Abt et al. (1989) was the first physical flume experiment that examined 
+the depth and velocity conditions that cause a person to fall over. Their research gives 
+an analysis of some theoretical issues as well as the data gathered from the experiment 
+programme. 
+The authors give a theoretical argument for an expression to describe the toppling 
+hazard for a monolith. They take the monolith configuration to represent the human 
+body structure with respect to flood exposure and measure the monolith dimensions 
+and weight. An analysis of the forces acting on the body when subjected to flowing 
+water is given; these forces are: 
+1. the weight of the monolith, W 
+2. buoyancy, B 
+ B = (thickness) × (width) × (depth of water) × γw 
+ where γw is the unit weight of water 
+3. the dynamic force due to velocity, P 
+ P = Cd × ρ × (v2
+/2) × An × Sf
+ 
+where Cd is a coefficient of drag 
+ρ is the density of water 
+ v is the average flow velocity 
+ An is the area normal to the flow 
+ Sf
+ is a safety factor 
+4. surface friction, Ff
+5. the hydrostatic upstream force, Fu
+6. the hydrostatic downstream force, Fd
+The rotational stability of the monolith in water depends on the resultant of the forces 
+acting on the downstream bottom edge of the monolith. Toppling occurs when the 
+force of the oncoming flow is greater than the moment due to the resultant weight of 
+the monolith. The expression for the toppling hazard envelope curve is found by 
+summing the moments about the downstream bottom edge of the monolith: 
+ΣMedge = [(W – B) × (1/2 thickness)] – (P (1/2d)] = 0 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+58 
+The resulting curve will be different for monoliths of different weights. The equation 
+assumes that the monolith is standing upright on a stable foundation and that the 
+velocity distribution is uniform in the channel. 
+Abt et al. (1989) compared their theoretical analysis with the results from flume 
+experiments which tested the depth and velocity conditions under which instability of 
+the monolith would occur. The empirical results were very close to the theoretical 
+predictions, which validates the theoretical analysis. The drawback of the analysis is 
+that it is for a monolith and not a person, and although carefully represented, the human 
+subject will respond differently to a monolith in flood conditions. This was also shown 
+with Abt et al.’s experiments. 
+In the same programme of research, the authors tested twenty human subjects in 
+addition to the monolith. The people were observed in a flume under different depth – 
+velocity conditions and with different bed surface types (turf, smooth concrete, steel, 
+gravel) and different bed slopes. The analysis of the results aimed to quantitatively 
+predict the point of instability of the human subject and it defined the causal factor as 
+the ‘product number’, the product of depth and velocity. For the human subjects, the 
+product numbers were found to be between 0.7 m2
+/s and 1.94 m2
+/s for channel slope 
+0.015 and between 0.93 m2
+/s and 2.13 m2
+/s for channel slope 0.005. With all else being 
+constant, the product number for a human subject to become unstable is 60 to 120 
+percent greater than the product numbers resulting from the theoretical analysis and the 
+monolith tests. The authors explained this by the difficulty in quantifying or 
+reproducing a person’s ability to adapt to flood flow conditions; they will change their 
+posture to best stabilise themselves in a flood. 
+Abt et al. (1989) found an equation for defining the threshold of instability of a person 
+in flood flow by carrying out a linear regression on the experimental data. The r2
+ value 
+was only 0.48 so the uncertainty associated with the relationship is high. Their 
+equation is: 
+dv = 0.0929 [e 0.022 (2.2m + h/25.4) + 1.09 ]
+2
+where dv is the product number in m2
+/s, m is the person’s weight in kg and h is the 
+person’s height in m. 
+RESCDAM, Helsinki University of Technology, 2000 
+The EU RESCDAM project was co-ordinated by the Finnish Environment Institute and 
+focussed on the development of rescue actions based on dam-break flood analysis. 
+They studied: 
+• human stability and manoeuvrability in flowing water 
+• permanence of houses in flowing water 
+• roughness coefficients of forest and houses. 
+The research on human stability involved flume experiments much like the Abt et al
+(1989) study. Human subjects were tested on an adjustable platform structure in a 
+flume. The results were compared to the results from Abt et al. (1989) and it was 
+found that the product numbers in the RESCDAM project were lower. The researchers 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+59 
+explain that the difference is due to the use of different clothing and different bottom 
+material. The survival suits used in the RESCDAM study increase buoyancy and 
+reduce mobility. In addition, the bottom surface was more slippery in the RESCDAM 
+study. 
+The RESCDAM study highlights that conditions will have an impact on the ability of a 
+person to stand up in flowing water. Stability will be impaired under the following 
+conditions: 
+• Bottom: uneven, slippery, obstacles 
+• Water: floating debris, low temperature, ice, poor visibility 
+• Human subject: additional loads, disabilities, aged 
+• Others: poor lighting. 
+The limits of human manoeuvrability are described by the following equations: 
+dv = 0.006hm + 0.3 for good conditions 
+dv = 0.004hm + 0.2 for normal conditions 
+dv = 0.002hm + 0.1 for poor conditions. 
+To apply the most suitable equation requires an assessment of the conditions, checking 
+the factors listed above. 
+Keller and Mitsch (1993) 
+Keller and Mitsch (1993) carried out research on the stability of both cars and people in 
+flood conditions in order to inform the design of urban streets as floodways for floods 
+greater than around the five year return period when the underground drainage system 
+reaches capacity. Their findings resulted in recommendations for the design of road 
+cross sections to minimise the risk to people on the road during a flood. 
+The research took an entirely theoretical approach and considered the physics of 
+vehicle and person stability in flood conditions. The analysis of vehicle stability 
+involved calculations for three types of common cars. The analysis of person stability 
+considered the case of an average-size five year old child with the aim of taking into 
+account the highest risk scenario. Children have a smaller stature and so are more at 
+risk of falling and drowning in flood waters, and children under five years old are likely 
+to be under the control of adults at all times and therefore be less at risk than a five year 
+old on their own. 
+The vehicle stability calculations were based on the distribution of the buoyancy force 
+between the two axles. The axle load for the front and rear axle was estimated from car 
+manufacturer specifications. Vehicle instability occurs when the drag force imposed by 
+the flowing water at an axle is equal to the restoring force due to the axle load. The 
+drag force acting on the side of the vehicle is a function of the density of water, the 
+drag coefficient, the submerged area of the vehicle projected normal to the flow and the 
+velocity of flow. The value of the drag coefficient is itself a function of depth. 
+The analysis of the instability of a child in a flood identified and evaluated two 
+mechanisms of instability. Like Abt et al. (1989), this research analysed the toppling 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+60 
+hazard caused by the situation where the moment of the drag force exceeds the 
+restoring moment of the child’s weight. In addition, they also considered the situation 
+where the drag force is greater than the frictional resistance between the child’s feet and 
+the road surface. 
+The person toppling hazard, or ‘moment’ instability occurs when the flowing water 
+exerts an overturning moment about a pivot point on the circumference of the base of a 
+cylinder representing the child. The point of instability occurs when the overturning 
+moment, a function of the drag force and the depth of water, is equal to the restoring 
+moment. 
+The alternative mode of instability is ‘friction’ instability and is calculated by finding 
+the normal force from the weight of the child and the buoyant force for each depth. 
+The velocity at which the child becomes unstable is defined by the normal force 
+exceeding the maximum resisting friction force. 
+The significance of each mechanism of instability is dependant on the depth of the 
+water. This research finds that the ‘friction’ mode of instability is more severe than the 
+‘moment’ mode of instability for depths up to 0.55m, and at depths deeper than this the 
+‘moment’ mode is more severe. 
+Choice of flood hazard equations for final method 
+Consider how the degree of hazard varies with depth and velocity for four equations as 
+shown in Table 3.1. To facilitate comparison across the different equations, 1.0m depth 
+and 0.5 m/sec velocity has been used as the ‘benchmark’. 
+Table 3.1 Equivalent Hazard Depths (m) for Different Hazard Rating Equations 
+Hazard Rating Velocity (m/sec) 
+Equation 0.1 0.5 1.0 2.0
+HR = dv 5.00 1.00 0.50 0.25
+HR = d(v+0.5) 1.67 1.00 0.67 0.40
+HR = d(v+1.5) 1.25 1.00 0.80 0.57
+HR = dv2
+ 25.00 1.00 0.25 0.06
+By simple inspection, the dv2
+ equations can be rejected as it places too greater an 
+importance on velocity. Although the other three equations give similar results, the dv 
+equation breaks down for slow moving floodwaters (as clearly flood depths of, say, 2m 
+or more are hazardous whatever the velocity). Such arguments reinforce the need for a 
+velocity adjustment factor if the variation in velocity (and depth) is to be reflected in 
+the degree of associated hazard. 
+The question is which of the following statements is more credible? 
+• the degree of hazard associated with floodwaters moving at 0.1 m/sec and a depth 
+approaching 1.7m is the same as that associated with floodwaters moving at 2.0 
+m/sec and a depth of 0.4m; or 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+61 
+• the degree of hazard associated with floodwaters moving at 0.1 m/sec and a depth 
+of 1.25m is the same as that associated with floodwaters moving at 2.0 m/sec and a 
+depth approaching 0.6m. 
+Clearly, these refer to the results of using HR = d(v+0.5) and HR = d(v+1.5) 
+respectively, but the selection of the ‘best’ equation is, in part, dependent on the 
+ultimate use of the equation. Given the potential range of uses of the outputs (i.e. apart 
+from assisting with high level mapping), there is merit in exploring in a little more 
+detail in how the degree of hazard varies in particular circumstances as outlined below. 
+Buildings 
+In broad terms, buildings are more resilient to floodwaters than people. Extensive 
+research into this area has been undertaken by CURBE (see, for example, Kelman 
+2002). Further detail is provided in HR Wallingford et at (2004b) section 3 and HR 
+Wallingford et at (2004c) section 2, but, as for people, the severity of damage is a
+function of both depth and velocity. However, as illustrated in Figure 3.1, there is only 
+a poor relationship between damage level and the hazard rating expression derived for 
+people (HR = d x (v +0.5). In other words, hazard function derived for people does not 
+apply to buildings. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+62 
+0 2.5 5 7.5 10
+2
+2.5
+3
+3.5
+4
+4.5
+5
+d(v+2)
+Building Damage Level
+0 2 4 6 8
+2
+2.5
+3
+3.5
+4
+4.5
+5
+d(v+0.5)
+Building Damage Level
+Figure 3.1 Variation of Building Damage with: 
+a) Depth/Velocity Function derived for People; and 
+b) an Improved Function (building damage is a function of d(v+2)) 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+63 
+Appendix 2 Case Studies 
+This appendix includes case studies of flooding in Cliffe (Lewes), Hull and Tripcock 
+Point on the Thames Estuary. 
+AQ.1 Case Study - Cliffe (Lewes) 
+AQ.1.1 Introduction 
+The Cliffe area of Lewes is bounded by the River Ouse to the west and south, 
+by an elevated road (the Phoenix Causeway) to the north and by a steep hillside 
+to the east. The area was badly flooded in October 2000 as illustrated in Figure 
+AQ.1 
+Figure AQ.1 View (looking NW) across Cliffe, October 2000 
+(reproduced from BBV, 2001) 
+The Cliffe area is defended by a substantial concrete wall with a height of about 
+4.75m. During the 200 floods, the highest flood levels were estimated to be 
+about 5.5m to the north of Cliffe High Street and about 5.0m to the south of 
+Cliffe High Street. These two areas are referred to as North Cliffe and South 
+Cliffe in the calculations which follow. 
+The difference in flood levels was due, in part, to the river flow (north to south) 
+being impeded by the Lewes Bridge. 
+AQ.1.2 Number of People at Risk 
+The existing defences have a standard approaching 1 in 100 years. Since the 
+existing defences are substantial, the probability of a breach is considered to be 
+negligible (in relation to the probabilities of overtopping considered in this 
+analysis). 
+North Cliffe 
+South Cliffe 
+Lewes 
+Phoenix Causeway
+Cliffe High Street
+River Ouse 
+Lewes Bridge 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+64 
+The numbers of properties at risk are summarised in Table AQ.1. 
+Table AQ.1: Number of Properties at Risk in Cliffe by Return Period 
+Return Period (years) 
+Area Property Type 
+100 160 200 
+Residential 27 +7 +5 
+North Cliffe 
+Non-residential 36 +1 +1 
+Residential 139 +31 +21 
+South Cliffe 
+Non-residential 47 +5 +3 
+All (incremental) 249 +44 +30 
+Cliffe 
+All (cumulative) 249 293 323 
+Sources: BBV (2001) and BBV (2002). 
+For a return period of 500 years, no further properties were assumed to be flooded (although the 
+flood depth would be greater as indicated below). 
+Cliffe is located in the Lewes Bridge Ward which has an average of 2.1 people 
+per household6
+. The majority of non-residential properties within Cliffe are 
+shops (along the High Street). However, there is a number of larger nonresidential properties (mainly close to the river) including Harveys brewery, 
+Riverside Surgery and the local community centre (the Phoenix Centre) and 
+boatyards. Although precise numbers have not been obtained, for the purposes 
+of this analysis an average figure of 4 people per non-residential property will 
+be assumed. Applying these factors to the numbers of properties at risk 
+generates Table AQ.2. 
+Table AQ.2: Number of People at Risk (Nz) in Cliffe by Return Period 
+Return Period (years) Area Property Type 
+100 160 200 
+Residential 57 +15 +10 
+North Cliffe Non-residential 144 +5 +3 
+All 201 +20 +13 
+Residential 292 +66 +44 
+South Cliffe Non-residential 188 +19 +13 
+All 480 +85 +56 
+All (incremental) 681 +105 +70 Cliffe All (cumulative) 681 785 855 
+Source: Application of occupancy rates to Table AQ.1. 
+For a return period of 500 years, no further people were assumed to be at risk. 
+ 
+6 This and subsequent statistics for the Lewes Bridge Ward are based on data from the 2001 
+Census as obtained from http:\\neighbourhood.statistics.gov.uk (by entering a local postcode). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+65 
+AQ.1.3 Hazard Rating 
+Flood Depth 
+Within Cliffe, road levels are generally in the region 4.2 to 4.6m. For this 
+analysis, three hazard zones (in both North and South Cliffe) are considered: 
+• Zone A covers those properties at risk for a 1 in 100 year event with a 
+typical floor level of around 4.3m; 
+• Zone B covers those properties at risk for a 1 in 160 year event with a 
+typical floor level of around 4.6m; and 
+• Zone C covers those properties at risk for a 1 in 200 year event with a 
+typical floor level of around 4.8m. 
+This information together with that observed in the 2000 floods as well as the 
+estimated flood levels (from BBV, 2002) enabled Tables AQ.3 and AQ.4 to be 
+constructed. 
+Table AQ.3: Flood Depths (d) by Hazard Zone in North Cliffe by Return Period 
+Return Period (years) (Flood Level) 
+Area 
+Hazard Zone 
+(Floor Level) 100 (5.2m) 160 (5.5m) 200 (5.8m) 500 (6.2m) 
+A (4.3m) 0.9m 1.2m 1.5m 1.9m 
+B (4.6m) not affected 0.9m 1.2m 1.6m North 
+Cliffe 
+C (4.8m) not affected not affected 1.0m 1.4m 
+Source: Floor levels derived from information presented in Figure 4.9, BBV (2001) and flood levels 
+derived from Appendix E, BBV (2002). 
+Table AQ.4: Flood Depths (d) by Hazard Zone in South Cliffe by Return Period 
+Return Period (years) (Flood Level) 
+Area 
+Hazard Zone 
+(Floor Level) 100 (4.8m) 160 (5.0m) 200 (5.2m) 500 (5.5m) 
+A (4.3m) 0.5m 0.7m 0.9m 1.2m 
+B (4.6m) not affected 0.4m 0.6m 0.9m South 
+Cliffe 
+C (4.8m) not affected not affected 0.4m 0.7m 
+Source: As for previous table. 
+Note that flood levels are lower for South Cliffe as downstream of Lewes Bridge. 
+Flood Velocity 
+The detailed description of the flood events of October 2000 (BBV, 2001) 
+indicates that the onset of flooding was fairly gradual (over a period of around 
+three hours). Initially, drains backed up and this was followed by overtopping 
+of the defences as the river increased in height. The build up of water upstream 
+of the Lewes Bridge led to an increased flood level in North Cliffe. Although 
+there were occasional ‘break- throughs’ with higher velocities, for the purposes 
+of this analysis a general value for velocity, v, of 1.0 m/sec will be assumed. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+66 
+Debris Factor 
+There were no reports of significant amounts of debris. On this basis, the debris 
+factor (DF) has been taken as zero. 
+Hazard Rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above enabled Table AQ.5 to be constructed. 
+Table AQ.5: Hazard Rating (HR) by Hazard Zone and by Return Period 
+Return Period (years) 
+Area Hazard Zone 
+100 160 200 500 
+A 1.4 1.8 2.3 2.9 
+B not affected 1.4 1.8 2.4 North 
+Cliffe 
+C not affected not affected 1.5 2.1 
+A 0.8 1.1 1.4 1.8 
+B not affected 0.6 0.9 1.4 South 
+Cliffe 
+C not affected not affected 0.6 1.1 
+AQ.1.4 Area Vulnerability 
+Flood Warning 
+As detailed in the main text, the score for flood warning is on the scale 1 (good 
+warning system) to 3 (no warning system). For Southern Region, the ‘generic’ 
+score is 2.14. Although the Agency claimed a high level of flood warning for 
+Lewes (BBV, 2001), subsequent interviews with the flood victims indicated that 
+only 33% of those flooded in Lewes reported receiving a warning7
+. On this 
+basis, a relatively poor score for flood warning seems appropriate. 
+Speed of Onset 
+As already indicated, the speed of onset of flooding in Cliffe was ‘gradual’ 
+which attracts a score of 2. 
+Nature of Area 
+As can be seen from Figure AQ.1, the Cliffe area is a typical mixed area of 
+predominantly two-storey homes, commercial and industrial properties. This is 
+a typical ‘medium’ risk area which attracts a score of 2. 
+ 
+7 Based on responses from 159 residents affected by the 2000 floods in Lewes who were 
+interviewed in relation to the work undertaken for RPA et al (2004). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+67 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give 
+AV = 6.14 (which indicates a medium risk area). 
+AQ.1.5 People Vulnerability 
+Long Term Illness 
+Based on statistics for the Lewes Bridge Ward, 16.3% of the Cliffe population 
+have a limiting long-term illness (and/or disability). 
+The Very Old 
+Based on statistics for the Lewes Bridge Ward, 9.4% of the Cliffe population 
+are 75 or over. 
+People Vulnerability Score 
+The people vulnerability (PV) score is simply the sum of the above factors to 
+give PV = 25.7%. For comparison, the national figures are 18.2% and 7.6% 
+respectively to give a combined score of 25.8%. As such, those at risk are no 
+more vulnerable than the general population. 
+AQ.1.6 Numbers of Injuries and Fatalities. 
+Numbers of Injuries 
+For each hazard zone and each event, an estimate of the numbers of injuries 
+(Ninj) can be made using the formula: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+The results are summarised in Tables AQ.6 and AQ.7 for North and South 
+Cliffe respectively. This shows that for a 160 year event (similar to the 2000 
+floods), around 30 injuries would be expected in total with the majority 
+occurring in South Cliffe. 
+Table AQ.6: Number of Injuries (Ninj) by Hazard Zone in North Cliffe and by Return Period 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 100 160 200 500 
+A 201 8.6 11.4 14.3 18.1 
+B 20 0.0 0.8 1.1 1.5 
+C 13 0.0 0.0 0.6 0.9 
+All 234 9 12 16 20 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+68 
+Table AQ.7: Number of Injuries (Ninj) by Hazard Zone in South Cliffe and by Return Period 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 100 160 200 500 
+A 480 11.4 15.9 20.4 27.3 
+B 85 0.0 1.6 2.4 3.6 
+C 56 0.0 0.0 1.1 1.9 
+All 621 11 18 24 33 
+Numbers of Injuries/Year 
+The average rate of injuries is based on both the numbers of injuries per event 
+(i.e. as above) and the frequency of the events. Numerically, the numbers of 
+injuries per year is: 
+ Ninj/per year = ∑ (df x Ninj) 
+The associated calculations are presented in Table AQ.8. For this analysis, it 
+was assumed that no overflow of the defences occurred in a 1 in 60 year event. 
+Table AQ.8: Number of Injuries/Year by Hazard Zone
+Return Period (years) 500 100 160 200 500 All 
+events 
+Frequency (f) (per 
+year) 1.7E-02 1.0E-02 6.3E-03 5.0E-03 2.0E-03 
+Frequency interval (df) 6.7E-03 3.8E-03 1.3E-03 3.0E-03 
+North Cliffe: 
+Zone A (df x Ninj) 0 5.7E-02 4.3E-02 1.8E-02 5.4E-02 1.7E-01 
+Zone B (df x Ninj) 0 0.0E+00 3.2E-03 1.4E-03 4.5E-03 9.1E-03 
+Zone C (df x Ninj) 0 0.0E+00 0.0E+00 7.9E-04 2.6E-03 3.4E-03 
+South Cliffe: 
+Zone A (df x Ninj) 0 7.6E-02 6.0E-02 2.6E-02 8.2E-02 2.4E-01
+Zone B (df x Ninj) 0 0.0E+00 6.0E-03 3.0E-03 1.1E-02 2.0E-02
+Zone C (df x Ninj) 0 0.0E+00 0.0E+00 1.3E-03 5.6E-03 7.0E-03
+Numbers of Fatalities 
+For each hazard zone and each event, an estimate of the numbers of fatalities 
+(Nf) can be made using the formula: 
+Nf = 2 x Ninj x HR/100 
+The results are summarised in Tables AQ.10 and AQ.11. The results indicate 
+that one or two fatalities could be expected in Cliffe under the most severe 
+conditions. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+69 
+Table AQ.10: Number of Fatalities (Nf) by Hazard Zone and by Return Period (North Cliffe) 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 100 160 200 500 
+A 201 0.23 0.41 0.64 1.03 
+B 20 N/A 0.02 0.04 0.07 
+C 13 N/A N/A 0.02 0.04 
+All 234 0.2 0.4 0.7 1.1
+Table AQ.11: Number of Fatalities (Nf) by Hazard Zone and by Return Period (South Cliffe) 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 100 160 200 500 
+A 480 0.17 0.33 0.55 0.98 
+B 85 N/A 0.02 0.04 0.10 
+C 56 N/A N/A 0.01 0.04 
+All 621 0.2 0.4 0.6 1.1
+Numbers of Fatalities/Year 
+In the same way as for injuries, the average rate of fatalities is based on both the 
+numbers of fatalities per event (i.e. as above) and the frequency of the events. 
+Numerically, the numbers of fatalities per year is: 
+Nf/per year = ∑ (df x Nf) 
+The associated calculations are presented in Table AQ.12. As before, it was 
+assumed that no overflow of the defences occurred in a 1 in 60 year event. 
+Table AQ.12: Number of Fatalities/Year by Hazard Zone 
+Return Period (years) 60 100 160 200 500 All 
+events 
+Frequency (f) (per 
+year) 1.7E-02 1.0E-02 6.3E-03 5.0E-03 2.0E-03 
+Frequency interval (df) 6.7E-03 3.8E-03 1.3E-03 3.0E-03 
+North Cliffe: 
+Zone A (df x Nf) 0 1.5E-03 1.5E-03 8.0E-04 3.1E-03 7.0E-03
+Zone B (df x Nf) 0 0.0E+00 8.6E-05 5.1E-05 2.2E-04 3.5E-04
+Zone C (df x Nf) 0 0.0E+00 0.0E+00 2.4E-05 1.1E-04 1.3E-04
+South Cliffe: 
+Zone A (df x Nf) 0 1.1E-03 1.3E-03 6.9E-04 2.9E-03 6.0E-03
+Zone B (df x Nf) 0 0.0E+00 7.2E-05 5.4E-05 2.9E-04 4.2E-04
+Zone C (df x Nf) 0 0.0E+00 0.0E+00 1.6E-05 1.2E-04 1.3E-04
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+70 
+AQ.1.7 Measures of Risk & Acceptability 
+Introduction 
+For mapping purposes, consideration is given to two measures of risk: 
+• societal risk - where this is represented by the average numbers of injuries 
+per year per square kilometre; and 
+• individual risk - where this is represented by the average level of risk 
+amongst those at risk. 
+These measures enable some conclusions to be drawn to the acceptability of the 
+risk and the implications for land-use planning. 
+Societal Risk 
+The measure of societal risk = 100 x Ninj/year / Zone Area (ha) = 
+Ninj/year/km2
+The associated calculations are summarised in Table AQ.13. 
+Table AQ.13: Cliffe Societal Risk Calculations 
+Area Zone Ninj/year Area (ha) Ninj/yr/ha Ninj/yr/km2
+A 1.7E-01 3.6 4.8E-02 4.8 
+North Cliffe B 9.1E-03 0.4 2.6E-02 2.6 
+C 3.4E-03 0.2 1.4E-02 1.4 
+A 2.4E-01 5.0 4.8E-02 4.8 
+South Cliffe B 2.0E-02 0.9 2.2E-02 2.2 
+C 7.0E-03 0.6 1.2E-02 1.2 
+Source: Ninj/year from Table AQ.8 and areas by zone based on a pro-rate distribution (by 
+population at risk) of estimated total areas of 4.2 and 6.5 ha for North and South Cliffe 
+respectively. 
+Individual Risk 
+The average individual risk (by zone) = Nf/year / Number of people at risk (Nz) 
+The associated calculations are summarised in Table AQ.14. 
+Table AQ.14: Cliffe Individual Risk Calculations 
+Area Zone Nf/year Nz Individual Risk 
+A 7.0E-03 201 3.5E-05 
+B 3.5E-04 20 1.8E-05 North 
+Cliffe 
+C 1.3E-04 13 1.0E-05 
+A 6.0E-03 480 1.3E-05 
+B 4.2E-04 85 4.9E-06 South 
+Cliffe 
+C 1.3E-04 56 2.4E-06 
+Source: Nf/year from Table AQ.12 and Nz from Tables AQ.10 and AQ.11. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+71 
+Acceptability of Individual Risk 
+The level of individual risk (IR) within three zones in North Cliffe and two 
+zones in South Cliffe is above the suggested risk criterion of 1 chance in 
+100,000 (1.0E-05) per year of being killed in a flood event. As such the general 
+level of risk would not be regarded as tolerable. 
+Application of Societal Risk Criterion 
+The proposed societal risk criterion is that: the number at risk x level of 
+individual risk < 1 x 10-3
+ per year. As such, the maximum number at risk 
+should be less than 1.0E-03/individual risk. The results of applying this 
+criterion are shown in Table AQ.15. 
+Table AQ.15: Determination of Maximum Numbers of People
+Area Parameter Zone A Zone B Zone C 
+Level of individual risk (100% 
+occupancy) 3.5E-05 1.8E-05 1.0E-05 
+Maximum number of people permitted 29 56 99 
+North 
+Cliffe 
+Maximum number of houses permitted 12 23 40 
+Level of individual risk (100% 
+occupancy) 1.3E-05 4.9E-06 2.4E-06 
+Maximum number of people permitted 80 202 422 
+South 
+Cliffe 
+Maximum number of houses permitted 32 81 169 
+Resultant Planning Advice (based on Risk Criteria) 
+Application of the risk criteria results in the advice summarised in Tables 
+AQ.16 and AQ.17. 
+Table AQ.16: Planning Advice based on Risk Criteria for North Cliffe 
+Risk Criterion Area A Area B Area C 
+Residential development not permitted Residential development 
+Individual Risk permitted 
+Industrial/commercial development permitted 
+Societal Risk Maximum of 29 people 
+(12 houses) 
+Maximum of 56 people 
+(23 houses) 
+Maximum of 99 people 
+(40 houses) 
+Resultant 
+Planning Advice 
+No new residential 
+development permitted. 
+Limited industrial/ 
+commercial 
+development permitted 
+but no more than 29 
+people at risk at any one 
+time. 
+No new residential 
+development permitted. 
+Limited industrial/ 
+commercial 
+development permitted 
+but no more than 56 
+people at risk at any one 
+time. 
+Residential development 
+permitted (up to 40 
+houses). Alternatively, 
+industrial/commercial 
+development permitted 
+but no more than 99 
+people at risk at any one 
+time. 
+Note: For Zone A, for non-residential development, an occupancy factor of 0.25 is incorporated 
+which leads to an individual risk of 3.5E-05 x 0.25 = 8.7E-06 per year which is below the suggested 
+target of 1.0E-05 per year. For Zone B, the individual risk is correspondingly lower. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+72 
+Table AQ.17: Planning Advice based on Risk Criteria for South Cliffe 
+Risk Criterion Area A Area B Area C 
+Residential development 
+not permitted Residential development permitted Individual Risk 
+Industrial/commercial development permitted 
+Societal Risk Maximum of 80 people 
+(32 houses) 
+Maximum of 202 people 
+(81 houses) 
+Maximum of 422 people 
+(169 houses) 
+Resultant 
+Planning Advice 
+No new residential 
+development permitted. 
+Limited industrial/ 
+commercial 
+development permitted 
+but no more than 80 
+people at risk at any one 
+time. 
+Residential development 
+permitted (up to 81 
+houses). Alternatively, 
+industrial/commercial 
+development permitted 
+but no more than 202 
+people at risk at any one 
+time. 
+Residential development 
+permitted (up to 169 
+houses). Alternatively, 
+industrial/commercial 
+development permitted 
+but no more than 422 
+people at risk at any one 
+time. 
+For Zone A, the incorporation of an occupancy factor for non-residential use reduces the level of 
+individual risk to below the suggested target value of 1.0E-05 per year 
+AQ.1.8 References 
+Binnie Black & Veatch (2001): Sussex Ouse 12th October 2000 Flood Report, report 
+prepared for the Environment Agency, dated March 2001. 
+Binnie Black & Veatch (2002): Sussex Ouse Flood Management Strategy - Project 
+Appraisal Report: Volume 2 - Appendices B to P, report prepared for the 
+Environment Agency, dated July 2002. 
+RPA et al (2004): The Appraisal of Human-Related Intangible Impacts of 
+Flooding, Defra/EA R&D Technical Report FD2005/TR, dated August 2004. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+73 
+AQ.2 Case Study - Hull 
+AQ.2.1 Introduction 
+Hull is situated on the north bank of the Humber. Although there are defences, 
+the standard of protection is low. However, the main trunk route (the A63) 
+which runs close to the river provides substantial secondary defences. 
+In this example consideration is given to the riverside area immediately to the 
+south-west of city centre. This area forms parts of Flood Cell 2-2 considered in 
+the development of Humber Strategy (being undertaken by BBV for the 
+Agency). 
+The area is at risk, primarily, from overtopping of the defences and is bounded 
+to the north-west by the A63 and to the south-east by the Humber. Two zones 
+(each of approximately 25ha in area) are considered in this analysis and are 
+illustrated in Figure AQ.2. 
+• Zone A forms the western part is a mixture of industrial and commercial 
+premises, including a number of warehouses and bulk storage areas; and 
+• Zone B is the recently redeveloped area around the Hull Marina and 
+comprises a mixture of residential, industrial and commercial properties. 
+Figure AQ.2 Areas Considered in Analysis from Flood Cell 2-2 
+(reproduced from BBV, 2004) 
+River 
+Humber 
+Zone A 
+Zone B 
+A63 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+74 
+AQ.2.2 Number of People at Risk 
+The numbers of properties at risk are summarised in Table AQ.18. Since the 
+area under consideration is effectively a ‘basin’ (once the defences are 
+overtopped), the numbers of properties affected are the same for each of the 
+return periods considered (although the depth of flooding varies). 
+Table AQ.18: Numbers of Properties at Risk in Hull (part of Flood Cell 2-2) 
+Property Type Zone A Zone B 
+Residential 5 354 
+Industrial/Commercial 170 152 
+- factories 16 1 
+- retail 21 25 
+- office 11 47 
+- warehouse 93 39 
+- ‘all bulk’ (storage areas) 29 40 
+Total 175 506 
+Source: Based on spreadsheets prepared by Black & Veatch for the economic appraisal of 
+options under consideration in the Humber Estuary Flood Defence Strategy (HEFDS). 
+The area is located in the Myton Ward (of Hull) which has an average of 1.8 
+people per household8
+. As illustrated in the table above, there are a range of 
+non-residential properties. These range from properties with low staff numbers 
+(such as warehouses and storage areas) to large retail shops and offices. 
+Although precise numbers have not been obtained, for the purposes of this 
+analysis an average figure of 4 people per non-residential property will be 
+assumed. Applying these factors to the numbers of properties at risk generates 
+Table AQ.19. 
+Table AQ.19: Numbers of People at Risk in Hull (part of Flood Cell 2-2) 
+Property Type Zone A Zone B 
+Residential 9 637 
+Industrial/Commercial 680 608 
+All 689 1245 
+Source: Application of occupancy rates to Table AQ.18. 
+ 
+AQ.2.3 Hazard Rating 
+Flood Depth 
+The detailed spreadsheets prepared for the HEFDS include the predicted flood 
+depths for each property by return period. For properties in Zones A and B, 
+these depths have been averaged to enable Table AQ.20 to be prepared. 
+ 
+8 This and subsequent statistics for the Myton Ward are based on data from the 2001 Census as 
+obtained from http:\\neighbourhood.statistics.gov.uk (by entering a local postcode). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+75 
+Table AQ.20: Flood Depths (d) by Hazard Zone in Hull by Return Period 
+Hazard Zone Return Period (years) (Flood Level) 
+(Floor Level) 10 (5.12m) 50 (5.29m) 100 (5.35m) 500 (5.50m) 
+A (2.46m) 2.66 2.83 2.89 3.04 
+B (4.28m) 0.84 1.01 1.07 1.22 
+Source: Floor levels derived from information in HEFDS spreadsheets for damage calculations. 
+Flood Velocity 
+It is envisaged that the flooding of the area under consideration will be fairly 
+gradual (in much the same way as for Cliffe considered previously). For the 
+purposes of this analysis a general value for velocity, v, of 1.0 m/sec will be 
+assumed. 
+Debris Factor 
+For the purpose of this analysis, the debris factor (DF) has been taken as zero. 
+Hazard Rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above enabled Table AQ.21 to be constructed. 
+Table AQ.21: Hazard Rating (HR) by Hazard Zone and by Return Period 
+Return Period (years) 
+Hazard Zone 
+10 50 100 500 
+A 4.0 4.3 4.3 4.6 
+B 1.3 1.5 1.6 1.8 
+AQ.2.4 Area Vulnerability 
+Flood Warning 
+As detailed in the main text, the score for flood warning is on the scale 1 (good 
+warning system) to 3 (no warning system). The North East region has made 
+most progress in achieving the targets and the ‘generic’ score for Yorkshire and 
+Humber is 1.73 and this score is used in the analysis which follows. 
+ 
+Speed of Onset 
+The speed of onset of flooding has been assumed to be ‘gradual’ which attracts 
+a score of 2. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+76 
+Nature of Area 
+The area of Hull under consideration is mixed with homes, commercial and 
+industrial properties. As such, this is considered to be a ‘medium’ risk area 
+which attracts a score of 2. 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give 
+AV = 5.73 (which indicates a medium risk area). 
+AQ.2.5 People Vulnerability 
+Local Statistics 
+ 
+Based on statistics for the Myton Ward, 29.4% of the population have a limiting 
+long-term illness (and/or disability) and 9.1% of the population are 75 or over 
+(and, for comparison, the national figures are 18.2% and 7.6% respectively). 
+Selected Values 
+However, the figures for Myton Ward generally are not considered suitable for 
+Zones A and B. From Table AQ.18, it is clear that Zone A is an industrial/ 
+commercial area with some retail outlets. With this in mind, it would be 
+expected that the proportion of people with a limiting long-term illness and/or 
+over 75 would be substantially less than the ward figures suggest. For the 
+purposes of this analysis, values of 5% for both long term illness and the 75s 
+and over will be used for Zone A. 
+Zone B is a mixed area (see Table AQ.18) and is likely to contain a greater 
+proportion of both groups of people vulnerable to flooding than Zone A. 
+However, the figures are unlikely to be as high as those suggested by the ward 
+statistics taking account of both the non-residential uses in the area and marine 
+style residential development. With these points in mind, values of 10% for 
+long term illness and 7.5% for the 75s and over will be used for Zone B. 
+People Vulnerability 
+The people vulnerability (PV) score is simply the sum of the above factors to 
+give PV = 10.0% and 17.5% for Zones A and B respectively. As such, those at 
+risk are less vulnerable than the general population (since the PV value would 
+be 25.8% based on national statistics). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+77 
+AQ.2.6 Numbers of Injuries and Fatalities. 
+Numbers of Injuries 
+For each hazard zone and each event, an estimate of the numbers of injuries 
+(Ninj) can be made using the formula: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+The results are summarised in Tables AQ.22. This shows, for example, that for 
+a 50 year event, around 60 injuries would be expected in total with the majority 
+occurring in Zone B. 
+Table AQ.22: Number of Injuries (Ninj) by Hazard Zone and by Return Period 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 10 50 100 500
+A 689 21.0 22.4 22.9 24.0 
+B 1245 31.4 37.7 40.0 45.6 
+All 1934 52 60 63 70 
+Numbers of Injuries/Year 
+The average rate of injuries is based on both the numbers of injuries per event 
+(i.e. as above) and the frequency of the events. Numerically, the numbers of 
+injuries per year is: 
+ Ninj/per year = ∑ (df x Ninj) 
+The associated calculations are presented in Table AQ.23. For this analysis, it 
+was assumed that no overflow of the defences occurred in a 1 in 5 year event. 
+Table AQ.23: Number of Injuries/Year by Hazard Zone 
+Return Period (years) 5 10 50 100 500 All 
+events 
+Frequency (f) (per 
+year) 2.0E-01 1.0E-01 2.0E-02 1.0E-02 2.0E-03 
+Frequency interval (df) 1.0E-01 8.0E-02 1.0E-02 8.0E-03 
+Zone A (df x Ninj) 0 2.10 1.79 0.23 0.19 4.3
+Zone B (df x Ninj) 0 3.14 3.02 0.40 0.36 6.9
+Numbers of Fatalities 
+For each hazard zone and each event, an estimate of the numbers of fatalities 
+(Nf) can be made using the formula: 
+Nf = 2 x Ninj x HR/100 
+The results are summarised in Tables AQ.24. The results indicate that a few 
+fatalities would be expected in the more severe events. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+78 
+Table AQ.24: Number of Fatalities (Nf) by Hazard Zone and by Return Period 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 10 50 100 500 
+A 689 1.7 1.9 2.0 2.2 
+B 1245 0.8 1.1 1.3 1.7 
+All 1934 2.5 3.0 3.3 3.9 
+Numbers of Fatalities/Year 
+In the same way as for injuries, the average rate of fatalities is based on both the 
+numbers of fatalities per event (i.e. as above) and the frequency of the events. 
+Numerically, the numbers of fatalities per year is: 
+Nf/per year = ∑ (df x Nf) 
+The associated calculations are presented in Table AQ.25. As before, it was 
+assumed that no overflow of the defences occurred in a 1 in 5 year event. 
+Table AQ.25: Number of Fatalities/Year by Hazard Zone 
+Return Period (years) 5 10 50 100 500 All 
+events 
+Frequency (f) (per 
+year) 2.0E-01 1.0E-01 2.0E-02 1.0E-02 2.0E-03 
+Frequency interval (df) 1.0E-01 8.0E-02 1.0E-02 8.0E-03 
+Zone A (df x Nf) 0 1.7E-01 1.5E-01 2.0E-02 1.8E-02 3.6E-01
+Zone B (df x Nf) 0 7.9E-02 9.1E-02 1.3E-02 1.3E-02 2.0E-01
+AQ.2.7 Measures of Risk & Acceptability 
+Introduction 
+For mapping purposes, consideration is given to two measures of risk: 
+• societal risk - where this is represented by the average numbers of injuries 
+per year per square kilometre; and 
+• individual risk - where this is represented by the average level of risk 
+amongst those at risk. 
+These measures enable some conclusions to be drawn to the acceptability of the 
+risk and the implications for land-use planning. 
+Societal Risk 
+The measure of societal risk = 100 x Ninj/year / Zone Area (ha) = 
+Ninj/year/km2
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+79 
+The associated calculations are summarised in Table AQ.26. 
+Table AQ.26: Societal Risk Calculations 
+Zone Ninj/year Area (ha) Ninj/yr/ha Ninj/yr/km2
+A 4.3 25 0.17 17 
+B 6.9 25 0.28 28 
+Source: Ninj/year from Table AQ.23 and areas provided in AQ.2.1. 
+Individual Risk 
+The average individual risk (by zone) = Nf/year / Number of people at risk (Nz) 
+The associated calculations are summarised in Table AQ.27. 
+Table AQ.27: Individual Risk Calculations 
+Zone Nf/year Nz Individual Risk 
+A 3.6E-01 689 5.2E-04 
+B 2.0E-01 1245 1.6E-04 
+Source: Nf/year from Table AQ.25 and Nz from Table AQ.24. 
+Acceptability of Individual Risk 
+The level of individual risk (IR) within both Zone A and Zone B is above the 
+suggested risk criterion of 1 chance in 100,000 (1.0E-05) per year of being 
+killed in a flood event. As such the level of risk is not considered to be 
+tolerable for new development. 
+Application of Societal Risk Criterion 
+The proposed societal risk criterion is that: the number at risk x level of 
+individual risk < 1 x 10-3
+ per year. As such, the maximum number at risk 
+should be less than 1.0E-03/individual risk. The results of applying this 
+criterion are shown in Table AQ.28. 
+Table AQ.28: Determination of Maximum Numbers of People
+Parameter Zone A Zone B 
+Level of individual risk (100% occupancy) 5.2E-04 1.6E-04 
+Maximum number of people permitted 2 6 
+Maximum number of houses permitted 1 3 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+80 
+Resultant Planning Advice (based on Risk Criteria) 
+Application of the risk criteria results in the advice summarised in Tables 
+AQ.29. 
+Table AQ.29: Planning Advice based on Risk Criteria 
+Risk Criterion Area A Area B 
+Residential development not permitted Individual Risk Industrial/commercial development not permitted 
+Societal Risk Maximum of 2 people 
+(1 house) 
+Maximum of 6 people 
+(3 houses) 
+Resultant Planning Advice No new development permitted. 
+Note: For non-residential development, incorporating an occupancy factor of 0.25 would still lead to 
+levels of individual risk greater than the suggested target of 1.0E-05 per year. 
+AQ.2.8 References 
+Black & Veatch (2004): Humber Estuary Flood Defence Strategy - Management 
+Units and Flood Compartment Boundaries, drawing prepared for the 
+Environment Agency, dated November 2004. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+81 
+AQ.3 Case Study - Tripcock Point (Thamesmead) 
+AQ.3.1 Introduction 
+Tripcock Point (Thamesmead) is a major planned development which forms 
+part of the Thames Gateway. It is located on the south bank of the River 
+Thames to the east of London (and downstream of the Thames Barrier). 
+The 34ha site is bounded to the north by the Thames, to the east by the 
+Thamesmead Centre and to the west by Tripcock Park. The proposals are for 
+2000 dwellings (on 25ha of the site) together with some ground floor 
+commercial properties (offices, shops, cafes, etc.). The proposed layout is 
+shown in Figure AQ.3. 
+Figure AQ.3 Proposed Layout of Tripcock Point 
+(reproduced from Tilfen Land, 2003) 
+Three zones are considered in this analysis: 
+• Zone A (9.5 ha in size) forms the south-eastern part of the site. This zone is 
+bounded by the 3m contour and is mostly (relatively) low density housing; 
+• Zone B (6.5 ha in size) forms the central part of the site. This zone is 
+bounded by the 3 and 5.5m contours and is mostly medium density housing 
+and some ground floor commercial premises (around the central 
+roundabout); and 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+82 
+• Zone C (18 ha) forms the northern and north-western part of the site and is 
+above the 5.5m contour. This zone comprises high and medium density 
+housing including commercial premises along the riverfront. 
+AQ.3.2 Number of People at Risk 
+Estimates of the numbers of dwellings, dwellings with ground floor
+accommodation and commercial properties have been based on the information 
+presented in the Planning Statement (Tilfen Land, 2003) using the following 
+assumptions: 
+• dwellings in low density areas are all assumed to have ground floor
+accommodation; 
+• 50% of units in medium density areas are assumed to have ground floor 
+accommodation; 
+• 25% of units on high density areas are assumed to have ground floor 
+accommodation; and 
+• for those areas with designated commercial uses (E1 to E4 and C8 to C11), 
+50% of ground floor units area assumed to be non-residential. 
+Whilst these are assumptions, they provide a basis for the analysis which 
+follows to illustrate the application of the methodologies that have been 
+developed. 
+Table AQ.30: Numbers of Properties by Zone for Tripcock Point 
+Parameter Zone A Zone B Zone C 
+Number of dwellings by zone 354 267 1378 
+Number of units with ground 
+floor accommodation 256 160 514 
+Number of dwellings with 
+ground floor accommodation 256 130 446 
+Number of ground floor 
+commercial premises 0 30 68 
+Source: Based on layout presented in Figure AQ.3 and assumptions listed above. 
+Tripcock Point is located in the Thamesmead Moorings Ward which has an 
+average of 2.3 people per household9
+. As illustrated in the table above, there 
+are a range of non-residential properties. These will be generally relatively 
+small units (shops and offices) and for the purposes of this analysis an average 
+figure of 4 people per non-residential property will be assumed. Applying these 
+factors to the numbers of properties at risk generates Table AQ.31. 
+Table AQ.31: Numbers of People by Zone for Tripcock Point 
+Property Type Zone A Zone B Zone C 
+Residential 590 300 1026 
+Commercial 0 119 273 
+All 590 419 1299 
+Source: Based on Table AQ.30 and occupancy rates given above. 
+ 
+9 This and subsequent statistics for the Thamesmead Moorings Ward are based on data from the 
+2001 Census as obtained from http:\\neighbourhood.statistics.gov.uk (by entering a local postcode). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+83 
+AQ.3.3 Hazard Rating 
+Introduction 
+Tripcock Point has been subject to a flood risk assessment (FRA). The report 
+(Scott Wilson, 2004) considers scenarios involving overtopping of the defences, 
+overflowing of the defences and breach of the defences. The most significant 
+risk is associated with overflowing in which extreme water levels (at the peak of 
+high tide) lead to a large flow of water over the defences (which are 7.1m in 
+height). The water flows over the site and collects in the south-eastern part of 
+the site. The FRA focuses on the 1000 year event in 2060 incorporating sea 
+level rise. For the purpose of this analysis, the following extreme water level 
+probabilities have been assumed. 
+Table AQ.32: Extreme Water Heights (m ODN) by Return Period at Tripcock Point 
+Return Period for 2030 for 2060 with Sea Level 
+Rise 
+750 years 7.00m 7.30m 
+1000 years 7.10m(1) 7.40m(2) 
+1500 years 7.25m 7.55m 
+2000 years 7.35m 7.65m 
+Notes: 
+1) The defences along the Thames are currently based on the predicted water levels for a 1 in 
+1,000 event in 2030 (i.e. 7.1m at Tripcock Point) 
+2) The FRA is based on this 1 in 1,000 year event for the 2060 scenario with further sea level 
+rise 
+Sources: Scott Wilson (2004) for base case of 1 in 1,000 years and related information from 
+the Environment Agency. 
+Flood Depth 
+The FRA provides spreadsheets (with particular reference to Appendix G) 
+detailing the calculations used to derive not only flood depths on the southeastern part of the site (in a 1 in 1,000 year event) but also the depth (and 
+velocity) of water flowing across the site. As would be expected, the peak 
+depths (and velocities) for the flowing water occur at the peak of high tide 
+whereas the peak depth for the flooded areas occur about one hour later10
+. 
+These calculations have been extended to the other return periods listed in Table 
+AQ.32 and the results are summarised in Table AQ.33. 
+ 
+10 The flood level then drops due to the fall in water level in the river and as the pumps ‘catch up’ 
+with the floodwaters. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+84 
+Table AQ.33: Flood Depths (d) by Hazard Zone by Return Period 
+Hazard Zone Return Period (years) (Peak Water Level) 
+(Ground Level) 750 (7.30m) 1,000 (7.40m) 1,500 (7.55m) 2,000 (7.65m) 
+A (<3m) 0.09m (flowing) 
+0.00m (still) 
+0.11m (flowing) 
+0.75m (still) 
+0.15m (flowing) 
+3.25m (still) 
+0.17m (flowing) 
+4.85m (still) 
+B (3 - 5.5m) 0.09m (flowing) 
+0.00m (still) 
+0.11m (flowing) 
+0.00m (still) 
+0.15m (flowing) 
+1.25m (still) 
+0.17m (flowing) 
+2.85m (still) 
+C (>5.5m) 0.09m (flowing) 
+0.00m (still) 
+0.11m (flowing) 
+0.00m (still) 
+0.15m (flowing) 
+0.00m (still) 
+0.17m (flowing) 
+0.7m (still) 
+Flood Velocity 
+For the areas which are flooded, a relatively low flood velocity of 0.5 m/sec has 
+been assumed. For the flowing waters, the velocities have been calculated 
+based on the information presented in the FRA. 
+Table AQ.34: Flood Velocities by Hazard Zone in Tripcock Point by Return Period 
+Return Period (years) 
+Hazard Zone 750 1,000 1,500 2,000 
+All 1.53 m/sec 2.16 m/sec 3.05 m/sec 3.60 m/sec 
+Source: Based on calculations presented in Appendix G, FRA (Scott Wilson, 2004). 
+Debris Factor 
+For the purpose of this analysis, the debris factor (DF) (for flowing waters only) 
+has been taken as zero for the 750 year event, as 0.5 for the 1,000 year event 
+and 1 for the more extreme events. It is considered that under the relatively 
+high velocities for the more extreme events, significant amounts of debris 
+would be expected to be carried by the floodwaters. 
+Hazard Rating 
+The equation for ‘hazard rating’, HR, is: HR = d x (v + 0.5) + DF 
+Substituting the values derived above enabled Table AQ.35 to be constructed 
+for both flowing waters and still waters. The hazard rating selected for further 
+analysis was taken as the maximum of these two values. 
+Table AQ.35: Hazard Rating (HR) by Hazard Zone and by Return Period 
+Return Period (years) 
+Hazard Zone 
+750 1,000 1,500 2,000 
+All (flowing) 0.18 0.80 1.53 1.70 
+A (still) 0.00 0.75 3.25 4.85 
+B (still) 0.00 0.00 1.25 2.85 
+C (still) 0.00 0.00 0.00 0.70 
+A (max) 0.18 0.80 3.25 4.85 
+B (max) 0.18 0.80 1.53 2.85 
+C (max) 0.18 0.80 1.53 1.70 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+85 
+AQ.3.4 Area Vulnerability 
+Flood Warning 
+As detailed in the main text, the score for flood warning is on the scale 1 (good 
+warning system) to 3 (no warning system). For this case study, it will be 
+assumed that given the importance of flood warnings for the River Thames, the 
+Agency has met all of its targets (by 2060) in respect of flood warning. On this 
+basis, a flood warning score of 1 has been awarded. 
+Speed of Onset 
+For the Thames Estuary, there will be many hours warning of an imminent 
+extreme high tide and the flooding of the south-eastern part of the site will take 
+place over a few hours (i.e. during the peak of the tide cycle). On this basis, the 
+speed of onset11 of flooding is assumed to be ‘gradual’ which attracts a score of
+2. 
+Nature of Area 
+Based on a consideration of the distribution of properties by hazard zone, Zone 
+A is considered to be a typical medium risk residential area which attracts a 
+score of 2. Zone B is a mixed area with medium density housing (including 
+some apartments) and commercial uses which, again, is assigned a score of 2. 
+Zone C is a mix of high./medium density housing including many multi-storey 
+apartment blocks. On this basis, Zone C is considered to be a low risk area 
+which attracts a score of 1. 
+Area Vulnerability Score 
+The Area Vulnerability (AV) score is then the sum of the above factors to give 
+AV = 5 for Zones A and B and 4 for Zone C. 
+ 
+AQ.3.5 People Vulnerability 
+Long Term Illness 
+ 
+Based on statistics for the Thamesmead Moorings Ward (of Greenwich), 14.5% 
+of the population have a limiting long-term illness (and/or disability). 
+The Very Old 
+ 
+Based on statistics for the Thamesmead Moorings Ward, only 2.7% of the 
+population are 75 or over. 
+ 
+11 Note that the ‘speed’ of onset is not the same as the ‘speed’ of the flood waters (which has 
+already been considered above ‘flood velocity’). 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+86 
+People Vulnerability Score 
+The people vulnerability (PV) score is simply the sum of the above factors to 
+give PV = 17.2%. For comparison, the national figures are 18.2% and 7.6% 
+respectively to give a combined score of 25.8%. As such, those at risk are less 
+vulnerable than the general population. 
+AQ.3.6 Numbers of Injuries and Fatalities. 
+Numbers of Injuries 
+For each hazard zone and each event, an estimate of the numbers of injuries 
+(Ninj) can be made using the formula: 
+Ninj = 2 x Nz x HR x AV/100 x PV 
+The results are summarised in Table AQ.36. This shows that for the 750 year 
+event, only 7 injuries would be expected, whilst for the 2,000 year event over 
+100 injuries would be expected. 
+Table AQ.36: Number of Injuries (Ninj) by Hazard Zone and by Return Period 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 750 1,000 1,500 2,000 
+A 590 1.8 8.1 33.0 49.2
+B 419 1.3 5.8 11.0 20.5
+C 1299 4.0 17.9 34.2 37.9
+All 2308 7 32 78 108
+Numbers of Injuries/Year 
+The average rate of injuries is based on both the numbers of injuries per event 
+(i.e. as above) and the frequency of the events. Numerically, the numbers of 
+injuries per year is: 
+ Ninj/per year = ∑ (df x Ninj) 
+The associated calculations are presented in Table AQ.37. For this analysis, it 
+was assumed that no overflow of the defences occurred in a 1 in 500 year event. 
+Table AQ.37: Number of Injuries/Year by Hazard Zone 
+Return Period (years) 500 750 1,000 1,500 2,000 All 
+events 
+Frequency (f) (per 
+year) 2.0E-03 1.3E-03 1.0E-03 6.7E-04 5.0E-04 
+Frequency interval (df) - 6.7E-04 3.3E-04 3.3E-04 1.7E-04 
+Zone A (df x Ninj) 0 1.2E-03 2.7E-03 1.1E-02 8.2E-03 2.3E-02
+Zone B (df x Ninj) 0 8.6E-04 1.9E-03 3.7E-03 3.4E-03 9.9E-03
+Zone C (df x Ninj) 0 2.7E-03 6.0E-03 1.1E-02 6.3E-03 2.6E-02
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+87 
+Numbers of Fatalities 
+For each hazard zone and each event, an estimate of the numbers of fatalities 
+(Nf) can be made using the formula: 
+Nf = Ninj x 2 x HR/100 
+The results are summarised in Table AQ.38. This shows that for the 750 year 
+event, no fatalities would be expected, whilst for the 2,000 year event around 7 
+fatalities would be expected. 
+Table AQ.38: Number of Fatalities (Nf) by Hazard Zone and by Return Period 
+Hazard Return Period (years) 
+Zone 
+No. at Risk 
+(Nz) 750 1,000 1,500 2,000 
+A 590 0.01 0.13 2.14 4.77 
+B 419 0.00 0.09 0.34 1.17 
+C 1299 0.01 0.29 1.04 1.29 
+All 2308 0.0 0.5 3.5 7.2
+Numbers of Fatalities/Year 
+In the same way as for injuries, the average rate of fatalities is based on both the 
+numbers of fatalities per event (i.e. as above) and the frequency of the events. 
+Numerically, the numbers of fatalities per year is: 
+Nf/per year = ∑ (df x Nf) 
+The associated calculations are presented in Table AQ.39. As before, it was 
+assumed that no overflow of the defences occurred in a 1 in 500 year event. 
+Table AQ.39: Number of Fatalities/Year by Hazard Zone 
+Return Period (years) 500 750 1,000 1,500 2,000 All 
+events 
+Frequency (f) (per 
+year) 2.0E-03 1.3E-03 1.0E-03 6.7E-04 5.0E-04 
+Frequency interval (df) - 6.7E-04 3.3E-04 3.3E-04 1.7E-04 
+Zone A (df x Nf) 0 4.3E-06 4.4E-05 7.1E-04 8.0E-04 1.6E-03
+Zone B (df x Nf) 0 3.1E-06 3.1E-05 1.1E-04 2.0E-04 3.4E-04
+Zone C (df x Nf) 0 9.5E-06 9.6E-05 3.5E-04 2.1E-04 6.7E-04
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+88 
+AQ.3.7 Measures of Risk & Acceptability 
+Introduction 
+For mapping purposes, consideration is given to two measures of risk: 
+• societal risk - where this is represented by the average numbers of injuries 
+per year per square kilometre; and 
+• individual risk - where this is represented by the average level of risk 
+amongst those at risk. 
+These measures enable some conclusions to be drawn to the acceptability of the 
+risk and the implications for land-use planning. 
+Societal Risk 
+The measure of societal risk = 100 x Ninj/year / Zone Area (ha) = 
+Ninj/year/km2
+The associated calculations are summarised in Table AQ.40. 
+Table AQ.40: Tripcock Point Societal Risk Calculations 
+Zone Ninj/year Area (ha) Ninj/yr/ha Ninj/yr/km2
+A 2.3E-02 9.5 2.4E-03 0.24
+B 9.9E-03 6.5 1.5E-03 0.15
+C 2.6E-02 18.0 1.5E-03 0.15
+Source: Ninj/year from Table AQ./ and areas from SAQ.3.1 
+Individual Risk 
+The average individual risk (by zone) = Nf/year / Number of people at risk (Nz) 
+The associated calculations are summarised in Table AQ.41. 
+Table AQ.41: Tripcock Point Individual Risk Calculations 
+Zone Nf/year Nz Individual Risk 
+A 1.6E-03 590 2.6E-06 
+B 3.4E-04 419 8.1E-07 
+C 6.7E-04 1299 5.1E-07 
+Source: Nf/year from Table AQ./ and Nz from Table AQ./ 
+Acceptability of Individual Risk 
+The level of individual risk (IR) within each of the three zones in Tripcock 
+Point is below the suggested risk criterion of 1 chance in 100,000 (1.0E-05) per 
+year of being killed in a flood event. As such the level of risk is tolerable. 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+89 
+Application of Societal Risk Criterion 
+The proposed societal risk criterion is that: the number at risk x level of 
+individual risk < 1 x 10-3
+ per year. As such, the maximum number at risk 
+should be less than 1.0E-03/individual risk. The results of applying this 
+criterion are shown in Table AQ.42. 
+Table AQ.42: Determination of Maximum Numbers of People
+Parameter Zone A Zone B Zone C 
+Level of individual risk (100% occupancy) 2.6E-06 8.1E-07 5.1E-07
+Maximum number of people permitted 379 1227 1944
+Maximum number of houses permitted 151 491 778
+Resultant Planning Advice (based on Risk Criteria) 
+Application of the risk criteria results in the advice summarised in Table AQ.43. 
+Table AQ.43: Planning Advice based on Risk Criteria 
+Risk Criterion Area A Area B Area C 
+Residential development permitted Individual Risk Industrial/commercial development permitted 
+Societal Risk Maximum of 379 
+people (151 houses) 
+Maximum of 1227 
+people (491 houses) 
+Maximum of 1944 
+people (778 houses) 
+Resultant Planning Advice 
+Since the current proposals indicate 590, 419 and 1299 people in 
+ground floor accommodation/premises in Zones A, B and C 
+respectively, there is some ground for concern in Zone A (as the 
+proposed population exceeds that determined from the suggested 
+societal risk criterion) 
+AQ.3.8 References 
+Scott Wilson (2004): Tripcock Point, Thamesmead Development - Flood Risk 
+Assessment, report prepared for Tilfen Land and dated October 2004. 
+Tilfen Land (2003): Tripcock Point Planning Statement, Rev A dated November 
+2003 and associated information with particular reference to Drawing TFN 
+001/102 Rev A (Residential Density Plan). These and related documents are 
+available from www.tilfenland.co.uk. 
+ 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+90 
+AQ.4. Summary of Results 
+The overall results are summarised in Table AQ.44. 
+Table AQ.44: Summary of Results 
+Area Zone Nz Ninj/yr/km2 Individual 
+Risk1
+A 201 4.8 3.5E-05 
+North Cliffe B 20 2.6 1.8E-05 
+C 13 1.4 1.0E-05 
+A 480 4.8 1.3E-05 
+South Cliffe B 85 2.2 4.9E-06 
+C 56 1.2 2.4E-06 
+A 689 17 5.2E-04 Hull 
+B 1245 28 1.6E-04 
+A 590 0.24 2.6E-06 
+Tripcock Point B 419 0.15 8.1E-07 
+C 1299 0.15 5.1E-07 
+Note: Individual Risk is the average chance of becoming a fatality per year. 
+By inspection of Table AQ.44, it can be seen that there is broad ranking of areas 
+by risk from Tripcock Point (the lowest risk) through Cliffe to Hull (the highest 
+risk). These results suggest that the following basis could be used to map risk 
+on both an individual and societal basis using the criteria shown in Table 
+AQ.45. 
+Table AQ.45: Suggested Mapping Criteria 
+Level of Risk Societal Risk 
+(as Ninj/yr/km2) 
+Individual Risk 
+(as Nf/yr/Nz) 
+Significant >3 >1.0E-05 
+Medium 0.3 - 3 1.0E-6 - 1.0E-05 
+Low <0.3 <1.0E-6 
+If these criteria are applied, the summary of results would appear as shown in 
+Table AQ.46. 
+ 
+Table AQ.46: Levels of Risk within Case Study Areas 
+Area Zone(s) Level of Societal Risk Level of Individual Risk 
+A Significant Significant 
+North Cliffe B Medium Significant 
+C Medium Medium 
+A Significant Significant South Cliffe 
+B & C Medium Medium 
+Hull A & B Significant Significant 
+A Low Medium Tripcock Point B & C Low Low 
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+91 
+Appendix 3 Example Calculation Sheets 
+Riskville example 
+14th February 2005
+Prob (Event 1) 5.0%
+Distance from river/ coast 
+(m) N(Z)
+Typical depth, 
+d (m)
+Typical velocity, v 
+(m/sec)
+Debris factor 
+(DF)
+Hazard 
+rating = 
+d(v+0.5) + DF
+0-50 25 1 1 1 2.50
+50-100 50 0.25 1 1 1.38
+100-250 300 0 0 0 0
+250-500 1000 0 0 0 0
+500-1000 2500 0 0 0 0
+3875
+Distance from river/coast 
+(m)
+Flood 
+warning Speed of onset Nature of area
+Sum = area 
+vulnerability
+0-50 2.15 3 2 7.15
+50-100 2.15 2 1 5.15
+100-250 2.15 2 3 7.15
+250-500 2.15 1 2 5.15
+500-1000 2.15 1 2 5.15
+Generating X (% of people at risk)
+Area vulnerability
+Distance from river/coast 
+(m) N(Z)
+Hazard rating 
+(HR) (AV) X = HR x AV N(ZE)
+0-50 25 2.5 7.15 18% 4
+50-100 50 1.375 5.15 7% 4
+100-250 300 0 7.15 0% 0
+250-500 1000 0 5.15 0% 0
+500-1000 2500 0 5.15 0% 0
+Sum 3875 8
+Note: N(Z) is the population in each hazard zone
+N(ZE) is the number of people exposed to the risk in each hazard zone
+Distance from river/coast 
+(m) N(Z)
+Factor 1 (% 
+very old)
+Factor 2 (% 
+Disabled or infirm) Y 
+0-50 25 15% 10% 25%
+50-100 50 10% 14% 24%
+100-250 300 12% 10% 22%
+250-500 1000 10% 15% 25%
+500-1000 2500 15% 20% 35%
+Sum 3875
+Distance from river /coast 
+(m)
+N(ZE) Table 
+6.3 Y = 1 + 2 (as %)
+No. of injuries = 2 * 
+Y * N(ZE)
+Fatality rate 
+= 2 x HR No. of deaths
+0-50 4 25% 2 5% 0
+50-100 4 24% 2 3% 0
+100-250 0 22% 0 0% 0
+250-500 0 25% 0 0% 0
+500-1000 0 35% 0 0% 0
+All 8 4 0
+
+R&D OUTPUTS: FLOOD RISKS TO PEOPLE: PHASE 2 FD2321/TR1
+92 
+
+PB 11545
+Nobel House, 
+17 Smith Square, 
+London SW1P 3JR
+www.defra.gov.uk

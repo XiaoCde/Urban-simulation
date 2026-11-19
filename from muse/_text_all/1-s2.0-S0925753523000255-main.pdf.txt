@@ -1,0 +1,1530 @@
+Safety Science 161 (2023) 106083
+Available online 8 February 2023
+0925-7535/© 2023 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC-ND license (http://creativecommons.org/licenses/bync-nd/4.0/).
+Investigating pedestrian behavioral patterns under different floodwater 
+conditions: A video analysis on real flood evacuations 
+Enrico Quagliarini a
+, Guido Romano a
+, Gabriele Bernardini a,* 
+a DICEA Dept, Universita ` Politecnica delle Marche, via di Brecce, Bianche 60131, Ancona, Italy 
+ARTICLE INFO 
+Keywords: 
+Behavioral design 
+Evacuation 
+Flood 
+Human behaviors 
+Video analysis 
+Risk management 
+ABSTRACT 
+Understanding how people behave during emergencies is fundamental to improve their safety. In the case of 
+flood evacuation, people have to deal with built environments extremely modified by the floodwaters and that 
+hence influences human-environment interactions both from a qualitative and quantitative standpoint. In this 
+sense, the observation of real events is fundamental to define behavioral patterns and their relation to floodwater 
+conditions. To this end, in this work, we analyzed 139 videotapes of recent real-world flood evacuations in 
+outdoor Built Environments involving about 1000 people all over the World (the largest set analyzed so far). The 
+frequencies of behavioral patterns are associated with water depth (measured with respect to ankles, knees, and 
+waist), flow (i.e., still or flowing), and evacuation phase in which they are observed (that is before, during, and 
+after the evacuation). Specific factors like voluntariness, human response, and presence of reference elements in 
+the flooded built environment are also considered. Frequent by-literature behaviors have been considered, and 
+new-noticed ones have been assessed. Results unveil that the most frequent floodwater conditions and thresholds 
+to trigger each behavior concern waters between the ankles and the waist, thus excluding slight and extreme 
+interactions with floodwater. The retrieved behavioral patterns could be employed to develop and validate 
+behavioral models for flood evacuation simulators, and to create critical scenarios for people’s training. 
+Furthermore, they trace quick insights to help safety planners in the design of risk-reduction measures also 
+considering local and/or temporary risks due to the floodwater conditions. 
+1. Introduction 
+In recent years, as a consequence of factors like the climate change 
+and the growing urbanization and densification of urban areas (Grahn & 
+Jaldell, 2019; Lan et al., 2022; Santoro et al., 2022), floods emerged as 
+the most disastrous natural hazards around the world both in terms of 
+the number of events and people affected (World Health Organization, 
+2014). Recent studies revealed that, globally, flood events and related 
+deaths are on a rising trend: more than 2 billion people were affected by 
+floods in the last 25 years1
+, of which 6171 only in 2020 (representing 42 
+% of annual deaths from natural disasters (UNDRR, 2021)). The majority 
+of those fatalities are due to drowning2 and occur in outdoor built environments, while people attempt to move in floodwaters, either on foot 
+or by vehicles (Hamilton et al., 2020; Petrucci et al., 2019; Salvati et al., 
+2018; Xia et al., 2011). When catastrophic events occur, evacuation 
+operations may become necessary due to the failure of risk-reduction 
+solutions, or to unpreparedness, unwillingness, or difficulty by public/ 
+private entities in implementing them and ensuring their effectiveness 
+(Abass et al., 2022; Bischiniotis et al., 2020; Grahn & Jaldell, 2019; S. Li 
+et al., 2020; Rezende et al., 2019). 
+In such critical circumstances, dynamic interactions between people 
+and floodwaters become unavoidable, and understanding their influence on evacuation behaviors assumes a key role in view of planning and 
+developing sustainable risk-reduction measures for people’s safety 
+(Alonso Vicario et al., 2020; Kvoˇcka et al., 2016; Musolino et al., 2022). 
+Most research approaches generally take advantage of traditional laboratory tests, involving the use of mannequins, equipped volunteers or 
+stuntmen, and controlled floodwater conditions that do not fully 
+represent the complexity of real flood events (Bae et al., 2016; Bernardini et al., 2020; Dias et al., 2021; Lee et al., 2019; Milanesi et al., 2015; 
+Xia et al., 2014, 2016). Conversely, still few studies concern behavioral 
+analysis involving people in real emergencies (Bernardini, Camilli, et al., 
+2017; Bernardini, Postacchini, et al., 2017; Chanson et al., 2014; 
+* Corresponding author. 
+E-mail address: g.bernardini@univpm.it (G. Bernardini). 1 https://www.who.int/health-topics/floods and https://public.emdat.be/mapping (Accessed: 16/06/2022). 2 https://www.who.int/news-room/fact-sheets/detail/drowning (Accessed: 01/03/2022). 
+Contents lists available at ScienceDirect 
+Safety Science 
+journal homepage: www.elsevier.com/locate/safety 
+https://doi.org/10.1016/j.ssci.2023.106083 
+Received 12 July 2022; Received in revised form 10 January 2023; Accepted 24 January 2023 
+
+Safety Science 161 (2023) 106083
+2
+Milanesi et al., 2016). Works concerning other kinds of disasters like 
+fires, earthquakes, and terrorist attacks have shown the potential and 
+increasing exploitation of videotapes of real evacuations to perform 
+situational analyses aimed at defining qualitative and quantitative 
+evacuation data (Arce et al., 2021; Bernardini & Quagliarini, 2021; 
+Haghani & Sarvi, 2018; van der Wal et al., 2021; Zhou et al., 2018). 
+In view of the above, the analysis of videotapes of real flood evacuations performed in this work aims at providing first insights into 
+causal relationships between human behaviors during flood emergencies and the floodwater features. In particular, we took advantage of 
+qualitative data to identify behavioral patterns as a function of the flood 
+situational conditions, defined in terms of water depth and flow (i.e., 
+still or flowing water), and of reference elements within the built environment (e.g., buildings, furniture, vehicles, other people). This 
+research focuses on outdoor Built Environments (BEs) contexts, in view 
+of their aforementioned impact on people’s safety, by verifying the 
+frequency of both literature-based behaviors (see Section 2) and new 
+noticed ones, thanks to the application of well-established videotapes 
+analysis procedures (see Section 3) (Bernardini & Quagliarini, 2021). 
+The outcoming behavioral patterns are shown in Section 4 and discussed 
+in detail in Section 5 also in view of possible specific use by authorities, 
+safety planners, and software developers. 
+2. State of the art on flood evacuation behaviors 
+Despite the growing attention that this type of disaster is arousing in 
+the scientific community, in literature there is still a lack of clear definitions for flood risk (Nguyen et al., 2021). However, according to the 
+most popular definitions, floods can be defined as “an overflow of water 
+in areas that are usually dry caused by rising water escaped or released 
+from the normal confines of any lake, or any river, creek or other natural 
+watercourses whether or not altered or modified; or from any reservoir, 
+canal, dam, or drainage ditch” (Bromhead, 2021), or as a”ponding of 
+water at or near the point where the rain fell”
+3
+. 
+As for other kinds of disasters affecting urban BEs, flood evacuation 
+is characterized by different types of behaviors according to which three 
+main evacuation phases are generally distinguished (Bernardini & 
+Quagliarini, 2021; Nakanishi et al., 2019; Wang et al., 2021): (1) a premovement phase, involving behaviors performed before the evacuation 
+starting that generally concerns the recognition/evaluation of the hazard, and are still unrelated with searching and reaching a safe area (e.g., 
+trying to save other people or personal belongings, spending time 
+recording with smartphones); (2) a motion towards the evacuation target 
+phase, referred to the actual physical evacuation of people from the 
+flooded areas; (3) a post-evacuation phase at the end of the motion process, after the arrival to a safe area. 
+Previous studies identify several factors leading or forcing people to 
+take part in a flood evacuation (by foot or vehicle, that is pedestrians or 
+drivers), thus exposing them to potentially dangerous (deadly) interactions with the floodwaters. Such interactions can be deliberately 
+chosen or passively suffered by people (Diakakis, 2020). The voluntariness to come in contact with floodwaters as a result of a decision can be 
+traced back to human factors (Wang et al., 2021), involving people’s 
+physical, psychological, cognitive, motivational, and social features. The 
+main factors refer to: (a) the experience with previous floods (Freimund 
+et al., 2022; Tanaka & Shimomura, 2021); (b) the preparedness to cope 
+with similar emergencies (Freimund et al., 2022; Sadeghi-Pouya et al., 
+2017); (c) the familiarity with the environment and the eventual 
+knowledge of safe evacuation plans/sites (Freimund et al., 2022; 
+Sadeghi-Pouya et al., 2017); (d) the perception of risk, as well as the 
+trust and attitude towards public authorities and rescuers (Mahdavian 
+et al., 2020; Santoro et al., 2022; Yari et al., 2021); (e) the expected 
+personal impact basing on self-confidence, “heroism”, and personal 
+skills (e.g., swimming, escaping, requesting help) (Gissing et al., 2016; 
+Yari et al., 2021); (f) people’s age, gender, health, foot size, height, body 
+shape, mass, abilities/impairments, geographical area, cultural background, education level, socio-economic status, and occupational duty 
+(Gomes et al., 2022; Mallick et al., 2022; Na & Grace, 2022; Nakanishi 
+et al., 2019; Rufat & Botzen, 2022). 
+On the other hand, environmental factors can impose additional risks 
+when the floodwater conditions are such to prevent people from 
+Nomenclature 
+BE Built Environment 
+PM “Pre-Movement” phase 
+PM1 Pre-Movement Behavior #1: Attachment to belongings 
+PM2 Pre-Movement Behavior #2: “Curiosity” effect (“flood 
+tourism”) 
+M “Motion towards the evacuation target” phase 
+M1 Motion towards the evacuation target Behavior #1: 
+Attraction towards safe areas 
+M2 Motion towards the evacuation target Behavior #2: 
+Attraction towards unmovable obstacles 
+M3 Motion towards the evacuation target Behavior #3: Fear of 
+moving elements 
+M4 Motion towards the evacuation target Behavior #4: 
+Increased guide effect 
+M5 Motion towards the evacuation target Behavior #5: 
+Moving through the water with vehicles 
+M6 Motion towards the evacuation target Behavior #6: Social 
+influence and group phenomena 
+M7 Motion towards the evacuation target Behavior #7: 
+Floodwaters effects on motion speed 
+M8 Motion towards the evacuation target Behavior #8: 
+Human body instability 
+M9 Motion towards the evacuation target Behavior #9: 
+Clinging to ropes and arranging “human chains” 
+PE “Post-Evacuation” phase 
+PE1 Post-Evacuation Behavior #1: Reaching temporary safe 
+areas 
+PE2 Post-Evacuation Behavior #2: Reaching indoor safe areas 
+PE3 Post-Evacuation Behavior #3: Reaching outdoor safe areas 
+A Water up to the ankles 
+K Water up to the knees 
+W Water up to the waist 
+HW Water higher than the waist 
+S Still water 
+F Flowing water 
+PO [pp] People overall 
+PI [pp] People involved 
+PId [pp] People involved per water depth 
+PIf [pp] People involved per water flow 
+PId,f [pp] People involved per floodwater conditions 
+PI/PO*100 [%] Overall frequency 
+PId/PI*100 [%] Situational frequency (with respect to the water 
+depth) 
+PIf/PI*100 [%] Situational frequency (with respect to the water 
+flow) 
+PId,f/PId*100 [%] Situational frequency per water depth (with 
+respect to the water flow given the same water depth) 
+3 https://www.weather.gov/mrx/flood_and_flash (Accessed: 11/10/2022). 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+3
+performing the desired behaviors (Chanson & Brown, 2018; Wang et al., 
+2021). Correlations between floodwater conditions and walking behaviors and quantities (e.g., speed, trajectory, step frequency, lateral 
+swaying, instability thresholds) generally highlight how the increase in 
+water depth and speed: (a) slows down pedestrians’ desired evacuation 
+speed (Bernardini et al., 2020; Dias et al., 2021; Lee et al., 2019; Ishigaki 
+et al., 2009); and (b) triggers the main mechanism of instability, namely 
+sliding (that is more frequent with high speed above the knees waters), 
+and toppling (that is more common when the water depth approaches 
+the height of the waist) (Chanson et al., 2014; Milanesi et al., 2015; Xia 
+et al., 2014; Yee, 2003). 
+In view of this general behavioral framework, Table 1, Table 2, and 
+Table 3 resume the most relevant and frequent by-literature behaviors 
+according to the evacuation phase in which they are observed. To 
+Table 1 
+List of frequent by-literature human behaviors observed in the “pre-movement” phase, and their classification according to type, voluntariness, human response, and 
+reference elements. 
+ID Behavior and Definition Type Voluntariness Human 
+Response 
+Reference 
+Elements 
+References 
+PM1 Attachment to belongings: before starting the evacuation 
+pedestrians try to save personal belongings (including animals, 
+vehicles, and excluding other individuals) once they are aware of 
+the hazard in terms of floodwater conditions and damages 
+Common Deliberately 
+Chosen 
+Hazardous 
+Behavior 
+Environmental 
+Elements 
+(Bernardini, Camilli, et al., 
+2017; Diakakis, 2020; 
+Petrucci et al., 2018) 
+PM2 “Curiosity” effect (“flood tourism”): pedestrians delay the 
+evacuation starting since they spend time looking at floodwater 
+conditions and recording with smartphones or cameras 
+Peculiar Deliberately 
+Chosen 
+Hazardous 
+Behavior 
+– (Bernardini, Camilli, et al., 
+2017; Diakakis, 2020; 
+Petrucci et al., 2018) 
+Table 2 
+List of frequent by-literature human behaviors observed in the “motion towards the evacuation target” phase, and their classification according to type, voluntariness, 
+human response, and reference elements. 
+ID Behavior and Definition Type Voluntariness Human 
+Response 
+Reference 
+Elements 
+References 
+M1 Attraction towards safe areas: pedestrians (try to) move towards 
+safe areas, or considered as such, to restore adequate safety 
+conditions (e.g., areas with lower levels of damage, lower 
+floodwaters depth) 
+Common Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+(Bernardini, Camilli, et al., 
+2017; Petrucci et al., 2018) 
+M2 Attraction towards unmovable obstacles: pedestrians prefer to 
+move towards (and along) elements that cannot be dragged by 
+the floodwaters, looking for physical support (e.g., walls, street 
+signals, trees, fences) 
+Peculiar Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+(Bernardini, Camilli, et al., 
+2017) 
+M3 Fear of moving elements: pedestrians prefer to move far from 
+floating objects dragged by the floodwaters (e.g., debris, 
+vehicles, bins) 
+Peculiar Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+(Bernardini, Camilli, et al., 
+2017) 
+M4 Increased guide effect: pedestrians benefit from the presence of 
+rescuers and/or evacuation leaders thus improving the 
+evacuation process (e.g..: choosing appropriate behaviors and 
+evacuation directions, increasing motion speeds) 
+Common Deliberately 
+Chosen 
+Protective 
+Behavior 
+Human Elements (Bernardini, Camilli, et al., 
+2017) 
+M5 Moving through the water with vehicles: drivers prefer still moving 
+through the floodwaters with vehicles (including cars, 
+motorcycles, buses, bikes, and excluding fire trucks) rather than 
+moving on foot 
+Peculiar Deliberately 
+Chosen 
+Hazardous 
+Behavior 
+– (Arrighi et al., 2015; Diakakis, 
+2020; Hamilton et al., 2016; 
+Petrucci et al., 2018) 
+M6 
+* 
+Social influence and group phenomena: pedestrians move in 
+groups, activate herding behaviors, share information, and 
+perform pro-social actions (e.g., try to rescue other individuals) 
+Common Deliberately 
+Chosen 
+Protective 
+Behavior 
+Human Elements (Bernardini, Camilli, et al., 
+2017; Diakakis, 2020) 
+M7 
+* 
+Floodwaters effects on motion speed: pedestrians are slowed down 
+by floodwaters depending on the water depth and flow 
+Peculiar Passively 
+Suffered 
+– – (Bernardini, Camilli, et al., 
+2017; Cox et al., 2010; Ishigaki 
+et al., 2009) 
+M8 
+* 
+Human body instability: pedestrians experience instability 
+problems due to the water depth and flow 
+Peculiar Passively 
+Suffered 
+– – (Bernardini, Camilli, et al., 
+2017; Cox et al., 2010; Milanesi 
+et al., 2016) 
+* Although the marked behaviors can be generally observed during all the evacuation phases, previous works’ evidence shows significant relevance for what 
+concerns the “motion towards evacuation target” phase (Bernardini, Camilli, et al., 2017). However, these findings were also confirmed during preliminary video 
+observations made early in this study. 
+Table 3 
+List of frequent by-literature human behaviors observed in the “post-evacuation” phase, and their classification according to type, voluntariness, human response, and 
+reference elements. 
+ID Behavior and Definition Type Voluntariness Human 
+Response 
+Reference 
+Elements 
+References 
+PE1 Reaching temporary safe areas: pedestrians reach temporary safety in 
+spontaneous areas waiting for rescuers (e.g., vehicle roofs, trees), and 
+eventually restart the evacuation motion 
+Common Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+(Bernardini, Camilli, 
+et al., 2017; Petrucci 
+et al., 2018) 
+PE2 Reaching indoor safe areas: pedestrians reach safety at the upper levels 
+of buildings, including non-strictly indoor areas like building roofs, 
+terraces, and balconies to be reached by rescuers. 
+Peculiar Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+(Adrian et al., 2019; 
+Petrucci et al., 2018) 
+PE3 Reaching outdoor safe areas: pedestrians reach safety on raised areas 
+and street furniture (e.g., benches, sidewalks, raised platforms) 
+Peculiar Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+(Bernardini, Camilli, 
+et al., 2017) 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+4
+properly focus on evacuation tasks, the collected behaviors refer to the 
+ones of people exposed to flood, by excluding mandatory behaviors due 
+to occupational duty, such as the ones of rescuers (Diakakis, 2020), and 
+by indifferently including both flash floods and slow-onset floods 
+regardless of their cause or source (Hamilton et al., 2020). Behaviors are 
+listed in alphabetical order, and they are associated with identification 
+codes (ID in Table 1, Table 2, and Table 3) composed by the main 
+reference to the related evacuation phase (that are: PM for pre-movement; 
+M for motion towards the evacuation target; and PE for post-evacuation) and 
+a number. For each behavior, when possible, Table 1, Table 2, and 
+Table 3 also provide: 
+• the type of emergency in which they are noticed, distinguishing 
+between peculiar behaviors that are characteristic only of the flood 
+evacuation, or common behaviors that are noticeable also in other 
+emergency conditions (Bernardini, Camilli, et al., 2017); 
+• the voluntariness in performing the behavior as a result of a decision, 
+as deliberately chosen or passively suffered (Diakakis, 2020); 
+• the people’s response against the hazard, in terms of protective 
+behavior directly aimed at saving their own and/or other’s lives, or 
+hazardous behavior (Petrucci et al., 2019); 
+• the required presence of reference elements for people to activate the 
+behavior, such as environmental elements (e.g., obstacles, debris, 
+urban furniture, tools furnished by rescuers), or human elements (i.e., 
+other evacuees or rescuers) (Bernardini, Camilli, et al., 2017). 
+The proposed behavioral database from Table 1, Table 2, and Table 3 
+have been used as a reference for the following video analysis introduced in Section 2. 
+Video-sharing platforms like YouTube, Twitter, Facebook, and 
+Instagram offer a huge and free database of emergency-related multimedia content already used for several applications concerning behavioral analyses, but only reliable sources should be taken into account (e. 
+g. mass-media channels, law enforcement agencies, rescuers, local authorities) (Bernardini & Quagliarini, 2021). Previous works also provided some flood monitoring, mapping, and modeling applications to 
+extract the event’s main features (i.e., floodwater depth, flow) from 
+images and videos through comparison with objects having known dimensions (e.g., pedestrians standing in the water, wheels of cars, road 
+signs) (Alizadeh Kharazi & Behzadan, 2021; Assumpç˜
+ao et al., 2018; Coz 
+et al., 2016; Feng et al., 2020; Kutija et al., 2014). However, even though 
+modern technologies allow detailed estimations, these kinds of approaches generally require long-time analyses and high-framing quality 
+multimedia content (Chaudhary et al., 2019; Feng et al., 2020). 
+Although videotapes analysis are consolidated, and detailed quantitative insights already explain “why” and “which” behaviors are performed (Bernardini, Camilli, et al., 2017; Milanesi et al., 2016), 
+literature works still demonstrate a general lack of explaining “how” 
+floodwater conditions qualitatively affect the pedestrians’ behaviors 
+(and so their bodies). In this sense, the following gaps should be 
+considered according to previous investigations: (a) the water depth in 
+relation to notable human body parts (namely the ankle, the knees, and 
+the waist) or vehicles parts (for drivers inside vehicles moving in the 
+floodwaters) (Bernardini et al., 2020; Dias et al., 2021; Feng et al., 2020; 
+Xia et al., 2014); and (b) the water flow by distinguishing between still 
+water and flowing water (that is zero and non-zero in terms of water 
+speed) (Cox et al., 2010; Milanesi et al., 2016). 
+3. Phases and methods 
+The work is organized in two steps, adapting a previous methodology 
+tested on terrorist acts and people’s behaviors (Bernardini & Quagliarini, 2021) to fit the flood evacuation scenarios analysis. The first step 
+concerns the videotapes collection and the definition of criteria on how 
+to classify the behaviors depending on the floodwater conditions (i.e., 
+water depth and flow), and the people involved (Section 3.1). Afterwards, the second step concerns the analysis of the behaviors and their 
+statistical frequency depending on the criteria introduced in the first 
+step task (Section 3.2). 
+In the overall process, even though previous literature approaches 
+suggest the use of the number of “scenes” or videotapes to evaluate the 
+frequency of each behavior (Bernardini & Quagliarini, 2021; van der 
+Wal et al., 2021), in this work, the frequency has been calculated 
+considering the number of people within the videotapes scenes in 
+combination with the floodwater and built environment conditions, 
+which is a measure of how much a given behavior is activated rather 
+than observed. In this way, the proposed approach also reduces the 
+possibility of a biased selection of the overall sample of assessed scenes, 
+mainly due to specific floodwater conditions more or less frequent in the 
+sample. Besides, it allows to separately evaluate how floodwaters conditions affect each person (i.e., same water depth but different body 
+parts submerged depending on the individual height). 
+Fig. 1. Videotapes general features in percentages terms according to: (a) the floodwater conditions (water depth and flow); (b) the geographic area; (c) the 
+groups’ dimensions. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+5
+3.1. Videotapes collection and organization 
+We analyzed 139 videotapes freely available on local news websites4 
+and verified YouTube and Twitter channels involving the clear presence 
+of people interacting (by foot or vehicles) with flooded outdoor BEs 
+scenarios from all over the World. The videotapes collection has been 
+carried out by searching in the search engine of the aforementioned 
+repositories the following keywords: “flood(ing)”, “urban flood(ing)”, 
+“flood(ing) evacuation”, “flooded areas” (where “floods” are assessed 
+according to the definitions provided in Section 2). The selected videotapes are identified by a number reported in curly brackets ({num}) 
+and are available at {Flood videotapes SafetyScience}. Each videotape 
+has been divided into one or more “scenes” characterized by the same 
+evacuation (i.e., floodwater) conditions (Bernardini et al., 2019; Bernardini & Quagliarini, 2021) in terms of the water depth and flow, in the 
+same built environment scenario. Fig. 1-A and -B resume the general 
+features (in percentage terms) of the collected videotapes database, 
+respectively in terms of floodwater conditions and geographic area 
+distributions. 
+In particular, considering floodwater conditions, the water depth - in 
+the following, referring to the subscript d - has been evaluated according 
+to the human body parts submerged by the flood, that is equal to or up to 
+ankles (A), knees (K), waist (W), and higher than the waist (HW) (Dias 
+et al., 2021; Feng et al., 2020; Xia et al., 2014). Such an approach ensures the quick application of such analysis on a wide sample by referring to critical body parts submerged by floodwaters, also in case of 
+different heights between the investigated individuals on the scene, 
+which can potentially affect the level of floodwater experienced and the 
+types of behaviors exhibited. However, although differences between 
+individuals can obviously exist due to anthropometric issues, in view of 
+the quantification of such body parts measures, such levels can be 
+roughly traced back to 0.10 m for the ankles, 0.40 m for the knees, and 
+0.90 m for the waist considering the average measures of an adult (Dias 
+et al., 2021). In particular, in the case of videotapes with adults-assisted 
+children (whose physiological measurements highly differ from adults), 
+the same approach was adopted and the adults’ body was considered as 
+a benchmark. This assumption is consistent with the adults’ active role 
+in children’s safety from both a physical and decisional point of view 
+(Haynes et al., 2017). Videotapes with only children were not found. For 
+what it concerns vehicles, the dimensions5 of wheels and car body have 
+been used to trace back the water depths to the four levels previously 
+defined. 
+The water flow - in the following, referring to the subscript f - has 
+Fig. 2. Illustration of all the floodwater conditions organized per water depth (rows) and water flow (columns), including related acronyms for subsample creation. 
+Numerical values are referred to adults (Dias et al., 2021). 
+Table 4 
+Parameters to quantify the number of people [pp] featured in the videotapes. 
+Parameters [pp] Meaning 
+PO - People overall The total number of people who could actually perform a given behavior (Fig. 2). The number of people has been also classified considering 
+the presence of reference elements if their presence is necessary to activate the behavior (e.g., the presence of unmovable obstacles to be 
+attracted by them). 
+PI - People involved Total number of people who perform a given behavior (Fig. 2). 
+PId - People involved per water depth Total number of people performing a given behavior under the same water depth, that is equal to or lower than the ankle, the knees, the waist, 
+or higher than the waist (d = [A; K; W; HW]). 
+PIf - People involved per water flow Total number of people performing a given behavior under the same water flow, that is still or flowing (f = [S; F]). 
+PId,f - People involved per floodwater 
+conditions 
+Total number of people performing a given behavior under the same floodwater conditions, that is combining the water depth and flow 
+conditions. 
+4 e.g.: https://www.ilfattoquotidiano.it/2021/07/15/germania-la-forzadel-fiume-esondato-nelle-strade-e-impressionante-lacqua-porta-via-le-autovideo/6262834/ (last accessed: 02/11/2022). 
+5 Cars’ dimensions have been estimated through the official web pages when 
+the models were recognizable, otherwise online sources like https://www. 
+pneumatici.it/calcolatrice-pneumatico were used to estimate the wheels 
+height depending on the cars’ model (e.g., city-cars, sedans, station-wagons, 
+SUVs, trucks…). 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+6
+been distinguished between still water (S) when the surface water seems 
+to be calm (speed close to zero) or not flowing,6 and flowing water 
+conditions (F) when the surface water speed is visibly different than zero 
+(traceable also with the aid of elements such as waves, dragged objects 
+within the videotapes) (Milanesi et al., 2016). All the floodwater conditions obtained by crossing the water depth and flow levels are resumed 
+in Fig. 2. 
+A total number of 1269 people have been inspected, distributed in 
+groups of up to 82 individuals, with a medium group dimension equal to 
+10 individuals. In particular, the number of people featured in each 
+scene has been organized according to the parameters shown in Table 4 
+and illustrated in Fig. 3. According to the original method adopted by 
+this work (Bernardini & Quagliarini, 2021), the following assumptions 
+were made: 
+• people not clearly and completely visible were not considered, as 
+well as those behind smartphones and cameras hypothetically 
+involved in “curiosity” effect behavior (PM2) since fundamental 
+factors such as if they are in a safer position and/or if they are reporters (thus filming for job reasons) are unknown. People filming 
+while evacuating were not found; 
+• moving through the water with vehicles (M5) were not considered in 
+relation to empty vehicles or with a not clearly visible presence of 
+people inside. In this case, the analysis of behaviors was performed in 
+relation to the number of vehicles (i.e., of drivers) crossing the 
+floodwater was considered, rather than considering the number of 
+passengers (Diakakis, 2020). 
+3.2. Behavioral patterns definition with respect to water depth and flow 
+The behavioral patterns definition has been performed by 
+considering frequent by-literature behaviors (those resumed in the previous Table 1, Table 2, and Table 3), and inquiring about new-noticed 
+ones, as suggested by the methodological reference work (Bernardini & 
+Quagliarini, 2021). In particular, the new-noticed behaviors have been 
+classified according to their related evacuation phase, type, voluntariness, human response, and presence of reference elements. 
+Then, the statistical frequencies of the observed behaviors (i.e., both 
+by-literature and new-noticed ones) have been calculated by considering 
+Fig. 3. Example of 2 pedestrians (on the left) performing attraction towards unmovable obstacles M2, while the pedestrian on the right is moving away from the 
+fence (the white arrow indicates his direction). The following parameters are considered in this scene: PO = 3, PI = 2, PIW = 2, PIW,S = 2 (reference videotape: {95}). 
+Table 5 
+Behaviors’ statistical frequencies and their meaning, evaluated with respect to 
+the number of people (according to Table 4) and the floodwater conditions (in 
+terms of water depth and flow). 
+Statistical Frequency percentage 
+[%] and related calculation 
+Meaning 
+Overall frequency PI/PO*100 Since this percentage is an expression of the 
+voluntariness in performing a given behavior, 
+it is only evaluated for deliberately chosen ones 
+(that is excluding behaviors M7 and M8 for 
+which the evaluation of PO strictly depends on 
+physical features not deducible through 
+images, such as the people’s age, gender, 
+health, foot size (Cox et al., 2010; Xia et al., 
+2014). 
+Situational frequencies PId/PI*100; 
+PIf/PI*100 
+These percentages show in which condition 
+the behaviors are more frequent respectively 
+in relation to the water depth and flow. Both 
+deliberately chosen and passively suffered 
+behaviors are considered. 
+Situational frequency per water depth 
+PId,f/PId*100 
+This percentage shows in which flow 
+conditions the behaviors are more frequent 
+given the same water depth, also in view of 
+comparisons with previous works’ general 
+trends depending on the human kinematics ( 
+Bernardini et al., 2020; Cox et al., 2010; Dias 
+et al., 2021; Milanesi et al., 2016). Both 
+deliberately chosen and passively suffered 
+behaviors are considered. 
+6 According to an expeditious approach, there is an inherent margin of error 
+due to image quality and perception. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+7
+overall and situational samples in relation to the number of people and 
+the floodwater conditions (i.e., the water depth and flow), as shown in 
+Table 5. Table 5 also resumes the assessed frequency percentage 
+depending on deliberately chosen and passively suffered behaviors, as 
+defined in Section 2. 
+Results are first discussed according to less and more frequent 
+floodwater conditions in which behaviors are observed, then inferential 
+statistical analyses are provided to assess relationships between situational frequencies. In particular, Chi-squared tests of independence are 
+performed for categorical data by considering 3 sets of values expression 
+of the performed behaviors and the specific conditions in which they 
+occur, namely: (a) Behaviors × Water depth (14 × 2); (b) Behaviors ×
+Water flow (14 × 4); (c) Behaviors × Water conditions (14 × 8) all of 
+which measured in terms of PI [pp] so as to consider only behaviors 
+actually performed (see Table 4). Finally, behavioral patterns are 
+defined with respect to the most frequent floodwater conditions. 
+4. Results 
+Results are organized in two sections: the first one discusses the 
+overall frequency PI/PO in relation to the overall sample (Section 4.1), 
+while the second one assesses the situational frequencies in relation to the 
+floodwaters’ depth and flow evaluated separately (PId/PI and PIf/PI) 
+and jointly (PId,f/PId) (Section 4.2). By-literature and new-noticed behaviors are discussed together. 
+4.1. Observed behaviors and their overall frequency 
+For what concerns new-noticed behaviors, 444 pedestrians have been 
+observed clinging to ropes and cables during their motion and eventually holding hands to arrange “human chains” (see Fig. 4), making it the 
+second most performed behavior in terms of PI [pp]. In general, such 
+responses allow for improving the evacuation process by mitigating 
+problems related to human speed and body instability in the floodwaters. Although some similarities are shared with other literature behaviors, the following main differences can be respectively noticed: 
+• while in attraction towards unmovable obstacles M2 pedestrians (try 
+to) reach supports, in this case, they can be reached by ropes and 
+cables on site, thus avoiding further dangerous movements in 
+floodwaters; 
+• differently from social influence and group phenomena M6, in this case, 
+physical contacts are not only widely accepted by pedestrians, but 
+also sought after. 
+Thus, this behavior will be referred to in the following as clinging to 
+ropes and arranging “human chains”, and can be classified as: (1) relevant 
+to the motion toward the evacuation target phase, as it concerns the actual 
+physical movement through and out of the flooded areas; (2) peculiar, as 
+it can be currently observed only for flood evacuations, at the authors’ 
+knowledge; (3) deliberately chosen, since it is performed as a result of a 
+decision; (4) protective, since it is aimed at improving the pedestrian 
+safety; (5) relying on environmental elements, as it depends on the presence of i.e. ropes and cables (even though partially also on the direct 
+support of rescuers or other pedestrians by means of their body within 
+the “human chain”). In view of the following behavioral analysis, 
+Table 6 resumes this classification according to the same layout as 
+Table 2, while Fig. 5 resumes all the behaviors considered for the 
+following proper video-analysis. 
+Fig. 6 resumes the Overall frequency PI/PO [%] of the observed behaviors (right y-axis) and the reference number of People Overall PO 
+[pp] as the sample dimension (left y-axis). 
+For what it concerns the behaviors of the pre-movement phase, results 
+confirm the tendency of people in performing hazardous behaviors before 
+starting a flood evacuation (Bernardini, Camilli, et al., 2017), as PI/PO is 
+Fig. 4. Panel A: a group of 4 pedestrians clinging to a rope (in brown) and arranging a human chain {48}. Panel B: a group of 15 pedestrians clinging to a rope and 
+arranging a “human chain” {17}. Jagged lines in blue indicate the waves. (For interpretation of the references to colour in this figure legend, the reader is referred to 
+the web version of this article.) 
+Table 6 
+New-observed behavior classified according to the evacuation phase, the type, 
+the voluntariness, the human response, and the reference elements. 
+ID Behavior 
+and 
+Definition 
+Type Voluntariness Human 
+Response 
+Reference 
+Elements 
+M9 Clinging to 
+ropes and 
+arranging 
+“human 
+chains”: 
+pedestrians 
+look for 
+physical 
+support by 
+grabbing 
+ropes and 
+eventually 
+holding 
+hands 
+Peculiar Deliberately 
+Chosen 
+Protective 
+Behavior 
+Environmental 
+Elements 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+8
+Fig. 5. Final picture of all the behaviors observed in the videotapes organized per evacuation phase, which integrates literature classifications. 
+Fig. 6. Overall frequency PI/PO [%] (colored bars; left y-axis) of deliberately chosen behaviors, and People Overall PO [pp] as the sample dimension (red circles; 
+right y-axis). (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.) 
+Table 7 
+Situational frequency percentages of the observed behaviors evaluated with respect to the water depth (PId/PI [%]) and the water flow (PIf/PI [%]). Behaviors IDs from 
+Fig. 5. 
+Post-evacuation Motion towards the evacuation target Post-evacuation 
+PM1 PM2 M1 M2 M3 M4 M5 M6 M7 M8 M9 PE1 PE2 PE3 
+PId/PI [%] 
+(Fig. 7) 
+ANKLES 32 47 33 20 0 32 75 23 29 19 20 0 2 73 
+KNEES 44 53 11 43 8 25 22 46 49 31 38 95 17 7 
+WAIST 14 0 56 33 92 32 0 29 16 37 38 0 66 20 
+HIGHER 11 0 0 5 0 10 3 2 6 13 4 5 15 0 
+PIf/PI [%] 
+(Fig. 8) 
+STILL 59 27 89 14 0 49 47 19 46 8 37 0 6 45 
+FLOWING 41 73 11 86 100 51 53 81 54 92 63 100 94 55 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+9
+higher than 90 % both for attachment to belongings PM1 and “curiosity” 
+effects PM2 on a sample of, respectively 72 and 173 PO. 
+As regards the motion towards the evacuation target phase, results 
+demonstrate that the presence of evacuation leaders, rescuers, and their 
+equipment (i.e., ropes and cables) almost always triggers behaviors like 
+increased guide effect M4, social influence and group phenomena M6, and 
+clinging to ropes and arranging “human chains” M9, as stated by PI/PO 
+close to 100 % (even if some exception may exist, for instance due to 
+factors like the lack of trust in authorities and warnings (Abass et al., 
+2022; Yari et al., 2021)). Furthermore, they also are the most observed 
+behaviors as they rank in the top three for the highest number of people 
+involved PI and people overall PO (both greater than 300 pp). Similarly, 
+also the other observed behaviors (attraction towards safe areas M1, 
+attraction towards unmovable obstacles M2, fear of moving elements M3, 
+and moving through the water with vehicles M5) recorded a high PI/PO, 
+although with smaller samples. 
+Finally, post-evacuation phase results seem to point out a slight, 
+overall preference for people in reaching indoor safe areas (PE2, PI/PO =
+100 % with PO = 139 pp) rather than outdoor (PE3, PI/PO = 87 % with 
+PO = 69 pp). 
+4.2. Statistical frequencies with respect to situational samples 
+Situational frequencies contextualize behavioral data with respect to 
+the floodwater conditions in which they are observed. General results 
+are resumed in Table 7 and Table 8. Inferential statistical outcomes are 
+shown in Table 9, according to the Chi-squared test. For all the 
+considered conditions, the test results prove how the performed behaviors can be considered as non-independent from the floodwater 
+situational conditions. Finally, in the following subsections behavioral 
+patterns are organized and discussed per evacuation phase. 
+4.2.1. Water depth influence 
+Fig. 7 shows the results concerning the situational frequency with 
+respect to water depth, thus regardless of the water flow. Considering 
+the evacuation phases, it is worthy of notice that: 
+• Pre-movement phase: “curiosity” effect PM2 has been observed only 
+with floodwaters lower than the knees, while attachment to belongings 
+PM1 phenomena result can be noticed for all the water depth 
+conditions; 
+• Motion towards evacuation target phase: moving through the water with 
+vehicles M5 is more frequent for water depths up to the ankles (PIA/ 
+PI = 75 %), essentially in view of the lower perception of risk in such 
+conditions. Behaviors (a) aimed at restoring the pedestrians’ safety 
+(attraction towards unmovable obstacles M2, increased guide effect M4, 
+social influence and group phenomena M6, clinging to ropes and arranging “human chains” M9) and (b) the ones producing dangerous effects on the pedestrians’ motion (floodwaters effects on motion speed 
+M7 and human body instability M8) have a similar frequency in each 
+condition, ranging from 20 to 40 %, while are less frequent for water 
+depth above the waist condition (PIHW/PI < 10 %). Fear of moving 
+Table 
+elements M3 is finally more frequent for water levels up to the waist, 
+8 
+Situational frequency percentages per water depth of the observed behaviors (PId,f/PId [%]). Behaviors IDs from Fig. 5, abbreviations from Fig. 2. 
+Post-evacuation Motion towards the evacuation target Post-evacuation 
+PM1 PM2 M1 M2 M3 M4 M5 M6 M7 M8 M9 PE1 PE2 PE3 
+S F S F S F S F S F S F S F S F S F S F S F S F S F S F 
+A 
+Fig. 10 
+29 71 55 45 100 0 6 94 – – 74 26 41 59 17 83 0 100 0 100 88 12 – – 100 0 61 39 
+K 
+Fig. 12 
+72 28 2 98 0 100 12 88 0 100 55 45 75 25 20 80 71 29 2 98 30 70 0 100 0 100 0 100 
+W 
+Fig. 14 
+56 44 – – 100 0 19 81 0 100 15 85 – – 18 82 31 69 5 95 15 85 – – 6 94 0 100 
+HW 
+Fig. 16 
+100 – – – – – 25 75 – – 61 39 0 100 36 64 100 0 43 57 50 50 0 100 0 100 – – 
+Table 9 
+Chi-squared test outcomes. For S > χ2 the null hypothesis is rejected and provide 
+support that the categories are related. DOF stays for Degree of Liberty. Significance level α is 0.05; p-values are < 0.00001 in all the cases. 
+Parameter 
+[pp] 
+CATEGORIES DOF Critical Chisquare χ2
+(α; DOF) 
+Pearson’s Chisquare S 
+PId Behaviors × Water 
+Depth 
+39 54.57 645.86 
+PIf Behaviors × Water 
+Flow 
+13 22.36 323.97 
+PId,f Behaviors × Water 
+Conditions 
+91 114.26 1459.51 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+10
+that is essentially when objects start floating and then are dragged by 
+floodwaters (compare also Section 4.2.2) (Xia et al., 2011). 
+• Post-evacuation phase: pedestrians generally prefer reaching outdoor 
+safe areas PE3 with floodwaters under the ankles (PIA/PI = 73 %), 
+and reaching indoor safe areas PE2 with higher depth values (PIW/PI 
+= 66 %). The possibility of reaching temporary safe areas PE1 is more 
+frequent for water depths between the ankles and the knees. In such 
+conditions, pedestrians are still able to move without suffering major 
+impediments (Bernardini, Camilli, et al., 2017; Dias et al., 2021). 
+4.2.2. Water flow influence 
+Fig. 8 shows the results concerning the situational frequency with 
+respect to water flow. Considering the evacuation phases, it is worthy of 
+notice that: 
+• Pre-movement phase: attachment to belongings PM1 is more frequent in 
+the case of still water, essentially because of lower possible floodwaters resistance against pedestrians’ motion. Vice versa, results 
+show that the “curiosity” effect PM2 seems more likely to be activated 
+with flowing water. Thus, such insight seems to suggest that 
+Fig. 7. Situational frequency PId/PI [%] (colored bars; left y-axis) of the observed behaviors evaluated with respect to the water depth levels, and People Involved PI 
+[pp] as the sample dimension (black rhombuses; right y-axis). Behaviors IDs from Fig. 5. 
+Fig. 8. Situational frequency PIf/PI [%] (colored bars; left y-axis) of the observed behaviors evaluated with respect to the water flow levels, and People Involved PI 
+[pp] as the sample dimension (black rhombuses; right y-axis). Behaviors IDs from Fig. 5. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+11
+pedestrians find the water depth more dangerous than its flowing 
+conditions, because, on the contrary, the situational frequency of this 
+behavior decreases with the increasing severity of the event in terms 
+of water depth (see PId/PI in Fig. 7). 
+• Motion towards evacuation target phase: protective behaviors are more 
+frequent with flowing water (PIF/PI > 80 %) suggesting: (a) a greater 
+sense of danger perceived by the pedestrians in such conditions 
+(considering the increase of, e.g., social influence and group phenomena M6); and (b) the suffered impact of effective more severe conditions that trigger human body instability M8 (Cox et al., 2010) and 
+so of the related actions to restore it (i.e., attraction towards unmovable objects M2 and clinging to ropes and arranging “human chains” M9) 
+(Bernardini, Postacchini, et al., 2017). Fear of moving elements M3 is 
+due to flowing water dragging objects (PIF/PI = 100 %). Results also 
+seem to point out that attraction toward safe areas M1 is more 
+frequent in still waters, but this result could be partially affected by 
+the small sample dimension (<10 pedestrians involved). 
+• Post-evacuation phase: general outcomes seem to highlight that temporary PE1 and indoor safe areas PE2 are mainly reached in case of 
+flowing waters (PIF/PI > 90 %), mainly because of the efforts due to 
+moving against higher resistance of floodwaters (Ishigaki et al., 
+2009), while in the case of still water pedestrians choose outdoor safe 
+areas PE3 too (PIS/PI and PIF/PI between 45 and 55 %). 
+4.2.3. Water depth equal to or up to the ankles 
+Fig. 10 shows the results concerning the situational frequency with 
+respect to water depth equal or up to the ankles, by distinguishing between still and flowing waters (Fig. 9). Considering the evacuation 
+phases, it is worthy of notice that: 
+• Pre-movement phase: hazardous behaviors (attachment to belongings 
+PM1 and “curiosity” effect PM2) are noticed in both still and flowing 
+waters conditions, although attachment to belongings PM1 is less 
+frequent in case of still water (PIA,S/PIA = 29 %), probably due to a 
+Fig. 9. People dealing with water up to the ankles (outlined in green). panel a is for still water, panel b is for flowing water and the blue jagged lines indicate the 
+waves (reference videotapes: {70}, {119}). (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of 
+this article.) 
+Fig. 10. Situational frequency per water depth equal to or lower than the ankles PIA,f/PIA [%] (colored bars; left y-axis) of the observed behaviors evaluated by 
+comparing the water flow. The sample dimension is outlined by PIA [pp] (black rhombuses; right y-axis). Behaviors IDs from Fig. 5. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+12
+slighter sense of danger felt by pedestrians with regards to their 
+goods (Bernardini, Camilli, et al., 2017). 
+• Motion towards evacuation target phase: behaviors assuming motion 
+problems are essentially activated with flowing water (i.e., for 
+floodwaters effects on motion speed M7, human body instability M8, and 
+attraction toward unmovable obstacles M2, PIA,F/PIA > 95 %), since the 
+possibility to move the feet inside or outside of the water is also 
+affected by the additional resistance of flowing waters (Bernardini 
+et al., 2020; Dias et al., 2021; Lee et al., 2019). Behaviors that 
+typically involve the presence of rescuers (i.e., increased guide effect 
+M4 and clinging to ropes M9) seem to be more frequent with still water 
+(PIA,F/PIA > 70 %), thus highlighting the importance of safety procedures also in less severe floodwater conditions that can still affect 
+the safety of most vulnerable pedestrians, such as children, elderly, 
+and pedestrians with mobility impairments. Social influence and group 
+phenomena M6 are more frequent with flowing water (PIA,F/PIA = 83 
+%). Videotapes involving the presence of moving elements M3 were 
+not found, essentially because of the limited water depth. 
+• Post-evacuation phase: pedestrians selecting temporary safe areas PE1 
+were not found, while reaching outdoor safe areas PE3 appears to be a 
+common solution either in the cases of still and flowing waters. The 
+statistical significance of reaching indoor safe areas PE2 could be 
+limited in view of the sample dimension (PIA = 3 pp, all in the same 
+videotape). 
+4.2.4. Water depth equal to or up to the knees 
+Fig. 12 shows the results concerning the situational frequency in 
+respect to water depth higher than the ankles, but equal or up to the 
+knees, by distinguishing between still and flowing waters (Fig. 11). 
+Considering the evacuation phases, it is worthy of notice that: 
+• Pre-movement phase: differently from the ankle-related situational 
+frequencies (PIA,f/PIA, Fig. 10), attachment to belongings PM1 is more 
+Fig. 11. People dealing with water up to the knees (outlined in yellow). panel a is for still water, panel b is for flowing water and the blue jagged lines indicate the 
+waves (reference videotapes: {76}, {42}). (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.) 
+Fig. 12. Situational frequency per water depth equal to or lower than the knees PIK,f/PIK [%] (colored bars; left y-axis) of the observed behaviors evaluated by 
+comparing the water flow. The sample dimension is outlined by PIK [pp] (black rhombuses; right y-axis). Behaviors IDs from Fig. 5. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+13
+frequent in still water (PIK,S/PIK = 72 %), while “curiosity” effect PM2 
+in flowing conditions (PIK,F/PIK = 98 %). 
+• Motion towards evacuation target phase: human body instability M8 still 
+can be essentially noticed in flowing water. On the contrary, floodwaters effects on motion speed M7 seem to be more frequent in still 
+water, thus implicitly confirming the possibility to move in such 
+conditions while being affected by a reduction in the evacuation 
+speed (Bernardini et al., 2020; Dias et al., 2021; Lee et al., 2019). The 
+sample dimensions for these behaviors are different, and they could 
+influence the results. However, behaviors aimed at restoring the 
+people’s safety like fear of moving elements M3, social influence and 
+group phenomena M6, and clinging to ropes and arranging “human 
+chains” M9 are confirmed to be more frequent in flowing water (PIK, 
+F/PIK > 80 %). Moving through the flow vehicles M5 is more frequent in 
+still water, which implies less severe conditions in terms of floodwaters resistance against the vehicles (Xia et al., 2011). 
+• Post-evacuation phase: videotapes with pedestrians reaching temporary PE1, indoor PE2, and outdoor safe areas PE3 were only found 
+with flowing waters. 
+4.2.5. Water depth equal to or up to the waist 
+Fig. 14 shows the results concerning the situational frequency with 
+respect to water depth higher than the knees, but equal or up to the 
+waist, by distinguishing between still and flowing waters (Fig. 13). 
+Considering the evacuation phases, it is worthy of notice that: 
+• Pre-movement phase: “curiosity” effect PM2 was not found in the 
+analyzed sample, while attachment to belongings PM1 has a quite 
+similar frequency in both still and flowing waters. 
+• Motion towards evacuation target phase: general outcomes of PIK,f/PIK 
+(Fig. 12) are confirmed, especially for fear of moving elements M3 as 
+the number of people involved increases. Moving through the water 
+with vehicles M5 was not found in the analyzed sample. As expected 
+Fig. 13. People dealing with water up to the waist (outlined in orange). panel a is for still water, panel b is for flowing water and the blue jagged lines indicate the 
+waves (reference videotapes: {100}, {84}). (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of 
+this article.) 
+Fig. 14. Situational frequency per water depth equal to or lower than the waist PIW,f/PIW [%] (colored bars; left y-axis) of the observed behaviors evaluated by 
+comparing the water flow. The sample dimension is outlined by PIW [pp] (black rhombuses; right y-axis). Behaviors IDs from Fig. 5. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+14
+(Bernardini et al., 2020; Cox et al., 2010; Ishigaki et al., 2009), issues 
+concerning Floodwaters effects on motion speed M7 and human body 
+instability M8 are more frequent in flowing waters. 
+• Post-evacuation phase: for what it concerns reaching indoor safe areas 
+PE2 and outdoor safe areas and PE3, results are similar to the kneesrelated outcomes (PIK,f/PIK, Fig. 12) and they are also corroborated 
+by a greater number of people involved (PIW = 85 pp, PIK = 22 pp for 
+PE2, PIW = 12 pp, PIK = 4 pp for PE3). On the other hand, reaching 
+temporary safe areas PE1 was not found in the analyzed sample. 
+4.2.6. Water depth higher than the waist 
+Fig. 16 shows the results concerning the situational frequency with 
+respect to water depth higher than the waist, by distinguishing between 
+still and flowing waters (Fig. 15). Considering the evacuation phases, it 
+is worthy of notice that: 
+• Pre-movement phase: attachment to belonging PM1 is the unique 
+noticed behavior within the analyzed sample, and only in the case of 
+still water. 
+• Motion towards evacuation target phase: in general, analyzed people 
+managed to perform few behaviors in such high-water depth conditions. In particular, increased guide effect M4 and clinging to ropes 
+and arranging “human chains” M9 are the most frequent in both the 
+water flow conditions, thus highlighting the importance of rescuers’ 
+presence and rescue tasks in such critical situations. Compared to the 
+previous cases (Figs. 10, 12, and 14), social influence and group phenomena M6 and human body instability M8 become more frequent 
+with still water (PIHW,S/PIHW respectively up to 36 % and 43 %). 
+Finally, floodwaters effects on motion speed M7 can be observed only 
+with still water, thus confirming that pedestrians can be able to 
+additionally move in still floodwaters deeper than 1.20 m (Cox et al., 
+2010). 
+• Post-evacuation phase: reaching outdoor safe areas PE3 was not found 
+in the analyzed sample and the statistical significance of reaching 
+temporary safe areas PE1 could be limited in view of the sample 
+dimension (PIHW = 5 pp, all in the same videotape). On the other 
+hand, the frequency of reaching indoor safe areas PE2 underlines the 
+impact of critical flow conditions on pedestrians’ preferences to 
+Fig. 15. People dealing with water higher than the waist (outlined in red). panel a is for still water, panel b is for flowing water and the blue jagged lines indicate the 
+waves (reference videotapes: {25}, {55}). (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.) 
+Fig. 16. Situational frequency per water depth higher than the waist PIHW,f/PIHW [%] (colored bars; left y-axis) of the observed behaviors evaluated by comparing 
+the water flow. The sample dimension is outlined by PIHW [pp] (black rhombuses; right y-axis). Behaviors IDs from Fig. 5. 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+15
+move far from the flooded areas reaching raised indoor positions (for 
+reaching indoor safe areas PE2). 
+4.3. Most frequent floodwater conditions for behavioral patterns 
+The use of human body parts as references for the behavioral patterns activations pursues a quick but reliable assessment of people’s 
+response to flood evacuation. Behavioral key findings are summarized in 
+Table 10, which resumes the most frequent floodwater conditions in 
+which behaviors are observed. 
+For what concerns the pre-movement phase, although the observed 
+behaviors can be classified as hazardous behaviors, some interesting 
+differences can be found. Indeed, even though both attachment to belongings PM1 and curiosity” effect PM2 are characterized by a sort of 
+“warning threshold” for pedestrians at the level of the knees, the latter is 
+observed predominantly with flowing conditions, thus suggesting that 
+pedestrians are more influenced by the water depth than its flowing 
+conditions. This threshold decreases down to the ankles level for moving 
+through the water with vehicles M5, which is in line with previous works 
+findings carried out through questionnaires, according to which people’s perception of the risk increase with the water depth (Papagiannaki 
+et al., 2021; Pearson & Hamilton, 2014). Moreover, considering its 
+occurrence during the evacuation phases, moving through the water with 
+vehicles M5 can also be associated with the pre-movement phase in view 
+of the similarities with attachment to belonging PM1 (i.e., the vehicles), 
+which can delay the actual evacuation on foot (Arrighi et al., 2015; 
+Hamilton et al., 2016). These differences can be also traced back to the 
+significant worsening in the walking behaviors (i.e., speed, trajectory, 
+step frequency, lateral swaying, stability) that arise when the knees articulations are even partially submerged, thus suggesting a different 
+acceptance of the risk depending on the context and the reference elements (Bernardini et al., 2020; Dias et al., 2021). 
+Motion towards evacuation target behaviors strongly depend on (1) the 
+presence of reference elements in the flooded scenarios and (2) the 
+possibility for pedestrians to move without restrictions imposed by the 
+water. As a consequence, behaviors like attraction towards safe areas M1 
+or fear of moving elements M3 only rely on a few observations (respectively, PI = 9 pp on 3 videotapes and PI = 16 pp on 3 videotapes). 
+However, comparing our findings with those on human body instability 
+and motion speed in floodwaters (Bernardini et al., 2020; Chanson et al., 
+2014; Cox et al., 2010; Dias et al., 2021; Milanesi et al., 2016), it could 
+be noticed that: 
+• attraction towards safe areas M1 was observed for still waters up to the 
+waist, essentially because these conditions still avoid buoyancy 
+problems for pedestrians, and so they allow pedestrians to move 
+towards an evacuation target; 
+• attraction towards unmovable obstacles M2 was noticed for flowing 
+waters between the ankles and the waist. These conditions can provoke human body instability problems thus leading pedestrians at 
+searching for physical support; 
+• fear of moving elements M3 concerns scenarios in which flowing water 
+(that is consistent with having objects dragged by floodwater) is 
+combined to water depth between the knees and waist (that is 
+excluding limited and extreme interactions with floodwaters). 
+As expected, the main intent of deliberately chosen behaviors performed during the actual movement within the floodwaters is to recover 
+from human body instability problems and speed up the restoration of 
+safety conditions. Thus, the most frequent conditions for passively suffered behaviors represent a benchmark also for behaviors aimed at 
+improving the pedestrians’ mobility into the floodwaters. In this sense, 
+floodwaters effects on motion speed M7 can be noticed especially in water 
+up to the knees, thus excluding conditions that impede human motion 
+(Cox et al., 2010). Furthermore, it is worthy of notice that this behavior 
+was not observed at all with still water under the ankles, where 
+Table 10 
+Observed behaviors and frequent floodwater conditions in which they are 
+performed. 
+ID – Observed Behavior Most frequent floodwater conditions 
+PM1 - Attachment to 
+belongings 
+Water up to the knees 
+PM2 - “Curiosity” effect Flowing water up the 
+knees 
+ID – Observed Behavior Most frequent floodwater conditions 
+M1 - Attraction towards 
+safe areas 
+Still water up to the 
+waist 
+M2 - Attraction towards 
+unmovable obstacles 
+Flowing water 
+between the ankles 
+and the waist 
+M3 - Fear of moving 
+elements 
+Flowing water 
+between the knees and 
+the waist 
+M4 - Increased guide effect Water up to the waist 
+M5 - Moving through the 
+water with vehicles 
+Water up to the ankles 
+M6 - Social influence and 
+group phenomena 
+Flowing water 
+between the knees and 
+the waist 
+M7 - Floodwaters effects on 
+motion speed 
+Water between the 
+ankles and the knees 
+M8 - Human body 
+instability 
+Flowing water 
+between the ankles 
+and the waist 
+M9 - Clinging to ropes and 
+arranging “human 
+chains” 
+Flowing water 
+between the ankles 
+and the waist 
+ID – Observed Behavior Most frequent floodwater conditions 
+PE1 - Reaching temporary 
+safe areas 
+Flowing water 
+between the ankles 
+and the knees 
+PE2 - Reaching indoor safe 
+areas 
+Flowing water 
+between the knees and 
+the waist 
+PE3 - Reaching outdoor 
+safe areas 
+Water up to the ankles 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+16
+pedestrians are still capable to move without significant problems 
+(Bernardini et al., 2020; Dias et al., 2021). Besides, human body instability M8 is mostly observed for flowing water between the ankles and 
+the waist (Cox et al., 2010; Milanesi et al., 2016), even if a wide number 
+of observations were retrieved also with higher/lower water depth. As a 
+consequence, protective behaviors that could involve also the presence of 
+rescuers like increased guide effect M4, clinging to ropes and arranging 
+“human chains” M9, and social influence and group phenomena M6 (which 
+includes also pro-social actions such as trying to rescue other pedestrians) are attempted in whatever kind of condition, especially in 
+flowing water up to the waist (basically the same conditions provoking 
+human body instability and motion speed problems (Cox et al., 2010; 
+Milanesi et al., 2015, 2016)). However, it is worthy of notice that these 
+behaviors are the three most observed in terms of people involved 
+(Fig. 6), which confirms the importance of actions aimed at saving their 
+own lives and those of others during flooding disasters (Hamilton et al., 
+2020). 
+Furthermore, post-evacuation behaviors highlight a trend for reaching 
+indoor safe areas PE2 in case of flowing water higher between the knees 
+and the waist, while outdoor safe areas PE3 in water up to the knees. This 
+result is consistent with differences in risk perception depending on 
+water depth and flow (Tanaka & Shimomura, 2021), besides the availability of outdoor areas in case of extreme events. On the other hand, 
+temporary safe areas PE1 can be substantially traced back to flowing 
+water between the ankles and knees, which can be probably considered 
+sufficiently severe to induce pedestrians to stop during their motion to 
+target (thus excluding still water and less deep than the ankles), but not 
+to threaten the safety of the selected area (floodwaters above the knees 
+can reasonably induce threat in temporary areas like vehicle roofs) 
+(Bernardini et al., 2020; Cox et al., 2010; Dias et al., 2021). 
+5. Discussion 
+Observations of real floods in outdoor BEs empirically (1) confirmed 
+that the floodwater conditions strongly affect people’s behaviors before, 
+during, and after the evacuation, and (2) demonstrated that critical 
+thresholds with respect to water depth and flow vary for each of the 
+observed behaviors. In this sense, the outcomes of this work can support 
+the development of risk-mitigation strategies and simulation modeling 
+approaches (Section 5.1), even though some limitations need to be 
+discussed (Section 5.2). 
+5.1. Implications on modeling approaches 
+This work findings can support the development and validation of 
+simulation tools based on microscopic approaches relying on the representation of people’s tasks with respect to the surrounding floodwater 
+conditions, such as agent-based models (Alonso Vicario et al., 2020; 
+Nakanishi et al., 2019; Shirvani et al., 2020). These approaches can be 
+then combined with modeling approaches to estimate pedestrians’ behaviors, velocity, and paths, such as cellular automata (Y. Li et al., 2019) 
+or force-based models (Bernardini, Postacchini, et al., 2017). Since this 
+work focuses on qualitative aspects of human response, works to 
+consolidate motion speed assessment are needed. In particular, considering attraction towards unmovable obstacles and clinging to ropes and arranging “human chains” behaviors, experiments could be conducted 
+toward the quantification of human stability and evacuation speed improvements thank to supporting elements like ropes and cables that 
+resulted to be widely used by evacuees and rescuers. These studies could 
+then move towards the analysis of rescuers’ operations and equipment 
+during the evacuation in order to improve their design and use under 
+specific hydrodynamic conditions. In this way, additional tests through 
+evacuation simulators could be also conducted for testing new equipment for rescue tasks and their implementation within the urban layout. 
+5.2. Relations with risk-mitigation strategies 
+Behavioral results retrieved in the pre-movement phase of the emergency demonstrate that future efforts should move towards the study of 
+risk-reduction measures to speed the (right) decision-making process 
+and reduce the time spent performing pre-movement hazardous behaviors which can often mark the difference between surviving or not, or 
+at least avoid that the best option becomes the “least harmful one” (e.g., 
+to be obligated to cross deep flowing waters rather than not). Indeed, 
+floods are disasters whose impact can locally vary depending on specific 
+conditions of the meteorological event or of the built environment, 
+which can be partially subject to prediction biases (e.g., in the case of 
+flash floods). Therefore, solutions may include the provision of 
+communication strategies, wayfinding systems, and Early Warning 
+Systems to be implemented, for instance, in form of reliable social-media 
+alerts or apps for mobile devices, so as to reduce the reaction time (i.e., 
+the overall “pre-movement” phase) to avoid floodwater interactions at 
+all, and ease the evacuation timing and path selection (Chaudhary et al., 
+2019; Cools et al., 2016; Coz et al., 2016; Feng et al., 2020; Haer et al., 
+2016). 
+Similarly, qualitative findings in the motion towards the evacuation 
+target phase can help local authorities and technicians in planning and 
+designing targeted interventions in flood-prone built environments 
+(some examples are shown in Fig. 17). Possible applications could 
+include: (1) the improvement and proper positioning of “passive” 
+architecturally-implemented solutions such as handrails, benches, and 
+raising floor systems, as well as traditional signage systems such as 
+hazard signs, water heights indicators, wayfinding systems (Bernardini, 
+Postacchini, et al., 2017; Gissing et al., 2016; K Haynes et al., 2009; 
+Musolino et al., 2022)); (2) the implementation of “active” systems for 
+emergency warning and wayfinding, including both visual (e.g. through 
+variable and luminescent directional signs) and acoustic indications 
+(Cools et al., 2016; Diakakis, 2020)); (3) the improvement of evacuation 
+planning with innovative and retrofitted solutions evaluated on the basis 
+of local and/or temporary risks (Bischiniotis et al., 2020; Quagliarini 
+et al., 2022); (4) the promotion of exercises and awareness campaigns to 
+improve the community resilience and educate people on the danger of 
+walking and driving in floodwaters, also with the aid of innovative 
+immersive techniques like virtual reality (VR) or augmented reality (AR) 
+serious games (Bernardini et al., 2019; Fujimi & Fujimura, 2020; 
+Sorensen ¨ et al., 2016); (5) the wide use of ropes and cables (that can be 
+more effective than expected especially if considering their general low 
+cost) regardless of the floods magnitude, since future events harsher 
+than usual cannot be excluded at all in flood prone areas even in presence of specific data linked to recurring conditions. 
+In this sense, this work also supports the identification of necessities 
+behind the selection of a certain type of safe area. Results emerging from 
+the analysis of post-evacuation behaviors can be used to evaluate aspects 
+like the safe areas’ position, dimensions (i.e., height, area, density), and 
+type also as a function of the expected risk in a given scenario (e.g., 
+evaluating the prearrangement of indoor areas or temporary forecastbased solutions aimed at gathering a certain number of evacuees), and 
+so depending on the general features of the floodwater conditions in 
+terms of water depth (in respect to the human body parts) and of the 
+presence of still or flowing waters. 
+5.3. Work limitations and future aims 
+Finally, it is worth noticing that the work insights are mainly affected 
+by some limitations, which can be overcome by future works. The 
+presence of some situations with a limited number of involved and 
+assessed people could be overcome by enlarging the videotapes database. Furthermore, results could be influenced by additional factors such 
+as physical (different body parts submerged under the same water depth, 
+different weight, and so on), geographical, cultural, and risk-awarenessrelated features of people, which could be not directly and easily 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+17
+assessed by videotapes analysis. In this sense, this work considers a 
+worldwide database as a unique sample, so as to point out “average” 
+behavioral responses to floods in the investigated outdoor BEs, as for 
+previous methods applied to other kinds of disasters (Bernardini & 
+Quagliarini, 2021; Haghani & Sarvi, 2018; van der Wal et al., 2021; 
+Zhou et al., 2018). Similarly, results could be affected also by external 
+factors like the presence of individuals with cameras or smartphones, 
+who could hardly decide to film unless something is happening (see for 
+example the lack of post-evacuation scenes). However, the approach 
+pursued by this work allows taking advantage of unbiased sources, 
+differently from controlled experimental tests that inevitably are influenced by simplified laboratory conditions both in terms of environmental and human factors. In this sense, future works could: (1) 
+integrate the database enlargement with specific analysis, e.g. on 
+geographical areas or including standard analyses through gender, age, 
+and/or height estimation when possible by the videotapes; (2) move 
+towards quantitative assessment of floodwater conditions, by also using 
+image processing (Alizadeh Kharazi & Behzadan, 2021), which could 
+reduce the quickness of the proposed approach but could also improve 
+their reliability and the detail level of the results (e.g. measuring “how 
+much” the individual body is submerged by the floodwaters rather than 
+just defining general conditions based on body parts); (3) investigate 
+recurring evacuation “storylines” so as to additionally inquire “when” 
+each behavior is usually performed, thus retrying the recurrent order of 
+activation of the behaviors during a flood evacuation, or even behavioral 
+patterns differences over the evacuation time. At the same time, 
+collected data could be also exploited by machine learning approaches 
+to investigate situational influences affecting behavioral patterns (Zhao 
+et al., 2020). In this sense, this work approach could provide simple but 
+reliable bases for the situational features’ selection while creating 
+structured databases in the flood context. 
+6. Conclusions 
+Comprehending decision-making processes and reasons behind 
+human behaviors in flood emergencies is fundamental for the development of risk assessment tools and risk-reduction strategies. Floodwaterhuman evacuation interactions are deeply influenced by the event features and the people’s perception of surrounding conditions and related 
+risk. A large number of studies already define flood-related behaviors 
+and evacuation physical quantities, but the relationship between 
+frequent behaviors and floodwater conditions is not yet really clarified 
+from this point of view. This work aims at filling this lack by using for the 
+flood case an approach already tested on other type of emergencies (i.e., 
+earthquakes, fire, terrorist attacks) that consists of the analysis of real 
+evacuations. 
+Starting from previous works’ findings, a reference behavioral 
+database has been organized in relation to the evacuation phases and the 
+main literature classifications, and new-noticed behaviors have been 
+also inquired to enlarge the reference database. Up to 139 videotapes 
+from relevant social media sources and more than 1000 people involved 
+in flood evacuation were considered, representing the largest set in the 
+field of video analysis for human behaviors. In particular, we focused on 
+outdoor Built Environments from all over the world. 
+The behavioral patterns have been defined according to statistical 
+frequencies innovatively evaluated through the number of people performing and that could actually perform the behaviors. The presence of 
+reference elements necessary to activate the behaviors have been also 
+considered for this purpose. Collected qualitative data have been organized according to the floodwaters’ conditions in which the behaviors 
+Fig. 17. Example of how “passive aids” can be implemented in the outdoor BE. Scenario A lacks of targeted interventions; Scenario B includes the presence of 
+handrails (1), raised platforms (2), road signs (3), and benches (4). 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+18
+were observed. In particular, the water depth has been classified into 4 
+classes identified by the knees, the ankles, and the waist, and the water 
+flow has been distinguished in still and flowing conditions. This quick 
+approach has been selected since it seems to be reliable with respect to 
+the main man-floodwater interactions noticed in previous works on 
+human motion in flood evacuation. 
+Such a significant overview of flood evacuation behaviors can find 
+application in different fields of risk management and assessment, 
+spacing from supporting safety planners in designing evacuation plans 
+and installations for resilient built environments, to the employment for 
+the development and validation of dedicated simulation tools. 
+CRediT authorship contribution statement 
+Enrico Quagliarini: Writing – review & editing, Supervision, 
+Methodology, Funding acquisition, Conceptualization. Guido Romano: 
+Writing – original draft, Visualization, Resources, Methodology, Investigation, Formal analysis, Data curation, Conceptualization. Gabriele 
+Bernardini: Writing – original draft, Validation, Methodology, 
+Conceptualization. 
+Declaration of Competing Interest 
+The authors declare that they have no known competing financial 
+interests or personal relationships that could have appeared to influence 
+the work reported in this paper. 
+Data availability 
+The source data (i.e. videotapes) are included in the manuscript. 
+Please contact us for additional analysis data to be shared on request. 
+References 
+Abass, K., Dumedah, G., Frempong, F., Muntaka, A.S., Appiah, D.O., Garsonu, E.K., 
+Gyasi, R.M., 2022. Rising incidence and risks of floods in urban Ghana: Is climate 
+change to blame? Cities 121, 103495. https://doi.org/10.1016/J. 
+CITIES.2021.103495. 
+Adrian, J., Bode, N., Amos, M., Baratchi, M., Beermann, M., Boltes, M., Corbetta, A., 
+Dezecache, G., Drury, J., Fu, Z., Geraerts, R., Gwynne, S., Hofinger, G., Hunt, A., 
+Kanters, T., Kneidl, A., Konya, K., Koster, ¨ G., Küpper, M., Wijermans, N., 2019. 
+A Glossary for Research on Human Crowd Dynamics. Collective Dynam. 4, 1–13. 
+https://doi.org/10.17815/cd.2019.19. 
+Alizadeh Kharazi, B., Behzadan, A.H., 2021. Flood depth mapping in street photos with 
+image processing and deep neural networks. Comput. Environ. Urban Syst. 88, 
+101628 https://doi.org/10.1016/j.compenvurbsys.2021.101628. 
+Alonso Vicario, S., Mazzoleni, M., Bhamidipati, S., Gharesifard, M., Ridolfi, E., 
+Pandolfo, C., Alfonso, L., 2020. Unravelling the influence of human behaviour on 
+reducing casualties during flood evacuation. Hydrol. Sci. J. 65 (14), 2359–2375. 
+https://doi.org/10.1080/02626667.2020.1810254. 
+Arce, S.G., Jeanneret, C., Gales, J., Antonellis, D., Vaiciulyte, S., 2021. Human behaviour 
+in informal settlement fires in Costa Rica. Saf. Sci. 142, 105384 https://doi.org/ 
+10.1016/J.SSCI.2021.105384. 
+Arrighi, C., Alc`erreca-Huerta, J.C., Oumeraci, H., Castelli, F., 2015. Drag and lift 
+contribution to the incipient motion of partly submerged flooded vehicles. J. Fluids 
+Struct. https://doi.org/10.1016/j.jfluidstructs.2015.06.010. 
+Assumpç˜
+ao, T.H., Popescu, I., Jonoski, A., Solomatine, D.P., 2018. Citizen observations 
+contributing to flood modelling: opportunities and challenges. Hydrol. Earth Syst. 
+Sci. 22 (2), 1473–1489. https://doi.org/10.5194/hess-22-1473-2018. 
+Bae, H.U., Yun, K.M., Yoon, J.Y., Lim, N.H., 2016. Human stability with respect to 
+overtopping flow on the breakwater. Int. J. Appl. Eng. Res.Volume 11, Number 1 
+(2016) pp 111-119, ISSN 0973-4562. 
+Bernardini, G., Lovreglio, R., Quagliarini, E., 2019. Proposing behavior-oriented 
+strategies for earthquake emergency evacuation: A behavioral data analysis from 
+New Zealand, Italy and Japan. Saf. Sci. 116, 295–309. https://doi.org/10.1016/J. 
+SSCI.2019.03.023. 
+Bernardini, G., Quagliarini, E., D’Orazio, M., Brocchini, M., 2020. Towards the 
+simulation of flood evacuation in urban scenarios: Experiments to estimate human 
+motion speed in floodwaters. Saf. Sci. https://doi.org/10.1016/j.ssci.2019.104563. 
+Bernardini, G., Quagliarini, E., 2021. Terrorist acts and pedestrians’ behaviours: First 
+insights on European contexts for evacuation modelling. Saf. Sci. 143, 105405 
+https://doi.org/10.1016/J.SSCI.2021.105405. 
+Bernardini, G., Camilli, S., Quagliarini, E., D’Orazio, M., 2017a. Flooding risk in existing 
+urban environment: from human behavioral patterns to a microscopic simulation 
+model. Energy Procedia 134, 131–140. https://doi.org/10.1016/j. 
+egypro.2017.09.549. 
+Bernardini, G., Postacchini, M., Quagliarini, E., Brocchini, M., Cianca, C., D’Orazio, M., 
+2017b. A preliminary combined simulation tool for the risk assessment of 
+pedestrians’ flood-induced evacuation. Environ. Model. Softw. https://doi.org/ 
+10.1016/j.envsoft.2017.06.007. 
+Bischiniotis, K., De Moel, H., Van Den Homberg, M., Couasnon, A., Aerts, J., 2020. 
+A framework for comparing permanent and forecast-based flood risk- reduction 
+strategies. Sci. Total Environ. 720 https://doi.org/10.1016/j. 
+scitotenv.2020.137572. 
+Bromhead, H., 2021. Disaster linguistics, climate change semantics and public discourse 
+studies: a semantically-enhanced discourse study of 2011 Queensland Floods. Lang. 
+Sci. 85, 101381 https://doi.org/10.1016/J.LANGSCI.2021.101381. 
+Chanson, H., Brown, R., 2018. Stability of Individuals during Urban Inundations: What 
+Should We Learn from Field Observations? https://doi.org/10.3390/ 
+geosciences8090341. 
+Chanson, H., Brown, R., McIntosh, D., 2014. Human body stability in floodwaters: The 
+2011 flood in Brisbane CBD. ISHS 2014 - Hydraulic Structures and Society - 
+Engineering Challenges and Extremes: Proceedings of the 5th IAHR International 
+Symposium on Hydraulic Structures, June, 1–9. https://doi.org/10.14264/ 
+uql.2014.48. 
+Chaudhary, P., D’Aronco, S., de Vitry, M., Leit˜
+ao, J. P., Wegner, J. D. (2019). Flood-water 
+level estimation from social media images. ISPRS Annals of the Photogrammetry, 
+Remote Sensing and Spatial Information Sciences, IV-2/W5, 5–12. https://doi.org/ 
+10.5194/isprs-annals-IV-2-W5-5-2019. 
+Cools, J., Innocenti, D., O’Brien, S., 2016. Lessons from flood early warning systems. 
+Environ Sci Policy 58, 117–122. https://doi.org/10.1016/j.envsci.2016.01.006. 
+Cox, R. J., Shand, T. D., Blacka, M. J., 2010. Australian Rainfall & Runoff revision project 
+10: Appropriate safety criteria for people. In Engineers Australia (Issue April). 
+Coz, J.L., Patalano, A., Collins, D., Guill´en, N.F., García, C.M., Smart, G.M., Bind, J., 
+Chiaverini, A., Boursicaud, R.L., Dramais, G., Braud, I., 2016. Crowdsourced data for 
+flood hydrology: Feedback from recent citizen science projects in Argentina, France 
+and New Zealand. J. Hydrol. 541, 766–777. https://doi.org/10.1016/J. 
+JHYDROL.2016.07.036. 
+Diakakis, M., 2020. Types of behavior of flood victims around floodwaters. Correlation 
+with situational and demographic factors. Sustainability (Switzerland) 12 (11). 
+https://doi.org/10.3390/su12114409. 
+Dias, C., Rahman, N. A., & Zaiter, A. (2021). Evacuation under flooded conditions: 
+Experimental investigation of the influence of water depth on walking behaviors. Int. 
+J. Disaster Risk Reduction, 58(November 2020), 102192. https://doi.org/10.1016/j. 
+ijdrr.2021.102192. 
+Feng, Y., Brenner, C., Sester, M., 2020. Flood severity mapping from Volunteered 
+Geographic Information by interpreting water level from images containing people: 
+A case study of Hurricane Harvey. ISPRS J. Photogramm. Remote Sens. 169, 
+301–319. https://doi.org/10.1016/J.ISPRSJPRS.2020.09.011. 
+Freimund, C.A., Garfin, G.M., Norman, L.M., Fisher, L.A., Buizer, J.L., 2022. Flood 
+resilience in paired US–Mexico border cities: a study of binational risk perceptions. 
+Nat. Hazards. https://doi.org/10.1007/s11069-022-05225-x. 
+Fujimi, T., Fujimura, K., 2020. Testing public interventions for flash flood evacuation 
+through environmental and social cues: The merit of virtual reality experiments. Int. 
+J. Disaster Risk Reduct. 50, 101690 https://doi.org/10.1016/J.IJDRR.2020.101690. 
+Gissing, A., Haynes, K., Coates, L., Keys, C., 2016. Motorist behaviour during the 2015 
+Shoalhaven floods. Aust. J. Emerg. Manag. 31, 25–30. 
+Gomes, G., Marchezini, V., Sato, M., 2022. (In)visibilities About the Vulnerabilities of 
+People with Visual Impairments to Disasters and Climate Change: A Case Study in 
+Cuiaba, ´ Brazil. Int. J. Disaster Risk Sci. https://doi.org/10.1007/s13753-022-00394- 
+6. 
+Grahn, T., Jaldell, H., 2019. Households (un)willingness to perform private flood risk 
+reduction – Results from a Swedish survey. Saf. Sci. 116, 127–136. https://doi.org/ 
+10.1016/J.SSCI.2019.03.011. 
+Haer, T., Botzen, W.J.W., Aerts, J.C.J.H., 2016. The effectiveness of flood risk 
+communication strategies and the influence of social networks—Insights from an 
+agent-based model. Environ Sci Policy 60, 44–52. https://doi.org/10.1016/j. 
+envsci.2016.03.006. 
+Haghani, M., Sarvi, M., 2018. Crowd behaviour and motion: Empirical methods. Transp. 
+Res. B Methodol. 107, 253–294. https://doi.org/10.1016/J.TRB.2017.06.017. 
+Hamilton, K., Peden, A.E., Pearson, M., Hagger, M.S., 2016. Stop there’s water on the 
+road! Identifying key beliefs guiding people’s willingness to drive through flooded 
+waterways. Saf. Sci. 89, 308–314. https://doi.org/10.1016/j.ssci.2016.07.004. 
+Hamilton, K., Demant, D., Peden, A.E., Hagger, M.S., 2020. A systematic review of 
+human behaviour in and around floodwater. Int. J. Disaster Risk Reduct. 47, 101561 
+https://doi.org/10.1016/J.IJDRR.2020.101561. 
+Haynes, K., Coates, L., Liegh, R., Handmer, J., Whittaker, J., Gissing, A., McAneney, J., 
+Opper, S., 2009. ‘Shelter-in-place’ vs. evacuation in flash floods. Environ. Hazards 8 
+(4), 291–303. https://doi.org/10.3763/ehaz.2009.0022. 
+Haynes, K., Coates, L., van den Honert, R., Gissing, A., Bird, D., de Oliveira, F.D., 
+D’Arcy, R., Smith, C., Radford, D., 2017. Exploring the circumstances surrounding 
+flood fatalities in Australia—1900–2015 and the implications for policy and practice. 
+Environ Sci Policy 76, 165–176. https://doi.org/10.1016/J.ENVSCI.2017.07.003. 
+Ishigaki, Taisuke, Kawanaka, R., Onishi, Y., Shimada, H., Toda, K., & Baba, Y. (2009). 
+Assessment of safety on evacuating route during underground flooding. In C. Zhang 
+& H. Tang (Eds.), Advances in Water Resources and Hydraulic Engineering - 
+Proceedings of 16th IAHR-APD Congress and 3rd Symposium of IAHR-ISHS (pp. 
+141–146). Springer Berlin Heidelberg. https://doi.org/10.1007/978-3-540-89465- 
+0_27. 
+Kutija, V., Bertsch, R., Glenis, V., Alderson, D., Parkin, G., Walsh, C., Robinson, J., & 
+Kilsby, C. (2014). Model Validation Using Crowd-Sourced Data From A Large Pluvial 
+E. Quagliarini et al. 
+
+Safety Science 161 (2023) 106083
+19
+Flood. 11th International Conference on Hydroinformatics. HIC 2014, New York 
+City, USA. 
+Kvoˇcka, D., Falconer, R. A., Bray, M., 2016. Flood hazard assessment for extreme flood 
+events. 84, 1569–1599. https://doi.org/10.1007/s11069-016-2501-z. 
+Lan, T., Goh, Y.M., Jensen, O., Asmore, A.S., 2022. The impact of climate change on 
+workplace safety and health hazard in facilities management: An in-depth review. 
+Saf. Sci. 151, 105745 https://doi.org/10.1016/J.SSCI.2022.105745. 
+Lee, H.-K., Hong, W.-H., Lee, Y.-H., 2019. Experimental study on the influence of water 
+depth on the evacuation speed of elderly people in flood conditions. Int. J. Disaster 
+Risk Reduct. 39, 101198 https://doi.org/10.1016/j.ijdrr.2019.101198. 
+Li, Y., Hu, B., Zhang, D., Gong, J., Song, Y., Sun, J., 2019. Flood evacuation simulations 
+using cellular automata and multiagent systems -a human-environment relationship 
+perspective. Int. J. Geogr. Inf. Sci. 33 (11), 2241–2258. https://doi.org/10.1080/ 
+13658816.2019.1622015. 
+Li, S., Yuan, L., Yang, H., An, H., Wang, G., 2020. Tailings dam safety monitoring and 
+early warning based on spatial evolution process of mud-sand flow. Saf. Sci. 124, 
+104579 https://doi.org/10.1016/j.ssci.2019.104579. 
+Mahdavian, F., Wiens, M., Platt, S., Schultmann, F., 2020. Risk behaviour and people’s 
+attitude towards public authorities – A survey of 2007 UK and 2013 German floods. 
+Int. J. Disaster Risk Reduct. 49, 101685 https://doi.org/10.1016/j. 
+ijdrr.2020.101685. 
+Mallick, J., Salam, R., Amin, R., Islam, A.R.M.T., Islam, A., Siddik, M.N.A., Alam, G.M. 
+M., 2022. Assessing factors affecting drought, earthquake, and flood risk perception: 
+empirical evidence from Bangladesh. Nat. Hazards. https://doi.org/10.1007/ 
+s11069-022-05242-w. 
+Milanesi, L., Pilotti, M., Ranzi, R., 2015. A conceptual model of people’s vulnerability to 
+floods. Water Resour. Res. 51 (1), 5375–5377. https://doi.org/10.1002/ 
+2014WR016172. 
+Milanesi, L., Pilotti, M., Bacchi, B., 2016. Using web-based observations to identify 
+thresholds of a person’s stability in a flow. Water Resour. Res. 52, 7793–7805. 
+https://doi.org/10.1002/2016WR019182. 
+Musolino, G., Ahmadian, R., Xia, J., 2022. Enhancing pedestrian evacuation routes 
+during flood events. Nat. Hazards. https://doi.org/10.1007/s11069-022-05251-9. 
+Na, H.S., Grace, R., 2022. Influence of social networks and opportunities for social 
+support on evacuation destination decision-making. Saf. Sci. 147, 105564 https:// 
+doi.org/10.1016/J.SSCI.2021.105564. 
+Nakanishi, H., Black, J., Suenaga, Y., 2019. Investigating the flood evacuation behaviour 
+of older people: A case study of a rural town in Japan. Res. Transp. Bus. Manag. 30, 
+100376 https://doi.org/10.1016/J.RTBM.2019.100376. 
+Nguyen, M. T., Sebesvari, Z., Souvignet, M., Bachofer, F., Braun, A., Garschagen, M., 
+Schinkel, U., Yang, L. E., Nguyen, L. H. K., Hochschild, V., Assmann, A., & 
+Hagenlocher, M. (2021). Understanding and assessing flood risk in Vietnam: Current 
+status, persisting gaps, and future directions. https://doi.org/10.1111/jfr3.12689. 
+Papagiannaki, K., Diakakis, M., Kotroni, V., Lagouvardos, K., Papagiannakis, G., 2021. 
+The role of water depth perception in shaping car drivers’ intention to enter 
+floodwaters: Experimental evidence. Sustainability (Switzerland) 13 (8). https://doi. 
+org/10.3390/SU13084451. 
+Pearson, M., Hamilton, K., 2014. Investigating driver willingness to drive through 
+flooded waterways. Accid. Anal. Prev. 72, 382–390. https://doi.org/10.1016/J. 
+AAP.2014.07.018. 
+Petrucci, O., Papagiannaki, K., Aceto, L., Boissier, L., Kotroni, V., Grimalt, M., Llasat, M. 
+C., Llasat-Botija, M., Rossello, ´ J., Pasqua, A. A., & Vinet, F. (2018). MEFF: The 
+database of MEditerranean Flood Fatalities (1980 to 2015). https://doi.org/ 
+10.1111/jfr3.12461. 
+Petrucci, O., Aceto, L., Bianchi, C., Bigot, V., Brazdil, ´ R., Pereira, S., Kahraman, A., Kiliç, 
+O., ¨ Kotroni, V., Llasat, M. C., Llasat-Botija, M., Papagiannaki, K., Pasqua, A. A., 
+Reho ˇ ˇr, J., Geli, J. R., Salvati, P., Vinet, F., & Zˆezere, J. L. (2019). Flood fatalities in 
+Europe, 1980-2018: Variability, features, and lessons to learn. Water (Switzerland), 
+11(8). https://doi.org/10.3390/w11081682. 
+Quagliarini, E., Romano, G., Bernardini, G., D’Orazio, M., 2022. Leaving or Sheltering? a 
+Simulation-Based Comparison of Flood Evacuation Strategies in Urban Built 
+Environments. In: Littlewood, J.R., Howlett, R.J., Jain, L.C. (Eds.), Sustainability in 
+Energy and Buildings 2021. Smart Innovation, Systems and Technologies, vol 263. 
+Springer Singapore, pp. 113–123. https://doi.org/10.1007/978-981-16-6269-0_10. 
+Rezende, O.M., Miranda, F.M., Haddad, A.N., Miguez, M.G., 2019. A Framework to 
+Evaluate Urban Flood Resilience of Design Alternatives for Flood Defence 
+Considering Future Adverse Scenarios. Water 11 (7), 1485. https://doi.org/ 
+10.3390/w11071485. 
+Rufat, S., Botzen, W.J.W., 2022. Drivers and dimensions of flood risk perceptions: 
+Revealing an implicit selection bias and lessons for communication policies. Glob. 
+Environ. Chang. 73 https://doi.org/10.1016/j.gloenvcha.2022.102465. 
+Sadeghi-Pouya, A., Nouri, J., Mansouri, N., Kia-Lashaki, A., 2017. Developing an index 
+model for flood risk assessment in the western coastal region of Mazandaran, Iran. 
+J. Hydrol. Hydromech. https://doi.org/10.1515/johh-2017-0007. 
+Salvati, P., Petrucci, O., Rossi, M., Bianchi, C., Pasqua, A.A., Guzzetti, F., 2018. Gender, 
+age and circumstances analysis of flood and landslide fatalities in Italy. Sci. Total 
+Environ. 610–611, 867–879. https://doi.org/10.1016/j.scitotenv.2017.08.064. 
+Santoro, S., Totaro, V., Lovreglio, R., Camarda, D., Iacobellis, V., Fratino, U., 2022. Risk 
+perception and knowledge of protective measures for flood risk planning. The case 
+study of Brindisi (Puglia region). Saf. Sci. 153, 105791 https://doi.org/10.1016/J. 
+SSCI.2022.105791. 
+Shirvani, M., Kesserwani, G., Richmond, P., 2020. Agent-based modelling of pedestrian 
+responses during flood emergency: mobility behavioural rules and implications for 
+flood risk analysis. J. Hydroinf. 22 (5), 1078–1092. https://doi.org/10.2166/ 
+hydro.2020.031. 
+Sorensen, ¨ J., Persson, A., Sternudd, C., Aspegren, H., Nilsson, J., Nordstrom, ¨ J., 
+Jonsson, ¨ K., Mottaghi, M., Becker, P., Pilesjo, ¨ P., Larsson, R., Berndtsson, R., 
+Mobini, S., 2016. Re-Thinking Urban Flood Management—Time for a regime Shift. 
+Water (Switzerland) 1–15. https://doi.org/10.3390/w8080332. 
+Tanaka, M., Shimomura, M., 2021. Making Evacuation Routine Behavior: Impact of 
+Experiencing Severe Flood Damage on Recognition and Advance Evacuation 
+Behavior. J. Disaster Res. 16 (2), 250–262. https://doi.org/10.20965/jdr.2021. 
+p0250. 
+UNDRR. (2021). Global Natural Disaster Assessment Report 2020. UN Annual Report, 
+October, 1–80. 
+van der Wal, C.N., Robinson, M.A., Bruine de Bruin, W., Gwynne, S., 2021. Evacuation 
+behaviors and emergency communications: An analysis of real-world incident 
+videos. Saf. Sci. 136, 105121 https://doi.org/10.1016/j.ssci.2020.105121. 
+Wang, Y., Kyriakidis, M., Dang, V.N., 2021. Incorporating human factors in emergency 
+evacuation – An overview of behavioral factors and models. Int. J. Disaster Risk 
+Reduct. 60, 102254 https://doi.org/10.1016/J.IJDRR.2021.102254. 
+World Health Organization. (2014). Global report on drowning: preventing a leading 
+killer. https://www.who.int/violence_injury_prevention/global_report_drowning/ 
+en/. 
+Xia, J., Chen, Q., Falconer, R. A., Deng, S., & Guo, P. (2016). Stability criterion for people 
+in floods for various slopes. Proc. Instit. Civ. Eng. - Water Manage. 169(4), 180–189. 
+https://doi.org/10.1680/wama.14.00110. 
+Xia, J., Falconer, R.A., Lin, B., Tan, G., 2011. Numerical assessment of flood hazard risk 
+to people and vehicles in flash floods. Environ. Model. Softw. 26 (8), 987–998. 
+https://doi.org/10.1016/j.envsoft.2011.02.017. 
+Xia, J., Falconer, R.A., Wang, Y., Xiao, X., 2014. New criterion for the stability of a 
+human body in floodwaters. J. Hydraul. Res. https://doi.org/10.1080/ 
+00221686.2013.875073. 
+Yari, A., Yousefi Khoshsabegheh, H., Zarezadeh, Y., Ardalan, A., Soufi Boubakran, M., 
+Ostadtaghizadeh, A., Motlagh, M.E., 2021. Behavioral, health- related and 
+demographic risk factors of death in floods: A case-control study. PLoS One 16 (12), 
+e0262005. 
+Yee, M. (2003). Human stability in floodways. Undergraduate Honours Thesis, School of 
+Civil and Environmental Engineering, University of New South Wales, Sydney, 
+Australia. 
+Zhao, X., Lovreglio, R., Nilsson, D., 2020. Modelling and interpreting pre-evacuation 
+decision-making using machine learning. Autom. Constr. 113, 103140 https://doi. 
+org/10.1016/j.autcon.2020.103140. 
+Zhou, J., Li, S., Nie, G., Fan, X., Tan, J., Meng, L., Xia, C., Zhou, Q., 2018. Research on 
+earthquake emergency response modes of individuals based on social surveillance 
+video. Int. J. Disaster Risk Reduct. 28 (November 2017), 350–362. https://doi.org/ 
+10.1016/j.ijdrr.2018.03.015. 
+E. Quagliarini et al. 

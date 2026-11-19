@@ -1,0 +1,147 @@
+[ 10/122] SHORT    694 B  Citation.pdf
+[ 11/122] OK      3418 B   0.5s  ACS2020_2024_PUMS_README.pdf
+[ 12/122] OK     85713 B   1.6s  Kreibich2017_重复副本.pdf
+[ 13/122] OK     88728 B   0.9s  LindellPerry2012_RiskAnalysis_保护性行动决策模型.pdf
+[ 14/122] OK     60919 B   1.2s  Sadri2017_JCM_社会网络中的联合疏散决策.pdf
+[ 15/122] OK    100485 B   2.2s  Thieken2022_NHESS_复合内陆洪水的四条路径.pdf
+[ 16/122] OK     79416 B   1.6s  Benjamin2022_FrontPsych_涉水驾驶的心理社会因素.pdf
+[ 17/122] OK     51093 B   0.8s  Hamilton2016_SafetyScience_涉水驾驶的信念.pdf
+[ 18/122] OK     72879 B   2.7s  Watkins2026_TRF_驾驶人对道路积水的认知与标牌遵从.pdf
+[ 19/122] OK     81462 B   1.1s  Mostafizi2017_NatHazards_路网中断下的海啸疏散建模.pdf
+[ 20/122] OK     69907 B  11.3s  Mostafizi2019_IJDRR_垂直疏散与避难所选址.pdf
+[ 21/122] OK     59806 B   1.8s  Wang2016_TRC_多方式近场海啸疏散智能体模型.pdf
+[ 22/122] OK    106807 B   2.2s  Zhang2026_TRD_洪灾人群移动的LLM智能体重建.pdf
+[ 23/122] OK     80862 B   7.4s  Thieken2026_EarthFuture_洪灾死亡情形与楼层位置.pdf
+[ 24/122] OK     66474 B   4.1s  1-s2.0-S0022169426006980-main.pdf
+[ 25/122] OK     80537 B   3.0s  1-s2.0-S0048969717320624-main.pdf
+[ 26/122] OK     57025 B   3.1s  1-s2.0-S0191261511001081-main (1).pdf
+[ 27/122] OK     57025 B   3.3s  1-s2.0-S0191261511001081-main.pdf
+[ 28/122] OK     81077 B   1.9s  1-s2.0-S0191261515302253-main.pdf
+[ 29/122] OK    203339 B   4.9s  1-s2.0-S0191261517303788-main.pdf
+[ 30/122] OK    357029 B  21.0s  1-s2.0-S0191261526002225-main.pdf
+[ 31/122] OK     55641 B   3.0s  1-s2.0-S0198971518302497-main.pdf
+[ 32/122] OK     94621 B   2.5s  1-s2.0-S0960077925018193-main.pdf
+[ 33/122] OK     43597 B   0.8s  1-s2.0-S0968090X11000957-main.pdf
+[ 34/122] OK     68720 B   1.8s  1-s2.0-S1353829222000181-main.pdf
+[ 35/122] OK     72879 B   2.7s  1-s2.0-S1369847826001348-main.pdf
+[ 36/122] OK     61017 B   0.8s  1-s2.0-S1462901117301818-main.pdf
+[ 37/122] OK     61229 B   2.0s  1-s2.0-S1462901124002594-main.pdf
+[ 38/122] OK     60717 B   2.1s  1-s2.0-S1755534517300313-main.pdf
+[ 39/122] OK     95739 B   2.1s  1-s2.0-S2212096326001142-main.pdf
+[ 40/122] OK     55573 B   1.8s  1-s2.0-S2212420924004631-main.pdf
+[ 41/122] OK     71540 B   2.6s  1-s2.0-S2212420925007939-main.pdf
+[ 42/122] OK     77721 B   2.0s  1-s2.0-S2212420926004413-main.pdf
+[ 43/122] OK     99984 B   1.7s  1-s2.0-S2590198221000324-main.pdf
+[ 44/122] OK     89183 B   2.1s  1-s2.0-S261665182600165X-main.pdf
+[ 45/122] OK     61745 B   0.9s  Analysis of evacuation destination and departure time choices for no-notice emergency events.pdf
+[ 46/122] OK     68919 B   0.8s  ARR_Project_10_Stage1_report_Final.pdf
+[ 47/122] OK    107708 B   1.9s  IJDRR_119-105315.pdf
+[ 48/122] OK     55728 B   2.4s  J Flood Risk Management - 2026 - Xu - Micro‐Behavioral Responses for Enhancing Urban Flood Resilience  Stated Preference.pdf
+[ 49/122] OK    321315 B   3.5s  NCHRP-562-Improving-Pedestrian-Safety-at-Unsignalized-Crossings.pdf
+[ 50/122] SHORT      0 B  Beijing.shp.xml
+[ 51/122] SHORT      0 B  Changsha.shp.xml
+[ 52/122] SHORT      0 B  Chengdu.shp.xml
+[ 53/122] SHORT      0 B  Chongqing.shp.xml
+[ 54/122] SHORT      0 B  Dalian.shp.xml
+[ 55/122] SHORT      0 B  Dongguan.shp.xml
+[ 56/122] SHORT      0 B  Foshan.shp.xml
+[ 57/122] SHORT      0 B  Guangzhou.shp.xml
+[ 58/122] SHORT      0 B  Hangzhou.shp.xml
+[ 59/122] SHORT      0 B  Harbin.shp.xml
+[ 60/122] SHORT      0 B  Jinan.shp.xml
+[ 61/122] SHORT      0 B  Kunming.shp.xml
+[ 62/122] SHORT      0 B  Nanjing.shp.xml
+[ 63/122] SHORT      0 B  Qingdao.shp.xml
+[ 64/122] SHORT      0 B  Shanghai.shp.xml
+[ 65/122] SHORT      0 B  Shenyang.shp.xml
+[ 66/122] SHORT      0 B  Shenzhen.shp.xml
+[ 67/122] SHORT      0 B  Tianjin.shp.xml
+[ 68/122] SHORT      0 B  Wuhan.shp.xml
+[ 69/122] SHORT      0 B  Xi'an.shp.xml
+[ 70/122] SHORT      0 B  Zhengzhou.shp.xml
+[ 71/122] SHORT      0 B  PNNL-26949.pdf
+[ 72/122] OK    116123 B   4.9s  WRL-TR2017-07-Vehicle-Stability-Testing-for-Flood-Flows.pdf
+[ 73/122] OK     96240 B   2.8s  1-s2.0-S0925753523000255-main.pdf
+[ 74/122] OK     12354 B   0.6s  Explanatory_note_for_FD2320_and_FD2321_project_record.pdf
+[ 75/122] OK     82910 B   0.7s  Flood-related+fatalities+during+the+flood+of+July+2021+in+North+Rhine-Westphalia,+Germany+what+can+be+learnt+for+future+flood+risk+management.pdf
+[ 76/122] OK    152023 B   1.1s  Flood_risks_to_people_-_Phase_2_Guidance_Document_Technical_report.pdf
+[ 77/122] OK    386750 B   1.6s  Flood_risks_to_people_-_Phase_2_Project_Record.pdf
+[ 78/122] OK    176129 B   1.5s  Flood_risks_to_people_-_Phase_2_The_flood_risks_to_people_methodology_technical_report.pdf
+[ 79/122] OK      6565 B   0.5s  Floor_risks_to_people_-_Phase_2_Summary_.pdf
+[ 80/122] OK     96246 B   1.9s  Investigating+flood+behaviours+con+Romano_safety+science_compressed.pdf
+[ 81/122] OK     35805 B   0.6s  Normal_walking_speed_a_descriptive_meta.pdf
+[ 82/122] OK     76110 B   0.8s  The_risk_perception_paradox_implications.pdf
+[ 83/122] OK     85808 B   1.1s  document.pdf
+[ 84/122] OK     57354 B   1.2s  p654.pdf
+[ 85/122] SHORT      0 B  s11116-026-10780-4.pdf
+[ 86/122] SHORT      0 B  sr90_2auflage.pdf
+[ 87/122] OK     68875 B   2.3s  Borowski2023_arXiv预印本.pdf
+[ 88/122] OK    101792 B   1.3s  dillenardt_thieken2025.pdf
+[ 89/122] OK     62795 B   0.7s  jonkman_kelman_2005.pdf
+[ 90/122] SHORT      0 B  naccs_9Loss-of-Life_26Jan2015.pdf
+[ 91/122] OK     39493 B   0.7s  paranjothy2011_uk2007.pdf
+[ 92/122] OK     94381 B   1.1s  rozer2016.pdf
+[ 93/122] OK     95720 B   1.8s  spekkers2017_pluvial_survey.pdf
+[ 94/122] SHORT      0 B  thieken2026_flood_fatalities.pdf
+[ 95/122] SHORT      0 B  thieken2026_try.pdf
+[ 96/122] SHORT      0 B  thieken2023-nhess.xml
+[ 97/122] OK     18064 B   0.5s  thieken2023-reviewer-responses.pdf
+[ 98/122] OK     53791 B   0.7s  wong-irma-survey-questions.pdf
+[ 99/122] OK     73978 B   3.3s  Chen_etal_2023_NHESS_tsunami_ABM.pdf
+[100/122] OK    156023 B   1.7s  JCU_Townsville_2025_flood_survey.pdf
+[101/122] OK     73353 B   0.7s  Ohtomo_etal_2020_JDR_Okayama_evacuation.pdf
+[102/122] OK    106313 B   2.8s  Silva_etal_2025_NHESS_Ahr_ABM.pdf
+[103/122] OK   1894094 B   6.0s  AHS_1998_Washington_Metro_H170-98-18.pdf
+[104/122] OK     41158 B   1.2s  CBECS2018_Table_B1.pdf
+[105/122] OK     25629 B   0.6s  Choi2002_Tall_Building_Design_Guideline.pdf
+[106/122] OK     97473 B   0.8s  DC_DOEE_Flood_Hazard_Rules_20DCMR31_Final_2025-06-20.pdf
+[107/122] OK     25494 B   0.8s  GSA_OAS_7005.1B_Internal_Space_Allocation_Policy.pdf
+[108/122] OK     37743 B   1.2s  JUE_WebAppendix_Building_Heights_Data.pdf
+[109/122] OK     66856 B   1.4s  DBQ-Spain-2026-validation.pdf
+[110/122] SHORT      0 B  Jonkman-2007-thesis.pdf
+[111/122] OK     71605 B   1.0s  Jonkman-Vrijling-2008-JFRM.pdf
+[112/122] OK      8284 B   0.5s  SHRP2-BPSA-Data-Dictionary.pdf
+[113/122] OK     60589 B   1.6s  Wang-2009-headway-FHWA-RIDOT.pdf
+[114/122] OK     34671 B   1.1s  baba2017_jsce_underground_evacuation.pdf
+[115/122] OK      7577 B   0.6s  ishigaki_jsce2005_cs7-010.pdf
+[116/122] OK     83171 B   2.9s  li2026_jhydrol_AAM.pdf
+[117/122] OK      5127 B   0.7s  mlit_chika_kiken_g-11_g-14.pdf
+[118/122] OK     33107 B   0.6s  palmer2014_neurological_activity_patterns_orendurff.pdf
+[119/122] OK    175180 B   1.5s  Jedwab_Barr_Brueckner_2022_CitiesWithoutSkylines_fulltext.pdf
+[120/122] SHORT      0 B  Smith_Davey_Cox_2014_WRL_TR2014-07_FloodHazard.pdf
+[121/122] OK     81729 B   1.8s  Thieken_2023_NHESS_23_973_正文.pdf
+[122/122] SHORT      0 B  UNSW_WRL_TR2015-09_洪水致死估算方法综述.pdf
+
+=== 汇总：新增 81，已存 9，失败 32 ===
+  失败: ./csv/Citation.pdf | 文本过短 694 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Beijing.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Changsha.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Chengdu.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Chongqing.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Dalian.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Dongguan.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Foshan.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Guangzhou.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Hangzhou.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Harbin.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Jinan.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Kunming.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Nanjing.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Qingdao.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shanghai.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shenyang.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Shenzhen.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Tianjin.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Wuhan.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Xi'an.shp.xml | 文本过短 0 B
+  失败: ./文献三/PKU-FIM-master/PKU-FIM-master/Datasets/SHP/Zhengzhou.shp.xml | 文本过短 0 B
+  失败: ./文献三/PNNL-26949.pdf | 文本过短 0 B
+  失败: ./文献二/s11116-026-10780-4.pdf | 文本过短 0 B
+  失败: ./文献二/sr90_2auflage.pdf | 文本过短 0 B
+  失败: ./第八轮回件/naccs_9Loss-of-Life_26Jan2015.pdf | 文本过短 0 B
+  失败: ./第八轮回件/thieken2026_flood_fatalities.pdf | 文本过短 0 B
+  失败: ./第八轮回件/thieken2026_try.pdf | 文本过短 0 B
+  失败: ./第六轮完整回件-修复版/dc-round6-20261116/原件/A/thieken2023-nhess.xml | 文本过短 0 B
+  失败: ./第六轮完整回件-修复版/dc-round6-20261116/原件/D/Jonkman-2007-thesis.pdf | 文本过短 0 B
+  失败: ./第十一轮自行检索/Smith_Davey_Cox_2014_WRL_TR2014-07_FloodHazard.pdf | 文本过短 0 B
+  失败: ./第十轮自行检索/UNSW_WRL_TR2015-09_洪水致死估算方法综述.pdf | 文本过短 0 B

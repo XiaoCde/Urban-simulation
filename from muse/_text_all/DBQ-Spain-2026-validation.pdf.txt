@@ -1,0 +1,694 @@
+Updating the Driver Behaviour Questionnaire (DBQ): A new 
+Spanish adaptation and validation
+María T. Sanchez-L ´ opez ´ a , Pablo Fernandez-Berrocal ´ a , Mariaelena Tagliabue b , 
+Alberto Megías-Robles a,*
+a Department of Basic Psychology, University of Malaga, ´ Spain b Department of General Psychology, University of Padua, Italy
+ARTICLE INFO
+Keywords:
+Driver behaviour questionnaire
+DBQ
+Aberrant driving behaviour
+Spanish adaptation
+Updating
+Validation
+ABSTRACT
+Introduction: The Driver Behaviour Questionnaire (DBQ) is a widely adopted instrument for 
+assessing aberrant driving behaviour across multiple countries and cultural contexts. Despite its 
+widespread use, it has been rarely applied in Spanish-speaking populations. This study aimed to 
+develop and validate an updated Spanish version of the DBQ through a large, gender- and agebalanced community sample. The instrument was revised, and new items addressing contemporary driving behaviours related to mobile phone use while driving were added.
+Method: The sample consisted of 2292 Spanish drivers (53.2% men; mean age = 35.55 years; age 
+range: 18-79 years).
+Results: Confirmatory factor analysis of the updated DBQ, including the items on phone use 
+behaviour, continued to support the adequacy of the original four-factor model. The four factors 
+demonstrated satisfactory internal consistency and temporal stability. The questionnaire also 
+showed good convergent validity, as evidenced by its associations with the Dula Dangerous 
+Driving Index and the Driving Anger Expression Inventory. Differences in DBQ factors were 
+observed according to gender, age, and cultural background.
+Conclusions and practical applications: This updated Spanish version of the DBQ is a reliable and 
+valid tool for assessing aberrant driving behaviour within the Spanish population, serving as a 
+useful resource for analysing driving patterns and guiding the development of effective road 
+safety policies and interventions.
+1. Introduction
+Road traffic crashes are among the leading causes of death worldwide. According to the latest WHO global report on road safety, 
+approximately 1.19 million people died and between 20 and 50 million sustained non-fatal injuries as a result of road crashes in 2021 
+(World Health Organization, 2023). In Spain, despite significant improvements in road safety during the 1990s and 2000s, the number 
+of road fatalities remains unacceptably high and has been relatively stable over the last decade, at around 1800 fatalities per year 
+(DGT, 2025). Previous literature confirms that human factors are the primary contributors to road traffic crashes, highlighting 
+driver-related behaviours such as speeding, distraction, and alcohol consumption (Dingus et al., 2016; Petridou and Moustaki, 2000; 
+* Corresponding author. University of M´
+alaga Faculty of Psychology, Department of Basic Psychology, Campus Teatinos, s/n, 29071, M´
+alaga, 
+Spain.
+E-mail address: amegias@uma.es (A. Megías-Robles). 
+Contents lists available at ScienceDirect
+Journal of Transport & Health
+journal homepage: www.elsevier.com/locate/jth
+https://doi.org/10.1016/j.jth.2026.102272
+Received 11 October 2025; Received in revised form 26 January 2026; Accepted 27 January 2026 
+Journal of Transport & Health 48 (2026) 102272
+Available online 11 February 2026
+2214-1405/© 2026 The Authors. Published by Elsevier Ltd. This is an open access article under the CC BY-NC license
+(http://creativecommons.org/licenses/by-nc/4.0/).
+
+Razzaghi et al., 2019; Rolison et al., 2018). Understanding driver behaviour is therefore crucial for designing effective prevention and 
+intervention strategies to reduce road mortality. One of the most widely used assessment instruments in driving behaviour research is 
+the Driver Behaviour Questionnaire (DBQ; de Winter et al., 2015; Reason et al., 1990). In the present study, we aimed to adapt and 
+validate the DBQ for the Spanish population, updating the instrument to reflect contemporary risk factors.
+The original version of this self-report scale was developed and validated by Reason et al. (1990) to assess aberrant driving behaviours in the United Kingdom. The scale was designed to distinguish between two distinct classes of driving behaviour: Errors and 
+Violations. Errors are defined as “failures of planned actions to achieve their intended consequences” (e.g., not checking the rear-view 
+mirrors before manoeuvring when it is necessary to do so), while Violations are “deliberate deviations from those practices believed 
+necessary to maintain safe driving” (e.g., exceeding the speed limit). Additionally, Reason et al. (1990) identified a third factor, 
+predominantly characterised by items reflecting errors related to trivial slips and lapses, which are commonly associated with attention 
+or memory failures. These were defined as “unwitting deviations of action from intention” (e.g., realising that you are driving toward 
+point B when you intended to go toward point A or hitting a previously unseen object while reversing).
+Over the last three decades, numerous variants of the questionnaire have been derived from the original version, establishing it as a 
+valuable instrument for studying driver behaviour and predicting road crashes (see de Winter and Dodou, 2010). One of the most 
+widely used versions of the questionnaire is the 28-item DBQ, which is based on a four-factor structure that includes Errors, Lapses, 
+“Ordinary” violations, and Aggressive violations as factors (Gras et al., 2006; Lajunen et al., 2004; Mesken et al., 2002; Smorti and 
+Guarnieri, 2016; Sullman et al., 2002). This structure retains the distinction between Errors and Lapses while further differentiating 
+between “Ordinary” violations and Aggressive violations. Aggressive violations, like “Ordinary” violations, involve deliberate deviations from safe driving practices, but are specifically motivated by expressions of anger and hostility toward other drivers (e.g., 
+honking the horn at another driver who is going too slowly).
+One reason for the variability among DBQ versions, including differences in the number of items and factor structures, is the need to 
+account for situational and cultural differences when assessing driving behaviour (de Winter and Dodou, 2016; Hussain et al., 2019; 
+Lajunen et al., 2004). Variations in traffic regulations and attitudes toward the violation of these regulations, such as speed limits, 
+alcohol consumption, and mobile phone use while driving, are evident across countries (Lajunen et al., 2004; Meesmann et al., 2025; 
+Nordfjærn et al., 2011) and have also been documented in Spain (Meesmann et al., 2022; Ortuna, ˜ 2021). In this regard, the DBQ has 
+been adapted and validated in numerous countries, including Australia (Stephens and Fitzharris, 2016), China (Shao et al., 2020), 
+France (Gu´eho et al., 2014), Finland and the Netherlands (Lajunen et al., 2004), Ghana (Dotse and Rowe, 2021), Greece (Kontogiannis 
+et al., 2002), Qatar and the United Arab Emirates (Bener et al., 2008), Italy (Smorti and Guarnieri, 2016), and Turkey (Ozkan ¨ and 
+Lajunen, 2005), among others. Despite its popularity and extensive support in the literature, the DBQ has been rarely used in Spain or 
+Spanish-speaking countries. A search of the Web of Science (WOS) database using the terms "DBQ" and "Spanish" yielded only four 
+results (Escamilla et al., 2023; Gras et al., 2006; Herrero-Fernandez ´ et al., 2024; Useche et al., 2021). Currently, only one 
+peer-reviewed study has validated the DBQ in a Spanish sample (Gras et al., 2006). While this validation was adequate, we believe it is 
+necessary to take a step further in studying the psychometric properties of the DBQ and update the questionnaire to reflect new risk 
+behaviours that have emerged in recent years. In this study, we wanted to explore alternative factorial structures and to assess the 
+validity of the DBQ using a more representative sample of drivers in Spain, spanning all age groups and accounting for gender differences, while also updating the questionnaire and refining the adaptation of certain items.
+Although the DBQ covers a wide range of risky driver behaviours, traditional versions of the questionnaire need to be adapted to 
+reflect the impact of technological advances, particularly mobile phone usage while driving (Cordazzo et al., 2016; Freeman et al., 
+2008; Parishad et al., 2023). Mobile phone use has become deeply ingrained in daily life, making it a central part of our routine 
+activities. Research indicates that the use of these devices while driving is a significant source of distraction, linked to a decline in 
+driving performance and an increased risk of road crashes (Boboc et al., 2022; Lipovac et al., 2017; Oviedo-Trespalacios et al., 2016; 
+Phuksuksakul et al., 2021). In particular, Boboc et al. (2022) highlight that phone use while driving causes not only manual (physical) 
+distraction but also visual and cognitive distraction, diverting attention to information irrelevant to the primary driving task. These 
+distractions impair driving performance by affecting lateral lane position, average speed, and brake reaction times, all considered 
+typical indicators of unsafe driving. Similarly, Phuksuksakul et al. (2021) demonstrated that texting while driving impairs lateral 
+position control, increases steering deviation and steering speed, slows reaction times, and raises the likelihood of near misses, all of 
+which elevate the risk of road crashes.
+The present study aimed to adapt and validate a Spanish version of the DBQ, based on the 28-item version (Lajunen et al., 2004; 
+Mesken et al., 2002),1 and to extend the questionnaire by adding items that address mobile phone use while driving. The goal was to 
+obtain a reliable, effective, and updated tool for assessing aberrant driving behaviour in Spanish-speaking populations. In addition, we 
+also examined potential differences in DBQ scores according to age, gender, and cultural background, given the well-documented 
+influence of these variables on driving behaviour (Åberg and Rimmo, ¨ 1998; de Winter and Dodou, 2010; Di Stasi et al., 2020; 
+Gianfranchi et al., 2017; Lajunen et al., 2004; Megías-Robles et al., 2022; Ozkan ¨ et al., 2006b; Ramos-Moreno et al., 2025; Ventsislavova et al., 2021).
+1 In the study by Lajunen et al. (2004), an item related to drinking and driving was omitted due to cultural differences and concerns about social 
+desirability bias regarding the perception of alcohol consumption in Finland.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+2
+
+2. Method
+2.1. Participants
+A community sample of 2292 Spanish drivers participated voluntarily in this study. Participants ranged in age from 18 to 79 years 
+(M = 35.55; SD = 14.54), comprising 1220 men (53.2%), 1064 women (46.4%), and 8 individuals identifying as “other gender” 
+(0.4%). Recruitment was conducted through advertisements at the University of Malaga ´ and the University of Granada, as well as 
+through a snowball sampling technique with the assistance of students from the University of M´
+alaga. Participants needed to hold a 
+valid driving licence to meet the study's eligibility criterion, but were not required to drive regularly. All participants were informed 
+that their responses would remain anonymous and were treated in accordance with the Helsinki Declaration (World Medical Association, 2009). The study received ethical approval from the Research Ethics Committee of the University of M´
+alaga (approval number: 
+14–2019-H).
+2.1.1. Procedure
+The translation and back-translation of the DBQ questionnaire were conducted in accordance with the International Test Commission (2017) guidelines. First, the original scale by Lajunen et al. (2004) was translated into Spanish. Although Gras et al. (2006)
+provided a Spanish adaptation, we chose to work from the original English version, as we identified several items requiring modifications. A bilingual translator (Spanish/English), a native English speaker from the UK, then performed a back-translation into English. 
+Finally, the authors and the translator reviewed and compared the original and back-translated versions to ensure conceptual 
+equivalence. Discrepancies were resolved by consensus. Linguistic, psychological, and cultural differences were carefully taken into 
+consideration. The final version of the Spanish DBQ is shown in Table A1 in the Appendix.
+Those interested in participating in the study contacted the authors by email and were subsequently provided with a link to 
+complete the questionnaires online through the LimeSurvey platform (www.limesurvey.org). All participants completed the Spanish 
+version of the DBQ and provided socio-demographic information, including gender, age, and confirmation of holding a valid driving 
+licence. To assess the convergent validity of the DBQ, a subsample of participants completed the Driving Anger Scale (DAS) and the 
+Dula Dangerous Driving Index (DDDI), which measure driving anger and the propensity for dangerous driving behaviours, respectively. Specifically, 691 participants completed the DAS and 740 completed the DDDI. Additionally, a subsample of 200 participants 
+was randomly selected for the assessment of test–retest reliability, of whom 134 completed the second assessment. These participants 
+were contacted via email and invited to complete the DBQ online four weeks after their initial assessment.
+2.2. Instruments
+The Driver Behaviour Questionnaire (DBQ; Lajunen et al., 2004; Reason et al., 1990) is a self-report measure designed to assess 
+aberrant driving behaviours. For the Spanish adaptation, we used the 28-item short version developed by Lajunen et al. (2004) and 
+Mesken et al. (2002), based on earlier work by Parker et al. (1995) and Lawton et al. (1997).
+1 The items are divided into four specific 
+subscales: Errors, Lapses, “Ordinary” violations, and Aggressive violations. Participants report how often they engage in these behaviours using a 6-point Likert scale (0 = “never”; 1 = “hardly ever”; 2 = “occasionally”; 3 = “quite often”; 4 = “frequently”; 5 =
+“nearly all the time”). For this study, we updated the questionnaire by adding two items concerning mobile phone use while driving: 
+“Talk on a mobile phone (without hands-free function) while driving” and “Use a mobile phone for instant messaging or other applications (e.g., WhatsApp, taking photos or videos, social media, email) while driving”. These new items, based on the Distracted 
+Driving Scale (DDS; Engelberg et al., 2015), were included within the “Ordinary” violations subscale and placed at the end of the 
+questionnaire so that researchers interested in using only the original 28 items could easily exclude them in future studies. The original 
+DBQ has shown acceptable internal consistency across its four subscales (Cronbach's alpha values between 0.69 and 0.79) and 
+satisfactory construct validity (Lajunen et al., 2004).
+The Spanish version of the Driving Anger Scale (DAS; Deffenbacher et al., 1994; Herrero-Fern´
+andez, 2011) is a short self-report 
+questionnaire composed of 14 items that assess the degree of anger elicited by specific driving situations. The scale includes three 
+subscales: Impeded progress by others (e.g., “Someone is slow in parking and holds up traffic”), Reckless driving (e.g., “Someone runs a 
+red light or stop sign”), and Direct hostility (e.g., “Someone makes an obscene gesture toward you about your driving”). Participants 
+respond on a 5-point Likert scale where 1 = “not at all” and 5 = “a lot of anger”. The DAS has demonstrated adequate psychometric 
+properties, with Cronbach's alpha values ranging from 0.66 to 0.87. Internal consistency in our sample was good (Cronbach's alpha for 
+the total score and subscales ranged from 0.77 to 0.89).
+The Spanish adaptation of the Dula Dangerous Driving Index (DDDI; Dula and Ballard, 2003; Sanchez-L ´ opez ´ et al., 2024) is a 
+self-report questionnaire composed of 28 items that assess the tendency to engage in dangerous driving behaviours. The scale includes 
+three subscales: Aggressive driving (e.g., “I verbally insult drivers who annoy me”), Risky driving (e.g., “When passing a car/truck on a 
+two-lane road, I will barely miss oncoming cars”), and Negative emotional driving (e.g., “When I get stuck in a traffic jam, I get very 
+irritated”). Participants report how frequently they perform certain driving behaviours on a 5-point Likert scale, where 1 = “never” and 
+5 = “always”. This questionnaire has demonstrated good internal consistency, with Cronbach's alpha values ranging from 0.82 to 0.93, 
+as well as satisfactory construct validity (Sanchez-L ´ opez ´ et al., 2024). In our sample, the DDDI showed good internal consistency 
+(Cronbach's alpha values for the total score and subscales ranged from 0.80 to 0.92).
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+3
+
+Fig. 1. Path diagram of the confirmatory factor analysis for the four-factor model. Standardised factor loadings for each item and correlations 
+among factors are presented.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+4
+
+2.3. Data analysis
+A Confirmatory Factor Analysis (CFA) was first conducted to verify the original four-factor structure of the DBQ. Given the ordinal 
+nature of the items, we employed the diagonally weighted least squares (DWLS) estimation method (Li, 2016). Chi-square (χ2), 
+comparative fit index (CFI), goodness of fit index (GFI), root mean square error of approximation (RMSEA), and standardised root 
+mean square residual (SRMR) were used to assess model fit (McDonald and Ho, 2002; Wang and Wang, 2012). Composite Reliability 
+(CR) and Average Variance Extracted (AVE) were calculated to assess the reliability and validity of the factors (Hair et al., 2019). In 
+line with previous literature (de Winter and Dodou, 2010; Lajunen et al., 2004; Martinussen et al., 2013a), we also tested several 
+alternative models to determine whether they provided a better fit than the original four-factor solution. Specifically, we evaluated: (1) 
+a one-factor model; (2) a two-factor model combining Errors and Lapses into a single factor (Errors), and “Ordinary” and Aggressive 
+violations into another (Violations); and (3) a second-order model retaining the original four-factor structure but introducing a 
+higher-order level distinguishing between Errors and Violations (similar to the two-factor model).
+Second, the internal consistency of the four DBQ factors was evaluated using Cronbach's alpha coefficients, while their temporal 
+stability was assessed through test-retest analyses employing the intraclass correlation coefficient (ICC). To examine convergent 
+validity, Pearson correlations were conducted between the DBQ scores and those from the DAS and DDDI questionnaires.
+After confirming the validity and reliability of the Spanish DBQ, descriptive analyses were conducted to examine scores for each of 
+the factors as well as individual items, with particular attention given to the newly added items related to mobile phone use while 
+driving. Gender differences were analysed using independent t-tests; the "other gender" category was excluded from these comparisons 
+due to its small sample size. To explore age-related differences, both linear and quadratic regression analyses were performed. Finally, 
+cultural differences between our Spanish sample and the British, Finnish, and Dutch driver samples reported by Lajunen et al. (2004)
+were examined using independent t-tests.
+Analyses were conducted using JASP (version 0.19.3) and lavaan (version 0.6-19) for the confirmatory factor analysis, and IBM 
+SPSS Statistics (version 23.0) for all other analyses.
+3. Results
+3.1. Confirmatory factor analysis (CFA)
+Before conducting the CFA, the Kaiser-Meyer-Olkin test (KMO = 0.95) and Bartlett's Sphericity test (χ2 = 31199.40, p < .001) 
+confirmed sampling adequacy for factor analysis.
+The CFA for the four-factor model, based on the structure proposed by Lajunen et al. (2004), revealed a good fit to our data (χ2(399) =
+3977.01, p < .001; CFI = 0.98, GFI = 0.99, RMSEA = 0.06, SRMR = 0.05). The path diagram of the model is shown in Fig. 1. All factor 
+loadings were statistically significant (p < .001). Composite reliability (CR) indicated good internal consistency for all factors: Errors 
+(0.88), Lapses (0.80), "Ordinary" violations (0.89), and Aggressive violations (0.82). Average variance extracted (AVE) indicated adequate 
+convergent validity for Aggressive violations (0.60), moderate values for Errors (0.47) and "Ordinary" violations (0.43), and a low value 
+for Lapses (0.34). Although the Lapses factor demonstrated good CR, several of its items had relatively weak standardised factor loadings, 
+which contributed to the lower AVE. Refinement of some items may therefore help to improve the convergent validity of this factor.
+Alternative factorial structures supported by prior research were also tested to assess whether they offered a better fit than the 
+original four-factor model (see Data analysis section). All three alternative models showed good fit indices: the one-factor model 
+(χ2
+(405) = 6735.59, p < .001; CFI = 0.96, GFI = 0.97, RMSEA = 0.08, SRMR = 0.07), the two-factor model (χ2
+(404) = 4868.58, p <
+.001; CFI = 0.97, GFI = 0.98, RMSEA = 0.07, SRMR = 0.06), and the second-order model (χ2
+(400) = 3977.37, p < .001; CFI = 0.98, 
+GFI = 0.99, RMSEA = 0.06, SRMR = 0.05). Chi-square difference tests revealed significant differences in model fit between the original 
+four-factor model and both the one-factor and two-factor models (ps < .001), with the four-factor model showing a superior fit. The 
+second-order model showed no significant differences from the four-factor model (p = .55); however, due to its greater simplicity, the 
+four-factor model was preferred.
+3.2. Internal consistency
+The four DBQ factors demonstrated good internal consistency. Cronbach's alpha coefficients were α = .83 for Errors, α = .76 for 
+Lapses, α = .86 for “Ordinary” violations, and α = .75 for Aggressive violations. These values were higher than those reported in 
+previous versions of the DBQ (Lajunen et al., 2004).
+3.3. Test-retest reliability
+Test-retest reliability, assessed using the intraclass correlation coefficient (ICC), indicated moderate stability for Errors (ICC = 0.58, 
+95% CI [0.46, 0.68]) and Lapses (ICC = 0.68, 95% CI [0.57 0.76]) and good reliability for “Ordinary” violations (ICC = 0.83, 95% CI [0 
+0.77 0.87]) and Aggressive violations (ICC = 0.87, 95% CI [0.82 0.91]), with coefficients interpreted according to Koo and Li (2016). 
+These findings confirm that the instrument is stable over time.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+5
+
+3.4. Convergent validity
+To assess convergent validity, DBQ scores were correlated with those from the DAS and DDDI questionnaires (see Instruments 
+section for details). Pearson correlation analyses revealed statistically significant associations between the DBQ and both the DAS and 
+DDDI, for total scores and individual subscales (ps < 0.01). As expected, higher DBQ scores were associated with greater driving anger 
+and a higher propensity for dangerous driving behaviours. Pearson correlation coefficients are reported in Table 1.
+3.5. Descriptive analysis of DBQ items and factors, and cross-cultural comparison
+After confirming the questionnaire's validity and reliability, we examined descriptive statistics for both individual items and the 
+four DBQ factors (see Table 2; descriptive statistics together with item descriptions are shown in Table A2 in the Appendix). Overall, 
+the mean scores were low, ranging from 0.38 to 1.83. Specifically, the mean score for Errors was 0.77 (SD = 0.55), for Lapses 1.16 (SD 
+= 0.59), for “Ordinary” violations 1.11 (SD = 0.68), and for Aggressive violations 1.06 (SD = 0.87). These values suggest that, in 
+general, such behaviours are infrequent among drivers. Items 7, 11, 19, and 28 were associated with the most frequently reported 
+behaviours, each showing mean scores above 1.5, indicating occasional occurrence. Notably, two of these items (11 and 28) refer to 
+exceeding speed limits, marking them as the most frequently reported violations.
+As part of our aim to update the DBQ by incorporating risk behaviours related to mobile phone use while driving, we observed that 
+the two newly added items addressing this content showed scores within the range of the rest of the violation items. In fact, their mean 
+scores were equal to or higher than those of six of the nine original “Ordinary” violation items. Furthermore, according to the CFA (see 
+Fig. 1), the factor loadings of these items were adequate (0.57 and 0.58). These results support and highlight the need to include mobile 
+phone use behaviours in the questionnaire.
+Finally, we compared the scores from our Spanish sample with those reported in the original study by Lajunen et al. (2004), which 
+included British, Finnish, and Dutch drivers.2 T-tests revealed significantly higher scores (all p < .001) for the Spanish sample 
+Table 1 
+Evidence of convergent validity based on Pearson correlations between DBQ factors and DAS and DDDI (total scores and subscales).
+Questionnaire Errors Lapses “Ordinary” violations Aggressive violations
+DAS Impeded progress by others 0.37** 0.30** 0.36** 0.35**
+DAS Reckless driving 0.14** 0.13** 0.13** 0.22**
+DAS Direct hostility 0.23** 0.20** 0.22** 0.28**
+DAS Total 0.31** 0.26** 0.30** 0.34**
+DDDI Aggressive driving 0.49** 0.40** 0.58** 0.70**
+DDDI Risky driving 0.56** 0.44** 0.75** 0.50**
+DDDI Negative emotional driving 0.40** 0.42** 0.52** 0.56**
+DDDI Total 0.55** 0.48** 0.71** 0.65**
+Note: DAS = Driving Anger Scale; DDDI = Dula Dangerous Driving Index. p < .05*; p < .01**.
+Table 2 
+Means and standard deviations (SD) for the DBQ items and factors.
+Item Mean (SD) Item Mean (SD)
+Item 1 0.97 (0.83) Item 18 0.91 (0.94)
+Item 2 1.19 (0.99) Item 19 1.61 (1.12)
+Item 3 0.74 (0.91) Item 20 1.24 (1.16)
+Item 4 1.18 (0.96) Item 21 1.03 (1.13)
+Item 5 0.96 (0.95) Item 22 1.28 (0.88)
+Item 6 1.15 (0.85) Item 23 1.01 (0.94)
+Item 7 1.62 (0.19) Item 24 1.02 (0.95)
+Item 8 0.98 (0.86) Item 25 1.14 (1.11)
+Item 9 0.60 (0.81) Item 26 1.02 (1.01)
+Item 10 0.93 (0.77) Item 27 0.85 (0.84)
+Item 11 1.63 (1.26) Item 28 1.83 (1.30)
+Item 12 1.37 (0.97) Item 29 0.90 (1.01)
+Item 13 0.38 (0.70) Item 30 1.02 (1.09)
+Item 14 0.59 (0.77) Errors 0.77 (0.55)
+Item 15 0.66 (0.87) Lapses 1.16 (0.59)
+Item 16 0.66 (0.76) “Ordinary” violations 1.11 (0.68)
+Item 17 0.43 (0.89) Aggressive violations 1.06 (0.87)
+2 For the purposes of this analysis, the “Ordinary” violations factor in our Spanish sample was computed excluding the two newly added items 
+related to mobile phone use and the item on drinking and driving, as the latter was omitted in Lajunen et al.'s (2004) version of the DBQ.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+6
+
+(MErrors = 0.77; MLapses = 1.16; MOr_violations = 1.20; MAg_violations = 1.06) compared to the British (MErrors = 0.50; MLapses = 0.97; 
+MOr_violations = 0.98; MAg_violations = 0.71), Finnish (MErrors = 0.51; MLapses = 0.87; MOr_violations = 0.94; MAg_violations = 0.53), and Dutch 
+(MErrors = 0.63; MLapses = 0.79; MOr_violations = 0.94; MAg_violations = 0.49) samples.
+3.6. Gender and age differences
+T-tests examining gender differences revealed statistically significant differences between men and women across all DBQ factors 
+(p < .05). Men scored higher on “Ordinary” violations, Aggressive violations, and Errors, while women scored higher on Lapses (see 
+Table 3). Effect sizes for these gender differences were small to moderate, ranging from 0.11 to 0.39. Regarding age, regression analyses revealed a significant quadratic relationship for “Ordinary” violations (β = − 0.37, p = .01) and Aggressive violations (β =
+− 0.59, p < .001). Scores for both factors initially increased with age, peaking at age 23 for “Ordinary” violations and age 39 for 
+Aggressive violations, after which they began to decline. No significant linear or quadratic relationships with age were found for the 
+remaining DBQ factors.
+4. Discussion
+The present study aimed to develop an updated Spanish version of the DBQ for Spanish-speaking drivers. We selected the 28-item 
+version developed by Lajunen et al. (2004), one of the most widely supported and cross-culturally validated adaptations in the 
+literature, for translation and adaptation. Additionally, two new items related to mobile device use while driving were incorporated to 
+ensure the instrument reflects contemporary driving behaviours. Psychometric analyses conducted on a community sample of 2292 
+Spanish drivers demonstrated that this updated version of the Spanish DBQ exhibits adequate reliability and validity, with psychometric properties comparable to those reported for the original version.
+The CFA confirmed a good fit for the four-factor model, consistent with the findings of Lajunen et al. (2004), comprising Errors, 
+Lapses, “Ordinary” violations, and Aggressive violations. Additional CFAs indicated that this four-factor model provided a better fit 
+than the one- and two-factor models. Although the fit indices for the second-order model did not differ significantly from those of the 
+four-factor model, the latter was preferred for its simplicity. These findings align with previous research supporting the 
+four-dimensional structure of the DBQ (Gras et al., 2006; Lajunen et al., 2004; Mesken et al., 2002; Smorti and Guarnieri, 2016; 
+Sullman et al., 2002) and provide further evidence for the theoretical framework originally proposed by Reason et al. (1990). 
+Nevertheless, it should be noted that the Lapses factor exhibited relatively weak factor loadings, suggesting that revising some of its 
+items may help to improve its psychometric properties.
+In terms of reliability, both internal consistency and temporal stability were adequate across the four factors. Cronbach's alpha 
+values ranged from 0.74 to 0.92, indicating good internal consistency. These values were comparable to, and in some cases exceeded, 
+those reported in previous versions of the questionnaire (e.g., Bener et al., 2008; Gras et al., 2006; Lajunen et al., 2004; Martinussen 
+et al., 2013a,b; Reason et al., 1990; Stephens and Fitzharris, 2016). Test–retest reliability, assessed over a four-week interval, was 
+moderate to good, with intraclass correlation coefficients (ICCs) ranging from 0.58 to 0.87, indicating temporal stability.
+Regarding convergent validity, our findings suggest the DBQ is a valid instrument for assessing aberrant driving behaviour. Positive 
+correlations were found between the DBQ and both the DAS and the DDDI (total scores and subscales), indicating that higher selfreported DBQ scores were associated with greater driving anger and a higher tendency to engage in dangerous driving behaviours. 
+These associations reflect common behavioural and emotional reactions captured by the DAS and DDDI, such as frustration when 
+blocked by a slow-moving vehicle or engaging in risky manoeuvres like frequent lane changes to avoid traffic congestion. These 
+findings are consistent with previous studies showing that aberrant driving tendencies are linked to increased driving-related anger 
+(Demir et al., 2016; Youssef et al., 2023) and a higher likelihood of risky behaviours and traffic crashes (Gianfranchi et al., 2017; 
+Grasso and Tagliabue, 2022; Megías-Robles et al., 2022; Richer and Bergeron, 2012; Sanchez-L ´ opez ´ et al., 2024). For example, Grasso 
+and Tagliabue (2022) demonstrated that higher DBQ Violations and Lapses scores predicted faster driving, more frequent speeding, 
+and longer time spent over speed limits in simulated driving tasks.
+One of the main objectives of this study was to update traditional versions of the DBQ by incorporating items that reflect the 
+influence of contemporary risk factors, specifically mobile phone use while driving (Freeman et al., 2008; Parishad et al., 2023). Our 
+results showed that the two newly added items addressing this content yielded mean scores comparable to, and in many cases higher 
+than, those of the other items related to driving violations. Moreover, the CFA indicated that the factor loadings of these items were 
+Table 3 
+T-tests examining gender differences (t value and Cohen's d effect sizes) for the four DBQ factors. Means and standard deviations (SD) are reported for 
+the total sample, as well as separately for men and women.
+Gender differences
+Mean (SD) for men Mean (SD) for women t-value Cohen's d
+Errors 0.80 (0.56) 0.74 (0.54) 2.68* 0.11
+Lapses 1.11 (0.57) 1.22 (0.61) − 4.51** − 0.19
+"Ordinary" violations 1.23 (0.70) 0.98 (0.62) 9.20** 0.39
+Aggressive violations 1.13 (0.91) 0.99 (0.81) 3.90** 0.16
+*p < .05, **p < .001.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+7
+
+adequate within the “Ordinary” violations factor. These findings support the inclusion of mobile phone use items in the questionnaire, 
+particularly within the “Ordinary” violations category, as this behaviour represents a deliberate and intentional action that drivers 
+generally recognise as prohibited under traffic safety regulations (Lajunen et al., 2004; Reason et al., 1990). Such findings are in line 
+with previous studies showing that mobile device use while driving is a major source of distraction, linked to reduced driving performance and an increased risk of road crashes (Boboc et al., 2022; Lipovac et al., 2017; Oviedo-Trespalacios et al., 2016; Phuksuksakul 
+et al., 2021).
+Finally, we examined differences in DBQ scores based on gender, age, and culture. Men, compared to women, reported engaging in 
+more violations—both ordinary and aggressive—as well as more errors. In contrast, women reported a greater tendency to experience 
+lapses associated with attentional and memory-related failures while driving. Regarding age-related differences, a quadratic relationship was observed, with the tendency to commit “Ordinary” and Aggressive violations initially increasing with age, peaking at 23 
+years for “Ordinary” violations and at 39 years for Aggressive violations, after which both gradually declined. These findings are 
+consistent with previous literature indicating that men tend to exhibit more deliberate dangerous driving behaviours (Åberg and 
+Rimmo, ¨ 1998; Megías-Robles et al., 2022; Navas et al., 2019; Reason et al., 1990; S´
+anchez-Lopez ´ et al., 2024; Ventsislavova et al., 
+2021), and that such behaviours decrease with age, particularly after emerging adulthood (see the meta-analysis by de Winter and 
+Dodou, 2010). Interestingly, the finding that women reported fewer driving errors than men represents a pattern not typically 
+observed in the literature (de Winter and Dodou, 2010; Gianfranchi et al., 2017). It is important to note that some versions of the DBQ 
+combine Errors and Lapses into a single factor or assign items differently across factors, which may contribute to inconsistencies in 
+findings between studies.
+The literature has also reported notable cultural differences in driving behaviour (de Winter and Dodou, 2016; Di Stasi et al., 2020; 
+Ozkan ¨ et al., 2006a). In the current study, our Spanish sample scored significantly higher on all four DBQ factors compared to the 
+British, Finnish, and Dutch samples analysed by Lajunen et al. (2004), suggesting a riskier driving style and a higher incidence of 
+errors. However, it should be noted that the samples used in each country differed in age range, mean age, and gender distribution—variables that, as previously shown, influence DBQ scores. Therefore, cross-cultural differences should be confirmed using 
+samples matched on key demographic characteristics.
+Some methodological limitations of the present study should be considered in future research. First, the study was conducted 
+online, which limited control over assessment conditions. Second, convergent validity was assessed using the DAS and DDDI questionnaires, which are related to risky and aggressive behaviours but do not specifically capture driving errors and lapses. Future studies 
+should therefore assess convergent validity using additional instruments that more directly target these behaviours (Roca et al., 2013). 
+Moreover, incorporating more objective measures, such as driving simulator data and official records of traffic accidents and fines, 
+would strengthen convergent validity and address potential biases inherent in self-report measures, including social desirability and 
+subjectivity.
+In conclusion, this study advances DBQ research by developing and validating a new Spanish version of the instrument using a 
+large, gender- and age-balanced community sample, and by incorporating contemporary items specifically addressing mobile phone 
+use while driving. The resulting Spanish adaptation represents a reliable, valid, and up-to-date tool for assessing aberrant driving 
+behaviour within the Spanish population and facilitates cross-cultural comparisons across countries. The present validation further 
+supports the robustness of the DBQ's four-factor structure, which is preserved even with the inclusion of the items related to mobile 
+phone use, distinguishing between “Ordinary” violations, Aggressive violations, Errors, and Lapses. This categorisation is one of the 
+DBQ's key strengths, offering valuable insights into behavioural patterns associated with crash risk. Assessing and analysing these 
+patterns can inform traffic safety authorities, driver education programmes, and researchers by helping to identify high-risk behaviours and to design more effective, targeted interventions and prevention strategies aimed at reducing road traffic crashes and 
+fatalities.
+CRediT authorship contribution statement
+María T. Sanchez-L ´ opez: ´ Writing – review & editing, Writing – original draft, Methodology, Formal analysis, Data curation, 
+Conceptualization. Pablo Fernandez-Berrocal: ´ Writing – review & editing, Supervision, Methodology, Conceptualization. Mariaelena Tagliabue: Writing – review & editing, Methodology, Conceptualization. Alberto Megías-Robles: Writing – review & editing, 
+Writing – original draft, Supervision, Methodology, Funding acquisition, Formal analysis, Data curation, Conceptualization.
+Declaration of competing interest
+All co-authors have approved the submission, and we confirm that there are no conflicts of interest to declare.
+Acknowledgments
+This work was funded by the Spanish Ministry of Science and Innovation (CNS2022-136082 awarded to Alberto Megías-Robles).
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+8
+
+Appendix 
+Table A1 
+Final version of the updated Spanish version of the DBQ.
+Para cada ítem, por favor, indica con qu´e frecuencia has experimentado la situacion ´ descrita. Basa tus respuestas en lo que recuerdes de tu conduccion ´ durante el 
+último ano. ˜
+0 1 2 3 4 5
+Nunca Casi nunca Ocasionalmente Bastante a menudo Muy frecuentemente Casi siempre
+1. Has chocado con algo que no habías visto previamente al conducir marcha atras. ´ (L) 
+2. Tenías la intencion ´ de ir a un destino A, pero de repente te has encontrado dirigi´endote a otro destino B sin darte cuenta. (L) 
+3. Has conducido cuando sospechabas que podías estar superando el límite legal de alcohol en sangre permitido. (VO) 
+4. Estabas en el carril equivocado al aproximarte al acceso a una rotonda o cruce. (L) 
+5. Mientras estabas en cola esperando para girar a la izquierda y así poder incorporarte a una vía principal, has prestado tanta atencion ´ al flujo de vehículos de la 
+carretera principal que has estado a punto de golpear al coche de delante. (E) 
+6. No te has dado cuenta de que había peatones cruzando la calle cuando has girado desde una vía principal hacia una calle lateral. (E) 
+7. Has tocado el claxon para expresarle tu enfado a otro/a conductor/a. (VA) 
+8. Te has olvidado de mirar el retrovisor antes de iniciar la marcha, cambiar de carril, etc. (E) 
+9. Has frenado bruscamente en una carretera resbaladiza o girado el volante en la direccion ´ incorrecta cuando tu vehículo estaba derrapando. (E) 
+10. Has salido de un cruce de tal forma que el/la conductor/a con prioridad de paso se ha visto obligado/a a detenerse para dejarte pasar. (VO) 
+11. No has respetado el límite de velocidad en una zona residencial. (VO) 
+12. Has activado algo, por ejemplo, los faros, cuando en realidad querías activar otra cosa, por ejemplo, el limpiaparabrisas. (L) 
+13. Al girar a la derecha casi impactas contra un/a ciclista que avanzaba por tu derecha. (E) 
+14. No has respetado una senal ˜ de “ceda el paso” y por ello casi colisionas con los vehículos que tenían prioridad de paso. (E) 
+15. Has intentado arrancar desde un semaforo ´ saliendo en tercera marcha. (L) 
+16. Has intentado adelantar un vehículo sin darte cuenta de que su conductor/a estaba senalizando ˜ que iba a girar a la izquierda. (E) 
+17. Te has enfadado con otro/a conductor/a y lo/a has perseguido con la intencion ´ de recriminarle su comportamiento (VA) 
+18. Has decidido permanecer hasta el último momento en un carril de la autovía que sabías que se acababa un poco m´
+as adelante, momento en el cual te has visto 
+forzado/a a cambiar de carril. (VO) 
+19. Has olvidado donde ´ habías dejado el coche en el aparcamiento. (L) 
+20. Has adelantado por la derecha a un vehículo que conducía lento. (VO) 
+21. Has acelerado bruscamente al salir de un semaforo ´ con la intencion ´ de superar al conductor o a la conductora que tenías al lado. (VO) 
+22. No has interpretado bien la senalizaci ˜ on ´ y eso te ha llevado a equivocarte de salida en una rotonda. (L) 
+23. Has circulado tan cerca del vehículo que tenías delante que hubiera sido difícil frenar a tiempo en caso de emergencia. (VO) 
+24. Has cruzado una interseccion ´ a pesar de saber que el semaforo ´ ya se había puesto rojo. (VO) 
+25. Te enfureces por culpa de cierto tipo de conductores/as y muestras tu enfado hacia ellos/as por cualquier medio que te sea posible. (VA) 
+26. Te has dado cuenta de que no recuerdas con claridad la carretera por la que acabas de estar circulando. (L) 
+27. Has subestimado la velocidad de un vehículo que se aproximaba hacia ti en sentido contrario cuando estabas realizando un adelantamiento. (E) 
+28. No has respetado el límite de velocidad en una autovía. (VO) 
+29. Has hablado por tel´efono (sin la funcion ´ de manos libres) mientras estabas conduciendo. (VO) 
+30. Has usado el tel´efono movil ´ para aplicaciones de mensajería instant´
+anea u otro tipo de aplicaciones (por ejemplo, WhatsApp, c´
+amara de fotos o video, redes 
+sociales, correo electronico, ´ etc.) mientras estabas conduciendo. (VO)
+Nota: E = Errores; L = Lapsus; VO = Violaciones “ordinarias”; VA = Violaciones agresivas.
+La puntuacion ´ de cada subescala se calcula como el promedio de las puntuaciones de los ítems que la componen.
+Table A2 
+Means and standard deviations (SD) for each DBQ item.
+Item Item description (English and Spanish) Mean (SD)
+1 Hit something when reversing that you had not previously seen. (L) 
+Has chocado con algo que no habías visto previamente al conducir marcha atr´
+as.
+0.97 (0.83)
+2 Intending to drive to destination A, you “wake up” to find yourself on the road to destination B. (L) 
+Tenías la intencion ´ de ir a un destino A, pero de repente te has encontrado dirigi´endote a otro destino B sin darte cuenta.
+1.19 (0.99)
+3 Drive even though you realize that you may be over the legal blood-alcohol limit. (OV) 
+Has conducido aun sabiendo que podías estar superando el límite legal de alcohol en sangre permitido.
+0.74 (0.91)
+4 Get into the wrong lane approaching a roundabout or a junction. (L) 
+Estabas en el carril equivocado al aproximarte al acceso a una rotonda o cruce.
+1.18 (0.96)
+5 Queuing to turn left onto a main road, you pay such close attention to the main stream of traffic that you nearly hit the car in front. (E) 
+Mientras estabas en cola esperando para girar a la izquierda y así poder incorporarte a una vía principal, has prestado tanta atencion ´ al flujo 
+de vehículos de la carretera principal que has estado a punto de golpear al coche de delante.
+0.96 (0.95)
+6 Fail to notice that pedestrians are crossing when turning into a side street from a main road. (E) 
+No te has dado cuenta de que había peatones cruzando la calle cuando has girado desde una vía principal hacia una calle lateral.
+1.15 (0.85)
+7 Sound your horn to indicate your annoyance to another road user. (AV) 
+Has tocado el claxon para expresarle tu enfado a otro/a conductor/a.
+1.62 (0.19)
+8 Fail to check your rear-view mirror before pulling out, changing lanes, etc. (E) 
+Te has olvidado de mirar el retrovisor antes de iniciar la marcha, cambiar de carril, etc.
+0.98 (0.86)
+9 Brake too quickly on a slippery road or steer the wrong way in a skid. (E) 
+Has frenado bruscamente en una carretera resbaladiza o girado el volante en la direccion ´ incorrecta cuando tu vehículo estaba derrapando.
+0.60 (0.81)
+(continued on next page)
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+9
+
+Table A2 (continued )
+Item Item description (English and Spanish) Mean (SD)
+10 Pull out of a junction so far that the driver with right of way has to stop and let you out. (OV) 
+Has salido de un cruce de tal forma que el/la conductor/a con prioridad de paso se ha visto obligado/a a detenerse para dejarte pasar.
+0.93 (0.77)
+11 Disregard the speed limit on a residential road. (OV) 
+No has respetado el límite de velocidad en una zona residencial.
+1.63 (1.26)
+12 Switch on one thing, such as the headlights, when you meant to switch on something else, such as the wipers. (L) 
+Has activado algo, por ejemplo, los faros, cuando en realidad querías activar otra cosa, por ejemplo, el limpiaparabrisas.
+1.37 (0.97)
+13 On turning left nearly hit a cyclist who has come up on your inside. (E) 
+Al girar a la derecha casi impactas contra un/a ciclista que avanzaba por tu derecha.
+0.38 (0.70)
+14 Miss “Give Way” signs and narrowly avoid colliding with traffic having right of way. (E) 
+No has respetado una senal ˜ de “ceda el paso” y por ello casi colisionas con los vehículos que tenían prioridad de paso.
+0.59 (0.77)
+15 Attempt to drive away from the traffic lights in third gear. (L) 
+Has intentado arrancar desde un sem´
+aforo saliendo en tercera marcha.
+0.66 (0.87)
+16 Attempt to overtake someone that you had not noticed to be signalling a right turn. (E) 
+Has intentado adelantar un vehículo sin darte cuenta de que su conductor/a estaba senalizando ˜ que iba a girar a la izquierda.
+0.66 (0.76)
+17 Underestimate the speed of an oncoming vehicle when overtaking. (AV) 
+Te has enfadado con otro/a conductor/a y lo/a has perseguido con la intencion ´ de recriminarle su comportamiento.
+0.43 (0.89)
+18 Stay in a motorway lane that you know will be closed ahead until the last minute before forcing your way into the other lane. (OV) 
+Has decidido permanecer hasta el último momento en un carril de la autovía que sabías que se acababa un poco mas ´ adelante, momento en 
+el cual te has visto forzado/a a cambiar de carril.
+0.91 (0.94)
+19 Forget where you left your car in a car park. (L) 
+Has olvidado donde ´ habías dejado el coche en el aparcamiento.
+1.61 (1.12)
+20 Overtake a slow driver on the inside. (OV) 
+Has adelantado por la derecha a un vehículo que conducía lento.
+1.24 (1.16)
+21 Race away from traffic lights with the intention of beating the driver next to you. (OV) 
+Has acelerado bruscamente al salir de un sem´
+aforo con la intencion ´ de superar al conductor o a la conductora que tenías al lado.
+1.03 (1.13)
+22 Misread the signs and exit from a roundabout on the wrong road. (L) 
+No has interpretado bien la senalizaci ˜ on ´ y eso te ha llevado a equivocarte de salida en una rotonda.
+1.28 (0.88)
+23 Drive so close to the car in front that it would be difficult to stop in an emergency. (OV) 
+Has circulado tan cerca del vehículo que tenías delante que hubiera sido difícil frenar a tiempo en caso de emergencia.
+1.01 (0.94)
+24 Cross a junction knowing that the traffic lights have already turned against you. (OV) 
+Has cruzado una interseccion ´ a pesar de saber que el semaforo ´ ya se había puesto rojo.
+1.02 (0.95)
+25 Become angered by a certain type of a driver and indicate your hostility by whatever means you can. (AV) 
+Te enfureces por culpa de cierto tipo de conductores/as y muestras tu enfado hacia ellos/as por cualquier medio que te sea posible.
+1.14 (1.11)
+26 Realize that you have no clear recollection of the road along which you have just been travelling. (L) 
+Te has dado cuenta de que no recuerdas con claridad la carretera por la que acabas de estar circulando.
+1.02 (1.01)
+27 Underestimate the speed of an oncoming vehicle when overtaking. (E) 
+Has subestimado la velocidad de un vehículo que se aproximaba hacia ti en sentido contrario cuando estabas realizando un adelantamiento.
+0.85 (0.84)
+28 Disregard the speed limit on a motorway. (OV) 
+No has respetado el límite de velocidad en una autovía.
+1.83 (1.30)
+29 Talk on a mobile phone (without hands-free function) while driving. (OV) 
+Has hablado por tel´efono (sin la funcion ´ de manos libres) mientras estabas conduciendo.
+0.90 (1.01)
+30 Use a mobile phone for instant messaging or other applications (e.g., WhatsApp, taking photos or videos, social media, email) while driving. 
+(OV) 
+Has usado el tel´efono movil ´ para aplicaciones de mensajería instantanea ´ u otro tipo de aplicaciones (por ejemplo, WhatsApp, c´
+amara de 
+fotos o video, redes sociales, correo electronico, ´ etc.) mientras estabas conduciendo.
+1.02 (1.09)
+Note: E = Errors; L = Lapses; OV = “Ordinary” violations; AV = Aggressive violations.
+Data availability
+Data will be made available on request.
+References
+Åberg, L., Rimmo, ¨ P.A., 1998. Dimensions of aberrant driver behaviour. Ergonomics 41 (1), 39–56. https://doi.org/10.1080/001401398187314.
+Bener, A., Ozkan, ¨ T., Lajunen, T., 2008. The driver behaviour questionnaire in Arab gulf countries: qatar and United Arab Emirates. Accid. Anal. Prev. 40 (4), 
+1411–1417. https://doi.org/10.1016/j.aap.2008.03.003.
+Boboc, R.G., Voinea, G.D., Buzdugan, I.D., Antonya, C., 2022. Talking on the phone while driving: a literature review on driving simulator studies. Int. J. Environ. Res. 
+Publ. Health 19 (17). https://doi.org/10.3390/ijerph191710554.
+Cordazzo, S.T.D., Scialfa, C.T., Ross, R.J., 2016. Modernization of the driver behaviour questionnaire. Accid. Anal. Prev. 87, 83–91. https://doi.org/10.1016/j. 
+aap.2015.11.016.
+de Winter, J.C.F., Dodou, D., 2016. National correlates of self-reported traffic violations across 41 countries. Pers. Indiv. Differ. 98, 145–152. https://doi.org/ 
+10.1016/j.paid.2016.03.091.
+de Winter, J.C.F., Dodou, D., 2010. The driver behaviour questionnaire as a predictor of accidents: a meta-analysis. J. Saf. Res. 41 (6), 463–470. https://doi.org/ 
+10.1016/j.jsr.2010.10.007.
+de Winter, Joost, C.F., Dodou, D., Stanton, N.A., 2015. A quarter of a century of the DBQ: some supplementary notes on its validity with regard to accidents. 
+Ergonomics 58 (10), 1745–1769. https://doi.org/10.1080/00140139.2015.1030460.
+Deffenbacher, J.L., Oetting, E.R., Lynch, R.S., 1994. Development of a driving anger scale. Psychol. Rep. 74 (1), 83–91. https://doi.org/10.2466/pr0.1994.74.1.83.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+10
+
+Demir, B., Demir, S., Ozkan, ¨ T., 2016. A contextual model of driving anger: a meta-analysis. Transport. Res. F Traffic Psychol. Behav. 42, 332–349. https://doi.org/ 
+10.1016/j.trf.2016.09.020.
+DGT, 2025. Principales cifras de la siniestralidad vial. Ano ˜ 2024. DGT.
+Di Stasi, L.L., Diaz-Piedra, C., Morales, J.M., Kurapov, A., Tagliabue, M., Bj¨
+artå, A., Megías, A., Bernhardsson, J., Paschenko, S., Romero, S., C´
+andido, A., Catena, A., 
+2020. A cross-cultural comparison of visual search strategies and response times in road hazard perception testing. Accid. Anal. Prev. 148, 105785. https://doi. 
+org/10.1016/j.aap.2020.105785.
+Dingus, T.A., Guo, F., Lee, S., Antin, J.F., Perez, M., Buchanan-King, M., Hankey, J., 2016. Driver crash risk factors and prevalence evaluation using naturalistic 
+driving data. Proc. Natl. Acad. Sci. U. S. A 113 (10), 2636–2641. https://doi.org/10.1073/pnas.1513271113.
+Dotse, J.E., Rowe, R., 2021. Modelling Ghanaian road crash risk using the Manchester driver behaviour questionnaire. Saf. Sci. 139, 105213. https://doi.org/ 
+10.1016/j.ssci.2021.105213.
+Dula, C.S., Ballard, M.E., 2003. Development and evaluation of a measure of dangerous, aggressive, negative emotional, and risky driving. J. Appl. Soc. Psychol. 33 
+(2), 263–282. https://doi.org/10.1111/j.1559-1816.2003.tb01896.x.
+Engelberg, J.K., Hill, L.L., Rybar, J., Styer, T., 2015. Distracted driving behaviors related to cell phone use among middle-aged adults. J. Transport Health 2 (3), 
+434–440. https://doi.org/10.1016/j.jth.2015.05.002.
+Escamilla, C., Belena, ˜ M.A., ´ Pico, ´ A., Mora Rojo, J., Mateu-Molla, ´ J., 2023. A psychological profile of drivers convicted of driving under the influence of alcohol. 
+Transport. Res. F Traffic Psychol. Behav. 95, 380–390. https://doi.org/10.1016/j.trf.2023.05.007.
+Freeman, J., Davey, J., Wishart, D., 2008. A study of contemporary modifications to the Manchester Driver Behaviour Questionnaire for organisational fleet settings. 
+In: Dorn, L. (Ed.), Driver Behaviour and Training: Volume III: Human Factors in Road and Rail Transport. Ashgate Publishing, pp. 201–214.
+Gianfranchi, E., Spoto, A., Tagliabue, M., 2017. Risk profiles in novice road users: relation between moped riding simulator performance, on-road aberrant behaviors 
+and dangerous driving. Transport. Res. F Traffic Psychol. Behav. 49, 132–144. https://doi.org/10.1016/j.trf.2017.06.016.
+Gras, M.E., Sullman, M.J.M., Cunill, M., Planes, M., Aymerich, M., Font-Mayolas, S., 2006. Spanish drivers and their aberrant driving behaviours. Transport. Res. F 
+Traffic Psychol. Behav. 9 (2), 129–137. https://doi.org/10.1016/j.trf.2005.09.004.
+Grasso, A., Tagliabue, M., 2022. Over-speeding trend across self-reported driving aberrant behaviors: a simulator study. Front. Psychol. 13, 1–12. https://doi.org/ 
+10.3389/fpsyg.2022.1028791.
+Gu´eho, L., Grani´e, M.A., Abric, J.C., 2014. French validation of a new version of the Driver Behavior Questionnaire (DBQ) for drivers of all ages and level of 
+experiences. Accid. Anal. Prev. 63, 41–48. https://doi.org/10.1016/j.aap.2013.10.024.
+Hair, J.F., Black, W.C., Babin, B.J., Anderson, R.E., 2019. Multivariate Data Analysis, eighth ed. Cengage Learning.
+Herrero-Fern´
+andez, D., 2011. Adaptacion ´ psicom´etrica de la version ´ reducida del driving anger scale en una muestra Espanola. ˜ Diferencias por edad y sexo. Anales de 
+Psicol./Annals Psychol. 27 (2), 544–549.
+Herrero-Fern´
+andez, D., Bogdan-Ganea, S.R., Seti´en-Suero, E., Martín-Ayala, J.L., 2024. The role of subjective risk perception and self-esteem in the relationship 
+between sensation seeking and aberrant behaviors on the road: a moderated-moderation model. J. Saf. Res. 90, 31–42. https://doi.org/10.1016/j. 
+jsr.2024.06.003.
+Hussain, B., Sato, H., Xiong, S., Miwa, T., Nguyen, N.T., Morikawa, T., 2019. Cross-Cultural differences in aberrant driving behaviors: Comparison of Japanese, 
+Chinese, and Vietnamese drivers. J. Eastern Asia Soc. Transport. Stud. 13, 43–59. https://doi.org/10.11175/easts.13.43.
+International Test Commission, 2017. The ITC Guidelines for Translating and Adapting Tests. ITC.
+Kontogiannis, T., Kossiavelou, Z., Marmaras, N., 2002. Self-reports of aberrant behaviour on the roads: errors and violations in a sample of Greek drivers. Accid. Anal. 
+Prev. 34 (3), 381–399. https://doi.org/10.1016/S0001-4575(01)00035-5.
+Koo, T.K., Li, M.Y., 2016. A guideline of selecting and reporting intraclass correlation coefficients for reliability research. J. Chiropract. Med. 15 (2), 155–163. https:// 
+doi.org/10.1016/j.jcm.2016.02.012.
+Lajunen, T., Parker, D., Summala, H., 2004. The Manchester Driver Behaviour Questionnaire: a cross-cultural study. Accid. Anal. Prev. 36 (2), 231–238. https://doi. 
+org/10.1016/S0001-4575(02)00152-5.
+Lawton, R., Parker, D., Manstead, A.S.R., Stradling, S.G., 1997. The role of affect in predicting social behaviors: the case of road traffic violations. J. Appl. Soc. 
+Psychol. 27 (14), 1258–1276. https://doi.org/10.1111/j.1559-1816.1997.tb01805.x.
+Li, C.H., 2016. Confirmatory factor analysis with ordinal data: comparing robust maximum likelihood and diagonally weighted least squares. Behav. Res. Methods 48 
+(3), 936–949. https://doi.org/10.3758/s13428-015-0619-7.
+Lipovac, K., Đeri´c, M., Teˇsi´c, M., Andri´c, Z., Mari´c, B., 2017. Mobile phone use while driving-literary review. Transport. Res. F Traffic Psychol. Behav. 47, 132–142. 
+https://doi.org/10.1016/j.trf.2017.04.015.
+Martinussen, L.M., Hakamies-Blomqvist, L., Møller, M., Ozkan, ¨ T., Lajunen, T., 2013a. Age, gender, mileage and the DBQ: the validity of the Driver Behavior 
+Questionnaire in different driver groups. Accid. Anal. Prev. 52, 228–236. https://doi.org/10.1016/j.aap.2012.12.036.
+Martinussen, L.M., Lajunen, T., Moller, M., Ozkan, ¨ T., 2013b. Short and user-friendly: the development and validation of the Mini-DBQ. Accid. Anal. Prev. 50, 
+1259–1265. https://doi.org/10.1016/j.aap.2012.09.030.
+McDonald, R.P., Ho, M.H.R., 2002. Principles and practice in reporting structural equation analyses. Psychol. Methods 7 (1), 64–82. https://doi.org/10.1037/1082- 
+989X.7.1.64.
+Meesmann, U., Pires, C., Wardenier, N., Cools, M., 2025. Exploring cross-national variations in traffic safety culture: insights into mobile phone use and shared beliefs 
+across 31 countries. IATSS Res. 49 (3), 399–409. https://doi.org/10.1016/j.iatssr.2025.09.004.
+Meesmann, U., Wardenier, N., Torfs, K., Pires, C., Delannoy, S., Van den Berghe, W., 2022. A Global Look at Road Safety. Synthesis from the ESRA2 Survey in 48 
+Countries. ESRA Project (E-Survey of Road Users' Attitudes). Vias institute.
+Megías-Robles, A., Sanchez-L ´ opez, ´ M.T., Fern´
+andez-Berrocal, P., 2022. The relationship between self-reported ability emotional intelligence and risky driving 
+behaviour: consequences for accident and traffic ticket rate. Accid. Anal. Prev. 174, 1–7. https://doi.org/10.1016/j.aap.2022.106760.
+Mesken, J., Lajunen, T., Summala, H., 2002. Interpersonal violations, speeding violations and their relation to accident involvement in Finland. Ergonomics 45 (7), 
+469–483. https://doi.org/10.1080/00140130210129682.
+Navas, J.F., Martín-P´erez, C., Petrova, D., Verdejo-García, A., Cano, M., Sagripanti-Mazuquín, O., Perandr´es-Gomez, ´ A., Lopez-Martín, ´ A., Cordovilla-Guardia, S., 
+Megías, A., Perales, J.C., Vilar-Lopez, ´ R., 2019. Sex differences in the association between impulsivity and driving under the influence of alcohol in young adults: 
+the specific role of sensation seeking. Accid. Anal. Prev. 124, 174–179. https://doi.org/10.1016/j.aap.2018.12.024.
+Nordfjærn, T., Jørgensen, S., Rundmo, T., 2011. A cross-cultural comparison of road traffic risk perceptions, attitudes towards traffic safety and driver behaviour. 
+J. Risk Res. 14 (6), 657–684. https://doi.org/10.1080/13669877.2010.547259.
+Ortuna, ˜ R., 2021. Desarrollo de indicadores relativos a la conducta y cultura de los usuarios de la vía, basados en la encuesta europea sobre actitudes de seguridad vial 
+de los usuarios de la vía. DGT.
+Oviedo-Trespalacios, O., Haque, M.M., King, M., Washington, S., 2016. Understanding the impacts of mobile phone distraction on driving performance: a systematic 
+review. Transport. Res. C Emerg. Technol. 72, 360–380. https://doi.org/10.1016/j.trc.2016.10.006.
+Ozkan, ¨ T., Lajunen, T., 2005. A new addition to DBQ: positive driver behaviours scale. Transport. Res. F Traffic Psychol. Behav. 8 (4–5), 355–368. https://doi.org/ 
+10.1016/j.trf.2005.04.018.
+Ozkan, ¨ T., Lajunen, T., Chliaoutakis, J. El, Parker, D., Summala, H., 2006a. Cross-cultural differences in driving behaviours: a comparison of six countries. Transport. 
+Res. F Traffic Psychol. Behav. 9 (3), 227–242. https://doi.org/10.1016/j.trf.2006.01.002.
+Ozkan, ¨ T., Lajunen, T., Summala, H., 2006b. Driver behaviour questionnaire: a follow-up study. Accid. Anal. Prev. 38 (2), 386–395. https://doi.org/10.1016/j. 
+aap.2005.10.012.
+Parishad, N., Aghabayk, K., Bayat, M., Shiwakoti, N., 2023. Validation of modified driver behavior questionnaire considering Mobile phone usage while driving. Civ. 
+Eng. Infrastruct. J. 56 (1), 19–32. https://doi.org/10.22059/CEIJ.2021.327968.1778.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+11
+
+Parker, D., West, R., Stradling, S., Manstead, A.S.R., 1995. Behavioural characteristics and involvement in different types of traffic accident. Accid. Anal. Prev. 27 (4), 
+571–581. https://doi.org/10.1016/0001-4575(95)00005-K.
+Petridou, E., Moustaki, M., 2000. Human factors in the causation of road traffic crashes. Eur. J. Epidemiol. 16 (9), 819–826. https://doi.org/10.1023/A: 
+1007649804201.
+Phuksuksakul, N., Kanitpong, K., Chantranuwathana, S., 2021. Factors affecting behavior of mobile phone use while driving and effect of mobile phone use on driving 
+performance. Accid. Anal. Prev. 151, 105945. https://doi.org/10.1016/j.aap.2020.105945.
+Ramos-Moreno, M.A., ´ Fern´
+andez-Berrocal, P., Megías-Robles, A., 2025. Emotion regulation abilities as a protective factor in the relationship between anger-inducing 
+road events and dangerous behavior behind the wheel. Transport. Res. F Traffic Psychol. Behav. 112, 138–147. https://doi.org/10.1016/j.trf.2025.03.025.
+Razzaghi, A., Soori, H., Kavousi, A., Abadi, A., Khosravi, A., Alipour, A., 2019. Risk factors of deaths related to road traffic crashes in World Health Organization 
+regions: a systematic review. Archives Trauma Res. 8 (2), 57. https://doi.org/10.4103/atr.atr_59_19.
+Reason, J., Manstead, A., Stradling, S., Baxter, J., Campbell, K., 1990. Errors and violations on the roads: a real distinction? Ergonomics 33 (10–11), 1315–1332. 
+https://doi.org/10.1080/00140139008925335.
+Richer, I., Bergeron, J., 2012. Differentiating risky and aggressive driving: further support of the internal validity of the dula dangerous driving index. Accid. Anal. 
+Prev. 45, 620–627. https://doi.org/10.1016/j.aap.2011.09.014.
+Roca, J., Padilla, J.L., Lopez-Ram ´ on, ´ M.F., Castro, C., 2013. Assessing individual differences in driving inattention: adaptation and validation of the attention-related 
+driving errors scale to Spain. Transport. Res. F Traffic Psychol. Behav. 21, 43–51. https://doi.org/10.1016/j.trf.2013.09.001.
+Rolison, J.J., Regev, S., Moutari, S., Feeney, A., 2018. What are the factors that contribute to road accidents? An assessment of law enforcement views, ordinary 
+drivers' opinions, and road accident records. Accid. Anal. Prev. 115, 11–24. https://doi.org/10.1016/j.aap.2018.02.025.
+S´
+anchez-Lopez, ´ M.T., Fern´
+andez-Berrocal, P., Tagliabue, M., Megías-Robles, A., 2024. Spanish adaptation and validation of the Dula Dangerous Driving Index (DDDI). 
+Aggress. Behav. 50 (1), 1–10. https://doi.org/10.1002/ab.22129.
+Shao, H.P., Yin, J., Yu, W.H., Wang, Q.L., 2020. Aberrant driving behaviours on risk involvement among drivers in China. J. Adv. Transp. 2020 (1), 8878711.
+Smorti, M., Guarnieri, S., 2016. Exploring the factor structure and psychometric properties of the Manchester Driver Behavior Questionnaire (DBQ) in an Italian 
+sample. TPM - Test. Psychometrics, Methodol. Appl. Psychol. 23 (2), 185–202. https://doi.org/10.4473/TPM23.2.4.
+Stephens, A.N., Fitzharris, M., 2016. Validation of the Driver Behaviour Questionnaire in a representative sample of drivers in Australia. Accid. Anal. Prev. 86, 
+186–198. https://doi.org/10.1016/j.aap.2015.10.030.
+Sullman, M.J.M., Meadows, M.L., Pajo, K.B., 2002. Aberrant driving behaviours amongst New Zealand truck drivers. Transport. Res. F Traffic Psychol. Behav. 5 (3), 
+217–232. https://doi.org/10.1016/S1369-8478(02)00019-0.
+Useche, S.A., Cendales, B., Lijarcio, I., Llamazares, F.J., 2021. Validation of the F-DBQ: a short (and accurate) risky driving behavior questionnaire for long-haul 
+professional drivers. Transport. Res. F Traffic Psychol. Behav. 82, 190–201. https://doi.org/10.1016/j.trf.2021.08.013.
+Ventsislavova, P., Crundall, D., García-Fernandez, P., Castro, C., 2021. Assessing willingness to engage in risky driving behaviour using naturalistic driving footage: 
+the role of age and gender. Int. J. Environ. Res. Publ. Health 18 (19), 1–20. https://doi.org/10.3390/ijerph181910227.
+Wang, J., Wang, X., 2012. Structural Equation Modeling: Applications Using Mplus. John Wiley & Sons.
+World Health Organization, 2023. Global Status Report on Road Safety 2023: Summary. WHO.
+World Medical Association, 2009. Declaration of Helsinki: Ethical Principles for Medical Research Involving Human Subjects. WMA.
+Youssef, D., Salameh, P., Abou-Abbas, L., Salmi, L.R., 2023. Driving anger dimensions and their relationship with aberrant driver behavior in Lebanon: results from a 
+national self-reported survey. PLoS One 18 (3 March), 1–17. https://doi.org/10.1371/journal.pone.0283293.
+M.T. Sanchez-L ´ ´
+opez et al. Journal of Transport & Health 48 (2026) 102272
+12

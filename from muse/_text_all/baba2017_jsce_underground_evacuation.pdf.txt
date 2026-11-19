@@ -1,0 +1,758 @@
+EXPERIMENTAL STUDIES ON SAFETY 
+EVACUATION FROM UNDERGROUND SPACES 
+UNDER INUNDATED SITUATIONS
+Yasuyuki BABA1, Taisuke ISHIGAKI2 and Keiichi TODA3
+1Member of JSCE, Associate Professor, Disaster Prevention Research Institute, Kyoto University 
+(2500-106, Katata, Shirahama, Nishimuro, Wakayama 649-2201, Japan)
+E-mail: baba@uh31.dpri.kyoto-u.ac.jp
+2Member of JSCE, Professor, Dept. of Civil, Environmental and Applied Systems Eng., Kansai University 
+(3-3-35 Yamate-cho, Suita, Osaka 564-8680, Japan)
+E-mail: ishigaki@kansai-u.ac.jp
+3Member of JSCE, Professor, Graduate School of Engineering, Kyoto University 
+(C Cluster, Kyoto-Daigaku-Katsura, Nishikyo, Kyoto 615-8540, Japan)
+E-mail: toda.keiichi.4z@kyoto-u.ac.jp
+Many cities in Japan are located in alluvial plains, and the vulnerability of urbanized areas to flood 
+disaster is highlighted by frequent flooding due to heavy rainfall or typhoon. Underground spaces are also 
+flood-prone areas because those are below the ground, and water intrusion into underground space inflicts 
+severe damages on human beings and urban functions and infrastructures.
+In order to reduce human suffering due to flood inundation in underground spaces and low-lying areas, 
+needless to say, early evacuation is one of the most important countermeasures. This paper shows some 
+experimental results of evacuation tests from underground spaces under inundated situations.
+The difficulties of evacuation from underground space was investigated by using three real-scale models 
+(door, staircase, and car), and the limits for safety evacuation is discussed. From the results, it is found that 
+water depth of 0.3–0.4m would be a critical condition for safety evacuation through staircase and door 
+while 0.7–0.8m deep on the ground would be a critical situation for safety evacuation through the doors of 
+the car. The relationship between the critical depth condition for the safety evacuation and the age of male 
+subjects was also investigated by using the experimental results of real-scale door model tests and the 
+Physical Fitness Survey results.
+A multiple regression model presented here properly reproduces the characteristics of the experimental 
+results, such as the critical depth condition and its age-associated difference for safety evacuation. The 
+same model is applied to the female's experimental results of real-scale door model tests and shows the 
+overall distribution of the experimental results although the regression output still has considerable variation, especially in the young generation.
+ Key Words : urban flood, underground space, evacuation tests, real-scale models
+1. INTRODUCTION
+Torrential rains have been observed frequently in 
+recent years in Japan, and the rainfalls over the capacity of drainage system have grown in frequency.
+These severe rainfalls cause inundations in many 
+places in Japan.
+Most urbanized areas developed in alluvial plains 
+have underground spaces, and underground spaces 
+have important roles in enhancing city functions (like 
+subways, motorways, shopping malls, and parking 
+lots) in the heavily built-up urbanized areas. Meanwhile, the underground spaces are prone to flood 
+events.
+Underground motorways (including underpasses) 
+are also flood-prone areas. Some accidents involving
+submerged cars often occur around low-lying areas 
+with "bowl-shaped" depression due to the heavy 
+downpour within a short duration.
+Once flood events happen in the urban area, water 
+intrusion occurs in the underground spaces, and infrastructures and cumulated properties are damaged
+severely. In the worst-case scenario, unfortunately 
+human sufferings are caused by underground inundations. Against the backdrop of these heightened 
+concerns, some research activities on urban flooding 
+Journal of JSCE, Vol. 5, 269-278, 2017 269
+
+Door：W=0.82m,H=2.0m
+Board：H=0-0.7m
+1.02m
+3.0m
+Pump
+Door：W=0.82m,H=2.0m
+Board：H=0-0.7m
+1.02m
+3.0m
+Pump
+Fig.1 Real-scale model of door. 
+Photo 1 Participatory test with door model. 
+have been carried out1), 2), 3), 4), 5), 6). 
+In order to reduce the human damage caused by 
+the inundation in underground spaces, needless to 
+say, evacuation behavior at the early stage is one of 
+the effective and important countermeasures. The 
+objectives of this study are to summarize and to 
+discuss the difficulty of safety evacuation based on 
+the experiment results by using real-scale models. 
+Furthermore, investigations on the difficulty of
+safety evacuation were also performed considering
+personal characteristics such as gender and age. In 
+this study, an attempt to illustrate a connection between the subjects' age and the water depth conditions for the safety evacuation was made. It would be 
+easy to imagine the existence of the relationship 
+between the subjects' age and the water depth conditions for the safety evacuation; however, clarifying
+the relationship and its background was not easy. A 
+multiple regression model with Physical Fitness 
+Survey results was employed to investigate the relationship between the subjects' age and the results of 
+the participatory model tests.
+2. EXPERIMENTS WITH REAL-SCALE 
+MODELS
+In some past cases of urban flooding, inundation in 
+underground space often happened which, unfortunately, caused human sufferings. In order to reduce 
+the human suffering under inundated situations, it is 
+pointed out that detailed investigations on the difficulty and limitation for safety evacuation are required7), 8), 9), 10), 11), 12), 13). 
+In the case of evacuation under inundated situations, evacuation behaviors are divided roughly into 
+two patterns as follows: 
+a. opening the door and getting out from a space
+(room or car)
+b. moving to a safe place through the corridor or 
+staircase
+Three real-scale models of door, staircase, and car 
+were employed to investigate experimentally the 
+difficulty and limitation of safety evacuation. In the 
+following sections, some experimental results with 
+these models are shown and discussed (Engineering 
+unit system is often used in the following sections to 
+facilitate the comparisons of the experimental data 
+and body weight). The critical depth condition in this 
+paper means "water depth condition that would cause 
+a difficult situation for safety evacuation", and the 
+evacuation rate means the ratio of the number of 
+subjects who can evacuate to the number of all subjects.
+(1) Evacuation tests through a door
+a) Real-scale door model
+To investigate the critical depth condition in front 
+of a door for safety evacuation, a real-scale model of 
+door was made, and some participatory experiments 
+was conducted. Fig.1 shows the experimental setup 
+of the door model. The model has a door (0.82m 
+wide) sandwiched by two tanks, and subjects can try 
+to push or pull the door open. Fifty-six subjects (44 
+males and 12 females) had real-scale model tests to 
+open the door with several experimental conditions.
+Human power to open the door in the upright position was also measured by using a load scale for 
+each subject. 
+b) Participatory tests of evacuation with door 
+model
+Fig.2 shows the relation between pushing force by
+subjects and their weights. It is found that the measuring results of pushing force are in between 45 and 
+80% of their own weight for male subjects. In the 
+females’ case, the results would be in between 40% 
+and approximately 70% of their own weight. If the 
+normal weight is 65 kilograms for men, the maximum expected pushing power is about 52 kilograms 
+Door: W=0.82m, H=2.0m
+Board: H=0-0.7m
+270
+
+0 20 40 60 80 100
+0
+20
+40
+60
+80
+Body weight of examinee (kgf)
+Pushing force (kgf, *9.81N)
+: male
+: female
+80% of weight
+45% of weight
+Fig.2 Relation between pushing force of subjects and their body 
+weight. 
+0 0.2 0.4 0.6
+0
+50
+100
+Water depth (m)
+Measured force to open door
+broken: measured force
+ by jack thrust test
+(kgf, *9.81N)
+52kg (80% of 65kg)
+29kg (45% of 65kg)
+Fig.3 Measured results of water pressure and required pushing 
+force to open the door8). 
+(80% of the body weight) and the minimum expected 
+pushing power about 29 kilograms (45% of the body 
+weight) by using the results.
+The broken line in Fig.3 illustrates the relationship 
+between the required pushing force to open the door 
+and water depth in front of the door8). Required
+pushing force to open the door is measured by jack 
+thrust test with a load cell. Based on the relationship, 
+the critical depth condition is estimated by the expected pushing force mentioned above. The critical 
+depth condition for male subjects is estimated between about 0.33m (corresponding to pushing force 
+of 29 kilograms) and about 0.45m (corresponding to 
+pushing force of 52 kilograms) shown in Fig.3. This
+result indicates that the water depth of around 0.4m
+would be the critical depth conditions for safety 
+evacuation for male subjects.
+The followings are the distribution of the critical
+0.15m
+2.5m
+4.5m 2.5m 6.0m
+1.0m
+0.3m
+Pump （Max 0.8m3/s）
+Depth H
+10.0m 1.8m
+0.15m
+2.5m
+4.5m 2.5m 6.0m
+1.0m
+0.3m
+Pump （Max 0.8m3/s）
+Depth H
+10.0m 1.8m
+Fig.4 Real-scale model of staircase. 
+depth condition for male subjects (the number of 
+available data is 38).
+0.3m - 0.4m: 0% (0 subject) 
+0.4m - 0.5m: 89.5% (34 subjects)
+0.5m - 0.6m: 10.5% (4 subjects) 
+This distribution means that all subjects are able to 
+open the door in the case of under 0.4m deep and the 
+evacuation rate rapidly decreases in the case of more 
+than 0.4m deep. In other words, for most male subjects, water depth of around 0.4m deep would be the 
+critical condition for the safety evacuation, and this 
+result supports the estimated critical depth condition 
+derived by the relationship between body weight and 
+pushing force.
+In the same way, the critical depth condition for 
+female subjects is also estimated by using the relationship in Fig.2 and Fig.3. If the normal weight is 50
+kilograms for women, the maximum expected 
+pushing power is about 35 kilograms (70% of the 
+body weight) and the minimum expected pushing 
+power about 20 kilograms (40% of the body weight) 
+by using the results in Fig.2. In Fig.3, the critical
+depth condition for female subjects is estimated
+between about 0.29m (corresponding to pushing 
+force of 20 kilograms) and about 0.37m (corresponding to pushing force of 35 kilograms). This 
+result indicates that the water depth of around 0.3m 
+would be the critical conditions for safety evacuation 
+for female subjects.
+(2) Evacuation tests through staircase
+a) Real-scale staircase model
+To simulate the intrusion of flood water over a 
+staircase, a real-scale model of staircase was installed 
+as shown in Fig.4. There are 20 steps of which tread 
+is 0.3m and riser is 0.15m. The sizes of both tread and 
+riser are standard and are used typically for staircases 
+in public spaces in Japan. The total height of the 
+staircase is 3m and the width is 1m. Maximum flow 
+discharge is up to 0.8m3
+/s, and the water depth on the 
+ground level H is variable (maximum H is 0.5m).
+b) Participatory tests of evacuation with staircase
+model
+The number of subjects of the evacuation test was 
+271
+
+Photo 2 Participatory test with staircase model.
+more than 100, including 11 children of 8 years and 3 
+children of 12 years. Required time for evacuation 
+was measured under four experimental conditions 
+(H=0.1, 0.2, 0.3, and 0.4m). Here, "Required time" is 
+the summation of the time for walking in the corridor 
+(5m long) and staircase (20 steps).
+The comparisons of required time for evacuation 
+are shown in Fig.5. The required time for evacuation 
+becomes longer with an increase in the depth conditions in both male and female cases. The rate of increase of the required time for evacuation is bigger in 
+the case of females than that in males. The required 
+time for evacuation in the case of children is considerably bigger than the one in adults, and this result 
+indicates that the critical depth condition for the 
+safety evacuation would be lower than thought although the number of children subjects is not sufficient for discussion. 
+Fig.6 shows the results of a questionnaire survey 
+among subjects asking about the water depth limit for 
+safety evacuation after the evacuation test. Many 
+subjects recognized the water depth of 0.3m on the 
+ground as the depth limit. Moreover, it is easily expected that the critical depth conditions for children 
+and the elderly would be shallower than the critical 
+depth condition above.
+(3) Evacuation tests through the door of a submerged car
+a) Real-scale car model
+The experimental setup is shown in Fig.7. A car in 
+the sedan category is used for the model, and the car 
+is fixed on the floor. The model consists of the car, 
+water tank, and pumping system. The water tank is 
+located in the driver side, and water depth in the tank 
+is variable from 0 to 1m (The bottom of the door is 
+0.32m high above the floor).
+0 0.1 0.2 0.3 0.4
+20
+30
+：male
+：female
+：children (8 yrs)
+：children (12 yrs)
+Water depth H (m)
+Required time (sec)
+Fig.5 Comparisons of required time for evacuation. 
+Fig.6 Questionnaire results on the water depth limit for safety 
+evacuation through staircase.
+(a) plane view
+(b) cross-section view
+Fig.7 Real-scale model of car (sedan car). 
+grating
+water tank
+control valve
+of discharge
+wall of water tank
+(Height: 1.0m) grating
+Unit: mm
+272
+
+In order to investigate the required pushing force 
+to open both front and rear doors, measurements of 
+pushing force were carried out by jack thrust test with 
+a load cell. Fig.8 illustrates the required pushing 
+force to open the front and rear doors. The broken
+lines represent fitted curves of the second order. 
+Measured results rise rapidly according to the increase in water depth, and the required pushing 
+forces to open the rear door is equal to almost 
+60%–70% of the one to open the front door. The 
+difference in the required force between front and 
+rear door results from the difference in the shape of 
+the door.
+b) Participatory tests of evacuation with car
+model
+Fig.9 shows the variations in evacuation rates and
+averaged evacuation time to water depth above the 
+door bottom in the cases of front and rear doors (the 
+number of subjects is 45). In the case of the front 
+door, as water depth rises, longer evacuation time is 
+needed and the possibility of evacuation suddenly
+decreases if water depth above the door bottom exceeds 0.4–0.45m deep (around 0.7–0.8m deep above 
+the floor). In the case of the rear door, the experimental results show similar characteristics; however, 
+the increase rate of evacuation time is relatively small 
+and the evacuation rate maintains a high level.
+Another series of participatory tests was conducted 
+in the case of evacuation through a sliding door. The 
+experimental setup for the experiments involving
+sliding door (Photo 4) is much the same as the one in 
+Fig.7. The only difference is the type of the car, and 
+the use of a mini-vehicle with a sliding door. The 
+bottom of the door is 0.31m high above the floor in 
+this case. The experimental results with the 
+mini-vehicle are shown in Fig.10. The experimental 
+results are similar to the one of the sedan case. Also, 
+the evacuation behavior through the sliding door is 
+more difficult than the one through the front door 
+(single swinging door). The water depth more than 
+0.4m (more than 0.7m deep above the floor) is a 
+nearly critical condition for the safety evacuation 
+because the evacuation rate rapidly decreases.
+There is a big difference in the method of opening 
+a single swinging door and a sliding door. In the case 
+of a single swinging door, an evacuee pushes the 
+single swinging door outward against the water 
+pressure to the door. In this case, the pushing direction by an evacuee is opposite to the one of water 
+pressure to the door.
+In the case of a sliding door, an evacuee needs to 
+combine the following actions to open the door: one 
+is pushing the door outward and the other is drawing
+the door backward. The subjects commented after the 
+participatory tests that the combined movement 
+20 40 60
+0
+200
+400
+600
+0
+20
+40
+60
+water depth above door bottom (cm)
+measured pushing force
+: front door
+: rear door
+(N) (kgf)
+Fig.8 Required forces to open the front and rear doors. 
+Photo 3 Participatory test with car model.
+20 40 60
+0
+5
+10
+15
+20
+25
+0.2
+0.4
+0.6
+0.8
+1
+water depth
+(above door bottom, cm)
+required evacuation time
+(sec)
+evacuation rate
+Evacuation tests through front door
+: required evacuation time
+: evacuation rate
+20 40 60
+0
+5
+10
+15
+20
+25
+0.2
+0.4
+0.6
+0.8
+1
+water depth
+(above door bottom, cm)
+required evacuation time
+(sec)
+evacuation rate
+Evacuation tests through rear door
+: required evacuation time
+: evacuation rate
+Fig.9 Evacuation time and evacuation rate through the front (top) 
+and rear (bottom) doors (sedan car). 
+273
+
+Photo 4 Experimental setup of car model (mini-vehicle).
+20 40 60
+0
+5
+10
+15
+20
+0.2
+0.4
+0.6
+0.8
+1
+water depth
+(above door bottom, cm)
+required evacuation time
+(sec)
+evacuation rate
+Evacuation tests through front door
+: required evacuation time
+: evacuation rate
+20 40 60
+0
+5
+10
+15
+20
+0.2
+0.4
+0.6
+0.8
+1
+water depth
+(above door bottom, cm)
+required evacuation time
+(sec)
+evacuation rate
+Evacuation tests through sliding door
+: required evacuation time
+: evacuation rate
+Fig.10 Evacuation time and evacuation rate through the front 
+(top) and sliding (bottom) doors (mini-vehicle). 
+to open the sliding door mentioned above was rather 
+troublesome, especially under deeper water condition. Thus, it is considered that the difference in the 
+method of opening doors would be one of the reasons 
+why the evacuation behavior through the sliding door 
+would not be easy.
+3. RELATIONSHIP BETWEEN THE 
+EXPERIMENTAL RESULTS AND THE 
+SUBJECTS’ AGE
+In the previous chapter, the comprehensive results 
+of the critical conditions for the safety evacuation 
+under inundated situation were derived based on the 
+participatory evacuation tests by using the real-scale 
+models.
+However, the experimental results in the previous 
+chapter included a considerable variation due to individual differences. Generally, physical capabilities 
+vary with age, including the influence of individual 
+differences and a difference in gender.
+It is therefore deemed that the critical depth conditions for the safety evacuation would vary to a 
+certain degree according to the physical capabilities 
+and the gender of the subjects. In this chapter, the 
+relationship between the critical depth conditions for 
+the safety evacuation and the subjects’ age is discussed based on the participatory test results in the 
+use of a door model by male subjects.
+(1) Results of the Physical Fitness Survey (Japan 
+Fitness Test)
+In Japan, the Ministry of Education, Culture, 
+Sports, Science and Technology (MEXT) has been 
+conducting Physical Fitness Surveys since 1964. The 
+Physical Fitness Survey has several investigation 
+items related to physical capabilities, and the investigated results are grouped into 26 classes according 
+to age. The investigation items of the Physical Fitness Survey consist of nine physical tests related to 
+muscle strength, muscle endurance, bendability, 
+agility and general endurance.
+In this research, the investigation items related to 
+muscle strength, namely grip strength, sit-ups and 
+standing long jump, were chosen as parameters to 
+explain the individual differences in physical capabilities because muscle strength was considered to be 
+closely related with physical strength, such as pushing power. The results of grip strength and sit-ups in 
+the 26 age classes and standing long jump in the 23 
+age classes are shown in Table 114). 
+(2) Distribution of the experimental results in the 
+use of the door model by male subjects
+The evacuation test in the use of the door model by 
+male subjects had the most number of participants
+among all evacuation tests mentioned in the previous 
+chapter, and the number of available data was up to 
+397. The 397 experimental results were grouped into 
+26 age-based classes according to the results of the 
+Physical Fitness Survey, and the averaged experi274
+
+20 40 60 80 0
+0.2
+0.4
+Age of subjects (yrs)
+Water depth (m)
+Dots: averaged results
+SD of experimental results
+Line: approximated curve
+Fig.11 Experimental results of evacuation test with door model.
+mental data with more than five subjects are shown in 
+Table 1. 
+Fig.11 illustrates the distributions of the averaged 
+experimental results, standard deviation of the experimental data, and the approximate quartic curve of 
+the averaged experimental results. The details of the 
+approximate quartic curve are as follows:
+depth (m) = 3.332×102
++ 3.487×102 ×Age
++ -1.042×10-3 ×Age2 (1)
++ 1.206×10-5 ×Age3
+ 
++ -4.971×10-8 ×Age4
+ 
+determination coefficient: 8.724×10-1 
+The averaged experimental data have wide distribution due to insufficient number of participants. 
+However, the maximum depth condition is around 
+0.4m deep between the ages of 20 and 40, and this 
+result corresponds to the critical depth condition of 
+door model test presented in the previous chapter.
+The distribution of the averaged experimental data 
+shows realistic characteristics as follows: (1) the peak 
+of the distribution is around 0.4m deep between the 
+ages of 20 and 40, (2) the critical depth conditions for 
+the elderly and children are relatively low, and (3) the 
+critical depth conditions in the young generation 
+increase according to the improvement of physical 
+ability.
+In the following data analysis, the approximate 
+quartic curve of the averaged experimental data is 
+used as the distribution of the critical depth conditions for male subjects, and the estimated values of 
+the depth condition of 23 age-based classes by the 
+quartic curve are shown in Table 1. 
+(3) Multiple regression model
+In order to estimate the calculated distribution of
+the critical depth condition in the column of “estimated water depth” in Table 1, a multiple regression
+Table 1 Physical Fitness Survey results, averaged experimental results and 
+estimated critical depth conditions (male subjects)
+14) .
+275
+
+0 20 40 60
+0.2
+0.3
+0.4
+0.5
+Age of subjects (yrs)
+Water depth (m)
+Line: approximated curve
+(Experimental data by male subjects)
+Dots: multiple regression results
+Fig.12 Comparison between the calculated results and experimental results. 
+model was adopted. The investigated results of body 
+weight, grip strength, sit-ups, and standing long jump 
+were used as input data for the multiple regression 
+model.
+Before the multiple regression analysis, all input 
+data and the estimated data (the calculated depth
+condition) were standardized for each item. A statistical software "R (ver 3.2.3)" was used, and the multiple regression analysis was performed by using 
+command "lm".
+Initially four input data (weight, grip strength, 
+sit-ups, and standing long jump) were used for the 
+multiple regression analysis. After the variable selection, the data combination of grip strength, sit-ups, 
+and standing long jump were found to produce better 
+estimated results. The obtained multiple regression 
+model is as follows (all data are standardized value):
+depth = -3.980×10-16
++ -9.672×10-1×a1 (0.0301)*
++ -1.862×a2 (0.0020)** (2)
++ 3.509×a3 (0.0005)***
+a1: grip strength, a2: sit-ups, a3: standing long jump
+( ) denote P value for regression coefficients
+Fig.12 shows the comparison between the critical 
+depth condition in the column of “estimated water 
+depth” in Table 1 and the estimated results by the 
+multiple regression model. The estimated results by 
+the multiple regression model have good agreement 
+with the overall trend of the calculated distribution of 
+the critical depth condition in Table 1 even though 
+the estimated maximum value is a little smaller than 
+the calculated results, and the estimated results in the 
+young generation have relatively large variability.
+(4) Application of the regression model to the 
+experimental results of the door model by 
+female subjects
+The number of the available data of the experimental results of using the door model by female 
+subjects is 132 and is not insufficient in order to estimate the critical depth conditions according to age in 
+the same way mentioned above.
+The multiple regression model based on the experimental results among male subjects is derived by 
+using several results of the Physical Fitness Survey. 
+In other words, it is possible to say that this multiple 
+regression model explains part of the relationship 
+between several results of the Physical Fitness Survey and the experimental results on the critical depth 
+condition for safety evacuation. The multiple regression model is also applicable to estimate the 
+critical depth conditions according to age in the female case without any model modification.
+The investigated results of grip strength, sit-ups, 
+and standing long jump among female subjects are 
+shown in Table 214). These investigated results are 
+also covered by the same standard derived by the
+investigated results among male subjects in Table 1. 
+Fig.13 shows the comparison between the critical 
+depth condition in the column of “estimated water 
+depth” in Table 1 and the estimated results by using 
+the multiple regression model with the investigated 
+results of female subjects of Physical Fitness Survey. 
+The estimated results in Fig.13 have relatively large
+variability in the young generation as those shown in 
+Table 2 Physical Fitness Survey results (female subjects)14).
+276
+
+0 20 40 60
+0.2
+0.3
+0.4
+0.5
+Age of subjects (yrs)
+Water depth (m)
+Line: approximated curve
+(Experimental data by male subjects)
+Dots: multiple regression results
+using women's results of Physical Fitness Survey
+Fig.13 Comparison between the calculated results and experimental results. 
+Fig.12. However, the maximum peak of the distribution is around 0.3m deep. This means that the estimated results by the multiple regression model have 
+agreement with the experimental results in the previous chapter.
+4. DISCUSSION
+In the previous chapters, the critical depth conditions for the safety evacuation under the inundated
+situations are discussed with the experimental results 
+of a series of the participatory tests of evacuation 
+with three real-scale models of door, staircase and 
+car. The critical conditions for safety evacuation in 
+the cases of door, staircase, and car are roughly estimated based on the experimental results. The estimated critical conditions would be nearly equal to the 
+maximum depth conditions for safety evacuation and 
+must provide a guideline to address the safety under 
+inundated situations, although the obtained results by 
+the participatory tests are still uncertain due to inadequate number of the subjects.
+The relationship between the critical depth conditions and the subjects' age is discussed based on the 
+participatory test results of the door model by male 
+subjects. The relationship between the critical depth 
+conditions and the male subjects' age is well reproduced by the multiple regression model with several 
+investigated results of the Physical Fitness Survey. 
+This result indicates a possible connection between 
+the experimental results of real-scale models and the 
+Physical Fitness Survey results.
+The experimental results presented here still bear
+uncertainty because of the inadequate number of 
+subjects, and more accumulation of data is required 
+in order to obtain more accurate relationship between 
+the experimental results of real-scale models and the 
+Physical Fitness Survey results.
+Despite the uncertainty due to insufficient data, the 
+multiple regression model using the Physical Fitness 
+Survey results can be used to estimate critical depth 
+condition in the case of paucity of available data. In 
+Fig.13, the estimated distribution of the critical depth 
+condition for female subjects is shown, and the estimated results by the multiple regression model have 
+characteristics that correspond to the experimental 
+results.
+The estimated results by the multiple regression 
+model have relatively large variability especially in 
+the young generation as shown in Fig.13. The young 
+generation is a period of rapid physical growth, and 
+physical performance develops with age as shown in 
+Table 1 and Table 2. As a result, it is expected that 
+the critical depth conditions for safety evacuation
+would have a monotonic increasing trend in the 
+young generation like the approximate curve in 
+Fig.13. However, the distribution of the estimated 
+results in Fig.13 does not show a monotonic increasing trend in the young generation. In order to 
+improve the estimation of the critical depth conditions in the young generation, other parameters or 
+another model may be required based on the adequate 
+experimental data.
+5. CONCLUDING REMARKS
+This paper shows some experimental results of 
+evacuation tests from underground spaces by using 
+three real-scale models of door, staircase, and car, 
+and the relationship between the experimental results 
+of the door model and the subjects’ age is also discussed. The main results obtained are as follows:
+(1) The experimental data are summarized to obtain the critical depth conditions for safety evacuation under inundated situations. The experimental 
+results show that a water depth of 0.3–0.4m would be 
+a critical situation for the safety evacuation through 
+staircases and doors and that 0.7–0.8m deep on the 
+ground would be a critical situation for safety evacuation through car doors.
+(2) The relationship between the critical depth 
+conditions for the safety evacuation and the subjects’
+age is investigated based on the participatory test 
+results of the door model by male subjects. The relationship between the critical depth conditions and the 
+male subjects’ age is well reproduced by the multiple 
+regression model with the Physical Fitness Survey 
+results of grip strength, sit-ups, and standing long 
+jump. 
+(3) It is also pointed out based on the estimation
+results of female subjects that the multiple regression 
+model using the Physical Fitness Survey results has 
+277
+
+applicability to the estimation of the critical depth 
+condition in the case of paucity of available data. 
+However, inadequate number of available data is an 
+issue to be resolved to improve the understanding of 
+the relationship between the critical depth conditions 
+and the subjects’ age.
+ACKNOWLEDGMENTS: This research was partially supported by JSPS Grant-in-Aid for Scientific 
+Research (C) 18510146, (B) 20310096, and (B)
+23310109. The authors express their sincere appreciation for the support of all members of Kyoto 
+University and Kansai University who participated in
+the evacuation tests of real-scale models and data 
+analyses.
+REFERENCES 
+1) Toda, K., Inoue, K., Murase, S., Ichikawa, Y. and Yokoo, 
+H.: Inundation analysis due to heavy rainfall in urban area, 
+Journal of Hydraulic, Coastal and Environmental Engineering, JSCE, No. 663/II-53, pp. 1-10, 2000 (in Japanese).
+2) Shige-eda, M. and Akiyama, J.: Comprehensive verification 
+of numerical model for urban flooding, Annual Journal of 
+Hydraulic Engineering, JSCE, Vol. 48, pp. 577-582, 2004 
+(in Japanese).
+3) Kawaike, K., Nakagawa, H., Ichikawa, Y. and Maruyama, 
+H.: Numerical simulation of flood disaster due to heavy rain 
+fall of July 2006 in Matsue City, Annual Journal of Hydraulic Engineering, JSCE, Vol. 51, pp. 535-540, 2007 (in 
+Japanese).
+4) Toda, K., Kuriyama, K., Oyagi, R. and Inoue, K.: Inundation analysis of complicated underground space, Annual 
+Journal of Hydraulic Engineering, JSCE, Vol. 47, pp. 
+877-882, 2003 (in Japanese).
+5) Sekine, M.: Numerical simulation of inundation and evacuation in compound underground station, Annual Journal of 
+Hydraulic Engineering, JSCE, Vol. 54, pp. 583-588, 2010 
+(in Japanese).
+6) Sekine, M. and Take, J.: Numerical simulation of inundation on roads and in underground spaces in highly urbanized 
+area of the center of Tokyo, Journal of Japan Society of 
+Civil Engineers, Ser. B1 (Hydraulic Engineering), Vol. 69, 
+Issue 4, pp. I_1567-I_1572, 2013 (in Japanese).
+7) Nakagawa, H., Ishigaki, T., Muto, Y., Yagi, H. and Zhang, 
+H.: Experiments on inundation in urban area by a river 
+water flooding and their analyses, Annual Journal of Hydraulic Engineering, JSCE, Vol. 48, pp. 571-576, 2004 (in 
+Japanese).
+8) Ishigaki, T., Baba, Y., Toda, K. and Inoue, K.: Experimental study on evacuation from underground space in 
+urban flood, Proc. of 31st IAHR Congress, Seoul, 2005 (on 
+CD-ROM).
+9) Toda, K., Inoue, K., Nakai, T. and Oyagi, R.: Hydraulic 
+model test of inundation water intrusion in underground 
+space, Proc. of 14th Congress of APD-IAHR, Hong Kong, 
+Vol. 2, pp. 1403-1409, 2004. 
+10) Ohtsu, I., Yasuda, Y. and Takahashi, M.: Flow characteristics of stepped channel flows, Journal of Hydraulic Engineering, ASCE, Vol. 130, No. 9, pp. 860-869, 2004.
+11) Takahashi, M., Yasuda, Y. and Ohtsu, I.: A drag coefficient 
+of bodies in aerated flow on stepped channels, Annual 
+Journal of Hydraulic Engineering, JSCE, Vol. 51, pp. 
+685-690, 2007 (in Japanese).
+12) Onisi, Y., Ishigaki, T., Baba, Y. and Toda, K.: Criterion and 
+its application for safety evacuation during underground 
+flooding, Annual Journal of Hydraulic Engineering, JSCE, 
+Vol. 52, pp. 841-846, 2008 (in Japanese).
+13) Sekine, M. and Ohno, R.: Numerical simulation of inundation in underground space and evacuation movement of 
+persons from it, Journal of Japan Society of Civil Engineers, Ser. B1 (Hydraulic Engineering), Vol. 69, Issue 1, 
+pp. 30-43, 2013 (in Japanese).
+14) Ministry of Education, Culture, Sports, Science and Technology-Japan: Results of the FY2012 Physical Fitness 
+Survey (Japan Fitness Test): http://www.mext.go.jp/english
+/topics/1343347.htm 
+(Received June 24, 2016)
+278
