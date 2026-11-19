@@ -172,15 +172,20 @@ export function createIncidents(o = {}) {
    *
    * 事件里的完整描述（r.cause 与 reason）不变，回放仍能看到水深、判据、概率。
    */
-  function deathCode(i, ctx) {
+  function deathCode(i, ctx, prevStatus) {
     const r = rows[i] || {};
     const c = ctx || {};
+    // 【修 2026-11-19】原实现在 die() 把 r.status 改成 'dead' 之后再读 status，
+    // 导致 status === 'stranded' 永远为假：所有非车内死亡都被归成「涉水行走 /
+    // 室外涉水」，把「深水被困」整类吞掉（300 人 p24 上 10 例被困全被记成涉水）。
+    // 现在由调用方把改状态之前的原状态传进来。
+    const wasStranded = prevStatus === 'stranded';
     const place = c.basement ? '地下室'
       : c.inVehicle ? '车内'
         : (c.indoor ? ((Number(r.effFloor) || 0) <= 1 ? '室内一层' : '室内上层') : '路面');
     const action = c.inVehicle ? '开车'
       : c.basement ? '进入地下室'
-        : r.status === 'stranded' ? '被困'
+        : wasStranded ? '被困'
           : c.indoor ? '滞留室内' : '涉水行走';
     // 致死机制分区：和「地点×动作」是两个维度。
     // 分区是为了回答「哪一套判据把人判死的」，便于和 Jonkman 的三区对照；
@@ -188,7 +193,7 @@ export function createIncidents(o = {}) {
     const zone = c.basement ? '地下室进水'
       : c.inVehicle ? '车内'
         : c.indoor ? '室内被淹'
-          : (r.status === 'stranded' ? '室外被困' : '室外涉水');
+          : (wasStranded ? '室外被困' : '室外涉水');
     return { place, action, zone, key: `${place}·${action}` };
   }
 
@@ -206,9 +211,10 @@ export function createIncidents(o = {}) {
   function die(i, cause, ctx) {
     const r = rows[i];
     if (!r || r.status === 'dead') return false;
+    const prevStatus = r.status;      // 「被困/涉水」要看死之前的状态，改完就读不到了
     r.status = 'dead'; r.cause = cause; r.minute = minute();
     r.x = ctx.x; r.z = ctx.z; r.depth = ctx.depth;
-    const code = deathCode(i, ctx);
+    const code = deathCode(i, ctx, prevStatus);
     r.deathPlace = code.place;
     r.deathAction = code.action;
     stat.deathsByCause[code.key] = (stat.deathsByCause[code.key] || 0) + 1;

@@ -122,7 +122,8 @@ function runOne(c, label = c) {
           evacuated: I.evacuated, driveChosen: D.driveChosen, arrivals: D.arrivals,
           carKm: D.carKm, redLightWaits: I.redLightWaits, yields: I.yields,
           maxDepthCm: Math.round((I.maxDepth || 0) * 100),
-          deathsByCause: I.deathsByCause, wallSec: j.wallSec };
+          deathsByCause: I.deathsByCause, deathsByZone: I.deathsByZone,
+          deathsByLegacyCause: I.deathsByLegacyCause, wallSec: j.wallSec };
       } catch (e) { sum = { error: 'parse: ' + e.message }; }
       console.log(`[sweep] ${c} 完成 · ${sec.toFixed(0)}s · 退出码 ${code}`
         + (sum && sum.dead != null ? ` · 死 ${sum.dead} 困 ${sum.stranded} 避险 ${sum.evacuated}` : ''));

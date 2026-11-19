@@ -189,7 +189,12 @@ for (let f = 0; f < totalFrames && !aborted; f += BATCH) {
         dead: I.dead, evacuated: I.evacuated,
         everInjured: I.everInjured, everStranded: I.everStranded,
         maxDepthCm: Math.round((I.maxDepth || 0) * 100),
+        // deathsByCause：地点×动作二维键（2026-11-19 起）
         deathsByCause: { ...(I.deathsByCause || {}) },
+        // 致死机制分区（室外涉水/室外被困/车内/室内被淹/地下室进水）
+        deathsByZone: { ...(I.deathsByZone || {}) },
+        // 旧口径（涉水溺亡/深水被困致死/车内溺亡…），只给旧报告对照
+        deathsByLegacyCause: { ...(I.deathsByLegacyCause || {}) },
       });
     }
   }
