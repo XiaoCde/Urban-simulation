@@ -392,6 +392,66 @@ export function createCrowdLife({
       }
     }
 
+    // 【2026-11-19 从众的参照群体：同街区邻居，而不是只有同一户】
+    // 此前 peers 只有「同户的人」，于是有两种失真：
+    //  ① 独居者（ACS 户规模=1）没有任何同伴，peersStayOf 返回 0，
+    //     而 0 在 Borowski 的设计里是「同伴全都走了」——等于把独居者
+    //     当成被所有人抛弃，凭空给了一股撤离压力；
+    //  ② 有同伴的人则几乎全是 1.0（全天没人走），被截到设计上限 0.8。
+    // 实测十档直方图：0 档 33%（正好是单人户占比）、≥0.9 档 67%、中间八档全空。
+    // 现在的做法：按**实际住址**就近配 3 个邻居（120 m 内、优先不同楼），
+    // 与同户成员一起构成参照群体。依据是社会影响的参照对象是「看得见的邻居」
+    // （结论性基本盘，见 from muse/全量文献方法台账.md 方法族 2）；
+    // 不使用任何外部网络调查的规模数值，规模由 DC 街区密度自己长出来。
+    // 合成性：邻居按住宅位置就近配对，不是真实社会网络调查，拿到真实网络应替换。
+    (function buildNeighbourPeers() {
+      const N = persons.length;
+      if (N < 8) return;
+      const CELL = 60, R = 120, K = 3;
+      const grid = new Map();
+      const key = (x, z) => `${Math.floor(x / CELL)},${Math.floor(z / CELL)}`;
+      for (let i = 0; i < N; i++) {
+        const hd = persons[i].homeDoor;
+        if (!hd || !Number.isFinite(hd.x) || !Number.isFinite(hd.z)) continue;
+        const k = key(hd.x, hd.z);
+        if (!grid.has(k)) grid.set(k, []);
+        grid.get(k).push(i);
+      }
+      for (let i = 0; i < N; i++) {
+        const p = persons[i], hd = p.homeDoor;
+        if (!hd || !Number.isFinite(hd.x) || !Number.isFinite(hd.z)) continue;
+        const own = p.peers || [];
+        const cx = Math.floor(hd.x / CELL), cz = Math.floor(hd.z / CELL);
+        const cand = [];
+        for (let dx = -2; dx <= 2; dx++) {
+          for (let dz = -2; dz <= 2; dz++) {
+            const arr = grid.get(`${cx + dx},${cz + dz}`);
+            if (!arr) continue;
+            for (const j of arr) {
+              if (j === i || own.includes(j)) continue;
+              const q = persons[j].homeDoor;
+              const d = Math.hypot(q.x - hd.x, q.z - hd.z);
+              if (d > R) continue;
+              // 同一栋楼的排前面会让参照群体全变成「同一片水」，
+              // 所以先按「是否同楼」再按距离排，优先不同楼。
+              cand.push([persons[j].homeBuilding === p.homeBuilding ? 1 : 0, d, j]);
+            }
+          }
+        }
+        if (!cand.length) continue;
+        cand.sort((a, b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2]);
+        const pool = cand.slice(0, Math.min(12, cand.length));
+        const start = (i * 7 + 3) % pool.length;
+        let added = 0;
+        for (let m = 0; m < pool.length && added < K; m++) {
+          const j = pool[(start + m) % pool.length][2];
+          if (own.includes(j)) continue;
+          own.push(j); added++;
+        }
+        p.peers = own;
+      }
+    })();
+
     // ---- 岗位 / 常去餐馆 / 街头锚点：全城网格索引，O(n) 而不是 O(n²)
     // 旧版只有 42 个固定门牌，实测 work_school_0 挂了 48 人；非 office 职业
     // 还全被摆进同一个剧情房间锚点（10:00 一格 62 人）。现在每个人的

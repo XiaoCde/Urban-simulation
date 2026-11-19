@@ -246,7 +246,22 @@ export function protectiveActionUtilities(input, rnd) {
   const E = EVACUATION_LOGIT;
   const c = E.coefficients;
   const S = SCALING;
+  // 【2026-11-19 随机参数的抽取层级】
+  // 原论文是随机参数 logit：cost / 同伴搭车 / 同伴留下 各自有均值和标准差，
+  // 每个受访者有三个**独立**的偏差。此前的实现有三个问题：
+  //  ① 三个随机参数共用同一个 draw（本该独立，等于强行相关）；
+  //  ② 每次判断都重抽（每天上万次），个体差异被平均掉，全城收敛到均值 7.76；
+  //  ③ 7.76 的标准差 10.87 比均值还大（论文自己写 vary widely），
+  //     固定成一个人人相同的数，等于把「有人跟从、有人逆反、有人不受影响」抹平。
+  // 现在改为：外面按人抽一次三个独立偏差传进来（q.rplZ），决策时不再重抽。
+  // 未传时退回旧的单次抽样，保持内核自检的黄金值不变。
+  const z = Array.isArray(q.rplZ) && q.rplZ.length >= 3
+    ? [finiteOr(q.rplZ[0], 0), finiteOr(q.rplZ[1], 0), finiteOr(q.rplZ[2], 0)]
+    : null;
   const draw = rnd ? normal(rnd) : 0;
+  const zCost = z ? z[0] : draw;
+  const zRide = z ? z[1] : draw;
+  const zStay = z ? z[2] : draw;
   const peersStay = clamp(finiteOr(q.peersStay, 0), 0, 1);
   const peersRide = clamp(finiteOr(q.peersRide, 0), 0, 1);
   // 【修 2026-11-17】非法档名（如 'foo'）会让 threatInteraction 查表得
@@ -255,8 +270,8 @@ export function protectiveActionUtilities(input, rnd) {
 
   // ---- 疏散侧 ----
   let Ve = E.evacuateASC
-    + (c.cost + c.costSD * draw) * finiteOr(q.cost, 0)
-    + (c.peersRide + c.peersRideSD * draw) * peersRide
+    + (c.cost + c.costSD * zCost) * finiteOr(q.cost, 0)
+    + (c.peersRide + c.peersRideSD * zRide) * peersRide
     + c.travelTime * finiteOr(q.travelTime, 0)
     + c.waitTime * finiteOr(q.waitTime, 0)
     + c.walkDistance * finiteOr(q.walkDistance, 0)
@@ -264,7 +279,7 @@ export function protectiveActionUtilities(input, rnd) {
   if (threat !== 'low') Ve += (E.threatInteraction.peersRide[threat] || 0) * peersRide;
 
   // ---- 留下侧：同伴效应在这里，ASC 固定 0 ----
-  let Vs = (c.peersStay + c.peersStaySD * draw) * peersStay;
+  let Vs = (c.peersStay + c.peersStaySD * zStay) * peersStay;
   if (threat !== 'low') Vs += (E.threatInteraction.peersStay[threat] || 0) * peersStay;
 
   return { evacuate: Ve, stay: Vs };

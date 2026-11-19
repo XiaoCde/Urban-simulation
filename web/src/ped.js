@@ -40,6 +40,7 @@ import { circleOf, summarize as summarizeCircles } from './social-circles.js';
 import { createIncidents } from './incidents.js';
 import { createDriveLayer } from './drive-layer.js';
 import { warnAtOf, WARNING_SELF_SET } from './kernel/warning.js';
+import { wadingSpeed } from './kernel/hazard-input.js';
 import { BASEMENT, goesToBasement, basementStayMin, basementElevationM }
   from './kernel/floors.js';
 
@@ -2303,6 +2304,21 @@ export function buildPedestrians(assets, opt = {}) {
       let spd = 0;
       if (p.state === 'walk') spd = p.speed * (pedAhead ? WALK.CROWD_MUL : 1.0);
       else if (p.state === 'yield') spd = 0;
+      // 【2026-11-19 第5步：涉水真的走不动】
+      // 此前 kernel 的 wadingSpeed 只喂给决策输入，**位移完全不受水深影响**，
+      // 人在 90 cm 的水里和干地一样快。这解释了为什么涉水死亡的暴露时间偏短。
+      // 现在把同一张实测自由速度表当唯一来源，按「当前水深 / 干地」的比值
+      // 乘到实际位移上，不另写一套数值。表本身来自中科大泳池实验
+      // （0/0.35/0.60/0.90 m），已在 params 里标过出处与同源问题。
+      if (spd > 0 && dInfo) {
+        dInfo(p.obj.position.x, p.obj.position.z, _ds);
+        const dNow = Number.isFinite(_ds.d) ? _ds.d : 0;
+        if (dNow > 0.05) {
+          const v0 = wadingSpeed(0);
+          const vd = wadingSpeed(dNow);
+          if (v0 > 0 && vd > 0) spd *= Math.max(0.25, Math.min(1, vd / v0));
+        }
+      }
       p.s += spd * dt * p.dir;
 
       // ---- 到端点：换相邻链（不掉头优先）

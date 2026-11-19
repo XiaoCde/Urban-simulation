@@ -188,6 +188,9 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
     hazardRatingExtremeBound: hazard.hazardRatingExtremeBound,
     // 敏感性分析用：允许注入缩放后的实测动员点，正常运行时不传。
     mobilisationPoints: s.mobilisationPoints,
+    // 随机参数 logit 的三个人级偏差（cost / 同伴搭车 / 同伴留下），
+    // 按人抽一次、全天不变；不传时内核按旧方式单次抽样。
+    rplZ: s.rplZ,
   };
   const choice = decideProtectiveAction(input, rnd);
   // 【2026-11-16 决策分层】离散选择模型本身不变（实测系数、抽样方式原样跑）。

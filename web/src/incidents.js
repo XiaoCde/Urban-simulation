@@ -101,7 +101,7 @@ export function createIncidents(o = {}) {
     safe: 0, wading: 0, stranded: 0, injured: 0, dead: 0, evacuated: 0,
     stalled: 0, abandonedCar: 0, slip: 0, collision: 0, redLightWaits: 0,
     yields: 0, rescued: 0,
-    deathsByCause: {}, incidentsByType: {}, exposed: 0, maxDepth: 0,
+    deathsByCause: {}, deathsByLegacyCause: {}, deathsByZone: {}, incidentsByType: {}, exposed: 0, maxDepth: 0,
   };
   const hourly = Array.from({ length: 24 }, (_, h) => ({
     hour: h, wading: 0, stranded: 0, injured: 0, dead: 0, evacuated: 0,
@@ -158,11 +158,41 @@ export function createIncidents(o = {}) {
   }
 
   /**
-   * 死因的统计归类键。【修 2026-11-17】顶层被淹那支的 cause 里嵌了水深、
-   * 判据、死亡概率和分区，几乎每个死者字符串都不同，直接拿它当
-   * deathsByCause 的键会把统计碎成几十个「各计 1」的项，没法按类汇总。
-   * 这里只归一统计键；r.cause 与事件 reason 仍保留完整描述，回放不丢细节。
+   * 死因的统计归类键。
+   *
+   * 【2026-11-19 改成「地点 × 动作」二维编码】
+   * 原来按「溺亡 / 被困 / 车内」分，是把死法和情境混在一起，而且和文献的分类
+   * 口径对不上：意大利 514 例、澳大利亚 1,859 例、德国 224 例都是按「死在什么
+   * 地方、当时在做什么」编码的（见 from muse/全量文献方法台账.md 方法族 4）。
+   * 分维度之后才能回答「死在地下室还是死在路上」这类问题，也才能和他们的
+   * 分布做对照——注意只做对照，不把他们的比例当我们的输出。
+   *
+   * 地点：地下室 / 车内 / 室内一层 / 室内上层 / 路面
+   * 动作：涉水行走 / 开车 / 被困 / 滞留室内 / 进入地下室
+   *
+   * 事件里的完整描述（r.cause 与 reason）不变，回放仍能看到水深、判据、概率。
    */
+  function deathCode(i, ctx) {
+    const r = rows[i] || {};
+    const c = ctx || {};
+    const place = c.basement ? '地下室'
+      : c.inVehicle ? '车内'
+        : (c.indoor ? ((Number(r.effFloor) || 0) <= 1 ? '室内一层' : '室内上层') : '路面');
+    const action = c.inVehicle ? '开车'
+      : c.basement ? '进入地下室'
+        : r.status === 'stranded' ? '被困'
+          : c.indoor ? '滞留室内' : '涉水行走';
+    // 致死机制分区：和「地点×动作」是两个维度。
+    // 分区是为了回答「哪一套判据把人判死的」，便于和 Jonkman 的三区对照；
+    // 地点×动作是为了回答「人死在哪、在做什么」，便于和个案库对照。
+    const zone = c.basement ? '地下室进水'
+      : c.inVehicle ? '车内'
+        : c.indoor ? '室内被淹'
+          : (r.status === 'stranded' ? '室外被困' : '室外涉水');
+    return { place, action, zone, key: `${place}·${action}` };
+  }
+
+  /** 旧口径的归类（保留给旧报告对照，不再用于统计）。 */
   function causeKeyOf(cause) {
     const s = String(cause == null ? '' : cause);
     if (s.startsWith('顶层被淹')) return '顶层被淹没路可退';
@@ -178,8 +208,14 @@ export function createIncidents(o = {}) {
     if (!r || r.status === 'dead') return false;
     r.status = 'dead'; r.cause = cause; r.minute = minute();
     r.x = ctx.x; r.z = ctx.z; r.depth = ctx.depth;
-    const key = causeKeyOf(cause);
-    stat.deathsByCause[key] = (stat.deathsByCause[key] || 0) + 1;
+    const code = deathCode(i, ctx);
+    r.deathPlace = code.place;
+    r.deathAction = code.action;
+    stat.deathsByCause[code.key] = (stat.deathsByCause[code.key] || 0) + 1;
+    r.deathZone = code.zone;
+    stat.deathsByZone[code.zone] = (stat.deathsByZone[code.zone] || 0) + 1;
+    const legacy = causeKeyOf(cause);
+    stat.deathsByLegacyCause[legacy] = (stat.deathsByLegacyCause[legacy] || 0) + 1;
     push(i, 'dead', cause, ctx);
     // 终点帧：回放最后一格必须停在他实际出事的位置与水深。
     if (r.trace) r.trace.push(frameOf(i, ctx, 'dead'));

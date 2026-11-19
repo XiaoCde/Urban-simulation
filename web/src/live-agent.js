@@ -12,6 +12,7 @@
 import { createPlan, ARRIVE_R } from './goal.js';
 import { makeKernel, judge } from './cohort.js';
 import { mulberry32 } from './decision.js';
+import { normal } from './kernel/rng.js';
 import { WALK } from './motion-units.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -39,11 +40,19 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 const depthBand = (d) => d < 0.05 ? 0 : d < 0.20 ? 1 : d < 0.30 ? 2
   : d < 0.50 ? 3 : d < 1.0 ? 4 : d < 2.0 ? 5 : 6;
 function scenarioKey(s, minute) {
-  // 30 仿真分钟一个重估窗口：即使情况没变，也不让一个「不保护」决定冻结一整天。
-  // 这个窗口是工程实现（目前自己定的）；文献确认的是战略层低频，没给具体分钟数。
+  // 【2026-11-19 第4步：重估窗口不再是一个固定常数】
+  // 原来固定 30 分钟一档，等于假设「预报可见度」恒定：毛毛雨和下暴雨同样
+  // 半小时才重估一次。现在雨强本身进签名——雨强跨档立刻重估，不等窗口；
+  // 窗口只作兜底（防止一个「不保护」的决定冻结一整天）。
+  // 依据：预警与重估是两件事，雨强变化是新的信息（Thieken 2023 把
+  // 「收到／理解／认为有效」分开测；Silva 2025 的动员曲线也把时间当作
+  // 连续量）。窗口取 30 分钟仍是工程实现，标在依据台账里。
   const window = Math.floor(minute / 30);
+  const rain = Number(s.rain) || 0;
+  // 0 = 无雨/毛毛雨，1 = 小雨 <5，2 = 中雨 <15，3 = 大雨 <30，4 = 暴雨 ≥30 mm/h
+  const rainBand = rain < 0.2 ? 0 : rain < 5 ? 1 : rain < 15 ? 2 : rain < 30 ? 3 : 4;
   return [depthBand(s.depthAhead), depthBand(s.depthHere), s.officialWarning ? 1 : 0,
-    s.goalType, s.late ? 1 : 0, s.blocked ? 1 : 0, window].join('|');
+    s.goalType, s.late ? 1 : 0, s.blocked ? 1 : 0, rainBand, window].join('|');
 }
 
 /** 檐下避雨时仍能做的判断：继续等 / 放慢 / 加快想走 / 等一下。 */
@@ -61,13 +70,22 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
   const INC = incidents;
   const atFn = (i, m) => (crowd && crowd.at) ? crowd.at(i, m) : null;
   const agents = [];
+  // 【2026-11-19】随机参数 logit 的个体偏差：每人三个独立标准正态，全天固定。
+  // 用独立随机流（不改主 rnd 的消耗序列），保证同种子可复现且不扰动既有结果。
+  // 依据：Borowski & Stathopoulos 2023 Table 4 给了三个随机参数的均值与标准差
+  // （同伴留下 7.76±10.87、同伴搭车 −1.27±1.91、成本 −3.71±1.03），
+  // 标准差比均值还大是论文自己的结论（vary widely），不能当成全城统一系数。
+  const rplOf = (i) => {
+    const r = mulberry32(((seed ^ 0x9e3779b9) >>> 0) + i * 7919 + 104729);
+    return [normal(r), normal(r), normal(r)];
+  };
   for (const p of peds) {
     const rnd = mulberry32(seed + p.i * 7919);
     const person = (crowd && crowd.persons) ? crowd.persons[p.i] : null;
     const kernel = makeKernel(p.i, person, rnd, circles[p.i] || null);
     const jitter = Math.round((rnd() - 0.5) * 40);   // ±20 分钟错峰
     agents[p.i] = {
-      i: p.i, rnd, kernel, person,
+      i: p.i, rnd, kernel, person, rplZ: rplOf(p.i),
       plan: createPlan(p.i, atFn, jitter, person, circles[p.i] || null), jitter,
       t: 0, nextThink: rnd() * 0.6, planDelay: (p.i % 96) * 0.5,
       detours: 0, lastAction: 'continue',
@@ -166,6 +184,7 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
       // 从众：同户同伴里还没避险的比例（合成网络，见 crowd-life.js）。
       // Borowski 2023 的系数要的就是这个比例，之前恒 0，从众支路等于没开。
       peersStay: peersStayOf(a),
+      rplZ: a.rplZ,          // 人级随机参数偏差（三个独立正态），全天不变
       fatigue: clamp(1 - stamina / 100, 0, 1),
       stuck: p.route ? (p.route.stuck || 0) : 0,
       detours: a.detours,
@@ -571,6 +590,7 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
       // 同种子可复现：连随机序列一起重建，否则「拖回同一时刻再跑一遍」
       // 会因为前半段消耗过的随机数得到完全不同的决策。
       a.rnd = mulberry32(seed + a.i * 7919);
+      a.rplZ = rplOf(a.i);   // 个体偏差不随重置变化，同一个人始终是同一套偏好
       a.kernel = makeKernel(a.i, a.person, a.rnd, circles[a.i] || null);
       const jitter = Math.round((a.rnd() - 0.5) * 40);
       a.jitter = jitter;
