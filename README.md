@@ -1,6 +1,6 @@
 # Urban-simulation
 
-> 华盛顿 DC 城市仿真（内涝仿真前序场景层）。**先读 [项目总览.md](项目总览.md)** —— 这是**交接书**：现状、代码地图、数据台账、排水模型口径、验收、待办、红线、命令全在里面。
+> 华盛顿 DC 城市仿真（内涝仿真前序场景层）。**先读 [docs/交接速览_2026-11-19.md](docs/交接速览_2026-11-19.md)**（哪些数能用、代码怎么分、我犯过哪些错），再读 [项目总览.md](项目总览.md)（完整交接书：代码地图、数据台账、排水模型口径、验收、待办、红线、命令）。
 
 ## 最短上手
 
@@ -20,17 +20,17 @@ D:\AI\node.exe serve.js 8123        # 浏览器 http://127.0.0.1:8123/
 ## 目录
 
 - `项目总览.md` — 唯一入口文档（交接书）
-- `行人Demo-计划表.md` — 行人 Demo 验收标准原文（B 线已冻结）
-- `历史文档-原文存档.md` — 15 份旧文档逐字原文
+- `历史文档-原文存档.md` — 15 份旧文档逐字原文（264 KB）
+- `docs/` — 27 份专项文档，分类见交接速览 §四
 - `web/` — 当前主线（Three.js 实时城市场景）
   - `src/` — 运行时内核与显示层（`src/kernel/` 纯计算，不碰 window / three）
   - `assets/` — 场景资源与积涝帧（生成产物，不进版本库）
-  - `tests/` — 验收与回归脚本（38 个），例：`cd web && node tests/check-floors.mjs`
+  - `tests/` — 验收与回归脚本（40 个），`cd web && npm test` 跑其中 13 个纯 Node 自检，例：`node tests/check-floors.mjs`
   - `sim/` — 连续 24h 仿真与多工况并行（`sim-day.mjs`、`sim-sweep.mjs`、`sweep-report.mjs`）
   - `devtools/` — 一次性开发脚本：`probes/` 探针、`shots/` 截图、`diag/` 诊断、`misc/` 其他
   - `out/` — 仿真输出；`serve.js` — 静态服务（启动脚本引用，位置不变）
   - 2026-11-17 归组前这 104 个脚本全堆在 `web/` 根目录，新旧名对照见 `docs/脚本归组映射.md`
-- `tools/` — 数据、模型、报告工具，分组说明见 `tools/README.md`
+- `tools/` — 数据、模型、报告工具，分组说明见 `tools/README.md`。**下划线开头的（`_probe_*`、`_inspect_*`、`_bbox_ll.py` 等）是开发期一次性探测脚本，与交付无关，可忽略**
 - `tools/flood/` — 排水与内涝模型，两套内核并存：
   - `simple_drainage.py` + `street_net.py` — 旧内核（fill-and-spill 填洼 + 一维街网），快、稳，但出不了路面连续水膜
   - `shallow2d.py` + `swe_numba.py` — **新内核**（二维浅水 inertial），路面上有连续水流；4 m 网格 6 h 工况约 4 min
