@@ -15,15 +15,46 @@
  *   车内：driving → stalled → abandonedCar（弃车转步行） / dead（困死车内）
  */
 import { RISK, CAR } from './motion-units.js';
-import { MEASURED, SELF_SET, instabilityDepthFor, exposureSecFor } from './kernel/thresholds.js';
+import { MEASURED, SELF_SET, instabilityDepthFor, exposureSecFor, airwayDepthFor }
+  from './kernel/thresholds.js';
 // 【2026-11-16 阶段3】楼层淹没判据：室内人按所在楼层是否被淹决定安危。
 import { floodFloor, floorElevationM, submergenceThresholdM, limitedMobilityByAge, BASEMENT }
   from './kernel/floors.js';
 // 【2026-11-16 第六轮】室内顶层被淹的致死概率改用 Jonkman 实测函数
 // （博士论文 §7.4 Eq.7-6 / 7-7），不再用自设耐受时长。见 kernel/fatality.js。
 import { jonkmanFatality, fatalRiskPerSecond, personalThreshold } from './kernel/fatality.js';
+// 【2026-11-20 流速 / 2026-11-21 去自设】危险度 HR / D·V 失稳 / 冲走判据，见 flow-hazard.js。
+import { hazardRating, isSweptAway } from './kernel/flow-hazard.js';
+// 【2026-11-21 去自设】耐受时间由涉水步速比推出，步速表仍是 Li 2026 的实测基本图。
+import { wadingSpeed } from './kernel/hazard-input.js';
+import { traceWanted, traceEvent } from './trace.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+
+// 【2026-11-21 敏感性 · 滑倒/受伤判据】
+// 现在这条判据把 ARR 的 D·V 区间（成人 0.6–1.2 m²/s）线性映射成受伤概率，
+// 门槛 (0.10 m 水深 + 0.05 m/s 流速) 与区间下界都是可争议处：
+//   · ?slip=off   → 整条关掉，看受伤数里有多少是它贡献的；
+//   · ?sliplo=x   → 改成人下界（Keller & Mitsch 1993 实测失稳区间 0.35–1.4 的端点）；
+//   · ?sliphi=x   → 改成人上界（默认取 ARR Project 10 的 1.2，1.4 是 Keller & Mitsch 区间上端）。
+// 下界必须小于上界：2026-11-21 第一版只让 `sliplo` 可调，把下界设到 1.4 时反而变成
+// 「D·V≥1.2 一律受伤」，比基线更狠 —— 单变量跑出来才发现，故新增上界并强制 lo<hi。
+// 默认值与口径表一致；敏感性只动这一处，别的都不许同时动。
+let _slipMode = 'dv';
+let _slipLo = null;
+let _slipHi = null;
+export function setSlipMode(m) {
+  const s = String(m || '').trim().toLowerCase();
+  if (s === 'off' || s === 'dv') _slipMode = s;
+}
+export function setSlipLower(v) {
+  const x = Number(v);
+  if (Number.isFinite(x) && x > 0) _slipLo = x;
+}
+export function setSlipUpper(v) {
+  const x = Number(v);
+  if (Number.isFinite(x) && x > 0) _slipHi = x;
+}
 
 /**
  * 【2026-11-15 已换掉 9 档自设致死水深】
@@ -60,8 +91,17 @@ const blank = (i) => ({
   floodRisk: 0, lastDepth: null, riseRate: 0, floorFd: 0, floorFdZone: '',
   // 【2026-11-17】地下室：在地下时不受楼层保护，按涉水暴露判，死因单列。
   inBasement: false, everWentBasement: false,
+  // 【2026-11-20 §6】室外那条死亡判据是**确定性**的（deepSec > endurance，
+  // endurance 由体力/雨强/伞算出来，没有抽签）。所以「这个人今天离死多近」
+  // 只能靠余量表达：deepMargin = 本次运行里 deepSec/endurance 的最大值，
+  // ≥1 就是死了。统计口径见 docs/报数口径_2026-11-20.md §六。
+  deepMargin: 0, enduranceSec: 0,
   // 弃车时刻：下车后头两分钟按"站不住"处理（见 tick 的 C 段）。
   carExitMin: null,
+  // 【2026-11-20 流速】swptRisk 是「已经站不住的人被水流带走后溺亡」的累积风险，
+  // 和室内的 floodRisk 同一套阈值（personalThreshold）。hrPeak / hazardSec 只做
+  // 报告：这个人这辈子遇到的最高危险度、以及暴露在 HR≥1.25 水里的秒数。
+  sweptRisk: 0, hrPeak: 0, hazardSec: 0, sweepSec: 0,
   // 个案回放：每人只留最近 60 秒的短轨迹；出事后才升级成完整链。
   // 未出事的人不占全天逐帧内存。
   trace: null, recent: [], traceSec: 0,
@@ -102,6 +142,11 @@ export function createIncidents(o = {}) {
     stalled: 0, abandonedCar: 0, slip: 0, collision: 0, redLightWaits: 0,
     yields: 0, rescued: 0,
     deathsByCause: {}, deathsByLegacyCause: {}, deathsByZone: {}, incidentsByType: {}, exposed: 0, maxDepth: 0,
+    // 【2026-11-21】楼层淹没判定的触发次数，按家/单位分开——验证工作场所楼层
+    // 这条链路是否真的跑起来了（不是只看代码改没改）。
+    floorTicks: { home: 0, work: 0 },
+    // 【2026-11-20 流速】死亡里有多少是「被水流冲倒」那一支；以及全城最高危险度。
+    sweptDeaths: 0, peakHr: 0, hazardPersonSec: 0,
   };
   const hourly = Array.from({ length: 24 }, (_, h) => ({
     hour: h, wading: 0, stranded: 0, injured: 0, dead: 0, evacuated: 0,
@@ -120,6 +165,15 @@ export function createIncidents(o = {}) {
       const c = peds[i] && peds[i].citizen;
       return (c && c.ageBand) || (q && q.ageBand) || 'prime';
     } catch (e) { return 'prime'; }
+  };
+  /** 真实性别（ACS '1' 男 / '2' 女）：只用于按身高分档的水面到口鼻高度，
+   *  取不到时返回 null，airwayDepthFor 走两性均值。 */
+  const sexOf = (i) => {
+    try {
+      const c = peds[i] && peds[i].citizen;
+      const s = (c && c.real && c.real.sex);
+      return (s === '1' || s === '2') ? s : null;
+    } catch (e) { return null; }
   };
   /** 真实年龄：从 ACS 记录取；取不到时不猜一个具体岁数，返回 null 走保守成人档。 */
   const ageOf = (i) => {
@@ -143,6 +197,16 @@ export function createIncidents(o = {}) {
     // 截断会让「从涉水到被困到溺亡」的中间过程凭空消失。
     r.events.push(e);
     log.push(e);
+    // 【2026-11-21 个体追溯】被追的那个人，每条状态跃迁同步进 trace。
+    // 逐分钟 tick（人在哪、脚下多深）+ 每次判断（五道门各读到什么）+ 这条事件，
+    // 三段合起来才是「他被困之前到底发生了什么」，聚合数追不到这一步。
+    if (traceWanted(i)) {
+      traceEvent(type, {
+        t: +m.toFixed(2), minute: +m.toFixed(2), reason,
+        depth: e.depth, x: e.x, z: e.z, band: e.band,
+        status: r.status, cause: r.cause || '',
+      });
+    }
     if (log.length > 200000) log.splice(0, 50000);
     // 出事即把最近 60 秒的短轨迹升级成完整链，之后逐帧续记。
     // 这样回放能看到「出事前 1 分钟他在哪、水多深、在干什么」，不是从出事那一刻才开始。
@@ -183,16 +247,18 @@ export function createIncidents(o = {}) {
     const place = c.basement ? '地下室'
       : c.inVehicle ? '车内'
         : (c.indoor ? ((Number(r.effFloor) || 0) <= 1 ? '室内一层' : '室内上层') : '路面');
-    const action = c.inVehicle ? '开车'
-      : c.basement ? '进入地下室'
-        : wasStranded ? '被困'
-          : c.indoor ? '滞留室内' : '涉水行走';
+    const action = c.swept ? '被水流冲走'
+      : c.inVehicle ? '开车'
+        : c.basement ? '进入地下室'
+          : wasStranded ? '被困'
+            : c.indoor ? '滞留室内' : '涉水行走';
     // 致死机制分区：和「地点×动作」是两个维度。
     // 分区是为了回答「哪一套判据把人判死的」，便于和 Jonkman 的三区对照；
     // 地点×动作是为了回答「人死在哪、在做什么」，便于和个案库对照。
-    const zone = c.basement ? '地下室进水'
-      : c.inVehicle ? '车内'
-        : c.indoor ? '室内被淹'
+    const zone = c.swept ? '室外被冲走'
+      : c.basement ? '地下室进水'
+        : c.inVehicle ? '车内'
+          : c.indoor ? '室内被淹'
           : (wasStranded ? '室外被困' : '室外涉水');
     return { place, action, zone, key: `${place}·${action}` };
   }
@@ -203,6 +269,7 @@ export function createIncidents(o = {}) {
     if (s.startsWith('顶层被淹')) return '顶层被淹没路可退';
     if (s.includes('车内')) return '车内溺亡';
     if (s.includes('地下室')) return '地下室进水溺亡';
+    if (s.includes('冲走')) return '被冲走溺亡';
     if (s.includes('深水')) return '深水被困致死';
     if (s.includes('涉水')) return '涉水溺亡';
     return s || '未分类死亡';
@@ -291,14 +358,14 @@ export function createIncidents(o = {}) {
     // Number(undefined)=NaN，`??` 只拦 null/undefined 不拦 NaN，于是 stamina=NaN、
     // endurance=NaN、`deepSec > NaN` 永远 false —— 溺亡判定整条失效。
     // 正确写法：先对原值做 ??，再转数字。
-    const stamina = clamp(Number(ctx.stamina ?? 70) / 100, 0, 1);
-    const rain = Math.max(0, Number(ctx.rainMMH) || 0);
-    // 【目前自己定的】体力 / 雨强 / 伞对耐受时间的修正，没有一手依据，
-    // 只保留一个统一的折减，不再按 9 档各写一套。
-    const endurance = V.exposureSec * (0.72 + stamina * 0.42)
-      * (rain > 25 ? 0.82 : 1) * (ctx.umbrella === 'open' ? 1.06 : 1);
+    // 【2026-11-21 去自设】原来这里乘三个拍出来的数：体力 (0.72 + stamina×0.42)、
+    // 雨强 >25 mm/h 打 0.82、有伞 ×1.06。三个都没有机制也没有剂量反应。
+    // 现在改成一个能推的量：涉水步速比。见下方 enduranceOf()。
     // 暴露起点是 ARR 的失稳深度（实测），不是「致死水深」。
     const instabilityDepth = V.instabilityDepth;
+    // 【2026-11-21 去自设】静水溺亡的起点不再用「失稳分级限值 1.2 m」——那是站不稳，
+    // 不是淹到气道。改用气道高度 = 身高 × 0.85（推导见 thresholds.js 的 BODY）。
+    const stillDepth = airwayDepthFor(ageOf(i), sexOf(i));
 
     r.inCar = inVehicle;
     if (depth > stat.maxDepth) stat.maxDepth = depth;
@@ -348,8 +415,17 @@ export function createIncidents(o = {}) {
       const tf = Number(ctx.totalFloors);
       if (indoor && Number.isFinite(tf) && tf > 0 && depth > 0.05) {
         if (!(r.effFloor > 0)) r.effFloor = Math.max(1, Math.floor(Number(ctx.floor) || 1));
+        // 【2026-11-21】工作场所也带楼层了（此前只有住宅，白天在单位的人按
+        // 地面水深判死）。这里按 where 分开记账，跑完能直接看出两条路各触发多少。
+        if (ctx.where === 'work') stat.floorTicks.work += 1;
+        else stat.floorTicks.home += 1;
+        // 【逐栋首层高 2026-11-20】这栋楼的首层高（FEMA 分位数校正值，m）。
+        // 家与单位各自带自己那栋的值；缺表/未知时给 undefined，让 kernel 回退
+        // 全城默认 1.5 ft（0.457 m）——不要给 0，那等于把首层压到地坪。
+        const fmRaw = Number(ctx.foundationM);
+        const foundationM = Number.isFinite(fmRaw) && fmRaw > 0 ? fmRaw : undefined;
         const fr = floodFloor({ waterDepthM: depth, currentFloor: r.effFloor,
-          totalFloors: tf, floorHeightM: ctx.floorHeightM });
+          totalFloors: tf, floorHeightM: ctx.floorHeightM, foundationM });
         if (fr.status === 'moveUp' && fr.targetFloor > r.effFloor) {
           r.effFloor = fr.targetFloor;      // 往更高的干层转移
           if (minute() - (r.floorMoveT || -1e9) > 30) {
@@ -364,7 +440,7 @@ export function createIncidents(o = {}) {
           // 行动不便者从地板起算 5 ft（1.52 m），能行动者要接近天花板
           // （层高 − 1 ft）。水到脚踝、到膝盖，人仍站在房间里。
           const localDepth = Math.max(0, depth
-            - floorElevationM(r.effFloor, undefined, ctx.floorHeightM));
+            - floorElevationM(r.effFloor, foundationM, ctx.floorHeightM));
           r.floorLocalDepth = localDepth;
           const limited = limitedMobilityByAge(ageOf(i));
           const thr = submergenceThresholdM({ limitedMobility: limited,
@@ -439,6 +515,43 @@ export function createIncidents(o = {}) {
       : depth;
     // 风险等级的可见水深用当地实际值，事件文字才能说清是地下室内部积水。
     r.localExposureDepth = dExp;
+
+    // ---- 耐受时间：由涉水步速比推出（2026-11-21 去自设）----
+    // Li et al. 2026（J Hydrol 672:135395，188 人静水实验）同一批人：
+    //   无水自由步速 1.67 m/s；水深 0.35 / 0.60 / 0.90 m 时 0.86 / 0.84 / 0.81 m/s。
+    // 步速掉到一半 ⇒ 走同样的距离要付约两倍体力与时间 ⇒ 可持续暴露时间按同一比例缩短。
+    // 这是推导（实测步速 → 耐受比例），**不是**实测的剂量反应：
+    // 实测只给了「走多快」，没给「泡多久会死」。下限 0.45 对应 0.90 m 处的实测比值 0.485。
+    const wadeRatio = clamp(wadingSpeed(dExp) / MEASURED.wadingFreeSpeed['0'], 0.45, 1);
+    const endurance = V.exposureSec * wadeRatio;
+    // ---- 【2026-11-20 流速 / 2026-11-21 去自设】危险度与被水流冲走 ----
+    // 之前这一段不存在：没有流速场，`docs/依据台账.md` 把「流速取 0」标成
+    // 目前自己定的，于是「被冲走」整类死亡在模型里是空的。
+    // 【修 2026-11-20】室内（含地下室）没有水流：水是顺着门缝/楼梯渗进来的，
+    // 不是河道。原来把室外采样到的流速直接套到地下室（当地水深还加了 2.2 m
+    // 埋深），第一跑就凭空判出 5 例「地下室·被水流冲走」——那是采样错位，
+    // 不是物理。室内一律按静水暴露判（走原来的 floodRisk / 深水耐受）。
+    const vFlow = (indoor || r.inBasement)
+      ? 0 : Math.max(0, Number(ctx.flowSpeed) || 0);
+    // HR 只用于分级统计（峰值、危险时长），不再参与死亡判定。
+    if (vFlow > 0.05) {
+      const hr = hazardRating(dExp, vFlow);
+      if (hr > r.hrPeak) r.hrPeak = hr;
+      if (hr >= 1.25) r.hazardSec += h;
+    }
+    // 【2026-11-21 重写】冲走判据换成只用实测阈值，见 kernel/flow-hazard.js：
+    // 判据开着时，人在流水里且 D·V ≥ 该人的失稳上限（成人 1.2、儿童 0.55
+    // m²/s，ARR Project 10 / Keller & Mitsch 1993）即记为一次「被水流冲走」。
+    // 旧版的秒级风险曲线（0.0002–0.01 /s）与两道自设门（步速 0.35、流速 0.5
+    // m/s）已删——那三个数没有出处，且把危险度分级直接读成了死亡率。
+    // 默认关闭（SWEPT=off），开启时是一条上界口径，结果按两版报区间。
+    if (isSweptAway(dExp, vFlow, ageOf(i))) {
+      die(i, `被水流冲倒后溺亡：水深 ${dExp.toFixed(2)} m、流速 `
+        + `${vFlow.toFixed(2)} m/s、D·V ${(dExp * vFlow).toFixed(2)} m²/s`
+        + `（ARR 失稳上限）`,
+      { ...ctx, swept: true });
+      return r.status;
+    }
     if (!r.everWaded) r.everWaded = true;
     r.wadeSec += h;
     if (r.status === 'safe' || r.status === 'evacuated') {
@@ -453,13 +566,27 @@ export function createIncidents(o = {}) {
     // 所以弃车后头 2 分钟按"挪不动"处理（步速记 0），接上同一条被困→溺亡判定。
     // 2 分钟是【目前自己定的】——原文没给"下车后多久被冲走"的时间。
     const justExited = Number.isFinite(r.carExitMin) && (minute() - r.carExitMin) < 2;
-    const effSpeed = (justExited && dExp >= instabilityDepth) ? 0 : speed;
+    const effSpeed = (justExited && dExp >= stillDepth) ? 0 : speed;
     if (dExp >= RISK.DEEP) {
       // 深水里几乎走不动 = 被困；不是「水深到了就死」
-      r.deepSec += h * (dExp / instabilityDepth);
+      r.deepSec += h * (dExp / stillDepth);
+      // 【2026-11-20】记下离阈值的最近距离。必须加 `dExp >= stillDepth`：
+      // deepSec 这一段是按 RISK.DEEP 的固定阈值累加的，而判死还要求
+      // 「此刻当地水深 ≥ 该人的失稳深度」（:508）。少了这个条件，人在深水
+      // 攒够时间后走进浅水，分子不再涨、endurance 却可能因下雨/体力变短，
+      // 比值会虚高到 20 倍以上，把「离死多远」读成全城都在鬼门关。
+      if (endurance > 0 && dExp >= stillDepth) {
+        r.enduranceSec = endurance;
+        const mg = r.deepSec / endurance;
+        if (mg > r.deepMargin) r.deepMargin = mg;
+      }
       if (effSpeed < 0.09) r.stillSec += h;
       else r.stillSec = Math.max(0, r.stillSec - h * 0.7);
-      if (r.stillSec > RISK.STRANDED_SEC && r.status !== 'stranded' && r.status !== 'injured') {
+      // 【2026-11-21 去自设】「动不了多久算被困」原来是自设的 90 秒。
+      // 改成按耐受预算的一半计：一个人把一半的暴露预算花在原地没挪动，就算困住。
+      // 这是排序约束推出来的（被困必须早于死亡，否则这个状态永远看不到），
+      // 不是另拍一个秒数。
+      if (r.stillSec > endurance * 0.5 && r.status !== 'stranded' && r.status !== 'injured') {
         r.status = 'stranded'; r.everStranded = true;
         push(i, 'stranded', `${Math.round(dExp * 100)} cm 深水里 ${Math.round(r.stillSec)} 秒没能挪动`, { ...ctx, band });
       }
@@ -471,27 +598,44 @@ export function createIncidents(o = {}) {
     // ---- 涉水滑倒受伤：深水 + 走太快 + 年龄脆弱，一次行程只判一次 ----
     // 【修 2026-11-17】用当地实际水深 dExp，不再用室外 depth：
     // 地下室人的当地水深是室外深度 + 埋深，按室外值会漏掉滑倒判定。
-    if (!r.slipRolled && dExp > 0.45 && effSpeed > 2.1) {
-      r.slipRolled = true;
-      const p = V.slip * clamp((dExp - 0.45) * 2.2, 0.25, 1);
-      const roll = ((i * 2654435761) % 1000) / 1000;
-      if (roll < p) {
-        // 状态可能随后变成「已避险」，但「今天受过伤」这件事不能被抹掉。
-        r.everInjured = true;
-        if (r.status !== 'dead') r.status = 'injured';
-        stat.slip++;
-        push(i, 'injured', `${Math.round(depth * 100)} cm 积水里快走失足（${band}）`, { ...ctx, band });
+    // ---- 涉水滑倒受伤：从拍概率改成 ARR 的 D·V 区间 ----
+    // 【2026-11-21 去自设】旧式 `p = 0.30 × clamp((dExp−0.45)×2.2, 0.25, 1)`
+    // 里的 0.30、0.45 m、2.2、0.25 全是拍的。现在改用 ARR Project 10 / Smith 2014
+    // 的失稳区间：D·V 低于低危险限值（儿童 0.4、成人 0.6）不判；到 1.2（"所有人极端危险"）
+    // 判 1；中间线性。区间是实测的，插值是工程映射（和危险度分级同一套口径）。
+    // 判据用水流速度而不是步行速度：静水里不会滑倒，被水推着才会。
+    // 【2026-11-21 敏感性开关】_slipMode='off' 整条关；_slipLo 改成人下界（0.35/0.6/1.4）。
+    if (_slipMode !== 'off' && !r.slipRolled && dExp > 0.10 && vFlow > 0.05) {
+      const dv = dExp * vFlow;
+      const loBase = ageOf(i) < 13
+        ? MEASURED.instabilityDV.childLow
+        : (_slipLo === null ? MEASURED.instabilityDV.adultLow : _slipLo);
+      const hi = _slipHi === null ? MEASURED.instabilityDV.extreme : _slipHi;
+      const lo = Math.min(loBase, hi - 0.05);
+      const p = dv >= hi ? 1 : (dv <= lo ? 0 : (dv - lo) / (hi - lo));
+      if (p > 0) {
+        r.slipRolled = true;
+        const roll = ((i * 2654435761) % 1000) / 1000;
+        if (roll < p) {
+          // 状态可能随后变成「已避险」，但「今天受过伤」这件事不能被抹掉。
+          r.everInjured = true;
+          if (r.status !== 'dead') r.status = 'injured';
+          stat.slip++;
+          push(i, 'injured', `${Math.round(depth * 100)} cm 积水里快走失足（${band}）`, { ...ctx, band });
+        }
       }
     }
 
     // ---- 车内：熄火 → 弃车 or 困死车内 ----
     if (inVehicle && depth > CAR.STALL_DEPTH) {
       r.stalledSec += h;
-      if (r.stalledSec > RISK.CAR_ABANDON_SEC && depth > RISK.CAR_TRAP_DEPTH) {
-        if (depth >= RISK.CAR_LETHAL_DEPTH && r.stalledSec > endurance * 0.8) {
-          die(i, '车内溺亡', { ...ctx, band });
-          return r.status;
-        }
+      // 【2026-11-21 去自设】不再用「熄火 75 秒才准弃车」这个拍的数。
+      // 弃车时机由实测车辆稳定性决定：0.15 m 开始被推移（STALL_DEPTH，已熄火），
+      // 0.60 m 整辆车漂浮（CAR_TRAP_DEPTH，此时留在车里已经不是选择而是困住）。
+      // 车已漂浮、人还在车里超过 80% 的暴露预算 → 车内溺亡。
+      if (depth > RISK.CAR_TRAP_DEPTH && r.stalledSec > endurance * 0.8) {
+        die(i, '车内溺亡', { ...ctx, band });
+        return r.status;
       }
     } else if (inVehicle) {
       r.stalledSec = Math.max(0, r.stalledSec - h);
@@ -500,7 +644,7 @@ export function createIncidents(o = {}) {
     // ---- 困死：达到 ARR 失稳深度 + 熬过（自设的）耐受时间 ----
     // 【重要】「失稳 → 伤亡」没有实测函数，这一整条判定是目前自己定的，
     // 算出来的死亡数是模型输出不是实测，交付时必须附敏感性分析。
-    if (dExp >= instabilityDepth && r.deepSec > endurance) {
+    if (dExp >= stillDepth && r.deepSec > endurance) {
       const cause = inVehicle ? '车内溺亡'
         : (r.inBasement ? '地下室进水溺亡'
           : (r.status === 'stranded' ? '深水被困致死' : '涉水溺亡'));
@@ -512,6 +656,10 @@ export function createIncidents(o = {}) {
   /** 车/交通层抛进来的事件（熄火、弃车、碰撞、等灯、让行）——同样不预写。 */
   function mark(i, type, reason, ctx = {}) {
     if (type === 'dead') return die(i, reason, ctx);
+    // 【2026-11-21 顺序 bug】已经死了的人还会被车/交通层继续抛事件（案例 74 号：
+    // 19:50:28 判「车内溺亡」，19:51:35 又记了一条「弃车改步行」）。这不是剧情，
+    // 是模块没查状态就写日志 —— 个体追溯一拉出来就露馅。死亡之后一律不再受理。
+    if (rows[i] && rows[i].status === 'dead') return 'dead';
     if (type === 'injured' && rows[i] && rows[i].status !== 'dead') {
       rows[i].status = 'injured'; rows[i].everInjured = true;
     }
@@ -548,6 +696,40 @@ export function createIncidents(o = {}) {
   function stats() {
     recount();
     const byCircle = {}, byBand = {}, byCause = stat.deathsByCause;
+    // 【2026-11-20 §6】两条死亡路径的可报量化：
+    //  · expectedIndoorDeaths = Σ min(floodRisk_i, 1)。室内判死用的是「每人固定
+    //    uniform(0,1) 阈值」（kernel/fatality.js 的 personalThreshold），给定轨迹
+    //    死亡概率恰等于 floodRisk，所以这个和就是室内死亡的期望值，单次运行即可导出，
+    //    不必多跑种子。它 ≥ 实际室内死亡数（抽样在期望上下浮动，但不可能系统性超过）。
+    //  · outdoorMargin = 室外此判据的确定性余量分布（deepSec/endurance 的最大值），
+    //    ≥1 即已死；给出 max 与 p95 表示「有多少人贴近阈值」。
+    let expectedIndoorDeaths = 0;
+    const margins = [];
+    for (const r of rows) {
+      const fr = Number(r && r.floodRisk) || 0;
+      if (fr > 0) expectedIndoorDeaths += Math.min(fr, 1);
+      const mg = Number(r && r.deepMargin) || 0;
+      if (mg > 0) margins.push(mg);
+    }
+    margins.sort((a, b) => a - b);
+    const pick95 = margins.length
+      ? margins[Math.min(margins.length - 1, Math.floor(margins.length * 0.95))] : 0;
+    let sweptDeaths = 0, peakHr = 0, hazardPersonSec = 0;
+    for (const r of rows) {
+      if (!r) continue;
+      if (r.deathAction === '被水流冲走') sweptDeaths++;
+      if (r.hrPeak > peakHr) peakHr = r.hrPeak;
+      if (r.hazardSec > 0) hazardPersonSec += r.hazardSec;
+    }
+    stat.sweptDeaths = sweptDeaths;
+    stat.peakHr = peakHr;
+    stat.hazardPersonSec = Math.round(hazardPersonSec);
+    const outdoorMargin = {
+      n: margins.length,
+      max: margins.length ? margins[margins.length - 1] : 0,
+      p95: pick95,
+      nearDeath: margins.filter((m) => m >= 0.8).length,
+    };
     for (const r of rows) {
       // 只对出事的人取年龄带/圈层：bandOf 要查社会层，全城 3000 人每批
       // 都查一遍会把 24h 验收拖慢一个数量级。
@@ -561,6 +743,7 @@ export function createIncidents(o = {}) {
       byBand[b][r.status]++;
     }
     return { ...stat, people: rows.length, byCause, byCircle, byBand,
+      expectedIndoorDeaths, outdoorMargin,
       logSize: log.length, timeline: hourly };
   }
 
@@ -620,7 +803,12 @@ export function createIncidents(o = {}) {
     for (let i = 0; i < rows.length; i++) rows[i] = blank(i);
     log = [];
     for (const k of Object.keys(stat)) {
+      // 【修 2026-11-21】旧写法把任何非数字字段重置成 {}，于是 floorTicks 这种
+      // 「分类计数」在页面加载/拖动时间轴时被清成空对象，之后 += 变成 NaN、
+      // 序列化全丢（实跑表现为 floorTicks 只剩一个 null 键）。这里按字段给回
+      // 各自的零值结构，不再靠「非数字就置 {}」猜。
       if (typeof stat[k] === 'number') stat[k] = 0;
+      else if (k === 'floorTicks') stat[k] = { home: 0, work: 0 };
       else if (k !== 'deathsByCause' && k !== 'incidentsByType') stat[k] = {};
     }
     stat.deathsByCause = {}; stat.incidentsByType = {};

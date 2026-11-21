@@ -101,6 +101,40 @@ export const SELF_SET = Object.freeze({
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
 /**
+ * 【逐栋首层高 2026-11-20】FEMA 分位数校正表（web/assets/city/foundation_fema.json）。
+ *
+ * 为什么要有：`SELF_SET.foundationHeightM` 是「全城统一 1.5 ft」，它来自 DC 洪泛区
+ * 新建建筑的 DFE 条款，**不是全城建筑实测**。tools/calibrate_foundation_fema.py 用
+ * FEMA 2015 默认台基值按分位数映射到逐栋，值域 0.30–1.22 m；用统一 0.457 会让
+ * 室内一层进水差 3–4 倍（docs/首层标高校正_2026-11-18.md：淹楼数 163 vs 540 vs 3358）。
+ *
+ * 性质：三组占比（A_全国河岸 / B_老城排屋 / C_商业为主）是**假设**，不是 DC 实测；
+ * 这里只是把已经算好的逐栋值接进运行时，不新增任何假设。
+ */
+let FOUNDATION = null;   // { byId: Map<string, number>, scenario, defaultM, coverage }
+
+/** 注册逐栋首层高表（由 web/src/terrain.js 在读完 buildings.json 后调用）。 */
+export function setFoundationTable(table) {
+  FOUNDATION = table && table.byId && typeof table.byId.get === 'function' ? table : null;
+}
+
+/** 这张表是否已注册（没有注册时全部退回 SELF_SET，行为与旧版一致）。 */
+export function foundationReady() { return !!FOUNDATION; }
+
+/**
+ * 某栋楼的首层高（m）。找不到就给统一默认值，并把来源标出来：
+ * 'fema' = 逐栋分位数校正值，'default' = 全城统一 1.5 ft。
+ * @param {string|number} id 建筑 id（buildings.json 的 b.id）
+ */
+export function foundationMFor(id) {
+  const key = id === undefined || id === null ? '' : String(id);
+  if (FOUNDATION && key && FOUNDATION.byId.has(key)) {
+    return { m: FOUNDATION.byId.get(key), source: 'fema', scenario: FOUNDATION.scenario };
+  }
+  return { m: SELF_SET.foundationHeightM, source: 'default', scenario: null };
+}
+
+/**
  * 地下室（2026-11-17 新增）。
  *
  * 【为什么必须有这一层】Thieken 等 2026（*Earth's Future* 14(9):e2026EF008695）
@@ -114,7 +148,13 @@ const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
  * 空间，深浅与进水条件都用下面的值。这是**目前自己定的**，不是实测。
  */
 export const BASEMENT = Object.freeze({
-  /** 地下室地板在室外地坪以下的深度 m。 */
+  /**
+   * 地下室地板在室外地坪以下的深度 m。
+   * 【2026-11-21 由拍的数改为推导】净高取下限 2.13 m（IBC 1208.2 可居住空间
+   * 最小净高 7 ft），加楼板与垫层 0.1 m → 2.23 m，取 2.2。
+   * 净高这条规范本会话未核原文，标「半自设」；深度对伤亡的影响已在 A/B 里
+   * 看过（凡是地下室进水，人都在 2.2 m 水深里，改 1.8/2.6 只移动时间不移动结局）。
+   */
   depthM: 2.2,
   /** 室外地面积水超过这个值，地下室就算进水（经窗井、门洞、下水倒灌）。 */
   entryDepthM: 0.05,
@@ -122,6 +162,8 @@ export const BASEMENT = Object.freeze({
    * 在家、脚下已见水的人里，下地下室的比例。
    * 【目前自己定的】没有实测的"下地下室比例"，只知道死亡里有 22% 在地下室；
    * 拿死亡份额反推下去的比例是错的（下而不死的人远多于死的），所以这里不反推。
+   * 【2026-11-21】仍无 DC 实测，定位为「情景参数」：0.35 是工程判断（回家的人里
+   * 约三分之一会去关泵、搬东西），必须配敏感性 0.20 / 0.50 一起报，不能单独引用。
    */
   goesDownShare: 0.35,
   /** 下去待多久（分钟），在区间内均匀取。抢救财物、查水泵这类动作的量级。 */
@@ -238,11 +280,15 @@ export function assignFloor(b, ordinal) {
     // 楼里放不下 → 明确判为室外，不把人硬塞进楼里造成「定位在楼里、显示在楼外」。
     return { indoor: false, floor: 0, elevationM: 0, capacity: cap,
       totalFloors: floors, floorHeightM: fh,
+      foundationM: foundationMFor(b && b.id).m, foundationSource: 'n/a', foundationScenario: null,
       reason: '该楼按面积估算的容量已满，人在室外' };
   }
   const floor = Math.floor(n / cap) + 1;
-  return { indoor: true, floor, elevationM: floorElevationM(floor, SELF_SET.foundationHeightM, fh),
+  // 【逐栋首层高 2026-11-20】用这栋楼自己的首层高，不再无条件用全城统一值。
+  const fm = foundationMFor(b && b.id);
+  return { indoor: true, floor, elevationM: floorElevationM(floor, fm.m, fh),
     capacity: cap, totalFloors: floors, floorHeightM: fh,
+    foundationM: fm.m, foundationSource: fm.source, foundationScenario: fm.scenario,
     reason: `按楼体面积估算容量，分配到第 ${floor} 层` };
 }
 

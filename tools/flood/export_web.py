@@ -47,11 +47,24 @@ def main():
     for k, f in enumerate(chosen):
         name = "f%02d.u8" % k
         shutil.copyfile(os.path.join(src, "frames", f["file"]), os.path.join(dst, name))
-        out["frames"].append({"file": name, "t_min": f["t_min"]})
+        ent = {"file": name, "t_min": f["t_min"]}
+        # 【流速场 2026-11-20】L2 帧若带 v/g（大小/流向），一起搬过去；
+        # 前端 flood.js 见到 manifest 里有 vel 才会去取，没有就退回纯水深模式。
+        for key, tag in (("vel", "v"), ("dir", "g")):
+            if key in f:
+                vname = "%s%02d.u8" % (tag, k)
+                shutil.copyfile(os.path.join(src, "frames", f[key]),
+                                os.path.join(dst, vname))
+                ent[key] = vname
+        out["frames"].append(ent)
     json.dump(out, open(os.path.join(dst, "manifest.json"), "w", encoding="utf-8"),
               ensure_ascii=False, indent=1)
 
-    total = sum(os.path.getsize(os.path.join(dst, f["file"])) for f in out["frames"])
+    total = 0
+    for f in out["frames"]:
+        for key in ("file", "vel", "dir"):
+            if key in f:
+                total += os.path.getsize(os.path.join(dst, f[key]))
     print(json.dumps({"frames": len(out["frames"]), "MB": round(total / 1e6, 1),
                       "t": [out["frames"][0]["t_min"], out["frames"][-1]["t_min"]],
                       "x0": out["x0"], "z0": out["z0"], "step": out["step_m"]},

@@ -39,7 +39,9 @@ import { WALK, ANIM, CAR, assertSpeedConsistency } from './motion-units.js';
 import { circleOf, summarize as summarizeCircles } from './social-circles.js';
 import { createIncidents } from './incidents.js';
 import { createDriveLayer } from './drive-layer.js';
-import { warnAtOf, WARNING_SELF_SET } from './kernel/warning.js';
+import { isDutyMission } from './kernel/access-impediment.js';
+import { traceWanted, traceIdentity, traceHasIdentity, traceTick } from './trace.js';
+import { warnAtOf, WARNING_SELF_SET, timeLayerOn, receiveAtOf, departAtOf, prepMinOf, warningStageOf } from './kernel/warning.js';
 import { wadingSpeed } from './kernel/hazard-input.js';
 import { BASEMENT, goesToBasement, basementStayMin, basementElevationM }
   from './kernel/floors.js';
@@ -78,6 +80,13 @@ const REFUGE_MAX = 620;         // 最近避难所超过这个距离就不找了
 const REFUGE_TRIES = 6;         // 直线被楼挡住时最多再换几个候选
 const SHELTER_CALM = 8.0;       // 水退干净这么久之后才敢回街上（秒）
 const HIGH_Q = 0.80;            // 「高地」定义：walknet 高程前 20% 的点
+// 【§5 时间层 2026-11-20】工况级的「官方发布时刻」（一天分钟），由主循环按
+// 水帧 manifest 的 rain_start_min 定。默认 0（全部收得到也得等到 0 点）。
+let publishMinCache = 0;
+export function setPublishMin(m) {
+  const v = Number(m);
+  if (Number.isFinite(v)) publishMinCache = Math.max(0, Math.min(1440, v));
+}
 // 决策运行时在下方装配；play() 的首次调用发生在装配之前（初始化动画），
 // 因此这里先声明为 null，避免 TDZ。clipTimeScale() 会自动走兜底。
 let LIVE = null;
@@ -1777,31 +1786,25 @@ export function buildPedestrians(assets, opt = {}) {
     }
 
     // 人-人分离：4 m 空间哈希，O(n)
-    const buckets = new Map();
-    const bk = hashCell;
     // 人也是实体：本帧已摆位的人用来做「人对人」的最小间距检查（24 人，O(n²) 可接受）
     const placedThisFrame = [];
-    for (const p of peds) {
-      if (!p.visible) continue;
-      const a = buckets;
-      const k = bk(Math.floor(p.obj.position.x / CELL_PED), Math.floor(p.obj.position.z / CELL_PED));
-      let arr = a.get(k);
-      if (!arr) a.set(k, (arr = []));
-      arr.push(p);
-    }
     pedBuckets = null;
-    // 【交规用索引按「真实存在的人」建，不受相机距离裁剪影响】
-    // 旧版复用 buckets（只收 p.visible 的人），无头/远景时街上明明有人，
-    // 车却一个行人都查不到，礼让次数恒为 0。行人优先必须按真实人群算。
+    // 【相机解耦 2026-11-20】索引必须按「真实存在的人」建，绝不受相机距离裁剪影响。
+    // 旧版这里按 p.visible 建一份 buckets，而 p.visible = (p.dist < VIS_DIST)，
+    // 于是「前方有人」只在相机 360 m 内成立：城市总览机位下 1000 人互相看不见、
+    // p.latTarget 恒 0、永不侧让——表现层的 LOD 决定了行为内核。
+    // 现在只建一份索引：活着、没被关掉、不在车里的人，无论相机远近都在里面。
+    // 交通层的行人优先查询复用同一份索引（旧版另建 yb 正是为了绕开这个裁剪）。
     const yb = new Map();
+    const bk = hashCell;
     for (const p of peds) {
-      if (p.enabled === false || p.inVehicle) continue;
+      if (p.enabled === false || p.inVehicle || INC.isDead(p.i)) continue;
       const k = bk(Math.floor(p.obj.position.x / CELL_PED), Math.floor(p.obj.position.z / CELL_PED));
       let arr = yb.get(k);
       if (!arr) yb.set(k, (arr = []));
       arr.push(p);
     }
-    pedBuckets = yb;   // 交通层的行人优先查询复用同一份索引
+    pedBuckets = yb;   // 交通层的行人优先查询与「前方有人」共用这一份
 
     // LDT 余量按帧聚合：所有人共用同一个 nowMin，所以可以先攒再算
     let ln = 0;
@@ -1828,6 +1831,26 @@ export function buildPedestrians(assets, opt = {}) {
           depth: vd, speed: vSpeed, raining: rainMMH >= 2, rainMMH,
           inVehicle: true, inBuilding: false, moving: vSpeed > 0.1, asleep: false,
         });
+        // 【2026-11-21 个体追溯】开车的人走的是这条分支（上面那个 tick 在步行分支里），
+        // 不在这里补一笔，trace 就只能看到「他在家」和「他死了」，中间那段路凭空消失。
+        // 被追的人恰好死在车里时（案例 74 号就是），缺的正是最关键的五分钟。
+        if (traceWanted(p.i)) {
+          traceTick({
+            t: NOW_MIN(),
+            x: +p.obj.position.x.toFixed(1),
+            z: +p.obj.position.z.toFixed(1),
+            y: +p.obj.position.y.toFixed(2),
+            depthM: +(vd || 0).toFixed(3),
+            wet: vd > 0.001,
+            where: 'road',
+            indoor: false,
+            mode: 'drive',
+            rainMMH: +(rainMMH || 0).toFixed(2),
+            inCar: true,
+            carSpeed: +(vSpeed || 0).toFixed(2),
+            stalled: !!(p.driveInfo && p.driveInfo.stalled),
+          });
+        }
         EXP.tick(p.i, dt, { depth: vd, speed: vSpeed, mode: 'drive', indoor: false,
           raining: rainMMH >= 2, minute: liveCtx.minute, phys: vPhys });
         const vLive = LIVE && LIVE.agent ? LIVE.agent(p.i) : null;
@@ -1874,25 +1897,120 @@ export function buildPedestrians(assets, opt = {}) {
       if (LIVE) {
         liveCtx.minute = NOW_MIN();
         liveCtx.rainMMH = rainMMH;
-        liveCtx.far = p.visible === false;
+        // 【相机解耦 2026-11-20】这里原来写 liveCtx.far = p.visible === false，
+        // 供决策层按机位给判断间隔打 2.2 倍折扣。那个用法已删除，字段一起去掉，
+        // 免得以后又被接回去。
         liveCtx.indoor = !!(q && q.indoor);
+        // 【2026-11-21 门5】值守岗位判据要用「人是不是在工作场所」。
+        // where 的取值来自 crowd-life.js 的时段表：home / work / road / shelter。
+        liveCtx.atWork = !!(q && q.indoor && q.where === 'work');
+        // 【2026-11-21 个体追溯】只追一个人（?trace=<i>），别人一次比较就返回，
+        // 不付任何额外代价。这里记「这一分钟他站在哪、脚下多深、在室内还是街上」；
+        // 判断那一段由 cohort.js 的 traceJudge 记，状态跃迁由 incidents.js 记。
+        if (traceWanted(p.i)) {
+          const cz = (CROWD && CROWD.persons && CROWD.persons[p.i]
+            && CROWD.persons[p.i].citizen) || {};
+          const rz = cz.real || {};
+          if (!traceHasIdentity()) {
+            traceIdentity({
+              i: p.i, t: NOW_MIN(),
+              age: cz.age ?? p.age ?? null,
+              sex: rz.sex === undefined ? null : String(rz.sex),
+              socCode: rz.socCode === undefined ? null : String(rz.socCode),
+              vehicles: rz.vehicles === undefined ? null : String(rz.vehicles),
+              socGroup: rz.socGroup || null,
+              role: (cz.profile && cz.profile.role) || '',
+              wadeMax: (cz.profile && cz.profile.wade) || 0,
+              experience: cz.experience ?? null,
+              hasCar: !!p.hasCar,
+              workPlace: p.workPlace || '',
+            });
+          }
+          if (dInfo) {
+            dInfo(p.obj.position.x, p.obj.position.z, _ds);
+            traceTick({
+              t: NOW_MIN(),
+              x: +p.obj.position.x.toFixed(1),
+              z: +p.obj.position.z.toFixed(1),
+              y: +p.obj.position.y.toFixed(2),
+              depthM: +((_ds.d || 0)).toFixed(3),
+              wet: !!_ds.wet,
+              where: (q && q.where) || '',
+              indoor: !!(q && q.indoor),
+              mode: p.mode || '',
+              rainMMH: +(rainMMH || 0).toFixed(2),
+            });
+          }
+        }
         // 【2026-11-17 A 预警按人分发】旧口径是「降雨开始之后就算收到预警」，
         // 而这批工况降雨从 0 点起，等于午夜全城都收到、一路累积到傍晚十九小时。
         // 现在：他脚下第一次见水（3 cm）的那一刻才确定预警时刻 = 见水 − 前置时间，
         // 35.5% 的人自始至终收不到（Thieken 2022 表 4，内涝 n=448）。
         // 只在第一次见水时算一次，之后记在 p.warnAt 上，不再逐帧查水深。
-        if (p.warnAt === undefined && dInfo
+        // 【§5 时间层 2026-11-20】预警是**广播**：一个人知不知道这件事，
+        // 不该取决于他脚下有没有踩到水 —— 水还没到，广播已经播了。
+        // 打开时间层时：知道时刻 = 发布 + 本人的收到延迟，动身再晚一个准备时间；
+        // 关闭时保持旧口径（见水那一刻才可能收到，见水 − 前置时间），与 v2 一致。
+        // 【2026-11-21 修】门1 的渠道权重原先只在 warningStageOf 里生效，
+        // 而「收不收得到」由 receiveAtOf 决定、此处又没传值守身份 → ?recvratio 打了空转
+        // （第一次敏感性跑出 Δ判断=0 才发现）。现把 dutyPerson 提到前面并透传。
+        const dutyPerson = !!(p.real && isDutyMission(String(p.real.socCode || '')));
+        if (timeLayerOn()) {
+          if (p.awareAt === undefined) {
+            p.awareAt = receiveAtOf(publishMinCache, p.i, dutyPerson);
+            p.warnAt = p.awareAt;
+            // 还没见水时 seeAt 记无穷：动身只由「收到」推，不被"看见水"提前。
+            p.departAt = departAtOf(p.awareAt, Infinity, p.i, dutyPerson);
+            p.receiveAt = p.awareAt;
+          }
+        } else if (p.warnAt === undefined && dInfo
           && (p.warnChk === undefined || NOW_MIN() - p.warnChk >= 1)) {
           p.warnChk = NOW_MIN();
           const dw = dInfo(p.obj.position.x, p.obj.position.z, _ds).d || 0;
           if (dw >= WARNING_SELF_SET.wetThresholdM) {
+            p.seeAt = NOW_MIN();
             p.warnAt = warnAtOf(NOW_MIN(), p.i);
+            p.receiveAt = p.warnAt;
+            p.departAt = p.warnAt;
           }
         }
-        const warnAt = p.warnAt;
+        // 「脚下第一次见水」单独记：报告要用（receive 与 see 的先后差就是
+        // 广播提前量），但它不再决定"知不知道"。
+        if (p.seeAt === undefined && dInfo
+          && (p.warnChk === undefined || NOW_MIN() - p.warnChk >= 1)) {
+          p.warnChk = NOW_MIN();
+          const dwSee = dInfo(p.obj.position.x, p.obj.position.z, _ds).d || 0;
+          if (dwSee >= WARNING_SELF_SET.wetThresholdM) p.seeAt = NOW_MIN();
+        }
+        const warnAt = timeLayerOn() ? p.awareAt : p.warnAt;
         const warned = Number.isFinite(warnAt) && NOW_MIN() >= warnAt;
+        // 【§5c 2026-11-21】收到 ≠ 拿到「该怎么做」。三段里只有拿到撤离指令
+        // 的那一部分人才会进入动员曲线；只「知道出事了」的人在模型里等看见水。
+        // 时间层关闭时不分段，与 v2 一致。
+        // 【2026-11-21 门1】值守大类（医疗/安保/教育/军职）的信息渠道与别人不同：
+        // 人少、有组织、有无线电台。方向有 Drabek 2000 支撑、比例没有——
+        // 所以默认 ratio=1 时这一句不改变任何数字，只在 ?recvratio= 时才生效。
+        const stage = timeLayerOn() ? warningStageOf(p.i, dutyPerson) : (warned ? 'timely' : 'never');
+        liveCtx.warningStage = stage;
         liveCtx.officialWarning = warned;
-        liveCtx.minutesSinceWarning = warned ? Math.max(0, NOW_MIN() - warnAt) : 0;
+        const actionable = warned && stage !== 'aware';
+        // 【2026-11-21 修：案 392 暴露的结构性缺陷】
+        // 原来只会「拿到指令」的人才有动员时钟，只「知道出事了」的人 minutesSinceWarning 恒 0
+        // → 门3 的 M(0)=0 → 保护行动概率恒 0 → 这 43% 的人一辈子不会主动撤，
+        // 只能被动涉水直到淹死（案 392 就是这样：全程「概率 0%」，从 0 cm 蹚到 240 cm）。
+        // Silva 2025 与 LifeSim 的口径是：没接到指令的人仍会因**自己看见水**而行动，只是更晚。
+        // 所以对这类人把时钟起点改成「看见水那一刻」，而不是永远 0。
+        const sawWater = Number.isFinite(p.seeAt);
+        liveCtx.minutesSinceWarning = actionable
+          ? Math.max(0, NOW_MIN() - warnAt)
+          : (sawWater ? Math.max(0, NOW_MIN() - p.seeAt) : 0);
+        // 动身那一刻起算的分钟数：收到 ≠ 动身，准备时间里人还在原地。
+        // 【2026-11-20】这个量先只导出、不参与决策——把它接进效用函数会改
+        // 全部工况的数字，得单独一轮做（见 docs/时间层设计_2026-11-20.md）。
+        const departAt = p.departAt;
+        liveCtx.departed = Number.isFinite(departAt) && NOW_MIN() >= departAt;
+        liveCtx.minutesSinceDepart = liveCtx.departed
+          ? Math.max(0, NOW_MIN() - departAt) : 0;
         // 正在跑向高处的人交给避险状态机；已经站在檐下的人仍每 0.5~1
         // 仿真秒判断一次「继续等还是走」，只是候选池受限、动作不打断避险。
         liveCtx.busy = (p.mode === 'flee');
@@ -1910,7 +2028,9 @@ export function buildPedestrians(assets, opt = {}) {
         p.profile.wade = q.wade;
         if (q.speedAbs > 0) p.speed = q.speedAbs;
         let dd0 = 0;
-        if (dInfo) { const ds0 = dInfo(p.obj.position.x, p.obj.position.z, _ds); dd0 = ds0.d || 0; }
+        // 【2026-11-20 流速】同一次采样把流速一起带回来，避免为每个人再查一遍栅格。
+        let ds0 = null;
+        if (dInfo) { ds0 = dInfo(p.obj.position.x, p.obj.position.z, _ds); dd0 = ds0.d || 0; }
         // 【生理状态真的跟着人走】旧版这里写死 speed:0，于是体力永远按静止
         // 恢复、饥饿永远按静止涨、淋湿与雨强脱钩 —— 状态值成了摆设。现在
         // 用这一子步真实的步速 / 水深 / 雨强 / 室内外喂给 PersonState。
@@ -1973,7 +2093,13 @@ export function buildPedestrians(assets, opt = {}) {
           ? wLive.plan.active() : null;
         INC.tick(p.i, dt, {
           x: p.obj.position.x, z: p.obj.position.z, depth: dd0,
+          // 【2026-11-20】流速（m/s）：没有流速帧的工况恒为 0，此时内核行为与
+          // 改动前完全一致（见 kernel/flow-hazard.js 的 isUnstable）。
+          flowSpeed: ds0 && ds0.sp > 0 ? ds0.sp : 0,
           speed: realSpeed, indoor: !!q.indoor,
+          // 【2026-11-21】把「此刻在哪」(home/work/road/shelter) 一并交给伤亡层：
+          // 楼层淹没判定要按地点分开记账，否则看不出工作场所楼层这条路有没有通。
+          where: q.where,
           // 【阶段3】室内楼层：真实建筑高度派生，供回放把人摆在对应楼层。
           // 相对楼层高度叠加地形，回放人偶 y 与场景里人的绝对高度一致。
           // totalFloors 只在「在家」时给（家里真实建筑层数；工作场所没有真实
@@ -1981,10 +2107,18 @@ export function buildPedestrians(assets, opt = {}) {
           floor: inBasement ? 0 : (q.floor || 0),
           // 【2026-11-17 B】地下室：不受楼层保护，按涉水暴露判。
           basement: inBasement,
-          totalFloors: (q.indoor && q.where === 'home') ? (q.totalFloors || 0) : 0,
+          // 【2026-11-21】工作场所也带上真实楼层（此前只认 home，白天在单位的人
+          // 被按地面水深判死，方向性高估；见 docs/8工况v2结果 §五 遗留条目）。
+          totalFloors: (q.indoor && (q.where === 'home' || q.where === 'work'))
+            ? (q.totalFloors || 0) : 0,
           // 这栋楼的层高（住宅 2.7 m，Choi 2002）：淹到第几层、该层积多深，
           // 都按它算，不用全局默认值。
-          floorHeightM: (q.indoor && q.where === 'home') ? (q.floorHeightM || 0) : 0,
+          floorHeightM: (q.indoor && (q.where === 'home' || q.where === 'work'))
+            ? (q.floorHeightM || 0) : 0,
+          // 【逐栋首层高 2026-11-20】这栋楼自己的首层高（FEMA 分位数校正，
+          // crowd-life 逐栋写入；缺表时是 0，由 incidents 回退全城默认）。
+          foundationM: (q.indoor && (q.where === 'home' || q.where === 'work'))
+            ? (q.foundationM || 0) : 0,
           floorY: inBasement
             ? groundAt(q.x, q.z) + basementElevationM()
             : ((q.indoor && Number.isFinite(q.floorRelY) && q.floorRelY > 0)
@@ -2032,7 +2166,11 @@ export function buildPedestrians(assets, opt = {}) {
             rejoinNet(p, dInfo);
           }
           if (q.indoor) {
-            p.enterWalk = (!first && p.obj.visible)
+            // 【相机解耦 2026-11-20】旧版 `(!first && p.obj.visible)`：可见的人
+            // 沿链走完门口那几米才「进屋」，不可见的人立刻进屋。于是同一栋楼里
+            // 两种人进避雨的用时不同，且由机位决定。现在一律走这段过渡，
+            // 只有渲染相关的 play/mixer 才看可见性。
+            p.enterWalk = (!first && q.enterDist > 0)
               ? { remain: q.enterDist, speed: Math.max(WALK.ENTER_MIN, q.speedAbs || 1.0) }
               : null;
           } else {
@@ -2079,7 +2217,7 @@ export function buildPedestrians(assets, opt = {}) {
         // 内就直接进去（模型收起），不做楼梯电梯等精细动作。
         const nearDoor = Math.hypot(
           p.obj.position.x - q.dest.x, p.obj.position.z - q.dest.z) <= q.enterRadius;
-        if (p.enterWalk && !nearDoor && p.enterWalk.remain > 0 && p.obj.visible && dt > 0
+        if (p.enterWalk && !nearDoor && p.enterWalk.remain > 0 && dt > 0
           && p.mode === 'net') {
           const cc = G.chains[p.ci];
           const step = Math.min(p.enterWalk.remain, p.enterWalk.speed * dt);
@@ -2089,8 +2227,11 @@ export function buildPedestrians(assets, opt = {}) {
             const gy0 = groundAt(_v.x, _v.z);
             p.obj.position.set(_v.x, gy0 + p.footFix, _v.z);
             p.enterWalk.remain -= step;
-            play(p, p.acts.walk ? 'walk' : 'idle', 0.16);
-            p.mixer.update(Math.max(dt, 1 / 60));
+            // 骨骼动画只为看得见的人推进（上一句不再用可见性决定「走不走进屋这段」）
+            if (p.visible) {
+              play(p, p.acts.walk ? 'walk' : 'idle', 0.16);
+              p.mixer.update(Math.max(dt, 1 / 60));
+            }
             p.stillFrames = 0;
           }
           if (p.enterWalk.remain > 0) continue;
@@ -2198,11 +2339,26 @@ export function buildPedestrians(assets, opt = {}) {
                 }
               }
             } else if (heavyRain && p.lazy !== 1 && shouldShelter(p, rainMMH)) {
-              p.tryT = 2.5;
-              const ps = CROWD && CROWD.persons[p.i] ? CROWD.persons[p.i].phys : null;
-              recordDecision(p, 'shelter',
-                ps && ps.hasUmbrella ? '伞也挡不住了，先找个檐下' : '雨下大了，先找地方避一下', 0);
-              startFlee(p, 'rain');
+              // 【§5 时间层 2026-11-20】「下雨了先躲一下」是**预防性**动作，
+              // 要等本人的动身时刻：收到预警 ≠ 立刻就走。收东西、找孩子、
+              // 等家人有一段准备时间（中位 8 分钟，见 kernel/warning.js）。
+              // 注意：上面「水已经没过涉水线」的分支不受这个门控——那时候
+              // 是逃命，不是准备；拿准备时间去拦逃命会把人拦在洪水里。
+              const waitingToDepart = timeLayerOn()
+                && Number.isFinite(p.departAt) && NOW_MIN() < p.departAt;
+              if (waitingToDepart) {
+                p.tryT = 0.5;                  // 半分钟后再看一次，准备完就走
+                if (!p.prepping) {
+                  p.prepping = NOW_MIN();
+                  recordDecision(p, 'wait', '雨已经下大了，但还在收拾东西，没动身', 0);
+                }
+              } else {
+                p.tryT = 2.5;
+                const ps = CROWD && CROWD.persons[p.i] ? CROWD.persons[p.i].phys : null;
+                recordDecision(p, 'shelter',
+                  ps && ps.hasUmbrella ? '伞也挡不住了，先找个檐下' : '雨下大了，先找地方避一下', 0);
+                startFlee(p, 'rain');
+              }
             } else {
               p.wading = 0;
               p.tryT = 1.0;
@@ -2246,7 +2402,7 @@ export function buildPedestrians(assets, opt = {}) {
       const vx = p.obj.position.x, vz = p.obj.position.z;
       for (let i = -1; i <= 1 && !pedAhead; i++) {
         for (let j = -1; j <= 1 && !pedAhead; j++) {
-          const arr = buckets.get(bk(cx + i, cz + j));
+          const arr = pedBuckets.get(bk(cx + i, cz + j));
           if (!arr) continue;
           for (const o of arr) {
             if (o === p) continue;
@@ -2316,7 +2472,10 @@ export function buildPedestrians(assets, opt = {}) {
         if (dNow > 0.05) {
           const v0 = wadingSpeed(0);
           const vd = wadingSpeed(dNow);
-          if (v0 > 0 && vd > 0) spd *= Math.max(0.25, Math.min(1, vd / v0));
+          // 【2026-11-21 去自设】下限从 0.25 改成 0.485：Li et al. 2026 实测同一批人
+          // 无水 1.67 m/s、0.90 m 水深 0.81 m/s，比值 0.485 —— 这是实测的最低步速比，
+          // 不是另拍一个下限。超过 0.90 m 的档位沿用该值（表在那里已封顶）。
+          if (v0 > 0 && vd > 0) spd *= Math.max(0.485, Math.min(1, vd / v0));
         }
       }
       p.s += spd * dt * p.dir;
@@ -2634,6 +2793,30 @@ export function buildPedestrians(assets, opt = {}) {
         speed: SPEED_AUDIT,
       };
     },
+    /**
+     * 【2026-11-21】楼层归属体检：住宅/单位各有几个人真的落在真实建筑里、
+     * 拿到了层数。此前只有住宅走 assignFloor，工作场所走池化门牌，
+     * 白天在单位的人被按地面水深判死（方向性高估）。这个计数用来确认
+     * 那条链路真的通了，而不是只看代码改没改。
+     */
+    buildingStats() {
+      const arr = (CROWD && CROWD.persons) || [];
+      let homeReal = 0, homeFloors = 0, workReal = 0, workFloors = 0, workIndoor = 0;
+      const byPlace = {};
+      for (const q of arr) {
+        if (!q) continue;
+        if (q.homeBuilding && !String(q.homeBuilding).startsWith('street_')) homeReal++;
+        if (Number(q.homeFloors) > 0) homeFloors++;
+        if (q.workBuilding) workReal++;
+        if (Number(q.workFloors) > 0) workFloors++;
+        if (q.workIndoor) workIndoor++;
+        const k = q.workPlace || 'none';
+        byPlace[k] = byPlace[k] || { n: 0, floors: 0 };
+        byPlace[k].n++;
+        if (Number(q.workFloors) > 0) byPlace[k].floors++;
+      }
+      return { people: arr.length, homeReal, homeFloors, workReal, workFloors, workIndoor, byPlace };
+    },
     /** 决策路线实时统计（HUD / 验收）：多少人真的在按自己选的路走。 */
     routeStats() {
       let active = 0, walking = 0, sumDist = 0, sumWalked = 0, toHigh = 0;
@@ -2655,9 +2838,13 @@ export function buildPedestrians(assets, opt = {}) {
     /** 积水避险的实时状态（验收/截图时用：console 里看有多少人在跑、多少人躲着）。 */
     fleeStats() {
       let net = 0, flee = 0, shelter = 0, roof = 0, escaped = 0;
-      let rainShelter = 0, floodShelter = 0, routing = 0;
+      let rainShelter = 0, floodShelter = 0, routing = 0, prepping = 0;
       for (const p of peds) {
         if (p.mode === 'route') routing++;
+        // 【§5 时间层】收到预警但还没到动身时刻、正在原地准备的人。
+        // 有准备时间才会有人在「雨已经很大」的时候还待在原地。
+        if (p.prepping !== undefined && Number.isFinite(p.departAt)
+          && NOW_MIN() < p.departAt) prepping++;
         if (p.mode === 'flee') flee++;
         else if (p.mode === 'shelter') {
           shelter++;
@@ -2671,7 +2858,7 @@ export function buildPedestrians(assets, opt = {}) {
         net, flee, shelter, roof, routing, refuges: refuges.length,
         byProfile: peds.reduce((a, q) => { a[q.profile.id] = (a[q.profile.id] || 0) + 1; return a; }, {}),
         // 避雨 / 避水 分别有多少人躲在避难所（用户 2026-10-29 要求「下雨就动」）
-        rainShelter, floodShelter, raining: lastRaining,
+        rainShelter, floodShelter, raining: lastRaining, prepping,
         // 【彻底被困】站在孤岛上、岛上没有任何高地的那些人 —— 洪水不走，他们就
         // 一天也出不去，救援也进不来。这是用户 m03597 要的那个数。
         trapped: trapStats.trapped,
@@ -2704,6 +2891,33 @@ export function buildPedestrians(assets, opt = {}) {
       };
     },
     clusterOf,
+    /**
+     * 【§5 时间层 2026-11-20】三个时刻的分布，供验收/文档引用。
+     * 只统计有明确见水时刻的人（p.seeAt 有限）；Infinity 计数单列。
+     * 写成方法而不是每帧算，是因为它要遍历一千人、排序——只在收尾读一次。
+     */
+    timeLayerSummary() {
+      const see = [], recv = [], dep = [];
+      let neverReceive = 0, noSee = 0;
+      for (const p of peds) {
+        if (Number.isFinite(p.seeAt)) see.push(p.seeAt); else noSee++;
+        if (Number.isFinite(p.receiveAt)) recv.push(p.receiveAt); else neverReceive++;
+        if (Number.isFinite(p.departAt)) dep.push(p.departAt);
+      }
+      const stat = (arr) => {
+        if (!arr.length) return { n: 0 };
+        const s = arr.slice().sort((a, b) => a - b);
+        const q = (f) => +s[Math.min(s.length - 1, Math.floor(s.length * f))].toFixed(1);
+        return { n: s.length, min: q(0), p10: q(0.1), median: q(0.5),
+          p90: q(0.9), max: q(1), mean: +(s.reduce((a, b) => a + b, 0) / s.length).toFixed(1) };
+      };
+      return {
+        enabled: timeLayerOn(),
+        publishMin: publishMinCache,
+        see: stat(see), receive: stat(recv), depart: stat(dep),
+        neverReceive, noSee, people: peds.length,
+      };
+    },
     stats: {
       usable: usable.length, total: G.chains.length, dropped, count: peds.length,
       // 站位策略：长度加权均匀随机（no hot spots）。改回热点配额会在这里反映。

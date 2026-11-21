@@ -65,9 +65,14 @@ ok('绕路美元用正文实测 32.78 美元/英里',
   attrDetour.raw.costUSD.toFixed(2) + ' USD');
 ok('没有绕路时不收绕路费（不再拿总距离顶替）',
   near(attr.raw.costUSD, 0), attr.raw.costUSD.toFixed(2) + ' USD');
-ok('四个属性都按实测设计范围归一化到 0–1',
-  ['cost', 'travelTime', 'waitTime', 'walkDistance'].every(
-    (k) => attr[k] >= 0 && attr[k] <= 1));
+// 【2026-11-21 改】四个属性不再归一化到 0–1，改按论文原单位送值。
+  // cost 以百美元计（刻度由论文自己印的 WTP 反解，见 attributes.js 注释）。
+  ok('四个属性按论文原单位送值（不再归一化）',
+    attr.cost === attr.raw.costUSD / attr.raw.costUnitUSD
+    && attr.travelTime === attr.raw.travelTimeMin
+    && attr.waitTime === attr.raw.waitTimeMin
+    && attr.walkDistance === attr.raw.miles,
+    `cost=${attr.cost} travel=${attr.travelTime} wait=${attr.waitTime} walk=${attr.walkDistance}`);
 ok('Cost 归一化基准是 Table 3 的 0–40 美元', BOROWSKI_DESIGN.costUSD.max === 40);
 ok('同伴比例定义是自我中心网络最多 5 人',
   BOROWSKI_DESIGN.egocentricNetworkMaxSize === 5
@@ -156,9 +161,37 @@ function rate(patch, n = 3000) {
 }
 const noPeers = rate({});
 const stayPeers = rate({ peersStay: 0.9 });
-ok('同伴比例输入通道已打开（不再是写死的 0）', Math.abs(noPeers - stayPeers) > 0.005,
-  `0 → ${noPeers.toFixed(3)}，90% 留下 → ${stayPeers.toFixed(3)}`);
-ok('同伴都留下时保护倾向下降（方向与 Borowski Table 4 一致）', stayPeers < noPeers);
+// 【2026-11-21 从众换机制】加性系数 7.76 已从效用里撤掉，改由阈值级联门承担
+// （kernel/crowd-threshold.js，Beta(0.85,0.75) 阈值分布）。因此 peersStay 不再是
+// 概率的自变量：同样的情境，同伴比例只影响"门会不会开"，不影响 logit 概率。
+ok('从众加性项已撤：同伴比例不再改变 logit 概率', Math.abs(noPeers - stayPeers) < 1e-9,
+  `0 → ${noPeers.toFixed(4)}，90% 留下 → ${stayPeers.toFixed(4)}`);
+function crowdFiredShare(patch, n = 400) {
+  const person = { role: '管理', status: '白领', ageBand: 'middle',
+    real: { age: 48, sex: '1', socCode: '11', hasMinor: true,
+      householdVehicles: 1, householdSize: 4 },
+    citizen: { ageBand: 'middle', ageGroup: 'adult', age: 48, experience: 0.6,
+      sightM: 40, veteran: false, rookie: false,
+      hazard: { score: 0.3, tier: 'x', trained: false, runs: 1, sightBonus: 3 } } };
+  const kk = makeKernel(3, person, mulberry32(999), null);
+  const base = { depthHere: 0.12, depthAhead: 0.34, farDepth: 0, farDist: 0,
+    blocked: false, progress: 0.5, late: false, goalType: 'errand', overdue: 0,
+    timeToDue: 45, pressure: 0.2, rain: 0, fatigue: 0.15, stuck: 0, detours: 0,
+    wetness: 0.05, hunger: 20, umbrella: 'none', expDepth: 0, doneToday: 1,
+    abandonToday: 0, detoursToday: 0, shelteredSec: 0, homeBias: 0,
+    confidence: 0.6, abandonCd: false, detourCd: false, waitCd: false,
+    goalLabel: '办事', waitSec: 1, minutesSinceWarning: 120,
+    officialWarning: true, ...patch };
+  const rnd = mulberry32(777);
+  let fired = 0;
+  for (let i = 0; i < n; i++) fired += judge(kk, base, rnd).score.crowdFired ? 1 : 0;
+  return fired / n;
+}
+ok('阈值门按"已撤比例 ≥ θ"开：九成邻居走了就跟着走',
+  crowdFiredShare({ peersStay: 0.1, crowdTheta: 0.5 }) > 0.95,
+  `已撤 90% / θ=0.5 → 触发率 ${(crowdFiredShare({ peersStay: 0.1, crowdTheta: 0.5 })).toFixed(2)}`);
+ok('阈值门不越界：邻居全留下时不触发',
+  crowdFiredShare({ peersStay: 1.0, crowdTheta: 0.5 }) === 0);
 ok('VR4 四组实测比例齐全', ARSHAGHI_VR4.conditions.length === 4
   && ARSHAGHI_VR4.conditions[0].safeRoutePct === 100
   && ARSHAGHI_VR4.conditions[3].safeRoutePct === 33.3);

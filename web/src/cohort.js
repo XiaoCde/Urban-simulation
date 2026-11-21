@@ -34,6 +34,9 @@ import { buildHazardInput } from './kernel/hazard-input.js';
 import { decideProtectiveAction, waterDepthOrdinalOf } from './kernel/choice-model.js';
 import { attributesFromSim } from './kernel/attributes.js';
 import { BOROWSKI_DESIGN } from './kernel/evidence-tables.js';
+import { crowdModeNow, crowdTriggered, crowdThresholdOf } from './kernel/crowd-threshold.js';
+import { impedimentOf, IMPEDIMENT, careChildDutyOf } from './kernel/access-impediment.js';
+import { traceWanted, traceJudge } from './trace.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
@@ -57,14 +60,28 @@ export function makeKernel(i, person, rnd = mulberry32(20261111 + i * 7919), cir
   const hz = (c && c.hazard) ? c.hazard : null;
 
   const k = {
+    // 【2026-11-21 个体系号】旧版 kernel 上根本没有 i，只有 `id: '状态/年龄带'` 这种
+    // 标签 —— 于是「按人追溯」这类代码写 traceWanted(k.i) 会静默恒假（又一个
+    // "结果恒 0 还不报错"的坑）。这里把人序号挂上，追溯与后续按人核账都用它。
+    i,
     id: `${status}/${band}`, status, band, role,
     age: real ? real.age : (c ? c.age : 48),
     female: real ? real.sex === '2' : false,
     socCode: real ? real.socCode : 'NA',
     householdHasMinor: real ? real.hasMinor : false,
     householdVehicles: real ? real.householdVehicles : 0,
-    // 灾害履历：既往洪水次数是离散选择模型的先验，来自 hazard.js。
-    priorFloods: hz ? clamp(Math.round((hz.runs || 0) + (hz.score || 0)), 0, 4) : 0,
+    // 【2026-11-21 门5 照护责任】ACS 户规模 + 与户主关系码 → 是否「单亲带一个未成年」。
+    // 推导见 kernel/access-impediment.js 的 careChildDutyOf()（一大人一未成年，逻辑唯一）。
+    householdSize: real ? Number(real.householdSize) || 1 : 1,
+    relationship: real ? String(real.relationship || 'NA') : 'NA',
+    careChildDuty: careChildDutyOf(real),
+    // 灾害履历：既往洪水次数是认知层的自变量，来自 hazard.js。
+    // 【2026-11-21 修口径】旧版写成 round(hz.runs + hz.score)——把「经历了几次」
+    // 和「0–1 的经验分」两个不同量纲相加，得到的 0–4 既不是次数也不是等级。
+    // Thieken Table S2 的 dummy 是「1 / 2 / 3 / 4+ 次」，所以这里只取次数。
+    // 经验分单独保留为 hazardScore，供分层报告与避险选址使用。
+    priorFloods: hz ? clamp(Math.round(hz.runs || 0), 0, 4) : 0,
+    hazardScore: hz ? hz.score : 0,
     trained: !!(hz && hz.trained),
     hazard: hz ? hz.score : 0,
     hazardTier: hz ? hz.tier : 'naive',
@@ -78,6 +95,9 @@ export function makeKernel(i, person, rnd = mulberry32(20261111 + i * 7919), cir
     speed: clamp(b.speed * B.walk * (0.95 + rnd() * 0.1), WALK.MIN, WALK.KERNEL_MAX),
     sightM: clamp((c ? c.sightM : 40) + (hz ? (hz.sightBonus || 0) : 0), 18, 76),
   };
+  // 【2026-11-21 门5 一致性】ACS 户车数为 0 的户里不可能有可开的车：
+  // 发车状态是场景层的随机赋值，会和真实户车数打架。这里以 ACS 为准。
+  if (Number(k.householdVehicles) === 0) k.hasCar = false;
   if (circle) {
     k.circleId = circle.id;
     k.circleLabel = circle.label;
@@ -148,24 +168,39 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
   const pool = restrict || ACTIONS;
   // 同伴比例是 Borowski 2023 实测系数的输入。第四轮 QA9 拿到了公开定义：
   // 论文里的比例是受访者「自我中心社会网络中最多 5 人」的选择比例，
-  // 不是空间半径里的人数。仿真目前还没把这个网络统计接进来，
-  // 所以从 s 读，读不到就显式给 0，绝不编一个比例。
-  // 输入通道已经打开，个案回放阶段接上统计后直接传 s.peersStay / s.peersRide 即可。
+  // 不是空间半径里的人数。仿真的参照群体由 crowd-life.js 合成
+  // （同户 + 120 m 内最多 3 个邻居，规模≈5），live-agent 每步把它算成
+  // peersStay / peersRide 两条传进来（kernel/peer-share.js）。
+  // 【2026-11-21 修两条】① peersRide 以前从未赋值 → Table 4 的 −1.27 与
+  // threat × peersRide 交互恒乘 0，现在按「参照群体里此刻坐在车里的人」算；
+  // ② peersStay 以前把「已经开车撤离的人」算成留下，方向与论文相反，已修。
   // 上限按 Borowski 2023 Table 3 实验设计范围截断（同伴留下 0–0.8、搭车 0–1），
-  // 不按 0–1 外推。仿真目前还没有把社会网络统计接进来，所以实际取到的是 0。
+  // 不按 0–1 外推。
   const peersStay = clamp(Number(s.peersStay) || 0,
     BOROWSKI_DESIGN.peerFractionStay.min, BOROWSKI_DESIGN.peerFractionStay.max);
   const peersRide = clamp(Number(s.peersRide) || 0,
     BOROWSKI_DESIGN.peerFractionRide.min, BOROWSKI_DESIGN.peerFractionRide.max);
+  // 【2026-11-21 从众渠道只走一条】Borowski 的 7.76 与阈值级联量的是同一条
+  // 社会影响渠道，同时打开就是重复计数。阈值模式下把加性项喂 0，
+  // 从众影响全部由 crowdThreshold 那道门承担（见 kernel/crowd-threshold.js）。
+  const peersStayInLogit = crowdModeNow() === 'coefficient' ? peersStay : 0;
+  const crowdDeparted = clamp(1 - peersStay, 0, 1);
+  const crowdFired = crowdModeNow() === 'threshold'
+    ? crowdTriggered(crowdDeparted, s.crowdTheta ?? crowdThresholdOf(k && k.i)) : false;
   const hazard = buildHazardInput({
     depthM: Math.max(s.depthAhead || 0, s.depthHere || 0),
     velocityMs: 0,
     // 碎屑因子不显式给 0：由 hazard-input 按 FD2321 Table 3.1 城市列取。
     officialWarning: !!s.officialWarning,
+    // 【2026-11-21 口径核查 · 未接入】warningInformation 是全项目唯一没有数据源的输入：
+    //  Cognition 层里它挂 Thieken 2023 Table S2 的系数 0.147，但没有任何地方给它赋值，
+    //  所以这一项在全部已发布结果里恒为 0、系数恒乘 0。要接必须先在文献里找到
+    //  「非官方渠道预警信息」的可观测代理量（例如邻里/媒体传播覆盖），不能拍一个 0–1 数字。
+    //  在那之前保持 0 并如实登记为未启用，比编一个值更接近"有依据"。
     warningInformation: s.warningInformation || 0,
     surprise: clamp(s.surprise ?? (s.farDepth > s.depthAhead + 0.08 ? 0.6 : 0.1), 0, 1),
     floodImpact: clamp(s.floodImpact ?? (s.depthAhead || 0), 0, 1),
-    peersStay,
+    peersStay: peersStayInLogit,
     peersRide,
     priorFloods: k.priorFloods,
     age: k.age,
@@ -188,6 +223,22 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
     hazardRatingExtremeBound: hazard.hazardRatingExtremeBound,
     // 敏感性分析用：允许注入缩放后的实测动员点，正常运行时不传。
     mobilisationPoints: s.mobilisationPoints,
+    // 【2026-11-21 门1 / 门5】接收（是否收到预警）与阻碍（无车/行动受限/需照顾家人）。
+    // ped 目前不提供这两项，缺省即「已收到、无阻碍」，所以这两门实际恒不触发；
+    // 在接上数据源之前如实登记，不拍值（见 kernel/choice-model.js 的 CHOICE_META.limits）。
+    received: s.received,
+    // 【2026-11-21 门5 接线】阻碍不再恒为空：ACS 户车数=0 且目标超出步行上限，
+    // 或值守岗位（SOC 29/31/33/25/55）正在工作场所，都会置 impediment，
+    // 把「撤离」概率压到 0，转成就地避险/垂直撤离。判据与出处见
+    // kernel/access-impediment.js（PADM §4 车辆可得性 + Drabek 2000 组织使命）。
+    impediment: (function () {
+      const imp = impedimentOf(k, s);
+      return imp ? imp.id : IMPEDIMENT.NONE;
+    })(),
+    // 【2026-11-21 照护责任】孩子是否已经在身边（同户未成年成员的水平距离
+    // 小于 ACCESS.childWithM 就算已带上）。门 5 用它解除 care_child 阻碍；
+    // 没有可判定的同户未成年成员时传 false，不编一个孩子出来。
+    minorWith: s.minorWith === true,
     // 随机参数 logit 的三个人级偏差（cost / 同伴搭车 / 同伴留下），
     // 按人抽一次、全天不变；不传时内核按旧方式单次抽样。
     rplZ: s.rplZ,
@@ -198,7 +249,8 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
   // 把上一次的 protect 传进来，不重新抽——这才是文献里「一次决定后锁定，
   // 出新情况才重估」的做法。forceProtect=null 时完全等同旧行为，验收不变。
   const protect = (forceProtect === true || forceProtect === false)
-    ? forceProtect : choice.protect;
+    ? forceProtect
+    : (choice.protect || crowdFired);
   const action = protect
     ? executionAction(k, s, pool)
     : routineAction(k, s, pool);
@@ -212,7 +264,33 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
     threat: choice.components.threat,
     priorFloods: choice.components.priorFloods,
     peersStay: +choice.components.peersStay.toFixed(3),
+    crowdDeparted: +crowdDeparted.toFixed(3),
+    crowdTheta: Number.isFinite(s.crowdTheta) ? +s.crowdTheta.toFixed(3) : null,
+    crowdFired,
+    crowdMode: crowdModeNow(),
   };
+
+  // 【2026-11-21 个体追溯】只记被追的那个人：这一次判断读了什么、乘出多少、
+  // 最后执行了哪个动作。没有这条记录，任何一个聚合数字都无法追到具体某一步。
+  if (traceWanted(k && k.i)) {
+    traceJudge({
+      t: Number.isFinite(s.minute) ? s.minute : null,
+      action,
+      protect,
+      probability: +choice.probability.toFixed(4),
+      utility: +choice.utility.toFixed(4),
+      mobilisation: +(choice.mobilisation || 0).toFixed(4),
+      depthHere: +(s.depthHere || 0).toFixed(3),
+      depthAhead: +(s.depthAhead || 0).toFixed(3),
+      waterDepthOrdinal: waterDepthOrdinalOf(hazard.waterDepthM),
+      hazardRatingValue: +Number(hazard.hazardRatingValue || 0).toFixed(3),
+      threat: choice.components.threat,
+      gates: choice.gates,
+      peersDeparted: +crowdDeparted.toFixed(3),
+      crowdFired,
+      reason: explain(action, k, s, choice),
+    });
+  }
 
   return {
     action,

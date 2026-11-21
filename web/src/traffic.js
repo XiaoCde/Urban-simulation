@@ -215,23 +215,38 @@ export async function createTraffic(o) {
    * 车主家附近的路段上。没有车主的车一律停着，保证画面上不会出现「空车
    * 自己绕圈跑」。main.js 在 PED / CROWD_LIFE 建好后晚绑定调用。
    */
+  /**
+   * 【车是代步工具】给每辆车绑定一个真实居民作为固定车主，并把车位摆到
+   * 车主家附近的路段上。没有车主的车一律停着，保证画面上不会出现「空车
+   * 自己绕圈跑」。main.js 在 PED / CROWD_LIFE 建好后晚绑定调用。
+   *
+   * 【2026-11-21 只给「真的有车且能开」的人配车】旧版第一轮给
+   * commute==='drive'||hasCar 的人配车，第二轮 `if (!used.has(i))` 无条件
+   * 补足——于是 ACS 户车数为 0、未成年的居民也拿到了车主身份，
+   * traffic.hasCrewCar(i) 为 true，身份层和 ACS 打架。现在只看
+   * circle.hasCar && circle.license（social-circles.js 里两者都由真实
+   * ACS 户车数与年龄推出来），补车那一轮直接取消：车比能开的人多时，
+   * 多出来的车就是无主车、停着，不再硬塞给不能开的人。
+   */
   function bindCrews(peds, crowd, circles) {
     if (!peds || !peds.length) return 0;
     const min = clock ? clock.minute : 0;
     const used = new Set();
     const owners = [];
-    // 先给「有车通勤」圈层配车，不够再按人序补足，一车一人不重复
+    // 一车一人、不重复：只给「家里有车 + 有驾照（18≤age<88）+ 不是未成年」的人
     for (let i = 0; i < peds.length && owners.length < cars.length; i++) {
       const c = circles && circles[i];
-      if ((c && (c.commute === 'drive' || c.hasCar)) && !used.has(i)) {
-        used.add(i); owners.push(i);
-      }
+      if (!c || !c.hasCar || !c.license || used.has(i)) continue;
+      used.add(i); owners.push(i);
     }
-    for (let i = 0; i < peds.length && owners.length < cars.length; i++) {
-      if (!used.has(i)) { used.add(i); owners.push(i); }
+    if (!owners.length) {
+      console.info('[traffic] 没有「有车且有驾照」的居民，全部车保持停放');
+      return 0;
     }
-    for (let k = 0; k < cars.length; k++) {
-      const i = owners[k % owners.length];
+    // 一车一人：车比能开的人多时，多出来的车不硬塞（真人只有一辆车，
+    // 同一个人被绑到 4 辆车上，claim 只会认第一辆，其余永远停在原地看着像空车）
+    for (let k = 0; k < cars.length && k < owners.length; k++) {
+      const i = owners[k];
       const q = crowd && crowd.at ? crowd.at(i, min) : null;
       const h = q && q.doors ? q.doors.home : null;
       const w = q && q.doors ? q.doors.work : null;

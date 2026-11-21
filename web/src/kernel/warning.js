@@ -1,3 +1,4 @@
+import { receiveShareFor } from './reception-channel.js';
 import { hash01 } from './draw.js';
 
 /**
@@ -27,7 +28,12 @@ import { hash01 } from './draw.js';
 
 /** 文献里的实测值（Thieken 2022 表 4）。 */
 export const WARNING_MEASURED = Object.freeze({
-  neverWarnedShare: 0.355,   // 完全没收到预警的比例
+  // 【2026-11-21 统一口径】不再用 Thieken 2022 的 35.5%，改用 Silva 2025 Ahr 重建的
+  // 「收到任何预警 57%」→ 收不到 43%。理由：三段比例 0.57/0.175/0.138 是同一事件、
+  // 同一样本里量出来的，混用另一篇的 35.5% 会让 0.175 失去分母。
+  // Thieken 的 35.5% 保留作敏感性口径（neverWarnedShareAlt），不做默认。
+  neverWarnedShare: 0.43,
+  neverWarnedShareAlt: 0.355,
   leadMedianMin: 60,         // 前置时间中位数（分钟）
   leadMeanMin: 150,          // 前置时间均值（分钟）
   awareByOwnObservation: 0.473,  // 靠自己看到水察觉
@@ -86,8 +92,10 @@ function invNorm(p) {
  * 这个人到底收不收得到官方预警。
  * 35.5% 收不到——依据是 Thieken 2022 表 4 的内涝子样本。
  */
-export function receivesWarning(i) {
-  return hash01(i, 0x9e37) >= WARNING_MEASURED.neverWarnedShare;
+export function receivesWarning(i, isDuty) {
+  // 【2026-11-21 门1】默认（ratio=1）逐位等价于原来的 neverWarnedShare 比较。
+  const pReceive = receiveShareFor(isDuty === true, WARNING_STAGES.warnedAny);
+  return hash01(i, 0x9e37) >= (1 - pReceive);
 }
 
 /**
@@ -134,5 +142,232 @@ export const WARNING_META = Object.freeze({
     '截断 5–600 分钟',
     '预警时刻挂在本地点首次见水（3 cm）之前，而非统一城市时刻；这是按「47.3% 靠自己看到水」做的近似',
     '一直没见水的人不赋预警',
+  ],
+});
+
+/* ============================================================================
+ * 【§5 时间层 2026-11-20】把「发布 / 收到 / 动身」拆成三个时刻
+ *
+ * 上面那个 warnAtOf() 把三种东西压成一个数：城市什么时候发布、这个人什么时候
+ * 知道、他什么时候真的开始动。结果是「提前 2 小时预警能救多少人」这类问题
+ * 在模型里根本问不出来。这一段把它们拆开，**默认关闭**（开关见 TIMELAYER.enabled），
+ * 因为打开它会改变全部八工况的数字，必须整族重跑一次才算数。
+ *
+ * 三个时刻各自的出处与性质（改这几个数前先读 docs/时间层设计_2026-11-20.md）：
+ *   t_publish  城市发布时刻 —— 【目前自己定的】，规则是「降雨开始前 30 分钟」
+ *   t_receive  本人知道 —— 收得到的人 = t_publish + 对数正态延迟（中位 60 分）；
+ *              收不到的 35.5% 永远是 Infinity（Thieken 2022 表 4 实测比例）
+ *   t_depart   开始动身 —— 【目前自己定的】准备时间，中位 8 分、截断 0–45 分，
+ *              依据只有 Thieken 2026 的定性描述（准备行为与救命行为要分开），没有分布
+ *
+ * 为什么 t_receive 的锚点要从「自己见水」改成「发布时刻」：论文里 47.3% 的人是
+ * 自己看见水才察觉的（最多的一类）。旧写法让**所有人**都按「见水前 N 分钟知道」
+ * 算，把「被广播叫醒」和「看见水才知道」混成了一套分布。改完之后这两类分开：
+ * 收得到的走广播时刻，收不到的只能等见水。
+ * ========================================================================== */
+
+export const TIMELAYER = Object.freeze({
+  /** 【目前自己定的】官方发布时刻 = 降雨开始前这么多分钟。 */
+  publishLeadBeforeRainMin: 30,
+  /** 收到延迟：沿用「前置时间」那两个实测统计量反解的对数正态（形状是自设的）。 */
+  receiveMedianMin: 60,
+  receiveMeanMin: 150,
+  receiveClipMin: [5, 600],
+  /** 【目前自己定的】收到 → 动身的准备时间（关阀、拿东西、叫家人）。 */
+  prepMedianMin: 8,
+  prepMeanMin: 20,
+  prepClipMin: [0, 45],
+});
+
+const RLN = lognormalParams(TIMELAYER.receiveMedianMin, TIMELAYER.receiveMeanMin);
+const PLN = lognormalParams(TIMELAYER.prepMedianMin, TIMELAYER.prepMeanMin);
+
+/**
+ * 总开关（默认 false = 走旧的 warnAtOf()，行为与 v2 一致）。
+ * 用可变状态而不是塞进 TIMELAYER，是因为那是个 Object.freeze 的常数表。
+ */
+let _timeLayerOn = false;
+export function setTimeLayer(on) { _timeLayerOn = !!on; }
+export function timeLayerOn() { return _timeLayerOn; }
+
+/** 工况级的发布时刻（一天分钟）。全天族降雨从 0 点起 → 发布也是 0 点。 */
+export function publishMinOf(rainStartMin) {
+  const rs = Number(rainStartMin);
+  if (!Number.isFinite(rs) || rs <= 0) return 0;
+  return Math.max(0, rs - TIMELAYER.publishLeadBeforeRainMin);
+}
+
+/** 第 i 个人的「知道」时刻：发布 + 延迟；收不到的人 Infinity。 */
+export function receiveAtOf(publishMin, i, isDuty) {
+  if (!receivesWarning(i, isDuty)) return Infinity;
+  const u = Math.min(0.999999, Math.max(1e-6, hash01(i, 0x85eb)));
+  const delay = diffusionDelayMin(u);
+  return Math.min(1440, Math.max(0, Number(publishMin) || 0) + delay);
+}
+
+/** 第 i 个人的准备时间（分钟）。*/
+export function prepMinOf(i) {
+  const u = Math.min(0.999999, Math.max(1e-6, hash01(i, 0xc2b2)));
+  const [lo, hi] = TIMELAYER.prepClipMin;
+  return Math.min(hi, Math.max(lo, Math.exp(PLN.mu + PLN.sigma * invNorm(u))));
+}
+
+/**
+ * 动身时刻 = 他知道的那一刻 + 准备时间。
+ * 「知道」取 min(收到广播, 自己看见水)：没收到广播的人只有见水这一条。
+ */
+export function departAtOf(receiveAt, seeAt, i, isDuty) {
+  // 门1 只影响「收不收得到」，动身时刻由收到时刻 + 准备时间推，不需要再过一次门1；
+  // 参数留着是为了调用点签名一致，这里只做转发注释。
+  void isDuty;
+  const r = Number.isFinite(receiveAt) ? receiveAt : Infinity;
+  const s = Number.isFinite(seeAt) ? seeAt : Infinity;
+  const know = Math.min(r, s);
+  if (!Number.isFinite(know)) return Infinity;
+  return Math.min(1440, know + prepMinOf(i));
+}
+
+/** 三个时刻的对照表，供文档与验收引用。 */
+export const TIMELAYER_META = Object.freeze({
+  measured: [
+    '收不到预警 35.5%：Thieken et al. 2022 NHESS 22:165–185 Table 4（2016 内涝 n=448）',
+    '靠自身观察察觉 47.3%：同上 Table 5',
+    '前置时间中位 1 h、均值 2.5 h：同上 Table 4/5（n=141）',
+  ],
+  selfSet: [
+    '发布时刻 = 降雨开始前 30 分钟（这是政策情景变量，不是自然常数；敏感性扫 0/30/60/120）',
+    '准备时间中位 8 分、截断 0–45 分（无分布依据，只有 Thieken 2026 的定性描述）',
+    '扩散曲线选定 A1.2 中等档（DC 有 WEA/AlertDC，但内涝提前量短）；可切 A1.1 快 / A1.3 慢做敏感性',
+  ],
+});
+
+/* ============================================================================
+ * 【§5b 预警扩散 2026-11-21】把「收到延迟」从自设对数正态换成 Eq.(S1)
+ *
+ * 上一版 receiveAtOf() 的延迟是「反解出一条对上中位 60 / 均值 150 的对数正态」——
+ * 那两个统计量是 Thieken 2022 的预警前置时间，不是「广播扩散速度」，用它当延迟
+ * 分布是形式上的挪用。Sorensen & Mileti 的扩散模型才是这一段的原始出处，
+ * 经 Silva 2025 落到 Table S2 的系数上：
+ *
+ *   Eq.(S1)  P_warned_t = P_warned_{t-1}
+ *            + (t / Bt²) · exp(−t² / (2·Bt²)) · Δt      ← Rayleigh 扩散项
+ *            + (1 − P_warned_{t-1}) · P_warned_{t-1} · Ct ← 非官方渠道的补足项
+ *
+ * Bt 越小扩散越快（Bt 是「广播渠道效率」的形状参数，量纲按分钟读），
+ * Ct 是口口相传的补充速率。系数全部取自 Table S2，没有自设。
+ *
+ * 三档（most likely）：A1.1 快 Bt=9.5 / A1.2 中等 Bt=100 / A1.3 慢 Bt=145。
+ * 默认取 A1.2：DC 有 WEA 与 AlertDC，但内涝是小时级、且 47.3% 的人是看见水
+ * 才知道（Thieken 2022），按「快」会系统性高估提前量。
+ * ========================================================================== */
+
+export const DIFFUSION = Object.freeze({
+  scenario: 'A1.2 中等扩散（most likely）',
+  Bt: 100.0,
+  Ct: 0.060,
+  // 直接锚定论文印出来的累计值，不自己重解 Eq.(S1)。
+  // 原因：Eq.(S1) 是离散递推，Δt 与 Ct 的量纲在补充材料里没写清；
+  // 按「ct 每分钟乘 (1−P)·P」重算，曲线 4 小时就饱和到 1.0，
+  // 而 Table S2 明写 8 小时只有 74.3% —— 说明量纲读法错。
+  // 与其猜一个 Δt，不如用论文自己给的三个累计点做单调插值（下面 ANCHORS），
+  // 8h / 24h / 72h 三个数就是论文的数，一天之内只在 0→8h 段插值。
+  anchors: [[0, 0], [480, 0.743], [1440, 0.900], [4320, 0.950]],
+  horizonMin: 1440,
+  source: 'Sorensen & Mileti (2015b, c) 经 Silva et al. 2025 NHESS 25:1501 补充材料 Table S2（A1.2 most likely：Bt=100.0、Ct=0.060、8h=0.743、24h=0.900、72h=0.950）',
+  why: 'DC 有无线应急警报与 AlertDC，但内涝提前量是小时级；取中等档，快/慢两档留给敏感性',
+});
+
+/** 累计收到比例：在 log1p(t) 上对论文锚点做单调线性插值（t=0 是奇点，故用 log1p）。 */
+export function warnedCumulativeAt(minutes) {
+  const t = Math.max(0, Math.min(DIFFUSION.horizonMin, Number(minutes) || 0));
+  const A = DIFFUSION.anchors;
+  if (t <= 0) return 0;
+  for (let k = 1; k < A.length; k++) {
+    if (t <= A[k][0]) {
+      const [t0, p0] = A[k - 1];
+      const [t1, p1] = A[k];
+      const x0 = Math.log1p(t0), x1 = Math.log1p(t1), x = Math.log1p(t);
+      const w = x1 === x0 ? 0 : (x - x0) / (x1 - x0);
+      return p0 + (p1 - p0) * w;
+    }
+  }
+  return A[A.length - 1][1];
+}
+
+let _diffGrid = null;
+/** 1 分钟网格的累计曲线（供反解用，模块级只算一次）。 */
+function diffusionGrid() {
+  if (_diffGrid) return _diffGrid;
+  const n = DIFFUSION.horizonMin + 2;
+  const g = new Float64Array(n);
+  for (let k = 1; k < n; k++) g[k] = warnedCumulativeAt(k);
+  _diffGrid = g;
+  return g;
+}
+
+/** 把 [0,1) 的分位点反解成「发布后多少分钟收到」。 */
+export function diffusionDelayMin(u) {
+  const g = diffusionGrid();
+  const target = Math.min(0.999999, Math.max(1e-6, Number(u) || 1e-6));
+  for (let k = 1; k < g.length; k++) if (g[k] >= target) return k;
+  return g.length - 1;
+}
+
+export const DIFFUSION_META = Object.freeze({
+  measured: ['Eq.(S1) 的 Rayleigh 扩散结构与 Bt/Ct 系数：Sorensen & Mileti 2015b,c → Silva 2025 补充材料 Table S2'],
+  selfSet: [
+    'Bt 的量纲按分钟读（原表未印单位）',
+    'Ct 项按原文印刷形式实现（(1−P)·P·Ct）；该项在小 t 时可忽略，在长时段提供尾部',
+    '默认情景 A1.2（Bt=100）；A1.1（9.5）/ A1.3（145）用于敏感性',
+  ],
+});
+
+/* ============================================================================
+ * 【§5c 三段预警 2026-11-21】收到 ≠ 得到可行动信息 ≠ 来得及
+ *
+ * 台账 §三 第 3 条指出我们只有「到达时刻」一条线，而 Thieken 2023 把预警
+ * 有效性拆成三个分别估计的因变量（收到 / 理解 / 认为有效并行动）。
+ * DC 本地没有这三段的调查，能用的实测是 2021 Ahr 谷重建（Silva 2025）：
+ *   收到任何预警 57%、收到含撤离指令的 17.5%、在洪水到达前收到的 13.8%。
+ * 两个比值就是两道门：
+ *   得到可行动信息 | 收到过 = 17.5/57 = 30.7%
+ *   来得及        | 可行动 = 13.8/17.5 = 78.9%
+ * ========================================================================== */
+
+export const WARNING_STAGES = Object.freeze({
+  warnedAny: 0.57,
+  withInstruction: 0.175,
+  beforeArrival: 0.138,
+  source: 'Silva et al. 2025 NHESS 25:1501（2021 Ahr 谷重建：57% / 17.5% / 13.8%）',
+});
+
+export const STAGE_RATIO = Object.freeze({
+  instructionOfWarned: 0.175 / 0.57,
+  timelyOfInstruction: 0.138 / 0.175,
+});
+
+/**
+ * 第 i 个人处在哪一段：'never' | 'aware'（知道有事但没拿到该怎么做）|
+ * 'instruction'（拿到指令）| 'timely'（且在洪水到达前拿到）。
+ * 三个阈值都是上表两个实测比值，不是自设。
+ */
+export function warningStageOf(i, isDuty) {
+  if (!receivesWarning(i, isDuty)) return 'never';
+  const r1 = hash01(i, 0x51ed);
+  if (r1 >= STAGE_RATIO.instructionOfWarned) return 'aware';
+  // 【2026-11-21 修正】第二道门原来复用 0x9e37，与 receivesWarning 同一个盐，
+  // 于是「来得及」被强制落在「已收到」的同一段 u 里（上界只剩 1-0.43=0.359），
+  // 实测用时比例 0.112 而非 0.138。换成独立盐 0x2545 后回到 13.8%。
+  const r2 = hash01(i, 0x2545);
+  if (r2 >= STAGE_RATIO.timelyOfInstruction) return 'instruction';
+  return 'timely';
+}
+
+export const WARNING_STAGE_META = Object.freeze({
+  measured: ['57% / 17.5% / 13.8%：Silva 2025 Ahr 重建'],
+  selfSet: ['把三段比值当独立抽样的两道门（原文是三个统计量，未给联合分布）'],
+  limits: [
+    'Ahr 是山区河谷、德国西部；DC 的广播体系（WEA）与制度环境不同，只能当量级参考',
+    '未接「理解」这一步（需要 DC 本地问卷），aware 段的人被当作「知道有事但不知道该做什么」',
   ],
 });

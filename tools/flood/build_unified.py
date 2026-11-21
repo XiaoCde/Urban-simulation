@@ -43,7 +43,8 @@ COMMON = [
     "--hyetograph", "day",
     "--et-mm-h", "0.12",
     "--soil-recover-h", "24",
-    "--sewer-m3s", "45",
+    # 【2026-11-21】旧参数 sewer-m3s 45 已删：shallow2d.py 从解算到出帧从未读过它，
+    # 管道能力由 drain-m3s（design_drain_m3s()≈228 m³/s）与满管桶容量决定。
     "--drain-fail-after-mm", "25",
     "--drain-residual", "0.05",
     "--drain-recover-h", "6",

@@ -233,7 +233,14 @@ export function createCrowdLife({
       const hs = Math.max(1, Math.min(5, Number(persons[k].real && persons[k].real.householdSize) || 1));
       const grp = [];
       for (let m = 0; m < hs && k < persons.length; m++, k++) grp.push(k);
-      for (const a of grp) persons[a].peers = grp.filter((b) => b !== a);
+      for (const a of grp) {
+        // peers = 参照群体（同户 + 后配邻居，见下方 buildNeighbourPeers）；
+        // household = 同户成员（不含自己），门 5 的照护责任只认这个集合里的
+        // 未成年成员 —— 邻居家孩子不算自己的孩子。合成性同上：ACS 无户号，
+        // 「谁和谁一户」是按户规模连续组出来的。
+        persons[a].peers = grp.filter((b) => b !== a);
+        persons[a].household = grp.filter((b) => b !== a);
+      }
     }
   })();
 
@@ -302,6 +309,16 @@ export function createCrowdLife({
     // 并留 1.6 倍余量；一栋楼仍按 3 人一个门牌细分，不会叠成一个点。
     const capHome = Math.max(4, Math.ceil((count / Math.max(1, rects.length)) * 1.6));
     const capWork = Math.max(10, Math.ceil((count / Math.max(1, rects.length)) * 3.2));
+    // 【2026-11-21】工作场所按建筑 function 匹配（building.json 的 function 字段：
+    // office 195 / government 26 / university 72 / school 29 / hospital 4 /
+    // retail 62 / commercial 45 栋）。岗位类别与建筑职能对齐，不把办公的人
+    // 塞进住宅楼；匹配不到时退回办公/商业楼。
+    const WORK_FN = {
+      office: /^(office|government|public|civic|commercial|hotel)$|office/,
+      school: /^(university|school|dormitory)$/,
+      clinic: /^(hospital|pharmacy)$/,
+      cafe: /^(retail|commercial|kiosk|hotel)$/,
+    };
     const doorNear = (r, x, z, jig) => {
       const pad = 2.2;
       const xa = Math.max(r.minx, Math.min(r.maxx, x));
@@ -373,7 +390,7 @@ export function createCrowdLife({
         const areaFallback = (best.maxx - best.minx) * (best.maxz - best.minz);
         const areaTrue = Number(best.area_m2);
         const areaUsed = Number.isFinite(areaTrue) && areaTrue > 0 ? areaTrue : areaFallback;
-        const fa = assignFloor({ height_m: best.h, function: 'residential',
+        const fa = assignFloor({ id: best.id, height_m: best.h, function: 'residential',
           area_m2: areaUsed }, n);
         p.homeAreaSource = Number.isFinite(areaTrue) && areaTrue > 0 ? 'real' : 'bbox';
         p.homeFloors = fa.totalFloors;
@@ -381,12 +398,57 @@ export function createCrowdLife({
         p.homeFloor = fa.floor;
         p.homeFloorY = fa.indoor ? fa.elevationM : 0;
         p.homeIndoor = fa.indoor;   // 容量放不下的人判室外，不会被硬塞进楼里
+        // 【逐栋首层高 2026-11-20】这栋楼自己的首层高（FEMA 分位数校正值，
+        // 缺表时回退全城统一 1.5 ft）。楼层淹没判定必须用它，不能用全城常量。
+        p.homeFoundationM = fa.foundationM;
+        p.homeFoundationSource = fa.foundationSource;
       } else {
         p.homeBuilding = `street_${ped.i}`;
         p.homeDoor = { id: `residence_${ped.i}`, place: 'home', x: sx, z: sz, cap: 3 };
         p.homeScene = `residence_${ped.i}`;
       }
       p.interiorVisible = false;
+      // 【2026-11-21 遗漏方向：工作场所没有楼层】v2 只给住宅跑 assignFloor，
+      // 白天在单位的人被当成「无楼层」，incidents 于是拿室外水深判室内死亡，
+      // 方向性高估（docs/8工况v2结果 §五 的遗留「工作场所楼层不判」）。
+      // 这里按 SOC→place 给上班的人挑一栋**真实建筑**，用该栋自己的
+      // function 与高度派生层数（层高见 kernel/floors.js 的 floorHeightFor）。
+      // 露天岗位（site/street）不挑楼，维持室外语义。
+      if (p.workPlace && !['site', 'street', 'home', null].includes(p.workPlace)) {
+        const want = WORK_FN[p.workPlace] || null;
+        if (want) {
+          const pool = rects.filter((r) => want.test(String(r.fn || '')));
+          const pick = pool.length ? pool : rects.filter((r) => /office|commercial|retail/.test(String(r.fn || '')));
+          let wbest = null, wd = Infinity;
+          for (const r of pick) {
+            if ((workLoad.get(r.id) || 0) >= capWork) continue;
+            const cx = (r.minx + r.maxx) / 2, cz = (r.minz + r.maxz) / 2;
+            const d = Math.hypot(cx - sx, cz - sz);
+            const jitter = d * (0.94 + ((ped.i * 0.6180339) % 1) * 0.12);
+            if (jitter < wd) { wd = jitter; wbest = r; }
+          }
+          if (wbest) {
+            const n = workLoad.get(wbest.id) || 0; workLoad.set(wbest.id, n + 1);
+            const d = doorNear(wbest, sx, sz, ped.i);
+            p.workBuilding = wbest.id;
+            p.workDoor = { id: `work_${wbest.id}_${Math.floor(n / 3)}`,
+              place: p.workPlace, x: d.x, z: d.z, cap: 3 };
+            const areaFallbackW = (wbest.maxx - wbest.minx) * (wbest.maxz - wbest.minz);
+            const areaTrueW = Number(wbest.area_m2);
+            const areaUsedW = Number.isFinite(areaTrueW) && areaTrueW > 0 ? areaTrueW : areaFallbackW;
+            const faW = assignFloor({ id: wbest.id, height_m: wbest.h,
+              function: String(wbest.fn || 'office'), area_m2: areaUsedW }, n);
+            p.workFloors = faW.totalFloors;
+            p.workFloorHeightM = faW.floorHeightM;
+            p.workFloor = faW.floor;
+            p.workFloorY = faW.indoor ? faW.elevationM : 0;
+            p.workIndoor = faW.indoor;
+            p.workFoundationM = faW.foundationM;
+            p.workFoundationSource = faW.foundationSource;
+          }
+        }
+      }
+
       if (now() < 360 && !p.nightShift) {
         ped.obj.position.x = p.homeDoor.x; ped.obj.position.z = p.homeDoor.z;
       }
@@ -498,7 +560,12 @@ export function createCrowdLife({
       const local = { ...donorQ.homeDoor, cap: capWork };
       p.mealDoor = { ...local, id: `meal_${key}`, place: 'street' };
       p.streetDoor = { ...local, id: `street_${key}`, place: 'street' };
-      p.workDoor = { ...local, id: `work_${p.status}_${key}`, place: p.workPlace };
+      // 【2026-11-21】已经在上面挑到真实办公楼的人（p.workBuilding 已设）不再
+      // 被池化门牌覆盖 —— 覆盖会让刚写好的 workFloors/workFloorY 与门牌对不上，
+      // 楼层保护又退回「无楼层」。只有露天岗位或没挑到楼的人走池化门牌。
+      if (!p.workBuilding) {
+        p.workDoor = { ...local, id: `work_${p.status}_${key}`, place: p.workPlace };
+      }
       // 虚拟岗位场景 = 不进任何剧情楼的 3D 房间锚点；室内人按自己的门牌散开。
       p.workScene = `work_${key}`;
       p.outdoorScene = `outdoor_${key}`;
@@ -524,9 +591,15 @@ export function createCrowdLife({
     // 【阶段3】内核只给「相对地面的楼层高度」floorRelY（0.3 / 3.6 / 6.9… m），
     // 不碰绝对高程。显示层（ped.js）摆位时再叠加真实地形高程，保持内核/显示边界。
     // 建筑容量放不下的人 homeIndoor=false，走室外门口逻辑，不会被硬塞楼里。
-    const floorRelY = (!outdoor && placeKey === 'home' && p.homeIndoor === true
-      && Number.isFinite(p.homeFloorY)) ? p.homeFloorY : null;
-    const floorNum = (placeKey === 'home') ? (p.homeFloor || 0) : 0;
+    // 【2026-11-21】工作场所也有真实楼层了（办公楼 3.8 m 层高，Choi 2002 /
+    // Jedwab 2022 JUE 132:103507 外推到 DC 2–4 层是限制）。露天岗位仍无楼层。
+    const homeFloorOn = !outdoor && placeKey === 'home' && p.homeIndoor === true
+      && Number.isFinite(p.homeFloorY);
+    const workFloorOn = !outdoor && placeKey === 'work' && p.workIndoor === true
+      && Number.isFinite(p.workFloorY);
+    const floorRelY = homeFloorOn ? p.homeFloorY : (workFloorOn ? p.workFloorY : null);
+    const floorNum = (placeKey === 'home') ? (p.homeFloor || 0)
+      : (placeKey === 'work' ? (p.workFloor || 0) : 0);
     if (a) {
       const ang = (idx * 2.399963 + p.i * 0.137) % (Math.PI * 2);
       const r = outdoor ? 5 + idx * 1.8 : 0.8 + idx * 0.42;
@@ -600,8 +673,13 @@ export function createCrowdLife({
       interiorVisible: where === 'work' ? p.workInteriorVisible : p.interiorVisible,
       homeBuilding: p.homeBuilding,
       // 【阶段3】这栋楼的真实总层数（由建筑高度派生），供楼层淹没判定用。
-      totalFloors: p.homeFloors || 0,
-      floorHeightM: p.homeFloorHeightM || 0,
+      // 【2026-11-21】楼层三件套按人此刻所在的那栋楼取：在家取住宅楼、
+      // 在单位取那栋办公楼；露天/路上为 0（incidents 据此走地面暴露）。
+      totalFloors: (where === 'work' ? (p.workFloors || 0) : (p.homeFloors || 0)),
+      floorHeightM: (where === 'work' ? (p.workFloorHeightM || 0) : (p.homeFloorHeightM || 0)),
+      // 【逐栋首层高 2026-11-20】这栋楼的首层高（FEMA 分位数校正值）。
+      // 楼层淹没判定按它算，不能用全城统一的 0.457。
+      foundationM: (where === 'work' ? (p.workFoundationM || 0) : (p.homeFoundationM || 0)),
       x: pos.x, y: pos.y, z: pos.z,
       dest: { id: dest.id, x: dest.x, z: dest.z, cap: dest.cap || DEST_CAP },
       doors: {

@@ -1,0 +1,753 @@
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+Understanding the Decision of Flood Evacuation Departure Time Using 
+Discrete Choice Model 
+ 
+Ma. Bernadeth LIM a, Hector Jr. LIM b, Mongkut PIANTANAKULCHAIc, Francis 
+Aldrine UYd 
+ 
+a,b,c Sirindhorn International Institute of Technology, Thammasat University, 
+Pathum Thani, 12121, Thailand 
+a E-mail: dae032004@yahoo.com 
+b E-mail: hector151981@yahoo.com 
+c E-mail: mongkutp@gmail.com 
+d Mapua Institute of Technology, Muralla St., Intramuros, Manila, Metro Manila, 
+1001, Philippines; E-mail: faauy@yahoo.com 
+ 
+ 
+Abstract: Modeling evacuation departure time is primarily essential in evacuation demand 
+modeling. In this study, a discrete choice model is used  to understand the decision of 
+evacuation departure time of households in flood affected areas in Quezon City, Philippine s. 
+Specification of the model is also validated. Results of the study provide useful insights for 
+evacuation planners. H ouseholds put importance on hazard- related factors and their capacity 
+to cope with flood when making their de cisions. Factors that deter mine the flood evacuation 
+departure time constitutes the type of work of the head of the household, house ownership, the 
+number of house floors, distance of their homes from the source of flood, and the flood level.  
+ 
+Keywords: Evacuation, Discrete Choice  Model, Travel Behavior, Evacuation Modeling, 
+Departure Time, Flood 
+ 
+ 
+1. INTRODUCTION 
+ 
+The occurrence of hydro- meteorological hazards  such as hurricanes and floods can be 
+anticipated in advance. Their impacts can also be estimated at a certain level.  With this,  
+possible that people at risk can prepare  so that impacts of future disasters could be averted . 
+One effective measure that all level of governments do before disaster strikes an area at risk is 
+evacuation. In fact, in the  context of the Philippines the  National Disaster Risk Reduction 
+Management Framework of the Philippines or Republic Act 10121 specifies two types of 
+evacuation that can be enforced by the local governments based on timing, which are 
+preemptive evacuation and forced evacuation (NDRRMC, 2010). Preemptive and forced 
+evacuations are executed prior and during the disaster event , respectively. Regardless of the 
+type of evacuation orders, careful planning, simulation and drills are carried out to prepare 
+community people for possible evacuation in the future. Evacuation planning  is a way to 
+identify the best strategy for evacuation under the most probable disaster scenario. However, 
+the success relies on complex  factors, like warning time, public preparedness and response 
+time, the way informat ion and instructions are distributed , available routes, network traffic 
+conditions, and traffic management measures (Lindell and Prater , 2007). Because of the 
+complexity of the p rocesses involved with overwhelming factors that affect these processes, 
+model-based methods are useful in analyzing and planning for future evacuations ( Hardy et 
+al., 2010). Evacuation modeling is used to understand network conditions and the effect of 
+traffic regulations and control measures. This is accomplished by knowing useful  information 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+such as p redicted departure and arrival patterns, travel times, average speeds, queue lengths, 
+and traffic flow rates  (Pel et al., 2011). With this information, planners could propose  
+strategies that are appropriate for evacuation to safe destinations before disaster strikes 
+threatened areas (Stopher et  al., 2004). Understanding the decision of evacuation timing is 
+vital to help government officials decide when to issue emergency evacuation orders.  
+The importance of understanding decision maki ng in terms of evacuation timing has 
+been highlighted in studies. For instance, Pel et al.  (2011) in their study on evacuee behavior 
+analysis relaxed some of the limitations in traffic models used. Results of their study made the 
+authors stress the need for more behavioral analysis on departure timing of evacuees . Further, 
+the authors suggested that parameter settings  in traffic models should be given careful 
+attention. This is due to limitations of traffic models that are used in evacuation studies to 
+suffer from lack of suitable  real-life data. Th is limitation, if n ot addressed could result to 
+models that are not correctly calibrated because of the use of traffic data that represent regular 
+daily traffic conditions. Moreover, Li et al., (2013) constructed an evacuation response cur ve 
+using traffic data collected in 2011 . Findings in their study also made the authors  
+recommended that more empirical data from different cases are needed to have reliable 
+evacuation response model. The authors have strongly noted that the behavior analysis is very 
+important in order to better understand the evacuation decision making process.   
+Evacuation time  has been mostly analyzed using response curves using traffic data 
+during evacuation (e.g. Radwan et al., 1985; Tweedie et al., 1986; Lindell and Prater, 2007). 
+However, using the response curve do not provide disaggregate information on where 
+evacuees came from, the types of households and their characteristics, the type of evacuation 
+warning they received from the government, among others . This information is important for 
+capturing behaviors that could allow planners to design appropriate  evacuation strategies. In 
+addition, studies conducted on this line are mostly in the context of hurricane hazard and in 
+developed countries. Departure time choice of households has not been fully understood in 
+the Asia’s context. Hence, analyzing evacuation timing behavior in Asia could be analyzed 
+and modeled.  
+Towards contributing to the needs of more behavior studies in understanding evacuation 
+response behavior, this study is conducted to understand the factors that determine evacuation 
+departure time choice. A binary logit model was estimated using the data collected from 
+households in Quezon City, Philippines which was affected during the wake of the big flood 
+in 2013 that affected the whole Metro Manila . This study is primarily useful in understanding 
+the timing response of evacuees in flood disasters. Thereby, governments can make use of the 
+results of the study to develop strategies to increase compliance of preemptive evacuation , 
+hence, reducing casualties during flood events. 
+ 
+ 
+2. EARLIER LITERATURE 
+ 
+This section gives an account of previous studies on evacuation travel behavior particularly 
+on evacuation departure time. 
+ 
+2.1 Approaches in Modeling Evacuation Departure Time Choice 
+ 
+Departure time of evacuees is essential in determining the demand for evacuation. Evacuation 
+demand models are used to determine the number of people who will evacuate and their 
+departure time patterns. Us ually, evacuation demand modeling is done in three steps. Firstly, 
+that region needs to be evacuated  is identified. Then number of people that will evacuate  is 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+determined. The third step is to identify the departure time or loading rates  of evacuees. 
+Evacuees’ departure timing can be modeled in a couple of ways. It is either sequentially or 
+simultaneously modeled with evacuation decision (Pel et al., 2012). 
+In the sequential modeling approach, evacuees’ departure time choice is modeled after 
+estimating the share of people who will evacuate. This is usually done through the application 
+of exogenous response curve indicating the percentage of evacuees leaving in each time 
+interval. The departure curve has significant impact on traffic operations, congestion, a nd 
+therefore the network clearance time in emergency evacuation. Loading the evacuation 
+demand in stages has the potential to better utilize the existing capacity of the transportation 
+system as opposed to simultaneous evacuation which potentially gridlocks in the network 
+(Abdelgawad and Abdulhai, 2010). Generation of evacuation depa rture curves can be done in 
+two ways. First, response curves are constructed based on post evacuation surveys . Second, 
+planners’ knowledge and judgment with the use of data to create more general functions is 
+employed for estimating departure time. The first approach applies response curve of different 
+rates such as slow, medium and fast . Example of this is the one  developed by the United 
+States Army Corps of Engineers (2000) from post-evacuation surveys and behavioral analyses. 
+This incorporates the zero time point where the decision is done when the evacuation order is 
+issued, which reflects the share of people who evacuated before the order is given. Although 
+this approach is simple to use, the transferability of such profiles to other evacuation events is 
+an issue as well as its insensitivity to the dynamics of the evacuation process (Abdelgawad 
+and Abdulhai, 2010). In the second approach, the departure response curve has been assumed 
+to follow many different distributions such as instantaneous departure, uniform distribution, 
+Rayleigh distribution, Poisson distribution, Weibull distribution and  sigmoid curve. The 
+Weibull distribution and sigmoid curve are most often used and cl aimed to be most realistic 
+(Pel et al., 2012).  
+In the simultaneous modeling approach, evacuation decision and departure time choice 
+is modeled using the binary logit model that shows time -dependence (e.g. Fu and Wilmot, 
+2004; Fu et  al., 2006). For simultaneous modeling of the evacuation decision and departure 
+time choice, binary logit model is repeatedly estimated in time to predict the share of people 
+who decide to evacuate and depart presently, or postpone the decision to evacuate. As detailed 
+in Pel et al. (2012), the performance of the repeated binary logit model depends evidently on 
+how accurately the relative evacuation utilities are estimated. Another approach in 
+simultaneous modeling is the development of mathematical models using data from surveys,  
+and evacuation demand scheduling optimization (staging). This approach determines the 
+optimal or “near -optimal” evacuation schedule that achieves a certain objective such as 
+minimizing network clearance time  (Pel et al., 2011). However, solving this probl em is 
+mathematically and computationally demanding and requires the interaction between an 
+optimization model and a dynamic model of the transportation system.  
+ 
+2.2 Recent Developments in Modeling Evacuation Departure Time Choice 
+ 
+Findings from research that focused on behavioral analysis of evacuation departure timing are 
+reviewed here. These studies, that have identified important variables that significantly affect 
+evacuation departure time choice, include that of Charnkol and Tanaboriboon (2006) in cas e 
+of tsunami, Pel et al.  (2010), Li et al. (2013), Dixit et al.  (2012) and Hasan et al.  (2013) in 
+case of hurricane.   
+Charnkol and Tanaboriboon (2006) investigated the time at which the evacuees were 
+expected to begin t heir evacuation  in the case of hypot hetical tsunami in Thailand . A 
+behavioral analysis for transients and permanent residents was carried out to gain some 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+insights into determining evacuees’ response patterns . The response patterns were fast, 
+medium, and slow , under four preparation and response time intervals  (60 minutes, 45 
+minutes, 30 minutes, and 15 minutes). In the analysis, the age, number of family members, 
+distance from the seashore, presence of disaster knowledge prior to the disaster, the number of 
+children in the family, type of em ployment, marital status and educational attainment was 
+found to influence evacuation departure decision making. Insights could be derived from the 
+study. T ransients were more likely to evacuate faster than the permanent residents. T he 
+probability of being in a quick response pattern diminishes with an increase in the number of 
+family members. Respondents, who are living closer to the shore, are more likely to evacuate 
+earlier than those living further away from the shore. Also, the respondents who themselves or 
+whose relatives had experienced the Indian Ocean tsunami, were more likely to evacuate 
+faster than those who had not. Likewise, respondents, who have disaster knowledge, are more 
+likely to evacuate faster than those who do not have any disaster knowl edge. As expected, the 
+number of children in the household decreases the probability of being in the quick response 
+group, and teenagers are more likely to be in a slow response group due to lack of experience 
+as they tend to underestimate the risks of an approaching disaster and its destructive potential. 
+Private employees were more likely to be in the quick response group than others. Although 
+marital status and educational level was found to be significant at some level, the authors 
+recommended future investigation in these factors.  
+On the other hand, Pel et al. (2010) in his earlier work focusing on departure time 
+choice, proposed a model of integrating traveler information and compliance behavior using 
+macroscopic simulation package. Their f indings show the need to incorporate traveler 
+information and compliance into evacuation models. T hey suggested that there is a need to 
+understand the impacts of changing information and evacuation decision results that are 
+obviously related to many behavioral aspect s. Moreover, Li et al. (2013) constructed an 
+evacuation response curve based on traffic data collected during Hurricane Irene (2011) in 
+Cape May County, New Jersey. The evacuation response curve follows a general S-shape with 
+sharp upward changes in slope following the issuance of mandatory evacuation notices. T he 
+widely used S -curves with different mathematical functions and the state -of-art behavior 
+models are calibrated and compared with empirical data. The results show that the calibrated 
+S-curves with Logit and Rayleigh functions best fit empirical data . The evacuation behavior 
+analysis and calibrated evacuation response models based on this recent Hurricane evacuation 
+event may benefit evacuation planning in similar areas.  
+Hasan et al. (2013) presented the results of a hurricane evacuation tim e model using a 
+random-parameter hazard-based modeling approach. Several important factors that inﬂuence 
+a household’s evacuation timing decision are household’s geographic location, type of the 
+shelter, location and time to reach the destination in normal time, time between decision and 
+actual evacuation, whether or not to live in a mobile house, educational attainment, income, 
+and type of evacuation notice received. T hree factors are found to have random paramete rs. 
+These variables include usual travel time to reach the destination, location of household and 
+the number of children. Insights can be taken from this study for eva cuation planning. First, 
+travel time to destinations under normal condition  inﬂuences the timing decision; h ouseholds 
+moving to places that usually require longer time to be reached in normal situations will 
+evacuate earlier. Second, households that evacuate late are likely to leave shortly after making 
+the evacuation decision (i .e., low mobilization time) compared to th e households evacuating 
+earlier. Third, low-income househol ds are likely to evacuate later and h ouseholds receiving 
+evacuation notice (either mandatory or optional) are likely to evacuate earlier. 
+Dixit et al. (2012) conducted a study in understanding the behavior of evacuees by 
+using the theory of risk developed and connecting it to economic theory with behavior  under 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+threat. This study provides the first step toward explicitly incorporating risk aversion into the 
+modeling framework for estimating time -dependent evacuation demand. Using H urricane 
+Andrew response data , evacuation departure time choice model is proposed. A constant 
+relative risk aversion specification is used to model risk attitudes. The results show that th e 
+presence of children affected the amount of time spent preparing if the family decided to stay. 
+The time of day, length of time spent in a region, and whether a mandatory evacuation order 
+was issued affected risk attitudes. F urther research will b e needed to use actual revealed 
+mobilization time and the time used to prepare to weather the stor m, to develop robust 
+estimates.  
+Although above -mentioned studies in understanding departure timing of evacuees 
+provided more information on what are taken into account with this type of decision making, 
+findings are mostly in the context of hurricane hazard in developed countries. This current 
+study aims to investigate further in case of evacuation timing during flood event based on post 
+flood event household surveys. Considering above-mentioned variables found to significant ly 
+influence the departure timing of evacuees, t his study is conducted as another effort towards 
+understanding evacuees’ decision making, specifically in the context of households  in flood 
+prone areas in developing country.  
+ 
+ 
+3. METHODOLOGY 
+ 
+The section describes the data collection and basic modeling framework of the study. 
+ 
+3.1 Data Collection 
+ 
+Data used for analysis were collected from households in selected sub-districts in Quezon City, 
+Philippines. Selected sub -districts were recommended by the Quezon City Government 
+(QCG). Quezon City is a flood prone area in Metropolitan Manila and regularly experiences 
+floods of different magnitudes every after heavy rain occur. This is mainly due to the presence 
+of 700- hectare dam at 100 -meter above sea level in the Northern part, and the low grade 
+terrain at the Southern portion of the City. When heavy rainfall pours, the water level at the 
+reservoir can reach the limit and cause excess water to flo od downstream areas. Moreover, 
+clogged canals, illegal settlements, poor urban planning and lack of preparedness of the 
+people add to the level of negative impacts caused by floods (Q CG and E arthquakes and 
+Megacities Initiative, 2013).  
+The city’s populati on of more than 2 million is nearly one -fourth of Metro Manila’s 
+population among 16 cities ( QCG, 2013). It is a densely populated city with increasing 
+number of settlements. From the flood risk assessment for the City, about 700,000 people are 
+estimated to be affected . 16% of these people reside in low susceptible  areas. 30% of them 
+live in moderate flood susceptible  areas while 54% live in high flood susceptible areas (QCG 
+and EMI 2013). In 2013, another flood event happened during the August monsoon rain s 
+worsened by the tropical cyclone Trami. This event prompted several households to evacuate 
+in many parts of Metro Manila including those in Quezon City. Flood levels reached up to the 
+roofs of houses near the source of flood. This flood was the basis for  the post flood survey in 
+this study which was conducted to understand the evacuation behavior of the households. 
+In order to study evacuation behavior of households in the study area, courtesy call was 
+done at the office of the Head of Quezon City, then t o the sub-districts and villages. This was 
+important to ensure safety of researchers, easier access to target households, and building 
+rapport with households in flood prone villages that were the prospects for data collection. 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+The flood risk areas in Quez on City were identified from initial interviews with government 
+officials. According to officials’ recommendations, sub -district areas selected for this study 
+include Bagong Silangan, Bahay Toro, Sto. Domingo and Roxas with 2013 projected 
+population of 101,806,  74,987, 15,560 and 13,563 respectively ( QCG, 2013). Initial 
+interviews were also conducted with household heads in selected sub- districts in order to 
+validate appropriateness of the survey questionnaire developed. The full face to f ace 
+household interviews was then conducted between December 2013 and April 2014.  
+The exact number of population located in high flood risk areas is unknown. In 
+determining the number of appropriate number of samples, it was assumed that the population 
+is normally distributed. The empirical formulas used to determine the sample size is shown in 
+Equations 1 and 2, according to Levy and Lemeshow (2008). 
+ 
+     
+2
+2
+0
+e
+pqZn =            pq −=1                   (1)                                                          
+ 
+Where n0 is the sample size for infinite population ; Z is the statistical parameter 
+corresponding to confidence level (Z =1.96 for 95% confidence level ); e is the specified error 
+margin (5% in this case); p is the hypothesized true proportion for population (equal to 0.5 to 
+account for worst case). 
+     
+
+
+
+ −+ = N n nn )1(1 0 0                         (2 )                                                         
+Where n is the sample for finite population; N is the size  of the population. After 
+calculating the sample size using Equations 1 and 2, the minimum number of samples 
+obtained in 385. In this study, a total of 740 interviews with randomly approached households 
+covering high flood risk villages were completed. Dur ing the interviews, 10 of approached 
+households refused to undergo such interview. Hence, the total household approached for 
+interviews was 750. From this, the response rate, which represents the total number of fully 
+and partially completed interviews (74 0), divided by the sum of the number of fully and 
+partially-completed interviews plus those who refused to undergo interview (750) is 98.7%. 
+The response rate is high as every household approached were very cooperative and willing to 
+share their experiences, motivated by the hope that the study results could reach concerned 
+people, who in turn could help them have a better situation during future evacuations. In 
+addition, coordination with relevant officials from the city level down to the village level 
+contributed to the high interview response rate. Information gathered from households include 
+the socio-demographic characteristics of the households, some hazard-related information and 
+their evacuation experience during the flood event in 2013, and their comments and 
+suggestions for improving situations in future evacuations. The face to face survey took an 
+average of 15 minutes for every household interviewed.  
+After interviews were completed, data w ere verified, cross-checked and all those with 
+missing information were removed from the data included for analysis. The data w ere then 
+summarized and coded according to the requirement of statistical tool used for modeling 
+method employed. Resulting valid samples used for analysis of departure time choice is 465. 
+The departure time choices of households were grouped into two categories. The first group 
+consists of risk-averse households that evacuated before the flood, after hearing recommended 
+evacuation advice from the government ( evacuation timing referred to as before). The other 
+group consists of risk -tolerant households that evacuated when floodwaters are in their 
+vicinity ( evacuation timing referred to as during) . These then are coded and analyzed 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+according to the modeling framework presented in the next subsection.   
+ 
+3.2 Modeling Framework 
+ 
+The households’ behavior regarding evacuation departure timing is analyzed using the 
+discrete choice modeling framework . The departure timing choice  include before or during 
+the flood. Discrete choice models postulate that an alternative is selected if the utility is higher 
+than the utility of any other alternatives. There are many applications of discrete choice 
+models existing in the literature. Examples are in the field of econom ics (e.g. Pryanishnikov 
+and Zigova, 2003), transportation (Zhang et al., 2009) and evacuation modeling (e.g. Sadri  et 
+al., 2014a). One form of discrete choice model is logit as detailed in Train (2009).  
+The question of whether to evacuate according to evacuation warning before or during 
+the flood are modeled in this study through binary logit, a simple closed form solution which 
+has the ability to capture behavioral representations, and to represent systematic taste 
+variation (Train, 2009). The binary logit model for any household, h, evacuatin g before the 
+flood, b or during the flood, d, respectively, is represented by the utility function s in Equation 
+3 and Equation 4. In these equations, β'b and β'd are vectors of parameters to be estimated  for 
+the model for households, h, that evacuated before, b and during, d, the flood, respectively. 
+Xbh and Xdh are vectors of the factors that households put importance to, in their evacuation 
+departure time decision-making of either before, b, or during the flood, d respectively. εbh and  
+εdh accounts for the effects of unobserved attributes and preferences on observed choice b and 
+d, respectively. 
+     bhbhbhbh XU εβ += '                             ( 3)                                                         
+ 
+   dhdhdhdh XU εβ += '                             ( 4)    
+                                                           
+The probability that a household evacuates before or during the flood is denoted by Pbh and 
+Pdh, respectively, which are presented in Equation 5 and Equation 6. 
+           
+dhXdhbhXbh
+bhXbh
+bh
+ee
+eP ''
+'
+ββ
+β
++=                           ( 5)                                                                
+        
+dhXdhbhXbh
+dhXdh
+dh
+ee
+eP ''
+'
+ββ
+β
++=                           (6)                                                               
+The maximum likelihood estimation method is used to determine the parameters  (βs). 
+Statistical test of model significance is conducted with the null hypothesis that all coefﬁcients 
+in the utility function take the value of zero. The null hypothesis can be statistically rejected if 
+any relevant model parameter is different from zero at a 0.05 signiﬁcance level. The 
+significance of i ndependent variables to departure timing decision outcome is assessed using 
+the t-statistics. Moreover, model fit is assessed using pseudo R2. The correct classification rate 
+(CCR) is also determined to assess the predictive ability of the model. The area under the 
+Receiver Operating Characteristics (ROC), with values between 0 and 1 was also determined 
+to test the ability of the model to distinguish a randomly chosen positive case (sensitivity) 
+higher than a randomly chosen negative case (specificity). As specified in Hosmer and 
+Lemeshow (2000), AUC indicates outstanding discrimination if the value ranges from 0.9 to 1, 
+excellent discrimination with values ranging from 0.8 to less than 0.9, and acceptable 
+discrimination with values ranging from 0.7 to less than 0.8. 
+ 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+4. RESULTS AND DISCUSSION 
+ 
+4.1 Data and Variable Correlations 
+ 
+Data used for analysis  consists of 38.7% households that evacuated  before the flood, and 
+61.3% that evacuated during the flood. For analysis of the variables that are included in the  
+model for departure time choice, several variables were initially considered. Most of these 
+variables were collected based from findings in earlier literature. These variables were age, 
+gender, marital status, educational attainment of the head of the household, type of work of 
+the head of the household, household monthly income, number of household members, 
+presence of children, presence of senior citizen and pet in the household, vehicle ownership, 
+distance from the source of hazard, flood level, the level of flood damage and source of 
+warning. Moreover, variables such as the number of floors of their house and the type of 
+house material were included in the analysis. These variables were revealed by households 
+during the interviews as factors they take i nto account in making their decision. Then, the 
+stepwise selection method was used to determine variables included in the model. This 
+method provides fast and effective way to screen a large number of variables, and to fit logit 
+models simultaneously (Steyeberg et al., 2004). First, all variables were included in the model 
+and assessed for inclusion using resulting p- values. Variables with highest p -value (p≥0.05) 
+were removed one at a time. Remaining variables were subjected to the same procedure until 
+significant variables were retained while having a significant model. The resulting variables 
+included in the model are presented in Table 1. Information on the variables , description and 
+the corresponding percentage in the data is presented in the Table.  
+ 
+Table 1. Summary of variables included in the model 
+Variable code and description Variable categories Frequency Percent 
+TDEC (evacuation timing of households) evacuated before flood 180 38.7 
+evacuated during the flood 285 61.3 
+TWORK (type of work of the household head) Part- time worker 156 33.5 
+Full-time worker 309 66.5 
+HOWN (House ownership type) 
+  
+Rented 114 24.5 
+Owned 351 75.5 
+FLOOR (Number of house floor levels) 
+  
+1 floor level 284 61.1 
+>1 floor level 181 38.9 
+DIST (Distance from the source of flood hazard) 
+  
+  
+0-10 meters 283 60.9 
+11-20 meters 39 8.4 
+21-30 meters 26 5.6 
+>30 meters 117 25.2 
+FLEVEL (level of flood experienced by the 
+household) 
+< 1 meter 354 79.1 
+≥ 1 meter 111 23.9 
+ 
+The correlation matrix , indicating the overall statistical relationship between variables  
+is presented in Table 2. The relationship of departure timing with selected independent 
+variables included in the model is indicated. The correl ation between any two variables, r, are 
+calculated by the formula in Equation 7, where xh and yh are corresponding variables being 
+investigated for any existing relationship, for household h; and x and y are the mean values of 
+sample x and y, respectively.  
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+           
+( )( )
+( ) ( )∑ −∑ −
+∑ −−
+=
+i
+i
+i
+i
+i
+ii
+yyxx
+yyxx
+r
+22                      ( 7)                                                                
+The interrelationships among variables indicate low to medium level correlation.  The 
+result in the table indicates that households choose the timing of evacuation based on some 
+characteristics and hazard related factors such as the type of work, the house ownership, the 
+number of house floor levels, distance of house from the source of flood, and flood level. 
+Departure tim e during the flood is positively correlated with the full -time worker, owned 
+house located at a d istance of more than 10 meters from source of flood . On the other hand, 
+departure timing during flood is negatively corr elated with number of floor levels  (more than 
+one), and the level of flood (greater than one meter ). Since the correlation provides 
+information on the effect of only one variable at a time on the departure timing, a binary logit 
+model is estimated in order  to evaluate the effects of multiple variables on the departure time  
+choice. The detailed result of the estimation is presented in Section 4.2. 
+ 
+Table 2. Correlation matrix of selected variables 
+ TDEC TWORK HOWN FLOOR DIST FLEVEL 
+TDEC 1      
+TWORK       0.078 1     
+HOWN 0.135** -0.034        1    
+FLOOR -0.209** 0.025       0.014         1   
+DIST 0.321** -0.024       0.110*   -0.273**          1  
+FLEVEL -0.259** -0.013      -0.049    0.178**  -0.361** 1 
+*significant at 5% level; **significant at 1% level 
+ 
+4.2 Model’s Parameter Estimation 
+ 
+Table 3 presents the estimation results for departure timing. Result here shows the coefficients 
+for the model of households that evacuated during the flood. Evacuation before the flood was 
+the basis for parameter est imation. According to results, the L ikelihood Ratio (LR)  χ2 
+–distributed, is equal to 76.589 with associating p-value of 0.000 which is significant at  level 
+of 0.05. This indicates the significance of the model parameters. Therefore, the existence of 
+relationship between the dependent variable and the independent variables is supported. In 
+addition, factors that households take into account when deciding when to evacuate include 
+the type of work of the head of the household, house ownership, the number of f loors their 
+house have, distance from the source of flood and the flood level.  
+The type of work, with coefficient of - 0.474 indicate that household heads working 
+full-time are less likely to evacuate during the flood. This means that they evacuate before the 
+flood which is reasonable. They need to secure members of the household before even going 
+to work. Related to findings of Charnkol and Tanaboriboon (2006), private employees were 
+more likely to be in the quick response group. Although the threshold of comparison differs 
+between these studies due to data availability (private/public employment in Charnkol and 
+Tanaboriboon (2006); full time/part- time workers in this current study), similar result is 
+observed.  
+The h ouse ownership has a negative coefficient of -0.646, which indicates that 
+households that own the house are more likely to evacuate before the flood. This confirms the 
+significant correlation (r = -0.209) between departure timing and house ownership indicted in 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+the correlation matrix in Table 2.  Households that own their house could prepare  and keep  
+their belongings well ahead of time , secure their homes before leaving the house when 
+compared to those renting. This may be related to security and looting issues as elicited from 
+interviewed households renting their homes. According to them, they do not leave until 
+flooding occurs to ensure as possible their belongings are intact.  
+On the other hand, t he number of house floor levels with coefficient 0.629 shows  that 
+households living in a house with more than a floor level have higher likelihood of evacuating, 
+when floodwaters are already in their home vicinity. Also, households that live at a distance of 
+more than 10 meters (farther) from the source of flood are less likely to evacuate during the 
+flood. This is according to the negative coefficient  of -0.371. As indicated in the correlation 
+matrix (in Table 2) , the medium level correlation between departure timing and distance 
+(r=0.321) is significant at 0.01 level. There is also some level of correlation between floor and 
+distance (r = -0.273). This means that those  who are living nearest the source of flood may 
+have built additional floors on their houses so they plan to decide to evacuate only when 
+floodwaters have reached their homes. This can also  be observed in the context of the study 
+area and revealed in the interviews. Households nearest flood source mentioned that it is a 
+way for them to adopt to flood risk to build higher floor levels. 
+Additionally, f lood level  indicator variable shows a  coefficient of 0.771. This is an 
+indication of a higher probability of evacuating during the flood for households that 
+experience f lood level more than 1 meter high. This also confirms the significant level of 
+correlation between departure timing and the flood level (r = -0.259) as indicated in Table 2. 
+This indicates the flood risk tolerance of households who decides to wait until their house is at 
+a flood level they could bear before deciding to move to safer places. Table 2 also shows a 
+significant medium le vel correlation between flood level and distance from the flood source 
+(r=-0.361). This indicates the high flood risk that households located nearer the flood source 
+experience higher flood level. This may also indicate that households nearer the source of  
+flood have been adopting to floods by building higher floor levels as shown by significant 
+correlation between floor and flood level (r  = 0.178), hence, significantly influencing their 
+timing of evacuation.    
+ 
+Table 3. Summary of estimated parameters 
+Variable Coefficient Standard error t-stat p-value 
+Constant          0.852   0.364 2.343 0.019 
+Indicator variable for TWORK (1 for full -time 
+worker,  
+0 for part time worker) 
+        -0.474* 0.225 -2.106 0.035 
+Indicator variable for HOWN (1 for households 
+that own the house, 0 otherwise) 
+        -0.646* 0.257 -2.516 0.012 
+Indicator variable for FLOOR (1 for households 
+with house floor levels more than 1, 0 otherwise) 
+         0.629** 0.225 2.792 0.005 
+Indicator variable for DIST (1 for households 
+living from source of flood more than 10 meters, 0 
+otherwise) 
+        -0.371*** 0.084 -4.420 0.000 
+Indicator variable for FLEVEL (1 for households 
+who experienced flood level more than 1 meter, 0 
+otherwise) 
+         0.771** 0.248 3.108 0.002 
+Number of observations 465   
+LR (χ2) (5) 76.589   
+Prob > (χ2) 0.000   
+Pseudo R-squared  0.123   
+Log likelihood at convergence -272.061   
+Log likelihood at 0 -310.356   
+*significant at 5% level; **significant at 1% level; ***significant at 0.1% level 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+The factors found her e to affect the evacuati on timing such as the distance of house 
+location from the source of flood, house number of floors and flood level, indicates that 
+households put importance on hazard- related factors when making their evacuation tim e 
+decisions.  
+ 
+4.3 Validation of Model Specification 
+ 
+The ability of the model to discriminate , measured by the AUC wh ich is equal to 0.744 with  
+correct classification rate of 76%. This indicates  acceptable level of discrimination according 
+to the general rule outline d by Hosmer and Lemeshow (2000). In order to further statistically 
+investigate the validity of the model specification, an LR based te st employed. The objective 
+of performing the LR is to test if there is no significant difference between the parameters of 
+the model estimated using parts of the whole data. This is the null hypothesis , which when 
+failed to be rejected, establishes the validity of the model specification.  
+The procedure as detailed in Hasan et al. (2013) and Sadri et al. (2014b) is employed in 
+this study. The whole data of 465 observations which was used to estimate the model as 
+presented in Table 3 is randomly divided into two parts. The two partitions are named here as 
+sample 1 and sample 2 , respectively . The two separate partitions were used to estimate 
+separate models with the same specification s. Then the log -likelihood at convergence is 
+recorded for each  estimation result. The LR is then calculated using Equation 6, where 
+LL(βfull) is the log -likelihood at convergence of the model estimated using the whole data, 
+LL(βsample1) and LL (β sample2) are the log -likelihood at convergenc e of the model estimated 
+using sample 1 and sample 2, respectively.  
+ 
+            ( ) ( ) ( )[ ]212 samplesamplefull LLLLLLLR βββ −−−=                       ( 8) 
+ 
+The calculated values for LL(β full), LL(βsample1) and LL (β sample2) are –272.06, –135.95 
+and −131.26, respectively. From these values, LR is equal to 9.68. LR is χ 2 distributed with 
+degrees of freedom equal to  5. Since the critical value of χ for 5% level of significance or 
+95% level of confidence and degrees of freedom equal to 5, χ 20.05, 5 is equal to 11.07, the null 
+hypothesis is failed to be rejected. Hence, the validity of the specification of the model is  
+supported. 
+ 
+ 
+5. SUMMARY, CONCLUSIONS AND FUTURE RESEARCH 
+ 
+The occurrence of hydro -meteorological hazards such as floods can be expected in advance, 
+impacts estimated, hence certain level of preparedness could be done. Evacuation is one 
+effective measure to move people at risk to safety before a disaster strik es so that impacts of 
+future disasters could be minimized. At the level of authorities, planning for evacuation is a 
+way to identify the best strategy for the most probable disaster scenario. In doing this, 
+modeling is helpful in taking into account complexities involved in decision making processes. 
+Evacuation modeling can be applied to obtain a better understanding of the network 
+conditions and the effect of traffic regulations and control measures he reon, by predicting 
+departure and arrival patterns, travel times, average speeds, queue lengths, traffic flow rates , 
+among others. Understanding evacuation timing behavior of evacuees is one important subject 
+that government officials need to know in order  to decide when to issue emergency 
+evacuation orders.  
+Evacuation timing behavior has been mostly analyzed using response curves using 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+traffic data during evacuation. However, using the response curve do not provide disaggregate 
+information which are impor tant for capturing behaviors that could allow planners to design 
+appropriate evacuation strategies. Therefore , understanding decision making in terms of 
+evacuation timing is needed as fundamental analysis for better evacuation planning and 
+management (e.g. Pel et al., 2011; Li et al., 2013).  
+This study was conducted to understand the evacuation timing behavior of flood 
+evacuees. Data were gathered from household heads in selected sub-districts in Quezon City, 
+Philippines. Using these data , a binary logit model was estimated. Findings from the model 
+also contribute to a better understanding of household evacuation timing behavior. Several 
+important factors that inﬂuence a household’s evacuation timing decision is found from our 
+empirical analysis. These factors include the household head’s type of work, house ownership, 
+number of house floor levels, distance of house from the source of flood, and the flood level.  
+Insights for evacuation planning could be derived from results of this study. First, 
+households put importance on hazard- related factors  and their security  when making their 
+decision to either evacuate before or during the flood. Households that have house with more 
+than a floor level, living very near the source of flood, and those located in areas susceptible 
+to flood level more than 1 meter high, are more likely to evacuate when floodwaters are 
+already in their home vicinity. This indicate s the flood risk tole rance of households who 
+decides to wait until their house is at a flood level they could bear before deciding to move to 
+safer places. Authorities could design appropriate strategies to encourage those that are living 
+very near the sou rce of flood and have house floor levels more than a floor to evacuate 
+immediately once the government recommended them to evacuate. This can be done by 
+educating and/or providing them with benefits of evacuating earlier such as highly prioritizing 
+them to be moved to secured evacuation centers with provision of vehicles as needed, food, 
+water, medical assistance and other basic needs. Second, since households that own the ir 
+house, with the head working full time, are more likely to evacuate before the floo d, t he 
+government can encourage these groups to do the same in future evacuation and involve them 
+in leading evacuation movements . Third, in order to encourage households who are renting 
+their homes to also evacuate well ahead of time, security guards should be provided in areas 
+of residence to keep them from worries of looting and house security. Above all, government 
+officials, when issuing future evacuation advice, should also specify the timing of evacuation 
+by specific groups of households in addition to other evacuation related content of the 
+message (e.g. routes to take when evacuating according to specified destinations such as 
+evacuation centers).  The model developed here can be used to predict the number of 
+households evacuating at specific timing which can be utilized to plan for staged evacuation 
+movement in the future.  
+This study is subjected to  couple of limitations. First, evacuation analyzed in this study 
+considered only those at high flood risk areas. Households who were r ecommended to 
+evacuate or those who voluntarily evacuated should also be taken into account. This has some 
+implications in network traffic conditions during evacuation. Future studies could also include 
+modeling departure time choice based on their actual evacuation timing f or better 
+understanding of the distribution of evacuees at specific time interval within the given 
+evacuation time period. 
+ 
+ 
+ACKNOWLEDGEMENTS 
+ 
+The authors would like to acknowledge support given by the Sirindhorn International Institute 
+of Technology, Thammasat University for this research. Special thanks also go to the Quezon 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+City Government, Philippines for their valuable support in the data collection. 
+ 
+ 
+REFERENCES 
+ 
+Abdelgawad, H., Abdulhai, B. (2010)  Towards a complete evacuation demand and 
+supply model ing and management process. Paper presented at the 12th World 
+Conference on Transportation Studies, Lisbon Portugal, July 11-15. 
+Charnkol, T., Tanaboriboon, Y . (2006) Tsunami evacuation behavior analysis-one step of 
+transportation disaster response. IATSS Research, 30(2), 83-96. 
+Dixit, V ., Wilmot, C., Wolshon, B. (2012) Modeling risk attitudes in e vacuation 
+departure choices. Transportation Research Record: Journal of the Transportation 
+Research Board, 2312, 159–163. doi: 10.3141/2312-17 
+Fu, H., Wilmot, G . (2004) Sequential logit dynamic travel demand model for hurricane 
+evacuation. Transportation Research Record: Journal of the Transportation Research 
+Board, 1882, 19–26. doi:10.3141/1882-03 
+Fu, H., Wilmot, C.G ., Baker, E.J. (2006) Sequential logit d ynamic travel demand model 
+and its transferability. Transportation Research Record: Journal of the Transportation 
+Research Board, 1977, 17-26. doi:10.3141/1977-05 
+Hardy, M., Wunderlich, K., Bunch, J., Smith T. (2010)  Structuring m odeling and 
+simulation analyses for evacuation planning and operations. Paper presented at the 
+89th Transportation Research Board Annual Meeting, Washington DC, United States 
+Hasan, S., Mesa- Arango, R., Ukkusuri, S. ( 2013) A random -parameter hazard -based 
+model to understand hous ehold evacuation timing behavior. Transportation Research 
+Part C, 27, 108–116. 
+Hosmer, D.W., Lemeshow, S. (2000) Applied Logistic Regression (2nd ed). John Wiley 
+and Sons, New York 
+Levy, S. P., Lemeshow, S. (2008) Sampling of populations: m ethods and appli cations, 
+(4th ed.). Wiley, Hoboken, NJ. 
+Lindell, M. K., Prater, C. S. (2007) Critical behavioral assumptions in evacuation 
+analysis for private vehicles: Examples from hurricane research and planning. Journal 
+of Urban Planning and Development, 133, 18–29. 
+Li, J., Ozbay, K., Batin, B., Iyer, S., Carnegie, J ( 2013) Empirical evacuation response 
+curve during hurricane Irene in Cape May County, New Jersey. Transportation 
+Research Record: Journal of the Transportation Research Board, 2376, 1- 10. 
+doi:10.3141/2376-01 
+National Disaster Risk Reduction Management Committee (NDRRMC) (2010) Republic 
+Act No. 10121 Philippine Disaster Risk Reduction and Management Act of 2010. 
+Available online at 
+http://www.ndrrmc.gov.ph/attachments/article/95/Implementing_Rules_and_Regularti
+on_RA_10121.pdf 
+Pel, A., Bliemer, M., Hoogendoorn, S. (2011) Modelling t raveller behaviour under 
+emergency evacuation conditions . European Journal for Transportation 
+Infrastructure Research, 11(2), 166-193. 
+Pel, A., Hoogendoorn, S., Bliemer, M. (2010) Evacuation modelling including traveler 
+information and compliance behavior. Procedia Engineering, 3, 101-111. 
+Pel, A., Bliemer, M., Hoogendoorn, S. (2012) A review on travel behaviour modeling in 
+dynamic traffic simulation models for evacuations. Transportation, 39, 97–123. 
+Pryanishnikov, I., Zigova, K. (2003). Multinomial Logit Models for the Austrian Labor 
+Proceedings of the Eastern Asia Society for Transportation Studies, Vol.10, 2015 
+ 
+ 
+Market. Austrian Journal of Statistics, 32 (4), 267–282. 
+QCG (2013). Quezon City actual and projected population by district and by barangay. 
+Unpublished report. 
+Q C G, EMI. (2013). Disaster risk reduction and management plan 2014- 2020. Building a 
+disaster resilient Quezon City project. 
+Radwan, A.E., Hobelka, A.G ., Sivasailam, D. (1985) A c omputer simulation model for 
+rural network e vacuation under natura l d isasters. Institute of Transportation 
+Engineers Journal, 55(9), 25-20.  
+Sadri, A. M., Ukkusuri, S. V ., Murray -Tuite, P., Gladwin, H. (2014a ) Analysis of 
+hurricane evacuee mode choice behavior. Transportation Research Part C: Emerging 
+Technologies, 48, 37–46. doi:10.1016/j.trc.2014.08.008 
+Sadri, A., Ukkusuri, S., Murray -Tuite, P., Gladwin, H. (2014b). How to evacuate: model 
+for understanding the r outing strategies during Hurricane e vacuation. Journal of 
+Transportation Engineering, 140(1), 61–69. 
+Steyeberg, E., Borsboom, G ., van Houwelingen, H., Eijkemans, M., Habbema, D. (2004) 
+Validation and updating of predictive logistic regression models: a study on sample 
+size and shrinkage. Statistics in Medicine, 12, 2567-2586. 
+Stopher, P., Rose, J., Alsnih, R. (2004) Dynamic travel demand for emergency 
+evacuation: the case of bushfires. Working Paper, Institute of Transport Studies. 
+Train, K. (2009) Discrete choice methods with simulation  (2nd ed.). Cambridge 
+University Press, New York. 
+Tweedie, S.W., Rowland, J.R., Walsh, S.J., Rhoten, R.P., Hagle, P.I. (1986) A 
+methodology for estimating emergency evacuation times. The Social Science Journal, 
+23(2), 189-204. 
+US Army Corps of Engineers (2000) Alabama Hurricane evacuation study technical data 
+report: behavioral analysis. Final Report.  
+Zhang, J., Kuwano, M., Lee, B., Fujiwara, A. (2009) Modeling household discrete choice 
+behavior incorporating heterogeneous group decision- making mechanisms. 
+Transportation Research Part B: Methodological , 43(2), 230–250. 
+doi:10.1016/j.trb.2008.05.002 

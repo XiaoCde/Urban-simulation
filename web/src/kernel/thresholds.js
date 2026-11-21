@@ -103,15 +103,19 @@ export const SELF_SET = Object.freeze({
   },
   /** 涉水滑倒概率：没有实测研究，旧版 0.14~0.60 全为自设。 */
   slipProbability: 0.30,
-  /** 动不了多久算被困。没有实测依据。 */
+  /** 旧「动多久算被困」的 90 s。2026-11-21 起判定改用 endurance×0.5，此值仅留作对照。 */
   strandedSec: 90,
-  /** 熄火后多久弃车。没有实测依据。 */
-  carAbandonSec: 75,
   /** 车内彻底开不动的深度：用实测的小型车漂浮深度，不是自设。 */
   carFloatM: MEASURED.vehicle.smallCarFloatM,
-  /** 开始涉水／算深水的分界：没有实测依据，只用于状态标签。 */
+  /**
+   * 状态标签的两个水深分界，2026-11-21 由「拍的数」改成实测折点：
+   * · 0.35 m = Li et al. 2026（188 人静水实验）步速第一次折半的深度
+   *   （0.86/1.67 ≈ 0.52，即走路上限掉了一半），所以从这儿起算「在涉水」。
+   * · 0.90 m = 同一实验的最深一档（0.81 m/s）。超过 0.90 m 没有任何步速实测，
+   *   模型进入外推，因此标签改成「深水」，不代表另一条死亡判据。
+   */
   wadingDepthM: 0.35,
-  deepWaterM: 0.85,
+  deepWaterM: 0.90,
 });
 
 /**
@@ -119,6 +123,63 @@ export const SELF_SET = Object.freeze({
  * 儿童／成人两档来自 ARR；其余年龄带的细分没有依据，
  * 所以不再像旧版那样写 9 档各一个「致死水深」。
  */
+export const BODY = Object.freeze({
+  // 【2026-11-21 补出处】身高不再用「常被引用但没核原表」的数，改为 NHANES 实测均值：
+  //   NCHS, Vital and Health Statistics Series 3 No.39（2016-08），
+  //   《Anthropometric Reference Data for Children and Adults: United States, 2011–2014》
+  //   表 7（2–19 岁，分性别年龄的身高均值，cm）
+  //   表 11（男性 20+ 均值 175.7 cm）／表 9（女性 20+ 均值 161.8 cm）
+  //   PDF: https://www.cdc.gov/nchs/data/series/sr_03/sr03_039.pdf
+  // 旧值 175.3/161.3 差异 <0.5 cm 但确实不是这张表；旧值「儿童 140 cm」更离谱——
+  // 4 岁均值 106.7 cm、8 岁 131.7 cm、12 岁 155.8 cm，一个数盖不住 2–12 岁。
+  heightCmByAge: {
+    // 键是周岁，2–19 岁；<2 岁按 2 岁档，≥20 岁走成人档
+    male: {
+      2: 92.2, 3: 99.0, 4: 106.7, 5: 113.8, 6: 120.0, 7: 126.4, 8: 131.7,
+      9: 136.5, 10: 143.0, 11: 150.3, 12: 155.8, 13: 163.4, 14: 169.4,
+      15: 173.4, 16: 173.9, 17: 174.9, 18: 175.6, 19: 176.3,
+    },
+    female: {
+      2: 90.0, 3: 98.1, 4: 105.8, 5: 112.3, 6: 118.7, 7: 124.5, 8: 131.7,
+      9: 137.7, 10: 144.3, 11: 150.7, 12: 156.2, 13: 158.5, 14: 160.3,
+      15: 161.1, 16: 162.3, 17: 162.5, 18: 161.7, 19: 163.0,
+    },
+  },
+  heightCm: { adultMale: 175.7, adultFemale: 161.8, adultMean: 168.75, childAt2: 91.1 },
+  // 气道（口鼻）高度占站高的比例。**这是本文件里唯一还没有一手数据支撑的比例**：
+  // 物理上溺亡＝水面高过口鼻，但口鼻高度是人体测量里很少单独公布的量，
+  // 检索到的分段比例表（Drillis & Contini 1966 经 Winter 转引）只给「头高 ≈ 0.130 H」，
+  // 据此推算口鼻约在 0.87–0.90 H。取 0.85 是偏保守（更早判溺亡），
+  // 敏感性 0.85 / 0.90 必须随结果一起报。不把它写成「文献值」。
+  airwayOfHeight: 0.85,
+  airwayOfHeightRange: [0.85, 0.90],
+  source: 'NHANES 2011–2014（NCHS Series 3 No.39，表 7/9/11）',
+  note: '身高已核原表；0.85 的口鼻/身高比仍是半自设，见 airwayOfHeightRange',
+});
+
+/** 按 NHANES 分性别年龄均值取站高（cm）。年龄缺失时走成人均值。 */
+export function statureCmFor(age, sex) {
+  const a = Number(age);
+  const known = age !== null && age !== undefined && Number.isFinite(a);
+  const s = String(sex);
+  const bySex = s === '2' ? BODY.heightCmByAge.female
+    : (s === '1' ? BODY.heightCmByAge.male : null);
+  if (known && a < 20) {
+    const key = Math.max(2, Math.round(a));       // <2 岁按 2 岁档
+    if (bySex) return bySex[key];
+    // 性别缺失：两性同年龄均值
+    return +(((BODY.heightCmByAge.male[key] + BODY.heightCmByAge.female[key]) / 2).toFixed(1));
+  }
+  if (s === '2') return BODY.heightCm.adultFemale;
+  if (s === '1') return BODY.heightCm.adultMale;
+  return BODY.heightCm.adultMean;
+}
+
+export function airwayDepthFor(age, sex) {
+  const h = statureCmFor(age, sex);
+  return +(h / 100 * BODY.airwayOfHeight).toFixed(3);
+}
+
 export function instabilityDepthFor(age) {
   // 【修 2026-11-17】NaN 与 null 原先会落到错误档：NaN 走成人、null 走儿童
   // （null < 13 为真）。取不到真实年龄时应走保守的成人档，与 incidents.js
@@ -132,13 +193,27 @@ export function instabilityDepthFor(age) {
 }
 
 /** 暴露耐受时长，只有儿童／成人两档，来自上面的自设表。 */
+/**
+ * 【2026-11-21 敏感性旋钮】暴露时长的整体倍数。默认 1.0，逐位等于上表。
+ *
+ * 为什么必须有这个旋钮：暴露时长（成人 150 s / 儿童 80 s）是本项目**最没依据**
+ * 的两个数（三轮检索没有「失稳后多久死亡」的定量函数）。没有旋钮，「整组 ×0.5 / ×2
+ * 各跑一次看结论是否翻转」就只能改源码，改源码等于没有可复现的敏感性。
+ * 用法：?casscale=0.5|2（页面）/ SIM_CAS_SCALE=0.5|2（跑批）。
+ */
+let _casScale = 1.0;
+export function setCasualtyScale(x) {
+  const v = Number(x);
+  if (Number.isFinite(v) && v > 0) _casScale = Math.min(10, Math.max(0.05, v));
+}
+export function casualtyScale() { return _casScale; }
+
 export function exposureSecFor(age) {
   const a = Number(age);
-  if (age === null || age === undefined || !Number.isFinite(a)) {
-    return SELF_SET.casualty.exposureSecAdult;
-  }
-  return a < 13 ? SELF_SET.casualty.exposureSecChild
-    : SELF_SET.casualty.exposureSecAdult;
+  const base = (age === null || age === undefined || !Number.isFinite(a))
+    ? SELF_SET.casualty.exposureSecAdult
+    : (a < 13 ? SELF_SET.casualty.exposureSecChild : SELF_SET.casualty.exposureSecAdult);
+  return base * _casScale;
 }
 
 export const THRESHOLD_META = Object.freeze({

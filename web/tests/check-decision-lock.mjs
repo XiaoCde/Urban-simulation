@@ -63,24 +63,32 @@ const check = (name, pass, extra = '') => {
     depthHere: 0.30, rain: 8, blocked: false, stuck: 0, stuckR: 0,
     late: false, overdue: 0, waitSec: 1,
   }));
-  const flips = (locked) => {
+  // 【2026-11-21 改】决策换成五道门之后，「同一情境里动作是否会翻」已经很少发生：
+  // 重抽与锁定都给 0 次翻转，严格 < 这条断言失去判别力。改为两条：
+  //  ① 结构断言——锁定模式真的把首次结果带下去了（held 计数 > 0，重抽模式恒为 0）；
+  //  ② 非严格断言——锁定不增加翻转（允许相等）。
+  const run = (locked) => {
     const rnd = mulberry32(1234);
     const depthBand = (d) => d < 0.05 ? 0 : d < 0.15 ? 1 : d < 0.35 ? 2
       : d < 0.60 ? 3 : d < 0.85 ? 4 : d < 1.2 ? 5 : 6;
-    let prevKey = null, held = null, prevAct = null, n = 0;
+    let prevKey = null, held = null, prevAct = null, n = 0, applied = 0;
     for (const s of waves) {
       const key = [depthBand(s.depthAhead), depthBand(s.depthHere), 0, '', 0, 0, 0].join('|');
       const force = locked && prevKey === key ? held : null;
+      if (force !== null) applied++;
       const out = judge(k, s, rnd, ACTIONS, force);
       if (locked) { prevKey = key; held = out.protectHeld; }
       if (prevAct !== null && out.action !== prevAct) n++;
       prevAct = out.action;
     }
-    return n;
+    return { n, applied };
   };
-  const freeFlips = flips(false), lockedFlips = flips(true);
-  check('锁定后动作翻转次数明显减少', lockedFlips < freeFlips,
-    `每次重抽 ${freeFlips} 次 → 锁定 ${lockedFlips} 次`);
+  const free = run(false), locked = run(true);
+  check('锁定模式确实复用首次判断（重抽模式不复用）',
+    locked.applied > 0 && free.applied === 0,
+    `复用：锁定 ${locked.applied} 次 / 重抽 ${free.applied} 次`);
+  check('锁定不增加动作翻转', locked.n <= free.n,
+    `每次重抽 ${free.n} 次 → 锁定 ${locked.n} 次`);
 }
 
 // ---------- ④ 被困接口 ----------

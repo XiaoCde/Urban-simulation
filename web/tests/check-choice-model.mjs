@@ -6,14 +6,15 @@
  *
  * 检查三件事：
  *   1 平静场景（没水没雨没预警）不启动保护行动，不出现无依据改道；
- *   2 概率随危险／预警时长／既往洪水经历／同伴比例按实测系数方向变化；
+ *   2 概率随危险／预警时长／既往洪水经历（经门3 的相对倍数）按实测系数方向变化；
  *   3 同一处境不同次抽样结果不同（概率抽样，不是阈值开关）。
  *
  * 用法：node _check_choice_model.mjs
  */
 import { buildHazardInput } from '../src/kernel/hazard-input.js';
 import {
-  decideProtectiveAction, waterDepthOrdinalOf, protectiveActionUtilities,
+  decideProtectiveAction, waterDepthOrdinalOf, protectiveActionUtilities, knowledgeScore,
+  setExperienceLink, EXPERIENCE_LINK,
   KNOWLEDGE_LOGIT, ACTION_LOGIT, EVACUATION_LOGIT, MOBILISATION, SCALING, CHOICE_META,
 } from '../src/kernel/choice-model.js';
 import { MOBILISATION_OBSERVED, mobilisedBy } from '../src/kernel/mobilisation.js';
@@ -52,12 +53,15 @@ function scenario(runs, patch, seed = 777) {
   const rnd = mulberry32(seed);
   const cnt = {};
   let pSum = 0;
+  let last = null;
   for (let n = 0; n < N; n++) {
     const o = judge(k, s, rnd);
     cnt[o.action] = (cnt[o.action] || 0) + 1;
     pSum += o.choice.probability;
+    last = o.choice;
   }
-  return { p: +(pSum / N).toFixed(4), cnt };
+  // gates 取自最后一次判断（同一处境下各门的值只随 rnd 抽到的随机参数而变）
+  return { p: +(pSum / N).toFixed(4), cnt, gates: last.gates };
 }
 
 console.log('===== 离散选择模型验收 =====');
@@ -125,7 +129,22 @@ const checks = [
   ['平静时不出现换街/掉头/放弃', noBadAction],
   ['预警时间越久保护概率越高', warned.p > shallow.p],
   ['水更深保护概率更高', deep.p > warned.p],
-  ['既往洪水经历增加保护倾向', exp3.p > exp1.p && exp1.p > warned.p - 0.001],
+  // 【2026-11-21 改】认知层不进主公式，但它的相对结构接到门3：
+  // 经历越多 → 知识线性预测子越高 → 动员倍数 κ=1 下越大 → 保护概率越高。
+  // 绝对值仍由 Silva 实测动员曲线给，所以这里只验方向与倍数区间。
+  ['经验越多保护概率越高（接到门3，κ=1）',
+    exp3.p > exp1.p
+    && exp3.gates.experienceRatio > 1
+    && exp1.gates.experienceRatio === 1  // 经历 1 次是参考人，定义上倍数 =1
+    && knowledgeScore({ priorFloods: 3, officialWarning: true })
+      > knowledgeScore({ priorFloods: 1, officialWarning: true })],
+  ['经验通道可关回（?exp=off 的 A/B 基线）',
+    (setExperienceLink(false), (() => {
+      const r = scenario(3, { depthAhead: 0.34, depthHere: 0.12, minutesSinceWarning: 120, officialWarning: true });
+      const off = r.gates.experienceRatio === 1 && Math.abs(r.p - exp1.p) < 1e-12;
+      setExperienceLink(true);
+      return off;
+    })())],
   ['危险升高时从众效应衰减', peerExtreme > peerLow],
   ['同处境抽样有随机性（非阈值开关）', calm.p === 0 && shallow.p > 0 && shallow.p < 1],
   ['水深编码按 Table S1 单调', waterDepthOrdinalOf(0) === 1 && waterDepthOrdinalOf(5) === 7],

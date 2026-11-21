@@ -18,16 +18,21 @@
  *
  * 参数顺序：工况 / 并发数 / 人数 / 分钟 / 输出目录
  *
- * 为什么并发默认 3：一个无头 Chrome 跑这套城市模型约占 1.2–1.6 GB，
- * 本机可用物理内存只有 4 GB 左右，开多了会开始换页，反而更慢。
+ * 为什么并发默认 3：一个无头 Chrome 跑这套模型实测常驻 2.0–2.5 GB（2026-11-19 采样，
+ * 上下浮动、不单调增长），本机总内存 15.4 GB、提交内存余量约 11 GB，四并发时余量会被吃掉大半，
+ * 开始换页反而更慢，也有渲染进程被干掉的风险。
  */
 import { spawn } from 'node:child_process';
-import { existsSync, mkdirSync, createWriteStream, readFileSync } from 'node:fs';
+import { existsSync, mkdirSync, createWriteStream, readFileSync, statSync } from 'node:fs';
 import { dirname, resolve, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { extname, normalize, sep } from 'node:path';
+import {
+  WATCH, createWatchdog, parseProgress, etaOf, etaVerdict, scanNaN, sanityOf, tripwireSummary,
+  rainFamily, familyRefSec,
+} from './tripwires.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
 const WEB = resolve(HERE, '..');   // 脚本已移到 web/sim/，web/ 根目录在上一级
@@ -104,18 +109,84 @@ function runOne(c, label = c) {
     const logPath = join(OUTDIR, label + '.log');
     const log = createWriteStream(logPath);
     const t = Date.now();
+    // 四条绊线的判定结果，跟着这次工况一起进 _sweep.json。
+    const trip = { stalled: false, silentSec: 0, etaOver: false, etaRatio: null,
+      expectedWallSec: 0, nan: [], sanity: null, killedByWatchdog: false };
     const cp = spawn(process.execPath, [
       join(WEB, 'sim/sim-day.mjs'), String(MINUTES), '24', String(PEOPLE), out, '0', c, String(SEED),
     ], { cwd: WEB, stdio: ['ignore', 'pipe', 'pipe'] });
+
     let tail = '';
-    cp.stdout.on('data', (d) => { const s = d.toString(); log.write(s); tail = (tail + s).slice(-4000); });
-    cp.stderr.on('data', (d) => { const s = d.toString(); log.write('[err] ' + s); tail = (tail + s).slice(-4000); });
+    // 绊线2 的基准：同族（全天雨/傍晚暴雨）已完成工况的墙钟中位数。
+    // 没有同族参照（例如只跑一个工况）时**不报 ETA 偏离**，只报进度 ——
+    // 宁可少一条指标，也不发一条每次都会响的假警报。
+    let expectedWallSec = familyRefSec(c, results);
+    trip.expectedWallSec = expectedWallSec;
+    trip.refFamily = rainFamily(c);
+    if (!expectedWallSec) trip.etaRefMissing = true;
+    let lastMinute = -1;
+
+    // ---- 绊线1 断流看门狗：日志长时间不涨 → 报警 + 终止子进程。
+    // 夜里「23:17 之后 11 小时没人知道」就是死在这条上。
+    const wd = createWatchdog({
+      probe: () => { const st = statSync(logPath); return { size: st.size, mtimeMs: st.mtimeMs }; },
+      onSilent: ({ silentSec }) => {
+        trip.stalled = true;
+        trip.silentSec = silentSec;
+        trip.killedByWatchdog = true;
+        console.error(`[sweep][绊线1] ${c} 日志 ${silentSec}s 没有新内容（阈值 ${WATCH.stallMin} 分钟）→ 判定断流，终止该子进程`);
+        try { cp.kill('SIGKILL'); } catch { /* 进程可能已经没了 */ }
+      },
+    }).start();
+
+    const onChunk = (s) => {
+      log.write(s);
+      tail = (tail + s).slice(-4000);
+      // ---- 绊线2 ETA 偏离
+      const p = parseProgress(s) || parseProgress(tail);
+      if (p && p.minute !== lastMinute) {
+        lastMinute = p.minute;
+        trip.lastMinute = p.minute;
+        if (expectedWallSec) {
+          const v = etaVerdict({ wallSec: p.wallSec, expectedWallSec });
+          if (v.over && !trip.etaOver) {
+            trip.etaOver = true;
+            trip.etaRatio = v.ratio;
+            console.error(`[sweep][绊线2] ${c} 进度偏离：到 ${p.minute} 分已花 ${p.wallSec}s，`
+              + `同族参照 ${expectedWallSec}s（${v.ratio}×，阈值 ${WATCH.etaSlack}×）`);
+          }
+        } else if (p.minute >= MINUTES / 2 && !trip.etaInfo) {
+          // 没有同族参照时只报「按本工况当前速度大概还要多久」，明说是参考、不作告警。
+          const e = etaOf({ minute: p.minute, wallSec: p.wallSec, minutesTotal: MINUTES });
+          if (e.etaWallSec && e.etaWallSec > 0) {
+            trip.etaInfo = true;
+            console.log(`[sweep] ${c} 没有同族参照：按本工况当前速度估计总墙钟 ≈ ${e.etaWallSec}s`
+              + `（仅参考，不作告警）`);
+          }
+        }
+      }
+    };
+    cp.stdout.on('data', (d) => onChunk(d.toString()));
+    cp.stderr.on('data', (d) => onChunk('[err] ' + d.toString()));
+
     cp.on('close', (code) => {
+      wd.stop();
       log.end();
       const sec = (Date.now() - t) / 1000;
+      // 绊线2 的收尾复核：进度行不一定跑到最后（一个 120 人的 60 分工况只打了两行），
+      // 光靠「跑到 X 分花了多久」会漏掉「整场就是比别人慢一倍」这种。
+      // 这里用最终墙钟对比同族参照，迟到但一定不会漏。
+      if (expectedWallSec && !trip.etaOver && sec > expectedWallSec * WATCH.etaSlack) {
+        trip.etaOver = true;
+        trip.etaRatio = +(sec / expectedWallSec).toFixed(2);
+        console.error(`[sweep][绊线2] ${c} 整场超时：实测 ${sec.toFixed(0)}s，同族参照 ${expectedWallSec}s`
+          + `（${trip.etaRatio}×，阈值 ${WATCH.etaSlack}×）`);
+      }
       let sum = null;
       try {
         const j = JSON.parse(readFileSync(out, 'utf8'));
+        // ---- 绊线4 NaN：只扫汇总层，不扫逐帧轨迹（那会把内存和 CPU 拖垮）。
+        trip.nan = scanNaN({ final: j.final, metrics: j.metrics, summary: j.summary });
         const I = (j.final && j.final.sim && j.final.sim.incidents) || {};
         const D = (j.final && j.final.sim && j.final.sim.driving) || {};
         sum = { dead: I.dead, stranded: I.everStranded, injured: I.everInjured,
@@ -125,9 +196,30 @@ function runOne(c, label = c) {
           deathsByCause: I.deathsByCause, deathsByZone: I.deathsByZone,
           deathsByLegacyCause: I.deathsByLegacyCause, wallSec: j.wallSec };
       } catch (e) { sum = { error: 'parse: ' + e.message }; }
-      console.log(`[sweep] ${c} 完成 · ${sec.toFixed(0)}s · 退出码 ${code}`
-        + (sum && sum.dead != null ? ` · 死 ${sum.dead} 困 ${sum.stranded} 避险 ${sum.evacuated}` : ''));
-      results.push({ case: c, code, sec: +sec.toFixed(1), sum });
+
+      // ---- 绊线3 合理性（这里只做绝对判据：缺数/超人数/死因对不上；
+      //      相对基线的判据要等同批都跑完，在下面的汇总段里算）。
+      // 被看门狗终止的工况没有结果文件，「解析失败 / 死亡数缺失」只是断流的后果，
+      // 不再重复计三条 —— 结论写清「断流终止，没有产出」就够了。
+      trip.sanity = trip.killedByWatchdog
+        ? { ok: true, issues: [], skipped: '断流终止，合理性无从判定（无产出）' }
+        : sanityOf(sum, { people: PEOPLE });
+      const tw = tripwireSummary({ stalled: trip.stalled, eta: { over: trip.etaOver, ratio: trip.etaRatio },
+        nan: trip.nan, sanity: trip.sanity });
+      trip.ok = tw.ok;
+      trip.bad = tw.bad;
+
+      if (!tw.ok) {
+        console.error(`[sweep][绊线] ${c} 有 ${tw.bad.length} 条告警：${tw.bad.join('；')}`);
+      }
+      if (trip.killedByWatchdog) {
+        console.error(`[sweep] ${c} 被看门狗终止（${trip.silentSec}s 无输出）· 没有产出，不进结果表`);
+      } else {
+        console.log(`[sweep] ${c} 完成 · ${sec.toFixed(0)}s · 退出码 ${code}`
+          + (sum && sum.dead != null ? ` · 死 ${sum.dead} 困 ${sum.stranded} 避险 ${sum.evacuated}` : '')
+          + (tw.ok ? '' : ` ⚠ ${tw.bad.join(' / ')}`));
+      }
+      results.push({ case: c, code, sec: +sec.toFixed(1), sum, trip });
       ok();
     });
   });
@@ -157,11 +249,56 @@ await Promise.all(Array.from({ length: n }, (_, i) => worker(i + 1)));
 const wallSec = +((Date.now() - t0) / 1000).toFixed(1);
 // 串行耗时 = 各工况耗时之和；并行提速按墙钟算
 const serialSec = +results.reduce((s, r) => s + r.sec, 0).toFixed(1);
+
+// ---- 绊线3 的相对判据：把同批「死亡数中位数」当基线。
+// 同一天、同一批人、只有雨在变，所以中位数就是「这套模型在这批水里通常死多少」。
+// v4 那次死 97 / 基线 21（4.6×）会在这一步被拎出来，不许混进表里当结果。
+const deads = results
+  .map((r) => (r.sum && typeof r.sum.dead === 'number' && Number.isFinite(r.sum.dead) ? r.sum.dead : null))
+  .filter((v) => v != null).sort((a, b) => a - b);
+const baselineDead = deads.length ? deads[Math.floor(deads.length / 2)] : null;
+const outliers = [];
+if (baselineDead != null && baselineDead > 0) {
+  for (const r of results) {
+    const d = r.sum && r.sum.dead;
+    if (!(typeof d === 'number' && Number.isFinite(d)) || d === baselineDead) continue;
+    const ratio = d / baselineDead;
+    if (ratio > WATCH.deadUp || ratio < WATCH.deadDown) {
+      const line = `死亡 ${d} 相对基线 ${baselineDead} 是 ${ratio.toFixed(1)}×`;
+      outliers.push({ case: r.case, dead: d, ratio: +ratio.toFixed(2) });
+      r.trip.bad.push(`${line}（同批中位数口径）`);
+      r.trip.ok = false;
+    }
+  }
+}
+
+const bad = results.filter((r) => !r.trip.ok);
+const tripCount = {
+  stalled: results.filter((r) => r.trip.stalled).length,
+  etaOver: results.filter((r) => r.trip.etaOver).length,
+  nan: results.filter((r) => r.trip.nan.length > 0).length,
+  sanity: results.filter((r) => r.trip.sanity && !r.trip.sanity.ok).length,
+  outliers: outliers.length,
+};
 const summary = { wallSec, serialSec, speedup: +(serialSec / wallSec).toFixed(2),
-  concurrency: CONCURRENCY, people: PEOPLE, minutes: MINUTES, results };
+  concurrency: CONCURRENCY, people: PEOPLE, minutes: MINUTES,
+  baselineDead, tripwires: { thresholds: WATCH, counts: tripCount, outliers,
+    clean: bad.length === 0, cases: bad.map((r) => ({ case: r.case, bad: r.trip.bad })) },
+  results };
 const sumPath = join(OUTDIR, '_sweep.json');
 const { writeFileSync } = await import('node:fs');
 writeFileSync(sumPath, JSON.stringify(summary, null, 2));
 console.log(`\n[sweep] 全部完成 · 墙钟 ${wallSec}s · 串行本应 ${serialSec}s · 提速 ${summary.speedup}×`);
+console.log(`[sweep] 绊线 · 断流 ${tripCount.stalled} · ETA 偏离 ${tripCount.etaOver} · NaN ${tripCount.nan}`
+  + ` · 合理性 ${tripCount.sanity} · 基线偏离 ${tripCount.outliers}`
+  + `（ETA 参照 = 同族已完成工况墙钟中位数，分族：全天雨／傍晚暴雨）`
+  + (baselineDead > 0 ? `（基线 = 同批死亡中位数 ${baselineDead}）`
+    : (baselineDead === 0 ? '（同批死亡中位数为 0，相对判据不适用）' : '（无可用基线）')));
+if (bad.length) {
+  console.log('[sweep] ⚠ 以下工况有告警，不能当成「跑完了」直接进表：');
+  for (const r of bad) console.log(`[sweep]   ${r.case}：${r.trip.bad.join('；')}`);
+} else {
+  console.log('[sweep] 四条绊线全清（断流 / ETA / NaN / 合理性 + 基线偏离）');
+}
 console.log(`[sweep] 汇总 ${sumPath}`);
 if (server) { server.close(); console.log('[sweep] 已关闭临时静态服务'); }

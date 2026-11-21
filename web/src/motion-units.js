@@ -117,14 +117,19 @@ export const ANIM = Object.freeze({
  * 由这些数算出的伤亡／被困是**模型输出，不是实测**，必须附敏感性分析。
  */
 export const RISK = Object.freeze({
-  WADING: SELF_SET.wadingDepthM,                    // 目前自己定的，状态标签用
-  DEEP: SELF_SET.deepWaterM,                        // 目前自己定的
-  LETHAL: MEASURED.instabilityDV.adultMaxDepthM,    // ARR 成人失稳最大深度（不是死亡判定）
-  STRANDED_SEC: SELF_SET.strandedSec,               // 目前自己定的
-  LETHAL_SEC: SELF_SET.casualty.exposureSecAdult,   // 目前自己定的
+  /** 0.35 m = Li et al. 2026（188 人静水实验）步速第一次折半的深度（实测折点）。 */
+  WADING: SELF_SET.wadingDepthM,
+  /** 0.90 m = 同一实验的最深一档；再深没有步速实测，模型进入外推。 */
+  DEEP: SELF_SET.deepWaterM,
+  /** ARR 成人失稳最大深度。**不是死亡判据**：死亡判据是水面到口鼻（见 thresholds.js 的 airwayDepthFor）。 */
+  LETHAL: MEASURED.instabilityDV.adultMaxDepthM,
+  /** 已弃用：被困判定改成 endurance×0.5，此值仅留作对照。 */
+  STRANDED_SEC: SELF_SET.strandedSec,
+  LETHAL_SEC: SELF_SET.casualty.exposureSecAdult,
   CAR_TRAP_DEPTH: MEASURED.vehicle.smallCarFloatM,  // 实测：小型车漂浮深度 0.60 m
   CAR_LETHAL_DEPTH: SELF_SET.carFloatM,             // 同实测值
-  CAR_ABANDON_SEC: SELF_SET.carAbandonSec,          // 目前自己定的
+  // 【2026-11-21 删】CAR_ABANDON_SEC：SELF_SET.carAbandonSec 已随「弃车 75 s」一起删掉，
+  //   这里残留的 SELF_SET.carAbandonSec 是 undefined，且全项目没有任何消费者。
   /** 失稳深度按真实年龄取，只有儿童／成人两档，见 thresholds.js。 */
   CHILD_INSTABILITY_M: MEASURED.instabilityDV.childMaxDepthM,
 });

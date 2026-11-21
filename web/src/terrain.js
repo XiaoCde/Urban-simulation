@@ -14,6 +14,7 @@
  */
 
 import * as THREE from 'three';
+import { setFoundationTable } from './kernel/floors.js';
 
 // ---------------------------------------------------------------- 下垫面配色
 // 色板按 DC 实景调：潮汐湖/波托马克是浑绿褐，不是泳池蓝；沥青偏冷灰；
@@ -343,6 +344,68 @@ export async function loadRoadCut(base = 'assets/roads/') {
  * 请求根本不到服务器，fetch 拿到合成响应 204 + 空 body（r.ok 仍为 true！）。
  * 所以统一叫 .mesh，并且一定要按 Content-Length 校验长度。
  */
+/**
+ * 逐栋首层高（2026-11-20）。表由 tools/export_web_foundation.py 生成，
+ * 数据源头是 data/derived/building_foundation_fema.json（FEMA 2015 默认台基值
+ * 按分位数映射到逐栋，值域 0.30–1.22 m，21,147/21,943 栋命中）。
+ *
+ * 为什么要在运行时加载它：kernel/floors.js 之前全城统一 0.457 m（DC 旧规
+ * 1.5 ft，只管洪泛区新建），用它算室内一层进水会差 3–4 倍。
+ *
+ * 三组占比是**假设**不是 DC 实测，默认取「B_老城排屋」（DC 存量以带地下室的
+ * 排屋为主：平板 40% / 填土 5% / 架空 25% / 地下室 30%）。换假设可用
+ * `?found=C_商业为主` 或 `?found=A_全国河岸`，只用于敏感性，不混报。
+ * 表缺失时静默退回全城 0.457 m（行为与旧版一致），并在控制台留一行提示。
+ */
+const FOUND_DEFAULT_SCENARIO = 'B_老城排屋';
+
+async function loadFoundationTable(base) {
+  try {
+    const r = await fetch(base + 'foundation_fema.json');
+    if (!r.ok) throw new Error('foundation_fema.json ' + r.status);
+    const j = await r.json();
+    const ids = Array.isArray(j.ids) ? j.ids : [];
+    const codes = Array.isArray(j.codes) ? j.codes : [];
+    const scen = (j.scenarios && typeof j.scenarios === 'object') ? j.scenarios : {};
+    let want = null;
+    try { want = new URLSearchParams(location.search).get('found'); } catch (e) { want = null; }
+    // 【2026-11-20 单变量 A/B】?found=off 显式关掉逐栋首层高，回到全城 0.457 m。
+    // 这是为了把「相机解耦」和「首层标高」两个改动拆开验证，不是运行时选项：
+    // 两种设置的结果必须分开成表，禁止混在同一份工况表里。
+    if (want === 'off') {
+      console.warn('[foundation] found=off · 本次按全城 0.457 m 跑（A/B 对照，不混报）');
+      if (typeof window !== 'undefined') window.__foundation = { count: 0, scenario: 'off' };
+      return 0;
+    }
+    const name = (want && scen[want]) ? want : FOUND_DEFAULT_SCENARIO;
+    const s = scen[name];
+    if (!s || s.length !== ids.length || codes.length < 4) {
+      throw new Error(`结构不符（ids ${ids.length} / ${name} ${s ? s.length : 0}）`);
+    }
+    const byId = new Map();
+    for (let i = 0; i < ids.length; i++) {
+      const c = codes[s.charCodeAt(i) - 48];
+      if (Number.isFinite(c)) byId.set(String(ids[i]), c);
+    }
+    setFoundationTable({ byId, scenario: name, defaultM: j.defaultM,
+      coverage: j.coverage || null });
+    const counts = [0, 0, 0, 0];
+    for (let i = 0; i < s.length; i++) { const d = s.charCodeAt(i) - 48; if (d >= 0 && d < 4) counts[d]++; }
+    console.log('[foundation] 逐栋首层高 ' + byId.size + ' 栋 · 假设 ' + name
+      + ' · 档位 ' + codes.join('/') + ' m · 占比 '
+      + counts.map((c) => (100 * c / ids.length).toFixed(1) + '%').join('/'));
+    if (typeof window !== 'undefined') {
+      window.__foundation = { count: byId.size, scenario: name, codes, counts,
+        coverage: j.coverage || null };
+    }
+    return byId.size;
+  } catch (e) {
+    console.warn('[foundation] 未启用逐栋首层高：' + (e && e.message)
+      + ' · 全部退回全城 0.457 m');
+    return 0;
+  }
+}
+
 export async function loadBuildings(base = 'assets/city/') {
   const meta = await fetch(base + 'buildings.json').then((r) => {
     if (!r.ok) throw new Error('buildings.json ' + r.status);
@@ -360,6 +423,8 @@ export async function loadBuildings(base = 'assets/city/') {
   if (iBuf.byteLength !== wantI) {
     throw new Error(`buildings.idx 长度 ${iBuf.byteLength} != 期望 ${wantI}`);
   }
+  // 【逐栋首层高】必须在任何人分摊楼层之前注册好（crowd-life 初始化就调 assignFloor）。
+  await loadFoundationTable(base);
   return {
     meta,
     verts: new Float32Array(vBuf),     // 每顶点 x, z, top_y, base_y

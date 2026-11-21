@@ -32,6 +32,7 @@ import {
   mobilisedBy, mobilisedShapeByEquation, warningReachedBy,
 } from './mobilisation.js';
 import { BOROWSKI_DESIGN } from './evidence-tables.js';
+import { hazardRating, hazardClass } from './flow-hazard.js';
 
 // 这两个函数由 hazard-input.js 从本文件读取，保持导出接口不变。
 export { mobilisedBy, warningReachedBy };
@@ -176,34 +177,97 @@ export const MOBILISATION = {
 };
 
 /**
- * 【目前自己定的】量纲缩放。
- * 三张系数表的自变量是问卷题项、stated-choice 属性、有序等级，
- * 仿真里的量是米、秒、0–1 比例。
- * 第四轮回件把 Borowski 2023 Table 3 的实验设计范围取回来了，
- * 米→英里、秒→分钟、绕路→美元这三个换算已改到 kernel/attributes.js，
- * 基准值全部是实测设计表，本文件不再有 0.001 / 0.01 那种随手系数。
- * 剩下的缩放集中在这里，改一个就能做敏感性分析，不藏在公式里。
+ * 【2026-11-21 全部删除：自设缩放不再存在】
+ *
+ * 旧版这里有五个自设数：knowledgeToActionScale 0.50、actionToUtilityScale 0.80、
+ * borowskiUtilityScale 0.25、threatUtility{none 0, low 0.35, moderate 1.30,
+ * extreme 2.60}、baselineExposure 0.15。它们的真实身份是**跨数据集 logit 的
+ * 尺度参数 λ 比值**（Swait & Louviere 1993, JMR 30(3):305–314）：把两组不同
+ * 样本、不同因变量估出来的系数合并进同一个线性指数之前，必须估计或检验 λ。
+ * 拿不到原始数据就估不出 λ，所以正确的做法不是「另定一个能跑的数」，而是
+ * **不让它们进同一个式子**——改成串行门之后，这里一个缩放都不需要了。
+ *
+ * 现在保留的只有实测项：年龄中心与离散度（Thieken Table S1 印刷）与
+ * 设计表来源；其余键刻意保持为空，避免有人再往里塞数。
  */
 export const SCALING = {
-  note: '除 ageCentre / ageScale 外，全部为目前自己定的量纲映射，不是实测；用于把仿真观测量送进上面的实测 logit 系数。改动任何一个都要重跑敏感性表。',
-  knowledgeToActionScale: 0.50,   // 有序 logit 线性预测子 → Table S3 的 1–6 情境知识量表
-  actionToUtilityScale: 0.80,     // Thieken 线性预测子 → Borowski 效用尺度
-  borowskiUtilityScale: 0.25,     // stated-choice 效用（ASC 4.22 量级）→ 归一
-  /**
-   * 危险等级进入疏散效用的主系数。
-   * 【目前自己定的】Borowski Table 4 只印了「同伴 × 威胁」交互项，
-   * 没有印威胁等级的主效应；缺这一项的话，没有同伴时危险再大也不会
-   * 提高保护行动概率。第四轮 QA2 还确认：该文的 moderate / extreme
-   * **从未对应到任何水深数值**，所以这里的分档也不能说成实测深度。
-   * 危险等级本身来自 DEFRA HR 分级（实测工程分级）。
-   */
-  threatUtility: { none: 0, low: 0.35, moderate: 1.30, extreme: 2.60 },
-  /** 雨刚下时仍有一小部分人会动，不该是 0；这个起点是目前自己定的。 */
-  baselineExposure: 0.15,
+  note: '【2026-11-21】五个自设缩放（0.50/0.80/0.25/威胁主效应/0.15）已删除，'
+    + '理由见上：它们是跨论文 logit 的 λ 比值，不估计就不能设。'
+    + '决策改为串行门（接收→风险识别→启动→选择→阻碍），各门用自己的原始系数相乘，不需要量纲缩放。',
   ageCentre: 48.0,                // Table S1 印刷的样本年龄均值 48.0 (SD 13.2)，实测
   ageScale: 13.2,                 // 同上，标准差，实测
   attributeSource: BOROWSKI_DESIGN.source,
 };
+
+/** 已退役的自设项及其真实身份，写进报告/台账时照抄这一份。 */
+export const RETIRED_SELF_SET = Object.freeze({
+  knowledgeToActionScale: { value: 0.50, why: '有序 logit 预测子 → 1–6 知识量表的映射，无出处；λ 不可估' },
+  actionToUtilityScale: { value: 0.80, why: 'Thieken 线性预测子 → Borowski 效用尺度，无出处；λ 不可估' },
+  borowskiUtilityScale: { value: 0.25, why: 'stated-choice 效用 → 归一，无出处；λ 不可估' },
+  threatUtility: { value: { none: 0, low: 0.35, moderate: 1.30, extreme: 2.60 }, why: 'Borowski Table 4 未印威胁主效应，四档效用无出处' },
+  baselineExposure: { value: 0.15, why: '无雨起点暴露，无出处' },
+});
+
+/**
+ * 【2026-11-21 加：经验必须能影响「走不走」，否则它只是个标签】
+ *
+ * 问题：认知层（Thieken 2023 Table S2/S3）算得出「既往洪水经历 → 情境知识 →
+ * 保护行为」的线性预测子，但它的量纲是有序 logit 的指数，无法直接塞进
+ * Borowski 的效用差，中间必须过 λ（Swait & Louviere 1993）。λ 估不出来，
+ * 原来的做法是整条退出主公式——结果是最强的预测子（4 次以上 vs 0 次差
+ * 2.001 log-odds，约 7.4 倍优势比）对行为零作用。
+ *
+ * 现在的做法：不把知识当「加项」塞进效用，而是让它作用在**启动**这一门
+ * （门3），即"多快进入保护行动"。这是 Thieken 认知层在因果链上的位置，
+ * 也是 Lindell & Perry 序列里「注意—理解—动员」那一段。
+ *
+ *     r_i = exp(κ · (k_i − k_ref))          经验相对倍数
+ *     M_i = clamp( M(t) · r_i , 0, 1 )       门3 的动员率
+ *
+ * 依据与假设分开写：
+ *   · 结构（经验 → 知识 → 动员，只动"多快"不动"去哪"）：Thieken Table S2/S3；
+ *   · k_i 的系数：原文印刷值，不改；
+ *   · κ：**唯一的自由标量**。默认 1.0 = 完全采用文献估出的相对强度、只在
+ *     人群内做相对调整（等价于假设 λ=1）。这个假设必须点名，并在报告里用
+ *     κ ∈ {0.5, 1, 2} 做敏感性；
+ *   · k_ref：参考人（1 次经历、无官方预警、无意外、中性性别、洪水影响 0），
+ *     把相对调整锚在人群中段，避免整体概率被整体抬高或压低；
+ *   · ratioClip 0.25–4：纯数值保护，防止极端组合把概率推到 0/1 之后
+ *     再也出不来（也让 κ=2 时不会炸）。
+ *
+ * 关掉：?exp=off（main.js）/ SIM_EXP=off（sim-day.mjs）→ 回到"经验不进
+ * 概率"的旧口径，供 A/B 对照。
+ */
+export const EXPERIENCE_LINK = Object.freeze({
+  mode: 'mobilise',
+  kappa: 1.0,
+  ratioClip: [0.25, 4],
+  reference: Object.freeze({
+    priorFloods: 1,
+    officialWarning: false,
+    female: false,
+    surprise: 0.1,
+    floodImpact: 0,
+    note: '参考人：1 次既往洪水、无官方预警、无意外事件、中性性别、洪水影响 0',
+  }),
+  assumption: 'λ=1（跨论文 logit 尺度参数比取 1），κ 需 0.5/1/2 敏感性',
+  source: 'Thieken et al. 2023, NHESS 23:973–990, Table S2（认知层）与 S3（行动层）',
+});
+
+let _expLink = true;
+export function setExperienceLink(on) { _expLink = on !== false; }
+export function experienceLinkOn() { return _expLink; }
+
+// 【2026-11-21 敏感性】κ 是这条通道上唯一的自由标量（λ=1 假设），必须扫 0.5/1/2。
+// 之前它写死在 Object.freeze 里，只能改源码再重跑 —— 那不算敏感性分析，那是改代码。
+// 现在运行时可设：?kappa=0.5（main.js）/ SIM_KAPPA=2（sim-day.mjs）。
+let _kappa = EXPERIENCE_LINK.kappa;
+export function setExperienceKappa(v) {
+  const x = Number(v);
+  if (Number.isFinite(x) && x > 0) _kappa = x;
+}
+export function experienceKappa() { return _kappa; }
+
 
 /**
  * 认知层：算「情境知识」的线性预测子。
@@ -286,64 +350,150 @@ export function protectiveActionUtilities(input, rnd) {
 }
 
 /**
- * 一次决策。
- * 返回 { protect, probability, utility, knowledge, actionScore, components }。
- * protect 是抽样出来的布尔值，不是阈值比较；同一处境不同人、不同次都不同。
+ * 危险度分级 → Borowski 的危险措辞。这是**工程映射**：Borowski 2023 的
+ * moderate / extreme 从未对应到任何水深数值（第四轮 QA2），所以这里只是把
+ * FD2321 的分级结果翻成它那两个词，用它的交互项系数，不新增系数。
+ */
+export const THREAT_OF_HAZARD = Object.freeze({
+  low: 'low', some: 'moderate', most: 'extreme', all: 'extreme',
+});
+
+/**
+ * 一次决策：五道门串行。**不再把三篇文献的系数塞进同一个线性指数。**
  *
- * 认知层／行动层的线性预测子（Thieken Table S2/S3）在这里只作为**先验**，
- * 通过明确标注为自设的缩放进入疏散效用；它们是有序 logit 的预测子，
- * 因变量分别是「情境知识」和「感知减损效果」，不是行动概率，
- * 补充材料也没有印阈值，所以不直接当概率用。
- * 绝对概率上限用 Silva 2025 实测动员率校准，避免把 stated-choice 的
- * 截距 4.22 直接当成「99% 的人都会撤离」。
+ * 门1 接收 —— 由 kernel/warning.js 的收到时刻决定（Silva 2025：35.5% 收不到）。
+ *              走到这里的人默认已收到；`received === false` 直接不动。
+ * 门2 风险识别 —— 危险等级取自 FD2321 危险度 HR = d(v+0.5)+DF 的分级
+ *              （low / some / most / all → low / moderate / extreme）。
+ *              这是工程映射，不是实测对应，写在 THREAT_OF_HAZARD 上面。
+ * 门3 启动 —— Silva 2025 Table S2 的实测动员率 M(t)（Eq.(S2) 为其形状）。
+ * 门4 选择 —— Borowski & Stathopoulos 2023 Table 4 的二元随机参数 logit
+ *              **原样**：P(撤离) = σ(Ve − Vs)，不乘任何缩放。
+ * 门5 阻碍 —— **改变可行集，不是否决**：
+ *              · 没车 → 照走，只是不开车（步行代价由涉水判据算）；
+ *              · 值守在岗 → 先履职，危险度到 most 以上自动解除（自保优先）。
+ *              判据与出处见 kernel/access-impediment.js。
+ *
+ * 概率 = M(t) × σ(Ve − Vs)。两个比例相乘是条件概率分解
+ * 「先动起来、再在撤与留之间选」，不需要权重，也不需要跨论文换算尺度。
+ * 这正是 Silva 2025 自己的结构（预警扩散 → 动员 → 走/留），
+ * 也是 Lindell & Perry 2012 的保护性行动决策序列。
+ *
+ * 认知层（Thieken Table S2/S3）**不进这条路**：它们是「情境知识 / 感知效果」
+ * 的有序 logit 预测子，因变量不是行动，也没有印阈值，只能做分层验证。
+ * 这里仍然算出来返回，供检验用，不参与 probability。
  */
 export function decideProtectiveAction(input, rnd) {
   const q = input && typeof input === 'object' ? input : {};
   const draw = typeof rnd === 'function' ? rnd : null;
-  const S = SCALING;
+
+  // ---- 门1 接收 ----
+  const received = q.received === undefined ? true : !!q.received;
+
+  // ---- 门2 风险识别 ----
+  // 显式传入的 threat 优先（敏感性分析、个案回放用）；否则由危险度分级推出来。
+  // 这条映射是工程映射，不是实测对应，见 THREAT_OF_HAZARD 上方注释。
+  const hr = Number.isFinite(Number(q.hazardRatingValue))
+    ? Number(q.hazardRatingValue)
+    : hazardRating(Number(q.waterDepthM) || 0, Number(q.flowSpeedMs) || 0);
+  const hcls = hazardClass(hr);
+  const threat = q.threat ? safeThreat(q.threat) : (THREAT_OF_HAZARD[hcls] || 'low');
+
+  // ---- 门3 启动（含经验修正：多快进入保护行动）----
   const knowledge = knowledgeScore(q);
-  const aScore = actionScore(q, knowledge * S.knowledgeToActionScale);
-  const U = protectiveActionUtilities(q, draw);
-  const prior = (knowledge * S.knowledgeToActionScale + aScore)
-    * S.actionToUtilityScale;
-  // 危险等级主效应进入疏散效用；界值来自 DEFRA HR 分级，系数是目前自己定的。
-  const threatMain = S.threatUtility[safeThreat(q.threat || 'low')] ?? 0;
-  const V = (U.evacuate - U.stay) * S.borowskiUtilityScale + prior + threatMain;
-  const raw = sigmoid(V);
-  // 「危险暴露」是连续权重，不是二元门控。
-  // 水深用 Thieken 2023 Table S1 印刷的 1–7 有序编码归一（实测编码，
-  // 不是自设厘米阈值）；无水=1 级 → 暴露 0，人不会凭空启动保护行动。
-  // 再乘 Silva 2025 的实测动员曲线：预警刚发出时几乎没人动，
-  // 随暴露时长连续上升，24 小时到 95.7%。
-  const grade = waterDepthOrdinalOf(q.waterDepthM);
-  const depthExposure = clamp((grade - 1) / 6, 0, 1);
-  // 时间暴露直接用 Silva 2025 Table S2 印刷的实测动员率（插值），
-  // mobilisationPoints 只供敏感性分析注入，正常运行时不传。
-  const timeExposure = mobilisedBy(finiteOr(q.minutesSinceWarning, 0),
-    q.mobilisationPoints || MOBILISATION_OBSERVED.points);
-  const baseline = S.baselineExposure;
-  const exposure = clamp(
-    depthExposure * (baseline + (1 - baseline) * timeExposure), 0, 1);
-  // 不再额外乘一次 h24：timeExposure 本身已经是实测动员率，
-  // 上一版乘两次时间把概率压低了，这里去掉重复。
-  // 【修 2026-11-17】clamp 不拦 NaN；概率与暴露都必须是有限数，否则
-  // rnd() < NaN 恒 false，人会静默「永远不动」而不报错。
-  const probability = Number.isFinite(raw * exposure) ? clamp(raw * exposure, 0, 1) : 0;
-  const safeExposure = Number.isFinite(exposure) ? exposure : 0;
+  // 参考人 = 与这个人完全相同、只是「经历过 1 次」的另一个自己。
+  // 这样相对倍数只反映经验差，不会被「官方预警有没有收到」等共同项整体抬高/压低
+  // （第一版拿固定参考人算，warning 打开时全人群的倍数被统一抬到 1.77 倍，是错的）。
+  const kRef = Number.isFinite(Number(q.knowledgeRef))
+    ? Number(q.knowledgeRef)
+    : knowledgeScore({ ...q, priorFloods: 1 });
+  const expRatio = _expLink
+    ? clamp(Math.exp(_kappa * (knowledge - kRef)),
+      EXPERIENCE_LINK.ratioClip[0], EXPERIENCE_LINK.ratioClip[1])
+    : 1;
+  const points = q.mobilisationPoints || MOBILISATION_OBSERVED.points;
+  const sinceWarn = finiteOr(q.minutesSinceWarning, 0);
+  const mobilisationBase = mobilisedBy(sinceWarn, points);
+  // 【AFT 形式】Hasan et al. 2013, TR-C 27:108–116：
+  //   k_h(t|X) = k0[t·e^{β'X}]·e^{β'X} —— 协变量**重标时间轴**，不是乘概率。
+  //   所以经验多的人不是"概率乘倍数"，而是"同样一分钟对他等于更多分钟"：
+  //   mobilisation = M(t·ratio)；ratio=1 时与没有经验修正完全一致。
+  //   时间轴重标的函数形式来自该文（Weibull 基线，P=3.906），M(t) 仍用 Silva 实测曲线。
+  const mobilisation = clamp(
+    mobilisedBy(sinceWarn * expRatio, points), 0, 1);
+
+  // ---- 门4 选择（Borowski 原样）----
+  const U = protectiveActionUtilities({ ...q, threat }, draw);
+  const pChoice = sigmoid(U.evacuate - U.stay);
+
+  // ---- 门5 阻碍：改可行集，不是否决动机 ----
+  // PADM（Lindell & Perry 2012）把「阻碍」放在**行动实施**环节，不是动机环节：
+  // 有阻碍的人不是不动，而是改成他动得了的那个动作。洪水里的两条实证方向：
+  //  ① Ahr 谷 2021：34% 离家或获救（Silva 2025），没走的多数往上走（垂直撤离），
+  //     不是站在原地看着水涨——生命损失最小的正是上楼那批。
+  //  ② 没车的人本来就是走或坐公交（PADM §4 的原文里点名 transit dependent），
+  //     仿真里所有行人都是步行的，所以他不是「走不了」，只是不开车走。
+  // 因此：
+  //  · no_vehicle —— 不改概率，只改「怎么走」。长距离步行更慢、涉水暴露更久，
+  //    代价由涉水判据（wadingSpeed / 耐受 / 失稳）自己算，不再由门 5 一刀切 0。
+  //  · on_duty —— 履职优先，但这个优先权会被自身危险解除：危险度到 most
+  //    （FD2321「danger for most」，HR ≥ 1.25）时自保优先，与 PADM 的
+  //    威胁评估回路一致（威胁上来要重启决策，不是一条道走到黑）。
+  const impediment = q.impediment && q.impediment !== 'none' ? String(q.impediment) : 'none';
+  // 解除口径统一为「自保优先」：
+  //  · no_vehicle —— 本来就不是否决，只改「怎么走」，所以直接算已解除；
+  //  · on_duty   —— 危险度到 most（FD2321「danger for most」，HR ≥ 1.25）时自保优先；
+  //  · care_child —— 孩子已经在身边（minorWith）或危险度到 most 时解除：
+  //    照护责任的语义是「不能一个人先走」，不是「陪着一起不动」。
+  const impedimentLifted = impediment === 'none'
+    ? false
+    : (impediment === 'no_vehicle' ? true
+      : (impediment === 'care_child' ? (q.minorWith === true || hcls === 'most' || hcls === 'all')
+        : (hcls === 'most' || hcls === 'all')));
+  const dutyHold = impediment === 'on_duty' && !impedimentLifted;
+  // 孩子在身边之前，不单独撤离；与 dutyHold 分开命名，统计上要能分开看。
+  const careHold = impediment === 'care_child' && !impedimentLifted;
+  const posture = dutyHold ? 'stay_on_duty'
+    : (careHold ? 'gather_child'
+      : (impediment === 'no_vehicle' ? 'walk' : 'evacuate'));
+
+  // 【修 2026-11-17】clamp 不拦 NaN：概率必须是有限数，否则 rnd() < NaN 恒 false。
+  const raw = (!received || dutyHold || careHold) ? 0 : mobilisation * pChoice;
+  const probability = Number.isFinite(raw) ? clamp(raw, 0, 1) : 0;
+
+  const aScore = actionScore(q, knowledge);
+
   return {
     protect: draw ? draw() < probability : false,
     probability,
-    utility: V,
+    // 兼容字段：utility 现在是 Borowski 的效用差本身（不做任何缩放）
+    utility: U.evacuate - U.stay,
     utilities: U,
     knowledge,
     actionScore: aScore,
+    mobilisation,
+    gates: {
+      received,
+      hazardRating: +hr.toFixed(3),
+      hazardClass: hcls,
+      threat,
+      mobilisation: +mobilisation.toFixed(4),
+      mobilisationBase: +mobilisationBase.toFixed(4),
+      experienceRatio: +expRatio.toFixed(3),
+      knowledgeLinearPredictor: +knowledge.toFixed(4),
+      choiceProbability: +pChoice.toFixed(4),
+      impediment,
+      impedimentLifted,
+      posture,
+    },
     components: {
       warning: q.officialWarning ? 1 : 0,
       priorFloods: clamp(finiteOr(q.priorFloods, 0), 0, 4),
+      experienceRatio: +expRatio.toFixed(3),
       waterDepthOrdinal: waterDepthOrdinalOf(q.waterDepthM),
       peersStay: clamp(finiteOr(q.peersStay, 0), 0, 1),
-      threat: safeThreat(q.threat || 'low'),
-      exposure: +safeExposure.toFixed(3),
+      threat,
+      mobilisation: +mobilisation.toFixed(3),
     },
   };
 }
@@ -354,7 +504,7 @@ export function mobilisationShape(minutes) {
 }
 
 export const CHOICE_META = {
-  form: '两层有序 logit 认知／行动 + 二元随机参数 logit 选择 + Table S2 实测动员率',
+  form: '五道门串行：接收（Silva 扩散）→ 风险识别（FD2321 危险度）→ 启动（Silva 动员率 × 经验相对倍数）→ 选择（Borowski 二元随机参数 logit，原样）→ 阻碍（改可行集：无车改步行、值守在岗在自身危险时解除）',
   coefficientsFrom: [
     KNOWLEDGE_LOGIT.source, ACTION_LOGIT.source,
     EVACUATION_LOGIT.source,
@@ -363,13 +513,27 @@ export const CHOICE_META = {
   measuredTables: [
     BOROWSKI_DESIGN.source, MOBILISATION_OBSERVED.source,
   ],
-  selfSet: Object.keys(SCALING).filter((k) => k !== 'note' && k !== 'attributeSource'),
+  selfSet: [
+    'THREAT_OF_HAZARD：FD2321 分级 → Borowski 的 moderate/extreme 措辞，工程映射（该文两个词从未对应水深）',
+    'SCALING.ageCentre / ageScale 为实测印刷值，不是自设',
+    'EXPERIENCE_LINK.kappa = 1.0：唯一的自由标量，含义是"跨论文 λ 取 1、只做人群内相对调整"；'
+      + '必须点名，并用 κ ∈ {0.5, 1, 2} 做敏感性（ratioClip 0.25–4 只是数值保护）',
+    'EXPERIENCE_LINK.reference：参考人取 1 次经历（中位），把相对倍数锚在人群中段',
+  ],
+  retired20261121: Object.keys(RETIRED_SELF_SET),
   limits: [
-    'Table S2/S3 是有序 logit，第四轮 QA1 再次确认任何版本都没印阈值，只能给相对分数',
+    'Table S2/S3 是有序 logit，第四轮 QA1 再次确认任何版本都没印阈值，只能给相对分数；'
+      + '本文件不直接用它的绝对概率，而是把它的相对结构接到门3（经验 → 多快动员），'
+      + '绝对水平仍由 Silva 的实测动员曲线给',
     '三张表来自德国 2021 洪水调查、美国六州 stated-choice、跨灾种历史案例，外推到华盛顿特区需写明',
     'Borowski 2023 的 moderate / extreme 从未对应到任何水深，分档是工程映射（QA2）',
-    '实测设计范围之间的归一化、认知层缩放、威胁主效应仍是目前自己定的，必须做敏感性分析',
+    '门5 只接了两条（无车 / 值守在岗，来自 ACS）；「需照顾家人」「行动受限」没有数据源，未接。无车只把姿态改成步行、不清零概率',
     '「水深 → 涉水／绕行／等待」三分动作仍无实测比例（QA5 第四轮复检仍为「没有」），细动作降级为路径执行',
-    '同伴比例尚未从周围人状态统计，显式给 0；公开定义已在 QA9 拿到，待个案回放阶段接入',
+    '同户同伴的「留下比例」peersStay 与「选择乘车比例」peersRide 都由 live-agent 的 peerSharesOf() '
+      + '按合成参照群体（同户 + 120 m 内最多 3 个邻居，≈论文的「最多 5 人」）实时统计，'
+      + '见 kernel/peer-share.js；「乘车」用在车状态 ped.inVehicle 判定，是本仿真唯一可观测代理',
+    '参照群体是按住址就近配对合成的，不是真实社会网络调查；拿到真实网络数据应替换',
+    '属性仍按 Borowski 表 3 的实测设计范围截断（成本 0–40 美元、时间 0–60 分钟、'
+      + '步行 0–0.5 英里、同伴留下 0–0.8）；超出设计范围的个案要单独标注，不能直接外推',
   ],
 };

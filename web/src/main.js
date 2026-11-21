@@ -13,9 +13,50 @@ import * as THREE from 'three';
 import { createFloodLayer } from './flood.js';
 import { createRain, rainRateAt } from './rain.js';
 import { CLOCK, toStoryMin, STORY_OFFSET } from './clock.js';
+import { setTimeLayer, publishMinOf } from './kernel/warning.js';
+import { setSweptMode } from './kernel/flow-hazard.js';
+import { setExperienceLink, setExperienceKappa } from './kernel/choice-model.js';
+import { setCasualtyScale } from './kernel/thresholds.js';
+import { setCrowdMode } from './kernel/crowd-threshold.js';
+import { setSlipMode, setSlipLower, setSlipUpper } from './incidents.js';
+import { setReceptionChannel, setDutyMissionRatio } from './kernel/reception-channel.js';
+// 【2026-11-21 个体追溯】`?trace=<人序号>` 打开后，页面把那个人的逐分钟记录攒起来，
+// 跑完由 sim-day.mjs 取走写成 JSON（也留在 window.__trace 里供控制台查看）。
+import { traceDump } from './trace.js';
 
 // 模块级参数入口：路网装配早于 buildCity 里的 QS0，单独留一份。
 const QS_ROAD = new URLSearchParams(location.search);
+// 【§5 时间层 2026-11-20】默认关闭；`?timelayer=1` 打开「发布/收到/动身」三钟。
+// 打开会改全部工况的决策时间轴，必须整族重跑才算数（docs/时间层设计_2026-11-20.md）。
+const TIME_LAYER_ON = QS_ROAD.has('timelayer');
+if (TIME_LAYER_ON) setTimeLayer(true);
+// 【2026-11-21 冲走判据】默认关闭；`?swept=unstable` 打开「D·V 达失稳上限即判被冲走」。
+// 这是把危险度读成伤亡的上界口径，主结果不用它，两版之差单独报（docs/冲走判据改法_2026-11-21.md）。
+if ((QS_ROAD.get('swept') || '').toLowerCase() === 'unstable') setSweptMode(true);
+// 【2026-11-21 经验修正】默认开启；`?exp=off` 关闭，用于 A/B 看「经验 → 多快动员」这一条的贡献。
+// 经验系数来自 Thieken 2023 Table S2/S3，唯一自由标量是 EXPERIENCE_LINK.kappa（λ=1 假设）。
+if ((QS_ROAD.get('exp') || '').toLowerCase() === 'off') setExperienceLink(false);
+// 【2026-11-21 敏感性 · 一次只动一处】这四个开关专为单变量分解准备，
+// 每个只改一条判据/一个标量，其余全部保持口径表那一版：
+//   ?kappa=0.5|2              经验 → 门3 的跨论文尺度比（唯一自由标量）
+//   ?crowd=coefficient|off    从众渠道：Borowski 加性系数 / 全关
+//   ?slip=off                 关掉 D·V 受伤判据（看受伤数里有多少是它贡献的）
+//   ?sliplo=0.35|1.4          受伤判据的成人下界（Keller & Mitsch 实测区间端点）
+{
+  const K = QS_ROAD.get('kappa'); if (K) setExperienceKappa(K);
+  const CM = QS_ROAD.get('crowd'); if (CM) setCrowdMode(CM);
+  const SP = QS_ROAD.get('slip'); if (SP) setSlipMode(SP);
+  const SL = QS_ROAD.get('sliplo'); if (SL) setSlipLower(SL);
+  const SH = QS_ROAD.get('sliphi'); if (SH) setSlipUpper(SH);
+  // 暴露时长整体倍数（伤亡链里最没依据的两个数：成人 150 s / 儿童 80 s）
+  const CS = QS_ROAD.get('casscale'); if (CS) setCasualtyScale(CS);
+}
+// 【2026-11-21 门1】接收渠道重分配：默认中性（ratio=1 与关闭逐位相同）。
+if ((QS_ROAD.get('recv') || '').toLowerCase() === 'off') setReceptionChannel(false);
+{
+  const rr = Number(QS_ROAD.get('recvratio'));
+  if (Number.isFinite(rr) && rr > 0) setDutyMissionRatio(rr);
+}
 
 /** 积涝叠层（可选，数据缺失时保持 null） */
 let FLOOD = null;
@@ -74,7 +115,7 @@ import { makeRoadCorridorTest } from './street-route.js';
 import {
   loadWater, buildWaterMesh, excavateTerrain, setWaterDesignLevel, paintShoreWet,
 } from './water.js';
-import { loadPedAssets, buildPedestrians, nextState, loadPedSurface } from './ped.js';
+import { loadPedAssets, buildPedestrians, nextState, loadPedSurface, setPublishMin } from './ped.js';
 import { loadLdt } from './ldt.js';
 
 // 白宫在建筑基底里的 id（data/derived/buildings_footprints.json）。
@@ -187,6 +228,8 @@ window.__camNow = () => camera;
 window.__insideNow = () => cameraInsideBuilding();
 window.__roadnet = () => ROADNET;
 window.__traffic = () => TRAFFIC;
+// 【2026-11-21 个体追溯】同 `?trace=<i>`：返回被追那人的 identity/tick/judge/事件链。
+window.__trace = () => traceDump();
 
 async function buildCity() {
   const t0 = performance.now();
@@ -402,7 +445,11 @@ async function buildCity() {
             if (x < minx) minx = x; if (x > maxx) maxx = x;
             if (z < minz) minz = z; if (z > maxz) maxz = z;
           }
-          const r = { id: bd.id, minx, maxx, minz, maxz, h: bd.height_m,
+          // 【2026-11-21】把建筑的 function（office/apartments/house/university…
+          // 见 buildings.json）与名称一起带出去：工作场所要按职能挑真实楼栋，
+          // 否则上班的人只能分到池化门牌、没有楼层，白天按地面水深判死。
+          const r = { id: bd.id, fn: bd.function || '', name: bd.name || '',
+            minx, maxx, minz, maxz, h: bd.height_m,
             // 【修 2026-11-17】把真实占地面积传下去。此前楼层容量用外接矩形
             // (maxx-minx)×(maxz-minz)，L 形／细长楼会高估每层能站多少人。
             area_m2: bd.area_m2, alive: true };
@@ -2161,7 +2208,13 @@ function frame(dt, skipRender = false) {
   // 水深采样、目标时间窗、雨强判定读到的都是这一子步真正的时间。
   // skipRender 只给离线 24h 验收：允许更稀的子步采样，实时播放仍按 0.2 秒。
   const sim = CLOCK.beginFrame(dt, skipRender);
-  const pedFlood = (FLOOD && FLOOD.group.visible) ? FLOOD : null;
+  // 【相机解耦 2026-11-20】旧版这里是 `FLOOD.group.visible ? FLOOD : null`，
+  // 面板上点一下「水面」把水层关掉，一千人就同时失去水深（不再涉水、不再被困、
+  // 不再淹死）——水层可见性是渲染开关，不能当模型开关。现在只要求水帧加载完成。
+  const pedFlood = (FLOOD && FLOOD.frames > 0) ? FLOOD : null;
+  // 【§5 时间层 2026-11-20】发布时刻是工况级的：脉冲族 = 雨前 30 分钟，全天族
+  // 从 0 点起（发布也是 0 点）。只在开了 ?timelayer=1 时喂进去，默认不影响行为。
+  if (TIME_LAYER_ON) setPublishMin(publishMinOf(FLOOD ? FLOOD.rainStart : 0));
   // 暂停 / 零 dt 时仍走一次「空步」：dt=0 不推进任何量，但要让行人状态机、
   // 可见性、场景摆位刷新（验收脚本常用 __frame(0,2) 做静态重放）。
   const nSteps = sim.steps || 1;

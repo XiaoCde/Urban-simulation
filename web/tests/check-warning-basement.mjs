@@ -1,5 +1,5 @@
 // 2026-11-17 A/B/C 三项改动的专项自检
-//   A 预警按人分发（覆盖率 35.5% 收不到、前置时间中位 1 小时）
+//   A 预警按人分发（覆盖率 43% 收不到 = Silva 2025 的 57% 收到、前置时间中位 1 小时）
 //   B 地下室层存在且可进入、进入后不受楼层保护
 //   C 弃车不等于安全：深水里下车后头两分钟挪不动
 import { createIncidents } from '../src/incidents.js';
@@ -32,8 +32,9 @@ function makeInc(n) {
     if (receivesWarning(i)) { got++; leads.push(warningLeadMin(i)); }
   }
   const share = 1 - got / N;
-  check('收不到预警的比例接近实测 35.5%', Math.abs(share - WARNING_MEASURED.neverWarnedShare) < 0.04,
-    `${(share * 100).toFixed(1)}%（实测 35.5，n=448）`);
+  check('收不到预警的比例接近实测 43%（Silva 2025 Ahr）',
+    Math.abs(share - WARNING_MEASURED.neverWarnedShare) < 0.04,
+    `${(share * 100).toFixed(1)}%（实测 43 = 1-0.57）`);
 
   leads.sort((a, b) => a - b);
   const med = leads[leads.length >> 1];

@@ -13,6 +13,8 @@ import { createPlan, ARRIVE_R } from './goal.js';
 import { makeKernel, judge } from './cohort.js';
 import { mulberry32 } from './decision.js';
 import { normal } from './kernel/rng.js';
+import { peerShares } from './kernel/peer-share.js';
+import { ACCESS } from './kernel/access-impediment.js';
 import { WALK } from './motion-units.js';
 
 const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -68,6 +70,7 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
   const EXP = experience;
   const DRIVE = drive;
   const INC = incidents;
+  const PERSONS = (crowd && crowd.persons) ? crowd.persons : null;
   const atFn = (i, m) => (crowd && crowd.at) ? crowd.at(i, m) : null;
   const agents = [];
   // 【2026-11-19】随机参数 logit 的个体偏差：每人三个独立标准正态，全天固定。
@@ -126,21 +129,73 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     return true;
   }
 
-  /** 同户同伴里当前没在避险（flee/shelter）的比例。合成网络见 crowd-life.js。 */
-  function peersStayOf(a) {
+  /**
+   * 参照群体状态 → Borowski 的两个同伴比例（kernel/peer-share.js）。
+   * 合成网络见 crowd-life.js（同户 + 120 m 内最多 3 个邻居，规模≈论文的「最多 5 人」）。
+   *
+   * 【2026-11-21 修】旧实现只有 peersStay 一条，且只排除 flee/shelter，
+   * 把「已经开车撤离的人」算进 stay —— 同伴开车走反而抬高 stay 占比，
+   * 与论文方向相反。peersRide 则从来没赋值过，Table 4 的 −1.27 与
+   * threat × peersRide 交互项恒乘 0。现在两条都由同一个分类函数给出。
+   */
+  function peerSharesOf(a) {
     const list = a.person && a.person.peers;
-    if (!list || !list.length) return 0;
-    let stay = 0, n = 0;
+    if (!list || !list.length) return peerShares([]);
+    const states = [];
     for (const j of list) {
       const q = peds[j];
       if (!q) continue;
-      n++;
-      if (q.mode !== 'flee' && q.mode !== 'shelter') stay++;
+      states.push({ mode: q.mode, inVehicle: q.inVehicle === true });
     }
-    return n ? stay / n : 0;
+    return peerShares(states);
+  }
+
+  /**
+   * 照护责任（门 5 的第三条，A7）：同户未成年成员此刻在不在身边。
+   *
+   * 返回 { withMinor, childPos, dist }：
+   *  · 同户（crowd-life 合成户）里有未成年成员 → 取最近那个，
+   *    dist ≤ ACCESS.childWithM(9 m) 算「已经带上了」；
+   *  · 户内没有可判定的未成年成员（ACS 有「户内有未成年=1」但合成户里
+   *    没配上孩子，或本人根本不带娃）→ withMinor = false，childPos = null。
+   *    这时门 5 不会命中 care_child，也就不会因为「没有孩子」被永久锁死。
+   *    宁可漏判，不凭空造一个孩子出来。
+   */
+  function minorNearbyOf(a) {
+    const none = { withMinor: false, childPos: null, dist: Infinity };
+    const hh = a.person && a.person.household;
+    const self = peds[a.i];
+    if (!hh || !hh.length || !self || !self.obj) return none;
+    const x = self.obj.position.x, z = self.obj.position.z;
+    let best = null, bestD = Infinity;
+    for (const j of hh) {
+      const pp = PERSONS && PERSONS[j];
+      const q = peds[j];
+      if (!pp || !pp.real || !q || !q.obj) continue;
+      if (!(Number(pp.real.age) < 18)) continue;
+      const d = Math.hypot(q.obj.position.x - x, q.obj.position.z - z);
+      if (d < bestD) { bestD = d; best = q.obj.position; }
+    }
+    if (!best) return none;
+    return {
+      withMinor: bestD <= ACCESS.childWithM,
+      childPos: { x: +best.x.toFixed(1), z: +best.z.toFixed(1) },
+      dist: +bestD.toFixed(1),
+    };
   }
 
   /** 感知：全部来自这一子步的真实世界，不用任何预置剧本。 */
+  // 【门1 接收 2026-11-21】这个人此刻是否知道「有洪水」。
+  // 只有两条有记录的时刻可以当依据：收到预警的时刻 receiveAt（kernel/warning.js 按人算，
+  // 由 ped.js 写入 p）和脚下第一次见水的时刻 seeAt。两者任一到达即为知道。
+  // 不能拿「收不到预警」当永不知道：那 35.6% 会被冻在原地，与现实相反。
+  function knowThereIsFlood(p, ctx) {
+    const now = Number(ctx && ctx.minute);
+    if (!Number.isFinite(now)) return true;      // 没有时钟信息时不拦人
+    const reached = (t) => Number.isFinite(t) && now >= t;
+    return reached(p.receiveAt) || reached(p.seeAt);
+  }
+
   function perceive(p, a, ctx) {
     const x = p.obj.position.x, z = p.obj.position.z;
     const fx = Math.sin(p.yaw || 0), fz = Math.cos(p.yaw || 0);
@@ -167,10 +222,19 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     const timeToDue = g ? g.dueMin - ctx.minute : 999;
     const q = a.q;
     const stamina = (q && q.phys && Number.isFinite(q.phys.stamina)) ? q.phys.stamina : 80;
+    // 同伴比例一次决策只算一遍（同一子步内参照群体状态不会变）。
+    const shares = peerSharesOf(a);
+    const kin = minorNearbyOf(a);
     const s = {
       depthHere, depthAhead, farDepth: +farDepth.toFixed(3),
       farDist: +farDist.toFixed(1), blocked,
       progress: clamp(1 - distGoal / 220, 0, 1),
+      // 【2026-11-21 门5 联动修正】原来只给了 progress（0–1 的进度），
+      // 没给真实距离，access-impediment.js 的 `Number(s.distGoal) > 2000`
+      // 拿到 NaN 恒为 false —— 判定逻辑写好了，但在真跑里从不触发。
+      distGoal: +distGoal.toFixed(1),
+      // 值守岗位判据要知道「此刻是不是在工作场所」；人群时段表给出 where=work。
+      atWork: !!(ctx && ctx.atWork),
       // 在家休息 / 睡觉 / 上班本身没有「迟到」这回事，人才不会凌晨赶着回家
       late: !!g && timeToDue < 25 && g.type !== 'home' && g.type !== 'work',
       goalType: g ? g.type : '',
@@ -181,9 +245,19 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
       // 送进 Silva 2025 的实测动员曲线，不是自设的倒计时。
       minutesSinceWarning: ctx.minutesSinceWarning || 0,
       officialWarning: !!ctx.officialWarning,
-      // 从众：同户同伴里还没避险的比例（合成网络，见 crowd-life.js）。
-      // Borowski 2023 的系数要的就是这个比例，之前恒 0，从众支路等于没开。
-      peersStay: peersStayOf(a),
+      // 【门1 接收 2026-11-21】这一门问的是「这个人现在知不知道有洪水」。
+      // 收到预警的人从 receiveAt 起知道；没收到的人（receiveAt 为无穷）
+      // 在脚下见到水（seeAt）时也会知道 —— 不能把 35.6% 收不到的人判成
+      // 永远不知道，那等于把他们全体冻在原地。
+      received: knowThereIsFlood(p, ctx),
+      // 从众：参照群体里「留下」与「选择乘车」的各占多少（合成网络，见 crowd-life.js /
+      // kernel/peer-share.js）。Borowski 2023 Table 4 的两个系数要的就是这两个比例，
+      // 此前 peersRide 从未赋值、peersStay 又把开车走的人算成留下，两条都不对。
+      peersStay: shares.peersStay,
+      peersRide: shares.peersRide,
+      // 门 5 照护责任：孩子是否已在身边（同户未成年成员的水平距离）。
+      minorWith: kin.withMinor,
+      childPos: kin.childPos,
       rplZ: a.rplZ,          // 人级随机参数偏差（三个独立正态），全天不变
       fatigue: clamp(1 - stamina / 100, 0, 1),
       stuck: p.route ? (p.route.stuck || 0) : 0,
@@ -356,7 +430,10 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
         const g = a.pendingGoal;
         a.pendingGoal = null;
         a.planRetryT = 0;
-        a.nextThink = a.t + a.kernel.think * (ctx.far ? 2.2 : 1);
+        // 【相机解耦 2026-11-20】旧版这里是 `a.kernel.think * (ctx.far ? 2.2 : 1)`，
+        // ctx.far 来自 p.visible===false，于是同一个人只因为相机离他远近，
+        // 规划之后的再判断间隔就差 2.2 倍。判断频率是模型参数，不能由机位决定。
+        a.nextThink = a.t + a.kernel.think;
         a.lastPlanT = a.t;
         return { type: 'goal', goal: g, reason: `到点了，${g.label}` };
       }
@@ -412,6 +489,10 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     // 选具体动作（前方水深、被挡、迟到），只是「要不要启动保护」不来回翻。
     const key = scenarioKey(s, minute);
     const held = (a.protectKey === key) ? a.protectHeld : null;
+    // 【2026-11-21 个体追溯】judge 内部要往 trace 里写"这一条判断发生在第几分钟"，
+    // 而 s 里原本没有时间字段（于是 trace 的 judge 记录 t 全是 null，事件和
+    // 逐分钟轨迹就对不上）。在调用前把当前分钟挂上去，一个字段的代价。
+    s.minute = +minute.toFixed(3);
     const out = judge(a.kernel, s, a.rnd, pool, held);
     a.protectKey = key;
     a.protectHeld = out.protectHeld;

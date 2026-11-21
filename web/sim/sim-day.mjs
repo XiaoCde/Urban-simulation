@@ -20,6 +20,19 @@
  * 清空起点之前的经历，不能用来反推全天数字，也不能写成「全天结果」。
  *
  * 产出：JSON 全量数据 + 同名 .md 可读报告。
+ *
+ * 【2026-11-20 卡点诊断】u_p20_s0 两次跑到 440 / 840 分就无声停住，日志最后一行
+ * 之后既没有报错也没有收尾——说明是**页面里某一帧卡死**（p.evaluate 永不返回），
+ * 不是内核抛异常。原来整批 100 帧一次 evaluate，卡在哪一帧、哪一分钟外面看不见。
+ * 现在拆成：
+ *   1) 一帧一次 __frame(dt,1,true)（与 __frame(dt,n,true) 逐帧等价，见 main.js:2274），
+ *      在页面里量每帧墙钟，>SLOW_MS 立刻 console 上报；
+ *   2) 每 50 帧上报一条 PROG（帧号/分钟/在场人数）。控制台消息由 CDP 立刻送出，
+ *      不等页面线程空闲，所以真卡死时最后一条 PROG 就是卡住的位置；
+ *   3) Node 侧每批套 SIM_BATCH_TIMEOUT 毫秒的硬超时；超时就打印
+ *      「第几分钟 / 第几批 / 当时在场人数」并退出，不再无声消失。
+ * 可用环境变量：SIM_BATCH（每批帧数，默认 100）、SIM_BATCH_TIMEOUT（默认 180000）、
+ * SIM_SLOW_MS（单帧慢阈值，默认 4000）。
  */
 import puppeteer from 'puppeteer-core';
 import { existsSync, writeFileSync, mkdirSync } from 'node:fs';
@@ -42,32 +55,102 @@ const CASE = (process.argv[7] || 'u_p8_s0').trim();
 // 同 seed + 同人数 = 同一批人，只有水在变。要换一批人就传第 9 个参数。
 const SEED = Number(process.argv[8] || 20261117) >>> 0;
 const REPORT = OUT.replace(/\.json$/i, '') + '.md';
-const BATCH = 100;
+const BATCH = Math.max(1, Number(process.env.SIM_BATCH || 100));
 const DT = 0.1;                  // 真实秒/帧（CLOCK 会钳到 0.1）
+// 单批硬超时：正常一批（100 帧 = 4 仿真分钟）实测 5–30 s，暴雨段最慢约 28 s，
+// 180 s 已是 6 倍余量；超过它就不是「慢」而是卡死。
+const BATCH_TIMEOUT = Math.max(10000, Number(process.env.SIM_BATCH_TIMEOUT || 180000));
+// 单帧慢阈值：一帧正常 0.05–0.3 s，>4 s 说明这一帧里有人卡在寻路/碰撞里。
+const SLOW_MS = Math.max(500, Number(process.env.SIM_SLOW_MS || 4000));
+// 【相机解耦验收 2026-11-20】表现层机位不许影响行为。SIM_VIEW 把机位切到
+// __setView 的预设（city / mall / street …），用来对同一段仿真做 A/B：
+// 若两台的「判断数 / 涉水 / 避险 / 困死」不同，说明行为还挂在相机上。
+// 空 = 页面默认机位（web/src/main.js:153 的街面近景）。
+const VIEW = (process.env.SIM_VIEW || '').trim();
 
 if (!CHROME) throw new Error('找不到 Chrome / Edge 可执行文件');
 mkdirSync(dirname(OUT), { recursive: true });
 
 const b = await puppeteer.launch({
   executablePath: CHROME, headless: 'new', protocolTimeout: 3600000,
-  args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'],
+  args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader',
+    '--disable-dev-shm-usage', '--js-flags=--max-old-space-size=6144'],
 });
 const p = await b.newPage();
+// 泄漏判定要用「强制 GC 后的存活堆」，不能看 usedJSHeapSize（它含尚未回收的垃圾，
+// 随 GC 时机上下跳，2026-11-20 两次 80 分钟短跑分别读到 1938→1688 和 640→1404）。
+const cdp = await p.createCDPSession();
+async function heapAfterGC() {
+  try { await cdp.send('HeapProfiler.collectGarbage'); } catch { /* 忽略 */ }
+  try { return await p.metrics(); } catch { return null; }
+}
 await p.setViewport({ width: 900, height: 560 });
 const pageErrors = [];
+// 卡点：页面每 50 帧上报一条 PROG，这里保留最后一条。真卡死时它是唯一线索。
+let lastProg = null;
 p.on('pageerror', (e) => pageErrors.push(e.message));
-p.on('console', (m) => { if (m.type() === 'error') pageErrors.push('console: ' + m.text()); });
+p.on('console', (m) => {
+  const t = m.text();
+  if (t.startsWith('PROG ')) {
+    try { lastProg = JSON.parse(t.slice(5)); } catch { /* 半截消息忽略 */ }
+    return;
+  }
+  if (m.type() === 'error') pageErrors.push('console: ' + t);
+});
 
 const u = new URL('http://127.0.0.1:8140/index.html');
 u.searchParams.set('capture', '1');
 u.searchParams.set('ped', String(PEOPLE));
 u.searchParams.set('v', String(Date.now()));
 u.searchParams.set('seed', String(SEED));
+// 【单变量 A/B 2026-11-20】SIM_FOUND=off → 关掉逐栋首层高（全城 0.457 m），
+// 或填 A_全国河岸 / C_商业为主 换占比假设。不设时用页面默认（B_老城排屋）。
+const FOUND = (process.env.SIM_FOUND || '').trim();
+if (FOUND) u.searchParams.set('found', FOUND);
+// 【§5 时间层 2026-11-20】SIM_TL=1 → 打开「发布/收到/动身」三钟（默认关闭）。
+const TL = (process.env.SIM_TL || '').trim();
+if (TL === '1' || TL === 'on') u.searchParams.set('timelayer', '1');
+// 【2026-11-21 冲走判据】SIM_SWEPT=unstable → 打开「D·V 达失稳上限即判被冲走」。
+// 默认关闭；主结果两版都跑，差值就是这条判据的贡献（docs/冲走判据改法_2026-11-21.md）。
+const SW = (process.env.SIM_SWEPT || '').trim().toLowerCase();
+if (SW === 'unstable' || SW === 'on') u.searchParams.set('swept', 'unstable');
+// 【2026-11-21 经验修正】SIM_EXP=off → 关闭「经验 → 多快动员」，回到经验不进概率的旧口径。
+const EX = (process.env.SIM_EXP || '').trim().toLowerCase();
+if (EX === 'off' || EX === '0') u.searchParams.set('exp', 'off');
+// 【2026-11-21 门1】SIM_RECV=off 关闭接收渠道重分配；SIM_RECV_RATIO=0.5/2 做敏感性。
+{
+  const RV = (process.env.SIM_RECV || '').trim().toLowerCase();
+  if (RV === 'off' || RV === '0') u.searchParams.set('recv', 'off');
+  if (process.env.SIM_RECV_RATIO) u.searchParams.set('recvratio', String(process.env.SIM_RECV_RATIO));
+}
+// 【2026-11-21 敏感性】四条单变量开关，一次只开一条：
+//   SIM_KAPPA=0.5|2       经验→门3 尺度比
+//   SIM_CROWD=coefficient|off  从众渠道（默认 threshold）
+//   SIM_SLIP=off          关掉 D·V 受伤判据
+//   SIM_SLIP_LO=0.35|1.4  受伤判据成人下界；SIM_SLIP_HI=1.4 改上界
+{
+  const K = (process.env.SIM_KAPPA || '').trim(); if (K) u.searchParams.set('kappa', K);
+  const CM = (process.env.SIM_CROWD || '').trim(); if (CM) u.searchParams.set('crowd', CM);
+  const SP = (process.env.SIM_SLIP || '').trim(); if (SP) u.searchParams.set('slip', SP);
+  const SL = (process.env.SIM_SLIP_LO || '').trim(); if (SL) u.searchParams.set('sliplo', SL);
+  const SH = (process.env.SIM_SLIP_HI || '').trim(); if (SH) u.searchParams.set('sliphi', SH);
+  // 暴露时长整体倍数：0.5 / 2 两档是「说得通」的最低要求（见参数依据表 casualty 段）
+  const CS = (process.env.SIM_CAS_SCALE || '').trim(); if (CS) u.searchParams.set('casscale', CS);
+}
+// 【2026-11-21 个体追溯】SIM_TRACE=<人序号> → 追这一个人，跑完写 trace JSON。
+// 用途：导师要的「定位某个受困/溺亡者，复现其完整过程」。traceTarget 记在 agg 里，
+// 结果文件和 trace 文件用同一个 case 名，回放/写报告时不会拿错人。
+const TRACE_RAW = (process.env.SIM_TRACE || '').trim();
+const traceTarget = (TRACE_RAW === '' || TRACE_RAW.toLowerCase() === 'off')
+  ? -1 : Number(TRACE_RAW);
+if (Number.isFinite(traceTarget) && traceTarget >= 0) {
+  u.searchParams.set('trace', String(traceTarget));
+}
 await p.goto(u.toString(), { waitUntil: 'domcontentloaded' });
 await p.waitForFunction(() => window.__ready === true, { timeout: 300000, polling: 300 });
 
 // ---------------------------------------------------------------- 起点对齐
-const start = await p.evaluate(async (sp, m, cs) => {
+const start = await p.evaluate(async (sp, m, cs, view) => {
   const C = window.__clock, PED = window.__ped, F = window.__flood;
   // 关掉 capture=1 的自动推帧：整段 24h 只由 __frame 驱动，时间轴不插帧。
   window.__manualDrive = true;
@@ -83,6 +166,22 @@ const start = await p.evaluate(async (sp, m, cs) => {
   }
   C.setSpeed(sp);
   C.seek(m);                       // 只在起点对齐一次，之后绝不 seek
+  // 【相机 A/B】只切机位，不 seek、不动时间。空字符串保持页面默认。
+  // 特殊值 'crowd'：把相机**放进人群里**（质心、眼睛高度 2 m）。
+  // 为什么不是高空俯视：运行时可见性用的是 3D 距离（web/src/ped.js:54
+  // VIS_DIST=360），相机抬到 260 m 时 3D 距离已经吃掉 260 m，质心又在
+  // 城市中间、人群铺开上千米，实测 visAtStart 只有 17 人，和默认机位的
+  // 15 人几乎一样，A/B 测不出差别。站到人群里才能让几百人真的可见。
+  if (view === 'crowd') {
+    const cam = window.__camera;
+    let sx = 0, sz = 0, nn = 0;
+    for (const pd of PED.peds) { sx += pd.obj.position.x; sz += pd.obj.position.z; nn++; }
+    if (cam && nn) {
+      const cx = sx / nn, cz = sz / nn;
+      cam.position.set(cx, 2.0, cz);
+      cam.lookAt(cx, 2.0, cz - 100);
+    }
+  } else if (view && window.__setView) window.__setView(view);
   if (PED.live) PED.live.reset(m, PED.peds);
   if (F && F.fb) F.fb.reset();
   C.setPlaying(true);
@@ -93,9 +192,45 @@ const start = await p.evaluate(async (sp, m, cs) => {
   }
   const f = window.__sim ? window.__sim() : null;
   const man = (F && F.manifest) || null;
+  // 起点时相机 VIS_DIST 内有多少人——用途只有一个：证明 A/B 两台的人确实
+  // 处在不同可见性下（否则「两台结果相同」可能是因为相机根本没起作用）。
+  // 按 3D 距离算（与运行时 p.dist 同口径，web/src/ped.js:54 VIS_DIST = 360），
+  // 不引用运行时的 p.visible（它要到第一帧 update 才会被写）。
+  const cam = window.__camera;
+  let visN = 0;
+  if (cam) {
+    for (const pd of PED.peds) {
+      const dx = pd.obj.position.x - cam.position.x;
+      const dy = pd.obj.position.y - cam.position.y;
+      const dz = pd.obj.position.z - cam.position.z;
+      if (Math.hypot(dx, dy, dz) < 360) visN++;
+    }
+  }
   let peakWet = 0;
   if (man && man.frames) for (const fr of man.frames) peakWet = Math.max(peakWet, fr.wet_ha || 0);
+  // 【逐栋首层高诊断】确认运行时真的拿到了逐栋表，并看它落到人身上是什么分布。
+  // 只读：不改任何人，只统计家里那栋楼的首层高。
+  const found = (() => {
+    try {
+      const meta = window.__foundation || null;
+      const CL = window.__crowdLife;
+      if (!meta || !CL || !CL.persons) return { ready: false };
+      const hist = {};
+      let n = 0;
+      for (const q of CL.persons) {
+        if (!q) continue;
+        const v = Number(q.homeFoundationM);
+        const k = Number.isFinite(v) && v > 0 ? v.toFixed(2) : 'none';
+        hist[k] = (hist[k] || 0) + 1; n++;
+      }
+      return { ready: true, scenario: meta.scenario, buildings: meta.count,
+        coverage: meta.coverage, persons: n, hist };
+    } catch (e) { return { ready: false, error: String(e && e.message) }; }
+  })();
   return { people: PED.peds.length, minute: C.minute, tMin: F ? F.tMin : null,
+    // 机位诊断：这一帧有多少人在 VIS_DIST 内（web/src/ped.js:54）。相机解耦后
+    // 这个数只该影响渲染，不该影响任何行为计数。
+    view: view || '(default)', visAtStart: visN, foundation: found,
     cohort, circles, speedTruth: f ? f.speed : null,
     circleStats: f ? f.circles : null,
     caseMeta: man ? { name: (man.source || '').split('/').filter(Boolean).pop(),
@@ -103,12 +238,13 @@ const start = await p.evaluate(async (sp, m, cs) => {
       hyeto: man.hyetograph || '', rainStart: man.rain_start_min ?? null,
       rainEnd: man.rain_end_min ?? null, frames: (man.frames || []).length,
       peakWetHa: +peakWet.toFixed(1) } : null };
-}, SPEED, START_MINUTE, CASE);
+}, SPEED, START_MINUTE, CASE, VIEW);
 
 // ---------------------------------------------------------------- 流式聚合
 const agg = {
   minutes: MINUTES, speed: SPEED, people: start.people,
   case: CASE, caseMeta: start.caseMeta, seed: SEED,
+  view: start.view, visAtStart: start.visAtStart, foundation: start.foundation,
   startMinute: start.minute, simSec: 0, frames: 0, batches: 0,
   byAction: {}, byCohortAction: {}, byCircleAction: {}, byGoal: {}, goals: {},
   unjustified: 0, unjustifiedSamples: [], events: 0, overflow: 0,
@@ -122,23 +258,90 @@ let aborted = false;
 process.on('SIGINT', () => { aborted = true; });
 
 const t0 = Date.now();
+
+function withTimeout(promise, ms, label) {
+  let timer;
+  const guard = new Promise((_, rej) => {
+    timer = setTimeout(() => rej(new Error(label + ' 超时 ' + ms + 'ms')), ms);
+  });
+  return Promise.race([promise, guard]).finally(() => clearTimeout(timer));
+}
+
+/** 卡死时的统一出口：打印分钟/批号/在场人数，落快照，然后硬退出。 */
+function dieStuck(reason, batchNo, fFrom, fTo) {
+  const where = lastProg
+    ? `第 ${lastProg.minute} 分钟（帧 ${lastProg.f}）· 在场 ${lastProg.people} 人（PED.peds 总数，含具名 1 人）`
+    : '页面没有回报过任何 PROG（卡在第一帧就死了）';
+  console.error('\n[stuck] ' + reason);
+  console.error(`[stuck] 第 ${batchNo} 批（帧 ${fFrom}–${fTo}）· ${where}`);
+  console.error(`[stuck] 已完成 ${agg.frames}/${totalFrames} 帧 · 事件 ${agg.events} 条 · 墙钟 ${((Date.now() - t0) / 1000).toFixed(0)}s`);
+  if (lastProg && lastProg.ms > SLOW_MS) console.error(`[stuck] 最后成功帧耗时 ${lastProg.ms} ms（>${SLOW_MS} ms）`);
+  try {
+    writeFileSync(OUT.replace(/\.json$/i, '') + '.stuck.json',
+      JSON.stringify({ ...agg, batchNo, fFrom, fTo, lastProg, final: null }, null, 2));
+    console.error('[stuck] 卡点快照 ' + OUT.replace(/\.json$/i, '') + '.stuck.json');
+  } catch (e) { console.error('[stuck] 快照写盘失败 ' + e.message); }
+  // 页面线程已死，b.close() 会一起挂住；直接退，让 sweep 的 close 事件拿到非零码。
+  process.exit(2);
+}
+
 let lastHour = -1;
 for (let f = 0; f < totalFrames && !aborted; f += BATCH) {
   const n = Math.min(BATCH, totalFrames - f);
-  const batch = await p.evaluate((frames, dt) => {
-    window.__frame(dt, frames, true);   // 只跑仿真，不渲染
-    const PED = window.__ped;
-    const ev = PED.live ? PED.live.events.splice(0) : [];
-    const st = PED.live ? PED.live.stats() : null;
-    return {
-      ev, st,
-      minute: window.__clock.minute,
-      tMin: window.__flood ? window.__flood.tMin : null,
-      route: PED.routeStats ? PED.routeStats() : null,
-      flee: PED.fleeStats ? PED.fleeStats() : null,
-      drive: PED.drive ? PED.drive.stats() : null,
-    };
-  }, n, DT);
+  const batchNo = agg.batches + 1;
+  const tb = Date.now();
+  let batch;
+  try {
+    batch = await withTimeout(p.evaluate((frames, dt, f0, slowMs) => {
+      const C = window.__clock, PD = window.__ped;
+      const slow = [];
+      // 一帧一次：与 __frame(dt, frames, true) 逐帧等价（main.js:2274 就是 for 循环），
+      // 但这样每一帧都能量墙钟，并能把卡点精确到帧。
+      for (let k = 0; k < frames; k++) {
+        const tf = performance.now();
+        window.__frame(dt, 1, true);   // 只跑仿真，不渲染
+        const ms = performance.now() - tf;
+        const bad = ms > slowMs;
+        if (bad) slow.push({ f: f0 + k, minute: +C.minute.toFixed(2), ms: Math.round(ms) });
+        if (bad || k % 50 === 0) {
+          console.log('PROG ' + JSON.stringify({ f: f0 + k + 1, minute: +C.minute.toFixed(2),
+            people: PD.peds.length, ms: Math.round(ms) }));
+        }
+        if (bad) console.log('SLOWFRAME ' + JSON.stringify({ f: f0 + k, minute: +C.minute.toFixed(2),
+          ms: Math.round(ms), peds: PD.peds.length, judged: PD.live ? PD.live.judged : null }));
+      }
+      const ev = PD.live ? PD.live.events.splice(0) : [];
+      const st = PD.live ? PD.live.stats() : null;
+      // 泄漏体检：three 的纹理/几何计数、场景子节点、积涝缓存项数。
+      // 堆一直涨时，看是这三项之一在涨（GPU/DOM 泄漏），还是都平（纯 JS 对象留住了）。
+      const R = window.__renderer;
+      const gm = R && R.info && R.info.memory;
+      const mem = {
+        tex: gm ? gm.textures : null,
+        geo: gm ? gm.geometries : null,
+        scene: window.__scene ? window.__scene.children.length : null,
+        u8: window.__flood && window.__flood.u8Cache ? window.__flood.u8Cache.size : null,
+        heapMB: Math.round((performance.memory ? performance.memory.usedJSHeapSize : 0) / 1048576),
+      };
+      return {
+        ev, st, slow, mem,
+        minute: C.minute,
+        tMin: window.__flood ? window.__flood.tMin : null,
+        route: PD.routeStats ? PD.routeStats() : null,
+        flee: PD.fleeStats ? PD.fleeStats() : null,
+        drive: PD.drive ? PD.drive.stats() : null,
+      };
+    }, n, DT, f, SLOW_MS), BATCH_TIMEOUT, '第 ' + batchNo + ' 批');
+  } catch (e) {
+    dieStuck(e && e.message ? e.message : String(e), batchNo, f, f + n - 1);
+  }
+  const batchMs = Date.now() - tb;
+  if (batch.slow && batch.slow.length) {
+    console.log(`[sim] 慢帧 ${batch.slow.length} 个（>${SLOW_MS}ms）· 最慢 ${Math.max(...batch.slow.map((s) => s.ms))}ms`);
+    for (const s of batch.slow.slice(0, 5)) {
+      console.log(`[sim]   帧 ${s.f} @ ${s.minute} 分 耗时 ${s.ms}ms`);
+    }
+  }
   agg.frames += n;
   agg.batches++;
   agg.simSec = batch.st ? batch.st.simSec : agg.simSec;
@@ -205,12 +408,21 @@ for (let f = 0; f < totalFrames && !aborted; f += BATCH) {
   if (agg.batches % 10 === 0) {
     const pct = (100 * agg.frames / totalFrames).toFixed(1);
     const sec = ((Date.now() - t0) / 1000).toFixed(0);
-    console.log(`[sim] ${pct}% · ${agg.last.minute} 分 · 判断 ${agg.events} 条 · ${sec}s`);
+    const mb = (v) => (v / 1048576).toFixed(0);
+    console.log(`[sim] ${pct}% · ${agg.last.minute} 分 · 判断 ${agg.events} 条 · 本批 ${(batchMs / 1000).toFixed(1)}s · ${sec}s`);
+    // 存活堆（强制 GC 后）：如果 p20 是内存耗死，这两列会一直往上爬；如果是卡在某一帧，它们是平的。
+    try {
+      const mt = await heapAfterGC();
+      if (!mt) throw new Error('metrics 不可用');
+      const k = batch.mem || {};
+      console.log(`[sim]   存活堆 ${mb(mt.JSHeapUsedSize)}MB · 节点 ${mt.Nodes} · 监听 ${mt.JSEventListeners}`
+        + ` · 纹理 ${k.tex} 几何 ${k.geo} 场景子 ${k.scene}`);
+    } catch (e) { console.log(`[sim]   取不到页面指标: ${e.message}`); }
   }
   // 每 50 批落一次盘：24h 跑得久，中途被中断也能拿到已采集的逐时数据。
   if (agg.batches % 50 === 0) {
     writeFileSync(OUT.replace(/\.json$/i, '') + '.partial.json',
-      JSON.stringify({ ...agg, final: null }, null, 2));
+      JSON.stringify({ ...agg, lastProg, final: null }, null, 2));
   }
 }
 
@@ -218,23 +430,57 @@ for (let f = 0; f < totalFrames && !aborted; f += BATCH) {
 agg.endMinute = agg.last ? agg.last.minute : start.minute;
 agg.wallSec = +((Date.now() - t0) / 1000).toFixed(1);
 agg.aborted = aborted;
-agg.final = await p.evaluate(() => {
-  const PED = window.__ped, C = window.__clock;
-  return {
-    minute: +C.minute.toFixed(2),
-    sim: window.__sim ? window.__sim() : null,
-    route: PED.routeStats ? PED.routeStats() : null,
-    flee: PED.fleeStats ? PED.fleeStats() : null,
-    // 连续运行记下的真实个案：完整事件链 + 每 2 仿真秒一帧的状态与判断。
-    // 只导出出过事的人，未出事的人不写盘。
-    cases: (PED.incidents && PED.incidents.exportCases)
-      ? PED.incidents.exportCases(12) : [],
-  };
-});
+// 收尾快照也套超时：页面要是正好在最后一帧卡住，不能连已跑完的 hourly 一起丢掉。
+try {
+  agg.final = await withTimeout(p.evaluate(() => {
+    const PED = window.__ped, C = window.__clock;
+    return {
+      minute: +C.minute.toFixed(2),
+      sim: window.__sim ? window.__sim() : null,
+      route: PED.routeStats ? PED.routeStats() : null,
+      flee: PED.fleeStats ? PED.fleeStats() : null,
+      // 连续运行记下的真实个案：完整事件链 + 每 2 仿真秒一帧的状态与判断。
+      // 只导出出过事的人，未出事的人不写盘。
+      cases: (PED.incidents && PED.incidents.exportCases)
+        ? PED.incidents.exportCases(12) : [],
+      // 【§5 时间层】三个时刻的分布（发布/收到/动身）；默认关闭时 enabled=false。
+      timeLayer: PED.timeLayerSummary ? PED.timeLayerSummary() : null,
+    };
+  }), BATCH_TIMEOUT, '收尾快照');
+} catch (e) {
+  console.error('[stuck] 收尾快照失败：' + (e && e.message ? e.message : e));
+  agg.final = { minute: agg.endMinute, sim: null, route: null, flee: null, cases: [], error: String(e && e.message || e) };
+}
+// 【2026-11-21 个体追溯】跑完把被追那人的记录取出来单独存一份（与结果同名 .trace.json）。
+// 导师要的是「定位某个受困/溺亡者，复现其完整过程」，所以 trace 必须能单独打开、
+// 不依赖重跑；结果 JSON 里只留一句摘要，避免「有 trace 文件但没人知道追的是谁」。
+if (Number.isFinite(traceTarget) && traceTarget >= 0) {
+  try {
+    const tr = await p.evaluate(() => (window.__trace ? window.__trace() : null));
+    if (tr && Array.isArray(tr.events)) {
+      const tf = OUT.replace(/\.json$/i, '') + '.trace.json';
+      writeFileSync(tf, JSON.stringify(tr, null, 2));
+      const id = tr.identity || {};
+      agg.trace = {
+        target: traceTarget,
+        file: tf,
+        records: tr.records,
+        truncated: !!tr.truncated,
+        identity: { age: id.age ?? null, sex: id.sex ?? null, socCode: id.socCode ?? null,
+          role: id.role ?? null, hasCar: id.hasCar ?? null, workPlace: id.workPlace ?? null },
+      };
+      console.log('TRACE ' + JSON.stringify(agg.trace));
+    } else {
+      console.error('[trace] 页面没有返回记录（?trace 是否真的传进去了）');
+    }
+  } catch (e) {
+    console.error('[trace] 导出失败：' + (e && e.message ? e.message : e));
+  }
+}
 writeFileSync(OUT, JSON.stringify(agg, null, 2));
 
 // ---------------------------------------------------------------- 可读报告
-const F = agg.final.sim || {};
+const F = (agg.final && agg.final.sim) || {};
 const L = F.live || {}, D = F.driving || {}, I = F.incidents || {}, C = F.circles || {};
 const n = (v) => Number(v || 0).toLocaleString('zh-CN');
 const rows = agg.hourly.map((h) => `| ${String(h.hour).padStart(2, '0')}:00 | ${n(h.judged)} | ${n(h.driving)} | ${n(h.redLightWaits)} | ${n(h.yields)} | ${n(h.wading)} | ${n(h.stranded)} | ${n(h.injured)} | ${n(h.dead)} | ${n(h.evacuated)} | ${n(h.maxDepthCm)} |`).join('\n');
@@ -245,6 +491,7 @@ const md = `# 连续 24 小时实时决策仿真报告
 - 时段：${agg.startMinute} → ${agg.endMinute} 分钟（${((agg.endMinute - agg.startMinute) / 60).toFixed(1)} 小时，全程连续推进，无 seek）
 - 人数：${n(agg.people)} 人 · 倍率 ×${agg.speed} · ${n(agg.frames)} 帧 · 墙钟 ${agg.wallSec} 秒
 - 人群种子：${agg.seed}（固定种子，各工况用的是同一批人）
+- 机位：${agg.view === '(default)' ? '页面默认（街面近景）' : agg.view}；起点时相机 360 m 内 ${agg.visAtStart} 人${agg.view === '(default)' ? '' : '（仅用于相机解耦 A/B，不作为结果口径）'}
 - 仿真秒：${n(agg.simSec)} · 页面脚本错误：${pageErrors.length}
 - 积水与时钟同层：${agg.last ? agg.last.tMinSync : '—'} · 事件 ${n(agg.events)} 条 · 溢出 ${n(agg.overflow)}
 
@@ -272,7 +519,7 @@ ${n(C.people)} 人分出 **${n(C.distinctCircles)} 种圈层**，最大一种 ${
 - 动作分布：${Object.entries(L.byAction || {}).map(([k, v]) => `${k} ${n(v)}`).join(' · ')}
 - 目标结果：${Object.entries(agg.goals || {}).map(([k, v]) => `${k} ${n(v)}`).join(' · ')}
 - 无依据改道（没水没雨、没被挡没卡住没迟到，却绕路/掉头/放弃）：${n(agg.unjustified)} 次，应接近 0
-- 绕开积水的路线：${n(agg.final.route ? agg.final.route.active : 0)} 人在按自己规划的路走
+- 绕开积水的路线：${n(agg.final && agg.final.route ? agg.final.route.active : 0)} 人在按自己规划的路走
 
 ## 四、开车 / 交规 / 避让
 

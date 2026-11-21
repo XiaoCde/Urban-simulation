@@ -81,6 +81,10 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
 
   let man = null, mesh = null, tex = null, mat = null;
   const cache = new Map();        // file -> Uint8Array
+  // 【2026-11-20 流速】每帧多两张 u8：流速大小（开方量化，量程见 manifest.velocity）
+  // 与流向。只在有人真的踩进水里时才取，干格不下这个下载。
+  const cacheV = new Map();       // file -> Uint8Array 流速
+  const cacheG = new Map();       // file -> Uint8Array 流向
   let idx = 0, playing = false, acc = 0;
   // 【统一时钟】传了 clock 就由城市时钟选帧，本层不再自己播。
   // clockMin 是时钟当前分钟；tMin / raining / HUD 都读它，行人 LDT 才和人同步。
@@ -129,6 +133,7 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     man = parsed;
     man.root = root;
     cache.clear();
+    cacheV.clear(); cacheG.clear();
     _bt = NaN; _br = null;        // 换工况：帧表变了，夹帧记忆作废
     // 【统一 24h】时钟量程和降雨窗口都由这一套工况的 manifest 决定，
     // 不再写死 52–360。切档位时 clock.minute 会被夹进新量程并广播重放。
@@ -245,7 +250,51 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     const buf = new Uint8Array(await r.arrayBuffer());
     if (buf.length === 0) throw new Error(`水深帧 ${f.file} 是空文件`);
     cache.set(k, buf);
+    // 【2026-11-20】水深到了顺手把同一帧的流速/流向也踢进后台。
+    // 不这么做，决策层第一次问流速时拿到的是「还没下载完」的 0 —— 那等于把
+    // 急流当成静水，冲走判据静默失效。preloadAll 会把整档都预热掉。
+    wantKind(f, 'vel'); wantKind(f, 'dir');
     return buf;
+  }
+
+  /**
+   * 取第 i 帧的流速 / 流向图。旧工况（没有 vel 帧）一律返回 null，
+   * 采样侧据此记 0 —— 不许编一个速度出来。
+   */
+  const wantingV = new Set();
+  function bytesOfKind(i, kind) {
+    const f = man && man.frames[i];
+    if (!f || typeof f[kind] !== 'string') return null;
+    const map = kind === 'vel' ? cacheV : cacheG;
+    const k = ckey(curDir, f[kind]);
+    const b = map.get(k);
+    if (b) return b;
+    // 和 bytesOf 同一个思路：宁可用邻帧，也不能把「有流速」说成「没流速」。
+    for (let d = 1; d <= 4; d++) {
+      for (const j of [i - d, i + d]) {
+        const g = man.frames[j];
+        if (!g || typeof g[kind] !== 'string') continue;
+        const nb = map.get(ckey(curDir, g[kind]));
+        if (nb) { wantKind(f, kind); return nb; }
+      }
+    }
+    wantKind(f, kind);
+    return null;
+  }
+  function wantKind(f, kind) {
+    const file = f && f[kind];
+    if (!file || wantingV.has(file)) return;
+    wantingV.add(file);
+    const map = kind === 'vel' ? cacheV : cacheG;
+    fetch(man.root + file, { cache: 'no-cache' })
+      .then((r) => (r.ok ? r.arrayBuffer() : null))
+      .then((ab) => {
+        if (!ab) return;
+        const u = new Uint8Array(ab);
+        if (u.length) map.set(ckey(curDir, file), u);
+      })
+      .catch(() => {})
+      .finally(() => wantingV.delete(file));
   }
 
   // ---------------------------------------------------------------- 采样
@@ -343,9 +392,74 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     return b0[i] + (b1[i] - b0[i]) * f;
   }
 
+  /**
+   * 流速采样（m/s + x/z 分量）。复用与水深相同的「空间双线性 + 帧间线性」，
+   * 但先把角度换成向量再插值 —— 直接插值角度会在 0/2π 接缝上算出反向流。
+   * 所有角点都是干格（没有流速）时返回 0。
+   */
+  const _fl = { sp: 0, ux: 0, uz: 0 };
+  function sampleFlow(x, z, t, out) {
+    out = out || _fl;
+    out.sp = 0; out.ux = 0; out.uz = 0;
+    if (!man || !Array.isArray(man.frames)) return out;
+    const vel = man.velocity;
+    if (!vel || !(vel.speed_scale_mps > 0)) return out;
+    const { cols, rows, step_m: step, x0, z0 } = man;
+    const px = Number(x), pz = Number(z);
+    if (!Number.isFinite(px) || !Number.isFinite(pz) || !(step > 0)) return out;
+    const fx = (px - x0) / step - 0.5;
+    const fz = (pz - z0) / step - 0.5;
+    if (!(fx >= -1) || !(fz >= -1) || fx > cols || fz > rows) return out;
+    // 【修 2026-11-20】t 省略时用「此刻」。不能把 undefined 直接喂 bracket：
+    // Number(undefined)=NaN，bracket 会退到第 0 帧（开局全干），逐人采样就
+    // 永远读到 sp=0，整条冲走判据静默失效（现场表现就是 peakHr 恒 0）。
+    const pt = (t === undefined || t === null || !Number.isFinite(+t)) ? curMinute() : +t;
+    let c0 = Math.floor(fx), r0 = Math.floor(fz);
+    const tx = fx - c0, tz = fz - r0;
+    const c1 = Math.min(cols - 1, c0 + 1), r1 = Math.min(rows - 1, r0 + 1);
+    c0 = Math.max(0, Math.min(cols - 1, c0)); r0 = Math.max(0, Math.min(rows - 1, r0));
+    const { i0, i1, f } = bracket(pt);
+    const v0 = bytesOfKind(i0, 'vel'), g0 = bytesOfKind(i0, 'dir');
+    if (!v0 || !g0) return out;
+    const blend = i1 !== i0 && f > 1e-4;
+    const v1 = blend ? bytesOfKind(i1, 'vel') : null;
+    const g1 = blend ? bytesOfKind(i1, 'dir') : null;
+    const scale = vel.speed_scale_mps;
+    const n = cols * rows;
+    let wsum = 0, sumSp = 0, sumUx = 0, sumUz = 0;
+    for (let k = 0; k < 4; k++) {
+      const c = k & 1 ? c1 : c0, r = k >>> 1 ? r1 : r0;
+      const w = (k & 1 ? tx : 1 - tx) * (k >>> 1 ? tz : 1 - tz);
+      if (!(w > 0)) continue;
+      const i = r * cols + c;
+      if (i >= n) continue;
+      let sv = v0[i];
+      if (v1 && i < v1.length) sv += (v1[i] - sv) * f;
+      if (!(sv > 0)) continue;                 // 干格不记流速，权重让给湿格
+      let sa = g0[i];
+      if (g1 && i < g1.length) sa += (g1[i] - sa) * f;
+      const q = sv / 255;
+      const sp = scale * q * q;                // 与导出时的开方量化对应
+      const ang = (sa / 255) * Math.PI * 2 - Math.PI;
+      sumSp += sp * w;
+      sumUx += Math.cos(ang) * w;
+      sumUz += Math.sin(ang) * w;
+      wsum += w;
+    }
+    if (!(wsum > 1e-9)) return out;
+    const sp = sumSp / wsum;
+    const mag = Math.hypot(sumUx, sumUz) / wsum;
+    out.sp = sp;
+    if (mag > 1e-6) {
+      out.ux = (sumUx / wsum) / mag * sp;
+      out.uz = (sumUz / wsum) / mag * sp;
+    }
+    return out;
+  }
+
   /** 空间双线性 + 帧间线性，返回米。 */
   const _fbS = { delay: 0, disp: 0, load: 0 };
-  const _samp = { d: 0, wet: false };
+  const _samp = { d: 0, wet: false, sp: 0, ux: 0, uz: 0 };
   const _cs = [0, 0, 0, 0], _cw = [0, 0, 0, 0];
   function sampleAt(x, z, t) {
     const { cols, rows, step_m: step, x0, z0 } = man;
@@ -428,6 +542,12 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
     const d = depthAt(x, z);
     out.d = d;
     out.wet = d >= 0.12;      // 12 cm 以上行人就当路断了（齐踝）
+    // 【2026-11-20 流速】只有脚底真的在水里才取流速：全城上千人每帧都做一次
+    // 双线性是白烧 CPU。旧工况没有 vel 帧，sampleFlow 返回 0，行为与改动前一致。
+    if (d >= 0.05) {
+      sampleFlow(x, z, undefined, _fl);
+      out.sp = _fl.sp; out.ux = _fl.ux; out.uz = _fl.uz;
+    } else { out.sp = 0; out.ux = 0; out.uz = 0; }
     return out;
   }
 
@@ -696,6 +816,12 @@ export function createFloodLayer(T, { base = '/assets/flood/', fps = 5, dir = nu
   return {
     group, load, toggle, setVisible, showFrame, showMinute, setClockMin, bindHud, setCase,
     depthAt, depthInfo, depthNow,
+    // 【2026-11-20】流速口：sampleFlow 是原始采样，speedAt 只给大小。
+    sampleFlow,
+    speedAt(x, z, tMin) {
+      sampleFlow(x, z, tMin, _fl);
+      return _fl.sp;
+    },
     loadIndex, setParams,
     fb,                                  // 人车写回口（见 flow-feedback.js）
     setGain(v) { fb.gain = v; return fb.gain; },

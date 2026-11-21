@@ -225,6 +225,106 @@ def wet_blocks(mask, cell_area, min_cells):
 # ----------------------------------------------------------------------------
 # 主程序
 # ----------------------------------------------------------------------------
+vel_scale_global = [3.0]
+vel_min_h_global = [0.01]
+
+
+def _vel_frames(h, qx, qy):
+    """把 qx/qy（m²/s 单位宽流量）换算成两张 u8：流速大小 + 流向。
+
+    交错网格约定（见 swe_numba._flux_x/_apply_x）：
+      qx[i,j] 是格 (i,j) 的西面通量，qx[i,j+1] 是东面 → 格心 u = 两面平均 / h
+      qy[i,j] 是格 (i,j) 的南面通量，qy[i+1,j] 是北面 → 格心 v = 两面平均 / h
+    深度平均流速 = 单位宽流量 / 水深。浅水（< vel_min_h）格直接记 0——
+    否则 qx/h 会在 1 cm 水层里放大成几十 m/s 的假流速。
+
+    量化：大小开方（与深度帧同一约定，浅水段对比度拉得开），
+          流向线性 0..255 ↔ -π..π。没有 qx/qy（t=0 全干帧）时写全 0。
+    """
+    if qx is None or qy is None:
+        z = np.zeros(h.shape, dtype="uint8")
+        return z, z.copy()
+    hh = np.maximum(h, 1e-6)
+    u = np.zeros_like(h)
+    v = np.zeros_like(h)
+    u[:, :-1] = 0.5 * (qx[:, :-1] + qx[:, 1:])
+    v[:-1, :] = 0.5 * (qy[:-1, :] + qy[1:, :])
+    wet = h >= float(vel_min_h_global[0])
+    u = np.where(wet, u / hh, 0.0)
+    v = np.where(wet, v / hh, 0.0)
+    sp = np.sqrt(u * u + v * v)
+    q = np.clip(sp / float(vel_scale_global[0]), 0.0, 1.0) ** 0.5 * 255.0
+    vs = np.clip(q, 0, 255).astype("uint8")
+    ang = np.arctan2(v, u)
+    vg = np.clip((ang + np.pi) / (2.0 * np.pi) * 255.0, 0, 255).astype("uint8")
+    return vs, vg
+
+
+# ---------------------------------------------------------------- 排水能力（2026-11-21 改为可追溯推导）
+# 原来这里只有一个 255.0 与一句注释「255 ≈ 30 mm/h × 30.6 km²」，30 mm/h 这个数没有出处。
+# 现在按设计暴雨推：Q = C × i × A
+#   i  = NOAA Atlas 14 Vol.2 v3，华盛顿特区点（lat 38.895, lon -77.036）
+#        60 分钟 2 年重现期降水量 1.48 in = 0.0376 m/h
+#        （同表：1/2/5/10/25/50/100 年 = 1.21/1.48/1.87/2.16/2.55/2.86/3.18 in）
+#   A  = 模型计算域 30.6 km²。**不是** DC 市域面积：30.6 km² 是三维场景 ground 多边形
+#        （历史文档-原文存档.md：footprint_area_m2 = 30,602,374），也是浅水核实的实算域；
+#        把 451 km²（`data/derived/landcover.tif` 地表面积）套进来会与降雨输入不守恒。
+#   C  = 0.714，不是 0.80。用 landcover.tif（5120×5978 px、4 m/px）按分类面积加权实算：
+#         class1 147.176 / class2 182.522 / class3 114.839 / class4 6.540 / class5 0.017 km²
+#         配 C_RUNOFF = [0, 0.95, 0.90, 0.15, 0.10, 0.35] → C_eff = 0.714
+#        （与产流段 shallow2d.py 里分下垫面用 C_RUNOFF[lc] 同一套系数，两处自此口径一致）
+# Q = 0.714 × 0.0376 × 30.6e6 / 3600 ≈ 228 m³/s
+# 敏感性：C = 0.60 / 0.714 / 0.80 → 192 / 228 / 255 m³/s。
+#
+# 真实管网侧（DC Water，公开文件）——用于说明这个常数的量级，不当作拓扑：
+#   长程控制计划（LTCP）调蓄隧道合计 193 Mgal：Rock Creek 9.5 Mgal、Potomac River 58 Mgal、
+#   Anacostia 系统 157 Mgal、Poplar Point→Northeast Boundary 49 Mgal、NEB 平行 77 Mgal；
+#   合流制溢流（CSO）排放口 60 个（Consent Decree）。
+#   193 Mgal = 7.3e5 m³。本模型的 228 m³/s 是「稳态通过能力」，对应 2 年一遇 60 分钟雨型；
+#   真实系统的隧道是按多年一遇的溢流峰值调蓄，二者不是同一个量的换算，不能互相替代。
+# 限制（必须随结果说明）：这是「控制体总排水能力」，不是管网拓扑。
+#   它只能吸收水量，不能反映哪个窨井先溢流，也没有把 60 个 CSO 排放口的空间位置纳入。
+DC_CATCHMENT_KM2 = 30.6
+NOAA_60MIN_2YR_IN = 1.48
+# landcover 实算值：见上方注释；C 不再取整，改成实算的不透水面加权值。
+RUNOFF_COEFF_C = 0.714
+# 敏感性对照（写进 helptext，不参与计算）
+DRAIN_SENSITIVITY = {"C=0.60": 192.0, "C=0.714（默认）": 228.0, "C=0.80": 255.0}
+# DC Water 公开量（只做量级说明）
+DC_LTCP_TUNNEL_MGAL = 193.0
+DC_CSO_OUTFALLS = 60
+
+# ---------------------------------------------------------------- 雨水口入口强度（2026-11-21 补出处）
+# 旧代码 `inlet_f32 * (30.0/1000/3600)` 直接写 30 mm/h，注释自己承认「没有出处」。
+# 现在改用与排水能力同一族的设计暴雨强度：入口按「设计暴雨强度落在街面上的水它能收走」定，
+# 即 i(Tr=2yr, D=60min) = 1.48 in/h = 37.6 mm/h（NOAA Atlas 14 Vol.2 v3，DC 点）。
+# 这样两个数出自同一个 i：Q_cap = C·i·A（管网通过能力）与 q_in = i（雨水口入口强度），
+# 口径自洽；DC DOEE SWMG Ch.2 的 Qp2「保持 24-hr 2-yr 峰现流量」同样是 2 年一遇族。
+# 敏感性：i = 30 / 37.6（默认）/ 50 mm/h → 街面需求 77.8 / 97.3 / 129.4 m³/s。
+INLET_INTENSITY_MM_H = NOAA_60MIN_2YR_IN * 25.4          # 37.6 mm/h
+INLET_SENSITIVITY_MM_H = {"30": 30.0, "37.6（默认）": 37.6, "50": 50.0}
+
+# ---------------------------------------------------------------- 满管调蓄桶容量（2026-11-21 改为可推导）
+# 旧默认 `--drain-fail-after-mm 25` 也是拍的。现按 DC Water LTCP 公开调蓄量推：
+#   193 Mgal = 193 × 3,785.41 m³ = 7.306e5 m³，摊到模型域 30.6 km² = 23.9 mm。
+# 也就是说「管网最多攒 24 mm 的雨，攒满就溢」这件事有 DC Water 的公开量级支撑，
+# 不再是随手写的 25。默认取推导值（23.9），25 只作敏感性上限。
+# 限制：LTCP 隧道是按多年一遇溢流峰值调的，和这里「一场雨攒 24 mm」不是同一个量，
+# 只借它的量级，不当作同一次事件的水量。
+def design_bucket_mm():
+    """满管调蓄桶容量 mm（由 DC Water LTCP 公开调蓄量 / 模型域面积推）。"""
+    return DC_LTCP_TUNNEL_MGAL * 3785.41 / (DC_CATCHMENT_KM2 * 1e6) * 1000.0
+
+
+BUCKET_SENSITIVITY_MM = {"20": 20.0, "23.9（默认，LTCP 推导）": None, "30": 30.0}
+
+
+def design_drain_m3s(c=RUNOFF_COEFF_C):
+    """设计暴雨法给出的排水能力 m³/s（C × i × A）。"""
+    i_m_per_h = NOAA_60MIN_2YR_IN * 0.0254
+    return c * i_m_per_h * DC_CATCHMENT_KM2 * 1e6 / 3600.0
+
+
 def main():
     ap = argparse.ArgumentParser(description="二维浅水（inertial）城区内涝内核")
     ap.add_argument("--res", type=int, default=4, help="计算分辨率（米），建议 4；2 会更细但慢 4 倍")
@@ -234,8 +334,11 @@ def main():
                     help="（已弃用）统一 24h 时间轴由 --day-minutes 决定退水段长度")
     ap.add_argument("--surge-m", type=float, default=4.0, help="河道增水 m（Isabel 2.71 / 历史最高 2.94）")
     ap.add_argument("--river-level", choices=["normal", "design"], default="normal")
-    ap.add_argument("--drain-m3s", type=float, default=255.0,
-                    help="雨水管网总服务能力 m³/s（255 ≈ 30 mm/h × 30.6 km²）")
+    ap.add_argument("--drain-m3s", type=float, default=round(design_drain_m3s(), 1),
+                    help="雨水管网总服务能力 m³/s。默认按设计暴雨推："
+                         "Q = C(0.714，landcover 实算) × i(NOAA Atlas 14 DC 60min 2yr = 1.48 in/h) "
+                         "× A(模型域 30.6 km²) ≈ 228.0 m³/s；敏感性 C=0.60/0.80 → 192/255 m³/s。"
+                         "口径是控制体排水能力，不是管网拓扑；DC Water LTCP 隧道 193 Mgal 只作量级对照")
     ap.add_argument("--bld-step-m", type=float, default=0.30, help="建筑格抬高的台阶（首层地面 + 基座）")
     ap.add_argument("--h-min", type=float, default=1e-4, help="参与通量计算的最小水深 m")
     ap.add_argument("--dt-max", type=float, default=20.0, help="时间步上限 s")
@@ -249,6 +352,14 @@ def main():
     ap.add_argument("--depth-scale", type=float, default=4.0,
                     help="u8 量化上限 m（与 --h-cap 对齐，超出截断）")
     ap.add_argument("--max-frames", type=int, default=28, help="帧数上限，超出自动抽稀")
+    # 【流速场 2026-11-20】带 --vel-frames 时每帧额外落两张 u8：
+    #   v%03d.u8 = 流速大小（开方量化，0..vel_scale m/s）
+    #   g%03d.u8 = 流向（0..255 对应 -π..π）
+    # 单位宽流量 qx/qy（m²/s）除以当地水深即深度平均流速（m/s）。
+    # 没有流速就判不了「被冲走 / 建筑倒塌」（FD2321 的 HR=d(v+0.5)+DF）。
+    ap.add_argument("--vel-frames", action="store_true", help="额外导出流速大小/流向 u8 帧")
+    ap.add_argument("--vel-scale", type=float, default=3.0, help="流速量化量程 m/s")
+    ap.add_argument("--vel-min-h", type=float, default=0.01, help="低于这个水深不记流速 m")
     ap.add_argument("--edge-tau-s", type=float, default=180.0, help="开边界自由出流时间常数 s")
     ap.add_argument("--edge-open-z", type=float, default=3.0, help="边界可出流的最高地面高程 m")
     ap.add_argument("--out", default=os.path.join(ROOT, "data", "flood", "sw2d"))
@@ -276,10 +387,15 @@ def main():
                     help="蒸散速率 mm/h（只作用于积水表面）")
     ap.add_argument("--soil-recover-h", type=float, default=24.0,
                     help="雨停后土壤蓄水库恢复时间常数 h")
-    ap.add_argument("--sewer-m3s", type=float, default=45.0,
-                    help="雨水口+截流管合计输送能力 m³/s（管网满管桶上限基准）")
-    ap.add_argument("--drain-fail-after-mm", type=float, default=25.0,
-                    help="管网调蓄桶容量折算雨量 mm；超过后能力衰减到 residual")
+    # 【2026-11-21 删掉 --sewer-m3s】旧参数写着「雨水口+截流管合计 45 m³/s（管网满管桶
+    # 上限基准）」，但二维内核里从解算到出帧一次都没读过它 —— 真正起作用的是
+    # --drain-m3s（控制体排水能力，默认 design_drain_m3s() ≈ 228 m³/s）与
+    # --drain-fail-after-mm（管网调蓄桶容量）。留着这个 flag 会让命令行和文档
+    # 都以为管子那 45 m³/s 参与了计算。需要按旧口径出数的是 simple_drainage.py，
+    # 那边的 --sewer-m3s 是真在用（fill-and-spill 内核的退水账），没有动它。
+    ap.add_argument("--drain-fail-after-mm", type=float, default=None,
+                    help="管网调蓄桶容量折算雨量 mm（缺省由 DC Water LTCP 193 Mgal / 30.6 km² "
+                         "推得 23.9 mm，见 design_bucket_mm()）；超过后能力按 residual 衰减")
     ap.add_argument("--drain-residual", type=float, default=0.05,
                     help="管网满管后剩余能力比例")
     ap.add_argument("--drain-recover-h", type=float, default=6.0,
@@ -288,6 +404,8 @@ def main():
                     help="河道增水在雨停后回落到基准水位的时间常数 h；"
                          "0 = 常数增水（旧口径，河一直顶在峰值，退水被顶住）")
     args = ap.parse_args()
+    vel_scale_global[0] = float(args.vel_scale)
+    vel_min_h_global[0] = float(args.vel_min_h)
 
     t_all = time.time()
     os.makedirs(args.out, exist_ok=True)
@@ -435,7 +553,8 @@ def main():
     inlet_f32 = (street & ~bld & ~river).astype("float32")
     roof_f32 = bld.astype("float32")
     ground_f32 = (~bld & ~river).astype("float32")
-    drain_cap = (inlet_f32 * (30.0 / 1000.0 / 3600.0)).astype("float32")   # m/s
+    # 雨水口入口强度按设计暴雨 i(2yr,60min) = 37.6 mm/h（见文件头 INLET_INTENSITY_MM_H）
+    drain_cap = (inlet_f32 * (INLET_INTENSITY_MM_H / 1000.0 / 3600.0)).astype("float32")   # m/s
 
     # 管网服务率：雨强恒定 → 需求恒定 → 整个降雨期只有这一个数
     roof_need = float((runoff_rate * roof_f32).sum()) * cell_area
@@ -453,12 +572,14 @@ def main():
 
     # ---- 管网满管桶（统一退水的第三条去路，能力随降雨逐步衰减 / 雨停恢复）----
     drain_area = float((inlet_f32 > 0).sum()) * cell_area
-    bucket_cap = max(0.0, float(args.drain_fail_after_mm) / 1000.0 * drain_area)
+    _bucket_mm = design_bucket_mm() if args.drain_fail_after_mm is None else float(args.drain_fail_after_mm)
+    bucket_cap = max(0.0, _bucket_mm / 1000.0 * drain_area)
     residual = float(np.clip(args.drain_residual, 0.0, 1.0))
     tau_rec = max(1.0, float(args.drain_recover_h) * 3600.0)
     tau_soil = max(1.0, float(args.soil_recover_h) * 3600.0)
     budget_used = 0.0
-    log(f"      管网调蓄桶 {bucket_cap/1e3:.1f} 千 m³（{args.drain_fail_after_mm:g} mm）× "
+    log(f"      管网调蓄桶 {bucket_cap/1e3:.1f} 千 m³（{_bucket_mm:g} mm"
+        f"{'，由 LTCP 193 Mgal 推' if args.drain_fail_after_mm is None else '，命令行给定'}）× "
         f"residual {residual:g}，放空 τ={args.drain_recover_h:g} h；土壤回补 τ={args.soil_recover_h:g} h")
 
     # ---- 统一时间轴：一天 0:00→24:00，降雨窗口落在 17:00（可配）----
@@ -507,7 +628,7 @@ def main():
     if args.frames:
         os.makedirs(frame_dir, exist_ok=True)
 
-    def _save_frame(fi, arr):
+    def _save_frame(fi, arr, vel=None):
         """u8 量化落盘（开方量化）。
 
         【为什么要开方】线性量化到 4 m 量程时，1 cm 的水只占 1 个灰度级，
@@ -520,7 +641,17 @@ def main():
         u8 = np.clip(q, 0, 255).astype("uint8")
         fn = "f%03d.u8" % fi
         u8.tofile(os.path.join(frame_dir, fn))
-        return fn
+        out = {"file": fn}
+        if args.vel_frames:
+            qx, qy = vel if vel is not None else (None, None)
+            vs, vg = _vel_frames(arr, qx, qy)
+            vfn = "v%03d.u8" % fi
+            gfn = "g%03d.u8" % fi
+            vs.tofile(os.path.join(frame_dir, vfn))
+            vg.tofile(os.path.join(frame_dir, gfn))
+            out["vel"] = vfn
+            out["dir"] = gfn
+        return out
 
     # 【统一内核】只保留一条口径：numba inertial + 四条退水去路。
     # 旧的 numpy 对照分支已删除 —— 两套实现口径必然漂移（雨停后 served 语义
@@ -542,9 +673,9 @@ def main():
     # 全干帧代表。前端 showMinute 会把这段里任意时刻都选到它（水深恒 0，正确）。
     if args.frames:
         zero = np.zeros_like(h)
-        frame_list.append({"file": _save_frame(0, zero),
-                           "t_min": 0.0, "river": round(river_level, 3),
-                           "wet_ha": 0.0, "max_h": 0.0})
+        fr0 = _save_frame(0, zero)
+        fr0.update(t_min=0.0, river=round(river_level, 3), wet_ha=0.0, max_h=0.0)
+        frame_list.append(fr0)
         stats.append(dict(t_min=0.0, dt=0.0, river=round(river_level, 3),
                          wet_ha=0.0, max_h=0.0, street_km=0.0, bld_hit=0))
     dt_base = 1.0
@@ -592,9 +723,14 @@ def main():
         # 管网满管桶：降雨期按已占用调蓄预算逐步降低能力，雨停后按 τ 放空。
         # 这一步把「恒定 30 mm/h 永不失效」的旧 bug 换掉，也让退水速率真实地
         # 依赖雨停了多久（旧内核 drain_recover_h 的语义）。
+        # 【2026-11-21 修】旧写法在 bucket_cap>0 时直接写 served_now = residual + ...，
+        # 把上面「能力/需求」算出的 served（例如 p80 的 79.7%）整个丢掉 —— 满管桶一开，
+        # 管网就按 100% 全额抽水，等于容量从不设限。现在改成两级相乘：
+        #   服务率 = 能力比 served × 满管衰减 bucket_factor
         if bucket_cap > 0.0:
             bfrac = min(1.0, max(0.0, budget_used) / bucket_cap)
-            served_now = residual + (1.0 - residual) * (1.0 - bfrac)
+            bucket_factor = residual + (1.0 - residual) * (1.0 - bfrac)
+            served_now = served * bucket_factor
         else:
             served_now = served
         if raining:
@@ -659,10 +795,10 @@ def main():
                         bld_hit=int((wet & bld).sum()))
             stats.append(stat)
             if args.frames:
-                frame_list.append({"file": _save_frame(len(frame_list), h),
-                                   "t_min": ft,
-                                   "river": round(river_level + dl, 3),
-                                   "wet_ha": stat["wet_ha"], "max_h": stat["max_h"]})
+                fr = _save_frame(len(frame_list), h, (core.qx, core.qy))
+                fr.update(t_min=ft, river=round(river_level + dl, 3),
+                          wet_ha=stat["wet_ha"], max_h=stat["max_h"])
+                frame_list.append(fr)
             if step % 200 == 0 or t >= t_end - 1e-6:
                 log(f"      t={ft:7.1f} min  dt={dt:5.2f}s  wet={stat['wet_ha']:8.2f} ha  "
                     f"hmax={stat['max_h']:5.2f} m  淹路 {stat['street_km']:6.2f} km")
@@ -671,11 +807,11 @@ def main():
     # 补一张时间轴终点帧（拖到 24:00 时不会停在倒数第二帧）
     if args.frames and frame_list and frame_list[-1]["t_min"] < args.day_minutes - 0.5:
         wet = (h > 0.01)
-        frame_list.append({"file": _save_frame(len(frame_list), h),
-                           "t_min": float(args.day_minutes),
-                           "river": round(river_level, 3),
-                           "wet_ha": round(float(wet.sum()) * cell_area / 1e4, 2),
-                           "max_h": round(float(h.max()), 3)})
+        frt = _save_frame(len(frame_list), h, (core.qx, core.qy))
+        frt.update(t_min=float(args.day_minutes), river=round(river_level, 3),
+                   wet_ha=round(float(wet.sum()) * cell_area / 1e4, 2),
+                   max_h=round(float(h.max()), 3))
+        frame_list.append(frt)
         stats.append(dict(t_min=float(args.day_minutes), dt=0.0,
                           river=round(river_level, 3),
                           wet_ha=frame_list[-1]["wet_ha"],
@@ -728,13 +864,23 @@ def main():
             keep = np.unique(np.linspace(0, len(frame_list) - 1, args.max_frames).round().astype(int))
             kept = [frame_list[i] for i in keep]
             for k, fr in enumerate(kept):
-                old = os.path.join(frame_dir, fr["file"])
-                new = "k%03d.u8" % k
-                os.replace(old, os.path.join(frame_dir, new))
-                fr["file"] = new
+                # 深度帧改名 k%03d，流速/流向跟着改成同一序号（抽稀后序号连续，
+                # 前端按 manifest 的 file/vel/dir 三元组取帧，不靠猜序号）。
+                for key, tag in (("file", "k"), ("vel", "v"), ("dir", "g")):
+                    if key not in fr:
+                        continue
+                    old = os.path.join(frame_dir, fr[key])
+                    new_name = "%s%03d.u8" % (tag, k)
+                    if fr[key] != new_name:
+                        os.replace(old, os.path.join(frame_dir, new_name))
+                    fr[key] = new_name
+            keep_names = set()
+            for x in kept:
+                for key in ("file", "vel", "dir"):
+                    if key in x:
+                        keep_names.add(x[key])
             for f in os.listdir(frame_dir):
-                if f.startswith("f") and os.path.join(frame_dir, f) not in \
-                        [os.path.join(frame_dir, x["file"]) for x in kept]:
+                if f[0] in "fvgk" and f.endswith(".u8") and f not in keep_names:
                     os.remove(os.path.join(frame_dir, f))
             frame_list = kept
         man = dict(step_m=int(res), x0=float(grid["x0"]), z0=float(-grid["y1"]),
