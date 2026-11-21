@@ -14,6 +14,7 @@ import { join, dirname } from 'node:path';
 import {
   WATCH, createWatchdog, parseProgress, etaOf, etaVerdict, rainFamily, familyRefSec,
   scanNaN, sanityOf, tripwireSummary,
+  familyInversions,
 } from '../sim/tripwires.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -198,7 +199,50 @@ const REAL_LINE = '[sim] 43% · 620.5 分 · 判断 12000 条 · 本批 61.2s ·
   ok(/scanNaN|sanityOf/.test(sweep), '跑批里查 NaN 与合理性');
   ok(/killedByWatchdog/.test(sweep) && /被看门狗终止/.test(sweep),
     '被看门狗终止的工况单独标注、不当成「跑完了」');
-  ok(/相对判据不适用/.test(sweep), '同批基线为 0 时明说相对判据不适用（不拿 0 当基线）');
+  ok(/familyInversions/.test(sweep), '跑批用同族雨强逆转判据，不用跨雨强中位数');
+  ok(!/baselineDead > 0 \?/.test(sweep) && /不再用于判据/.test(sweep),
+    '跨雨强中位数基线已移除（它会把小雨工况全部误报）');
+  ok(/死亡数不做跨雨强比较/.test(sweep), '控制台明说死亡数不做跨雨强比较');
+}
+
+// ---------------------------------------------------------------- 雨强逆转判据（2026-11-22 改法）
+{
+  // 真实的使用场景：8 工况跑批（2026-11-22 凌晨实测），同族内死亡随雨强上升，
+  // 唯一的 16→24 是 30→29（差 1 人）——不该报。
+  const real = [
+    ['u_p8_s0', 'uniform', 8, 3], ['u_p16_s0', 'uniform', 16, 30],
+    ['u_p24_s0', 'uniform', 24, 29], ['u_p32_s0', 'uniform', 32, 42],
+    ['u_p20_s0', 'evening', 20, 0], ['u_p40_s0', 'evening', 40, 2],
+    ['u_p80_s0', 'evening', 80, 9], ['u_p120_s0', 'evening', 120, 26],
+  ].map(([cs, family, intensity, dead]) => ({ case: cs, family, intensity, dead }));
+  ok(familyInversions(real).length === 0, '真实 8 工况结果不报逆转（30→29 的 1 人之差不该算异常）');
+
+  // 跨族不能比：全天 8 mm/h 死 3、傍晚 20 mm/h 死 0，两族强度不同、时长短不同。
+  ok(familyInversions([
+    { case: 'u_p8_s0', family: 'uniform', intensity: 8, dead: 3 },
+    { case: 'u_p20_s0', family: 'evening', intensity: 20, dead: 0 },
+  ]).length === 0, '跨族不当比较（小雨族 vs 暴雨族互不参照）');
+
+  // 真逆转：同族里 40 mm/h 死 6，80 mm/h 只死 2。
+  const inv = familyInversions([
+    { case: 'u_p40_s0', family: 'evening', intensity: 40, dead: 6 },
+    { case: 'u_p80_s0', family: 'evening', intensity: 80, dead: 2 },
+  ]);
+  ok(inv.length === 1 && inv[0].from === 'u_p40_s0' && inv[0].to === 'u_p80_s0',
+    '同族内雨强升高、死亡掉一半以上要报');
+  ok(/不到/.test(inv[0].note) && /mm\/h/.test(inv[0].note), '提示里写清两边雨强与死亡数');
+
+  // 低基数不比：0/1/2 人的抖动不是结构性逆转。
+  ok(familyInversions([
+    { case: 'u_p20_s0', family: 'evening', intensity: 20, dead: 0 },
+    { case: 'u_p40_s0', family: 'evening', intensity: 40, dead: 0 },
+    { case: 'u_p80_s0', family: 'evening', intensity: 80, dead: 1 },
+  ]).length === 0, '低基数档（<minDead）不参与比较，避免拿 0 比 0');
+  ok(familyInversions([
+    { case: 'u_p80_s0', family: 'evening', intensity: 80, dead: 6 },
+    { case: 'u_p120_s0', family: 'evening', intensity: 120, dead: 2 },
+  ], { minDead: 10 }).length === 0, 'minDead 可调（阈值放宽后同一组不报）');
+  ok(familyInversions([]).length === 0 && familyInversions(null).length === 0, '空输入不炸');
 }
 
 console.log(`\n${pass}/${pass + fail} 通过`);

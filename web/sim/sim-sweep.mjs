@@ -31,7 +31,7 @@ import { readFile, stat } from 'node:fs/promises';
 import { extname, normalize, sep } from 'node:path';
 import {
   WATCH, createWatchdog, parseProgress, etaOf, etaVerdict, scanNaN, sanityOf, tripwireSummary,
-  rainFamily, familyRefSec,
+  rainFamily, familyRefSec, familyInversions,
 } from './tripwires.mjs';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
@@ -250,27 +250,27 @@ const wallSec = +((Date.now() - t0) / 1000).toFixed(1);
 // 串行耗时 = 各工况耗时之和；并行提速按墙钟算
 const serialSec = +results.reduce((s, r) => s + r.sec, 0).toFixed(1);
 
-// ---- 绊线3 的相对判据：把同批「死亡数中位数」当基线。
-// 同一天、同一批人、只有雨在变，所以中位数就是「这套模型在这批水里通常死多少」。
-// v4 那次死 97 / 基线 21（4.6×）会在这一步被拎出来，不许混进表里当结果。
-const deads = results
-  .map((r) => (r.sum && typeof r.sum.dead === 'number' && Number.isFinite(r.sum.dead) ? r.sum.dead : null))
-  .filter((v) => v != null).sort((a, b) => a - b);
-const baselineDead = deads.length ? deads[Math.floor(deads.length / 2)] : null;
-const outliers = [];
-if (baselineDead != null && baselineDead > 0) {
-  for (const r of results) {
-    const d = r.sum && r.sum.dead;
-    if (!(typeof d === 'number' && Number.isFinite(d)) || d === baselineDead) continue;
-    const ratio = d / baselineDead;
-    if (ratio > WATCH.deadUp || ratio < WATCH.deadDown) {
-      const line = `死亡 ${d} 相对基线 ${baselineDead} 是 ${ratio.toFixed(1)}×`;
-      outliers.push({ case: r.case, dead: d, ratio: +ratio.toFixed(2) });
-      r.trip.bad.push(`${line}（同批中位数口径）`);
-      r.trip.ok = false;
-    }
-  }
-}
+// ---- 绊线3 的相对判据：只用「同族内雨强升高却掉一半」这种结构性逆转。
+// 【2026-11-22 改法的原因】上一版拿「同批死亡中位数」当基线，一次干净的 8 工况跑批
+// 就误报 3 条（u_p8_s0 死 3、u_p20_s0 死 0、u_p40_s0 死 2 都「低于中位数 26」）——
+// 那不是异常，那是雨强梯度：8 mm/h 下满一天本来就不该和 120 mm/h 两小时灌一样多。
+// 跨雨强的死亡数没有可比性（文档 §15 与 sweep-report 都写明两族不能横比）。
+// 现在改为同族、按雨强排序、只看「更高雨强反而不到低雨强的一半」，且只作复核提示，不阻断入表。
+const intensityOf = (caseName) => {
+  const m = /^u_p(\d+)_s/.exec(String(caseName || ''));
+  return m ? Number(m[1]) : null;
+};
+const familyRows = results
+  .map((r) => {
+    const p = intensityOf(r.case);
+    return p == null ? null : {
+      case: r.case, family: rainFamily(r.case), intensity: p,
+      dead: r.sum && typeof r.sum.dead === 'number' ? r.sum.dead : NaN,
+    };
+  })
+  .filter(Boolean);
+const inversions = familyInversions(familyRows);
+const baselineDead = null;   // 保留字段以兼容旧 _sweep.json 读取方；不再用于判据
 
 const bad = results.filter((r) => !r.trip.ok);
 const tripCount = {
@@ -278,11 +278,11 @@ const tripCount = {
   etaOver: results.filter((r) => r.trip.etaOver).length,
   nan: results.filter((r) => r.trip.nan.length > 0).length,
   sanity: results.filter((r) => r.trip.sanity && !r.trip.sanity.ok).length,
-  outliers: outliers.length,
+  inversions: inversions.length,
 };
 const summary = { wallSec, serialSec, speedup: +(serialSec / wallSec).toFixed(2),
   concurrency: CONCURRENCY, people: PEOPLE, minutes: MINUTES,
-  baselineDead, tripwires: { thresholds: WATCH, counts: tripCount, outliers,
+  baselineDead, tripwires: { thresholds: WATCH, counts: tripCount, inversions,
     clean: bad.length === 0, cases: bad.map((r) => ({ case: r.case, bad: r.trip.bad })) },
   results };
 const sumPath = join(OUTDIR, '_sweep.json');
@@ -290,15 +290,17 @@ const { writeFileSync } = await import('node:fs');
 writeFileSync(sumPath, JSON.stringify(summary, null, 2));
 console.log(`\n[sweep] 全部完成 · 墙钟 ${wallSec}s · 串行本应 ${serialSec}s · 提速 ${summary.speedup}×`);
 console.log(`[sweep] 绊线 · 断流 ${tripCount.stalled} · ETA 偏离 ${tripCount.etaOver} · NaN ${tripCount.nan}`
-  + ` · 合理性 ${tripCount.sanity} · 基线偏离 ${tripCount.outliers}`
-  + `（ETA 参照 = 同族已完成工况墙钟中位数，分族：全天雨／傍晚暴雨）`
-  + (baselineDead > 0 ? `（基线 = 同批死亡中位数 ${baselineDead}）`
-    : (baselineDead === 0 ? '（同批死亡中位数为 0，相对判据不适用）' : '（无可用基线）')));
+  + ` · 合理性 ${tripCount.sanity} · 雨强逆转 ${tripCount.inversions}`
+  + `（ETA 参照 = 同族已完成工况墙钟中位数；死亡数不做跨雨强比较）`);
 if (bad.length) {
   console.log('[sweep] ⚠ 以下工况有告警，不能当成「跑完了」直接进表：');
   for (const r of bad) console.log(`[sweep]   ${r.case}：${r.trip.bad.join('；')}`);
 } else {
-  console.log('[sweep] 四条绊线全清（断流 / ETA / NaN / 合理性 + 基线偏离）');
+  console.log('[sweep] 四条绊线全清（断流 / ETA / NaN / 合理性）');
+}
+if (inversions.length) {
+  console.log('[sweep] 复核提示（不阻断入表）：同族内雨强升高但死亡掉一半以上');
+  for (const v of inversions) console.log(`[sweep]   ${v.note}`);
 }
 console.log(`[sweep] 汇总 ${sumPath}`);
 if (server) { server.close(); console.log('[sweep] 已关闭临时静态服务'); }

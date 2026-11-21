@@ -244,6 +244,48 @@ export function sanityOf(sum, { people = null, baselineDead = null } = {}) {
   return { ok: issues.length === 0, issues };
 }
 
+/**
+ * 同族「雨强更高、死亡反而不到一半」的结构性逆转判据。
+ *
+ * 【2026-11-22 改法的原因】上一版把「同批所有工况的死亡中位数」当基线，
+ * 于是一次干净的 8 工况跑批（0 断流 / 0 NaN / 0 退出码异常）报出 3 条告警：
+ * u_p8_s0 死 3、u_p20_s0 死 0、u_p40_s0 死 2 都「低于中位数 26」。
+ * 这不是异常，这是**雨强梯度**：8 mm/h 下满一天当然比 120 mm/h 两小时灌死得少。
+ * 用跨雨强的中位数当基线，等于要求「小雨和大暴雨死一样多」——判据本身错了。
+ *
+ * 现在只保留一种有意义的相对判据：**同族内雨强升高、死亡却掉到不足一半**。
+ * 出现这种情况要么是分母变了（先死的那批人已不在被困池里），要么是真出事了，
+ * 无论哪种都值得复核，但它只作为「提示」，不阻断结果入表。
+ *
+ * @param {Array<{case:string, family:string, intensity:number, dead:number}>} rows
+ * @param {{minDead?:number, ratio?:number}} opts 低雨强档死亡数 ≥ minDead 才比（小样本不比）
+ */
+export function familyInversions(rows, { minDead = 5, ratio = 0.5 } = {}) {
+  const issues = [];
+  const byFam = new Map();
+  for (const r of Array.isArray(rows) ? rows : []) {
+    if (!r || !r.family) continue;
+    if (!byFam.has(r.family)) byFam.set(r.family, []);
+    byFam.get(r.family).push(r);
+  }
+  for (const [family, arr] of byFam) {
+    arr.sort((a, b) => (a.intensity || 0) - (b.intensity || 0));
+    for (let i = 1; i < arr.length; i++) {
+      const prev = arr[i - 1]; const cur = arr[i];
+      const a = prev.dead; const b = cur.dead;
+      if (!Number.isFinite(a) || !Number.isFinite(b)) continue;
+      if (a < minDead) continue;          // 低基数档不比，避免拿 0 比 0
+      if (b < a * ratio) {
+        issues.push({
+          family, from: prev.case, to: cur.case, fromDead: a, toDead: b,
+          note: `${cur.case} 雨强更高（${cur.intensity} mm/h）却只死 ${b}，不到 ${prev.case}（${prev.intensity} mm/h）的 ${a} 的一半`,
+        });
+      }
+    }
+  }
+  return issues;
+}
+
 /** 把一次跑批的四类绊线结果压成一行结论（给 _sweep.json 与控制台用）。 */
 export function tripwireSummary({ stalled = false, eta = null, nan = [], sanity = null } = {}) {
   const bad = [];
