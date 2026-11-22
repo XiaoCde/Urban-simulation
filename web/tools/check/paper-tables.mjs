@@ -36,7 +36,11 @@ function loadDir(dir) {
         people: j.people, minutes: j.minutes, seed: j.seed, startMinute: j.startMinute,
         pMmH: (j.caseMeta || {}).pMmH, surgeM: (j.caseMeta || {}).surgeM,
         peakWetHa: (j.caseMeta || {}).peakWetHa,
-        dead: inc.dead || 0, stranded: inc.stranded || 0, injured: inc.injured || 0,
+        dead: inc.dead || 0, stranded: inc.stranded || 0,
+        // 【2026-11-23】injured 是「此刻仍在伤」的点值，everInjured 才是「累计受过伤」的
+        // 全量口径；论文表格要报累计（与 sweep 汇总的 injured 列同义），否则同一工况会在
+        // 两张表里出现 27 与 93 两个数。
+        injured: inc.everInjured != null ? inc.everInjured : (inc.injured || 0),
         evacuated: inc.evacuated || 0, wading: inc.wading || 0, abandonedCar: inc.abandonedCar || 0,
         rescued: inc.rescued || 0, slip: inc.slip || 0,
         judged: sum('judged'),
@@ -67,7 +71,7 @@ function ablate(dir) {
   const get = (c, m) => rows.find((r) => r.caseName === c && r.mode === m);
 
   const cols = [
-    ['dead', '死亡', 0], ['stranded', '被困（累计）', 0], ['injured', '受伤', 0],
+    ['dead', '死亡', 0], ['stranded', '被困（累计）', 0], ['injured', '受伤（累计）', 0],
     ['evacuated', '避险', 0], ['wading', '涉水（人次）', 0],
     ['firstEvacMinute', '首次撤离（分）', 0], ['judged', '判断次数', 0],
     ['carKm', '行驶 km', 1],
@@ -140,7 +144,7 @@ function driver(surgeDir, rainDir, rainCase) {
   const cols = [
     ['pMmH', '雨强 mm/h', 0], ['surgeM', '河道增水 m', 2], ['peakWetHa', '峰值湿区 ha', 0],
     ['peakCm', '最深水 cm', 0], ['peakMinute', '最深水时刻（分）', 0],
-    ['dead', '死亡', 0], ['stranded', '被困（累计）', 0], ['injured', '受伤', 0],
+    ['dead', '死亡', 0], ['stranded', '被困（累计）', 0], ['injured', '受伤（累计）', 0],
     ['evacuated', '避险', 0], ['firstEvacMinute', '首次撤离（分）', 0], ['carKm', '行驶 km', 1],
   ];
   for (const [k, label, d] of cols) {
