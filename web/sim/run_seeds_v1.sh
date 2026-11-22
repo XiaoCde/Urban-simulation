@@ -23,7 +23,8 @@ MINUTES=1440
 # 两个工况 × 3 seed = 6 run（约 4 小时），足够报「跨 seed 的范围」这一句，
 # 论文里必须写明「seed 重复只做了这两个工况」。
 CASES="u_p16_s0 u_p120_s0"
-SEEDS="20261117 20261123 20261129"
+# 【2026-11-23】20261117 已经是主结果（out/sweep_v62 里的同参数 run），这里只补两个额外 seed。
+SEEDS="20261123 20261129"
 
 mkdir -p "$OUT"
 echo "[seeds] 开始 $(date '+%F %T')  并发 $CONC · $PEOPLE 人 · 输出 $OUT"
