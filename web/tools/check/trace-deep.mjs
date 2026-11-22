@@ -34,12 +34,16 @@ const files = fs.readdirSync(dir)
   .filter((f) => !onlyArg || f.includes(onlyArg));
 const runs = [];
 const broken = [];
+const withheld = [];
 for (const f of files) {
   let j;
   try { j = JSON.parse(fs.readFileSync(path.join(dir, f), 'utf8')); } catch { continue; }
   // 收尾快照失败的结果：final.error 有值、final.sim 为 null、cases 空。
   // 静默跳过它会让「死者总数」偏小，所以单独记下来打在屏幕上。
-  if (j.final && j.final.error) { broken.push({ file: f, error: j.final.error }); continue; }
+  // 2026-11-22 20:15 分档：sim 还在的降级结果不算坏（指标可信），只是没有个案，
+  // 归因用不上它——记进 withheld，别混进 broken（broken 代表整份作废）。
+  if (j.final && j.final.error && !j.final.sim) { broken.push({ file: f, error: j.final.error }); continue; }
+  if (j.final && j.final.error && j.final.sim) { withheld.push({ file: f, error: j.final.error }); continue; }
   const cases = (j.final && j.final.cases) || [];
   if (!cases.length) continue;
   runs.push({ file: f, caseName: (j.caseMeta && j.caseMeta.name) || f.replace('.json', ''), cases, j });
@@ -49,7 +53,13 @@ if (!runs.length) {
   process.exit(1);
 }
 
-if (onlyArg) console.log(`[trace-deep] 只读文件名含 "${onlyArg}" 的结果（共 ${files.length} 个）`);
+if (withheld.length) {
+  console.log(`[trace-deep] ${withheld.length} 份结果是降级版（指标在、个案缺），已排除：${withheld.map((x) => x.file).join(', ')}`);
+}
+if (broken.length) {
+  console.log(`[trace-deep] ${broken.length} 份结果收尾快照失败（整份作废），已排除：${broken.map((x) => x.file).join(', ')}`);
+}
+console.log(`[trace-deep] 只读文件名含 "${onlyArg || ''}" 的结果（共 ${files.length} 个）`);
 const buf = [];
 const say = (line = '') => { buf.push(line); console.log(line); };
 

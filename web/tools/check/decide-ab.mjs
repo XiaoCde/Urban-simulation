@@ -20,9 +20,14 @@ const rows = files.map((f) => {
   const j = JSON.parse(fs.readFileSync(f, 'utf8'));
   // 收尾快照失败的结果：final.sim=null，所有指标都会读成 0。
   // 不拦住它，就会拿「0 死亡」当结论（我们已经因此白跑过一整批）。
-  if (j.final && j.final.error) {
+  // 【2026-11-22 20:15 分档】有 error 但 final.sim 还在 = 降级结果（个案缺失、
+  // 指标可信）。那种要**照常比**，只打 warning；只有 sim 为 null 才是真坏结果。
+  if (j.final && j.final.error && !j.final.sim) {
     console.error(`[refuse] ${f}: 收尾快照失败（${j.final.error}）——这份结果的指标全是空值，不能比。`);
     process.exit(1);
+  }
+  if (j.final && j.final.error && j.final.sim) {
+    console.error(`[warn] ${f}: 降级结果（${j.final.error}）——指标可用，但没有个案，归因不能读它。`);
   }
   if (!j.final || !j.final.sim) {
     console.error(`[refuse] ${f}: final.sim 为 null，不能比。`);

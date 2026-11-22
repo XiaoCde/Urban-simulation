@@ -126,10 +126,13 @@ function driver(surgeDir, rainDir, rainCase) {
   const pick = rainCase ? rain.filter((r) => r.caseName === rainCase) : rain;
   const rows = [...pick, ...surge];
   const out = [];
-  out.push('# 跨驱动：降雨型（快涨）vs 河道漫堤（慢涨）——同一决策层、同一城市');
+  out.push('# 跨驱动：降雨型 vs 河道漫堤——同一决策层、同一城市');
   out.push('');
   out.push(`> 生成：\`node tools/check/paper-tables.mjs driver ${surgeDir} ${rainDir}${rainCase ? ' --rain=' + rainCase : ''}\``);
-  out.push('> 两类的驱动完全不同：降雨是「雨停后退」，漫堤是「堤顶越流、退水靠外排」。');
+  out.push('> 两类的驱动完全不同：降雨是「雨停后退」（有雨窗可循），漫堤是「堤顶越流」——');
+  out.push('> 2026-11-22 实测 s4：堤顶一破，河front 街区**头一小时就进水**（5.7 分 11.5 ha、');
+  out.push('> 45 分 110.9 ha），之后才慢慢爬到 173 ha。所以不要写「慢涨」，');
+  out.push('> 要写「瞬时越流 + 缓慢爬升」。');
   out.push('> **这不是跨灾种**（都是洪水），论文里只能写 cross-driver。');
   out.push('');
   out.push('| 指标 | ' + rows.map((r) => r.caseName).join(' | ') + ' |');
@@ -150,7 +153,7 @@ function driver(surgeDir, rainDir, rainCase) {
   out.push('|---|---|');
   for (const r of rows) out.push(`| ${r.caseName} | ${causeOf(r)} |`);
   out.push('');
-  out.push('**读法**：慢涨工况若「车内」死亡下降、「地下室/低洼地面」上升、「首次撤离」推迟，');
+  out.push('**读法**：漫堤工况若「车内」死亡不升、「地下室」明显上升、「首次撤离」提前，');
   out.push('说明决策层确实在读输入（而不是被写死的行为表）；反之若两者死因结构几乎一样，');
   out.push('说明决策层对「涨水速率」不敏感——那反而是个该记录的负结果。');
   return out.join('\n');

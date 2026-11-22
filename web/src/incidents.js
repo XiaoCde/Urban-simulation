@@ -794,9 +794,33 @@ export function createIncidents(o = {}) {
     return out.slice(0, limit);
   }
 
-  /** 离线验收导出：把个案的完整链取走（不含未出事的人）。 */
+  // 【2026-11-22 20:55 性能】逐帧轨迹是导出的主要体积：24 h 一夜被淹的人能有
+  // 上千帧，乘以 999 个个案就是几百 MB，走 CDP 序列化要十几分钟（p16/p24 两次
+  // 就是死在收尾快照超时上）。这里把每人的轨迹**等距抽稀**到最多 REPLAY_MAX_FRAMES
+  // 帧：死亡时刻、死时水深、死因、事件链都不动（它们不在 trace 里），只把「过程
+  // 曲线」变稀。抽稀后写明 traceStride/traceFull，读的人知道原始密度。
+  const REPLAY_MAX_FRAMES = 160;
+  function slimTrace(trace, max = REPLAY_MAX_FRAMES) {
+    if (!trace) return [];
+    if (trace.length <= max) return trace.slice();
+    const keep = [];
+    const step = (trace.length - 1) / (max - 1);
+    for (let k = 0; k < max; k++) keep.push(trace[Math.round(k * step)]);
+    return keep;
+  }
+
+  /** 离线验收导出：把个案的完整链取走（不含未出事的人）。轨迹已抽稀。 */
   function exportCases(limit = 60) {
-    return cases(limit).map((c) => ({ summary: c, replay: snapshot(c.i) }));
+    return cases(limit).map((c) => {
+      const rep = snapshot(c.i);
+      if (rep && rep.trace && rep.trace.length > REPLAY_MAX_FRAMES) {
+        const full = rep.trace.length;
+        rep.trace = slimTrace(rep.trace);
+        rep.traceFull = full;
+        rep.traceStride = Math.round((full / rep.trace.length) * 10) / 10;
+      }
+      return { summary: c, replay: rep };
+    });
   }
 
   function reset() {

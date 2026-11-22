@@ -32,6 +32,7 @@
  *   3) Node 侧每批套 SIM_BATCH_TIMEOUT 毫秒的硬超时；超时就打印
  *      「第几分钟 / 第几批 / 当时在场人数」并退出，不再无声消失。
  * 可用环境变量：SIM_BATCH（每批帧数，默认 100）、SIM_BATCH_TIMEOUT（默认 180000）、
+ *   SIM_FINAL_TIMEOUT（收尾快照超时，默认 900000）、
  * SIM_SLOW_MS（单帧慢阈值，默认 4000）。
  */
 import puppeteer from 'puppeteer-core';
@@ -60,6 +61,11 @@ const DT = 0.1;                  // 真实秒/帧（CLOCK 会钳到 0.1）
 // 单批硬超时：正常一批（100 帧 = 4 仿真分钟）实测 5–30 s，暴雨段最慢约 28 s，
 // 180 s 已是 6 倍余量；超过它就不是「慢」而是卡死。
 const BATCH_TIMEOUT = Math.max(10000, Number(process.env.SIM_BATCH_TIMEOUT || 180000));
+// 【为什么收尾要单独的超时】2026-11-22 19:05 抓到：p16 两条工况跑到 100% 之后
+// `收尾快照 超时 180000ms`、final.sim=null —— 个案上限开到 999 之后，把上百条
+// replay（每 2 仿真秒一帧）序列化回 Node 侧要几分钟，180 s 是「一批帧」的预算，
+// 不是「整场个案」的预算。批次超时维持 180 s（那是卡帧检测），收尾给 600 s。
+const FINAL_TIMEOUT = Math.max(60000, Number(process.env.SIM_FINAL_TIMEOUT || 900000));
 // 单帧慢阈值：一帧正常 0.05–0.3 s，>4 s 说明这一帧里有人卡在寻路/碰撞里。
 const SLOW_MS = Math.max(500, Number(process.env.SIM_SLOW_MS || 4000));
 // 【相机解耦验收 2026-11-20】表现层机位不许影响行为。SIM_VIEW 把机位切到
@@ -152,6 +158,19 @@ if (EX === 'off' || EX === '0') u.searchParams.set('exp', 'off');
 // final.sim 变成 null、死亡数全读成 0，而且不报错——整批 8 个工况白跑。
 const CASES_MAX = Math.max(1, Number(process.env.SIM_CASES_MAX || 12));
 u.searchParams.set('casesmax', String(CASES_MAX));
+// 【2026-11-22 元数据】结果 JSON 里必须自带「这份结果是用哪套配置跑的」。
+// 现在只带 caseMeta（水情），gate 还是 single、同伴网络哪一档、三大上限是多少，
+// 全靠文件名和日志猜——审稿人复现时会拿错。这里把配置一起写进 final.meta。
+const RUN_META = {
+  decide: (process.env.SIM_DECIDE || 'gate').trim() || 'gate',
+  single: (process.env.SIM_SINGLE || 'merge').trim() || 'merge',
+  peer: (process.env.SIM_PEER || 'synthetic').trim() || 'synthetic',
+  peerR: process.env.SIM_PEER_R || null,
+  peerQ: process.env.SIM_PEER_Q || null,
+  casesMax: CASES_MAX,
+  seed: SEED,
+  casScale: process.env.SIM_CAS_SCALE || '1',
+};
 // 【2026-11-21 个体追溯】SIM_TRACE=<人序号> → 追这一个人，跑完写 trace JSON。
 // 用途：导师要的「定位某个受困/溺亡者，复现其完整过程」。traceTarget 记在 agg 里，
 // 结果文件和 trace 文件用同一个 case 名，回放/写报告时不会拿错人。
@@ -447,9 +466,13 @@ agg.wallSec = +((Date.now() - t0) / 1000).toFixed(1);
 agg.aborted = aborted;
 // 收尾快照也套超时：页面要是正好在最后一帧卡住，不能连已跑完的 hourly 一起丢掉。
 try {
-  agg.final = await withTimeout(p.evaluate((casesMax) => {
+  // 【为什么改成返回 JSON 字符串】2026-11-22 19:05：p16 两条工况收尾超时
+  // （180 s）。原因不只是超时给短了——把一个大对象从浏览器送回 Node 时，
+  // CDP 会对整个结构做一次序列化，几百条 replay 的开销翻倍。让页面自己
+  // JSON.stringify 一次、Node 侧 JSON.parse 一次，同样的数据只序列化一遍。
+  const finalJson = await withTimeout(p.evaluate((RUN) => {
     const PED = window.__ped, C = window.__clock;
-    return {
+    return JSON.stringify({
       minute: +C.minute.toFixed(2),
       sim: window.__sim ? window.__sim() : null,
       route: PED.routeStats ? PED.routeStats() : null,
@@ -462,16 +485,42 @@ try {
       // 会系统性偏向深水（实测 u_p16_s0 30 个死者只导出 12 个）。导出多少不影响仿真
       // 本身（只是写盘），所以批跑中途改这个上限不会让同一批的计数不可比。
       cases: (PED.incidents && PED.incidents.exportCases)
-        ? PED.incidents.exportCases(casesMax) : [],
+        ? PED.incidents.exportCases(RUN.casesMax) : [],
       // 【§5 时间层】三个时刻的分布（发布/收到/动身）；默认关闭时 enabled=false。
       timeLayer: PED.timeLayerSummary ? PED.timeLayerSummary() : null,
-    };
-  }, CASES_MAX), BATCH_TIMEOUT, '收尾快照');
+      meta: RUN,
+    });
+  }, RUN_META), FINAL_TIMEOUT, '收尾快照');
+  agg.final = JSON.parse(finalJson);
 } catch (e) {
   // 注意：这里出错会让 final.sim 变成 null，随后任何人算指标都会得到 0。
   // 所以「0 死亡」必须先看 final.error 在不在（decide-ab / trace-deep 已加拒绝）。
   console.error('[stuck] 收尾快照失败：' + (e && e.message ? e.message : e));
-  agg.final = { minute: agg.endMinute, sim: null, route: null, flee: null, cases: [], error: String(e && e.message || e) };
+  // 【补救（2026-11-22 20:10）】一次性把「汇总 + 个案」都取回来是脆的：个案
+  // 序列化慢、汇总很快。所以失败后立刻降级再取一次**不要个案**的快照——
+  // 仿真已经跑完的那一两个小时不能因为写盘失败而作废。降级结果里写明
+  // `casesWithheld`，下游就知道「这份没有个案，但指标是真的」。
+  try {
+    const slim = await withTimeout(p.evaluate((RUN) => {
+      const PED = window.__ped, C = window.__clock;
+      return JSON.stringify({
+        minute: +C.minute.toFixed(2),
+        sim: window.__sim ? window.__sim() : null,
+        route: PED.routeStats ? PED.routeStats() : null,
+        flee: PED.fleeStats ? PED.fleeStats() : null,
+        cases: [],
+        casesWithheld: true,
+        timeLayer: PED.timeLayerSummary ? PED.timeLayerSummary() : null,
+        meta: RUN,
+        error: null,
+      });
+    }, RUN_META), 120000, '收尾快照（降级）');
+    agg.final = JSON.parse(slim);
+    agg.final.error = '个案导出失败（已降级保留汇总）：' + String(e && e.message || e);
+    console.error('[stuck] 已降级保留汇总，个案缺失');
+  } catch (e2) {
+    agg.final = { minute: agg.endMinute, sim: null, route: null, flee: null, cases: [], error: String(e && e.message || e) };
+  }
 }
 // 【2026-11-21 个体追溯】跑完把被追那人的记录取出来单独存一份（与结果同名 .trace.json）。
 // 导师要的是「定位某个受困/溺亡者，复现其完整过程」，所以 trace 必须能单独打开、
