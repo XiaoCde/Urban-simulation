@@ -1,0 +1,98 @@
+{
+ "generated": "2026-11-23",
+ "grid": {
+  "cell_m": 2.0,
+  "rows": 2560,
+  "cols": 2989
+ },
+ "against_dc_official_model": {
+  "auc_cell": 0.632,
+  "auc_ci_block_bootstrap": {
+   "lo": 0.5743,
+   "hi": 0.6758,
+   "n": 200
+  },
+  "pos_cells": 201873,
+  "neg_cells": 7449967,
+  "truth_coverage_pct": 2.638,
+  "thresholds": [
+   {
+    "th_m": 0.05,
+    "tp": 10688,
+    "fp": 274071,
+    "fn": 191185,
+    "POD": 0.0529,
+    "FAR": 0.9625,
+    "CSI": 0.0225,
+    "F1": 0.0439
+   },
+   {
+    "th_m": 0.15,
+    "tp": 2821,
+    "fp": 68505,
+    "fn": 199052,
+    "POD": 0.014,
+    "FAR": 0.9604,
+    "CSI": 0.0104,
+    "F1": 0.0207
+   },
+   {
+    "th_m": 0.3,
+    "tp": 910,
+    "fp": 24126,
+    "fn": 200963,
+    "POD": 0.0045,
+    "FAR": 0.9637,
+    "CSI": 0.004,
+    "F1": 0.008
+   },
+   {
+    "th_m": 0.5,
+    "tp": 398,
+    "fp": 8853,
+    "fn": 201475,
+    "POD": 0.002,
+    "FAR": 0.957,
+    "CSI": 0.0019,
+    "F1": 0.0038
+   }
+  ],
+  "equal_area_threshold_m": 0.067,
+  "equal_area_metrics": {
+   "th_m": 0.0672421082854271,
+   "tp": 7864,
+   "fp": 194009,
+   "fn": 194009,
+   "POD": 0.039,
+   "FAR": 0.961,
+   "CSI": 0.0199,
+   "F1": 0.039
+  },
+  "best_csi_threshold_m": 0.05,
+  "best_csi": 0.0225
+ },
+ "against_311_reports": {
+  "report_point_hit_official_pct": 1.4,
+  "report_point_hit_official_lift": 0.53,
+  "report_point_hit_ours_pct": 3.7,
+  "report_point_hit_ours_lift": 1.0,
+  "two_maps_agreement_pct": 94.9,
+  "iou_ours_vs_official": 0.0225,
+  "ours_wet_inside_official_pct": 3.8,
+  "auc": 0.4846,
+  "auc_ci_point_bootstrap": {
+   "lo": 0.4547,
+   "hi": 0.5151,
+   "n": 1000
+  },
+  "points_dedup_10m": 214,
+  "median_depth_at_reports_m": 0.0,
+  "share_zero_depth_pct": 88.8
+ },
+ "caveats": [
+  "官方模型是 1-yr 情景、我们是 50 mm/h 稳态，不是同一场雨；AUC 只说明空间判别力。",
+  "官方 DEPTH 单位未确认，只用多边形覆盖做二值真值。",
+  "311 有报告偏差，报修点 AUC 只作弱证据。",
+  "我们的深度图 h-cap 3 m，高分截平会使 AUC 略低估（同分按 0.5 计）。"
+ ]
+}
