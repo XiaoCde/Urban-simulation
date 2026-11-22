@@ -22,8 +22,11 @@ echo "[v62] 开始 $(date '+%F %T')  并发 $CONC · $PEOPLE 人 · 输出 $OUT"
 echo "[v62] 同伴网络：synthetic（Kleinberg 小世界，d_sr=120 m，q=1，上限 5 人）"
 
 # SIM_CASES_MAX 必须在 Node 侧读（页面闭包里没有 process —— 2026-11-22 的教训）
-SIM_CASES_MAX=999 node sim/sim-sweep.mjs \
-  u_p8_s0 u_p16_s0 u_p24_s0 u_p32_s0 u_p20_s0 u_p40_s0 u_p80_s0 u_p120_s0 \
+# 【2026-11-23 00:10 教训】sim-sweep 的工况表必须是**一个**逗号分隔的参数
+# （process.argv[2]），不能写成 8 个空格分隔的参数——否则它会只认第一个工况、
+# 把第二个工况名当输出目录，然后在 1 秒内"成功"退出（exit 0，产出 0 个结果）。
+CASES="u_p8_s0,u_p16_s0,u_p24_s0,u_p32_s0,u_p20_s0,u_p40_s0,u_p80_s0,u_p120_s0"
+SIM_CASES_MAX=999 node sim/sim-sweep.mjs "$CASES" \
   "$CONC" "$PEOPLE" 1440 "$OUT" \
   > "$OUT/_runner.log" 2>&1
 CODE=$?
