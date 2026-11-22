@@ -136,6 +136,11 @@ if (EX === 'off' || EX === '0') u.searchParams.set('exp', 'off');
   const SH = (process.env.SIM_SLIP_HI || '').trim(); if (SH) u.searchParams.set('sliphi', SH);
   // 暴露时长整体倍数：0.5 / 2 两档是「说得通」的最低要求（见参数依据表 casualty 段）
   const CS = (process.env.SIM_CAS_SCALE || '').trim(); if (CS) u.searchParams.set('casscale', CS);
+  // 参照群体生成器（2026-11-22）：SIM_PEER=synthetic|neighbour|household 切换模式，
+  // SIM_PEER_R / SIM_PEER_Q 改短程半径与长程边数（扫稳健性用，见 kernel/peer-network.js）。
+  const PN = (process.env.SIM_PEER || '').trim(); if (PN) u.searchParams.set('peer', PN);
+  const PNR = (process.env.SIM_PEER_R || '').trim(); if (PNR) u.searchParams.set('peerR', PNR);
+  const PNQ = (process.env.SIM_PEER_Q || '').trim(); if (PNQ) u.searchParams.set('peerQ', PNQ);
 }
 // 【2026-11-21 个体追溯】SIM_TRACE=<人序号> → 追这一个人，跑完写 trace JSON。
 // 用途：导师要的「定位某个受困/溺亡者，复现其完整过程」。traceTarget 记在 agg 里，

@@ -17,6 +17,7 @@ import { setTimeLayer, publishMinOf } from './kernel/warning.js';
 import { setSweptMode } from './kernel/flow-hazard.js';
 import { setExperienceLink, setExperienceKappa } from './kernel/choice-model.js';
 import { setCasualtyScale } from './kernel/thresholds.js';
+import { setPeerMode, setPeerParams } from './kernel/peer-network.js';
 import { setCrowdMode } from './kernel/crowd-threshold.js';
 import { setSlipMode, setSlipLower, setSlipUpper } from './incidents.js';
 import { setReceptionChannel, setDutyMissionRatio } from './kernel/reception-channel.js';
@@ -50,6 +51,10 @@ if ((QS_ROAD.get('exp') || '').toLowerCase() === 'off') setExperienceLink(false)
   const SH = QS_ROAD.get('sliphi'); if (SH) setSlipUpper(SH);
   // 暴露时长整体倍数（伤亡链里最没依据的两个数：成人 150 s / 儿童 80 s）
   const CS = QS_ROAD.get('casscale'); if (CS) setCasualtyScale(CS);
+  // 【2026-11-22】参照群体生成器：模式与两个结构参数（可现场扫，见 kernel/peer-network.js）
+  const PM = QS_ROAD.get('peer'); if (PM) setPeerMode(PM);
+  const PR = QS_ROAD.get('peerR'); if (PR) setPeerParams({ shortRangeM: PR });
+  const PQ = QS_ROAD.get('peerQ'); if (PQ) setPeerParams({ longRangeQ: PQ });
 }
 // 【2026-11-21 门1】接收渠道重分配：默认中性（ratio=1 与关闭逐位相同）。
 if ((QS_ROAD.get('recv') || '').toLowerCase() === 'off') setReceptionChannel(false);

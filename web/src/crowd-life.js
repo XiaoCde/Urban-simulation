@@ -28,8 +28,13 @@ import { pickRole, umbrellaChance, statusOf, WORK_BY_PLACE, ROLES } from './role
 import { WALK } from './motion-units.js';
 import { makeHazard, summarizeHazard } from './hazard.js';
 import { samplePerson } from './kernel/population.js';
+import { buildPeerNetwork } from './kernel/peer-network.js';
 // 【2026-11-16 阶段3】逐人楼层：用真实建筑高度派生，替代从场景 id 猜楼层。
 import { floorsFromHeight, floorElevationM, assignFloor } from './kernel/floors.js';
+
+let PEER_STATS = null;
+/** 参照群体的生成统计（模式、边数、度分布、孤立者占比），只读诊断用 */
+export function peerNetworkStats() { return PEER_STATS; }
 
 const XING = ['陈', '李', '王', '张', '刘', '周', '吴', '徐', '孙', '马', '朱', '胡', '林', '何', '郭', '高'];
 const MING = ['志远', '晓雯', '建国', '雅琴', '子涵', '明轩', '思琪', '浩然',
@@ -227,7 +232,7 @@ export function createCrowdLife({
   // 不是真实社会网络调查数据；拿到真实网络后应替换这里。
   // 目的：让 kernel/cohort.js 的 peersStay 不再恒 0，而是由同伴的实时避险
   // 状态算出来（见 live-agent.js 的 peersStayOf）。
-  (function buildPeerNetwork() {
+  (function buildHouseholds() {
     let k = 0;
     while (k < persons.length) {
       const hs = Math.max(1, Math.min(5, Number(persons[k].real && persons[k].real.householdSize) || 1));
@@ -454,65 +459,24 @@ export function createCrowdLife({
       }
     }
 
-    // 【2026-11-19 从众的参照群体：同街区邻居，而不是只有同一户】
-    // 此前 peers 只有「同户的人」，于是有两种失真：
-    //  ① 独居者（ACS 户规模=1）没有任何同伴，peersStayOf 返回 0，
-    //     而 0 在 Borowski 的设计里是「同伴全都走了」——等于把独居者
-    //     当成被所有人抛弃，凭空给了一股撤离压力；
-    //  ② 有同伴的人则几乎全是 1.0（全天没人走），被截到设计上限 0.8。
-    // 实测十档直方图：0 档 33%（正好是单人户占比）、≥0.9 档 67%、中间八档全空。
-    // 现在的做法：按**实际住址**就近配 3 个邻居（120 m 内、优先不同楼），
-    // 与同户成员一起构成参照群体。依据是社会影响的参照对象是「看得见的邻居」
-    // （结论性基本盘，见 from muse/全量文献方法台账.md 方法族 2）；
-    // 不使用任何外部网络调查的规模数值，规模由 DC 街区密度自己长出来。
-    // 合成性：邻居按住宅位置就近配对，不是真实社会网络调查，拿到真实网络应替换。
-    (function buildNeighbourPeers() {
-      const N = persons.length;
-      if (N < 8) return;
-      const CELL = 60, R = 120, K = 3;
-      const grid = new Map();
-      const key = (x, z) => `${Math.floor(x / CELL)},${Math.floor(z / CELL)}`;
-      for (let i = 0; i < N; i++) {
-        const hd = persons[i].homeDoor;
-        if (!hd || !Number.isFinite(hd.x) || !Number.isFinite(hd.z)) continue;
-        const k = key(hd.x, hd.z);
-        if (!grid.has(k)) grid.set(k, []);
-        grid.get(k).push(i);
+    // 【2026-11-22 参照群体改由**发表方法**生成，不再是我们自己定的 120 m / 3 邻居】
+    //
+    // 旧规则（2026-11-19 版）确实修掉了一个真失真：独居者（ACS 户规模=1，DC 三成）
+    // 此前 peersStay 恒 0，被 Borowski 的问卷口径读成「同伴全走光了」，凭空多出撤离压力。
+    // 但它把「住得近」当成了「认识」，而且 120 m / 3 人这两个数没有任何文献可引。
+    //
+    // 现在：Kleinberg 小世界（短程半径 d_sr + q 条幂律长程边）+ 三类真实接触，
+    // 见 kernel/peer-network.js 文件头的出处（Kuhlman 2020 AAMAS §2.2/Table 1、
+    // Borowski 2023 QA9 的「至多 5 人」上限、ACS 户结构、SOC→场所的工作边）。
+    // 规模上限 5 人是问卷设计上限，不是我们挑的；d_sr 与 q 是区间内取值，已在
+    // 敏感性里扫（60/120/240 m × q=0/1/2）。
+    {
+      const { peers, stats } = buildPeerNetwork(persons, { seed: 20261122 });
+      for (let i = 0; i < persons.length; i++) {
+        if (Array.isArray(peers[i])) persons[i].peers = peers[i];
       }
-      for (let i = 0; i < N; i++) {
-        const p = persons[i], hd = p.homeDoor;
-        if (!hd || !Number.isFinite(hd.x) || !Number.isFinite(hd.z)) continue;
-        const own = p.peers || [];
-        const cx = Math.floor(hd.x / CELL), cz = Math.floor(hd.z / CELL);
-        const cand = [];
-        for (let dx = -2; dx <= 2; dx++) {
-          for (let dz = -2; dz <= 2; dz++) {
-            const arr = grid.get(`${cx + dx},${cz + dz}`);
-            if (!arr) continue;
-            for (const j of arr) {
-              if (j === i || own.includes(j)) continue;
-              const q = persons[j].homeDoor;
-              const d = Math.hypot(q.x - hd.x, q.z - hd.z);
-              if (d > R) continue;
-              // 同一栋楼的排前面会让参照群体全变成「同一片水」，
-              // 所以先按「是否同楼」再按距离排，优先不同楼。
-              cand.push([persons[j].homeBuilding === p.homeBuilding ? 1 : 0, d, j]);
-            }
-          }
-        }
-        if (!cand.length) continue;
-        cand.sort((a, b) => a[0] - b[0] || a[1] - b[1] || a[2] - b[2]);
-        const pool = cand.slice(0, Math.min(12, cand.length));
-        const start = (i * 7 + 3) % pool.length;
-        let added = 0;
-        for (let m = 0; m < pool.length && added < K; m++) {
-          const j = pool[(start + m) % pool.length][2];
-          if (own.includes(j)) continue;
-          own.push(j); added++;
-        }
-        p.peers = own;
-      }
-    })();
+      PEER_STATS = stats;   // 只给诊断/测试读，不进任何决策
+    }
 
     // ---- 岗位 / 常去餐馆 / 街头锚点：全城网格索引，O(n) 而不是 O(n²)
     // 旧版只有 42 个固定门牌，实测 work_school_0 挂了 48 人；非 office 职业

@@ -35,6 +35,7 @@ import { CASCADE } from './crowd-threshold.js';
 import { ACCESS, ACCESS_META, DUTY_SOC, HOUSEHOLDER_RELP } from './access-impediment.js';
 import { WARNING_MEASURED, WARNING_SELF_SET, TIMELAYER } from './warning.js';
 import { RECEPTION, DUTY_POPULATION_SHARE } from './reception-channel.js';
+import { PEER_NETWORK } from './peer-network.js';
 
 export const KINDS = Object.freeze({
   real: '真实数据集',
@@ -345,14 +346,68 @@ export const ENTRIES = [
     probe: { file: 'web/src/kernel/crowd-threshold.js', re: RE('BETA|theta') },
   },
   {
-    id: 'crowd.peers', chain: 'crowd', label: '参照群体规模（同户 + 3 邻居，120 m）', unit: '人 / m',
-    expect: [3, 120], kind: 'selfSet',
-    source: 'web/src/crowd-life.js buildNeighbourPeers（CELL 60，R 120，K 3）',
-    why: 'Borowski 的同伴变量需要「参照群体里各方案比例」，但我们没有真实社会网络调查（要 IRB）。'
-      + '折中：按住址就近配对，规模由 DC 街区密度自己长出来 —— 城镇街区里「看得见的邻居」'
-      + '通常就是三五户，取 3；120 m 是「同一排房子」的量级。合成性必须如实标注。',
-    sens: 'K=2/3/5、R=80/120/200 属待扫敏感性；已知问题：独居者若无邻居则 peersStay=0',
-    probe: { file: 'web/src/crowd-life.js', re: RE('CELL = 60, R = 120, K = 3') },
+    id: 'peer.maxPeers', chain: 'crowd', label: '参照群体人数上限', unit: '人',
+    expect: 5, kind: 'measured',
+    source: 'Borowski 2023 第四轮问卷 QA9：自我中心网络由姓名生成题引出，**至多 5 人**',
+    why: '同伴比例变量（Share peers choosing ride / staying）就是这个「至多 5 人」的网络里算出来的；'
+      + '超过 5 人的同伴集合不在问卷设计里，硬给 8–10 人等于改掉原论文的口径。',
+    sens: '不适用（问卷设计上限）',
+    get: () => PEER_NETWORK.maxPeers,
+    probe: { file: 'web/src/kernel/peer-network.js', re: RE('maxPeers: 5,') },
+  },
+  {
+    id: 'peer.shortRange', chain: 'crowd', label: '邻里半径 d_sr', unit: 'm',
+    expect: 120, kind: 'selfSet',
+    source: 'Kuhlman et al. 2020 AAMAS 19:654–662 §2.2 + Table 1（扫 40/70/100 m）；我们的街区尺度更大',
+    why: '短程半径决定「谁算邻居」。Kuhlman 的合成人口是 VA Beach，他们扫 0.04/0.07/0.10 km；'
+      + 'DC 排屋街区进深更宽，取 120 m 对应「同一排房子 + 街对面」，属他们扫过的区间外推一档。'
+      + '**这两个数（半径与长程边数）不是文献最优值，是区间内的取值。**',
+    sens: '扫 60 / 120 / 240 m：改半径换的是「谁进圈」，人数上限不变；结果见 docs/同伴网络_2026-11-22.md',
+    get: () => PEER_NETWORK.shortRangeM,
+    probe: { file: 'web/src/kernel/peer-network.js', re: RE('shortRangeM: 120,') },
+  },
+  {
+    id: 'peer.longRangeQ', chain: 'crowd', label: '每人长程边数 q', unit: '条',
+    expect: 1, kind: 'selfSet',
+    source: 'Kuhlman et al. 2020 AAMAS §2.2 + Table 1（q 扫 0/2/4/8/16/32）；我们受 5 人上限约束',
+    why: '长程边代表「不在附近但会联系的人」（远亲/同乡/线上）。Kuhlman 的合成人口里 q 可以到 32 条，'
+      + '因为他们的网络不受 5 人上限约束；我们的参照群体上限是 Borowski 问卷的 5 人，'
+      + '所以只能留 1 条，其余名额给邻里与同事。',
+    sens: '扫 q=0/1/2：q=0 时长程边消失、同伴集合缩到「同户+同事+邻居」',
+    get: () => PEER_NETWORK.longRangeQ,
+    probe: { file: 'web/src/kernel/peer-network.js', re: RE('longRangeQ: 1,') },
+  },
+  {
+    id: 'peer.longRangePower', chain: 'crowd', label: '长程边距离衰减指数 r', unit: '—',
+    expect: 2, kind: 'measured',
+    source: 'Kleinberg 2000, Nature 406:845–851（可导航小世界的最优指数 r=2）',
+    why: '长程边不是均匀随机，而是按 d^-r 衰减：越远的联系人越少。r=2 是 Kleinberg 的可导航性结论，'
+      + '属方法常数，不是我们拟合出来的。',
+    sens: '不适用（方法常数）',
+    get: () => PEER_NETWORK.longRangePower,
+    probe: { file: 'web/src/kernel/peer-network.js', re: RE('longRangePower: 2,') },
+  },
+  {
+    id: 'peer.extraTies', chain: 'crowd', label: '同户之外的同伴目标数', unit: '条',
+    expect: 3, kind: 'selfSet',
+    source: '自设：目标度数 = ACS 同户人数 + 3（同事 1 / 长程 1 / 邻里补满）',
+    why: '文献只给了「至多 5 人」这个上限，没给三类接触各几条。5 个名额减去同户人数，'
+      + '剩下的给非家庭接触；DC 户规模均值小（单人户三成），所以多数人手里有 2–3 个非家庭名额。'
+      + '拆成「同事 1 / 长程 1 / 邻里补满」是为了让三类接触都真的发生（第一版先补邻里，'
+      + '结果 workEdges=0、longRangeEdges=0，两个机制「看着接了、实际从不发生」）。',
+    sens: '扫 extraTies=1/3/5（对应人均度数降到约 2 / 4.5 / 5）',
+    get: () => PEER_NETWORK.extraTies,
+    probe: { file: 'web/src/kernel/peer-network.js', re: RE('extraTies: 3,') },
+  },
+  {
+    id: 'peer.workQuota', chain: 'crowd', label: '同事名额', unit: '条',
+    expect: 1, kind: 'selfSet',
+    source: '自设（与 peer.extraTies 同一预算分配）；同事关系来自 SOC→场所映射与办公楼分配',
+    why: '工作边的「谁和谁是同事」有数据（同办公楼），但「同事里算几个同伴」没有数据；'
+      + '留 1 条，避免同一栋楼被连成完全图、把邻里名额吃光。',
+    sens: '扫 0/1/2（0 = 完全不要工作边，回到「同户+邻居」的旧口径）',
+    get: () => PEER_NETWORK.workQuota,
+    probe: { file: 'web/src/kernel/peer-network.js', re: RE('workQuota: 1,') },
   },
 
   /* ---------------- impediment：门5 阻碍 ---------------- */
@@ -639,6 +694,7 @@ export const MONITORED = Object.freeze([
   'web/src/kernel/access-impediment.js',
   'web/src/kernel/warning.js',
   'web/src/kernel/reception-channel.js',
+  'web/src/kernel/peer-network.js',
   'web/src/cohort.js',
   'web/src/ped.js',
 ]);
