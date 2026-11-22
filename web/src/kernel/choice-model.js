@@ -383,6 +383,99 @@ export const THREAT_OF_HAZARD = Object.freeze({
  * 的有序 logit 预测子，因变量不是行动，也没有印阈值，只能做分层验证。
  * 这里仍然算出来返回，供检验用，不参与 probability。
  */
+
+/**
+ * 【2026-11-22 加：单式基线（消融对照用）】
+ *
+ * 论文要回答的不是「门结构跑得动」，而是「不拆门会怎样」。所以这里把
+ * 「单式效用」恢复成一个可运行的基线，两种写法都实现：
+ *
+ *   merge（默认）—— 把三张表的线性预测子用退役记录里的三个数
+ *                    （0.50 / 0.80 / 0.25）压到同一量纲再相加。这是
+ *                    「不拆门」时最自然的工程做法，也是 2026-11-21 之前的写法。
+ *   raw         —— 完全不做尺度换算，直接把三张表的系数相加。用来验证
+ *                    「不换算会怎样」，说明 merge 那一组缩放不是随便挑的。
+ *
+ * 触发规则也回到旧式：**水深 > 0 即进入决策**（二元触发），没有接收门、
+ * 没有动员曲线、没有 AFT 时间轴。这正是导师批评的「触发即逃」。
+ *
+ * 门5（阻碍）在两种模式下**完全一致**：消融要隔离的是「决策结构」，不是
+ * 「可行集」。否则分不清差异来自哪一层。
+ *
+ * 为什么这两个缩放可以当成「基线」而不是「我们编的数」：它们原本就在
+ * RETIRED_SELF_SET 里登记过，值就是 0.50 / 0.80 / 0.25，退役理由是不能把
+ * 跨论文 logit 的 λ 比值拍出来（Swait & Louviere 1993）。基线用它们，是因为
+ * 「如果非要合并，也只能这么合并」——把不可估的量按旧值填上，然后看结果偏到哪。
+ */
+export const SINGLE_UTILITY = Object.freeze({
+  variants: Object.freeze({
+    merge: Object.freeze({
+      lambdaKnowledge: 0.50,
+      lambdaAction: 0.80,
+      lambdaUtility: 0.25,
+      note: '退役记录里的三个 λ 比值：0.50 知识→行动、0.80 行动→效用、0.25 效用归一',
+    }),
+    raw: Object.freeze({
+      lambdaKnowledge: 1,
+      lambdaAction: 1,
+      lambdaUtility: 1,
+      note: '不做任何尺度换算，三张表系数直接相加',
+    }),
+  }),
+  threatUtility: Object.freeze({ none: 0, low: 0.35, moderate: 1.30, extreme: 2.60 }),
+  trigger: '水深 > 0 即进入决策（二元触发）；无接收门、无动员曲线、无 AFT 时间轴',
+  source: 'RETIRED_SELF_SET（0.50 / 0.80 / 0.25 / 威胁四档）+ Thieken Table S2/S3 + Borowski Table 4；'
+    + 'λ 不可估的依据：Swait & Louviere 1993, JMR 30(3):305–314',
+  limits: Object.freeze([
+    '这是「不拆门」的对照基线，不是要替代五道门；它的存在是为了让消融有对照组',
+    '三个 λ 比值不可估（Swait & Louviere 1993），所以基线的绝对概率没有解释意义，只看差异方向',
+    '门5 阻碍在两种模式下一模一样，差异只来自接收/动员/时间轴这一层',
+    '水位 > 0 触发是工程规则，没有任何文献支持它是「人开始决策」的阈值',
+  ]),
+});
+
+export const DECIDE_MODES = Object.freeze(['gate', 'single']);
+
+let _decideMode = 'gate';
+let _singleVariant = 'merge';
+
+export function setDecideMode(mode) {
+  const x = String(mode || '').toLowerCase();
+  if (DECIDE_MODES.includes(x)) _decideMode = x;
+  return _decideMode;
+}
+export function decideMode() { return _decideMode; }
+export function setSingleVariant(v) {
+  const x = String(v || '').toLowerCase();
+  if (SINGLE_UTILITY.variants[x]) _singleVariant = x;
+  return _singleVariant;
+}
+export function singleVariant() { return _singleVariant; }
+
+/** 危险度 → 措辞（门2 与单式基线共用，保证两边用的是同一套分级）。 */
+function threatForInput(q) {
+  if (q.threat) return safeThreat(q.threat);
+  const hr = Number.isFinite(Number(q.hazardRatingValue))
+    ? Number(q.hazardRatingValue)
+    : hazardRating(Number(q.waterDepthM) || 0, Number(q.flowSpeedMs) || 0);
+  return THREAT_OF_HAZARD[hazardClass(hr)] || 'low';
+}
+
+/** 单式基线的线性指数 V 与概率 σ(V)。 */
+export function singleUtilityScore(input, rnd) {
+  const q = input && typeof input === 'object' ? input : {};
+  const L = SINGLE_UTILITY.variants[_singleVariant] || SINGLE_UTILITY.variants.merge;
+  const k = knowledgeScore(q);
+  const a = actionScore(q, k);
+  const threat = threatForInput(q);
+  const U = protectiveActionUtilities({ ...q, threat }, rnd);
+  const v = L.lambdaKnowledge * k
+    + L.lambdaAction * a
+    + L.lambdaUtility * (U.evacuate - U.stay)
+    + (SINGLE_UTILITY.threatUtility[threat] || 0);
+  return { v, probability: sigmoid(v), threat, knowledge: k, actionScore: a, utilities: U };
+}
+
 export function decideProtectiveAction(input, rnd) {
   const q = input && typeof input === 'object' ? input : {};
   const draw = typeof rnd === 'function' ? rnd : null;
@@ -426,6 +519,17 @@ export function decideProtectiveAction(input, rnd) {
   const U = protectiveActionUtilities({ ...q, threat }, draw);
   const pChoice = sigmoid(U.evacuate - U.stay);
 
+  // ---- 【2026-11-22 消融】单式基线：把上面四道门塌成一条效用方程 ----
+  // 只在本模块被 setDecideMode('single') 打开时生效（?decide=single / SIM_DECIDE=single）。
+  // 读数：v 是单式线性指数，pSingle 是 σ(v)；触发放在这里，因为旧式没有「动员」这一层。
+  const singleMode = _decideMode === 'single';
+  const depthNow = finiteOr(q.waterDepthM, 0);
+  const triggered = depthNow > 0;
+  const single = singleMode
+    ? singleUtilityScore({ ...q, threat }, draw)
+    : null;
+  const pSingle = single ? single.probability : 0;
+
   // ---- 门5 阻碍：改可行集，不是否决动机 ----
   // PADM（Lindell & Perry 2012）把「阻碍」放在**行动实施**环节，不是动机环节：
   // 有阻碍的人不是不动，而是改成他动得了的那个动作。洪水里的两条实证方向：
@@ -458,7 +562,11 @@ export function decideProtectiveAction(input, rnd) {
       : (impediment === 'no_vehicle' ? 'walk' : 'evacuate'));
 
   // 【修 2026-11-17】clamp 不拦 NaN：概率必须是有限数，否则 rnd() < NaN 恒 false。
-  const raw = (!received || dutyHold || careHold) ? 0 : mobilisation * pChoice;
+  // 【2026-11-22 消融】单式基线：不加接收门、不乘动员、只看「泡到水没有」。
+  // 阻碍照旧生效（dutyHold / careHold），这是两模式共用的门5，不属于消融变量。
+  const raw = singleMode
+    ? ((triggered && !dutyHold && !careHold) ? pSingle : 0)
+    : ((!received || dutyHold || careHold) ? 0 : mobilisation * pChoice);
   const probability = Number.isFinite(raw) ? clamp(raw, 0, 1) : 0;
 
   const aScore = actionScore(q, knowledge);
@@ -473,15 +581,19 @@ export function decideProtectiveAction(input, rnd) {
     actionScore: aScore,
     mobilisation,
     gates: {
+      mode: singleMode ? 'single' : 'gate',
+      singleVariant: singleMode ? _singleVariant : null,
+      triggered: singleMode ? triggered : null,
       received,
       hazardRating: +hr.toFixed(3),
       hazardClass: hcls,
       threat,
-      mobilisation: +mobilisation.toFixed(4),
+      mobilisation: singleMode ? (triggered ? 1 : 0) : +mobilisation.toFixed(4),
       mobilisationBase: +mobilisationBase.toFixed(4),
       experienceRatio: +expRatio.toFixed(3),
       knowledgeLinearPredictor: +knowledge.toFixed(4),
-      choiceProbability: +pChoice.toFixed(4),
+      choiceProbability: singleMode ? +pSingle.toFixed(4) : +pChoice.toFixed(4),
+      singleUtility: single ? +single.v.toFixed(4) : null,
       impediment,
       impedimentLifted,
       posture,
@@ -505,6 +617,7 @@ export function mobilisationShape(minutes) {
 
 export const CHOICE_META = {
   form: '五道门串行：接收（Silva 扩散）→ 风险识别（FD2321 危险度）→ 启动（Silva 动员率 × 经验相对倍数）→ 选择（Borowski 二元随机参数 logit，原样）→ 阻碍（改可行集：无车改步行、值守在岗在自身危险时解除）',
+  ablationBaseline: 'setDecideMode("single")（?decide=single / SIM_DECIDE=single）：把三张表的线性预测子用 RETIRED_SELF_SET 的 0.50/0.80/0.25 压到同一量纲相加，水深>0 即触发，无接收门/无动员曲线/无 AFT；门5 两模式一致。见 SINGLE_UTILITY',
   coefficientsFrom: [
     KNOWLEDGE_LOGIT.source, ACTION_LOGIT.source,
     EVACUATION_LOGIT.source,

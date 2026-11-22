@@ -49,7 +49,7 @@ export const KINDS = Object.freeze({
 /** 链条分组，出表时按这个顺序排。 */
 export const CHAINS = Object.freeze([
   'population', 'warning', 'cognition', 'mobilisation', 'choice', 'crowd',
-  'impediment', 'casualty', 'vehicle', 'engineering',
+  'impediment', 'casualty', 'vehicle', 'river', 'engineering',
 ]);
 
 const RE = (s) => new RegExp(s);
@@ -656,6 +656,44 @@ export const ENTRIES = [
       + '0.02/0.01 是「看见水」的显示阈。全部为表现/交互阈值。',
     sens: '不适用（已在 0.20 m 危险档之下，改它不改判定）',
     probe: { file: 'web/src/cohort.js', re: RE('depthAhead > 0\\.04') },
+  },
+
+  /* ---------------- river：河道/风暴潮驱动（Python 内核侧，2026-11-22 新增） ----------------
+   * 这三条**没有 get()**：真值在 tools/flood/shallow2d.py 里，JS 读不到。机检对它们的
+   * 约束靠 probe（源文件里字面量必须还在）+ source/why/sens 的完整性；一旦 Python 侧改了
+   * 默认值，probe 会红，逼着人回来改这张表。
+   */
+  {
+    id: 'riv.overtopCw', chain: 'river', label: '漫堤入城堰流系数 Cw', unit: 'm^0.5/s',
+    expect: 1.7, kind: 'measured',
+    source: 'USACE EM 1110-2-1601（宽顶堰）与通用水力学教科书的宽顶堰系数 '
+      + 'Cw = 1.7 m^0.5/s（SI），q = Cw·L·H^1.5；另见 EurOtop 2018 对堰流段的口径说明',
+    why: '河道增水要能淹进街道，只能把漫堤写成显式源项：numba 通量门 hfm < h_min 会把'
+      + '「河格 h=0 → 干陆格」这一侧门掉（实测 --p-mm-h 0 --surge-m 8 湿区 0.00 ha、'
+      + '倒灌 0.0000 Mm³）。堰流是标准做法，Cw 用教科书值 1.7，不另调参。',
+    sens: 'Cw 0.7 / 1.7 / 2.6 三档（±60%）必须扫；漫堤量对 Cw 是一次的线性关系',
+    probe: { file: 'tools/flood/shallow2d.py', re: RE('--river-overtop-cw') },
+  },
+  {
+    id: 'riv.bankCrest', chain: 'river', label: '护岸堤顶高程（默认取 FEMA BFE 最低值）', unit: 'm NAVD88',
+    expect: 3.658, kind: 'real',
+    source: 'data/derived/water.json（2026 年从 DCGIS 拉取）→ levels.BFE_min_m = 3.658；'
+      + '来源图层 DCGIS Environment_Flood/MapServer/5，V_DATUM=NAVD88（FEMA FIS 2020 年版本）；'
+      + 'MSL_m=0.046 是 NOAA CO-OPS 8594900 的 1983–2001 常年均值',
+    why: '不设堤顶就是「无护岸」：Isabel 2.71 m 增水会灌成 63.7 ha、进 79 Mm³，'
+      + '与 2003 年特区实况（17th St 堤防未漫堤）矛盾。用 FEMA 洪泛区最低基准高程当堤顶，'
+      + '低于堤顶只顶托排水、高于堤顶才漫。',
+    sens: '堤顶 ±0.5 m（3.16/3.66/4.16）决定「哪几档增水会漫」，必须连同增水档一起扫',
+    probe: { file: 'tools/flood/shallow2d.py', re: RE('--river-bank-m') },
+  },
+  {
+    id: 'riv.overtopDefault', chain: 'river', label: '漫堤开关默认值（0=关）', unit: '—',
+    expect: 0.0, kind: 'engineering',
+    source: 'tools/flood/shallow2d.py 的 --river-overtop-cw default=0.0',
+    why: '默认关闭，保证历史 12 套工况与全部已有结果逐位不变；只有跨驱动实验显式打开。'
+      + '这条只影响「跑哪套驱动」，不进任何已有结论。',
+    sens: '不适用（开关）',
+    probe: { file: 'tools/flood/shallow2d.py', re: RE('river-overtop-cw\\", type=float, default=0\\.0') },
   },
 ];
 

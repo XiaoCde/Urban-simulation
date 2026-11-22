@@ -185,6 +185,11 @@ function runOne(c, label = c) {
       let sum = null;
       try {
         const j = JSON.parse(readFileSync(out, 'utf8'));
+        // 【2026-11-22 踩过的坑】收尾快照在 page.evaluate 里跑，一旦那里抛错
+        // （例如误用 process），final.sim 会变成 null 而**不报任何错**——
+        // 后面所有指标读到 0，看起来像「这批完全没死」。必须显式标错：
+        if (j.final && j.final.error) throw new Error('final.error: ' + j.final.error);
+        if (!j.final || !j.final.sim) throw new Error('final.sim 为 null（收尾快照失败）');
         // ---- 绊线4 NaN：只扫汇总层，不扫逐帧轨迹（那会把内存和 CPU 拖垮）。
         trip.nan = scanNaN({ final: j.final, metrics: j.metrics, summary: j.summary });
         const I = (j.final && j.final.sim && j.final.sim.incidents) || {};

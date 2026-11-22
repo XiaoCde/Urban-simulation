@@ -15,7 +15,7 @@ import { createRain, rainRateAt } from './rain.js';
 import { CLOCK, toStoryMin, STORY_OFFSET } from './clock.js';
 import { setTimeLayer, publishMinOf } from './kernel/warning.js';
 import { setSweptMode } from './kernel/flow-hazard.js';
-import { setExperienceLink, setExperienceKappa } from './kernel/choice-model.js';
+import { setExperienceLink, setExperienceKappa, setDecideMode, setSingleVariant } from './kernel/choice-model.js';
 import { setCasualtyScale } from './kernel/thresholds.js';
 import { setPeerMode, setPeerParams } from './kernel/peer-network.js';
 import { setCrowdMode } from './kernel/crowd-threshold.js';
@@ -55,6 +55,10 @@ if ((QS_ROAD.get('exp') || '').toLowerCase() === 'off') setExperienceLink(false)
   const PM = QS_ROAD.get('peer'); if (PM) setPeerMode(PM);
   const PR = QS_ROAD.get('peerR'); if (PR) setPeerParams({ shortRangeM: PR });
   const PQ = QS_ROAD.get('peerQ'); if (PQ) setPeerParams({ longRangeQ: PQ });
+  // 【2026-11-22 消融】决策结构：gate = 五道门（默认），single = 单式效用基线。
+  // ?single=merge|raw 选单式基线的两种合并方式（见 kernel/choice-model.js 的 SINGLE_UTILITY）。
+  const DM = QS_ROAD.get('decide'); if (DM) setDecideMode(DM);
+  const SV = QS_ROAD.get('single'); if (SV) setSingleVariant(SV);
 }
 // 【2026-11-21 门1】接收渠道重分配：默认中性（ratio=1 与关闭逐位相同）。
 if ((QS_ROAD.get('recv') || '').toLowerCase() === 'off') setReceptionChannel(false);

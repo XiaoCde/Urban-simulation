@@ -403,6 +403,15 @@ def main():
     ap.add_argument("--surge-recede-h", type=float, default=3.0,
                     help="河道增水在雨停后回落到基准水位的时间常数 h；"
                          "0 = 常数增水（旧口径，河一直顶在峰值，退水被顶住）")
+    ap.add_argument("--river-bank-m", type=float, default=-1.0,
+                    help="护岸/堤顶高程 m（NAVD88）。<0 = 用 water.json 的 BFE_min_m"
+                         "（FEMA 洪泛区最低基准高程 3.658 m）。只有瞬时水位高于堤顶"
+                         "才漫堤，否则河只是尾水顶托。")
+    ap.add_argument("--river-overtop-cw", type=float, default=0.0,
+                    help="河道漫堤入城系数（宽顶堰，0 = 关闭）。开了以后河岸"
+                         "相邻的陆格在「瞬时水位 > 地面高程」时按堰流公式"
+                         "q = Cw·L·H^1.5 进水；Cw 取 1.7 m^0.5/s（SI，USACE EM "
+                         "1110-2-1601 / 宽顶堰标准值）。默认 0，历史工况一格不动。")
     args = ap.parse_args()
     vel_scale_global[0] = float(args.vel_scale)
     vel_min_h_global[0] = float(args.vel_min_h)
@@ -518,6 +527,34 @@ def main():
 
     # 河格掩膜不参与降雨/产流/排水
     runoff_rate = np.where(river, 0.0, runoff_rate)
+
+    # ---- 漫堤入城（--river-overtop-cw > 0 才启用）----
+    # 【为什么必须显式写这一段】swe_numba 的通量门是 hfm < h_min → q = 0。
+    # 河格按 Dirichlet 处理成 h = 0（地形抬到水面），所以「河 → 陆地」方向上
+    # hfm = max(h_land, 0)，干陆格恒为 0 ⇒ 通量恒被门掉。结果是：增水只能
+    # 顶托排水（尾水），永远淹不进街道。实测 --p-mm-h 0 --surge-m 8 在 res 40
+    # 上湿区 0.00 ha、倒灌 0.0000 Mm³ —— 河要么排、要么不参与，单向阀。
+    # 要跑「河道/风暴潮型淹没」就必须把漫堤当一个显式源项，不能再指望坡降自动倒灌。
+    # 物理：宽顶堰 q = Cw·L·H^{3/2}，Cw=1.7（SI），L 取一格宽 dx，H = 水位 − 地面高程。
+    over_idx = None
+    over_z = None
+    if args.river_overtop_cw > 0.0 and river.any():
+        adj = np.zeros_like(river)
+        adj[1:, :] |= river[:-1, :]
+        adj[:-1, :] |= river[1:, :]
+        adj[:, 1:] |= river[:, :-1]
+        adj[:, :-1] |= river[:, 1:]
+        land_if = adj & ~river
+        over_idx = np.flatnonzero(land_if)
+        # 堤顶高程：默认取 FEMA 洪泛区最低基准（BFE_min_m），不给就是「无护岸」，
+        # 那样 2.71 m 的 Isabel 增水会直接灌成 63.7 ha、进 79 Mm³ —— 不是 2003 年
+        # 华盛顿特区的实际情形（市区有 17th St 堤防，Isabel 未漫堤）。
+        bank = float(args.river_bank_m) if args.river_bank_m > 0 else float(lvl["BFE_min_m"])
+        crest = np.maximum(bank, z.ravel()[over_idx].astype("float64"))
+        log(f"      漫堤入城：{len(over_idx):,} 格河岸陆格，堤顶 {bank:.3f} m（"
+            f"{'指定' if args.river_bank_m > 0 else 'BFE_min_m'}），"
+            f"Cw={args.river_overtop_cw:g} m^0.5/s")
+    V_over = 0.0
 
     qx = np.zeros_like(z, dtype="float32")   # qx[i,j] = 从 (i,j-1) 流向 (i,j) 的单宽流量
     qy = np.zeros_like(z, dtype="float32")   # qy[i,j] = 从 (i-1,j) 流向 (i,j)
@@ -749,6 +786,23 @@ def main():
         V_edge += dve                      # 开边界
         V_river -= dvr                     # dvr>0 = 排进河；<0 = 河水倒灌
         V_clip += dcp                      # 超深削平（溢流进涵洞）
+        # ---- 漫堤源项（关闭时整段不执行，历史工况逐位不变）----
+        if over_idx is not None:
+            stage_now = river_level + dl
+            hf = h.ravel()
+            # 堰上水头必须减去陆格**此刻已有**的水深：不扣就会出现「一格灌到 4 m
+            # 还按 2 m 水头继续灌」，实测 24 h 灌进 732 Mm³（管网全年才 228 m³/s），
+            # hmax 涨到 4639 m、闭合差 −1.17e6 Mm³ —— 那是账本爆炸，不是洪水。
+            head = stage_now - crest - hf[over_idx]
+            wet = head > 0.0
+            if wet.any():
+                q = args.river_overtop_cw * dx * np.power(head[wet], 1.5)
+                # 单位：q 是 m³/s、dt 是 s ⇒ 体积 m³；h 是**水深 m**，必须除以格面积。
+                # 少这一步会把 54 m³ 当成 54 m 水深，实测直接把 hmax 顶到 66 m。
+                hf[over_idx[wet]] += (q * dt / cell_area).astype(h.dtype)
+                vol = float(q.sum()) * dt
+                V_over += vol
+                V_river += vol             # 正 = 河水倒灌进来（账本与闭合差一致）
         if raining and bucket_cap > 0.0:
             budget_used += roof_need * served * rscale * dt + dvd
         elif not raining and budget_used > 0.0:
@@ -830,6 +884,8 @@ def main():
         f"③ 管道 {V_drain/1e6:9.3f}   ④ 入河 {-V_river/1e6:9.3f}")
     log(f"      边界出流 {V_edge/1e6:8.3f}   倒灌 {max(0.0, V_river)/1e6:7.4f}   "
         f"削平 {V_clip/1e6:8.4f}")
+    if V_over > 0.0:
+        log(f"      其中漫堤入城 {V_over/1e6:7.4f} Mm³（{len(over_idx):,} 格河岸界面）")
     log(f"      剩余 {V_now/1e6:9.3f} Mm³   闭合差 {(V_in - V_out - V_now)/1e6:+.6f} Mm³ "
         f"（{100*(V_in - V_out - V_now)/max(V_in,1e-9):+.4f}%）")
 

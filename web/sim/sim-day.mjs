@@ -141,7 +141,17 @@ if (EX === 'off' || EX === '0') u.searchParams.set('exp', 'off');
   const PN = (process.env.SIM_PEER || '').trim(); if (PN) u.searchParams.set('peer', PN);
   const PNR = (process.env.SIM_PEER_R || '').trim(); if (PNR) u.searchParams.set('peerR', PNR);
   const PNQ = (process.env.SIM_PEER_Q || '').trim(); if (PNQ) u.searchParams.set('peerQ', PNQ);
+  // 【2026-11-22 消融】决策结构：SIM_DECIDE=single 走单式效用基线，
+  // SIM_SINGLE=merge|raw 选合并方式（默认 gate = 五道门，见 kernel/choice-model.js）。
+  const DM = (process.env.SIM_DECIDE || '').trim(); if (DM) u.searchParams.set('decide', DM);
+  const SV = (process.env.SIM_SINGLE || '').trim(); if (SV) u.searchParams.set('single', SV);
 }
+// 【2026-11-22 个案导出上限】必须由 Node 读环境变量、再通过 URL 传进页面：
+// 收尾快照是在 page.evaluate() 里跑的（浏览器上下文），那里**没有 process**。
+// 我第一版直接在闭包写 process.env.SIM_CASES_MAX → 每次收尾都抛 "process is not defined"，
+// final.sim 变成 null、死亡数全读成 0，而且不报错——整批 8 个工况白跑。
+const CASES_MAX = Math.max(1, Number(process.env.SIM_CASES_MAX || 12));
+u.searchParams.set('casesmax', String(CASES_MAX));
 // 【2026-11-21 个体追溯】SIM_TRACE=<人序号> → 追这一个人，跑完写 trace JSON。
 // 用途：导师要的「定位某个受困/溺亡者，复现其完整过程」。traceTarget 记在 agg 里，
 // 结果文件和 trace 文件用同一个 case 名，回放/写报告时不会拿错人。
@@ -437,7 +447,7 @@ agg.wallSec = +((Date.now() - t0) / 1000).toFixed(1);
 agg.aborted = aborted;
 // 收尾快照也套超时：页面要是正好在最后一帧卡住，不能连已跑完的 hourly 一起丢掉。
 try {
-  agg.final = await withTimeout(p.evaluate(() => {
+  agg.final = await withTimeout(p.evaluate((casesMax) => {
     const PED = window.__ped, C = window.__clock;
     return {
       minute: +C.minute.toFixed(2),
@@ -446,13 +456,20 @@ try {
       flee: PED.fleeStats ? PED.fleeStats() : null,
       // 连续运行记下的真实个案：完整事件链 + 每 2 仿真秒一帧的状态与判断。
       // 只导出出过事的人，未出事的人不写盘。
+      // 【2026-11-22 创新点 #3】个案导出上限从固定 12 改成 SIM_CASES_MAX（默认仍 12）。
+      // 为什么必须能放开：cases() 先按「status 严重度 → maxDepth」排序再截断，所以
+      // 12 条上限取到的是「最深的 12 个死者」，不是「全部死者」——拿它统计死因构成
+      // 会系统性偏向深水（实测 u_p16_s0 30 个死者只导出 12 个）。导出多少不影响仿真
+      // 本身（只是写盘），所以批跑中途改这个上限不会让同一批的计数不可比。
       cases: (PED.incidents && PED.incidents.exportCases)
-        ? PED.incidents.exportCases(12) : [],
+        ? PED.incidents.exportCases(casesMax) : [],
       // 【§5 时间层】三个时刻的分布（发布/收到/动身）；默认关闭时 enabled=false。
       timeLayer: PED.timeLayerSummary ? PED.timeLayerSummary() : null,
     };
-  }), BATCH_TIMEOUT, '收尾快照');
+  }, CASES_MAX), BATCH_TIMEOUT, '收尾快照');
 } catch (e) {
+  // 注意：这里出错会让 final.sim 变成 null，随后任何人算指标都会得到 0。
+  // 所以「0 死亡」必须先看 final.error 在不在（decide-ab / trace-deep 已加拒绝）。
   console.error('[stuck] 收尾快照失败：' + (e && e.message ? e.message : e));
   agg.final = { minute: agg.endMinute, sim: null, route: null, flee: null, cases: [], error: String(e && e.message || e) };
 }
