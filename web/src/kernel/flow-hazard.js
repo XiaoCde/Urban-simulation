@@ -144,6 +144,36 @@ export function isSweptAway(depthM, speedMs, age) {
 }
 
 /** 出处与性质，给报告/台账直接引用。 */
+/**
+ * 【2026-11-23 模型审计】决策层的危险度要不要计入流速。
+ *
+ * 现状是**不计**：`cohort.js` 给 buildHazardInput 传的 velocityMs 恒 0，
+ * 于是决策层用的是「静水危险度」HR = 0.5d + DF；而伤亡层（ped.js → incidents.js）
+ * 用的是真实流速，判据是 D·V 超过失稳上限即被冲走。同一个时刻、同一个人，
+ * 行为层说「低危险」、伤亡层说「已冲走」——这是口径不一致，不是物理。
+ *
+ * 为什么不直接改成计入：FD2321/FD2320 的 HR 确实含流速，但一旦把 v 接进
+ * 门2，「流过水」的地方危险等级会从 low/some 跳到 most/all，门3 的动员与
+ * 门5 的值守解除全部跟着变——所有已发布结果（V6.1/V6.2/消融/跨驱动）都要重跑。
+ * 所以做成显式开关，默认为关（保持历史结果可复现），打开后必须整批重跑，
+ * 两版不可混引。
+ *
+ * 打开方式：`?flowhr=on`（main.js）/ `SIM_FLOW_HR=on`（sim-day.mjs、sim-sweep）。
+ */
+let _flowHrMode = false;
+export function setFlowHrMode(on) { _flowHrMode = !!on; return _flowHrMode; }
+export function flowHrOn() { return _flowHrMode; }
+
+export const FLOW_HR_META = Object.freeze({
+  default: 0,
+  what: '决策层（门2 危险度分级）是否把真实流速算进 HR = d(v+0.5) + 碎屑因子',
+  why: '现状 velocityMs 恒 0，导致行为层与伤亡层对同一时刻的水情给出不同结论；'
+    + '开关打开后需整批重跑，历史结果不可混引',
+  literature: 'FD2321 TR1 Table 3.1 与 FD2320 的危险度定义都含流速项；'
+    + 'ARR Project 10 / Keller & Mitsch 1993 给出失稳 D·V 上限（成人 1.2、儿童 0.55 m²/s）',
+  status: '默认关；打开时只改门2 的 HR，不改门3/门4/门5 的系数',
+});
+
 export const FLOW_META = Object.freeze({
   measured: {
     hazardRating: 'FD2321 Table 3.1/3.2（HR = d(v+0.5)+DF，界值 0.75/1.25/2.5）',

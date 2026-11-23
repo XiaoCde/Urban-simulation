@@ -29,12 +29,17 @@ import { WALK } from './motion-units.js';
 import { makeHazard, summarizeHazard } from './hazard.js';
 import { samplePerson } from './kernel/population.js';
 import { buildPeerNetwork } from './kernel/peer-network.js';
+import { groupHouseholds } from './kernel/household.js';
 // 【2026-11-16 阶段3】逐人楼层：用真实建筑高度派生，替代从场景 id 猜楼层。
 import { floorsFromHeight, floorElevationM, assignFloor } from './kernel/floors.js';
 
 let PEER_STATS = null;
 /** 参照群体的生成统计（模式、边数、度分布、孤立者占比），只读诊断用 */
 export function peerNetworkStats() { return PEER_STATS; }
+
+let HOUSEHOLD_STATS = null;
+/** 合成户的生成统计（户规模分布、桶余数、户内冲突），只读诊断用 */
+export function householdStats() { return HOUSEHOLD_STATS; }
 
 const XING = ['陈', '李', '王', '张', '刘', '周', '吴', '徐', '孙', '马', '朱', '胡', '林', '何', '郭', '高'];
 const MING = ['志远', '晓雯', '建国', '雅琴', '子涵', '明轩', '思琪', '浩然',
@@ -224,30 +229,31 @@ export function createCrowdLife({
     });
   }
 
-  // 【2026-11-18 从众支路：合成自我中心网络】
-  // ACS microsample 没有户号（SERIALNO），无法把具体的人还原成真实同户。
-  // 这里按每人的真实户规模（ACS 记录的 householdSize）连续组户，同户互为
-  // 同伴，上限 5 人（Borowski 2023 对自我中心网络的定义）。
-  // 这是合成网络：户规模分布来自 ACS 真实记录，但「谁和谁一户」是合成的，
-  // 不是真实社会网络调查数据；拿到真实网络后应替换这里。
-  // 目的：让 kernel/cohort.js 的 peersStay 不再恒 0，而是由同伴的实时避险
-  // 状态算出来（见 live-agent.js 的 peersStayOf）。
-  (function buildHouseholds() {
-    let k = 0;
-    while (k < persons.length) {
-      const hs = Math.max(1, Math.min(5, Number(persons[k].real && persons[k].real.householdSize) || 1));
-      const grp = [];
-      for (let m = 0; m < hs && k < persons.length; m++, k++) grp.push(k);
+  // 【2026-11-18 从众支路：合成自我中心网络】【2026-11-23 户内一致性重做】
+  // ACS microsample 没有户号（SERIALNO），「谁和谁一户」只能合成；合成方式
+  // 决定户内字段是否自洽。旧做法（按第 k 个人自己的 householdSize 顺序切块）
+  // 实测 64.3% 的户户规模互相矛盾、60.4% 户车数冲突、45.1% 的户车主数超过
+  // 户车数（544 张驾照 vs 397 辆户车）。现在改成按 (户规模, 户车数, 户内有未成年)
+  // 三元组分组，逻辑与统计都在 kernel/household.js，那里写了完整对照。
+  // 字段用途：户规模+户内有未成年 → 门5 照护责任；户车数 → hasCar/家车分配；
+  // 同户成员 → 同伴网络的家庭边。三条链都要求户内一致。
+  {
+    const { groups, sizeOf, stats } = groupHouseholds(persons.map((p) => p.real || {}));
+    for (let h = 0; h < groups.length; h++) {
+      const grp = groups[h];
+      const size = sizeOf[h];
       for (const a of grp) {
-        // peers = 参照群体（同户 + 后配邻居，见下方 buildNeighbourPeers）；
-        // household = 同户成员（不含自己），门 5 的照护责任只认这个集合里的
-        // 未成年成员 —— 邻居家孩子不算自己的孩子。合成性同上：ACS 无户号，
-        // 「谁和谁一户」是按户规模连续组出来的。
+        const r = persons[a].real;
+        if (Number(r.householdSize) !== size) r.householdSize = size;   // 桶余数户改成 1 人户
+        r.hhId = h;
+        r.hhSize = size;
+        persons[a].hhId = h;
         persons[a].peers = grp.filter((b) => b !== a);
         persons[a].household = grp.filter((b) => b !== a);
       }
     }
-  })();
+    HOUSEHOLD_STATS = stats;
+  }
 
   // 前 7 个行人与具名角色一一对应，共享同一目标、位置与判断，不再另跑剧本。
   // 【2026-11-15】具名演示角色是**手写的展示人物，不属于 ACS 抽样人群**。
@@ -805,5 +811,5 @@ export function createCrowdLife({
   }
 
   return { persons, at, decide, tick, setAnchors, setClusters, setRouting, bindResidents,
-    setLiveOverride, stats, debug, now, DOORS };
+    setLiveOverride, stats, debug, now, DOORS, householdStats };
 }

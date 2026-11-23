@@ -233,11 +233,30 @@ export async function createTraffic(o) {
     const min = clock ? clock.minute : 0;
     const used = new Set();
     const owners = [];
-    // 一车一人、不重复：只给「家里有车 + 有驾照（18≤age<88）+ 不是未成年」的人
+    // 【2026-11-23 按户分配】ACS 的 VEH 是**户**车数，不是人均。旧版只判
+    // person.hasCar（= 户车数>0），于是「1 辆车的家里两个有驾照的成年人都能开」：
+    // 2000 人实测 45.1% 的户出现车主数 > 户车数（合计 544 张驾照 vs 397 辆户车，
+    // 1.37×）。这里按 hhId 记账，一户最多分配 householdVehicles 辆；
+    // 没有户号（理论上不该发生）时按每人独立处理，不静默跳过。
+    const PERSONS = (crowd && crowd.persons) ? crowd.persons : null;
+    const allocByHousehold = new Map();
+    let cappedByHousehold = 0;
     for (let i = 0; i < peds.length && owners.length < cars.length; i++) {
       const c = circles && circles[i];
       if (!c || !c.hasCar || !c.license || used.has(i)) continue;
+      const r = PERSONS ? (PERSONS[i] && PERSONS[i].real) : null;
+      const hh = r && Number.isFinite(r.hhId) ? r.hhId : null;
+      const cap = r ? Math.max(0, Math.min(4, Number(r.householdVehicles) || 0)) : 1;
+      if (hh !== null && hh >= 0) {
+        const got = allocByHousehold.get(hh) || 0;
+        if (got >= cap) { cappedByHousehold++; continue; }
+        allocByHousehold.set(hh, got + 1);
+      }
       used.add(i); owners.push(i);
+    }
+    if (cappedByHousehold > 0) {
+      console.info('[traffic] 按户车数封顶：%d 个「有驾照但家里车已被同户其他人占用」的居民未配车',
+        cappedByHousehold);
     }
     if (!owners.length) {
       console.info('[traffic] 没有「有车且有驾照」的居民，全部车保持停放');

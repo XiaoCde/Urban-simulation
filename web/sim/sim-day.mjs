@@ -151,6 +151,8 @@ if (EX === 'off' || EX === '0') u.searchParams.set('exp', 'off');
   // SIM_SINGLE=merge|raw 选合并方式（默认 gate = 五道门，见 kernel/choice-model.js）。
   const DM = (process.env.SIM_DECIDE || '').trim(); if (DM) u.searchParams.set('decide', DM);
   const SV = (process.env.SIM_SINGLE || '').trim(); if (SV) u.searchParams.set('single', SV);
+  // 【2026-11-23 模型审计】决策层危险度计入流速（默认关）。打开后要整批重跑。
+  const FH = (process.env.SIM_FLOW_HR || '').trim(); if (FH) u.searchParams.set('flowhr', FH);
 }
 // 【2026-11-22 个案导出上限】必须由 Node 读环境变量、再通过 URL 传进页面：
 // 收尾快照是在 page.evaluate() 里跑的（浏览器上下文），那里**没有 process**。
@@ -164,6 +166,7 @@ u.searchParams.set('casesmax', String(CASES_MAX));
 const RUN_META = {
   decide: (process.env.SIM_DECIDE || 'gate').trim() || 'gate',
   single: (process.env.SIM_SINGLE || 'merge').trim() || 'merge',
+  flowHr: (process.env.SIM_FLOW_HR || '').trim() || 'off',
   peer: (process.env.SIM_PEER || 'synthetic').trim() || 'synthetic',
   peerR: process.env.SIM_PEER_R || null,
   peerQ: process.env.SIM_PEER_Q || null,

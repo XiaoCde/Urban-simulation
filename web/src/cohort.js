@@ -30,6 +30,7 @@ import { STATUS_BASE, statusOf } from './roles.js';
 import { bandOf } from './citizen.js';
 import { WALK } from './motion-units.js';
 import { mulberry32 } from './decision.js';
+import { flowHrOn } from './kernel/flow-hazard.js';
 import { buildHazardInput } from './kernel/hazard-input.js';
 import { decideProtectiveAction, waterDepthOrdinalOf } from './kernel/choice-model.js';
 import { attributesFromSim } from './kernel/attributes.js';
@@ -187,9 +188,14 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
   const crowdDeparted = clamp(1 - peersStay, 0, 1);
   const crowdFired = crowdModeNow() === 'threshold'
     ? crowdTriggered(crowdDeparted, s.crowdTheta ?? crowdThresholdOf(k && k.i)) : false;
+  // 【2026-11-23 模型审计】流速不再恒 0：伤亡层一直用真实流速判「被冲走」，
+  // 决策层却传 0，同一个时刻对同一个人给出两种水情。现在默认仍按静水算
+  // （保持历史结果可复现），但把真实流速一并交给内核记录；开关 `?flowhr=on`
+  // 打开时门2 的 HR 才计入 v。见 kernel/flow-hazard.js 的 FLOW_HR_META。
+  const vFlow = Math.max(0, Number(s.flowSpeed) || 0);
   const hazard = buildHazardInput({
     depthM: Math.max(s.depthAhead || 0, s.depthHere || 0),
-    velocityMs: 0,
+    velocityMs: flowHrOn() ? vFlow : 0,
     // 碎屑因子不显式给 0：由 hazard-input 按 FD2321 Table 3.1 城市列取。
     officialWarning: !!s.officialWarning,
     // 【2026-11-21 口径核查 · 未接入】warningInformation 是全项目唯一没有数据源的输入：
@@ -219,6 +225,8 @@ export function judge(k, s, rnd, restrict = null, forceProtect = null) {
     waitTime: attrs.waitTime,
     walkDistance: attrs.walkDistance,
     waterDepthM: hazard.waterDepthM,
+    // 流速单列一路：即使 HR 不计 v，内核与追溯也要能看到这一刻的真实流速。
+    flowSpeedMs: vFlow,
     hazardRatingValue: hazard.hazardRatingValue,
     hazardRatingExtremeBound: hazard.hazardRatingExtremeBound,
     // 敏感性分析用：允许注入缩放后的实测动员点，正常运行时不传。

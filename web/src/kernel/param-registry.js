@@ -36,6 +36,7 @@ import { ACCESS, ACCESS_META, DUTY_SOC, HOUSEHOLDER_RELP } from './access-impedi
 import { WARNING_MEASURED, WARNING_SELF_SET, TIMELAYER } from './warning.js';
 import { RECEPTION, DUTY_POPULATION_SHARE } from './reception-channel.js';
 import { PEER_NETWORK } from './peer-network.js';
+import { flowHrOn } from './flow-hazard.js';
 
 export const KINDS = Object.freeze({
   real: '真实数据集',
@@ -590,6 +591,30 @@ export const ENTRIES = [
   },
 
   /* ---------------- engineering：不进结论的表现参数 ---------------- */
+  {
+    // 【2026-11-23 模型审计】决策层危险度是否计入流速：默认 0（不计）。
+    // 计不计是**口径**问题不是数值问题：不计时行为层按静水算 HR，伤亡层按
+    // 真实流速判冲走，两层对同一时刻给出不同水情。改成 1 需要整批重跑。
+    id: 'flow.hrInDecision', chain: 'engineering', label: '决策层危险度是否计入流速（0=否 / 1=是）',
+    unit: '开关', expect: 0, kind: 'engineering',
+    source: 'FD2321 TR1 Table 3.1 / FD2320 的危险度定义都含流速项（HR = d(v+0.5) + 碎屑因子）',
+    why: '默认关是为了让 2026-11-21 以来的全部结果（V6.1 / V6.2 / 消融 / 跨驱动）'
+      + '保持可复现；打开后门2 的危险等级会整体上移，属另一版口径，不与历史结果混引。'
+      + '这一项不进结论，只决定用哪一版水情口径。',
+    sens: '开 / 关两版必须分别整批重跑；单跑一两个工况不能代替',
+    get: () => (flowHrOn() ? 1 : 0),
+    probe: { file: 'web/src/kernel/flow-hazard.js', re: RE('let _flowHrMode = false;') },
+  },
+  {
+    id: 'pop.hhMax', chain: 'population', label: '合成户规模上限', unit: '人',
+    expect: 5, kind: 'measured',
+    source: 'Borowski 2023 第四轮问卷 QA9（自我中心网络至多 5 人）+ ACS PUMS 户规模分布',
+    why: '户规模是门5 照护责任的判据之一（户规模=2 且有未成年 ⇒ 单亲带娃），'
+      + '上限必须与同伴网络一致，否则同户成员会漏出参照群体。',
+    sens: '不适用（问卷设计上限）',
+    get: () => 5,
+    probe: { file: 'web/src/kernel/household.js', re: RE('const MAX_HH = 5;') },
+  },
   {
     id: 'eng.height', chain: 'engineering', label: '模型身高（男 / 女）', unit: 'm',
     expect: [1.82, 1.68], kind: 'engineering',

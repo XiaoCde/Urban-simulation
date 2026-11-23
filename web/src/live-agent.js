@@ -145,6 +145,11 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     for (const j of list) {
       const q = peds[j];
       if (!q) continue;
+      // 【2026-11-23 死者不是「选择留下」】死掉的人不再做任何选择，把他算进
+      // peersStay 会凭空抬高「同伴都留下」，方向与文献相反（Borowski Table 4
+      // 的 peersStay 是「同伴选择的方案」，死人没有方案）。直接从分母里剔除；
+      // 全组都死的极端情形沿用 peerShares 的空群体口径（全 0，不编比例）。
+      if (INC && INC.isDead(j)) continue;
       states.push({ mode: q.mode, inVehicle: q.inVehicle === true });
     }
     return peerShares(states);
@@ -227,6 +232,10 @@ export function createLiveAgents({ peds, crowd, seed = 20261111, experience = nu
     const kin = minorNearbyOf(a);
     const s = {
       depthHere, depthAhead, farDepth: +farDepth.toFixed(3),
+      // 【2026-11-23】这一刻脚下的真实流速（m/s），由 ped.js 从流速帧采样后传进来。
+      // 决策层默认不把它算进危险度（见 flow-hazard.js 的 FLOW_HR_META），
+      // 但必须让内核记录、让个案追溯看得到，否则行为层与伤亡层口径不一致。
+      flowSpeed: Math.max(0, Number(ctx.flowSpeed) || 0),
       farDist: +farDist.toFixed(1), blocked,
       progress: clamp(1 - distGoal / 220, 0, 1),
       // 【2026-11-21 门5 联动修正】原来只给了 progress（0–1 的进度），

@@ -2031,6 +2031,9 @@ export function buildPedestrians(assets, opt = {}) {
         // 【2026-11-20 流速】同一次采样把流速一起带回来，避免为每个人再查一遍栅格。
         let ds0 = null;
         if (dInfo) { ds0 = dInfo(p.obj.position.x, p.obj.position.z, _ds); dd0 = ds0.d || 0; }
+        // 【2026-11-23】流速同时供给决策层（下一子步的 liveCtx）。伤亡层一直
+        // 用这条值判冲走，决策层此前拿不到、只能按 0 算，两层口径不一致。
+        liveCtx.flowSpeed = (ds0 && ds0.sp > 0) ? ds0.sp : 0;
         // 【生理状态真的跟着人走】旧版这里写死 speed:0，于是体力永远按静止
         // 恢复、饥饿永远按静止涨、淋湿与雨强脱钩 —— 状态值成了摆设。现在
         // 用这一子步真实的步速 / 水深 / 雨强 / 室内外喂给 PersonState。

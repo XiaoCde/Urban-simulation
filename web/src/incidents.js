@@ -139,6 +139,9 @@ export function createIncidents(o = {}) {
   let log = [];
   const stat = {
     safe: 0, wading: 0, stranded: 0, injured: 0, dead: 0, evacuated: 0,
+    // 【2026-11-23】避险里有多少是「往上爬一层」的垂直避险，多少是「走出积水」。
+    // 两者在真实灾害里含义完全不同，外面报数时不能混成一个「撤离」。
+    floorEscapes: 0,
     stalled: 0, abandonedCar: 0, slip: 0, collision: 0, redLightWaits: 0,
     yields: 0, rescued: 0,
     deathsByCause: {}, deathsByLegacyCause: {}, deathsByZone: {}, incidentsByType: {}, exposed: 0, maxDepth: 0,
@@ -430,6 +433,10 @@ export function createIncidents(o = {}) {
           r.effFloor = fr.targetFloor;      // 往更高的干层转移
           if (minute() - (r.floorMoveT || -1e9) > 30) {
             r.floorMoveT = minute();
+            // 【2026-11-23】垂直避险单独记账：status 仍是 evacuated（对外口径不变），
+            // 但 everFloorEscaped 让「避险 = 撤出去」与「避险 = 上楼」能分开统计。
+            r.everFloorEscaped = true;
+            stat.floorEscapes += 1;
             if (!r.everEvacuated) { r.everEvacuated = true; }
             if (r.status !== 'dead' && r.status !== 'injured') r.status = 'evacuated';
             push(i, 'evacuated', `第 ${fr.targetFloor} 层还没被淹，往上转移`, { ...ctx, band });
@@ -678,6 +685,10 @@ export function createIncidents(o = {}) {
 
   function recount() {
     for (const k of ['safe', 'wading', 'stranded', 'injured', 'dead', 'evacuated']) stat[k] = 0;
+    // 【2026-11-23】垂直避险按「人」重算，不按事件累加（同一人多次上楼只算一次）。
+    // 与 stat.evacuated 的关系：evacuated 是当前状态里「安全了（含上楼）」的人数，
+    // 两者不可互相替代，报告里必须分开写。
+    let floorEscapes = 0, everFloorEscaped = 0;
     let exposed = 0, everInjured = 0, everStranded = 0, everEvacuated = 0;
     for (const r of rows) {
       if (!r) continue;
@@ -686,7 +697,10 @@ export function createIncidents(o = {}) {
       if (r.everInjured) everInjured++;
       if (r.everStranded) everStranded++;
       if (r.everEvacuated) everEvacuated++;
+      if (r.everFloorEscaped) { floorEscapes++; everFloorEscaped++; }
     }
+    stat.floorEscapes = floorEscapes;
+    stat.everFloorEscaped = everFloorEscaped;
     stat.exposed = exposed;
     stat.everInjured = everInjured;
     stat.everStranded = everStranded;
@@ -786,6 +800,8 @@ export function createIncidents(o = {}) {
         district: (c && c.districtLabel) || null,
         events: r.events.length, frames: r.trace.length,
         firstMinute: r.trace.length ? r.trace[0].t : 0,
+        // 这个人是「上楼避险」还是「走出积水」——两条路在真实灾害里完全不是一回事。
+        floorEscaped: !!r.everFloorEscaped,
         maxDepth: r.trace.reduce((m, f) => Math.max(m, f.d || 0), 0),
       });
     }

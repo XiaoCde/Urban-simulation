@@ -16,6 +16,7 @@ import { CLOCK, toStoryMin, STORY_OFFSET } from './clock.js';
 import { setTimeLayer, publishMinOf } from './kernel/warning.js';
 import { setSweptMode } from './kernel/flow-hazard.js';
 import { setExperienceLink, setExperienceKappa, setDecideMode, setSingleVariant } from './kernel/choice-model.js';
+import { setFlowHrMode } from './kernel/flow-hazard.js';
 import { setCasualtyScale } from './kernel/thresholds.js';
 import { setPeerMode, setPeerParams } from './kernel/peer-network.js';
 import { setCrowdMode } from './kernel/crowd-threshold.js';
@@ -59,6 +60,9 @@ if ((QS_ROAD.get('exp') || '').toLowerCase() === 'off') setExperienceLink(false)
   // ?single=merge|raw 选单式基线的两种合并方式（见 kernel/choice-model.js 的 SINGLE_UTILITY）。
   const DM = QS_ROAD.get('decide'); if (DM) setDecideMode(DM);
   const SV = QS_ROAD.get('single'); if (SV) setSingleVariant(SV);
+  // 【2026-11-23 模型审计】决策层危险度是否计入流速。默认关（保持历史结果
+  // 可复现）；`?flowhr=on` 打开后必须整批重跑，两版不可混引。
+  const FH = QS_ROAD.get('flowhr'); if (FH) setFlowHrMode(FH === 'on' || FH === '1');
 }
 // 【2026-11-21 门1】接收渠道重分配：默认中性（ratio=1 与关闭逐位相同）。
 if ((QS_ROAD.get('recv') || '').toLowerCase() === 'off') setReceptionChannel(false);
